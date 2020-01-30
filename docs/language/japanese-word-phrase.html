@@ -1,0 +1,3258 @@
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 7 ]>    <html lang="zh-CN" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="zh-CN" class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="zh-CN" class="ie9"> <![endif]-->
+<!--[if (gte IE 10)|!(IE)]><!--> <html lang="zh-CN"> <!--<![endif]-->
+
+<head>
+  <meta charset="UTF-8">
+
+  <title>Japanese: Word - Just Do It</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="author" content="reed">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  <!-- Feed -->
+  <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss.xml">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/atom.xml">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/themes/twitter/css/style.css?ver=20151125">
+  <link rel="stylesheet" href="/assets/themes/twitter/css/font-awesome.min.css?ver=20151122">
+  <!--[if IE 7 ]><link rel="stylesheet" href="/assets/themes/twitter/css/font-awesome-ie7.min.css?ver=20151122"><![endif]-->
+
+  <!-- Scripts -->
+  <script type="text/javascript" src="/assets/themes/twitter/js/jquery-1.11.1.min.js"></script>
+  <!--[if lt IE 9]><script src="/assets/themes/twitter/js/html5shiv.min.js"></script><![endif]-->
+  <script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+</head> 
+<body>
+
+  <div id="wrap">
+    <header id="top">
+      <!-- Home Link -->
+      <a id="logo" href="/" title="回到首页">
+        <img src="/assets/themes/twitter/img/logo.png" alt="Just Do It">
+      </a>
+      <!-- Navigation Bar -->
+      <nav id="navbar">
+        <ul>
+          <li>
+            <a href="/" title="首页">首页</a>
+          </li>
+          <li>
+            <a href="/categories.html" title="分类">分类</a>
+          </li>
+          <li>
+            <a href="/tags.html" title="标签">标签</a>
+          </li>
+          <!--
+          <li>
+            <a href="/messages.html" title="留言板">留言板</a>
+          </li>
+          <li id="about-link" >
+            <a href="/about.html" title="关于我">关于我</a>
+          </li>
+          -->
+          <!--
+          <li id="rss-link">
+            <a href="/rss.xml" title="订阅 RSS"><i class="icon-large icon-fixed-width icon-rss"></i></a>
+          -->
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="main">
+
+      <!-- Sidebar -->
+      <aside id="sidebar">
+        <section id="search-box">
+          <form id="search-form">
+  <input id="query" type="text" placeholder="正则搜索"></input>
+  <button type="submit"><i class="icon-search"></i></button>
+</form>
+<script type="text/javascript">
+$(document).ready(function() {
+  $('#search-form').submit(function() {
+    $('#query').blur().attr('disabled', true);
+    $('#main-content').hide();
+    $('#loader').show();
+    $.ajax({url: '/atom.xml?r=' + (Math.random() * 999999), dataType: 'xml', success: function(data) {
+      var rq = new RegExp($('#query').val(), 'im');
+      var rl = /\/([^\/]+)\.html$/;
+      var html = '';
+      $(data).find('entry').each(function(index, entry) {
+        var title = $(entry).find('title').text();
+        var link = $(entry).find('link').attr('href');
+        var title_en = rl.exec(link)[1].replace('-', ' ');
+        var content = $(entry).find('content').text();
+        if (rq.test(title) || rq.test(title_en) || rq.test(content)) {
+          var parts = $(entry).find('updated').text().split(/[-T:+]/g);
+          var months = [ "January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December" ];
+          date = parts[2] + ' ' + months[parts[1] - 1] + ' ' + parts[0];
+          html += '<article class="nested">';
+          html += '<header><h2><a href="' + link + '">' + title + '</a></h2></header>';
+          html += '<section><p>' + content + '</p></section>';
+          html += '<footer><p>更新日期：' + date + '</p></footer>';
+          html += '</article>';
+        }
+      });
+      $('#main-content').html(html);
+      $('#loader').hide();
+      $('#main-content').show();
+    }});
+    $('#query').blur().attr('disabled', false);
+    return false;
+  });
+});
+</script>
+
+        </section>
+        <section class="active">
+          <a href="/" title="查看最近发表"><i class="icon-fixed-width icon-edit"></i> 最近发表</a>
+<ul>
+
+  <li><a href="/math/math-apply-proability-and-statistics-model-checking.html" title="查看《P.A.S.: Model Checking》">P.A.S.: Model Checking</a></li>
+
+  <li><a href="/math/math-apply-learning-partially-observed-data.html" title="查看《P.G.M.: Learning-Partially Observed Data》">P.G.M.: Learning-Partially Observed Data</a></li>
+
+  <li><a href="/math/math-apply-learning-learning-undirected-data.html" title="查看《P.G.M.: Learning-Undirected Models》">P.G.M.: Learning-Undirected Models</a></li>
+
+  <li><a href="/math/math-discrete-graph-theory-planar-graphs.html" title="查看《Graph Theory: Planar Graphs》">Graph Theory: Planar Graphs</a></li>
+
+  <li><a href="/math/math-discrete-graph-theory-vertex-colourings.html" title="查看《Graph Theory: Vertex Colourings》">Graph Theory: Vertex Colourings</a></li>
+
+  <li><a href="/math/math-discrete-graph-theory-matchings.html" title="查看《Graph Theory: Matchings》">Graph Theory: Matchings</a></li>
+
+</ul>
+
+        </section>
+        <!--
+        <section>
+          <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
+<span title="文章总数">330</span>
+<ul>
+
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#January-2020">2020 年 01 月 (29)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#December-2019">2019 年 12 月 (50)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#November-2019">2019 年 11 月 (48)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#October-2019">2019 年 10 月 (33)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#September-2019">2019 年 09 月 (13)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#August-2019">2019 年 08 月 (29)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#July-2019">2019 年 07 月 (24)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#June-2019">2019 年 06 月 (18)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#May-2019">2019 年 05 月 (39)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#April-2019">2019 年 04 月 (6)</a></li>
+    
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2019">2019 年 03 月 (1)</a></li>
+    
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#January-2019">2019 年 01 月 (1)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2018">2018 年 03 月 (3)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#May-2017">2017 年 05 月 (9)</a></li>
+    
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2017">2017 年 03 月 (1)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#August-2016">2016 年 08 月 (18)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#May-2016">2016 年 05 月 (8)</a></li>
+    
+  
+
+</ul>
+
+        </section>
+        -->
+        <section>
+          <a href="/categories.html" title="查看所有分类"><i class="icon-fixed-width icon-folder-open"></i> 文章分类</a>
+<span title="分类总数">10</span>
+<ul>
+
+  <li><a href="/categories.html#c++-ref">c++ (5)</a></li>
+
+  <li><a href="/categories.html#code-ref">code (29)</a></li>
+
+  <li><a href="/categories.html#algorithm-ref">algorithm (3)</a></li>
+
+  <li><a href="/categories.html#python-ref">python (41)</a></li>
+
+  <li><a href="/categories.html#linux-ref">linux (11)</a></li>
+
+  <li><a href="/categories.html#life-ref">life (9)</a></li>
+
+  <li><a href="/categories.html#AI-ref">AI (27)</a></li>
+
+  <li><a href="/categories.html#math-ref">math (198)</a></li>
+
+  <li><a href="/categories.html#language-ref">language (5)</a></li>
+
+  <li><a href="/categories.html#CS-ref">CS (1)</a></li>
+
+</ul>
+
+        </section>
+        <section>
+          <a href="/tags.html" title="查看所有标签"><i class="icon-fixed-width icon-tags"></i> 标签云</a>
+<span title="标签总数">31</span>
+<div id="tag-cloud">
+
+
+
+
+
+
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#language-ref" style="font-size: 12.5pt; color: #555;">language</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#c++-ref" style="font-size: 9.5pt; color: #999;">c++</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#java-ref" style="font-size: 9pt; color: #999;">java</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#code-ref" style="font-size: 10.5pt; color: #888;">code</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#python-ref" style="font-size: 10.5pt; color: #777;">python</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#IO-ref" style="font-size: 9.5pt; color: #888;">IO</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#-ref" style="font-size: 10.5pt; color: #888;"></a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#CLI tool-ref" style="font-size: 9.5pt; color: #888;">CLI tool</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#linux-ref" style="font-size: 9pt; color: #999;">linux</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#container-ref" style="font-size: 9pt; color: #999;">container</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#清单-ref" style="font-size: 9pt; color: #999;">清单</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#life-ref" style="font-size: 9pt; color: #999;">life</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#latex-ref" style="font-size: 10pt; color: #888;">latex</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#japan-ref" style="font-size: 10pt; color: #888;">japan</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#model-ref" style="font-size: 10.5pt; color: #777;">model</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#algorithm-ref" style="font-size: 10pt; color: #888;">algorithm</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#apply-ref" style="font-size: 18pt; color: #000;">apply</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#GUI tool-ref" style="font-size: 9pt; color: #999;">GUI tool</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#distribution-ref" style="font-size: 9.5pt; color: #999;">distribution</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#keyword-ref" style="font-size: 9pt; color: #999;">keyword</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#unsupervised learning-ref" style="font-size: 9.5pt; color: #888;">unsupervised learning</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#sampling-ref" style="font-size: 9pt; color: #999;">sampling</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#change-ref" style="font-size: 12pt; color: #666;">change</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#space-ref" style="font-size: 14.5pt; color: #444;">space</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#tensorflow-ref" style="font-size: 9.5pt; color: #888;">tensorflow</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#english-ref" style="font-size: 9pt; color: #999;">english</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#functional analysis-ref" style="font-size: 9.5pt; color: #888;">functional analysis</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#basic-ref" style="font-size: 9.5pt; color: #999;">basic</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#food-ref" style="font-size: 9pt; color: #999;">food</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#structure-ref" style="font-size: 14pt; color: #444;">structure</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#discrete-ref" style="font-size: 10.5pt; color: #888;">discrete</a>
+  
+
+</div>
+
+        </section>
+        <div id="fixed-container">
+  <section>
+    
+  </section>
+  <section>
+    <a href="#"><i class="icon-fixed-width icon-heart"></i> 与我联系</a>
+<div id="contacts-list">
+  <a href="mailto:zhanghy1012@gmail.com" target="_blank" title="Gmail">
+    <i class="icon-large icon-fixed-width icon-envelope"></i>
+  </a>
+  <a href="https://github.com/slip-slap" target="_blank" title="GitHub">
+    <i class="icon-large icon-fixed-width icon-github"></i>
+  </a>
+  <a href="http://weibo.com/" target="_blank" title="新浪微博">
+    <i class="icon-large icon-fixed-width icon-weibo"></i>
+  </a>
+  <a href="https://twitter.com/" target="_blank" title="Twitter">
+    <i class="icon-large icon-fixed-width icon-twitter"></i>
+  </a>
+</div>
+
+  </section>
+  <section>
+    <a href="#"><i class="icon-fixed-width icon-link"></i> 友情链接</a>
+<ul>
+  <li><a href="https://github.com/Shopify/liquid/wiki/Liquid-for-Designers" target="_blank">Liquid 模板引擎</a></li>
+  <li><a href="http://jekyllrb.com/" target="_blank">Jekyll 静态博客生成器</a></li>
+</ul>
+
+  </section>
+</div>
+<script type="text/javascript">
+$(document).ready(function() {
+  var position = $('#fixed-container').offset();
+  $(window).scroll(function() {
+    if($(window).scrollTop() > position.top) {
+      $('#fixed-container').css('position','fixed').css('top','0');
+    } else {
+      $('#fixed-container').css('position','static');
+    }
+  });
+});
+</script>
+
+      </aside>
+
+      <!-- Main Content -->
+      <div id="main-inner">
+        <div id="loader"><img src="/assets/themes/twitter/img/loading.gif" alt="请稍侯"></div>
+        <div id="main-content">
+          
+
+
+
+<section id="content">
+  <article class="post">
+  <!--
+  - math support
+  -->
+      <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+                tex2jax: {
+                      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+                            inlineMath: [['$','$']]
+                                }
+                                  });
+      </script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+
+    <header>
+      <h1>Japanese: Word</h1>
+    </header>
+
+    <section>
+      <div class="post-extra">
+        <div class="pull-left">
+          <span>17 June 2019</span>
+        </div>
+        <div class="pull-right">
+          
+
+
+  <span id="share">
+  <a class="wechat" target="_blank" title="分享到微信" href="http://chart.apis.google.com/chart?cht=qr&amp;chs=300x300&amp;chl=/language/japanese-word-phrase.html"><i class="icon-large icon-wechat"></i></a>
+  <a class="weibo" target="_blank" title="分享到微博" href="http://service.weibo.com/share/share.php?title=Japanese: Word - Just Do It&amp;url=/language/japanese-word-phrase.html&amp;type=3&amp;searchPic=1"><i class="icon-large icon-weibo"></i></a>
+  <a class="qzone" target="_blank" title="分享到 QQ 空间" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=/language/japanese-word-phrase.html&amp;title=Japanese: Word - Just Do It&amp;summary=&amp;site="><i class="icon-large icon-qzone"></i></a>
+  <a class="twitter" target="_blank" title="Share to Twitter" href="https://twitter.com/intent/tweet?url=/language/japanese-word-phrase.html&amp;text=Japanese: Word - Just Do It&amp;via="><i class="icon-large icon-twitter"></i></a>
+  <a class="facebook" target="_blank" title="Share to Facebook" href="http://www.facebook.com/sharer.php?u=/language/japanese-word-phrase.html&amp;t=Japanese: Word - Just Do It"><i class="icon-large icon-facebook-sign"></i></a>
+  <a class="googleplus" target="_blank" title="Share to Google+" href="https://plus.google.com/share?url=/language/japanese-word-phrase.html"><i class="icon-large icon-google-plus-sign"></i></a>
+</span>
+
+
+
+
+
+        </div>
+      </div>
+      
+<h4 id="取り">取り</h4>
+<ol>
+  <li>取り消す: cancel
+急に忙しくなってしまったので、病院の予約を取り消した。</li>
+</ol>
+
+<h4 id="word">word</h4>
+<ol>
+  <li>売買(ばいばい): trade</li>
+  <li>発売(はつばい): release</li>
+  <li>特売(とくばい): special sale
+    <h4 id="different-meaning">different meaning</h4>
+  </li>
+  <li>欠点(けってん): flaw</li>
+  <li>軽症(けいしょう):</li>
+  <li>重症(じゅうしょう):</li>
+  <li>切り傷(きりきず):</li>
+  <li>生活習慣病</li>
+  <li>うつ病: depression</li>
+  <li>納得(なっとく): understand</li>
+</ol>
+
+<h4 id="verb-masu-form--きる">verb masu-form + きる</h4>
+<ol>
+  <li>indicates complete the job, but very difficult.</li>
+  <li>三人分料理を一人で食べきった。</li>
+</ol>
+
+<h4 id="verb-masu-form--通す">verb masu-form + 通す</h4>
+<ol>
+  <li>最後までやり通す。</li>
+</ol>
+
+<h4 id="word-1">word</h4>
+<ol>
+  <li>八頭身(はっとうしん): beautiful well-proportioned woman(body 8 times longer than head)</li>
+  <li>妊娠(にんしん): pregnancy</li>
+</ol>
+
+<h4 id="勘">勘</h4>
+<ol>
+  <li>勘: perception, intuition</li>
+  <li>勘違う: misunderstanding</li>
+  <li>割り勘: dutch treat, splitting the cost</li>
+</ol>
+
+<h4 id="決める">決める</h4>
+<ol>
+  <li>decide その仕事誰を選ぶか決めるのは君の責任だ。it rests with you to decide whom to choose for the job</li>
+</ol>
+
+<h4 id="配信はいしん-distribution">配信(はいしん) distribution</h4>
+<ol>
+  <li>音楽配信: online music distribution</li>
+  <li>配信証明(はいしんしょうめい): proof of delivery</li>
+  <li>配達(はいたつ): delivery (とも達)</li>
+</ol>
+
+<h4 id="振りぶり">振り(ぶり)</h4>
+<p>after an interval of</p>
+<ol>
+  <li>一週間ぶり: a week later</li>
+  <li>３ヶ月ぶりに日本へくる: after three month, he come to Japan</li>
+  <li>十年ぶりの最新版: latest version after a lapse of ten years
+way of doing</li>
+  <li>話ぶり: way of talking</li>
+  <li>飲みっぷり: way of drinking</li>
+</ol>
+
+<h4 id="おき-repeated-at-intervals">おき repeated at intervals</h4>
+<ol>
+  <li>一日置きに買い物に行く I go shopping every other day</li>
+  <li>二メートルおきに木が植えられている。</li>
+</ol>
+
+<h4 id="気味ぎみ--a-little-a-touch-of">気味(ぎみ)  a little, a touch of</h4>
+<ol>
+  <li>風邪気味: having a slight cold</li>
+  <li>緊張気味: feeling somewhat nervous</li>
+  <li>食い気味(くいぎみ): cutting off someone without waiting for them to finish talking</li>
+</ol>
+
+<h4 id="勝ちがち-tend-to-doused-to-describe-a-negative-tendency">勝ち(がち) tend to do(used to describe a negative tendency)</h4>
+<ol>
+  <li>忘れがち: to forget something easily, 忙しいと大切なことを忘れがちになる</li>
+  <li>疲れがち: get tired easily: パソコンの使いすぎて目が疲れがちです</li>
+  <li>ありがち: something real common: 日本人にありがちな英語のミス</li>
+  <li>起こりがち: frequently happen: 冬の日は事故が起こりがちなので気を付けてください</li>
+</ol>
+
+<h4 id="仲間なかま-relationship">仲間(なかま): relationship</h4>
+<ol>
+  <li>仕事仲間: work relationship</li>
+  <li>勉強仲間: study relationship</li>
+  <li>飲み仲間: wine relationship</li>
+</ol>
+
+<h4 id="かける-indicates-verb-is-being-directed-to-someone">かける indicates verb is being directed to someone</h4>
+<ol>
+  <li>話かける: begin to talk(to someone)</li>
+  <li>笑いかける: to smile(at someone)</li>
+  <li>呼びかける: to address(to someone)</li>
+  <li>問いかける: to ask(someone)</li>
+</ol>
+
+<h4 id="明け-end">明け end</h4>
+<ol>
+  <li>休み明け: just after a holiday break, the first day after the holidays</li>
+  <li>夜明け: dawn, daybreak</li>
+  <li>週明け(しゅう明け): beginning of the week</li>
+</ol>
+
+<h4 id="扱い-treatment">扱い treatment</h4>
+
+<ol>
+  <li>子供扱い: treat like a child</li>
+  <li>犯人扱い: treak like a crime</li>
+</ol>
+
+<h4 id="つきattached">つき　attached</h4>
+<ol>
+  <li>昼食つき: a lunch included</li>
+  <li>期間つき: with a time limit</li>
+  <li>条件付き: condition attached</li>
+  <li>景品つき: a premium attached</li>
+</ol>
+
+<h4 id="立てたて-newlyfreshly-just-did-something">立て(たて) newly/freshly just did something</h4>
+<ol>
+  <li>焼き立て: just baked</li>
+  <li>出来立て: just made</li>
+  <li>取れ立て(とれたて): something freshly harvested or gathered</li>
+  <li>揚げたて: freshly fried</li>
+</ol>
+
+<h4 id="立つ-to-stand-to-rise">立つ: to stand, to rise</h4>
+<ol>
+  <li>旅立つ: to begin a trip</li>
+</ol>
+
+<h4 id="adverb">adverb</h4>
+<ol>
+  <li>一々(いちいち): one by one</li>
+  <li>一応(いちおう): first</li>
+  <li>一段と(いちだんと): more and more</li>
+  <li>一度に(いちどに): at the same time</li>
+  <li>一見(いっけん): at first</li>
+  <li>一体(いったい): on earth</li>
+  <li>さっぱり: complete, at all</li>
+</ol>
+
+<h4 id="ず">ず</h4>
+<ol>
+  <li>絶えず: continually</li>
+  <li>関わらず: in spite of</li>
+</ol>
+
+<h4 id="難しい">難しい</h4>
+<ol>
+  <li>真剣(しんけん):</li>
+  <li>非難(ひなん): attack</li>
+  <li>服装(ふくそう): clothes</li>
+</ol>
+
+<h4 id="word-2">word</h4>
+<ol>
+  <li>ふわふわする: very light  わたはふわふわしている: cotton are very light and soft</li>
+  <li>レジャー: leisure time when you are not working: time when you can do whatever you want to do.</li>
+  <li>レジャー用品:</li>
+  <li>僭越(せんえつ): arrogant</li>
+  <li>一言(ひとこと): a few words</li>
+</ol>
+
+<h4 id="adjective">adjective</h4>
+<ol>
+  <li>辛抱強い(しんぼうつよい): very patient</li>
+  <li>感心(かんしん): respect</li>
+  <li>大袈裟(おおげさ): exaggerate</li>
+  <li>弱音(よわね): complain</li>
+  <li>必要不可欠(ひつようふかけつ): necessary</li>
+  <li>追試験(ついしけん): supplementary exam</li>
+  <li>筆記試験(ひっきしけん): written examination</li>
+  <li>口頭試験(こうとうしけん): oral examination</li>
+  <li>聴講生(ちょうこうせい): auditing student( to attend a course at a college or university without having to do 
+any of the course work and without receiving credit)</li>
+  <li>希釈する(きしゃく): dilution</li>
+  <li>ビール腹(ばら): beer belly</li>
+</ol>
+
+<h4 id="品">品</h4>
+<ol>
+  <li>薬品(やくひん): meicine</li>
+  <li>下品(げひん): vulgarity</li>
+  <li>上品(じょうひん): elegant, refined</li>
+  <li>返品(へんぴん): return goods</li>
+  <li>部品(ぶひん): components, parts</li>
+</ol>
+
+<h4 id="pronounce">pronounce</h4>
+<ol>
+  <li>日清食品 にっしんしょくひん</li>
+  <li>清水寺　きよみずてら</li>
+  <li>洗顔料　せんがんりょう</li>
+  <li>洗濯　　せんたく</li>
+  <li>洗剤　　せんざい</li>
+  <li>一気に　いっきに: immediately</li>
+  <li>思春期　ししゅんき</li>
+</ol>
+
+<h4 id="difficult-word">difficult word</h4>
+<ol>
+  <li>芝居(しばい): play, drama</li>
+  <li>芝生(しばふ): lawn</li>
+  <li>相場(そうば): market price</li>
+  <li>水道水(すいどうすい): tap-water</li>
+  <li>浄水器(じょうすいき): water cleaner</li>
+  <li>大手(おおて): big</li>
+  <li>取りて: excellent athete</li>
+  <li>地上(ちじょう): on the ground</li>
+  <li>良民(りょうみん): law-abiding people</li>
+  <li>張本人(ちょうほんにん): perpetrator, ringleader</li>
+  <li>強請る(ゆする): to extort, to demand</li>
+  <li>汚職(おしょく): bribery</li>
+  <li>仮定(かてい): assum</li>
+  <li>脱税(だつぜい): tax evasion</li>
+  <li>小柄(こがら): small type</li>
+  <li>優勝(ゆうしょう): champion</li>
+  <li>準優勝(じゅんゆうしょう): finishing second</li>
+  <li>予選(よせん): qualification competion</li>
+  <li>桁外れ(けたはずれ): extraordinary</li>
+  <li>試合(しあい): competion</li>
+</ol>
+
+<h4 id="カタカナ">カタカナ</h4>
+<ol>
+  <li>ハンドル: handle</li>
+  <li>ブレーキ: brake</li>
+  <li>リモコン: remote control</li>
+  <li>メートル: meter</li>
+  <li>センチメートル: cm</li>
+  <li>うっフル: whaffle</li>
+  <li>煎餅(せんべい): japanese cracker</li>
+  <li>味がない: tasteless</li>
+  <li>エッセイ: essay</li>
+  <li>エリート: elite</li>
+  <li>リターン: return</li>
+  <li>空港ロビー: airport waiting room</li>
+  <li>控え室(ひかえしつ): waiting room</li>
+  <li>ピータン: hundred-year old egg, preserved egg</li>
+  <li>イコール: equal</li>
+  <li>インフレ: inflate</li>
+  <li>メーカー: manufacturer</li>
+</ol>
+
+<h4 id="special-verb">special verb</h4>
+<ol>
+  <li>みずみずしい: juicy and fresh</li>
+  <li>空気(くうき)を入れる: pump up</li>
+  <li>丸ごと: the whole</li>
+  <li>ありとあらゆる: all</li>
+  <li>一斉(いっせい)</li>
+  <li>井戸(いど): water well</li>
+  <li>裏口(うらぐち): backdoor</li>
+  <li>後からつけ(あと): putting in order</li>
+</ol>
+
+<h4 id="place">place</h4>
+<ol>
+  <li>鎌倉(かまくら)</li>
+</ol>
+
+<h4 id="noun">noun</h4>
+<ol>
+  <li>手拭い(てぬぐい): hand towel</li>
+  <li>祭日(さいじつ): national holiday</li>
+  <li>私有地(しゆうち): private land</li>
+  <li>花嫁(はなよめ): bride</li>
+  <li>花婿(はなむこ): groom</li>
+  <li>鰻(ウナギ)</li>
+  <li>マグロ: tuna(edible fish)</li>
+  <li>竹の子: bamboo</li>
+  <li>味噌: fermented condiment usu. made from soybeans</li>
+  <li>胡麻味噌: paste of miso, ground toasted sesame seeds</li>
+  <li>土石流(どせきりゅう): avalanche of earch and rocks</li>
+  <li>土砂降り(どしゃぶり): heavy rain</li>
+  <li>卵の殻(たまごのから): eggshell</li>
+  <li>処方箋(しょほうせん): prescription</li>
+  <li>寝巻き(ねまき): sleepwear, pyjamas</li>
+  <li>突き当り(つきあたり): end of street</li>
+  <li>当たらない: miss the target, failed to hit</li>
+  <li>直接手渡す(ちょくせつてわたす): hand over</li>
+</ol>
+
+<h4 id="verb">verb</h4>
+<ol>
+  <li>絞る(しぼる): to squeeze, to extract</li>
+  <li>売却(ばいきゃく): sell</li>
+  <li>払い: sweeping</li>
+  <li>ポイ捨て: littering</li>
+  <li>甘やかす(あまやかす): to pamper, to spoil</li>
+  <li>販売高(はんばいだか): the volume of selling 　高: quantity, amount</li>
+  <li>商売(しょうばい): business</li>
+  <li>卸売り(おろしうり): wholesale</li>
+  <li>通ずる(つうずる): to be open to traffic, to be understood</li>
+  <li>余計(よけい): too many, too much</li>
+  <li>打つける(ぶつける): to hit</li>
+  <li>猶予(ゆうよ): postpone</li>
+  <li>扱い(あつかい): treatment, service</li>
+  <li>扱い方(あつかいかた): how to manage, how to handle</li>
+  <li>盗作する(とうさくする): copy and paste</li>
+  <li>稼ぐ(かせぐ): earn money</li>
+</ol>
+
+<h4 id="食べ物">食べ物</h4>
+<ol>
+  <li>八百屋(やおや): vegetable and fruit shop</li>
+  <li>もやし: bean sprouts</li>
+  <li>唐辛子(とうがらし): pepper</li>
+  <li>野菜饅頭(やさいまんじゅう)</li>
+  <li>肉饅頭(にくまんじゅう): steamd yeast bun with filling</li>
+  <li>漬物(つけもの): japanese pickled vegetables</li>
+  <li>漬ける: to seep, to dip in</li>
+  <li>塩漬け: pickling in salt</li>
+  <li>お通し(おとおし): appetizer</li>
+  <li>キリン(麒麟): giraffe</li>
+  <li>脱脂乳(だっしにゅう)</li>
+</ol>
+
+<h4 id="銀こ">銀こ</h4>
+<ol>
+  <li>口座を設ける(もうける): sign in</li>
+  <li>預金する(よきんする): deposit</li>
+  <li>預金者(よきんしゃ): depositor</li>
+</ol>
+
+<h4 id="電機">電機</h4>
+<ol>
+  <li>充電器(じゅうでんき): charger</li>
+  <li>使い捨て(つかいすて): disposable</li>
+  <li>車両(しゃりょう): railroad cars</li>
+  <li>終電(しゅうでん): last train</li>
+  <li>人家(じんか): house, human habitation</li>
+  <li>映像(えいぞう): picture</li>
+  <li>象(ぞう): elephant</li>
+  <li>蛍光灯(けいこうとう): fluorescent lamp</li>
+  <li>範囲(はんい): the range, area</li>
+  <li>外国為替(がいこくかわせ): exchange rates 為: in order to 替: exchange</li>
+  <li>小切手(こぎって): checque, combine 切符 and 手形</li>
+  <li>切符:</li>
+  <li>手形:</li>
+  <li>黒字(くろじ): balance in the black</li>
+  <li>手当(てあて): salary</li>
+  <li>特別手当: special allowance</li>
+  <li>残業手当: the allowance of overtime work. Japanse language is very interesting, what is overtime wor, it is the left work that you don’t finish.</li>
+  <li>大見出し(おおみだし):</li>
+  <li>閉幕式(へいまくしき): headline</li>
+  <li>首輪(くびわ): necklace</li>
+  <li>幕になる(まくになる): to come to an end</li>
+</ol>
+
+<h4 id="food">food</h4>
+<ol>
+  <li>お雑煮(おぞうに): soup containing rice cakes and vegetables (炒年糕)</li>
+  <li>年越し蕎麦(としこしそば): new year’s noodle</li>
+  <li>餅(もち):</li>
+</ol>
+
+<h4 id="場所">場所</h4>
+<ol>
+  <li>裏庭(うらにわ): back yard</li>
+  <li>庭師(にわし): a man who take care of flowers</li>
+</ol>
+
+<h4 id="different-from-english">different from english</h4>
+<ol>
+  <li>スマート: slim</li>
+</ol>
+
+<h4 id="important">important</h4>
+<ol>
+  <li>削除する(さくじよ): delete</li>
+  <li>洗剤(せんざい): detergent</li>
+  <li>おやつ: snack</li>
+  <li>踏み切り(ふみきり): railway crossing</li>
+  <li>生ゴミ(なま): kitchen waste</li>
+  <li>掲示板(けいじばん): bulletin board, notice board</li>
+  <li>定年(ていねん): retirement age</li>
+  <li>手配する: preparations</li>
+  <li>長所(ちょうしょ): merit, virtue, advantage</li>
+  <li>好敵手(こうてきしゆ): opponent, enemy</li>
+</ol>
+
+<h4 id="body">body</h4>
+<ol>
+  <li>足の指(あしのゆび): toes</li>
+  <li>足が上がる: unemployment</li>
+  <li>足を洗う: quit job</li>
+  <li>足が出る: to exceed the budget</li>
+  <li>頭が固い: stubborn</li>
+  <li>頭に来る: very angry</li>
+  <li>頭が下がる: admire</li>
+  <li>腕が上がる: to gain in skill</li>
+  <li>口がうまい: good at talk</li>
+  <li>口が重い: don’t like to talk</li>
+  <li>口を出す: interrupt the other’s talk</li>
+  <li>尻が重い: unwilling to move</li>
+  <li>尻が軽い: agile</li>
+  <li>尻が長い: stay in host’s home for a long time without leaving</li>
+  <li>尻に火がつく: to be pressed by urgent business</li>
+  <li>手に手を取る: hand in hand between boys and girls</li>
+  <li>腹が黒い: malicious</li>
+  <li>耳が痛い: feeling pain in one’s ear</li>
+  <li>血を分けた仲: biology relationship</li>
+</ol>
+
+<h4 id="verb-1">verb</h4>
+<ol>
+  <li>様に(ように): in order to</li>
+  <li>ようにする: (following a verb) to be sure to do</li>
+  <li>退ける(どける): to put something out of the way</li>
+</ol>
+
+<h4 id="adverb-1">adverb</h4>
+<ol>
+  <li>せめて　せめてこれだけはもらいたい(at least give me this one)</li>
+  <li>いわゆる so called</li>
+  <li>おしゃれ: fashion-conscious, smartly dressed</li>
+  <li>派手(はで): flashy, showy</li>
+  <li>立派(りっぱ): splendid</li>
+  <li>威張る(いばる): boast, big talker</li>
+  <li>求人(きゅうじん): off of job</li>
+  <li>ついでに: by the way</li>
+  <li>そのうち: a few days later</li>
+</ol>
+
+<h4 id="number">number</h4>
+<ol>
+  <li>一休み(ひとやすみ): take a rest for a while</li>
+  <li>一言(いちごん): one sentence 一言で言えば in one sentence</li>
+</ol>
+
+<h4 id="ancient-word">ancient word</h4>
+<ol>
+  <li>貴行(きこう): your bank</li>
+  <li>監督(かんとく): director, manager</li>
+  <li>厚生(こうせい): public welfare 厚生年金: welfare pension</li>
+  <li>年金: pension, an amount of money that a company or the gouverment pays to a person who is old or sick and no longer works</li>
+  <li>国民年金: goverment pension</li>
+  <li>司会(しかい): leading a meeting</li>
+  <li>皮肉(ひにく): sarcasm,satire   皮肉な言葉</li>
+  <li>運ぶ(はこぶ):move 　荷物が来るまで運ぶ</li>
+  <li>運転(うんてん): drive</li>
+  <li>手料理(て): home-cooking</li>
+  <li>手触り(てざわり): touch feeling</li>
+  <li>て続き: procedure</li>
+</ol>
+
+<h4 id="意味が違います">意味が違います</h4>
+<ol>
+  <li>陽気(ようき): season</li>
+  <li>名刺(めいし): business card 刺: calling card</li>
+  <li>刺身:</li>
+  <li>脂身(あぶらみ): fat meat</li>
+  <li>大人しい(おとなしい):obedient 大人しい娘</li>
+  <li>大層(たいそう): exaggerated, very much</li>
+  <li>高層ビル(こうそう): skyscraper</li>
+</ol>
+
+<h4 id="difficult-word-1">difficult word</h4>
+<ol>
+  <li>赤ん坊(あかんぼう): baby</li>
+  <li>研修(けんしゅう): training</li>
+  <li>屋台(やたい): a food cart</li>
+  <li>休養(きゅうぎょう): business suspended</li>
+  <li>連休(れんきゅう): consecutive holidays</li>
+  <li>案内: guidance</li>
+  <li>案外: unexpectedly</li>
+  <li>考案する(こうあん): plan</li>
+  <li>台無し: spoiled, ruin  台: support</li>
+  <li>雑談(ざつだん): idle talk</li>
+  <li>贅沢(ぜいたく): luxury 贅: extravagance, luxury  沢: swamp</li>
+  <li>沢山(たくさん): a lot</li>
+  <li>多数(たすう): majority</li>
+  <li>半数(はんすう): half</li>
+  <li>裏返す(うらがえす): to turn inside out</li>
+  <li>頼もしい: trustworthy</li>
+  <li>勤務(きんむ): service</li>
+  <li>件名(けんめい): term</li>
+  <li>興行(こうぎょう): performance</li>
+</ol>
+
+<h4 id="件">件</h4>
+<ol>
+  <li>件: matter, affair</li>
+  <li>本件: this matter</li>
+  <li>要件(ようけん): important matter</li>
+</ol>
+
+<h4 id="place-1">place</h4>
+<ol>
+  <li>裁判所(さいばんしよ): court</li>
+  <li>判子(はんこ):  seal used for signature</li>
+  <li>国連(こくれ): United Nations</li>
+</ol>
+
+<h4 id="word-3">word</h4>
+<ol>
+  <li>格好いい: good-looking</li>
+  <li>格好(かっこう): appearance</li>
+  <li>様子(ようす):situation</li>
+  <li>怪我(けが): injury</li>
+  <li>混む(こむ): to be crowed</li>
+</ol>
+
+<h4 id="合わせ-as-suffix">合わせ as suffix</h4>
+
+<ol>
+  <li>join together</li>
+</ol>
+
+<p>盛り合わせ: combination platter <br />
+組み合わせ: combination <br />
+乗り合わせ: to share a vehicle <br /></p>
+
+<ol>
+  <li>
+    <p>opposite</p>
+  </li>
+  <li>
+    <p>facing
+問い合わせ: ask for infromation
+打ち合わせ: advance arrangements
+間に合わせる: in time</p>
+  </li>
+</ol>
+
+<h4 id="差">差</h4>
+<ol>
+  <li>日差し: sunlight</li>
+  <li>差す: to shine</li>
+  <li>目差す(めざす): to ait at</li>
+</ol>
+
+<h4 id="body-1">body</h4>
+<ol>
+  <li>手間: time and labour 間:time</li>
+  <li>夕立(ゆうだち): heavy rain for a very short time</li>
+</ol>
+
+<h4 id="metaphor">metaphor</h4>
+<ol>
+  <li>目にする: to catch sight of</li>
+  <li>お目にかかる: to meet someone of higher status  一度、仕事で、木村先生にお目にかかったことがある。</li>
+  <li>耳にする: to hear by chance</li>
+  <li>気にする: to pay undue amount of attention to something</li>
+  <li>夢中になる:(むちゅうになる)</li>
+  <li>鼻がたかい: proud</li>
+  <li>後にする: to put off</li>
+  <li>改める(あらためる): to change, to do properly</li>
+  <li>手に入る(手にはいる): to come into possession of</li>
+  <li>腕前(うでまえ): ability</li>
+  <li>活気(かっき): energy</li>
+  <li>活発(かっぱつ): vigor</li>
+  <li>用心する(ようじんする): caution</li>
+  <li>要するに(ようするに): as a conclusion</li>
+  <li>気分転換(きぶんてんかん): change of mood</li>
+  <li>平気(へいき): composure, calmness</li>
+</ol>
+
+<h4 id="決">決</h4>
+<ol>
+  <li>可決(かけつ): approval</li>
+  <li>否決(ひけつ): rejection</li>
+  <li>決断(けつだん): decision</li>
+  <li>無断(むだん): without permission</li>
+</ol>
+
+<h4 id="薬">薬</h4>
+<ol>
+  <li>咳止め(せきどめ): cough medicine</li>
+  <li>痛み止め(いたみどめ): painkiller</li>
+</ol>
+
+<h4 id="diease">diease</h4>
+<ol>
+  <li>胃痛(いつう): stomach-ache</li>
+</ol>
+
+<h4 id="verb-2">verb</h4>
+<ol>
+  <li>話しかける:(はなしかける) to start a conversation</li>
+  <li>発生(はっせい): outbreak, occurrence</li>
+  <li>請求書(せいきゅうしょ): bill</li>
+  <li>運転免許(うんてんめんきょ): driver license</li>
+</ol>
+
+<h4 id="adjective-1">adjective</h4>
+<ol>
+  <li>細長い:</li>
+</ol>
+
+<h4 id="word-4">word</h4>
+<ol>
+  <li>通貨: currency  currency is a kind of commodity you can use everywhere</li>
+  <li>役割(やくわり): part, role</li>
+  <li>外れる(はずれる): to be disconnected (you can understand in this way, 
+something disconnected, so it to be out)</li>
+  <li>仲良く(なかよく): getting along well with  仲: relationship</li>
+  <li>宛先(あてさき): address, destination 宛て: purpose,end</li>
+  <li>どんぶり: big bowl</li>
+  <li>取って(とって): handle,knob</li>
+  <li>我が社: our company</li>
+  <li>我が子: one’s own child</li>
+  <li>我が国: our country</li>
+  <li>無駄: useless</li>
+</ol>
+
+<h4 id="中国言葉違います">中国言葉違います</h4>
+<p>japanese word is a metaphor</p>
+
+<ol>
+  <li>見舞う(みまう): to ask after health</li>
+  <li>仕舞う(しまう): to finish</li>
+  <li>しまうた: damn it</li>
+  <li>
+    <p>仕上げる: finish</p>
+  </li>
+  <li>花見: flower viewing</li>
+  <li>所見(しょけん): view, opinion</li>
+  <li>向かう: to go towards　</li>
+  <li>立ち寄り: to stop by, to drop in for a short visit 
+立ち: verb prefix conveying emphasis and sometimes formality
+寄る: to stop by, to make a short visit</li>
+  <li>年寄る: to grow old
+寄る: to grow old</li>
+  <li>手軽(てがる): easy, simple</li>
+  <li>気軽(きがる): carefree, lighthearted</li>
+  <li>部署: one’s post</li>
+  <li>味方: friend</li>
+  <li>共食い(ともぐい): eating each other</li>
+  <li>見込む：to anticipate, to expect. 込み：including</li>
+  <li>快晴(かいせい): clear weather 快(かい): pleasure</li>
+  <li>快適(かいてき): pleasant, agreeable</li>
+  <li>駄菓子(だがし): cheep sweets   駄: low-grade, use as suffix</li>
+  <li>油断:  carelessness 断: decision</li>
+  <li>儲ける(もうける): to profit 儲け: profit</li>
+  <li>工夫(くふう): coming up with  工: worker</li>
+  <li>立ち上がる: stand up  上がる: indicates completion</li>
+  <li>今度: this time       度: counter for occurrences and times</li>
+  <li>被災地(ひさいち):     被: indicates the target of an activity.</li>
+  <li>落第: dropping out of a class  第: ordinal</li>
+  <li>用意(ようい): preparation  用: task</li>
+  <li>用件(ようけん): something that should be performed</li>
+  <li>話し掛ける: begin to talk かける: after -masu stem of verb, to begin(but not complete)</li>
+  <li>有難い(ありがたい): grateful  難い: difficult to</li>
+  <li>有能(ゆうのう): capable  能: talent</li>
+  <li>中古車: second-hand bicycle 中古: second-hand 古: used item, secondhand item</li>
+  <li>やる気: willingness to do something</li>
+  <li>選挙: election 挙: raise</li>
+  <li>弁護士: atternoy 弁: speech　護: protect</li>
+  <li>看護師(かんごし): nurse</li>
+  <li>着替える: changing clothes  着: clothes</li>
+  <li>着せる: to put clothes on</li>
+  <li>落ち着く: to calm down</li>
+  <li>非常食: emergency rations 非常: emergency</li>
+  <li>非常電話: emergency call</li>
+  <li>送料: shipping charge  料: fee 　</li>
+  <li>改札口: ticket barrier 札: ticket　</li>
+  <li>千円札: 1000 yen bill 札: paper money</li>
+  <li>丼: どん porcelain bowl</li>
+  <li>広告(こうこく):</li>
+  <li>合図: signal  合い: suffix together 図: figure</li>
+  <li>テレビ局: 局: department</li>
+  <li>道幅: width of a road 幅: width</li>
+  <li>一途: the only way 途: way</li>
+  <li>返事: reply</li>
+  <li>通帳(つうちょう): bankbook</li>
+  <li>物価: price</li>
+  <li>定価(ていか): regular price</li>
+</ol>
+
+<h4 id="phrase">phrase</h4>
+<ol>
+  <li>歳をとっている become old</li>
+  <li>喝采を浴びる</li>
+  <li>バランスをとる</li>
+  <li>予定を立てる(make plan)</li>
+  <li>役立てる(やくだてる): to put to use</li>
+  <li>時間にを破れる</li>
+  <li>面倒を見る(take care of)</li>
+</ol>
+
+<h4 id="違い意味言葉">違い意味言葉</h4>
+<ol>
+  <li>吹雪: blow storm  吹(ふ): blow</li>
+  <li>風情: taste</li>
+  <li>騒音: noise 騒: make noise</li>
+  <li>物騒: disturbed 騒: disturb</li>
+  <li>放送: broadcast 放: release</li>
+  <li>活字: printing type 活: suffix, action</li>
+  <li>駅弁: boxed lunch bought at a station, variety of sexual position</li>
+  <li>近所迷惑: neighborhood nuisance</li>
+  <li>刺身:raw sliced fish 刺し: sliced raw fish 身: main part, meat as apposed to bone</li>
+  <li>瀬戸物:  瀬: shallow china</li>
+  <li>湯気: steam 湯: hot water</li>
+  <li>配布: distribution</li>
+  <li>退屈: tedium</li>
+  <li>就労(しゅうろう): being employed</li>
+  <li>日付: date, this word can be understand separately, ’ひ’ and ‘付’,to be
+connected, days which to be connected</li>
+  <li>気を付けて: here, the object we want to apply is ‘気’</li>
+  <li>交付: delivering, handing over. 交+付</li>
+  <li>手首: waist</li>
+  <li>荒い波: (あらい波)wild waves</li>
+  <li>大工: carpenter</li>
+  <li>瀬戸際: critical moment</li>
+  <li>調う:(ととのう) to be prepared</li>
+  <li>叶う:(かなう) to come true 願いが叶う</li>
+  <li>有線: communicate by wire</li>
+  <li>代金: price</li>
+  <li>借金(しゃっきん): loan, liabilities</li>
+  <li>税金: tax,duty</li>
+  <li>生意気: cheeky, impertinent</li>
+  <li>内約: private contract</li>
+  <li>早速:(さっそく) at once, immediately</li>
+  <li>味方:(みかた) friend, supporter</li>
+  <li>歯車:(はぐるま) gear</li>
+  <li>内服:(ないふく) internal use</li>
+  <li>素人:(しろうと) amateur</li>
+  <li>素直(すなお): honest, unaffected</li>
+  <li>率直(そっちょく): frankness</li>
+  <li>在学:(ざいがく) enrolled in school</li>
+  <li>大言:(たいげん) big talk</li>
+  <li>電気代:(でんきだい) electric utility expense だい: cost, charge</li>
+  <li>手早い:(てばやい) quick, agile</li>
+  <li>金物:(かなもの) metal utensil</li>
+  <li>鍋物:(なべもの) food cooked in a pot</li>
+  <li>名物(めいぶつ): famous product</li>
+  <li>好物(こうぶつ): favourite food こう: good</li>
+  <li>本物(ほんもの): real thing</li>
+  <li>本番(ほんばん): performance</li>
+  <li>生物(せいぶつ): living things</li>
+  <li>入れ物: container</li>
+  <li>物置(ものおき): storage room</li>
+  <li>現物: actual goods</li>
+  <li>しゃぶしゃぶ:</li>
+  <li>仕入れ:(仕入れ)  stocking</li>
+  <li>耳が遠い: (みみがとおい) poor hearing</li>
+  <li>遺族: bereaved family</li>
+  <li>円満:(えんまん) perfection</li>
+  <li>肌着:(はだぎ) underclothes</li>
+  <li>鳥肌(とりはだ): goose bumps</li>
+  <li>葉書:(はがき) postcard 葉書を出す</li>
+  <li>生地:(きじ) texture,cloth</li>
+  <li>地味(じみ): plain, simple</li>
+  <li>下味(したあじ): seasoning food</li>
+  <li>気の毒:(きのどく) pitiful</li>
+  <li>手軽:(てがる) easy</li>
+  <li>お年玉:(おとしだま) New Year’s gift</li>
+</ol>
+
+<h4 id="英語言葉違います">英語言葉違います</h4>
+
+<ol>
+  <li>スマート: slim</li>
+</ol>
+
+<h4 id="adverb-2">adverb</h4>
+<ol>
+  <li>ちっと: a little bit</li>
+  <li>ちっとも:  not at all(net.verb)</li>
+  <li>すでに: already 
+すでにこの時期,インスタンラーメンの国際化という夢を持っていた</li>
+  <li>一方( いっぽう): on the one hand, on the other hand</li>
+</ol>
+
+<h4 id="difference">difference</h4>
+<ol>
+  <li>もう: already も: too</li>
+</ol>
+
+<h4 id="無料と無給">無料と無給</h4>
+<ol>
+  <li>無料: free</li>
+  <li>無給: unpaid</li>
+</ol>
+
+<h4 id="荷">荷</h4>
+<p>荷: goods,baggage</p>
+<ol>
+  <li>出荷料: shiping charges</li>
+  <li>荷物: luggage</li>
+  <li>手荷物: hand luggage</li>
+</ol>
+
+<h4 id="替える">替える</h4>
+
+<ol>
+  <li>両替: 両 obsolete unit of currency</li>
+  <li>着替え: change clothes</li>
+  <li>為替(かわせ): exchange</li>
+</ol>
+
+<h4 id="気">気</h4>
+<ol>
+  <li>気を揉む: きをもむ to worry</li>
+  <li>気を遣う(きをつかう): to pay attention to</li>
+</ol>
+
+<h4 id="慮">慮</h4>
+<ol>
+  <li>遠慮: reserve, thoughfulness</li>
+  <li>配慮:(はいりょ) consideration, concern</li>
+</ol>
+
+<h4 id="術">術</h4>
+<ol>
+  <li>技術</li>
+  <li>手術: しゅじゅつ</li>
+</ol>
+
+<h4 id="接">接</h4>
+<ol>
+  <li>面接試験: めんせつしけん</li>
+  <li>直接: direct</li>
+</ol>
+
+<h4 id="prefix-and-suffix">prefix and suffix</h4>
+<ol>
+  <li>真: means completely, correct 真っ暗(漆黑)、真っ青(深蓝)</li>
+  <li>マン: means male              サラリーマン、カメラマン(male photography)</li>
+  <li>取り: emphatic or formal prefix 取り消す(to cancel)
+    <ul>
+      <li>取り箸:(とりばし) chopsticks used to move food from serving dish to one’s own dish</li>
+      <li>段取り:plans(how to get step)  段: step</li>
+      <li>取り扱い: deal with 扱い: to deal with</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="調味料ちょうみりょう">調味料(ちょうみりょう)</h4>
+
+<h4 id="counting-and-counters">counting and counters</h4>
+<p>月 <br /></p>
+<ol>
+  <li>April 四月(しがつ)</li>
+  <li>July  七月(しちがつ)</li>
+  <li>September 九月(くがつ)
+日 <br />
+<img src="/images/japanese-date.png" />
+分<br /></li>
+  <li>1分(いっぷん)</li>
+  <li>3分(さんぷん)</li>
+  <li>4分(よんぷん)</li>
+  <li>6分(ろっぷん)</li>
+  <li>8分(はっぷん)</li>
+  <li>10分(じゅっぷん)
+週<br /></li>
+  <li>三週間(さんしゅうかん)</li>
+  <li>一週間(いっしゅうかん)</li>
+  <li>8週間(はっしゅうかん)
+月 the small [ヶ] is totally different from ケ, it is the abbrevation for the kanji[箇]<br /></li>
+  <li>一ヶ月(いっかげつ)</li>
+  <li>六ヶ月(ろっかげつ)</li>
+  <li>十ヶ月(じゅっかげつ)</li>
+</ol>
+
+<p>a span of time <br />
+The basic counter for a span of time is [間] which is read as [かん]</p>
+<ol>
+  <li>you can attach it to the end of hours, days, weeks, and years.</li>
+  <li>minutes and second do not need this counter and month has a seperate counter.</li>
+  <li>二時間40分(にじかんよんじゅっぷん)</li>
+  <li>二十日間(はつかかん)</li>
+  <li>15日間(じゅうごにちかん)</li>
+  <li>二年間(にねんかん)</li>
+  <li>一日(いちにち)</li>
+</ol>
+
+<h4 id="目-to-show-order">目 to show order</h4>
+<p>you can attach [目] to different counters to show order. <br />
+例えば、[一番] which means number one becomes the first when you add <a href="一番目">目</a></p>
+<ol>
+  <li>1回目　the first time</li>
+  <li>四人目 the fourth person</li>
+</ol>
+
+<h4 id="weapon">weapon</h4>
+<ol>
+  <li>地対地(ちたいち)ミサイル:　ground-to-ground guided missle</li>
+</ol>
+
+
+      
+      <footer>
+        <p>
+          本作品由 <a href="mailto:zhanghy1012@gmail.com">reed</a> 创作，采用
+          <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="查看协议详细信息" target="_blank">CC BY-NC-SA 3.0 许可协议</a>
+          进行许可。
+        </p>
+      </footer>
+      
+    </section>
+
+  </article>
+</section>
+
+<section>
+
+  <div class="tag-box-wrapper">
+    
+    <ul class="tag-box inline">
+      <li><i class="icon-large icon-folder-open"></i></li>
+      
+      
+
+
+  
+     
+    	<li><a href="/categories.html#language-ref">
+    		language <span>5</span>
+    	</a></li>
+    
+  
+
+
+
+    </ul>
+    
+
+    
+    <ul class="tag-box inline">
+      <li><i class="icon-large icon-tags"></i></li>
+      
+      
+
+
+  
+     
+    	<li><a href="/tags.html#japan-ref">japan <span>7</span></a></li>
+    
+  
+
+
+
+    </ul>
+    
+  </div>
+
+  <div class="pagination">
+    <ul>
+      
+      <li class="prev"><a href="/python/code-python-openml.html" title="Python openml">&larr; 上一篇</a></li>
+      
+      <li><a href="/archive.html">文章列表</a></li>
+      
+      <li class="next"><a href="/math/math-structure-algebraic-topology.html" title="Algebraic Topology: Topology">下一篇 &rarr;</a></li>
+      
+    </ul>
+  </div>
+
+</section>
+
+<section id="comments">
+  
+
+
+  
+<div id="disqus_thread"></div>
+
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'just-do-it-1';
+    
+    var disqus_identifier = 'Japanese: Word';
+    var disqus_title = 'Japanese: Word';
+    var disqus_url = '/language/japanese-word-phrase.html';
+    
+    
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+
+
+
+
+</section>
+
+
+
+
+
+
+        </div>
+      </div>
+
+      <div id="back-top">
+  <a href="#top" title="回到顶部">
+    <i class="icon-2x icon-arrow-up"></i>
+  </a>
+</div>
+<script type="text/javascript">
+$("#back-top").hide();
+$(document).ready(function () {
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 100) {
+      $('#back-top').fadeIn();
+    } else {
+      $('#back-top').fadeOut();
+    }
+  });
+  $('#back-top a').click(function () {
+    $('body,html').animate({
+      scrollTop: 0
+    }, 500);
+    return false;
+  });
+});
+</script>
+
+
+    </section>
+
+    <footer id="bottom">
+      <p align="center">&copy; 2020 reed
+        with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+        and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+      </p>
+    </footer>
+  </div>
+
+  <script type="text/javascript">
+    $('article.post a').attr('target', '_blank');
+    if (navigator.appVersion.indexOf("Mac") != -1) {
+      $('code, pre').css('font-family', 'Courier, monospace');
+    }
+  </script>
+  
+
+  
+</body>
+</html>
+
