@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Coronavirus"
+title: "被困在家的三十八天"
 keywords: [""]
 description: ""
 category: ""
@@ -8,7 +8,7 @@ tags: []
 ---
 {% include JB/setup %}
 
-#### 搭飞机
+#### 乘飞机
 飞机座很多次了，可能因为隔得时间太长，每次都是差一点要错过,都没能在在机场免税店
 好好逛一下。
 1. 值机, 找到搭乘航空公司的值机柜台办理，一般在飞机起飞前的45分钟左右停止值机。
