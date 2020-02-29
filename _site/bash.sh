@@ -6,9 +6,8 @@ mkdir ~/Desktop/docs
 cp -r ./_site/* ~/Desktop/docs
 
 git checkout master
-rm -r *
 
-cp -r ~/Desktop/docs/* ./
+mv  ~/Desktop/docs/* ./
 rm -r  ~/Desktop/docs
 git add .
 git commit -m "me"
