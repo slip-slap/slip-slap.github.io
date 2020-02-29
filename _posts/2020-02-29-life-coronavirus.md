@@ -3,7 +3,7 @@ layout: post
 title: "被困在家的三十八天"
 keywords: [""]
 description: ""
-category: ""
+category: "life"
 tags: []
 ---
 {% include JB/setup %}
