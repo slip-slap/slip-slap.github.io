@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Stochastic Process: Countable State Markov Chains"
+title: "S.P.: Countable State Markov Chains"
 keywords: [""] 
 description: ""
 category: "math"

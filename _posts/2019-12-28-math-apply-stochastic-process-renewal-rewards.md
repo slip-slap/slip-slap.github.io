@@ -1,6 +1,6 @@
 ---
 layout: post 
-title: "Stochastic Process: Renewal Rewards"
+title: "S.P.: Renewal Rewards"
 keywords: ["Markov Chain"] 
 description: ""
 category: "math"

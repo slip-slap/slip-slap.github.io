@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Gibbs Sampling for dummies"
-keywords: ["Gibbs Sampling","Conditional Probability","MCMC"]
+title: "P.A.S.M.I.: Gibbs Sampling"
+keywords: ["MCMC"]
 description: ""
 category: "math"
 tags: ["sampling"]

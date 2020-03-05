@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "P.A.S.: Likelihood Inference"
+title: "P.A.S.M.I.: Likelihood Inference"
 keywords: [""] 
 description: ""
 category: "math"

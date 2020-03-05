@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "P.A.S.: Finites States of Markov Chain"
+title: "S.P.: Finites States of Markov Chain"
 keywords: ["Markov Chain"] 
 description: ""
 category: "math"
@@ -41,7 +41,8 @@ src="{{IMAGE_PATH}}/math-apply-probability-and-statistics-stochastic-process-fin
 
 #### Periodic States and Classes. 
 The period, d(i), of state i is defined as <br />
-$d(i)=gcd{n:p_{ii}^n}>0$ <br />
+$d(i)=gcd{n:p_{ii}^n}>0$ 
+
 - if d(i)=1, i is aperiodic 
 - if d(i)>1, i is periodic with period d(i)
 - All states in the same class have the same period.

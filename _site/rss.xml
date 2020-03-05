@@ -5,18 +5,64 @@
   <description>Just Do It - </description>
   <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
   <link></link>
-  <lastBuildDate>Sat, 29 Feb 2020 21:41:06 +0900</lastBuildDate>
-  <pubDate>Sat, 29 Feb 2020 21:41:06 +0900</pubDate>
+  <lastBuildDate>Thu, 05 Mar 2020 21:17:49 +0900</lastBuildDate>
+  <pubDate>Thu, 05 Mar 2020 21:17:49 +0900</pubDate>
   <ttl>1800</ttl>
 
 
   <item>
-    <title>被困在家的三十八天</title>
+    <title>Abstract of Application Subject</title>
+    <description>
+&lt;ol&gt;
+  &lt;li&gt;probability and statistics, random process, information theory, graph theory.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;relationship-between-machine-learning-and-information-theory&quot;&gt;Relationship Between Machine Learning and Information Theory&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Human Brain is amazing, it can memorize and do the inference, but how ? we
+want to know&lt;/li&gt;
+  &lt;li&gt;We are interested in do the inference based on known information, that’s the
+job of machine learning. &lt;strong&gt;one problem&lt;/strong&gt; is how the data should be feed into
+neural network, in what kind? That’s the job of information theory.&lt;/li&gt;
+  &lt;li&gt;Brains are the ultimate compression and communication systems.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/math/math-apply.html</link>
+    <guid>/math/math-apply</guid>
+    <pubDate>Mon, 02 Mar 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>P.A.S.: Variational Inference</title>
+    <description>
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.quora.com/What-is-variational-inference&quot;&gt;what is variational Inference&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cs.princeton.edu/courses/archive/fall11/cos597C/lectures/variational-inference-i.pdf&quot;&gt;variational bayes&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/math/math-apply-probability-and-statistics-variational-inference.html</link>
+    <guid>/math/math-apply-probability-and-statistics-variational-inference</guid>
+    <pubDate>Mon, 02 Mar 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>I.T.: Hash Codes</title>
+    <description>
+</description>
+    <link>/math/math-apply-information-theory-hash-codes.html</link>
+    <guid>/math/math-apply-information-theory-hash-codes</guid>
+    <pubDate>Sun, 01 Mar 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>春节: 被困在家的三十八天</title>
     <description>
 &lt;h4 id=&quot;乘飞机&quot;&gt;乘飞机&lt;/h4&gt;
 &lt;p&gt;飞机座很多次了，可能因为隔得时间太长，每次都是差一点要错过,都没能在在机场免税店
 好好逛一下。&lt;/p&gt;
 &lt;ol&gt;
+  &lt;li&gt;由于价格歧视，机票价格波动很大, 没事要多多关注。订票直接在航空公司官网预定。&lt;/li&gt;
   &lt;li&gt;值机, 找到搭乘航空公司的值机柜台办理，一般在飞机起飞前的45分钟左右停止值机。
 有个要回中国的小伙子插队在韩国航空公司柜台值机。&lt;/li&gt;
   &lt;li&gt;安检，这是最耗时的，所有航空公司使用统一的安检通道, 甚至还有脱鞋检查。&lt;/li&gt;
@@ -42,6 +88,7 @@
   &lt;li&gt;我大姨和二妞挺关心我的, 隔天都有打电话来问.
 对我小姨一家彻底失望，完全没有关心。
 建中很🉑️，下次回去要买点东西给他女儿。&lt;/li&gt;
+  &lt;li&gt;回到日本，检查信箱，收到305(曾同学)情人节那天送的巧克力,还有小纸条,开森。&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h4 id=&quot;关于生活&quot;&gt;关于生活&lt;/h4&gt;
@@ -610,12 +657,22 @@ conditional probability distributions $P(y|x)$, one for each $x \in
 $A_{\mathcal{X}}$&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h4 id=&quot;the-capacity-of-a-channel-q-is&quot;&gt;The Capacity of a channel Q is:&lt;/h4&gt;
+&lt;h5 id=&quot;capacity-of-channel-q&quot;&gt;Capacity of Channel Q:&lt;/h5&gt;
 &lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;C(Q)=\max _{\mathcal{P}_{X}} I(X ; Y)&lt;/script&gt;&lt;/p&gt;
 &lt;ul&gt;
+  &lt;li&gt;The capacity of a channel is the maximum over all input distributions $P(x)$,
+of the mutual information.&lt;/li&gt;
   &lt;li&gt;The distribution $\mathcal{P}_X$ that achieves the maximum is called the
 optimal input distribution, denoted by $\mathcal{P}_X^{\star}$&lt;/li&gt;
+  &lt;li&gt;The nature of a channel is that it &lt;strong&gt;defines a conditional distribution&lt;/strong&gt;, nothing
+but a conditional distribution.&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h5 id=&quot;what-does-this-use-for&quot;&gt;What does this use for?&lt;/h5&gt;
+&lt;ol&gt;
+  &lt;li&gt;capacity actually measures how fast you can reliably communicate over the
+channel&lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;h4 id=&quot;concept-1&quot;&gt;Concept&lt;/h4&gt;
 &lt;ol&gt;
@@ -624,10 +681,10 @@ optimal input distribution, denoted by $\mathcal{P}_X^{\star}$&lt;/li&gt;
 
 &lt;h4 id=&quot;shannons-noisy-channel-coding-theorem&quot;&gt;Shannon’s noisy-channel coding theorem&lt;/h4&gt;
 &lt;p&gt;Associated with each discrete memoryless channel, there is a nonnegative number
-C(called the channel capacity) with the following property. For any $\epislon &amp;gt;0$
+C(called the channel capacity) with the following property. For any $\epsilon &amp;gt;0$
 and $R&amp;lt;C$, for large enough N, there exists a block code of length N and are
 $\geq R$ and a decoding algorithm, such that the maximal probability of block
-error is $\leq \epislon$&lt;/p&gt;
+error is $\leq \epsilon$&lt;/p&gt;
 
 </description>
     <link>/math/math-apply-information-theory-communication-over-noisy-channel.html</link>
@@ -1095,7 +1152,7 @@ According to Wald’s equality&lt;br /&gt;
   </item>
 
   <item>
-    <title>Stochastic Process: Renewal Rewards</title>
+    <title>S.P.: Renewal Rewards</title>
     <description>
 &lt;h4 id=&quot;time-average-residual-life&quot;&gt;Time-average Residual Life&lt;/h4&gt;
 &lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\int_{0}^{t} y(\tau) d \tau=\frac{1}{2} \sum_{i=1}^{n(t)}
@@ -1187,21 +1244,23 @@ weeks.&lt;/li&gt;
   </item>
 
   <item>
-    <title>Stochastic Process.: Renewal Process</title>
+    <title>S.P.: Renewal Process</title>
     <description>
 &lt;h4 id=&quot;motivation&quot;&gt;Motivation&lt;/h4&gt;
 &lt;p&gt;Much of this chapter will be devoted to understanding the behavior of N(t) and
 N(t)/t as t becomes large.&lt;/p&gt;
+
 &lt;h4 id=&quot;renewal-processes-and-poisson-process&quot;&gt;Renewal Processes and Poisson Process&lt;/h4&gt;
+
 &lt;ol&gt;
   &lt;li&gt;A renewal process is an arrival process for which the interarrival intervals
 $X_1,X_2,\cdots$ are IID. Renewal processes can be specified in three standard
 ways.
     &lt;ul&gt;
-      &lt;li&gt;the names come from that you start over at each interval.
--. The joint distribution of the arrival epochs $S_1,S_2,\cdots$ 
--. The joint distribution of the interarrival times $X_1,X_2,\cdots$
--. The joint distribution of the counting rv’s&lt;/li&gt;
+      &lt;li&gt;the names come from that you start over at each interval.&lt;/li&gt;
+      &lt;li&gt;The joint distribution of the arrival epochs $S_1,S_2,\cdots$&lt;/li&gt;
+      &lt;li&gt;The joint distribution of the interarrival times $X_1,X_2,\cdots$&lt;/li&gt;
+      &lt;li&gt;The joint distribution of the counting rv’s&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;A Poisson process is a renewal process for which the interarrival rv’s are
@@ -1255,7 +1314,7 @@ if it exists,is the time-average renewal rate over $(0,\infty)$ for the
   </item>
 
   <item>
-    <title>P.A.S.: Queueing Theory</title>
+    <title>S.P.: Queueing Theory</title>
     <description>
 &lt;h4 id=&quot;kendalls-notation&quot;&gt;Kendall’s Notation&lt;/h4&gt;
 &lt;p&gt;Kendall notation is the standard system used to describe and classify a queueing
@@ -2769,35 +2828,8 @@ influence each other, regardless of Z.&lt;/li&gt;
     <title>P.A.S.: Introduction</title>
     <description>
 &lt;h4 id=&quot;introduction&quot;&gt;Introduction&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Probability is the science of uncertainty. It provides precise mathematical
-rules for understanding and analyzing our own ignorance.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;probability-model&quot;&gt;Probability model&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;A probability model&lt;/strong&gt; consists of a nonempty set called the sample space
-&lt;strong&gt;S&lt;/strong&gt;; a collection of events that are subsets of &lt;strong&gt;S&lt;/strong&gt;; and a probability
-measure &lt;strong&gt;P&lt;/strong&gt; assigning a probability between 0 and 1 to each event.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;strong&gt;Sample Space&lt;/strong&gt;: A sample space is any set that lists all possible outcomes(or, responses) of
-some unknown experiment or situation.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Probability Measure&lt;/strong&gt;: usually written P. This probability measure must
-assign, to each event A, a probability P(A).&lt;/li&gt;
-  &lt;li&gt;$A^c$: if A is any event, we write $A^c$(read “A complement”) for the event
-that A does not occur.
-&lt;script type=&quot;math/tex&quot;&gt;P(A^c)=1-P(A)&lt;/script&gt;&lt;/li&gt;
-&lt;/ol&gt;
 
 &lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;To study geometry, we introduce calculus, and now, to study probability, we
-also need to use calculus, calculus just a tool can be used in geometry and
-probability.&lt;/li&gt;
-  &lt;li&gt;The true logic for this world is the &lt;strong&gt;calculus of probabilities&lt;/strong&gt;, which takes
-account of the magnitude of the probability which is, or ought to be, in a
-reasonable man’s mind (Maxwell 1950)&lt;/li&gt;
-&lt;/ol&gt;
 
 </description>
     <link>/math/math-apply-probability-and-statistics-introduction.html</link>
@@ -2914,7 +2946,7 @@ holds in some of the most important problems in statistical inference.&lt;/p&gt;
   </item>
 
   <item>
-    <title>P.A.S.: Likelihood Inference</title>
+    <title>P.A.S.M.I.: Likelihood Inference</title>
     <description>
 &lt;h4 id=&quot;introduction&quot;&gt;Introduction&lt;/h4&gt;
 &lt;ol&gt;
@@ -3003,8 +3035,8 @@ depend only on &lt;strong&gt;the model&lt;/strong&gt;  ${P_{\theta}: \theta \in 
 &lt;/ol&gt;
 
 </description>
-    <link>/math/math-apply-probability-and-statistics-likelihood-inference.html</link>
-    <guid>/math/math-apply-probability-and-statistics-likelihood-inference</guid>
+    <link>/math/math-apply-probability-and-statistics-model-inference-likelihood-inference.html</link>
+    <guid>/math/math-apply-probability-and-statistics-model-inference-likelihood-inference</guid>
     <pubDate>Tue, 10 Dec 2019 00:00:00 +0900</pubDate>
   </item>
 
@@ -3085,7 +3117,7 @@ distribution&lt;/a&gt;&lt;/li&gt;
   </item>
 
   <item>
-    <title>P.A.S: Expectation and Variance</title>
+    <title>P.A.S.M: Expectation and Variance</title>
     <description>
 &lt;h4 id=&quot;poisson-distribution&quot;&gt;Poisson Distribution&lt;/h4&gt;
 &lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;P(X(t)=k)=\frac{(\lambda t)^{k} e^{-\lambda t}}{k !}&lt;/script&gt;&lt;/p&gt;
@@ -3108,13 +3140,13 @@ x=\int_{0}^{\infty} x \cdot \lambda e^{-\lambda x} d x=\frac{1}{\lambda}
   &lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/saltriver/article/details/53982885&quot;&gt;指数分布的期望和方差CSDN&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </description>
-    <link>/math/math-apply-probability-and-statistics-expectation-variance.html</link>
-    <guid>/math/math-apply-probability-and-statistics-expectation-variance</guid>
+    <link>/math/math-apply-probability-and-statistics-model-expectation-variance.html</link>
+    <guid>/math/math-apply-probability-and-statistics-model-expectation-variance</guid>
     <pubDate>Fri, 06 Dec 2019 00:00:00 +0900</pubDate>
   </item>
 
   <item>
-    <title>P.A.S: Law of Large Number</title>
+    <title>P.A.S.M: Law of Large Number</title>
     <description>
 &lt;h4 id=&quot;what-is-the-crap-of-sampling-distribution&quot;&gt;What is the crap of Sampling Distribution?&lt;/h4&gt;
 &lt;ol&gt;
@@ -3238,8 +3270,8 @@ mean&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 </description>
-    <link>/math/math-apply-probability-and-statistics-law-of-large-number.html</link>
-    <guid>/math/math-apply-probability-and-statistics-law-of-large-number</guid>
+    <link>/math/math-apply-probability-and-statistics-model-law-of-large-number.html</link>
+    <guid>/math/math-apply-probability-and-statistics-model-law-of-large-number</guid>
     <pubDate>Wed, 04 Dec 2019 00:00:00 +0900</pubDate>
   </item>
 
@@ -12935,7 +12967,7 @@ to all elements of S, if such an element exists.&lt;/p&gt;
   </item>
 
   <item>
-    <title>P.A.S.: Variational Bayes Expectation Maximization Algorithm</title>
+    <title>P.A.S.: Variational Bayes Expectation Maximization</title>
     <description>
 &lt;h4 id=&quot;a-simple-linear-regression&quot;&gt;a simple linear regression&lt;/h4&gt;
 &lt;p&gt;Let’s look at a basic linear regression. we want to map input into real numbers.
@@ -12993,6 +13025,13 @@ and each parameter Range is R, so how to calculate the posterior probability?
 &lt;h4 id=&quot;the-relationship-between-mle-and-map&quot;&gt;the relationship between MLE and MAP&lt;/h4&gt;
 &lt;p&gt;MLE is a special case of MAP, which prior probability all same&lt;/p&gt;
 
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;variation: something that is similar to something else but different in some
+way. (variational)&lt;/li&gt;
+  &lt;li&gt;In Chinese, we name this method “变分EM”, who can understand this crap.&lt;/li&gt;
+&lt;/ol&gt;
+
 &lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
 &lt;ol&gt;
   &lt;li&gt;&lt;a href=&quot;https://wiseodd.github.io/techblog/2017/01/01/mle-vs-map/&quot;&gt;MLE and MAP&lt;/a&gt;&lt;/li&gt;
@@ -13001,20 +13040,6 @@ and each parameter Range is R, so how to calculate the posterior probability?
     <link>/math/math-apply-probability-and-statistics-variational-bayes-em-algorithm.html</link>
     <guid>/math/math-apply-probability-and-statistics-variational-bayes-em-algorithm</guid>
     <pubDate>Sat, 25 May 2019 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>variational inference</title>
-    <description>
-&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.quora.com/What-is-variational-inference&quot;&gt;what is variational Inference&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.cs.princeton.edu/courses/archive/fall11/cos597C/lectures/variational-inference-i.pdf&quot;&gt;variational bayes&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    <link>/math/probability-and-statistics-Variational-Inference.html</link>
-    <guid>/math/probability-and-statistics-Variational-Inference</guid>
-    <pubDate>Fri, 24 May 2019 00:00:00 +0900</pubDate>
   </item>
 
   <item>
@@ -13299,68 +13324,7 @@ E(v, h)&amp;=-\sum_{i} a_{i} v_{i}-\sum_{j} b_{j} h_{j}-\sum_{i} \sum_{j} v_{i} 
   </item>
 
   <item>
-    <title>Gibbs Sampling for dummies</title>
-    <description>
-&lt;h4 id=&quot;gibbs-sampling&quot;&gt;Gibbs Sampling&lt;/h4&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Gibbs Sampling is a MCMC method&lt;/li&gt;
-  &lt;li&gt;Gibbs Sampler can draw samples from any distribution&lt;/li&gt;
-  &lt;li&gt;the helper distribution that you need is the conditional distribution&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;python-implementation&quot;&gt;Python Implementation&lt;/h4&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;seaborn&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sns&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;p_x_given_y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sigmas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;mu&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sigmas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sigmas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;sigma&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sigmas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sigmas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sigmas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sigmas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;normal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mu&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sigma&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-
-&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;p_y_given_x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sigmas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;mu&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sigmas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sigmas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;sigma&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sigmas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sigmas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sigmas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sigmas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;normal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mu&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sigma&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-
-&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;gibbs_sampling&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sigmas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;iter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;samples&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;zeros&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;iter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rand&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;iter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p_x_given_y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sigmas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p_y_given_x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sigmas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;samples&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;samples&lt;/span&gt;
-
-
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__name__&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'__main__'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;mus&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;sigmas&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;.9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;.9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;samples&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gibbs_sampling&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sigmas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;sns&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;jointplot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;samples&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;samples&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;http://fourier.eng.hmc.edu/e161/lectures/gaussianprocess/node7.html.&quot;&gt;conditional distribution of multivariate Gaussian&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://wiseodd.github.io/techblog/2015/10/09/gibbs-sampling/&quot;&gt;Gibbs Sampling&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-    <link>/math/probability-and-statistics-Gibbs-sampling-algorithm.html</link>
-    <guid>/math/probability-and-statistics-Gibbs-sampling-algorithm</guid>
-    <pubDate>Wed, 22 May 2019 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>P.A.S.: Slice Sampling</title>
+    <title>P.A.S.M.I.: Slice Sampling</title>
     <description>
 &lt;h4 id=&quot;intuitive-explanation&quot;&gt;Intuitive Explanation&lt;/h4&gt;
 
@@ -13417,8 +13381,69 @@ E(v, h)&amp;=-\sum_{i} a_{i} v_{i}-\sum_{j} b_{j} h_{j}-\sum_{i} \sum_{j} v_{i} 
 &lt;p&gt;&lt;a href=&quot;https://wiseodd.github.io/techblog/2015/10/24/slice-sampling/&quot;&gt;slice sampling&lt;/a&gt;&lt;/p&gt;
 
 </description>
-    <link>/math/math-apply-probability-and-statistics-slice-sampling-algorithm.html</link>
-    <guid>/math/math-apply-probability-and-statistics-slice-sampling-algorithm</guid>
+    <link>/math/math-apply-probability-and-statistics-model-inference-slice-sampling-algorithm.html</link>
+    <guid>/math/math-apply-probability-and-statistics-model-inference-slice-sampling-algorithm</guid>
+    <pubDate>Wed, 22 May 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>P.A.S.M.I.: Gibbs Sampling</title>
+    <description>
+&lt;h4 id=&quot;gibbs-sampling&quot;&gt;Gibbs Sampling&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Gibbs Sampling is a MCMC method&lt;/li&gt;
+  &lt;li&gt;Gibbs Sampler can draw samples from any distribution&lt;/li&gt;
+  &lt;li&gt;the helper distribution that you need is the conditional distribution&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;python-implementation&quot;&gt;Python Implementation&lt;/h4&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;seaborn&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sns&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;p_x_given_y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sigmas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;mu&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sigmas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sigmas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;sigma&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sigmas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sigmas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sigmas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sigmas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;normal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mu&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sigma&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;p_y_given_x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sigmas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;mu&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sigmas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sigmas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;sigma&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sigmas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sigmas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sigmas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sigmas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;normal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mu&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sigma&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;gibbs_sampling&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sigmas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;iter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;samples&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;zeros&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;iter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rand&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;iter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p_x_given_y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sigmas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p_y_given_x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sigmas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;samples&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;samples&lt;/span&gt;
+
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__name__&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'__main__'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;mus&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;sigmas&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;.9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;.9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;samples&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gibbs_sampling&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sigmas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;sns&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;jointplot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;samples&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;samples&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;http://fourier.eng.hmc.edu/e161/lectures/gaussianprocess/node7.html.&quot;&gt;conditional distribution of multivariate Gaussian&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://wiseodd.github.io/techblog/2015/10/09/gibbs-sampling/&quot;&gt;Gibbs Sampling&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/math/math-apply-probability-and-statistics-model-inference-gibbs-sampling-algorithm.html</link>
+    <guid>/math/math-apply-probability-and-statistics-model-inference-gibbs-sampling-algorithm</guid>
     <pubDate>Wed, 22 May 2019 00:00:00 +0900</pubDate>
   </item>
 
@@ -13715,7 +13740,7 @@ energy function.&lt;/p&gt;
   </item>
 
   <item>
-    <title>P.A.S.: Markov Decision Theory and Dynamic Programming</title>
+    <title>S.P.: Markov Decision Theory and Dynamic Programming</title>
     <description>
 &lt;h4 id=&quot;ruin-problem&quot;&gt;Ruin Problem&lt;/h4&gt;
 &lt;p&gt;In this example, an entity(often described as a gambler or an insurance company)
@@ -13730,7 +13755,7 @@ that this occurs within finite time, or the mean time until which it occurs.&lt;
   </item>
 
   <item>
-    <title>P.A.S.: Finites States of Markov Chain</title>
+    <title>S.P.: Finites States of Markov Chain</title>
     <description>
 &lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
 &lt;ol&gt;
@@ -13773,7 +13798,8 @@ that is not recurrent.
 
 &lt;h4 id=&quot;periodic-states-and-classes&quot;&gt;Periodic States and Classes.&lt;/h4&gt;
 &lt;p&gt;The period, d(i), of state i is defined as &lt;br /&gt;
-$d(i)=gcd{n:p_{ii}^n}&amp;gt;0$ &lt;br /&gt;&lt;/p&gt;
+$d(i)=gcd{n:p_{ii}^n}&amp;gt;0$&lt;/p&gt;
+
 &lt;ul&gt;
   &lt;li&gt;if d(i)=1, i is aperiodic&lt;/li&gt;
   &lt;li&gt;if d(i)&amp;gt;1, i is periodic with period d(i)&lt;/li&gt;
@@ -13870,7 +13896,7 @@ Eigenvector &lt;br /&gt;
   </item>
 
   <item>
-    <title>Stochastic Process: Countable State Markov Chains</title>
+    <title>S.P.: Countable State Markov Chains</title>
     <description>
 &lt;h4 id=&quot;motivation&quot;&gt;Motivation&lt;/h4&gt;
 &lt;p&gt;Markov chains with a countably-infinite state space(more briefly,
@@ -14461,17 +14487,37 @@ connect to windows server&lt;/a&gt;&lt;/li&gt;
   </item>
 
   <item>
-    <title>P.A.S.: Concept and Notation</title>
+    <title>P.A.S.M.: Concept and Notation</title>
     <description>
-&lt;h4 id=&quot;core-concept&quot;&gt;Core Concept&lt;/h4&gt;
-&lt;p&gt;The core concept in probability theory is that of a probability model.&lt;/p&gt;
+&lt;h4 id=&quot;outline&quot;&gt;Outline&lt;/h4&gt;
+&lt;p&gt;Probability is the science of uncertainty. It provides precise mathematical
+rules for understanding and analyzing our own ignorance.
+The content of probability and statistics can be divided into three parts&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Probability and Statistics Model(P.A.S.M.)&lt;/li&gt;
+  &lt;li&gt;Probability and Statistics Model Inference(P.A.S.M.I.)&lt;/li&gt;
+  &lt;li&gt;Probability and Statistics Model Check(P.A.S.M.C.)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;probability-model&quot;&gt;Probability model&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;A probability model&lt;/strong&gt; consists of a nonempty set called the sample space
+&lt;strong&gt;S&lt;/strong&gt;; a collection of events that are subsets of &lt;strong&gt;S&lt;/strong&gt;; and a probability
+measure &lt;strong&gt;P&lt;/strong&gt; assigning a probability between 0 and 1 to each event.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Sample Space&lt;/strong&gt;: A sample space is any set that lists all possible outcomes(or, responses) of
+some unknown experiment or situation,
+ &lt;strong&gt;which is a set whose elements are called outcomes or sample points.&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Probability Measure&lt;/strong&gt;: usually written P. This probability measure must
+assign, to each event A, a probability P(A).&lt;/li&gt;
+  &lt;li&gt;$A^c$: if A is any event, we write $A^c$(read “A complement”) for the event
+that A does not occur.
+&lt;script type=&quot;math/tex&quot;&gt;P(A^c)=1-P(A)&lt;/script&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
 &lt;ul&gt;
-  &lt;li&gt;The first component of a probability model is sample space, which is a set
-whose elements are called outcomes or sample points.&lt;/li&gt;
   &lt;li&gt;The second component of a probability model is a class of events, which can be
 considered for now simply as the class of all subsets of the sample space.&lt;/li&gt;
-  &lt;li&gt;The third component is a probability measure, which can be regarded for now as
-the assignment of a nonnegative number to each outcome.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h5 id=&quot;remark&quot;&gt;Remark&lt;/h5&gt;
@@ -14618,8 +14664,8 @@ expectation and variance.&lt;/li&gt;
 &lt;/ol&gt;
 
 </description>
-    <link>/math/math-apply-probability-and-statistics-concept-review.html</link>
-    <guid>/math/math-apply-probability-and-statistics-concept-review</guid>
+    <link>/math/math-apply-probability-and-statistics-model-concept-review.html</link>
+    <guid>/math/math-apply-probability-and-statistics-model-concept-review</guid>
     <pubDate>Sat, 27 Apr 2019 00:00:00 +0900</pubDate>
   </item>
 

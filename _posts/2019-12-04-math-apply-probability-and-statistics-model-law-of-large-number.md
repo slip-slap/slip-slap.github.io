@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "P.A.S: Law of Large Number"
-keywords: [ "numberical analysis"]
+title: "P.A.S.M: Law of Large Number"
+keywords: [""]
 description: ""
 category: "math"
 tags: ["apply"]

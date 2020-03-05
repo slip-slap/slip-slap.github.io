@@ -124,17 +124,17 @@ $(document).ready(function() {
           <a href="/" title="查看最近发表"><i class="icon-fixed-width icon-edit"></i> 最近发表</a>
 <ul>
 
-  <li><a href="/life/life-coronavirus.html" title="查看《被困在家的三十八天》">被困在家的三十八天</a></li>
+  <li><a href="/math/math-apply.html" title="查看《Abstract of Application Subject》">Abstract of Application Subject</a></li>
+
+  <li><a href="/math/math-apply-probability-and-statistics-variational-inference.html" title="查看《P.A.S.: Variational Inference》">P.A.S.: Variational Inference</a></li>
+
+  <li><a href="/math/math-apply-information-theory-hash-codes.html" title="查看《I.T.: Hash Codes》">I.T.: Hash Codes</a></li>
+
+  <li><a href="/life/life-coronavirus.html" title="查看《春节: 被困在家的三十八天》">春节: 被困在家的三十八天</a></li>
 
   <li><a href="/math/math-apply-proability-and-statistics-model-checking.html" title="查看《P.A.S.: Model Checking》">P.A.S.: Model Checking</a></li>
 
   <li><a href="/math/math-apply-learning-partially-observed-data.html" title="查看《P.G.M.: Learning-Partially Observed Data》">P.G.M.: Learning-Partially Observed Data</a></li>
-
-  <li><a href="/math/math-apply-learning-learning-undirected-data.html" title="查看《P.G.M.: Learning-Undirected Models》">P.G.M.: Learning-Undirected Models</a></li>
-
-  <li><a href="/math/math-discrete-graph-theory-planar-graphs.html" title="查看《Graph Theory: Planar Graphs》">Graph Theory: Planar Graphs</a></li>
-
-  <li><a href="/math/math-discrete-graph-theory-vertex-colourings.html" title="查看《Graph Theory: Vertex Colourings》">Graph Theory: Vertex Colourings</a></li>
 
 </ul>
 
@@ -142,9 +142,27 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">331</span>
+<span title="文章总数">333</span>
 <ul>
 
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2020">2020 年 03 月 (3)</a></li>
+    
+  
 
   
   
@@ -1587,12 +1605,7 @@ $(document).ready(function() {
   
   
   
-
-  
-  
-  
-  
-    <li><a href="/archive.html#May-2019">2019 年 05 月 (39)</a></li>
+    <li><a href="/archive.html#May-2019">2019 年 05 月 (38)</a></li>
     
   
 
@@ -1878,7 +1891,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#AI-ref">AI (27)</a></li>
 
-  <li><a href="/categories.html#math-ref">math (198)</a></li>
+  <li><a href="/categories.html#math-ref">math (200)</a></li>
 
   <li><a href="/categories.html#language-ref">language (5)</a></li>
 
@@ -2064,7 +2077,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#space-ref" style="font-size: 14.5pt; color: #444;">space</a>
+    <a href="/tags.html#space-ref" style="font-size: 14pt; color: #444;">space</a>
   
     
     
@@ -2106,7 +2119,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#structure-ref" style="font-size: 14pt; color: #444;">structure</a>
+    <a href="/tags.html#structure-ref" style="font-size: 13.5pt; color: #444;">structure</a>
   
     
     
@@ -2227,12 +2240,22 @@ conditional probability distributions $P(y|x)$, one for each $x \in
 $A_{\mathcal{X}}$</li>
 </ol>
 
-<h4 id="the-capacity-of-a-channel-q-is">The Capacity of a channel Q is:</h4>
+<h5 id="capacity-of-channel-q">Capacity of Channel Q:</h5>
 <p><script type="math/tex">C(Q)=\max _{\mathcal{P}_{X}} I(X ; Y)</script></p>
 <ul>
+  <li>The capacity of a channel is the maximum over all input distributions $P(x)$,
+of the mutual information.</li>
   <li>The distribution $\mathcal{P}_X$ that achieves the maximum is called the
 optimal input distribution, denoted by $\mathcal{P}_X^{\star}$</li>
+  <li>The nature of a channel is that it <strong>defines a conditional distribution</strong>, nothing
+but a conditional distribution.</li>
 </ul>
+
+<h5 id="what-does-this-use-for">What does this use for?</h5>
+<ol>
+  <li>capacity actually measures how fast you can reliably communicate over the
+channel</li>
+</ol>
 
 <h4 id="concept-1">Concept</h4>
 <ol>
@@ -2241,10 +2264,10 @@ optimal input distribution, denoted by $\mathcal{P}_X^{\star}$</li>
 
 <h4 id="shannons-noisy-channel-coding-theorem">Shannon’s noisy-channel coding theorem</h4>
 <p>Associated with each discrete memoryless channel, there is a nonnegative number
-C(called the channel capacity) with the following property. For any $\epislon &gt;0$
+C(called the channel capacity) with the following property. For any $\epsilon &gt;0$
 and $R&lt;C$, for large enough N, there exists a block code of length N and are
 $\geq R$ and a decoding algorithm, such that the maximal probability of block
-error is $\leq \epislon$</p>
+error is $\leq \epsilon$</p>
 
 
       
@@ -2274,7 +2297,7 @@ error is $\leq \epislon$</p>
   
      
     	<li><a href="/categories.html#math-ref">
-    		math <span>198</span>
+    		math <span>200</span>
     	</a></li>
     
   
@@ -2293,7 +2316,7 @@ error is $\leq \epislon$</p>
 
   
      
-    	<li><a href="/tags.html#apply-ref">apply <span>69</span></a></li>
+    	<li><a href="/tags.html#apply-ref">apply <span>72</span></a></li>
     
   
 

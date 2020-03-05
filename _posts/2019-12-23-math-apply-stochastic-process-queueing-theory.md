@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "P.A.S.: Queueing Theory"
+title: "S.P.: Queueing Theory"
 keywords: [""] 
 description: ""
 category: "math"

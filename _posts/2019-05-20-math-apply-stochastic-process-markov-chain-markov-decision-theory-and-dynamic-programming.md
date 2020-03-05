@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "P.A.S.: Markov Decision Theory and Dynamic Programming"
+title: "S.P.: Markov Decision Theory and Dynamic Programming"
 keywords: ["Markov Chain"] 
 description: ""
 category: "math"

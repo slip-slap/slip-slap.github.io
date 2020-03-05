@@ -1,7 +1,7 @@
 ---
 layout: post 
-title: "Stochastic Process.: Renewal Process"
-keywords: ["Markov Chain"] 
+title: "S.P.: Renewal Process"
+keywords: [""] 
 description: ""
 category: "math"
 tags: ["apply"]
@@ -10,14 +10,17 @@ tags: ["apply"]
 #### Motivation
 Much of this chapter will be devoted to understanding the behavior of N(t) and
 N(t)/t as t becomes large.
+
+
 #### Renewal Processes and Poisson Process
+
 1. A renewal process is an arrival process for which the interarrival intervals
 $X_1,X_2,\cdots$ are IID. Renewal processes can be specified in three standard
 ways.
 - the names come from that you start over at each interval.
--. The joint distribution of the arrival epochs $S_1,S_2,\cdots$ 
--. The joint distribution of the interarrival times $X_1,X_2,\cdots$
--. The joint distribution of the counting rv's
+- The joint distribution of the arrival epochs $S_1,S_2,\cdots$ 
+- The joint distribution of the interarrival times $X_1,X_2,\cdots$
+- The joint distribution of the counting rv's
 2. A Poisson process is a renewal process for which the interarrival rv's are
    exponential
 

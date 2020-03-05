@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "P.A.S: Expectation and Variance"
+title: "P.A.S.M: Expectation and Variance"
 keywords: [""]
 description: ""
 category: "math"

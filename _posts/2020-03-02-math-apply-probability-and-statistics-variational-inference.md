@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "variational inference"
-keywords: ["probabiltiy", "template"]
-description: "statistics theory"
+title: "P.A.S.: Variational Inference"
+keywords: [] 
+description: ""
 category: "math"
-tags: [""]
+tags: ["apply"]
 ---
 {% include JB/setup %}
 

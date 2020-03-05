@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "P.A.S.: Slice Sampling"
+title: "P.A.S.M.I.: Slice Sampling"
 keywords: ["slice sampling","MCMC"]
 description: ""
 category: "math"

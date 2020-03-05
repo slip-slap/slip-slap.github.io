@@ -1,20 +1,39 @@
 ---
 layout: post
-title: "P.A.S.: Concept and Notation"
+title: "P.A.S.M.: Concept and Notation"
 keywords: ["probabiltiy"]
 description: ""
 category: "math"
 tags: ["apply"]
 ---
 {% include JB/setup %}
-#### Core Concept
-The core concept in probability theory is that of a probability model.
-- The first component of a probability model is sample space, which is a set
-  whose elements are called outcomes or sample points.
+
+#### Outline
+Probability is the science of uncertainty. It provides precise mathematical
+rules for understanding and analyzing our own ignorance.
+The content of probability and statistics can be divided into three parts
+1. Probability and Statistics Model(P.A.S.M.)
+2. Probability and Statistics Model Inference(P.A.S.M.I.)
+3. Probability and Statistics Model Check(P.A.S.M.C.)
+
+#### Probability model
+**A probability model** consists of a nonempty set called the sample space
+**S**; a collection of events that are subsets of **S**; and a probability
+measure **P** assigning a probability between 0 and 1 to each event. 
+
+1. **Sample Space**: A sample space is any set that lists all possible outcomes(or, responses) of
+   some unknown experiment or situation,
+ **which is a set whose elements are called outcomes or sample points.**
+2. **Probability Measure**: usually written P. This probability measure must
+   assign, to each event A, a probability P(A).
+3. $A^c$: if A is any event, we write $A^c$(read "A complement") for the event
+   that A does not occur.
+   $$
+   P(A^c)=1-P(A)
+   $$
+
 - The second component of a probability model is a class of events, which can be
   considered for now simply as the class of all subsets of the sample space.
-- The third component is a probability measure, which can be regarded for now as
-  the assignment of a nonnegative number to each outcome.
 
 ##### Remark
 We must familiar with some terms, such as sample point, is same as outcome.
@@ -138,6 +157,9 @@ cumulative distribution function.
        expectation and variance. 
 3. So random process and probabilit and statistics just the subject evaluate
    expectation and variance.
+4. To study geometry, we introduce calculus, and now, to study probability, we
+   also need to use calculus, calculus just a tool can be used in geometry and
+   probability.
 
 #### reference
 1. [statistic](https://en.wikipedia.org/wiki/Statistic)

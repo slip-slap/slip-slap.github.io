@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "P.A.S.: Variational Bayes Expectation Maximization Algorithm"
+title: "P.A.S.: Variational Bayes Expectation Maximization"
 keywords: ["VBEM", "bayes"]
 description: ""
 category: "math"
@@ -74,14 +74,14 @@ $$
 
 
 
-
-
-
-
-
-
 #### the relationship between MLE and MAP
 MLE is a special case of MAP, which prior probability all same
+
+
+#### Galois
+1. variation: something that is similar to something else but different in some
+   way. (variational)
+2. In Chinese, we name this method "变分EM", who can understand this crap.
 
 
 
