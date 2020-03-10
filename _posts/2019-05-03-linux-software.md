@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Linux: Application and Common Problems"
-keywords: ["software", "Mac"]
+keywords: ["software", ""]
 description: "software"
 category: "linux"
 tags: ["GUI tool"]
@@ -26,9 +26,19 @@ tags: ["GUI tool"]
 1. If you mac can't connect to another computer, please check the finder
    preference.
 
+#### Mac OS Chrome
+1. Can't chang default search engine in Chrome
+- Go to system preferences
+- click the profile
+- the list will inclue "Iky", select this item and click "-" on the left lower
+  corner.
+
+
+
 
 
 #### Reference
 1. [Ie7 User Agent String](https://blogs.msdn.microsoft.com/ie/2006/09/20/the-ie7-user-agent-string/)
-2. [   
-connect to windows server](https://support.apple.com/guide/mac-help/if-your-mac-cant-connect-to-another-computer-mchlp1656/mac)
+2. [connect to windows server](https://support.apple.com/guide/mac-help/if-your-mac-cant-connect-to-another-computer-mchlp1656/mac)
+3. [can't change default search engine in
+   Chrome](https://support.google.com/chrome/thread/23333087?hl=en)

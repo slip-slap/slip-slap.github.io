@@ -13,6 +13,9 @@ tags: ["discrete"]
 2. Tree: a tree is a connected acyclic graph
 - If G is a tree, then $\epsilon= v-1$
 3. Cut Edge: A cut edge of G is an edge e such that $w(G-e)>w(G)$.
+- The term "Cut Edge" is very intuitive and informative, imaging cut a graph
+  with with a knife, after the edge is deleted, you have two subgraph, and the
+  edge is called cut edge.
 
 ##### Edges and Bonds
 1. For subsets S and $S^{\prime}$ of V, we denote by $[S,S^{\prime}]$ the set of

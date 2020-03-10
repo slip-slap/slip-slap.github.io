@@ -8,6 +8,11 @@ tags: ["apply"]
 ---
 {% include JB/setup %}
 
+
+1.$E[X]=\int F_X^c(x)dx$ for arbitrary nonneg X
+
+<img src="{{IMAGE_PATH}}/math-apply-probability-and-statistics-expectation.png" />
+
 #### Poisson Distribution
 $$
 P(X(t)=k)=\frac{(\lambda t)^{k} e^{-\lambda t}}{k !}

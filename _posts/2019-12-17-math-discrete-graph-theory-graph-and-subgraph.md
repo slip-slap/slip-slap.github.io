@@ -17,8 +17,12 @@ vertices such that $\psi_G(e)=uv$, then $e$ is said to join $u$ and $v$;
 2. Loop: An edge with identical ends is called a loop.
 3. Link: An edge with distinct ends is called a link.
 4. Incident: The ends of an edge are said to be incident with the edge
+- incidence: the angle at which a ray (such as a ray of light) hits a surface,
+  that is the nature meaning of **the world incidence**
 5. Adjacent: Two vertices which are incident with a common edge are adjacent, as
    are two edges which are incident with a common vertex.
+- When the word adjacent pops up, most times, it means relationgship between two
+  vertices.
 - There is no unique way of drawing a graph; A diagram of a graph merely
    depicts the incidence relation holding between its vertices and edges.
 - We often draw a diagram of a graph and refer to it as the graph itself; in
@@ -146,6 +150,7 @@ $$, we wirte $H \subset G$, and call H a proper subgraph of G.
 #### Application: Shortest Path Problem
 Problem: Find the shortest $(u_0,v_0)$-path<br />
 Solution: Dijkstra Algorithm <br />
+
 
 
 

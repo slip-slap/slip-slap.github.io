@@ -20,3 +20,8 @@ tags: ["discrete"]
 <img
 src="{{IMAGE_PATH}}/math-discrete-graph-theory-independent-sets-and-cliques-set.png">
 
+
+#### Galois
+1. Why we have the concept such as "Independent set" and "Clique", because they
+   are the basic building blocks of a graph, just as the concept in the other
+   subject.

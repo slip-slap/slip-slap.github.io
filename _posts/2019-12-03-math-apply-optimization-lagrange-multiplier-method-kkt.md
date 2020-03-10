@@ -8,6 +8,10 @@ tags: ["apply"]
 ---
 {% include JB/setup %}
 
+#### Contour Maps
+A contour map is a mathod of projecting a three-dimensional object onto a two
+dimensional surface, frequently comes up in topography and map making such as
+indicating the height of various points of a hill on a two dimensional map.
 
 #### Example
 **Please remember the following picture**
@@ -19,6 +23,8 @@ $$min f(x,y)=x^2 + y^2, s.t. xy=3$
 2. $f_x = \lambda \times g_x$ 
 2. $f_y = \lambda \times g_y$ 
 2. $xy=3$ 
+
+
 
 
 

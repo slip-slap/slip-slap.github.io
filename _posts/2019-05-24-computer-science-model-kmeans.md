@@ -1,0 +1,50 @@
+---
+layout: post
+title: "C.S.M.: Kmeans"
+keywords: []
+description: ""
+category: "CS"
+tags: ["" ]
+---
+{% include JB/setup %}
+
+#### What does Kmeans do ?
+
+1. The goal of this algorithm is to find groups in the data, with the number of groups represented by the variable K.
+
+<hr />
+
+#### formula
+
+All points with a cluster are closer in distance to their centroid than they are to any other centroid, and the mathematical condition
+for the K cluster $$C_{k}$$ and the K centroid $$u_{k}$$ can be expressed as: <br />
+
+$$
+\text { Mnimize } \sum_{k=1}^{K} \sum_{\mathbf{x}_{n} \in C_{k}}\left\|\mathrm{x}_{n}-\mu_{k}\right\|^{2} \text { with respect to } C_{k}, \mu_{k}
+$$
+
+<hr />
+
+#### Application
+
+1. customer segmentation
+2. Document Classification
+
+#### the relationship between EM algorithm and Kmeans
+The general EM scheme
+1. The E-step, where each object is assigned to the centroid such that it is assigned to the most likely cluster
+- **why why why the name is Expectation**, because in this step we assign the
+  probability to each observation data, 0 or 1, **then we can calculate the
+  expectation of corresponding distribution.**
+2. The M-step, where the model(=centroids) are recalculated(least square optimization)
+It differs from GMM:
+- it uses hard partitioning, each object is assigned to exactly one cluster
+- the model are centroids only, no variance or covariance are taken into account
+
+
+<hr />
+
+#### Reference
+
+1. [Step by step Kmeans](https://www.kaggle.com/shrutimechlearn/step-by-step-kmeans-explained-in-detail/data)
+2. [Clustering with K-Means and EM: how are they related ?](https://stats.stackexchange.com/questions/76866/clustering-with-k-means-and-em-how-are-they-related)
