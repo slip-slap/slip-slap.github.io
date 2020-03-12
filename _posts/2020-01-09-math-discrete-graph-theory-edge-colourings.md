@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Graph Theory: Edge Colourings"
+title: "G.T.: Edge Colourings"
 keywords: [""]
 description: ""
 category: "math"

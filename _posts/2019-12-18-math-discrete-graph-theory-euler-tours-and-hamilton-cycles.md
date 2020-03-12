@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Graph Theory: Euler Tours and Hamilton Cycles"
+title: "G.T.: Euler Tours and Hamilton Cycles"
 keywords: [""]
 description: ""
 category: "math"

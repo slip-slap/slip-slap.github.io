@@ -43,7 +43,6 @@ A first-order hidden Markov model instantiates two simpliying assumptions.
 #### Forward Algorithm
 <img src="{{IMAGE_PATH}}/HMM-forward-algorithm.png" height="" width="" />
 
-#### The Viterbi Algorithm
 
 
 

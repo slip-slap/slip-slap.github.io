@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Graph Theory: Matchings"
+title: "G.T.: Matchings"
 keywords: [""]
 description: ""
 category: "math"

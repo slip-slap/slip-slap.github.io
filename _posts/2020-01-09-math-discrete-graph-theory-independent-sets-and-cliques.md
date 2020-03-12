@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Graph Theory: Independent Sets and Cliques"
+title: "G.T.: Independent Sets and Cliques"
 keywords: [""]
 description: ""
 category: "math"

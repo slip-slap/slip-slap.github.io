@@ -11,7 +11,7 @@ tags: ["structure"]
 #### Concept
 In algebraic topology, the Euler characteristic or Euler number is a topological
 invariant, a number that describes a topological space's shape or structure
-regardless of the way it is bent. It is commonly denoted by $\Chi$
+regardless of the way it is bent. It is commonly denoted by $$\chi$$
 
 #### HAHA
 You can make a model, doesn't mean it is a mathematic object.

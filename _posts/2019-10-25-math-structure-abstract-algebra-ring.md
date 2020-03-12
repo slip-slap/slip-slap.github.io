@@ -8,18 +8,17 @@ tags: ["structure"]
 ---
 {% include JB/setup %}
 
-#### Terminology
-1. A ring is a set of elements under $$\times, -,+$$, not commutative under $$\times$$
-2. At first, ring is a concept generialize the integer
+#### Definition 
+Ring:  A ring is a set of elements under $$\times, -,+$$, not commutative under $$\times$$
+- At first, ring is a concept generialize the integer
 
 
-#### Example
+##### Example
+1. Integer: Every Integer is a product of primes.
 
-##### Integer
-Every Integer is a product of primes.
+2. Matrix
+ $$2\times 2$$ matrix, $$a,b,c,d \in R \times$$.
 
-#### Matrix
-1. $$2\times 2$$ matrix, $$a,b,c,d \in R$\times$
 $$ 
 	\begin{bmatrix}
 		a & b \\
@@ -27,7 +26,7 @@ $$
 	\end{bmatrix}
 $$
 rings generalize matrix, which are pretty important.
-2. Intergers  are ring.
+3. Intergers  are ring.
 
 #### Polynomial
 Polynomials with coefficients

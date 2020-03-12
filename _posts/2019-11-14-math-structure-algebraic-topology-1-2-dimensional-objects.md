@@ -10,7 +10,7 @@ tags: ["structure"]
 
 
 #### HAHA
-A^{2}=A^{\prime} \times A^{\prime} <br />
+$$A^{2}=A^{\prime} \times A^{\prime}$$ <br />
 Product of lines: this is a construction of topological spaces.
 
 
@@ -25,13 +25,15 @@ link, but nonetheless all three are linked.
 src="{{IMAGE_PATH}}/math-structure-algebraic-topology-1-2-dimensional-objects-borromean-ring.png">
 
 
-#### HAHA
-Genus: It can be described by the number of the holes, it's a little bit
-informal, more careful definition, the maximum number of disjoint loops on the
-surface. <br />
+#### Definition
 Genus: A topologically invariant property of a surface defined as the largest
 number of nonintersecting simple closed curves that can be drawn on the surface
 without separating it. Roughly speaking, it is the number of holes in a surface.
+-  It can be described by the number of the holes, it's a little bit
+informal, more careful definition, the maximum number of disjoint loops on the
+surface. <br />
+
+
 
 #### Reference
 1. [Genus](http://mathworld.wolfram.com/Genus.html)

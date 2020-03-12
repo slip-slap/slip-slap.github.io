@@ -15,6 +15,10 @@ the notion of a triangle or tetrahedron to artitrary dimensions. <br />
 2. a 1-simplex is a line segment
 3. a 2-simplex is a triangle
 4. a 3-simplex is a tetrahedron
+- A spatial configuration of n dimensions determined by n+1 points in a space of
+  dimension equal to or greater than n 
+- A triangle together with its interior determined by its three vertices is a
+  two-dimensional simplex in hte plane or any space of higher dimension.
 
 #### Boundary
 

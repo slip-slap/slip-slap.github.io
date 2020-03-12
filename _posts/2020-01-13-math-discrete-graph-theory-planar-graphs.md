@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Graph Theory: Planar Graphs"
+title: "G.T.: Planar Graphs"
 keywords: [""]
 description: ""
 category: "math"

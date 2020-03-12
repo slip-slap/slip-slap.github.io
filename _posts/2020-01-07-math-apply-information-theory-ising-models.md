@@ -22,10 +22,11 @@ $$
 P(\mathrm{x} | \beta, J, H)=\frac{1}{Z(\beta, J, H)} \exp [-\beta E(\mathrm{x} ;
 J, H)]
 $$
-- $$
-Z(\beta, J, H) \equiv \sum_{\mathbf{x}} \exp [-\beta E(\mathbf{x} ; J, H)]
+- $$Z(\beta, J, H) \equiv \sum_{\mathbf{x}} \exp [-\beta E(\mathbf{x} ; J, H)]
 $$
-
+- $$
+\beta=1 / k_{\mathrm{B}} T
+$$, $$k_B$$ is a Boltzmann's constant
 
 #### Reference
 1. [Ising Models](http://wiki.swarma.net/index.php/ISING%E6%A8%A1%E5%9E%8B)
