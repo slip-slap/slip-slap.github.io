@@ -4,7 +4,7 @@ title: "I.T.: Communication over a Noisy Channel"
 keywords: [""]
 description: ""
 category: "math"
-tags: ["apply"]
+tags: ["apply","I.T."]
 ---
 {% include JB/setup %}
 

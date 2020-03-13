@@ -1,10 +1,10 @@
 ---
 layout: post 
-title: "Stochastic Process: Wald's Equality"
-keywords: ["Markov Chain"] 
+title: "S.P.: Wald's Equality"
+keywords: [""] 
 description: ""
 category: "math"
-tags: ["apply"]
+tags: ["apply","S.P."]
 ---
 {% include JB/setup %}
 

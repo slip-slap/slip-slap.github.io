@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Abstract of Application Subject"
+title: "Apply: Summary"
 keywords: [""]
 description: ""
 category: "math"
-tags: ["apply"]
+tags: ["apply","summary"]
 ---
 
 {% include JB/setup %}

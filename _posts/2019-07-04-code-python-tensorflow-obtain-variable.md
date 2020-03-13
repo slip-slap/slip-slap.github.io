@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "how to obtain variable value in tensorflow"
+title: "Python: Obtain Variable Value in Tensorflow"
 keywords: ["python"]
 description: "tensorflow"
-category: "python"
-tags: ["language"]
+category: "code"
+tags: ["python","tf"]
 ---
 {% include JB/setup %}
 
@@ -17,8 +17,8 @@ tensorflow provide some api to get the tensor
 
 #### check the variable
 
-Tensorflow provides graph collections that group the variables. To access the variables you 
-can run the following code
+Tensorflow provides graph collections that group the variables. To access the
+variables you can run the following code
 ```python
 # get variable that you trained
 tf.get_collection(tf.GraphKeys.TRAINABLE_VARIABLES)

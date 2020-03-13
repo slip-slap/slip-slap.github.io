@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Model: Gaussian Mixture Model"
-keywords: ["Kmeans", "GMM"]
+title: "ML: Gaussian Mixture Model"
+keywords: ["GMM"]
 description: ""
 category: "AI"
-tags: ["unsupervised learning" ]
+tags: ["ML","supervised" ]
 ---
 {% include JB/setup %}
 

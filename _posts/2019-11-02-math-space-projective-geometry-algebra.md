@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Projective Geometry: Algebraic"
+title: "P.G.: Algebra of Projective Geometry"
 keywords: [""]
 description: ""
 category: "math"
-tags: ["space"]
+tags: ["space","P.G."]
 ---
 
 

@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Differential Geometry: Geodesic and Christoffel Symbol"
+title: "D.G.: Geodesic and Christoffel Symbol"
 keywords: ["history"]
 description: ""
 category: "math"
-tags: ["space"]
+tags: ["space","D.G."]
 ---
 {% include JB/setup %}
 

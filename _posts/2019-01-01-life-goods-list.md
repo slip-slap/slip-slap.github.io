@@ -4,7 +4,7 @@ title: "物品清单"
 keywords: ["清单", "life"]
 description: "清单"
 category: "life"
-tags: ["清单", "life"]
+tags: []
 ---
 {% include JB/setup %}
 

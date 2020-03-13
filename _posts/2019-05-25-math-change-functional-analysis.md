@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Functional Analysis: Calculus of Variations"
+title: "F.A.: Calculus of Variations"
 keywords: ["calculus"] 
 description: ""
 category: "math"
-tags: ["change"]
+tags: ["change","F.A."]
 ---
 {% include JB/setup %}
 

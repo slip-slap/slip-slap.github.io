@@ -2,9 +2,9 @@
 layout: post
 title: "Algorithm: Intersection of Two Line"
 keywords: []
-description: "algorithm"
-category: "algorithm"
-tags: [""]
+description: 
+category: "CS"
+tags: ["algorithm"]
 ---
 {% include JB/setup %}
 

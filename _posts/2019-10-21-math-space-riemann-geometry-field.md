@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Riemann Geometry: Field"
+title: "R.G.: Field"
 keywords: [""]
 description: ""
 category: "math"
-tags: ["space"]
+tags: ["space","R.G."]
 ---
 {% include JB/setup %}
 

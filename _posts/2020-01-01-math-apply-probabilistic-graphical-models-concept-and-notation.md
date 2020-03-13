@@ -4,7 +4,7 @@ title: "P.G.M.: Concept and Notation"
 keywords: [""] 
 description: ""
 category: "math"
-tags: ["apply"]
+tags: ["apply","P.G.M."]
 ---
 {% include JB/setup %}
 #### Motivation

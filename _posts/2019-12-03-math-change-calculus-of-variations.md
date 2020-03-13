@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Calculus of Variations"
-keywords: [ "functional analysis"]
+title: "F.A. Introduction"
+keywords: [ ""]
 description: ""
 category: "math"
-tags: ["change"]
+tags: ["change","F.A."]
 ---
 {% include JB/setup %}
 

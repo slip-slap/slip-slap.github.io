@@ -1,16 +1,17 @@
 ---
 layout: post
-title: "Numberical Analysis: Newton's method"
-keywords: [ "numberical analysis"]
+title: "N.A.: Newton's method"
+keywords: [ ""]
 description: ""
 category: "math"
-tags: ["apply"]
+tags: ["apply","N.A."]
 ---
 {% include JB/setup %}
 
 #### definition
-Newton's method is a root-finding algorithm which produces successively better approximations to the roots of a real-valued function.
-The most basic version starts with a single-variable function f defined for a real variable x. <br />
+Newton's method is a root-finding algorithm which produces successively better
+approximations to the roots of a real-valued function.  The most basic version
+starts with a single-variable function f defined for a real variable x. <br />
 
 
 $$

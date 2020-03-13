@@ -1,14 +1,14 @@
 ---
 layout: post
-title: "broadcasting in tensorflow"
+title: "Python: Broadcasting in Tensorflow"
 keywords: ["python"]
-description: "tensorflow"
-category: "python"
-tags: ["tensorflow"]
+description: ""
+category: "code"
+tags: ["python","tf"]
 ---
 {% include JB/setup %}
 
 #### what the crap is broadcasting ?
-Broadcasting is the process of making arrays with different shapes have compatible shapes for arithmetic
-operations.
+Broadcasting is the process of making arrays with different shapes have
+compatible shapes for arithmetic operations.
 

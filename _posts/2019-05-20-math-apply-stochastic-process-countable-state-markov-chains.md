@@ -4,7 +4,7 @@ title: "S.P.: Countable State Markov Chains"
 keywords: [""] 
 description: ""
 category: "math"
-tags: ["apply"]
+tags: ["apply","S.P."]
 ---
 {% include JB/setup %}
 

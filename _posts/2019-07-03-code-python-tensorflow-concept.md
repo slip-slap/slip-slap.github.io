@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "concept in tensorflow"
+title: "Python: Concept in Tensorflow"
 keywords: ["python"]
-description: "tensorflow"
-category: "python"
-tags: ["tensorflow"]
+description: 
+category: "code"
+tags: ["python","tf"]
 ---
 {% include JB/setup %}
 

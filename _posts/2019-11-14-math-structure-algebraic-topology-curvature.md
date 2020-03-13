@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Algebraic Topology: Curvature"
-keywords: ["", ""]
+title: "A.T.: Curvature"
+keywords: []
 description: ""
 category: "math"
-tags: ["structure"]
+tags: ["structure","A.T."]
 ---
 {% include JB/setup %}
 

@@ -4,7 +4,7 @@ title: "Common Sense"
 keywords: ["international dial"]
 description: "life"
 category: "life"
-tags: [""]
+tags: []
 ---
 {% include JB/setup %}
 

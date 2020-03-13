@@ -4,7 +4,7 @@ title: "I.T.: Codes for Integers"
 keywords: [""]
 description: ""
 category: "math"
-tags: ["apply"]
+tags: ["apply","I.T."]
 ---
 {% include JB/setup %}
 

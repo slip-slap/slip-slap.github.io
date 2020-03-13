@@ -4,7 +4,7 @@ title: "P.A.S.M.I.: Gibbs Sampling"
 keywords: ["MCMC"]
 description: ""
 category: "math"
-tags: ["sampling"]
+tags: ["apply","P.A.S."]
 ---
 {% include JB/setup %}
 

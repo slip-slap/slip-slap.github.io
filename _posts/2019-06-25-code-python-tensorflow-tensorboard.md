@@ -1,17 +1,18 @@
 ---
 layout: post
-title: "tensorboard"
-keywords: ["python", "tensorboard"]
-description: "python"
-category: "python"
-tags: ["tensorflow"]
+title: "Python: Tensorboard"
+keywords: [""]
+description: ""
+category: "code"
+tags: ["python"]
 ---
 {% include JB/setup %}
 
 
 #### Introduction
-TensorBoard is a visualization software that comes with any standard Tensorflow installation. In Google's words:
-"The compuations you'll use Tensorflow for(like training a massive deep neural network)"
+TensorBoard is a visualization software that comes with any standard Tensorflow
+installation. In Google's words: "The compuations you'll use Tensorflow for(like
+training a massive deep neural network)"
 
 
 #### 启动tensorboard
@@ -69,17 +70,21 @@ with tf.Session() as sess:
 ```
 
 4. remark
-+ if you run your code several times with the same [logdir], there are will be multiple event files in your [logdir], TF will show only the
-latest graph and display the warning of multiple event files. To get rid of the warning, delete the event files you no longer need or save them
-in different [logdir] folders.
++ if you run your code several times with the same [logdir], there are will be
+  multiple event files in your [logdir], TF will show only the latest graph and
+  display the warning of multiple event files. To get rid of the warning, delete
+  the event files you no longer need or save them in different [logdir] folders.
 
 #### Writing Summaries to Visualize Learning
 
-So far we only focused on how to visualize the graph in TensorBoard. In this second part, we are now going to use a special operation called **summary**
-to visualize the model parameters(like weights and biases of a neural network), metrics(like loss or accuracy value), and images(like input images to a 
+So far we only focused on how to visualize the graph in TensorBoard. In this
+second part, we are now going to use a special operation called **summary** to
+visualize the model parameters(like weights and biases of a neural network),
+metrics(like loss or accuracy value), and images(like input images to a
 network). <br />
-Summary is a special TensorBoard operation that takes in a regular tensor and outputs the summarized data to your disk(i.e. in the event file). 
-Basically, there are three main types of summaries:
+Summary is a special TensorBoard operation that takes in a regular tensor and
+outputs the summarized data to your disk(i.e. in the event file).  Basically,
+there are three main types of summaries:
 
 
 ##### demo

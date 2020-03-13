@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Code Integrated Template of QT Designer and Pyqt5"
-keywords: ["python"] 
-description: "python"
-category: "python"
-tags: ["code"]
+title: "Python: Code Integrated Template of QT Designer and Pyqt5"
+keywords: [] 
+description: 
+category: "code"
+tags: ["python"]
 ---
 {% include JB/setup %}
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Graph Theory: Networks"
+title: "G.T.: Networks"
 keywords: [""]
 description: ""
 category: "math"

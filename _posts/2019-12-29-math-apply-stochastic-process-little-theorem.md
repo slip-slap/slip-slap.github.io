@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Stochastic Process: Little's Theorem"
+title: "S.P.: Little's Theorem"
 keywords: [""] 
 description: ""
 category: "math"
-tags: ["apply"]
+tags: ["apply","S.P."]
 ---
 {% include JB/setup %}
 

@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "How to define variable in tensorflow"
-keywords: ["python", "introduction","tensorflow"]
+title: "Python: Define Variable in Tensorflow"
+keywords: []
 description: "tensorflow"
-category: "python"
-tags: ["tensorflow"]
+category: "code"
+tags: ["python","tf"]
 ---
 {% include JB/setup %}
 

@@ -4,7 +4,7 @@ title: "C.S.M.: Kmeans"
 keywords: []
 description: ""
 category: "CS"
-tags: ["" ]
+tags: []
 ---
 {% include JB/setup %}
 

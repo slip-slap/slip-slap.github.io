@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Graph Theory: Graph and Subgraphs"
+title: "G.T.: Graph and Subgraphs"
 keywords: ["bayesian"]
 description: ""
 category: "math"
-tags: ["discrete"]
+tags: ["discrete","G.T."]
 ---
 {% include JB/setup %}
 

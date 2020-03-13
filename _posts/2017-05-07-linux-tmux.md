@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "tmux"
-keywords: ["tmux", "introduction"]
+title: "Linux: Tmux"
+keywords: []
 description: "tmux"
 category: "linux"
-tags: ["linux"]
+tags: ["CLI"]
 ---
 {% include JB/setup %}
 

@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Linear Algebra: Determinant"
+title: "L.A.: Determinant"
 keywords: [""]
 description: ""
 category: "math"
-tags: ["structure"]
+tags: ["structure","L.A."]
 ---
 {% include JB/setup %}
 

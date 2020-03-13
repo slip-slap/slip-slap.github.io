@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Linear Algebra: Matrices and Application(3 times 3)"
+title: "L.A.: Matrices and Application(3 times 3)"
 keywords: [""]
 description: ""
 category: "math"
-tags: ["structure"]
+tags: ["structure","L.A."]
 ---
 {% include JB/setup %}
 

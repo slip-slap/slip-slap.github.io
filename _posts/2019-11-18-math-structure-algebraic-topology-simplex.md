@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Algebraic Topology: Simplex"
+title: "A.T.: Simplex"
 keywords: []
 description: ""
 category: "math"
-tags: ["structure"]
+tags: ["structure","A.T."]
 ---
 {% include JB/setup %}
 

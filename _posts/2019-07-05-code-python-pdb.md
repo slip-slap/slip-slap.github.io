@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "python pdb"
+title: "Python:  pdb"
 keywords: ["python", "pdb"]
 description: ""
-category: "python"
-tags: ["language"]
+category: "code"
+tags: ["python"]
 ---
 {% include JB/setup %}
 

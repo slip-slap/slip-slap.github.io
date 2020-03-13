@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Coordinate System of PGF"
+title: "Latex: The Coordinate System of PGF"
 keywords: ["Tikz", "PGF"]
 description: ""
 category: "code"

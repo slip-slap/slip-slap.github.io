@@ -4,6 +4,6 @@ title: "NP Problem"
 keywords: ["++", ""]
 description: ""
 category: "CS"
-tags: [""]
+tags: []
 ---
 {% include JB/setup %}

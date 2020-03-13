@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Fourier Transformation"
-keywords: ["calculus", "fourier"]
+title: "M.A.: Fourier Transformation"
+keywords: []
 description: ""
 category: "math"
-tags: [""]
+tags: ["change","M.A."]
 ---
 {% include JB/setup %}
 

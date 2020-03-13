@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Hyperbolic Geometry: Spherical"
+title: "H.G.: Spherical"
 keywords: []
 description: ""
 category: "math"
-tags: ["space"]
+tags: ["space","H.G."]
 ---
 {% include JB/setup %}
 

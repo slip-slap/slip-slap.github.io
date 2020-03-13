@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Linear Algebra: Linear Equation"
+title: "L.A.: Linear Equation"
 keywords: [""]
 description: ""
 category: "math"
-tags: ["structure"]
+tags: ["structure","L.A."]
 ---
 {% include JB/setup %}
 #### Two different way of linear equation

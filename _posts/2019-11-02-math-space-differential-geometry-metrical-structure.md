@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Differential Geometry: Metrical Structure"
+title: "D.G.: Metrical Structure"
 keywords: ["calculus"]
 description: ""
 category: "math"

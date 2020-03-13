@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "pytho's IOn"
-keywords: ["python", "IO"]
+title: "Python: Input and Output Stream"
+keywords: []
 description: "python"
-category: "python"
-tags: [ "IO"]
+category: "code"
+tags: [ "python"]
 ---
 {% include JB/setup %}
 
@@ -12,8 +12,6 @@ tags: [ "IO"]
 
 The main motivation behind the context manager in python is a source acquisition and release mechanism
 which prevents resource leak
-
-
 
 #### what is CSV?
 

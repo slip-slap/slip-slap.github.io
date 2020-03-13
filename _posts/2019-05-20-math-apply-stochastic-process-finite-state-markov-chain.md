@@ -4,7 +4,7 @@ title: "S.P.: Finites States of Markov Chain"
 keywords: ["Markov Chain"] 
 description: ""
 category: "math"
-tags: ["apply"]
+tags: ["apply","S.P."]
 ---
 {% include JB/setup %}
 

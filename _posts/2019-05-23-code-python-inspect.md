@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "inspect module of python"
-keywords: ["", "inspect"]
-description: "python"
-category: "python"
-tags: ["language"]
+title: "Python: Inspect Module"
+keywords: []
+description: ""
+category: "code"
+tags: ["python"]
 ---
 {% include JB/setup %}
 

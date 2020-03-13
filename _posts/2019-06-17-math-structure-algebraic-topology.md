@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Algebraic Topology: Topology"
-keywords: ["", ""]
+title: "A.T.: Topology"
+keywords: [] 
 description: ""
 category: "math"
-tags: ["space"]
+tags: ["space","A.T."]
 ---
 {% include JB/setup %}
 
@@ -28,7 +28,8 @@ tags: ["space"]
    a two-dimensional space.
 
 
-#### Winding Numbers #### Euler Numbers
+#### Euler Numbers
+
 
 #### remark why we often use manifold, such as sphere, torus, because they are
 more fundamental objects, they are objects can be treated almost the same as

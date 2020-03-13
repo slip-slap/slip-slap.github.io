@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Graph Theory: Vertex Colourings"
+title: "G.T.: Vertex Colourings"
 keywords: [""]
 description: ""
 category: "math"

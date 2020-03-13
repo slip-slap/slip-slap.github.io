@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "norm space"
-keywords: [ "functional analysis"]
+title: "F.A.: Norm Space"
+keywords: [ ""]
 description: ""
 category: "math"
-tags: ["functional analysis"]
+tags: ["change","F.A."]
 ---
 {% include JB/setup %}
 

@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Differential Geometry: Winding Number"
+title: "D.G.: Winding Number"
 keywords: [""]
 description: ""
 category: "math"
-tags: ["space"]
+tags: ["space","D.G."]
 ---
 {% include JB/setup %}
 

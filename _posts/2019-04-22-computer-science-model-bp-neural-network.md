@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "C.S.M.: Neural Network"
+title: "ML: Neural Network"
 keywords: []
 description: "neural network"
-category: "CS"
-tags: ["model" ]
+category: "AI"
+tags: ["ML","supervised" ]
 ---
 {% include JB/setup %}
 

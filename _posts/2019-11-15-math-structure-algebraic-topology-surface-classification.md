@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Algebraic Topology: Surface Classification"
+title: "A.T.: Surface Classification"
 keywords: []
 description: ""
 category: "math"
-tags: ["structure"]
+tags: ["structure","A.T."]
 ---
 {% include JB/setup %}
 

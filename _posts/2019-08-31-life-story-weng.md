@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "さようなら、Weng"
-keywords: ["international dial"]
+keywords: []
 description: "life"
 category: "life"
-tags: [""]
+tags: []
 ---
 {% include JB/setup %}
 

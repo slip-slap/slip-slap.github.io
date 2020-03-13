@@ -4,7 +4,7 @@ title: "Manifold Learning: Isomap"
 keywords: ["isomap"]
 description: ""
 category: "AI"
-tags: ["unsupervised learning" ]
+tags: ["ML","unsupervised" ]
 ---
 
 #### Introduction

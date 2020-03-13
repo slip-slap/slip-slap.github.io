@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Python openml"
+title: "Python: Openml"
 keywords: ["openml"]
-description: "python"
-category: "python"
-tags: ["language"]
+description: 
+category: "code"
+tags: ["python"]
 ---
 {% include JB/setup %}
 

@@ -4,7 +4,7 @@ title: "P.A.S.M.: Generating Functions"
 keywords: ["probabiltiy"]
 description: ""
 category: "math"
-tags: ["apply"]
+tags: ["apply","P.A.S."]
 ---
 {% include JB/setup %}
 

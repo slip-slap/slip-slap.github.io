@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Imperative VS. Symbolic Programs"
-keywords: ["stack", "list"]
+title: "Code: Style"
+keywords: []
 description: "algorithm"
-category: "algorithm"
-tags: ["language"]
+category: "code"
+tags: []
 ---
 {% include JB/setup %}
 

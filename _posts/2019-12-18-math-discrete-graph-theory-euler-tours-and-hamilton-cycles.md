@@ -4,7 +4,7 @@ title: "G.T.: Euler Tours and Hamilton Cycles"
 keywords: [""]
 description: ""
 category: "math"
-tags: ["discrete"]
+tags: ["discrete","G.T."]
 ---
 {% include JB/setup %}
 

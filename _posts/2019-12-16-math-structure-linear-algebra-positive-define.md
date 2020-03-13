@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Linear Algebra: Positive Define"
+title: "L.A.: Positive Define"
 keywords: [""]
 description: ""
 category: "math"
-tags: ["structure"]
+tags: ["structure","L.A."]
 ---
 {% include JB/setup %}
 #### Definition

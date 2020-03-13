@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Differential Geometry: Gauss"
+title: "D.G.: Gauss"
 keywords: [""]
 description: ""
 category: "math"
-tags: ["space"]
+tags: ["space","D.G."]
 ---
 {% include JB/setup %}
 

@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Tikz and PGF"
+title: "Latex: Tikz and PGF"
 keywords: ["Tikz", "PGF"]
-description: "python"
+description: 
 category: "code"
 tags: ["latex"]
 ---

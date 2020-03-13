@@ -1,17 +1,18 @@
 ---
 layout: post
-title: "math"
-keywords: [ "numberical analysis"]
+title: "Math: Outline and History"
+keywords: []
 description: ""
 category: "math"
-tags: ["functional analysis"]
+tags: []
 ---
 {% include JB/setup %}
 
 <img src="{{IMAGE_PATH}}/math.png"  />
 
 1. set is the foundations of all the branches of modern mathmatics 
-2. According to the function of math braches, math can be divided into four parts, structure, space, change, application, and discrete.
+2. According to the function of math braches, math can be divided into four
+   parts, structure, space, change, application, and discrete.
 
 
 #### Difference between space and structure

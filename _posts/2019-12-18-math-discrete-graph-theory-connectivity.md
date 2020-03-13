@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Graph Theory: Connectivity and Application"
+title: "G.T.: Connectivity and Application"
 keywords: [""]
 description: ""
 category: "math"
-tags: ["discrete"]
+tags: ["discrete","G.T."]
 ---
 {% include JB/setup %}
 

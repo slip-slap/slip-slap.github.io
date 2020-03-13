@@ -4,7 +4,7 @@ title: "linux, BSD, and Mac OS X"
 keywords: ["linux","mac","BSD"]
 description: "introduction"
 category: "linux"
-tags: ["CLI tool"]
+tags: ["CLI"]
 ---
 {% include JB/setup %}
 

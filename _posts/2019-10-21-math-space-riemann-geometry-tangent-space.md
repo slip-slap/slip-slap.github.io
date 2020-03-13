@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Riemann Geometry: Tangent Spaces"
+title: "R.G.: Tangent Spaces"
 keywords: [""]
 description: ""
 category: "math"
-tags: ["space"]
+tags: ["space","R.G."]
 ---
 {% include JB/setup %}
 

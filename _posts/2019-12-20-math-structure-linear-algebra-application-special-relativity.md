@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Linear Algebra: Application in Special Relativity"
+title: "L.A.: Application in Special Relativity"
 keywords: [""]
 description: ""
 category: "math"
-tags: ["structure"]
+tags: ["structure","L.A."]
 ---
 {% include JB/setup %}
 #### Introduction

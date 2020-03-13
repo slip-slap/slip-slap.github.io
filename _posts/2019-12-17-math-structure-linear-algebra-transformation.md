@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Linear Algebra: Transformation"
+title: "L.A.: Transformation"
 keywords: [""]
 description: ""
 category: "math"
-tags: ["structure"]
+tags: ["structure","L.A."]
 ---
 {% include JB/setup %}
 

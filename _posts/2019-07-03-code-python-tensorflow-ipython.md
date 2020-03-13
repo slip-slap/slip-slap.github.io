@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "ipython with tensorflow"
+title: "Python: Ipython with Tensorflow"
 keywords: ["python"]
 description: "ipython"
-category: "python"
-tags: ["tensorflow"]
+category: "code"
+tags: ["python"]
 ---
 {% include JB/setup %}
 
@@ -15,7 +15,8 @@ Ipython bring you the benefits, but also the pitfall
 
 #### how to get the lost code back in ipython 
 
-when you delete the code, and you want them back, you can using the following method to get them back.
+when you delete the code, and you want them back, you can using the following
+method to get them back.
 
 ```python
 def rescue_code(function):

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Syntax for Path Specification"
+title: "Latex: Syntax for Path Specification"
 keywords: ["Path", "PGF"]
 description: ""
 category: "code"

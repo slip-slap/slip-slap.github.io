@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Linear Algebra: Vatrix Algebra"
+title: "L.A.: Vatrix Algebra"
 keywords: [""]
 description: ""
 category: "math"
-tags: ["structure"]
+tags: ["structure","L.A."]
 ---
 {% include JB/setup %}
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Python: Scipy Module"
-keywords: ["python", "scientific"]
+keywords: []
 description: "scipy"
 category: "code"
 tags: ["python"]

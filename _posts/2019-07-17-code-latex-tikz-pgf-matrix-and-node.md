@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "nodes and matrix in PGF"
-keywords: ["nodes", "matrix"]
+title: "Latex: Nodes and Matrix in PGF"
+keywords: []
 description: ""
 category: "code"
 tags: ["latex"]

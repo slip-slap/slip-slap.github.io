@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Linear Algebra: Application in Polynomial Space"
+title: "L.A.: Application in Polynomial Space"
 keywords: [""]
 description: ""
 category: "math"
-tags: ["structure"]
+tags: ["structure","L.A."]
 ---
 {% include JB/setup %}
 #### Introduction

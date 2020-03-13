@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Graph Theory: Trees"
+title: "G.T.: Trees"
 keywords: [""]
 description: ""
 category: "math"
-tags: ["discrete"]
+tags: ["discrete","G.T."]
 ---
 {% include JB/setup %}
 

@@ -4,7 +4,7 @@ title: "Manifold Learning: Multidimensional Scaling"
 keywords: ["MDS"]
 description: ""
 category: "AI"
-tags: ["unsupervised learning" ]
+tags: ["ML","unsupervised"]
 ---
 
 #### Introduction

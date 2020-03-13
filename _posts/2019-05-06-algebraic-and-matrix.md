@@ -1,15 +1,16 @@
 ---
 layout: post
-title: "dot product and inner product"
-keywords: ["Euclidean", "Cartesian","dot product"]
+title: "E.G.: Inner Product"
+keywords: []
 description: ""
 category: "math"
-tags: ["distribution"]
+tags: ["space","E.G."]
 ---
 {% include JB/setup %}
 
-In Euclidean Gemometry, the dot product of the Cartesian Coordinates is a algebraic operaton that takes two equal-length sequence of numbers
-and returns a single numer
+In Euclidean Gemometry, the dot product of the Cartesian Coordinates is a
+algebraic operaton that takes two equal-length sequence of numbers and returns a
+single numer
 
 #### formula
 

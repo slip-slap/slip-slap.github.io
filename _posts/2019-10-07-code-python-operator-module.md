@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Operator module"
-keywords: ["python", "lambda"]
+title: "Python: Operator"
+keywords: [] 
 description: "python"
 category: "code"
 tags: ["python"]

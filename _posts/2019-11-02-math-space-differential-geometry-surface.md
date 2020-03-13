@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Differential Deometry: Surface"
+title: "D.G.: Surface"
 keywords: [""]
 description: ""
 category: "math"
-tags: ["space"]
+tags: ["space","D.G."]
 ---
 {% include JB/setup %}
 

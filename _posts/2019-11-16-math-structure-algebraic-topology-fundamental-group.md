@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Algebraic Topology: Fundamental Group"
+title: "A.T.: Fundamental Group"
 keywords: []
 description: ""
 category: "math"
-tags: ["structure"]
+tags: ["structure","A.T."]
 ---
 {% include JB/setup %}
 

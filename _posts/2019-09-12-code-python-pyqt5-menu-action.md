@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Pyqt5 Menu Event Handling"
-keywords: ["python"] 
+title: "Python: Pyqt5 Menu Event Handling"
+keywords: []
 description: "python"
-category: "python"
-tags: ["code"]
+category: "code"
+tags: ["python"]
 ---
 {% include JB/setup %}
 

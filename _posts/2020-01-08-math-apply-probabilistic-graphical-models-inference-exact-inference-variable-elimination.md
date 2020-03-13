@@ -4,7 +4,7 @@ title: "P.G.M.: Exact Inference-Variable Elimination"
 keywords: [""] 
 description: ""
 category: "math"
-tags: ["apply"]
+tags: ["apply","P.G.M."]
 ---
 {% include JB/setup %}
 

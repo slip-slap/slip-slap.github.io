@@ -4,7 +4,7 @@ title: "朋友"
 keywords: ["朋友", "卵"]
 description: "life"
 category: "life"
-tags: [""]
+tags: []
 ---
 {% include JB/setup %}
 

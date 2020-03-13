@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Riemann Geometry:  Multilinear Algebra"
+title: "R.G.:  Multilinear Algebra"
 keywords: [""]
 description: ""
 category: "math"
-tags: ["space"]
+tags: ["space","R.G."]
 ---
 {% include JB/setup %}
 

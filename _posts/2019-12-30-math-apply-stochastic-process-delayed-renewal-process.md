@@ -1,10 +1,10 @@
 ---
 layout: post 
-title: "Stochastic Process.: Delayed Renewal Process"
-keywords: ["Markov Chain"] 
+title: "S.P.: Delayed Renewal Process"
+keywords: [""] 
 description: ""
 category: "math"
-tags: ["apply"]
+tags: ["apply","S.P."]
 ---
 {% include JB/setup %}
 

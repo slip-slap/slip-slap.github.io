@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Algebraic Topology: 1 and 2-dim Objects"
+title: "A.T.: 1 and 2-dim Objects"
 keywords: []
 description: ""
 category: "math"

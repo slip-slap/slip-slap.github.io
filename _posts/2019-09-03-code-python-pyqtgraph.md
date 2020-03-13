@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "pyqtgraph"
-keywords: ["python"] 
+title: "Python: Pyqtgraph"
+keywords: [""] 
 description: "python"
-category: "python"
-tags: ["code"]
+category: "code"
+tags: ["python"]
 ---
 {% include JB/setup %}
 

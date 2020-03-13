@@ -4,7 +4,7 @@ title: "Git: Local Management"
 keywords: []
 description: "git"
 category: "linux"
-tags: ["CLI tool"]
+tags: ["CLI"]
 ---
 {% include JB/setup %}
 

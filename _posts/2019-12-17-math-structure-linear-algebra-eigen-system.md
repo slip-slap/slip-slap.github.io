@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Linear Algebra: Eigen System"
+title: "L.A.: Eigen System"
 keywords: [""]
 description: ""
 category: "math"
-tags: ["structure"]
+tags: ["structure","L.A."]
 ---
 {% include JB/setup %}
 #### Intuitive Explaination of Matrix 

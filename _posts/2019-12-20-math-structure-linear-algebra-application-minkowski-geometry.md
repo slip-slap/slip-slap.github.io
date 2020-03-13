@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Linear Algebra: Application In Minkowski Geometry"
+title: "L.A.: Application In Minkowski Geometry"
 keywords: [""]
 description: ""
 category: "math"
-tags: ["structure"]
+tags: ["structure","L.A."]
 ---
 {% include JB/setup %}
 

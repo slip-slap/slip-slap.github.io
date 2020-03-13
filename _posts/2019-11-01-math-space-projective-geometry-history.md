@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Projective Geometry: History"
+title: "P.G.: History"
 keywords: [""]
 description: ""
 category: "math"
-tags: ["space"]
+tags: ["space","P.G."]
 ---
 {% include JB/setup %}
 

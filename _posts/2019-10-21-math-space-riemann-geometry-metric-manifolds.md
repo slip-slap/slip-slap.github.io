@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Riemann Geometry: Metric Manifold"
+title: "R.G.: Metric Manifold"
 keywords: [""]
 description: ""
 category: "math"
-tags: ["space"]
+tags: ["space","R.G."]
 ---
 {% include JB/setup %}
 

@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Hyperbolic Geometry: Dual and Perpendicularity"
+title: "H.G.: Dual and Perpendicularity"
 keywords: ["history"]
 description: ""
 category: "math"
-tags: ["space"]
+tags: ["space","H.G."]
 ---
 {% include JB/setup %}
 

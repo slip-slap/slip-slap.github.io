@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Riemann Geometry: Connections"
+title: "R.G.: Connections"
 keywords: [""]
 description: ""
 category: "math"
-tags: ["space"]
+tags: ["space","R.G."]
 ---
 {% include JB/setup %}
 

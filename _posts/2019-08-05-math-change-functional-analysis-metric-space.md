@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "metric space"
-keywords: [ "functional analysis"]
+title: "F.A.: Metric Space"
+keywords: [ ""]
 description: ""
 category: "math"
-tags: ["functional analysis"]
+tags: ["change","F.A."]
 ---
 {% include JB/setup %}
 

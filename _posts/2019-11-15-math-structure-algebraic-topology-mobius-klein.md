@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Algebraic Topology: Mobius, Klein, Orientability "
-keywords: ["", ""]
+title: "A.T.: Mobius, Klein, Orientability "
+keywords: []
 description: ""
 category: "math"
-tags: ["structure"]
+tags: ["structure","A.T."]
 ---
 {% include JB/setup %}
 

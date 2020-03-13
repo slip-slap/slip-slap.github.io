@@ -4,6 +4,6 @@ title: "P.G.M.: Inference as Optimization"
 keywords: [""] 
 description: ""
 category: "math"
-tags: ["apply"]
+tags: ["apply","P.G.M."]
 ---
 {% include JB/setup %}

@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "inner product space"
-keywords: [ "functional analysis"]
+title: "F.A.: Inner Product Space"
+keywords: [ ""]
 description: ""
 category: "math"
-tags: ["functional analysis"]
+tags: ["change","F.A."]
 ---
 {% include JB/setup %}

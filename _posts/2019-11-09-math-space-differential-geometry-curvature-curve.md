@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Differential Geometry: Curvature In Curve"
+title: "D.G.: Curvature In Curve"
 keywords: ["calculus"]
 description: ""
 category: "math"
-tags: ["space"]
+tags: ["space","D.G."]
 ---
 {% include JB/setup %}
 

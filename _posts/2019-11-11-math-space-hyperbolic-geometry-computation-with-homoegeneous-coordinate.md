@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Hyperbolic Geometry: Homogeneous Coordinate"
+title: "H.G.: Homogeneous Coordinate with Hyperbolic Geometry"
 keywords: ["history"]
 description: ""
 category: "math"
-tags: ["space"]
+tags: ["space","H.G."]
 ---
 {% include JB/setup %}
 

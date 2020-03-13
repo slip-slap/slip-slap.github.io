@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Asterisk Operator in Python"
-keywords: ["python", "introduction"]
-description: "python"
-category: "python"
-tags: ["code"]
+title: "Python: Asterisk Operator"
+keywords: []
+description: 
+category: "code"
+tags: ["python"]
 ---
 {% include JB/setup %}
 
@@ -20,10 +20,13 @@ def demo(*args, **kwargs):
     print(args," and ",kwargs)     
 demo('ha', 'big', third='wilson', fourth='roy')
 ```
-1. the asterisk mark before args is not used to get the address or content such as in c++. 
-2. **\*args** means accepting arbitrary numbers of positional arguments, **\*\*kwargs** means accepting arbitray numbers of keyword arguments.
+1. the asterisk mark before args is not used to get the address or content such
+   as in c++. 
+2. **\*args** means accepting arbitrary numbers of positional arguments,
+   **\*\*kwargs** means accepting arbitray numbers of keyword arguments.
 3. In here, **\*args** and **\*\*kwargs** are called **packing**
-4. the arguments passed as positional are stored in a tuple called **args**, the arguments passed as keyword are stroed in a dict called **kwargs**
+4. the arguments passed as positional are stored in a tuple called **args**, the
+   arguments passed as keyword are stroed in a dict called **kwargs**
 
 
 #### unpacking the containers

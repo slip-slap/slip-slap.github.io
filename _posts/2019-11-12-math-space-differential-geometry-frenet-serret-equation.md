@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Differential Deometry: Frenet Serret Equation"
+title: "D.G.: Frenet Serret Equation"
 keywords: [""]
 description: ""
 category: "math"
-tags: ["space"]
+tags: ["space","D.G."]
 ---
 {% include JB/setup %}
 

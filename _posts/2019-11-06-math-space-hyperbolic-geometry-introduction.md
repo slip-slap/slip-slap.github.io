@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Hyperbolic Geometry: Introduction"
+title: "H.G.: Introduction"
 keywords: ["history"] 
 description: ""
 category: "math"
-tags: ["space"]
+tags: ["space","H.G."]
 ---
 {% include JB/setup %}
 

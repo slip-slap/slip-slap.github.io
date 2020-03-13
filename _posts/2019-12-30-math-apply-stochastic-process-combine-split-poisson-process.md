@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Stochastic Process: Combine and Split of PP"
+title: "S.P.: Combine and Split of PP"
 keywords: [] 
-description: "statistics theory"
+description: ""
 category: "math"
-tags: ["apply"]
+tags: ["apply","S.P."]
 ---
 {% include JB/setup %}
 

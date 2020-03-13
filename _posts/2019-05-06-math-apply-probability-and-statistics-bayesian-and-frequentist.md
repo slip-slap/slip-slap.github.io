@@ -4,7 +4,7 @@ title: "P.A.S.: Frequentist and Bayesian"
 keywords: ["frequentist", "bayesian"]
 description: ""
 category: "math"
-tags: ["distribution"]
+tags: ["apply","P.A.S."]
 ---
 {% include JB/setup %}
 
@@ -13,7 +13,6 @@ Jo has a test for a disease, we denote Jo's state of health by the variable a
 and the test result by b. <br />
 1. a=1 Jo has the disease
 2. a=0 Jo does not have the disease
-
 
 
 

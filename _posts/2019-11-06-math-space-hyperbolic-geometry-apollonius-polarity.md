@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Hyperbolic Geometry: Polarity"
+title: "H.G.: Polarity"
 keywords: ["history"]
 description: ""
 category: "math"
-tags: ["space"]
+tags: ["space","H.G."]
 ---
 {% include JB/setup %}
 

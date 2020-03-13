@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "PIL package"
+title: "Python: PIL package"
 keywords: ["PIL", "introduction"]
 description: "python"
-category: "python"
-tags: ["language"]
+category: "code"
+tags: ["python"]
 ---
 {% include JB/setup %}
 

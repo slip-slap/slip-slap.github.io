@@ -4,7 +4,7 @@ title: "P.A.S.M.I.: Model Inference"
 keywords: [""]
 description: ""
 category: "math"
-tags: ["apply"]
+tags: ["apply","P.A.S."]
 ---
 {% include JB/setup %}
 

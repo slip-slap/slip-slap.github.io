@@ -1,10 +1,10 @@
 ---
 layout: post 
 title: "S.P.: Renewal Rewards"
-keywords: ["Markov Chain"] 
+keywords: [] 
 description: ""
 category: "math"
-tags: ["apply"]
+tags: ["apply","S.P."]
 ---
 {% include JB/setup %}
 

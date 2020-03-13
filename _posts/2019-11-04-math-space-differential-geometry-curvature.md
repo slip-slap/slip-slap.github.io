@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Differential Geometry: Curvature In Surface"
+title: "D.G.: Curvature In Surface"
 keywords: ["calculus"]
 description: ""
 category: "math"
-tags: ["space"]
+tags: ["space","D.G."]
 ---
 {% include JB/setup %}
 
