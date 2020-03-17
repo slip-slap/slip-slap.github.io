@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Information Geometry: Statistical Manifolds"
+title: "I.G.: Statistical Manifolds"
 keywords: [""]
 description: ""
 category: "math"
-tags: ["space"]
+tags: ["space","I.G."]
 ---
 {% include JB/setup %}
 

@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Differential Geometry: History"
+title: "D.G.: History"
 keywords: ["history"]
 description: ""
 category: "math"
-tags: ["space"]
+tags: ["space","D.G."]
 ---
 {% include JB/setup %}
 

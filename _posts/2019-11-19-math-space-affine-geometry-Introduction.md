@@ -1,15 +1,12 @@
 ---
 layout: post
-title: "Affine Geometry: Introduction"
-keywords: ["history"]
+title: "A.G.: Introduction"
+keywords: []
 description: ""
 category: "math"
-tags: ["space"]
+tags: ["space","A.G."]
 ---
 {% include JB/setup %}
-
-
-
 
 #### HAHA
 1. we deal with geometry with a algebraic point of view.

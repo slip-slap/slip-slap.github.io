@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Complex Analysis"
+title: "M.A.: Complex Analysis"
 keywords: [""]
 description: ""
 category: "math"
-tags: ["change"]
+tags: ["change","M.A."]
 ---
 {% include JB/setup %}
 

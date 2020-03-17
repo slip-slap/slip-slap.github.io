@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Number Theory: Real Number"
+title: "N.T.: Real Number"
 keywords: [ ""]
 description: ""
 category: "math"
-tags: ["structure"]
+tags: ["structure","N.T."]
 ---
 {% include JB/setup %}
 

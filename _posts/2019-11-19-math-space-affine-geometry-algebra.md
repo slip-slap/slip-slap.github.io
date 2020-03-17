@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Affine Geometry: Vector Algebra"
+title: "A.G.: Vector Algebra"
 keywords: ["history"]
 description: ""
 category: "math"
-tags: ["space"]
+tags: ["space","A.G."]
 ---
 {% include JB/setup %}
 

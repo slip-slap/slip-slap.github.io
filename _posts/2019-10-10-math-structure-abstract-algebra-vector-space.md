@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Abstract Algebra: Vector Space"
-keywords: [ " linear algebra"]
+title: "A.A.: Vector Space"
+keywords: []
 description: ""
 category: "math"
-tags: ["structure"]
+tags: ["structure","A.A."]
 ---
 {% include JB/setup %}
 

@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Algebraic Topology: Euler-Poincare Characteristic"
+title: "A.T.: Euler-Poincare Characteristic"
 keywords: ["", ""]
 description: ""
 category: "math"
-tags: ["structure"]
+tags: ["structure","A.T."]
 ---
 {% include JB/setup %}
 

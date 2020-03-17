@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Differential Deometry: Gauss-Egregium"
+title: "D.G: Gauss-Egregium"
 keywords: [""]
 description: ""
 category: "math"
-tags: ["space"]
+tags: ["space","D.G."]
 ---
 {% include JB/setup %}
 

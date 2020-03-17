@@ -23,16 +23,6 @@ the benificial is following:
 a vector space is a set V with two operations, plus and times $$(V,+,-)$$  <br />
 1): a set V <br />
 2): +: V*V $$\rightarrow$$ V "addition" <br />
-3): <br />
-satifsying:
-1. $$C^{+}$$
-2. $$A^{+}$$
-3. $$N^{+}$$
-4. $$I^{+}$$
-5. A:    
-5. D:
-5. D:
-5. U:
 
 ##### vector space of Homomorphisms
 if $$(V,+,\cdot)$$ and $$(W,+,\cdot)$$ are vector spaces, then we can define the set

@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Riemann Integral"
-keywords: [ "mathematical analysis"]
+title: "M.A.: Riemann Integral"
+keywords: []
 description: ""
 category: "math"
-tags: ["change"]
+tags: ["change","M.A."]
 ---
 {% include JB/setup %}
 

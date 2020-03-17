@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Riemann Geometry: Differential Manifold"
+title: "R.G.: Differential Manifold"
 keywords: [""]
 description: ""
 category: "math"
-tags: ["space"]
+tags: ["space","R.G."]
 ---
 {% include JB/setup %}
 

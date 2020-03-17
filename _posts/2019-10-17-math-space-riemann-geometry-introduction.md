@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "R.G.: Concept"
+title: "R.G.: Introduction"
 keywords: [""]
 description: ""
 category: "math"

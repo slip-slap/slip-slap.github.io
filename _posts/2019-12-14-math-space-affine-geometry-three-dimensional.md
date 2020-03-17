@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Affine Geometry: In Three Dimensional"
+title: "A.G.: Three Dimensional"
 keywords: ["history"]
 description: ""
 category: "math"
-tags: ["space"]
+tags: ["space","A.G."]
 ---
 {% include JB/setup %}
 

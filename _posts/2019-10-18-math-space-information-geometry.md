@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Information Geometry"
-keywords: ["statistical model", "Riemann geometry"]
+title: "I.G.: Introduction"
+keywords: []
 description: ""
 category: "math"
-tags: ["space"]
+tags: ["space","I.G."]
 ---
 {% include JB/setup %}
 

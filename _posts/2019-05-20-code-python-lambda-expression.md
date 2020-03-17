@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "The lambda expression of Python"
-keywords: ["python", "lambda"]
-description: "python"
+title: "Python: Lambda Expression"
+keywords: []
+description: ""
 category: "code"
 tags: ["python"]
 ---

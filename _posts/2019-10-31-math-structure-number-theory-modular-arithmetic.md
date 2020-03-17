@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Number Theory: Modular Arithmetic"
+title: "N.T.: Modular Arithmetic"
 keywords: [ ""]
 description: ""
 category: "math"
-tags: ["structure"]
+tags: ["structure","N.T."]
 ---
 {% include JB/setup %}
 

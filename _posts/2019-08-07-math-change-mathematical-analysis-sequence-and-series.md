@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "sequence and series"
+title: "M.A.: Sequence and Series"
 keywords: [ "mathematical analysis"]
 description: ""
 category: "math"
-tags: ["change"]
+tags: ["change","M.A."]
 ---
 {% include JB/setup %}
 

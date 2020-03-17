@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Abstract Algebra: Presentation of a Group"
+title: "A.A.: Group Presentation"
 keywords: []
 description: ""
 category: "math"
-tags: ["structure"]
+tags: ["structure","A.A."]
 ---
 {% include JB/setup %}
 

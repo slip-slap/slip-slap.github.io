@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Linear Algebra: Application In Euclidean Geometry"
+title: "L.A.: Application In Euclidean Geometry"
 keywords: [""]
 description: ""
 category: "math"
-tags: ["structure"]
+tags: ["structure","L.A."]
 ---
 {% include JB/setup %}
 

@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Mathematical Analysis: Change Order of Integration, Differention and limit"
+title: "M.A.: Change Order of Integration, Differention and limit"
 keywords: [ ""]
 description: ""
 category: "math"
-tags: ["change"]
+tags: ["change","M.A."]
 ---
 {% include JB/setup %}
 

@@ -26,6 +26,16 @@ find Non-Euclidean geometry, to study his paper, Gauss learn Russian language.
 ignore said I had alread find this. So his work is ignored by contempory scitentist.
 
 
+#### Relationship Between Geometry and Algebra
+1. Geometry is the most imporant thing want to deal with, like a square, a cubic,
+so cartesian coordiates is developed to deal with this geometry algebraicly.
+2. Differential Geometry is dealed with in an differential way, vector,
+   integration, differential, are used.
+3. Affine Geometry, linear algebra is developed.
+4. Now we want to unify all these geometry in one framework. Tensor is
+   coming.
+
+
 
 
 

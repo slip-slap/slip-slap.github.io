@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Algebraic Topology: Homology"
+title: "A.T.: Homology"
 keywords: []
 description: ""
 category: "math"
-tags: ["structure"]
+tags: ["structure","A.T."]
 ---
 {% include JB/setup %}
 

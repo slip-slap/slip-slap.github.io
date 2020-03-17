@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "I.T.: Concept and Notation"
+title: "I.T.: Introduction"
 keywords: [""]
 description: ""
 category: "math"

@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "diagram of Neural Network,Flowchart"
-keywords: ["tikz", "fig",""]
-description: "neural network"
+title: "Latex: Neural Network,Flowchart"
+keywords: []
+description: ""
 category: "code"
-tags: ["latex" ]
+tags: ["latex"]
 ---
 {% include JB/setup %}
 

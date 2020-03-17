@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Linear Algebra: Concept and Notation"
+title: "L.A.: Introduction"
 keywords: [""]
 description: ""
 category: "math"
-tags: ["structure"]
+tags: ["structure","L.A."]
 ---
 {% include JB/setup %}
 
@@ -56,10 +56,11 @@ Geometrically it means these three vectors span a plane in $\mathcal{A^3}$
 
 
 #### Galois
-1. the origin of linear algebra is affine geometry. Because of affine geometry,
+1. The origin of linear algebra is affine geometry. Because of affine geometry,
    we found linear algebra. After that, linear algebra is be treated as a
    independent branch.
-2. Linear algebra is just a tool for computation.
+2. Linear algebra is just a tool for computation, **It can used to deal with so
+   many problems, just as a tool to calculation, don't be afraid**.
 3. We are so familiar with the computation of addition, minus,
    multiplication,division, but not too familiar with calculus, derivative,
    least familiar with matrix compuation. **As a mathematican, we shoud not

@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "broadcasting in tensorflow"
-keywords: ["python"]
-description: "keras"
+title: "Python: Keras"
+keywords: []
+description: 
 category: "code"
 tags: ["python"]
 ---

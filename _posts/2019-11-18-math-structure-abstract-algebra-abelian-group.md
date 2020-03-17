@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Abstract Algebra: Abelian Group"
+title: "A.A.: Abelian Group"
 keywords: []
 description: ""
 category: "math"
-tags: ["structure"]
+tags: ["structure","A.A."]
 ---
 {% include JB/setup %}
 

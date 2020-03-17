@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Game Theory: Introduction"
+title: "G.T.: Introduction"
 keywords: [ ""]
 description: ""
 category: "math"
-tags: ["apply"]
+tags: ["apply","G.T."]
 ---
 {% include JB/setup %}
 

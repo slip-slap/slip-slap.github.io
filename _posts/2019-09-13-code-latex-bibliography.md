@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "bibliography"
+title: "Latex: Bibliography"
 keywords: ["Tikz", "PGF"]
 description: ""
 category: "code"

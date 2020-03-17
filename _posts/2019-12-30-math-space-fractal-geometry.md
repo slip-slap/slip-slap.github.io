@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Fractal Geometry: Introduction"
+title: "F.G.: Introduction"
 keywords: ["history"]
 description: ""
 category: "math"
-tags: ["space"]
+tags: ["space","F.G."]
 ---
 {% include JB/setup %}

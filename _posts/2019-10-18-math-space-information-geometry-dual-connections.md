@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Dual Connections"
-keywords: ["statistical model", "Riemann geometry"]
+title: "I.G.: Dual Connections"
+keywords: []
 description: ""
 category: "math"
-tags: ["space"]
+tags: ["space","I.G."]
 ---
 {% include JB/setup %}
 

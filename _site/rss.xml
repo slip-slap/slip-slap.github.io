@@ -5,10 +5,136 @@
   <description>Just Do It - </description>
   <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
   <link></link>
-  <lastBuildDate>Fri, 13 Mar 2020 14:23:34 +0900</lastBuildDate>
-  <pubDate>Fri, 13 Mar 2020 14:23:34 +0900</pubDate>
+  <lastBuildDate>Tue, 17 Mar 2020 11:32:43 +0900</lastBuildDate>
+  <pubDate>Tue, 17 Mar 2020 11:32:43 +0900</pubDate>
   <ttl>1800</ttl>
 
+
+  <item>
+    <title>Tensor: Summary</title>
+    <description>
+&lt;h4 id=&quot;why-we-have-tensors&quot;&gt;Why we have tensors?&lt;/h4&gt;
+&lt;p&gt;The answer is to unify the function, unify space.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Functions in nature is a map, but what kind of up, how to define this map?&lt;/li&gt;
+  &lt;li&gt;According to tensor theory, it can be consists of two building blocks, vector
+and covector, and covector is just a special vector whose image is real
+number.&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/math/math-change-tensor-summary.html</link>
+    <guid>/math/math-change-tensor-summary</guid>
+    <pubDate>Tue, 17 Mar 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Tensor: Delta Operator and Gradient</title>
+    <description>
+&lt;h4 id=&quot;delta-operator-and-gradient&quot;&gt;Delta Operator and Gradient&lt;/h4&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\nabla f=\left\langle\frac{\partial}{\partial x} f, \frac{\partial}{\partial y}
+f, \frac{\partial}{\partial z} f\right\rangle&lt;/script&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;example-of-vector-and-covector&quot;&gt;Example of Vector and Covector&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;$\nabla {f}$ obtains a vector&lt;/li&gt;
+  &lt;li&gt;$df$  obtains a covector
+    &lt;ul&gt;
+      &lt;li&gt;For a very very long time, I just can’t understand why $df$ is a covector,
+because as soon as I see the sign $df$, the expression such as &lt;script type=&quot;math/tex&quot;&gt;3dx+5dy+6dz&lt;/script&gt;
+come into my mind, that’s the form of &lt;script type=&quot;math/tex&quot;&gt;df&lt;/script&gt;, that’s calculation process of
+$df$, you should focus on the result of the $df$, it’s just a number.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/math/math-change-tensor-delta-operator-and-gradient.html</link>
+    <guid>/math/math-change-tensor-delta-operator-and-gradient</guid>
+    <pubDate>Tue, 17 Mar 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Tensor: Covector</title>
+    <description>
+&lt;h4 id=&quot;covector&quot;&gt;Covector&lt;/h4&gt;
+&lt;p&gt;A covector(row vector) is a function that takes a vector and produces a scalar.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Covectors are invarient, covector component are not invariant.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;two special covectors:&lt;/p&gt;
+
+&lt;h4 id=&quot;covector-visualization&quot;&gt;Covector Visualization&lt;/h4&gt;
+&lt;p&gt;This visualization is really nice because we don’t need to know everything about
+coordinate systems or components in order to understand how a covector acts on 
+a vector.&lt;/p&gt;
+
+&lt;h4 id=&quot;linear-map&quot;&gt;Linear Map&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Coordinate Definition: Matrics are the coordinate interpretation of linear
+maps.&lt;/li&gt;
+  &lt;li&gt;Geometric Definition: keep lines parallel, keep lines evenly spaced, keep the
+origin stationary.&lt;/li&gt;
+  &lt;li&gt;Abstract Algebra  Definition&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;tensor-notation&quot;&gt;Tensor Notation&lt;/h4&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;T_{r s t \dots}^{i j k \ldots}&lt;/script&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;m denotes contravarient indexes and n denotes covariant indexes&lt;/li&gt;
+  &lt;li&gt;we call T as (m,n)-tensor&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;einstein-summation-convention&quot;&gt;Einstein Summation Convention&lt;/h4&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;% &lt;![CDATA[
+\begin{aligned} \sum_{v=1}^{n} A_{\mu v} v_{v} &amp; \rightarrow A_{\mu v} v_{v} \\
+\sum_{\beta=1}^{n} \sum_{\gamma=1}^{n} A_{\alpha \beta} B_{\beta \gamma}
+C_{\gamma \delta} &amp; \rightarrow A_{\alpha \beta} B_{\beta \gamma} C_{\gamma
+\delta} \end{aligned} %]]&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;delta-operator-and-gradient&quot;&gt;Delta Operator and Gradient&lt;/h4&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\nabla f=\left\langle\frac{\partial}{\partial x} f, \frac{\partial}{\partial y}
+f, \frac{\partial}{\partial z} f\right\rangle&lt;/script&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;example-of-vector-and-covector&quot;&gt;Example of Vector and Covector&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;$\nabla {f}$ obtains a vector&lt;/li&gt;
+  &lt;li&gt;$df$  obtains a covector&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;diverence-notation&quot;&gt;Diverence Notation&lt;/h4&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;% &lt;![CDATA[
+\begin{aligned} \nabla \cdot \vec{f} &amp;=\left\langle\frac{\partial}{\partial
+x_{1}}, \frac{\partial}{\partial x_{2}}, \frac{\partial}{\partial
+x_{3}}\right\rangle \cdot\left\langle f_{1}, f_{2}, f_{3}\right\rangle \\
+&amp;=\frac{\partial}{\partial x_{1}}\left(f_{1}\right)+\frac{\partial}{\partial
+x_{2}}\left(f_{1}\right)+\frac{\partial}{\partial x_{3}}\left(f_{3}\right) \\
+&amp;=\partial_{1} f_{1}+\partial_{2} f_{2}+\partial_{3} f_{2} \end{aligned} %]]&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+
+</description>
+    <link>/math/math-change-tensor-covector.html</link>
+    <guid>/math/math-change-tensor-covector</guid>
+    <pubDate>Tue, 17 Mar 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>famous people</title>
+    <description>
+&lt;h4 id=&quot;雷倩&quot;&gt;雷倩&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;she is calm, logistic, when you listen her talk, you can’t tell his political
+position. She just give you the numbers, the facts and make the conclusion,
+without, I think, I know, I feel to express yourself.  There is so much that
+I can learn from her.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/life/life-famous-person.html</link>
+    <guid>/life/life-famous-person</guid>
+    <pubDate>Sun, 15 Mar 2020 00:00:00 +0900</pubDate>
+  </item>
 
   <item>
     <title>Linux: Jekyll</title>
@@ -71,12 +197,66 @@ and Bayesian networks.&lt;/p&gt;
   </item>
 
   <item>
+    <title>Books, Movies and Music</title>
+    <description>
+&lt;h4 id=&quot;books&quot;&gt;Books&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Things That Gain from Disorder&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Success and Luck
+Success is because of luck.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;李光耀观天下
+In this book, Li has the following conclusions:&lt;/li&gt;
+  &lt;li&gt;In the future, Amecian and China will be the biggest ecomomy entity in the
+world.&lt;/li&gt;
+  &lt;li&gt;Europe and Japan will go down
+The conclusion is build on the following four factors&lt;/li&gt;
+  &lt;li&gt;Population&lt;/li&gt;
+  &lt;li&gt;Language: english is the most powerful language, It’s easy to learn, so it
+attracts people to learn. It  attact scientist, engineers to master and to
+work for your country.&lt;/li&gt;
+  &lt;li&gt;Tradition: There are many political systems, China is not democratic,
+because for a long history, It shows if and only if there is a powerfull central
+goverment in China, and China is prosperous and powerfull.&lt;/li&gt;
+  &lt;li&gt;Transaction
+    &lt;h4 id=&quot;music&quot;&gt;Music&lt;/h4&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Red Right Hand(soundtrack of Peaky Blinder)&lt;/li&gt;
+  &lt;li&gt;很爱很爱你(刘若英) Origin: 長い間(あいだ)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;movie&quot;&gt;Movie&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;大明劫&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/life/life-books-and-movies-music.html</link>
+    <guid>/life/life-books-and-movies-music</guid>
+    <pubDate>Tue, 10 Mar 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
     <title>Historical Geography</title>
     <description>
 &lt;h4 id=&quot;mongol-empire&quot;&gt;Mongol Empire&lt;/h4&gt;
 &lt;ol&gt;
   &lt;li&gt;Founder: Genghis Khan.&lt;/li&gt;
   &lt;li&gt;Reigh 1206-1227&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;russia&quot;&gt;Russia&lt;/h4&gt;
+
+&lt;h4 id=&quot;roman&quot;&gt;Roman&lt;/h4&gt;
+
+&lt;h4 id=&quot;china&quot;&gt;China&lt;/h4&gt;
+
+&lt;h4 id=&quot;notation&quot;&gt;Notation&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;B.C. stands for the english phrase before chirst.&lt;/li&gt;
+  &lt;li&gt;A.D. stands for coufusingly for a Lation phrase: anno domini(in the year of
+lord-the year Jesus was born)&lt;/li&gt;
 &lt;/ol&gt;
 
 </description>
@@ -91,30 +271,6 @@ and Bayesian networks.&lt;/p&gt;
 </description>
     <link>/life/economy-stock.html</link>
     <guid>/life/economy-stock</guid>
-    <pubDate>Tue, 10 Mar 2020 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>Books, Movies and Music</title>
-    <description>
-&lt;h4 id=&quot;books&quot;&gt;Books&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Things That Gain from Disorder&lt;/li&gt;
-  &lt;li&gt;Success and Luck
-Success is because of luck.
-    &lt;h4 id=&quot;music&quot;&gt;Music&lt;/h4&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Red Right Hand(soundtrack of Peaky Blinder)&lt;/li&gt;
-  &lt;li&gt;很爱很爱你(刘若英) Origin: 長い間(あいだ)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;movie&quot;&gt;Movie&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;大明劫&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    <link>/life/books-and-movies-music.html</link>
-    <guid>/life/books-and-movies-music</guid>
     <pubDate>Tue, 10 Mar 2020 00:00:00 +0900</pubDate>
   </item>
 
@@ -1250,13 +1406,13 @@ this subject, Such as I-Map, I-projection and M-projection.&lt;/li&gt;
 &lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
 
 </description>
-    <link>/math/math-apply-probabilistic-graphical-models-concept-and-notation.html</link>
-    <guid>/math/math-apply-probabilistic-graphical-models-concept-and-notation</guid>
+    <link>/math/math-apply-probabilistic-graphical-models-introduction.html</link>
+    <guid>/math/math-apply-probabilistic-graphical-models-introduction</guid>
     <pubDate>Wed, 01 Jan 2020 00:00:00 +0900</pubDate>
   </item>
 
   <item>
-    <title>Fractal Geometry: Introduction</title>
+    <title>F.G.: Introduction</title>
     <description>
 </description>
     <link>/math/math-space-fractal-geometry.html</link>
@@ -1640,15 +1796,6 @@ falling powers.&lt;/li&gt;
   </item>
 
   <item>
-    <title>Decision Theory.: Introduction</title>
-    <description>
-</description>
-    <link>/math/math-apply-decision-theory-introduction.html</link>
-    <guid>/math/math-apply-decision-theory-introduction</guid>
-    <pubDate>Sun, 22 Dec 2019 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
     <title>L.A.: Vatrix Algebra</title>
     <description>
 &lt;h4 id=&quot;concept&quot;&gt;Concept&lt;/h4&gt;
@@ -1729,7 +1876,7 @@ discovered by any time after 1700.&lt;/li&gt;
   </item>
 
   <item>
-    <title>Linear Algebra: Application In Euclidean Geometry</title>
+    <title>L.A.: Application In Euclidean Geometry</title>
     <description>
 &lt;h4 id=&quot;introduction&quot;&gt;Introduction&lt;/h4&gt;
 &lt;ol&gt;
@@ -2848,6 +2995,62 @@ z=c_{k}\right)&lt;/script&gt;&lt;/p&gt;
   </item>
 
   <item>
+    <title>L.A.: Introduction</title>
+    <description>
+&lt;h4 id=&quot;notation&quot;&gt;Notation&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;% &lt;![CDATA[
+\boldsymbol{x}=\left[\begin{array}{llll}{x_{1}} &amp; {x_{2}} &amp; {\dots} &amp;
+{x_{m}}\end{array}\right]^{\mathrm{T}} %]]&gt;&lt;/script&gt;: to simplify writing column vectors in-line with other text, sometimes they
+are written as row vectors with the transpose operation applied to them.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h4 id=&quot;spanning-sets&quot;&gt;Spanning Sets&lt;/h4&gt;
+&lt;p&gt;A set of vector &lt;script type=&quot;math/tex&quot;&gt;\left\{\vec{v}_{1}, \vec{v}_{2}, \dots, \vec{v}_{n}\right\}&lt;/script&gt; is a spanning set for &lt;br /&gt;
+$\mathcal{A^3} \leftrightarrow$ for every vector $\vec{v} \in \mathcal{A^3}$ 
+can be written as: &lt;br /&gt;
+&lt;script type=&quot;math/tex&quot;&gt;\vec{v}=a_{1} \vec{v}_{1}+a_{2} \vec{v}_{2}+\cdots+a_{n} \vec{v}_{n}&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h4 id=&quot;linear-independent-sets&quot;&gt;Linear Independent Sets&lt;/h4&gt;
+&lt;p&gt;a set of vectors 
+&lt;script type=&quot;math/tex&quot;&gt;\left\{\vec{v}_{1}, \vec{v}_{2}, \dots, \vec{v}_{n}\right\}&lt;/script&gt;
+in $\mathcal{A^3}$ is linearly independent
+$\leftrightarrow$ none of the vectors can be written as linear combination of
+the others.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h5 id=&quot;example&quot;&gt;Example&lt;/h5&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\begin{array}{l}{\left\{\left(\begin{array}{c}{2} \\ {3} \\
+{-1}\end{array}\right),\left(\begin{array}{c}{4} \\ {2} \\
+{1}\end{array}\right),\left(\begin{array}{c}{-2} \\ {5} \\
+{-5}\end{array}\right)\right\}} \\ {\left(\begin{array}{c}{-2} \\ {5} \\
+{-5}\end{array}\right)=3\left(\begin{array}{c}{2} \\ {3} \\
+{-1}\end{array}\right)-2\left(\begin{array}{c}{4} \\ {2} \\
+{1}\end{array}\right)}\end{array}&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Geometrically it means these three vectors span a plane in $\mathcal{A^3}$&lt;/p&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;The origin of linear algebra is affine geometry. Because of affine geometry,
+we found linear algebra. After that, linear algebra is be treated as a
+independent branch.&lt;/li&gt;
+  &lt;li&gt;Linear algebra is just a tool for computation, &lt;strong&gt;It can used to deal with so
+many problems, just as a tool to calculation, don’t be afraid&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;We are so familiar with the computation of addition, minus,
+multiplication,division, but not too familiar with calculus, derivative,
+least familiar with matrix compuation. **As a mathematican, we shoud not
+afraid any calculation of math **&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/math/math-structure-linear-algebra-introduction.html</link>
+    <guid>/math/math-structure-linear-algebra-introduction</guid>
+    <pubDate>Sat, 14 Dec 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
     <title>L.A.: Determinant</title>
     <description>
 &lt;h4 id=&quot;question-what-is-delta-a-&quot;&gt;Question: What is $\Delta (A)$ ?&lt;/h4&gt;
@@ -2903,61 +3106,6 @@ for me in working with matrices.&lt;/li&gt;
   </item>
 
   <item>
-    <title>Linear Algebra: Concept and Notation</title>
-    <description>
-&lt;h4 id=&quot;notation&quot;&gt;Notation&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;% &lt;![CDATA[
-\boldsymbol{x}=\left[\begin{array}{llll}{x_{1}} &amp; {x_{2}} &amp; {\dots} &amp;
-{x_{m}}\end{array}\right]^{\mathrm{T}} %]]&gt;&lt;/script&gt;: to simplify writing column vectors in-line with other text, sometimes they
-are written as row vectors with the transpose operation applied to them.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;h4 id=&quot;spanning-sets&quot;&gt;Spanning Sets&lt;/h4&gt;
-&lt;p&gt;A set of vector &lt;script type=&quot;math/tex&quot;&gt;\left\{\vec{v}_{1}, \vec{v}_{2}, \dots, \vec{v}_{n}\right\}&lt;/script&gt; is a spanning set for &lt;br /&gt;
-$\mathcal{A^3} \leftrightarrow$ for every vector $\vec{v} \in \mathcal{A^3}$ 
-can be written as: &lt;br /&gt;
-&lt;script type=&quot;math/tex&quot;&gt;\vec{v}=a_{1} \vec{v}_{1}+a_{2} \vec{v}_{2}+\cdots+a_{n} \vec{v}_{n}&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;h4 id=&quot;linear-independent-sets&quot;&gt;Linear Independent Sets&lt;/h4&gt;
-&lt;p&gt;a set of vectors 
-&lt;script type=&quot;math/tex&quot;&gt;\left\{\vec{v}_{1}, \vec{v}_{2}, \dots, \vec{v}_{n}\right\}&lt;/script&gt;
-in $\mathcal{A^3}$ is linearly independent
-$\leftrightarrow$ none of the vectors can be written as linear combination of
-the others.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;h5 id=&quot;example&quot;&gt;Example&lt;/h5&gt;
-&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\begin{array}{l}{\left\{\left(\begin{array}{c}{2} \\ {3} \\
-{-1}\end{array}\right),\left(\begin{array}{c}{4} \\ {2} \\
-{1}\end{array}\right),\left(\begin{array}{c}{-2} \\ {5} \\
-{-5}\end{array}\right)\right\}} \\ {\left(\begin{array}{c}{-2} \\ {5} \\
-{-5}\end{array}\right)=3\left(\begin{array}{c}{2} \\ {3} \\
-{-1}\end{array}\right)-2\left(\begin{array}{c}{4} \\ {2} \\
-{1}\end{array}\right)}\end{array}&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;Geometrically it means these three vectors span a plane in $\mathcal{A^3}$&lt;/p&gt;
-
-&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;the origin of linear algebra is affine geometry. Because of affine geometry,
-we found linear algebra. After that, linear algebra is be treated as a
-independent branch.&lt;/li&gt;
-  &lt;li&gt;Linear algebra is just a tool for computation.&lt;/li&gt;
-  &lt;li&gt;We are so familiar with the computation of addition, minus,
-multiplication,division, but not too familiar with calculus, derivative,
-least familiar with matrix compuation. **As a mathematican, we shoud not
-afraid any calculation of math **&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    <link>/math/math-structure-linear-algebra-concept-and-notation.html</link>
-    <guid>/math/math-structure-linear-algebra-concept-and-notation</guid>
-    <pubDate>Sat, 14 Dec 2019 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
     <title>L.A.: Matrices Application(2 times 2)</title>
     <description>
 &lt;h4 id=&quot;linear-approximations-to-nonlinear-maps&quot;&gt;Linear Approximations to Nonlinear Maps&lt;/h4&gt;
@@ -3006,7 +3154,7 @@ is the derivative&lt;/p&gt;
   </item>
 
   <item>
-    <title>Affine Geometry: In Three Dimensional</title>
+    <title>A.G.: Three Dimensional</title>
     <description>
 </description>
     <link>/math/math-space-affine-geometry-three-dimensional.html</link>
@@ -3682,7 +3830,7 @@ just create the word “unitary”&lt;/li&gt;
   </item>
 
   <item>
-    <title>Abstract Algebra: Presentation of a Group</title>
+    <title>A.A.: Group Presentation</title>
     <description>
 &lt;h4 id=&quot;introduction&quot;&gt;Introduction&lt;/h4&gt;
 &lt;p&gt;In mathematics, a presentation is one method of specifying a group. A
@@ -3864,11 +4012,11 @@ curves.&lt;/li&gt;
   </item>
 
   <item>
-    <title>Linear Algebraic Geometry: Bezier Curves</title>
+    <title>L.A.: Bezier Curves</title>
     <description>
 </description>
-    <link>/math/math-space-affine-geometry-beizer-curve.html</link>
-    <guid>/math/math-space-affine-geometry-beizer-curve</guid>
+    <link>/math/math-space-linear-algebra-beizer-curve.html</link>
+    <guid>/math/math-space-linear-algebra-beizer-curve</guid>
     <pubDate>Wed, 20 Nov 2019 00:00:00 +0900</pubDate>
   </item>
 
@@ -3904,7 +4052,7 @@ But with math tool, you see it, math is beautiful, math is great, I love math.&l
   </item>
 
   <item>
-    <title>Affine Geometry: Vector Algebra</title>
+    <title>A.G.: Vector Algebra</title>
     <description>
 &lt;h4 id=&quot;haha&quot;&gt;HAHA&lt;/h4&gt;
 &lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;% &lt;![CDATA[
@@ -4016,7 +4164,7 @@ d}\end{array}\right)\left(\begin{array}{l}{x_{1}} \\ {x_{2}}\end{array}\right) %
   </item>
 
   <item>
-    <title>Affine Geometry: Introduction</title>
+    <title>A.G.: Introduction</title>
     <description>
 &lt;h4 id=&quot;haha&quot;&gt;HAHA&lt;/h4&gt;
 &lt;ol&gt;
@@ -4149,7 +4297,7 @@ where hats means omit.&lt;/p&gt;
   </item>
 
   <item>
-    <title>Abstract Algebra: Abelian Group</title>
+    <title>A.A.: Abelian Group</title>
     <description>
 &lt;h4 id=&quot;haha&quot;&gt;HAHA&lt;/h4&gt;
 &lt;p&gt;Every finite commutative or abelian group is isomorphic to a direct sum of
@@ -4237,7 +4385,7 @@ meaning of quotient and generalize this concept.&lt;/li&gt;
   </item>
 
   <item>
-    <title>Algebraic Topology: Homology</title>
+    <title>A.T.: Homology</title>
     <description>
 &lt;h4 id=&quot;haha&quot;&gt;HAHA&lt;/h4&gt;
 &lt;p&gt;As we prefer to write operation as addition, so loop is represented by
@@ -4363,7 +4511,7 @@ positive rotation as we move around.&lt;/p&gt;
   </item>
 
   <item>
-    <title>Algebraic Topology: Euler-Poincare Characteristic</title>
+    <title>A.T.: Euler-Poincare Characteristic</title>
     <description>
 &lt;h4 id=&quot;concept&quot;&gt;Concept&lt;/h4&gt;
 &lt;p&gt;In algebraic topology, the Euler characteristic or Euler number is a topological
@@ -4472,7 +4620,7 @@ of the curve, and is negative if the curve travels around the point clockwise.&l
   </item>
 
   <item>
-    <title>Differential Deometry: Gauss-Egregium</title>
+    <title>D.G: Gauss-Egregium</title>
     <description>
 &lt;h4 id=&quot;haha&quot;&gt;HAHA&lt;/h4&gt;
 &lt;p&gt;Gauss introduce the idea of describing a surface &lt;strong&gt;S&lt;/strong&gt; parametrically, and then
@@ -4847,7 +4995,7 @@ where $\delta_{12}$ and $\delta_{21}$ are zeros&lt;/p&gt;
   </item>
 
   <item>
-    <title>Number Theory: Real Number</title>
+    <title>N.T.: Real Number</title>
     <description>
 &lt;h4 id=&quot;haha&quot;&gt;HAHA&lt;/h4&gt;
 &lt;p&gt;Currently, we think real numbers are the basic building blocks of number, but,
@@ -5017,7 +5165,7 @@ suit for arithmetic&lt;/li&gt;
   </item>
 
   <item>
-    <title>complex</title>
+    <title>N.T.: Complex</title>
     <description>
 &lt;h4 id=&quot;notation&quot;&gt;notation&lt;/h4&gt;
 &lt;ol&gt;
@@ -5445,6 +5593,17 @@ find Non-Euclidean geometry, to study his paper, Gauss learn Russian language.&l
 ignore said I had alread find this. So his work is ignored by contempory scitentist.&lt;/li&gt;
 &lt;/ol&gt;
 
+&lt;h4 id=&quot;relationship-between-geometry-and-algebra&quot;&gt;Relationship Between Geometry and Algebra&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Geometry is the most imporant thing want to deal with, like a square, a cubic,
+so cartesian coordiates is developed to deal with this geometry algebraicly.&lt;/li&gt;
+  &lt;li&gt;Differential Geometry is dealed with in an differential way, vector,
+integration, differential, are used.&lt;/li&gt;
+  &lt;li&gt;Affine Geometry, linear algebra is developed.&lt;/li&gt;
+  &lt;li&gt;Now we want to unify all these geometry in one framework. Tensor is
+coming.&lt;/li&gt;
+&lt;/ol&gt;
+
 &lt;h4 id=&quot;example-cartesian-geometry&quot;&gt;Example: Cartesian Geometry&lt;/h4&gt;
 &lt;ol&gt;
   &lt;li&gt;Euclidean Geometry study the properties of geometry itself, for example,
@@ -5490,7 +5649,7 @@ solve problems.&lt;/li&gt;
   </item>
 
   <item>
-    <title>Number Theory: Modular Arithmetic</title>
+    <title>N.T.: Modular Arithmetic</title>
     <description>
 &lt;h4 id=&quot;definition&quot;&gt;definition&lt;/h4&gt;
 &lt;p&gt;modular arithmetic: modular arithmetic can be handled mathematically by introducing a congruence relation
@@ -6025,27 +6184,7 @@ The reason why we talk about multilinear space is because the tangent spaces.&lt
 &lt;h5 id=&quot;definition-vector-space&quot;&gt;definition: vector space&lt;/h5&gt;
 &lt;p&gt;a vector space is a set V with two operations, plus and times &lt;script type=&quot;math/tex&quot;&gt;(V,+,-)&lt;/script&gt;  &lt;br /&gt;
 1): a set V &lt;br /&gt;
-2): +: V*V &lt;script type=&quot;math/tex&quot;&gt;\rightarrow&lt;/script&gt; V “addition” &lt;br /&gt;
-3): &lt;br /&gt;
-satifsying:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;C^{+}&lt;/script&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;A^{+}&lt;/script&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;N^{+}&lt;/script&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;I^{+}&lt;/script&gt;
-  &lt;/li&gt;
-  &lt;li&gt;A:&lt;/li&gt;
-  &lt;li&gt;D:&lt;/li&gt;
-  &lt;li&gt;D:&lt;/li&gt;
-  &lt;li&gt;U:&lt;/li&gt;
-&lt;/ol&gt;
+2): +: V*V &lt;script type=&quot;math/tex&quot;&gt;\rightarrow&lt;/script&gt; V “addition” &lt;br /&gt;&lt;/p&gt;
 
 &lt;h5 id=&quot;vector-space-of-homomorphisms&quot;&gt;vector space of Homomorphisms&lt;/h5&gt;
 &lt;p&gt;if &lt;script type=&quot;math/tex&quot;&gt;(V,+,\cdot)&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;(W,+,\cdot)&lt;/script&gt; are vector spaces, then we can define the set
@@ -6131,7 +6270,7 @@ inner product structure.&lt;/p&gt;
   </item>
 
   <item>
-    <title>Riemann Geometry: Integration</title>
+    <title>R.G.: Integration</title>
     <description>
 &lt;h4 id=&quot;introduction&quot;&gt;Introduction&lt;/h4&gt;
 &lt;p&gt;Completion of our “lift” of analysis of chart to the manifold level. &lt;br /&gt;
@@ -6224,7 +6363,7 @@ from me. ahaahaaha…. &lt;br /&gt;&lt;/p&gt;
   </item>
 
   <item>
-    <title>Riemann Geometry: Differential Manifold</title>
+    <title>R.G.: Differential Manifold</title>
     <description>
 &lt;h4 id=&quot;questions-why-we-need-talk-about-differentiable-manifolds&quot;&gt;Questions: why we need talk about differentiable Manifolds?&lt;/h4&gt;
 &lt;p&gt;It’s important to figure out what kind of structure we need to add on
@@ -6498,16 +6637,6 @@ origin stationary.&lt;/li&gt;
 C_{\gamma \delta} &amp; \rightarrow A_{\alpha \beta} B_{\beta \gamma} C_{\gamma
 \delta} \end{aligned} %]]&gt;&lt;/script&gt;&lt;/p&gt;
 
-&lt;h4 id=&quot;delta-operator-and-gradient&quot;&gt;Delta Operator and Gradient&lt;/h4&gt;
-&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\nabla f=\left\langle\frac{\partial}{\partial x} f, \frac{\partial}{\partial y}
-f, \frac{\partial}{\partial z} f\right\rangle&lt;/script&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;example-of-vector-and-covector&quot;&gt;Example of Vector and Covector&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;$\nabla {f}$ obtains a vector&lt;/li&gt;
-  &lt;li&gt;$df$  obtains a covector&lt;/li&gt;
-&lt;/ol&gt;
-
 &lt;h4 id=&quot;diverence-notation&quot;&gt;Diverence Notation&lt;/h4&gt;
 &lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;% &lt;![CDATA[
 \begin{aligned} \nabla \cdot \vec{f} &amp;=\left\langle\frac{\partial}{\partial
@@ -6546,13 +6675,13 @@ property of geometry&lt;/strong&gt;&lt;/p&gt;
 &lt;/ol&gt;
 
 </description>
-    <link>/math/math-change-tensor-vector-and-covector.html</link>
-    <guid>/math/math-change-tensor-vector-and-covector</guid>
+    <link>/math/math-change-tensor-vector.html</link>
+    <guid>/math/math-change-tensor-vector</guid>
     <pubDate>Mon, 21 Oct 2019 00:00:00 +0900</pubDate>
   </item>
 
   <item>
-    <title>Information Geometry</title>
+    <title>I.G.: Introduction</title>
     <description>
 &lt;h4 id=&quot;background&quot;&gt;background&lt;/h4&gt;
 &lt;p&gt;View the set of probability distributions which constitute a &lt;strong&gt;statistical model as a manifold&lt;/strong&gt;,&lt;br /&gt;
@@ -6594,7 +6723,7 @@ and related areas.&lt;/li&gt;
   </item>
 
   <item>
-    <title>Information Geometry: Statistical Manifolds</title>
+    <title>I.G.: Statistical Manifolds</title>
     <description>
 &lt;h4 id=&quot;introduction&quot;&gt;Introduction&lt;/h4&gt;
 &lt;p&gt;One of the most important applications of the Riemannian gradient descent in
@@ -6607,7 +6736,7 @@ machine learning is for doing optimization of statistical manifolds.&lt;/p&gt;
   </item>
 
   <item>
-    <title>Dual Connections</title>
+    <title>I.G.: Dual Connections</title>
     <description>
 &lt;h4 id=&quot;background&quot;&gt;background&lt;/h4&gt;
 &lt;p&gt;when investigating the properties of the Fisher metric g and the
@@ -6621,7 +6750,7 @@ rather as the triple &lt;script type=&quot;math/tex&quot;&gt;(g,\nabla^{\alpha},
   </item>
 
   <item>
-    <title>R.G.: Concept</title>
+    <title>R.G.: Introduction</title>
     <description>
 &lt;h4 id=&quot;introduction&quot;&gt;Introduction&lt;/h4&gt;
 &lt;p&gt;Elliptic geometry is a non-Euclidean geometry with positive curvature which replaces the parallel po
@@ -6771,8 +6900,8 @@ to another that both the function and its inverse are smooth.&lt;/li&gt;
 &lt;/ol&gt;
 
 </description>
-    <link>/math/math-space-riemann-geometry-concept.html</link>
-    <guid>/math/math-space-riemann-geometry-concept</guid>
+    <link>/math/math-space-riemann-geometry-introduction.html</link>
+    <guid>/math/math-space-riemann-geometry-introduction</guid>
     <pubDate>Thu, 17 Oct 2019 00:00:00 +0900</pubDate>
   </item>
 
@@ -7009,7 +7138,7 @@ edges or at a vertex.
   </item>
 
   <item>
-    <title>Abstract Algebra: Vector Space</title>
+    <title>A.A.: Vector Space</title>
     <description>
 &lt;h4 id=&quot;why-vector-space-&quot;&gt;Why vector space ?&lt;/h4&gt;
 &lt;p&gt;We are pretty familiar with 2-dimensional and 3-dimensional vector space, and
@@ -7114,7 +7243,7 @@ vector space,too .&lt;/li&gt;
   </item>
 
   <item>
-    <title>Game Theory: Introduction</title>
+    <title>G.T.: Introduction</title>
     <description>
 &lt;h4 id=&quot;background&quot;&gt;Background&lt;/h4&gt;
 &lt;p&gt;Game theory is the study of mathematical models of strategic interaction among rational decision-makers. It has applications in all fields of social science
@@ -7533,7 +7662,7 @@ list of dictionaries.&lt;/p&gt;
   </item>
 
   <item>
-    <title>diagram of Neural Network,Flowchart</title>
+    <title>Latex: Neural Network,Flowchart</title>
     <description>
 &lt;p&gt;&lt;img src=&quot;/images/Latex-diagram.jpg&quot; height=&quot;&quot; width=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -7700,7 +7829,7 @@ my data my data&lt;span class=&quot;k&quot;&gt;\cite&lt;/span&gt;&lt;span class=
   </item>
 
   <item>
-    <title>bibliography</title>
+    <title>Latex: Bibliography</title>
     <description>&lt;h4 id=&quot;how-to-cite&quot;&gt;how to cite&lt;/h4&gt;
 
 &lt;p&gt;&lt;strong&gt;step 1&lt;/strong&gt;: prepare the dataset &lt;br /&gt;&lt;/p&gt;
@@ -7873,7 +8002,7 @@ Programming look into the essence of the world.&lt;/p&gt;
   </item>
 
   <item>
-    <title>how to learn a new package</title>
+    <title>Code: Summary</title>
     <description>
 &lt;h4 id=&quot;why-we-have-this&quot;&gt;Why we have this?&lt;/h4&gt;
 &lt;p&gt;For a new code library is just a bundle of functions and classes. &lt;br /&gt;&lt;/p&gt;
@@ -7883,9 +8012,33 @@ Programming look into the essence of the world.&lt;/p&gt;
   &lt;li&gt;In the document, you can find code demo about how to use this package.&lt;/li&gt;
 &lt;/ol&gt;
 
+&lt;h4 id=&quot;common-short&quot;&gt;Common Short&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;LHS: left-hand side&lt;/li&gt;
+  &lt;li&gt;RHS: right-hand side&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;programming-style&quot;&gt;Programming Style&lt;/h4&gt;
+
+&lt;h5 id=&quot;imperatives-style-vs-symbolic-style&quot;&gt;Imperatives-style VS Symbolic-style&lt;/h5&gt;
+&lt;ol&gt;
+  &lt;li&gt;Imperative-style programs perform computation as you run them.&lt;/li&gt;
+  &lt;li&gt;Symbolic Programs&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h5 id=&quot;deep-learning-library-and-programming-style&quot;&gt;Deep Learning Library and Programming Style&lt;/h5&gt;
+&lt;ol&gt;
+  &lt;li&gt;Symbolic style deep learning library include Tensorflow, Theano&lt;/li&gt;
+  &lt;li&gt;Imperative stype deep learning library include Torch&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://mxnet.incubator.apache.org/versions/master/architecture/program_model.html&quot;&gt;Imperative-style and Symbolic-style&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
 </description>
-    <link>/code/code-how-to-learn-package.html</link>
-    <guid>/code/code-how-to-learn-package</guid>
+    <link>/code/code-summary.html</link>
+    <guid>/code/code-summary</guid>
     <pubDate>Tue, 10 Sep 2019 00:00:00 +0900</pubDate>
   </item>
 
@@ -8172,7 +8325,7 @@ to describe the feeling.&lt;/p&gt;
   </item>
 
   <item>
-    <title>I.T.: Concept and Notation</title>
+    <title>I.T.: Introduction</title>
     <description>
 &lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
 &lt;ol&gt;
@@ -8263,8 +8416,8 @@ model, domain of random variable denoted by $Val(X)$&lt;/li&gt;
 &lt;/ol&gt;
 
 </description>
-    <link>/math/math-apply-information-theory-core-concept.html</link>
-    <guid>/math/math-apply-information-theory-core-concept</guid>
+    <link>/math/math-apply-information-theory-introduction.html</link>
+    <guid>/math/math-apply-information-theory-introduction</guid>
     <pubDate>Mon, 26 Aug 2019 00:00:00 +0900</pubDate>
   </item>
 
@@ -8448,7 +8601,7 @@ So {$X_n$} stays the same on average and is a maringale.&lt;/p&gt;
   </item>
 
   <item>
-    <title>broadcasting in tensorflow</title>
+    <title>Python: Keras</title>
     <description>
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;keras.models&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;load_model&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;load_model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'model.h5'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
@@ -8701,7 +8854,7 @@ all can be used to study probability and statistics.&lt;/li&gt;
   </item>
 
   <item>
-    <title>Riemann Integral</title>
+    <title>M.A.: Riemann Integral</title>
     <description>
 &lt;h4 id=&quot;definition&quot;&gt;definition&lt;/h4&gt;
 &lt;ol&gt;
@@ -8837,7 +8990,7 @@ We expect the degree of $p(x)$ is n-1&lt;/p&gt;
   </item>
 
   <item>
-    <title>sequence and series</title>
+    <title>M.A.: Sequence and Series</title>
     <description>
 &lt;h4 id=&quot;sequence&quot;&gt;Sequence&lt;/h4&gt;
 &lt;p&gt;a sequence is a function with a domain equal to the set of positive integers.&lt;/p&gt;
@@ -8907,7 +9060,7 @@ a single point.&lt;/p&gt;
   </item>
 
   <item>
-    <title>Mathematical Analysis: Change Order of Integration, Differention and limit</title>
+    <title>M.A.: Change Order of Integration, Differention and limit</title>
     <description>
 &lt;h4 id=&quot;change-order-between-integration-and-differenation&quot;&gt;Change Order between Integration and Differenation&lt;/h4&gt;
 
@@ -8958,7 +9111,7 @@ space).&lt;/p&gt;
   </item>
 
   <item>
-    <title>Math: Outline and History</title>
+    <title>Math: Summary</title>
     <description>
 &lt;p&gt;&lt;img src=&quot;/images/math.png&quot; /&gt;&lt;/p&gt;
 
@@ -9045,8 +9198,8 @@ Poincare 1854-1912 France
 norm space. structure more algebraic, such as in group theory.&lt;/li&gt;
 &lt;/ol&gt;
 </description>
-    <link>/math/math-introduction.html</link>
-    <guid>/math/math-introduction</guid>
+    <link>/math/math-summary.html</link>
+    <guid>/math/math-summary</guid>
     <pubDate>Tue, 06 Aug 2019 00:00:00 +0900</pubDate>
   </item>
 
@@ -9211,7 +9364,7 @@ mapping the set S onto the set T&amp;gt;
   </item>
 
   <item>
-    <title>Complex Analysis</title>
+    <title>M.A.: Complex Analysis</title>
     <description>
 &lt;h4 id=&quot;definition&quot;&gt;definition&lt;/h4&gt;
 &lt;ol&gt;
@@ -9247,7 +9400,7 @@ studying complex functions.&lt;/p&gt;
   </item>
 
   <item>
-    <title>Differential Geometry: History</title>
+    <title>D.G.: History</title>
     <description>
 &lt;h4 id=&quot;history&quot;&gt;History&lt;/h4&gt;
 &lt;ol&gt;
@@ -9572,7 +9725,7 @@ For example, in “1 + 2”, 1 and 2 are the operands and the plus operator is o
   </item>
 
   <item>
-    <title>Nodes in PGF</title>
+    <title>Latex: Nodes in PGF</title>
     <description>&lt;h4 id=&quot;placing-nodes-on-a-line-or-curve-explicitly&quot;&gt;Placing Nodes on a Line or Curve Explicitly&lt;/h4&gt;
 
 </description>
@@ -9657,19 +9810,6 @@ loss function&lt;/p&gt;
     <link>/cs/AI-Adaptive-Boosting.html</link>
     <guid>/cs/AI-Adaptive-Boosting</guid>
     <pubDate>Tue, 16 Jul 2019 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>The stand for of Code</title>
-    <description>
-&lt;ol&gt;
-  &lt;li&gt;LHS: left-hand side&lt;/li&gt;
-  &lt;li&gt;RHS: right-hand side&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    <link>/code/stand-for-code.html</link>
-    <guid>/code/stand-for-code</guid>
-    <pubDate>Sun, 14 Jul 2019 00:00:00 +0900</pubDate>
   </item>
 
   <item>
@@ -10308,31 +10448,6 @@ known as &lt;strong&gt;“order”,”ndims” or “degree”&lt;/strong&gt;&lt
 </description>
     <link>/code/code-python-closure.html</link>
     <guid>/code/code-python-closure</guid>
-    <pubDate>Wed, 26 Jun 2019 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>Code: Style</title>
-    <description>
-&lt;h4 id=&quot;imperatives-style-vs-symbolic-style&quot;&gt;Imperatives-style VS Symbolic-style&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Imperative-style programs perform computation as you run them.&lt;/li&gt;
-  &lt;li&gt;Symbolic Programs&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;deep-learning-library-and-programming-style&quot;&gt;Deep Learning Library and Programming Style&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Symbolic style deep learning library include Tensorflow, Theano&lt;/li&gt;
-  &lt;li&gt;Imperative stype deep learning library include Torch&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://mxnet.incubator.apache.org/versions/master/architecture/program_model.html&quot;&gt;Imperative-style and Symbolic-style&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    <link>/code/code-programming-style.html</link>
-    <guid>/code/code-programming-style</guid>
     <pubDate>Wed, 26 Jun 2019 00:00:00 +0900</pubDate>
   </item>
 
@@ -14324,7 +14439,7 @@ computed using a Monte Carlo approximation.&lt;/li&gt;
   </item>
 
   <item>
-    <title>The lambda expression of Python</title>
+    <title>Python: Lambda Expression</title>
     <description>
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;lambda&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
@@ -14836,7 +14951,7 @@ Chrome&lt;/a&gt;&lt;/li&gt;
   </item>
 
   <item>
-    <title>P.A.S.M.: Concept and Notation</title>
+    <title>P.A.S.M.: Introduction</title>
     <description>
 &lt;h4 id=&quot;outline&quot;&gt;Outline&lt;/h4&gt;
 &lt;p&gt;Probability is the science of uncertainty. It provides precise mathematical
@@ -15016,8 +15131,8 @@ probability.&lt;/li&gt;
 &lt;/ol&gt;
 
 </description>
-    <link>/math/math-apply-probability-and-statistics-model-concept-review.html</link>
-    <guid>/math/math-apply-probability-and-statistics-model-concept-review</guid>
+    <link>/math/math-apply-probability-and-statistics-model-introduction.html</link>
+    <guid>/math/math-apply-probability-and-statistics-model-introduction</guid>
     <pubDate>Sat, 27 Apr 2019 00:00:00 +0900</pubDate>
   </item>
 
@@ -15345,7 +15460,7 @@ J(\Theta) = -\frac{1}{m}\sum_{i=1}^{m}\sum_{k=1}^{K}[y_k^{(i)}\log((h_{\Theta}^{
   </item>
 
   <item>
-    <title>The Introduction of Latex</title>
+    <title>Latex: Introduction</title>
     <description>
 &lt;h3 id=&quot;最简单的tex代码&quot;&gt;最简单的Tex代码&lt;/h3&gt;
 &lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;\documentclass&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;[11pt]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;article&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;

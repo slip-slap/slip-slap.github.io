@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Math: Outline and History"
+title: "Math: Summary"
 keywords: []
 description: ""
 category: "math"
-tags: []
+tags: ["summary"]
 ---
 {% include JB/setup %}
 

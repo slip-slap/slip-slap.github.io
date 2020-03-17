@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "P.A.S.M.: Concept and Notation"
+title: "P.A.S.M.: Introduction"
 keywords: ["probabiltiy"]
 description: ""
 category: "math"

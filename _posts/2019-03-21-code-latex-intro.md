@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "The Introduction of Latex"
-keywords: ["latex", "introduction"]
-description: "latex"
+title: "Latex: Introduction"
+keywords: []
+description: ""
 category: "code"
 tags: ["latex"]
 ---
