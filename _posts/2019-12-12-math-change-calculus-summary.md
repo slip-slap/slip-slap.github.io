@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Calculus: Principal and Problems"
+title: "Change: Summary"
 keywords: [""]
 description: ""
 category: "math"
-tags: ["change"]
+tags: ["change","summary"]
 ---
 {% include JB/setup %}
 

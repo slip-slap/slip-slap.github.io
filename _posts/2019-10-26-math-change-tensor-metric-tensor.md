@@ -4,7 +4,7 @@ title: "Tensor: Metric Tensor"
 keywords: [ ""]
 description: ""
 category: "math"
-tags: ["change"]
+tags: ["change","Tensor"]
 ---
 {% include JB/setup %}
 

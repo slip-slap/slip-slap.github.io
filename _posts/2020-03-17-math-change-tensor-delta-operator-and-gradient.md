@@ -4,7 +4,7 @@ title: "Tensor: Delta Operator and Gradient"
 keywords: [ ""]
 description: ""
 category: "math"
-tags: ["change","tensor"]
+tags: ["change","Tensor"]
 ---
 {% include JB/setup %}
 #### Delta Operator and Gradient
@@ -21,3 +21,11 @@ $$
   come into my mind, that's the form of $$df$$, that's calculation process of
   $df$, you should focus on the result of the $df$, it's just a number.
 
+
+#### Visulization 
+<img src="{{IMAGE_PATH}}/math-change-tensor-delta-operator-and-gradient.png"
+height="200" width="400">
+
+$$
+d f(\vec{v})=\nabla_{\vec{v}} f=\nabla f \cdot \vec{v}
+$$

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Tensor: Vector and Covector"
+title: "Tensor: Vector"
 keywords: [ ""]
 description: ""
 category: "math"
