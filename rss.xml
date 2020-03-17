@@ -5,8 +5,8 @@
   <description>Just Do It - </description>
   <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
   <link></link>
-  <lastBuildDate>Tue, 17 Mar 2020 11:32:43 +0900</lastBuildDate>
-  <pubDate>Tue, 17 Mar 2020 11:32:43 +0900</pubDate>
+  <lastBuildDate>Tue, 17 Mar 2020 13:59:46 +0900</lastBuildDate>
+  <pubDate>Tue, 17 Mar 2020 13:59:46 +0900</pubDate>
   <ttl>1800</ttl>
 
 
@@ -48,6 +48,10 @@ $df$, you should focus on the result of the $df$, it’s just a number.&lt;/li&g
   &lt;/li&gt;
 &lt;/ol&gt;
 
+&lt;h4 id=&quot;visulization&quot;&gt;Visulization&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/math-change-tensor-delta-operator-and-gradient.png&quot; height=&quot;200&quot; width=&quot;400&quot; /&gt;&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;d f(\vec{v})=\nabla_{\vec{v}} f=\nabla f \cdot \vec{v}&lt;/script&gt;
 </description>
     <link>/math/math-change-tensor-delta-operator-and-gradient.html</link>
     <guid>/math/math-change-tensor-delta-operator-and-gradient</guid>
@@ -58,17 +62,65 @@ $df$, you should focus on the result of the $df$, it’s just a number.&lt;/li&g
     <title>Tensor: Covector</title>
     <description>
 &lt;h4 id=&quot;covector&quot;&gt;Covector&lt;/h4&gt;
-&lt;p&gt;A covector(row vector) is a function that takes a vector and produces a scalar.&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Covectors are invarient, covector component are not invariant.&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;Definition: A covector(row vector) is a function that takes a vector and
+produces a scalar.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Covectors are invarient, they are purely geometrical objects.&lt;/li&gt;
+  &lt;li&gt;Covector component are not invariant, it’s depend on what coordinate system
+that you use.&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;two special covectors:&lt;/p&gt;
+&lt;h4 id=&quot;covector-component&quot;&gt;Covector Component&lt;/h4&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;% &lt;![CDATA[
+\begin{array}{ll}\epsilon^{1}(\overrightarrow{e_{1}})=1 &amp;
+\epsilon^{1}(\overrightarrow{e_{2}})=0 \\ \epsilon^{2}(\overrightarrow{e_{1}})=0
+&amp; \epsilon^{2}(\overrightarrow{e_{2}})=1\end{array} %]]&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;In a more concise way
+&lt;script type=&quot;math/tex&quot;&gt;\epsilon^{i}(\overrightarrow{e_{j}})=\delta_{i j}=\left\{\begin{array}{l}1 \text
+{ if } i=j \\ 0 \text { if } i \neq j\end{array}\right.&lt;/script&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;inference&quot;&gt;inference&lt;/h4&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\epsilon^{1}(\vec{v})=\epsilon^{1}\left(v^{1} \overrightarrow{e_{1}}+v^{2}
+\overrightarrow{e_{2}}\right)=v^{1} \epsilon^{1}(\overrightarrow{e_{1}})+v^{2}
+\epsilon^{1}(\overrightarrow{e_{2}})&lt;/script&gt;&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\epsilon^{2}(\vec{v})=\epsilon^{2}\left(v^{1} \overrightarrow{e_{1}}+v^{2}
+\overrightarrow{e_{2}}\right)=v^{1} \epsilon^{2}(\overrightarrow{e_{1}})+v^{2}
+\epsilon^{2}(\overrightarrow{e_{2}})=v^{2}&lt;/script&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\begin{array}{l}\alpha(\vec{v})=\alpha\left(v^{1} \overrightarrow{e_{1}}+v^{2}
+\overrightarrow{e_{2}}\right)=v^{1} \alpha(\overrightarrow{e_{1}})+v^{2}
+\alpha(\overrightarrow{e_{2}}) \\ \text { Remember: }
+\epsilon^{1}(\vec{v})=v^{1} \quad \epsilon^{2}(\vec{v})=v^{2} \\
+\alpha(\vec{v})=\epsilon^{1}(\vec{v})
+\alpha(\overrightarrow{e_{1}})+\epsilon^{2}(\vec{v})
+\alpha(\overrightarrow{e_{1}}) \\ \text { Define: }
+\alpha(\overrightarrow{e_{1}})=\alpha_{1} \quad
+\alpha(\overrightarrow{e_{2}})=\alpha_{2} \\ \alpha(\vec{v})=\alpha_{1}
+\epsilon^{1}(\vec{v})+\alpha_{2} \epsilon^{2}(\vec{v})\end{array}&lt;/script&gt;
+&lt;script type=&quot;math/tex&quot;&gt;\alpha=\alpha_{1} \epsilon^{1}+\alpha_{2} \epsilon^{2}&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;\begin{aligned} d f(\vec{v})=\nabla f \cdot \vec{v} &amp;amp;=\left((\nabla f)^{i}
+\overrightarrow{e_{i}}\right) \cdot\left(v^{j} \overrightarrow{e_{j}}\right) &lt;br /&gt;
+&amp;amp;=(\nabla f)^{i} v^{j}(\overrightarrow{e_{i}} \cdot \overrightarrow{e_{j}}) &lt;br /&gt;
+&amp;amp;=(\nabla f)^{i} v^{j} g_{i j} \end{aligned}&lt;/p&gt;
+
+&lt;h5 id=&quot;examples&quot;&gt;Examples&lt;/h5&gt;
+&lt;ol&gt;
+  &lt;li&gt;Integration and differention operation is a covector, because after the
+process, you get a real number.&lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;h4 id=&quot;covector-visualization&quot;&gt;Covector Visualization&lt;/h4&gt;
 &lt;p&gt;This visualization is really nice because we don’t need to know everything about
 coordinate systems or components in order to understand how a covector acts on 
 a vector.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;The idea is beautiful, but if you don’t understand what is a covector in
+nature, this visualization is complete a disaster for you.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h4 id=&quot;linear-map&quot;&gt;Linear Map&lt;/h4&gt;
 &lt;ol&gt;
@@ -3163,7 +3215,7 @@ is the derivative&lt;/p&gt;
   </item>
 
   <item>
-    <title>Calculus: Principal and Problems</title>
+    <title>Change: Summary</title>
     <description>
 &lt;h4 id=&quot;problem-with-differential&quot;&gt;problem with differential&lt;/h4&gt;
 &lt;p&gt;$d(xy)=xdy+ydx$&lt;/p&gt;
@@ -3183,8 +3235,8 @@ with this theorem. The result is &lt;strong&gt;accurate!!!&lt;/strong&gt;&lt;/li
 J$\cdot$Gregory thinks that limit operation is also an arithmetical operation.&lt;/p&gt;
 
 </description>
-    <link>/math/math-change-calculus-principal-and-problems.html</link>
-    <guid>/math/math-change-calculus-principal-and-problems</guid>
+    <link>/math/math-change-calculus-summary.html</link>
+    <guid>/math/math-change-calculus-summary</guid>
     <pubDate>Thu, 12 Dec 2019 00:00:00 +0900</pubDate>
   </item>
 
@@ -4949,15 +5001,14 @@ geometry, the Cartesian coordinate is introduced.&lt;/li&gt;
   </item>
 
   <item>
-    <title>Calculus: Kronecker Delta</title>
+    <title>Tensor: Kronecker Delta</title>
     <description>
-&lt;h4 id=&quot;haha&quot;&gt;HAHA&lt;/h4&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+&lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;% &lt;![CDATA[
 \delta_{i j}=\left\{\begin{array}{ll}{0} &amp; {\text { if } i \neq j} \\ {1} &amp;
-{\text { if } i=j}\end{array}\right. %]]&gt;&lt;/script&gt;
+{\text { if } i=j}\end{array}\right. %]]&gt;&lt;/script&gt;&lt;/p&gt;
 
-&lt;h4 id=&quot;haha-1&quot;&gt;HAHA&lt;/h4&gt;
+&lt;h4 id=&quot;example&quot;&gt;Example&lt;/h4&gt;
 &lt;p&gt;The inner product of vector: &lt;br /&gt;
 &lt;script type=&quot;math/tex&quot;&gt;\mathbf{a} \cdot \mathbf{b}=\sum_{i, j=1}^{n} a_{i} \delta_{i j} b_{j}&lt;/script&gt;&lt;/p&gt;
 
@@ -4965,8 +5016,6 @@ geometry, the Cartesian coordinate is introduced.&lt;/li&gt;
 &lt;script type=&quot;math/tex&quot;&gt;a=\sum_{i j} a_{i} c_{j} \delta_{i j}=b_1 c_1 \delta_{11}+b_1 c_2 \delta_{12}
 b_2 c_1 \delta_{21}+b_2 c_2 \delta_{22}&lt;/script&gt; &lt;br /&gt;
 where $\delta_{12}$ and $\delta_{21}$ are zeros&lt;/p&gt;
-
-&lt;h4 id=&quot;generalization&quot;&gt;Generalization&lt;/h4&gt;
 
 &lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
 &lt;ol&gt;
@@ -6581,7 +6630,7 @@ curves, surfaces.&lt;/p&gt;
   </item>
 
   <item>
-    <title>Tensor: Vector and Covector</title>
+    <title>Tensor: Vector</title>
     <description>
 &lt;h4 id=&quot;introduction&quot;&gt;Introduction&lt;/h4&gt;
 &lt;p&gt;If you understand tensors, you can get a lot insight in geometry; If you
