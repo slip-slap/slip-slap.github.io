@@ -8,9 +8,6 @@ tags: ["change","Tensor"]
 ---
 {% include JB/setup %}
 
-#### Introduction
-If you understand tensors, you can get a lot insight in geometry; If you
-understand geometry, you can understand geometry more easily.
 
 #### HH
 Because vector components behave contrary to the basis vectors, we say that 
@@ -18,11 +15,13 @@ vector components are contra-variant
 
 The following is how basic and component transformation in different coordinate
 system.
-<img src="{{IMAGE_PATH}}/math-change-tensor-vector-compontent.png" />
+<img src="{{IMAGE_PATH}}/math-change-tensor-vector-compontent.png" height="150"
+width="300" />
 
 Notation, in order to remind the component is contravarient to the basic,
 so using the following summation.
-<img src="{{IMAGE_PATH}}/math-change-tensor-summation1.png" />
+<img src="{{IMAGE_PATH}}/math-change-tensor-summation1.png" height="150"
+width="300" />
 
 
 #### Covector

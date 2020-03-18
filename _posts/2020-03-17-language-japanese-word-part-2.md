@@ -12,6 +12,9 @@ tags: ["japan"]
 1. 転勤になる: job transfer
 2. 勤務(きんむ): work
 
+####
+1. 芸術(げいじゅつ)
+2. 芸能(芸能)
 
 #### II 
 1. 退社: leaving work
@@ -38,3 +41,57 @@ tags: ["japan"]
 2. 我が子: one's own child
 3. 我が国: our country
 4. 我が家: (わがや)
+
+#### 8
+1. 裁判所(さいばんしよ): court
+2. 裁判官(かん)
+
+#### 届け(とどけ)
+1. 離婚届: diverce paper
+2. 退職届: resign paper
+
+#### 房
+1. 暖房
+2. 冷房
+3. 厨房
+
+#### 暴(ぼう)
+1. 暴力(ぼうりょく): 
+
+#### 防(ぼう)
+1. 消防(しょうぼう)
+
+
+#### 
+1. 乗客(じょうきゃく)
+
+#### 
+
+#### 場
+1. 裏庭(うらにわ): back yard
+2. 庭師(にわし): a man who take care of flowers
+3. 相場(そうば): market price
+4. 登場
+5. 会場
+6. 結婚式場
+
+#### 書
+1. 履歴書(りれきしよ)
+
+
+#### 配信(はいしん) distribution
+1. 配布: distribution
+2. 音楽配信: online music distribution
+3. 配信証明(はいしんしょうめい): proof of delivery
+4. 配達(はいたつ): delivery (とも達)
+5. 配慮:(はいりょ) consideration, concern
+6. 手配する: preparations
+
+#### 
+1. 海外: かいがい
+2. 外国語(がいこくご)
+
+####
+1. 日本円:
+2. ドル:
+3. 人民元(じんみんげん)

@@ -8,12 +8,6 @@ tags: ["japan"]
 ---
 {% include JB/setup %}
 
-#### 取り
-1. 取り消す: cancel
-急に忙しくなってしまったので、病院の予約を取り消した。
-
-
-
 
 
 #### word
@@ -54,11 +48,6 @@ tags: ["japan"]
 
 #### 決める
 1. decide その仕事誰を選ぶか決めるのは君の責任だ。it rests with you to decide whom to choose for the job
-
-#### 配信(はいしん) distribution
-1. 音楽配信: online music distribution
-2. 配信証明(はいしんしょうめい): proof of delivery
-3. 配達(はいたつ): delivery (とも達)
 
 
 #### 振り(ぶり)
@@ -179,7 +168,6 @@ any of the course work and without receiving credit)
 #### difficult word
 1. 芝居(しばい): play, drama
 2. 芝生(しばふ): lawn
-3. 相場(そうば): market price
 3. 水道水(すいどうすい): tap-water
 4. 浄水器(じょうすいき): water cleaner
 5. 大手(おおて): big
@@ -318,9 +306,6 @@ any of the course work and without receiving credit)
 
 
 
-#### 場所
-1. 裏庭(うらにわ): back yard
-2. 庭師(にわし): a man who take care of flowers
 
 
 #### different from english
@@ -335,7 +320,6 @@ any of the course work and without receiving credit)
 5. 生ゴミ(なま): kitchen waste
 6. 掲示板(けいじばん): bulletin board, notice board
 7. 定年(ていねん): retirement age
-8. 手配する: preparations
 9. 長所(ちょうしょ): merit, virtue, advantage
 1. 好敵手(こうてきしゆ): opponent, enemy
 
@@ -436,7 +420,6 @@ any of the course work and without receiving credit)
 3. 要件(ようけん): important matter
 
 #### place
-1. 裁判所(さいばんしよ): court
 2. 判子(はんこ):  seal used for signature
 3. 国連(こくれ): United Nations
 
@@ -613,7 +596,6 @@ japanese word is a metaphor
 9. 刺身:raw sliced fish 刺し: sliced raw fish 身: main part, meat as apposed to bone
 1. 瀬戸物:  瀬: shallow china
 2. 湯気: steam 湯: hot water
-3. 配布: distribution
 4. 退屈: tedium
 8. 就労(しゅうろう): being employed
 6. 日付: date, this word can be understand separately, ’ひ’ and '付',to be
@@ -710,8 +692,6 @@ japanese word is a metaphor
 
 #### 慮
 1. 遠慮: reserve, thoughfulness
-2. 配慮:(はいりょ) consideration, concern
-
 #### 術
 1. 技術
 2. 手術: しゅじゅつ
