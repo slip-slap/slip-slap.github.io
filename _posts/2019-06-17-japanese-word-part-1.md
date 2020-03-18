@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Japanese: Word"
+title: "Japanese: Word Part I"
 keywords: []
 description: ""
 category: "language"
@@ -427,7 +427,6 @@ any of the course work and without receiving credit)
 4. 半数(はんすう): half
 4. 裏返す(うらがえす): to turn inside out
 5. 頼もしい: trustworthy
-6. 勤務(きんむ): service
 7. 件名(けんめい): term
 8. 興行(こうぎょう): performance
 
@@ -526,9 +525,6 @@ something disconnected, so it to be out)
 5. 宛先(あてさき): address, destination 宛て: purpose,end
 6. どんぶり: big bowl
 7. 取って(とって): handle,knob
-8. 我が社: our company
-9. 我が子: one's own child
-1. 我が国: our country
 2. 無駄: useless
 
 
@@ -574,8 +570,6 @@ japanese word is a metaphor
 7. 中古車: second-hand bicycle 中古: second-hand 古: used item, secondhand item
 8. やる気: willingness to do something
 9. 選挙: election 挙: raise
-1. 弁護士: atternoy 弁: speech　護: protect
-2. 看護師(かんごし): nurse
 2. 着替える: changing clothes  着: clothes
 3. 着せる: to put clothes on
 4. 落ち着く: to calm down

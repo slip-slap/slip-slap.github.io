@@ -8,6 +8,8 @@ tags: ["summary"]
 ---
 {% include JB/setup %}
 
+
+#### Outline
 <img src="{{IMAGE_PATH}}/math.png"  />
 
 1. set is the foundations of all the branches of modern mathmatics 
@@ -29,31 +31,7 @@ tags: ["summary"]
    sometimes clear, sometimes elusive. Clearly, groups are algebraic, while
    Euclidean spaces are geometric.
 
-
-#### Greek Notation
-1. $$ \xi \mapsto p_{\xi} $$: sign between $$\xi$$ and $$p_{\xi}$$ means maps to
-2. $$\alpha$$ and A
-3. $$\beta$$  and B
-4. $$\gamma$$ and $$\Gamma$$
-5. $$\delta$$ and $$\Delta$$
-6. $$\epsilon$$ and $$\Epsilon$$
-8. $$ \xi $$ and $$ \Xi $$ prounced |zai| in English, prounced |ksi| in modern
-   Greek.
-9. $$\sigma$$ and $$\Sigma$$
-10. $$\phi$$ or $$\varphi$$  and  $$\Phi$$, these two letters are the same, but little change
-11. $$\psi$$ and $$\Psi$$, usually stands for wave function in quanum mechanics.
-12. $$\omega$$ and $$\Omega$$
-
-####  brackets
-1. curly brackets: {} which means the order doesn't matter
-2. square brackets: [] the order matters
-
-#### General Notation
-1. $$\partial$$: denote as a partial derivative such as 
-$$
-\frac{\partial z}{\partial x}
-$$.
-It represents a specialized cursive letter of d. It may simply pronounced simply "dee".
+#### History
 
 ```
 Socrates 469-399  Greek
@@ -82,7 +60,33 @@ Abel 1802-1829 Norway
 Poincare 1854-1912 France
 ```
 
+#### Notation
 
+
+#####  Greek Notation
+1. $$ \xi \mapsto p_{\xi} $$: sign between $$\xi$$ and $$p_{\xi}$$ means maps to
+2. $$\alpha$$ and A
+3. $$\beta$$  and B
+4. $$\gamma$$ and $$\Gamma$$
+5. $$\delta$$ and $$\Delta$$
+6. $$\epsilon$$ and $$\Epsilon$$
+8. $$ \xi $$ and $$ \Xi $$ prounced |zai| in English, prounced |ksi| in modern
+   Greek.
+9. $$\sigma$$ and $$\Sigma$$
+10. $$\phi$$ or $$\varphi$$  and  $$\Phi$$, these two letters are the same, but little change
+11. $$\psi$$ and $$\Psi$$, usually stands for wave function in quanum mechanics.
+12. $$\omega$$ and $$\Omega$$
+
+#####  brackets
+1. curly brackets: {} which means the order doesn't matter
+2. square brackets: [] the order matters
+
+##### General Notation
+1. $$\partial$$: denote as a partial derivative such as 
+$$
+\frac{\partial z}{\partial x}
+$$.
+It represents a specialized cursive letter of d. It may simply pronounced simply "dee".
 
 
 #### Reference

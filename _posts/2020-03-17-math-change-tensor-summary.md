@@ -16,5 +16,13 @@ The answer is to unify the function, unify space.
    number.
 
 
+3. After you learn tensor staff, and now you look back into what you have
+   learned, for example, differention operation, integration operation, in
+   nature they are covectors, because they give you the numbers, just real
+   numbers, a very special space. You  look back at the matrix transformation,
+   and they just vectors.
+4. And covecter is the result we want, like the volume, weight, accelaration
+   speed, probability. That't the job of covectors, but we need vector to do
+   some transformation, space transformation.
 
 

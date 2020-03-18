@@ -27,6 +27,11 @@ more polite. It means the company request you, just more polite.
 2. 原因なんて、いいですよ。we don't listen the explaination. 
 3. ここまで来て、今さら、やめることはない。 
 
+#### 2
+1. 通行止め:
+2. 税込み:
+
+
 
 #### word
 1. 排気ガス: waste gas
