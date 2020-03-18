@@ -360,7 +360,6 @@ any of the course work and without receiving credit)
 1. せめて　せめてこれだけはもらいたい(at least give me this one)
 2. いわゆる so called 
 3. おしゃれ: fashion-conscious, smartly dressed
-4. 派手(はで): flashy, showy
 5. 立派(りっぱ): splendid
 6. 威張る(いばる): boast, big talker
 7. 求人(きゅうじん): off of job
@@ -709,7 +708,6 @@ japanese word is a metaphor
 + 取り扱い: deal with 扱い: to deal with
 
 
-#### 調味料(ちょうみりょう)
 
 
 
