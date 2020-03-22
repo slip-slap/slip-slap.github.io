@@ -1025,6 +1025,7 @@ you can attach [目] to different counters to show order. <br />
 ####
 1. 真実(しんじつ):
 2. 口実(こうじつ):
+3. 事実(じじつ): fact
 
 ####
 1. 暴力(ぼうりょく): 
@@ -1147,4 +1148,9 @@ you can attach [目] to different counters to show order. <br />
 #### shi
 1. 世界
 2. 勢力(せいりょく)
+
+####
+1. 撮影(さつえい)
+2. 殺人(さつじん)
+
 
