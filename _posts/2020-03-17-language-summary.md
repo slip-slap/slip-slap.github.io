@@ -3,8 +3,8 @@ layout: post
 title: "Language: summary"
 keywords: []
 description: ""
-category: 
-tags: []
+category: "言葉"
+tags: ["language"]
 ---
 {% include JB/setup %}
 

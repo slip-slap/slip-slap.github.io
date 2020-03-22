@@ -3,7 +3,7 @@ layout: post
 title: "Japanese: Word Part II-漢字"
 keywords: []
 description: ""
-category: "language"
+category: "言葉"
 tags: ["japan"]
 ---
 {% include JB/setup %}

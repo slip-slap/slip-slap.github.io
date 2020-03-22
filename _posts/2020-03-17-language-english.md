@@ -3,7 +3,7 @@ layout: post
 title: "English: Oral"
 keywords: [""]
 description: ""
-category: "language"
+category: "言葉"
 tags: ["english"]
 ---
 {% include JB/setup %}

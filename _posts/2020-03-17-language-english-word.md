@@ -3,7 +3,7 @@ layout: post
 title: "English: word"
 keywords: [""]
 description: ""
-category: "language"
+category: "言葉"
 tags: ["english"]
 ---
 {% include JB/setup %}

@@ -3,7 +3,7 @@ layout: post
 title: "Japanese: Thinking In a Japanese Way"
 keywords: ["janpanese"]
 description: ""
-category: "language"
+category: "言葉"
 tags: ["japan"]
 ---
 {% include JB/setup %}

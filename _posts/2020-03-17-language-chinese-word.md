@@ -3,7 +3,7 @@ layout: post
 title: "Chinese"
 keywords: []
 description: ""
-category: ""
+category: "言葉"
 tags: ["china"]
 ---
 {% include JB/setup %}
