@@ -12,7 +12,6 @@ tags: ["japan"]
 
 #### word
 1. 売買(ばいばい): trade
-2. 発売(はつばい): release
 3. 特売(とくばい): special sale
 #### different meaning
 1. 欠点(けってん): flaw
@@ -183,7 +182,6 @@ any of the course work and without receiving credit)
 5. 優勝(ゆうしょう): champion
 6. 準優勝(じゅんゆうしょう): finishing second
 7. 予選(よせん): qualification competion
-8. 桁外れ(けたはずれ): extraordinary
 9. 試合(しあい): competion
 
 #### カタカナ
@@ -276,7 +274,6 @@ any of the course work and without receiving credit)
 3. 預金者(よきんしゃ): depositor
 
 #### 電機
-1. 充電器(じゅうでんき): charger
 2. 使い捨て(つかいすて): disposable
 3. 車両(しゃりょう): railroad cars
 4. 終電(しゅうでん): last train
@@ -376,7 +373,6 @@ any of the course work and without receiving credit)
 3. 厚生(こうせい): public welfare 厚生年金: welfare pension
 4. 年金: pension, an amount of money that a company or the gouverment pays to a person who is old or sick and no longer works
 5. 国民年金: goverment pension
-6. 司会(しかい): leading a meeting
 7. 皮肉(ひにく): sarcasm,satire   皮肉な言葉
 8. 運ぶ(はこぶ):move 　荷物が来るまで運ぶ
 9. 運転(うんてん): drive
@@ -518,7 +514,6 @@ japanese word is a metaphor
 1. 見舞う(みまう): to ask after health
 2. 仕舞う(しまう): to finish
 3. しまうた: damn it
-4. 仕上げる: finish
 
 1. 花見: flower viewing
 2. 所見(しょけん): view, opinion
@@ -533,9 +528,7 @@ japanese word is a metaphor
 6. 部署: one's post
 7. 味方: friend
 9. 共食い(ともぐい): eating each other
-1. 見込む：to anticipate, to expect. 込み：including
 2. 快晴(かいせい): clear weather 快(かい): pleasure
-3. 快適(かいてき): pleasant, agreeable
 3. 駄菓子(だがし): cheep sweets   駄: low-grade, use as suffix
 4. 油断:  carelessness 断: decision
 6. 儲ける(もうける): to profit 儲け: profit
@@ -557,7 +550,6 @@ japanese word is a metaphor
 4. 落ち着く: to calm down
 3. 非常食: emergency rations 非常: emergency
 3. 非常電話: emergency call
-4. 送料: shipping charge  料: fee 　
 5. 改札口: ticket barrier 札: ticket　
 6. 千円札: 1000 yen bill 札: paper money
 7. 丼: どん porcelain bowl
@@ -568,7 +560,6 @@ japanese word is a metaphor
 3. 一途: the only way 途: way
 4. 返事: reply
 5. 通帳(つうちょう): bankbook
-6. 物価: price
 7. 定価(ていか): regular price
 
 
@@ -598,7 +589,7 @@ japanese word is a metaphor
 4. 退屈: tedium
 8. 就労(しゅうろう): being employed
 6. 日付: date, this word can be understand separately, ’ひ’ and '付',to be
-   connected, days which to be connected
+  connected, days which to be connected
 7. 気を付けて: here, the object we want to apply is '気'
 8. 交付: delivering, handing over. 交+付
 7. 手首: waist
@@ -639,7 +630,6 @@ japanese word is a metaphor
 2. 耳が遠い: (みみがとおい) poor hearing
 3. 遺族: bereaved family
 4. 円満:(えんまん) perfection
-5. 肌着:(はだぎ) underclothes
 5. 鳥肌(とりはだ): goose bumps
 6. 葉書:(はがき) postcard 葉書を出す
 7. 生地:(きじ) texture,cloth
@@ -670,13 +660,10 @@ japanese word is a metaphor
 1. もう: already も: too
 
 #### 無料と無給
-1. 無料: free
 2. 無給: unpaid
 
 #### 荷
-荷: goods,baggage 
-1. 出荷料: shiping charges
-2. 荷物: luggage
+2. 荷物(にもつ): luggage
 3. 手荷物: hand luggage
 
 #### 替える
@@ -766,8 +753,398 @@ you can attach [目] to different counters to show order. <br />
 
 
 
+#### 
+1. 日の出: sunrise
+2. 日の入り(ひのいり): sunset 
+
+#### I
+1. 転勤になる: job transfer
+2. 勤務(きんむ): work
+3. 出勤(しゅっきん)
+4. 欠勤(けっきん)
+
+####
+1. 哲学(てつがく)::wq
+
+
+####
+1. 芸術(げいじゅつ)
+2. 芸能(芸能)
+
+#### II 
+1. 退社: leaving work
+2. 退職: resign
+
+#### III
+1. 弁護士: atternoy 弁: speech　護: protect
+2. 看護師(かんごし): nurse
+3. 環境保護(かんきょうほご): protect environment
+
+#### 4
+1. 専門店(せんもんてん):
+
+#### 4
+1. 油揚げ
+2. 唐揚げ
+
+#### 6
+1. 親子丼(おやこどん): 
+2. 他人丼(たにんどん)
+
+#### 7
+1. 我が社: our company
+2. 我が子: one's own child
+3. 我が国: our country
+4. 我が家: (わがや)
+
+#### 8
+1. 裁判所(さいばんしよ): court
+2. 裁判官(かん)
+3. 栽培する(さいばい): 
 
 
 
 
+#### 届け(とどけ)
+1. 離婚届: diverce paper
+2. 退職届: resign paper
+
+
+
+#### 
+1. 乗客(じょうきゃく)
+
+#### 
+
+#### 場
+1. 裏庭(うらにわ): back yard
+2. 庭師(にわし): a man who take care of flowers
+4. 登場
+5. 会場
+6. 結婚式場
+7. 出場(しゅつじょう): 
+8. 運動場(うんどうじょう)
+3. 相場(そうば): market price
+4. 職場(しょくば): workplace 
+5. 売り場(うりば): counter
+
+#### 書
+1. 履歴書(りれきしよ)
+
+
+#### 配信(はいしん) distribution
+1. 配布: distribution
+2. 音楽配信: online music distribution
+3. 配信証明(はいしんしょうめい): proof of delivery
+4. 配達(はいたつ): delivery (とも達)
+5. 配慮:(はいりょ) consideration, concern
+6. 手配する: preparations
+
+#### 
+1. 海外: かいがい
+2. 外国語(がいこくご)
+
+####
+1. 日本円:
+2. ドル:
+3. 人民元(じんみんげん)
+
+####
+1. 私立(しりつ):
+2. 国立: 
+
+
+#### 調味料(ちょうみりょう)
+1. 胡椒(こしょう)
+2. 唐辛子(とうがらし)
+
+#### 食べ物
+1. お粥(おかゆ)
+2. おかず
+
+####
+1. 長ネギ: 
+2. 玉ねぎ: onion
+
+#### holiday
+1. 七五三(しちごさん): 753
+
+
+#### 
+1. 派手(はで): flashy, showy
+2. 地味(じみ): common
+
+#### 飲料
+
+#### 屋
+1. 居酒屋(いざかや)
+2. 本屋:
+3. 花屋:
+4. 八百屋:
+
+#### 
+1. 申請(しんせい):
+2. 申し込み: 
+
+
+
+#### i
+1. 取り消す: 予約を取り消す
+2. 取り替える: (電池)でんちを取り替える
+3. キャンセル: cancel
+
+#### 上がる: indicates completion
+1. 仕上がる: finish
+2. 書き上がる: 
+3. 焼きあがる: 
+
+#### 
+1. アパート:
+2. マンション:
+
+
+####  
+1. 危ない:
+2. 危険: (きけん)
+
+#### 
+1. 関係者(かんけいしゃ)
+2. 開設(かいせつ)
+3. 開幕(かいまく): 
+4. 開発(かいはつ):
+
+
+####
+1. 試合
+2. コンテスト
+3. ゲーム
+
+####
+1. じゃが芋
+2. サツマイモ: 
+
+#### 
+1. 少子化(しょうしか)
+2. 高齢化(こうれいか)
+
+####
+1. 承知(しょうち): agree, understand
+2. 承る(うけたまわる): know
+
+#### 
+1. 食卓(しょくたく): food table
+
+####
+1. 航空券(こうくうけん): plane ticket
+2. 空港(くうこう): 
+3. 飛行機: 
+
+#### 
+1. 準備
+2. 支度(したく)
+3. 用意(ようい)
+
+#### 
+1. 候補
+2. 補足(ほそく): supplement
+
+####
+1. 促進(そくしん):
+
+#### 
+1. 娯楽(ごらく): entainment
+2. 極楽(ごくらく): 
+
+####
+1. 迫る: approach
+2. 緊迫する(きんばくする)
+
+
+####
+1. 故障(こしょう): failure
+2. 障害(しょうがい): barrier
+
+####
+1. 地割れ(じわれ)
+
+#### JIAN
+3. 建築(けんちく)
+4. 建設(けんせつ)
+5. 建造物(けんぞうぶつ):
+6. 見物(けんぶつ): sightseeing
+7. 見物人: tourist
+
+####
+1. 物価: price
+2. 価格(かかく): price
+
+####
+1. 肌着:(はだぎ) underclothes
+2. 上着:
+3. 下着: 
+
+####
+1. 情報(じょうほう):
+2. 情景(じょうけい): 
+3. 景色: 
+
+####
+1. 桁外れ(けたはずれ): extraordinary
+2. 欄(らん)
+
+####
+1. 植物(しょくぶつ):
+2. 植える(う)
+
+####
+1. 突然
+2. 必然(ひつぜん):
+2. 必要(ひつよう):
+
+####
+1. 座る(すわる): 
+2. 立つ:
+
+####
+1. 印刷(いんさつ)
+2. 飲料(いんりょう)
+2. 索引(さくいん)
+
+####
+1. 関東軍(かんとうぐん)
+
+#### 
+1. 直接
+2. 間接(かんせつ)
+
+####
+1. 体積(たいせき):
+2. 面積(めんせき):
+3. 容積(ようせき): 
+
+####
+1. 真実(しんじつ):
+2. 口実(こうじつ):
+
+####
+1. 暴力(ぼうりょく): 
+2. 包丁(ほうちょう): kitchen knife
+3. 包装(ほうそう): 
+4. 服装(ふくそう):
+
+
+
+#### 房
+1. 暖房
+2. 冷房
+3. 厨房
+3. 文房具(ぶんぼうぐ)
+
+
+
+
+####
+1. 文芸(ぶんげい)
+2. 文献(ぶんけん)
+
+####
+1. 閉会(へいかい)
+2. 一週間
+3. 開会(かいかい)
+
+####
+1. 開店
+2. 閉店(へいてん)
+
+
+#### 防(ぼう)
+1. 消防(しょうぼう)
+2. 防ぐ(ふせぐ):
+3. 妨げる(さまた):
+4. 坊や(ぼうや): child 
+5. 赤ん坊(あかんぼう): baby
+6. 包丁(ほうちょう): chef
+7. 幼児(ようじ)
+
+####
+1. 朝寝坊(あさねぼう): oversleeping
+
+
+
+
+
+####
+1. 快適(かいてき): pleasant, agreeable
+2. 水滴(すいてき): 
+
+####
+1. 送料: shipping charge  料: fee 　
+2. 無料: free
+
+#### 出(しゅつ)
+1. 出荷料(しゅっか): shiping charges
+2. 支出(ししゅつ): expense 
+3. 排出(はいしゅつ)
+3. 俳句(はいく)
+
+#### 出(で)
+1. 出迎え(でむかえ): 
+2. 出入り口
+
+#### 発(はつ)
+1. 発売(はつばい): release
+
+#### 月(げつ)
+1. 月餅(げっぺい)
+
+#### 
+1. 宿泊
+2. 縮小(しゅくしょう)
+
+#### 
+1. 修正(しゅうせい): amendment
+
+####
+1. 苦情(くじょう): complain
+2. 強情(ごうじょう): stubborness
+3. 強盗(ごうとう): 
+
+
+####
+1. 豪華(ごうか)
+2. 合格(ごうかく)
+
+####
+1. 充電器(じゅうでんき): charger
+2. 補充(ほじゅう): charge
+3. 候補(こうほ)
+
+####
+1. 経由(けいゆ)
+2. 経営(けいえい)
+3. 経験(けいけん)
+4. 経済(けいざい)
+
+####
+1. 決して(けっして):
+2. 察する(さっする): inference
+
+####
+2. 縮む(ちぢむ): 
+
+####
+1. 司会(しかい): leading a meeting
+2. 閉会(へいかい)
+3. 大会
+
+####
+1. 配慮:(はいりょ) consideration, concern
+
+#### 
+1. 地図
+2. 地域(ちいき)
+
+#### shi
+1. 世界
+2. 勢力(せいりょく)
 

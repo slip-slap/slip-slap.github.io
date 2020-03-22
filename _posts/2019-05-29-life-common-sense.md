@@ -20,3 +20,18 @@ tags: []
 
 #### reference
 1. [the difference between CC, BCC, Reply, and Reply All](https://blog.hubspot.com/sales/reply-reply-all-bcc-flowchart)
+
+#### 国際配達
+##### 运单
+1. The basic information about the sender and receiver, telephone number,
+   address, and postcode 
+2. HS Code of the Goods
+
+##### Delivery In Japan.
+1. postman will bring the goods to your home, if he failed to contact you, he
+   will leave a note in your mailbox.
+2. According to the note in your mailbox, you have some options to get your delivery,
+
+
+
+
