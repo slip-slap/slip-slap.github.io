@@ -4,7 +4,7 @@ title: "Language: summary"
 keywords: []
 description: ""
 category: "言葉"
-tags: ["language"]
+tags: []
 ---
 {% include JB/setup %}
 

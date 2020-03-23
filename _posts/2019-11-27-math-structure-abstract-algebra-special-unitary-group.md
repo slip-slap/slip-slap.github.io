@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Abstract Algebra: SU(n)"
+title: "Abstract Algebra: Unitary Group"
 keywords: []
 description: ""
 category: "math"
-tags: ["structure"]
+tags: ["構造","A.A."]
 ---
 {% include JB/setup %}
 

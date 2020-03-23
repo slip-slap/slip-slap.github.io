@@ -4,7 +4,7 @@ title: "L.A.: Matrices and Application(3 times 3)"
 keywords: [""]
 description: ""
 category: "math"
-tags: ["structure","L.A."]
+tags: ["構造","L.A."]
 ---
 {% include JB/setup %}
 

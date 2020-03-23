@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "number theory: history"
+title: "A.A.: History"
 keywords: [ ""]
 description: ""
 category: "math"
-tags: ["structure"]
+tags: ["構造","A.A."]
 ---
 {% include JB/setup %}
 

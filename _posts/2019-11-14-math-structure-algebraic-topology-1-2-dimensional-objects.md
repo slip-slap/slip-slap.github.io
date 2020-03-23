@@ -4,7 +4,7 @@ title: "A.T.: 1 and 2-dim Objects"
 keywords: []
 description: ""
 category: "math"
-tags: ["structure"]
+tags: ["構造","A.T."]
 ---
 {% include JB/setup %}
 

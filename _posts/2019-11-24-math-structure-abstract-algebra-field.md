@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Abstract Algebra: Field"
+title: "A.A.: Field"
 keywords: [ "Module"]
 description: ""
 category: "math"
-tags: ["structure"]
+tags: ["構造","A.A."]
 ---
 {% include JB/setup %}
 

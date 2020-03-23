@@ -4,7 +4,7 @@ title: "LGLA: Normed Division Algebra"
 keywords: [""]
 description: ""
 category: "math"
-tags: ["structure"]
+tags: ["構造","LGLA"]
 ---
 {% include JB/setup %}
 

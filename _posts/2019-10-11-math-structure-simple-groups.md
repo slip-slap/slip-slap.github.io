@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Simple Group: History"
+title: "A.T.: History"
 keywords: [""]
 description: ""
 category: "math"
-tags: ["structure"]
+tags: ["構造","A.T."]
 ---
 {% include JB/setup %}
 

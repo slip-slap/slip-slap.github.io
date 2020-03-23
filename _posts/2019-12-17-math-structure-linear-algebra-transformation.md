@@ -4,7 +4,7 @@ title: "L.A.: Transformation"
 keywords: [""]
 description: ""
 category: "math"
-tags: ["structure","L.A."]
+tags: ["構造","L.A."]
 ---
 {% include JB/setup %}
 

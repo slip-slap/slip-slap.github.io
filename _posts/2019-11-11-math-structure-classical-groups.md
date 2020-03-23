@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Lie Lie: Classical Group "
+title: "LGLA: Classical Group "
 keywords: [""]
 description: ""
 category: "math"
-tags: ["structure"]
+tags: ["構造","LGLA"]
 ---
 {% include JB/setup %}
 

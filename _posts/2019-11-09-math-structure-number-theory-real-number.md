@@ -4,7 +4,7 @@ title: "N.T.: Real Number"
 keywords: [ ""]
 description: ""
 category: "math"
-tags: ["structure","N.T."]
+tags: ["構造","N.T."]
 ---
 {% include JB/setup %}
 

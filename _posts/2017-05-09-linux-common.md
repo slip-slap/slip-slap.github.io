@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "linux常用命令"
-keywords: ["linux", "cp"]
+title: "Linux: Common Command Line"
+keywords: []
 description: "linux"
 category: "linux"
-tags: ["language"]
+tags: []
 ---
 {% include JB/setup %}
 

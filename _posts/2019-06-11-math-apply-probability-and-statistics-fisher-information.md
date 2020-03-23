@@ -58,6 +58,13 @@ we design an experiment.
    the likelihood function
 2. we want to the likelihood function function more peaked, more cocentrated, so
    we study the shape, we come up fisher information.
+3. **Isn't fisher information is another dual problem ? assuming the probability
+   model is known, and the oiginal problem is: given the theta, calculate the
+   probability of some events; and the dual problem is, given all the events,
+   calulate the statistics in the parameter space.** 
+   
+
+
 
 #### Reference
 1. [Intuitive explanation of Fisher Information](https://www.quora.com/What-is-an-intuitive-explanation-of-Fisher-information)

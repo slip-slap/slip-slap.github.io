@@ -4,7 +4,7 @@ title: "A.T.: Curvature"
 keywords: []
 description: ""
 category: "math"
-tags: ["structure","A.T."]
+tags: ["構造","A.T."]
 ---
 {% include JB/setup %}
 

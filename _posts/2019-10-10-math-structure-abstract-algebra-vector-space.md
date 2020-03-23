@@ -4,7 +4,7 @@ title: "A.A.: Vector Space"
 keywords: []
 description: ""
 category: "math"
-tags: ["structure","A.A."]
+tags: ["構造","A.A."]
 ---
 {% include JB/setup %}
 

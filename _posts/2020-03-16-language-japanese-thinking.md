@@ -31,12 +31,10 @@ more polite. It means the company request you, just more polite.
 1. 通行止め:
 2. 税込み:
 
+####
+1. 受診(じゅしん): seeing a doctor
+2. 受賞(じゅしょう): 
 
 
-#### word
-1. 排気ガス: waste gas
-2. 古新聞: old newspaper
-3. 寄贈する(きぞう): gift
-4. 寄付: donation
-5. 代金: fee
+
 

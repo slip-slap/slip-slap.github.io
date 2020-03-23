@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Number Theory: Hypercomplex Number System"
+title: "N.T.: Hypercomplex Number System"
 keywords: [ ""]
 description: ""
 category: "math"
-tags: ["structure"]
+tags: ["構造","N.T."]
 ---
 {% include JB/setup %}
 

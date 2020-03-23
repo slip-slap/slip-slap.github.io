@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Japanese: Word Part I"
+title: "Japanese: 言葉"
 keywords: []
 description: ""
 category: "言葉"
@@ -9,6 +9,54 @@ tags: ["japan"]
 {% include JB/setup %}
 
 
+#### chong
+1. 衝突(しょうとつ)
+2. 納得(なっとく): understand
+3. 出納(すいとう): 
+
+####
+1. 心当たり: happening to know
+2. 圧縮(あっしゅく):
+3. 飢饉(ききん)
+4. 段取り:plans(how to get step)  段: step 
+5. 束縛(そくばく): 
+
+
+#### 
+1. 乗客(じょうきゃく)
+2. 過剰(かじょう): excess
+
+
+####
+1. 自粛(しゅく): self-contained
+2. 蛇口(じゃぐち): tap
+
+####
+1. 頭脳(ずのう)
+2. 頭痛(ずつう)
+
+####
+1. 駐車場
+2. 駐輪場
+3. 車輪(しゃりん)
+
+####
+1. 従業員(じゅうぎょういん)
+2. 従う(したがう)
+
+####
+1. 下車(げしや): getting off
+
+
+####
+1. 思いつく: to think of
+
+####
+1. て続き: procedure
+2. 存続(そんぞく)
+3. 継続(けいぞく)
+4. 続ける
+5. 続々(ぞくぞく): one after another
 
 #### word
 1. 売買(ばいばい): trade
@@ -20,7 +68,6 @@ tags: ["japan"]
 4. 切り傷(きりきず):
 5. 生活習慣病
 6. うつ病: depression
-7. 納得(なっとく): understand
 
 
 #### verb masu-form + きる
@@ -378,7 +425,6 @@ any of the course work and without receiving credit)
 9. 運転(うんてん): drive
 1. 手料理(て): home-cooking
 2. 手触り(てざわり): touch feeling
-3. て続き: procedure
 
 #### 意味が違います
 1. 陽気(ようき): season
@@ -596,7 +642,6 @@ japanese word is a metaphor
 8. 荒い波: (あらい波)wild waves
 9. 大工: carpenter
 1. 瀬戸際: critical moment
-2. 調う:(ととのう) to be prepared
 3. 叶う:(かなう) to come true 願いが叶う
 4. 有線: communicate by wire
 5. 代金: price
@@ -691,7 +736,6 @@ japanese word is a metaphor
 2. マン: means male              サラリーマン、カメラマン(male photography) 
 3. 取り: emphatic or formal prefix 取り消す(to cancel)
 + 取り箸:(とりばし) chopsticks used to move food from serving dish to one's own dish
-+ 段取り:plans(how to get step)  段: step 
 + 取り扱い: deal with 扱い: to deal with
 
 
@@ -811,8 +855,6 @@ you can attach [目] to different counters to show order. <br />
 
 
 
-#### 
-1. 乗客(じょうきゃく)
 
 #### 
 
@@ -839,6 +881,13 @@ you can attach [目] to different counters to show order. <br />
 4. 配達(はいたつ): delivery (とも達)
 5. 配慮:(はいりょ) consideration, concern
 6. 手配する: preparations
+7. 速達(そくたつ): special delivery
+8. 到達(とうたつ): 
+
+
+####
+1. 到達
+2. 透明(とうめい)
 
 #### 
 1. 海外: かいがい
@@ -874,7 +923,6 @@ you can attach [目] to different counters to show order. <br />
 1. 派手(はで): flashy, showy
 2. 地味(じみ): common
 
-#### 飲料
 
 #### 屋
 1. 居酒屋(いざかや)
@@ -954,6 +1002,7 @@ you can attach [目] to different counters to show order. <br />
 #### 
 1. 娯楽(ごらく): entainment
 2. 極楽(ごくらく): 
+3. 音楽
 
 ####
 1. 迫る: approach
@@ -1149,8 +1198,189 @@ you can attach [目] to different counters to show order. <br />
 1. 世界
 2. 勢力(せいりょく)
 
+
+
 ####
 1. 撮影(さつえい)
 2. 殺人(さつじん)
+3. 自殺(じさつ)
+4. 他殺(たさつ)
 
+#### 
+1. 精神(せいしん)
+2. 清掃(せいそう)
+
+####
+1. 調う:(ととのう) to be prepared
+2. 順調(じゅんちょう):
+3. 好調(こうちょう): 
+
+#### word
+1. 排気ガス: waste gas
+2. 古新聞: old newspaper
+3. 寄贈する(きぞう): gift
+4. 寄付: donation
+5. 代金: fee
+
+#### 
+1. 飲料(いんりょう)
+2. 臨床(りんしょう)
+
+1. 次代(じだい): next generation
+1. 床屋(とこや): babaershop
+2. 倒産(とうさん): bankrupt
+1. 傷跡(きずあと): 
+2. 愛用(あいよう): like to use
+1. 衝突(しょうとつ): 
+1. 奴隷(どれい): slave
+1. 天皇(てんのう)
+2. 灯台(とうだい): 
+5. 過剰生産(かじょうせいさん): over produce
+6. 解釈する(かいしゃくする): 
+8. 嫌う(きらう):  dislike
+9. 傷つく(きずつく): 
+2. 一部払い戻し: return part payment 
+4. 労働(ろうどう)
+5. 検討する(けんとう): discuss
+6. 居酒屋(いざかや): 
+7. 割合(わりあい): ration
+8. 座席(ざせき):
+9. 横断歩道(おうだんほどう): 
+1. 廊下(ろうか): corridor
+2. 緑茶(りょく):
+3. 宝くじ(たからくじ): lottery
+4. 見込む：to anticipate, to expect. 込み：including
+5. 慌てる(あわてる): 
+8. 助かる(たすかる): 
+9. 揃える(そろえる): prepare  お金を揃える
+1. (支度)したく: prepare
+2. 敷金(しききん): deposit
+3. 犠牲(ぎせい): sacrifice
+5. 塗り薬(ぬりぐすり): 
+6. 飛躍的(ひやくてき):
+7. 精神(せいしん)
+8. 狙う(ねらう)
+9. 整う(ととのう): 
+1. 治療(ちりょう)
+4. 尋ねる(たずねる):
+5. 淑やか(しとやか)
+6. 萎れる(しおれる): (植物に塩を入れ)
+7. 収める(おさめる):
+8. 搭載(とうさい)
+9. 揃え(そろ): to be equal (そろそろ)
+2. 飾る(かざる): 教室を飾る
+
+
+
+
+####
+1. 素直(すなお):  
+1. 素敵:
+2. 適当(てきとう)
+3. 水滴(すいてき)
+
+####
+1. 構う(かまう): baby-sitting
+
+####
+1. 収穫(しゅうかく): reap　
+2. 収入(しゅうにゅう): income
+3. 修理(しゅうり): repair
+
+####
+1. 深刻(しんこく): severe
+2. 信仰(しんこう): faith, belief
+
+####
+1. 貧困(ひんこん): poverty
+
+####
+1. 逮捕する(たいほすす): arrested
+2. 滞在(たいざい): stay
+
+####
+1. 柄(がら): 柄が悪い evil
+2. 小柄: small stature
+
+####
+1. 釜(かま): pot
+2. 鍋
+
+####
+1. 全く(まったく): 
+2. 全然(ぜんぜん):
+
+####
+1. 雰囲気(ふんいき):
+2. 範囲(はんい): 
+
+####
+1. 福祉(ふくし)
+2. 仕事:
+
+####
+1. 問屋(とんや)
+- 問屋で商品を仕入れる。
+
+####
+1. 勝敗(しょうはい):
+2. 失敗(しっぱい)
+
+####
+1. 大層(たいそう): amazing
+####
+1. 伝染(でんせん) infect
+2. 伝言(でんごん); 
+3. 宣伝(せんでん): propganda
+
+####
+1. 湯気(ゆげ): 
+
+
+#### 
+1. 娯楽(ごらく): entertainment
+2. 楽器(がっき)
+3. 音楽(おんがく)
+
+#### 
+1. 学期
+2. 学年(がくねん)
+
+
+1. 言葉遣い(ことばつかい): 
+2. 木の葉(このは):
+
+####
+1. 躊躇う(ためらう)
+2. 試す(ためす)
+3. 迷う(まよう)
+####
+1. 繰り返し(repeat)
+
+####
+1. 蓄える(たくわえる): たくさん 挖来
+2. 萎む(しぼむ): 
+3. 賄う(まかなう): ma 叶う(马上就实现)
+4. 忍(しのぶ): 
+2. 属する(ぞくする): 家族
+3. 所属(しょぞく): 
+
+####
+1. 挟まる(はさまる):
+2. 挟み(はさみ): 
+
+####
+1. 初春(しょしゅん):
+
+####
+1. 在学(ざいがく)
+2. 在留(ざいりゅう): stay
+3. 滞在(たいざい)
+
+####
+1. 限り(かぎり): limits
+
+####
+1. 引っ越し
+2. 寄越す(よこす)
 

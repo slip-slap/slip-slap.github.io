@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "find in Mac"
-keywords: ["linux","mac","find"]
-description: "introduction"
+title: "Linux: Find"
+keywords: []
+description: ""
 category: "linux"
-tags: ["language"]
+tags: []
 ---
 {% include JB/setup %}
 

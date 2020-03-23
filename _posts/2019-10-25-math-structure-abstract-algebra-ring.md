@@ -4,7 +4,7 @@ title: "Abstract Algebra: ring"
 keywords: [ "ring"]
 description: ""
 category: "math"
-tags: ["structure"]
+tags: ["構造","A.A."]
 ---
 {% include JB/setup %}
 
