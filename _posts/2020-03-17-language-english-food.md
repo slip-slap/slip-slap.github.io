@@ -20,3 +20,7 @@ tags: ["english"]
 
 ####
 1. Potato Chip
+
+
+#### Food
+1. Stalk, root

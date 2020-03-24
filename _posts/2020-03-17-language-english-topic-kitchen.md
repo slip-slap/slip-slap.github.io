@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "English: Cosmetics"
+title: "English: Kitchen"
 keywords: [""]
 description: ""
 category: "言葉"
@@ -8,12 +8,5 @@ tags: ["english"]
 ---
 {% include JB/setup %}
 
-#### Brand
-1. Facial Cleanser
-2. Lotion
-3. Cream
-
-
-#### Action
-1. Rubbing my hands
-
+####
+1. Chopping Board
