@@ -4,9 +4,30 @@ title: "Japanese Oral"
 keywords: ["janpanese"]
 description: ""
 category: "言葉"
-tags: ["japan"]
+tags: ["日本語"]
 ---
 {% include JB/setup %}
+
+
+#### ちょっと
+
+1. ちょっとわかります: I understand a little
+-  basic, fundamental meaning "a little"
+2. ちょっと待って！: wait a moment
+- If you are an english speaker, you may thing "1分待って", more natural.
+
+3. ちょっといいですか？do you have a moment?
+- without the context, you may wondering "a little of what", the answer in this
+  case is time.
+
+4. ちょっとビールが欲しいです。I want a little beer.
+- Physical Quantity
+
+5. それはちょっとね。
+- in the case when you feel negatively but don't want to state your feeling
+  directly. Imagine you were asked about something that you are strongly
+  against.
+
 
 #### Oral
 1. 初めて日本へ来た時、大変だったでしょう。

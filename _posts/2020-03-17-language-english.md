@@ -31,3 +31,19 @@ For example, in "1 + 2", 1 and 2 are the operands and the plus operator is opera
 1. what do you think of Kyoto?
 2. check, please
 3. Can we have the bill ?
+
+####
+1. say: claim
+2. outnumber: more than
+3. worst-hit: being damage sereverly
+
+
+####
+1. The US promised to give some medical supplies to China, but it was not ready
+   until March 11.
+
+
+
+#### Stock
+1. plummet, bounce back, up, down
+1. The share index down by more than 10%

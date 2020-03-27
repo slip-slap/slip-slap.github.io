@@ -4,7 +4,7 @@ title: "English: Food"
 keywords: [""]
 description: ""
 category: "言葉"
-tags: ["english"]
+tags: ["英語"]
 ---
 {% include JB/setup %}
 

@@ -4,7 +4,7 @@ title: "Japanese: Thinking In a Japanese Way"
 keywords: ["janpanese"]
 description: ""
 category: "言葉"
-tags: ["japan"]
+tags: ["日本語"]
 ---
 {% include JB/setup %}
 
@@ -26,6 +26,9 @@ more polite. It means the company request you, just more polite.
 1. 問題ないんじゃない。 There is no problem.
 2. 原因なんて、いいですよ。we don't listen the explaination. 
 3. ここまで来て、今さら、やめることはない。 
+4. 結構です no thank you.
+
+
 
 #### 2
 1. 通行止め:

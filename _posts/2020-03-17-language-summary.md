@@ -17,7 +17,8 @@ problem lies in me is I can't express myself in a very concise and efficient
 way. I should master some words in different area.   
 
 In the 21st century, Chinese is the most important language in the world,
-because the Chinese powerfull econemy capability, and military ability.
+because the Chinese powerfull econemy capability, and military ability. But the
+drawback of chinese is it is too difficult to master. 
 
 #### English
 I have learn English for so many years. Currently, American is the most
@@ -33,9 +34,13 @@ scientist, I should learn english.
 
 
 #### Japanese
-Because Japanese language is influenced by Tang Dynasty and American, I can
-learn Japanese pretty easily, and the problem lies me is the listening. I should
-listen more, and memorize more words.
+But at first I learn Japanese, it is completely a nightmare, I was too focused
+on the meaning of every word in a phrase. I suffer a lot. I should treat them as
+a whole, expeciall in the context of conversation, it will be much more easier.
+Because Japanese language is influenced by Tang Dynasty and western countries, I
+can learn Japanese pretty easily, and the problem lies me is the listening. I
+should listen more, and memorize more words.
+
 
 
 #### Galois
@@ -43,6 +48,7 @@ According to the experience that I learn language, here is some advices
 1. First, you need to memorize words, it's the building blocks.
 2. Second, listen, listen, and listen, listen different topics
 3. memorize the word that is often used in some specific area.
+4. Maybe, the most important thing is **Talk to yourself at home** 
 
 For example, I love history, expecially world history, not only China or Japan,
 I want to figure out, what the the other people is doing when China is in Tang

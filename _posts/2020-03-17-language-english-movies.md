@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "English: Culture"
+title: "English: Movies and Drama"
 keywords: [""]
 description: ""
 category: "言葉"
-tags: ["english"]
+tags: ["英語"]
 ---
 {% include JB/setup %}
 
@@ -17,6 +17,21 @@ tags: ["english"]
 #### Director
 1. Quentin Tarantino
 - Reservoir Dogs
+
+#### South Korea
+
+##### Drama
+1. Reply 1988
+
+##### Movies
+1. New World
+
+
+
+#### 
+1. moment cut
+2. subtitle
+3. hilarious bloopers
 
 
 

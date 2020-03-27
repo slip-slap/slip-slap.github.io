@@ -4,13 +4,37 @@ title: "Japanese: Grammar"
 keywords: ["janpanese"]
 description: ""
 category: "言葉"
-tags: ["japan"]
+tags: ["japan","日本語"]
 ---
 {% include JB/setup %}
 
 
+#### inference
+
+##### のも無理はない
+1. 彼はまだ経験がないので、知らないのも無理はない。
+##### ~に決まっている
+1. 今から会社に帰っても、もう誰もいないに決まっている。
+
+#### ~ようだと~みたいだ
+1. みなさん揃ったようですね。
+2. 今日は休業みたいだね。
+
+
+
+##### Vることはない and verb+までもない and verb+必要がない
+means: you don't need to <br />
+1. その本なら貸してあげるから、買うことはないよ. I give you this book, you don't
+   need buy it anymore
+2. 今さら言うまでもありませんが、すべてみなさんのおかげです。
+
+
+
 #### となると and とすると and としたら
 後藤先生がご病気となると、代わりの先生を探さなくてはいけません。
+- there are two と particles here
+- the first means the content to refer to
+- the second particle means supposition
 
 #### 〜と思ったら
 1. 電車は発車(はっしゃ)したと思ってたら大きな音を出して急停車(ていしゃ)した。
@@ -624,10 +648,6 @@ verb-ta form+末 <br />
 2. その映画は原作(げんさく)を読まなくても理解できなくはないです、よくわからない
 と思うところがたくさんあると思います。
 
-#### Vることはない and verb+までもない and verb+必要がない
-means: you don't need to <br />
-1. その本なら貸してあげるから、買うことはないよ. I give you this book, you don't need buy it anymore
-2. 今さら言うまでもありませんが、すべてみなさんのおかげです。
 
 #### なしには
 1. 今回の成功は、彼らの協力なしにはありえなかったと思います。

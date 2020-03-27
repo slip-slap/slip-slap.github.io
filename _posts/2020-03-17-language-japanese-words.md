@@ -4,10 +4,64 @@ title: "Japanese: 言葉"
 keywords: []
 description: ""
 category: "言葉"
-tags: ["japan"]
+tags: ["日本語"]
 ---
 {% include JB/setup %}
 
+####
+1. 来日
+2. 来場
+3. 来館
+
+####
+1. 手順(てじゅん): order
+
+####
+1. 調う:(ととのう) to be prepared
+2. 順調(じゅんちょう):
+3. 好調(こうちょう): 
+
+####
+1. 本格
+2. 格安(かくやす): cheap
+
+####
+1. 紅葉
+2. 紅葉(こうよう)
+####
+1. 提出
+2. 提案
+3. 提供する(ていきょう)
+
+####
+1. 年末(ねんまつ)
+
+####
+1. 虐待(ぎゃくたい)
+2. 逆光
+####
+1. 商売(しょうばい): business
+2. 商品
+3. 商業(しょうぎょう)
+####
+1. 傍ら(かたわら)
+####
+1. 蓄える(たくわえる): たくさん 挖来
+2. 萎む(しぼむ): 
+3. 賄う(まかなう): ma 叶う(马上就实现)
+4. 忍(しのぶ): 
+2. 属する(ぞくする): 家族
+3. 所属(しょぞく): 
+
+####
+1. 兵器(へいき)
+2. 平気(へいき): calmness
+####
+1. 一応(いちおう): first
+
+####
+1. いい加減にしろ: that's enough
+2. 減少(げんしょう):
 
 #### chong
 1. 衝突(しょうとつ)
@@ -16,11 +70,15 @@ tags: ["japan"]
 
 ####
 1. 心当たり: happening to know
+2. 日当たり:
+3. 当たり前:
 2. 圧縮(あっしゅく):
 3. 飢饉(ききん)
-4. 段取り:plans(how to get step)  段: step 
 5. 束縛(そくばく): 
 
+####
+1. 段取り:plans(how to get step)  段: step 
+2. 一段と(いちだんと): more and more
 
 #### 
 1. 乗客(じょうきゃく)
@@ -158,8 +216,6 @@ way of doing
 
 #### adverb
 1. 一々(いちいち): one by one
-2. 一応(いちおう): first
-3. 一段と(いちだんと): more and more
 4. 一度に(いちどに): at the same time
 5. 一見(いっけん): at first
 6. 一体(いったい): on earth
@@ -291,7 +347,6 @@ any of the course work and without receiving credit)
 4. ポイ捨て: littering
 5. 甘やかす(あまやかす): to pamper, to spoil
 6. 販売高(はんばいだか): the volume of selling 　高: quantity, amount
-7. 商売(しょうばい): business
 8. 卸売り(おろしうり): wholesale
 8. 通ずる(つうずる): to be open to traffic, to be understood
 9. 余計(よけい): too many, too much
@@ -1210,10 +1265,6 @@ you can attach [目] to different counters to show order. <br />
 1. 精神(せいしん)
 2. 清掃(せいそう)
 
-####
-1. 調う:(ととのう) to be prepared
-2. 順調(じゅんちょう):
-3. 好調(こうちょう): 
 
 #### word
 1. 排気ガス: waste gas
@@ -1357,13 +1408,6 @@ you can attach [目] to different counters to show order. <br />
 ####
 1. 繰り返し(repeat)
 
-####
-1. 蓄える(たくわえる): たくさん 挖来
-2. 萎む(しぼむ): 
-3. 賄う(まかなう): ma 叶う(马上就实现)
-4. 忍(しのぶ): 
-2. 属する(ぞくする): 家族
-3. 所属(しょぞく): 
 
 ####
 1. 挟まる(はさまる):

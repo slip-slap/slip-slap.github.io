@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Tensor: Kronecker Delta"
+title: "Tensor: Kronecker Delta Function"
 keywords: [ ""]
 description: ""
 category: "math"
@@ -27,6 +27,21 @@ b_2 c_1 \delta_{21}+b_2 c_2 \delta_{22}
 $$ <br />
 where $\delta_{12}$ and $\delta_{21}$ are zeros
 
+
+#### Properties 
+$$
+\begin{aligned} \sum_{j} \delta_{i j} a_{j} &=a_{i} \\ \sum_{i} a_{i} \delta_{i
+j} &=a_{j} \\ \sum_{k} \delta_{i k} \delta_{k j} &=\delta_{i j} \end{aligned}
+$$
+- for the third formula, maybe you need spent a little time to think about it,
+  but it's not that difficult. for the two items, we only need consider about
+  the first term $$\delta_{i k}$$ is when i equals to k, so we only have
+  $$\delta_{i i}$$, it's the same rule, we have only $$\delta_{j j}$$, so what's
+  the result of $$
+  \delta_{i i} \delta_{j j}
+  $$
+
+- it can also be treated as an identity matrix
 
 
 #### Reference

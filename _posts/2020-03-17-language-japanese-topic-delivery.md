@@ -4,7 +4,7 @@ title: "Japanese: 配達テーマ"
 keywords: []
 description: ""
 category: "言葉"
-tags: ["japan"]
+tags: ["日本語"]
 ---
 {% include JB/setup %}
 
