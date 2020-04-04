@@ -25,13 +25,12 @@ tags: []
 
 #### 电子产品
 + MacBook Air
-+ MacBook Air 电源适配器 
++ MacBook Air Charger
 + IODATA 移动光驱 
 + SAMSUNG Galaxy S9+
-+ DAMSUNG Galaxy S9+ 电源适配器 
++ DAMSUNG Galaxy S9+ Charger
 + CANON 相机
 + DW腕表
-+ PHILIPS Series 5000 电动剃须刀
 + ELECOM 16G U盘
 + ELECOM HDMI/VGA Mini DisplayPorts Convert Adapter
 + Beats イヤホン
@@ -78,4 +77,6 @@ tags: []
 #### 厨具
 + 炒锅
 
-
+#### Home
+1. hair dryer
+3. PHILIPS Series 5000, Electric Razor 

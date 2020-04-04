@@ -12,6 +12,8 @@ tags: ["英語"]
 1. cigarette Tubes
 2. a box of cigartte
 3. hook rail
+4. tube cases
+5. pack of tissue
 
 
 ####
@@ -25,3 +27,43 @@ tags: ["英語"]
 7. Trump attibutes rise in case to testing.
 
 
+####
+1. Take my friends to the airport.
+2. Got back home
+3. Got back
+4. keep the pack of tissue
+
+
+#### scenario
+1. He holds printed notes, shuffling the papers occasionally, staring down at
+   them frequently.
+
+####
+1. stranded: is (a person) abandoned.
+2. stuck
+- I got caught in a tree
+- I got stuck in a tree
+3. trap: is caught in a trap
+
+#### 
+1. strict
+2. generous
+3. mean
+4. nerd
+5. sycophant
+6. filial
+
+####
+1. emotional
+2. rational
+
+####
+1. people are struggling for food during the country's lockdown
+
+1. odds: chance, possiblity
+2. asap: as soon as possible
+
+
+####
+1. Man proposes, God disposes.
+2. Do my best, the rest is up to god.

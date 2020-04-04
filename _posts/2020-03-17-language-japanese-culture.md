@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Japanese: Culture"
+title: "日本語: Culture"
 keywords: []
 description: ""
 category: "言葉"

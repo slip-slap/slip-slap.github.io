@@ -33,6 +33,8 @@ language in the world, for business, for communication, for techology, for
 scientist, I should learn english.
 
 
+
+
 #### Japanese
 But at first I learn Japanese, it is completely a nightmare, I was too focused
 on the meaning of every word in a phrase. I suffer a lot. I should treat them as
@@ -58,4 +60,17 @@ you should the following famous movies, The shawshank Redemption, godfather, the
 lord of the rings, pulp fiction, Inception, The matrix, seven samurai,
 Crounching Tiger and hidden Dragon, The new world.
 
+
+#### Galois
+1. There is one word that confuse me a lot. According what I learn and express
+   english in a chinese way. "let" is the choice to ask someone to do something.
+   but, it's not, in English, it is **make**, I think this is the most frequent
+   word in English, DON'T forget it.
+2. You can't translate one language to the other language literly, because there
+   is no words whose meaning are equivlant exactly between two different
+   language. Before I went abroad, some guy told me if you go japan, you must
+   master japanese. That's so not true. Between two different language, the
+   difficult is not only the prounciation, but also the word choice, some
+   sentence make sense in your culture, but not in the other culture. You should
+   try to picture the scenario,  and pay attention to their word choices.
 

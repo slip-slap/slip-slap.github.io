@@ -31,6 +31,16 @@ The answer is to unify the function, unify space.
    speed, probability. That't the job of covectors, but we need vector to do
    some transformation, space transformation.
 
+
+#### Revolution of Notation
+When you check the history of math, it is also the history of how to rewrite our
+express.
+1. first we write an expression like $$x^2+2xy+y^2$$
+2. we can rewrite the exression in the matrix way.
+3. we can rewrite matrix in a kronecker way.
+we can decide what kind of notation system we take, but essiential it change
+nothing, just the expression form.
+
 #### How to denote a map
 $$
 \begin{array}{l}
@@ -47,4 +57,11 @@ $$
 \langle\Lambda, q v+b p\rangle= q\langle\Lambda, v\rangle+ b\langle\Lambda,
 p\rangle
 $$
+
+#### Galois
+1. If some notation is too complicate to understand, we can just break them
+   down, for example the addition marker.
+2. what's the point of tensor notation ? the point is create a new fancy way to
+   rewrite the expression, that's all the point.
+
 

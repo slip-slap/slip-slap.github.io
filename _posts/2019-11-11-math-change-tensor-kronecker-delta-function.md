@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Tensor: Kronecker Delta Function"
+title: "Tensor: Kronecker Delta"
 keywords: [ ""]
 description: ""
 category: "math"
@@ -28,6 +28,7 @@ $$ <br />
 where $\delta_{12}$ and $\delta_{21}$ are zeros
 
 
+
 #### Properties 
 $$
 \begin{aligned} \sum_{j} \delta_{i j} a_{j} &=a_{i} \\ \sum_{i} a_{i} \delta_{i
@@ -43,6 +44,11 @@ $$
 
 - it can also be treated as an identity matrix
 
+#### Galois
+1. Why we invent this sign, becasue it can used to express our equation in a
+   more compact and concise way, just like matrix, without any linear algebra
+   background, you can just treat matrix sign, as a more efficient and compact
+   way for expressions
 
 #### Reference
 1. [kronecker delta-wiki](https://en.wikipedia.org/wiki/Kronecker_delta#Definitions_of_the_generalized_Kronecker_delta)

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Abstract Algebra: Unitary Group"
+title: "A.A.: Unitary Group"
 keywords: []
 description: ""
 category: "math"

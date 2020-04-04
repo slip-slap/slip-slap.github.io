@@ -33,6 +33,10 @@ tags: ["GUI"]
 - the list will inclue "Iky", select this item and click "-" on the left lower
   corner.
 
+#### Youtute
+1. The the video progress bar is very useful, it will remember where you left
+   off. when you played next time, it will start from where you were.
+
 
 
 

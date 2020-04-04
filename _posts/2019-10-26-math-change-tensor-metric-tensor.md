@@ -68,3 +68,11 @@ $$
 
 
 
+#### Galois
+1. When I first encounter the metric tenosr, I totally have no idea what does
+   this stand for. Because first I kind of afraid of matrix, I didn't realize
+   it's a new form to rewrite the expression, It kinds of mysteric, and confuse
+   to me; Second, tensor is a complete new to me.
+2. After you realized that metric tensor just a fancy way to rewrite the
+   algebra expression, you are so happy. 
+

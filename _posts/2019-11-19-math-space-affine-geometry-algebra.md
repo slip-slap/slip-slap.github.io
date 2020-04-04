@@ -137,6 +137,13 @@ d}\end{array}\right)\left(\begin{array}{l}{x_{1}} \\ {x_{2}}\end{array}\right)
 $$
 
 
+#### Galois
+1. For a long time, I just can't understand what is the cross product, can't
+   tell the difference between cross product and inner product.
+2. Actuall, we get the definition of cross product based on some experiment
+   result we observe, for example, force, moment, force of moment 
+3. Inner product is used to define the length.
+
 
 #### Reference
 1. [Cartesian Product](https://en.wikipedia.org/wiki/Cartesian_product)

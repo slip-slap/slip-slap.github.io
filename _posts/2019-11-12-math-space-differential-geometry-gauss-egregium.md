@@ -8,7 +8,7 @@ tags: ["space","D.G."]
 ---
 {% include JB/setup %}
 
-#### HAHA
+#### Definition
 Gauss introduce the idea of describing a surface **S** parametrically, and then
 we can think about the surface in coordinates, then we can transform everything
 form the surface to the coordiates. Actually, Euler is the first guy who found
@@ -65,6 +65,10 @@ because the curvature.
 2. And now, according to Gauss-Rodrigues map, the curvature of a map also can be
 determined just only according to the surface, so now we can think surface is
 also intrinsic geometry, that's reasonable.
+3. **You can the useage of inner product in the formula, it's just the
+   application of funtional analysis, another way to define distance.**
+4. When you just can integrated you knowlegde, you feel awosome.
+
 
 
 

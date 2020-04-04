@@ -9,6 +9,53 @@ tags: ["日本語"]
 {% include JB/setup %}
 
 ####
+
+1. 金物:(かなもの) metal utensil
+2. 鍋物:(なべもの) food cooked in a pot
+3. 名物(めいぶつ): famous product
+4. 好物(こうぶつ): favourite food こう: good
+5. 本物(ほんもの): real thing 
+6. 品物(しなもの): 商品
+
+####
+1. いつでも
+2. どこでも
+3. 誰でも
+4. 何でも(なんでも)
+
+####
+1. もちもち
+
+####
+1. 紫式部(むらさきしきぶ)
+
+####
+1. 何とか(なんとか): no matter what
+- at first, it confuse me a lot. "忘年会を参加するかとうか,おしらせください" 
+2. 何しろ(なにしろ): anyway, at any rate
+- なに＋しろ no matter what you do.
+
+####
+1. 政(まつりごと): work about festival
+- it's not easy to memorize the pronounciation. The first part is 祭り, and the
+  second part is ごと, then combine the two meaning to one chinese character.
+2. 仕事
+
+####
+1. 項目(こうもく)
+
+####
+1. 段階
+2. 階段
+3. 段取り:plans(how to get step)  段: step 
+4. 一段と(いちだんと): more and more
+
+
+####
+1. 承る(うけたまわる): 受ける＋賜る(たまわる)
+- receive somthing in a very polite way.
+
+####
 1. 来日
 2. 来場
 3. 来館
@@ -76,9 +123,6 @@ tags: ["日本語"]
 3. 飢饉(ききん)
 5. 束縛(そくばく): 
 
-####
-1. 段取り:plans(how to get step)  段: step 
-2. 一段と(いちだんと): more and more
 
 #### 
 1. 乗客(じょうきゃく)
@@ -101,6 +145,7 @@ tags: ["日本語"]
 ####
 1. 従業員(じゅうぎょういん)
 2. 従う(したがう)
+3. 卒業(そつぎょう)
 
 ####
 1. 下車(げしや): getting off
@@ -715,11 +760,6 @@ japanese word is a metaphor
 5. 大言:(たいげん) big talk
 6. 電気代:(でんきだい) electric utility expense だい: cost, charge
 7. 手早い:(てばやい) quick, agile
-8. 金物:(かなもの) metal utensil
-9. 鍋物:(なべもの) food cooked in a pot
-1. 名物(めいぶつ): famous product
-2. 好物(こうぶつ): favourite food こう: good
-3. 本物(ほんもの): real thing 
 4. 本番(ほんばん): performance
 4. 生物(せいぶつ): living things
 5. 入れ物: container
@@ -760,7 +800,10 @@ japanese word is a metaphor
 1. もう: already も: too
 
 #### 無料と無給
-2. 無給: unpaid
+1. 無給: unpaid
+2. 無料:
+3. 給料: 
+
 
 #### 荷
 2. 荷物(にもつ): luggage
@@ -800,45 +843,6 @@ japanese word is a metaphor
 
 
 
-#### counting and counters
-月 <br />
-1. April 四月(しがつ)
-2. July  七月(しちがつ)
-3. September 九月(くがつ)
-日 <br />
-<img src="{{IMAGE_PATH}}/japanese-date.png"/>
-分<br />
-1. 1分(いっぷん)
-2. 3分(さんぷん)
-3. 4分(よんぷん)
-4. 6分(ろっぷん)
-5. 8分(はっぷん)
-6. 10分(じゅっぷん)
-週<br />
-1. 三週間(さんしゅうかん)
-2. 一週間(いっしゅうかん)
-3. 8週間(はっしゅうかん)
-月 the small [ヶ] is totally different from ケ, it is the abbrevation for the kanji[箇]<br />
-1. 一ヶ月(いっかげつ)
-2. 六ヶ月(ろっかげつ)
-4. 十ヶ月(じゅっかげつ)
-
-
-a span of time <br />
-The basic counter for a span of time is [間] which is read as [かん]
-1. you can attach it to the end of hours, days, weeks, and years.
-2. minutes and second do not need this counter and month has a seperate counter.
-1. 二時間40分(にじかんよんじゅっぷん)
-2. 二十日間(はつかかん)
-3. 15日間(じゅうごにちかん)
-4. 二年間(にねんかん)
-5. 一日(いちにち)
-
-#### 目 to show order
-you can attach [目] to different counters to show order. <br />
-例えば、[一番] which means number one becomes the first when you add [目](一番目)
-1. 1回目　the first time
-2. 四人目 the fourth person
 
 
 #### weapon
@@ -938,6 +942,8 @@ you can attach [目] to different counters to show order. <br />
 6. 手配する: preparations
 7. 速達(そくたつ): special delivery
 8. 到達(とうたつ): 
+9. 達する(たっする): reach
+
 
 
 ####
@@ -1185,6 +1191,7 @@ you can attach [目] to different counters to show order. <br />
 ####
 1. 送料: shipping charge  料: fee 　
 2. 無料: free
+3. 電話代: telephone bill
 
 #### 出(しゅつ)
 1. 出荷料(しゅっか): shiping charges
@@ -1218,6 +1225,7 @@ you can attach [目] to different counters to show order. <br />
 ####
 1. 豪華(ごうか)
 2. 合格(ごうかく)
+3. 不合格(ふごうかく):
 
 ####
 1. 充電器(じゅうでんき): charger
@@ -1260,6 +1268,9 @@ you can attach [目] to different counters to show order. <br />
 2. 殺人(さつじん)
 3. 自殺(じさつ)
 4. 他殺(たさつ)
+
+####
+1. 実際(じっさい):
 
 #### 
 1. 精神(せいしん)
@@ -1341,6 +1352,9 @@ you can attach [目] to different counters to show order. <br />
 ####
 1. 深刻(しんこく): severe
 2. 信仰(しんこう): faith, belief
+3. 遅刻(ちこく)する: 
+4. 時刻表(じこくひょう)
+
 
 ####
 1. 貧困(ひんこん): poverty
@@ -1427,4 +1441,8 @@ you can attach [目] to different counters to show order. <br />
 ####
 1. 引っ越し
 2. 寄越す(よこす)
+
+####
+1. 死ぬ
+2. 死亡(しぼう)
 

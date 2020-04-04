@@ -1,20 +1,73 @@
 ---
 layout: post
-title: "Japanese: Grammar"
-keywords: ["janpanese"]
-description: ""
+title: "日本語: Grammar"
+keywords: []
+description: 
 category: "言葉"
-tags: ["japan","日本語"]
+tags: ["日本語"]
 ---
 {% include JB/setup %}
 
+#### 〜恐れがある
+1. 地震のため, この地域は断水の恐れがある。
 
-#### inference
+#### 
+1. それなのに: although
+- に indicate although
+2. ごちそうさま
+3. そういえば: now that you mention it.(the potentional form of いう is いえば) 
+4. その調査によると: according to that report
+
+#### 
+1. 〜といえば equals to ~っていえば　
+
+#### のみandだけ
+1. used more in oral
+2. used more in paper
+
+####
+1. 何だ: no more that it's literally meaning, what?
+
+#### ええとはい
+1. ええ: means yes but not polite
+2. はい: means yes but polite
+3. うん: high  social rank to lower social rank
+
+####
+1. いえ: means no but polite
+2. いや: means no but not polite
+
+#### 
+1. そうなんですか
+- [んです] is used to denote the reason.　
+2. そうですか
+
+#### ても and でも: even if
+1. there have the same meaning, just because the te-form of the word is
+   different, so it has two different types.
+2. で: (conjunction) and then, so
+3. て: indicate action
+4. も: even if
+
+####
+1. 鈴木さんが中国にくるのを知っていますか。not yet
+2. 鈴木さんが中国に来たのを知っていますか。already come
+3. 佐藤さんにお金を返すのを忘れちゃった。 not yet
+3. 佐藤さんにお金を返したのを忘れちゃった。already give back
+
+####
+1. それで: and, so
+2. それに: further, in addtion
+- 頭が痛くて、それに熱もちょってあるんで。
 
 ##### のも無理はない
 1. 彼はまだ経験がないので、知らないのも無理はない。
 ##### ~に決まっている
 1. 今から会社に帰っても、もう誰もいないに決まっている。
+
+##### ~ と言っても過言ではない
+1. と言っても過言(かごん)ではない
+-  中国語は世界で一番難しい言葉だと言っても過言ではない。
 
 #### ~ようだと~みたいだ
 1. みなさん揃ったようですね。
@@ -217,8 +270,6 @@ so the rule is, the part before the **の or ん** particle, **it should be a se
 おっとは料理が上手なのに、あまり作ってくれません.
 
 
-#### 〜恐れがある
-1. 地震のため, この地域は断水の恐れがある。
 
 #### [~てきました]と[~た]
 1. [~てきました]表示变化的开始，或不断朝着某个结果进展的状态
@@ -419,7 +470,6 @@ is to tell others what we have heard.
 なんて素晴らしいんだろう
 
 
-#### のみandだけ
 
 
 

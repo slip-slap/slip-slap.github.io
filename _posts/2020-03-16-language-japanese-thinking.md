@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Japanese: Thinking In a Japanese Way"
+title: "日本語: Thinking In a Japanese Way"
 keywords: ["janpanese"]
 description: ""
 category: "言葉"
