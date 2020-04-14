@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Japanese: 言葉"
+title: "ライフ: 言葉"
 keywords: []
 description: ""
 category: "言葉"

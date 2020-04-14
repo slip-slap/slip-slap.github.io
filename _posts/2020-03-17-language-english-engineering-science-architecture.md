@@ -21,6 +21,7 @@ tags: ["日本語"]
 4. light pole
 5. stone pole and chain fence
 6. tree fence
+7. stoop
 
 
 #### house

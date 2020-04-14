@@ -9,7 +9,10 @@ tags: ["英語"]
 {% include JB/setup %}
 
 
-#### Chinese Food
+#### American 
+1. Jelly
+
+#### Chinese 
 1. Braised Pork
 2. Fried Dumplings
 3. Fried Rice
@@ -24,3 +27,4 @@ tags: ["英語"]
 
 #### Food
 1. Stalk, root
+2. skin

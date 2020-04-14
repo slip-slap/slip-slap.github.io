@@ -20,7 +20,6 @@ tags: ["英語"]
 5. suspend
 
 #### Place
-1. native villages
 2. market
 3. supermarket
 4. stock market
@@ -29,23 +28,19 @@ tags: ["英語"]
 #### work
 1. purchase agent
 - buy goods or properties on behalf of another. 
-2. migrant worker
-3. migrant labour
 
-#### Company
-1. workshop
-2. mafia
-3. mob
-4. the Chinese Coffee chain
 
 #### Position
 1. president
 2. section manager
 3. right-hand
 4. boss
+5. general manager
+
 #### phrase
 1. Chinese-made equipment
 2. retail company Alibaba
+3. make a living
 
 
 #### Action
@@ -54,5 +49,13 @@ tags: ["英語"]
 3. appoint
 4. online auction
 
+#### Migrant worker
+1. intensive labour
+2. migrant worker
+3. migrant labour
+
+
 #### Sentence
 1. The Chinese coffee chain has now suspended its chief operating officer.
+
+

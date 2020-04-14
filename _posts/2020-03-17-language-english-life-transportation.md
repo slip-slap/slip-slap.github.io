@@ -17,6 +17,7 @@ tags: ["英語"]
 1. bar
 2. one-way
 3. round-way
+4. boarding pass
 
 ####
 1. sidewalk
@@ -38,10 +39,16 @@ tags: ["英語"]
 4. go across the strees
 -across: from one side to the other side
 
+#### phrase
+1. run over
+2. pull over
+
 
 
 #### Sentence
 1. The train was carrying 2 passengers and 5 staff when it crashed today.
 2. The generator car burst into flames.
 3. All of the injured people were taken to the hospital.
+4. the car overturned while trying to avoid the other cars.
+
 

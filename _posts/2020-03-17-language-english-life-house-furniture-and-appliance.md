@@ -11,6 +11,7 @@ tags: ["英語"]
 ####
 1. shoe cabinet
 2. table lamp
+3. floor lamp
 
 1. bathroom scales
 2. folding chair
@@ -18,6 +19,9 @@ tags: ["英語"]
 4. soft couch
 5. trash can
 6. waste basket
+
+####
+1. bathroom
 
 
 #### Air Conditioners
@@ -31,10 +35,10 @@ tags: ["英語"]
 1. power bank, portable charger
 2. power strip
 3. data cable
+4. hair dryer
 
 ####
 1. electric hot water heater
-2. scooter
 
 #### electric and electronic
 1. electric: relating to electricity
@@ -42,3 +46,4 @@ tags: ["英語"]
 
 #### Action
 1. Turn on, start
+2. move the floor lamp a littler closer

@@ -78,6 +78,9 @@ df.iloc[0,0]
 ```
 
 
+#### Draw
+1. Pandas has tight integration with matplotlib.
+
 
 
 
@@ -85,3 +88,5 @@ df.iloc[0,0]
 1. [官网](http://pandas.pydata.org/pandas-docs/stable/install.html)
 2. [Ten minutes to Pandas](http://pandas.pydata.org/pandas-docs/stable/getting_started/10min.html#selection)
 3. [the difference between Series and Dataframe](https://stackoverflow.com/questions/26047209/what-is-the-difference-between-a-pandas-series-and-a-single-column-dataframe)
+4. [Use Pandas to
+   Draw](http://queirozf.com/entries/pandas-dataframe-plot-examples-with-matplotlib-pyplot)

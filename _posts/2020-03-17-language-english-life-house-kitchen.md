@@ -21,4 +21,12 @@ tags: ["英語"]
 1. kitchen sponge
 2. kitchen sink
 3. kitchen sink stopper
+4. kitchen peeler
+
+
+#### Phrase
+clean up 
+
+#### adjective
+1. sharp
 

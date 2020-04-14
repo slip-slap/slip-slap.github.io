@@ -65,4 +65,9 @@ tags: ["英語"]
 1. hang up.
 2. hang on
 3. call again
+4. put joe on the phone 
 
+
+
+####
+1. proper care 

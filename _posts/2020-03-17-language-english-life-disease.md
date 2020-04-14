@@ -23,6 +23,7 @@ tags: ["英語"]
 5. hosptital
 6. private clinic
 
+
 #### Medicine
 1. Disinfect
 2. sprayer
@@ -33,6 +34,8 @@ tags: ["英語"]
 #### case
 1. imported cases
 2. carrier
+3. confirmed case
+4. active case
 
 #### 
 1. recovery
@@ -51,5 +54,7 @@ tags: ["英語"]
    under-reporting both total cases and deaths.
 
 3. disease could be transimitted from animal fur to human.
+4. those who ended up in tensive care maybe left with permanent damage to their
+   lungs and liver.
 
 

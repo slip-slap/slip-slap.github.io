@@ -16,7 +16,7 @@ tags: ["英語"]
 4. deal with it and move on
 7. turning it over
 8. set aside their differences
-2. let go ot the ring
+2. let go of the ring
 3. let go of the past
 4. heads up
 9. live away from
@@ -38,6 +38,7 @@ tags: ["英語"]
 4. get you pregant
 5. get my arm into the sleeve
 6. get her something special
+- you don't buy me anything.
 7. don't get me wrong.
 8. get into troubles
 9. get your head out from  windows
@@ -45,6 +46,12 @@ tags: ["英語"]
 - the funtionality of the word get is kind of like "让" in China. 
 - get her to pay.
 2. get her out of my mind
+3. get over it. 
+- I had hepatitis, I got over it.
+
+#### up and down
+1. curl up 
+2. lie down
 
 #### move
 1. move it over
@@ -57,6 +64,92 @@ tags: ["英語"]
 4. point out
 5. multify out
 6. wipe out
-7. work out
+
+#### work
+1. work out: exercise
+2. work out: have a good or specified result
+- hope everything will work out.
 
 #### Away from
+
+####
+1. scare off.
+2. run off.
+
+
+#### things
+1. new things
+- I am 60s, I am still learn new things
+2. novel things
+- Japanese always like novel things, new things.
+
+1. what were you thinking?
+2. I can see it in your eyes
+
+####
+1. start over: restart
+
+####
+1. up, down, from, off, on, away, to are very common adjective that can be used combined
+   with verb.
+2. up, down may have some meaning related to direction
+3. off have kind of meaning related to result 
+
+#### Galois
+1. I think words such like "make", "get" are very common in oral english, I
+   should pay enough attention to them.
+2. "it" is also a very important word,
+- It's a little louder.
+
+
+#### Importance
+1. what are you getting at?
+2. frankly, she think she is funny, but I never be able to see it.
+3. Hold on, I just have one thing to take care of first, would you mind waiting?
+4. Wasn't I on my way to do something?
+5. lost my touch: No longer be able to do or handle something skillfully.
+6. I'll be right back.
+
+
+#### come over and come here
+1. over could interpret as "please cross distance between where you are now and
+   where I am".
+2. "come here" emphasizes the target location.
+
+####
+1. jump over the hole in the middle and not step on the rotten boards.
+
+####
+1. sort out: to understand or find(by something, such as a solution) by thinking
+   I'm trying to sort out a way to do it.
+2. sort someone out: you make them realize that they have behaved wrongly.
+
+
+
+####
+1. go through
+- search through or examine carefully or in sequence.
+2. gather around
+- people gether together and form a circle.
+
+
+#### what a
+1. what a great view of the hall from here.
+
+
+
+#### over, off, over
+1. jump out that window
+2. jump off roof
+3. jump over the hole
+- how to choice these three adjective depends on the word nexts to it.
+- off: means away from, away from the roof
+- out: from inside to outside
+- over: means across the hole
+
+#### up, down
+up and down implies completion, like emphasizing
+1. open up the market
+2. close up 
+3. end up with
+

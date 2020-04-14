@@ -26,13 +26,14 @@ tags: ["英語"]
 
 #### Phrase 
 1. in friend Zone
+2. gorgeous and sexy
 
 
 
 #### sentence
 1. got dumped during sex
 2. I am totally over her
-3. I caress my butt
+3. caress my butt
 4. I want to take my tongue run over all your body
 5. kiss him all over
 - all over: everywhere
@@ -40,4 +41,8 @@ tags: ["英語"]
 7. took advantage of me
 8. your probably see someone else now, for old times sake, would you like some
    hot, steamy, wild night.
+
+####
+1. will that upset me.
+2. mad at me.
 

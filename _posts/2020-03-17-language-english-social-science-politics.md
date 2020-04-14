@@ -14,6 +14,8 @@ tags: ["英語"]
 3. public gatherings
 4. department of labour
 5. approval rating
+6. subvert
+7. subversion
 
 #### Patriotism and Nationalism
 1. patriotism: love that people feel for their country.
@@ -27,3 +29,6 @@ tags: ["英語"]
 2. downplay: downplay the crisis
 3. magnify, overstate
 
+
+####
+1. flags are flown at half-mast.

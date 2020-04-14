@@ -25,4 +25,8 @@ tags: ["英語"]
 2. warrior
 3. princess
 4. domain, site, territory, place, area
+5. craftsman
+6. shoemaker
+
+####
 

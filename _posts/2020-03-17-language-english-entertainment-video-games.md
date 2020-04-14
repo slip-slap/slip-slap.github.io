@@ -14,6 +14,7 @@ tags: ["英語"]
 3. bottom lane
 4. buff
 5. rule
+6. bronze league
 
 
 ####
@@ -29,3 +30,8 @@ tags: ["英語"]
 ####
 1. rank mode
 2. classic mode
+
+
+####
+1. you were promoted to the next higher league, keep participating in
+   competitions to get more rewards.

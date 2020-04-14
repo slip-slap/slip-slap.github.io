@@ -14,3 +14,13 @@ tags: ["英語"]
    important events in the calendar to commermorate ancestors who are no long
    with you. burn items, such as joss stick and paper offerings to honour the
    dead and transmit money and other goods to loved ones in the afterlife.
+
+#### Act
+1. mourn
+2. life
+
+#### Sentence
+1. China mourns victims with three-minute silence.
+
+
+

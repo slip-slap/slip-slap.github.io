@@ -10,11 +10,7 @@ tags: ["英語"]
 
 
 ####
-1. village
-2. town
-3. county
-4. city
-5. province
+1. globe
 
 #### African
 1. Gabon
@@ -32,4 +28,13 @@ tags: ["英語"]
 1. Iberian Peninsula
 - Spain 
 - Portugal
+
+#### 
+1. hill
+2. mountain
+3. valley
+
+
+#### Sentence
+1. I'll look it up in the encyclopedia.
 

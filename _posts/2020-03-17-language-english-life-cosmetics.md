@@ -12,6 +12,9 @@ tags: ["英語"]
 1. Facial Cleanser
 2. Lotion
 3. Cream
+4. powder
+5. toothbrush
+6. tooth paste
 
 ####
 1. razor
@@ -29,4 +32,7 @@ tags: ["英語"]
 1. dry skin
 2. oily skin
 3. combniation skin
+
+#### sentence
+1. sprinkle on your legs.
 
