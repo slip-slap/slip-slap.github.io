@@ -10,6 +10,9 @@ tags: ["英語"]
 
 ####
 1. fit closely
+2. large rocks
+3. ledge
 
 ####
 1. It was build out of super-strong stone that can withstand a falling tree.
+2. crush the ledge of the fountain

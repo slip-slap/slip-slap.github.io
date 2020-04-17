@@ -16,6 +16,7 @@ tags: ["英語"]
 5. saucepan with glass lid
 6. trash bags
 7. sponge holder
+8. jar
 
 ####
 1. kitchen sponge
@@ -25,7 +26,8 @@ tags: ["英語"]
 
 
 #### Phrase
-clean up 
+1. clean up 
+2. hallway
 
 #### adjective
 1. sharp

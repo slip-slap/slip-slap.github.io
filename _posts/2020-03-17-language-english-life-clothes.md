@@ -23,6 +23,8 @@ tags: ["英語"]
 1. long sleeves
 2. leather pants
 3. tie
+4. leg warmer
+5. hanger
 
 
 ##### Headbands
@@ -50,13 +52,8 @@ tags: ["英語"]
 3. Where did I leave my knitting needles?
 
 
-
-
-
-
-
 #### Phrase
-1. dress up: dress up as a ghost
+1. dress up: dress up as a ghost, dress up as a girl
 2. reversible tie.
 3. tea stain
 4. slots in the pocket

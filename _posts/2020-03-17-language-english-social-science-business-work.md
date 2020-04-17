@@ -53,6 +53,7 @@ tags: ["英語"]
 1. intensive labour
 2. migrant worker
 3. migrant labour
+4. hunting dream
 
 
 #### Sentence

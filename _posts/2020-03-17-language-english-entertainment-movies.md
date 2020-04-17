@@ -40,8 +40,24 @@ tags: ["英語"]
 8. episode
 9. sound track
 1. trailer
+2. character
+3. celebrity
+4. monologue
+
+
+####
+1. improvise
+2. unplaned
+3. shot and reshot the scene
+4. best movie counting down
+5. hold the breath
+6. evil character
 
 #### sentence
 1. This movie about butler is based on a true story.
+2. turn the excruciating pain into performance
+
+
+
 
 

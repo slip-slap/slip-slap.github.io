@@ -49,6 +49,7 @@ tags: ["英語"]
 ####
 1. emotional
 2. rational
+3. physical 
 
 ####
 1. people are struggling for food during the country's lockdown

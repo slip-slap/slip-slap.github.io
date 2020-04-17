@@ -8,6 +8,32 @@ tags: ["英語"]
 ---
 {% include JB/setup %}
 
+
+#### 
+1. remove
+2. replace
+3. move
+
+####
+1. ask
+2. order
+3. force
+
+
+#### 
+1. look
+2. take a look at
+3. see
+4. look away
+5. what are you looking at?
+
+
+####
+1. beat
+2. strike
+3. attack
+
+
 #### Word
 1. remember: keep that in mind
 2. number: death toll
@@ -73,8 +99,10 @@ For example, in "1 + 2", 1 and 2 are the operands and the plus operator is opera
 
 ####
 1. say: claim
+2. confess:
 2. outnumber: more than
 3. worst-hit: being damage sereverly
+
 
 
 ####
@@ -94,4 +122,23 @@ For example, in "1 + 2", 1 and 2 are the operands and the plus operator is opera
 - A spare tire or a spare room may never be used, but they have the specific
   purpose of being available in an emergency.  Ofthen when something is extra,
   you get rid of it.
+
+#### Problem, Issue and Trouble
+1. Problem: A problem is something negative that needs to be solved. Some bad
+   things that happen can't be called "problems" they are unsolvable.
+- For example, if you broke your, you probably wouldn't call your broken leg a
+  "problem". The broken leg can't be fixed. On the other hand, figuring out how
+  to get to work with a broken leg is a problem.
+
+2. Issue: issue is associated with difficult decisions and disagreement. It mean
+   that topic that people are talking about or disagreeing. Social issues and
+   political issues
+
+#### Persuade and Convince
+1. You persuage someone to do something
+2. you convince someone of something
+
+#### Problem and Issue
+1. If you want to obtain information by asking, use question
+2. doubt refers to a feeling. When you feel uncertain about something, use doubt
 

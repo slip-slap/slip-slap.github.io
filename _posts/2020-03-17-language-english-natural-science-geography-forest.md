@@ -11,10 +11,16 @@ tags: ["英語"]
 ####
 1. stump
 2. dry stump
+3. dry trees
 
 #### Action
 1. uproot
 2. pull off
+3. cut down
+
+
+
+
 
 
 #### sentence

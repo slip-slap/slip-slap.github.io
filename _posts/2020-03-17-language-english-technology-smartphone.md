@@ -25,6 +25,7 @@ tags: ["英語"]
 6. video progress bar
 7. black area
 - site, place
+8. interface
 
 #### Setting
 1. lock screen and secruity

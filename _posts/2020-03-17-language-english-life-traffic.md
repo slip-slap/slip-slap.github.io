@@ -20,13 +20,6 @@ tags: ["英語"]
 4. boarding pass
 
 ####
-1. sidewalk
-2. sideways
-3. lane: a small road often find in a rural area
-4. avenue: a public way which has building on both sides of it. They run
-   perpendicular to street
-5. street: A public way that has buildings on both side, that perpendicular to
-   avenues.
 
 #### Traffic board
 1. traffic cone
@@ -50,5 +43,6 @@ tags: ["英語"]
 2. The generator car burst into flames.
 3. All of the injured people were taken to the hospital.
 4. the car overturned while trying to avoid the other cars.
+5. He get hits buy a car.
 
 

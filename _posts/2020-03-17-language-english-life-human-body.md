@@ -17,6 +17,7 @@ tags: ["英語"]
 6. back
 7. liver
 8. lung
+9. blood flow
 
 ####
 1. life 
@@ -27,6 +28,10 @@ tags: ["英語"]
 2. move: move your leg.
 3. rub: run your hands
 4. slip
+5. scratch my leg
+
+#### mood
+1. break down
 
 ####
 1. turn around
@@ -34,6 +39,9 @@ tags: ["英語"]
 - I slipped down the side of hill and got covered in mud.
 3. bend down
 
+####
+1. heartbreaking moment
+2. heartwarming moment
 
 
 #### Sentence
@@ -43,6 +51,15 @@ tags: ["英語"]
 5. you hand never left my back.
 6. nothing, extra air in my mouth.
 7. my legs expanded from the heat.
+8. I take his hands in my hand
+9. I take my arm around her neck 
+1. site by the side of the king
+2. sneak into the garden
+3. you hold a knife to his throat
+4. as quiet as a shadow
+5. broke two toes, after kicking two many solid metal
+
+
 
 #### Appearance
 1. He is not a typical Russia

@@ -37,4 +37,6 @@ poll: a game played on an English billiard table in which each players stakes a
 sum and the winner takes all
 
 #### Sentence
-1. roll a six in three goes
+1. roll a six in three goes.
+2. you competitors don't stand a chance against you.
+

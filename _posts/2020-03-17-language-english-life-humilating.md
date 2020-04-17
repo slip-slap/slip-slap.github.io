@@ -22,6 +22,8 @@ tags: ["英語"]
 2. What's wrong with you, what's the matter with you?
 3. he is yelling at me
 4. are you insane
+5. Don't snap at me
+- speak sharply or angrily to someone
 
 
 #### Phrase 
@@ -45,4 +47,5 @@ tags: ["英語"]
 ####
 1. will that upset me.
 2. mad at me.
+3. Don't let them see your tears, they are not worth crying over.
 

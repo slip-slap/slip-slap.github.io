@@ -17,6 +17,10 @@ tags: ["英語"]
 6. subvert
 7. subversion
 
+####
+1. local goverment
+2. central goverment
+
 #### Patriotism and Nationalism
 1. patriotism: love that people feel for their country.
 2. nationalism: A desire by a large group of people(such as people who share the

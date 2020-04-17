@@ -13,6 +13,7 @@ tags: ["日本語"]
 1. manhole
 2. sewer
 3. sewage
+4. arch bridge
 
 #### sidewalk
 1. pole 

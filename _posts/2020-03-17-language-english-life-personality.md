@@ -15,6 +15,7 @@ tags: ["英語"]
 4. nerd
 5. sycophant
 6. filial
+7. belittle
 
 #### attitude
 1. rude
@@ -24,8 +25,15 @@ tags: ["英語"]
 5. active
 6. upbeat
 7. positive altitude
+8. a man of mercy
 
 
 ####
 1. They are rich, sophisticated and elegant.
+2. I was too shy and passive
+3. what doen's kill you, makes you stronger
+
+
+####
+1. peace and quiet
 

@@ -14,7 +14,11 @@ tags: ["英語"]
 
 ####
 1. a couple of days
-2. one out of 5
+3. a bunch of fresh apple
+4. a pile of rubble
+5. one out of 5
+6. a couple of years older than you
+
 
 
 ####

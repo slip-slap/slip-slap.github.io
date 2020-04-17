@@ -23,10 +23,12 @@ tags: ["英語"]
 3. van
 4. tractor
 5. tractor and trailor
+6. airbags
 
 
 ####
 1. drive
+2. ring the bell
 
 ####
 1. brake failure

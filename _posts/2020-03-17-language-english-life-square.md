@@ -11,6 +11,7 @@ tags: ["英語"]
 #### Phrase
 1. fountain
 2. swan statue
+3. floating decoration
 
 
 #### Sentence

@@ -8,10 +8,35 @@ tags: ["英語"]
 ---
 {% include JB/setup %}
 
+
+
+#### go
+1. I will go over their definition
+2. Things are going well
+
+####
+1. come by
+2. stop by
+3. drop by
+
+#### way
+1. make our way
+- We made our way through the thick underbrush
+2. find a way
+
+
+#### away
+1. throw away
+2. live away from
+- He has been living away from his family.
+3. back away from
+- Trump back away from New York quarantine
+4. run away with me
+
+
 ####
 2. break down 
 6. hang around
-7. throw away
 3. back off
 4. deal with it and move on
 7. turning it over
@@ -19,21 +44,23 @@ tags: ["英語"]
 2. let go of the ring
 3. let go of the past
 4. heads up
-9. live away from
-- He has been living away from his family.
 1. back up
-2. back away from
-- Trump back away from New York quarantine
 4. you go ahead, I will catch up.
-5. run away with me
 
 #### prefix
 1. disobey
+2. underreport
+3. unsend
+4. rebalance
+5. outthink
+
 #### get 
 1. get through
 2. get off: telling someone to stop another person or thing touching someone or
    sometthing
 - get your dog off me.
+3. get that away from me
+4. get ivy off the wall
 3. get off from work.
 4. get you pregant
 5. get my arm into the sleeve
@@ -45,9 +72,13 @@ tags: ["英語"]
 1. don't get me wrong
 - the funtionality of the word get is kind of like "让" in China. 
 - get her to pay.
-2. get her out of my mind
 3. get over it. 
 - I had hepatitis, I got over it.
+
+##### remark
+1. get is kind of a very flexible word, you can divide the sentence into two
+   parts which are the verb get and the words next to verb get.
+2. get on the plane. There are two parts in this sentence **get** and **on the plane**
 
 #### up and down
 1. curl up 
@@ -111,6 +142,13 @@ tags: ["英語"]
 6. I'll be right back.
 
 
+
+#### over
+1. talk over you, never let you finish.
+2. get a heart over another patient.
+3. I am totally over her.
+4. I am still not over it.
+
 #### come over and come here
 1. over could interpret as "please cross distance between where you are now and
    where I am".
@@ -152,4 +190,20 @@ up and down implies completion, like emphasizing
 1. open up the market
 2. close up 
 3. end up with
+
+
+#### leave
+1. left the people in the nursing home to die
+
+
+#### Galois
+1. get, make, take, leave maybe just the most important words in English, they
+   are very versatile.
+
+
+
+
+
+
+
 

@@ -18,6 +18,7 @@ tags: ["英語"]
 #### Act
 1. mourn
 2. life
+3. proper burial
 
 #### Sentence
 1. China mourns victims with three-minute silence.

@@ -18,3 +18,7 @@ tags: ["英語"]
 7. Islam
 8. Protestant
 9. Christianity
+
+
+####
+1. throw lucky coin
