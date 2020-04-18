@@ -8,6 +8,15 @@ tags: ["日本語"]
 ---
 {% include JB/setup %}
 
+
+####
+1. いえ: home
+2. うち: house
+
+####
+1. 世界: world
+2. 世の中: society
+
 ####
 
 1. 金物:(かなもの) metal utensil

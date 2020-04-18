@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Social Science: Crime"
+title: "Social Activity: Crime"
 keywords: [""]
 description: ""
 category: "言葉"
@@ -42,6 +42,7 @@ tags: ["英語"]
 1. innocent
 2. guilty
 3. seiral killer
+4. plead guilt
 
 
 #### Sentence
@@ -52,4 +53,5 @@ tags: ["英語"]
 4. I will spare your life
 5. demand a trial by combat
 6. give me a chance to defense myself
+7. serve his sentence
 

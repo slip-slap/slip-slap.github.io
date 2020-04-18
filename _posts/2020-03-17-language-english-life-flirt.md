@@ -22,3 +22,5 @@ tags: ["英語"]
 ####
 1. when you look in your eyes, and you look back in mine. 
 2. reveal their real feeling about each other.
+3. we can pick up where we left off, I never stop loving you.
+4. who are you going to impress?

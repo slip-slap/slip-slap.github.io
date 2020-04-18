@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Engineering Science: Military"
+title: "Nation: Military"
 keywords: [""]
 description: ""
 category: "言葉"

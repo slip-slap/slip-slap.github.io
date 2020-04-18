@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Japanese: 配達テーマ"
+title: "事業: 配達テーマ"
 keywords: []
 description: ""
 category: "言葉"

@@ -9,6 +9,9 @@ tags: ["日本語"]
 {% include JB/setup %}
 
 
+####
+1. 銀行と信用金庫、どんな違いあるの。
+
 #### ちょっと
 
 1. ちょっとわかります: I understand a little

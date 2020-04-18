@@ -23,6 +23,9 @@ tags: ["英語"]
 
 #### Traffic board
 1. traffic cone
+2. traffic sign
+3. warning sign
+4. stop sign
 
 
 #### Action

@@ -13,6 +13,11 @@ tags: ["英語"]
 1. frost boy
 2. summar camp
 
+
+####
+1. education affairs department: at the counter of education affairs department.
+
+
 ####
 1. do you take this class?
 
@@ -22,6 +27,7 @@ tags: ["英語"]
 1. bring up
 2. educate
 3. sign up
+
 
 
 ####

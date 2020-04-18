@@ -1,0 +1,14 @@
+---
+layout: post
+title: "国家: 軍隊"
+keywords: [""]
+description: ""
+category: "言葉"
+tags: ["英語"]
+---
+{% include JB/setup %}
+
+####
+1. 国家(こっか)
+2. 軍隊(ぐんたい)
+3. 自衛隊

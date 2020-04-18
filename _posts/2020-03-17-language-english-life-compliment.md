@@ -12,3 +12,4 @@ tags: ["英語"]
    tokieda(正時枝)
 2. she is an sophisticated woman.
 3. I hate him with all my heart
+4. still got a way with ladies

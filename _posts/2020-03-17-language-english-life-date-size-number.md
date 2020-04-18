@@ -23,6 +23,8 @@ tags: ["英語"]
 
 ####
 1. take the total up to 12.
+2. the closet value
+3. on average
 
 
 ### Date

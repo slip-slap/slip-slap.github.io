@@ -43,6 +43,10 @@ tags: ["英語"]
 1. heartbreaking moment
 2. heartwarming moment
 
+####
+1. keep an eye on him
+2. behind her back
+3. stand besides me
 
 #### Sentence
 1. I shaved off my beard I had been growing for weeks.
@@ -58,6 +62,7 @@ tags: ["英語"]
 3. you hold a knife to his throat
 4. as quiet as a shadow
 5. broke two toes, after kicking two many solid metal
+6. hold her from back.
 
 
 

@@ -195,6 +195,12 @@ up and down implies completion, like emphasizing
 #### leave
 1. left the people in the nursing home to die
 
+#### catch
+1. you go ahead, I will catch up.
+2. if you didn't yesterdays episode.
+
+
+
 
 #### Galois
 1. get, make, take, leave maybe just the most important words in English, they
