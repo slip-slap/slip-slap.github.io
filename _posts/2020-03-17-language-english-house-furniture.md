@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Life: House Furniture and Appliance"
+title: "House: Furniture"
 keywords: [""]
 description: ""
 category: "言葉"
@@ -12,13 +12,13 @@ tags: ["英語"]
 1. shoe cabinet
 2. table lamp
 3. floor lamp
-
 1. bathroom scales
 2. folding chair
 3. tape measurer
 4. soft couch
 5. trash can
 6. waste basket
+7. stereo
 
 ####
 1. bathroom

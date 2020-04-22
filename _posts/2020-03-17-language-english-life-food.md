@@ -28,3 +28,7 @@ tags: ["英語"]
 #### Food
 1. Stalk, root
 2. skin
+
+#### snack
+1. last stick of gum
+2. appetizer

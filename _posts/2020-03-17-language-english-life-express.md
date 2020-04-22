@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Life: Express"
+title: "Job: Express"
 keywords: [""]
 description: ""
 category: "言葉"

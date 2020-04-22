@@ -25,7 +25,10 @@ tags: ["英語"]
 #### Phrase
 1. final word
 2. last word
-
+1. hospital shooting
+2. got shots
+3. terriorst
+4. superhero
 
 
 

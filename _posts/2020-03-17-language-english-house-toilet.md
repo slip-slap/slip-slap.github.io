@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Life: Toilet"
+title: "House: Toilet"
 keywords: [""]
 description: ""
 category: "言葉"
@@ -21,5 +21,6 @@ tags: ["英語"]
 
 
 ####
-1. clog up
+1. clog up with dirt, the water can't get through it.
+
 
