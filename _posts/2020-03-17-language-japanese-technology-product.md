@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Technology: Product"
+title: "テクノロジー: 製品 "
 keywords: [""]
 description: ""
 category: "言葉"

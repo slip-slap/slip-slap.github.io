@@ -70,6 +70,7 @@ tags: ["英語"]
 6. hold her from back.
 7. stepped up in gum.
 8. got her tongue in his ear
+9. throw a cat under the bus
 
 
 

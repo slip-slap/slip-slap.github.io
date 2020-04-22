@@ -19,3 +19,6 @@ tags: ["英語"]
 ####
 1. buy me soda, we will even.
 2. I kind of relieved, I have a good time with you, I can't stand your friend
+3. let me get this straight, He got you to beg to sleep with him, he got you to
+   say he never has to call you again, and he got you thinking this a great
+   idea.

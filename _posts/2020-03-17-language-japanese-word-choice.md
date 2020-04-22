@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Japanese: Word Choice"
+title: "言葉を選ぶ"
 keywords: []
 description: ""
 category: "言葉"

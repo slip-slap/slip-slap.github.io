@@ -52,6 +52,7 @@ voice, but "x" should be amphasised.
 
 ####
 1. stop it: stobit
+2. when did he   when di de
 
 
 

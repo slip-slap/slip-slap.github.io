@@ -22,5 +22,6 @@ tags: ["英語"]
 3. a terrible liar
 4. screw up my first date
 5. blow me off
+6. I feel like I had a dream about you last night.
 
 

@@ -13,6 +13,8 @@ tags: ["英語"]
 #### go
 1. I will go over their definition
 2. Things are going well
+3. there  are three pounds to go
+4. where the topic suppose to go
 
 ####
 1. come by

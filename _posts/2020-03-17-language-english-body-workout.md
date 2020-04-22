@@ -20,4 +20,5 @@ tags: ["英語"]
 ####
 1. you are bleeding
 2. put on a little weight
+3. 132 pound
 

@@ -18,3 +18,4 @@ tags: ["英語"]
 6. How did that happen?
 7. get off
 8. what's going on
+9. you're gonna be fine

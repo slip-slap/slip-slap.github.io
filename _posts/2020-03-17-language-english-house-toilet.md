@@ -22,5 +22,6 @@ tags: ["英語"]
 
 ####
 1. clog up with dirt, the water can't get through it.
+2. press that button
 
 
