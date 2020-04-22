@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "周年: 祭り"
+title: "記念日: 祭り"
 keywords: [""]
 description: ""
 category: "言葉"

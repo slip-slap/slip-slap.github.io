@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Life: Food"
+title: "Food"
 keywords: [""]
 description: ""
 category: "言葉"
@@ -11,6 +11,7 @@ tags: ["英語"]
 
 #### American 
 1. Jelly
+2. Jinger
 
 #### Chinese 
 1. Braised Pork

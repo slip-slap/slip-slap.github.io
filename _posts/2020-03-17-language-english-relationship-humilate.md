@@ -41,8 +41,6 @@ tags: ["英語"]
 - all over: everywhere
 6. fool around with Joe sister
 7. took advantage of me
-8. your probably see someone else now, for old times sake, would you like some
-   hot, steamy, wild night.
 
 ####
 1. will that upset me.

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Social Activity: Crime"
+title: "Judiciary: Crime"
 keywords: [""]
 description: ""
 category: "言葉"
@@ -57,4 +57,5 @@ tags: ["英語"]
 5. demand a trial by combat
 6. give me a chance to defense myself
 7. serve his sentence
+8. put my finger through my eye, into my brain and swirl it around
 

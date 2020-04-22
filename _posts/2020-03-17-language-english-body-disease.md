@@ -16,6 +16,7 @@ tags: ["英語"]
 5. fast heartbeat
 6. vomit
 7. stroke
+8. choke
 
 #### Disease
 1. Hepatitis
@@ -45,6 +46,7 @@ tags: ["英語"]
 4. aspirin
 5. cotton swab
 6. painkiller
+7. puncture wound
 
 ####
 1. blood circulate

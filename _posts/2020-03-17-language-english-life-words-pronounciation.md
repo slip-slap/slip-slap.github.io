@@ -60,3 +60,12 @@ voice, but "x" should be amphasised.
    emphasis.
 2. "A,E,I,O,U" and the rest of the alphabet play diffent roles. The former is
    used to pronounce, the rest is for express the meaning of the word.
+3. I know how to pronounce a word correctly, but as for a sentence, most time I
+   don't pronounce correctly.  Last time, I was watching friends, a female
+   character whose name is Julia, the way she spoke new york impressed me a lot.
+   and for a long time, japanse words that are from english confused me a lot,
+   but today, I realized the difference. 
+4. Another scene made an impression on me is the scene a girl call Chandler and
+   leave a phone message, it was a very long sentence, but if you focus on where
+   should you emphasis, it will not be a problem.
+

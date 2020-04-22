@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Natural Science: Weather"
+title: "Earth: Weather"
 keywords: [""]
 description: ""
 category: "言葉"

@@ -17,6 +17,7 @@ tags: ["英語"]
 6. withdrawal
 7. bonus point
 8. balance
+9. freezing of assets
 
 #### Phrase
 1. balance transfer

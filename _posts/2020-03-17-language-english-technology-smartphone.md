@@ -68,6 +68,8 @@ tags: ["英語"]
 3. call again
 4. put joe on the phone 
 
+####
+1. telephone card
 
 
 ####

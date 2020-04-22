@@ -16,3 +16,8 @@ tags: ["英語"]
 #### Equipment
 1. barbell
 
+
+####
+1. you are bleeding
+2. put on a little weight
+

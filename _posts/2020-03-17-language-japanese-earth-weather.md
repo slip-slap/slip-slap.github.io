@@ -4,7 +4,7 @@ title: "地球: 天気"
 keywords: [""]
 description: ""
 category: "言葉"
-tags: ["英語"]
+tags: ["日本語"]
 ---
 {% include JB/setup %}
 

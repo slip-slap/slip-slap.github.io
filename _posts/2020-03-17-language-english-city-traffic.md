@@ -49,5 +49,6 @@ tags: ["英語"]
 4. the car overturned while trying to avoid the other cars.
 5. He get hits buy a car.
 6. I got on the subway
+7. got off that plane with her.
 
 

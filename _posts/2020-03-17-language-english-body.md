@@ -50,6 +50,7 @@ tags: ["英語"]
 3. stand besides me
 4. hit her in eyes
 5. punch me
+6. squeeze my hand
 
 #### Sentence
 1. I shaved off my beard I had been growing for weeks.

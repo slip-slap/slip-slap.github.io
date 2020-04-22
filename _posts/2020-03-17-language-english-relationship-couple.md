@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Life: Relationship"
+title: "Relationship"
 keywords: [""]
 description: ""
 category: "言葉"
@@ -21,5 +21,6 @@ tags: ["英語"]
 2. I don't have a feeling for her.
 3. a terrible liar
 4. screw up my first date
+5. blow me off
 
 

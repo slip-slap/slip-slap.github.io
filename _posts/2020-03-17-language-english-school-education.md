@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Life: Education"
+title: "School: Education"
 keywords: []
 description: 
 category: "言葉"

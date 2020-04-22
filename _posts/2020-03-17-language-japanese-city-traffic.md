@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "ライフ: 通行"
+title: "都市: 通行"
 keywords: []
 description: 
 category: "言葉"

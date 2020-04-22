@@ -40,6 +40,7 @@ tags: ["英語"]
 
 #### phrase
 1. unemployment benefits
+2. economic sanctions
 
 
 

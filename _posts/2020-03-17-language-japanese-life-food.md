@@ -4,7 +4,7 @@ title: "ライフ: 料理"
 keywords: [""]
 description: ""
 category: "言葉"
-tags: ["英語"]
+tags: ["日本語"]
 ---
 {% include JB/setup %}
 

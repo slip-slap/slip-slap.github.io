@@ -74,6 +74,7 @@ tags: ["英語"]
 - get her to pay.
 3. get over it. 
 - I had hepatitis, I got over it.
+4. get out of my office
 
 ##### remark
 1. get is kind of a very flexible word, you can divide the sentence into two
@@ -190,6 +191,7 @@ up and down implies completion, like emphasizing
 1. open up the market
 2. close up 
 3. end up with
+4. take that down
 
 
 #### leave

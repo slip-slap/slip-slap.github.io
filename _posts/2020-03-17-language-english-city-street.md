@@ -34,6 +34,7 @@ tags: ["日本語"]
 #### Difference
 1. Line: is an abstract word corresponding to point, plane.
 2. Cable: is refer to electric
+3. I run into him on the street
 
 
 #### Galois
