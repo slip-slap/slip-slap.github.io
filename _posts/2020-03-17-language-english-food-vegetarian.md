@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Natural Science: Botany"
+title: "Fodd: Vegetarian"
 keywords: [""]
 description: ""
 category: "言葉"

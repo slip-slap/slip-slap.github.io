@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Drama"
+title: "Entertainment: Drama"
 keywords: [""]
 description: ""
 category: "言葉"

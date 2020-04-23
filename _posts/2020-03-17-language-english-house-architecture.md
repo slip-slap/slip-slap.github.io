@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Technology: Architecture"
+title: "House: Architecture"
 keywords: [""]
 description: ""
 category: "言葉"

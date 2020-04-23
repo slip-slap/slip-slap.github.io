@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Nation: Military"
+title: "War: Military"
 keywords: [""]
 description: ""
 category: "言葉"

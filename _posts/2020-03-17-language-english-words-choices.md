@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "English: Word Choices"
+title: "Word: Choice"
 keywords: [""]
 description: ""
 category: "言葉"

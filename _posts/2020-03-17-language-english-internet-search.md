@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Technology: Internet"
+title: "Internet: Search Engine"
 keywords: [""]
 description: ""
 category: "言葉"
