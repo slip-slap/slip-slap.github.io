@@ -47,6 +47,9 @@ tags: ["英語"]
 3. seiral killer
 4. plead guilt
 
+####
+1. stalking 
+2. follow 
 
 #### Sentence
 1. what is the crime that you committed ?

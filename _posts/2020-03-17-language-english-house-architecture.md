@@ -12,6 +12,10 @@ tags: ["英語"]
 1. fit closely
 2. large rocks
 3. ledge
+4. pillar
+
+####
+1. behind the pillar
 
 ####
 1. It was build out of super-strong stone that can withstand a falling tree.

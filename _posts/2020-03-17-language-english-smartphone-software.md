@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Technology: Cellphone"
+title: "Smartphone: software"
 keywords: [""]
 description: ""
 category: "言葉"
@@ -45,9 +45,15 @@ tags: ["英語"]
 8. remap bixby button to google asistent
 9. speed up 
 1. slow down
+2. reboot
 
 #### Sentence
 1. some settings reset frequently on their own.
+
+#### 
+1. mobile operating system
+2. bug
+3. upcoming software updates
 
 
 
@@ -70,8 +76,10 @@ tags: ["英語"]
 4. put joe on the phone 
 
 ####
-1. telephone card
 
 
 ####
 1. proper care 
+
+
+

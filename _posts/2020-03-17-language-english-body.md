@@ -71,11 +71,13 @@ tags: ["英語"]
 7. stepped up in gum.
 8. got her tongue in his ear
 9. throw a cat under the bus
+1. spill in the sink
 
 
 
 #### Appearance
-1. He is not a typical Russia
+1. He is not a typical Russia.
+2. He got brown hair and green eyes.
 
 
 

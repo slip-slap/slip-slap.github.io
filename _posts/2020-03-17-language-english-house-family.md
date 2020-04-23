@@ -11,3 +11,4 @@ tags: ["英語"]
 
 ####
 1. hold you back
+2. laminate the picture

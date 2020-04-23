@@ -26,3 +26,9 @@ tags: ["英語"]
 
 ####
 1. what do you do for living
+
+
+####  How is the work going on?
+1. There are three to go.
+2. I get done with most of it.
+

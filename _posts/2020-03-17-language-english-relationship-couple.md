@@ -23,5 +23,6 @@ tags: ["英語"]
 4. screw up my first date
 5. blow me off
 6. I feel like I had a dream about you last night.
+7. intimacy stuff
 
 

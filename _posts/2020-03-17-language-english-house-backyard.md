@@ -16,3 +16,5 @@ tags: ["英語"]
 
 ####
 1. cover up the hole
+2. electric drill
+3. workpants

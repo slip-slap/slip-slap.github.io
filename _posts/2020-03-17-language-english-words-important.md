@@ -9,6 +9,9 @@ tags: ["英語"]
 {% include JB/setup %}
 
 
+####
+1. told me over the phone
+2. told me in person
 
 #### go
 1. I will go over their definition
@@ -209,6 +212,8 @@ up and down implies completion, like emphasizing
 #### Galois
 1. get, make, take, leave maybe just the most important words in English, they
    are very versatile.
+2. come and go, the two words are the two most basic words in english, but they
+   never come to my mind when I need to use them.
 
 
 

@@ -11,6 +11,7 @@ tags: ["英語"]
 #### Material
 1. Regular yarn
 2. top quality cashmere yarn
+3. one hundred percent cotton
 
 #### Clothes
 1. Down Jacket

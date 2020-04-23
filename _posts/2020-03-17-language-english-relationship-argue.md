@@ -22,3 +22,5 @@ tags: ["英語"]
 3. let me get this straight, He got you to beg to sleep with him, he got you to
    say he never has to call you again, and he got you thinking this a great
    idea.
+4. I am a little way out of line here, do you have a problem with Janice.
+5. we have a situation here.

@@ -37,3 +37,5 @@ tags: ["英語"]
 #### sentence
 1. sprinkle on your legs.
 
+####
+1. handbag
