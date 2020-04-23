@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "English: Miscellaneous"
+title: "Words: Miscellaneous"
 keywords: [""]
 description: ""
 category: "言葉"

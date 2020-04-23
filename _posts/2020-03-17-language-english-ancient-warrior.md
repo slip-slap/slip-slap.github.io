@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Life: Warrior"
+title: "Ancient: Warrior"
 keywords: [""]
 description: ""
 category: "言葉"

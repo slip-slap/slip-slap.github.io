@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "都市: レストラン"
+title: "食べ物: レストラン"
 keywords: [""]
 description: ""
 category: "言葉"

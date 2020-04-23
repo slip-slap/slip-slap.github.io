@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "園芸: ドラマ"
+title: "娯楽: ドラマ"
 keywords: [""]
 description: ""
 category: "言葉"

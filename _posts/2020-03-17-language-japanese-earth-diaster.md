@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "地球:双星"
+title: "地球: 双星"
 keywords: [""]
 description: ""
 category: "言葉"

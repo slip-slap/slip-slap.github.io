@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Japanese: Travel"
-keywords: ["janpanese"]
+title: "旅行"
+keywords: []
 description: ""
 category: "言葉"
 tags: ["日本語"]

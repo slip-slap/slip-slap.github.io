@@ -26,6 +26,7 @@ tags: ["英語"]
 7. black area
 - site, place
 8. interface
+9. accidental touch protection
 
 #### Setting
 1. lock screen and secruity

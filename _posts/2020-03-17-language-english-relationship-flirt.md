@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Compliment: Flirt"
+title: "Relationship: Flirt"
 keywords: [""]
 description: ""
 category: "言葉"
