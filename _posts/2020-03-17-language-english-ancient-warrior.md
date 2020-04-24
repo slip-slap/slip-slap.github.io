@@ -20,7 +20,7 @@ tags: ["英語"]
 #### phrase
 1. 1 on 1
 2. sword fight
-3. armor
+3. mortal enemy
 
 #### sentence
 1. the law of gravity doesn't apply in ancient China

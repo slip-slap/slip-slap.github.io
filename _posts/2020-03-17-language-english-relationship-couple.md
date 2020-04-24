@@ -11,6 +11,8 @@ tags: ["英語"]
 ####
 1. get her out of my mind
 2. picture my brother's face
+3. soul mate
+4. intimacy stuff
 
 ####
 1. disappointed my father.
@@ -23,6 +25,8 @@ tags: ["英語"]
 4. screw up my first date
 5. blow me off
 6. I feel like I had a dream about you last night.
-7. intimacy stuff
+7. spend the rest of our life together
+8. go home, curl up and cry
+
 
 

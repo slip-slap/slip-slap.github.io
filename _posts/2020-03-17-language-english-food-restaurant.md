@@ -13,6 +13,13 @@ tags: ["英語"]
 1. milk carton
 2. a bag of sugar
 3. latte
+4. receipt
+5. invoice
+6. bill
+
+####
+1. goblet
+
 
 ####
 1. let me get that check.

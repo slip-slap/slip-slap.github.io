@@ -43,6 +43,8 @@ tags: ["英語"]
 2. character
 3. celebrity
 4. monologue
+5. cast
+6. crew
 
 
 ####

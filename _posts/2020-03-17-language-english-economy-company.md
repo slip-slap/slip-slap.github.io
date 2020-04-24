@@ -19,6 +19,7 @@ tags: ["英語"]
 
 #### Action
 1. live-stream
+2. human resource
 
 
 #### Sentence

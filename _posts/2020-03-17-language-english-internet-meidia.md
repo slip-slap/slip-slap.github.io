@@ -9,6 +9,10 @@ tags: ["英語"]
 {% include JB/setup %}
 
 ####
+1. online celebrity
+2. influencer
+
+####
 1. help us trend the hashtag
 
 

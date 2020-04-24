@@ -10,3 +10,7 @@ tags: ["英語"]
 
 
 1. telephone card
+2. battery
+####
+1. fully charged.
+2. 20 percent battery.

@@ -8,6 +8,8 @@ tags: ["英語"]
 ---
 {% include JB/setup %}
 
+####
+1. It's not applicable in every situation.
 
 ####
 1. told me over the phone
@@ -147,6 +149,9 @@ tags: ["英語"]
 5. lost my touch: No longer be able to do or handle something skillfully.
 6. I'll be right back.
 
+#### take
+1. I will take that.
+2. take my friends to the airport
 
 
 #### over
@@ -199,6 +204,8 @@ up and down implies completion, like emphasizing
 4. take that down
 
 
+
+
 #### leave
 1. left the people in the nursing home to die
 
@@ -212,7 +219,7 @@ up and down implies completion, like emphasizing
 #### Galois
 1. get, make, take, leave maybe just the most important words in English, they
    are very versatile.
-2. come and go, the two words are the two most basic words in english, but they
+2. come and go,run,  the two words are the two most basic words in english, but they
    never come to my mind when I need to use them.
 
 

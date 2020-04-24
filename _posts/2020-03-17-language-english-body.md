@@ -18,11 +18,10 @@ tags: ["英語"]
 7. liver
 8. lung
 9. blood flow
-
-####
-1. life 
-2. afterlife
-3. knuckle-cracking
+1. bump
+2. life 
+3. afterlife
+4. knuckle-cracking
 
 #### action
 1. raise: raise up my head and look into the sky.
@@ -30,15 +29,12 @@ tags: ["英語"]
 3. rub: run your hands
 4. slip
 5. scratch my leg
-
-#### mood
-1. break down
-
-####
-1. turn around
-2. slip down
+6. bang my head against the wall
+7. break down
+8. turn around
+9. slip down
 - I slipped down the side of hill and got covered in mud.
-3. bend down
+1. grab: grab the guitar
 
 ####
 1. heartbreaking moment
@@ -72,6 +68,10 @@ tags: ["英語"]
 8. got her tongue in his ear
 9. throw a cat under the bus
 1. spill in the sink
+2. high-pitch noice
+3. he is in pain
+4. stick out tongue
+5. stuck my tongue down her throat
 
 
 

@@ -33,17 +33,11 @@ tags: ["英語"]
 
 
 #### sentence
-1. got dumped during sex
-2. I am totally over her
-3. caress my butt
-4. I want to take my tongue run over all your body
-5. kiss him all over
-- all over: everywhere
-6. fool around with Joe sister
-7. took advantage of me
 
 ####
 1. will that upset me.
 2. mad at me.
 3. Don't let them see your tears, they are not worth crying over.
+4. annoy
+5. bother
 

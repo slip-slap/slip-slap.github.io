@@ -54,6 +54,7 @@ tags: ["英語"]
 1. I don't want Daviad to thing I was coppying him.
 2. you fly is open
 3. Where did I leave my knitting needles?
+4. you pant stuck on your leg.
 
 
 #### Phrase

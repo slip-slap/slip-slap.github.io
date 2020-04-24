@@ -17,6 +17,8 @@ tags: ["英語"]
 6. trash bags
 7. sponge holder
 8. jar
+9. induction cooker
+1. range hood
 
 ####
 1. kitchen sponge

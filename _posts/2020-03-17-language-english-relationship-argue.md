@@ -13,6 +13,7 @@ tags: ["英語"]
 
 
 
+
 ####
 1. call it even
 
@@ -24,3 +25,4 @@ tags: ["英語"]
    idea.
 4. I am a little way out of line here, do you have a problem with Janice.
 5. we have a situation here.
+6. both we have our strength 

@@ -10,8 +10,9 @@ tags: ["英語"]
 
 ####
 1. special edition
-2. cast
 3. entertain
+4. show
+5. travel show
 
 
 #### action
@@ -30,3 +31,6 @@ tags: ["英語"]
 1. entertainer
 
 
+#### galois
+1. Television program, you can add anything before the word "show", the listener
+   will get it, it's some kind of show, such as, talk show, travel show.
