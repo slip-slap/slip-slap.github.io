@@ -12,3 +12,8 @@ tags: ["英語"]
 ####
 1. hold you back
 2. laminate the picture
+
+
+####
+1. grown up
+2. birth mom

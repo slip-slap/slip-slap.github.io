@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Words: Important"
+title: "Words: Verbs and Adverb"
 keywords: [""]
 description: ""
 category: "言葉"
@@ -8,18 +8,64 @@ tags: ["英語"]
 ---
 {% include JB/setup %}
 
+
+#### Adverb
+1. out: in or to a place
+-  feel out, turn out, figure out
+- read out, speak out, shout out
+- point out, multify out, wipe out
+2. up: indicate direction to something
+- curl up 
+3. down: indicate direction to something
+- lie down
+4. off: away from a place 
+5. over: cross something
+- move it over
+- talk over you, never let you finish.
+- get a heart over another patient.
+- I am totally over her.
+- I am still not over it.
+
+##### remark
+1. up, down, from, off, on, away, to are very common adjective that can be used combined
+   with verb.
+
+
+#### verb
+1. drift
+2. move
+- move your feet
+#### come over and come here
+1. over could interpret as "please cross distance between where you are now and
+   where I am".
+2. "come here" emphasizes the target location.
+
 ####
 1. It's not applicable in every situation.
+2. You are not even talking to me.
 
 ####
 1. told me over the phone
 2. told me in person
 
 #### go
-1. I will go over their definition
-2. Things are going well
-3. there  are three pounds to go
-4. where the topic suppose to go
+1. I will go over their definition.
+2. Things are going well.
+3. there  are three pounds to go.
+4. where the topic suppose to go.
+5. make it all go away.
+6. make you go all the way down there.
+7. I would have thought the other way around.
+
+
+
+
+
+
+
+#### be
+1. be home
+
 
 ####
 1. come by
@@ -30,6 +76,7 @@ tags: ["英語"]
 1. make our way
 - We made our way through the thick underbrush
 2. find a way
+3. There is got to be a way we can work past this.
 
 
 #### away
@@ -75,6 +122,7 @@ tags: ["英語"]
 - you don't buy me anything.
 7. don't get me wrong.
 8. get into troubles
+9. get you into trouble
 9. get your head out from  windows
 1. don't get me wrong
 - the funtionality of the word get is kind of like "让" in China. 
@@ -88,21 +136,9 @@ tags: ["英語"]
    parts which are the verb get and the words next to verb get.
 2. get on the plane. There are two parts in this sentence **get** and **on the plane**
 
-#### up and down
-1. curl up 
-2. lie down
 
-#### move
-1. move it over
-2. move your feet
 
 #### Particle
-1. read out
-2. speak out
-3. shout out
-4. point out
-5. multify out
-6. wipe out
 
 #### work
 1. work out: exercise
@@ -128,11 +164,6 @@ tags: ["英語"]
 ####
 1. start over: restart
 
-####
-1. up, down, from, off, on, away, to are very common adjective that can be used combined
-   with verb.
-2. up, down may have some meaning related to direction
-3. off have kind of meaning related to result 
 
 #### Galois
 1. I think words such like "make", "get" are very common in oral english, I
@@ -154,16 +185,6 @@ tags: ["英語"]
 2. take my friends to the airport
 
 
-#### over
-1. talk over you, never let you finish.
-2. get a heart over another patient.
-3. I am totally over her.
-4. I am still not over it.
-
-#### come over and come here
-1. over could interpret as "please cross distance between where you are now and
-   where I am".
-2. "come here" emphasizes the target location.
 
 ####
 1. jump over the hole in the middle and not step on the rotten boards.
@@ -213,11 +234,22 @@ up and down implies completion, like emphasizing
 1. you go ahead, I will catch up.
 2. if you didn't yesterdays episode.
 
+####
+1. pick up
+2. drop
 
+
+#### stuff and thing
+1. here is a box of stuff
+2. the thing
+
+
+#### free
+1. smack-free
 
 
 #### Galois
-1. get, make, take, leave maybe just the most important words in English, they
+1. be, get, make, take, leave maybe just the most important words in English, they
    are very versatile.
 2. come and go,run,  the two words are the two most basic words in english, but they
    never come to my mind when I need to use them.

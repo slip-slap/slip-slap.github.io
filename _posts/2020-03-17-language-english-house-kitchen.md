@@ -10,6 +10,7 @@ tags: ["英語"]
 
 ####
 1. Chopping Board
+2. Rolling Pin
 2. plastic wrap
 3. rice cooker
 4. electric pressure cooker
@@ -19,6 +20,7 @@ tags: ["英語"]
 8. jar
 9. induction cooker
 1. range hood
+2. ceiling
 
 ####
 1. kitchen sponge

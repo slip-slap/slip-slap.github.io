@@ -11,6 +11,7 @@ tags: ["英語"]
 
 #### Action
 1. sue
+2. violate
 
 #### Phrase
 1. restraining order

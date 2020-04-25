@@ -69,11 +69,6 @@ tags: ["英語"]
 ####
 1. cashless payment
 
-#### phrase
-1. hang up.
-2. hang on
-3. call again
-4. put joe on the phone 
 
 ####
 

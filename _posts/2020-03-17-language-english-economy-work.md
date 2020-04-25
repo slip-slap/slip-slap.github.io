@@ -61,5 +61,7 @@ tags: ["英語"]
 
 #### Sentence
 1. The Chinese coffee chain has now suspended its chief operating officer.
+2. You are not work with him anymore.
+3. Work comes first.
 
 

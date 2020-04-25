@@ -37,6 +37,7 @@ tags: ["英語"]
 ####
 1. the credit issue charges interest on the unpaid balance if the billed amount
    is not paid in full.(at a much higher rate than most form of debt)
+2. Have 50 dollars a month taken from my account?
 
 
 

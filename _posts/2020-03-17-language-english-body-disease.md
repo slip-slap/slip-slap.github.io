@@ -30,6 +30,8 @@ tags: ["英語"]
 9. Alzheimer's disease
 1. emphysema
 2. human-to-human transimission
+3. tumor
+4. benign tumor
 
 ####
 1. suture
@@ -47,6 +49,7 @@ tags: ["英語"]
 5. cotton swab
 6. painkiller
 7. puncture wound
+8. artificial leg
 
 ####
 1. blood circulate
@@ -62,6 +65,8 @@ tags: ["英語"]
 - offering free screening services 
 3. deteriorate
 4. pull off a band aid
+5. pull it off
+6. use disinfectant to treat coronavirus
 
 #### surgery
 1. penius enlargement surgery
@@ -69,6 +74,7 @@ tags: ["英語"]
 #### surgery and operation
 1. operation: a specific surgical procedure carried out on a patient
 2. surgery: A place where sugeries are performed, also called an operatin room.
+
 
 #### sentence
 1. France reported 884 additional deaths that have occured in nuring homes over

@@ -14,6 +14,9 @@ tags: ["英語"]
 3. honeymoon
 4. anniversary
 5. motivation
+6. best man
+7. ring bearer
+8. theme wedding
 
 
 ####
@@ -24,6 +27,7 @@ tags: ["英語"]
 1. have a wife
 2. attend the event 
 3. marry me
+4. walk down an aisle
 
 
 #### Sentence

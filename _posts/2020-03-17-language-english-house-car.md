@@ -24,11 +24,14 @@ tags: ["英語"]
 4. tractor
 5. tractor and trailor
 6. airbags
+7. tailpipe
+8. rest stop
 
 
 ####
 1. drive
 2. ring the bell
+
 
 ####
 1. brake failure

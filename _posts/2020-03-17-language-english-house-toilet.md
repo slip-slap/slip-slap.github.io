@@ -19,6 +19,9 @@ tags: ["英語"]
 7. drainage
 
 
+####
+1. pee on the floor.
+2. pee on anyone of you.
 
 ####
 1. clog up with dirt, the water can't get through it.

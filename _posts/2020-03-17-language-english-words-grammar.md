@@ -17,7 +17,4 @@ tags: ["英語"]
 
 
 #### 
-1. get to:  gonna
-2. want to:  wanna
-- what do you wanna to say?
 

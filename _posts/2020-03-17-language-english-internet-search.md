@@ -15,6 +15,7 @@ tags: ["英語"]
 4. separate account
 5. support page
 6. default page
+7. picture in picture
 
 ####
 1. enter

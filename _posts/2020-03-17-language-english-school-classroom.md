@@ -10,3 +10,8 @@ tags: ["英語"]
 
 ####
 1. chalk
+2. 18 pages, front and back
+3. script
+
+####
+1. I want to be thorough

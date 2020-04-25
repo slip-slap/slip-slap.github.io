@@ -19,6 +19,8 @@ tags: ["英語"]
 5. trash can
 6. waste basket
 7. stereo
+8. freezer
+9. refrigerator
 
 ####
 1. bathroom

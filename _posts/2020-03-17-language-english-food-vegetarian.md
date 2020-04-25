@@ -27,3 +27,5 @@ A bunch of bananas
 4. plant seeds
 5. harvesting time
 
+####
+1. just because he buys you dinner, it doesn't mean you own him anything.

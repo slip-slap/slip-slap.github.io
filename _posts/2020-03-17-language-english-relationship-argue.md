@@ -16,6 +16,7 @@ tags: ["英語"]
 
 ####
 1. call it even
+2. we got in a fight
 
 ####
 1. buy me soda, we will even.
@@ -26,3 +27,8 @@ tags: ["英語"]
 4. I am a little way out of line here, do you have a problem with Janice.
 5. we have a situation here.
 6. both we have our strength 
+7. you don't have to like each other, you must figure out a way to be around
+   each other, don't put us in the middle.
+8. who's going with who?
+9. leave me alone
+

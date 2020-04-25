@@ -50,5 +50,6 @@ tags: ["英語"]
 5. He get hits buy a car.
 6. I got on the subway
 7. got off that plane with her.
+8. what does the sign say?
 
 

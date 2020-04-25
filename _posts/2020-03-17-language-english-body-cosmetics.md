@@ -28,6 +28,7 @@ tags: ["英語"]
 
 #### Action
 1. Rubbing my hands
+2. got sun burned
 
 #### Skin type
 1. dry skin
@@ -39,3 +40,6 @@ tags: ["英語"]
 
 ####
 1. handbag
+
+####
+1. start wearing makeup

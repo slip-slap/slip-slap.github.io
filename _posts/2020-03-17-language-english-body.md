@@ -72,12 +72,15 @@ tags: ["英語"]
 3. he is in pain
 4. stick out tongue
 5. stuck my tongue down her throat
+6. I choked on a cookie
+7. head shaving
 
 
 
 #### Appearance
 1. He is not a typical Russia.
 2. He got brown hair and green eyes.
+3. average height, medium body
 
 
 

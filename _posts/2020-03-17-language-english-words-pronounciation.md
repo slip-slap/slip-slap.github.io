@@ -54,6 +54,11 @@ voice, but "x" should be amphasised.
 1. stop it: stobit
 2. when did he   when di de
 
+####
+1. going to:  gonna
+2. want to:  wanna
+- what do you wanna to say?
+
 
 
 #### galois

@@ -16,6 +16,7 @@ tags: ["英語"]
 4. natural spring
 5. pump filter
 6. candle burn out
+7. jellyfish
 
 
 ####
@@ -26,3 +27,4 @@ tags: ["英語"]
 
 ####
 1. bond and connection
+2. get stung by a jellyfish

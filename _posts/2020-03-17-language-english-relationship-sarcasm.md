@@ -10,3 +10,4 @@ tags: ["英語"]
 
 ####
 1. this is a lovely tie, it's a shame around such a worthless neck.
+2. suck up the president

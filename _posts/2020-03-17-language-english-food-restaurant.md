@@ -19,8 +19,14 @@ tags: ["英語"]
 
 ####
 1. goblet
+2. one meal, that's what all I asking for. 
+3. empty carton
+4. member only
+5. serve food
 
 
 ####
 1. let me get that check.
 2. you got five 5 bucks.
+3. How much cash you got in your pocket right now?
+4. Have you ever taken the trash out?

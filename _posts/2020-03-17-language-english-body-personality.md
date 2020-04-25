@@ -38,4 +38,5 @@ tags: ["英語"]
 ####
 1. peace and quiet
 2. absessive
+3. incredibly sensitive
 
