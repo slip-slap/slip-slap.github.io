@@ -13,6 +13,9 @@ tags: ["英語"]
 2. influencer
 
 ####
+1. open an account
+
+####
 1. help us trend the hashtag
 
 

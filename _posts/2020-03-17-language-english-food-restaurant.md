@@ -23,6 +23,7 @@ tags: ["英語"]
 3. empty carton
 4. member only
 5. serve food
+6. serve steak
 
 
 ####

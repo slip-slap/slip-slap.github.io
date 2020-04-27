@@ -25,3 +25,4 @@ You will lose all the points you gained if you quit now?
 ####
 1. I don't know what I take responsibility for?
 2. kick you guys out instead?
+3. If you need somebody to talk to.

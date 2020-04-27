@@ -17,17 +17,21 @@ tags: ["英語"]
 6. best man
 7. ring bearer
 8. theme wedding
+9. band
 
 
 ####
 1. remarriage
 2. reunion
+3. declare
 
 #### phrase
 1. have a wife
 2. attend the event 
 3. marry me
 4. walk down an aisle
+5. as a symbol of your bond
+
 
 
 #### Sentence
@@ -36,4 +40,5 @@ tags: ["英語"]
 2. you are not marriage material.
 3. we are man and wife now.
 4. The anniversary comeing up.
+5. The band is ready
 

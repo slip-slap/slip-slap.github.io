@@ -12,3 +12,4 @@ tags: ["英語"]
 
 ####
 1. sprinkle fertilizer
+2. wine cellar

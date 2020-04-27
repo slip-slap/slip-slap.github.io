@@ -35,6 +35,8 @@ tags: ["英語"]
 9. slip down
 - I slipped down the side of hill and got covered in mud.
 1. grab: grab the guitar
+2. get washed up
+3. spit on me
 
 ####
 1. heartbreaking moment

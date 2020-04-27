@@ -10,3 +10,8 @@ tags: ["英語"]
 
 ####
 1. landmark
+2. unpack
+3. pack up
+
+####
+1. standby for the plane

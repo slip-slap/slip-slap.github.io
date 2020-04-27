@@ -11,3 +11,4 @@ tags: ["英語"]
 
 ####
 1. case
+2. pledge

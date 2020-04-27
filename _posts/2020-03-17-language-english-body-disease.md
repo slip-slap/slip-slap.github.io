@@ -17,6 +17,7 @@ tags: ["英語"]
 6. vomit
 7. stroke
 8. choke
+9. kidney stone
 
 #### Disease
 1. Hepatitis

@@ -56,6 +56,7 @@ tags: ["英語"]
 5. make it all go away.
 6. make you go all the way down there.
 7. I would have thought the other way around.
+8. I hope you don't take this the wrong way
 
 
 
