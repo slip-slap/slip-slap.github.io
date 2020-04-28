@@ -32,7 +32,9 @@ tags: ["英語"]
 1. drive
 2. ring the bell
 
+#### failure
+1. backfire
+2. brake failure
 
-####
-1. brake failure
+
 

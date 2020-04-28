@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Life: Square"
+title: "City: Square"
 keywords: [""]
 description: ""
 category: "言葉"

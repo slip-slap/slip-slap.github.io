@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Linux: Common Command Line"
+title: "CLI: Common Command Line"
 keywords: []
 description: "linux"
 category: "linux"
-tags: []
+tags: ["CLI"]
 ---
 {% include JB/setup %}
 

@@ -76,6 +76,7 @@ tags: ["英語"]
 5. stuck my tongue down her throat
 6. I choked on a cookie
 7. head shaving
+8. You are acting strange all day.
 
 
 
@@ -83,6 +84,7 @@ tags: ["英語"]
 1. He is not a typical Russia.
 2. He got brown hair and green eyes.
 3. average height, medium body
+4. size
 
 
 

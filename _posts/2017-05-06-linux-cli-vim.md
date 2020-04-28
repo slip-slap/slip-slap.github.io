@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Linux: Vim"
+title: "CLI: Vim"
 keywords: []
 description: "vim"
 category: "linux"

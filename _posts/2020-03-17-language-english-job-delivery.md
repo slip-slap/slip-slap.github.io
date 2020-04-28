@@ -11,6 +11,7 @@ tags: ["英語"]
 ####
 1. price range
 2. delivery time
+3. delivery charge
 
 
 ####

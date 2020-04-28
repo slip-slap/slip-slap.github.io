@@ -23,6 +23,9 @@ tags: ["英語"]
 2. ceiling
 
 ####
+1. cut
+
+####
 1. kitchen sponge
 2. kitchen sink
 3. kitchen sink stopper

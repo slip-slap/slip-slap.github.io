@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Mac: Tricks and Ticks of Application"
-keywords: ["software"]
-description: "software"
+title: "GUI: Mac Application"
+keywords: []
+description: 
 category: "linux"
 tags: ["GUI"]
 ---

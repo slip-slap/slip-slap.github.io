@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Linux: Zsh"
-keywords: ["zsh"] 
-description: "zsh"
+title: "CLI: Zsh"
+keywords: [] 
+description: 
 category: "linux"
 tags: ["CLI"]
 ---

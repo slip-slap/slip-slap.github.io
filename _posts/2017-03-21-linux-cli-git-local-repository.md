@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Git: Local Management"
+title: "CLI: Git Local Management"
 keywords: []
 description: "git"
 category: "linux"

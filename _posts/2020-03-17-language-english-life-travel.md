@@ -12,6 +12,7 @@ tags: ["英語"]
 1. landmark
 2. unpack
 3. pack up
+4. road trip
 
 ####
 1. standby for the plane

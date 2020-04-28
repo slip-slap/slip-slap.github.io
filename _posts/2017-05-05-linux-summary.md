@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "linux, BSD, and Mac OS X"
-keywords: ["linux","mac","BSD"]
-description: "introduction"
+title: "Linux: Summary"
+keywords: []
+description: 
 category: "linux"
-tags: ["CLI"]
+tags: ["summary"]
 ---
 {% include JB/setup %}
 

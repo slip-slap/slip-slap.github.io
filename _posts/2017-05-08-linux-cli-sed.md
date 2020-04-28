@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Linux: Sed"
+title: "CLI: Sed"
 keywords: [] 
-description: "sed"
+description: 
 category: "linux"
 tags: ["CLI"]
 ---

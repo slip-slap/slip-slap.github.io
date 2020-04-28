@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Linux: Find"
+title: "CLI: Find"
 keywords: []
 description: ""
 category: "linux"
-tags: []
+tags: ["CLI"]
 ---
 {% include JB/setup %}
 

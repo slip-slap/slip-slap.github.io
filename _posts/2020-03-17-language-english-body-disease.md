@@ -51,6 +51,7 @@ tags: ["英語"]
 6. painkiller
 7. puncture wound
 8. artificial leg
+9. eye drop
 
 ####
 1. blood circulate
@@ -75,6 +76,9 @@ tags: ["英語"]
 #### surgery and operation
 1. operation: a specific surgical procedure carried out on a patient
 2. surgery: A place where sugeries are performed, also called an operatin room.
+
+####
+1. eye doctor
 
 
 #### sentence

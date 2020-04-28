@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Linux: Jekyll"
+title: "CLI: Jekyll"
 keywords: []
-description: "introduction"
+description: 
 category: "linux"
 tags: ["CLI"]
 ---

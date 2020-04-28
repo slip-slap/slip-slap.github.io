@@ -12,3 +12,6 @@ tags: ["英語"]
 1. oversize
 2. angle bracelet
 3. rings
+4. wallet: slot
+5. purse
+6. compartment

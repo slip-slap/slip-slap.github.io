@@ -37,11 +37,19 @@ $$
 $$
 
 
+#### Galois
+1. The relationship between neural network and convolutional neural network is how
+   to treat the input signal. If the network is full connected, then it is
+   neural network, convolutional neural network is just  a special case which
+   every neuron is partly connected to the input, which more imitate human
+   behavior.
+   
 
 
 
 #### Inference
 1.[Convolutional neural networks backpropagation: from intuition to derivation](https://grzegorzgwardys.wordpress.com/2016/04/22/8/)
+
 2. [differentiate a cross entropy cost function](https://wu-2018.github.io/2018/11/02/differentiate-a-cross-entropy-cost-function.html)
 
 

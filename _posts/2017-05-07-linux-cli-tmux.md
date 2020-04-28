@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Linux: Tmux"
+title: "CLI: Tmux"
 keywords: []
-description: "tmux"
+description: 
 category: "linux"
 tags: ["CLI"]
 ---
@@ -10,12 +10,20 @@ tags: ["CLI"]
 
 
 #### intro
-tmux是一个优秀的终端复用软件，tmux使用C/S模型构建，主要由以下单元模块构成:
-1. server 服务器，输入tmux命令开启一个服务器
-2. session 会话，一个服务器可以包含多个会话
-3. window 窗口， 一个会话可以包含多个窗口
-4. pane 面板， 一个窗口一个包含多个面板
+tmux is a terminal multiplexer，tmux使用C/S模型构建，it consists of the
+following unit:
+1. server，输入tmux命令开启一个服务器
+2. session，一个服务器可以包含多个会话
+3. window， 一个会话可以包含多个窗口
+4. pane， 一个窗口一个包含多个面板
 
+#### Session Operation
+
++ exit current session:  prefix+d <font color="red">退出该session后，该session扔在后台运行</font>
++ check out all sessions: tmux ls
++ re-enter session: tmux attach -t session-name
++ create a session with specific name: tmux new -s name
++ rename a session: tmux rename-session -t 3 paper
 <hr />
 
 #### 功能
@@ -26,32 +34,32 @@ tmux默认的快捷键前缀是Ctrl-b<br />
 Caps-Lock-a 用着更方便，可以在配置文件中自己设置
 <hr />
 
-##### pane操作
+#### window operation
 
-+ 上下分屏 prefix+"
-+ 左右分屏 prefix+%
-+ 切换屏幕 prefix+o
++ tmux kill-window -t window-name
+<hr />
+
+#### Pane Operation
+
++ up and down split screen:  prefix+"
++ left and right split screen:  prefix+%
++ switch screen: prefix+o
 + 关闭终端 prefix+x
 + 上下左右分屏切换 prfex+空格键
 + 上下分屏窗格切换 prefix+}
 + full screen   prefix+z   (z which means zoom in and zoom out)
-
 <hr />
 
+##### Adjust Pane Size
 
-##### window operation
+```shell
+bind < resize-pane -L 2
+bind > resize-pane -R 2
+bind _ resize-pane -D 2
+bind + resize-pane -U 2
+```
 
-+ tmux kill-window -t window-name
-
-##### session操作
-
-+ 退出一个session 前缀键+d <font color="red">退出该session后，该session扔在后台运行</font>
-+ 查看有哪些sessions tmux ls
-+ 重新进入session   tmux attach -t session-name
-+ tmux new -s myname # create a session with specific name
-
-<hr />
-##### 复制模式
+#### 复制模式
 
 在tmux的配置文件.tmux.conf添加如下配置
 
@@ -78,14 +86,6 @@ tmux source ~/.tmux.conf
 
 <hr />
 
-##### 调整窗格大小
-
-```shell
-bind < resize-pane -L 2
-bind > resize-pane -R 2
-bind _ resize-pane -D 2
-bind + resize-pane -U 2
-```
 
 #### plugin
 
@@ -94,6 +94,9 @@ bind + resize-pane -U 2
 Just as the name noted, this is plugin is used to manage plugins of tmux
 
 #### tmux-resurrect
+key bindings
+- prefix + Ctrl-s -save
+- prefix + Ctrl-l -restore
 
 
 
