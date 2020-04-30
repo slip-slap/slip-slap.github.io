@@ -5,10 +5,24 @@
   <description>Just Do It - </description>
   <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
   <link></link>
-  <lastBuildDate>Thu, 30 Apr 2020 17:05:44 +0900</lastBuildDate>
-  <pubDate>Thu, 30 Apr 2020 17:05:44 +0900</pubDate>
+  <lastBuildDate>Thu, 30 Apr 2020 20:24:00 +0900</lastBuildDate>
+  <pubDate>Thu, 30 Apr 2020 20:24:00 +0900</pubDate>
   <ttl>1800</ttl>
 
+
+  <item>
+    <title>Service: Internet</title>
+    <description>
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cnblogs.com/gbyukg/p/3326825.html&quot;&gt;Curl&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/linux/linux-service-internet.html</link>
+    <guid>/linux/linux-service-internet</guid>
+    <pubDate>Thu, 30 Apr 2020 00:00:00 +0900</pubDate>
+  </item>
 
   <item>
     <title>Shell: Batch Processing</title>
@@ -16,10 +30,11 @@
 &lt;h4 id=&quot;rename-filename&quot;&gt;Rename Filename&lt;/h4&gt;
 
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;i &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.md
-&lt;span class=&quot;k&quot;&gt;do 
-    &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;var1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;i&lt;/span&gt;:1:5&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-    &lt;span class=&quot;nv&quot;&gt;var1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;i&lt;/span&gt;:10:100&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-    &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;var1&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;-world-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;var2&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;do
+   &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;var1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;i&lt;/span&gt;:0:10&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+   &lt;span class=&quot;nv&quot;&gt;var2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;i&lt;/span&gt;:10:100&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+   &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;var1&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;-code&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;var2&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+   &lt;span class=&quot;nb&quot;&gt;mv&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;var1&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;-code&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;var2&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -18989,7 +19004,12 @@ behavior.&lt;/li&gt;
 &lt;p&gt;1.&lt;a href=&quot;https://grzegorzgwardys.wordpress.com/2016/04/22/8/&quot;&gt;Convolutional neural networks backpropagation: from intuition to derivation&lt;/a&gt;&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://wu-2018.github.io/2018/11/02/differentiate-a-cross-entropy-cost-function.html&quot;&gt;differentiate a cross entropy cost function&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://wu-2018.github.io/2018/11/02/differentiate-a-cross-entropy-cost-function.html&quot;&gt;differentiate a cross entropy cost function&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://cs231n.github.io&quot;&gt;CS231&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ol&gt;
 
 </description>
@@ -22846,17 +22866,17 @@ tmux &lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; ~/.tmux.conf
 &lt;p&gt;This software is plugin system, so it is very flexsible and diffcult to learn.
 it heavily depends on the plugin and shortcut to improve the efficient.&lt;/p&gt;
 
-&lt;h4 id=&quot;plugin&quot;&gt;Plugin&lt;/h4&gt;
+&lt;h3 id=&quot;常用功能&quot;&gt;常用功能&lt;/h3&gt;
+
+&lt;h4 id=&quot;setting&quot;&gt;Setting&lt;/h4&gt;
+
 &lt;ol&gt;
-  &lt;li&gt;For every plugin, you can refer to the instruction about how to use them.&lt;/li&gt;
-  &lt;li&gt;and in the vimrc file to setting.&lt;/li&gt;
+  &lt;li&gt;set relativenumber!&lt;/li&gt;
+  &lt;li&gt;set cursorline&lt;/li&gt;
+  &lt;li&gt;syntax off  I spend a lot of time to fix this simple question, crap !!!!!!!!&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3 id=&quot;常用功能&quot;&gt;常用功能&lt;/h3&gt;
-&lt;hr /&gt;
-
 &lt;h4 id=&quot;版本查看&quot;&gt;版本查看&lt;/h4&gt;
-
 &lt;p&gt;:version 查看vim支持的插件，如python等
 :set  show vars different from defaults
 :h key-notation 查看键盘映射
@@ -22909,7 +22929,7 @@ set foldmethod=indent
 zR
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;paste&quot;&gt;paste&lt;/h4&gt;
+&lt;h4 id=&quot;auto-indent&quot;&gt;auto indent&lt;/h4&gt;
 
 &lt;p&gt;vim在粘贴代码时会自动缩进，把代码搞得一团糟糕，需要提前设置&lt;/p&gt;
 &lt;ul&gt;
@@ -22923,6 +22943,11 @@ zR
   &lt;li&gt;the reason is that paste character &lt;strong&gt;i&lt;/strong&gt; or character &lt;strong&gt;o&lt;/strong&gt; will trigger
 insert mode, and you will miss everying before&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h4 id=&quot;joining-two-lines-with-j&quot;&gt;joining two lines with J&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;J joins the line the cursor is on with the line below&lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;h4 id=&quot;search&quot;&gt;search&lt;/h4&gt;
 
@@ -22975,13 +23000,7 @@ insert mode, and you will miss everying before&lt;/li&gt;
 :%retab!
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;setting&quot;&gt;setting&lt;/h4&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;set relativenumber!&lt;/li&gt;
-  &lt;li&gt;set cursorline&lt;/li&gt;
-  &lt;li&gt;syntax off  I spend a lot of time to fix this simple question, crap !!!!!!!!&lt;/li&gt;
-&lt;/ol&gt;
+&lt;hr /&gt;
 
 &lt;h3 id=&quot;mode&quot;&gt;mode&lt;/h3&gt;
 
@@ -22992,7 +23011,6 @@ insert mode, and you will miss everying before&lt;/li&gt;
   &lt;li&gt;Line mode: V(upper-case)&lt;/li&gt;
   &lt;li&gt;Block mode: Ctrl+v&lt;/li&gt;
 &lt;/ol&gt;
-&lt;hr /&gt;
 
 &lt;h4 id=&quot;normal-mode&quot;&gt;normal mode&lt;/h4&gt;
 
@@ -23002,8 +23020,6 @@ insert mode, and you will miss everying before&lt;/li&gt;
 :normal G
 &lt;span class=&quot;c&quot;&gt;# normal!&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;hr /&gt;
-
 &lt;h4 id=&quot;recording-mode&quot;&gt;recording mode&lt;/h4&gt;
 
 &lt;p&gt;record type character into register&lt;/p&gt;
@@ -23016,7 +23032,11 @@ your operation&lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr /&gt;
 
-&lt;h3 id=&quot;插件&quot;&gt;插件&lt;/h3&gt;
+&lt;h3 id=&quot;plugin&quot;&gt;Plugin&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;For every plugin, you can refer to the instruction about how to use them.&lt;/li&gt;
+  &lt;li&gt;and in the vimrc file to setting.&lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;h4 id=&quot;vundle-plugin&quot;&gt;vundle-plugin&lt;/h4&gt;
 &lt;ol&gt;
@@ -23033,11 +23053,13 @@ git submodule update &lt;span class=&quot;nt&quot;&gt;--init&lt;/span&gt; &lt;sp
 
 &lt;h4 id=&quot;nerdtree-plugin&quot;&gt;NERDTree-plugin&lt;/h4&gt;
 
-&lt;h5 id=&quot;安装&quot;&gt;安装&lt;/h5&gt;
-
 &lt;ol&gt;
-  &lt;li&gt;在.vim文件下创建autoload和bundle子文件夹&lt;/li&gt;
-  &lt;li&gt;下载pathogen.vim到autoload中&lt;/li&gt;
+  &lt;li&gt;install
+    &lt;ul&gt;
+      &lt;li&gt;在.vim文件下创建autoload和bundle子文件夹&lt;/li&gt;
+      &lt;li&gt;下载pathogen.vim到autoload中&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/.vim &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;mkdir &lt;/span&gt;autoload &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;mkdir &lt;/span&gt;bundle &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;bundle
@@ -23045,36 +23067,40 @@ curl &lt;span class=&quot;nt&quot;&gt;-LSso&lt;/span&gt; ~/.vim/autoload/pathoge
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;在.vimrc添加配置文件&lt;/li&gt;
+  &lt;li&gt;Add configuration to .vimrc file&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;execute pathogen#infect&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
 &lt;ol&gt;
-  &lt;li&gt;安装NERDTree&lt;/li&gt;
+  &lt;li&gt;install NERDTree&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/.vim/bundle
 git clone https://github.com/scrooloose/nerdtree.git
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h5 id=&quot;how-to-use&quot;&gt;how to use&lt;/h5&gt;
-
 &lt;ol&gt;
-  &lt;li&gt;ctrl+w+w 切换窗口&lt;/li&gt;
-  &lt;li&gt;o 打开光标所在目录 O递归打开所有子目录&lt;/li&gt;
-  &lt;li&gt;p 回到光标坐在父目录&lt;/li&gt;
-  &lt;li&gt;r 刷新光标所在的子目录&lt;/li&gt;
-  &lt;li&gt;? pop-up help document&lt;/li&gt;
+  &lt;li&gt;usage
+    &lt;ul&gt;
+      &lt;li&gt;ctrl+w+w 切换窗口&lt;/li&gt;
+      &lt;li&gt;o 打开光标所在目录 O递归打开所有子目录&lt;/li&gt;
+      &lt;li&gt;p 回到光标坐在父目录&lt;/li&gt;
+      &lt;li&gt;r 刷新光标所在的子目录&lt;/li&gt;
+      &lt;li&gt;? pop-up help document&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ol&gt;
+&lt;hr /&gt;
 
 &lt;h4 id=&quot;ctrlp-plugin&quot;&gt;CtrlP-plugin&lt;/h4&gt;
-
-&lt;p&gt;配置&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;runtimepath^&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;~/.vim/bundle/ctrlp.vim
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ol&gt;
+  &lt;li&gt;Configuration
+    &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;runtimepath^&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;~/.vim/bundle/ctrlp.vim
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
 
 &lt;h4 id=&quot;pymode-plugin&quot;&gt;pymode-plugin&lt;/h4&gt;
 &lt;h4 id=&quot;powerline-plugin&quot;&gt;powerline-plugin&lt;/h4&gt;
@@ -26319,6 +26345,93 @@ C++中，变量，函数使用之前需要声明，头文件k就是起声明的�
   </item>
 
   <item>
+    <title>Cmake: Introduction</title>
+    <description>
+&lt;h4 id=&quot;make&quot;&gt;Make&lt;/h4&gt;
+&lt;p&gt;代码变成可执行文件，叫编译；&lt;br /&gt;
+编译的顺序，叫做构建;&lt;br /&gt;
+make是最常用的构建工具,make主要用来构建c语言的项目，实际上，任何主要某个文件有变化，就要重新构建项目，都可以用make构建&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;语法&quot;&gt;语法&lt;/h4&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;target&amp;gt; : &amp;lt;prerequisites&amp;gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;tab] &amp;lt;commands&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;make命令在没有指定目标时，默认会执行makefile文件的第一个目标&lt;/li&gt;
+  &lt;li&gt;make targetName 执行相应的代码
+    &lt;div class=&quot;language-makefile highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nl&quot;&gt;do&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
+ &lt;span class=&quot;err&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;default target&quot;&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;clean&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
+ &lt;span class=&quot;err&quot;&gt;rm&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;create&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
+ &lt;span class=&quot;err&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;create a file&quot;&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;create&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;cmake&quot;&gt;Cmake&lt;/h4&gt;
+&lt;p&gt;cmake is a cross-platform build system.&lt;/p&gt;
+
+&lt;p&gt;cmake也是一种编程语言，像c++一样。不过它有自己独特的语法结构.&lt;br /&gt;
+同maven相比，它没有网络仓库的概念，它的仓库需要在本地.&lt;br /&gt;
+也没有约定的目录结构.&lt;/p&gt;
+
+&lt;p&gt;相同的是，都有配置文件。在maven中是pom.xml.在cmake中是CMakeLists.txt&lt;/p&gt;
+
+&lt;p&gt;CMakeLists.txt文件的代码&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cmake_minimum_required(VERSION 3.7)
+project(demo)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;cmake常用命令&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cmake .. -G &quot;Unix Makefiles&quot;
+#cmake命令后的路径用来指出CMakeList.txt所在的位置。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://cmake.org/cmake/help/latest/guide/tutorial/index.html&quot;&gt;document&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/code/code-cmake-intro.html</link>
+    <guid>/code/code-cmake-intro</guid>
+    <pubDate>Wed, 01 Jul 2015 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>CMake: Libraryies</title>
+    <description>
+&lt;p&gt;&lt;a href=&quot;https://cmake.org/cmake/help/v3.0/command/target_link_libraries.html&quot;&gt;官方文档&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#使用这个语法的时候，target必须通过add_executable()或者add_library()创建
+target_link_libraries(&amp;lt;target&amp;gt; [item])
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+    <link>/code/code-cmake-target-link-libraries.html</link>
+    <guid>/code/code-cmake-target-link-libraries</guid>
+    <pubDate>Tue, 26 May 2015 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Cmake: Modules</title>
+    <description>
+&lt;p&gt;&lt;a href=&quot;https://cmake.org/cmake/help/v3.0/module/FindPkgConfig.html&quot;&gt;官方文档&lt;/a&gt;看完直接想吐。&lt;br /&gt;
+上代码&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;find_package(PkgConfig REQUIRED)
+#pkg_check_modules(FOO,OPENCV) 这是错误写法，中间没有逗号，而且有空格
+pkg_check_modules(FOO OPENCV)
+include_directories(${FOO_INCLUDE_DIRS})
+target_link_libraries(untitled ${FOO_LIBRARIES})
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+</description>
+    <link>/code/code-cmake-pkg-check-modules.html</link>
+    <guid>/code/code-cmake-pkg-check-modules</guid>
+    <pubDate>Mon, 25 May 2015 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
     <title>网络安全</title>
     <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#主机扫描&quot; id=&quot;markdown-toc-主机扫描&quot;&gt;主机扫描&lt;/a&gt;    &lt;ul&gt;
@@ -26396,95 +26509,6 @@ PORT     STATE  SERVICE
   </item>
 
   <item>
-    <title>CLI: Software Mangement</title>
-    <description>
-&lt;h3 id=&quot;brew&quot;&gt;Brew&lt;/h3&gt;
-&lt;h4 id=&quot;作用&quot;&gt;作用&lt;/h4&gt;
-&lt;p&gt;the missing package manager for macos, 和centos下的yumhe ubuntu下的apt-get类似&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;brew的安装目录在/usr/local/Cellar&lt;/li&gt;
-  &lt;li&gt;配置目录在/usr/local/etc&lt;/li&gt;
-  &lt;li&gt;命令目录在/usr/local/bin&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr /&gt;
-
-&lt;h4 id=&quot;使用&quot;&gt;使用&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;brew install boost-python&lt;/li&gt;
-  &lt;li&gt;brew upgrade boost&lt;/li&gt;
-  &lt;li&gt;brew info boost  查看boost相关信息&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;ruby&quot;&gt;Ruby&lt;/h3&gt;
-&lt;p&gt;ruby使用rvm即Ruby Version Manager来升级Ruby&lt;/p&gt;
-&lt;h4 id=&quot;rvm&quot;&gt;rvm&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;rvm -v 查看rvm版本&lt;/li&gt;
-  &lt;li&gt;rvm list known 列出已知ruby的版本&lt;/li&gt;
-  &lt;li&gt;rvm install 2.4.0  安装新版本&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr /&gt;
-
-&lt;h4 id=&quot;gem&quot;&gt;gem&lt;/h4&gt;
-&lt;p&gt;gem是管理Ruby库和程序的标准包，通过使用Ruby Gem源来查找，安装，升级和卸载软件&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;gem install [gemname] 从Gem源安装gem包&lt;/li&gt;
-  &lt;li&gt;gem update            更新所有已安装的gem包&lt;/li&gt;
-  &lt;li&gt;gem list              查看本机已经安装的所有gem包&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;//www.pyimagesearch.com/2015/04/27/installing-boost-and-boost-python-on-osx-with-homebrew/&quot;&gt;使用brew安装boost-python&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    <link>/linux/linux-cli-software-management.html</link>
-    <guid>/linux/linux-cli-software-management</guid>
-    <pubDate>Thu, 21 May 2015 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>磁盘管理</title>
-    <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#df&quot; id=&quot;markdown-toc-df&quot;&gt;df&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#功能&quot; id=&quot;markdown-toc-功能&quot;&gt;功能&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#语法&quot; id=&quot;markdown-toc-语法&quot;&gt;语法&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#参数&quot; id=&quot;markdown-toc-参数&quot;&gt;参数&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#du&quot; id=&quot;markdown-toc-du&quot;&gt;du&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#功能-1&quot; id=&quot;markdown-toc-功能-1&quot;&gt;功能&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#语法-1&quot; id=&quot;markdown-toc-语法-1&quot;&gt;语法&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#参数-1&quot; id=&quot;markdown-toc-参数-1&quot;&gt;参数&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;df&quot;&gt;df&lt;/h4&gt;
-&lt;hr /&gt;
-
-&lt;h5 id=&quot;功能&quot;&gt;功能&lt;/h5&gt;
-&lt;p&gt;展示剩余的磁盘空间&lt;/p&gt;
-&lt;hr /&gt;
-
-&lt;h5 id=&quot;语法&quot;&gt;语法&lt;/h5&gt;
-&lt;p&gt;df -h&lt;/p&gt;
-&lt;h5 id=&quot;参数&quot;&gt;参数&lt;/h5&gt;
-
-&lt;h4 id=&quot;du&quot;&gt;du&lt;/h4&gt;
-&lt;hr /&gt;
-
-&lt;h5 id=&quot;功能-1&quot;&gt;功能&lt;/h5&gt;
-&lt;p&gt;显示已经使用的磁盘空间&lt;/p&gt;
-&lt;h5 id=&quot;语法-1&quot;&gt;语法&lt;/h5&gt;
-&lt;h5 id=&quot;参数-1&quot;&gt;参数&lt;/h5&gt;
-</description>
-    <link>/linux/linux-disk-management.html</link>
-    <guid>/linux/linux-disk-management</guid>
-    <pubDate>Tue, 19 May 2015 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
     <title>netstat</title>
     <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#netstat&quot; id=&quot;markdown-toc-netstat&quot;&gt;netstat&lt;/a&gt;    &lt;ul&gt;
@@ -26517,7 +26541,7 @@ PORT     STATE  SERVICE
   </item>
 
   <item>
-    <title>CLI: Process Management</title>
+    <title>Management: Process</title>
     <description>
 &lt;h4 id=&quot;kill&quot;&gt;Kill&lt;/h4&gt;
 &lt;p&gt;用来终止指定的进程，终止前台的进程可以使用Ctrl+c, 终止后台的进程必须使用kill命令&lt;/p&gt;
@@ -26567,13 +26591,13 @@ pstree &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt;
 pstree &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
-    <link>/linux/linux-cli-process-management.html</link>
-    <guid>/linux/linux-cli-process-management</guid>
+    <link>/linux/linux-management-process.html</link>
+    <guid>/linux/linux-management-process</guid>
     <pubDate>Sun, 17 May 2015 00:00:00 +0900</pubDate>
   </item>
 
   <item>
-    <title>CLI: User Management</title>
+    <title>Management: User</title>
     <description>
 &lt;h4 id=&quot;说明&quot;&gt;说明&lt;/h4&gt;
 &lt;p&gt;该文件只能使用visudo命令打开编辑，如果有语法错误，则不能保存&lt;/p&gt;
@@ -26599,13 +26623,77 @@ groupadd docker
 usermod &lt;span class=&quot;nt&quot;&gt;-aG&lt;/span&gt; docker &lt;span class=&quot;nv&quot;&gt;$USER&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
-    <link>/linux/linux-cli-user-management.html</link>
-    <guid>/linux/linux-cli-user-management</guid>
+    <link>/linux/linux-management-user.html</link>
+    <guid>/linux/linux-management-user</guid>
     <pubDate>Sat, 16 May 2015 00:00:00 +0900</pubDate>
   </item>
 
   <item>
-    <title>CLI: Access Management</title>
+    <title>Mangement: Software</title>
+    <description>
+&lt;h3 id=&quot;brew&quot;&gt;Brew&lt;/h3&gt;
+&lt;h4 id=&quot;作用&quot;&gt;作用&lt;/h4&gt;
+&lt;p&gt;the missing package manager for macos, 和centos下的yumhe ubuntu下的apt-get类似&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;brew的安装目录在/usr/local/Cellar&lt;/li&gt;
+  &lt;li&gt;配置目录在/usr/local/etc&lt;/li&gt;
+  &lt;li&gt;命令目录在/usr/local/bin&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;使用&quot;&gt;使用&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;brew install boost-python&lt;/li&gt;
+  &lt;li&gt;brew upgrade boost&lt;/li&gt;
+  &lt;li&gt;brew info boost  查看boost相关信息&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;ruby&quot;&gt;Ruby&lt;/h3&gt;
+&lt;p&gt;ruby使用rvm即Ruby Version Manager来升级Ruby&lt;/p&gt;
+&lt;h4 id=&quot;rvm&quot;&gt;rvm&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;rvm -v 查看rvm版本&lt;/li&gt;
+  &lt;li&gt;rvm list known 列出已知ruby的版本&lt;/li&gt;
+  &lt;li&gt;rvm install 2.4.0  安装新版本&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;gem&quot;&gt;gem&lt;/h4&gt;
+&lt;p&gt;gem是管理Ruby库和程序的标准包，通过使用Ruby Gem源来查找，安装，升级和卸载软件&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;gem install [gemname] 从Gem源安装gem包&lt;/li&gt;
+  &lt;li&gt;gem update            更新所有已安装的gem包&lt;/li&gt;
+  &lt;li&gt;gem list              查看本机已经安装的所有gem包&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;//www.pyimagesearch.com/2015/04/27/installing-boost-and-boost-python-on-osx-with-homebrew/&quot;&gt;使用brew安装boost-python&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/linux/linux-management-software.html</link>
+    <guid>/linux/linux-management-software</guid>
+    <pubDate>Sat, 16 May 2015 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Management: Disk</title>
+    <description>
+&lt;h4 id=&quot;df&quot;&gt;df&lt;/h4&gt;
+&lt;p&gt;df -h&lt;/p&gt;
+
+&lt;h4 id=&quot;du&quot;&gt;du&lt;/h4&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo du&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-h&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--max-depth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1 /var
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+    <link>/linux/linux-management-disk.html</link>
+    <guid>/linux/linux-management-disk</guid>
+    <pubDate>Sat, 16 May 2015 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Management: Access</title>
     <description>
 &lt;h4 id=&quot;功能&quot;&gt;功能&lt;/h4&gt;
 &lt;p&gt;在linux系统中，默认只有三种权限，文件夹的所有者，所属组，非所有者所属组用户,
@@ -26633,8 +26721,34 @@ fstab为file system table的缩写，描述文件信息&lt;/p&gt;
 &lt;span class=&quot;nv&quot;&gt;UUID&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;eb448abb-3012-4d8d-bcde-94434d586a31 /                       ext4    defaults,acl        1 1
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
-    <link>/linux/linux-cli-acess-management.html</link>
-    <guid>/linux/linux-cli-acess-management</guid>
+    <link>/linux/linux-management-access.html</link>
+    <guid>/linux/linux-management-access</guid>
+    <pubDate>Sat, 16 May 2015 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>CLI: Time Schedule</title>
+    <description>
+&lt;h4 id=&quot;at的访问控制&quot;&gt;at的访问控制&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;如果系统中有/etc/at.allow文件，那么只有写入/etc/at.allow文件中的用户可以使用at命令，/etc/at.deny文件会被忽略&lt;/li&gt;
+  &lt;li&gt;如果系统中没有/etc/at.allow文件，只有/etc/at.deny文件，那么写入/etc/at.deny文件中的用户不能使用at命令。对root不起作用&lt;/li&gt;
+  &lt;li&gt;如果系统中这两个文件都不存在，那么只有root用户可以使用at命令&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;常用命令&quot;&gt;常用命令&lt;/h4&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# ctrl+d表示结束任务&lt;/span&gt;
+at now +5 minutes
+at&amp;gt; &lt;span class=&quot;nb&quot;&gt;ls
+&lt;/span&gt;at&amp;gt; &amp;lt;EOT&amp;gt;
+&lt;span class=&quot;c&quot;&gt;# 查看任务列表&lt;/span&gt;
+atq
+&lt;span class=&quot;c&quot;&gt;# 查看任务详细信息,后面的数字表示对应哪一条消息的内容&lt;/span&gt;
+at &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; 1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+    <link>/linux/linux-cli-time-scheduling.html</link>
+    <guid>/linux/linux-cli-time-scheduling</guid>
     <pubDate>Sat, 16 May 2015 00:00:00 +0900</pubDate>
   </item>
 
@@ -26760,32 +26874,6 @@ crontab &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt;
 </description>
     <link>/linux/linux-centos7-crontab.html</link>
     <guid>/linux/linux-centos7-crontab</guid>
-    <pubDate>Sat, 16 May 2015 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>CLI: At</title>
-    <description>
-&lt;h4 id=&quot;at的访问控制&quot;&gt;at的访问控制&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;如果系统中有/etc/at.allow文件，那么只有写入/etc/at.allow文件中的用户可以使用at命令，/etc/at.deny文件会被忽略&lt;/li&gt;
-  &lt;li&gt;如果系统中没有/etc/at.allow文件，只有/etc/at.deny文件，那么写入/etc/at.deny文件中的用户不能使用at命令。对root不起作用&lt;/li&gt;
-  &lt;li&gt;如果系统中这两个文件都不存在，那么只有root用户可以使用at命令&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;常用命令&quot;&gt;常用命令&lt;/h4&gt;
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# ctrl+d表示结束任务&lt;/span&gt;
-at now +5 minutes
-at&amp;gt; &lt;span class=&quot;nb&quot;&gt;ls
-&lt;/span&gt;at&amp;gt; &amp;lt;EOT&amp;gt;
-&lt;span class=&quot;c&quot;&gt;# 查看任务列表&lt;/span&gt;
-atq
-&lt;span class=&quot;c&quot;&gt;# 查看任务详细信息,后面的数字表示对应哪一条消息的内容&lt;/span&gt;
-at &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; 1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-</description>
-    <link>/linux/cli-linux-at.html</link>
-    <guid>/linux/cli-linux-at</guid>
     <pubDate>Sat, 16 May 2015 00:00:00 +0900</pubDate>
   </item>
 
