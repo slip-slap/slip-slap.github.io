@@ -8,27 +8,44 @@ tags: ["英語"]
 ---
 {% include JB/setup %}
 
-
 #### Adverb
-1. out: in or to a place
--  feel out, turn out, figure out
+1. out: from inside to outside
+- feel out, turn out, figure out
 - read out, speak out, shout out
 - point out, multify out, wipe out
+- jump out that window
 2. up: indicate direction to something
 - curl up 
 3. down: indicate direction to something
+up and down implies completion, like emphasizing
 - lie down
+- open up the market
+- close up 
+- end up with
+- take that down
 4. off: away from a place 
+- push her off the bridge
+- jump off roof
 5. over: cross something
 - move it over
 - talk over you, never let you finish.
 - get a heart over another patient.
 - I am totally over her.
 - I am still not over it.
+- jump over the hole
+6. through
+- go through
+- search through or examine carefully or in sequence.
+7. around
+- gather around
+- people gether together and form a circle.
+
+<img src="{{IMAGE_PATH}}/english-words-verb-and-adverb.gif" />
 
 ##### remark
 1. up, down, from, off, on, away, to are very common adjective that can be used combined
    with verb.
+<hr />
 
 
 #### verb
@@ -141,7 +158,6 @@ tags: ["英語"]
 
 
 
-#### Particle
 
 #### work
 1. work out: exercise
@@ -199,33 +215,12 @@ tags: ["英語"]
 
 
 
-####
-1. go through
-- search through or examine carefully or in sequence.
-2. gather around
-- people gether together and form a circle.
 
 
 #### what a
 1. what a great view of the hall from here.
 
 
-
-#### over, off, over
-1. jump out that window
-2. jump off roof
-3. jump over the hole
-- how to choice these three adjective depends on the word nexts to it.
-- off: means away from, away from the roof
-- out: from inside to outside
-- over: means across the hole
-
-#### up, down
-up and down implies completion, like emphasizing
-1. open up the market
-2. close up 
-3. end up with
-4. take that down
 
 
 

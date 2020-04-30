@@ -1,0 +1,33 @@
+---
+layout: post
+title: centos7
+categories: linux
+---
+* content
+{:toc}
+
+#### 新特性
+1. 使用systemd后台管理程序linux系统和服务
+2. 使用firewalld后台程序管理防火墙服务
+
+<hr />
+
+#### systemd
+1. systemd是linux系统的一个超级后台程序，主要用于管理linux系统后台程序和服务。使用pstree命令查看系统程序时，systemd是所有程序的祖辈程序
+2. systemctl是管理systemd程序的基本命令。
+
+<hr />
+
+#### 服务器运行级别
+```shell
+# 查看系统运行级别
+runlevel
+```
+
+##### 配置文件
+在/etc/initab文件中，保存了系统开机后进入哪个运行级别<hr />
+在centos7中，该配置文件已经被systemd所取代
+
+##### 查看服务的状态
+在centos7该为systemctl list-unit-files <hr />
+之前为chkconfig --list

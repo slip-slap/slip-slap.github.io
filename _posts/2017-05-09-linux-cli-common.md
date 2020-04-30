@@ -17,7 +17,10 @@ If you want to create permanent aliases, just modify corresponding configuration
 ```shell
 alias ls="ls --auto=color" 
 ```
-
+#### head 
+1. 显示开头或结尾某个数量的文字区块
+2. head [参数]  [文件]
+3. -n 显示行数   ls | head -n 3
 
 #### cp 
 
@@ -79,4 +82,24 @@ ls -l
 ### nslookup
 
 nslookup: name server lookup
+
+#### lsof
+lsof被称为linux调试的瑞士军刀，一般只有root用户才能执行lsof命令
+
+#### 常用命令
+```shell
+# 查看哪个进程在使用8080端口
+sudo lsof -i :8080
+# 根据PID杀掉进程
+sudo kill -9 ${PID}
+```
+#### Wget
+下载，支持断点下载，代理服务器下载
+<hr />
+
+#### 语法
+1. -c 断点续传 当文件特别大或者特别慢的时候需要断点续传
+```shell
+wget -c http://the.url.of/target/file/url
+```
 

@@ -3,13 +3,32 @@
   <title>Just Do It</title>
   <link href="/atom.xml" rel="self"/>
   <link href=""/>
-  <updated>2020-04-28T20:20:28+09:00</updated>
+  <updated>2020-04-30T17:05:44+09:00</updated>
   <id></id>
   <author>
     <name>reed</name>
     <email>zhanghy1012@gmail.com</email>
   </author>
 
+
+  <entry>
+    <title>Shell: Batch Processing</title>
+    <link href="/code/code-shell-batch-process.html"/>
+    <updated>2020-04-30T00:00:00+09:00</updated>
+    <id>/code/code-shell-batch-process</id>
+    <content type="html">
+Rename Filename
+
+for i in *.md
+do 
+    var1=&quot;${i:1:5}&quot;
+    var1=&quot;${i:10:100}&quot;
+    echo &quot;${var1}-world-${var2}&quot;
+done
+
+
+</content>
+  </entry>
 
   <entry>
     <title>Work: Journal</title>
@@ -1035,11 +1054,12 @@ action
     <content type="html">
 Adverb
 
-  out: in or to a place
+  out: from inside to outside
     
       feel out, turn out, figure out
       read out, speak out, shout out
       point out, multify out, wipe out
+      jump out that window
     
   
   up: indicate direction to something
@@ -1048,11 +1068,7 @@ Adverb
     
   
   down: indicate direction to something
-    
-      lie down
-    
-  
-  off...</content>
+...</content>
   </entry>
 
   <entry>
@@ -1535,6 +1551,7 @@ Going
 ####
 
   old best friends
+  moral obligation
 
 
 Sentence
@@ -1543,8 +1560,7 @@ Sentence
 havn’t shared with you.
   Do your friends ever have a conversation, and you just nod along, even you
 are not realy sure what are they talking about.
-
-</content>
+  you use hum...</content>
   </entry>
 
   <entry>
@@ -8951,10 +8967,10 @@ zsh-sy...</content>
   </entry>
 
   <entry>
-    <title>Linux: SSH</title>
-    <link href="/linux/net-ssh.html"/>
+    <title>CLI: SSH</title>
+    <link href="/linux/linux-cli-ssh.html"/>
     <updated>2017-05-15T00:00:00+09:00</updated>
-    <id>/linux/net-ssh</id>
+    <id>/linux/linux-cli-ssh</id>
     <content type="html">
 介绍
 
@@ -9046,32 +9062,30 @@ If you want to create permanent aliases, just modify corresponding configuration
 
 alias ls=&quot;ls --auto=color&quot; 
 
+head
 
-cp
-
-将源文件复制到目标文件，或将多个源文件复制到目标文件
-
-
-语法
-
-
-
-cp [参数] source dest
-
-
-参数
-
-
-  -i, –interactive  覆盖前是否询问
-  -r, –r...</content>
+  显示开头或结尾某个数量的文字区块
+  head [参数]  [文件]
+  
+    
+      
+        
+          -n 显示行数   ls
+          hea...</content>
   </entry>
 
   <entry>
     <title>CLI: Sed</title>
-    <link href="/linux/linux-cli-sed.html"/>
+    <link href="/linux/linux-cli-text-editor.html"/>
     <updated>2017-05-08T00:00:00+09:00</updated>
-    <id>/linux/linux-cli-sed</id>
+    <id>/linux/linux-cli-text-editor</id>
     <content type="html">
+Awk
+分割符
+-F field-separator(默认为空格)
+awk -F ':' '{print $3}' /etc/passwd
+
+
 feature
 
 
@@ -9086,8 +9100,7 @@ feature
 
 sed [options] 'command' file(s)
 # options: -e; -n; -i
-# -n: suppress automatic printing of **pattern space**
-# what's the crap, what's the pattern space ? it's ever...</content>
+# -n: suppress automatic printing of *...</content>
   </entry>
 
   <entry>
@@ -9106,11 +9119,15 @@ following unit:
   pane， 一个窗口一个包含多个面板
 
 
+Layout
+
+  prefix+ space: change the layout from horizontal to vertial
+
+
 Session Operation
 
 
-  exit current session:  prefix+d 退出该session后，该session扔在后台运行
-  check out all sessions: tmux ls...</content>
+  exit current session...</content>
   </entry>
 
   <entry>
@@ -9119,11 +9136,6 @@ Session Operation
     <updated>2017-05-06T00:00:00+09:00</updated>
     <id>/linux/linux-cli-vim</id>
     <content type="html">
-
-  2019.10.27 update
-  2020.03-18 update
-
-
 Outline
 This software is plugin system, so it is very flexsible and diffcult to learn.
 it heavily depends on the plugin and shortcut to improve the efficient.
@@ -9131,7 +9143,15 @@ it heavily depends on the plugin and shortcut to improve the efficient.
 Plugin
 
   For every plugin, you can refer to the instruction about how to use them.
-  and in ...</content>
+  and in the vimrc file to setting.
+
+
+常用功能
+
+
+版本查看
+
+:...</content>
   </entry>
 
   <entry>
@@ -9140,13 +9160,61 @@ Plugin
     <updated>2017-05-05T00:00:00+09:00</updated>
     <id>/linux/linux-summary</id>
     <content type="html">
-The difference between Linux and BSD
+intro
+学习mac，需要知道linux的设计哲学，Linux本质上是一个用户服务器模式，tmux借鉴了linux的设计模式，也是一个c/s架构的模式。
+在linux中，最重要的概念是用户和组
 
 
+
+####
+隐藏文件在finder不可见
+defaults write com.apple.finder AppleShowAllFiles -bool false
+
+隐藏文件在finder中可见
+defaults write com.apple.finder AppleShowAllFiles -bool true
+
+在finder的偏好设置中，可以选择在桌面显示或者隐藏，硬盘，外置磁盘...</content>
+  </entry>
+
+  <entry>
+    <title>CLI: Git Branch</title>
+    <link href="/linux/linux-cli-git-branch.html"/>
+    <updated>2017-03-23T00:00:00+09:00</updated>
+    <id>/linux/linux-cli-git-branch</id>
+    <content type="html">
+操作
+
+  git branch                 显示分支
+  git checkout master        切换分支
+  git branch develop         创建分支  创建分支的名字为developj
+    git checkout -b develop
+# 相当于执行下面两条命令
+git branch develop
+git checkout develop
+    
   
-    Linux is just the Linux Kernel. A typical Linux distributions are made of many pieces of software.
-That’s why linux is sometimes called GNU/Linux. There are many linux distributions, like Redhat,Ubuntu,Debian,
-if you want to install Linux, you will n...</content>
+  git branch -d develop      删除分支 删除名字为develop的分支
+
+
+exception
+fatal: this operatio...</content>
+  </entry>
+
+  <entry>
+    <title>CLI: Git Remote Repository</title>
+    <link href="/linux/linux-cli-git-remote-repository.html"/>
+    <updated>2017-03-22T00:00:00+09:00</updated>
+    <id>/linux/linux-cli-git-remote-repository</id>
+    <content type="html">
+git支持多种协议，包括https, 但是通过ssh支持的原生git协议速度最快。
+
+
+  添加远程库：git remote add origin git@github.com:slip-slap/slip-slap.github.io.git
+远程库的名字叫做origin，也可以改成别的，但是origin这个名字一看就知道是远程库
+  把本地库的所有内容推送到远程库上 git push origin master
+
+
+</content>
   </entry>
 
   <entry>
@@ -9169,6 +9237,22 @@ git管理。
 
 git由三个概念，分别是工作区，版本库和暂存区，add命令把文件由工作区
 添加到stage,即暂存区，com...</content>
+  </entry>
+
+  <entry>
+    <title>CLI: Git</title>
+    <link href="/linux/linux-cli-git.html"/>
+    <updated>2017-03-20T00:00:00+09:00</updated>
+    <id>/linux/linux-cli-git</id>
+    <content type="html">
+查看HEAD
+cat .git/HEAD
+
+
+
+git中提交时，会保存一个提交(commit)对象，该对象包含一个指向暂存内容快照的指针。包含本次提交的作者等相关信息。包含零个或多个指向该提交对象的父对象指针。首次提交是没有直接祖先的。
+
+</content>
   </entry>
 
   <entry>
@@ -9219,6 +9303,14 @@ install package by conda
 
 conda install matplotlib
 
+
+Prompt
+
+  There is a prompt in your terminal which says “base”, it means your
+environment, you can turn it off by the following code.
+
+
+conda deactivate
 
 </content>
   </entry>
@@ -9571,6 +9663,56 @@ jav...</content>
   </entry>
 
   <entry>
+    <title>Java: Socket</title>
+    <link href="/code/code-java-socket.html"/>
+    <updated>2016-05-10T00:00:00+09:00</updated>
+    <id>/code/code-java-socket</id>
+    <content type="html">
+socket阻塞
+服务器端的阻塞有两种
+
+  ServerSocket的accept方法会产生阻塞
+  文件的io会产生阻塞
+
+
+
+//客户端请求
+public class Client {
+
+    public void getAsset() throws IOException, InterruptedException {
+        Socket socket=new Socket(&quot;127.0.0.1&quot;,8089);
+        OutputStream outputStream=socket.getOutputStream();
+        socket.cl...</content>
+  </entry>
+
+  <entry>
+    <title>Java: Command Line</title>
+    <link href="/code/code-java-cmd.html"/>
+    <updated>2016-05-09T00:00:00+09:00</updated>
+    <id>/code/code-java-cmd</id>
+    <content type="html">
+运行
+java [字节码的名字] 
+java Main   运行Main.class字节码文件
+
+java路径
+
+  相对路径 指的是JVM的启动路径
+    File file=new File(&quot;config.xml&quot;);
+file.createNewFile();
+// 如果jvm在/Users/ 目录下启动,则会在/Users目录下创建config.xml文件
+// tomcat的启动目录为安装目录的bin文件下，在servlet中以相对路径读取文件
+// 相对路径为tomcat的启动目录
+    
+  
+
+
+javac
+
+javac -d . HelloServlet.jav...</content>
+  </entry>
+
+  <entry>
     <title>Java: IO</title>
     <link href="/code/code-java-io.html"/>
     <updated>2016-05-08T00:00:00+09:00</updated>
@@ -9605,6 +9747,37 @@ os.write(...</content>
   </entry>
 
   <entry>
+    <title>JAVA: Copy Control</title>
+    <link href="/code/code-java-copy-control.html"/>
+    <updated>2016-05-08T00:00:00+09:00</updated>
+    <id>/code/code-java-copy-control</id>
+    <content type="html">
+intro
+在c++中，有一章专门讲拷贝控制，java把这个问题简单化了，简化成深拷贝与浅拷贝
+
+
+浅拷贝
+
+
+问题的产生
+class Foo{
+	private int age;
+	private Date date;
+	public int getA() {
+		return age;
+	}
+	public void setA(int age) {
+		this.age = age;
+	}
+	public Date getDate() {
+		return date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;...</content>
+  </entry>
+
+  <entry>
     <title>Java: 多线程</title>
     <link href="/code/code-java-thread.html"/>
     <updated>2016-05-07T00:00:00+09:00</updated>
@@ -9634,6 +9807,31 @@ for(int i=0;i&amp;lt;10;i++){
         @Override
         public void run() {
             ...</content>
+  </entry>
+
+  <entry>
+    <title>Java: Jvm</title>
+    <link href="/code/code-java-jvm.html"/>
+    <updated>2016-05-06T00:00:00+09:00</updated>
+    <id>/code/code-java-jvm</id>
+    <content type="html">
+class文件的组织结构
+.class文件是由子节组成的文件，又叫字节码文件
+
+
+魔数
+由java编译器编译而成的class文件的前四个字节都是“OxCAFEBABE”
+作用，即JVM在尝试加载某个文件到内存中的时候，会首先判断此class文件有没有JVM认为可以接受的”签名”，即JVM会首先读取文件的前四个字节，判断这四个字节是否是”0xCAFEBABE”,如果是则JVM会认为可以将此冷箭当作class文件来加载使用
+
+
+版本号
+
+垃圾回收机制
+
+
+垃圾回收算法
+
+  标记-清除算法，首先标记出所有需要回收的对象，然后回收所有需要回收的对象，该算法缺点是内存块回收之后不连续，导致下一...</content>
   </entry>
 
   <entry>
@@ -9689,6 +9887,49 @@ MSB &amp;amp;&amp;amp; LSB
 
 most significant bit和least significant bit，前者采用Big endian方式存储数据，后者采用little endian存储数据
 CPU有两大派系, IBM的Power PC和Inter的x86系列。PowerPC采用big endian，x86采用...</content>
+  </entry>
+
+  <entry>
+    <title>Java: Container</title>
+    <link href="/code/code-java-container.html"/>
+    <updated>2016-05-04T00:00:00+09:00</updated>
+    <id>/code/code-java-container</id>
+    <content type="html">
+
+  intro
+  set    
+      intro
+    
+  
+  list    
+      intro
+    
+  
+  字典容器    
+      intro
+      properties
+      map        
+          map的遍历
+        
+      
+    
+  
+
+
+intro
+java的容器类都在java.util包下，主要的接口
+set
+intro
+实现set接口的类主要有TreeSet
+
+
+
+list
+
+
+intro
+
+  实现list接口的有LinkedList, ArrayList, Vector, s...</content>
   </entry>
 
   <entry>
@@ -9783,6 +10024,45 @@ class template
   </entry>
 
   <entry>
+    <title>Java: Class Loader</title>
+    <link href="/code/code-java-class-load.html"/>
+    <updated>2016-05-02T00:00:00+09:00</updated>
+    <id>/code/code-java-class-load</id>
+    <content type="html">
+
+  intro
+  类加载过程    
+      源文件
+      加载
+      链接        
+          验证
+          准备
+          解析
+        
+      
+      初始化
+      使用
+      卸载
+    
+  
+  类加载器    
+      类与类加载器
+      类加载器        
+          启动类加载器
+          扩展类加载器
+          应用程序类加载器
+        
+      
+      类加载器工作原理
+    
+  
+
+
+intro
+在C++语...</content>
+  </entry>
+
+  <entry>
     <title>C++: Reload Operator</title>
     <link href="/code/code-c++-load-operator.html"/>
     <updated>2016-05-02T00:00:00+09:00</updated>
@@ -9805,6 +10085,1045 @@ class Worker{
 	public:
 	    int age;
 	    std::stri...</content>
+  </entry>
+
+  <entry>
+    <title>Java: Annotation</title>
+    <link href="/code/code-java-annotation.html"/>
+    <updated>2016-04-09T00:00:00+09:00</updated>
+    <id>/code/code-java-annotation</id>
+    <content type="html">
+介绍
+注解也叫作元数据，为我们在代码中添o加信息提供了一种形式化的方法
+
+  metadata: data that provides information about other data
+
+
+
+使用
+
+
+注解的定义
+
+  源码注解   注解在源码中存在
+  编译时注解 注解在源码和.class文件中都存在
+  运行时注解 在运行阶段起作用的注解，甚至影响程序运行逻辑的注解
+    注解的分类
+  
+
+
+
+JDK注解
+JDK注解@Override，@Deprecated和@Suppvisewarnings都是编译时注解
+
+
+第三方注解
+
+
+自定义注解
+
+
+package tuesd...</content>
+  </entry>
+
+  <entry>
+    <title>Java: reflection</title>
+    <link href="/code/code-java-reflection.html"/>
+    <updated>2016-04-08T00:00:00+09:00</updated>
+    <id>/code/code-java-reflection</id>
+    <content type="html">
+Intro
+反射是得到类的元数据的过程
+
+
+Class对象
+
+  
+    编译后的字节码文件，即.class文件就是Class类的Class对象
+  
+  Java虚拟机类加载系统根据将对应Class对象加载到JVM中，根据类对象创建实例对象
+
+
+
+Class对象的加载
+
+
+Class.forName()
+该方法的调用返回一个对应类的Class对象，无需通过持有该类的实例对象
+引用而去获得Class对象。
+
+
+Class字面常量
+
+  通过字面量的方法获取Class对象的引用不会自动初始化该类
+  接口，数组和基本数据类型都可以通过该方法获得Class对象
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Java: Array</title>
+    <link href="/code/code-java-System.html"/>
+    <updated>2016-04-07T00:00:00+09:00</updated>
+    <id>/code/code-java-System</id>
+    <content type="html">
+arraycopy
+查看源代码里面使用的是native方法，看不到底层代码，里面应该维护指针
+
+
+数组拷贝
+void foo(){
+    int[] src=new int[]{1,2,3,8,23,5,3,7,8};
+	int[] dest=new int[10];
+	System.arraycopy(src, 2, dest, 3, 5);
+	System.out.println(Arrays.toString(dest));
+}
+
+
+
+系统属性
+
+  属性名        属性值
+  java.version  Java运行时的环境版本
+  java.home     Java...</content>
+  </entry>
+
+  <entry>
+    <title>Java: String</title>
+    <link href="/code/code-java-String.html"/>
+    <updated>2016-04-07T00:00:00+09:00</updated>
+    <id>/code/code-java-String</id>
+    <content type="html">
+介绍
+
+  String类使用底层使用字符数组保存字符串，有final修饰，String对象是不可变的
+  StringBuilder和StringBuffer都继承自AbstractStringBuilder类，也使用字符串保留数组。
+  String中的对象是不可变的，可以理解为长了，线程安全。StringBuffer对方法加了同步锁，也是线程安全的
+
+
+
+功能
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Java: Calendar</title>
+    <link href="/code/code-java-Calendar.html"/>
+    <updated>2016-04-07T00:00:00+09:00</updated>
+    <id>/code/code-java-Calendar</id>
+    <content type="html">
+Calendar
+Calendar类是一个抽象类，功能比Date类强大，实现比Date复杂
+
+
+使用
+Calendar cal=Calendar.getInstance();
+System.out.println(calendar.get(Calendar.YEAR));
+
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Java: BigDecimal</title>
+    <link href="/code/code-java-BigDecimal.html"/>
+    <updated>2016-04-07T00:00:00+09:00</updated>
+    <id>/code/code-java-BigDecimal</id>
+    <content type="html">
+作用
+精确运算
+
+
+使用方法
+
+  使用String对象构建BigDecimal对象
+  调用相应的方法进行算术运算
+  把BigDecimal对象转换成float,double等类型
+
+
+
+代码
+BigDecimal bd=new BigDecimal(&quot;0.06&quot;);
+System.out.println(bd.add(new BigDecimal(&quot;0.01&quot;)));
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Java: Interface</title>
+    <link href="/code/code-java-interface.html"/>
+    <updated>2016-04-06T00:00:00+09:00</updated>
+    <id>/code/code-java-interface</id>
+    <content type="html">
+特征
+
+  属性有固定的修饰符: public static final
+  函数有固定的修饰符: public abstract,函数不能有方法体。
+
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Java: Class</title>
+    <link href="/code/code-java-class.html"/>
+    <updated>2016-04-06T00:00:00+09:00</updated>
+    <id>/code/code-java-class</id>
+    <content type="html">
+类的三大特点，封装，继承和多态，集中封装和继承是多态的基础
+
+构造器，只是一个函数，函数只是一段需要执行的代码，就这么简单。
+类的组成
+
+
+普通代码块
+
+
+构造代码块
+直接在类中定义且没有加static关键字的代码块称为构造代码块。
+构造代码块属于对象
+，在对象创建时被执行，每次创建对象都会被调用，
+构造代码块的执行顺序优于类构造函数
+
+
+静态代码块
+java中使用static关键字声明的代码块，静态代码块用于初始化类
+为类的属性初始化。每个静态块只会执行一次。静态代码块属于类
+类的构造器
+
+
+调用方法
+
+  可以通过new关键字调用
+  通过反射调用
+
+
+
+区别
+
+  Class.n...</content>
+  </entry>
+
+  <entry>
+    <title>Java: String</title>
+    <link href="/code/code-java-string.html"/>
+    <updated>2016-04-05T00:00:00+09:00</updated>
+    <id>/code/code-java-string</id>
+    <content type="html">
+字符分割
+String[] a=&quot;ab@cd&quot;.split(&quot;@&quot;);
+		for(String v:a){
+			System.out.println(v);
+		}
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Java: Enumberation</title>
+    <link href="/code/code-java-Enumeration.html"/>
+    <updated>2016-04-04T00:00:00+09:00</updated>
+    <id>/code/code-java-Enumeration</id>
+    <content type="html">
+作用
+Enumeration是一个接口,源码如下
+package java.util;
+
+pubic interface Enumeration&amp;lt;E&amp;gt;{
+	boolean hasMoreElements();
+	E nextElement();
+}
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Java: Enum</title>
+    <link href="/code/code-java-enum.html"/>
+    <updated>2016-04-03T00:00:00+09:00</updated>
+    <id>/code/code-java-enum</id>
+    <content type="html">
+intro
+枚举类型反编译之后也是类，该类用final关键字修饰
+
+
+产生原因
+//枚举类型的引入
+class Weekday{
+	private Weekday(){};
+	public static final Weekday MONDAY= new Weekday();
+	public static final Weekday TUESDAY= new Weekday();
+	public static final Weekday WENDESDAY= new Weekday();
+	public static final Weekday THURSDAY= new Weekda...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Vim</title>
+    <link href="/code/code-c++-memory.html"/>
+    <updated>2016-01-21T00:00:00+09:00</updated>
+    <id>/code/code-c++-memory</id>
+    <content type="html">
+intro
+自动分配
+全局对象在程序启动时分配，程序结束时销毁。
+局部对象，进入其定义所在的程序时被创建，离开时销毁
+局部static对象在第一次使用前分配，程序结束时销毁
+
+
+动态分配
+除了静态内存和栈内存，每个程序还拥有一个内存池。称为自由空间，free store或堆heap
+动态分配的对象的生存期与他们在哪里创建是无关的，只有当显示地被释放时，对象才会被销毁
+
+
+智能指针
+智能指针产生的原因是对象在销毁时，会调用它的析构函数。
+
+
+shared_ptr
+
+
+直接管理内存
+
+</content>
+  </entry>
+
+  <entry>
+    <title>C++: Vim</title>
+    <link href="/code/code-c++-compiler.html"/>
+    <updated>2016-01-20T00:00:00+09:00</updated>
+    <id>/code/code-c++-compiler</id>
+    <content type="html">
+内存对齐
+
+  书写汇编语言时,处理器给我们能处理的内存块最小单位是一个字节大小。底层是如何处理的我们并不知道。我们可以把它看成一个黑箱。C++语言是汇编语言的高级形式。
+  struct foo_1{
+    char a;
+    int  b;
+    };
+struct foo_2{
+    char a;
+    char b;
+    int  c;
+};
+struct foo_3{
+    char a;
+    int  c;
+    char b;
+};
+foo_1 a;
+foo_2 b;
+foo_3 c;
+cout&amp;lt;&amp;lt; sizeof(a)&amp;lt;&amp;lt;...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Vim</title>
+    <link href="/code/code-c++-boost.html"/>
+    <updated>2016-01-19T00:00:00+09:00</updated>
+    <id>/code/code-c++-boost</id>
+    <content type="html">
+介绍
+boost是一个可移植的，提供源代码的C++库，由于其对跨平台的强调，对标准C++的强调，与编写平台无关。大部分的boost库功能使用只需要包括相应的头文件即可，少数如正则表达式库和文件系统库需要连接库。
+
+
+文件系统库
+
+
+使用方法
+
+  头文件&amp;lt;boost/filesystem.hpp&amp;gt;提供对文件系统的重要操作，它定义了path类，是filesystem库的基础
+  头文件&amp;lt;boost/filesystem/fstream.hpp&amp;gt;是对std::fstream的一个补充。
+文件系统库使用前需要链接相应的库文件
+  需要添加链接库
+    # demo表...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Vim</title>
+    <link href="/code/code-c++-gtest.html"/>
+    <updated>2016-01-18T00:00:00+09:00</updated>
+    <id>/code/code-c++-gtest</id>
+    <content type="html">
+官方文档
+</content>
+  </entry>
+
+  <entry>
+    <title>C++: Vim</title>
+    <link href="/code/code-c++-opencv.html"/>
+    <updated>2016-01-17T00:00:00+09:00</updated>
+    <id>/code/code-c++-opencv</id>
+    <content type="html">
+官方文档写得很不客气，there’s no point to using the old methods unless you’re a masochist programmer and you’re asking for trouble
+
+绘制椭圆代码，参考文献
+#define w 400
+cv::Mat img=Mat::zeros(w,w,CV_8UC3);
+cv::ellipse(img,Point(w/2,w/2),Size(w/4,w/16),0,0,360,Scalar(255,0,255),2,3);
+imshow(&quot;demo&quot;,img);
+waitKey(0);
+
+</content>
+  </entry>
+
+  <entry>
+    <title>C++: Vim</title>
+    <link href="/code/code-c++-opencv-highgui.html"/>
+    <updated>2016-01-16T00:00:00+09:00</updated>
+    <id>/code/code-c++-opencv-highgui</id>
+    <content type="html">
+reference
+VideoCapture cap(0); // open the default camera
+         if(!cap.isOpened())  // check if we succeeded
+         return -1;
+
+         Mat edges;
+         namedWindow(&quot;edges&quot;,1);
+         for(;;){
+         Mat frame;
+	     cap &amp;gt;&amp;gt; frame; // get a new frame from camera
+	     cvtColor...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Vim</title>
+    <link href="/code/code-c++-Eigen.html"/>
+    <updated>2016-01-14T00:00:00+09:00</updated>
+    <id>/code/code-c++-Eigen</id>
+    <content type="html">
+官方文档
+//默认是列向量
+Eigen::Vector4d a(1,2,3,4);//构造初始化
+Eigen::Vector4d b;
+b&amp;lt;&amp;lt;1,2,3,4;//赋值初始化
+
+
+</content>
+  </entry>
+
+  <entry>
+    <title>C++: Vim</title>
+    <link href="/code/code-c++-causal.html"/>
+    <updated>2016-01-01T00:00:00+09:00</updated>
+    <id>/code/code-c++-causal</id>
+    <content type="html">
+如下代码:
+while(first!=last){
+	 ++first
+	}
+
+left-inclusive interval,左闭合空间的意义:
+当first与last相等时，迭代器范围为空
+当first与last不相等时，迭代器范围内至少有一个元素，而且first指向该区间的第一个元素，通过若干次自增运算可以使first不断增大，知道first==last为止。
+
+
+和表达式相比，函数比表达式好理解，容易维护，重用性好
+缺点就是，效率差，调用函数之前需要保存寄存器，复制实参，程序跳转等操作。
+
+封装是一项将低层次的元素组合起来形成新的高层次实体的技术，函数是封装的一种形式 ，函数所...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Vim</title>
+    <link href="/code/code-c++-macro.html"/>
+    <updated>2015-12-26T00:00:00+09:00</updated>
+    <id>/code/code-c++-macro</id>
+    <content type="html">
+宏: 就是指令的集合
+#define PRINT(A) std::cout&amp;lt;&amp;lt;&quot;this is output: &quot;&amp;lt;&amp;lt;#A&amp;lt;&amp;lt;std::endl
+PRINT(&quot;hello&quot;);
+
+</content>
+  </entry>
+
+  <entry>
+    <title>C++: Vim</title>
+    <link href="/code/code-c++-template.html"/>
+    <updated>2015-12-03T00:00:00+09:00</updated>
+    <id>/code/code-c++-template</id>
+    <content type="html">
+intro
+OOP和范型编程都能处理在编写程序时不知道类型的情况。不同之处在于
+OOP能处理类型在程序运行之前都未知的情况，范型编程中，编译时就能获知类型。
+
+
+function template
+
+define
+template &amp;lt;typename price&amp;gt; bool isCheaper(price p1,price p2){
+	    return p1&amp;lt;p2;
+        }
+
+instantiation
+//函数模板能自己推断参数类型
+compare(2.0,12.0);
+
+
+
+
+class template
+类模板用来生成类的蓝图，与函数模板不同，编...</content>
+  </entry>
+
+  <entry>
+    <title>Code C++ Opengl</title>
+    <link href="/code-c++-opengl.html"/>
+    <updated>2015-11-29T00:00:00+09:00</updated>
+    <id>/code-c++-opengl</id>
+    <content type="html">
+</content>
+  </entry>
+
+  <entry>
+    <title>C++: Vim</title>
+    <link href="/code/code-c++-exception.html"/>
+    <updated>2015-11-15T00:00:00+09:00</updated>
+    <id>/code/code-c++-exception</id>
+    <content type="html">
+异常
+异常指运行时的反常行为，典型的异常包括数据库链接和遇到意外输入等。
+
+</content>
+  </entry>
+
+  <entry>
+    <title>C++: Vim</title>
+    <link href="/code/code-c++-function.html"/>
+    <updated>2015-11-10T00:00:00+09:00</updated>
+    <id>/code/code-c++-function</id>
+    <content type="html">
+
+  函数是命名的代码块。并没有什么了不起。
+    参数传递
+  
+  形参的初始化方式和变量的初始化方式是一样的
+  和其他变量一样，形参的类型决定了形参和实参的交互方式
+
+
+
+引用传递
+如果形参是引用类型，它将绑定到对应的实参上
+
+
+值传递
+实参的值拷贝到形参
+
+
+函数指针
+
+  函数指针指向的是函数而非对象
+  当把函数名作为一个值使用时，该函数自动转换成指针
+
+</content>
+  </entry>
+
+  <entry>
+    <title>C++: Vim</title>
+    <link href="/code/code-c++-express.html"/>
+    <updated>2015-11-08T00:00:00+09:00</updated>
+    <id>/code/code-c++-express</id>
+    <content type="html">
+类型转换
+隐士转换
+C++语言不会直接将两个不同类型的值相加，而是先根据类型转换的规则将运算的
+类型统一后，再求值。
+int ival = 3.541 + 3;
+// 1 3转换成double型，结果类型为double
+// 2 初始化过程中，初始化对象的类型无法改变，初始值被转化为该对象的类型
+
+
+显示转换
+表达式 cast-name(expression)
+type: 转换的目标类型，expression要转换的值
+cast-name是static, dynamic, const, reinterpret中的一种
+
+</content>
+  </entry>
+
+  <entry>
+    <title>C++: Vim</title>
+    <link href="/code/code-c++-operator.html"/>
+    <updated>2015-11-04T00:00:00+09:00</updated>
+    <id>/code/code-c++-operator</id>
+    <content type="html">
+位运算符
+
+
+	
+		 ~  位求反        
+		 &amp;lt;&amp;lt; 左移          
+		 &amp;gt;&amp;gt; 右移          
+		  &amp;amp; 位与   256&amp;amp;7  
+		  | 位或          
+		  ^ 异或          
+	
+
+
+
+点运算符
+
+.(dot operator): 点操作符通过它的左操作数取得有操作数，点操作符的右操作数不是对象或值，而是成员的名字。
+
+
+箭头运算符
+
+-&amp;gt;(arrow operator): 箭头操作符包含点操作符和解引用操作符。
+
+
+[]: 下标操作符
+
+
+
+函数调用操作符
+()(call...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Vim</title>
+    <link href="/code/code-c++-array.html"/>
+    <updated>2015-11-03T00:00:00+09:00</updated>
+    <id>/code/code-c++-array</id>
+    <content type="html">
+在出现标准库之前，c++程序使用数组保存对象，现代c++程序更多地用vector取代数组
+与vector相比，数组的长度是固定的。
+只有当程序强调速度的时候才在类的实现内部使用数组和指针。
+</content>
+  </entry>
+
+  <entry>
+    <title>C++: Vim</title>
+    <link href="/code/code-c++-intro.html"/>
+    <updated>2015-11-01T00:00:00+09:00</updated>
+    <id>/code/code-c++-intro</id>
+    <content type="html">
+语言类型
+
+  c++容忍隐士的类型转换，所以是一种种弱类型语言
+  c++编译时进行类型检查，程序运行时不能改变其结构，所以是静态语言
+    版本问题
+  
+  c++11 版本，以前的C++代码风格极其混乱。
+  代码使用C++11的风格，以前的不要用了。
+
+
+.h文件和.cpp文件  后缀名是为了给程序员看的，没有什么用。
+C++中，变量，函数使用之前需要声明，头文件k就是起声明的作用。
+</content>
+  </entry>
+
+  <entry>
+    <title>网络安全</title>
+    <link href="/linux/linux-internet-security.html"/>
+    <updated>2015-05-22T00:00:00+09:00</updated>
+    <id>/linux/linux-internet-security</id>
+    <content type="html">
+  主机扫描    
+      fping
+      hping
+    
+  
+  路由扫描    
+      traceroute
+      mtr
+    
+  
+  批量服务扫描    
+      nmap        
+          常用功能
+        
+      
+      ncat
+    
+  
+  常见网络攻击策略
+
+
+主机扫描
+
+
+fping
+
+
+
+hping
+
+
+
+路由扫描
+
+
+traceroute
+
+
+
+mtr
+
+
+
+批量服务扫描
+
+
+nmap
+
+常用功能
+# 查看肉鸡开放的端口
+sudo nmap -sS 47.75.37.163
+...</content>
+  </entry>
+
+  <entry>
+    <title>CLI: Software Mangement</title>
+    <link href="/linux/linux-cli-software-management.html"/>
+    <updated>2015-05-21T00:00:00+09:00</updated>
+    <id>/linux/linux-cli-software-management</id>
+    <content type="html">
+Brew
+作用
+the missing package manager for macos, 和centos下的yumhe ubuntu下的apt-get类似
+
+  brew的安装目录在/usr/local/Cellar
+  配置目录在/usr/local/etc
+  命令目录在/usr/local/bin
+
+
+
+使用
+
+  brew install boost-python
+  brew upgrade boost
+  brew info boost  查看boost相关信息
+
+
+Ruby
+ruby使用rvm即Ruby Version Manager来升级Ruby
+rvm
+
+  rv...</content>
+  </entry>
+
+  <entry>
+    <title>磁盘管理</title>
+    <link href="/linux/linux-disk-management.html"/>
+    <updated>2015-05-19T00:00:00+09:00</updated>
+    <id>/linux/linux-disk-management</id>
+    <content type="html">
+  df    
+      功能
+      语法
+      参数
+    
+  
+  du    
+      功能
+      语法
+      参数
+    
+  
+
+
+df
+
+
+功能
+展示剩余的磁盘空间
+
+
+语法
+df -h
+参数
+
+du
+
+
+功能
+显示已经使用的磁盘空间
+语法
+参数
+</content>
+  </entry>
+
+  <entry>
+    <title>netstat</title>
+    <link href="/linux/linux-netstat.html"/>
+    <updated>2015-05-18T00:00:00+09:00</updated>
+    <id>/linux/linux-netstat</id>
+    <content type="html">
+  netstat    
+      作用
+      使用
+    
+  
+  ifconfig
+
+
+netstat
+
+
+作用
+show network status
+
+
+使用
+
+  netstat -p TCP 显示tcp协议
+
+
+
+ifconfig
+
+</content>
+  </entry>
+
+  <entry>
+    <title>CLI: Process Management</title>
+    <link href="/linux/linux-cli-process-management.html"/>
+    <updated>2015-05-17T00:00:00+09:00</updated>
+    <id>/linux/linux-cli-process-management</id>
+    <content type="html">
+Kill
+用来终止指定的进程，终止前台的进程可以使用Ctrl+c, 终止后台的进程必须使用kill命令
+
+介绍
+ps类似于命令行界面的任务管理器，查看进程状态
+
+
+ps
+ps命令默认显示4列信息
+
+  PID: process ID
+  PPID: parent process ID 程序的父进程号
+  TTY: 命令所运行的位置(终端)
+  TIME: 运行着的该命令所占用的CPU时间
+  CMD: 该进程所运行的命令
+
+
+
+参数
+
+  -u 根据用户过滤进程，ps -u huiyaozhang 查看用户huiyaozhang的进程
+  -a 显示一个终端所有进程
+  -x 显示没有...</content>
+  </entry>
+
+  <entry>
+    <title>CLI: User Management</title>
+    <link href="/linux/linux-cli-user-management.html"/>
+    <updated>2015-05-16T00:00:00+09:00</updated>
+    <id>/linux/linux-cli-user-management</id>
+    <content type="html">
+说明
+该文件只能使用visudo命令打开编辑，如果有语法错误，则不能保存
+
+
+为普通用户添加root权限
+# 在&quot;root ALL=(ALL) ALL&quot;添加一行
+username ALL=(All)  ALL
+
+
+组
+
+增删
+# 增加组
+groupadd docker
+
+
+
+用户
+
+修改用户组
+# user modify
+usermod -aG docker $USER
+
+</content>
+  </entry>
+
+  <entry>
+    <title>CLI: Access Management</title>
+    <link href="/linux/linux-cli-acess-management.html"/>
+    <updated>2015-05-16T00:00:00+09:00</updated>
+    <id>/linux/linux-cli-acess-management</id>
+    <content type="html">
+功能
+在linux系统中，默认只有三种权限，文件夹的所有者，所属组，非所有者所属组用户,
+这样的分组在复杂的文件权限管理中是无法使用的，acl就是为了弥补这一缺陷而存在。
+
+
+查看磁盘是否开启acl权限
+# dumpe2fs 查询指定分区详细文件系统信息的命令
+dumpe2fs -h /dev/vda1 | grep mount options:
+# user_xattr acl 磁盘开启了acl权限
+
+
+设置acl权限
+# 为文件设置acl权限后，使用ls -l查看文件信息,后面多了一个加号
+# -rw-rwxr--+ 1 hy   hy    379 2月  23 20:09 do...</content>
+  </entry>
+
+  <entry>
+    <title>centos7</title>
+    <link href="/linux/linux-centos7.html"/>
+    <updated>2015-05-16T00:00:00+09:00</updated>
+    <id>/linux/linux-centos7</id>
+    <content type="html">
+  新特性
+  systemd
+  服务器运行级别    
+      配置文件
+      查看服务的状态
+    
+  
+
+
+新特性
+
+  使用systemd后台管理程序linux系统和服务
+  使用firewalld后台程序管理防火墙服务
+
+
+
+
+systemd
+
+  systemd是linux系统的一个超级后台程序，主要用于管理linux系统后台程序和服务。使用pstree命令查看系统程序时，systemd是所有程序的祖辈程序
+  systemctl是管理systemd程序的基本命令。
+
+
+
+
+服务器运行级别
+# 查看系统运行级别
+runlevel
+
+
+配置文件
+在/etc/i...</content>
+  </entry>
+
+  <entry>
+    <title>centos7的目录结构</title>
+    <link href="/linux/linux-centos7-directory-structure.html"/>
+    <updated>2015-05-16T00:00:00+09:00</updated>
+    <id>/linux/linux-centos7-directory-structure</id>
+    <content type="html">
+  proc
+  常用设置
+
+
+proc
+
+  linux提供了一种通过/proc文件系统，在运行时访问内核内部数据结构，改变内核设置的机制。
+  proc文件系统是一个伪文件系统，只存在内存中，不占用外存空间
+  /proc下有三个很重要的目录，net，scsi和sys；sys是可写的，可以通过它来访问或者修改内核参数
+
+
+常用设置
+# 关闭icmp协议
+sysctl -w net.ipv4.icmp_echo_ignore_all=1
+
+</content>
+  </entry>
+
+  <entry>
+    <title>crontab</title>
+    <link href="/linux/linux-centos7-crontab.html"/>
+    <updated>2015-05-16T00:00:00+09:00</updated>
+    <id>/linux/linux-centos7-crontab</id>
+    <content type="html">
+  访问控制
+  常用命令
+
+
+访问控制
+
+  当系统中有/etc/cron.allow文件时，只有写入此文件的用户可以使用crontab命令。
+  当/etc/cron.allow存在时，/etc/cron.deny文件会被忽略,/etc/cron.allow文件的优先级更高
+  当系统中只有/etc/cron.deny文件时，写入此文件的用户不能使用crontab命令
+
+
+常用命令
+
+	
+		项目
+		*
+		*
+		*
+		*
+		*
+	
+	
+		含义
+		每小时中的第几分钟
+		每天当中的第几小时
+		每月当中的第几天
+		每年当中的第几月
+		每周当中的星期几
+	
+	
+		范...</content>
+  </entry>
+
+  <entry>
+    <title>CLI: At</title>
+    <link href="/linux/cli-linux-at.html"/>
+    <updated>2015-05-16T00:00:00+09:00</updated>
+    <id>/linux/cli-linux-at</id>
+    <content type="html">
+at的访问控制
+
+  如果系统中有/etc/at.allow文件，那么只有写入/etc/at.allow文件中的用户可以使用at命令，/etc/at.deny文件会被忽略
+  如果系统中没有/etc/at.allow文件，只有/etc/at.deny文件，那么写入/etc/at.deny文件中的用户不能使用at命令。对root不起作用
+  如果系统中这两个文件都不存在，那么只有root用户可以使用at命令
+
+
+常用命令
+# ctrl+d表示结束任务
+at now +5 minutes
+at&amp;gt; ls
+at&amp;gt; &amp;lt;EOT&amp;gt;
+# 查看任务列表
+atq
+# 查看任务详细信...</content>
+  </entry>
+
+  <entry>
+    <title>Linux Cflag</title>
+    <link href="/linux-cflag.html"/>
+    <updated>2015-05-08T00:00:00+09:00</updated>
+    <id>/linux-cflag</id>
+    <content type="html">作用
+控制在find中的显示
+
+  chflags hidden filepath/filename 隐藏
+  chflags nohidden filepath/filename 显示
+
+</content>
+  </entry>
+
+  <entry>
+    <title>CLI: Shell</title>
+    <link href="/linux/linux-cli-shell.html"/>
+    <updated>2015-05-01T00:00:00+09:00</updated>
+    <id>/linux/linux-cli-shell</id>
+    <content type="html">
+简介
+每个操作系统都有自己的shell，图形界面的或者命令行的。图形界面显示就是有鼠标箭头，命令行也有相应的显示工具。
+shell是linux的外壳，负责外界与linux内核的交互；linux常用的内核有sh,bash,csh等，通过以下命令可以查看mac下的shell类型
+cat /etc/shells
+
+通过以下命令查看shell的类型
+echo $SHELL
+
+
+shell脚本
+小程序堆积成大程序，要养成写脚本的习惯
+#/bin/bash
+echo &quot;hello world&quot;
+
+Check Out System Variable
+echo $HOME
+
+Shell Tutoria...</content>
   </entry>
 
 

@@ -17,6 +17,11 @@ following unit:
 3. window， 一个会话可以包含多个窗口
 4. pane， 一个窗口一个包含多个面板
 
+
+#### Layout
+1. prefix+ space: change the layout from horizontal to vertial 
+
+
 #### Session Operation
 
 + exit current session:  prefix+d <font color="red">退出该session后，该session扔在后台运行</font>

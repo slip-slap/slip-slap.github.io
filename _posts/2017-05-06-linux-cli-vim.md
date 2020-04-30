@@ -9,8 +9,6 @@ tags: ["CLI"]
 {% include JB/setup %}
 
 
-1. 2019.10.27 update
-2. 2020.03-18 update
 
 #### Outline
 This software is plugin system, so it is very flexsible and diffcult to learn.
@@ -48,7 +46,7 @@ gq
 ```
 
 
-#### 代码补全
+#### Code Complete 
 
 ctrl+p 默认的代码补全功能是根据缓冲区中的内容进行正则匹配
 
@@ -68,7 +66,7 @@ ctrl+x ctrl+o 方向箭头选择补全的文本
 切换回常规模式:":%!xxd -r"
 
 
-#### 代码折叠
+#### Code folding 
 
 ```shell
 " 设置代码折叠方式
@@ -144,6 +142,7 @@ a tab could be a different number of columns depending on your enviroment
 1. Character mode: v (lower-case)
 2. Line mode: V(upper-case)
 3. Block mode: Ctrl+v
+<hr />
 
 #### normal mode
 
@@ -154,7 +153,7 @@ a tab could be a different number of columns depending on your enviroment
 :normal G
 # normal!
 ```
-
+<hr />
 #### recording mode
 
 record type character into register
@@ -163,6 +162,7 @@ record type character into register
    your operation
 2. press q to end recording in normal mode
 3. press @\<letter\> to replay the recorded operation 
+<hr />
 
 
 ### 插件

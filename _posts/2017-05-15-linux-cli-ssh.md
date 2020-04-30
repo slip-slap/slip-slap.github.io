@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Linux: SSH"
-keywords: ["ssh"]
-description: "ssh"
+title: "CLI: SSH"
+keywords: []
+description: 
 category: "linux"
 tags: ["CLI"]
 ---

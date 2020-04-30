@@ -8,6 +8,21 @@ tags: ["summary"]
 ---
 {% include JB/setup %}
 
+#### intro
+学习mac，需要知道linux的设计哲学，Linux本质上是一个用户服务器模式，tmux借鉴了linux的设计模式，也是一个c/s架构的模式。<br />
+在linux中，最重要的概念是用户和组
+
+<hr />
+####
+隐藏文件在finder不可见
+```shell
+defaults write com.apple.finder AppleShowAllFiles -bool false
+```
+隐藏文件在finder中可见
+```shell
+defaults write com.apple.finder AppleShowAllFiles -bool true
+```
+在finder的偏好设置中，可以选择在桌面显示或者隐藏，硬盘，外置磁盘等
 
 #### The difference between Linux and BSD
 

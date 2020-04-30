@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Java: 多线程"
-keywords: ["java", "thread"]
-description: "java"
+keywords: 
+description: 
 category: "code"
 tags: ["java"]
 ---

@@ -9,6 +9,14 @@ tags: ["CLI"]
 {% include JB/setup %}
 
 
+#### Awk
+#### 分割符
+-F field-separator(默认为空格)
+```shell
+awk -F ':' '{print $3}' /etc/passwd
+```
+
+
 
 #### feature
 
@@ -70,6 +78,9 @@ cat temp | grep 'slipslap' | sed 's/slipslap//' | sed 's/\/.*est//' | sed 's/13.
 sed -n '/category: "statitics"/p' *
 # replace the target
 sed -i 's/category: "statitics"/category: "math"/' *
+sed -i '1,9c --- \nlayout: post \ntitle: "C++: Vim" \nkeywords: []
+\ndescription: \ncategory: "code" \ntags: ["c++"] \n--- \n{% include JB/setup
+%}' *
 ```
 
 
@@ -99,3 +110,18 @@ i extension
 ```shell
 sed -i 'jjj'  '1,5d' 2016-08-01-python-intro.md
 ```
+### grep
+grep命令是一种强大的文本搜索工具，使用正则表达式搜索文本，并把匹配的行打印处理
+#### 语法
+grep \[option\] pattern file
+#### 参数
+1. -c  --count    计算符合样式的列数
+
+### sed
+文本行处理，增，删，替
+<hr />
+#### 语法
+1. sed [options] 'command' file 命令行格式
+2. sed -f script file 脚本格式
+#### 参数
+1. -n by default, each line of input is echoed to the standard output after all of the commands have been applied to it, the suppresses this behavior
