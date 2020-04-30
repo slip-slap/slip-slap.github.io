@@ -14,14 +14,16 @@ tags: ["CLI"]
 This software is plugin system, so it is very flexsible and diffcult to learn.
 it heavily depends on the plugin and shortcut to improve the efficient.
 
-#### Plugin
-1. For every plugin, you can refer to the instruction about how to use them.
-2. and in the vimrc file to setting.
 
 ### 常用功能 
-<hr />
-#### 版本查看
 
+#### Setting  
+
+1. set relativenumber!
+2. set cursorline
+3. syntax off  I spend a lot of time to fix this simple question, crap !!!!!!!!
+
+#### 版本查看
 :version 查看vim支持的插件，如python等
 :set  show vars different from defaults
 :h key-notation 查看键盘映射
@@ -75,7 +77,7 @@ set foldmethod=indent
 zR
 ```
 
-#### paste
+#### auto indent
 
 vim在粘贴代码时会自动缩进，把代码搞得一团糟糕，需要提前设置
 + set paste
@@ -85,6 +87,9 @@ copy into vim from GUI results missing line
 + before pasting to vim, make sure the Insert Mode is activated.
 + the reason is that paste character **i** or character **o** will trigger
   insert mode, and you will miss everying before
+
+#### joining two lines with J
+1. J joins the line the cursor is on with the line below
 
 #### search
 
@@ -129,11 +134,8 @@ a tab could be a different number of columns depending on your enviroment
 :%retab!
 ```
 
-####  setting
 
-1. set relativenumber!
-2. set cursorline
-3. syntax off  I spend a lot of time to fix this simple question, crap !!!!!!!!
+<hr />
 
 ### mode 
 
@@ -142,7 +144,6 @@ a tab could be a different number of columns depending on your enviroment
 1. Character mode: v (lower-case)
 2. Line mode: V(upper-case)
 3. Block mode: Ctrl+v
-<hr />
 
 #### normal mode
 
@@ -153,7 +154,6 @@ a tab could be a different number of columns depending on your enviroment
 :normal G
 # normal!
 ```
-<hr />
 #### recording mode
 
 record type character into register
@@ -165,7 +165,9 @@ record type character into register
 <hr />
 
 
-### 插件
+### Plugin
+1. For every plugin, you can refer to the instruction about how to use them.
+2. and in the vimrc file to setting.
 
 #### vundle-plugin
 1. BundleList 查看已经安装的插件
@@ -181,44 +183,40 @@ git submodule update --init --recursive
 
 #### NERDTree-plugin
 
-##### 安装
-
-1. 在.vim文件下创建autoload和bundle子文件夹
-2. 下载pathogen.vim到autoload中
+1. install
+- 在.vim文件下创建autoload和bundle子文件夹
+- 下载pathogen.vim到autoload中
 
 ```shell
 cd ~/.vim && mkdir autoload && mkdir bundle && cd bundle
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 ```
 
-3. 在.vimrc添加配置文件
+2. Add configuration to .vimrc file
 
 ```shell
 execute pathogen#infect()
 ```
-
-4. 安装NERDTree
+3. install NERDTree
 
 ```shell
 cd ~/.vim/bundle
 git clone https://github.com/scrooloose/nerdtree.git
 ```
 
-#####  how to use
-
-1. ctrl+w+w 切换窗口
-2. o 打开光标所在目录 O递归打开所有子目录
-3. p 回到光标坐在父目录
-4. r 刷新光标所在的子目录
-5. ? pop-up help document
-
+4. usage
+- ctrl+w+w 切换窗口
+- o 打开光标所在目录 O递归打开所有子目录
+- p 回到光标坐在父目录
+- r 刷新光标所在的子目录
+- ? pop-up help document
+<hr />
 #### CtrlP-plugin
-
-配置
-
+1. Configuration
 ```shell
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 ```
+<hr />
 
 #### pymode-plugin
 #### powerline-plugin

@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "CLI: Software Mangement"
+title: "Mangement: Software"
 keywords: []
-description: "vim"
+description: 
 category: "linux"
-tags: ["CLI"]
+tags: ["MNG"]
 ---
 {% include JB/setup %}
 

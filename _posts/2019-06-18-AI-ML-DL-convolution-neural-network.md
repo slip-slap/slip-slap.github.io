@@ -52,4 +52,5 @@ $$
 
 2. [differentiate a cross entropy cost function](https://wu-2018.github.io/2018/11/02/differentiate-a-cross-entropy-cost-function.html)
 
+3. [CS231](https://cs231n.github.io)
 

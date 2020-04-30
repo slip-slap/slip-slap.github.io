@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "CLI: User Management"
+title: "Management: User"
 keywords: []
 description: 
 category: "linux"
-tags: ["CLI"]
+tags: ["MNG"]
 ---
 {% include JB/setup %}
 #### 说明

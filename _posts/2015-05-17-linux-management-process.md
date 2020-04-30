@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "CLI: Process Management"
+title: "Management: Process"
 keywords: []
 description: 
 category: "linux"
-tags: ["CLI"]
+tags: ["MNG"]
 ---
 {% include JB/setup %}
 

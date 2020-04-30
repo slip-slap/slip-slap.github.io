@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "CLI: Access Management"
+title: "Management: Access"
 keywords: []
 description: 
 category: "linux"
-tags: ["CLI"]
+tags: ["MNG"]
 ---
 {% include JB/setup %}
 
