@@ -3,13 +3,27 @@
   <title>Just Do It</title>
   <link href="/atom.xml" rel="self"/>
   <link href=""/>
-  <updated>2020-04-30T17:05:44+09:00</updated>
+  <updated>2020-04-30T20:24:00+09:00</updated>
   <id></id>
   <author>
     <name>reed</name>
     <email>zhanghy1012@gmail.com</email>
   </author>
 
+
+  <entry>
+    <title>Service: Internet</title>
+    <link href="/linux/linux-service-internet.html"/>
+    <updated>2020-04-30T00:00:00+09:00</updated>
+    <id>/linux/linux-service-internet</id>
+    <content type="html">
+Reference
+
+  Curl
+
+
+</content>
+  </entry>
 
   <entry>
     <title>Shell: Batch Processing</title>
@@ -20,10 +34,11 @@
 Rename Filename
 
 for i in *.md
-do 
-    var1=&quot;${i:1:5}&quot;
-    var1=&quot;${i:10:100}&quot;
-    echo &quot;${var1}-world-${var2}&quot;
+do
+   var1=&quot;${i:0:10}&quot;
+   var2=&quot;${i:10:100}&quot;
+   echo &quot;${var1}-code${var2}&quot;
+   mv &quot;${i}&quot; &quot;${var1}-code${var2}&quot;
 done
 
 
@@ -9140,18 +9155,17 @@ Outline
 This software is plugin system, so it is very flexsible and diffcult to learn.
 it heavily depends on the plugin and shortcut to improve the efficient.
 
-Plugin
-
-  For every plugin, you can refer to the instruction about how to use them.
-  and in the vimrc file to setting.
-
-
 常用功能
 
+Setting
 
-版本查看
 
-:...</content>
+  set relativenumber!
+  set cursorline
+  syntax off  I spend a lot of time to fix this simple question, crap !!!!!!!!
+
+
+...</content>
   </entry>
 
   <entry>
@@ -10713,6 +10727,66 @@ C++中，变量，函数使用之前需要声明，头文件k就是起声明的�
   </entry>
 
   <entry>
+    <title>Cmake: Introduction</title>
+    <link href="/code/code-cmake-intro.html"/>
+    <updated>2015-07-01T00:00:00+09:00</updated>
+    <id>/code/code-cmake-intro</id>
+    <content type="html">
+Make
+代码变成可执行文件，叫编译；
+编译的顺序，叫做构建;
+make是最常用的构建工具,make主要用来构建c语言的项目，实际上，任何主要某个文件有变化，就要重新构建项目，都可以用make构建
+
+
+语法
+&amp;lt;target&amp;gt; : &amp;lt;prerequisites&amp;gt;
+[tab] &amp;lt;commands&amp;gt;
+
+
+
+
+  make命令在没有指定目标时，默认会执行makefile文件的第一个目标
+  make targetName 执行相应的代码
+    do:
+ echo &quot;default target&quot;
+clean:
+ rm create
+create:
+ ech...</content>
+  </entry>
+
+  <entry>
+    <title>CMake: Libraryies</title>
+    <link href="/code/code-cmake-target-link-libraries.html"/>
+    <updated>2015-05-26T00:00:00+09:00</updated>
+    <id>/code/code-cmake-target-link-libraries</id>
+    <content type="html">
+官方文档
+#使用这个语法的时候，target必须通过add_executable()或者add_library()创建
+target_link_libraries(&amp;lt;target&amp;gt; [item])
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Cmake: Modules</title>
+    <link href="/code/code-cmake-pkg-check-modules.html"/>
+    <updated>2015-05-25T00:00:00+09:00</updated>
+    <id>/code/code-cmake-pkg-check-modules</id>
+    <content type="html">
+官方文档看完直接想吐。
+上代码
+find_package(PkgConfig REQUIRED)
+#pkg_check_modules(FOO,OPENCV) 这是错误写法，中间没有逗号，而且有空格
+pkg_check_modules(FOO OPENCV)
+include_directories(${FOO_INCLUDE_DIRS})
+target_link_libraries(untitled ${FOO_LIBRARIES})
+
+
+</content>
+  </entry>
+
+  <entry>
     <title>网络安全</title>
     <link href="/linux/linux-internet-security.html"/>
     <updated>2015-05-22T00:00:00+09:00</updated>
@@ -10773,77 +10847,6 @@ sudo nmap -sS 47.75.37.163
   </entry>
 
   <entry>
-    <title>CLI: Software Mangement</title>
-    <link href="/linux/linux-cli-software-management.html"/>
-    <updated>2015-05-21T00:00:00+09:00</updated>
-    <id>/linux/linux-cli-software-management</id>
-    <content type="html">
-Brew
-作用
-the missing package manager for macos, 和centos下的yumhe ubuntu下的apt-get类似
-
-  brew的安装目录在/usr/local/Cellar
-  配置目录在/usr/local/etc
-  命令目录在/usr/local/bin
-
-
-
-使用
-
-  brew install boost-python
-  brew upgrade boost
-  brew info boost  查看boost相关信息
-
-
-Ruby
-ruby使用rvm即Ruby Version Manager来升级Ruby
-rvm
-
-  rv...</content>
-  </entry>
-
-  <entry>
-    <title>磁盘管理</title>
-    <link href="/linux/linux-disk-management.html"/>
-    <updated>2015-05-19T00:00:00+09:00</updated>
-    <id>/linux/linux-disk-management</id>
-    <content type="html">
-  df    
-      功能
-      语法
-      参数
-    
-  
-  du    
-      功能
-      语法
-      参数
-    
-  
-
-
-df
-
-
-功能
-展示剩余的磁盘空间
-
-
-语法
-df -h
-参数
-
-du
-
-
-功能
-显示已经使用的磁盘空间
-语法
-参数
-</content>
-  </entry>
-
-  <entry>
     <title>netstat</title>
     <link href="/linux/linux-netstat.html"/>
     <updated>2015-05-18T00:00:00+09:00</updated>
@@ -10876,10 +10879,10 @@ ifconfig
   </entry>
 
   <entry>
-    <title>CLI: Process Management</title>
-    <link href="/linux/linux-cli-process-management.html"/>
+    <title>Management: Process</title>
+    <link href="/linux/linux-management-process.html"/>
     <updated>2015-05-17T00:00:00+09:00</updated>
-    <id>/linux/linux-cli-process-management</id>
+    <id>/linux/linux-management-process</id>
     <content type="html">
 Kill
 用来终止指定的进程，终止前台的进程可以使用Ctrl+c, 终止后台的进程必须使用kill命令
@@ -10907,10 +10910,10 @@ ps命令默认显示4列信息
   </entry>
 
   <entry>
-    <title>CLI: User Management</title>
-    <link href="/linux/linux-cli-user-management.html"/>
+    <title>Management: User</title>
+    <link href="/linux/linux-management-user.html"/>
     <updated>2015-05-16T00:00:00+09:00</updated>
-    <id>/linux/linux-cli-user-management</id>
+    <id>/linux/linux-management-user</id>
     <content type="html">
 说明
 该文件只能使用visudo命令打开编辑，如果有语法错误，则不能保存
@@ -10939,10 +10942,56 @@ usermod -aG docker $USER
   </entry>
 
   <entry>
-    <title>CLI: Access Management</title>
-    <link href="/linux/linux-cli-acess-management.html"/>
+    <title>Mangement: Software</title>
+    <link href="/linux/linux-management-software.html"/>
     <updated>2015-05-16T00:00:00+09:00</updated>
-    <id>/linux/linux-cli-acess-management</id>
+    <id>/linux/linux-management-software</id>
+    <content type="html">
+Brew
+作用
+the missing package manager for macos, 和centos下的yumhe ubuntu下的apt-get类似
+
+  brew的安装目录在/usr/local/Cellar
+  配置目录在/usr/local/etc
+  命令目录在/usr/local/bin
+
+
+
+使用
+
+  brew install boost-python
+  brew upgrade boost
+  brew info boost  查看boost相关信息
+
+
+Ruby
+ruby使用rvm即Ruby Version Manager来升级Ruby
+rvm
+
+  rv...</content>
+  </entry>
+
+  <entry>
+    <title>Management: Disk</title>
+    <link href="/linux/linux-management-disk.html"/>
+    <updated>2015-05-16T00:00:00+09:00</updated>
+    <id>/linux/linux-management-disk</id>
+    <content type="html">
+df
+df -h
+
+du
+
+sudo du -h --max-depth=1 /var
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Management: Access</title>
+    <link href="/linux/linux-management-access.html"/>
+    <updated>2015-05-16T00:00:00+09:00</updated>
+    <id>/linux/linux-management-access</id>
     <content type="html">
 功能
 在linux系统中，默认只有三种权限，文件夹的所有者，所属组，非所有者所属组用户,
@@ -10958,6 +11007,29 @@ dumpe2fs -h /dev/vda1 | grep mount options:
 设置acl权限
 # 为文件设置acl权限后，使用ls -l查看文件信息,后面多了一个加号
 # -rw-rwxr--+ 1 hy   hy    379 2月  23 20:09 do...</content>
+  </entry>
+
+  <entry>
+    <title>CLI: Time Schedule</title>
+    <link href="/linux/linux-cli-time-scheduling.html"/>
+    <updated>2015-05-16T00:00:00+09:00</updated>
+    <id>/linux/linux-cli-time-scheduling</id>
+    <content type="html">
+at的访问控制
+
+  如果系统中有/etc/at.allow文件，那么只有写入/etc/at.allow文件中的用户可以使用at命令，/etc/at.deny文件会被忽略
+  如果系统中没有/etc/at.allow文件，只有/etc/at.deny文件，那么写入/etc/at.deny文件中的用户不能使用at命令。对root不起作用
+  如果系统中这两个文件都不存在，那么只有root用户可以使用at命令
+
+
+常用命令
+# ctrl+d表示结束任务
+at now +5 minutes
+at&amp;gt; ls
+at&amp;gt; &amp;lt;EOT&amp;gt;
+# 查看任务列表
+atq
+# 查看任务详细信...</content>
   </entry>
 
   <entry>
@@ -11061,29 +11133,6 @@ sysctl -w net.ipv4.icmp_echo_ignore_all=1
 	
 	
 		范...</content>
-  </entry>
-
-  <entry>
-    <title>CLI: At</title>
-    <link href="/linux/cli-linux-at.html"/>
-    <updated>2015-05-16T00:00:00+09:00</updated>
-    <id>/linux/cli-linux-at</id>
-    <content type="html">
-at的访问控制
-
-  如果系统中有/etc/at.allow文件，那么只有写入/etc/at.allow文件中的用户可以使用at命令，/etc/at.deny文件会被忽略
-  如果系统中没有/etc/at.allow文件，只有/etc/at.deny文件，那么写入/etc/at.deny文件中的用户不能使用at命令。对root不起作用
-  如果系统中这两个文件都不存在，那么只有root用户可以使用at命令
-
-
-常用命令
-# ctrl+d表示结束任务
-at now +5 minutes
-at&amp;gt; ls
-at&amp;gt; &amp;lt;EOT&amp;gt;
-# 查看任务列表
-atq
-# 查看任务详细信...</content>
   </entry>
 
   <entry>
