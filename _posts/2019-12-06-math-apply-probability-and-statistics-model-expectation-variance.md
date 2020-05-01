@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "P.A.S.M: Expectation and Variance"
-keywords: [""]
-description: ""
+title: "P.A.S.M.: Expectation and Variance"
+keywords: []
+description: 
 category: "math"
-tags: ["apply"]
+tags: ["apply","P.A.S.M."]
 ---
 {% include JB/setup %}
 

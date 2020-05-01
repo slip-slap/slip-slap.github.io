@@ -4,7 +4,7 @@ title: "P.A.S.M.I.: Likelihood Inference"
 keywords: [""] 
 description: ""
 category: "math"
-tags: ["apply","P.A.S."]
+tags: ["apply","P.A.S.M.I."]
 ---
 {% include JB/setup %}
 

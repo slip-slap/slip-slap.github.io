@@ -10,7 +10,7 @@ tags: ["terminal"]
 {% include JB/setup %}
 
 #### 功能
-chsh是一个linux命令，用来修改设定用户的shell<hr />
+chsh是一个linux命令，用来修改设定用户的shell
 
 #### 语法
 1. chsh -m 修改配置当前用户的shell

@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "P.A.S.M.: Generating Functions"
-keywords: ["probabiltiy"]
-description: ""
+keywords: []
+description: 
 category: "math"
-tags: ["apply","P.A.S."]
+tags: ["apply","P.A.S.M."]
 ---
 {% include JB/setup %}
 

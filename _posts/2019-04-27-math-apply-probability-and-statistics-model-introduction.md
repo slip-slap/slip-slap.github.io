@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "P.A.S.M.: Introduction"
-keywords: ["probabiltiy"]
-description: ""
+keywords: []
+description: 
 category: "math"
-tags: ["apply"]
+tags: ["apply","P.A.S.M."]
 ---
 {% include JB/setup %}
 

@@ -4,6 +4,6 @@ title: "P.A.S.M.C.: statistic"
 keywords: [""]
 description: ""
 category: "math"
-tags: ["apply"]
+tags: ["apply","P.A.S.M.C."]
 ---
 {% include JB/setup %}

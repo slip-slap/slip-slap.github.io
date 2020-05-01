@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "P.A.S.M.I.: Slice Sampling"
-keywords: ["slice sampling","MCMC"]
+keywords: []
 description: ""
 category: "math"
-tags: ["apply"]
+tags: ["apply","P.A.S.M.I."]
 ---
 {% include JB/setup %}
 

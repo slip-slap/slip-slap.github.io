@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "P.A.S.: Frequentist and Bayesian"
-keywords: ["frequentist", "bayesian"]
+keywords: 
 description: ""
 category: "math"
 tags: ["apply","P.A.S."]
@@ -61,6 +61,8 @@ if you are a frequentist,
 1. You cannot do inference without making assumptions.
 2. The **big difference** between the two approaches is that Bayesians also use
    probabilities to **describe inferences**.
+
+
 #### Reference
 1. [bayesian](https://en.wikipedia.org/wiki/Bayes%27_theorem)
 
