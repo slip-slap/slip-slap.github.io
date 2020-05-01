@@ -5,14 +5,96 @@
   <description>Just Do It - </description>
   <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
   <link></link>
-  <lastBuildDate>Thu, 30 Apr 2020 20:24:00 +0900</lastBuildDate>
-  <pubDate>Thu, 30 Apr 2020 20:24:00 +0900</pubDate>
+  <lastBuildDate>Fri, 01 May 2020 18:42:25 +0900</lastBuildDate>
+  <pubDate>Fri, 01 May 2020 18:42:25 +0900</pubDate>
   <ttl>1800</ttl>
 
 
   <item>
+    <title>Service: SSH</title>
+    <description>
+&lt;h4 id=&quot;介绍&quot;&gt;介绍&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;ssh是一种协议，用于计算机之间的加密登陆。&lt;/li&gt;
+  &lt;li&gt;用户从本地计算机通过ssh登陆到另外一台计算机，是安全的&lt;/li&gt;
+  &lt;li&gt;ssh只是一种协议，具体由多种实现，主要讲开源的OpenSSH实现&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;使用&quot;&gt;使用&lt;/h4&gt;
+
+&lt;h5 id=&quot;登陆&quot;&gt;登陆&lt;/h5&gt;
+&lt;p&gt;ssh的登陆和mysql的远程登陆很像，可能mysql的底层使用的就是ssh来实现远程登陆的&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# 用户名user登陆host&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ssh user@host
+&lt;span class=&quot;c&quot;&gt;# 本地用户名和远程用户名相同&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ssh host
+&lt;span class=&quot;c&quot;&gt;# ssh的默认端口为22，使用p修改端口&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ssh &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; user@host
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h5 id=&quot;登陆过程&quot;&gt;登陆过程&lt;/h5&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;主机受到用户的登陆请求，把自己的公钥发给用户&lt;/li&gt;
+  &lt;li&gt;用户使用公钥将登陆密码加密，发送给主机&lt;/li&gt;
+  &lt;li&gt;主机用私钥解密登陆密码，密码正确，同意登陆&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h5 id=&quot;免密码登陆&quot;&gt;免密码登陆&lt;/h5&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# 在a机器下生成公钥/私钥对,在用户家目录下的.ssh文件中&lt;/span&gt;
+ssh-keygen &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; rsa
+&lt;span class=&quot;c&quot;&gt;# 使用scp命令，将a机器id_rsa.pub复制到b机器的.ssh/authorized_keys文件里&lt;/span&gt;
+scp .ssh/id_rsa.pub hy@192.168.1.1:/home/hy/id_rsa.pub
+&lt;span class=&quot;c&quot;&gt;# b机器把从a机器复制的id_rsa.pub添加到.ssh/authorized_keys中&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;id_rsa.pub &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; .ssh/authorized_keys
+&lt;span class=&quot;c&quot;&gt;# 修改authorized_keys的权限为600&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;chmod &lt;/span&gt;600 .ssh/authorized_keys
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;中间人攻击&quot;&gt;中间人攻击&lt;/h4&gt;
+
+&lt;p&gt;如果攻击者在用户与远程主机之间，用伪造的公钥，获取用户的登陆密码，再用这个密码登陆主机。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h5 id=&quot;口令登陆&quot;&gt;口令登陆&lt;/h5&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;第一次登陆对方主机会出现对方的公钥指纹，用来验证host主机的真实性&lt;/li&gt;
+  &lt;li&gt;公钥指纹一般使用RSA算法生成，长达1024位，难以比较,所以使用MD5算法，变成一个128位的指纹&lt;/li&gt;
+  &lt;li&gt;远程主机的公钥被接受以后，文件会被保存在客户端的${HOME}/.ssh/known_hosts文件中。下次再链接该主机时，由于客户端已经有了服务器的公钥，跳过验证主机真实性的步骤，直接输入密码登陆&lt;/li&gt;
+  &lt;li&gt;在/etc/ssh/ssh_known_hosts文件中保存对所用用户都信赖的公钥&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/linux/linux-service-ssh.html</link>
+    <guid>/linux/linux-service-ssh</guid>
+    <pubDate>Thu, 30 Apr 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
     <title>Service: Internet</title>
     <description>
+&lt;ul&gt;
+  &lt;li&gt;TCP/IP: Transmission Control Protocol/Internet Protocol&lt;/li&gt;
+  &lt;li&gt;LAN: Local Area Network&lt;/li&gt;
+  &lt;li&gt;WAN: Wide Area Network&lt;/li&gt;
+  &lt;li&gt;DNS: Domain name system&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;netstat&quot;&gt;netstat&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;show network status&lt;/li&gt;
+  &lt;li&gt;netstat -p TCP 显示tcp协议&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;ip&quot;&gt;ip&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;internet protocol&lt;/li&gt;
+  &lt;li&gt;ip addr&lt;/li&gt;
+&lt;/ol&gt;
+
 &lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
 &lt;ol&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.cnblogs.com/gbyukg/p/3326825.html&quot;&gt;Curl&lt;/a&gt;&lt;/li&gt;
@@ -21,6 +103,19 @@
 </description>
     <link>/linux/linux-service-internet.html</link>
     <guid>/linux/linux-service-internet</guid>
+    <pubDate>Thu, 30 Apr 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Service: File</title>
+    <description>
+&lt;h4 id=&quot;file-protocol&quot;&gt;File Protocol&lt;/h4&gt;
+&lt;p&gt;Enter the following code in file exploer address bar or brower address bar.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;file:///Users/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+    <link>/linux/linux-service-file.html</link>
+    <guid>/linux/linux-service-file</guid>
     <pubDate>Thu, 30 Apr 2020 00:00:00 +0900</pubDate>
   </item>
 
@@ -6587,6 +6682,53 @@ inside door.&lt;/li&gt;
   </item>
 
   <item>
+    <title>Language English Game Snooker</title>
+    <description>
+&lt;hr /&gt;
+&lt;p&gt;layout: post
+title: “Game: Snooker”
+keywords: []
+description: 
+category: “言葉”
+tags: [“英語”]
+—&lt;/p&gt;
+
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;frame&lt;/li&gt;
+  &lt;li&gt;pocket&lt;/li&gt;
+  &lt;li&gt;pool&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;action&quot;&gt;Action&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;rolling&lt;/li&gt;
+  &lt;li&gt;bounce back&lt;/li&gt;
+  &lt;li&gt;strike&lt;/li&gt;
+  &lt;li&gt;block the pocket&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;phrase&quot;&gt;Phrase&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;49 points behind&lt;/li&gt;
+  &lt;li&gt;49 points in front&lt;/li&gt;
+  &lt;li&gt;big frame&lt;/li&gt;
+  &lt;li&gt;key move&lt;/li&gt;
+  &lt;li&gt;semi-final&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Ronnie O’Sullivan is falling out of love with snooker.&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/language-english-game-snooker.html</link>
+    <guid>/language-english-game-snooker</guid>
+    <pubDate>Tue, 17 Mar 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
     <title>Game: Mobile</title>
     <description>
 &lt;p&gt;####&lt;/p&gt;
@@ -6726,30 +6868,6 @@ sum and the winner takes all&lt;/p&gt;
 </description>
     <link>/%E8%A8%80%E8%91%89/language-english-game-casino.html</link>
     <guid>/%E8%A8%80%E8%91%89/language-english-game-casino</guid>
-    <pubDate>Tue, 17 Mar 2020 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>Language English Game Blast</title>
-    <description>
-&lt;hr /&gt;
-&lt;p&gt;layout: post
-title: “Game: Blast”
-keywords: [””]
-description: “”
-category: “言葉”
-tags: [“英語”]
-—&lt;/p&gt;
-
-&lt;h4 id=&quot;sentence&quot;&gt;Sentence&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Make matches or explode power-ups next to boxes to remove them.&lt;/li&gt;
-  &lt;li&gt;When you activate one Plane, you see two of them take off.&lt;/li&gt;
-  &lt;li&gt;My mood is fantastic today.&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    <link>/language-english-game-blast.html</link>
-    <guid>/language-english-game-blast</guid>
     <pubDate>Tue, 17 Mar 2020 00:00:00 +0900</pubDate>
   </item>
 
@@ -11792,7 +11910,7 @@ uncertainty about how the observed data were produced.
    uncertainties need to be described by probabilities&lt;/strong&gt;, then the prescription of
    a model alone is incomplete.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/2019-12-10-math-apply-probability-and-statistics-bayesian-inference.md&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/math-apply-probability-and-statistics-bayesian-inference.png&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;The spread of the posterior distribution gives some idea of the precision on
@@ -22268,117 +22386,6 @@ const int &amp;amp;r2 = i;
   </item>
 
   <item>
-    <title>CLI: Zsh</title>
-    <description>
-&lt;h4 id=&quot;功能&quot;&gt;功能&lt;/h4&gt;
-&lt;p&gt;chsh是一个linux命令，用来修改设定用户的shell&amp;lt;hr /&amp;gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;语法&quot;&gt;语法&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;chsh -m 修改配置当前用户的shell&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;插件&quot;&gt;插件&lt;/h4&gt;
-
-&lt;h5 id=&quot;autojump&quot;&gt;autojump&lt;/h5&gt;
-&lt;p&gt;cd 过一次的目录，下次都可以直接跳转&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /Users/huiyaozhang/Library/Caches/IntelliJIdea2017.1/tomcat/Unnamed_direckBank
-j tomcat
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;hr /&gt;
-
-&lt;h5 id=&quot;zsh-autosuggestions&quot;&gt;zsh-autosuggestions&lt;/h5&gt;
-
-&lt;p&gt;该命令是基于历史命令数据进行分析的，随着输入的命令越来越多，提示会越来越准确&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# 觉得提示正确&lt;/span&gt;
-ctrl+f 表示采纳
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;hr /&gt;
-
-&lt;h5 id=&quot;zsh-syntax-highlighting&quot;&gt;zsh-syntax-highlighting&lt;/h5&gt;
-
-&lt;p&gt;语法高亮&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/.oh-my-zsh/custom/plugins
-git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
-&lt;span class=&quot;c&quot;&gt;# 修改配置文件～/.zshrc&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;plugins&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=(&lt;/span&gt;git&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 修改为plugins&lt;span class=&quot;o&quot;&gt;=(&lt;/span&gt;git zsh-syntax-highlighting&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h4 id=&quot;参考链接&quot;&gt;参考链接&lt;/h4&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/robbyrussell/oh-my-zsh&quot;&gt;zsh之github&lt;/a&gt;&lt;/p&gt;
-</description>
-    <link>/linux/linux-cli-zsh.html</link>
-    <guid>/linux/linux-cli-zsh</guid>
-    <pubDate>Tue, 16 May 2017 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>CLI: SSH</title>
-    <description>
-&lt;h4 id=&quot;介绍&quot;&gt;介绍&lt;/h4&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;ssh是一种协议，用于计算机之间的加密登陆。&lt;/li&gt;
-  &lt;li&gt;用户从本地计算机通过ssh登陆到另外一台计算机，是安全的&lt;/li&gt;
-  &lt;li&gt;ssh只是一种协议，具体由多种实现，主要讲开源的OpenSSH实现&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;使用&quot;&gt;使用&lt;/h4&gt;
-
-&lt;h5 id=&quot;登陆&quot;&gt;登陆&lt;/h5&gt;
-&lt;p&gt;ssh的登陆和mysql的远程登陆很像，可能mysql的底层使用的就是ssh来实现远程登陆的&lt;/p&gt;
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# 用户名user登陆host&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ssh user@host
-&lt;span class=&quot;c&quot;&gt;# 本地用户名和远程用户名相同&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ssh host
-&lt;span class=&quot;c&quot;&gt;# ssh的默认端口为22，使用p修改端口&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ssh &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; user@host
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;hr /&gt;
-
-&lt;h5 id=&quot;登陆过程&quot;&gt;登陆过程&lt;/h5&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;主机受到用户的登陆请求，把自己的公钥发给用户&lt;/li&gt;
-  &lt;li&gt;用户使用公钥将登陆密码加密，发送给主机&lt;/li&gt;
-  &lt;li&gt;主机用私钥解密登陆密码，密码正确，同意登陆&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h5 id=&quot;免密码登陆&quot;&gt;免密码登陆&lt;/h5&gt;
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# 在a机器下生成公钥/私钥对,在用户家目录下的.ssh文件中&lt;/span&gt;
-ssh-keygen &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; rsa
-&lt;span class=&quot;c&quot;&gt;# 使用scp命令，将a机器id_rsa.pub复制到b机器的.ssh/authorized_keys文件里&lt;/span&gt;
-scp .ssh/id_rsa.pub hy@192.168.1.1:/home/hy/id_rsa.pub
-&lt;span class=&quot;c&quot;&gt;# b机器把从a机器复制的id_rsa.pub添加到.ssh/authorized_keys中&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;id_rsa.pub &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; .ssh/authorized_keys
-&lt;span class=&quot;c&quot;&gt;# 修改authorized_keys的权限为600&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;chmod &lt;/span&gt;600 .ssh/authorized_keys
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;中间人攻击&quot;&gt;中间人攻击&lt;/h4&gt;
-
-&lt;p&gt;如果攻击者在用户与远程主机之间，用伪造的公钥，获取用户的登陆密码，再用这个密码登陆主机。&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h5 id=&quot;口令登陆&quot;&gt;口令登陆&lt;/h5&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;第一次登陆对方主机会出现对方的公钥指纹，用来验证host主机的真实性&lt;/li&gt;
-  &lt;li&gt;公钥指纹一般使用RSA算法生成，长达1024位，难以比较,所以使用MD5算法，变成一个128位的指纹&lt;/li&gt;
-  &lt;li&gt;远程主机的公钥被接受以后，文件会被保存在客户端的${HOME}/.ssh/known_hosts文件中。下次再链接该主机时，由于客户端已经有了服务器的公钥，跳过验证主机真实性的步骤，直接输入密码登陆&lt;/li&gt;
-  &lt;li&gt;在/etc/ssh/ssh_known_hosts文件中保存对所用用户都信赖的公钥&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    <link>/linux/linux-cli-ssh.html</link>
-    <guid>/linux/linux-cli-ssh</guid>
-    <pubDate>Mon, 15 May 2017 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
     <title>CS: Regex Expression</title>
     <description>
 &lt;h4 id=&quot;intro&quot;&gt;Intro&lt;/h4&gt;
@@ -22613,6 +22620,27 @@ find &lt;span class=&quot;s2&quot;&gt;&quot;test&quot;&lt;/span&gt; &lt;span cla
   <item>
     <title>CLI: Sed</title>
     <description>
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;\w 数字0-9，字母a-z及A-Z，下划线 &lt;font color=&quot;red&quot;&gt;因为在编程语言中，数字的命名都是数字字母下划线&lt;/font&gt;&lt;/li&gt;
+  &lt;li&gt;\W 非\w&lt;/li&gt;
+  &lt;li&gt;. 除去换行符以外的任意字符&lt;/li&gt;
+  &lt;li&gt;[] 字符范围&lt;/li&gt;
+  &lt;li&gt;[^…] 字符范围以外&lt;/li&gt;
+  &lt;li&gt;^ 行首&lt;/li&gt;
+  &lt;li&gt;$ 行尾&lt;/li&gt;
+  &lt;li&gt;()  分组, 并记录匹配到的字符串&lt;/li&gt;
+  &lt;li&gt;\n  使用分组符(x)匹配到的字符串
+    &lt;h4 id=&quot;repeat&quot;&gt;repeat&lt;/h4&gt;
+  &lt;/li&gt;
+  &lt;li&gt;x* x+ 贪婪匹配&lt;/li&gt;
+  &lt;li&gt;x* x+? 非贪婪匹配&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;x?      出现0次或一次&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;(?:x) 仅分组&lt;/li&gt;
+&lt;/ol&gt;
+
 &lt;h4 id=&quot;awk&quot;&gt;Awk&lt;/h4&gt;
 &lt;h4 id=&quot;分割符&quot;&gt;分割符&lt;/h4&gt;
 &lt;p&gt;-F field-separator(默认为空格)&lt;/p&gt;
@@ -22734,13 +22762,13 @@ edit files in place (makes backup if SUFFIX supplied)&lt;/li&gt;
   &lt;li&gt;-n by default, each line of input is echoed to the standard output after all of the commands have been applied to it, the suppresses this behavior&lt;/li&gt;
 &lt;/ol&gt;
 </description>
-    <link>/linux/linux-cli-text-editor.html</link>
-    <guid>/linux/linux-cli-text-editor</guid>
+    <link>/linux/linux-text-process.html</link>
+    <guid>/linux/linux-text-process</guid>
     <pubDate>Mon, 08 May 2017 00:00:00 +0900</pubDate>
   </item>
 
   <item>
-    <title>CLI: Tmux</title>
+    <title>Terminal: Tmux</title>
     <description>
 &lt;h4 id=&quot;intro&quot;&gt;intro&lt;/h4&gt;
 &lt;p&gt;tmux is a terminal multiplexer，tmux使用C/S模型构建，it consists of the
@@ -22766,6 +22794,11 @@ following unit:&lt;/p&gt;
   &lt;li&gt;create a session with specific name: tmux new -s name&lt;/li&gt;
   &lt;li&gt;rename a session: tmux rename-session -t 3 paper&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h5 id=&quot;session-switch&quot;&gt;Session Switch&lt;/h5&gt;
+&lt;ol&gt;
+  &lt;li&gt;prefix+w :the shortcut key of vim plugin nerdtree is also prefix+w&lt;/li&gt;
+&lt;/ol&gt;
 &lt;hr /&gt;
 
 &lt;h4 id=&quot;功能&quot;&gt;功能&lt;/h4&gt;
@@ -22854,13 +22887,61 @@ tmux &lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; ~/.tmux.conf
 &lt;/ol&gt;
 
 </description>
-    <link>/linux/linux-cli-tmux.html</link>
-    <guid>/linux/linux-cli-tmux</guid>
+    <link>/linux/linux-terminal-tmux.html</link>
+    <guid>/linux/linux-terminal-tmux</guid>
     <pubDate>Sun, 07 May 2017 00:00:00 +0900</pubDate>
   </item>
 
   <item>
-    <title>CLI: Vim</title>
+    <title>Terminal: Zsh</title>
+    <description>
+&lt;h4 id=&quot;功能&quot;&gt;功能&lt;/h4&gt;
+&lt;p&gt;chsh是一个linux命令，用来修改设定用户的shell&amp;lt;hr /&amp;gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;语法&quot;&gt;语法&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;chsh -m 修改配置当前用户的shell&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;插件&quot;&gt;插件&lt;/h4&gt;
+
+&lt;h5 id=&quot;autojump&quot;&gt;autojump&lt;/h5&gt;
+&lt;p&gt;cd 过一次的目录，下次都可以直接跳转&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /Users/huiyaozhang/Library/Caches/IntelliJIdea2017.1/tomcat/Unnamed_direckBank
+j tomcat
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h5 id=&quot;zsh-autosuggestions&quot;&gt;zsh-autosuggestions&lt;/h5&gt;
+
+&lt;p&gt;该命令是基于历史命令数据进行分析的，随着输入的命令越来越多，提示会越来越准确&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# 觉得提示正确&lt;/span&gt;
+ctrl+f 表示采纳
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h5 id=&quot;zsh-syntax-highlighting&quot;&gt;zsh-syntax-highlighting&lt;/h5&gt;
+
+&lt;p&gt;语法高亮&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/.oh-my-zsh/custom/plugins
+git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
+&lt;span class=&quot;c&quot;&gt;# 修改配置文件～/.zshrc&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;plugins&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=(&lt;/span&gt;git&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 修改为plugins&lt;span class=&quot;o&quot;&gt;=(&lt;/span&gt;git zsh-syntax-highlighting&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h4 id=&quot;参考链接&quot;&gt;参考链接&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/robbyrussell/oh-my-zsh&quot;&gt;zsh之github&lt;/a&gt;&lt;/p&gt;
+</description>
+    <link>/linux/linux-terminal-zsh.html</link>
+    <guid>/linux/linux-terminal-zsh</guid>
+    <pubDate>Sat, 06 May 2017 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Terminal: Vim</title>
     <description>
 &lt;h4 id=&quot;outline&quot;&gt;Outline&lt;/h4&gt;
 &lt;p&gt;This software is plugin system, so it is very flexsible and diffcult to learn.
@@ -23127,8 +23208,8 @@ git clone https://github.com/scrooloose/nerdtree.git
 &lt;/ol&gt;
 
 </description>
-    <link>/linux/linux-cli-vim.html</link>
-    <guid>/linux/linux-cli-vim</guid>
+    <link>/linux/linux-terminal-vim.html</link>
+    <guid>/linux/linux-terminal-vim</guid>
     <pubDate>Sat, 06 May 2017 00:00:00 +0900</pubDate>
   </item>
 
@@ -26503,41 +26584,9 @@ PORT     STATE  SERVICE
 &lt;h3 id=&quot;常见网络攻击策略&quot;&gt;常见网络攻击策略&lt;/h3&gt;
 
 </description>
-    <link>/linux/linux-internet-security.html</link>
-    <guid>/linux/linux-internet-security</guid>
+    <link>/linux/linux-internet-attack.html</link>
+    <guid>/linux/linux-internet-attack</guid>
     <pubDate>Fri, 22 May 2015 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>netstat</title>
-    <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#netstat&quot; id=&quot;markdown-toc-netstat&quot;&gt;netstat&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#作用&quot; id=&quot;markdown-toc-作用&quot;&gt;作用&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#使用&quot; id=&quot;markdown-toc-使用&quot;&gt;使用&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#ifconfig&quot; id=&quot;markdown-toc-ifconfig&quot;&gt;ifconfig&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;netstat&quot;&gt;netstat&lt;/h3&gt;
-&lt;hr /&gt;
-
-&lt;h4 id=&quot;作用&quot;&gt;作用&lt;/h4&gt;
-&lt;p&gt;show network status&lt;/p&gt;
-&lt;hr /&gt;
-
-&lt;h4 id=&quot;使用&quot;&gt;使用&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;netstat -p TCP 显示tcp协议&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;ifconfig&quot;&gt;ifconfig&lt;/h3&gt;
-
-</description>
-    <link>/linux/linux-netstat.html</link>
-    <guid>/linux/linux-netstat</guid>
-    <pubDate>Mon, 18 May 2015 00:00:00 +0900</pubDate>
   </item>
 
   <item>
@@ -26639,7 +26688,6 @@ usermod &lt;span class=&quot;nt&quot;&gt;-aG&lt;/span&gt; docker &lt;span class=
   &lt;li&gt;配置目录在/usr/local/etc&lt;/li&gt;
   &lt;li&gt;命令目录在/usr/local/bin&lt;/li&gt;
 &lt;/ol&gt;
-&lt;hr /&gt;
 
 &lt;h4 id=&quot;使用&quot;&gt;使用&lt;/h4&gt;
 &lt;ol&gt;
@@ -26647,6 +26695,24 @@ usermod &lt;span class=&quot;nt&quot;&gt;-aG&lt;/span&gt; docker &lt;span class=
   &lt;li&gt;brew upgrade boost&lt;/li&gt;
   &lt;li&gt;brew info boost  查看boost相关信息&lt;/li&gt;
 &lt;/ol&gt;
+
+&lt;h4 id=&quot;xcode-select&quot;&gt;xcode-select&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Manages the active developer directory for Xcode and BSD tools.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;xcode-select &lt;span class=&quot;nt&quot;&gt;--install&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Opens a user interface dialog to request automatic insallation of the command&lt;/span&gt;
+line developer tools.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h4 id=&quot;relationship&quot;&gt;Relationship&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;brew is a command, it needs some environment.&lt;/li&gt;
+  &lt;li&gt;xcode-select –install provide an active developer tools, include compiler
+and something else.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
 
 &lt;h3 id=&quot;ruby&quot;&gt;Ruby&lt;/h3&gt;
 &lt;p&gt;ruby使用rvm即Ruby Version Manager来升级Ruby&lt;/p&gt;
@@ -26658,7 +26724,7 @@ usermod &lt;span class=&quot;nt&quot;&gt;-aG&lt;/span&gt; docker &lt;span class=
 &lt;/ol&gt;
 &lt;hr /&gt;
 
-&lt;h4 id=&quot;gem&quot;&gt;gem&lt;/h4&gt;
+&lt;h4 id=&quot;gem&quot;&gt;Gem&lt;/h4&gt;
 &lt;p&gt;gem是管理Ruby库和程序的标准包，通过使用Ruby Gem源来查找，安装，升级和卸载软件&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;gem install [gemname] 从Gem源安装gem包&lt;/li&gt;

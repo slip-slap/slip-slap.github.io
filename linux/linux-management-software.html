@@ -124,17 +124,17 @@ $(document).ready(function() {
           <a href="/" title="查看最近发表"><i class="icon-fixed-width icon-edit"></i> 最近发表</a>
 <ul>
 
+  <li><a href="/linux/linux-service-ssh.html" title="查看《Service: SSH》">Service: SSH</a></li>
+
   <li><a href="/linux/linux-service-internet.html" title="查看《Service: Internet》">Service: Internet</a></li>
+
+  <li><a href="/linux/linux-service-file.html" title="查看《Service: File》">Service: File</a></li>
 
   <li><a href="/code/code-shell-batch-process.html" title="查看《Shell: Batch Processing》">Shell: Batch Processing</a></li>
 
   <li><a href="/work/work-journal.html" title="查看《Work: Journal》">Work: Journal</a></li>
 
   <li><a href="/linux/linux-gui-iterm.html" title="查看《GUI: ITerm》">GUI: ITerm</a></li>
-
-  <li><a href="/life/life-essay-exgirlfriends.html" title="查看《Exgirlfriends》">Exgirlfriends</a></li>
-
-  <li><a href="/math/math-change-mathematical-analysis-legendre-transormation.html" title="查看《M.A.: Legendre Transformation》">M.A.: Legendre Transformation</a></li>
 
 </ul>
 
@@ -170,7 +170,17 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#April-2020">2020 年 04 月 (5)</a></li>
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#April-2020">2020 年 04 月 (7)</a></li>
     
   
 
@@ -2428,12 +2438,7 @@ $(document).ready(function() {
   
   
   
-
-  
-  
-  
-  
-    <li><a href="/archive.html#May-2017">2017 年 05 月 (9)</a></li>
+    <li><a href="/archive.html#May-2017">2017 年 05 月 (8)</a></li>
     
   
 
@@ -2855,12 +2860,7 @@ $(document).ready(function() {
   
   
   
-
-  
-  
-  
-  
-    <li><a href="/archive.html#May-2015">2015 年 05 月 (15)</a></li>
+    <li><a href="/archive.html#May-2015">2015 年 05 月 (14)</a></li>
     
   
 
@@ -2894,7 +2894,7 @@ $(document).ready(function() {
         </section>
         <section>
           <a href="/tags.html" title="查看所有标签"><i class="icon-fixed-width icon-tags"></i> 标签云</a>
-<span title="标签总数">53</span>
+<span title="标签总数">54</span>
 <div id="tag-cloud">
 
 
@@ -2958,6 +2958,13 @@ $(document).ready(function() {
     
     
     <a href="/tags.html#summary-ref" style="font-size: 10pt; color: #888;">summary</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#terminal-ref" style="font-size: 9pt; color: #999;">terminal</a>
   
     
     
@@ -3384,7 +3391,6 @@ $(document).ready(function() {
   <li>配置目录在/usr/local/etc</li>
   <li>命令目录在/usr/local/bin</li>
 </ol>
-<hr />
 
 <h4 id="使用">使用</h4>
 <ol>
@@ -3392,6 +3398,24 @@ $(document).ready(function() {
   <li>brew upgrade boost</li>
   <li>brew info boost  查看boost相关信息</li>
 </ol>
+
+<h4 id="xcode-select">xcode-select</h4>
+<ol>
+  <li>Manages the active developer directory for Xcode and BSD tools.</li>
+</ol>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xcode-select <span class="nt">--install</span>
+<span class="c"># Opens a user interface dialog to request automatic insallation of the command</span>
+line developer tools.
+</code></pre></div></div>
+<h4 id="relationship">Relationship</h4>
+<ol>
+  <li>brew is a command, it needs some environment.</li>
+  <li>xcode-select –install provide an active developer tools, include compiler
+and something else.</li>
+</ol>
+
+<hr />
 
 <h3 id="ruby">Ruby</h3>
 <p>ruby使用rvm即Ruby Version Manager来升级Ruby</p>
@@ -3403,7 +3427,7 @@ $(document).ready(function() {
 </ol>
 <hr />
 
-<h4 id="gem">gem</h4>
+<h4 id="gem">Gem</h4>
 <p>gem是管理Ruby库和程序的标准包，通过使用Ruby Gem源来查找，安装，升级和卸载软件</p>
 <ol>
   <li>gem install [gemname] 从Gem源安装gem包</li>
