@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "CLI: Zsh"
+title: "Terminal: Zsh"
 keywords: [] 
 description: 
 category: "linux"
-tags: ["CLI"]
+tags: ["terminal"]
 ---
 
 {% include JB/setup %}

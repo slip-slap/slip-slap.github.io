@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "CLI: Tmux"
+title: "Terminal: Tmux"
 keywords: []
 description: 
 category: "linux"
-tags: ["CLI"]
+tags: ["terminal"]
 ---
 {% include JB/setup %}
 
@@ -29,6 +29,10 @@ following unit:
 + re-enter session: tmux attach -t session-name
 + create a session with specific name: tmux new -s name
 + rename a session: tmux rename-session -t 3 paper
+
+
+##### Session Switch
+1. prefix+w :the shortcut key of vim plugin nerdtree is also prefix+w
 <hr />
 
 #### 功能

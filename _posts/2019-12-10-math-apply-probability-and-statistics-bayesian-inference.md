@@ -16,8 +16,7 @@ uncertainty about how the observed data were produced.
    uncertainties need to be described by probabilities**, then the prescription of
    a model alone is incomplete.
 
-<img
-src="{{IMAGE_PATH}}/2019-12-10-math-apply-probability-and-statistics-bayesian-inference.md" />
+<img src="{{IMAGE_PATH}}/math-apply-probability-and-statistics-bayesian-inference.png" />
 
 - The spread of the posterior distribution gives some idea of the precision on
   any probability statements we make about $\theta$

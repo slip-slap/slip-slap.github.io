@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "CLI: Vim"
+title: "Terminal: Vim"
 keywords: []
-description: "vim"
+description: 
 category: "linux"
-tags: ["CLI"]
+tags: ["terminal"]
 ---
 {% include JB/setup %}
 

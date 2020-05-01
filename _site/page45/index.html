@@ -124,17 +124,17 @@ $(document).ready(function() {
           <a href="/" title="查看最近发表"><i class="icon-fixed-width icon-edit"></i> 最近发表</a>
 <ul>
 
+  <li><a href="/linux/linux-service-ssh.html" title="查看《Service: SSH》">Service: SSH</a></li>
+
   <li><a href="/linux/linux-service-internet.html" title="查看《Service: Internet》">Service: Internet</a></li>
+
+  <li><a href="/linux/linux-service-file.html" title="查看《Service: File》">Service: File</a></li>
 
   <li><a href="/code/code-shell-batch-process.html" title="查看《Shell: Batch Processing》">Shell: Batch Processing</a></li>
 
   <li><a href="/work/work-journal.html" title="查看《Work: Journal》">Work: Journal</a></li>
 
   <li><a href="/linux/linux-gui-iterm.html" title="查看《GUI: ITerm》">GUI: ITerm</a></li>
-
-  <li><a href="/life/life-essay-exgirlfriends.html" title="查看《Exgirlfriends》">Exgirlfriends</a></li>
-
-  <li><a href="/math/math-change-mathematical-analysis-legendre-transormation.html" title="查看《M.A.: Legendre Transformation》">M.A.: Legendre Transformation</a></li>
 
 </ul>
 
@@ -170,7 +170,17 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#April-2020">2020 年 04 月 (5)</a></li>
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#April-2020">2020 年 04 月 (7)</a></li>
     
   
 
@@ -2428,12 +2438,7 @@ $(document).ready(function() {
   
   
   
-
-  
-  
-  
-  
-    <li><a href="/archive.html#May-2017">2017 年 05 月 (9)</a></li>
+    <li><a href="/archive.html#May-2017">2017 年 05 月 (8)</a></li>
     
   
 
@@ -2855,12 +2860,7 @@ $(document).ready(function() {
   
   
   
-
-  
-  
-  
-  
-    <li><a href="/archive.html#May-2015">2015 年 05 月 (15)</a></li>
+    <li><a href="/archive.html#May-2015">2015 年 05 月 (14)</a></li>
     
   
 
@@ -2894,7 +2894,7 @@ $(document).ready(function() {
         </section>
         <section>
           <a href="/tags.html" title="查看所有标签"><i class="icon-fixed-width icon-tags"></i> 标签云</a>
-<span title="标签总数">53</span>
+<span title="标签总数">54</span>
 <div id="tag-cloud">
 
 
@@ -2958,6 +2958,13 @@ $(document).ready(function() {
     
     
     <a href="/tags.html#summary-ref" style="font-size: 10pt; color: #888;">summary</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#terminal-ref" style="font-size: 9pt; color: #999;">terminal</a>
   
     
     
@@ -3339,33 +3346,29 @@ $(document).ready(function() {
   <article class="nested">
 
     <header>
-      <h2><a href="/linux/linux-cli-ssh.html" title="查看《CLI: SSH》">CLI: SSH</a></h2>
+      <h2><a href="/code/c++-data-type.html" title="查看《C++: Data Type》">C++: Data Type</a></h2>
     </header>
 
     <section>
       <p>
         
-介绍
+intro
 
-
-  ssh是一种协议，用于计算机之间的加密登陆。
-  用户从本地计算机通过ssh登陆到另外一台计算机，是安全的
-  ssh只是一种协议，具体由多种实现，主要讲开源的OpenSSH实现
-
-
-使用
-
-登陆
-ssh的登陆和mysql的远程登陆很像，可能mysql的底层使用的就是ssh来实...
+数据的初始化分为两种:  
+直接初始化: 使用assignment operator
+复制初始化: 使用(),将初始化值放在圆括号内。
+对于类类型对象，直接初始化直接调用与实参匹配的构造函数。复制初始化
+调用复制构造函数，然后使用复制构造函数将临时对象复制到正在创建的对象。
+1...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#May-2017" title="查看此月所有文章">15 May 2017</a>，
+        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">02 March 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#linux-ref" title="查看此类别下的所有文章">linux</a>，
-        评论：<a href="/linux/linux-cli-ssh.html#disqus_thread" title="查看此文章的评论"></a>
+        类别：<a href="/categories.html#code-ref" title="查看此类别下的所有文章">code</a>，
+        评论：<a href="/code/c++-data-type.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -3464,22 +3467,23 @@ If you want to create permanent aliases, just modify corresponding configuration
   <article class="nested">
 
     <header>
-      <h2><a href="/linux/linux-cli-text-editor.html" title="查看《CLI: Sed》">CLI: Sed</a></h2>
+      <h2><a href="/linux/linux-text-process.html" title="查看《CLI: Sed》">CLI: Sed</a></h2>
     </header>
 
     <section>
       <p>
         
-Awk
-分割符
--F field-separator(默认为空格)
-awk -F ':' '{print $3}' /etc/passwd
+####
 
-
-feature
-
-
-  the ability to filter text in a pipeline which particularly di...
+  \w 数字0-9，字母a-z及A-Z，下划线 因为在编程语言中，数字的命名都是数字字母下划线
+  \W 非\w
+  . 除去换行符以外的任意字符
+  [] 字符范围
+  [^…] 字符范围以外
+  ^ 行首
+  $ 行尾
+  ()  分组, 并记录匹配到的字符串
+  \n  ...
       </p>
     </section>
 
@@ -3488,7 +3492,7 @@ feature
         发表日期：<a href="/archive.html#May-2017" title="查看此月所有文章">08 May 2017</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#linux-ref" title="查看此类别下的所有文章">linux</a>，
-        评论：<a href="/linux/linux-cli-text-editor.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/linux/linux-text-process.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -3497,7 +3501,7 @@ feature
   <article class="nested">
 
     <header>
-      <h2><a href="/linux/linux-cli-tmux.html" title="查看《CLI: Tmux》">CLI: Tmux</a></h2>
+      <h2><a href="/linux/linux-terminal-tmux.html" title="查看《Terminal: Tmux》">Terminal: Tmux</a></h2>
     </header>
 
     <section>
@@ -3518,7 +3522,7 @@ following unit:
         发表日期：<a href="/archive.html#May-2017" title="查看此月所有文章">07 May 2017</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#linux-ref" title="查看此类别下的所有文章">linux</a>，
-        评论：<a href="/linux/linux-cli-tmux.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/linux/linux-terminal-tmux.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -3527,7 +3531,44 @@ following unit:
   <article class="nested">
 
     <header>
-      <h2><a href="/linux/linux-cli-vim.html" title="查看《CLI: Vim》">CLI: Vim</a></h2>
+      <h2><a href="/linux/linux-terminal-zsh.html" title="查看《Terminal: Zsh》">Terminal: Zsh</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+功能
+chsh是一个linux命令，用来修改设定用户的shell&lt;hr /&gt;
+
+语法
+
+  chsh -m 修改配置当前用户的shell
+
+
+插件
+
+autojump
+cd 过一次的目录，下次都可以直接跳转
+
+cd /Users/huiyaozhang/Library/Cache...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#May-2017" title="查看此月所有文章">06 May 2017</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#linux-ref" title="查看此类别下的所有文章">linux</a>，
+        评论：<a href="/linux/linux-terminal-zsh.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/linux/linux-terminal-vim.html" title="查看《Terminal: Vim》">Terminal: Vim</a></h2>
     </header>
 
     <section>
@@ -3544,7 +3585,7 @@ it heavily depends on the plugin and shortcut to improve th...
         发表日期：<a href="/archive.html#May-2017" title="查看此月所有文章">06 May 2017</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#linux-ref" title="查看此类别下的所有文章">linux</a>，
-        评论：<a href="/linux/linux-cli-vim.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/linux/linux-terminal-vim.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -3606,34 +3647,6 @@ defaults write com.apple....
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#linux-ref" title="查看此类别下的所有文章">linux</a>，
         评论：<a href="/linux/linux-cli-git-branch.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/linux/linux-cli-git-remote-repository.html" title="查看《CLI: Git Remote Repository》">CLI: Git Remote Repository</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-git支持多种协议，包括https, 但是通过ssh支持的原生git协议速度最快。
-
-
-  添加远程库：git remote add origin git@github.com:slip-slap/slip-slap.github.io.git
-远程库的名字叫做origin，也可以改成别的，...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">22 March 2017</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#linux-ref" title="查看此类别下的所有文章">linux</a>，
-        评论：<a href="/linux/linux-cli-git-remote-repository.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 

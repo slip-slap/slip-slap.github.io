@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "CLI: SSH"
+title: "Service: SSH"
 keywords: []
 description: 
 category: "linux"
-tags: ["CLI"]
+tags: ["SERV"]
 ---
 {% include JB/setup %}
 

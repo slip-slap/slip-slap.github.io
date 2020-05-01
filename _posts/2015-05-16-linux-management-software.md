@@ -14,11 +14,27 @@ the missing package manager for macos, 和centos下的yumhe ubuntu下的apt-get�
 1. brew的安装目录在/usr/local/Cellar
 2. 配置目录在/usr/local/etc
 3. 命令目录在/usr/local/bin
-<hr />
+
 #### 使用
 1. brew install boost-python
 2. brew upgrade boost
 3. brew info boost  查看boost相关信息
+
+#### xcode-select
+1. Manages the active developer directory for Xcode and BSD tools.
+
+```shell
+xcode-select --install
+# Opens a user interface dialog to request automatic insallation of the command
+line developer tools.
+```
+#### Relationship
+1. brew is a command, it needs some environment. 
+2. xcode-select --install provide an active developer tools, include compiler
+   and something else.
+
+
+<hr />
 
 ### Ruby
 ruby使用rvm即Ruby Version Manager来升级Ruby
@@ -27,7 +43,8 @@ ruby使用rvm即Ruby Version Manager来升级Ruby
 2. rvm list known 列出已知ruby的版本
 3. rvm install 2.4.0  安装新版本
 <hr />
-#### gem
+
+#### Gem
 gem是管理Ruby库和程序的标准包，通过使用Ruby Gem源来查找，安装，升级和卸载软件
 1. gem install [gemname] 从Gem源安装gem包
 2. gem update            更新所有已安装的gem包
