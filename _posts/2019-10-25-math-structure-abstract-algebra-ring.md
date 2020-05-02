@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Abstract Algebra: ring"
-keywords: [ "ring"]
-description: ""
+title: "A.A.: Ring"
+keywords:  
+description: 
 category: "math"
 tags: ["構造","A.A."]
 ---

@@ -1,25 +1,12 @@
 ---
 layout: post
-title: "P.A.S.M.I.: Model Inference"
-keywords: [""]
+title: "P.A.S.M.I.: Summary"
+keywords: 
 description: ""
 category: "math"
-tags: ["apply","P.A.S."]
+tags: ["apply","P.A.S.M.I.","summary"]
 ---
 {% include JB/setup %}
-
-
-#### Inference
-1. **Inference, Inference, Inference** maybe the most important thing is
-   probability and statistics, model inference, parameters of model inference.
-
-2. In the point of view of a frequentist, maybe the first step is construct an estimator.
-3. In the point of view  of a bayesian, there are four basic methods
-- Complete enumeration
-- Laplace's method
-- Monte Carlo method: 
-- Variational method
-
 
 #### Inference Using a Probability Model
 we are in a situation in which we feel probability is applicable and that we
@@ -36,7 +23,24 @@ space for a response s.
    to a distinct probability distribution in the model, we can talk about the
    true value of $\theta$, as this gives the true distribution via $f_{\theta}$
 
-#### three types of Inference
+#### Statistical Models
+
+
+#### Galois
+The diffence between Probability Model and Statistical Models
+1. The main difference is that a probability model is only one distribution,
+   while a statistical model is a set of probability models.
+
+<hr />
+
+
+#### Uncertainty
+1. the uncertainty associated with an outcome or response as descried by a
+   probability measure.
+2. uncertain about the probability measure is.
+
+
+#### Types of Inference
 our primary goal may be to determine not the true $f_\theta$, but some
 characteristic of the true distribution such as its mean, median, or the value
 of the true distribution function F at a specified value. We will denote this
@@ -65,5 +69,32 @@ And corresponding inferences:
 3. Assess whether or not $\psi_o$ is a plausible value for $\psi(\theta)$ after
    having observed s, referred to as the problem of hypothesis assessment.
 
+<hr />
+#### Inference Methods
+1. **Inference, Inference, Inference** the most important thing in
+   probability and statistics, model inference, parameters of model inference.
+
+- likelihood methods: require the least structure
+- Bayesian methods: require some additional ingredients
+- Optimal methods: Inference based on measures of performance and loss
+  functions.
+- Laplace's method
+- Variational method
+- Complete enumeration
+
+2. There are two different views about probability and statistics, which are
+   frequentist and bayesian, the inference methods also can be divided into two
+   parts.
  
+
+#### Galois
+1. The name of this subject is probability and statistics, what does statistics
+   mean? According to Merriam-Webster: a branch of mathematics dealing with the
+   collection, analysis, interpretation, and presentation of masses of
+   numberical data.
+
+
+#### Reference
+1. [Difference Between Probability Model and Statistical
+   Model](https://gist.github.com/dakridas/9c377ac38f60c22c71be9885a3bd1203)
 

@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "P.A.S.: Bayesian Inference"
-keywords: [""]
-description: ""
+title: "P.A.S.M.I.: Bayesian Inference"
+keywords: []
+description: 
 category: "math"
-tags: ["apply","P.A.S."]
+tags: ["apply","P.A.S.M.I."]
 ---
 {% include JB/setup %}
 

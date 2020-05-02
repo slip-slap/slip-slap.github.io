@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Abstract Algebra: Module"
-keywords: [ "Module"]
-description: ""
+title: "A.A.: Module"
+keywords: 
+description: 
 category: "math"
 tags: ["構造","A.A."]
 ---

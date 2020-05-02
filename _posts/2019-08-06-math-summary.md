@@ -2,7 +2,7 @@
 layout: post
 title: "Math: Summary"
 keywords: []
-description: ""
+description: 
 category: "math"
 tags: ["summary"]
 ---
@@ -60,22 +60,22 @@ Abel 1802-1829 Norway
 Poincare 1854-1912 France
 ```
 
+
+
+
+<hr />
+
 #### Notation
 
-
 #####  Greek Notation
+
+<img src="{{IMAGE_PATH}}/math-greek-alphabet.jpg"  />
+
 1. $$ \xi \mapsto p_{\xi} $$: sign between $$\xi$$ and $$p_{\xi}$$ means maps to
-2. $$\alpha$$ and A
-3. $$\beta$$  and B
-4. $$\gamma$$ and $$\Gamma$$
-5. $$\delta$$ and $$\Delta$$
-6. $$\epsilon$$ and $$\Epsilon$$
-8. $$ \xi $$ and $$ \Xi $$ prounced |zai| in English, prounced |ksi| in modern
+2. $$ \xi $$ and $$ \Xi $$ prounced |zai| in English, prounced |ksi| in modern
    Greek.
-9. $$\sigma$$ and $$\Sigma$$
-10. $$\phi$$ or $$\varphi$$  and  $$\Phi$$, these two letters are the same, but little change
-11. $$\psi$$ and $$\Psi$$, usually stands for wave function in quanum mechanics.
-12. $$\omega$$ and $$\Omega$$
+3. $$\phi$$ or $$\varphi$$  and  $$\Phi$$, these two letters are the same, but little change
+4. $$\psi$$ and $$\Psi$$, usually stands for wave function in quanum mechanics.
 
 #####  brackets
 1. curly brackets: {} which means the order doesn't matter
@@ -87,6 +87,8 @@ $$
 \frac{\partial z}{\partial x}
 $$.
 It represents a specialized cursive letter of d. It may simply pronounced simply "dee".
+
+<hr />
 
 
 #### Reference

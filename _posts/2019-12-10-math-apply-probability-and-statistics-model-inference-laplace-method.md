@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "P.A.S.M.I.: Laplace's Method"
-keywords: ["MCMC"]
-description: ""
+keywords: []
+description: 
 category: "math"
-tags: ["apply","P.A.S."]
+tags: ["apply","P.A.S.M.I."]
 ---
 {% include JB/setup %}
 
