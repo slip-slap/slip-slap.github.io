@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Stochastic Process: Poisson Process"
+title: "S.P.: Poisson Process"
 keywords: [] 
-description: "statistics theory"
+description: 
 category: "math"
-tags: ["apply"]
+tags: ["apply","S.P."]
 ---
 {% include JB/setup %}
 

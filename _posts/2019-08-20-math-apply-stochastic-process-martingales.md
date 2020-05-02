@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Stochastic Process: Martingles"
+title: "S.P.: Martingles"
 keywords: [] 
 description: ""
 category: "math"
-tags: ["apply"]
+tags: ["apply","S.P."]
 ---
 {% include JB/setup %}
 #### Martingales

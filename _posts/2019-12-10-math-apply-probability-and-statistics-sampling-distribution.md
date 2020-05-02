@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "P.A.S.: Sampling Distributions"
-keywords: [""] 
-description: ""
+title: "P.A.S.M.: Sampling Distributions"
+keywords: [] 
+description: 
 category: "math"
-tags: ["apply","P.A.S."]
+tags: ["apply","P.A.S.M."]
 ---
 {% include JB/setup %}
 

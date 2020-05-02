@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Stochastic Processes: Random Walk"
-keywords: [""]
-description: ""
+title: "S.P.: Random Walk"
+keywords: []
+description: 
 category: "math"
-tags: ["apply"]
+tags: ["apply","S.P."]
 ---
 {% include JB/setup %}
 

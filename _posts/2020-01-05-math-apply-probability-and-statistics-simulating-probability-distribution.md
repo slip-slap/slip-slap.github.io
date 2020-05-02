@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "P.A.S.: Simulating Probability Distributions"
+title: "P.A.S.M.: Simulating Probability Distributions"
 keywords: ["probabiltiy"]
 description: ""
 category: "math"
-tags: ["apply"]
+tags: ["apply","P.A.S.M."]
 ---
 {% include JB/setup %}
 
