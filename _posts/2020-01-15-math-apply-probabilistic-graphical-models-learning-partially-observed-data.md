@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "P.G.M.: Learning-Partially Observed Data"
+title: "P.G.M.L.: Learning-Partially Observed Data"
 keywords: [""] 
 description: ""
 category: "math"
-tags: ["apply","P.G.M."]
+tags: ["apply","P.G.M.","P.G.M.L."]
 ---
 {% include JB/setup %}
 

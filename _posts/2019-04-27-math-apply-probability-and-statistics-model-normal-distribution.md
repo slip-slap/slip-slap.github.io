@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "P.A.S.: Normal Distribution"
+title: "P.A.S.M.: Normal Distribution"
 keywords: []
-description: ""
+description: 
 category: "math"
-tags: ["apply","P.A.S."]
+tags: ["apply","P.A.S.M."]
 ---
 {% include JB/setup %}
 

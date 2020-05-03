@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "P.G.M.: Template Based Representation"
+title: "P.G.M.R.: Template Based Representation"
 keywords: [""] 
 description: ""
 category: "math"
-tags: ["apply"]
+tags: ["apply","P.G.M.","P.G.M.R."]
 ---
 {% include JB/setup %}
 

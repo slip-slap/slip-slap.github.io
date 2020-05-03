@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "LGLA: Classical Group "
-keywords: [""]
-description: ""
+title: "L.G.L.A.: Classical Group "
+keywords: []
+description: 
 category: "math"
-tags: ["構造","LGLA"]
+tags: ["構造","L.G.L.A."]
 ---
 {% include JB/setup %}
 

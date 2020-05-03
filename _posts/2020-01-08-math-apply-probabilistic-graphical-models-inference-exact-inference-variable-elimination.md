@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "P.G.M.: Exact Inference-Variable Elimination"
+title: "P.G.M.I.: Exact Inference-Variable Elimination"
 keywords: [""] 
 description: ""
 category: "math"
-tags: ["apply","P.G.M."]
+tags: ["apply","P.G.M.","P.G.M.I."]
 ---
 {% include JB/setup %}
 

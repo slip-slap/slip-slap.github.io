@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "P.G.M.: Learning Graphical Models"
-keywords: [""] 
-description: ""
+title: "P.G.M.L.: Learning Graphical Models"
+keywords: [] 
+description: 
 category: "math"
-tags: ["apply","P.G.M."]
+tags: ["apply","P.G.M.","P.G.M.L."]
 ---
 {% include JB/setup %}
 

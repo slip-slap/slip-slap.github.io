@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "P.G.M.: Local Probabilistic Models"
+title: "P.G.M.R.: Local Probabilistic Models"
 keywords: [""] 
 description: ""
 category: "math"
-tags: ["apply"]
+tags: ["apply","P.G.M.","P.G.M.R."]
 ---
 {% include JB/setup %}
 

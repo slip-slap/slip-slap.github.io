@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "P.G.M.: Exponential Family"
+title: "P.G.M.R.: Exponential Family"
 keywords: [""]
 description: ""
 category: "math"
-tags: ["apply"]
+tags: ["apply","P.G.M.","P.G.M.R."]
 ---
 {% include JB/setup %}
 

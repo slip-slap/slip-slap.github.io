@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "P.G.M.: Exact Inference-Clique Trees"
+title: "P.G.M.I.: Exact Inference-Clique Trees"
 keywords: [""] 
 description: ""
 category: "math"
-tags: ["apply","P.G.M."]
+tags: ["apply","P.G.M.","P.G.M.I."]
 ---
 {% include JB/setup %}
 

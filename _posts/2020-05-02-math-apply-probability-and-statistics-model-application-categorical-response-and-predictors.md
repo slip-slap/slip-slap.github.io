@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "P.A.S.M.C.: Categorical Response and Predictors"
+title: "P.A.S.M.A.: Categorical Response and Predictors"
 keywords: []
 description: 
 category: "math"
-tags: ["apply","P.A.S.M.C."]
+tags: ["apply","P.A.S.M.A."]
 ---
 {% include JB/setup %}

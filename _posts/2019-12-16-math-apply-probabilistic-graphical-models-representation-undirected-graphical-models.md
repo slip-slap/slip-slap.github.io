@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "P.G.M.: Undirected Graphical Models Representation"
-keywords: [""] 
-description: ""
+title: "P.G.M.R.: Undirected Graphical Models"
+keywords: [] 
+description: 
 category: "math"
-tags: ["apply"]
+tags: ["apply","P.G.M.","P.G.M.R."]
 ---
 {% include JB/setup %}
 

@@ -9,35 +9,27 @@ tags: ["terminal"]
 {% include JB/setup %}
 
 
-
-#### Outline
-This software is plugin system, so it is very flexsible and diffcult to learn.
+### 1. Introduction 
+This software is plugin system, so it is very flexible and diffcult to learn.
 it heavily depends on the plugin and shortcut to improve the efficient.
 
+<hr />
 
-### 常用功能 
+### 2. 常用功能 
 
-#### Setting  
+#### 2.1 Setting  
 
 1. set relativenumber!
 2. set cursorline
 3. syntax off  I spend a lot of time to fix this simple question, crap !!!!!!!!
 
-#### 版本查看
-:version 查看vim支持的插件，如python等
-:set  show vars different from defaults
-:h key-notation 查看键盘映射
-:ctrl+r anti-cancel
-:set colorcolumn=80 lenght marke
-
-#### register
+#### 2.2 register
 To access a register, type **"a**, **a** is the name of the register. <br />
 :reg to check out the content of the  register <br />
 1. to paste from system clipboard on Mac  **"\*p**
 2. to copy into system clipboard on Mac **"\*yy**
 
-
-#### format
+#### 2.3 format
 1. select the lines of text you want to re-format:
 ```shell
 v
@@ -46,6 +38,40 @@ v
 ```shell
 gq
 ```
+#### 2.4 Code folding 
+```shell
+" 设置代码折叠方式
+set foldmethod=indent
+" 打开全部折叠
+zR
+```
+
+#### 2.5 Search
+
+1. /target 从文档的开始匹配目标字符串，n匹配下一个，N匹配上一个
+2. ?target 从文档的结束位置匹配目标字符串，n匹配下一个，N匹配上一个
+
+#### 2.6 Delete 
++ ctrl+w 删除光标所在行的光标之前的文字
++ ndd 删除光标所在行的后n行，包括光标所在行
+
+#### 2.7 Split Screen
+
+命令行的快捷键和图形界面的快捷键不一样，<font
+color="red">图形界面的前缀键和命令键是同时按下的,命令行的前缀键和命令键常常分开</font>使用tmux时，它的前缀键为ctrl+b
++ ctrl+w 为前缀键，j k h l上下左右切换
++ ctrl+w 为前缀键 >可以改变窗口大小
++ sp file  水平打开
++ vsp file 垂直打开
+#### 版本查看
+:version 查看vim支持的插件，如python等
+:set  show vars different from defaults
+:h key-notation 查看键盘映射
+:ctrl+r anti-cancel
+:set colorcolumn=80 lenght marke
+
+
+
 
 
 #### Code Complete 
@@ -68,14 +94,6 @@ ctrl+x ctrl+o 方向箭头选择补全的文本
 切换回常规模式:":%!xxd -r"
 
 
-#### Code folding 
-
-```shell
-" 设置代码折叠方式
-set foldmethod=indent
-" 打开全部折叠
-zR
-```
 
 #### auto indent
 
@@ -91,23 +109,6 @@ copy into vim from GUI results missing line
 #### joining two lines with J
 1. J joins the line the cursor is on with the line below
 
-#### search
-
-1. /target 从文档的开始匹配目标字符串，n匹配下一个，N匹配上一个
-2. ?target 从文档的结束位置匹配目标字符串，n匹配下一个，N匹配上一个
-
-#### delete 
-+ ctrl+w 删除光标所在行的光标之前的文字
-+ ndd 删除光标所在行的后n行，包括光标所在行
-
-#### split the screen
-
-命令行的快捷键和图形界面的快捷键不一样，<font
-color="red">图形界面的前缀键和命令键是同时按下的,命令行的前缀键和命令键常常分开</font>使用tmux时，它的前缀键为ctrl+b
-+ ctrl+w 为前缀键，j k h l上下左右切换
-+ ctrl+w 为前缀键 >可以改变窗口大小
-+ sp file  水平打开
-+ vsp file 垂直打开
 
 #### 同时打开多个文件
 
@@ -137,15 +138,15 @@ a tab could be a different number of columns depending on your enviroment
 
 <hr />
 
-### mode 
+### 3. Mode 
 
-#### visual mode
+#### 3.1 Visual Mode
 
 1. Character mode: v (lower-case)
 2. Line mode: V(upper-case)
 3. Block mode: Ctrl+v
 
-#### normal mode
+#### 3.2 Normal Mode
 
 ```shell
 # 映射G键到别的东西
@@ -154,7 +155,8 @@ a tab could be a different number of columns depending on your enviroment
 :normal G
 # normal!
 ```
-#### recording mode
+
+#### 3.3 Recording Mode
 
 record type character into register
 
@@ -165,14 +167,14 @@ record type character into register
 <hr />
 
 
-### Plugin
+### 4. Plugin
 1. For every plugin, you can refer to the instruction about how to use them.
 2. and in the vimrc file to setting.
 
-#### vundle-plugin
+#### 4.1 vundle-plugin
 1. BundleList 查看已经安装的插件
 
-#### YouCompleteMe-plugin
+#### 4.2 YouCompleteMe-plugin
 
 ```shell
 # 下载
@@ -181,7 +183,7 @@ git clone https://github.com/Valloric/YouCompleteMe.git
 git submodule update --init --recursive
 ```
 
-#### NERDTree-plugin
+#### 4.3 NERDTree-plugin
 
 1. install
 - 在.vim文件下创建autoload和bundle子文件夹
@@ -211,16 +213,16 @@ git clone https://github.com/scrooloose/nerdtree.git
 - r 刷新光标所在的子目录
 - ? pop-up help document
 <hr />
-#### CtrlP-plugin
+#### 4.4 CtrlP-plugin
 1. Configuration
 ```shell
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 ```
 <hr />
 
-#### pymode-plugin
-#### powerline-plugin
-#### vimtex-plugin
+#### 4.5 pymode-plugin
+#### 4.6 powerline-plugin
+#### 4.7 vimtex-plugin
 
 
 

@@ -1,9 +1,12 @@
 ---
 layout: post
-title: "P.A.S.M.C.: Quantitative Response and Predictors"
+title: "P.A.S.M.A.: Quantitative Response and Predictors"
 keywords: []
 description: 
 category: "math"
-tags: ["apply","P.A.S.M.C."]
+tags: ["apply","P.A.S.M.A."]
 ---
 {% include JB/setup %}
+
+
+

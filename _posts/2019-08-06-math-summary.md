@@ -8,30 +8,7 @@ tags: ["summary"]
 ---
 {% include JB/setup %}
 
-
-#### Outline
-<img src="{{IMAGE_PATH}}/math.png"  />
-
-1. set is the foundations of all the branches of modern mathmatics 
-2. According to the function of math braches, math can be divided into four
-   parts, structure, space, change, application, and discrete.
-
-
-#### Difference between space and structure
-
-1. $$R^N$$, Banach space, Normed vector space, Metric space, Hilbert space,
-   Inner product space, vector space. modern mathematics uses many types of
-   spaces.  it does not define the notion of "space" itself
-2. Neither of these words space and structure have a single mathematical
-   definition. The English words can be used in essentially all the same
-   situations, but you often think of a "space" as more geometric and a
-   "structure as more algebraic. So you could thinke of "structures" as places
-   we do algebra, and "spaces" we do geometry. 
-3. The distinction between geometric "space" and algebraic "structure" is
-   sometimes clear, sometimes elusive. Clearly, groups are algebraic, while
-   Euclidean spaces are geometric.
-
-#### History
+#### 1. History
 
 ```
 Socrates 469-399  Greek
@@ -60,14 +37,32 @@ Abel 1802-1829 Norway
 Poincare 1854-1912 France
 ```
 
-
-
-
 <hr />
 
-#### Notation
+#### 2. Architecture
+math can be divided into four parts, structure, space, change, application, and
+discrete.
+<img src="{{IMAGE_PATH}}/math.png"  />
 
-#####  Greek Notation
+
+1. Difference between space and structure
+
+- $$R^N$$, Banach space, Normed vector space, Metric space, Hilbert space,
+   Inner product space, vector space. modern mathematics uses many types of
+   spaces.  it does not define the notion of "space" itself
+- Neither of these words space and structure have a single mathematical
+   definition. The English words can be used in essentially all the same
+   situations, but you often think of a "space" as more geometric and a
+   "structure as more algebraic. So you could thinke of "structures" as places
+   we do algebra, and "spaces" we do geometry. 
+- The distinction between geometric "space" and algebraic "structure" is
+   sometimes clear, sometimes elusive. Clearly, groups are algebraic, while
+   Euclidean spaces are geometric.
+
+
+#### 3 Notation
+
+#####  3.1 Greek Alphabet
 
 <img src="{{IMAGE_PATH}}/math-greek-alphabet.jpg"  />
 
@@ -77,19 +72,26 @@ Poincare 1854-1912 France
 3. $$\phi$$ or $$\varphi$$  and  $$\Phi$$, these two letters are the same, but little change
 4. $$\psi$$ and $$\Psi$$, usually stands for wave function in quanum mechanics.
 
+
+##### 3.2 Change Mathematics
+- $$\partial$$: denote as a partial derivative such as $$ \frac{\partial
+  z}{\partial x} $$.
+- It represents a specialized cursive letter of d. It may simply pronounced
+   simply "dee".
+
+
+##### 3.3 Applied Mathematics
+
+1. Probability and Statistics
+- $\Pi$ denotes a finite set of objects, $\pi$ denotes a member in the set.
+- X denoted a real-valued functions(sometimes called a measurement)
+
+
 #####  brackets
 1. curly brackets: {} which means the order doesn't matter
 2. square brackets: [] the order matters
 
-##### General Notation
-1. $$\partial$$: denote as a partial derivative such as 
-$$
-\frac{\partial z}{\partial x}
-$$.
-It represents a specialized cursive letter of d. It may simply pronounced simply "dee".
-
 <hr />
-
 
 #### Reference
 1. you often think space more geometric, such as metric space, Hilbert space,

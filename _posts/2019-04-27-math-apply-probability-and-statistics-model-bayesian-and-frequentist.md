@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "P.A.S.: Frequentist and Bayesian"
+title: "P.A.S.M.: Frequentist and Bayesian"
 keywords: 
-description: ""
+description: 
 category: "math"
-tags: ["apply","P.A.S."]
+tags: ["apply","P.A.S.M."]
 ---
 {% include JB/setup %}
 

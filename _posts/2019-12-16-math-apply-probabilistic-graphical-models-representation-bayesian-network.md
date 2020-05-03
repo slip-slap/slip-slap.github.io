@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "P.G.M.: Bayesian Network Representation"
-keywords: [""] 
-description: ""
+title: "P.G.M.R.: Bayesian Network Representation"
+keywords:  
+description: 
 category: "math"
-tags: ["apply","P.G.M."]
+tags: ["apply","P.G.M.","P.G.M.R."]
 ---
 {% include JB/setup %}
 

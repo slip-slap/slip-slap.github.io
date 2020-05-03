@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "P.A.S.: Fisher Information"
+title: "P.A.S.M.: Fisher Information"
 keywords: []
 description: 
 category: "math"
-tags: ["apply","P.A.S."]
+tags: ["apply","P.A.S.M."]
 ---
 {% include JB/setup %}
 
