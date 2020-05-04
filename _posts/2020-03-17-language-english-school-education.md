@@ -12,6 +12,8 @@ tags: ["英語"]
 ####
 1. frost boy
 2. summar camp
+3. grade school
+4. elementary school
 
 
 ####

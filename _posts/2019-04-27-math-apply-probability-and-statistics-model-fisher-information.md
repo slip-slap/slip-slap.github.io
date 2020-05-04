@@ -8,8 +8,8 @@ tags: ["apply","P.A.S.M."]
 ---
 {% include JB/setup %}
 
-#### what is the crap fisher information ?
 
+### 1. Definition
 1. For $$
 p(X | \theta)
 $$, fisher information is to answer the question: <br />
@@ -37,18 +37,24 @@ $$
   respect to all possible outcomes x**
 - The above line is very important.
 
-#### Example
 
 
-####  marker
-1. X denotes a prototypical trial
+### 2. Application
+
+#### 2.1 Frequentist Paradigm: Sample Size
+
+#### 2.2 Bayesian Paradigm: Default Parameter Prior
+
+#### 2.3 Minimum Description Length Paradigm: Model Complexity
+
+$$ \begin{aligned} \mathrm{AIC} &=-2 \log f(\vec{x} | \hat{\theta})+2 d \\
+\mathrm{BIC} &=-2 \log f(\vec{x} | \hat{\theta})+d \log (n) \\ \mathrm{FIA}
+&=\underbrace{-\log f(\vec{x} | \hat{\theta})}_{\text {Goodness-of-fit
+}}+\underbrace{\frac{d}{2} \log \frac{n}{2 \pi}}_{\text {Dimensionality
+}}+\underbrace{\log \left(\int_{\Theta} \sqrt{\operatorname{det} I(\theta)}
+\mathrm{d} \theta\right)}_{\text {Geometric complexity }} \end{aligned} $$
 
 
-#### application
-1. In the view of frequentist, Fisher information is used to determine the sample size with which
-we design an experiment.
-2. In Bayesian, Fisher information is used to define a default parameter prior.
-3. Fisher information is used to measure model complexity.
 
 
 

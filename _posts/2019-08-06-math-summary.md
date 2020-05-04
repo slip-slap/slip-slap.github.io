@@ -88,8 +88,15 @@ discrete.
 
 
 #####  brackets
-1. curly brackets: {} which means the order doesn't matter
-2. square brackets: [] the order matters
+1. curly brackets: {} which means the order doesn't matter.
+2. square brackets: [] the order matters.
+3. tilde $ \tilde $ means: denote an equivalence between two objects.x $ \tilde $y
+4. raised asterisk $*$: used to denote adjoint.
+5. hat over letter: used to denote an estimated value, as opposed to its
+   theoretical counterpart, for example, in the context of errors and residuals,
+   the "hat" over the letter $\epsilon$ indicates an observable estimate (the
+   residuals) of an unobservable quantity called $\epsilon$(the statistical
+   errors).
 
 <hr />
 

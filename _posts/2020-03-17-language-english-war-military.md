@@ -26,6 +26,7 @@ tags: ["英語"]
 #### Action
 1. match forward
 2. blow the horn
+3. open fire
 
 
 #### Fight, Strike and Attack
@@ -36,11 +37,13 @@ tags: ["英語"]
 5. hit:
 6. beat:
 
+
 #### Terminology
 1. Intelligence community
 2. classified report
 3. rocket launch platform
 4. launch site
+5. gunfire exchange
 
 #### Action
 1. proportional rataliate

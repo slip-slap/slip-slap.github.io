@@ -18,6 +18,7 @@ tags: ["英語"]
 7. stroke
 8. choke
 9. kidney stone
+1. rash
 
 #### Disease
 1. Hepatitis

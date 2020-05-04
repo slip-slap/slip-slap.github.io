@@ -20,6 +20,7 @@ tags: ["英語"]
 5. suspend
 6. offer
 7. unofficial offer
+8. take a couple of days off
 
 #### Place
 2. market

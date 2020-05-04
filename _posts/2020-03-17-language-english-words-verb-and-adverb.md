@@ -33,6 +33,7 @@ up and down implies completion, like emphasizing
 - I am totally over her.
 - I am still not over it.
 - jump over the hole
+- roll me over
 6. through
 - go through
 - search through or examine carefully or in sequence.
