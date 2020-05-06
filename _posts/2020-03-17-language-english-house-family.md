@@ -10,7 +10,7 @@ tags: ["英語"]
 
 
 ####
-1. hold you back
+1. hold you back and you fight back
 2. laminate the picture
 
 

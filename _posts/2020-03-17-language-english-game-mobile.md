@@ -21,6 +21,8 @@ tags: ["英語"]
 1. our sides
 2. report
 3. team
+4. teamwork
+5. teammate
 
 ####
 1. match: a contest in which two or more persons compete

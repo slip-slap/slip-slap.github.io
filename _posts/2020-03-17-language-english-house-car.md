@@ -35,6 +35,7 @@ tags: ["英語"]
 #### failure
 1. backfire
 2. brake failure
+3. high-speed car chase
 
 
 

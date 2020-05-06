@@ -40,4 +40,6 @@ tags: ["英語"]
 3. Don't let them see your tears, they are not worth crying over.
 4. annoy
 5. bother
+6. control your temper tonight, speechless.
+7. I am not going to swear in front of kids.
 

@@ -20,6 +20,7 @@ tags: ["英語"]
 3. sweet girl
 4. chemistry
 5. that's not my type.
+6. hurt my feeling
 
 
 ####

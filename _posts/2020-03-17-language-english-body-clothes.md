@@ -43,6 +43,7 @@ tags: ["英語"]
 1. trolly case
 2. suitcase
 3. compartment
+4. fancy clothes
 
 
 #### Action

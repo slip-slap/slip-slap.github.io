@@ -17,6 +17,8 @@ tags: ["英語"]
 
 #### Equipment
 1. barbell
+2. roller
+3. plank
 
 #### Phrase
 1. gym card

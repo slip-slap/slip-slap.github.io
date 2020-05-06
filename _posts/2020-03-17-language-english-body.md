@@ -77,6 +77,7 @@ tags: ["英語"]
 6. I choked on a cookie
 7. head shaving
 8. You are acting strange all day.
+9. I got your back
 
 
 

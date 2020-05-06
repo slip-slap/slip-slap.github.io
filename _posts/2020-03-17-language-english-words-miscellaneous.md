@@ -49,15 +49,20 @@ tags: ["英語"]
 ####
 1. emotional
 2. rational
-3. physical 
 
 ####
 1. people are struggling for food during the country's lockdown
-
 1. odds: chance, possiblity
 2. asap: as soon as possible
+
+####
+1. That means a lot to me.
+2. That's too much.
 
 
 ####
 1. Man proposes, God disposes.
 2. Do my best, the rest is up to god.
+3. you can't teach an old dog new tricks.
+4. I don't trip over the same stone twice.
+5. If I was in your shoes.

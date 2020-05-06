@@ -10,6 +10,8 @@ tags: ["英語"]
 
 ####
 1. argue about
+2. fuck off
+3. freak out
 
 
 
@@ -32,4 +34,6 @@ tags: ["英語"]
    each other, don't put us in the middle.
 8. who's going with who?
 9. leave me alone
+1. the last person I want to see on earth.
+2. stop acting like a baby girl
 

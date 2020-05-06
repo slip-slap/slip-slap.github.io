@@ -29,6 +29,8 @@ tags: ["英語"]
 3. tone deaf
 4. spoiler alert
 5. entertainer
+6. textbook acting
+
 
 ####
 It's on.

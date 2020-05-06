@@ -15,10 +15,12 @@ tags: ["英語"]
 4. intimacy stuff
 5. long-term relationship
 6. once a cheater, always a cheater.
+7. old girl friend
 
 ####
 1. disappointed my father.
 2. force
+3. physical relationship: sex
 
 ####
 1. how to express your feelings.
@@ -34,6 +36,7 @@ tags: ["英語"]
 1. Can I be your girlfriend?
 2. set him up on a date.
 3. which one do you like more?
+
 
 
 

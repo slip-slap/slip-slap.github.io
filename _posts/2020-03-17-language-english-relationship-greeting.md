@@ -12,6 +12,7 @@ tags: ["英語"]
 2. What are you up to tonight?
 3. no one put it like that before
 4. How should I put this
+5. How should I put this into words? 
 5. The word you are looking for?
 6. How did that happen?
 7. get off
@@ -24,3 +25,4 @@ tags: ["英語"]
 1. How was it going?
 2. what's going on
 3. How was it going with you guys?
+4. How are you feeling today?

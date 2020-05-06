@@ -8,7 +8,7 @@ tags: ["英語"]
 ---
 {% include JB/setup %}
 
-#### Adverb
+#### 1. Adverb
 1. out: from inside to outside
 - feel out, turn out, figure out
 - read out, speak out, shout out
@@ -26,6 +26,10 @@ up and down implies completion, like emphasizing
 4. off: away from a place 
 - push her off the bridge
 - jump off roof
+- start my day off with the paper
+- start tomorrow off by going to bed on time
+- start the dish off with shrimp
+- way off: not close
 5. over: cross something
 - move it over
 - talk over you, never let you finish.
@@ -49,16 +53,57 @@ up and down implies completion, like emphasizing
 <hr />
 
 
-#### verb
+#### 2 Verb
+
+#### 2.1 Go
+1. I will go over their definition.
+2. Things are going well.
+3. there are three pounds to go.
+3. 30 seconds to go.
+4. where the topic suppose to go.
+5. make it all go away.
+6. make you go all the way down there.
+7. I would have thought the other way around.
+8. I hope you don't take this the wrong way
+
 1. drift
 2. move
 - move your feet
+
+#### 2.2 Get 
+1. get through
+2. get off: telling someone to stop another person or thing touching someone or
+   sometthing
+- get your dog off me.
+3. get that away from me
+4. get ivy off the wall
+3. get off from work.
+4. get you pregant
+5. get my arm into the sleeve
+6. get her something special
+- you don't buy me anything.
+7. don't get me wrong.
+8. get into troubles
+9. get you into trouble
+9. get your head out from  windows
+1. don't get me wrong
+- the funtionality of the word get is kind of like "让" in China. 
+- get her to pay.
+3. get over it. 
+- I had hepatitis, I got over it.
+4. get out of my office
+
+#### 2.2 Keep
+1. keep up
+2. keep going
+3. keep an eye on her
+
 #### come over and come here
 1. over could interpret as "please cross distance between where you are now and
    where I am".
 2. "come here" emphasizes the target location.
 
-####
+
 1. It's not applicable in every situation.
 2. You are not even talking to me.
 
@@ -66,15 +111,6 @@ up and down implies completion, like emphasizing
 1. told me over the phone
 2. told me in person
 
-#### go
-1. I will go over their definition.
-2. Things are going well.
-3. there  are three pounds to go.
-4. where the topic suppose to go.
-5. make it all go away.
-6. make you go all the way down there.
-7. I would have thought the other way around.
-8. I hope you don't take this the wrong way
 
 
 
@@ -98,6 +134,7 @@ up and down implies completion, like emphasizing
 - We made our way through the thick underbrush
 2. find a way
 3. There is got to be a way we can work past this.
+4. inching their way
 
 
 #### away
@@ -129,28 +166,6 @@ up and down implies completion, like emphasizing
 4. rebalance
 5. outthink
 
-#### get 
-1. get through
-2. get off: telling someone to stop another person or thing touching someone or
-   sometthing
-- get your dog off me.
-3. get that away from me
-4. get ivy off the wall
-3. get off from work.
-4. get you pregant
-5. get my arm into the sleeve
-6. get her something special
-- you don't buy me anything.
-7. don't get me wrong.
-8. get into troubles
-9. get you into trouble
-9. get your head out from  windows
-1. don't get me wrong
-- the funtionality of the word get is kind of like "让" in China. 
-- get her to pay.
-3. get over it. 
-- I had hepatitis, I got over it.
-4. get out of my office
 
 ##### remark
 1. get is kind of a very flexible word, you can divide the sentence into two
@@ -245,6 +260,7 @@ up and down implies completion, like emphasizing
 
 #### free
 1. smack-free
+2. care-free day
 
 
 #### Galois

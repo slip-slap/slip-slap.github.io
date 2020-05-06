@@ -16,6 +16,10 @@ tags: ["英語"]
 4. receipt
 5. invoice
 6. bill
+7. inedible
+
+#### Phrase
+1. Five Dishes
 
 ####
 1. goblet
@@ -24,6 +28,7 @@ tags: ["英語"]
 4. member only
 5. serve food
 6. serve steak
+7. white wine
 
 
 ####
@@ -31,3 +36,5 @@ tags: ["英語"]
 2. you got five 5 bucks.
 3. How much cash you got in your pocket right now?
 4. Have you ever taken the trash out?
+5. nailed every component
+

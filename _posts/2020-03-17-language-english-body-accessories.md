@@ -15,3 +15,4 @@ tags: ["英語"]
 4. wallet: slot
 5. purse
 6. compartment
+7. shoulder bag

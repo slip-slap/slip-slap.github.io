@@ -21,6 +21,7 @@ tags: ["英語"]
 
 ####
 1. pump out: pump the water out
+2. chage rabbit
 
 ####
 1. Why can't we have a pond here?
