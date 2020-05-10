@@ -3,13 +3,310 @@
   <title>Just Do It</title>
   <link href="/atom.xml" rel="self"/>
   <link href=""/>
-  <updated>2020-05-05T16:59:41+09:00</updated>
+  <updated>2020-05-11T03:43:11+09:00</updated>
   <id></id>
   <author>
     <name>reed</name>
     <email>zhanghy1012@gmail.com</email>
   </author>
 
+
+  <entry>
+    <title>R.P.: Wald's Equality</title>
+    <link href="/math/math-apply-stochastic-process-renewal-process-wald-equality.html"/>
+    <updated>2020-05-10T00:00:00+09:00</updated>
+    <id>/math/math-apply-stochastic-process-renewal-process-wald-equality</id>
+    <content type="html">
+Motivation
+Gambling
+
+
+  defective random variable: it means there is some probability that J is going
+to be infinite
+  Indicator random variable: An indicator random variable is a special kind of
+random variable associated with the occurence of an event. The indicator
+random variable $I_A$ assoc...</content>
+  </entry>
+
+  <entry>
+    <title>R.P.: Renewal Rewards</title>
+    <link href="/math/math-apply-stochastic-process-renewal-process-renewal-reward-processes.html"/>
+    <updated>2020-05-10T00:00:00+09:00</updated>
+    <id>/math/math-apply-stochastic-process-renewal-process-renewal-reward-processes</id>
+    <content type="html">
+Time-average Residual Life
+
+
+
+
+Galois
+Professor said: “I think after many years finally I understand it, I hope I can make it easy for
+you to understand it.” so modest !!!
+</content>
+  </entry>
+
+  <entry>
+    <title>R.P.: Introduction</title>
+    <link href="/math/math-apply-stochastic-process-renewal-process-introduction.html"/>
+    <updated>2020-05-10T00:00:00+09:00</updated>
+    <id>/math/math-apply-stochastic-process-renewal-process-introduction</id>
+    <content type="html">
+Motivation
+Much of this chapter will be devoted to understanding the behavior of N(t) and
+N(t)/t as t becomes large.
+
+Renewal Processes and Poisson Process
+
+
+  A renewal process is an arrival process for which the interarrival intervals
+$X_1,X_2,\cdots$ are IID. Renewal processes can be specifie...</content>
+  </entry>
+
+  <entry>
+    <title>S.P.: Martingles</title>
+    <link href="/math/math-apply-stochastic-process-martingales.html"/>
+    <updated>2020-05-10T00:00:00+09:00</updated>
+    <id>/math/math-apply-stochastic-process-martingales</id>
+    <content type="html">
+Martingales
+
+  Martingales: Let $X_0,X_1,X_2,\cdots$ be a markov chain. The chain is a
+martingle if for all $n=0,1,2,\cdots$, we have $E(X_{n+1} - X_n|X_n)=0$, that
+is, on average the chain’s value does not change, regardless of what the
+current value $X_n$ actually is.
+    
+      a special clas...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Build Neural Network With Any Topology</title>
+    <link href="/pl/pl-python-tensorflow-neural-network-with-any-topology.html"/>
+    <updated>2020-05-09T00:00:00+09:00</updated>
+    <id>/pl/pl-python-tensorflow-neural-network-with-any-topology</id>
+    <content type="html">
+def layer(layer_name, data, output_channels):
+    with tf.variable_scope(layer_name,reuse=tf.AUTO_REUSE):
+        w = tf.get_variable(name=&quot;weight&quot;,shape=[data.shape[-1],output_channels])
+        b = tf.get_variable(name=&quot;bias&quot;,shape=[output_channels])
+        summary_bias = tf.summary.histogram...</content>
+  </entry>
+
+  <entry>
+    <title>S.P.: summary</title>
+    <link href="/math/math-apply-stochastic-process-summary.html"/>
+    <updated>2020-05-09T00:00:00+09:00</updated>
+    <id>/math/math-apply-stochastic-process-summary</id>
+    <content type="html">
+Introduction
+
+  Stochastic processes which are processes that proceed randomly in time.
+  We consider sequences $X_0,X_1,X_2,\cdots$ where $X_n$ represents some random
+quantity at time n.
+How do you prevent oil spills? 
+How do you prevent nuclear plants from going off?
+How do you prevent nuclear...</content>
+  </entry>
+
+  <entry>
+    <title>P.P.: Introduction</title>
+    <link href="/math/math-apply-stochastic-process-poisson-process-introduction.html"/>
+    <updated>2020-05-09T00:00:00+09:00</updated>
+    <id>/math/math-apply-stochastic-process-poisson-process-introduction</id>
+    <content type="html">
+Poisson Distribution
+In probability theory and statistics, Poisson distribution expresses 
+the probability of a given number of events occurring in a fixed interval of
+time or space. 
+
+formula
+
+
+
+ is a parameter which stands for events/time * time period
+
+Definition
+
+  If an arrival process has ...</content>
+  </entry>
+
+  <entry>
+    <title>S.P.: Combine and Split of PP</title>
+    <link href="/math/math-apply-stochastic-process-poisson-process-combine-split.html"/>
+    <updated>2020-05-09T00:00:00+09:00</updated>
+    <id>/math/math-apply-stochastic-process-poisson-process-combine-split</id>
+    <content type="html">
+Poisson Combining
+The sum of many small independent arrival processes tends to be close to Poisson
+even if the small processes are not.  In a sense, the independence between the
+processes overcomes the dependence between successive arrivals in each process.
+
+Splitting a Poisson process
+Each arri...</content>
+  </entry>
+
+  <entry>
+    <title>M.C.: Markov Chain and Random Walk</title>
+    <link href="/math/math-apply-stochastic-process-markov-chain-random-walk.html"/>
+    <updated>2020-05-09T00:00:00+09:00</updated>
+    <id>/math/math-apply-stochastic-process-markov-chain-random-walk</id>
+    <content type="html">
+
+  Markov Chain is just a fancy term for a random walk on a graph
+  what it says it that for a very long walk, the probability that you end at
+some vertex V is independent of where you started
+
+
+
+
+definition
+Ergodic Markov Chains: A Markov Chain is ergodic if there is a positive probability to p...</content>
+  </entry>
+
+  <entry>
+    <title>S.P.: Markov Decision Theory and Dynamic Programming</title>
+    <link href="/math/math-apply-stochastic-process-markov-chain-markov-decision-theory-and-dynamic-programming.html"/>
+    <updated>2020-05-09T00:00:00+09:00</updated>
+    <id>/math/math-apply-stochastic-process-markov-chain-markov-decision-theory-and-dynamic-programming</id>
+    <content type="html">
+Ruin Problem
+In this example, an entity(often described as a gambler or an insurance company)
+has an amount of money which varies randomly with time, possibly with some
+drift. The model considers the event that the amount of money reaches 0,
+representing bankruptcy. The model can answer question...</content>
+  </entry>
+
+  <entry>
+    <title>M.C.: Finites States</title>
+    <link href="/math/math-apply-stochastic-process-markov-chain-finite-state.html"/>
+    <updated>2020-05-09T00:00:00+09:00</updated>
+    <id>/math/math-apply-stochastic-process-markov-chain-finite-state</id>
+    <content type="html">
+Definition
+
+  Def: A state(node) j is accessible from i(i$\rightarrow$j) if a walk exists from
+i to j.
+    
+      $i\rightarrow j$ means that, starting in i, entry to j is possible, perhaps
+with multiple steps.$i \neq j$ means there is no possibility of ever reaching
+j from i.
+      If $i\righta...</content>
+  </entry>
+
+  <entry>
+    <title>M.C.: Countable State</title>
+    <link href="/math/math-apply-stochastic-process-markov-chain-countable-state.html"/>
+    <updated>2020-05-09T00:00:00+09:00</updated>
+    <id>/math/math-apply-stochastic-process-markov-chain-countable-state</id>
+    <content type="html">
+Motivation
+Markov chains with a countably-infinite state space(more briefly,
+countable-state Markov chains) exhibit some types of behavior not possible for
+chains with a finite state space.
+Notation
+
+  $P_{0j}^n$ is the probability of being in state j at the end of the nth
+transition, conditiona...</content>
+  </entry>
+
+  <entry>
+    <title>M.C.: Metropolis and Metropolis Hastings</title>
+    <link href="/math/math-apply-stochastic-process-markov-chain-apply-metropolis-hastings-sampling.html"/>
+    <updated>2020-05-09T00:00:00+09:00</updated>
+    <id>/math/math-apply-stochastic-process-markov-chain-apply-metropolis-hastings-sampling</id>
+    <content type="html">
+Metropolis Hastings Algorithm
+
+
+  definition: Metropolis Hastings algorithm is one of the sampling algorithm to sample from high dimensional
+  why called Markov Chain(MC) ? because when you  want to get the next sample, you only need to consider the current sample
+  why called Mento Carlo(MC) ? ...</content>
+  </entry>
+
+  <entry>
+    <title>M.C.: Gibbs Sampling</title>
+    <link href="/math/math-apply-stochastic-process-markov-chain-apply-gibbs-sampling.html"/>
+    <updated>2020-05-09T00:00:00+09:00</updated>
+    <id>/math/math-apply-stochastic-process-markov-chain-apply-gibbs-sampling</id>
+    <content type="html">
+Process
+Suppose we want to generate samples from the joint distribution of , Further suppose that we can
+generate from each of the full conditionalal distributions, where 
+
+namely, we can generate from the conditional distribution of $Y_i$ given the
+values of all the other coordinates.
+
+  Specif...</content>
+  </entry>
+
+  <entry>
+    <title>P.G.M.I.: Inference in Temporal Networks</title>
+    <link href="/math/math-apply-probabilistic-graphical-models-inference-in-temporal-models.html"/>
+    <updated>2020-05-06T00:00:00+09:00</updated>
+    <id>/math/math-apply-probabilistic-graphical-models-inference-in-temporal-models</id>
+    <content type="html">
+</content>
+  </entry>
+
+  <entry>
+    <title>P.G.M.I.: Inference in Hybrid Networks</title>
+    <link href="/math/math-apply-probabilistic-graphical-models-inference-in-hybrid-networks.html"/>
+    <updated>2020-05-06T00:00:00+09:00</updated>
+    <id>/math/math-apply-probabilistic-graphical-models-inference-in-hybrid-networks</id>
+    <content type="html">
+</content>
+  </entry>
+
+  <entry>
+    <title>P.G.M.I.: MAP Inference</title>
+    <link href="/math/math-apply-probabilistic-graphical-models-inference-exact-map-inference.html"/>
+    <updated>2020-05-06T00:00:00+09:00</updated>
+    <id>/math/math-apply-probabilistic-graphical-models-inference-exact-map-inference</id>
+    <content type="html">
+</content>
+  </entry>
+
+  <entry>
+    <title>P.G.M.I.: Exact Inference-Variable Elimination</title>
+    <link href="/math/math-apply-probabilistic-graphical-models-inference-exact-inference-variable-elimination.html"/>
+    <updated>2020-05-06T00:00:00+09:00</updated>
+    <id>/math/math-apply-probabilistic-graphical-models-inference-exact-inference-variable-elimination</id>
+    <content type="html">
+Concept
+
+  Factor Marginalization: Let X be a set of variables, and Y $\in X$ a
+variable. Let $\phi(X,Y)$ be a factor. We define the factor marginalization
+of Y in $\phi$, denoted by $\sum_Y \phi$, to be a factor $\psi$ over X such
+that: 
+
+
+
+</content>
+  </entry>
+
+  <entry>
+    <title>P.G.M.I.: Exact Inference-Clique Trees</title>
+    <link href="/math/math-apply-probabilistic-graphical-models-inference-exact-inference-clique-trees.html"/>
+    <updated>2020-05-06T00:00:00+09:00</updated>
+    <id>/math/math-apply-probabilistic-graphical-models-inference-exact-inference-clique-trees</id>
+    <content type="html">
+Concept
+
+  Cluster Graph: a data structure that provides a graphical flowchart of the
+factor-manipulation process
+    
+      a cluster: each node in the cluster graph is a cluster, which is associated
+with a subset of variables
+      the graph contains undirected edges that connect clusters whos...</content>
+  </entry>
+
+  <entry>
+    <title>P.G.M.I.: Inference as Optimization</title>
+    <link href="/math/math-apply-probabilistic-graphical-models-inference-as-optimization.html"/>
+    <updated>2020-05-06T00:00:00+09:00</updated>
+    <id>/math/math-apply-probabilistic-graphical-models-inference-as-optimization</id>
+    <content type="html">
+</content>
+  </entry>
 
   <entry>
     <title>P.G.M.D.T.: Utilities and Decisions</title>
@@ -98,6 +395,26 @@ independent.
   </entry>
 
   <entry>
+    <title>Shell: Batch Processing</title>
+    <link href="/pl/pl-shell-batch-process.html"/>
+    <updated>2020-04-30T00:00:00+09:00</updated>
+    <id>/pl/pl-shell-batch-process</id>
+    <content type="html">
+Rename Filename
+
+for i in *.md
+do
+   var1=&quot;${i:0:10}&quot;
+   var2=&quot;${i:10:100}&quot;
+   echo &quot;${var1}-code${var2}&quot;
+   mv &quot;${i}&quot; &quot;${var1}-code${var2}&quot;
+done
+
+
+</content>
+  </entry>
+
+  <entry>
     <title>Service: SSH</title>
     <link href="/linux/linux-service-ssh.html"/>
     <updated>2020-04-30T00:00:00+09:00</updated>
@@ -173,26 +490,6 @@ Reference
 File Protocol
 Enter the following code in file exploer address bar or brower address bar.
 file:///Users/
-
-</content>
-  </entry>
-
-  <entry>
-    <title>Shell: Batch Processing</title>
-    <link href="/code/code-shell-batch-process.html"/>
-    <updated>2020-04-30T00:00:00+09:00</updated>
-    <id>/code/code-shell-batch-process</id>
-    <content type="html">
-Rename Filename
-
-for i in *.md
-do
-   var1=&quot;${i:0:10}&quot;
-   var2=&quot;${i:10:100}&quot;
-   echo &quot;${var1}-code${var2}&quot;
-   mv &quot;${i}&quot; &quot;${var1}-code${var2}&quot;
-done
-
 
 </content>
   </entry>
@@ -1525,6 +1822,20 @@ Sentence
   </entry>
 
   <entry>
+    <title>Technology: Network</title>
+    <link href="/%E8%A8%80%E8%91%89/language-english-technology-network.html"/>
+    <updated>2020-03-17T00:00:00+09:00</updated>
+    <id>/%E8%A8%80%E8%91%89/language-english-technology-network</id>
+    <content type="html">
+####
+
+  fiber optic network
+
+
+</content>
+  </entry>
+
+  <entry>
     <title>School: Graduation</title>
     <link href="/%E8%A8%80%E8%91%89/language-english-school-graduate.html"/>
     <updated>2020-03-17T00:00:00+09:00</updated>
@@ -2244,6 +2555,19 @@ How is the work going on?
   </entry>
 
   <entry>
+    <title>Job: Agent</title>
+    <link href="/%E8%A8%80%E8%91%89/language-english-job-agent.html"/>
+    <updated>2020-03-17T00:00:00+09:00</updated>
+    <id>/%E8%A8%80%E8%91%89/language-english-job-agent</id>
+    <content type="html">
+####
+
+  CIA agent
+
+</content>
+  </entry>
+
+  <entry>
     <title>Internet</title>
     <link href="/%E8%A8%80%E8%91%89/language-english-internet.html"/>
     <updated>2020-03-17T00:00:00+09:00</updated>
@@ -2429,6 +2753,7 @@ he stucked a board through the handle, locked me in.
   induction cooker
   range hood
   ceiling
+  back room
 
 
 ####
@@ -2441,10 +2766,7 @@ he stucked a board through the handle, locked me in.
   kitchen sponge
   kitchen sink
   kitchen sink stopper
-  kitchen peeler
-
-
-Phra...</content>
+  kitchen p...</content>
   </entry>
 
   <entry>
@@ -3719,6 +4041,26 @@ attitude
   </entry>
 
   <entry>
+    <title>Body: Genetics</title>
+    <link href="/%E8%A8%80%E8%91%89/language-english-body-genetics.html"/>
+    <updated>2020-03-17T00:00:00+09:00</updated>
+    <id>/%E8%A8%80%E8%91%89/language-english-body-genetics</id>
+    <content type="html">
+####
+
+  genetric pedigree
+  phenotype
+  genotype: the genetic makeup of a person
+  autosomal chromosomes
+  a pair of sex chromosome
+  locus
+  allele
+  penetrance
+
+</content>
+  </entry>
+
+  <entry>
     <title>Body: Disease</title>
     <link href="/%E8%A8%80%E8%91%89/language-english-body-disease.html"/>
     <updated>2020-03-17T00:00:00+09:00</updated>
@@ -3945,30 +4287,30 @@ sentence
 ####
 
   security protection
+  body guard
+  body guard
   butler
   concubine
   golden crown
   majesty
   clan
-  body guard
 
 
-####
+Action
 
   betray
   swear
-  bend his knee
   killer
 
 
-Move
+Sentence
 
   take the throne
   inherit the throne
   proved him in the battle
   his wife unharmed and confined to death
   overthrow his father
-  bend an iro...</content>
+  bend an ...</content>
   </entry>
 
   <entry>
@@ -4403,49 +4745,6 @@ pair of vertices of D.
   </entry>
 
   <entry>
-    <title>P.G.M.I.: Exact Inference-Variable Elimination</title>
-    <link href="/math/math-apply-probabilistic-graphical-models-inference-exact-inference-variable-elimination.html"/>
-    <updated>2020-01-08T00:00:00+09:00</updated>
-    <id>/math/math-apply-probabilistic-graphical-models-inference-exact-inference-variable-elimination</id>
-    <content type="html">
-Concept
-
-  Factor Marginalization: Let X be a set of variables, and Y $\in X$ a
-variable. Let $\phi(X,Y)$ be a factor. We define the factor marginalization
-of Y in $\phi$, denoted by $\sum_Y \phi$, to be a factor $\psi$ over X such
-that: 
-
-
-
-</content>
-  </entry>
-
-  <entry>
-    <title>P.G.M.I.: Exact Inference-Clique Trees</title>
-    <link href="/math/math-apply-probabilistic-graphical-models-inference-exact-inference-clique-trees.html"/>
-    <updated>2020-01-08T00:00:00+09:00</updated>
-    <id>/math/math-apply-probabilistic-graphical-models-inference-exact-inference-clique-trees</id>
-    <content type="html">
-Concept
-
-  Cluster Graph: a data structure that provides a graphical flowchart of the
-factor-manipulation process
-    
-      a cluster: each node in the cluster graph is a cluster, which is associated
-with a subset of variables
-      the graph contains undirected edges that connect clusters whos...</content>
-  </entry>
-
-  <entry>
-    <title>P.G.M.I.: Inference as Optimization</title>
-    <link href="/math/math-apply-probabilistic-graphical-models-inference-as-optimization.html"/>
-    <updated>2020-01-08T00:00:00+09:00</updated>
-    <id>/math/math-apply-probabilistic-graphical-models-inference-as-optimization</id>
-    <content type="html">
-</content>
-  </entry>
-
-  <entry>
     <title>I.T.: Codes for Integers</title>
     <link href="/math/math-apply-information-theory-integer-codes.html"/>
     <updated>2020-01-08T00:00:00+09:00</updated>
@@ -4455,12 +4754,23 @@ with a subset of variables
   </entry>
 
   <entry>
-    <title>NP Problem</title>
-    <link href="/cs/computer-science-np-problem.html"/>
+    <title>Jump Game</title>
+    <link href="/csp/computer-science-jump-game.html"/>
     <updated>2020-01-08T00:00:00+09:00</updated>
-    <id>/cs/computer-science-np-problem</id>
+    <id>/csp/computer-science-jump-game</id>
     <content type="html">
-</content>
+####
+
+  Given an array of non-negative integers, you are initially positioned at the
+first index of the array.
+  Each element in the array represents your maximum jump length at that
+position.
+  Determine if you are able to reach the last index.
+
+
+
+public class Solution{
+    public static boolea...</content>
   </entry>
 
   <entry>
@@ -4710,21 +5020,6 @@ $f(\alpha)$
   </entry>
 
   <entry>
-    <title>S.P.: Combine and Split of PP</title>
-    <link href="/math/math-apply-stochastic-process-combine-split-poisson-process.html"/>
-    <updated>2019-12-30T00:00:00+09:00</updated>
-    <id>/math/math-apply-stochastic-process-combine-split-poisson-process</id>
-    <content type="html">
-Poisson Combining
-The sum of many small independent arrival processes tends to be close to Poisson
-even if the small processes are not.  In a sense, the independence between the
-processes overcomes the dependence between successive arrivals in each process.
-
-Splitting a Poisson process
-Each arri...</content>
-  </entry>
-
-  <entry>
     <title>S.P.: Little's Theorem</title>
     <link href="/math/math-apply-stochastic-process-little-theorem.html"/>
     <updated>2019-12-29T00:00:00+09:00</updated>
@@ -4737,57 +5032,6 @@ its expected value is. Even you don’t know the expected value, you would like 
 know the bound of the expected value.
 
   thi...</content>
-  </entry>
-
-  <entry>
-    <title>S.P.: Wald's Equality</title>
-    <link href="/math/math-apply-stochastic-process-wald-equality.html"/>
-    <updated>2019-12-28T00:00:00+09:00</updated>
-    <id>/math/math-apply-stochastic-process-wald-equality</id>
-    <content type="html">
-Motivation
-Gambling
-
-
-  defective random variable: it means there is some probability that J is going
-to be infinite
-  Indicator random variable: An indicator random variable is a special kind of
-random variable associated with the occurence of an event. The indicator
-random variable $I_A$ assoc...</content>
-  </entry>
-
-  <entry>
-    <title>S.P.: Renewal Rewards</title>
-    <link href="/math/math-apply-stochastic-process-renewal-rewards.html"/>
-    <updated>2019-12-28T00:00:00+09:00</updated>
-    <id>/math/math-apply-stochastic-process-renewal-rewards</id>
-    <content type="html">
-Time-average Residual Life
-
-
-
-
-Galois
-Professor said: “I think after many years finally I understand it, I hope I can make it easy for
-you to understand it.” so modest !!!
-</content>
-  </entry>
-
-  <entry>
-    <title>S.P.: Renewal Process</title>
-    <link href="/math/math-apply-stochastic-process-renewal-process.html"/>
-    <updated>2019-12-23T00:00:00+09:00</updated>
-    <id>/math/math-apply-stochastic-process-renewal-process</id>
-    <content type="html">
-Motivation
-Much of this chapter will be devoted to understanding the behavior of N(t) and
-N(t)/t as t becomes large.
-
-Renewal Processes and Poisson Process
-
-
-  A renewal process is an arrival process for which the interarrival intervals
-$X_1,X_2,\cdots$ are IID. Renewal processes can be specifie...</content>
   </entry>
 
   <entry>
@@ -5293,6 +5537,40 @@ they are not equal zero, the re...</content>
   </entry>
 
   <entry>
+    <title>P.A.S.T.B.: Variational Inference</title>
+    <link href="/math/math-apply-probability-and-statistics-toolbox-variational-method.html"/>
+    <updated>2019-12-10T00:00:00+09:00</updated>
+    <id>/math/math-apply-probability-and-statistics-toolbox-variational-method</id>
+    <content type="html">
+1. Motivation
+
+
+   is simple, but not simple enough
+  solution: approximate  by a simpler distribution .
+Adjust  to get the ‘best’ approximation.
+  THen approximate 
+
+
+2. Method
+
+  
+    
+  
+  
+    
+  
+  we can substitue $P(x)$ into formula 1, and we got
+
+  variational free energy
+
+
+
+Galois
+
+  Th...</content>
+  </entry>
+
+  <entry>
     <title>P.A.S.M.: Sampling Distributions</title>
     <link href="/math/math-apply-probability-and-statistics-sampling-distribution.html"/>
     <updated>2019-12-10T00:00:00+09:00</updated>
@@ -5303,29 +5581,6 @@ In many applications of probability theory, we will be faced with the following
 problem. Suppose that $X_1,X_2,\cdots,X_n$ is an identically and independently
 distributed sequence, $X_1,X_2,\cdots,X_n$ is a $sample$ from some distribution,
 and we are interested in the distribution o...</content>
-  </entry>
-
-  <entry>
-    <title>P.A.S.M.I.: Variational Inference</title>
-    <link href="/math/math-apply-probability-and-statistics-model-inference-variational-inference.html"/>
-    <updated>2019-12-10T00:00:00+09:00</updated>
-    <id>/math/math-apply-probability-and-statistics-model-inference-variational-inference</id>
-    <content type="html">
-Motivation
-
-
-   is simple, but not simple enough
-  solution: approximate  by a simpler distribution .
-Adjust  to get the ‘best’ approximation.
-  THen approximate 
-
-
-Reference
-
-  what is variational Inference
-  variational bayes
-
-</content>
   </entry>
 
   <entry>
@@ -5553,6 +5808,24 @@ Reference
   </entry>
 
   <entry>
+    <title>Algorithm: Intersection of Two Line</title>
+    <link href="/pl/pl-algorithm-cross-point-two-line.html"/>
+    <updated>2019-11-20T00:00:00+09:00</updated>
+    <id>/pl/pl-algorithm-cross-point-two-line</id>
+    <content type="html">
+Crap
+This is a very common question, but it is not simple.
+
+Solution
+
+  we use vector coordinate to solve this problem.
+  Given the two line, suppose they have intersect point
+  We can obtain the intersection point.
+  The last step is to determine weather this point is on the line
+  we can again...</content>
+  </entry>
+
+  <entry>
     <title>Projective Geometry: Curves, Riemann Surface</title>
     <link href="/math/math-space-projective-geometry-with-curves.html"/>
     <updated>2019-11-20T00:00:00+09:00</updated>
@@ -5573,24 +5846,6 @@ dimensional space, and projective geometry can be used to study these...</conten
     <id>/math/math-space-linear-algebra-beizer-curve</id>
     <content type="html">
 </content>
-  </entry>
-
-  <entry>
-    <title>Algorithm: Intersection of Two Line</title>
-    <link href="/cs/code-algorithm-cross-point-two-line.html"/>
-    <updated>2019-11-20T00:00:00+09:00</updated>
-    <id>/cs/code-algorithm-cross-point-two-line</id>
-    <content type="html">
-Crap
-This is a very common question, but it is not simple.
-
-Solution
-
-  we use vector coordinate to solve this problem.
-  Given the two line, suppose they have intersect point
-  We can obtain the intersection point.
-  The last step is to determine weather this point is on the line
-  we can again...</content>
   </entry>
 
   <entry>
@@ -6870,6 +7125,25 @@ Terminology
   </entry>
 
   <entry>
+    <title>Python: Operator</title>
+    <link href="/pl/pl-python-operator-module.html"/>
+    <updated>2019-10-07T00:00:00+09:00</updated>
+    <id>/pl/pl-python-operator-module</id>
+    <content type="html">
+method
+
+  operator.itemgetter(items): return a callable object that fetches item from its operand, using the operand’s getitem()
+  f = itemgetter(2), the call f(r) returns r[2]
+  f = itemgetter(2, 5, 3), the call g(r) returns (r[2], r[5], r[3])
+
+
+itemgetter(1,3,5)('ABCDEFG')
+# ('B', 'D', 'F')
+
+#...</content>
+  </entry>
+
+  <entry>
     <title>G.T.: Introduction</title>
     <link href="/math/math-apply-game-theory-introduction.html"/>
     <updated>2019-10-07T00:00:00+09:00</updated>
@@ -6887,29 +7161,10 @@ component
   </entry>
 
   <entry>
-    <title>Python: Operator</title>
-    <link href="/code/code-python-operator-module.html"/>
-    <updated>2019-10-07T00:00:00+09:00</updated>
-    <id>/code/code-python-operator-module</id>
-    <content type="html">
-method
-
-  operator.itemgetter(items): return a callable object that fetches item from its operand, using the operand’s getitem()
-  f = itemgetter(2), the call f(r) returns r[2]
-  f = itemgetter(2, 5, 3), the call g(r) returns (r[2], r[5], r[3])
-
-
-itemgetter(1,3,5)('ABCDEFG')
-# ('B', 'D', 'F')
-
-#...</content>
-  </entry>
-
-  <entry>
     <title>Python: Asterisk Operator</title>
-    <link href="/code/code-python-operator-asterisk.html"/>
+    <link href="/pl/pl-python-operator-asterisk.html"/>
     <updated>2019-09-27T00:00:00+09:00</updated>
-    <id>/code/code-python-operator-asterisk</id>
+    <id>/pl/pl-python-operator-asterisk</id>
     <content type="html">
 Introduction
 Asterisk plays very important role in python
@@ -6927,9 +7182,9 @@ demo('ha', 'big', third='wilson', fourth='roy')
 
   <entry>
     <title>Python Copy</title>
-    <link href="/code/code-python-copy.html"/>
+    <link href="/pl/pl-python-copy.html"/>
     <updated>2019-09-18T00:00:00+09:00</updated>
-    <id>/code/code-python-copy</id>
+    <id>/pl/pl-python-copy</id>
     <content type="html">
 copy in Python
 In Python, Assignment statements do not copy objects, they create bindings between a target and an object. 
@@ -6941,9 +7196,9 @@ dee...</content>
 
   <entry>
     <title>Python: Collections and Algorithm</title>
-    <link href="/code/code-python-collections.html"/>
+    <link href="/pl/pl-python-collections.html"/>
     <updated>2019-09-16T00:00:00+09:00</updated>
-    <id>/code/code-python-collections</id>
+    <id>/pl/pl-python-collections</id>
     <content type="html">
 Collections
 
@@ -6958,9 +7213,9 @@ structures to store collectio...</content>
 
   <entry>
     <title>Latex: Neural Network,Flowchart</title>
-    <link href="/code/code-latex-diagram-neural-network-flowchart.html"/>
+    <link href="/pl/pl-latex-diagram-neural-network-flowchart.html"/>
     <updated>2019-09-16T00:00:00+09:00</updated>
-    <id>/code/code-latex-diagram-neural-network-flowchart</id>
+    <id>/pl/pl-latex-diagram-neural-network-flowchart</id>
     <content type="html">
 
 
@@ -6974,9 +7229,9 @@ structures to store collectio...</content>
 
   <entry>
     <title>Latex: Bibliography</title>
-    <link href="/code/code-latex-bibliography.html"/>
+    <link href="/pl/pl-latex-bibliography.html"/>
     <updated>2019-09-13T00:00:00+09:00</updated>
-    <id>/code/code-latex-bibliography</id>
+    <id>/pl/pl-latex-bibliography</id>
     <content type="html">how to cite
 
 step 1: prepare the dataset 
@@ -6992,9 +7247,9 @@ step 1: prepare the dataset
 
   <entry>
     <title>Python: Pyqt5 Menu Event Handling</title>
-    <link href="/code/code-python-pyqt5-menu-action.html"/>
+    <link href="/pl/pl-python-pyqt5-menu-action.html"/>
     <updated>2019-09-12T00:00:00+09:00</updated>
-    <id>/code/code-python-pyqt5-menu-action</id>
+    <id>/pl/pl-python-pyqt5-menu-action</id>
     <content type="html">
 Event Handling
 
@@ -7015,9 +7270,9 @@ from PyQt5 i...</content>
 
   <entry>
     <title>Python: Picture Display</title>
-    <link href="/code/code-python-pyqt5-display-image.html"/>
+    <link href="/pl/pl-python-pyqt5-display-image.html"/>
     <updated>2019-09-12T00:00:00+09:00</updated>
-    <id>/code/code-python-pyqt5-display-image</id>
+    <id>/pl/pl-python-pyqt5-display-image</id>
     <content type="html">
 Display a picutre
 In nature, There is no difference between text label and picture label. 
@@ -7032,9 +7287,9 @@ import ma...</content>
 
   <entry>
     <title>Code: Summary</title>
-    <link href="/code/code-summary.html"/>
+    <link href="/pl/pl-summary.html"/>
     <updated>2019-09-10T00:00:00+09:00</updated>
-    <id>/code/code-summary</id>
+    <id>/pl/pl-summary</id>
     <content type="html">
 Why we have this?
 For a new code library is just a bundle of functions and classes. 
@@ -7051,9 +7306,9 @@ Common Short
 
   <entry>
     <title>Python: Qt Designer</title>
-    <link href="/code/code-python-QT-designer.html"/>
+    <link href="/pl/pl-python-QT-designer.html"/>
     <updated>2019-09-05T00:00:00+09:00</updated>
-    <id>/code/code-python-QT-designer</id>
+    <id>/pl/pl-python-QT-designer</id>
     <content type="html">
 Widget
 
@@ -7066,9 +7321,9 @@ view, List ...</content>
 
   <entry>
     <title>Python: Code Integrated Template of QT Designer and Pyqt5</title>
-    <link href="/code/code-python-pyqt-qtdesigner-code-template.html"/>
+    <link href="/pl/pl-python-pyqt-qtdesigner-code-template.html"/>
     <updated>2019-09-04T00:00:00+09:00</updated>
-    <id>/code/code-python-pyqt-qtdesigner-code-template</id>
+    <id>/pl/pl-python-pyqt-qtdesigner-code-template</id>
     <content type="html">
 signal and slot
 If you have a programming backgound, you may hear about event handling where you interact with a widget
@@ -7079,9 +7334,9 @@ So when you click a QPushButton, a signal is emitted. The signal name in this c.
 
   <entry>
     <title>Python: Pyqtgraph</title>
-    <link href="/code/code-python-pyqtgraph.html"/>
+    <link href="/pl/pl-python-pyqtgraph.html"/>
     <updated>2019-09-03T00:00:00+09:00</updated>
-    <id>/code/code-python-pyqtgraph</id>
+    <id>/pl/pl-python-pyqtgraph</id>
     <content type="html">
 what’s pyqtgraph
 pyqtgraph is born for dynamic graph, matplotlib is for static graph.
@@ -7135,44 +7390,6 @@ $\...</content>
   </entry>
 
   <entry>
-    <title>S.P.: Poisson Process</title>
-    <link href="/math/math-apply-stochastic-process-poisson-process.html"/>
-    <updated>2019-08-20T00:00:00+09:00</updated>
-    <id>/math/math-apply-stochastic-process-poisson-process</id>
-    <content type="html">
-Poisson Distribution
-In probability theory and statistics, Poisson distribution expresses 
-the probability of a given number of events occurring in a fixed interval of
-time or space. 
-
-formula
-
-
-
- is a parameter which stands for events/time * time period
-
-Definition
-
-  If an arrival process has ...</content>
-  </entry>
-
-  <entry>
-    <title>S.P.: Martingles</title>
-    <link href="/math/math-apply-stochastic-process-martingales.html"/>
-    <updated>2019-08-20T00:00:00+09:00</updated>
-    <id>/math/math-apply-stochastic-process-martingales</id>
-    <content type="html">
-Martingales
-
-  Martingales: Let $X_0,X_1,X_2,\cdots$ be a markov chain. The chain is a
-martingle if for all $n=0,1,2,\cdots$, we have $E(X_{n+1} - X_n|X_n)=0$, that
-is, on average the chain’s value does not change, regardless of what the
-current value $X_n$ actually is.
-    
-      a special clas...</content>
-  </entry>
-
-  <entry>
     <title>DL: Recurrent Neural Network</title>
     <link href="/ai/AI-ML-DL-supervised-recurrent-neural-network.html"/>
     <updated>2019-08-20T00:00:00+09:00</updated>
@@ -7205,9 +7422,9 @@ Reference
 
   <entry>
     <title>Python: Keras</title>
-    <link href="/code/code-python-keras-model.html"/>
+    <link href="/pl/pl-python-keras-model.html"/>
     <updated>2019-08-19T00:00:00+09:00</updated>
-    <id>/code/code-python-keras-model</id>
+    <id>/pl/pl-python-keras-model</id>
     <content type="html">
 from keras.models import load_model
 model=load_model('model.h5')
@@ -7221,9 +7438,9 @@ print(y)
 
   <entry>
     <title>NVIDIA, CUDA,CUDNN, and Tensorflow</title>
-    <link href="/code/code-AI-hardware-nvidia-cuda.html"/>
+    <link href="/pl/pl-AI-hardware-nvidia-cuda.html"/>
     <updated>2019-08-19T00:00:00+09:00</updated>
-    <id>/code/code-AI-hardware-nvidia-cuda</id>
+    <id>/pl/pl-AI-hardware-nvidia-cuda</id>
     <content type="html">
 concept
 
@@ -7231,22 +7448,6 @@ concept
 computing and application programming interface model, It allows developers
 to use a CUDA-enabled graphics processing unit(GPU) for general purpose
 processing - an approach termed GPGPU(General computing on Graphic...</content>
-  </entry>
-
-  <entry>
-    <title>S.P.: Random Walk</title>
-    <link href="/math/math-apply-stochastic-process-random-walk.html"/>
-    <updated>2019-08-13T00:00:00+09:00</updated>
-    <id>/math/math-apply-stochastic-process-random-walk</id>
-    <content type="html">
-Introduction
-
-  Stochastic processes which are processes that proceed randomly in time.
-  We consider sequences $X_0,X_1,X_2,\cdots$ where $X_n$ represents some random
-quantity at time n.
-How do you prevent oil spills? 
-How do you prevent nuclear plants from going off?
-How do you prevent nuclear...</content>
   </entry>
 
   <entry>
@@ -7662,9 +7863,9 @@ After I come to Japan, for a lot of reas...</content>
 
   <entry>
     <title>Latex: Nodes in PGF</title>
-    <link href="/code/code-latex-tikz-pgf-node.html"/>
+    <link href="/pl/pl-latex-tikz-pgf-node.html"/>
     <updated>2019-07-18T00:00:00+09:00</updated>
-    <id>/code/code-latex-tikz-pgf-node</id>
+    <id>/pl/pl-latex-tikz-pgf-node</id>
     <content type="html">Placing Nodes on a Line or Curve Explicitly
 
 </content>
@@ -7672,9 +7873,9 @@ After I come to Japan, for a lot of reas...</content>
 
   <entry>
     <title>Latex: Nodes and Matrix in PGF</title>
-    <link href="/code/code-latex-tikz-pgf-matrix-and-node.html"/>
+    <link href="/pl/pl-latex-tikz-pgf-matrix-and-node.html"/>
     <updated>2019-07-17T00:00:00+09:00</updated>
-    <id>/code/code-latex-tikz-pgf-matrix-and-node</id>
+    <id>/pl/pl-latex-tikz-pgf-matrix-and-node</id>
     <content type="html">\matrix
 
 \matrix Inside {tikzpicture} this is an abbreviation for \path node[matrix]
@@ -7749,9 +7950,9 @@ predict same target variable will perform a b...</content>
 
   <entry>
     <title>Latex: Syntax for Path Specification</title>
-    <link href="/code/code-latex-tikz-pgf-path-syntax.html"/>
+    <link href="/pl/pl-latex-tikz-pgf-path-syntax.html"/>
     <updated>2019-07-10T00:00:00+09:00</updated>
-    <id>/code/code-latex-tikz-pgf-path-syntax</id>
+    <id>/pl/pl-latex-tikz-pgf-path-syntax</id>
     <content type="html">Move-To Operation
 
 
@@ -7772,9 +7973,9 @@ Line-To Operation
 
   <entry>
     <title>neural network, flowchart, citation, picture </title>
-    <link href="/code/code-latex-tikz-pgf-neural-network-flowchart-citation-picture-diagram.html"/>
+    <link href="/pl/pl-latex-tikz-pgf-neural-network-flowchart-citation-picture-diagram.html"/>
     <updated>2019-07-10T00:00:00+09:00</updated>
-    <id>/code/code-latex-tikz-pgf-neural-network-flowchart-citation-picture-diagram</id>
+    <id>/pl/pl-latex-tikz-pgf-neural-network-flowchart-citation-picture-diagram</id>
     <content type="html">\begin{center}
 \begin{tikzpicture}
 \tikzstyle{startstop} = [rectangle, rounded corners, minimum width=1.0cm,minimum height=0.6cm, 
@@ -7785,9 +7986,9 @@ Line-To Operation
 
   <entry>
     <title>Latex: The Coordinate System of PGF</title>
-    <link href="/code/code-latex-tikz-pgf-coordinate-system.html"/>
+    <link href="/pl/pl-latex-tikz-pgf-coordinate-system.html"/>
     <updated>2019-07-10T00:00:00+09:00</updated>
-    <id>/code/code-latex-tikz-pgf-coordinate-system</id>
+    <id>/pl/pl-latex-tikz-pgf-coordinate-system</id>
     <content type="html">1. Coordinate system canvas
 
 
@@ -7818,9 +8019,9 @@ Classification and Regression Trees(CART) is to refer to Decision Tree Algorithm
 
   <entry>
     <title>Latex: Tikz and PGF</title>
-    <link href="/code/code-latex-tikz-pgf.html"/>
+    <link href="/pl/pl-latex-tikz-pgf.html"/>
     <updated>2019-07-09T00:00:00+09:00</updated>
-    <id>/code/code-latex-tikz-pgf</id>
+    <id>/pl/pl-latex-tikz-pgf</id>
     <content type="html">the relationship between Tikz and PGF
 
 
@@ -7834,9 +8035,9 @@ You c...</content>
 
   <entry>
     <title>Python:  pdb</title>
-    <link href="/code/code-python-pdb.html"/>
+    <link href="/pl/pl-python-pdb.html"/>
     <updated>2019-07-05T00:00:00+09:00</updated>
-    <id>/code/code-python-pdb</id>
+    <id>/pl/pl-python-pdb</id>
     <content type="html">
 initiate pdb
 
@@ -7859,9 +8060,9 @@ One of the strongest feature of pdb is that we can move through our code in vari
 
   <entry>
     <title>Python: Common Error</title>
-    <link href="/code/code-python-error-debug.html"/>
+    <link href="/pl/pl-python-error-debug.html"/>
     <updated>2019-07-05T00:00:00+09:00</updated>
-    <id>/code/code-python-error-debug</id>
+    <id>/pl/pl-python-error-debug</id>
     <content type="html">
 NoneType error
 
@@ -7875,9 +8076,9 @@ and the line number with the invalid syntax is not th...</content>
 
   <entry>
     <title>Python: Obtain Variable Value in Tensorflow</title>
-    <link href="/code/code-python-tensorflow-obtain-variable.html"/>
+    <link href="/pl/pl-python-tensorflow-obtain-variable.html"/>
     <updated>2019-07-04T00:00:00+09:00</updated>
-    <id>/code/code-python-tensorflow-obtain-variable</id>
+    <id>/pl/pl-python-tensorflow-obtain-variable</id>
     <content type="html">
 introduction
 you can treat tensorflow as a blackbox, when we want to check the tensor.
@@ -7893,9 +8094,9 @@ variables you can run the fo...</content>
 
   <entry>
     <title>Python: Ipython with Tensorflow</title>
-    <link href="/code/code-python-tensorflow-ipython.html"/>
+    <link href="/pl/pl-python-tensorflow-ipython.html"/>
     <updated>2019-07-03T00:00:00+09:00</updated>
-    <id>/code/code-python-tensorflow-ipython</id>
+    <id>/pl/pl-python-tensorflow-ipython</id>
     <content type="html">
 pitfall
 Ipython bring you the benefits, but also the pitfall
@@ -7912,9 +8113,9 @@ def rescue_code(function):
 
   <entry>
     <title>Python: Concept in Tensorflow</title>
-    <link href="/code/code-python-tensorflow-concept.html"/>
+    <link href="/pl/pl-python-tensorflow-concept.html"/>
     <updated>2019-07-03T00:00:00+09:00</updated>
-    <id>/code/code-python-tensorflow-concept</id>
+    <id>/pl/pl-python-tensorflow-concept</id>
     <content type="html">
 what the crap is the rank?
 
@@ -7929,9 +8130,9 @@ known as “order”,”ndims” or “degree”
 
   <entry>
     <title>Python: PIL package</title>
-    <link href="/code/code-python-PIL.html"/>
+    <link href="/pl/pl-python-PIL.html"/>
     <updated>2019-07-02T00:00:00+09:00</updated>
-    <id>/code/code-python-PIL</id>
+    <id>/pl/pl-python-PIL</id>
     <content type="html">
 what is PIL
 
@@ -7952,9 +8153,9 @@ new_im = Image.fromarray(np_im)
 
   <entry>
     <title>Python: Closure</title>
-    <link href="/code/code-python-closure.html"/>
+    <link href="/pl/pl-python-closure.html"/>
     <updated>2019-06-26T00:00:00+09:00</updated>
-    <id>/code/code-python-closure</id>
+    <id>/pl/pl-python-closure</id>
     <content type="html">
 Why Closures?
 All the crap comes out because of the concept of non-local variable. First let’s define some concept.
@@ -7969,9 +8170,9 @@ The Criteria of a Closure
 
   <entry>
     <title>Python: Tensorboard</title>
-    <link href="/code/code-python-tensorflow-tensorboard.html"/>
+    <link href="/pl/pl-python-tensorflow-tensorboard.html"/>
     <updated>2019-06-25T00:00:00+09:00</updated>
-    <id>/code/code-python-tensorflow-tensorboard</id>
+    <id>/pl/pl-python-tensorflow-tensorboard</id>
     <content type="html">
 Introduction
 TensorBoard is a visualization software that comes with any standard Tensorflow
@@ -7984,9 +8185,9 @@ python /path/to/tensorflow/install/directory/tensorflow/tensorboar...</content>
 
   <entry>
     <title>Python: Define Variable in Tensorflow</title>
-    <link href="/code/code-python-tensorflow-sharing-variable.html"/>
+    <link href="/pl/pl-python-tensorflow-sharing-variable.html"/>
     <updated>2019-06-25T00:00:00+09:00</updated>
-    <id>/code/code-python-tensorflow-sharing-variable</id>
+    <id>/pl/pl-python-tensorflow-sharing-variable</id>
     <content type="html">
 variable sharing
 
@@ -7997,9 +8198,9 @@ In traditional method, when you want to use the same variable in different metho
 
   <entry>
     <title>Python: Introduction of Tensorflow</title>
-    <link href="/code/code-python-tensorflow-intro.html"/>
+    <link href="/pl/pl-python-tensorflow-intro.html"/>
     <updated>2019-06-25T00:00:00+09:00</updated>
-    <id>/code/code-python-tensorflow-intro</id>
+    <id>/pl/pl-python-tensorflow-intro</id>
     <content type="html">
 what is the crap of tensorflow ?
 
@@ -8013,9 +8214,9 @@ how to use tensorflow to ...</content>
 
   <entry>
     <title>Python: Broadcasting in Tensorflow</title>
-    <link href="/code/code-python-tensorflow-broadcasting-mechanism.html"/>
+    <link href="/pl/pl-python-tensorflow-broadcasting-mechanism.html"/>
     <updated>2019-06-25T00:00:00+09:00</updated>
-    <id>/code/code-python-tensorflow-broadcasting-mechanism</id>
+    <id>/pl/pl-python-tensorflow-broadcasting-mechanism</id>
     <content type="html">
 what the crap is broadcasting ?
 Broadcasting is the process of making arrays with different shapes have
@@ -8069,9 +8270,9 @@ mathematic objects which ...</content>
 
   <entry>
     <title>Python: Openml</title>
-    <link href="/code/code-python-openml.html"/>
+    <link href="/pl/pl-python-openml.html"/>
     <updated>2019-06-15T00:00:00+09:00</updated>
-    <id>/code/code-python-openml</id>
+    <id>/pl/pl-python-openml</id>
     <content type="html">
 what the crap of openml
 
@@ -8085,6 +8286,26 @@ dataset_list_pd = pd.DataFrame.from_dict(dataset_list,orient='index')
 
 # get the mnist dataset ID
 dataset_list_pd[dataset_list_pd.name.str.cont...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Input and Output Stream</title>
+    <link href="/pl/pl-python-io.html"/>
+    <updated>2019-06-11T00:00:00+09:00</updated>
+    <id>/pl/pl-python-io</id>
+    <content type="html">
+what the crap is a context manager?
+
+The main motivation behind the context manager in python is a source acquisition and release mechanism
+which prevents resource leak
+
+what is CSV?
+
+CSV stands for comma separated values, it’s just another plain text file.
+
+Input and Output of CSV file
+
+import ...</content>
   </entry>
 
   <entry>
@@ -8126,30 +8347,10 @@ def f_j(x, beta):
   </entry>
 
   <entry>
-    <title>Python: Input and Output Stream</title>
-    <link href="/code/code-python-io.html"/>
-    <updated>2019-06-11T00:00:00+09:00</updated>
-    <id>/code/code-python-io</id>
-    <content type="html">
-what the crap is a context manager?
-
-The main motivation behind the context manager in python is a source acquisition and release mechanism
-which prevents resource leak
-
-what is CSV?
-
-CSV stands for comma separated values, it’s just another plain text file.
-
-Input and Output of CSV file
-
-import ...</content>
-  </entry>
-
-  <entry>
     <title>Python: For Loop</title>
-    <link href="/code/code-python-principal-iterator.html"/>
+    <link href="/pl/pl-python-principal-iterator.html"/>
     <updated>2019-06-10T00:00:00+09:00</updated>
-    <id>/code/code-python-principal-iterator</id>
+    <id>/pl/pl-python-principal-iterator</id>
     <content type="html">
 what the crap of iterator protocol?
 
@@ -8268,9 +8469,9 @@ similarities of the corresponding low-dimensional points in t...</content>
 
   <entry>
     <title>Python: List, Dict and Tuple</title>
-    <link href="/code/code-python-built-in-data-structure.html"/>
+    <link href="/pl/pl-python-built-in-data-structure.html"/>
     <updated>2019-05-27T00:00:00+09:00</updated>
-    <id>/code/code-python-built-in-data-structure</id>
+    <id>/pl/pl-python-built-in-data-structure</id>
     <content type="html">
 dict
 
@@ -8393,6 +8594,24 @@ kind of pull the Gauss distribution to the left, beca...</content>
   </entry>
 
   <entry>
+    <title>Python: Inspect Module</title>
+    <link href="/pl/pl-python-inspect.html"/>
+    <updated>2019-05-23T00:00:00+09:00</updated>
+    <id>/pl/pl-python-inspect</id>
+    <content type="html">
+function: get the source code
+
+import inspect
+from scipy.stats import bernoulli
+
+code = inspect.getsource(bernoulli.rvs)
+print(code)
+
+
+</content>
+  </entry>
+
+  <entry>
     <title>C.S.M.: Boltzmann Machine</title>
     <link href="/cs/computer-science-model-boltzmann-machine-neural-network.html"/>
     <updated>2019-05-23T00:00:00+09:00</updated>
@@ -8423,85 +8642,10 @@ Boltzmann Machine
   </entry>
 
   <entry>
-    <title>Python: Inspect Module</title>
-    <link href="/code/code-python-inspect.html"/>
-    <updated>2019-05-23T00:00:00+09:00</updated>
-    <id>/code/code-python-inspect</id>
-    <content type="html">
-function: get the source code
-
-import inspect
-from scipy.stats import bernoulli
-
-code = inspect.getsource(bernoulli.rvs)
-print(code)
-
-
-</content>
-  </entry>
-
-  <entry>
-    <title>P.A.S.M.I.: Slice Sampling</title>
-    <link href="/math/math-apply-probability-and-statistics-model-inference-slice-sampling-algorithm.html"/>
-    <updated>2019-05-22T00:00:00+09:00</updated>
-    <id>/math/math-apply-probability-and-statistics-model-inference-slice-sampling-algorithm</id>
-    <content type="html">
-Intuitive Explanation
-
-Slice Sampling Algorithm
-
-  Compared with Metropolis-Hastings, Slice Sampling doesn’t need helper distribution. Metropolist-Hastings needs a transition distribution
-  It needs to provide the target distribution
-
-
-Python Implementation
-
-import numpy as np
-import scipy.stats...</content>
-  </entry>
-
-  <entry>
-    <title>P.A.S.M.I.: Gibbs Sampling</title>
-    <link href="/math/math-apply-probability-and-statistics-model-inference-gibbs-sampling-algorithm.html"/>
-    <updated>2019-05-22T00:00:00+09:00</updated>
-    <id>/math/math-apply-probability-and-statistics-model-inference-gibbs-sampling-algorithm</id>
-    <content type="html">
-Gibbs Sampling
-
-
-  Gibbs Sampling is a MCMC method
-  Gibbs Sampler can draw samples from any distribution
-  the helper distribution that you need is the conditional distribution
-
-
-Python Implementation
-
-import numpy as np
-import seaborn as sns
-
-def p_x_given_y(y, mus, sigmas):
-    mu = mus[0] + ...</content>
-  </entry>
-
-  <entry>
-    <title>P.A.S.: Metropolis and Metropolis Hastings Algorithm</title>
-    <link href="/math/math-apply-probability-and-statistics-metropolis-hastings-sampling-algorithm.html"/>
-    <updated>2019-05-22T00:00:00+09:00</updated>
-    <id>/math/math-apply-probability-and-statistics-metropolis-hastings-sampling-algorithm</id>
-    <content type="html">
-Metropolis Hastings Algorithm
-
-
-  definition: Metropolis Hastings algorithm is one of the sampling algorithm to sample from high dimensional
-  why called Markov Chain(MC) ? because when you  want to get the next sample, you only need to consider the current sample
-  why called Mento Carlo(MC) ? ...</content>
-  </entry>
-
-  <entry>
     <title>Python: Tqdm Package</title>
-    <link href="/code/code-python-tqdm.html"/>
+    <link href="/pl/pl-python-tqdm.html"/>
     <updated>2019-05-22T00:00:00+09:00</updated>
-    <id>/code/code-python-tqdm</id>
+    <id>/pl/pl-python-tqdm</id>
     <content type="html">
 tqdm
 
@@ -8525,6 +8669,26 @@ seq 100000000 | tqdm --total 100000000 | wc -l
 from tqdm import tqdm
 
 f...</content>
+  </entry>
+
+  <entry>
+    <title>P.A.S.M.I.: Slice Sampling</title>
+    <link href="/math/math-apply-probability-and-statistics-model-inference-slice-sampling-algorithm.html"/>
+    <updated>2019-05-22T00:00:00+09:00</updated>
+    <id>/math/math-apply-probability-and-statistics-model-inference-slice-sampling-algorithm</id>
+    <content type="html">
+Intuitive Explanation
+
+Slice Sampling Algorithm
+
+  Compared with Metropolis-Hastings, Slice Sampling doesn’t need helper distribution. Metropolist-Hastings needs a transition distribution
+  It needs to provide the target distribution
+
+
+Python Implementation
+
+import numpy as np
+import scipy.stats...</content>
   </entry>
 
   <entry>
@@ -8571,87 +8735,10 @@ Architecture...</content>
   </entry>
 
   <entry>
-    <title>P.A.S.: Markov Chain</title>
-    <link href="/math/math-apply-stochastic-process-markov-chain.html"/>
-    <updated>2019-05-20T00:00:00+09:00</updated>
-    <id>/math/math-apply-stochastic-process-markov-chain</id>
-    <content type="html">
-
-  Markov Chain is just a fancy term for a random walk on a graph
-  what it says it that for a very long walk, the probability that you end at some vertex V is independent of where you started
-
-
-
-
-definition
-Ergodic Markov Chains: A Markov Chain is ergodic if there is a positive probability to p...</content>
-  </entry>
-
-  <entry>
-    <title>S.P.: Markov Decision Theory and Dynamic Programming</title>
-    <link href="/math/math-apply-stochastic-process-markov-chain-markov-decision-theory-and-dynamic-programming.html"/>
-    <updated>2019-05-20T00:00:00+09:00</updated>
-    <id>/math/math-apply-stochastic-process-markov-chain-markov-decision-theory-and-dynamic-programming</id>
-    <content type="html">
-Ruin Problem
-In this example, an entity(often described as a gambler or an insurance company)
-has an amount of money which varies randomly with time, possibly with some
-drift. The model considers the event that the amount of money reaches 0,
-representing bankruptcy. The model can answer question...</content>
-  </entry>
-
-  <entry>
-    <title>S.P.: Finites States of Markov Chain</title>
-    <link href="/math/math-apply-stochastic-process-finite-state-markov-chain.html"/>
-    <updated>2019-05-20T00:00:00+09:00</updated>
-    <id>/math/math-apply-stochastic-process-finite-state-markov-chain</id>
-    <content type="html">
-Definition
-
-  Def: A state(node) j is accessible from i(i$\rightarrow$j) if a walk exists from
-i to j.
-    
-      $i\rightarrow j$ means that, starting in i, entry to j is possible, perhaps
-with multiple steps.$i \neq j$ means there is no possibility of ever reaching
-j from i.
-      If $i\righta...</content>
-  </entry>
-
-  <entry>
-    <title>S.P.: Countable State Markov Chains</title>
-    <link href="/math/math-apply-stochastic-process-countable-state-markov-chains.html"/>
-    <updated>2019-05-20T00:00:00+09:00</updated>
-    <id>/math/math-apply-stochastic-process-countable-state-markov-chains</id>
-    <content type="html">
-Motivation
-Markov chains with a countably-infinite state space(more briefly,
-countable-state Markov chains) exhibit some types of behavior not possible for
-chains with a finite state space.
-Notation
-
-  $P_{0j}^n$ is the probability of being in state j at the end of the nth
-transition, conditiona...</content>
-  </entry>
-
-  <entry>
-    <title>P.A.S.: Monte Carlo</title>
-    <link href="/math/math-apply-probability-and-statistics-Monte-Carlo.html"/>
-    <updated>2019-05-20T00:00:00+09:00</updated>
-    <id>/math/math-apply-probability-and-statistics-Monte-Carlo</id>
-    <content type="html">
-what is the crap Monte Carlo(MC) ?
-Monte Carlo sampling the area of a curve is usually done by throwing darts at the graph of
-your function and determining whether or not you landed under the curve. Divide the number of
-hits by the the number of darts, and you get an approximation of the area.
-
-...</content>
-  </entry>
-
-  <entry>
     <title>Python: Lambda Expression</title>
-    <link href="/code/code-python-lambda-expression.html"/>
+    <link href="/pl/pl-python-lambda-expression.html"/>
     <updated>2019-05-20T00:00:00+09:00</updated>
-    <id>/code/code-python-lambda-expression</id>
+    <id>/pl/pl-python-lambda-expression</id>
     <content type="html">
 numbers = (1, 2, 3, 4)
 result = map(lambda x: x*x, numbers)
@@ -8663,6 +8750,20 @@ print(numbersSquare)
 
 
 </content>
+  </entry>
+
+  <entry>
+    <title>P.A.S.T.B.: Monte Carlo</title>
+    <link href="/math/math-apply-probability-and-statistics-toolbox-monte-carlo.html"/>
+    <updated>2019-05-20T00:00:00+09:00</updated>
+    <id>/math/math-apply-probability-and-statistics-toolbox-monte-carlo</id>
+    <content type="html">
+what is the crap Monte Carlo(MC) ?
+Monte Carlo sampling the area of a curve is usually done by throwing darts at the graph of
+your function and determining whether or not you landed under the curve. Divide the number of
+hits by the the number of darts, and you get an approximation of the area.
+
+...</content>
   </entry>
 
   <entry>
@@ -8687,9 +8788,9 @@ SVD means decomposition matrix transformation into three parts, which includes r
 
   <entry>
     <title>Python: Juypter</title>
-    <link href="/code/code-python-anaconda-jupyter.html"/>
+    <link href="/pl/pl-python-anaconda-jupyter.html"/>
     <updated>2019-05-16T00:00:00+09:00</updated>
-    <id>/code/code-python-anaconda-jupyter</id>
+    <id>/pl/pl-python-anaconda-jupyter</id>
     <content type="html">
 how to use
 
@@ -8713,9 +8814,9 @@ set default brower for
 
   <entry>
     <title>Python: Sklearn</title>
-    <link href="/code/code-python-sklearn.html"/>
+    <link href="/pl/pl-python-sklearn.html"/>
     <updated>2019-05-14T00:00:00+09:00</updated>
-    <id>/code/code-python-sklearn</id>
+    <id>/pl/pl-python-sklearn</id>
     <content type="html">
 Component of scikit-learn
 
@@ -8744,9 +8845,9 @@ divided by the document length as ...</content>
 
   <entry>
     <title>Python: Scipy Module</title>
-    <link href="/code/code-python-scipy.html"/>
+    <link href="/pl/pl-python-scipy.html"/>
     <updated>2019-05-13T00:00:00+09:00</updated>
-    <id>/code/code-python-scipy</id>
+    <id>/pl/pl-python-scipy</id>
     <content type="html">
 statis
 
@@ -8764,9 +8865,9 @@ generates random variables,cdf function
 
   <entry>
     <title>Python: Matplotlib and Seaborn</title>
-    <link href="/code/code-python-matplotlib-seaborn.html"/>
+    <link href="/pl/pl-python-matplotlib-seaborn.html"/>
     <updated>2019-05-13T00:00:00+09:00</updated>
-    <id>/code/code-python-matplotlib-seaborn</id>
+    <id>/pl/pl-python-matplotlib-seaborn</id>
     <content type="html">
 matplotlib
 
@@ -9042,9 +9143,9 @@ If this is ...</content>
 
   <entry>
     <title>Latex: Introduction</title>
-    <link href="/code/code-latex-intro.html"/>
+    <link href="/pl/pl-latex-intro.html"/>
     <updated>2019-03-21T00:00:00+09:00</updated>
-    <id>/code/code-latex-intro</id>
+    <id>/pl/pl-latex-intro</id>
     <content type="html">
 最简单的Tex代码
 \documentclass[11pt]{article}
@@ -9113,9 +9214,9 @@ Basic drawing
 
   <entry>
     <title>C++: Container</title>
-    <link href="/code/code-c++-container.html"/>
+    <link href="/pl/pl-c++-container.html"/>
     <updated>2018-03-04T00:00:00+09:00</updated>
-    <id>/code/code-c++-container</id>
+    <id>/pl/pl-c++-container</id>
     <content type="html">
 Intro
 
@@ -9144,9 +9245,9 @@ list类型在任何位置都能快速插入和删除。访问某个元素要求�
 
   <entry>
     <title>C++: Class</title>
-    <link href="/code/c++-data.html"/>
+    <link href="/pl/pl-c++-class.html"/>
     <updated>2018-03-03T00:00:00+09:00</updated>
-    <id>/code/c++-data</id>
+    <id>/pl/pl-c++-class</id>
     <content type="html">
 封装
 
@@ -9162,9 +9263,9 @@ python, java和c++中，都隐约存在this指针这个概念。&amp;lt;/br&amp;
 
   <entry>
     <title>C++: Data Type</title>
-    <link href="/code/c++-data-type.html"/>
+    <link href="/pl/pl-c++-data-type.html"/>
     <updated>2018-03-02T00:00:00+09:00</updated>
-    <id>/code/c++-data-type</id>
+    <id>/pl/pl-c++-data-type</id>
     <content type="html">
 intro
 
@@ -9485,9 +9586,9 @@ git中提交时，会保存一个提交(commit)对象，该对象包含一个指
 
   <entry>
     <title>Python: Module</title>
-    <link href="/code/code-python-module.html"/>
+    <link href="/pl/pl-python-module.html"/>
     <updated>2016-08-17T00:00:00+09:00</updated>
-    <id>/code/code-python-module</id>
+    <id>/pl/pl-python-module</id>
     <content type="html">
 name属性
 the name attribute must be set to the fully-qualified name of the module. this
@@ -9497,9 +9598,9 @@ name is used to uniquely identify the module in the import system
 
   <entry>
     <title>Python: Keyword</title>
-    <link href="/code/code-python-keyword.html"/>
+    <link href="/pl/pl-python-keyword.html"/>
     <updated>2016-08-17T00:00:00+09:00</updated>
-    <id>/code/code-python-keyword</id>
+    <id>/pl/pl-python-keyword</id>
     <content type="html">
 pass
 
@@ -9519,9 +9620,9 @@ accessed inside or outside of the function.
 
   <entry>
     <title>Python: Conda</title>
-    <link href="/code/code-python-conda.html"/>
+    <link href="/pl/pl-python-conda.html"/>
     <updated>2016-08-17T00:00:00+09:00</updated>
-    <id>/code/code-python-conda</id>
+    <id>/pl/pl-python-conda</id>
     <content type="html">
 install package by python3
 
@@ -9545,9 +9646,9 @@ conda deactivate
 
   <entry>
     <title>Python: Pandas </title>
-    <link href="/code/code-python-pandas.html"/>
+    <link href="/pl/pl-python-pandas.html"/>
     <updated>2016-08-14T00:00:00+09:00</updated>
-    <id>/code/code-python-pandas</id>
+    <id>/pl/pl-python-pandas</id>
     <content type="html">名字由来: panel data和data analysis。panel data是经济学中关于多维数据集的一个术语
 ，pandas也提供了panel的数据类型。
 
@@ -9560,9 +9661,9 @@ can be thought as a dict-like container for Series Objects
 
   <entry>
     <title>Python: Os module</title>
-    <link href="/code/code-python-os.html"/>
+    <link href="/pl/pl-python-os.html"/>
     <updated>2016-08-12T00:00:00+09:00</updated>
-    <id>/code/code-python-os</id>
+    <id>/pl/pl-python-os</id>
     <content type="html">intro
 os: this module provides a portable way of using operating system dependent
 functionality
@@ -9588,9 +9689,9 @@ os.getcwd()
 
   <entry>
     <title>Python: Sys</title>
-    <link href="/code/code-python-sys.html"/>
+    <link href="/pl/pl-python-sys.html"/>
     <updated>2016-08-11T00:00:00+09:00</updated>
-    <id>/code/code-python-sys</id>
+    <id>/pl/pl-python-sys</id>
     <content type="html">
 intro
 文档sys: this module provides access to some variables used or maintained by the interpreter and to functions that interact strongly with the interpreter
@@ -9607,16 +9708,16 @@ print(sys.path)
   </entry>
 
   <entry>
-    <title>Code Python Tool</title>
-    <link href="/code-python-tool.html"/>
+    <title>Pl Python Tool</title>
+    <link href="/pl-python-tool.html"/>
     <updated>2016-08-10T00:00:00+09:00</updated>
-    <id>/code-python-tool</id>
+    <id>/pl-python-tool</id>
     <content type="html">
 
 layout: post
 title: “Python: Module”
 keywords: []
-description: “”
+category: “PL”
 category: “code”
 tags: [“python”]
 —
@@ -9631,9 +9732,9 @@ tags: [“python”]
 
   <entry>
     <title>Python: Argparse</title>
-    <link href="/code/code-python-argparse.html"/>
+    <link href="/pl/pl-python-argparse.html"/>
     <updated>2016-08-10T00:00:00+09:00</updated>
-    <id>/code/code-python-argparse</id>
+    <id>/pl/pl-python-argparse</id>
     <content type="html">
 该module主要有两个参数分别为Positional arguments和Optional arguments
 positional arguments 作为命令行运行的时候必须有
@@ -9649,9 +9750,9 @@ parser = argparse.ArgumentPars...</content>
 
   <entry>
     <title>Python: Container</title>
-    <link href="/code/code-python-container.html"/>
+    <link href="/pl/pl-python-container.html"/>
     <updated>2016-08-09T00:00:00+09:00</updated>
-    <id>/code/code-python-container</id>
+    <id>/pl/pl-python-container</id>
     <content type="html">
 intro
 python里的元组,列表和字典类比c++中的顺序容器和关联容器来理解。
@@ -9678,9 +9779,9 @@ foo[&quot;x&quot;];
 
   <entry>
     <title>Python: Exception</title>
-    <link href="/code/code-python-exception.html"/>
+    <link href="/pl/pl-python-exception.html"/>
     <updated>2016-08-07T00:00:00+09:00</updated>
-    <id>/code/code-python-exception</id>
+    <id>/pl/pl-python-exception</id>
     <content type="html">with...as...
 
 class Demo:
@@ -9701,9 +9802,9 @@ with Demo() as demo:
 
   <entry>
     <title>Python: Numpy</title>
-    <link href="/code/code-python-numpy.html"/>
+    <link href="/pl/pl-python-numpy.html"/>
     <updated>2016-08-06T00:00:00+09:00</updated>
-    <id>/code/code-python-numpy</id>
+    <id>/pl/pl-python-numpy</id>
     <content type="html">
 random module
 This module is consists of two components, they are 
@@ -9725,9 +9826,9 @@ np.where()
 
   <entry>
     <title>Python: Built-in Function</title>
-    <link href="/code/code-python-built-in-function.html"/>
+    <link href="/pl/pl-python-built-in-function.html"/>
     <updated>2016-08-05T00:00:00+09:00</updated>
-    <id>/code/code-python-built-in-function</id>
+    <id>/pl/pl-python-built-in-function</id>
     <content type="html">
 built-in function
 dir()
@@ -9759,9 +9860,9 @@ reference
 
   <entry>
     <title>Python: Function</title>
-    <link href="/code/code-python-function.html"/>
+    <link href="/pl/pl-python-function.html"/>
     <updated>2016-08-04T00:00:00+09:00</updated>
-    <id>/code/code-python-function</id>
+    <id>/pl/pl-python-function</id>
     <content type="html">
 function
 Function is the first-class citizen in python
@@ -9782,9 +9883,9 @@ Python is a PASS-BY-OBJECT-REFERENCE programming language
 
   <entry>
     <title>Python: Container</title>
-    <link href="/code/code-python-algorthim.html"/>
+    <link href="/pl/pl-python-algorthim.html"/>
     <updated>2016-08-04T00:00:00+09:00</updated>
-    <id>/code/code-python-algorthim</id>
+    <id>/pl/pl-python-algorthim</id>
     <content type="html">常见的容器有list, tuple, dictionary提供相同的算法
 len(var)  #元素个数
 max(var)  #元素最大值
@@ -9796,9 +9897,9 @@ min(var)  #元素最小值
 
   <entry>
     <title>Python: Statement</title>
-    <link href="/code/code-python-statement.html"/>
+    <link href="/pl/pl-python-statement.html"/>
     <updated>2016-08-03T00:00:00+09:00</updated>
-    <id>/code/code-python-statement</id>
+    <id>/pl/pl-python-statement</id>
     <content type="html">
 layout: post
  title: “pythonIO”
@@ -9814,9 +9915,9 @@ for &amp;lt;statement&amp;gt; in &amp;...</content>
 
   <entry>
     <title>Python: Class</title>
-    <link href="/code/code-python-class.html"/>
+    <link href="/pl/pl-python-class.html"/>
     <updated>2016-08-03T00:00:00+09:00</updated>
-    <id>/code/code-python-class</id>
+    <id>/pl/pl-python-class</id>
     <content type="html">
 create
 
@@ -9845,9 +9946,9 @@ class Duck:
 
   <entry>
     <title>Python: Meta-functiion</title>
-    <link href="/code/code-python-data-type.html"/>
+    <link href="/pl/pl-python-data-type.html"/>
     <updated>2016-08-02T00:00:00+09:00</updated>
-    <id>/code/code-python-data-type</id>
+    <id>/pl/pl-python-data-type</id>
     <content type="html">
 None
 # None是一个空对象，没有方法和属性
@@ -9864,9 +9965,9 @@ int(var)     #转化为int类型
 
   <entry>
     <title>Python: Introduction</title>
-    <link href="/code/code-python-intro.html"/>
+    <link href="/pl/pl-python-intro.html"/>
     <updated>2016-08-01T00:00:00+09:00</updated>
-    <id>/code/code-python-intro</id>
+    <id>/pl/pl-python-intro</id>
     <content type="html">
 语言类型
 
@@ -9892,9 +9993,9 @@ jav...</content>
 
   <entry>
     <title>Java: Socket</title>
-    <link href="/code/code-java-socket.html"/>
+    <link href="/pl/pl-java-socket.html"/>
     <updated>2016-05-10T00:00:00+09:00</updated>
-    <id>/code/code-java-socket</id>
+    <id>/pl/pl-java-socket</id>
     <content type="html">
 socket阻塞
 服务器端的阻塞有两种
@@ -9915,9 +10016,9 @@ public class Client {
 
   <entry>
     <title>Java: Command Line</title>
-    <link href="/code/code-java-cmd.html"/>
+    <link href="/pl/pl-java-cmd.html"/>
     <updated>2016-05-09T00:00:00+09:00</updated>
-    <id>/code/code-java-cmd</id>
+    <id>/pl/pl-java-cmd</id>
     <content type="html">
 运行
 java [字节码的名字] 
@@ -9942,9 +10043,9 @@ javac -d . HelloServlet.jav...</content>
 
   <entry>
     <title>Java: IO</title>
-    <link href="/code/code-java-io.html"/>
+    <link href="/pl/pl-java-io.html"/>
     <updated>2016-05-08T00:00:00+09:00</updated>
-    <id>/code/code-java-io</id>
+    <id>/pl/pl-java-io</id>
     <content type="html">
 intro
 
@@ -9976,9 +10077,9 @@ os.write(...</content>
 
   <entry>
     <title>JAVA: Copy Control</title>
-    <link href="/code/code-java-copy-control.html"/>
+    <link href="/pl/pl-java-copy-control.html"/>
     <updated>2016-05-08T00:00:00+09:00</updated>
-    <id>/code/code-java-copy-control</id>
+    <id>/pl/pl-java-copy-control</id>
     <content type="html">
 intro
 在c++中，有一章专门讲拷贝控制，java把这个问题简单化了，简化成深拷贝与浅拷贝
@@ -10007,9 +10108,9 @@ class Foo{
 
   <entry>
     <title>Java: 多线程</title>
-    <link href="/code/code-java-thread.html"/>
+    <link href="/pl/pl-java-thread.html"/>
     <updated>2016-05-07T00:00:00+09:00</updated>
-    <id>/code/code-java-thread</id>
+    <id>/pl/pl-java-thread</id>
     <content type="html">
 创建与启动
 
@@ -10039,9 +10140,9 @@ for(int i=0;i&amp;lt;10;i++){
 
   <entry>
     <title>Java: Jvm</title>
-    <link href="/code/code-java-jvm.html"/>
+    <link href="/pl/pl-java-jvm.html"/>
     <updated>2016-05-06T00:00:00+09:00</updated>
-    <id>/code/code-java-jvm</id>
+    <id>/pl/pl-java-jvm</id>
     <content type="html">
 class文件的组织结构
 .class文件是由子节组成的文件，又叫字节码文件
@@ -10064,9 +10165,9 @@ class文件的组织结构
 
   <entry>
     <title>C++: 迭代器</title>
-    <link href="/code/code-c++-iterator.html"/>
+    <link href="/pl/pl-c++-iterator.html"/>
     <updated>2016-05-06T00:00:00+09:00</updated>
-    <id>/code/code-c++-iterator</id>
+    <id>/pl/pl-c++-iterator</id>
     <content type="html">
 intro
 
@@ -10097,9 +10198,9 @@ find_if(b...</content>
 
   <entry>
     <title>C++: Stream</title>
-    <link href="/code/code-c++-stream.html"/>
+    <link href="/pl/pl-c++-stream.html"/>
     <updated>2016-05-05T00:00:00+09:00</updated>
-    <id>/code/code-c++-stream</id>
+    <id>/pl/pl-c++-stream</id>
     <content type="html">
 Intro
 
@@ -10119,9 +10220,9 @@ CPU有两大派系, IBM的Power PC和Inter的x86系列。PowerPC采用big endian
 
   <entry>
     <title>Java: Container</title>
-    <link href="/code/code-java-container.html"/>
+    <link href="/pl/pl-java-container.html"/>
     <updated>2016-05-04T00:00:00+09:00</updated>
-    <id>/code/code-java-container</id>
+    <id>/pl/pl-java-container</id>
     <content type="html">
 
   intro
@@ -10162,9 +10263,9 @@ intro
 
   <entry>
     <title>C++: Keywords</title>
-    <link href="/code/code-c++-keyword.html"/>
+    <link href="/pl/pl-c++-keyword.html"/>
     <updated>2016-05-04T00:00:00+09:00</updated>
-    <id>/code/code-c++-keyword</id>
+    <id>/pl/pl-c++-keyword</id>
     <content type="html">
 explicit
 c++为只用传递一个参数的构造函数定义了一个隐士转换
@@ -10182,6 +10283,35 @@ Animal dog = 3         //报错，无法使用explicit Animal构造器
 
 
 class...</content>
+  </entry>
+
+  <entry>
+    <title>C++:  Template</title>
+    <link href="/pl/pl-c++-template.html"/>
+    <updated>2016-05-03T00:00:00+09:00</updated>
+    <id>/pl/pl-c++-template</id>
+    <content type="html">
+intro
+OOP和范型编程都能处理在编写程序时不知道类型的情况。不同之处在于
+OOP能处理类型在程序运行之前都未知的情况，范型编程中，编译时就能获知类型。
+
+
+function template
+
+define
+template &amp;lt;typename price&amp;gt; bool isCheaper(price p1,price p2){
+	    return p1&amp;lt;p2;
+        }
+
+instantiation
+//函数模板能自己推断参数类型
+compare(2.0,12.0);
+
+
+
+
+class template
+类模板用来生成类的蓝图，与函数模板不同，编...</content>
   </entry>
 
   <entry>
@@ -10223,39 +10353,10 @@ class BiTree{
   </entry>
 
   <entry>
-    <title>C++:  Template</title>
-    <link href="/code/code-c++-template.html"/>
-    <updated>2016-05-03T00:00:00+09:00</updated>
-    <id>/code/code-c++-template</id>
-    <content type="html">
-intro
-OOP和范型编程都能处理在编写程序时不知道类型的情况。不同之处在于
-OOP能处理类型在程序运行之前都未知的情况，范型编程中，编译时就能获知类型。
-
-
-function template
-
-define
-template &amp;lt;typename price&amp;gt; bool isCheaper(price p1,price p2){
-	    return p1&amp;lt;p2;
-        }
-
-instantiation
-//函数模板能自己推断参数类型
-compare(2.0,12.0);
-
-
-
-
-class template
-类模板用来生成类的蓝图，与函数模板不同，编...</content>
-  </entry>
-
-  <entry>
     <title>Java: Class Loader</title>
-    <link href="/code/code-java-class-load.html"/>
+    <link href="/pl/pl-java-class-load.html"/>
     <updated>2016-05-02T00:00:00+09:00</updated>
-    <id>/code/code-java-class-load</id>
+    <id>/pl/pl-java-class-load</id>
     <content type="html">
 
   intro
@@ -10292,9 +10393,9 @@ intro
 
   <entry>
     <title>C++: Reload Operator</title>
-    <link href="/code/code-c++-load-operator.html"/>
+    <link href="/pl/pl-c++-load-operator.html"/>
     <updated>2016-05-02T00:00:00+09:00</updated>
-    <id>/code/code-c++-load-operator</id>
+    <id>/pl/pl-c++-load-operator</id>
     <content type="html">
 重载的运算符不过是有特殊名字的函数
 重载下标运算符
@@ -10317,9 +10418,9 @@ class Worker{
 
   <entry>
     <title>Java: Annotation</title>
-    <link href="/code/code-java-annotation.html"/>
+    <link href="/pl/pl-java-annotation.html"/>
     <updated>2016-04-09T00:00:00+09:00</updated>
-    <id>/code/code-java-annotation</id>
+    <id>/pl/pl-java-annotation</id>
     <content type="html">
 介绍
 注解也叫作元数据，为我们在代码中添o加信息提供了一种形式化的方法
@@ -10356,9 +10457,9 @@ package tuesd...</content>
 
   <entry>
     <title>Java: reflection</title>
-    <link href="/code/code-java-reflection.html"/>
+    <link href="/pl/pl-java-reflection.html"/>
     <updated>2016-04-08T00:00:00+09:00</updated>
-    <id>/code/code-java-reflection</id>
+    <id>/pl/pl-java-reflection</id>
     <content type="html">
 Intro
 反射是得到类的元数据的过程
@@ -10391,9 +10492,9 @@ Class字面常量
 
   <entry>
     <title>Java: Array</title>
-    <link href="/code/code-java-System.html"/>
+    <link href="/pl/pl-java-System.html"/>
     <updated>2016-04-07T00:00:00+09:00</updated>
-    <id>/code/code-java-System</id>
+    <id>/pl/pl-java-System</id>
     <content type="html">
 arraycopy
 查看源代码里面使用的是native方法，看不到底层代码，里面应该维护指针
@@ -10418,9 +10519,9 @@ void foo(){
 
   <entry>
     <title>Java: String</title>
-    <link href="/code/code-java-String.html"/>
+    <link href="/pl/pl-java-String.html"/>
     <updated>2016-04-07T00:00:00+09:00</updated>
-    <id>/code/code-java-String</id>
+    <id>/pl/pl-java-String</id>
     <content type="html">
 介绍
 
@@ -10437,9 +10538,9 @@ void foo(){
 
   <entry>
     <title>Java: Calendar</title>
-    <link href="/code/code-java-Calendar.html"/>
+    <link href="/pl/pl-java-Calendar.html"/>
     <updated>2016-04-07T00:00:00+09:00</updated>
-    <id>/code/code-java-Calendar</id>
+    <id>/pl/pl-java-Calendar</id>
     <content type="html">
 Calendar
 Calendar类是一个抽象类，功能比Date类强大，实现比Date复杂
@@ -10455,9 +10556,9 @@ System.out.println(calendar.get(Calendar.YEAR));
 
   <entry>
     <title>Java: BigDecimal</title>
-    <link href="/code/code-java-BigDecimal.html"/>
+    <link href="/pl/pl-java-BigDecimal.html"/>
     <updated>2016-04-07T00:00:00+09:00</updated>
-    <id>/code/code-java-BigDecimal</id>
+    <id>/pl/pl-java-BigDecimal</id>
     <content type="html">
 作用
 精确运算
@@ -10480,9 +10581,9 @@ System.out.println(bd.add(new BigDecimal(&quot;0.01&quot;)));
 
   <entry>
     <title>Java: Interface</title>
-    <link href="/code/code-java-interface.html"/>
+    <link href="/pl/pl-java-interface.html"/>
     <updated>2016-04-06T00:00:00+09:00</updated>
-    <id>/code/code-java-interface</id>
+    <id>/pl/pl-java-interface</id>
     <content type="html">
 特征
 
@@ -10495,9 +10596,9 @@ System.out.println(bd.add(new BigDecimal(&quot;0.01&quot;)));
 
   <entry>
     <title>Java: Class</title>
-    <link href="/code/code-java-class.html"/>
+    <link href="/pl/pl-java-class.html"/>
     <updated>2016-04-06T00:00:00+09:00</updated>
-    <id>/code/code-java-class</id>
+    <id>/pl/pl-java-class</id>
     <content type="html">
 类的三大特点，封装，继承和多态，集中封装和继承是多态的基础
 
@@ -10535,9 +10636,9 @@ java中使用static关键字声明的代码块，静态代码块用于初始化�
 
   <entry>
     <title>Java: String</title>
-    <link href="/code/code-java-string.html"/>
+    <link href="/pl/pl-java-string.html"/>
     <updated>2016-04-05T00:00:00+09:00</updated>
-    <id>/code/code-java-string</id>
+    <id>/pl/pl-java-string</id>
     <content type="html">
 字符分割
 String[] a=&quot;ab@cd&quot;.split(&quot;@&quot;);
@@ -10550,9 +10651,9 @@ String[] a=&quot;ab@cd&quot;.split(&quot;@&quot;);
 
   <entry>
     <title>Java: Enumberation</title>
-    <link href="/code/code-java-Enumeration.html"/>
+    <link href="/pl/pl-java-Enumeration.html"/>
     <updated>2016-04-04T00:00:00+09:00</updated>
-    <id>/code/code-java-Enumeration</id>
+    <id>/pl/pl-java-Enumeration</id>
     <content type="html">
 作用
 Enumeration是一个接口,源码如下
@@ -10568,9 +10669,9 @@ pubic interface Enumeration&amp;lt;E&amp;gt;{
 
   <entry>
     <title>Java: Enum</title>
-    <link href="/code/code-java-enum.html"/>
+    <link href="/pl/pl-java-enum.html"/>
     <updated>2016-04-03T00:00:00+09:00</updated>
-    <id>/code/code-java-enum</id>
+    <id>/pl/pl-java-enum</id>
     <content type="html">
 intro
 枚举类型反编译之后也是类，该类用final关键字修饰
@@ -10587,10 +10688,10 @@ class Weekday{
   </entry>
 
   <entry>
-    <title>C++: Vim</title>
-    <link href="/code/code-c++-memory.html"/>
+    <title>C++: Memory</title>
+    <link href="/pl/pl-c++-memory.html"/>
     <updated>2016-01-21T00:00:00+09:00</updated>
-    <id>/code/code-c++-memory</id>
+    <id>/pl/pl-c++-memory</id>
     <content type="html">
 intro
 自动分配
@@ -10617,10 +10718,10 @@ shared_ptr
   </entry>
 
   <entry>
-    <title>C++: Vim</title>
-    <link href="/code/code-c++-compiler.html"/>
+    <title>C++: Compiler</title>
+    <link href="/pl/pl-c++-compiler.html"/>
     <updated>2016-01-20T00:00:00+09:00</updated>
-    <id>/code/code-c++-compiler</id>
+    <id>/pl/pl-c++-compiler</id>
     <content type="html">
 内存对齐
 
@@ -10646,10 +10747,10 @@ cout&amp;lt;&amp;lt; sizeof(a)&amp;lt;&amp;lt;...</content>
   </entry>
 
   <entry>
-    <title>C++: Vim</title>
-    <link href="/code/code-c++-boost.html"/>
+    <title>C++: Boost</title>
+    <link href="/pl/pl-c++-boost.html"/>
     <updated>2016-01-19T00:00:00+09:00</updated>
-    <id>/code/code-c++-boost</id>
+    <id>/pl/pl-c++-boost</id>
     <content type="html">
 介绍
 boost是一个可移植的，提供源代码的C++库，由于其对跨平台的强调，对标准C++的强调，与编写平台无关。大部分的boost库功能使用只需要包括相应的头文件即可，少数如正则表达式库和文件系统库需要连接库。
@@ -10669,9 +10770,9 @@ boost是一个可移植的，提供源代码的C++库，由于其对跨平台的
 
   <entry>
     <title>C++: Vim</title>
-    <link href="/code/code-c++-gtest.html"/>
+    <link href="/pl/pl-c++-gtest.html"/>
     <updated>2016-01-18T00:00:00+09:00</updated>
-    <id>/code/code-c++-gtest</id>
+    <id>/pl/pl-c++-gtest</id>
     <content type="html">
 官方文档
 </content>
@@ -10679,9 +10780,9 @@ boost是一个可移植的，提供源代码的C++库，由于其对跨平台的
 
   <entry>
     <title>C++: Vim</title>
-    <link href="/code/code-c++-opencv.html"/>
+    <link href="/pl/pl-c++-opencv.html"/>
     <updated>2016-01-17T00:00:00+09:00</updated>
-    <id>/code/code-c++-opencv</id>
+    <id>/pl/pl-c++-opencv</id>
     <content type="html">
 官方文档写得很不客气，there’s no point to using the old methods unless you’re a masochist programmer and you’re asking for trouble
 
@@ -10696,10 +10797,10 @@ waitKey(0);
   </entry>
 
   <entry>
-    <title>C++: Vim</title>
-    <link href="/code/code-c++-opencv-highgui.html"/>
+    <title>C++: OpenCV</title>
+    <link href="/pl/pl-c++-opencv-highgui.html"/>
     <updated>2016-01-16T00:00:00+09:00</updated>
-    <id>/code/code-c++-opencv-highgui</id>
+    <id>/pl/pl-c++-opencv-highgui</id>
     <content type="html">
 reference
 VideoCapture cap(0); // open the default camera
@@ -10715,10 +10816,10 @@ VideoCapture cap(0); // open the default camera
   </entry>
 
   <entry>
-    <title>C++: Vim</title>
-    <link href="/code/code-c++-Eigen.html"/>
+    <title>C++: Eigen</title>
+    <link href="/pl/pl-c++-Eigen.html"/>
     <updated>2016-01-14T00:00:00+09:00</updated>
-    <id>/code/code-c++-Eigen</id>
+    <id>/pl/pl-c++-Eigen</id>
     <content type="html">
 官方文档
 //默认是列向量
@@ -10731,10 +10832,10 @@ b&amp;lt;&amp;lt;1,2,3,4;//赋值初始化
   </entry>
 
   <entry>
-    <title>C++: Vim</title>
-    <link href="/code/code-c++-causal.html"/>
+    <title>C++: Code Normal</title>
+    <link href="/pl/pl-c++-causal.html"/>
     <updated>2016-01-01T00:00:00+09:00</updated>
-    <id>/code/code-c++-causal</id>
+    <id>/pl/pl-c++-causal</id>
     <content type="html">
 如下代码:
 while(first!=last){
@@ -10753,10 +10854,10 @@ left-inclusive interval,左闭合空间的意义:
   </entry>
 
   <entry>
-    <title>C++: Vim</title>
-    <link href="/code/code-c++-macro.html"/>
+    <title>C++: Macro</title>
+    <link href="/pl/pl-c++-macro.html"/>
     <updated>2015-12-26T00:00:00+09:00</updated>
-    <id>/code/code-c++-macro</id>
+    <id>/pl/pl-c++-macro</id>
     <content type="html">
 宏: 就是指令的集合
 #define PRINT(A) std::cout&amp;lt;&amp;lt;&quot;this is output: &quot;&amp;lt;&amp;lt;#A&amp;lt;&amp;lt;std::endl
@@ -10766,10 +10867,10 @@ PRINT(&quot;hello&quot;);
   </entry>
 
   <entry>
-    <title>C++: Vim</title>
-    <link href="/code/code-c++-template.html"/>
+    <title>C++: Template</title>
+    <link href="/pl/pl-c++-template.html"/>
     <updated>2015-12-03T00:00:00+09:00</updated>
-    <id>/code/code-c++-template</id>
+    <id>/pl/pl-c++-template</id>
     <content type="html">
 intro
 OOP和范型编程都能处理在编写程序时不知道类型的情况。不同之处在于
@@ -10795,31 +10896,10 @@ class template
   </entry>
 
   <entry>
-    <title>Code C++ Opengl</title>
-    <link href="/code-c++-opengl.html"/>
-    <updated>2015-11-29T00:00:00+09:00</updated>
-    <id>/code-c++-opengl</id>
-    <content type="html">
-</content>
-  </entry>
-
-  <entry>
-    <title>C++: Vim</title>
-    <link href="/code/code-c++-exception.html"/>
-    <updated>2015-11-15T00:00:00+09:00</updated>
-    <id>/code/code-c++-exception</id>
-    <content type="html">
-异常
-异常指运行时的反常行为，典型的异常包括数据库链接和遇到意外输入等。
-
-</content>
-  </entry>
-
-  <entry>
-    <title>C++: Vim</title>
-    <link href="/code/code-c++-function.html"/>
+    <title>C++: Function</title>
+    <link href="/pl/pl-c++-function.html"/>
     <updated>2015-11-10T00:00:00+09:00</updated>
-    <id>/code/code-c++-function</id>
+    <id>/pl/pl-c++-function</id>
     <content type="html">
 
   函数是命名的代码块。并没有什么了不起。
@@ -10847,10 +10927,10 @@ class template
   </entry>
 
   <entry>
-    <title>C++: Vim</title>
-    <link href="/code/code-c++-express.html"/>
+    <title>C++: Expression</title>
+    <link href="/pl/pl-c++-express.html"/>
     <updated>2015-11-08T00:00:00+09:00</updated>
-    <id>/code/code-c++-express</id>
+    <id>/pl/pl-c++-express</id>
     <content type="html">
 类型转换
 隐士转换
@@ -10870,10 +10950,10 @@ cast-name是static, dynamic, const, reinterpret中的一种
   </entry>
 
   <entry>
-    <title>C++: Vim</title>
-    <link href="/code/code-c++-operator.html"/>
+    <title>C++: Operator</title>
+    <link href="/pl/pl-c++-operator.html"/>
     <updated>2015-11-04T00:00:00+09:00</updated>
-    <id>/code/code-c++-operator</id>
+    <id>/pl/pl-c++-operator</id>
     <content type="html">
 位运算符
 
@@ -10908,10 +10988,10 @@ cast-name是static, dynamic, const, reinterpret中的一种
   </entry>
 
   <entry>
-    <title>C++: Vim</title>
-    <link href="/code/code-c++-array.html"/>
+    <title>C++: Container</title>
+    <link href="/pl/pl-c++-array.html"/>
     <updated>2015-11-03T00:00:00+09:00</updated>
-    <id>/code/code-c++-array</id>
+    <id>/pl/pl-c++-array</id>
     <content type="html">
 在出现标准库之前，c++程序使用数组保存对象，现代c++程序更多地用vector取代数组
 与vector相比，数组的长度是固定的。
@@ -10920,10 +11000,10 @@ cast-name是static, dynamic, const, reinterpret中的一种
   </entry>
 
   <entry>
-    <title>C++: Vim</title>
-    <link href="/code/code-c++-intro.html"/>
+    <title>C++: Version</title>
+    <link href="/pl/pl-c++-intro.html"/>
     <updated>2015-11-01T00:00:00+09:00</updated>
-    <id>/code/code-c++-intro</id>
+    <id>/pl/pl-c++-intro</id>
     <content type="html">
 语言类型
 
@@ -10942,9 +11022,9 @@ C++中，变量，函数使用之前需要声明，头文件k就是起声明的�
 
   <entry>
     <title>Cmake: Introduction</title>
-    <link href="/code/code-cmake-intro.html"/>
+    <link href="/pl/pl-cmake-intro.html"/>
     <updated>2015-07-01T00:00:00+09:00</updated>
-    <id>/code/code-cmake-intro</id>
+    <id>/pl/pl-cmake-intro</id>
     <content type="html">
 Make
 代码变成可执行文件，叫编译；
@@ -10971,9 +11051,9 @@ create:
 
   <entry>
     <title>CMake: Libraryies</title>
-    <link href="/code/code-cmake-target-link-libraries.html"/>
+    <link href="/pl/pl-cmake-target-link-libraries.html"/>
     <updated>2015-05-26T00:00:00+09:00</updated>
-    <id>/code/code-cmake-target-link-libraries</id>
+    <id>/pl/pl-cmake-target-link-libraries</id>
     <content type="html">
 官方文档
 #使用这个语法的时候，target必须通过add_executable()或者add_library()创建
@@ -10984,9 +11064,9 @@ target_link_libraries(&amp;lt;target&amp;gt; [item])
 
   <entry>
     <title>Cmake: Modules</title>
-    <link href="/code/code-cmake-pkg-check-modules.html"/>
+    <link href="/pl/pl-cmake-pkg-check-modules.html"/>
     <updated>2015-05-25T00:00:00+09:00</updated>
-    <id>/code/code-cmake-pkg-check-modules</id>
+    <id>/pl/pl-cmake-pkg-check-modules</id>
     <content type="html">
 官方文档看完直接想吐。
 上代码
