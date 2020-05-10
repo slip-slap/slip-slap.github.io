@@ -10,22 +10,22 @@ tags: ["英語"]
 
 ####
 1. security protection
+2. body guard
+3. body guard
 2. butler
 3. concubine
 4. golden crown
 5. majesty
 6. clan
-7. body guard
 
-####
+#### Action
 1. betray
 2. swear
-3. bend his knee
 4. killer
 
 
 
-#### Move
+#### Sentence
 2. take the throne
 3. inherit the throne
 4. proved him in the battle
@@ -36,4 +36,5 @@ tags: ["英語"]
 9. Sometimes I try to understand a person's motives, I play a game, I assume the
    worst, what's the worst reason you turn me against my sister?
 1. what does your lord expect for me?
+2. bend his knee
 

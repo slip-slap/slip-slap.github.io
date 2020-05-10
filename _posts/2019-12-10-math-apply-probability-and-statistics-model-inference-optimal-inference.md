@@ -4,7 +4,7 @@ title: "P.A.S.M.I.: Optimal Inference"
 keywords: [] 
 description: 
 category: "math"
-tags: ["apply","P.A.S.M.I."]
+tags: ["apply","P.A.S.M.I.","frequentist"]
 ---
 {% include JB/setup %}
 
@@ -27,4 +27,14 @@ is called a loss function. **Loss functions** form the basis for yet another
 approach to statistical inference called **decision theory**. While it is not
 always the case that a performance measure is based on a loss function, this
 holds in some of the most important problems in statistical inference.
+
+
+
+#### Estimator and estimate
+1. The difference is very obvious if you have some basic understanding about
+   english words.
+2. timer, heater, sampler, they are just tool to make a result.
+3. estimator is used to make a estimate, sampler is used to get a sampling
+   point.
+
 

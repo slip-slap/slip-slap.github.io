@@ -21,6 +21,7 @@ tags: ["英語"]
 9. induction cooker
 1. range hood
 2. ceiling
+3. back room
 
 ####
 1. cut

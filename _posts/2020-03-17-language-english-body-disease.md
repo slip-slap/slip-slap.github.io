@@ -34,6 +34,8 @@ tags: ["英語"]
 2. human-to-human transimission
 3. tumor
 4. benign tumor
+5. PTSD: post-traumatic stress disorder
+6. late-onset disease
 
 ####
 1. suture

@@ -18,3 +18,11 @@ tags: ["apply","P.G.M.","P.G.M.R."]
    \mathcal{X}^{(t)}=\xi\right)=P\left(\mathcal{X}^{\prime}=\xi^{\prime} |
    \mathcal{X}=\xi\right)
    $$
+
+
+
+#### Galois
+1. Stochastic processes is an important part of probability and statictics, it
+   focus on a variable which is time.
+2. Probabilistic graphical models also can be splited into two different parts,
+   variable-based model and templated-based model.

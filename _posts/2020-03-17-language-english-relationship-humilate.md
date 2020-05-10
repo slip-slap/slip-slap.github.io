@@ -34,12 +34,11 @@ tags: ["英語"]
 
 #### sentence
 
-####
 1. will that upset me.
 2. mad at me.
-3. Don't let them see your tears, they are not worth crying over.
 4. annoy
 5. bother
+3. Don't let them see your tears, they are not worth crying over.
 6. control your temper tonight, speechless.
 7. I am not going to swear in front of kids.
 
