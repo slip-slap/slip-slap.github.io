@@ -3,7 +3,7 @@
   <title>Just Do It</title>
   <link href="/atom.xml" rel="self"/>
   <link href=""/>
-  <updated>2020-05-11T03:43:11+09:00</updated>
+  <updated>2020-05-12T00:18:26+09:00</updated>
   <id></id>
   <author>
     <name>reed</name>
@@ -4628,123 +4628,6 @@ never occurs, and therefore, in almost all cases, the maxi...</content>
   </entry>
 
   <entry>
-    <title>G.T.: Planar Graphs</title>
-    <link href="/math/math-discrete-graph-theory-planar-graphs.html"/>
-    <updated>2020-01-13T00:00:00+09:00</updated>
-    <id>/math/math-discrete-graph-theory-planar-graphs</id>
-    <content type="html">
-Concept
-
-  Planar: A graph is said to be embeddable in the plane, or planar, if it can
-be drawn in the plane so that its edges intersect only at their ends.
-    
-      Such a drawing of a planar graph G is called a planar embedding of G.
-      A planar embedding $\tilde{G}$ of G can itself be re...</content>
-  </entry>
-
-  <entry>
-    <title>G.T.: Vertex Colourings</title>
-    <link href="/math/math-discrete-graph-theory-vertex-colourings.html"/>
-    <updated>2020-01-09T00:00:00+09:00</updated>
-    <id>/math/math-discrete-graph-theory-vertex-colourings</id>
-    <content type="html">
-Concept
-
-  A k-vertex colouring of G is an assignment of k colours, $1,2,\cdots,k$ to
-the vertices of G;
-    
-      The colouring is proper if no two distince adjacent vertices have the same
-colour.
-    
-  
-  chromatic number: , of G is the minimum k for which G is
-k-colourable;
-    
-      if , ...</content>
-  </entry>
-
-  <entry>
-    <title>G.T.: Matchings</title>
-    <link href="/math/math-discrete-graph-theory-matchings.html"/>
-    <updated>2020-01-09T00:00:00+09:00</updated>
-    <id>/math/math-discrete-graph-theory-matchings</id>
-    <content type="html">
-Concept
-
-  matching: A subset M of E is called a matching in G if its elements are links
-and no two are adjacent in G
-    
-      the two ends of an edge in M are said to be matched under M.
-      A matching M saturates a vertex v, and v is said to be M-saturated,
-otherwise, v is M-unsaturated.
- ...</content>
-  </entry>
-
-  <entry>
-    <title>G.T.: Independent Sets and Cliques</title>
-    <link href="/math/math-discrete-graph-theory-independent-sets-and-cliques.html"/>
-    <updated>2020-01-09T00:00:00+09:00</updated>
-    <id>/math/math-discrete-graph-theory-independent-sets-and-cliques</id>
-    <content type="html">
-Concept
-
-  Independent set: A subset S of V is called an independent set of G if no two
-vertices of S are adjacent in G.
-  Clique: A clique of a simple graph G is a subset S of V such that G[S] is
-complete
-    
-      This name Clique is very intuitive and informative, in a clique, everyone knows...</content>
-  </entry>
-
-  <entry>
-    <title>G.T.: Edge Colourings</title>
-    <link href="/math/math-discrete-graph-theory-edge-colourings.html"/>
-    <updated>2020-01-09T00:00:00+09:00</updated>
-    <id>/math/math-discrete-graph-theory-edge-colourings</id>
-    <content type="html">
-Concept
-
-  K-edge Colouring: A k-edge colouring $\mathscr{C}$ of a loopless graph G is
-an assignment of k colours,$1,2,\cdots,k$  to the edges of G. The colouring
-$\mathscr{C}$ is proper if no two adjacement edges have the same colour.
-  G is k-edge colourable if G has a proper k-edge-colouring
-
-</content>
-  </entry>
-
-  <entry>
-    <title>G.T.: Networks</title>
-    <link href="/math/math-discrete-graph-theory-directed-networks.html"/>
-    <updated>2020-01-09T00:00:00+09:00</updated>
-    <id>/math/math-discrete-graph-theory-directed-networks</id>
-    <content type="html">
-Concept
-
-  A network N is a digraph D with two distinguished subsets of vertices, X and
-Y, and a non-negative integer-valued function c defined on its arc set A; the
-sets X and Y are assumed to be disjoint and nonempty.
-    
-      X and Y correspond to production centres and markets
-      vertic...</content>
-  </entry>
-
-  <entry>
-    <title>G.T.: Directed Graphs</title>
-    <link href="/math/math-discrete-graph-theory-directed-graph.html"/>
-    <updated>2020-01-09T00:00:00+09:00</updated>
-    <id>/math/math-discrete-graph-theory-directed-graph</id>
-    <content type="html">
-Concept
-
-  Directed Graph D: a directed graph D is an ordered triple $(V(D),A(D),\psi_D)$ consisting of 
-a nonempty set $V(D)$ of vertices, a set $A(D)$, disjoint from $V(D)$, or arcs,
-and an incidence function $\psi_D$ that associates with each arc of D an ordered
-pair of vertices of D.
-    
-  ...</content>
-  </entry>
-
-  <entry>
     <title>I.T.: Codes for Integers</title>
     <link href="/math/math-apply-information-theory-integer-codes.html"/>
     <updated>2020-01-08T00:00:00+09:00</updated>
@@ -4754,10 +4637,94 @@ pair of vertices of D.
   </entry>
 
   <entry>
-    <title>Jump Game</title>
-    <link href="/csp/computer-science-jump-game.html"/>
+    <title>CS: Regex Expression</title>
+    <link href="/cs/computer-science-regex-expression.html"/>
     <updated>2020-01-08T00:00:00+09:00</updated>
-    <id>/csp/computer-science-jump-game</id>
+    <id>/cs/computer-science-regex-expression</id>
+    <content type="html">
+Intro
+
+  正则表达式描述了一种字符串匹配的模式，用来检查一个串是否含有某种子串，它不属于某种语言，但是不同的语言对它的支持不一样。
+  正则表达式是一种引擎匹配工具，没啥牛逼的
+  字符有本身的含义，比如字母，数字和下划线，如果需要赋予其别的含义只能通过转义符来实现，比如\w表示所有的字符
+  在正则中，大多数的字符只是其本身的含义，只需要记住一些转义后的字符即可
+  
+    
+      在正则中已经失去其本来的含义，表示一种贪婪匹配
+    
+  
+  ？在正则中依然表示问号，添加转义字符后\?才表示匹配一次或者零次
+  （）括号依然表示括号本身的括号含义，添加转义符之后...</content>
+  </entry>
+
+  <entry>
+    <title>C.S.P.: String</title>
+    <link href="/csp/computer-science-problem-string.html"/>
+    <updated>2020-01-08T00:00:00+09:00</updated>
+    <id>/csp/computer-science-problem-string</id>
+    <content type="html">
+1. Reverse String
+Write a function that takes a string as input and returns the string reversed
+
+public class Solution{
+    public static String reverseString(String s){
+        if(s == null || s.length() &amp;lt; 2) return s;
+        int i = 0;
+        int j = s.length() - 1;
+        char[] chars =...</content>
+  </entry>
+
+  <entry>
+    <title>Stack: </title>
+    <link href="/csp/computer-science-problem-stack.html"/>
+    <updated>2020-01-08T00:00:00+09:00</updated>
+    <id>/csp/computer-science-problem-stack</id>
+    <content type="html">
+1. Valid Parentheses
+
+  Problem: given a string  containing just the characters ‘(‘,’)’,’{‘,’}’,’[’ and
+‘]’, determine if the input string is valid.
+  Example :
+    
+      input: “()” output: true
+    
+  
+
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Regular Expression Matching</title>
+    <link href="/csp/computer-science-problem-regular-expression-matching.html"/>
+    <updated>2020-01-08T00:00:00+09:00</updated>
+    <id>/csp/computer-science-problem-regular-expression-matching</id>
+    <content type="html">
+</content>
+  </entry>
+
+  <entry>
+    <title>Recursion</title>
+    <link href="/csp/computer-science-problem-recursion.html"/>
+    <updated>2020-01-08T00:00:00+09:00</updated>
+    <id>/csp/computer-science-problem-recursion</id>
+    <content type="html">
+#### 
+Recursive programming is a great way to show yourself that you can solve
+difficult problems.
+
+  Write an iterative function to solve the problem.
+  Write a “dispatcher” function.
+    
+      Dispatcher function solves problem for some “minimal” data set.
+      in this case, when size parame...</content>
+  </entry>
+
+  <entry>
+    <title>Jump Game</title>
+    <link href="/csp/computer-science-problem-jump-game.html"/>
+    <updated>2020-01-08T00:00:00+09:00</updated>
+    <id>/csp/computer-science-problem-jump-game</id>
     <content type="html">
 ####
 
@@ -4771,6 +4738,144 @@ position.
 
 public class Solution{
     public static boolea...</content>
+  </entry>
+
+  <entry>
+    <title>Backtracking </title>
+    <link href="/csp/computer-science-problem-backtracking.html"/>
+    <updated>2020-01-08T00:00:00+09:00</updated>
+    <id>/csp/computer-science-problem-backtracking</id>
+    <content type="html">
+</content>
+  </entry>
+
+  <entry>
+    <title>D.S.: Stack,List and Map</title>
+    <link href="/cs/computer-science-data-structure-stack-map-list-algorithms.html"/>
+    <updated>2020-01-08T00:00:00+09:00</updated>
+    <id>/cs/computer-science-data-structure-stack-map-list-algorithms</id>
+    <content type="html">
+
+
+class BiTreeNode{
+	public char name;
+	public BiTreeNode left;
+	public BiTreeNode right;
+}
+class BiTree{
+	int index=-1;
+	int leftDeep=0;
+	int rightDeep=0;
+	public void createBiTree(BiTreeNode node){
+		String str=new String(&quot;AG##C##&quot;);
+		index++;
+		if(str.charAt(index)=='#'){
+			node=null;
+		}el...</content>
+  </entry>
+
+  <entry>
+    <title>D.S.: Priority Queue</title>
+    <link href="/cs/computer-science-data-structure-priority-queue.html"/>
+    <updated>2020-01-08T00:00:00+09:00</updated>
+    <id>/cs/computer-science-data-structure-priority-queue</id>
+    <content type="html">
+</content>
+  </entry>
+
+  <entry>
+    <title>D.S.: Heap</title>
+    <link href="/cs/computer-science-data-structure-heap.html"/>
+    <updated>2020-01-08T00:00:00+09:00</updated>
+    <id>/cs/computer-science-data-structure-heap</id>
+    <content type="html">
+</content>
+  </entry>
+
+  <entry>
+    <title>D.S.: AVL Tree</title>
+    <link href="/cs/computer-science-data-structure-avl-tree.html"/>
+    <updated>2020-01-08T00:00:00+09:00</updated>
+    <id>/cs/computer-science-data-structure-avl-tree</id>
+    <content type="html">
+self-balancing binary search tree.
+</content>
+  </entry>
+
+  <entry>
+    <title>C.S.A.: Sort</title>
+    <link href="/cs/computer-science-algorithm-sort.html"/>
+    <updated>2020-01-08T00:00:00+09:00</updated>
+    <id>/cs/computer-science-algorithm-sort</id>
+    <content type="html">
+</content>
+  </entry>
+
+  <entry>
+    <title>C.S.A.: Dynamic Programming </title>
+    <link href="/cs/computer-science-algorithm-dynamic-programming.html"/>
+    <updated>2020-01-08T00:00:00+09:00</updated>
+    <id>/cs/computer-science-algorithm-dynamic-programming</id>
+    <content type="html">
+####
+
+  Why we call this boy dynamic programming, why, why ? just a fancy
+terminology, just for cool, in nature
+    
+      DP is “careful brute force”
+      Dp is guessing + recursion + momoization
+    
+  
+
+
+
+  define subproblems
+  guess
+  recurrence
+  recurrence + momoize
+  solve original probl...</content>
+  </entry>
+
+  <entry>
+    <title>C.S.A.: Divide and Conquer</title>
+    <link href="/cs/computer-science-algorithm-divide-and-conquer.html"/>
+    <updated>2020-01-08T00:00:00+09:00</updated>
+    <id>/cs/computer-science-algorithm-divide-and-conquer</id>
+    <content type="html">
+</content>
+  </entry>
+
+  <entry>
+    <title>C.S.A.: Deepth First Search</title>
+    <link href="/cs/computer-science-algorithm-deepth-first-search.html"/>
+    <updated>2020-01-08T00:00:00+09:00</updated>
+    <id>/cs/computer-science-algorithm-deepth-first-search</id>
+    <content type="html">
+DFS
+DFS stands for Depth First Search is a edge based technique. It used the Stack
+data structure, performs two stages:
+
+  first visited vertices are pushed into stack
+  second if there is no vertices then visited vertices are popped.
+
+
+</content>
+  </entry>
+
+  <entry>
+    <title>C.S.A.: Breadth First Search</title>
+    <link href="/cs/computer-science-algorithm-breadth-first-search.html"/>
+    <updated>2020-01-08T00:00:00+09:00</updated>
+    <id>/cs/computer-science-algorithm-breadth-first-search</id>
+    <content type="html">
+BFS
+
+  BFS stands for Breadth First Search is a vertex based techinique for finding
+a shortest path in graph.
+    
+      It uses a Queue data structure which follows first in first out. In BFS, one
+vertex is selected at a time when it is visited and marked then its adjacent
+are visited and store...</content>
   </entry>
 
   <entry>
@@ -4938,25 +5043,6 @@ N-K bits are linear functions of the original K bi...</content>
     <id>/math/math-apply-information-theory-exact-marginalization</id>
     <content type="html">
 </content>
-  </entry>
-
-  <entry>
-    <title>G.T.: Message Passing</title>
-    <link href="/math/math-apply-graph-theory-message-passing.html"/>
-    <updated>2020-01-05T00:00:00+09:00</updated>
-    <id>/math/math-apply-graph-theory-message-passing</id>
-    <content type="html">
-Message-passing rule-set A
-Message-passing rule-set B
-
-Min-sum Algorithm or Viterbi Algorithm
-
-
-
-  Each node can broadcast its cost to its descendants once it knows the costs
-of all its possible predecessors.
-  The cost of A is zero, we pass this news on to H and I., as the
-message passes along ...</content>
   </entry>
 
   <entry>
@@ -5190,6 +5276,27 @@ which is isomorphic to $V^n$ ...</content>
   </entry>
 
   <entry>
+    <title>G.T.: Vertex Colourings</title>
+    <link href="/math/math-discrete-graph-theory-vertex-colourings.html"/>
+    <updated>2019-12-18T00:00:00+09:00</updated>
+    <id>/math/math-discrete-graph-theory-vertex-colourings</id>
+    <content type="html">
+Concept
+
+  A k-vertex colouring of G is an assignment of k colours, $1,2,\cdots,k$ to
+the vertices of G;
+    
+      The colouring is proper if no two distince adjacent vertices have the same
+colour.
+    
+  
+  chromatic number: , of G is the minimum k for which G is
+k-colourable;
+    
+      if , ...</content>
+  </entry>
+
+  <entry>
     <title>G.T.: Trees</title>
     <link href="/math/math-discrete-graph-theory-trees.html"/>
     <updated>2019-12-18T00:00:00+09:00</updated>
@@ -5209,6 +5316,103 @@ Concept
   </entry>
 
   <entry>
+    <title>G.T.: Summary</title>
+    <link href="/math/math-discrete-graph-theory-summary.html"/>
+    <updated>2019-12-18T00:00:00+09:00</updated>
+    <id>/math/math-discrete-graph-theory-summary</id>
+    <content type="html">
+####
+There are two aspects we need to study about a graph, the node and the edge.
+
+  the attribute of the nodes, we have breadth first search and deep first
+search.
+  about the attributes, we have shortest path problem.
+
+</content>
+  </entry>
+
+  <entry>
+    <title>G.T.: Planar Graphs</title>
+    <link href="/math/math-discrete-graph-theory-planar-graphs.html"/>
+    <updated>2019-12-18T00:00:00+09:00</updated>
+    <id>/math/math-discrete-graph-theory-planar-graphs</id>
+    <content type="html">
+Concept
+
+  Planar: A graph is said to be embeddable in the plane, or planar, if it can
+be drawn in the plane so that its edges intersect only at their ends.
+    
+      Such a drawing of a planar graph G is called a planar embedding of G.
+      A planar embedding $\tilde{G}$ of G can itself be re...</content>
+  </entry>
+
+  <entry>
+    <title>G.T.: Message Passing</title>
+    <link href="/math/math-discrete-graph-theory-message-passing.html"/>
+    <updated>2019-12-18T00:00:00+09:00</updated>
+    <id>/math/math-discrete-graph-theory-message-passing</id>
+    <content type="html">
+Message-passing rule-set A
+Message-passing rule-set B
+
+Min-sum Algorithm or Viterbi Algorithm
+
+
+
+  Each node can broadcast its cost to its descendants once it knows the costs
+of all its possible predecessors.
+  The cost of A is zero, we pass this news on to H and I., as the
+message passes along ...</content>
+  </entry>
+
+  <entry>
+    <title>G.T.: Matchings</title>
+    <link href="/math/math-discrete-graph-theory-matchings.html"/>
+    <updated>2019-12-18T00:00:00+09:00</updated>
+    <id>/math/math-discrete-graph-theory-matchings</id>
+    <content type="html">
+Concept
+
+  matching: A subset M of E is called a matching in G if its elements are links
+and no two are adjacent in G
+    
+      the two ends of an edge in M are said to be matched under M.
+      A matching M saturates a vertex v, and v is said to be M-saturated,
+otherwise, v is M-unsaturated.
+ ...</content>
+  </entry>
+
+  <entry>
+    <title>G.T.: Independent Sets and Cliques</title>
+    <link href="/math/math-discrete-graph-theory-independent-sets-and-cliques.html"/>
+    <updated>2019-12-18T00:00:00+09:00</updated>
+    <id>/math/math-discrete-graph-theory-independent-sets-and-cliques</id>
+    <content type="html">
+Concept
+
+  Independent set: A subset S of V is called an independent set of G if no two
+vertices of S are adjacent in G.
+  Clique: A clique of a simple graph G is a subset S of V such that G[S] is
+complete
+    
+      This name Clique is very intuitive and informative, in a clique, everyone knows...</content>
+  </entry>
+
+  <entry>
+    <title>G.T.: Graph and Subgraphs</title>
+    <link href="/math/math-discrete-graph-theory-graph-and-subgraph.html"/>
+    <updated>2019-12-18T00:00:00+09:00</updated>
+    <id>/math/math-discrete-graph-theory-graph-and-subgraph</id>
+    <content type="html">
+Graph, Loop, Link
+
+  A graph G is an ordered triple $(V(G),E(G),\psi_G)$ consisting of a nonempty set
+V(G) of vertices, a set E(G), disjoint from V(G), of edges, and an incidence
+function $\psi_G$ that associates with each edge of G an unordered pair of(not
+necessarily distinct) vertices of G. I...</content>
+  </entry>
+
+  <entry>
     <title>G.T.: Euler Tours and Hamilton Cycles</title>
     <link href="/math/math-discrete-graph-theory-euler-tours-and-hamilton-cycles.html"/>
     <updated>2019-12-18T00:00:00+09:00</updated>
@@ -5222,6 +5426,54 @@ of G.
 once.
   Euler Tour: An Euler tour is a tour which traverses each edge exactly once.
   Hamilton path: A path that contains e...</content>
+  </entry>
+
+  <entry>
+    <title>G.T.: Edge Colourings</title>
+    <link href="/math/math-discrete-graph-theory-edge-colourings.html"/>
+    <updated>2019-12-18T00:00:00+09:00</updated>
+    <id>/math/math-discrete-graph-theory-edge-colourings</id>
+    <content type="html">
+Concept
+
+  K-edge Colouring: A k-edge colouring $\mathscr{C}$ of a loopless graph G is
+an assignment of k colours,$1,2,\cdots,k$  to the edges of G. The colouring
+$\mathscr{C}$ is proper if no two adjacement edges have the same colour.
+  G is k-edge colourable if G has a proper k-edge-colouring
+
+</content>
+  </entry>
+
+  <entry>
+    <title>G.T.: Networks</title>
+    <link href="/math/math-discrete-graph-theory-directed-networks.html"/>
+    <updated>2019-12-18T00:00:00+09:00</updated>
+    <id>/math/math-discrete-graph-theory-directed-networks</id>
+    <content type="html">
+Concept
+
+  A network N is a digraph D with two distinguished subsets of vertices, X and
+Y, and a non-negative integer-valued function c defined on its arc set A; the
+sets X and Y are assumed to be disjoint and nonempty.
+    
+      X and Y correspond to production centres and markets
+      vertic...</content>
+  </entry>
+
+  <entry>
+    <title>G.T.: Directed Graphs</title>
+    <link href="/math/math-discrete-graph-theory-directed-graph.html"/>
+    <updated>2019-12-18T00:00:00+09:00</updated>
+    <id>/math/math-discrete-graph-theory-directed-graph</id>
+    <content type="html">
+Concept
+
+  Directed Graph D: a directed graph D is an ordered triple $(V(D),A(D),\psi_D)$ consisting of 
+a nonempty set $V(D)$ of vertices, a set $A(D)$, disjoint from $V(D)$, or arcs,
+and an incidence function $\psi_D$ that associates with each arc of D an ordered
+pair of vertices of D.
+    
+  ...</content>
   </entry>
 
   <entry>
@@ -5304,20 +5556,6 @@ How to understand the matrix T?
 
 
 Project...</content>
-  </entry>
-
-  <entry>
-    <title>G.T.: Graph and Subgraphs</title>
-    <link href="/math/math-discrete-graph-theory-graph-and-subgraph.html"/>
-    <updated>2019-12-17T00:00:00+09:00</updated>
-    <id>/math/math-discrete-graph-theory-graph-and-subgraph</id>
-    <content type="html">
-Graph, Loop, Link
-
-  A graph G is an ordered triple $(V(G),E(G),\psi_G)$ consisting of a nonempty set
-V(G) of vertices, a set E(G), disjoint from V(G), of edges, and an incidence
-function $\psi_G$ that associates with each edge of G an unordered pair of(not
-necessarily distinct) vertices of G. I...</content>
   </entry>
 
   <entry>
@@ -9116,9 +9354,9 @@ train_x = np.zero...</content>
 
   <entry>
     <title>ML: Neural Network</title>
-    <link href="/ai/computer-science-model-bp-neural-network.html"/>
+    <link href="/ai/AI-ML-bp-neural-network.html"/>
     <updated>2019-04-22T00:00:00+09:00</updated>
-    <id>/ai/computer-science-model-bp-neural-network</id>
+    <id>/ai/AI-ML-bp-neural-network</id>
     <content type="html">
 a neuron
 the weights bias(b) namely is the threshold
@@ -9289,27 +9527,6 @@ intro
 空指针
 
 空指针不指向任何对象，在使用一个指针之...</content>
-  </entry>
-
-  <entry>
-    <title>CS: Regex Expression</title>
-    <link href="/cs/computer-science-regex-expression.html"/>
-    <updated>2017-05-14T00:00:00+09:00</updated>
-    <id>/cs/computer-science-regex-expression</id>
-    <content type="html">
-Intro
-
-  正则表达式描述了一种字符串匹配的模式，用来检查一个串是否含有某种子串，它不属于某种语言，但是不同的语言对它的支持不一样。
-  正则表达式是一种引擎匹配工具，没啥牛逼的
-  字符有本身的含义，比如字母，数字和下划线，如果需要赋予其别的含义只能通过转义符来实现，比如\w表示所有的字符
-  在正则中，大多数的字符只是其本身的含义，只需要记住一些转义后的字符即可
-  
-    
-      在正则中已经失去其本来的含义，表示一种贪婪匹配
-    
-  
-  ？在正则中依然表示问号，添加转义字符后\?才表示匹配一次或者零次
-  （）括号依然表示括号本身的括号含义，添加转义符之后...</content>
   </entry>
 
   <entry>
@@ -10312,44 +10529,6 @@ compare(2.0,12.0);
 
 class template
 类模板用来生成类的蓝图，与函数模板不同，编...</content>
-  </entry>
-
-  <entry>
-    <title>D.S.: Stack,List and Map</title>
-    <link href="/cs/computer-and-science-data-structure-stack-map-list-algorithms.html"/>
-    <updated>2016-05-03T00:00:00+09:00</updated>
-    <id>/cs/computer-and-science-data-structure-stack-map-list-algorithms</id>
-    <content type="html">
-树
-
-
-
-二叉树
-
-
-
-
-  使用递归创建二叉树
-  java不能传引用，递归的时候麻烦一点
-
-
-
-代码
-
-
-
-class BiTreeNode{
-	public char name;
-	public BiTreeNode left;
-	public BiTreeNode right;
-}
-class BiTree{
-	int index=-1;
-	int leftDeep=0;
-	int rightDeep=0;
-	public void createBiTree(BiTreeNode node){
-		String str=new String(&quot;AG##C##&quot;);
-		inde...</content>
   </entry>
 
   <entry>
