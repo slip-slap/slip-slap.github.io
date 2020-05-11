@@ -5,8 +5,8 @@
   <description>Just Do It - </description>
   <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
   <link></link>
-  <lastBuildDate>Mon, 11 May 2020 03:43:11 +0900</lastBuildDate>
-  <pubDate>Mon, 11 May 2020 03:43:11 +0900</pubDate>
+  <lastBuildDate>Tue, 12 May 2020 00:18:26 +0900</lastBuildDate>
+  <pubDate>Tue, 12 May 2020 00:18:26 +0900</pubDate>
   <ttl>1800</ttl>
 
 
@@ -10129,273 +10129,180 @@ distribution in our training set.&lt;/li&gt;
   </item>
 
   <item>
-    <title>G.T.: Planar Graphs</title>
-    <description>
-&lt;h4 id=&quot;concept&quot;&gt;Concept&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Planar: A graph is said to be embeddable in the plane, or planar, if it can
-be drawn in the plane so that its edges intersect only at their ends.
-    &lt;ul&gt;
-      &lt;li&gt;Such a drawing of a planar graph G is called a planar embedding of G.&lt;/li&gt;
-      &lt;li&gt;A planar embedding $\tilde{G}$ of G can itself be regarded as a graph
-isomorphic to G;&lt;/li&gt;
-      &lt;li&gt;the vertex set of $\tilde{G}$ is the set of points representing vertices of G,
-the edge sef of $\tilde{G}$ is the set of lines representing edges of G.&lt;/li&gt;
-      &lt;li&gt;refer to a planar embedding of a planar graph as a plane graph.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/math-discrete-graph-theory-planar-graph.png&quot; /&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Jordan Curve: A Jordan curve is a continuous non-self-intersecting curve
-whose origin and terminus coincide.
-    &lt;ul&gt;
-      &lt;li&gt;Let J be a Jordan curve in the plane. then the rest of the plane is
-partitioned into two disjoint open sets called the interior and exterior of J.&lt;/li&gt;
-      &lt;li&gt;We shall denote the interior and exterior of J, respectively, by &lt;strong&gt;int J and ext
-J&lt;/strong&gt;, and their closures by &lt;strong&gt;Int J and Ext J&lt;/strong&gt;.&lt;/li&gt;
-      &lt;li&gt;
-        &lt;script type=&quot;math/tex; mode=display&quot;&gt;\operatorname{Int} J \cap \operatorname{Ext} J=J&lt;/script&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Jordan curve theorem: states that any line joining a point in J to a point in
-ext J must meet J in some point.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/math-discrete-graph-theory-planar-jordan.png&quot; /&gt;&lt;/p&gt;
-&lt;h4 id=&quot;theorem&quot;&gt;Theorem&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;A graph G is embeddable in the plane if and only if it is embeddable on the&lt;/p&gt;
-
-    &lt;p&gt;sphere.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    <link>/math/math-discrete-graph-theory-planar-graphs.html</link>
-    <guid>/math/math-discrete-graph-theory-planar-graphs</guid>
-    <pubDate>Mon, 13 Jan 2020 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>G.T.: Vertex Colourings</title>
-    <description>
-&lt;h4 id=&quot;concept&quot;&gt;Concept&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;A k-vertex colouring of G is an assignment of k colours, $1,2,\cdots,k$ to
-the vertices of G;
-    &lt;ul&gt;
-      &lt;li&gt;The colouring is proper if no two distince adjacent vertices have the same
-colour.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;chromatic number: &lt;script type=&quot;math/tex&quot;&gt;\chi(G)&lt;/script&gt;, of G is the minimum k for which G is
-k-colourable;
-    &lt;ul&gt;
-      &lt;li&gt;if &lt;script type=&quot;math/tex&quot;&gt;\chi(G)=k&lt;/script&gt;, G is said to be k-chromatic. 
-&lt;img src=&quot;/images/math-discrete-graph-theory-vertex-colourings-chromatic-number.png&quot; /&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Girth: the girth of G is the length of a shortest cycle in G; if G has no
-cycles we define the girth of G to be infinite.&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-    <link>/math/math-discrete-graph-theory-vertex-colourings.html</link>
-    <guid>/math/math-discrete-graph-theory-vertex-colourings</guid>
-    <pubDate>Thu, 09 Jan 2020 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>G.T.: Matchings</title>
-    <description>
-&lt;h4 id=&quot;concept&quot;&gt;Concept&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;matching: A subset M of E is called a matching in G if its elements are links
-and no two are adjacent in G
-    &lt;ul&gt;
-      &lt;li&gt;the two ends of an edge in M are said to be matched under M.&lt;/li&gt;
-      &lt;li&gt;A matching M saturates a vertex v, and v is said to be &lt;strong&gt;M-saturated&lt;/strong&gt;,
-otherwise, v is &lt;strong&gt;M-unsaturated&lt;/strong&gt;.&lt;/li&gt;
-      &lt;li&gt;If every vertex of G is M-saturated, the matching M is perfect.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;M-alternating path: An M-alternating path in G is a path whose edges are
-alternately in E\M and M.&lt;/li&gt;
-  &lt;li&gt;M-augementing path: an M-augmenting path is an M-alternating path whose
-origin and terminus are M-unsaturated.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;concept-1&quot;&gt;Concept&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;covering: A covering of a graph G is a subset K of V such that every edge of
-G has at least one end in K.&lt;/li&gt;
-  &lt;li&gt;minimum covering: A covering K is a minimum covering if G has no covering
-$|K^{\prime}|&amp;lt;|K|$
-&lt;img src=&quot;/images/math-discrete-graph-theory-matching-covering.png&quot; /&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;application-personnel-assignment-problem&quot;&gt;Application: Personnel Assignment Problem&lt;/h4&gt;
-&lt;p&gt;In a certain company, n workers $X_1,X_2,\cdots,X_n$ are available for n jobs
-$Y_1,Y_2,\cdots,Y_n$, each worker being qualified for one or more of these jobs.
-can all the men be assigned, one man per job, to jobs for which they are
-qualified?&lt;/p&gt;
-
-&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Just as the other branches in mathematician. we are trying to divide the
-graph to very very small concept, such as mathing, covering, bond, block,
-independent set. I think maybe it is also another &lt;strong&gt;group theory&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-    <link>/math/math-discrete-graph-theory-matchings.html</link>
-    <guid>/math/math-discrete-graph-theory-matchings</guid>
-    <pubDate>Thu, 09 Jan 2020 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>G.T.: Independent Sets and Cliques</title>
-    <description>
-&lt;h4 id=&quot;concept&quot;&gt;Concept&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Independent set: A subset S of V is called an independent set of G if no two
-vertices of S are adjacent in G.&lt;/li&gt;
-  &lt;li&gt;Clique: A clique of a simple graph G is a subset S of V such that G[S] is
-complete
-    &lt;ul&gt;
-      &lt;li&gt;This name &lt;strong&gt;Clique&lt;/strong&gt; is very intuitive and informative, in a clique, everyone knows each
-other, in a graph, every vertice is connected to the other vertices in the
-clique.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/math-discrete-graph-theory-independent-sets-and-cliques-set.png&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Why we have the concept such as “Independent set” and “Clique”, because they
-are the basic building blocks of a graph, just as the concept in the other
-subject.&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    <link>/math/math-discrete-graph-theory-independent-sets-and-cliques.html</link>
-    <guid>/math/math-discrete-graph-theory-independent-sets-and-cliques</guid>
-    <pubDate>Thu, 09 Jan 2020 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>G.T.: Edge Colourings</title>
-    <description>
-&lt;h4 id=&quot;concept&quot;&gt;Concept&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;K-edge Colouring: A k-edge colouring $\mathscr{C}$ of a loopless graph G is
-an assignment of k colours,$1,2,\cdots,k$  to the edges of G. The colouring
-$\mathscr{C}$ is proper if no two adjacement edges have the same colour.&lt;/li&gt;
-  &lt;li&gt;G is k-edge colourable if G has a proper k-edge-colouring&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    <link>/math/math-discrete-graph-theory-edge-colourings.html</link>
-    <guid>/math/math-discrete-graph-theory-edge-colourings</guid>
-    <pubDate>Thu, 09 Jan 2020 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>G.T.: Networks</title>
-    <description>
-&lt;h4 id=&quot;concept&quot;&gt;Concept&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;A network N is a digraph D with two distinguished subsets of vertices, X and
-Y, and a non-negative integer-valued function c defined on its arc set A; the
-sets X and Y are assumed to be disjoint and nonempty.
-    &lt;ul&gt;
-      &lt;li&gt;X and Y correspond to production centres and markets&lt;/li&gt;
-      &lt;li&gt;vertices which are neither sources nor sinks are called &lt;strong&gt;Intermediate
-Vertices&lt;/strong&gt;, the set of such vertices will be denoted by I.&lt;/li&gt;
-      &lt;li&gt;Capacity Function: the function c is the capacity function of N and its value
-on an arc a the capacity of a.&lt;/li&gt;
-      &lt;li&gt;The capacity of an arc can be thought of as representing the maximum rate at
-which a commodity can be transported along it.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/math-discrete-graph-theory-networks.png&quot; /&gt;
--. two sources $x_1,x_2$
--. three sinks $y_1,y_2,y_3$
--. four intermediate vertices $v_1,v_2,v_3,v_4$&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Flow: A flow in a network N is an integer-valued function f defined on A such
-that&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-    <link>/math/math-discrete-graph-theory-directed-networks.html</link>
-    <guid>/math/math-discrete-graph-theory-directed-networks</guid>
-    <pubDate>Thu, 09 Jan 2020 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>G.T.: Directed Graphs</title>
-    <description>
-&lt;h4 id=&quot;concept&quot;&gt;Concept&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Directed Graph D: a directed graph D is an ordered triple $(V(D),A(D),\psi_D)$ consisting of 
-a nonempty set $V(D)$ of vertices, a set $A(D)$, disjoint from $V(D)$, or arcs,
-and an incidence function $\psi_D$ that associates with each arc of D an ordered
-pair of vertices of D.
-    &lt;ul&gt;
-      &lt;li&gt;if a is an arc and u van v are vertices such that $\psi_D (a)=(u,v)$, then a
-is said to join u to v;&lt;/li&gt;
-      &lt;li&gt;u is the tail of a, and v is its head.&lt;/li&gt;
-      &lt;li&gt;For convenience, ‘directed graph’ is abbreviated to &lt;strong&gt;digraph&lt;/strong&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Directed Walk: A directed walk in D is a finite non-null sequence
-$W=(v_0,a_1,v_1,\cdots,a_k,v_k)$, whose terms are alternately vertices and
-arcs,&lt;/li&gt;
-  &lt;li&gt;Directed Trail: a directed trail is a directed walk that is a trail.&lt;/li&gt;
-  &lt;li&gt;Indegree: the indegree &lt;script type=&quot;math/tex&quot;&gt;d_{\mathrm{D}}^{-}(v)&lt;/script&gt; of a vertex v in D is the number of arcs with head v&lt;/li&gt;
-  &lt;li&gt;Outdegree: the outdegree &lt;script type=&quot;math/tex&quot;&gt;d_{\mathrm{D}}^{+}(v)&lt;/script&gt; of v is the number of arcs with tail v
-    &lt;ul&gt;
-      &lt;li&gt;denote the minimum and minimum and maximum indegrees and outdegrees in D by
-$\delta^{-} (D), \Delta^{-} (D)$&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;idea&quot;&gt;Idea&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Reachable: If there is a directed $(u,v)-path$ in D, vertex $v$ is said to be
-reachable from vertex $u$ in D.&lt;/li&gt;
-  &lt;li&gt;Diconnected: Two vertices are diconnected in D if each is reachable from the
-other.&lt;/li&gt;
-  &lt;li&gt;Strict: A digraph is strict if it has no loops and no two arcs with the same
-ends have the same orientation.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;theorem&quot;&gt;Theorem&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;A digraph $D$ contains a directed path of length $\chi-1$&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-    <link>/math/math-discrete-graph-theory-directed-graph.html</link>
-    <guid>/math/math-discrete-graph-theory-directed-graph</guid>
-    <pubDate>Thu, 09 Jan 2020 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
     <title>I.T.: Codes for Integers</title>
     <description>
 </description>
     <link>/math/math-apply-information-theory-integer-codes.html</link>
     <guid>/math/math-apply-information-theory-integer-codes</guid>
+    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>CS: Regex Expression</title>
+    <description>
+&lt;h4 id=&quot;intro&quot;&gt;Intro&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;正则表达式描述了一种字符串匹配的模式，用来检查一个串是否含有某种子串，它不属于某种语言，但是不同的语言对它的支持不一样。&lt;/li&gt;
+  &lt;li&gt;正则表达式是一种引擎匹配工具，没啥牛逼的&lt;/li&gt;
+  &lt;li&gt;字符有本身的含义，比如字母，数字和下划线，如果需要赋予其别的含义只能通过转义符来实现，比如\w表示所有的字符&lt;/li&gt;
+  &lt;li&gt;在正则中，大多数的字符只是其本身的含义，只需要记住一些转义后的字符即可&lt;/li&gt;
+  &lt;li&gt;
+    &lt;ul&gt;
+      &lt;li&gt;在正则中已经失去其本来的含义，表示一种贪婪匹配&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;？在正则中依然表示问号，添加转义字符后\?才表示匹配一次或者零次&lt;/li&gt;
+  &lt;li&gt;（）括号依然表示括号本身的括号含义，添加转义符之后才表示一种子元素&lt;/li&gt;
+  &lt;li&gt;[]这个不好比较特殊，已经被转义&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;类型&quot;&gt;类型&lt;/h4&gt;
+&lt;p&gt;正则表达式和数学表达式的创建方法是一样的,因此正则表达式也用相应的一些运算符&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h5 id=&quot;字符&quot;&gt;字符&lt;/h5&gt;
+&lt;ol&gt;
+  &lt;li&gt;特定字符 ‘X’&lt;/li&gt;
+  &lt;li&gt;范围内字符:[0-9],[259], [a-zA-Z,:]  grep ‘[^0-9]’ passwd&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;转义字符在[]内失去作用，‘[.]’ 表示匹配.,而不是匹配任意字符
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ol&gt;
+  &lt;li&gt;.点号字符表示匹配任意字符&lt;/li&gt;
+  &lt;li&gt;边界字符&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;^: ^root  匹配输入字符串的开始位置， 注意与[^]的区别
+&lt;span class=&quot;nv&quot;&gt;$:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;匹配输入字符串的结尾位置
+&lt;span class=&quot;s1&quot;&gt;'^$'&lt;/span&gt; 表示空行
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h5 id=&quot;元字符&quot;&gt;元字符&lt;/h5&gt;
+&lt;ol&gt;
+  &lt;li&gt;\w: 匹配人体字类字符，包括下划线([A-Za-z0-9_])&lt;/li&gt;
+  &lt;li&gt;\W: 匹配任何非字类字符 ‘[^A-Za-z0-9_]’&lt;/li&gt;
+  &lt;li&gt;\b: 代表单词的分隔&lt;/li&gt;
+  &lt;li&gt;*   匹配0次或者n次&lt;/li&gt;
+  &lt;li&gt;\+ 匹配1次或者n次&lt;/li&gt;
+  &lt;li&gt;\? 匹配0次或者1次&lt;/li&gt;
+  &lt;li&gt;\{n\} 匹配n次&lt;/li&gt;
+  &lt;li&gt;\{n,\} 至少匹配n次&lt;/li&gt;
+  &lt;li&gt;\{n,m\} 至少匹配n次最多匹配m次&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h5 id=&quot;正则表达式组合&quot;&gt;正则表达式组合&lt;/h5&gt;
+
+&lt;h4 id=&quot;实例&quot;&gt;实例&lt;/h4&gt;
+
+&lt;p&gt;15到18位以X或者x或者数字结尾的身份证号&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'[1-9]\([0-9]\{13\}\|[0-9]\{16\}\)[0-9Xx]'&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;test&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;匹配密码&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'$\w\+$'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+    <link>/cs/computer-science-regex-expression.html</link>
+    <guid>/cs/computer-science-regex-expression</guid>
+    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>C.S.P.: String</title>
+    <description>
+&lt;h4 id=&quot;1-reverse-string&quot;&gt;1. Reverse String&lt;/h4&gt;
+&lt;p&gt;Write a function that takes a string as input and returns the string reversed&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Solution&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;reverseString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;chars&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toCharArray&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
+            &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;chars&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;chars&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;chars&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;chars&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;chars&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;haha&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;a big man sings a song&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Solution&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;reverseString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+</description>
+    <link>/csp/computer-science-problem-string.html</link>
+    <guid>/csp/computer-science-problem-string</guid>
+    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Stack: </title>
+    <description>
+&lt;h4 id=&quot;1-valid-parentheses&quot;&gt;1. Valid Parentheses&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Problem: given a string  containing just the characters ‘(‘,’)’,’{‘,’}’,’[’ and
+‘]’, determine if the input string is valid.&lt;/li&gt;
+  &lt;li&gt;Example :
+    &lt;ul&gt;
+      &lt;li&gt;input: “()” output: true&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/csp/computer-science-problem-stack.html</link>
+    <guid>/csp/computer-science-problem-stack</guid>
+    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Regular Expression Matching</title>
+    <description>
+</description>
+    <link>/csp/computer-science-problem-regular-expression-matching.html</link>
+    <guid>/csp/computer-science-problem-regular-expression-matching</guid>
+    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Recursion</title>
+    <description>
+&lt;p&gt;#### 
+Recursive programming is a great way to show yourself that you can solve
+difficult problems.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Write an iterative function to solve the problem.&lt;/li&gt;
+  &lt;li&gt;Write a “dispatcher” function.
+    &lt;ul&gt;
+      &lt;li&gt;Dispatcher function solves problem for some “minimal” data set.&lt;/li&gt;
+      &lt;li&gt;in this case, when size parameter == 0&lt;/li&gt;
+      &lt;li&gt;Dispatcher calls iterative function to handle non-minimal cases&lt;/li&gt;
+      &lt;li&gt;must pass smaller data set to iterative function. in this case, passing size
+-1 for third parameter does the trick.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;In dispatcher, replace call to iterative function with call to dispatcher.&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/csp/computer-science-problem-recursion.html</link>
+    <guid>/csp/computer-science-problem-recursion</guid>
     <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
   </item>
 
@@ -10434,8 +10341,253 @@ position.&lt;/li&gt;
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
-    <link>/csp/computer-science-jump-game.html</link>
-    <guid>/csp/computer-science-jump-game</guid>
+    <link>/csp/computer-science-problem-jump-game.html</link>
+    <guid>/csp/computer-science-problem-jump-game</guid>
+    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Backtracking </title>
+    <description>
+</description>
+    <link>/csp/computer-science-problem-backtracking.html</link>
+    <guid>/csp/computer-science-problem-backtracking</guid>
+    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>D.S.: Stack,List and Map</title>
+    <description>
+&lt;hr /&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;BiTreeNode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BiTreeNode&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BiTreeNode&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;BiTree&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;leftDeep&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rightDeep&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;createBiTree&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;BiTreeNode&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;AG##C##&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++;&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;charAt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)==&lt;/span&gt;&lt;span class=&quot;sc&quot;&gt;'#'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;charAt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BiTreeNode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;createBiTree&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BiTreeNode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;createBiTree&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;BiTreeNode&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt;&lt;span class=&quot;sc&quot;&gt;'\u0000'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Character&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;valueOf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+		&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;treeDeep&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;BiTreeNode&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;treeDeep&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;leftDeep&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++;&lt;/span&gt;
+		&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;treeDeep&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;rightDeep&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++;&lt;/span&gt;
+		&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;leftDeep&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rightDeep&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h5 id=&quot;基于数组和链表的map实现&quot;&gt;基于数组和链表的map实现&lt;/h5&gt;
+&lt;ol&gt;
+  &lt;li&gt;数组用来存放哈希表&lt;/li&gt;
+  &lt;li&gt;链表用来存放key&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;HashTable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;c1&quot;&gt;//哈希表&lt;/span&gt;
+	&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hashTableSize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;35&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;c1&quot;&gt;//链表&lt;/span&gt;
+	&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;();&lt;/span&gt;
+	&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hashTable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;c1&quot;&gt;//创建hash表&lt;/span&gt;
+	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;createHashTable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;hashTable&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hashTableSize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+		&lt;span class=&quot;c1&quot;&gt;//初始化hash表&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hashTable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++){&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;hashTable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getTableAddress&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;31&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;put&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
+		&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;address&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getTableAddress&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;hashTable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;address&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;c1&quot;&gt;//显示哈希表&lt;/span&gt;
+	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
+		&lt;span class=&quot;c1&quot;&gt;//计算在hash表中的位置&lt;/span&gt;
+		&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;address&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getTableAddress&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;intValue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+		&lt;span class=&quot;c1&quot;&gt;//hash表的值&lt;/span&gt;
+		&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hashTable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;address&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;StringBuilder&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StringBuilder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;sb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;sb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;: &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;sb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;c1&quot;&gt;//根据key找到value&lt;/span&gt;
+	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
+		&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;address&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getTableAddress&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hashTable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;address&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+    <link>/cs/computer-science-data-structure-stack-map-list-algorithms.html</link>
+    <guid>/cs/computer-science-data-structure-stack-map-list-algorithms</guid>
+    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>D.S.: Priority Queue</title>
+    <description>
+</description>
+    <link>/cs/computer-science-data-structure-priority-queue.html</link>
+    <guid>/cs/computer-science-data-structure-priority-queue</guid>
+    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>D.S.: Heap</title>
+    <description>
+</description>
+    <link>/cs/computer-science-data-structure-heap.html</link>
+    <guid>/cs/computer-science-data-structure-heap</guid>
+    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>D.S.: AVL Tree</title>
+    <description>
+&lt;p&gt;self-balancing binary search tree.&lt;/p&gt;
+</description>
+    <link>/cs/computer-science-data-structure-avl-tree.html</link>
+    <guid>/cs/computer-science-data-structure-avl-tree</guid>
+    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>C.S.A.: Sort</title>
+    <description>
+</description>
+    <link>/cs/computer-science-algorithm-sort.html</link>
+    <guid>/cs/computer-science-algorithm-sort</guid>
+    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>C.S.A.: Dynamic Programming </title>
+    <description>
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Why we call this boy dynamic programming, why, why ? just a fancy
+terminology, just for cool, in nature
+    &lt;ul&gt;
+      &lt;li&gt;DP is “careful brute force”&lt;/li&gt;
+      &lt;li&gt;Dp is guessing + recursion + momoization&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;define subproblems&lt;/li&gt;
+  &lt;li&gt;guess&lt;/li&gt;
+  &lt;li&gt;recurrence&lt;/li&gt;
+  &lt;li&gt;recurrence + momoize&lt;/li&gt;
+  &lt;li&gt;solve original problem&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;application&quot;&gt;Application&lt;/h4&gt;
+
+&lt;h5 id=&quot;text-justification&quot;&gt;Text Justification&lt;/h5&gt;
+
+</description>
+    <link>/cs/computer-science-algorithm-dynamic-programming.html</link>
+    <guid>/cs/computer-science-algorithm-dynamic-programming</guid>
+    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>C.S.A.: Divide and Conquer</title>
+    <description>
+</description>
+    <link>/cs/computer-science-algorithm-divide-and-conquer.html</link>
+    <guid>/cs/computer-science-algorithm-divide-and-conquer</guid>
+    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>C.S.A.: Deepth First Search</title>
+    <description>
+&lt;h4 id=&quot;dfs&quot;&gt;DFS&lt;/h4&gt;
+&lt;p&gt;DFS stands for Depth First Search is a edge based technique. It used the Stack
+data structure, performs two stages:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;first visited vertices are pushed into stack&lt;/li&gt;
+  &lt;li&gt;second if there is no vertices then visited vertices are popped.&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+    <link>/cs/computer-science-algorithm-deepth-first-search.html</link>
+    <guid>/cs/computer-science-algorithm-deepth-first-search</guid>
+    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>C.S.A.: Breadth First Search</title>
+    <description>
+&lt;h4 id=&quot;bfs&quot;&gt;BFS&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;BFS stands for Breadth First Search is a vertex based techinique for finding
+a shortest path in graph.
+    &lt;ul&gt;
+      &lt;li&gt;It uses a Queue data structure which follows first in first out. In BFS, one
+vertex is selected at a time when it is visited and marked then its adjacent
+are visited and stored in the queue.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;application&quot;&gt;Application&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;web crawling&lt;/li&gt;
+  &lt;li&gt;social networking&lt;/li&gt;
+  &lt;li&gt;network broadcast&lt;/li&gt;
+  &lt;li&gt;garbage collection&lt;/li&gt;
+  &lt;li&gt;model checking&lt;/li&gt;
+  &lt;li&gt;mathematical conjecture checking&lt;/li&gt;
+  &lt;li&gt;solving puzzles games&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/cs/computer-science-algorithm-breadth-first-search.html</link>
+    <guid>/cs/computer-science-algorithm-breadth-first-search</guid>
     <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
   </item>
 
@@ -10758,46 +10910,6 @@ the fewest bits.&lt;/li&gt;
 </description>
     <link>/math/math-apply-information-theory-exact-marginalization.html</link>
     <guid>/math/math-apply-information-theory-exact-marginalization</guid>
-    <pubDate>Sun, 05 Jan 2020 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>G.T.: Message Passing</title>
-    <description>
-&lt;h4 id=&quot;message-passing-rule-set-a&quot;&gt;Message-passing rule-set A&lt;/h4&gt;
-&lt;h4 id=&quot;message-passing-rule-set-b&quot;&gt;Message-passing rule-set B&lt;/h4&gt;
-
-&lt;h4 id=&quot;min-sum-algorithm-or-viterbi-algorithm&quot;&gt;Min-sum Algorithm or Viterbi Algorithm&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/math-discrete-graph-theory-message-passing.png&quot; /&gt;&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Each node can broadcast its cost to its descendants once it knows the costs
-of all its possible predecessors.&lt;/li&gt;
-  &lt;li&gt;The cost of &lt;strong&gt;A&lt;/strong&gt; is zero, we pass this news on to &lt;strong&gt;H&lt;/strong&gt; and &lt;strong&gt;I&lt;/strong&gt;., as the
-message passes along each edge in the graph, the cost of that edge is added.
-We find the costs of H and I are 4 and 1 respectively. figure(a)&lt;/li&gt;
-  &lt;li&gt;what about &lt;strong&gt;K&lt;/strong&gt;, out of the edge &lt;strong&gt;H-K&lt;/strong&gt; comes the message that a path of
-cost 5 exists from &lt;strong&gt;A&lt;/strong&gt; to &lt;strong&gt;K&lt;/strong&gt; via &lt;strong&gt;H&lt;/strong&gt;; and from edge &lt;strong&gt;I-K&lt;/strong&gt; we learn
-of an alternative path of cost 3 figure(b)&lt;/li&gt;
-  &lt;li&gt;The min-sum algorithm sets the cost of &lt;strong&gt;K&lt;/strong&gt; equal to the minimum of these,
-and records which was the smallest-cost route into &lt;strong&gt;K&lt;/strong&gt; by retaining only
-hte edge &lt;strong&gt;I-K&lt;/strong&gt; and pruning away the other edges leading to K, fiugre(c)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;One reason that graph theory is important is because we can use graph 
-to complete some calculation.&lt;/li&gt;
-  &lt;li&gt;Message-passing rule-set A and message-passing rule-set B just make use the
-structure of the graph and do some math.&lt;/li&gt;
-  &lt;li&gt;At first, I read the phrase “message-passing rule-set A”, I don’t know how to
-separate the sentence, it should be like this “message-passing rule” for “set
-A”. I just need a lot of time to understand something.&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-    <link>/math/math-apply-graph-theory-message-passing.html</link>
-    <guid>/math/math-apply-graph-theory-message-passing</guid>
     <pubDate>Sun, 05 Jan 2020 00:00:00 +0900</pubDate>
   </item>
 
@@ -11498,6 +11610,35 @@ and
   </item>
 
   <item>
+    <title>G.T.: Vertex Colourings</title>
+    <description>
+&lt;h4 id=&quot;concept&quot;&gt;Concept&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;A k-vertex colouring of G is an assignment of k colours, $1,2,\cdots,k$ to
+the vertices of G;
+    &lt;ul&gt;
+      &lt;li&gt;The colouring is proper if no two distince adjacent vertices have the same
+colour.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;chromatic number: &lt;script type=&quot;math/tex&quot;&gt;\chi(G)&lt;/script&gt;, of G is the minimum k for which G is
+k-colourable;
+    &lt;ul&gt;
+      &lt;li&gt;if &lt;script type=&quot;math/tex&quot;&gt;\chi(G)=k&lt;/script&gt;, G is said to be k-chromatic. 
+&lt;img src=&quot;/images/math-discrete-graph-theory-vertex-colourings-chromatic-number.png&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Girth: the girth of G is the length of a shortest cycle in G; if G has no
+cycles we define the girth of G to be infinite.&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/math/math-discrete-graph-theory-vertex-colourings.html</link>
+    <guid>/math/math-discrete-graph-theory-vertex-colourings</guid>
+    <pubDate>Wed, 18 Dec 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
     <title>G.T.: Trees</title>
     <description>
 &lt;h4 id=&quot;concept&quot;&gt;Concept&lt;/h4&gt;
@@ -11593,6 +11734,387 @@ for stochastic process; polynomial family for functional analysis.&lt;/li&gt;
   </item>
 
   <item>
+    <title>G.T.: Summary</title>
+    <description>
+&lt;p&gt;####
+There are two aspects we need to study about a graph, the node and the edge.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;the attribute of the nodes, we have breadth first search and deep first
+search.&lt;/li&gt;
+  &lt;li&gt;about the attributes, we have shortest path problem.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/math/math-discrete-graph-theory-summary.html</link>
+    <guid>/math/math-discrete-graph-theory-summary</guid>
+    <pubDate>Wed, 18 Dec 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>G.T.: Planar Graphs</title>
+    <description>
+&lt;h4 id=&quot;concept&quot;&gt;Concept&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Planar: A graph is said to be embeddable in the plane, or planar, if it can
+be drawn in the plane so that its edges intersect only at their ends.
+    &lt;ul&gt;
+      &lt;li&gt;Such a drawing of a planar graph G is called a planar embedding of G.&lt;/li&gt;
+      &lt;li&gt;A planar embedding $\tilde{G}$ of G can itself be regarded as a graph
+isomorphic to G;&lt;/li&gt;
+      &lt;li&gt;the vertex set of $\tilde{G}$ is the set of points representing vertices of G,
+the edge sef of $\tilde{G}$ is the set of lines representing edges of G.&lt;/li&gt;
+      &lt;li&gt;refer to a planar embedding of a planar graph as a plane graph.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/math-discrete-graph-theory-planar-graph.png&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Jordan Curve: A Jordan curve is a continuous non-self-intersecting curve
+whose origin and terminus coincide.
+    &lt;ul&gt;
+      &lt;li&gt;Let J be a Jordan curve in the plane. then the rest of the plane is
+partitioned into two disjoint open sets called the interior and exterior of J.&lt;/li&gt;
+      &lt;li&gt;We shall denote the interior and exterior of J, respectively, by &lt;strong&gt;int J and ext
+J&lt;/strong&gt;, and their closures by &lt;strong&gt;Int J and Ext J&lt;/strong&gt;.&lt;/li&gt;
+      &lt;li&gt;
+        &lt;script type=&quot;math/tex; mode=display&quot;&gt;\operatorname{Int} J \cap \operatorname{Ext} J=J&lt;/script&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Jordan curve theorem: states that any line joining a point in J to a point in
+ext J must meet J in some point.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/math-discrete-graph-theory-planar-jordan.png&quot; /&gt;&lt;/p&gt;
+&lt;h4 id=&quot;theorem&quot;&gt;Theorem&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;A graph G is embeddable in the plane if and only if it is embeddable on the&lt;/p&gt;
+
+    &lt;p&gt;sphere.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/math/math-discrete-graph-theory-planar-graphs.html</link>
+    <guid>/math/math-discrete-graph-theory-planar-graphs</guid>
+    <pubDate>Wed, 18 Dec 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>G.T.: Message Passing</title>
+    <description>
+&lt;h4 id=&quot;message-passing-rule-set-a&quot;&gt;Message-passing rule-set A&lt;/h4&gt;
+&lt;h4 id=&quot;message-passing-rule-set-b&quot;&gt;Message-passing rule-set B&lt;/h4&gt;
+
+&lt;h4 id=&quot;min-sum-algorithm-or-viterbi-algorithm&quot;&gt;Min-sum Algorithm or Viterbi Algorithm&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/math-discrete-graph-theory-message-passing.png&quot; /&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Each node can broadcast its cost to its descendants once it knows the costs
+of all its possible predecessors.&lt;/li&gt;
+  &lt;li&gt;The cost of &lt;strong&gt;A&lt;/strong&gt; is zero, we pass this news on to &lt;strong&gt;H&lt;/strong&gt; and &lt;strong&gt;I&lt;/strong&gt;., as the
+message passes along each edge in the graph, the cost of that edge is added.
+We find the costs of H and I are 4 and 1 respectively. figure(a)&lt;/li&gt;
+  &lt;li&gt;what about &lt;strong&gt;K&lt;/strong&gt;, out of the edge &lt;strong&gt;H-K&lt;/strong&gt; comes the message that a path of
+cost 5 exists from &lt;strong&gt;A&lt;/strong&gt; to &lt;strong&gt;K&lt;/strong&gt; via &lt;strong&gt;H&lt;/strong&gt;; and from edge &lt;strong&gt;I-K&lt;/strong&gt; we learn
+of an alternative path of cost 3 figure(b)&lt;/li&gt;
+  &lt;li&gt;The min-sum algorithm sets the cost of &lt;strong&gt;K&lt;/strong&gt; equal to the minimum of these,
+and records which was the smallest-cost route into &lt;strong&gt;K&lt;/strong&gt; by retaining only
+hte edge &lt;strong&gt;I-K&lt;/strong&gt; and pruning away the other edges leading to K, fiugre(c)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;One reason that graph theory is important is because we can use graph 
+to complete some calculation.&lt;/li&gt;
+  &lt;li&gt;Message-passing rule-set A and message-passing rule-set B just make use the
+structure of the graph and do some math.&lt;/li&gt;
+  &lt;li&gt;At first, I read the phrase “message-passing rule-set A”, I don’t know how to
+separate the sentence, it should be like this “message-passing rule” for “set
+A”. I just need a lot of time to understand something.&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/math/math-discrete-graph-theory-message-passing.html</link>
+    <guid>/math/math-discrete-graph-theory-message-passing</guid>
+    <pubDate>Wed, 18 Dec 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>G.T.: Matchings</title>
+    <description>
+&lt;h4 id=&quot;concept&quot;&gt;Concept&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;matching: A subset M of E is called a matching in G if its elements are links
+and no two are adjacent in G
+    &lt;ul&gt;
+      &lt;li&gt;the two ends of an edge in M are said to be matched under M.&lt;/li&gt;
+      &lt;li&gt;A matching M saturates a vertex v, and v is said to be &lt;strong&gt;M-saturated&lt;/strong&gt;,
+otherwise, v is &lt;strong&gt;M-unsaturated&lt;/strong&gt;.&lt;/li&gt;
+      &lt;li&gt;If every vertex of G is M-saturated, the matching M is perfect.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;M-alternating path: An M-alternating path in G is a path whose edges are
+alternately in E\M and M.&lt;/li&gt;
+  &lt;li&gt;M-augementing path: an M-augmenting path is an M-alternating path whose
+origin and terminus are M-unsaturated.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;concept-1&quot;&gt;Concept&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;covering: A covering of a graph G is a subset K of V such that every edge of
+G has at least one end in K.&lt;/li&gt;
+  &lt;li&gt;minimum covering: A covering K is a minimum covering if G has no covering
+$|K^{\prime}|&amp;lt;|K|$
+&lt;img src=&quot;/images/math-discrete-graph-theory-matching-covering.png&quot; /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;application-personnel-assignment-problem&quot;&gt;Application: Personnel Assignment Problem&lt;/h4&gt;
+&lt;p&gt;In a certain company, n workers $X_1,X_2,\cdots,X_n$ are available for n jobs
+$Y_1,Y_2,\cdots,Y_n$, each worker being qualified for one or more of these jobs.
+can all the men be assigned, one man per job, to jobs for which they are
+qualified?&lt;/p&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Just as the other branches in mathematician. we are trying to divide the
+graph to very very small concept, such as mathing, covering, bond, block,
+independent set. I think maybe it is also another &lt;strong&gt;group theory&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/math/math-discrete-graph-theory-matchings.html</link>
+    <guid>/math/math-discrete-graph-theory-matchings</guid>
+    <pubDate>Wed, 18 Dec 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>G.T.: Independent Sets and Cliques</title>
+    <description>
+&lt;h4 id=&quot;concept&quot;&gt;Concept&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Independent set: A subset S of V is called an independent set of G if no two
+vertices of S are adjacent in G.&lt;/li&gt;
+  &lt;li&gt;Clique: A clique of a simple graph G is a subset S of V such that G[S] is
+complete
+    &lt;ul&gt;
+      &lt;li&gt;This name &lt;strong&gt;Clique&lt;/strong&gt; is very intuitive and informative, in a clique, everyone knows each
+other, in a graph, every vertice is connected to the other vertices in the
+clique.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/math-discrete-graph-theory-independent-sets-and-cliques-set.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Why we have the concept such as “Independent set” and “Clique”, because they
+are the basic building blocks of a graph, just as the concept in the other
+subject.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/math/math-discrete-graph-theory-independent-sets-and-cliques.html</link>
+    <guid>/math/math-discrete-graph-theory-independent-sets-and-cliques</guid>
+    <pubDate>Wed, 18 Dec 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>G.T.: Graph and Subgraphs</title>
+    <description>
+&lt;h4 id=&quot;graph-loop-link&quot;&gt;Graph, Loop, Link&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;A graph G is an ordered triple $(V(G),E(G),\psi_G)$ consisting of a nonempty set
+V(G) of vertices, a set E(G), disjoint from V(G), of edges, and an &lt;strong&gt;incidence
+function&lt;/strong&gt; $\psi_G$ that associates with each edge of G an unordered pair of(not
+necessarily distinct) vertices of G. If $e$ is an edge and $u$ and $v$ are
+vertices such that $\psi_G(e)=uv$, then $e$ is said to join $u$ and $v$;&lt;/li&gt;
+  &lt;li&gt;Loop: An edge with identical ends is called a loop.&lt;/li&gt;
+  &lt;li&gt;Link: An edge with distinct ends is called a link.&lt;/li&gt;
+  &lt;li&gt;Incident: The ends of an edge are said to be incident with the edge
+    &lt;ul&gt;
+      &lt;li&gt;incidence: the angle at which a ray (such as a ray of light) hits a surface,
+that is the nature meaning of &lt;strong&gt;the world incidence&lt;/strong&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Adjacent: Two vertices which are incident with a common edge are adjacent, as
+are two edges which are incident with a common vertex.
+    &lt;ul&gt;
+      &lt;li&gt;When the word adjacent pops up, most times, it means relationgship between two
+vertices.&lt;/li&gt;
+      &lt;li&gt;There is no unique way of drawing a graph; A diagram of a graph merely
+depicts the incidence relation holding between its vertices and edges.&lt;/li&gt;
+      &lt;li&gt;We often draw a diagram of a graph and refer to it as the graph itself; in
+the same spirit, we shall call its points ‘vertices’ and its lines ‘edges’.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h4 id=&quot;special-graphs&quot;&gt;Special Graphs&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Simple Graph: A graph is simple if it has no loops and no two of its links
+join the same pair of vertices.&lt;/li&gt;
+  &lt;li&gt;Complete Graph: A simple graph in which each pair of distinct vertices is
+joined by an edge is called a complete graph.
+    &lt;ul&gt;
+      &lt;li&gt;There is just one complete graph on n vertices; it is denoted by $K_n$&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/math-discrete-graph-theory-graph-and-subgraph.png&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Empty Graph: a graph with no edges.&lt;/li&gt;
+  &lt;li&gt;Bipartite graph: a graph whose vertex set can be partitioned into two subsets
+X and Y, so that each edge has one end in X and one end in Y;&lt;/li&gt;
+  &lt;li&gt;Complete Biparite Graph: a simple bipartite graph with bipartition (X,Y) in
+which each vertex of X is joined to each vertex of Y; if |X|=m and |Y|=n,
+such a graph is denoted by $K_{m,n}$&lt;/li&gt;
+  &lt;li&gt;Trivial and Nontrivial: We call a graph with just one vertex trivial and all
+other graphs nontrivial&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;notation&quot;&gt;Notation&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;$v(G)$ denotes the number of vertices.&lt;/li&gt;
+  &lt;li&gt;$\epsilon(G)$ denotes the number of edges.&lt;/li&gt;
+  &lt;li&gt;When just one graph under discussion, we usually denote this graph by G, We
+omit the letter G from graph-theoretic symbols and write, for instance,
+$V,E,v,\epsilon$ instead of V(G), E(G),v(G) and $\epsilon(G)$&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;graph-isomporphism&quot;&gt;Graph Isomporphism&lt;/h4&gt;
+&lt;p&gt;In general, two graphs G and H are said to be isomorphic&lt;/p&gt;
+
+&lt;h4 id=&quot;incidence-and-adjacency-matrices&quot;&gt;Incidence and Adjacency Matrices&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Incidence Matrix:  To any graph G there corresponds a $v\times \epsilon$ matrix called the
+incidence matrix&lt;/li&gt;
+  &lt;li&gt;Vertices of G: denote by $v_1, v_2,\cdots,v_v$&lt;/li&gt;
+  &lt;li&gt;Edges of G: denote by $e_1,e_2,\cdots,e_{\epsilon}$&lt;/li&gt;
+  &lt;li&gt;Incidence Matrix of G: denotes by $M(G)=[m_{ij}]$&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;subgraphs&quot;&gt;Subgraphs&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Subgraph: A graph H is a subgraph of G(written $H\subseteq G$) if $V(H)
+\subseteq V(G)$, $E(H) \subseteq E(G)$, and $\psi_H$ is the restriction of
+$\psi_G$ to $E(H)$&lt;/li&gt;
+  &lt;li&gt;Proper Subgraph: When $H \subseteq G$ but &lt;script type=&quot;math/tex&quot;&gt;H \neq G&lt;/script&gt;, we wirte $H \subset G$, and call H a proper subgraph of G.&lt;/li&gt;
+  &lt;li&gt;Underlying Simple Graph: By deleting from G all loops and, for every pair of
+adjacent vertices, all but one link joining them, we obtain a simple spanning
+subgraph of G, called the underlying simple graph of G.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Connected: two vertices $u$ and $v$ v are said to be connected if there is a
+$(u,v)$-path in G.&lt;/li&gt;
+  &lt;li&gt;Connection is an equivalence relation on the vertex set V. Thus there is a
+partition of V into nonempty subsets $V_1,V_2,\cdots,V_w$ such that two
+vertices $u$ and $v$ are connected if and only if $u$ and $v$ belong to the
+same set $V_i$&lt;/li&gt;
+  &lt;li&gt;Component: the subgraphs $G[V_1],G[V_2],\cdots,G[V_w]$ are called the
+components of G. If G has exactly one component, G is connected, otherwise G
+is disconnected.
+    &lt;ol&gt;
+      &lt;li&gt;A Spanning Subgraph: If H is a subgraph of G, G is a supergraph of H, a
+ spanning subgraph(or spanning supergraph) of G is a subgraph (or supergraph)
+ H with $V(H)=V(G)$&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;induced-graph&quot;&gt;Induced Graph&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Induced Subgraph: Suppose that $V^{\prime}$ is a nonempty subset of V. The
+subgraph of G whose vertex set is $V^{\prime}$ and whose edge set is the set
+of those edges of G that have both ends in $V^{\prime}$ is called the
+subgraph of G induced by $V^{\prime}$ and is denoted by $G[V^{\prime}]$
+    &lt;ul&gt;
+      &lt;li&gt;The induced subgraph $G[V\V^{\prime}]$ is denoted by $G-V^{\prime}$&lt;/li&gt;
+      &lt;li&gt;it is the subgraph obtained from G by deleting the vertices in $V^{\prime}$
+together with their incident edges.&lt;/li&gt;
+      &lt;li&gt;If $V^{\prime}={v}$ we write $G-v$ for $G-{ v }$&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Edge-induced Subgraph: suppose that $E^{\prime}$ is a nonempty subset of E.
+The subgraph of G whose vertex set is the set of ends of edges in $E^{\prime}$ and
+whose edge set is $E^{\prime}$ is called the subgraph of G induced by
+$E^{\prime}$ and denoted by $G[E^{\prime}]$&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;vertex-degrees&quot;&gt;Vertex Degrees&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;The degree $d_G(v)$ of a vertex $v$ in G is the number of edges of G incident
+with $v$, each loop counting as two edges. We denote by $\delta(G)$ and
+$\Delta (G)$ the minimum and maximum degrees, respectively, of vertices of G. 
+&lt;br /&gt;
+&lt;script type=&quot;math/tex&quot;&gt;\sum_{v \in V} d(v)=2 \varepsilon&lt;/script&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;paths-and-connection&quot;&gt;Paths and Connection&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Walk: A walk in G is a finite non-null sequence $W=v_0e_1v_1e_2v_2\cdots
+e_kv_k$, whose terms are alternatively vertices and edges. &lt;br /&gt;
+for $1\leq i \leq k$, the ends of $e_i$ are $v_{i-1}$ and $v_i$. We say that
+W is a walk from $v_0$ to $v_k$, or $v_0,v_k$-walk&lt;/li&gt;
+  &lt;li&gt;Origin and Terminus: the vertices $v_0$ and $v_k$ are called the origin and
+terminus of W&lt;/li&gt;
+  &lt;li&gt;Internal Vertices: $v_1,v_2,\cdots,v_{k-1}$ its internal vertices&lt;/li&gt;
+  &lt;li&gt;Length: the integer k is the length of W.&lt;/li&gt;
+  &lt;li&gt;Trail: If the edges $e_1, e_2,\cdots,e_k$ of a walk W are distinct, W is
+called a trail.&lt;/li&gt;
+  &lt;li&gt;Path: if the vertices $v_0,v_1,\cdots,v_k$ of a walk W are distinct, W is
+called a path.&lt;/li&gt;
+  &lt;li&gt;Connection: Two vertices u and v of G are said to be connected if there is a
+$(u,v)$-pathin G.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;cycles&quot;&gt;Cycles&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Closed Walk: a walk is closed if it has positive length and its origin and
+terminus are the same&lt;/li&gt;
+  &lt;li&gt;Cycle: A closed trail whose origin and internal vertices are distinct is a
+cycle.&lt;/li&gt;
+  &lt;li&gt;K-cycle: A cycle of length k is called a k-cycle, a k-cycle is odd or even
+according as k is odd or even.&lt;/li&gt;
+  &lt;li&gt;Triangle: A 3-cycle is often called a triangle.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;bond-and-edge-cut&quot;&gt;Bond and Edge Cut&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Edge Cut: For subsets S and $S^{\prime}$ of V, we denote by $[S,S^{\prime}]$
+the set of edges with one end in S and the other is $S^{\prime}$.
+    &lt;ul&gt;
+      &lt;li&gt;An edge cut of G is a subset of E of the form $[S,\bar{S}]$&lt;/li&gt;
+      &lt;li&gt;Where S is a nonempty proper subset of V and $\bar{S}=V\S$&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Bond: A minimal nonempty edge cut of G is called a bond.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;application-shortest-path-problem&quot;&gt;Application: Shortest Path Problem&lt;/h4&gt;
+&lt;p&gt;Problem: Find the shortest $(u_0,v_0)$-path&lt;br /&gt;
+Solution: Dijkstra Algorithm &lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Learning Graph theory exactly like the learning Riemann Geometry. Manifold,
+submanifold.&lt;/li&gt;
+  &lt;li&gt;The definition of degree in graph theory just as the definition of degree in
+differential equation.&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/math/math-discrete-graph-theory-graph-and-subgraph.html</link>
+    <guid>/math/math-discrete-graph-theory-graph-and-subgraph</guid>
+    <pubDate>Wed, 18 Dec 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
     <title>G.T.: Euler Tours and Hamilton Cycles</title>
     <description>
 &lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
@@ -11621,6 +12143,108 @@ walks as little as possible.
 </description>
     <link>/math/math-discrete-graph-theory-euler-tours-and-hamilton-cycles.html</link>
     <guid>/math/math-discrete-graph-theory-euler-tours-and-hamilton-cycles</guid>
+    <pubDate>Wed, 18 Dec 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>G.T.: Edge Colourings</title>
+    <description>
+&lt;h4 id=&quot;concept&quot;&gt;Concept&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;K-edge Colouring: A k-edge colouring $\mathscr{C}$ of a loopless graph G is
+an assignment of k colours,$1,2,\cdots,k$  to the edges of G. The colouring
+$\mathscr{C}$ is proper if no two adjacement edges have the same colour.&lt;/li&gt;
+  &lt;li&gt;G is k-edge colourable if G has a proper k-edge-colouring&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/math/math-discrete-graph-theory-edge-colourings.html</link>
+    <guid>/math/math-discrete-graph-theory-edge-colourings</guid>
+    <pubDate>Wed, 18 Dec 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>G.T.: Networks</title>
+    <description>
+&lt;h4 id=&quot;concept&quot;&gt;Concept&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;A network N is a digraph D with two distinguished subsets of vertices, X and
+Y, and a non-negative integer-valued function c defined on its arc set A; the
+sets X and Y are assumed to be disjoint and nonempty.
+    &lt;ul&gt;
+      &lt;li&gt;X and Y correspond to production centres and markets&lt;/li&gt;
+      &lt;li&gt;vertices which are neither sources nor sinks are called &lt;strong&gt;Intermediate
+Vertices&lt;/strong&gt;, the set of such vertices will be denoted by I.&lt;/li&gt;
+      &lt;li&gt;Capacity Function: the function c is the capacity function of N and its value
+on an arc a the capacity of a.&lt;/li&gt;
+      &lt;li&gt;The capacity of an arc can be thought of as representing the maximum rate at
+which a commodity can be transported along it.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/math-discrete-graph-theory-networks.png&quot; /&gt;
+-. two sources $x_1,x_2$
+-. three sinks $y_1,y_2,y_3$
+-. four intermediate vertices $v_1,v_2,v_3,v_4$&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Flow: A flow in a network N is an integer-valued function f defined on A such
+that&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/math/math-discrete-graph-theory-directed-networks.html</link>
+    <guid>/math/math-discrete-graph-theory-directed-networks</guid>
+    <pubDate>Wed, 18 Dec 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>G.T.: Directed Graphs</title>
+    <description>
+&lt;h4 id=&quot;concept&quot;&gt;Concept&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Directed Graph D: a directed graph D is an ordered triple $(V(D),A(D),\psi_D)$ consisting of 
+a nonempty set $V(D)$ of vertices, a set $A(D)$, disjoint from $V(D)$, or arcs,
+and an incidence function $\psi_D$ that associates with each arc of D an ordered
+pair of vertices of D.
+    &lt;ul&gt;
+      &lt;li&gt;if a is an arc and u van v are vertices such that $\psi_D (a)=(u,v)$, then a
+is said to join u to v;&lt;/li&gt;
+      &lt;li&gt;u is the tail of a, and v is its head.&lt;/li&gt;
+      &lt;li&gt;For convenience, ‘directed graph’ is abbreviated to &lt;strong&gt;digraph&lt;/strong&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Directed Walk: A directed walk in D is a finite non-null sequence
+$W=(v_0,a_1,v_1,\cdots,a_k,v_k)$, whose terms are alternately vertices and
+arcs,&lt;/li&gt;
+  &lt;li&gt;Directed Trail: a directed trail is a directed walk that is a trail.&lt;/li&gt;
+  &lt;li&gt;Indegree: the indegree &lt;script type=&quot;math/tex&quot;&gt;d_{\mathrm{D}}^{-}(v)&lt;/script&gt; of a vertex v in D is the number of arcs with head v&lt;/li&gt;
+  &lt;li&gt;Outdegree: the outdegree &lt;script type=&quot;math/tex&quot;&gt;d_{\mathrm{D}}^{+}(v)&lt;/script&gt; of v is the number of arcs with tail v
+    &lt;ul&gt;
+      &lt;li&gt;denote the minimum and minimum and maximum indegrees and outdegrees in D by
+$\delta^{-} (D), \Delta^{-} (D)$&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;idea&quot;&gt;Idea&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Reachable: If there is a directed $(u,v)-path$ in D, vertex $v$ is said to be
+reachable from vertex $u$ in D.&lt;/li&gt;
+  &lt;li&gt;Diconnected: Two vertices are diconnected in D if each is reachable from the
+other.&lt;/li&gt;
+  &lt;li&gt;Strict: A digraph is strict if it has no loops and no two arcs with the same
+ends have the same orientation.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;theorem&quot;&gt;Theorem&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;A digraph $D$ contains a directed path of length $\chi-1$&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/math/math-discrete-graph-theory-directed-graph.html</link>
+    <guid>/math/math-discrete-graph-theory-directed-graph</guid>
     <pubDate>Wed, 18 Dec 2019 00:00:00 +0900</pubDate>
   </item>
 
@@ -11878,200 +12502,6 @@ S: \frac{1}{Q}\left(\begin{array}{ccc}{-a^{2}+b^{2}+c^{2}} &amp; {-2 a b} &amp; 
 </description>
     <link>/math/math-structure-linear-algebra-3-3-matrices-and-application.html</link>
     <guid>/math/math-structure-linear-algebra-3-3-matrices-and-application</guid>
-    <pubDate>Tue, 17 Dec 2019 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>G.T.: Graph and Subgraphs</title>
-    <description>
-&lt;h4 id=&quot;graph-loop-link&quot;&gt;Graph, Loop, Link&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;A graph G is an ordered triple $(V(G),E(G),\psi_G)$ consisting of a nonempty set
-V(G) of vertices, a set E(G), disjoint from V(G), of edges, and an &lt;strong&gt;incidence
-function&lt;/strong&gt; $\psi_G$ that associates with each edge of G an unordered pair of(not
-necessarily distinct) vertices of G. If $e$ is an edge and $u$ and $v$ are
-vertices such that $\psi_G(e)=uv$, then $e$ is said to join $u$ and $v$;&lt;/li&gt;
-  &lt;li&gt;Loop: An edge with identical ends is called a loop.&lt;/li&gt;
-  &lt;li&gt;Link: An edge with distinct ends is called a link.&lt;/li&gt;
-  &lt;li&gt;Incident: The ends of an edge are said to be incident with the edge
-    &lt;ul&gt;
-      &lt;li&gt;incidence: the angle at which a ray (such as a ray of light) hits a surface,
-that is the nature meaning of &lt;strong&gt;the world incidence&lt;/strong&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Adjacent: Two vertices which are incident with a common edge are adjacent, as
-are two edges which are incident with a common vertex.
-    &lt;ul&gt;
-      &lt;li&gt;When the word adjacent pops up, most times, it means relationgship between two
-vertices.&lt;/li&gt;
-      &lt;li&gt;There is no unique way of drawing a graph; A diagram of a graph merely
-depicts the incidence relation holding between its vertices and edges.&lt;/li&gt;
-      &lt;li&gt;We often draw a diagram of a graph and refer to it as the graph itself; in
-the same spirit, we shall call its points ‘vertices’ and its lines ‘edges’.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;h4 id=&quot;special-graphs&quot;&gt;Special Graphs&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Simple Graph: A graph is simple if it has no loops and no two of its links
-join the same pair of vertices.&lt;/li&gt;
-  &lt;li&gt;Complete Graph: A simple graph in which each pair of distinct vertices is
-joined by an edge is called a complete graph.
-    &lt;ul&gt;
-      &lt;li&gt;There is just one complete graph on n vertices; it is denoted by $K_n$&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/math-discrete-graph-theory-graph-and-subgraph.png&quot; /&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Empty Graph: a graph with no edges.&lt;/li&gt;
-  &lt;li&gt;Bipartite graph: a graph whose vertex set can be partitioned into two subsets
-X and Y, so that each edge has one end in X and one end in Y;&lt;/li&gt;
-  &lt;li&gt;Complete Biparite Graph: a simple bipartite graph with bipartition (X,Y) in
-which each vertex of X is joined to each vertex of Y; if |X|=m and |Y|=n,
-such a graph is denoted by $K_{m,n}$&lt;/li&gt;
-  &lt;li&gt;Trivial and Nontrivial: We call a graph with just one vertex trivial and all
-other graphs nontrivial&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;notation&quot;&gt;Notation&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;$v(G)$ denotes the number of vertices.&lt;/li&gt;
-  &lt;li&gt;$\epsilon(G)$ denotes the number of edges.&lt;/li&gt;
-  &lt;li&gt;When just one graph under discussion, we usually denote this graph by G, We
-omit the letter G from graph-theoretic symbols and write, for instance,
-$V,E,v,\epsilon$ instead of V(G), E(G),v(G) and $\epsilon(G)$&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;graph-isomporphism&quot;&gt;Graph Isomporphism&lt;/h4&gt;
-&lt;p&gt;In general, two graphs G and H are said to be isomorphic&lt;/p&gt;
-
-&lt;h4 id=&quot;incidence-and-adjacency-matrices&quot;&gt;Incidence and Adjacency Matrices&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Incidence Matrix:  To any graph G there corresponds a $v\times \epsilon$ matrix called the
-incidence matrix&lt;/li&gt;
-  &lt;li&gt;Vertices of G: denote by $v_1, v_2,\cdots,v_v$&lt;/li&gt;
-  &lt;li&gt;Edges of G: denote by $e_1,e_2,\cdots,e_{\epsilon}$&lt;/li&gt;
-  &lt;li&gt;Incidence Matrix of G: denotes by $M(G)=[m_{ij}]$&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;subgraphs&quot;&gt;Subgraphs&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Subgraph: A graph H is a subgraph of G(written $H\subseteq G$) if $V(H)
-\subseteq V(G)$, $E(H) \subseteq E(G)$, and $\psi_H$ is the restriction of
-$\psi_G$ to $E(H)$&lt;/li&gt;
-  &lt;li&gt;Proper Subgraph: When $H \subseteq G$ but &lt;script type=&quot;math/tex&quot;&gt;H \neq G&lt;/script&gt;, we wirte $H \subset G$, and call H a proper subgraph of G.&lt;/li&gt;
-  &lt;li&gt;Underlying Simple Graph: By deleting from G all loops and, for every pair of
-adjacent vertices, all but one link joining them, we obtain a simple spanning
-subgraph of G, called the underlying simple graph of G.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Connected: two vertices $u$ and $v$ v are said to be connected if there is a
-$(u,v)$-path in G.&lt;/li&gt;
-  &lt;li&gt;Connection is an equivalence relation on the vertex set V. Thus there is a
-partition of V into nonempty subsets $V_1,V_2,\cdots,V_w$ such that two
-vertices $u$ and $v$ are connected if and only if $u$ and $v$ belong to the
-same set $V_i$&lt;/li&gt;
-  &lt;li&gt;Component: the subgraphs $G[V_1],G[V_2],\cdots,G[V_w]$ are called the
-components of G. If G has exactly one component, G is connected, otherwise G
-is disconnected.
-    &lt;ol&gt;
-      &lt;li&gt;A Spanning Subgraph: If H is a subgraph of G, G is a supergraph of H, a
- spanning subgraph(or spanning supergraph) of G is a subgraph (or supergraph)
- H with $V(H)=V(G)$&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;induced-graph&quot;&gt;Induced Graph&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Induced Subgraph: Suppose that $V^{\prime}$ is a nonempty subset of V. The
-subgraph of G whose vertex set is $V^{\prime}$ and whose edge set is the set
-of those edges of G that have both ends in $V^{\prime}$ is called the
-subgraph of G induced by $V^{\prime}$ and is denoted by $G[V^{\prime}]$
-    &lt;ul&gt;
-      &lt;li&gt;The induced subgraph $G[V\V^{\prime}]$ is denoted by $G-V^{\prime}$&lt;/li&gt;
-      &lt;li&gt;it is the subgraph obtained from G by deleting the vertices in $V^{\prime}$
-together with their incident edges.&lt;/li&gt;
-      &lt;li&gt;If $V^{\prime}={v}$ we write $G-v$ for $G-{ v }$&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Edge-induced Subgraph: suppose that $E^{\prime}$ is a nonempty subset of E.
-The subgraph of G whose vertex set is the set of ends of edges in $E^{\prime}$ and
-whose edge set is $E^{\prime}$ is called the subgraph of G induced by
-$E^{\prime}$ and denoted by $G[E^{\prime}]$&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;vertex-degrees&quot;&gt;Vertex Degrees&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;The degree $d_G(v)$ of a vertex $v$ in G is the number of edges of G incident
-with $v$, each loop counting as two edges. We denote by $\delta(G)$ and
-$\Delta (G)$ the minimum and maximum degrees, respectively, of vertices of G. 
-&lt;br /&gt;
-&lt;script type=&quot;math/tex&quot;&gt;\sum_{v \in V} d(v)=2 \varepsilon&lt;/script&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;paths-and-connection&quot;&gt;Paths and Connection&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Walk: A walk in G is a finite non-null sequence $W=v_0e_1v_1e_2v_2\cdots
-e_kv_k$, whose terms are alternatively vertices and edges. &lt;br /&gt;
-for $1\leq i \leq k$, the ends of $e_i$ are $v_{i-1}$ and $v_i$. We say that
-W is a walk from $v_0$ to $v_k$, or $v_0,v_k$-walk&lt;/li&gt;
-  &lt;li&gt;Origin and Terminus: the vertices $v_0$ and $v_k$ are called the origin and
-terminus of W&lt;/li&gt;
-  &lt;li&gt;Internal Vertices: $v_1,v_2,\cdots,v_{k-1}$ its internal vertices&lt;/li&gt;
-  &lt;li&gt;Length: the integer k is the length of W.&lt;/li&gt;
-  &lt;li&gt;Trail: If the edges $e_1, e_2,\cdots,e_k$ of a walk W are distinct, W is
-called a trail.&lt;/li&gt;
-  &lt;li&gt;Path: if the vertices $v_0,v_1,\cdots,v_k$ of a walk W are distinct, W is
-called a path.&lt;/li&gt;
-  &lt;li&gt;Connection: Two vertices u and v of G are said to be connected if there is a
-$(u,v)$-pathin G.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;cycles&quot;&gt;Cycles&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Closed Walk: a walk is closed if it has positive length and its origin and
-terminus are the same&lt;/li&gt;
-  &lt;li&gt;Cycle: A closed trail whose origin and internal vertices are distinct is a
-cycle.&lt;/li&gt;
-  &lt;li&gt;K-cycle: A cycle of length k is called a k-cycle, a k-cycle is odd or even
-according as k is odd or even.&lt;/li&gt;
-  &lt;li&gt;Triangle: A 3-cycle is often called a triangle.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;bond-and-edge-cut&quot;&gt;Bond and Edge Cut&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Edge Cut: For subsets S and $S^{\prime}$ of V, we denote by $[S,S^{\prime}]$
-the set of edges with one end in S and the other is $S^{\prime}$.
-    &lt;ul&gt;
-      &lt;li&gt;An edge cut of G is a subset of E of the form $[S,\bar{S}]$&lt;/li&gt;
-      &lt;li&gt;Where S is a nonempty proper subset of V and $\bar{S}=V\S$&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Bond: A minimal nonempty edge cut of G is called a bond.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;application-shortest-path-problem&quot;&gt;Application: Shortest Path Problem&lt;/h4&gt;
-&lt;p&gt;Problem: Find the shortest $(u_0,v_0)$-path&lt;br /&gt;
-Solution: Dijkstra Algorithm &lt;br /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Learning Graph theory exactly like the learning Riemann Geometry. Manifold,
-submanifold.&lt;/li&gt;
-  &lt;li&gt;The definition of degree in graph theory just as the definition of degree in
-differential equation.&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-    <link>/math/math-discrete-graph-theory-graph-and-subgraph.html</link>
-    <guid>/math/math-discrete-graph-theory-graph-and-subgraph</guid>
     <pubDate>Tue, 17 Dec 2019 00:00:00 +0900</pubDate>
   </item>
 
@@ -22448,8 +22878,8 @@ J(\Theta) = -\frac{1}{m}\sum_{i=1}^{m}\sum_{k=1}^{K}[y_k^{(i)}\log((h_{\Theta}^{
 4.&lt;a href=&quot;https://github.com/slip-slap/AI/tree/master/bp&quot;&gt;code from scratch in github&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </description>
-    <link>/ai/computer-science-model-bp-neural-network.html</link>
-    <guid>/ai/computer-science-model-bp-neural-network</guid>
+    <link>/ai/AI-ML-bp-neural-network.html</link>
+    <guid>/ai/AI-ML-bp-neural-network</guid>
     <pubDate>Mon, 22 Apr 2019 00:00:00 +0900</pubDate>
   </item>
 
@@ -22944,81 +23374,6 @@ const int &amp;amp;r2 = i;
     <link>/pl/pl-c++-data-type.html</link>
     <guid>/pl/pl-c++-data-type</guid>
     <pubDate>Fri, 02 Mar 2018 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>CS: Regex Expression</title>
-    <description>
-&lt;h4 id=&quot;intro&quot;&gt;Intro&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;正则表达式描述了一种字符串匹配的模式，用来检查一个串是否含有某种子串，它不属于某种语言，但是不同的语言对它的支持不一样。&lt;/li&gt;
-  &lt;li&gt;正则表达式是一种引擎匹配工具，没啥牛逼的&lt;/li&gt;
-  &lt;li&gt;字符有本身的含义，比如字母，数字和下划线，如果需要赋予其别的含义只能通过转义符来实现，比如\w表示所有的字符&lt;/li&gt;
-  &lt;li&gt;在正则中，大多数的字符只是其本身的含义，只需要记住一些转义后的字符即可&lt;/li&gt;
-  &lt;li&gt;
-    &lt;ul&gt;
-      &lt;li&gt;在正则中已经失去其本来的含义，表示一种贪婪匹配&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;？在正则中依然表示问号，添加转义字符后\?才表示匹配一次或者零次&lt;/li&gt;
-  &lt;li&gt;（）括号依然表示括号本身的括号含义，添加转义符之后才表示一种子元素&lt;/li&gt;
-  &lt;li&gt;[]这个不好比较特殊，已经被转义&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;类型&quot;&gt;类型&lt;/h4&gt;
-&lt;p&gt;正则表达式和数学表达式的创建方法是一样的,因此正则表达式也用相应的一些运算符&lt;/p&gt;
-&lt;hr /&gt;
-
-&lt;h5 id=&quot;字符&quot;&gt;字符&lt;/h5&gt;
-&lt;ol&gt;
-  &lt;li&gt;特定字符 ‘X’&lt;/li&gt;
-  &lt;li&gt;范围内字符:[0-9],[259], [a-zA-Z,:]  grep ‘[^0-9]’ passwd&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;转义字符在[]内失去作用，‘[.]’ 表示匹配.,而不是匹配任意字符
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;ol&gt;
-  &lt;li&gt;.点号字符表示匹配任意字符&lt;/li&gt;
-  &lt;li&gt;边界字符&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;^: ^root  匹配输入字符串的开始位置， 注意与[^]的区别
-&lt;span class=&quot;nv&quot;&gt;$:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;匹配输入字符串的结尾位置
-&lt;span class=&quot;s1&quot;&gt;'^$'&lt;/span&gt; 表示空行
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h5 id=&quot;元字符&quot;&gt;元字符&lt;/h5&gt;
-&lt;ol&gt;
-  &lt;li&gt;\w: 匹配人体字类字符，包括下划线([A-Za-z0-9_])&lt;/li&gt;
-  &lt;li&gt;\W: 匹配任何非字类字符 ‘[^A-Za-z0-9_]’&lt;/li&gt;
-  &lt;li&gt;\b: 代表单词的分隔&lt;/li&gt;
-  &lt;li&gt;*   匹配0次或者n次&lt;/li&gt;
-  &lt;li&gt;\+ 匹配1次或者n次&lt;/li&gt;
-  &lt;li&gt;\? 匹配0次或者1次&lt;/li&gt;
-  &lt;li&gt;\{n\} 匹配n次&lt;/li&gt;
-  &lt;li&gt;\{n,\} 至少匹配n次&lt;/li&gt;
-  &lt;li&gt;\{n,m\} 至少匹配n次最多匹配m次&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;hr /&gt;
-
-&lt;h5 id=&quot;正则表达式组合&quot;&gt;正则表达式组合&lt;/h5&gt;
-
-&lt;h4 id=&quot;实例&quot;&gt;实例&lt;/h4&gt;
-
-&lt;p&gt;15到18位以X或者x或者数字结尾的身份证号&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'[1-9]\([0-9]\{13\}\|[0-9]\{16\}\)[0-9Xx]'&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;test&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;匹配密码&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'$\w\+$'&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-</description>
-    <link>/cs/computer-science-regex-expression.html</link>
-    <guid>/cs/computer-science-regex-expression</guid>
-    <pubDate>Sun, 14 May 2017 00:00:00 +0900</pubDate>
   </item>
 
   <item>
@@ -25904,131 +26259,6 @@ compare(2.0,12.0);
 </description>
     <link>/pl/pl-c++-template.html</link>
     <guid>/pl/pl-c++-template</guid>
-    <pubDate>Tue, 03 May 2016 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>D.S.: Stack,List and Map</title>
-    <description>
-&lt;h3 id=&quot;树&quot;&gt;树&lt;/h3&gt;
-
-&lt;hr /&gt;
-
-&lt;h4 id=&quot;二叉树&quot;&gt;二叉树&lt;/h4&gt;
-
-&lt;hr /&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;使用递归创建二叉树&lt;/li&gt;
-  &lt;li&gt;java不能传引用，递归的时候麻烦一点&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr /&gt;
-
-&lt;h5 id=&quot;代码&quot;&gt;代码&lt;/h5&gt;
-
-&lt;hr /&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;BiTreeNode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BiTreeNode&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BiTreeNode&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;BiTree&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;leftDeep&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rightDeep&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;createBiTree&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;BiTreeNode&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;AG##C##&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++;&lt;/span&gt;
-		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;charAt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)==&lt;/span&gt;&lt;span class=&quot;sc&quot;&gt;'#'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
-			&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-		&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-			&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;charAt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-			&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BiTreeNode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-			&lt;span class=&quot;n&quot;&gt;createBiTree&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-			&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BiTreeNode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-			&lt;span class=&quot;n&quot;&gt;createBiTree&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-		&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;BiTreeNode&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
-		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt;&lt;span class=&quot;sc&quot;&gt;'\u0000'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Character&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;valueOf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
-		&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
-			&lt;span class=&quot;n&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-		&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-		&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;treeDeep&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;BiTreeNode&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
-		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
-			&lt;span class=&quot;n&quot;&gt;treeDeep&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-			&lt;span class=&quot;n&quot;&gt;leftDeep&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++;&lt;/span&gt;
-		&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
-			&lt;span class=&quot;n&quot;&gt;treeDeep&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-			&lt;span class=&quot;n&quot;&gt;rightDeep&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++;&lt;/span&gt;
-		&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;leftDeep&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rightDeep&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-
-	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h5 id=&quot;基于数组和链表的map实现&quot;&gt;基于数组和链表的map实现&lt;/h5&gt;
-&lt;ol&gt;
-  &lt;li&gt;数组用来存放哈希表&lt;/li&gt;
-  &lt;li&gt;链表用来存放key&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;HashTable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;c1&quot;&gt;//哈希表&lt;/span&gt;
-	&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hashTableSize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;35&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;c1&quot;&gt;//链表&lt;/span&gt;
-	&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;();&lt;/span&gt;
-	&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hashTable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;c1&quot;&gt;//创建hash表&lt;/span&gt;
-	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;createHashTable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;hashTable&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hashTableSize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
-		&lt;span class=&quot;c1&quot;&gt;//初始化hash表&lt;/span&gt;
-		&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hashTable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++){&lt;/span&gt;
-			&lt;span class=&quot;n&quot;&gt;hashTable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-		&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getTableAddress&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
-		&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;31&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;put&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
-		&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;address&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getTableAddress&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;hashTable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;address&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-	&lt;span class=&quot;c1&quot;&gt;//显示哈希表&lt;/span&gt;
-	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
-		&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
-		&lt;span class=&quot;c1&quot;&gt;//计算在hash表中的位置&lt;/span&gt;
-		&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;address&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getTableAddress&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;intValue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
-		&lt;span class=&quot;c1&quot;&gt;//hash表的值&lt;/span&gt;
-		&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hashTable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;address&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;StringBuilder&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StringBuilder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;sb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;sb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;: &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;sb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-	&lt;span class=&quot;c1&quot;&gt;//根据key找到value&lt;/span&gt;
-	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
-		&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;address&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getTableAddress&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-		&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hashTable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;address&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
-	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-</description>
-    <link>/cs/computer-and-science-data-structure-stack-map-list-algorithms.html</link>
-    <guid>/cs/computer-and-science-data-structure-stack-map-list-algorithms</guid>
     <pubDate>Tue, 03 May 2016 00:00:00 +0900</pubDate>
   </item>
 
