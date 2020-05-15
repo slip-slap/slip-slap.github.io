@@ -3,7 +3,7 @@ layout: post
 title: "Jump Game"
 keywords: []
 description: ""
-category: "CSP"
+category: "CS"
 tags: []
 ---
 {% include JB/setup %}

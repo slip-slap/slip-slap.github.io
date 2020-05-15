@@ -5,8 +5,8 @@
   <description>Just Do It - </description>
   <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
   <link></link>
-  <lastBuildDate>Tue, 12 May 2020 00:18:26 +0900</lastBuildDate>
-  <pubDate>Tue, 12 May 2020 00:18:26 +0900</pubDate>
+  <lastBuildDate>Fri, 15 May 2020 11:02:09 +0900</lastBuildDate>
+  <pubDate>Fri, 15 May 2020 11:02:09 +0900</pubDate>
   <ttl>1800</ttl>
 
 
@@ -10138,6 +10138,102 @@ distribution in our training set.&lt;/li&gt;
   </item>
 
   <item>
+    <title>C.S.T.: Recursion</title>
+    <description>
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;head recursion: the recursive call, when it happens, comes before other
+processing in the function.(think of it happening at the top).
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;the head recursion technique can reduce the data passed to the recursive
+call&lt;/strong&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;tail recursion: the processing occurs before the recursive call.
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;the tail recursion techique can result in passing additional data to recursive
+calls&lt;/strong&gt;.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;#### 
+Recursive programming is a great way to show yourself that you can solve
+difficult problems.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Write an iterative function to solve the problem.&lt;/li&gt;
+  &lt;li&gt;Write a “dispatcher” function.
+    &lt;ul&gt;
+      &lt;li&gt;Dispatcher function solves problem for some “minimal” data set.&lt;/li&gt;
+      &lt;li&gt;in this case, when size parameter == 0&lt;/li&gt;
+      &lt;li&gt;Dispatcher calls iterative function to handle non-minimal cases&lt;/li&gt;
+      &lt;li&gt;must pass smaller data set to iterative function. in this case, passing size
+-1 for third parameter does the trick.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;In dispatcher, replace call to iterative function with call to dispatcher.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;application-in-dynamic-data-structures&quot;&gt;Application in Dynamic Data Structures&lt;/h4&gt;
+
+&lt;h4 id=&quot;linkedlist&quot;&gt;LinkedList&lt;/h4&gt;
+&lt;p&gt;Recursion requires us to divide the problem, to be able to pass a reduced
+version of the original problem to the recursive call. &lt;strong&gt;There is only one way to
+divide a singly linked list: the first node in the list and the rest of the
+list.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;binary-trees&quot;&gt;Binary Trees&lt;/h5&gt;
+&lt;ol&gt;
+  &lt;li&gt;More complicated structures may require multiple recursive calls.&lt;/li&gt;
+  &lt;li&gt;For applying recursion, we will conceptualize trees as having three parts:
+    &lt;ul&gt;
+      &lt;li&gt;the node at the top, known as the root node;&lt;/li&gt;
+      &lt;li&gt;all of the nodes reached from the left link of the root, known as the left
+subtree.&lt;/li&gt;
+      &lt;li&gt;all of the nodes reached from the right link of the root, known as the right
+subtree.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;common-mistakes&quot;&gt;Common Mistakes&lt;/h4&gt;
+
+&lt;h5 id=&quot;parameters&quot;&gt;Parameters&lt;/h5&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h5 id=&quot;global-variables&quot;&gt;Global Variables&lt;/h5&gt;
+&lt;ol&gt;
+  &lt;li&gt;The use of global variables is generally a poor programming pracice, although
+it is sometimes permissible for performance reasons. &lt;strong&gt;Global variables
+should always be avoided in recursive functions when possible&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/cs/computer-science-technique-recursion.html</link>
+    <guid>/cs/computer-science-technique-recursion</guid>
+    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>C.S.T.: Pointers and Dynamic Memory</title>
+    <description>
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Pointers and dynamic memory allocation are “hard-core” programming. When you
+can write programs that grab blocks of memory on the fly, link them into
+useful strucures, and clean everything at the end so there is no residue,
+you’re not just someone who can do a little coding, you’re a programmer.&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/cs/computer-science-technique-pointers-and-dynamic-memory.html</link>
+    <guid>/cs/computer-science-technique-pointers-and-dynamic-memory</guid>
+    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
     <title>CS: Regex Expression</title>
     <description>
 &lt;h4 id=&quot;intro&quot;&gt;Intro&lt;/h4&gt;
@@ -10246,63 +10342,22 @@ distribution in our training set.&lt;/li&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 </description>
-    <link>/csp/computer-science-problem-string.html</link>
-    <guid>/csp/computer-science-problem-string</guid>
+    <link>/cs/computer-science-problem-string.html</link>
+    <guid>/cs/computer-science-problem-string</guid>
     <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
   </item>
 
   <item>
-    <title>Stack: </title>
+    <title>C.S.P.: Sorting</title>
     <description>
-&lt;h4 id=&quot;1-valid-parentheses&quot;&gt;1. Valid Parentheses&lt;/h4&gt;
+&lt;p&gt;####&lt;/p&gt;
 &lt;ol&gt;
-  &lt;li&gt;Problem: given a string  containing just the characters ‘(‘,’)’,’{‘,’}’,’[’ and
-‘]’, determine if the input string is valid.&lt;/li&gt;
-  &lt;li&gt;Example :
-    &lt;ul&gt;
-      &lt;li&gt;input: “()” output: true&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
+  &lt;li&gt;sorting means putting data in a specified order.&lt;/li&gt;
 &lt;/ol&gt;
 
 </description>
-    <link>/csp/computer-science-problem-stack.html</link>
-    <guid>/csp/computer-science-problem-stack</guid>
-    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>Regular Expression Matching</title>
-    <description>
-</description>
-    <link>/csp/computer-science-problem-regular-expression-matching.html</link>
-    <guid>/csp/computer-science-problem-regular-expression-matching</guid>
-    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>Recursion</title>
-    <description>
-&lt;p&gt;#### 
-Recursive programming is a great way to show yourself that you can solve
-difficult problems.&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Write an iterative function to solve the problem.&lt;/li&gt;
-  &lt;li&gt;Write a “dispatcher” function.
-    &lt;ul&gt;
-      &lt;li&gt;Dispatcher function solves problem for some “minimal” data set.&lt;/li&gt;
-      &lt;li&gt;in this case, when size parameter == 0&lt;/li&gt;
-      &lt;li&gt;Dispatcher calls iterative function to handle non-minimal cases&lt;/li&gt;
-      &lt;li&gt;must pass smaller data set to iterative function. in this case, passing size
--1 for third parameter does the trick.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;In dispatcher, replace call to iterative function with call to dispatcher.&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-    <link>/csp/computer-science-problem-recursion.html</link>
-    <guid>/csp/computer-science-problem-recursion</guid>
+    <link>/cs/computer-science-problem-sorting.html</link>
+    <guid>/cs/computer-science-problem-sorting</guid>
     <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
   </item>
 
@@ -10341,22 +10396,248 @@ position.&lt;/li&gt;
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
-    <link>/csp/computer-science-problem-jump-game.html</link>
-    <guid>/csp/computer-science-problem-jump-game</guid>
+    <link>/cs/computer-science-problem-jump-game.html</link>
+    <guid>/cs/computer-science-problem-jump-game</guid>
     <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
   </item>
 
   <item>
-    <title>Backtracking </title>
+    <title>A.D.P.: Greedy</title>
+    <description>
+&lt;h4 id=&quot;property&quot;&gt;Property&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;optimal substructure&lt;/li&gt;
+  &lt;li&gt;greedy choice property
+    &lt;ul&gt;
+      &lt;li&gt;locally optimal choice lead to globally solution, most of the time, it’s not
+tree, but sometimes it works.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/cs/computer-science-algorithmic-design-paradigm-greedy.html</link>
+    <guid>/cs/computer-science-algorithmic-design-paradigm-greedy</guid>
+    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>A.D.P.: Dynamic Programming</title>
+    <description>
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Why we call this boy dynamic programming, why, why ? just a fancy
+terminology, it sounded cool.
+    &lt;ul&gt;
+      &lt;li&gt;DP is “careful brute force”&lt;/li&gt;
+      &lt;li&gt;Dp is guessing + recursion + momoization&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;topological sort of subproblem dependency DAG.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;define subproblems: is the most difficult part, need some insight.
+    &lt;ul&gt;
+      &lt;li&gt;rule of thumb&lt;/li&gt;
+      &lt;li&gt;suffixes $x[i:]$: topological order is always right to left, decreasing i&lt;/li&gt;
+      &lt;li&gt;prefixes $x[:i]$: topologican order is always left to right, increasing i&lt;/li&gt;
+      &lt;li&gt;substrings: increase substring&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;guess:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;what to guess&lt;/strong&gt;, maybe the most important problem, with some
+practice, you can get it.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;recurrence&lt;/li&gt;
+  &lt;li&gt;recurrence + momoize&lt;/li&gt;
+  &lt;li&gt;solve original problem
+    &lt;ul&gt;
+      &lt;li&gt;parent pointer&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;application&quot;&gt;Application&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;naive&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;fib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Memoized DP Algorithm
+    &lt;ul&gt;
+      &lt;li&gt;fib(k) only recurses the first time it is called&lt;/li&gt;
+      &lt;li&gt;memoized calls cost O(1)&lt;/li&gt;
+      &lt;li&gt;nonmemoized calls is n: fib(1), fib(2), … ,fib(n)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;memo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;memo_fib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;memo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;memo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;memo_fib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;memo_fib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;memo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Bottom-up DP Algorithm&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;bottom_up_fib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;fib&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;fib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;application-1&quot;&gt;Application&lt;/h4&gt;
+
+&lt;h5 id=&quot;shortest-path-problem&quot;&gt;Shortest Path Problem&lt;/h5&gt;
+&lt;h5 id=&quot;text-justification&quot;&gt;Text Justification&lt;/h5&gt;
+&lt;ol&gt;
+  &lt;li&gt;Microsoft Word: greedy&lt;/li&gt;
+  &lt;li&gt;Latex: badness = $(\text{page width - total width})^3$&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h5 id=&quot;parenthesization&quot;&gt;Parenthesization&lt;/h5&gt;
+&lt;h5 id=&quot;edit-distance&quot;&gt;Edit Distance&lt;/h5&gt;
+&lt;h5 id=&quot;knapsack&quot;&gt;Knapsack&lt;/h5&gt;
+
+</description>
+    <link>/cs/computer-science-algorithmic-design-paradigm-dynamic-programming.html</link>
+    <guid>/cs/computer-science-algorithmic-design-paradigm-dynamic-programming</guid>
+    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>A.D.P.: Divide and Conquer</title>
+    <description>
+&lt;h4 id=&quot;merge-sort&quot;&gt;Merge Sort&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/computer-science-algorithm-design-paradigm-divide-and-conquer-mergesort.gif&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;quick-sort&quot;&gt;Quick Sort&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/computer-science-algorithm-design-paradigm-divide-and-conquer-quicksort.gif&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;application&quot;&gt;Application&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;binary search&lt;/li&gt;
+  &lt;li&gt;mergesort&lt;/li&gt;
+  &lt;li&gt;quicksort&lt;/li&gt;
+  &lt;li&gt;strassens matrix multiplication&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Merge_sort&quot;&gt;mergesort&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Quicksort&quot;&gt;quicksort&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/cs/computer-science-algorithmic-design-paradigm-divide-and-conquer.html</link>
+    <guid>/cs/computer-science-algorithmic-design-paradigm-divide-and-conquer</guid>
+    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>A.D.P.: Bracnch and Bound</title>
     <description>
 </description>
-    <link>/csp/computer-science-problem-backtracking.html</link>
-    <guid>/csp/computer-science-problem-backtracking</guid>
+    <link>/cs/computer-science-algorithmic-design-paradigm-branch-and-bound.html</link>
+    <guid>/cs/computer-science-algorithmic-design-paradigm-branch-and-bound</guid>
     <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
   </item>
 
   <item>
-    <title>D.S.: Stack,List and Map</title>
+    <title>A.D.P.: Backtracking </title>
+    <description>
+</description>
+    <link>/cs/computer-science-algorithmic-design-paradigm-backtracking.html</link>
+    <guid>/cs/computer-science-algorithmic-design-paradigm-backtracking</guid>
+    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>C.S.A.: Sort</title>
+    <description>
+</description>
+    <link>/cs/computer-science-algorithm-sort.html</link>
+    <guid>/cs/computer-science-algorithm-sort</guid>
+    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>A.D.A.: P, NP, NP-completeness</title>
+    <description>
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;P stands for polynomial time&lt;/li&gt;
+  &lt;li&gt;NP stands for nondeterministic polynomial time&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/cs/computer-science-algorithm-design-and-analysis-p-np.html</link>
+    <guid>/cs/computer-science-algorithm-design-and-analysis-p-np</guid>
+    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>A.D.A.: Amoritization</title>
+    <description>
+</description>
+    <link>/cs/computer-science-algorithm-design-and-analysis-amortization.html</link>
+    <guid>/cs/computer-science-algorithm-design-and-analysis-amortization</guid>
+    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>A.D.T.: Stack</title>
+    <description>
+</description>
+    <link>/cs/computer-science-abstract-data-type-stack.html</link>
+    <guid>/cs/computer-science-abstract-data-type-stack</guid>
+    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>A.D.T.: Red Black Tree</title>
+    <description>
+</description>
+    <link>/cs/computer-science-abstract-data-type-red-black-tree.html</link>
+    <guid>/cs/computer-science-abstract-data-type-red-black-tree</guid>
+    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>A.D.T.: Priority Queue</title>
+    <description>
+</description>
+    <link>/cs/computer-science-abstract-data-type-priority-queue.html</link>
+    <guid>/cs/computer-science-abstract-data-type-priority-queue</guid>
+    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>A.D.T.: List</title>
     <description>
 &lt;hr /&gt;
 
@@ -10459,135 +10740,84 @@ position.&lt;/li&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
-    <link>/cs/computer-science-data-structure-stack-map-list-algorithms.html</link>
-    <guid>/cs/computer-science-data-structure-stack-map-list-algorithms</guid>
+    <link>/cs/computer-science-abstract-data-type-list.html</link>
+    <guid>/cs/computer-science-abstract-data-type-list</guid>
     <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
   </item>
 
   <item>
-    <title>D.S.: Priority Queue</title>
+    <title>A.D.T.: Heap</title>
     <description>
+&lt;h4 id=&quot;application&quot;&gt;Application&lt;/h4&gt;
 </description>
-    <link>/cs/computer-science-data-structure-priority-queue.html</link>
-    <guid>/cs/computer-science-data-structure-priority-queue</guid>
+    <link>/cs/computer-science-abstract-data-type-heap.html</link>
+    <guid>/cs/computer-science-abstract-data-type-heap</guid>
     <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
   </item>
 
   <item>
-    <title>D.S.: Heap</title>
-    <description>
-</description>
-    <link>/cs/computer-science-data-structure-heap.html</link>
-    <guid>/cs/computer-science-data-structure-heap</guid>
-    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>D.S.: AVL Tree</title>
-    <description>
-&lt;p&gt;self-balancing binary search tree.&lt;/p&gt;
-</description>
-    <link>/cs/computer-science-data-structure-avl-tree.html</link>
-    <guid>/cs/computer-science-data-structure-avl-tree</guid>
-    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>C.S.A.: Sort</title>
-    <description>
-</description>
-    <link>/cs/computer-science-algorithm-sort.html</link>
-    <guid>/cs/computer-science-algorithm-sort</guid>
-    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>C.S.A.: Dynamic Programming </title>
+    <title>A.D.T.: Hashing With Chaining</title>
     <description>
 &lt;p&gt;####&lt;/p&gt;
 &lt;ol&gt;
-  &lt;li&gt;Why we call this boy dynamic programming, why, why ? just a fancy
-terminology, just for cool, in nature
+  &lt;li&gt;simple uniform hashing&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Expected length of chain for k keys, m slots:  n over m, called $\alpha$, the
+load factor of the table.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/cs/computer-science-abstract-data-type-hashing-with-chain.html</link>
+    <guid>/cs/computer-science-abstract-data-type-hashing-with-chain</guid>
+    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>A.D.T.: Dictionary</title>
+    <description>
+</description>
+    <link>/cs/computer-science-abstract-data-type-dictionary.html</link>
+    <guid>/cs/computer-science-abstract-data-type-dictionary</guid>
+    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>A.D.T.: Binary Search Tree</title>
+    <description>
+</description>
+    <link>/cs/computer-science-abstract-data-type-binary-search-tree.html</link>
+    <guid>/cs/computer-science-abstract-data-type-binary-search-tree</guid>
+    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>A.D.T.: AVL Tree</title>
+    <description>
+&lt;p&gt;self-balancing binary search tree.&lt;/p&gt;
+
+&lt;h4 id=&quot;left-rotate&quot;&gt;left rotate&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;we call it left rotate because the root move to the left.
     &lt;ul&gt;
-      &lt;li&gt;DP is “careful brute force”&lt;/li&gt;
-      &lt;li&gt;Dp is guessing + recursion + momoization&lt;/li&gt;
+      &lt;li&gt;the trick, find the target node that want to put operation on&lt;/li&gt;
+      &lt;li&gt;if the operation is left rotate, than find the right child of the target node.&lt;/li&gt;
+      &lt;li&gt;if the operation is right rotate, than find the left child of the target node.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
+&lt;p&gt;&lt;img src=&quot;/images/computer-science-abstract-data-type-avl-tree-rotation.png&quot; /&gt;&lt;/p&gt;
+
 &lt;ul&gt;
-  &lt;li&gt;define subproblems&lt;/li&gt;
-  &lt;li&gt;guess&lt;/li&gt;
-  &lt;li&gt;recurrence&lt;/li&gt;
-  &lt;li&gt;recurrence + momoize&lt;/li&gt;
-  &lt;li&gt;solve original problem&lt;/li&gt;
+  &lt;li&gt;What’s the nature of left rotation and right rotation,  It’s just a constant
+number of pointer changs, O(1)&lt;/li&gt;
+  &lt;li&gt;satisfy BST order property after change.&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h4 id=&quot;application&quot;&gt;Application&lt;/h4&gt;
-
-&lt;h5 id=&quot;text-justification&quot;&gt;Text Justification&lt;/h5&gt;
-
 </description>
-    <link>/cs/computer-science-algorithm-dynamic-programming.html</link>
-    <guid>/cs/computer-science-algorithm-dynamic-programming</guid>
-    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>C.S.A.: Divide and Conquer</title>
-    <description>
-</description>
-    <link>/cs/computer-science-algorithm-divide-and-conquer.html</link>
-    <guid>/cs/computer-science-algorithm-divide-and-conquer</guid>
-    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>C.S.A.: Deepth First Search</title>
-    <description>
-&lt;h4 id=&quot;dfs&quot;&gt;DFS&lt;/h4&gt;
-&lt;p&gt;DFS stands for Depth First Search is a edge based technique. It used the Stack
-data structure, performs two stages:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;first visited vertices are pushed into stack&lt;/li&gt;
-  &lt;li&gt;second if there is no vertices then visited vertices are popped.&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-    <link>/cs/computer-science-algorithm-deepth-first-search.html</link>
-    <guid>/cs/computer-science-algorithm-deepth-first-search</guid>
-    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>C.S.A.: Breadth First Search</title>
-    <description>
-&lt;h4 id=&quot;bfs&quot;&gt;BFS&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;BFS stands for Breadth First Search is a vertex based techinique for finding
-a shortest path in graph.
-    &lt;ul&gt;
-      &lt;li&gt;It uses a Queue data structure which follows first in first out. In BFS, one
-vertex is selected at a time when it is visited and marked then its adjacent
-are visited and stored in the queue.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;application&quot;&gt;Application&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;web crawling&lt;/li&gt;
-  &lt;li&gt;social networking&lt;/li&gt;
-  &lt;li&gt;network broadcast&lt;/li&gt;
-  &lt;li&gt;garbage collection&lt;/li&gt;
-  &lt;li&gt;model checking&lt;/li&gt;
-  &lt;li&gt;mathematical conjecture checking&lt;/li&gt;
-  &lt;li&gt;solving puzzles games&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-    <link>/cs/computer-science-algorithm-breadth-first-search.html</link>
-    <guid>/cs/computer-science-algorithm-breadth-first-search</guid>
+    <link>/cs/computer-science-abstract-data-type-avl-tree.html</link>
+    <guid>/cs/computer-science-abstract-data-type-avl-tree</guid>
     <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
   </item>
 
@@ -11802,46 +12032,6 @@ ext J must meet J in some point.&lt;/li&gt;
   </item>
 
   <item>
-    <title>G.T.: Message Passing</title>
-    <description>
-&lt;h4 id=&quot;message-passing-rule-set-a&quot;&gt;Message-passing rule-set A&lt;/h4&gt;
-&lt;h4 id=&quot;message-passing-rule-set-b&quot;&gt;Message-passing rule-set B&lt;/h4&gt;
-
-&lt;h4 id=&quot;min-sum-algorithm-or-viterbi-algorithm&quot;&gt;Min-sum Algorithm or Viterbi Algorithm&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/math-discrete-graph-theory-message-passing.png&quot; /&gt;&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Each node can broadcast its cost to its descendants once it knows the costs
-of all its possible predecessors.&lt;/li&gt;
-  &lt;li&gt;The cost of &lt;strong&gt;A&lt;/strong&gt; is zero, we pass this news on to &lt;strong&gt;H&lt;/strong&gt; and &lt;strong&gt;I&lt;/strong&gt;., as the
-message passes along each edge in the graph, the cost of that edge is added.
-We find the costs of H and I are 4 and 1 respectively. figure(a)&lt;/li&gt;
-  &lt;li&gt;what about &lt;strong&gt;K&lt;/strong&gt;, out of the edge &lt;strong&gt;H-K&lt;/strong&gt; comes the message that a path of
-cost 5 exists from &lt;strong&gt;A&lt;/strong&gt; to &lt;strong&gt;K&lt;/strong&gt; via &lt;strong&gt;H&lt;/strong&gt;; and from edge &lt;strong&gt;I-K&lt;/strong&gt; we learn
-of an alternative path of cost 3 figure(b)&lt;/li&gt;
-  &lt;li&gt;The min-sum algorithm sets the cost of &lt;strong&gt;K&lt;/strong&gt; equal to the minimum of these,
-and records which was the smallest-cost route into &lt;strong&gt;K&lt;/strong&gt; by retaining only
-hte edge &lt;strong&gt;I-K&lt;/strong&gt; and pruning away the other edges leading to K, fiugre(c)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;One reason that graph theory is important is because we can use graph 
-to complete some calculation.&lt;/li&gt;
-  &lt;li&gt;Message-passing rule-set A and message-passing rule-set B just make use the
-structure of the graph and do some math.&lt;/li&gt;
-  &lt;li&gt;At first, I read the phrase “message-passing rule-set A”, I don’t know how to
-separate the sentence, it should be like this “message-passing rule” for “set
-A”. I just need a lot of time to understand something.&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-    <link>/math/math-discrete-graph-theory-message-passing.html</link>
-    <guid>/math/math-discrete-graph-theory-message-passing</guid>
-    <pubDate>Wed, 18 Dec 2019 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
     <title>G.T.: Matchings</title>
     <description>
 &lt;h4 id=&quot;concept&quot;&gt;Concept&lt;/h4&gt;
@@ -12270,6 +12460,142 @@ is disconnected.
 </description>
     <link>/math/math-discrete-graph-theory-connectivity.html</link>
     <guid>/math/math-discrete-graph-theory-connectivity</guid>
+    <pubDate>Wed, 18 Dec 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>G.T.: Representation of Tree and Graph</title>
+    <description>
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Matrix
+####
+    &lt;h4 id=&quot;adjacency-list&quot;&gt;Adjacency List&lt;/h4&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Adjacency list is a linked representation.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;How to represent a graph in computer memory, why have this question when we
+run into graph. stack, queue, dictionary and so on, we also get a way to
+store them in computer memory, just because graph is a little more
+complicate, we need pay more attention.&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/math/math-discrete-graph-theory-algorithm-representations.html</link>
+    <guid>/math/math-discrete-graph-theory-algorithm-representations</guid>
+    <pubDate>Wed, 18 Dec 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>G.T.A.: Message Passing</title>
+    <description>
+&lt;h4 id=&quot;message-passing-rule-set-a&quot;&gt;Message-passing rule-set A&lt;/h4&gt;
+&lt;h4 id=&quot;message-passing-rule-set-b&quot;&gt;Message-passing rule-set B&lt;/h4&gt;
+
+&lt;h4 id=&quot;min-sum-algorithm-or-viterbi-algorithm&quot;&gt;Min-sum Algorithm or Viterbi Algorithm&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/math-discrete-graph-theory-message-passing.png&quot; /&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Each node can broadcast its cost to its descendants once it knows the costs
+of all its possible predecessors.&lt;/li&gt;
+  &lt;li&gt;The cost of &lt;strong&gt;A&lt;/strong&gt; is zero, we pass this news on to &lt;strong&gt;H&lt;/strong&gt; and &lt;strong&gt;I&lt;/strong&gt;., as the
+message passes along each edge in the graph, the cost of that edge is added.
+We find the costs of H and I are 4 and 1 respectively. figure(a)&lt;/li&gt;
+  &lt;li&gt;what about &lt;strong&gt;K&lt;/strong&gt;, out of the edge &lt;strong&gt;H-K&lt;/strong&gt; comes the message that a path of
+cost 5 exists from &lt;strong&gt;A&lt;/strong&gt; to &lt;strong&gt;K&lt;/strong&gt; via &lt;strong&gt;H&lt;/strong&gt;; and from edge &lt;strong&gt;I-K&lt;/strong&gt; we learn
+of an alternative path of cost 3 figure(b)&lt;/li&gt;
+  &lt;li&gt;The min-sum algorithm sets the cost of &lt;strong&gt;K&lt;/strong&gt; equal to the minimum of these,
+and records which was the smallest-cost route into &lt;strong&gt;K&lt;/strong&gt; by retaining only
+hte edge &lt;strong&gt;I-K&lt;/strong&gt; and pruning away the other edges leading to K, fiugre(c)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;One reason that graph theory is important is because we can use graph 
+to complete some calculation.&lt;/li&gt;
+  &lt;li&gt;Message-passing rule-set A and message-passing rule-set B just make use the
+structure of the graph and do some math.&lt;/li&gt;
+  &lt;li&gt;At first, I read the phrase “message-passing rule-set A”, I don’t know how to
+separate the sentence, it should be like this “message-passing rule” for “set
+A”. I just need a lot of time to understand something.&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/math/math-discrete-graph-theory-algorithm-message-passing.html</link>
+    <guid>/math/math-discrete-graph-theory-algorithm-message-passing</guid>
+    <pubDate>Wed, 18 Dec 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>G.T.A.: Deepth First Search</title>
+    <description>
+&lt;h4 id=&quot;dfs&quot;&gt;DFS&lt;/h4&gt;
+&lt;p&gt;DFS stands for Depth First Search is a edge based technique. It used the Stack
+data structure, performs two stages:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;first visited vertices are pushed into stack&lt;/li&gt;
+  &lt;li&gt;second if there is no vertices then visited vertices are popped.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;class classification&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;DFS just provide us another way to visit all the nodes in a graph.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/math/math-discrete-graph-theory-algorithm-deepth-first-search.html</link>
+    <guid>/math/math-discrete-graph-theory-algorithm-deepth-first-search</guid>
+    <pubDate>Wed, 18 Dec 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>G.T.A.: Breadth First Search</title>
+    <description>
+&lt;h4 id=&quot;bfs&quot;&gt;BFS&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;BFS stands for Breadth First Search is a vertex based techinique for finding
+a shortest path in graph.
+    &lt;ul&gt;
+      &lt;li&gt;It uses a Queue data structure which follows first in first out. In BFS, one
+vertex is selected at a time when it is visited and marked then its adjacent
+are visited and stored in the queue.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;####&lt;/p&gt;
+
+&lt;h4 id=&quot;application&quot;&gt;Application&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;web crawling&lt;/li&gt;
+  &lt;li&gt;social networking&lt;/li&gt;
+  &lt;li&gt;network broadcast&lt;/li&gt;
+  &lt;li&gt;garbage collection&lt;/li&gt;
+  &lt;li&gt;model checking&lt;/li&gt;
+  &lt;li&gt;mathematical conjecture checking&lt;/li&gt;
+  &lt;li&gt;solving puzzles games&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Graph just as the other abstract data type, why we need to study how to visit node
+in a graph, because things turn a little complicate now, array, stack, tree,
+visiting each element is a very simple things.&lt;/li&gt;
+  &lt;li&gt;BFS is one strategy that we visit every node in the graph, and another thing
+we gain is &lt;strong&gt;the approach to find shortest path from one source to the other
+nodes in the graph&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/math/math-discrete-graph-theory-algorithm-breadth-first-search.html</link>
+    <guid>/math/math-discrete-graph-theory-algorithm-breadth-first-search</guid>
     <pubDate>Wed, 18 Dec 2019 00:00:00 +0900</pubDate>
   </item>
 
@@ -17017,6 +17343,31 @@ vector space,too .&lt;/li&gt;
   <item>
     <title>G.T.: Introduction</title>
     <description>
+&lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;A game-frame in strategic form is a list of four items(a quadruple) &lt;script type=&quot;math/tex&quot;&gt;\left\langle I,\left(S_{1}, S_{2}, \ldots, S_{n}\right), O, f\right\rangle&lt;/script&gt; where :
+    &lt;ul&gt;
+      &lt;li&gt;$I = {1,2,\cdots,n}$ is a set of players&lt;/li&gt;
+      &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;\left(S_{1}, S_{2}, \ldots, S_{n}\right)&lt;/script&gt; is a list of sets, one for each player, for every Player $i \in I$, $S_i$ is
+the set of strategies of Player $i$. We denote by S the Cartesian product of
+these sets: &lt;script type=&quot;math/tex&quot;&gt;S=S_{1} \times S_{2} \times \cdots \times S_{n}&lt;/script&gt;; thus an element of S is a list $s = (s_1,s_2,\cdots,s_n)$ consisting of one
+strategy for each player. We call S the set of strategy profiles.&lt;/li&gt;
+      &lt;li&gt;$O$ is a set of outcomes&lt;/li&gt;
+      &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;f: S \rightarrow O&lt;/script&gt; is a function that associates with every strategy profile s an outcome $f(s)
+\in O$&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/math/math-apply-game-theory-ordinal-payoffs-introduction.html</link>
+    <guid>/math/math-apply-game-theory-ordinal-payoffs-introduction</guid>
+    <pubDate>Mon, 07 Oct 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>G.T.: Introduction</title>
+    <description>
 &lt;h4 id=&quot;background&quot;&gt;Background&lt;/h4&gt;
 &lt;p&gt;Game theory is the study of mathematical models of strategic interaction among rational decision-makers. It has applications in all fields of social science
 , as well as in logic, systems science, and computer science.&lt;/p&gt;
@@ -21093,7 +21444,7 @@ way. (variational)&lt;/li&gt;
   </item>
 
   <item>
-    <title>C.S.M.: Kmeans</title>
+    <title>Kmeans</title>
     <description>
 &lt;h4 id=&quot;what-does-kmeans-do-&quot;&gt;What does Kmeans do ?&lt;/h4&gt;
 
@@ -21147,8 +21498,8 @@ It differs from GMM:
   &lt;li&gt;&lt;a href=&quot;https://stats.stackexchange.com/questions/76866/clustering-with-k-means-and-em-how-are-they-related&quot;&gt;Clustering with K-Means and EM: how are they related ?&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </description>
-    <link>/cs/computer-science-model-kmeans.html</link>
-    <guid>/cs/computer-science-model-kmeans</guid>
+    <link>/kmeans.html</link>
+    <guid>/kmeans</guid>
     <pubDate>Fri, 24 May 2019 00:00:00 +0900</pubDate>
   </item>
 
@@ -21266,7 +21617,7 @@ calculate the mean, covaiance.&lt;/li&gt;
   </item>
 
   <item>
-    <title>C.S.M.: Boltzmann Machine</title>
+    <title>Boltzmann Machine</title>
     <description>
 &lt;h4 id=&quot;boltzmann-machine&quot;&gt;Boltzmann Machine&lt;/h4&gt;
 &lt;ol&gt;
@@ -21377,8 +21728,8 @@ E(v, h)&amp;=-\sum_{i} a_{i} v_{i}-\sum_{j} b_{j} h_{j}-\sum_{i} \sum_{j} v_{i} 
 &lt;p&gt;where Z is intractable&lt;/p&gt;
 
 </description>
-    <link>/cs/computer-science-model-boltzmann-machine-neural-network.html</link>
-    <guid>/cs/computer-science-model-boltzmann-machine-neural-network</guid>
+    <link>/ai/AI-boltzmann-machine-neural-network.html</link>
+    <guid>/ai/AI-boltzmann-machine-neural-network</guid>
     <pubDate>Thu, 23 May 2019 00:00:00 +0900</pubDate>
   </item>
 

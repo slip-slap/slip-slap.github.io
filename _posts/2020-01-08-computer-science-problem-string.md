@@ -3,7 +3,7 @@ layout: post
 title: "C.S.P.: String"
 keywords: []
 description: ""
-category: "CSP"
+category: "CS"
 tags: []
 ---
 {% include JB/setup %}
