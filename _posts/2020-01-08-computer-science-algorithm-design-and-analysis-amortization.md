@@ -7,3 +7,7 @@ category: "CS"
 tags: ["A.D.A."]
 ---
 {% include JB/setup %}
+
+
+#### 
+a fancy cool analysis of data structure.

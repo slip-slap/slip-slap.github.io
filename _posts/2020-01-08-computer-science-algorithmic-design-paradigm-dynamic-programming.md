@@ -9,10 +9,11 @@ tags: ["A.D.P."]
 {% include JB/setup %}
 
 ####
-1. Why we call this boy dynamic programming, why, why ? just a fancy
-   terminology, it sounded cool. 
--  DP is "careful brute force"
--  Dp is guessing + recursion + momoization
+1. why we call this boy dynamic programming, 
+- Dynamic why, why ? just a fancy terminology, it sounded cool. 
+- Programming means optimization in America.
+- DP is "careful brute force"
+- Dp is guessing + recursion + momoization
 
 topological sort of subproblem dependency DAG.
 

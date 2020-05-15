@@ -28,6 +28,14 @@ f: S \rightarrow O
 $$ is a function that associates with every strategy profile s an outcome $f(s)
 \in O$
 
+2. An ordinal game in strategic form is a quintuple $$
+\left\langle I,\left(S_{1}, \ldots, S_{n}\right), O, f,\left(\succsim_{1},
+\ldots, \succsim_{n}\right)\right\rangle
+$$
+- $$
+\left\langle I,\left(S_{1}, S_{2}, \ldots, S_{n}\right), O, f\right\rangle
+$$ is a game-frame in strategic
+
 #### Notation
 1. $$
 o \succsim_{i} o^{\prime}
@@ -40,4 +48,32 @@ o \sim_{i} o^{\prime}
 $$, Player i considers outcome $o$ to be just as good as $o^{\prime}$
 
 
+####
+1. Ordinal utility function: Given a complete and transitive ranking $$
+\succsim
+$$ of a finite set of outcomes O, a function $$
+U: O \rightarrow \mathbb{R}
+$$ (where $\mathbb{R}$ denotes the set of real numbers) is said to be an ordinal
+utility function that represents the ranking $$\succsim$$, for every two
+outcomes $o$ and $o^{\prime}$, $$
+U(o)>U\left(o^{\prime}\right)
+$$ if and only if $$
+o \succ o^{\prime}
+$$ and $$
+U(o)=U\left(o^{\prime}\right)
+$$ 
+and only if $$
+o \sim o^{\prime}
+$$
+
+
+####
+1. strict dominance: $a$ strictly dominates $b$(or $b$ strictly dominated by $a$) if, in
+   every situation(that is, no matter what the other players do), $a$ gives
+   Player $i$ a payoff which is greater than the payoff that $b$ gives.
+   Formally: for every $$
+   s_{-i} \in S_{-i}, \pi_{i}\left(a, s_{-i}\right)>\pi_{i}\left(b,
+   s_{-i}\right)
+   $$
+2. weak dominance:
 
