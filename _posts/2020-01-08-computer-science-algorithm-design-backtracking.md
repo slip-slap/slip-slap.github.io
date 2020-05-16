@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "A.D.P.: Backtracking "
+title: "A.D.: Backtracking "
 keywords: []
 description: ""
 category: "CS"
-tags: ["A.D.P."]
+tags: ["A.D."]
 ---
 {% include JB/setup %}

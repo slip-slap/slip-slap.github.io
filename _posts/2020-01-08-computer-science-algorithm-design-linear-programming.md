@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "A.D.P.: Linear Programming"
+title: "A.D.: Linear Programming"
 keywords: []
 description: ""
 category: "CS"
-tags: ["A.D.P."]
+tags: ["A.D."]
 ---
 {% include JB/setup %}
 

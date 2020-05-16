@@ -1,12 +1,17 @@
 ---
 layout: post
-title: "A.D.P.: Divide and Conquer"
+title: "A.D.: Divide and Conquer"
 keywords: []
 description: ""
 category: "CS"
-tags: ["A.D.P."]
+tags: ["A.D."]
 ---
 {% include JB/setup %}
+
+#### 
+1. Divide is pretty straight foward.
+2. Merge is the most fun part.
+
 
 
 #### Merge Sort

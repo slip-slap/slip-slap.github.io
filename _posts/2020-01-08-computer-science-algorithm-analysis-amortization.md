@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "A.D.A.: Amoritization"
+title: "Algorithm Analysis: Amoritization"
 keywords: []
 description: 
 category: "CS"
-tags: ["A.D.A."]
+tags: ["Algorithm Analysis"]
 ---
 {% include JB/setup %}
 
