@@ -142,7 +142,7 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">579</span>
+<span title="文章总数">583</span>
 <ul>
 
 
@@ -1372,7 +1372,27 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#January-2020">2020 年 01 月 (48)</a></li>
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#January-2020">2020 年 01 月 (52)</a></li>
     
   
 
@@ -3141,7 +3161,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#math-ref">math (219)</a></li>
 
-  <li><a href="/categories.html#CS-ref">CS (34)</a></li>
+  <li><a href="/categories.html#CS-ref">CS (38)</a></li>
 
   <li><a href="/categories.html#言葉-ref">言葉 (142)</a></li>
 
@@ -3579,7 +3599,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#OS-ref" style="font-size: 9pt; color: #999;">OS</a>
+    <a href="/tags.html#OS-ref" style="font-size: 9.5pt; color: #888;">OS</a>
   
     
     
@@ -3740,6 +3760,135 @@ $(document).ready(function() {
 
 <!-- Recent Posts  -->
 <section>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-java-string.html" title="查看《Java: String》">Java: String</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+字符分割
+String[] a="ab@cd".split("@");
+		for(String v:a){
+			System.out.println(v);
+		}
+
+
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#April-2016" title="查看此月所有文章">05 April 2016</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-java-string.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-java-Enumeration.html" title="查看《Java: Enumberation》">Java: Enumberation</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+作用
+Enumeration是一个接口,源码如下
+package java.util;
+
+pubic interface Enumeration&lt;E&gt;{
+	boolean hasMoreElements();
+	E nextElement();
+}
+
+
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#April-2016" title="查看此月所有文章">04 April 2016</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-java-Enumeration.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-java-enum.html" title="查看《Java: Enum》">Java: Enum</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+intro
+枚举类型反编译之后也是类，该类用final关键字修饰
+
+
+产生原因
+//枚举类型的引入
+class Weekday{
+	private Weekday(){};
+	public static final Weekday MONDAY= new Weekday();
+	public...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#April-2016" title="查看此月所有文章">03 April 2016</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-java-enum.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-c++-memory.html" title="查看《C++: Memory》">C++: Memory</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+intro
+自动分配
+全局对象在程序启动时分配，程序结束时销毁。
+局部对象，进入其定义所在的程序时被创建，离开时销毁
+局部static对象在第一次使用前分配，程序结束时销毁
+
+
+动态分配
+除了静态内存和栈内存，每个程序还拥有一个内存池。称为自由空间，free store或堆heap
+动态分配...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#January-2016" title="查看此月所有文章">21 January 2016</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-c++-memory.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
   
   <article class="nested">
 
@@ -3917,140 +4066,6 @@ b&lt;&lt;1,2,3,4;//赋值初始化
 
   </article>
   
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-c++-causal.html" title="查看《C++: Code Normal》">C++: Code Normal</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-如下代码:
-while(first!=last){
-	 ++first
-	}
-
-left-inclusive interval,左闭合空间的意义:
-当first与last相等时，迭代器范围为空
-当first与last不相等时，迭代器范围内至少有一个元素，而且first指向该区间的第一个元素，...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#January-2016" title="查看此月所有文章">01 January 2016</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-c++-causal.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-c++-macro.html" title="查看《C++: Macro》">C++: Macro</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-宏: 就是指令的集合
-#define PRINT(A) std::cout&lt;&lt;"this is output: "&lt;&lt;#A&lt;&lt;std::endl
-PRINT("hello");
-
-
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#December-2015" title="查看此月所有文章">26 December 2015</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-c++-macro.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-c++-template.html" title="查看《C++: Template》">C++: Template</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-intro
-OOP和范型编程都能处理在编写程序时不知道类型的情况。不同之处在于
-OOP能处理类型在程序运行之前都未知的情况，范型编程中，编译时就能获知类型。
-
-
-function template
-
-define
-template &lt;typename price&gt; bool is...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#December-2015" title="查看此月所有文章">03 December 2015</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-c++-template.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-c++-function.html" title="查看《C++: Function》">C++: Function</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-
-  函数是命名的代码块。并没有什么了不起。
-    参数传递
-  
-  形参的初始化方式和变量的初始化方式是一样的
-  和其他变量一样，形参的类型决定了形参和实参的交互方式
-
-
-
-引用传递
-如果形参是引用类型，它将绑定到对应的实参上
-
-
-值传递
-实参的值拷贝到形参
-
-
-函数指针
-
-  函数...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#November-2015" title="查看此月所有文章">10 November 2015</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-c++-function.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
 
   
     
@@ -4090,7 +4105,7 @@ template &lt;typename price&gt; bool is...
 
     <!-- Current Page -->
     <li class="active">
-      <span class="page_number ">第 56/58 页</span>
+      <span class="page_number ">第 56/59 页</span>
     </li>
 
     <!-- Next Page -->
@@ -4100,7 +4115,7 @@ template &lt;typename price&gt; bool is...
 
     <!-- Last Page -->
     
-    <li><a href="/page58">&raquo;&raquo;</a></li>
+    <li><a href="/page59">&raquo;&raquo;</a></li>
     
   </ul>
 </section>
