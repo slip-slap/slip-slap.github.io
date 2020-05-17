@@ -142,7 +142,7 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">577</span>
+<span title="文章总数">579</span>
 <ul>
 
 
@@ -1362,7 +1362,17 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#January-2020">2020 年 01 月 (46)</a></li>
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#January-2020">2020 年 01 月 (48)</a></li>
     
   
 
@@ -3131,7 +3141,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#math-ref">math (219)</a></li>
 
-  <li><a href="/categories.html#CS-ref">CS (32)</a></li>
+  <li><a href="/categories.html#CS-ref">CS (34)</a></li>
 
   <li><a href="/categories.html#言葉-ref">言葉 (142)</a></li>
 
@@ -3142,7 +3152,7 @@ $(document).ready(function() {
         </section>
         <section>
           <a href="/tags.html" title="查看所有标签"><i class="icon-fixed-width icon-tags"></i> 标签云</a>
-<span title="标签总数">73</span>
+<span title="标签总数">74</span>
 <div id="tag-cloud">
 
 
@@ -3534,7 +3544,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#A.D.T.-ref" style="font-size: 10pt; color: #888;">A.D.T.</a>
+    <a href="/tags.html#AA-ref" style="font-size: 9pt; color: #999;">AA</a>
   
     
     
@@ -3556,6 +3566,13 @@ $(document).ready(function() {
     
     
     <a href="/tags.html#C.S.A.-ref" style="font-size: 9pt; color: #999;">C.S.A.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#D.S.-ref" style="font-size: 10pt; color: #888;">D.S.</a>
   
     
     
@@ -3723,6 +3740,70 @@ $(document).ready(function() {
 
 <!-- Recent Posts  -->
 <section>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-c++-compiler.html" title="查看《C++: Compiler》">C++: Compiler</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+内存对齐
+
+  书写汇编语言时,处理器给我们能处理的内存块最小单位是一个字节大小。底层是如何处理的我们并不知道。我们可以把它看成一个黑箱。C++语言是汇编语言的高级形式。
+  struct foo_1{
+    char a;
+    int  b;
+    };
+struct foo_2{...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#January-2016" title="查看此月所有文章">20 January 2016</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-c++-compiler.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-c++-boost.html" title="查看《C++: Boost》">C++: Boost</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+介绍
+boost是一个可移植的，提供源代码的C++库，由于其对跨平台的强调，对标准C++的强调，与编写平台无关。大部分的boost库功能使用只需要包括相应的头文件即可，少数如正则表达式库和文件系统库需要连接库。
+
+
+文件系统库
+
+
+使用方法
+
+  头文件&lt;boost/filesyste...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#January-2016" title="查看此月所有文章">19 January 2016</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-c++-boost.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
   
   <article class="nested">
 
@@ -3965,73 +4046,6 @@ template &lt;typename price&gt; bool is...
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
         评论：<a href="/pl/pl-c++-function.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-c++-express.html" title="查看《C++: Expression》">C++: Expression</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-类型转换
-隐士转换
-C++语言不会直接将两个不同类型的值相加，而是先根据类型转换的规则将运算的
-类型统一后，再求值。
-int ival = 3.541 + 3;
-// 1 3转换成double型，结果类型为double
-// 2 初始化过程中，初始化对象的类型无法改变，初始值被转化为该对象的...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#November-2015" title="查看此月所有文章">08 November 2015</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-c++-express.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-c++-operator.html" title="查看《C++: Operator》">C++: Operator</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-位运算符
-
-
-	
-		 ~  位求反        
-		 &lt;&lt; 左移          
-		 &gt;&gt; 右移          
-		  &amp; 位与   256&amp;7  
-		  | 位或          
-		  ^ 异或          
-	
-
-
-...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#November-2015" title="查看此月所有文章">04 November 2015</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-c++-operator.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 

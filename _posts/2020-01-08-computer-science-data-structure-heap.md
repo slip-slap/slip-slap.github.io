@@ -1,9 +1,13 @@
 ---
 layout: post
-title: "A.D.T.: Priority Queue"
+title: "D.S.: Heap"
 keywords: []
 description: ""
 category: "CS"
-tags: ["A.D.T."]
+tags: ["D.S."]
 ---
 {% include JB/setup %}
+
+
+
+#### Application

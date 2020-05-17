@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "A.D.T.: Hashing With Chaining"
+title: "D.S.: Hashing With Chaining"
 keywords: []
 description: ""
 category: "CS"
-tags: ["A.D.T."]
+tags: ["D.S."]
 ---
 {% include JB/setup %}
 

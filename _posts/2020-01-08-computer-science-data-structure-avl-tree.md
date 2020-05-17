@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "A.D.T.: AVL Tree"
+title: "D.S.: AVL Tree"
 keywords: []
 description: ""
 category: "CS"
-tags: ["A.D.T."]
+tags: ["D.S."]
 ---
 {% include JB/setup %}
 

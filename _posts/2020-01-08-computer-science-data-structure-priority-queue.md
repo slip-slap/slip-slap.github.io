@@ -1,11 +1,9 @@
 ---
 layout: post
-title: "A.D.T.: 2-3 Tree"
+title: "D.S.: Priority Queue"
 keywords: []
 description: ""
 category: "CS"
-tags: ["A.D.T."]
+tags: ["D.S."]
 ---
 {% include JB/setup %}
-
-

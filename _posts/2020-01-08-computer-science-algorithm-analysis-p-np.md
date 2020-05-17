@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Algorithm Analysis: P, NP, NP-completeness"
+title: "AA: P, NP, NP-completeness"
 keywords: []
 description: 
 category: "CS"
-tags: ["Algorithm Analysis"]
+tags: ["AA"]
 ---
 {% include JB/setup %}
 

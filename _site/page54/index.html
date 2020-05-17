@@ -142,7 +142,7 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">577</span>
+<span title="文章总数">579</span>
 <ul>
 
 
@@ -1362,7 +1362,17 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#January-2020">2020 年 01 月 (46)</a></li>
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#January-2020">2020 年 01 月 (48)</a></li>
     
   
 
@@ -3131,7 +3141,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#math-ref">math (219)</a></li>
 
-  <li><a href="/categories.html#CS-ref">CS (32)</a></li>
+  <li><a href="/categories.html#CS-ref">CS (34)</a></li>
 
   <li><a href="/categories.html#言葉-ref">言葉 (142)</a></li>
 
@@ -3142,7 +3152,7 @@ $(document).ready(function() {
         </section>
         <section>
           <a href="/tags.html" title="查看所有标签"><i class="icon-fixed-width icon-tags"></i> 标签云</a>
-<span title="标签总数">73</span>
+<span title="标签总数">74</span>
 <div id="tag-cloud">
 
 
@@ -3534,7 +3544,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#A.D.T.-ref" style="font-size: 10pt; color: #888;">A.D.T.</a>
+    <a href="/tags.html#AA-ref" style="font-size: 9pt; color: #999;">AA</a>
   
     
     
@@ -3556,6 +3566,13 @@ $(document).ready(function() {
     
     
     <a href="/tags.html#C.S.A.-ref" style="font-size: 9pt; color: #999;">C.S.A.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#D.S.-ref" style="font-size: 10pt; color: #888;">D.S.</a>
   
     
     
@@ -3723,6 +3740,69 @@ $(document).ready(function() {
 
 <!-- Recent Posts  -->
 <section>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-java-jvm.html" title="查看《Java: Jvm》">Java: Jvm</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+class文件的组织结构
+.class文件是由子节组成的文件，又叫字节码文件
+
+
+魔数
+由java编译器编译而成的class文件的前四个字节都是“OxCAFEBABE”
+作用，即JVM在尝试加载某个文件到内存中的时候，会首先判断此class文件有没有JVM认为可以接受的”签名”，即JVM会首...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#May-2016" title="查看此月所有文章">06 May 2016</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-java-jvm.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-c++-iterator.html" title="查看《C++: 迭代器》">C++: 迭代器</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+intro
+
+谓词
+谓词本质是可调用的表达式，返回结果是一个能用作条件的值。
+一元谓词: 接受单一参数unary predicate
+二元谓词: 接受两个参数binary predicate
+接受谓词参数的算法对输入序列中的元素调用谓词，因此元素类型必须转换为谓词的参数类型
+
+迭代器
+迭代器...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#May-2016" title="查看此月所有文章">06 May 2016</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-c++-iterator.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
   
   <article class="nested">
 
@@ -4006,66 +4086,6 @@ Class.f...
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
         评论：<a href="/pl/pl-java-reflection.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-java-System.html" title="查看《Java: Array》">Java: Array</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-arraycopy
-查看源代码里面使用的是native方法，看不到底层代码，里面应该维护指针
-
-
-数组拷贝
-void foo(){
-    int[] src=new int[]{1,2,3,8,23,5,3,7,8};
-	int[] dest=new int[10];
-	System.ar...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#April-2016" title="查看此月所有文章">07 April 2016</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-java-System.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-java-String.html" title="查看《Java: String》">Java: String</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-介绍
-
-  String类使用底层使用字符数组保存字符串，有final修饰，String对象是不可变的
-  StringBuilder和StringBuffer都继承自AbstractStringBuilder类，也使用字符串保留数组。
-  String中的对象是不可变的，可以理解为长了，线...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#April-2016" title="查看此月所有文章">07 April 2016</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-java-String.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 

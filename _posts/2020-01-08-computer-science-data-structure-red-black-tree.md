@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "A.D.T.: Binary Search Tree"
+title: "D.S.: Red Black Tree"
 keywords: []
-description: ""
+description: 
 category: "CS"
-tags: ["A.D.T."]
+tags: ["D.S."]
 ---
 {% include JB/setup %}

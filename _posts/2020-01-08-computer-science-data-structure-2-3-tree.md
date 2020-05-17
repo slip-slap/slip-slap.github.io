@@ -1,13 +1,11 @@
 ---
 layout: post
-title: "A.D.T.: Heap"
+title: "D.S.: 2-3 Tree"
 keywords: []
 description: ""
 category: "CS"
-tags: ["A.D.T."]
+tags: ["D.S."]
 ---
 {% include JB/setup %}
 
 
-
-#### Application

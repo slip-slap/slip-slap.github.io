@@ -1,14 +1,9 @@
 ---
 layout: post
-title: "A.D.T.: Stack"
+title: "D.S.: Binary Search Tree"
 keywords: []
 description: ""
 category: "CS"
-tags: ["A.D.T."]
+tags: ["D.S."]
 ---
 {% include JB/setup %}
-
-
-
-
-

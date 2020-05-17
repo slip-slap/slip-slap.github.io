@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "A.D.T.: Dictionary"
+title: "D.S.: Dictionary"
 keywords: []
 description: ""
 category: "CS"
-tags: ["A.D.T."]
+tags: ["D.S."]
 ---
 {% include JB/setup %}
