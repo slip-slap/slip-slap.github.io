@@ -142,7 +142,7 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">583</span>
+<span title="文章总数">590</span>
 <ul>
 
 
@@ -318,7 +318,17 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#April-2020">2020 年 04 月 (7)</a></li>
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#April-2020">2020 年 04 月 (9)</a></li>
     
   
 
@@ -1392,7 +1402,27 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#January-2020">2020 年 01 月 (52)</a></li>
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#January-2020">2020 年 01 月 (56)</a></li>
     
   
 
@@ -2385,7 +2415,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#July-2019">2019 年 07 月 (20)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#July-2019">2019 年 07 月 (21)</a></li>
     
   
 
@@ -3151,9 +3186,9 @@ $(document).ready(function() {
 <span title="分类总数">8</span>
 <ul>
 
-  <li><a href="/categories.html#linux-ref">linux (28)</a></li>
+  <li><a href="/categories.html#linux-ref">linux (29)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (108)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (110)</a></li>
 
   <li><a href="/categories.html#life-ref">life (15)</a></li>
 
@@ -3161,7 +3196,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#math-ref">math (219)</a></li>
 
-  <li><a href="/categories.html#CS-ref">CS (38)</a></li>
+  <li><a href="/categories.html#CS-ref">CS (42)</a></li>
 
   <li><a href="/categories.html#言葉-ref">言葉 (142)</a></li>
 
@@ -3242,7 +3277,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#latex-ref" style="font-size: 9.5pt; color: #888;">latex</a>
+    <a href="/tags.html#latex-ref" style="font-size: 10pt; color: #888;">latex</a>
   
     
     
@@ -3564,14 +3599,14 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#AA-ref" style="font-size: 9pt; color: #999;">AA</a>
+    <a href="/tags.html#Algorithm-ref" style="font-size: 10.5pt; color: #888;">Algorithm</a>
   
     
     
     
     
     
-    <a href="/tags.html#Algorithm Analysis-ref" style="font-size: 9pt; color: #999;">Algorithm Analysis</a>
+    <a href="/tags.html#AA-ref" style="font-size: 9.5pt; color: #999;">AA</a>
   
     
     
@@ -3585,7 +3620,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#C.S.A.-ref" style="font-size: 9pt; color: #999;">C.S.A.</a>
+    <a href="/tags.html#A.P.-ref" style="font-size: 9pt; color: #999;">A.P.</a>
   
     
     
@@ -3648,14 +3683,14 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#SERV-ref" style="font-size: 9pt; color: #999;">SERV</a>
+    <a href="/tags.html#SERV-ref" style="font-size: 9.5pt; color: #999;">SERV</a>
   
     
     
     
     
     
-    <a href="/tags.html#Shell-ref" style="font-size: 9pt; color: #999;">Shell</a>
+    <a href="/tags.html#Script-ref" style="font-size: 9pt; color: #999;">Script</a>
   
     
     
@@ -3819,13 +3854,13 @@ $(document).ready(function() {
 <h4 id="fileoutputstream">FileOutputStream</h4>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//这里的文件创建的地方要注意</span>
-<span class="n">File</span> <span class="n">file</span> <span class="o">=</span><span class="k">new</span> <span class="n">File</span><span class="o">(</span><span class="s">"db.properties"</span><span class="o">);</span>
+<span class="nc">File</span> <span class="n">file</span> <span class="o">=</span><span class="k">new</span> <span class="nc">File</span><span class="o">(</span><span class="s">"db.properties"</span><span class="o">);</span>
 <span class="k">if</span><span class="o">(!</span><span class="n">file</span><span class="o">.</span><span class="na">exists</span><span class="o">()){</span>
 	<span class="n">file</span><span class="o">.</span><span class="na">createNewFile</span><span class="o">();</span>
 <span class="o">}</span>
 <span class="c1">//创建输出流，可追加</span>
-<span class="n">OutputStream</span> <span class="n">os</span><span class="o">=</span><span class="k">new</span> <span class="n">FileOutputStream</span><span class="o">(</span><span class="s">"db.properties"</span><span class="o">,</span><span class="kc">true</span><span class="o">);</span>
-<span class="n">os</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="k">new</span> <span class="n">String</span><span class="o">(</span><span class="s">"hehe"</span><span class="o">).</span><span class="na">getBytes</span><span class="o">());</span>
+<span class="nc">OutputStream</span> <span class="n">os</span><span class="o">=</span><span class="k">new</span> <span class="nc">FileOutputStream</span><span class="o">(</span><span class="s">"db.properties"</span><span class="o">,</span><span class="kc">true</span><span class="o">);</span>
+<span class="n">os</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="k">new</span> <span class="nc">String</span><span class="o">(</span><span class="s">"hehe"</span><span class="o">).</span><span class="na">getBytes</span><span class="o">());</span>
 <span class="n">os</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="mi">65</span><span class="o">);</span><span class="c1">//在db.properties文件中，会有大写字母A,是二进制写入</span>
 </code></pre></div></div>
 <h3 id="inputstream">InputStream</h3>
@@ -3847,25 +3882,25 @@ $(document).ready(function() {
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//“中国hello wld!”引号里面是GRE.txt文件中的内容</span>
 <span class="kd">class</span> <span class="nc">Foo</span><span class="o">{</span>
 	<span class="c1">//逐字符读取</span>
-	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">reader1</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">Exception</span><span class="o">{</span>
-		<span class="n">File</span> <span class="n">file</span><span class="o">=</span><span class="k">new</span> <span class="n">File</span><span class="o">(</span><span class="s">"GRE.txt"</span><span class="o">);</span>
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">reader1</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">Exception</span><span class="o">{</span>
+		<span class="nc">File</span> <span class="n">file</span><span class="o">=</span><span class="k">new</span> <span class="nc">File</span><span class="o">(</span><span class="s">"GRE.txt"</span><span class="o">);</span>
 		<span class="k">if</span><span class="o">(!</span><span class="n">file</span><span class="o">.</span><span class="na">exists</span><span class="o">()){</span>
 		<span class="n">file</span><span class="o">.</span><span class="na">createNewFile</span><span class="o">();</span>
 		<span class="o">}</span>
-		<span class="n">Reader</span> <span class="n">in</span><span class="o">=</span><span class="k">new</span> <span class="n">FileReader</span><span class="o">(</span><span class="n">file</span><span class="o">);</span>
+		<span class="nc">Reader</span> <span class="n">in</span><span class="o">=</span><span class="k">new</span> <span class="nc">FileReader</span><span class="o">(</span><span class="n">file</span><span class="o">);</span>
 		<span class="kt">int</span> <span class="n">word</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span>
 		<span class="k">while</span><span class="o">((</span><span class="n">word</span><span class="o">=</span><span class="n">in</span><span class="o">.</span><span class="na">read</span><span class="o">())!=-</span><span class="mi">1</span><span class="o">){</span>
-			<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">((</span><span class="kt">char</span><span class="o">)</span><span class="n">word</span><span class="o">);</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">((</span><span class="kt">char</span><span class="o">)</span><span class="n">word</span><span class="o">);</span>
 		<span class="o">}</span>
 		<span class="n">in</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
 	<span class="o">}</span>
 	<span class="c1">//使用缓冲区读取</span>
-	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">reader2</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">Exception</span><span class="o">{</span>
-		<span class="n">Reader</span> <span class="n">in</span><span class="o">=</span><span class="k">new</span> <span class="n">FileReader</span><span class="o">(</span><span class="k">new</span> <span class="n">File</span><span class="o">(</span><span class="s">"GRE.txt"</span><span class="o">));</span>
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">reader2</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">Exception</span><span class="o">{</span>
+		<span class="nc">Reader</span> <span class="n">in</span><span class="o">=</span><span class="k">new</span> <span class="nc">FileReader</span><span class="o">(</span><span class="k">new</span> <span class="nc">File</span><span class="o">(</span><span class="s">"GRE.txt"</span><span class="o">));</span>
 		<span class="kt">char</span><span class="o">[]</span> <span class="n">buffer</span><span class="o">=</span><span class="k">new</span> <span class="kt">char</span><span class="o">[</span><span class="mi">5</span><span class="o">];</span>
 		<span class="k">while</span><span class="o">((</span><span class="n">in</span><span class="o">.</span><span class="na">read</span><span class="o">(</span><span class="n">buffer</span><span class="o">))!=-</span><span class="mi">1</span><span class="o">){</span>
             <span class="c1">//这个buffer很有意思，如果最后不满五个字符，会向前补给，输出的最后一行为d! wl</span>
-		    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="k">new</span> <span class="n">String</span><span class="o">(</span><span class="n">buffer</span><span class="o">));</span>
+		    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="k">new</span> <span class="nc">String</span><span class="o">(</span><span class="n">buffer</span><span class="o">));</span>
 		<span class="o">}</span>
 	<span class="o">}</span>
 <span class="o">}</span>
@@ -3911,7 +3946,7 @@ $(document).ready(function() {
   
      
     	<li><a href="/categories.html#PL-ref">
-    		PL <span>108</span>
+    		PL <span>110</span>
     	</a></li>
     
   

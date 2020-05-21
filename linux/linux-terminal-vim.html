@@ -142,7 +142,7 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">583</span>
+<span title="文章总数">590</span>
 <ul>
 
 
@@ -318,7 +318,17 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#April-2020">2020 年 04 月 (7)</a></li>
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#April-2020">2020 年 04 月 (9)</a></li>
     
   
 
@@ -1392,7 +1402,27 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#January-2020">2020 年 01 月 (52)</a></li>
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#January-2020">2020 年 01 月 (56)</a></li>
     
   
 
@@ -2385,7 +2415,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#July-2019">2019 年 07 月 (20)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#July-2019">2019 年 07 月 (21)</a></li>
     
   
 
@@ -3151,9 +3186,9 @@ $(document).ready(function() {
 <span title="分类总数">8</span>
 <ul>
 
-  <li><a href="/categories.html#linux-ref">linux (28)</a></li>
+  <li><a href="/categories.html#linux-ref">linux (29)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (108)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (110)</a></li>
 
   <li><a href="/categories.html#life-ref">life (15)</a></li>
 
@@ -3161,7 +3196,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#math-ref">math (219)</a></li>
 
-  <li><a href="/categories.html#CS-ref">CS (38)</a></li>
+  <li><a href="/categories.html#CS-ref">CS (42)</a></li>
 
   <li><a href="/categories.html#言葉-ref">言葉 (142)</a></li>
 
@@ -3242,7 +3277,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#latex-ref" style="font-size: 9.5pt; color: #888;">latex</a>
+    <a href="/tags.html#latex-ref" style="font-size: 10pt; color: #888;">latex</a>
   
     
     
@@ -3564,14 +3599,14 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#AA-ref" style="font-size: 9pt; color: #999;">AA</a>
+    <a href="/tags.html#Algorithm-ref" style="font-size: 10.5pt; color: #888;">Algorithm</a>
   
     
     
     
     
     
-    <a href="/tags.html#Algorithm Analysis-ref" style="font-size: 9pt; color: #999;">Algorithm Analysis</a>
+    <a href="/tags.html#AA-ref" style="font-size: 9.5pt; color: #999;">AA</a>
   
     
     
@@ -3585,7 +3620,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#C.S.A.-ref" style="font-size: 9pt; color: #999;">C.S.A.</a>
+    <a href="/tags.html#A.P.-ref" style="font-size: 9pt; color: #999;">A.P.</a>
   
     
     
@@ -3648,14 +3683,14 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#SERV-ref" style="font-size: 9pt; color: #999;">SERV</a>
+    <a href="/tags.html#SERV-ref" style="font-size: 9.5pt; color: #999;">SERV</a>
   
     
     
     
     
     
-    <a href="/tags.html#Shell-ref" style="font-size: 9pt; color: #999;">Shell</a>
+    <a href="/tags.html#Script-ref" style="font-size: 9pt; color: #999;">Script</a>
   
     
     
@@ -3984,10 +4019,25 @@ your operation</li>
 </ol>
 
 <h4 id="42-youcompleteme-plugin">4.2 YouCompleteMe-plugin</h4>
+<p>Maybe this is the most difficult plugin to install</p>
+<ol>
+  <li>YouCompleteMe itself work in client-server pattern</li>
+  <li>Everytime you start vim, the <strong>thread systemd</strong> will begin to work on some
+port.</li>
+  <li>Actualy, you can start <strong>system manually</strong>, to check whether you install it
+properly</li>
+</ol>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 下载</span>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> /path/to/YouCompleteMe/third_party/ycmd/
+<span class="nb">cat </span>PYTHON_USED_DURING_BUILDING
+/some/path/to/python3
+<span class="nb">cp </span>ycmd/default_settings.json <span class="nb">.</span>
+/some/path/to/python3 ycmd <span class="nt">--options_file</span><span class="o">=</span>default_settings.json
+serving on http://localhost:&lt;some port&gt;
+</code></pre></div></div>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># </span>
 git clone https://github.com/Valloric/YouCompleteMe.git
-<span class="c"># 检查完整性</span>
 git submodule update <span class="nt">--init</span> <span class="nt">--recursive</span>
 </code></pre></div></div>
 
@@ -4042,7 +4092,6 @@ git clone https://github.com/scrooloose/nerdtree.git
 </ol>
 <hr />
 
-<h4 id="45-pymode-plugin">4.5 pymode-plugin</h4>
 <h4 id="46-powerline-plugin">4.6 powerline-plugin</h4>
 <h4 id="47-vimtex-plugin">4.7 vimtex-plugin</h4>
 
@@ -4053,7 +4102,6 @@ git clone https://github.com/scrooloose/nerdtree.git
   <li><a href="https://vim.sourceforge.io/docs.php">vim教程官方网站</a> <br /></li>
   <li><a href="ftp://ftp.vim.org/pub/vim/doc/book/vimbook-OPL.pdf">vim官方网站pdf教程</a> <br /></li>
   <li><a href="https://github.com/VundleVim/Vundle.vim">vundle教程</a><br /></li>
-  <li><a href="https://www.jianshu.com/p/d908ce81017a?nomobile=yes">YouCompleteMe安装教程</a></li>
   <li><a href="http://ternjs.net/doc/manual.html#server">tern安装教程</a><br /></li>
   <li><a href="http://kien.github.io/ctrlp.vim/#installation">CtrlP-plugin</a></li>
   <li><a href="http://www.hangge.com/blog/cache/detail_1537.html">Emmet使用教程</a></li>
@@ -4064,6 +4112,8 @@ git clone https://github.com/scrooloose/nerdtree.git
   <li><a href="https://stackoverflow.com/questions/1527784/what-is-vim-recording-and-how-can-it-be-disabled">vim recording mode</a> <br /></li>
   <li><a href="https://stackoverflow.com/questions/1497958/how-do-i-use-vim-registers">vim register</a> <br /></li>
   <li><a href="https://thoughtbot.com/blog/wrap-existing-text-at-80-characters-in-vim">vim format</a></li>
+  <li><a href="https://github.com/ycm-core/YouCompleteMe">YouCompleteMe</a></li>
+  <li><a href="https://github.com/ycm-core/YouCompleteMe/wiki/Troubleshooting-steps-for-ycmd-server-SHUT-DOWN">YouCompleteMe Trouble Shooting</a></li>
 </ol>
 
 
@@ -4094,7 +4144,7 @@ git clone https://github.com/scrooloose/nerdtree.git
   
      
     	<li><a href="/categories.html#linux-ref">
-    		linux <span>28</span>
+    		linux <span>29</span>
     	</a></li>
     
   
