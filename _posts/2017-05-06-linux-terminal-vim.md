@@ -175,11 +175,28 @@ record type character into register
 1. BundleList 查看已经安装的插件
 
 #### 4.2 YouCompleteMe-plugin
+Maybe this is the most difficult plugin to install
+1. YouCompleteMe itself work in client-server pattern
+2. Everytime you start vim, the **thread systemd** will begin to work on some
+   port. 
+3. Actualy, you can start **system manually**, to check whether you install it
+   properly
 
 ```shell
-# 下载
+cd /path/to/YouCompleteMe/third_party/ycmd/
+cat PYTHON_USED_DURING_BUILDING
+/some/path/to/python3
+cp ycmd/default_settings.json .
+/some/path/to/python3 ycmd --options_file=default_settings.json
+serving on http://localhost:<some port>
+```
+
+
+
+
+```shell
+# 
 git clone https://github.com/Valloric/YouCompleteMe.git
-# 检查完整性
 git submodule update --init --recursive
 ```
 
@@ -220,7 +237,6 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 ```
 <hr />
 
-#### 4.5 pymode-plugin
 #### 4.6 powerline-plugin
 #### 4.7 vimtex-plugin
 
@@ -232,7 +248,6 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 3. [vim教程官方网站](https://vim.sourceforge.io/docs.php) <br />
 4. [vim官方网站pdf教程](ftp://ftp.vim.org/pub/vim/doc/book/vimbook-OPL.pdf) <br />
 5. [vundle教程](https://github.com/VundleVim/Vundle.vim)<br />
-6. [YouCompleteMe安装教程](https://www.jianshu.com/p/d908ce81017a?nomobile=yes)
 7. [tern安装教程](http://ternjs.net/doc/manual.html#server)<br />
 8. [CtrlP-plugin](http://kien.github.io/ctrlp.vim/#installation)
 9. [Emmet使用教程](http://www.hangge.com/blog/cache/detail_1537.html)
@@ -243,4 +258,6 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 15. [vim recording mode](https://stackoverflow.com/questions/1527784/what-is-vim-recording-and-how-can-it-be-disabled) <br />
 16. [vim register](https://stackoverflow.com/questions/1497958/how-do-i-use-vim-registers) <br />
 17. [vim format](https://thoughtbot.com/blog/wrap-existing-text-at-80-characters-in-vim)
+18. [YouCompleteMe](https://github.com/ycm-core/YouCompleteMe)
+19. [YouCompleteMe Trouble Shooting](https://github.com/ycm-core/YouCompleteMe/wiki/Troubleshooting-steps-for-ycmd-server-SHUT-DOWN)
 

@@ -4,6 +4,6 @@ title: "A.D.: Backtracking "
 keywords: []
 description: ""
 category: "CS"
-tags: ["A.D."]
+tags: ["A.D.","Algorithm"]
 ---
 {% include JB/setup %}

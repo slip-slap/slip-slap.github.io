@@ -4,7 +4,7 @@ title: "AA: P, NP, NP-completeness"
 keywords: []
 description: 
 category: "CS"
-tags: ["AA"]
+tags: ["AA","Algorithm"]
 ---
 {% include JB/setup %}
 

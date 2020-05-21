@@ -4,7 +4,7 @@ title: "A.D.: Dynamic Programming"
 keywords: []
 description: ""
 category: "CS"
-tags: ["A.D."]
+tags: ["A.D.","Algorithm"]
 ---
 {% include JB/setup %}
 

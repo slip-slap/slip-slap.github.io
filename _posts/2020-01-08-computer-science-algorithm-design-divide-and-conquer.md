@@ -4,9 +4,14 @@ title: "A.D.: Divide and Conquer"
 keywords: []
 description: ""
 category: "CS"
-tags: ["A.D."]
+tags: ["A.D.","Algorithm"]
 ---
 {% include JB/setup %}
+
+####
+1. the subproblem should be the same as the problem, otherwise, we can't use
+   divide and conquer strategy.
+- this is why recursive in nature.
 
 #### 
 1. Divide is pretty straight foward.

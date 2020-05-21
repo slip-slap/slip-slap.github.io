@@ -31,5 +31,19 @@ For a new code library is just a bundle of functions and classes. <br />
 1. Symbolic style deep learning library include Tensorflow, Theano
 2. Imperative stype deep learning library include Torch 
 
+#### Error
+1. Every programming language has its features, things are different, not every
+   error goes to the same way. 
+
+##### Latex
+##### script
+
+
+
+
+
+
+
+
 #### Reference 
 1. [Imperative-style and Symbolic-style](https://mxnet.incubator.apache.org/versions/master/architecture/program_model.html)

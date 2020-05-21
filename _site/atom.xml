@@ -3,7 +3,7 @@
   <title>Just Do It</title>
   <link href="/atom.xml" rel="self"/>
   <link href=""/>
-  <updated>2020-05-17T20:08:36+09:00</updated>
+  <updated>2020-05-21T15:13:57+09:00</updated>
   <id></id>
   <author>
     <name>reed</name>
@@ -395,10 +395,10 @@ independent.
   </entry>
 
   <entry>
-    <title>Shell: Batch Processing</title>
-    <link href="/pl/pl-shell-batch-process.html"/>
+    <title>Script: Batch Processing</title>
+    <link href="/pl/pl-script-linux-batch-process.html"/>
     <updated>2020-04-30T00:00:00+09:00</updated>
-    <id>/pl/pl-shell-batch-process</id>
+    <id>/pl/pl-script-linux-batch-process</id>
     <content type="html">
 Rename Filename
 
@@ -410,6 +410,26 @@ do
    mv &quot;${i}&quot; &quot;${var1}-code${var2}&quot;
 done
 
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Script: Apple Script</title>
+    <link href="/pl/pl-script-apple.html"/>
+    <updated>2020-04-30T00:00:00+09:00</updated>
+    <id>/pl/pl-script-apple</id>
+    <content type="html">
+osascript -e 'tell application &quot;System Events&quot;
+    tell application &quot;Adobe Acrobat Reader DC&quot; to activate
+    keystroke &quot;h&quot; using {command down, control down}
+    end tell'
+
+
+Reference
+
+  Complete list of AppleScript key
+codes
 
 </content>
   </entry>
@@ -490,6 +510,20 @@ Reference
 File Protocol
 Enter the following code in file exploer address bar or brower address bar.
 file:///Users/
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Service: Program Execution</title>
+    <link href="/linux/linux-service-compiler.html"/>
+    <updated>2020-04-30T00:00:00+09:00</updated>
+    <id>/linux/linux-service-compiler</id>
+    <content type="html">
+Mac OS
+
+#The CXX compiler identification is unknown: xcode
+sudo xcode-select --reset
 
 </content>
   </entry>
@@ -4891,9 +4925,9 @@ everything evolved.
 
   <entry>
     <title>D.S.: List</title>
-    <link href="/cs/computer-science-data-structure-list.html"/>
+    <link href="/cs/computer-science-data-structure-presentation-list.html"/>
     <updated>2020-01-08T00:00:00+09:00</updated>
-    <id>/cs/computer-science-data-structure-list</id>
+    <id>/cs/computer-science-data-structure-presentation-list</id>
     <content type="html">
 
 
@@ -4915,20 +4949,10 @@ class BiTree{
   </entry>
 
   <entry>
-    <title>D.S.: Heap</title>
-    <link href="/cs/computer-science-data-structure-heap.html"/>
-    <updated>2020-01-08T00:00:00+09:00</updated>
-    <id>/cs/computer-science-data-structure-heap</id>
-    <content type="html">
-Application
-</content>
-  </entry>
-
-  <entry>
     <title>D.S.: Hashing With Chaining</title>
-    <link href="/cs/computer-science-data-structure-hashing.html"/>
+    <link href="/cs/computer-science-data-structure-presentation-hashing.html"/>
     <updated>2020-01-08T00:00:00+09:00</updated>
-    <id>/cs/computer-science-data-structure-hashing</id>
+    <id>/cs/computer-science-data-structure-presentation-hashing</id>
     <content type="html">
 ####
 
@@ -4941,6 +4965,42 @@ Application
 load factor of the table.
 
 </content>
+  </entry>
+
+  <entry>
+    <title>D.S.: 2-3 Tree</title>
+    <link href="/cs/computer-science-data-structure-presentation-2-3-tree.html"/>
+    <updated>2020-01-08T00:00:00+09:00</updated>
+    <id>/cs/computer-science-data-structure-presentation-2-3-tree</id>
+    <content type="html">
+</content>
+  </entry>
+
+  <entry>
+    <title>D.S.: Heap</title>
+    <link href="/cs/computer-science-data-structure-heap.html"/>
+    <updated>2020-01-08T00:00:00+09:00</updated>
+    <id>/cs/computer-science-data-structure-heap</id>
+    <content type="html">
+Definition
+
+
+  First, Heap is complete binary tree.
+  node greater than its descendant.
+    
+      just like arranging apple in the mark, which is one on the top of the apple
+pyramid, the most fresh one, in this context, the maximum is the most fresh
+one.
+    
+  
+
+
+
+
+Operation
+
+  insert
+  delete...</content>
   </entry>
 
   <entry>
@@ -4958,7 +5018,25 @@ load factor of the table.
     <updated>2020-01-08T00:00:00+09:00</updated>
     <id>/cs/computer-science-data-structure-binary-search-tree</id>
     <content type="html">
-</content>
+Array Representaion
+
+Rule
+
+  if a Node is at index $i$
+  its left child is at $2*i$
+  its left child is at $2*i+1$
+  its parent is at $i/2$
+
+
+Complete Binary Tree
+
+  how to identify a tree is complete binary tree, you can make use of the array
+representation
+
+
+Galois
+
+  We go to university to ge...</content>
   </entry>
 
   <entry>
@@ -4979,20 +5057,37 @@ left rotate
   </entry>
 
   <entry>
-    <title>D.S.: 2-3 Tree</title>
-    <link href="/cs/computer-science-data-structure-2-3-tree.html"/>
+    <title>Summary: Algorithm</title>
+    <link href="/cs/computer-science-algorithm-summary.html"/>
     <updated>2020-01-08T00:00:00+09:00</updated>
-    <id>/cs/computer-science-data-structure-2-3-tree</id>
+    <id>/cs/computer-science-algorithm-summary</id>
     <content type="html">
-</content>
+terminology
+
+  key: in the context of data structure, a key is a value used to identify a
+certain component of a data structure.
+
+
+Notation
+$\leftarrow$ denotes assignment
+
+Algorithm Largest Number
+    Input: a list of numbers
+    Output: the largest number in the list
+
+    if L.size = 0 return ...</content>
   </entry>
 
   <entry>
-    <title>C.S.A.: Sort</title>
-    <link href="/cs/computer-science-algorithm-sort.html"/>
+    <title>A.P.: Search</title>
+    <link href="/cs/computer-science-algorithm-problem-search.html"/>
     <updated>2020-01-08T00:00:00+09:00</updated>
-    <id>/cs/computer-science-algorithm-sort</id>
+    <id>/cs/computer-science-algorithm-problem-search</id>
     <content type="html">
+
+  linear search
+  binary search
+
 </content>
   </entry>
 
@@ -5031,7 +5126,13 @@ tree, but sometimes it works.
     
   
 
-</content>
+
+Greedy(a, n):
+    for i = 1 to n do:
+    {
+        x = select(a);
+        if feasible(x) then:
+            sol...</content>
   </entry>
 
   <entry>
@@ -5063,6 +5164,16 @@ topological sort of subproblem de...</content>
     <content type="html">
 ####
 
+  the subproblem should be the same as the problem, otherwise, we can’t use
+divide and conquer strategy.
+    
+      this is why recursive in nature.
+    
+  
+
+
+####
+
   Divide is pretty straight foward.
   Merge is the most fun part.
 
@@ -5077,15 +5188,28 @@ Quick Sort
 Application
 
   binary search
-  mergesort
-  quicksort
-  strassens matrix multiplication
+ ...</content>
+  </entry>
 
+  <entry>
+    <title>A.D.: Binary Search</title>
+    <link href="/cs/computer-science-algorithm-design-divide-and-conquer-binary-search.html"/>
+    <updated>2020-01-08T00:00:00+09:00</updated>
+    <id>/cs/computer-science-algorithm-design-divide-and-conquer-binary-search</id>
+    <content type="html">
+binarySearch(A, n, key):
+    low  = 1
+    high = n
+    while(l&amp;lt; h){
+        mid = (l+h)/2
+        if(key == A[mid]):
+            return mid
+        if(key &amp;lt; A[mid]):
+            h = mid - 1
+        else:
+            l = mid + 1
 
-Reference
-
-  mergesort
-  quicksort
+    }
 
 </content>
   </entry>
@@ -5134,6 +5258,28 @@ in G.
   </entry>
 
   <entry>
+    <title>AA: Time Complexity</title>
+    <link href="/cs/computer-science-algorithm-analysis-time-complexity.html"/>
+    <updated>2020-01-08T00:00:00+09:00</updated>
+    <id>/cs/computer-science-algorithm-analysis-time-complexity</id>
+    <content type="html">
+####
+
+  constant    $O(1)$
+  logrithemic $O(1)$
+  linear      $O(n)$
+  quadratic   $O(n^2)$
+  cubic       $O(n^3)$
+  exponential $O(2^n)$
+
+
+
+
+example
+</content>
+  </entry>
+
+  <entry>
     <title>AA: P, NP, NP-completeness</title>
     <link href="/cs/computer-science-algorithm-analysis-p-np.html"/>
     <updated>2020-01-08T00:00:00+09:00</updated>
@@ -5154,6 +5300,36 @@ in G.
     <updated>2020-01-08T00:00:00+09:00</updated>
     <id>/cs/computer-science-algorithm-analysis-master-theorem</id>
     <content type="html">
+
+
+
+
+</content>
+  </entry>
+
+  <entry>
+    <title>AA: Asymptotic</title>
+    <link href="/cs/computer-science-algorithm-analysis-asymptotic.html"/>
+    <updated>2020-01-08T00:00:00+09:00</updated>
+    <id>/cs/computer-science-algorithm-analysis-asymptotic</id>
+    <content type="html">
+####
+
+  Big O notation is a mathematical notation that describes the limiting
+behavior of a function when the argument towards a particular value or
+infinity
+
+
+Compare
+
+
+
+
+#### 
+
+
+
+
 
 
 </content>
@@ -8522,6 +8698,27 @@ After I come to Japan, for a lot of reas...</content>
   </entry>
 
   <entry>
+    <title>Latex: Error</title>
+    <link href="/pl/pl-latex-error.html"/>
+    <updated>2019-07-18T00:00:00+09:00</updated>
+    <id>/pl/pl-latex-error</id>
+    <content type="html">undefine
+
+
+  tikz code can’t surrounded by frame code which a keyword from beamer.
+
+
+
+\documentclass{beamer}
+\usepackage{graphicx,multicol,lipsum,caption,authblk}
+\usepackage{amsmath,booktabs,verbatim,tikz}
+\usetikzlibrary{shapes.geometric, arrows,positioning,matrix,calc}
+\usepackage{mathptmx}
+
+\...</content>
+  </entry>
+
+  <entry>
     <title>Latex: Nodes and Matrix in PGF</title>
     <link href="/pl/pl-latex-tikz-pgf-matrix-and-node.html"/>
     <updated>2019-07-17T00:00:00+09:00</updated>
@@ -9792,11 +9989,13 @@ If this is ...</content>
   </entry>
 
   <entry>
-    <title>Latex: Introduction</title>
-    <link href="/pl/pl-latex-intro.html"/>
+    <title>Latex: Summary</title>
+    <link href="/pl/pl-latex-summary.html"/>
     <updated>2019-03-21T00:00:00+09:00</updated>
-    <id>/pl/pl-latex-intro</id>
+    <id>/pl/pl-latex-summary</id>
     <content type="html">
+####
+
 最简单的Tex代码
 \documentclass[11pt]{article}
 \begin{document}
@@ -9818,9 +10017,7 @@ Basic drawing
 
 \begin{tikzpicture}
 
-\draw (0,0) parabola (4,4);
-
-\end...</content>
+\draw (0,0) parabola (4,4);...</content>
   </entry>
 
   <entry>
@@ -10214,6 +10411,37 @@ git中提交时，会保存一个提交(commit)对象，该对象包含一个指
   </entry>
 
   <entry>
+    <title>Python: Package Manager</title>
+    <link href="/pl/pl-python-package-manager.html"/>
+    <updated>2016-08-17T00:00:00+09:00</updated>
+    <id>/pl/pl-python-package-manager</id>
+    <content type="html">
+1. Pip
+
+1.1 Install
+
+pip install tensorflow==1.13.2
+
+
+install package by python3
+
+python3 -m pip install matplotlib
+
+
+2. Conda
+
+2.1 Install
+
+conda install matplotlib
+
+
+Prompt
+
+  There is a prompt in your terminal which says “base”, it means your
+environment, you can turn it off by the following ...</content>
+  </entry>
+
+  <entry>
     <title>Python: Module</title>
     <link href="/pl/pl-python-module.html"/>
     <updated>2016-08-17T00:00:00+09:00</updated>
@@ -10245,32 +10473,6 @@ global,local and nonlocal
   global variables, a variable declared outside of the function or in global scope is known as global variable. This means, global variable can be
 accessed inside or outside of the function.
  ...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Conda</title>
-    <link href="/pl/pl-python-conda.html"/>
-    <updated>2016-08-17T00:00:00+09:00</updated>
-    <id>/pl/pl-python-conda</id>
-    <content type="html">
-install package by python3
-
-python3 -m pip install matplotlib
-
-install package by conda
-
-conda install matplotlib
-
-
-Prompt
-
-  There is a prompt in your terminal which says “base”, it means your
-environment, you can turn it off by the following code.
-
-
-conda deactivate
-
-</content>
   </entry>
 
   <entry>

@@ -1,10 +1,10 @@
 --- 
 layout: post 
-title: "Shell: Batch Processing" 
+title: "Script: Batch Processing" 
 keywords: [] 
 description: 
 category: "PL"
-tags: ["Shell"] 
+tags: ["Script"] 
 --- 
 {% include JB/setup %}
 

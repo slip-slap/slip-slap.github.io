@@ -4,7 +4,7 @@ title: "AA: Amoritization"
 keywords: []
 description: 
 category: "CS"
-tags: ["AA"]
+tags: ["Algorithm","AA"]
 ---
 {% include JB/setup %}
 

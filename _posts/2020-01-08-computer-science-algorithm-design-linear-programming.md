@@ -4,7 +4,7 @@ title: "A.D.: Linear Programming"
 keywords: []
 description: ""
 category: "CS"
-tags: ["A.D."]
+tags: ["A.D.","Algorithm"]
 ---
 {% include JB/setup %}
 
