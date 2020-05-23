@@ -142,7 +142,7 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">591</span>
+<span title="文章总数">602</span>
 <ul>
 
 
@@ -1427,7 +1427,57 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#January-2020">2020 年 01 月 (57)</a></li>
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#January-2020">2020 年 01 月 (67)</a></li>
     
   
 
@@ -3178,7 +3228,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#May-2015">2015 年 05 月 (14)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#May-2015">2015 年 05 月 (15)</a></li>
     
   
 
@@ -3193,15 +3248,15 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#linux-ref">linux (29)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (110)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (111)</a></li>
 
   <li><a href="/categories.html#life-ref">life (15)</a></li>
 
   <li><a href="/categories.html#AI-ref">AI (26)</a></li>
 
-  <li><a href="/categories.html#math-ref">math (219)</a></li>
+  <li><a href="/categories.html#math-ref">math (220)</a></li>
 
-  <li><a href="/categories.html#CS-ref">CS (43)</a></li>
+  <li><a href="/categories.html#CS-ref">CS (52)</a></li>
 
   <li><a href="/categories.html#言葉-ref">言葉 (142)</a></li>
 
@@ -3604,7 +3659,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#Algorithm-ref" style="font-size: 10.5pt; color: #888;">Algorithm</a>
+    <a href="/tags.html#Algorithm-ref" style="font-size: 11.5pt; color: #666;">Algorithm</a>
   
     
     
@@ -3625,7 +3680,14 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#A.P.-ref" style="font-size: 9pt; color: #999;">A.P.</a>
+    <a href="/tags.html#A.P.-ref" style="font-size: 10pt; color: #888;">A.P.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#sort-ref" style="font-size: 9pt; color: #999;">sort</a>
   
     
     
@@ -3640,13 +3702,6 @@ $(document).ready(function() {
     
     
     <a href="/tags.html#OS-ref" style="font-size: 9.5pt; color: #888;">OS</a>
-  
-    
-    
-    
-    
-    
-    <a href="/tags.html#C.S.P.-ref" style="font-size: 9pt; color: #999;">C.S.P.</a>
   
     
     
@@ -3844,8 +3899,110 @@ $(document).ready(function() {
 <p>####</p>
 <ol>
   <li>P stands for polynomial time</li>
-  <li>NP stands for nondeterministic polynomial time</li>
+  <li>NP stands for nondeterministic polynomial time
+    <ul>
+      <li>why we have this idea ? why we coined a new term ? there must a reason for
+this, why we divide problem into P and NP, there must be a reason.</li>
+      <li>Suppose you are struggling to solve a problem, after many years effort, you
+still can’t nail it, but you solve part of it. we want to preserve you work,
+and in the future, people can focus on the unsolved problems. So part of this
+problem can be solved in polynomial time now, but some can’t, and we call this
+NP problem.</li>
+    </ul>
+  </li>
+  <li>NP-hard:
+    <ul>
+      <li>here we coin a new term again ? why, because we need a yardstick, assume this
+problem is NP-hard, and everyone admit it. So every problem is more difficult
+than this problem is also NP-hard.</li>
+      <li>how to compare the difficult among different ?</li>
+    </ul>
+  </li>
+  <li>NP-complete:
+    <ul>
+      <li>new term again? crap</li>
+    </ul>
+  </li>
 </ol>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>Polynomial Time</th>
+      <th> </th>
+      <th>Polynomial Time</th>
+    </tr>
+    <tr>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Linear Search</td>
+      <td>n</td>
+      <td>0/1 Knapsack</td>
+      <td>$2^n$</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Binary Search</td>
+      <td>logn</td>
+      <td>TSP</td>
+      <td>$2^n$</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Mergesort</td>
+      <td>nlogn</td>
+      <td>subset</td>
+      <td>$2^n$</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Insection</td>
+      <td> </td>
+      <td>Graph coloring</td>
+      <td>$2^n$</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Matrix multiplication</td>
+      <td>n3</td>
+      <td>Hamiltonian cycle</td>
+      <td>$2^n$</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
 
       
@@ -3875,7 +4032,7 @@ $(document).ready(function() {
   
      
     	<li><a href="/categories.html#CS-ref">
-    		CS <span>43</span>
+    		CS <span>52</span>
     	</a></li>
     
   
@@ -3896,7 +4053,7 @@ $(document).ready(function() {
      
     	<li><a href="/tags.html#AA-ref">AA <span>5</span></a></li>
      
-    	<li><a href="/tags.html#Algorithm-ref">Algorithm <span>17</span></a></li>
+    	<li><a href="/tags.html#Algorithm-ref">Algorithm <span>30</span></a></li>
     
   
 
