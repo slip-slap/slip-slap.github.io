@@ -15,3 +15,6 @@ The transportation system in Japan is very complicate.
 2. 阪急はその会社の１つです
 3. 京阪はその会社の１つです
 
+
+
+
