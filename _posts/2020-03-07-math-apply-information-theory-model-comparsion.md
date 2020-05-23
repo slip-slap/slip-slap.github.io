@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "C.S.M.: Model Comparsion"
+title: "Model Comparsion"
 keywords: []
 description: ""
-category: "CS"
-tags: ["model" ]
+category: "math"
+tags: ["I.T." ]
 ---
 {% include JB/setup %}
 

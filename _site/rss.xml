@@ -5,8 +5,8 @@
   <description>Just Do It - </description>
   <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
   <link></link>
-  <lastBuildDate>Thu, 21 May 2020 15:31:30 +0900</lastBuildDate>
-  <pubDate>Thu, 21 May 2020 15:31:30 +0900</pubDate>
+  <lastBuildDate>Sat, 23 May 2020 11:45:02 +0900</lastBuildDate>
+  <pubDate>Sat, 23 May 2020 11:45:02 +0900</pubDate>
   <ttl>1800</ttl>
 
 
@@ -9925,7 +9925,7 @@ function&lt;/strong&gt; &lt;script type=&quot;math/tex&quot;&gt;A: \Omega \right
   </item>
 
   <item>
-    <title>C.S.M.: Model Comparsion</title>
+    <title>Model Comparsion</title>
     <description>
 &lt;h4 id=&quot;occams-razor&quot;&gt;Occam’s Razor&lt;/h4&gt;
 &lt;p&gt;&lt;img src=&quot;/images/computer-science-model-comparsion.png&quot; /&gt;&lt;/p&gt;
@@ -9963,8 +9963,8 @@ choose the model that fits the data best:&lt;/li&gt;
 &lt;/ol&gt;
 
 </description>
-    <link>/cs/computer-science-model-comparsion.html</link>
-    <guid>/cs/computer-science-model-comparsion</guid>
+    <link>/math/math-apply-information-theory-model-comparsion.html</link>
+    <guid>/math/math-apply-information-theory-model-comparsion</guid>
     <pubDate>Sat, 07 Mar 2020 00:00:00 +0900</pubDate>
   </item>
 
@@ -10189,6 +10189,14 @@ call&lt;/strong&gt;&lt;/li&gt;
 calls&lt;/strong&gt;.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
+  &lt;li&gt;no matter it is head recursion or tail recursion, the problem we want to
+study can be divided into three parts:
+    &lt;ul&gt;
+      &lt;li&gt;parameter&lt;/li&gt;
+      &lt;li&gt;return&lt;/li&gt;
+      &lt;li&gt;multiple recursion&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;#### 
@@ -10268,81 +10276,6 @@ you’re not just someone who can do a little coding, you’re a programmer.&lt;
   </item>
 
   <item>
-    <title>CS: Regex Expression</title>
-    <description>
-&lt;h4 id=&quot;intro&quot;&gt;Intro&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;正则表达式描述了一种字符串匹配的模式，用来检查一个串是否含有某种子串，它不属于某种语言，但是不同的语言对它的支持不一样。&lt;/li&gt;
-  &lt;li&gt;正则表达式是一种引擎匹配工具，没啥牛逼的&lt;/li&gt;
-  &lt;li&gt;字符有本身的含义，比如字母，数字和下划线，如果需要赋予其别的含义只能通过转义符来实现，比如\w表示所有的字符&lt;/li&gt;
-  &lt;li&gt;在正则中，大多数的字符只是其本身的含义，只需要记住一些转义后的字符即可&lt;/li&gt;
-  &lt;li&gt;
-    &lt;ul&gt;
-      &lt;li&gt;在正则中已经失去其本来的含义，表示一种贪婪匹配&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;？在正则中依然表示问号，添加转义字符后\?才表示匹配一次或者零次&lt;/li&gt;
-  &lt;li&gt;（）括号依然表示括号本身的括号含义，添加转义符之后才表示一种子元素&lt;/li&gt;
-  &lt;li&gt;[]这个不好比较特殊，已经被转义&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;类型&quot;&gt;类型&lt;/h4&gt;
-&lt;p&gt;正则表达式和数学表达式的创建方法是一样的,因此正则表达式也用相应的一些运算符&lt;/p&gt;
-&lt;hr /&gt;
-
-&lt;h5 id=&quot;字符&quot;&gt;字符&lt;/h5&gt;
-&lt;ol&gt;
-  &lt;li&gt;特定字符 ‘X’&lt;/li&gt;
-  &lt;li&gt;范围内字符:[0-9],[259], [a-zA-Z,:]  grep ‘[^0-9]’ passwd&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;转义字符在[]内失去作用，‘[.]’ 表示匹配.,而不是匹配任意字符
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;ol&gt;
-  &lt;li&gt;.点号字符表示匹配任意字符&lt;/li&gt;
-  &lt;li&gt;边界字符&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;^: ^root  匹配输入字符串的开始位置， 注意与[^]的区别
-&lt;span class=&quot;nv&quot;&gt;$:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;匹配输入字符串的结尾位置
-&lt;span class=&quot;s1&quot;&gt;'^$'&lt;/span&gt; 表示空行
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h5 id=&quot;元字符&quot;&gt;元字符&lt;/h5&gt;
-&lt;ol&gt;
-  &lt;li&gt;\w: 匹配人体字类字符，包括下划线([A-Za-z0-9_])&lt;/li&gt;
-  &lt;li&gt;\W: 匹配任何非字类字符 ‘[^A-Za-z0-9_]’&lt;/li&gt;
-  &lt;li&gt;\b: 代表单词的分隔&lt;/li&gt;
-  &lt;li&gt;*   匹配0次或者n次&lt;/li&gt;
-  &lt;li&gt;\+ 匹配1次或者n次&lt;/li&gt;
-  &lt;li&gt;\? 匹配0次或者1次&lt;/li&gt;
-  &lt;li&gt;\{n\} 匹配n次&lt;/li&gt;
-  &lt;li&gt;\{n,\} 至少匹配n次&lt;/li&gt;
-  &lt;li&gt;\{n,m\} 至少匹配n次最多匹配m次&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;hr /&gt;
-
-&lt;h5 id=&quot;正则表达式组合&quot;&gt;正则表达式组合&lt;/h5&gt;
-
-&lt;h4 id=&quot;实例&quot;&gt;实例&lt;/h4&gt;
-
-&lt;p&gt;15到18位以X或者x或者数字结尾的身份证号&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'[1-9]\([0-9]\{13\}\|[0-9]\{16\}\)[0-9Xx]'&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;test&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;匹配密码&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'$\w\+$'&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-</description>
-    <link>/cs/computer-science-regex-expression.html</link>
-    <guid>/cs/computer-science-regex-expression</guid>
-    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
     <title>C.S.P.: String</title>
     <description>
 &lt;h4 id=&quot;1-reverse-string&quot;&gt;1. Reverse String&lt;/h4&gt;
@@ -10378,20 +10311,6 @@ you’re not just someone who can do a little coding, you’re a programmer.&lt;
 </description>
     <link>/cs/computer-science-problem-string.html</link>
     <guid>/cs/computer-science-problem-string</guid>
-    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>C.S.P.: Sorting</title>
-    <description>
-&lt;p&gt;####&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;sorting means putting data in a specified order.&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-    <link>/cs/computer-science-problem-sorting.html</link>
-    <guid>/cs/computer-science-problem-sorting</guid>
     <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
   </item>
 
@@ -10634,36 +10553,23 @@ this basic block, keep that in mind forever.&lt;/li&gt;
   </item>
 
   <item>
-    <title>D.S.: Stack</title>
+    <title>D.S.: Tree</title>
     <description>
-</description>
-    <link>/cs/computer-science-data-structure-stack.html</link>
-    <guid>/cs/computer-science-data-structure-stack</guid>
-    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
-  </item>
+&lt;h4 id=&quot;array-representaion&quot;&gt;Array Representaion&lt;/h4&gt;
 
-  <item>
-    <title>D.S.: Red Black Tree</title>
-    <description>
-</description>
-    <link>/cs/computer-science-data-structure-red-black-tree.html</link>
-    <guid>/cs/computer-science-data-structure-red-black-tree</guid>
-    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
-  </item>
+&lt;h4 id=&quot;rule&quot;&gt;Rule&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;if a Node is at index $i$&lt;/li&gt;
+  &lt;li&gt;its left child is at $2*i$&lt;/li&gt;
+  &lt;li&gt;its left child is at $2*i+1$&lt;/li&gt;
+  &lt;li&gt;its parent is at $i/2$&lt;/li&gt;
+&lt;/ol&gt;
 
-  <item>
-    <title>D.S.: Priority Queue</title>
-    <description>
-</description>
-    <link>/cs/computer-science-data-structure-priority-queue.html</link>
-    <guid>/cs/computer-science-data-structure-priority-queue</guid>
-    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>D.S.: List</title>
-    <description>
-&lt;hr /&gt;
+&lt;h4 id=&quot;linked-list-presentation-of-tree&quot;&gt;Linked list presentation of Tree&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;we can based on the position relationship between parent and child, to create
+a tree.&lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;BiTreeNode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
 	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
@@ -10713,7 +10619,42 @@ this basic block, keep that in mind forever.&lt;/li&gt;
 	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+    <link>/cs/computer-science-data-structure-tree.html</link>
+    <guid>/cs/computer-science-data-structure-tree</guid>
+    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
+  </item>
 
+  <item>
+    <title>D.S.: Stack</title>
+    <description>
+</description>
+    <link>/cs/computer-science-data-structure-stack.html</link>
+    <guid>/cs/computer-science-data-structure-stack</guid>
+    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>D.S.: Red Black Tree</title>
+    <description>
+</description>
+    <link>/cs/computer-science-data-structure-red-black-tree.html</link>
+    <guid>/cs/computer-science-data-structure-red-black-tree</guid>
+    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>D.S.: Priority Queue</title>
+    <description>
+</description>
+    <link>/cs/computer-science-data-structure-priority-queue.html</link>
+    <guid>/cs/computer-science-data-structure-priority-queue</guid>
+    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>D.S.: Map</title>
+    <description>
 &lt;h5 id=&quot;基于数组和链表的map实现&quot;&gt;基于数组和链表的map实现&lt;/h5&gt;
 &lt;ol&gt;
   &lt;li&gt;数组用来存放哈希表&lt;/li&gt;
@@ -10764,36 +10705,23 @@ this basic block, keep that in mind forever.&lt;/li&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
-    <link>/cs/computer-science-data-structure-presentation-list.html</link>
-    <guid>/cs/computer-science-data-structure-presentation-list</guid>
+    <link>/cs/computer-science-data-structure-map.html</link>
+    <guid>/cs/computer-science-data-structure-map</guid>
     <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
   </item>
 
   <item>
-    <title>D.S.: Hashing With Chaining</title>
+    <title>D.S.: List</title>
     <description>
 &lt;p&gt;####&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;simple uniform hashing&lt;/li&gt;
-&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&quot;language-code&quot;&gt;nodeDelete(node):
+    node.value = node.next.value
+    node.next  = node.next.next
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;####&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Expected length of chain for k keys, m slots:  n over m, called $\alpha$, the
-load factor of the table.&lt;/li&gt;
-&lt;/ol&gt;
 </description>
-    <link>/cs/computer-science-data-structure-presentation-hashing.html</link>
-    <guid>/cs/computer-science-data-structure-presentation-hashing</guid>
-    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>D.S.: 2-3 Tree</title>
-    <description>
-</description>
-    <link>/cs/computer-science-data-structure-presentation-2-3-tree.html</link>
-    <guid>/cs/computer-science-data-structure-presentation-2-3-tree</guid>
+    <link>/cs/computer-science-data-structure-list.html</link>
+    <guid>/cs/computer-science-data-structure-list</guid>
     <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
   </item>
 
@@ -10837,6 +10765,35 @@ one.&lt;/li&gt;
   </item>
 
   <item>
+    <title>D.S.: Hashing With Chaining</title>
+    <description>
+&lt;h4 id=&quot;why-this-crap-&quot;&gt;Why this crap ?&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;we have linear search, its time complexity is $\Theta (n)$&lt;/li&gt;
+  &lt;li&gt;we have binary search, its time complexity is $log_2^n$&lt;/li&gt;
+  &lt;li&gt;The problem is: we need more, we don’t satisify with the current situation,
+we need more, how about constant time, can we do it? give it a shot.&lt;/li&gt;
+  &lt;li&gt;The solution is &lt;strong&gt;hashing&lt;/strong&gt; !!! Just constant time, are you excited ? let’s
+began our journey.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;simple uniform hashing&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Expected length of chain for k keys, m slots:  n over m, called $\alpha$, the
+load factor of the table.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/cs/computer-science-data-structure-hashing.html</link>
+    <guid>/cs/computer-science-data-structure-hashing</guid>
+    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
     <title>D.S.: Dictionary</title>
     <description>
 </description>
@@ -10848,16 +10805,6 @@ one.&lt;/li&gt;
   <item>
     <title>D.S.: Binary Search Tree</title>
     <description>
-&lt;h4 id=&quot;array-representaion&quot;&gt;Array Representaion&lt;/h4&gt;
-
-&lt;h4 id=&quot;rule&quot;&gt;Rule&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;if a Node is at index $i$&lt;/li&gt;
-  &lt;li&gt;its left child is at $2*i$&lt;/li&gt;
-  &lt;li&gt;its left child is at $2*i+1$&lt;/li&gt;
-  &lt;li&gt;its parent is at $i/2$&lt;/li&gt;
-&lt;/ol&gt;
-
 &lt;h4 id=&quot;complete-binary-tree&quot;&gt;Complete Binary Tree&lt;/h4&gt;
 &lt;ol&gt;
   &lt;li&gt;how to identify a tree is complete binary tree, you can make use of the array
@@ -10905,8 +10852,51 @@ number of pointer changs, O(1)&lt;/li&gt;
   </item>
 
   <item>
+    <title>D.S.: 2-3 Tree</title>
+    <description>
+</description>
+    <link>/cs/computer-science-data-structure-2-3-tree.html</link>
+    <guid>/cs/computer-science-data-structure-2-3-tree</guid>
+    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
     <title>Summary: Algorithm</title>
     <description>
+&lt;h4 id=&quot;introduction&quot;&gt;Introduction&lt;/h4&gt;
+&lt;p&gt;Computer scientists are one of the most talented people in the world, they
+create everything from scratch.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;At the beginning, they want to do something with a computer, they create a
+predefined procedure to let computer do the job.&lt;/li&gt;
+  &lt;li&gt;How to define the procedure? I think that’s all the job algorithm should do&lt;/li&gt;
+  &lt;li&gt;and how, please look at the tools we have array
+    &lt;ul&gt;
+      &lt;li&gt;array:&lt;/li&gt;
+      &lt;li&gt;function: also this is what we created, just assume this is in our toolbox&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;just based on array and function, we create other tools linked, list, map,
+stack, heap, tree.
+    &lt;ul&gt;
+      &lt;li&gt;basically, all the fancy data structure is based on array and function.&lt;/li&gt;
+      &lt;li&gt;so how do they make it ?  they are many tricks there, but in a nutshell, all
+the tricks come in one way.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;always associate array with pointers, sometimes, you need more than one
+ponters keep that in mind&lt;/strong&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;problem-solution&quot;&gt;Problem Solution&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Just like we solve math or phyics problems, we learn formula, principals, no
+matter what probem we meet, we stick with our formulas.&lt;/li&gt;
+  &lt;li&gt;solving algorithm problem comes the same way, we know our tools, our strategy,
+based on our experience, we nail them.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Please always draw picture&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
 &lt;h4 id=&quot;terminology&quot;&gt;terminology&lt;/h4&gt;
 &lt;ol&gt;
   &lt;li&gt;key: in the context of data structure, a key is a value used to identify a
@@ -10961,8 +10951,10 @@ If you can draw, probably you can draw a picture, and everyone knows it is a tre
 but how could a computer knows a tree.&lt;/li&gt;
   &lt;li&gt;computer representation is very interesting, it’s fun. Suppose the only two
 things we have is array and linked list, given these two things, How should
-we reprent a tree, how should we represent a graph, a stack, a queue, a heap?&lt;/li&gt;
+we reprsent a tree, how should we represent a graph, a stack, a queue, a heap?&lt;/li&gt;
   &lt;li&gt;It’s fun!!!&lt;/li&gt;
+  &lt;li&gt;The only thing that I learn from algorithm, draw picture, draw the procedure,
+it’s better for everything.&lt;/li&gt;
 &lt;/ol&gt;
 
 </description>
@@ -10972,15 +10964,238 @@ we reprent a tree, how should we represent a graph, a stack, a queue, a heap?&lt
   </item>
 
   <item>
-    <title>A.P.: Search</title>
+    <title>A.P.: Wildcard Matching</title>
+    <description>
+</description>
+    <link>/cs/computer-science-algorithm-problem-wildcard-matching.html</link>
+    <guid>/cs/computer-science-algorithm-problem-wildcard-matching</guid>
+    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>A.P.: Traveling Salesman</title>
+    <description>
+&lt;h4 id=&quot;dynamic-programming-solutiongtop-to-down&quot;&gt;Dynamic Programming Solutiong(Top to down)&lt;/h4&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;g(i, s)=\min _{k \in S}\left\{c_{i k}+g(k, s-\{k\})\right\}&lt;/script&gt;
+
+&lt;h4 id=&quot;2-recursive-tree&quot;&gt;2. Recursive Tree&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/computer-science-algorithm-problem-traveling-salesman.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;3-recursive-table&quot;&gt;3. Recursive Table&lt;/h4&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{array}{l}g(2, \phi)=5 \\ g(3, \phi)=6 \\ g(4,\phi)=8\end{array}&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{array}{l}g(2,\{3\})=15 \\ g(2,\{4\})=18 \\ g(3,\{2\})=18 \\ g(3,\{4\})=20
+\\ g(4,\{2\})=13 \\ g(4,\{3\})=15\end{array}&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{array}{l}
+g(2,\{3,4\})=25 \\ 
+g(3,\{2,4\})=25 \\ 
+g(4,\{2,3\})=23 \\
+g(1,\{2,3,4\})=35 \\
+\end{array}&lt;/script&gt;
+
+</description>
+    <link>/cs/computer-science-algorithm-problem-traveling-salesman.html</link>
+    <guid>/cs/computer-science-algorithm-problem-traveling-salesman</guid>
+    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>A.P.: Sum of Subsets</title>
+    <description>
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;draw the state tree&lt;/li&gt;
+  &lt;li&gt;the trick is how to redefine&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{array}{l}\cdot \sum_{i=1}^{k} \omega_{i} x_{i}+\omega_{k+1} \leqslant m
+\\ \sum_{i=1}^{k} \omega_{i} x_{1}+\sum_{i=k+1}^{n} \omega_{i}&gt; m \end{array}&lt;/script&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/computer-science-algorithm-problem-sum-of-subset.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Don’t be nervous, make use of knowledge you have, it’s just another tree
+recursive problem&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/cs/computer-science-algorithm-problem-sum-of-subsets.html</link>
+    <guid>/cs/computer-science-algorithm-problem-sum-of-subsets</guid>
+    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Sort: Mergesort</title>
     <description>
 &lt;ol&gt;
-  &lt;li&gt;linear search&lt;/li&gt;
-  &lt;li&gt;binary search&lt;/li&gt;
+  &lt;li&gt;sorting means putting data in a specified order.&lt;/li&gt;
 &lt;/ol&gt;
+
+&lt;h4 id=&quot;2-way-merging&quot;&gt;2-way Merging&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&quot;language-code&quot;&gt;Merge(A, B, m, n):
+    i = 1;
+    j = 1;
+    k = 1;
+    while(i&amp;lt;= m &amp;amp;&amp;amp; j&amp;lt;= n):
+        if(A[i] &amp;lt; B[j]):
+            c[k++] = A[i++];
+        else:
+            c[k++] = B[j++];
+    
+    for(; i&amp;lt;= m; i++);
+        c[k++] = A[i];
+    for(;j &amp;lt;= n; j++):
+        c[k++] = B[j];
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;4-way-merging&quot;&gt;4-way Merging&lt;/h4&gt;
+
 </description>
-    <link>/cs/computer-science-algorithm-problem-search.html</link>
-    <guid>/cs/computer-science-algorithm-problem-search</guid>
+    <link>/cs/computer-science-algorithm-problem-sorting.html</link>
+    <guid>/cs/computer-science-algorithm-problem-sorting</guid>
+    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>A.P.: Reliability Design</title>
+    <description>
+</description>
+    <link>/cs/computer-science-algorithm-problem-reliability-design.html</link>
+    <guid>/cs/computer-science-algorithm-problem-reliability-design</guid>
+    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>A.P.: N Queens Problem</title>
+    <description>
+&lt;h4 id=&quot;state-space-tree&quot;&gt;State Space Tree&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/computer-science-n-queens-problem.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;bounding-function&quot;&gt;Bounding Function&lt;/h4&gt;
+
+</description>
+    <link>/cs/computer-science-algorithm-problem-n-queen.html</link>
+    <guid>/cs/computer-science-algorithm-problem-n-queen</guid>
+    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>A.P.: Matrix Multiplication</title>
+    <description>
+</description>
+    <link>/cs/computer-science-algorithm-problem-matrix-multiplication.html</link>
+    <guid>/cs/computer-science-algorithm-problem-matrix-multiplication</guid>
+    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>A.P.: LCS</title>
+    <description>
+&lt;h4 id=&quot;problem&quot;&gt;Problem&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;There are two strings A and B as following:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;b&lt;/th&gt;
+      &lt;th&gt;d&lt;/th&gt;
+      &lt;th&gt;\0&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;a&lt;/th&gt;
+      &lt;th&gt;b&lt;/th&gt;
+      &lt;th&gt;c&lt;/th&gt;
+      &lt;th&gt;d&lt;/th&gt;
+      &lt;th&gt;\0&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;21-recursion-methodtop-down-approach&quot;&gt;2.1 Recursion Method(top down approach)&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Code&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-code&quot;&gt;int LCS(i,j):
+    if(A[i] == '\0' !! B[j] == '\0'):
+        return 0;
+    else if(A[i] == B[j]):
+        return 1 + LCS(i+1, j+1);
+    else:
+        return max(LCS(i + 1, j), LCS(i, j+1));
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Recursive Tree&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/computer-science-algorithm-problem-lcs.png&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Recursive Table
+|   |   | a | b | c | d | \0  |
+|—|—|—|—|—|—|—|
+|   |   | 0 | 1 | 2 | 3 | 4 |
+| b | 0 | 2 | 2 |   |   |   |
+| d | 1 | 1 | 1 | 1 | 1 |   |
+| \0  | 2 | 0 | 0 | 0 |   | 0 |&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;22--dynamic-approachbottom-up-approach&quot;&gt;2.2  Dynamic Approach(bottom up approach)&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;code&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-code&quot;&gt;if(A[i] = B[j]):
+    LCS[i,j] = 1 + LCS[i-1, j-1]
+else:
+    LCS[i,j] = max(LCS[i-1, j], LCS[i, j-1])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+  &lt;li&gt;bottom up table 
+|   |   | a | b | c | d |   |
+|—|—|—|—|—|—|—|
+|   |   | 0 | 1 | 2 | 3 | 4 |
+| b | 0 | 0 | 0 | 0 | 0 | 0 |
+| d | 1 | 0 | 0 | 1 | 1 | 1 |
+|   | 2 | 0 | 0 | 1 | 1 | 2 |&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;time complexity $\Theta(m \times n)$&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+    <link>/cs/computer-science-algorithm-problem-longest-common-subsequence.html</link>
+    <guid>/cs/computer-science-algorithm-problem-longest-common-subsequence</guid>
     <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
   </item>
 
@@ -10993,9 +11208,226 @@ we reprent a tree, how should we represent a graph, a stack, a queue, a heap?&lt
   &lt;li&gt;strategy 2: prefer to choose object with higest profit
 both of them sounds feasible.&lt;/li&gt;
 &lt;/ol&gt;
+
+&lt;h4 id=&quot;dynamic-programingbottom-up-problem&quot;&gt;Dynamic Programing(Bottom Up Problem)&lt;/h4&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Knapsack&lt;/th&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt;0&lt;/th&gt;
+      &lt;th&gt;1&lt;/th&gt;
+      &lt;th&gt;2&lt;/th&gt;
+      &lt;th&gt;3&lt;/th&gt;
+      &lt;th&gt;4&lt;/th&gt;
+      &lt;th&gt;5&lt;/th&gt;
+      &lt;th&gt;6&lt;/th&gt;
+      &lt;th&gt;7&lt;/th&gt;
+      &lt;th&gt;8&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;P&lt;/td&gt;
+      &lt;td&gt;W&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;6&lt;/td&gt;
+      &lt;td&gt;7&lt;/td&gt;
+      &lt;td&gt;7&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;6&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;6&lt;/td&gt;
+      &lt;td&gt;6&lt;/td&gt;
+      &lt;td&gt;7&lt;/td&gt;
+      &lt;td&gt;8&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;set-method&quot;&gt;set method&lt;/h4&gt;
 </description>
     <link>/cs/computer-science-algorithm-problem-knapsack.html</link>
     <guid>/cs/computer-science-algorithm-problem-knapsack</guid>
+    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>A.P.: Job Sequencing with Deadline</title>
+    <description>
+&lt;h4 id=&quot;greedy-method&quot;&gt;Greedy Method&lt;/h4&gt;
+
+&lt;h4 id=&quot;branch-and-bound&quot;&gt;Branch and Bound&lt;/h4&gt;
+</description>
+    <link>/cs/computer-science-algorithm-problem-job-sequencing-with-deadline.html</link>
+    <guid>/cs/computer-science-algorithm-problem-job-sequencing-with-deadline</guid>
+    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>A.P.: Graph Coloring</title>
+    <description>
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Given limited colors, we want to find all the solutions.&lt;/li&gt;
+  &lt;li&gt;constraint: neighbouring vertices shoud not have the same color.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;generate-state-space-tree&quot;&gt;generate state space tree&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/computer-science-algorithm-problem-graph-coloring.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;history&quot;&gt;History&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;In old days when the printing was done, for each color, the paper has to pass
+through the printing press one time, in order to save work.&lt;/li&gt;
+  &lt;li&gt;A map can be converted to a graph, treat each country as a vertice.&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/cs/computer-science-algorithm-problem-graph-coloring.html</link>
+    <guid>/cs/computer-science-algorithm-problem-graph-coloring</guid>
+    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Knuth-Morris-Pratt String Matching</title>
+    <description>
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;String&lt;/th&gt;
+      &lt;th&gt;a&lt;/th&gt;
+      &lt;th&gt;b&lt;/th&gt;
+      &lt;th&gt;a&lt;/th&gt;
+      &lt;th&gt;b&lt;/th&gt;
+      &lt;th&gt;c&lt;/th&gt;
+      &lt;th&gt;a&lt;/th&gt;
+      &lt;th&gt;b&lt;/th&gt;
+      &lt;th&gt;c&lt;/th&gt;
+      &lt;th&gt;a&lt;/th&gt;
+      &lt;th&gt;b&lt;/th&gt;
+      &lt;th&gt;a&lt;/th&gt;
+      &lt;th&gt;b&lt;/th&gt;
+      &lt;th&gt;a&lt;/th&gt;
+      &lt;th&gt;b&lt;/th&gt;
+      &lt;th&gt;d&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;6&lt;/td&gt;
+      &lt;td&gt;7&lt;/td&gt;
+      &lt;td&gt;8&lt;/td&gt;
+      &lt;td&gt;9&lt;/td&gt;
+      &lt;td&gt;10&lt;/td&gt;
+      &lt;td&gt;11&lt;/td&gt;
+      &lt;td&gt;12&lt;/td&gt;
+      &lt;td&gt;13&lt;/td&gt;
+      &lt;td&gt;14&lt;/td&gt;
+      &lt;td&gt;15&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Pattern&lt;/th&gt;
+      &lt;th&gt;0&lt;/th&gt;
+      &lt;th&gt;1&lt;/th&gt;
+      &lt;th&gt;2&lt;/th&gt;
+      &lt;th&gt;3&lt;/th&gt;
+      &lt;th&gt;4&lt;/th&gt;
+      &lt;th&gt;5&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;a&lt;/td&gt;
+      &lt;td&gt;b&lt;/td&gt;
+      &lt;td&gt;a&lt;/td&gt;
+      &lt;td&gt;b&lt;/td&gt;
+      &lt;td&gt;d&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    <link>/cs/computer-science-algorithm-problem-Knuth-Morris-Pratt-string-matching.html</link>
+    <guid>/cs/computer-science-algorithm-problem-Knuth-Morris-Pratt-string-matching</guid>
     <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
   </item>
 
@@ -11056,6 +11488,21 @@ Greedy Strategy&lt;/strong&gt;&lt;/li&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
+&lt;h4 id=&quot;application&quot;&gt;Application&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;finding minimum cost spanning tree: always select a minimum edge&lt;/li&gt;
+  &lt;li&gt;Dijkstra short path algorithm     : always select shortest path vertex&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;the difference between dynamic programming strategy and greedy strategy is
+very obvious, dynamic programming strategy is brute force, consider every
+situation.  but greedy strategy is different, it only consider limit
+situation, which situation it consider, which is based on a predefined
+precedure, to get optimal result. 
+.&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     <link>/cs/computer-science-algorithm-design-greedy.html</link>
     <guid>/cs/computer-science-algorithm-design-greedy</guid>
@@ -11268,6 +11715,14 @@ in G.&lt;/li&gt;
   <item>
     <title>A.D.: Bracnch and Bound</title>
     <description>
+&lt;p&gt;####&lt;/p&gt;
+
+&lt;h4 id=&quot;relationship-with-backtracking&quot;&gt;Relationship with Backtracking&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;It also use a state space tree to solve the problem&lt;/li&gt;
+  &lt;li&gt;but it is useful to solve optimization problem, and only minimization
+problem.&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     <link>/cs/computer-science-algorithm-design-branch-and-bound.html</link>
     <guid>/cs/computer-science-algorithm-design-branch-and-bound</guid>
@@ -11277,6 +11732,27 @@ in G.&lt;/li&gt;
   <item>
     <title>A.D.: Backtracking </title>
     <description>
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;generate state space tree: this is the first step.&lt;/li&gt;
+  &lt;li&gt;bounding function: optimize this function.
+&lt;img src=&quot;/images/computer-science-algorithm-design-backtracking.png&quot; /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;solution&quot;&gt;solution&lt;/h4&gt;
+
+&lt;h4 id=&quot;application&quot;&gt;Application&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;N Queen Problem&lt;/li&gt;
+  &lt;li&gt;Sum of Subsets Problem&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;difference-between-backtracking-and-dynamic-programming&quot;&gt;Difference Between Backtracking and Dynamic Programming&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;both of them are brue force&lt;/li&gt;
+  &lt;li&gt;Dynamic programming is used for optimization problem, find the best optimal&lt;/li&gt;
+  &lt;li&gt;Backtracking is used to find all the solution&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     <link>/cs/computer-science-algorithm-design-backtracking.html</link>
     <guid>/cs/computer-science-algorithm-design-backtracking</guid>
@@ -11299,7 +11775,6 @@ in G.&lt;/li&gt;
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
 1&lt;\log n&lt;\sqrt{n}&lt;n&lt;n \log n&lt;n^{2}&lt;n^{3}&lt;\cdots&lt;2^{n}&lt;3^{n}&lt;\ldots&lt;n^{n} %]]&gt;&lt;/script&gt;
 
-&lt;h4 id=&quot;example&quot;&gt;example&lt;/h4&gt;
 </description>
     <link>/cs/computer-science-algorithm-analysis-time-complexity.html</link>
     <guid>/cs/computer-science-algorithm-analysis-time-complexity</guid>
@@ -11312,8 +11787,110 @@ in G.&lt;/li&gt;
 &lt;p&gt;####&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;P stands for polynomial time&lt;/li&gt;
-  &lt;li&gt;NP stands for nondeterministic polynomial time&lt;/li&gt;
+  &lt;li&gt;NP stands for nondeterministic polynomial time
+    &lt;ul&gt;
+      &lt;li&gt;why we have this idea ? why we coined a new term ? there must a reason for
+this, why we divide problem into P and NP, there must be a reason.&lt;/li&gt;
+      &lt;li&gt;Suppose you are struggling to solve a problem, after many years effort, you
+still can’t nail it, but you solve part of it. we want to preserve you work,
+and in the future, people can focus on the unsolved problems. So part of this
+problem can be solved in polynomial time now, but some can’t, and we call this
+NP problem.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;NP-hard:
+    &lt;ul&gt;
+      &lt;li&gt;here we coin a new term again ? why, because we need a yardstick, assume this
+problem is NP-hard, and everyone admit it. So every problem is more difficult
+than this problem is also NP-hard.&lt;/li&gt;
+      &lt;li&gt;how to compare the difficult among different ?&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;NP-complete:
+    &lt;ul&gt;
+      &lt;li&gt;new term again? crap&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ol&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt;Polynomial Time&lt;/th&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt;Polynomial Time&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt; &lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Linear Search&lt;/td&gt;
+      &lt;td&gt;n&lt;/td&gt;
+      &lt;td&gt;0/1 Knapsack&lt;/td&gt;
+      &lt;td&gt;$2^n$&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Binary Search&lt;/td&gt;
+      &lt;td&gt;logn&lt;/td&gt;
+      &lt;td&gt;TSP&lt;/td&gt;
+      &lt;td&gt;$2^n$&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Mergesort&lt;/td&gt;
+      &lt;td&gt;nlogn&lt;/td&gt;
+      &lt;td&gt;subset&lt;/td&gt;
+      &lt;td&gt;$2^n$&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Insection&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Graph coloring&lt;/td&gt;
+      &lt;td&gt;$2^n$&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Matrix multiplication&lt;/td&gt;
+      &lt;td&gt;n3&lt;/td&gt;
+      &lt;td&gt;Hamiltonian cycle&lt;/td&gt;
+      &lt;td&gt;$2^n$&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
 </description>
     <link>/cs/computer-science-algorithm-analysis-p-np.html</link>
@@ -11330,6 +11907,14 @@ in G.&lt;/li&gt;
 T(n)=T(n-1)+\log n-O(n \log n) \\ T(n)=2 T(n-1)+1-O\left(2^{n}\right) \\ T(n)=3
 T(n-1)+1-O\left(3^{n}\right)\end{array}&lt;/script&gt;
 
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;recursive tree
+    &lt;ul&gt;
+      &lt;li&gt;for any recursive problem, just draw the recursive tree,&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
 </description>
     <link>/cs/computer-science-algorithm-analysis-master-theorem.html</link>
     <guid>/cs/computer-science-algorithm-analysis-master-theorem</guid>
@@ -24927,6 +25512,11 @@ it heavily depends on the plugin and shortcut to improve the efficient.&lt;/p&gt
   &lt;li&gt;set relativenumber!&lt;/li&gt;
   &lt;li&gt;set cursorline&lt;/li&gt;
   &lt;li&gt;syntax off  I spend a lot of time to fix this simple question, crap !!!!!!!!&lt;/li&gt;
+  &lt;li&gt;adjust window width
+    &lt;pre&gt;&lt;code class=&quot;language-code&quot;&gt;:nnoremap  &amp;lt;leader&amp;gt;+ :vertical res +10 &amp;lt;cr&amp;gt;
+:nnoremap  &amp;lt;leader&amp;gt;- :vertical res -10&amp;lt;cr&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h4 id=&quot;22-register&quot;&gt;2.2 register&lt;/h4&gt;
@@ -28360,6 +28950,81 @@ target_link_libraries(untitled ${FOO_LIBRARIES})
     <link>/pl/pl-cmake-pkg-check-modules.html</link>
     <guid>/pl/pl-cmake-pkg-check-modules</guid>
     <pubDate>Mon, 25 May 2015 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>PL: Regex Expression</title>
+    <description>
+&lt;h4 id=&quot;intro&quot;&gt;Intro&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;正则表达式描述了一种字符串匹配的模式，用来检查一个串是否含有某种子串，它不属于某种语言，但是不同的语言对它的支持不一样。&lt;/li&gt;
+  &lt;li&gt;正则表达式是一种引擎匹配工具，没啥牛逼的&lt;/li&gt;
+  &lt;li&gt;字符有本身的含义，比如字母，数字和下划线，如果需要赋予其别的含义只能通过转义符来实现，比如\w表示所有的字符&lt;/li&gt;
+  &lt;li&gt;在正则中，大多数的字符只是其本身的含义，只需要记住一些转义后的字符即可&lt;/li&gt;
+  &lt;li&gt;
+    &lt;ul&gt;
+      &lt;li&gt;在正则中已经失去其本来的含义，表示一种贪婪匹配&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;？在正则中依然表示问号，添加转义字符后\?才表示匹配一次或者零次&lt;/li&gt;
+  &lt;li&gt;（）括号依然表示括号本身的括号含义，添加转义符之后才表示一种子元素&lt;/li&gt;
+  &lt;li&gt;[]这个不好比较特殊，已经被转义&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;类型&quot;&gt;类型&lt;/h4&gt;
+&lt;p&gt;正则表达式和数学表达式的创建方法是一样的,因此正则表达式也用相应的一些运算符&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h5 id=&quot;字符&quot;&gt;字符&lt;/h5&gt;
+&lt;ol&gt;
+  &lt;li&gt;特定字符 ‘X’&lt;/li&gt;
+  &lt;li&gt;范围内字符:[0-9],[259], [a-zA-Z,:]  grep ‘[^0-9]’ passwd&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;转义字符在[]内失去作用，‘[.]’ 表示匹配.,而不是匹配任意字符
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ol&gt;
+  &lt;li&gt;.点号字符表示匹配任意字符&lt;/li&gt;
+  &lt;li&gt;边界字符&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;^: ^root  匹配输入字符串的开始位置， 注意与[^]的区别
+&lt;span class=&quot;nv&quot;&gt;$:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;匹配输入字符串的结尾位置
+&lt;span class=&quot;s1&quot;&gt;'^$'&lt;/span&gt; 表示空行
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h5 id=&quot;元字符&quot;&gt;元字符&lt;/h5&gt;
+&lt;ol&gt;
+  &lt;li&gt;\w: 匹配人体字类字符，包括下划线([A-Za-z0-9_])&lt;/li&gt;
+  &lt;li&gt;\W: 匹配任何非字类字符 ‘[^A-Za-z0-9_]’&lt;/li&gt;
+  &lt;li&gt;\b: 代表单词的分隔&lt;/li&gt;
+  &lt;li&gt;*   匹配0次或者n次&lt;/li&gt;
+  &lt;li&gt;\+ 匹配1次或者n次&lt;/li&gt;
+  &lt;li&gt;\? 匹配0次或者1次&lt;/li&gt;
+  &lt;li&gt;\{n\} 匹配n次&lt;/li&gt;
+  &lt;li&gt;\{n,\} 至少匹配n次&lt;/li&gt;
+  &lt;li&gt;\{n,m\} 至少匹配n次最多匹配m次&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h5 id=&quot;正则表达式组合&quot;&gt;正则表达式组合&lt;/h5&gt;
+
+&lt;h4 id=&quot;实例&quot;&gt;实例&lt;/h4&gt;
+
+&lt;p&gt;15到18位以X或者x或者数字结尾的身份证号&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'[1-9]\([0-9]\{13\}\|[0-9]\{16\}\)[0-9Xx]'&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;test&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;匹配密码&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'$\w\+$'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+    <link>/pl/pl-regex-expression.html</link>
+    <guid>/pl/pl-regex-expression</guid>
+    <pubDate>Sat, 23 May 2015 00:00:00 +0900</pubDate>
   </item>
 
   <item>

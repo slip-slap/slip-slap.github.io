@@ -22,6 +22,13 @@ it heavily depends on the plugin and shortcut to improve the efficient.
 1. set relativenumber!
 2. set cursorline
 3. syntax off  I spend a lot of time to fix this simple question, crap !!!!!!!!
+4. adjust window width
+```code
+:nnoremap  <leader>+ :vertical res +10 <cr>
+:nnoremap  <leader>- :vertical res -10<cr>
+```
+
+
 
 #### 2.2 register
 To access a register, type **"a**, **a** is the name of the register. <br />

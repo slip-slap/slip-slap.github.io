@@ -9,13 +9,6 @@ tags: ["D.S."]
 {% include JB/setup %}
 
 
-#### Array Representaion
-
-#### Rule
-1. if a Node is at index $i$
-2. its left child is at $2*i$
-3. its left child is at $2*i+1$
-4. its parent is at $i/2$
 
 
 #### Complete Binary Tree

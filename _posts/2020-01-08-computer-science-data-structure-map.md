@@ -1,69 +1,12 @@
 ---
 layout: post
-title: "D.S.: List"
+title: "D.S.: Map"
 keywords: []
 description: 
 category: "CS"
-tags: ["D.S."]
+tags: ["Algorithm","D.S."]
 ---
 {% include JB/setup %}
-
-
-
-
-
-<hr />
-
-```java
-class BiTreeNode{
-	public char name;
-	public BiTreeNode left;
-	public BiTreeNode right;
-}
-class BiTree{
-	int index=-1;
-	int leftDeep=0;
-	int rightDeep=0;
-	public void createBiTree(BiTreeNode node){
-		String str=new String("AG##C##");
-		index++;
-		if(str.charAt(index)=='#'){
-			node=null;
-		}else {
-			node.name=str.charAt(index);
-			node.left=new BiTreeNode();
-			createBiTree(node.left);
-			node.right=new BiTreeNode();
-			createBiTree(node.right);
-		}
-	}
-	public void display(BiTreeNode node){
-		if(node.name!='\u0000'){
-		System.out.println(Character.valueOf(node.name));
-		}
-		if(node.left!=null){
-			display(node.left);
-		}
-		if(node.right!=null){
-		display(node.right);
-		}
-	}
-	public void treeDeep(BiTreeNode head){
-		if(head.left!=null){
-			treeDeep(head.left);
-			leftDeep++;
-		}
-		if(head.right!=null){
-			treeDeep(head.right);
-			rightDeep++;
-		}
-		System.out.println(leftDeep);
-		System.out.println(rightDeep);
-
-	}
-}
-```
-
 
 
 ##### 基于数组和链表的map实现

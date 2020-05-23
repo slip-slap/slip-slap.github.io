@@ -17,6 +17,12 @@ tags: ["C.S.T."]
 - **the tail recursion techique can result in passing additional data to recursive
   calls**.
 
+3. no matter it is head recursion or tail recursion, the problem we want to
+   study can be divided into three parts:
+- parameter
+- return
+- multiple recursion
+
 
 #### 
 Recursive programming is a great way to show yourself that you can solve

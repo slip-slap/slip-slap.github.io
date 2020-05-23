@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "CS: Regex Expression"
+title: "PL: Regex Expression"
 keywords: []
 description: 
-category: "CS"
+category: "PL"
 tags: []
 ---
 {% include JB/setup %}

@@ -36,3 +36,17 @@ Greedy(a, n):
   manybe not, but, according to my strategy, this is the best. and **This is
   Greedy Strategy**
 
+
+#### Application
+1. finding minimum cost spanning tree: always select a minimum edge 
+2. Dijkstra short path algorithm     : always select shortest path vertex
+
+
+
+#### Galois
+1. the difference between dynamic programming strategy and greedy strategy is
+   very obvious, dynamic programming strategy is brute force, consider every
+   situation.  but greedy strategy is different, it only consider limit
+   situation, which situation it consider, which is based on a predefined
+   precedure, to get optimal result. 
+   .
