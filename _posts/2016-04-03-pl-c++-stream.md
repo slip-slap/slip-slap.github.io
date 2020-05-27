@@ -8,16 +8,16 @@ tags: ["c++"]
 ---
 {% include JB/setup %}
 
-#### Intro
+#### Stream
+1. to access data that from outside of a program 
+- Inputstream: access data from outside of a program.
+- Outputstream: send data out of the program. 
+2. so we have IOS, which means:
+- Inputstream: istream, ifstream
+- Outputstream: ostream, ofstream
+- cin is an object of istream, cout is an object of ostream.
 
 
-##### 介绍
-
-I/O操作: 写程序的时候，变量的命名是相对程序而言的。<br/>   
-输入: 指的是从程序外向程序内发出的动作。<br/>
-输出: 指的是从程序内向程序外发出的动作。<br/>
-inputstream即是从程序外读数据，outputstream是向程序外写数据。<br/>
-<hr />
 
 ##### MSB && LSB
 

@@ -9,15 +9,22 @@ tags: ["G.T.","G.T.A."]
 {% include JB/setup %}
 
 #### BFS
-1. BFS stands for Breadth First Search is a vertex based techinique for finding
+BFS stands for Breadth First Search is a vertex based techinique for finding
    a shortest path in graph. 
-- It uses a Queue data structure which follows first in first out. In BFS, one
+1. It uses a Queue data structure which follows first in first out. In BFS, one
   vertex is selected at a time when it is visited and marked then its adjacent
   are visited and stored in the queue. 
+- step 1: visiting a vertex
+- step 2: exploration
 
 
 
-####
+
+#### Graph Explaniaton
+<img src="{{IMAGE_PATH}}/math-discrete-graph-theory-bfs.png">
+
+
+
 
 
 

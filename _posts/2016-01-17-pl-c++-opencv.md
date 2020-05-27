@@ -1,6 +1,6 @@
 --- 
 layout: post 
-title: "C++: Vim" 
+title: "C++: Opencv" 
 keywords: [] 
 description: 
 category: "PL"

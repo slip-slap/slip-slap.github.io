@@ -30,6 +30,10 @@ compare(2.0,12.0);
 <hr />
 #### class template  
 类模板用来生成类的蓝图，与函数模板不同，编译器不能为类模板推断模板参数类型
+1. generic class: you can use the same class for multiple data types.
+- generic class is template.
+
+
 
 
 

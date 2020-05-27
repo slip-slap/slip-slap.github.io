@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "C.S.T.: Recursion"
+title: "A.R.: Recursion"
 keywords: []
 description: ""
 category: "CS"
-tags: ["C.S.T."]
+tags: ["A.R."]
 ---
 {% include JB/setup %}
 
