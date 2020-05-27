@@ -5,8 +5,8 @@
   <description>Just Do It - </description>
   <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
   <link></link>
-  <lastBuildDate>Sat, 23 May 2020 13:25:11 +0900</lastBuildDate>
-  <pubDate>Sat, 23 May 2020 13:25:11 +0900</pubDate>
+  <lastBuildDate>Wed, 27 May 2020 09:47:34 +0900</lastBuildDate>
+  <pubDate>Wed, 27 May 2020 09:47:34 +0900</pubDate>
   <ttl>1800</ttl>
 
 
@@ -192,64 +192,6 @@ So {$X_n$} stays the same on average and is a maringale.&lt;/p&gt;
     <link>/math/math-apply-stochastic-process-martingales.html</link>
     <guid>/math/math-apply-stochastic-process-martingales</guid>
     <pubDate>Sun, 10 May 2020 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>Python: Build Neural Network With Any Topology</title>
-    <description>
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;layer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;layer_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;output_channels&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;variable_scope&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;layer_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reuse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;AUTO_REUSE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;w&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get_variable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;weight&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shape&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shape&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;output_channels&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get_variable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;bias&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shape&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;output_channels&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;summary_bias&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;summary&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;histogram&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;bias&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;matmul&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;
-
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;tensorflow&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tf&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# use NumPy to produce data
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x_data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;float32&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rand&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;y_data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,[[&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],[&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.300&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;layer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;first&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;layer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;second&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;layer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;third&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;layer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;fourth&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# loss
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loss&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reduce_mean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;square&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;summary_loss&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;summary&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;scalar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;loss&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loss&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;optimizer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;train&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GradientDescentOptimizer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.01&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;train&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;optimizer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;minimize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loss&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# init
-&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;init&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;initialize_all_variables&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;merged&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;summary&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;merge_all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# run graph
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Session&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sess&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;sess&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;writer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;summary&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;FileWriter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;./ann&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sess&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;step&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;40000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;sess&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;summary&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sess&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;merged&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;writer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_summary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;summary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;step&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;step&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;step&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sess&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loss&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;tricky-things&quot;&gt;Tricky Things&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-    <link>/pl/pl-python-tensorflow-neural-network-with-any-topology.html</link>
-    <guid>/pl/pl-python-tensorflow-neural-network-with-any-topology</guid>
-    <pubDate>Sat, 09 May 2020 00:00:00 +0900</pubDate>
   </item>
 
   <item>
@@ -798,6 +740,103 @@ do something, &lt;strong&gt;finally!!!&lt;/strong&gt;&lt;/li&gt;
   </item>
 
   <item>
+    <title>PL: Programming Strategy</title>
+    <description>
+&lt;h4 id=&quot;methodology&quot;&gt;Methodology&lt;/h4&gt;
+&lt;p&gt;Among the following method, OOP is most successful and famous.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Modular or Procedural Programming
+    &lt;ul&gt;
+      &lt;li&gt;this is in contrast with monolithic programming which means write all code in
+one function.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Object Oriented Programming&lt;/li&gt;
+  &lt;li&gt;AOP: Aspect Oriented Programming&lt;/li&gt;
+  &lt;li&gt;Structured Programming&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;principles-of-object-orientation&quot;&gt;Principles of object-orientation&lt;/h4&gt;
+&lt;p&gt;Just as the other industry, we want to find a way to make software, just like
+making a car.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;abstraction&lt;/li&gt;
+  &lt;li&gt;Encapsulation: Data hiding&lt;/li&gt;
+  &lt;li&gt;Inheritance&lt;/li&gt;
+  &lt;li&gt;Polymorphism&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/pl/pl-programming-strategy.html</link>
+    <guid>/pl/pl-programming-strategy</guid>
+    <pubDate>Wed, 06 May 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>PL: Programming and Computer</title>
+    <description>
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;No matter what  we are playing, one thing is very important &lt;strong&gt;archtiecture&lt;/strong&gt;.
+    &lt;ul&gt;
+      &lt;li&gt;assume you are the president of Hongkong, if you want to be a member of
+international game, you have to obey the rule in the name of “CHINA HONGKONG”,
+that’s the architecture set by China, so is Taiwan.&lt;/li&gt;
+      &lt;li&gt;You are a programmer, you have to understand the architecutre of the computer.
+Know what you can do, and what you can’t.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;thinking&quot;&gt;Thinking&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;You are a programmer, you job is writing codes. The rest is up to computer.&lt;/li&gt;
+  &lt;li&gt;you want to get your computer work well, you have to understand it.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;steps&quot;&gt;Steps&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;in order to execute your code, your code will be loaded into the main memory.&lt;/li&gt;
+  &lt;li&gt;In order to use the main memory in full, we use two methods to allocate
+memory, the first is called stack and the second is called heap.
+    &lt;ul&gt;
+      &lt;li&gt;How to use stack, do we need to care about this, no we don’t. Compiler will do
+this job for us.&lt;/li&gt;
+      &lt;li&gt;How to use heap, do we nee to care about this, it depends.&lt;/li&gt;
+      &lt;li&gt;If you use c++, or c, you can access the main memory by pointer, so you can
+access device, such as keyboard, network, everything, so we can do system
+programming, you can develop operation system, you can develop device drivers.
+Only because we have pointers, &lt;strong&gt;You can get anywhere you want with pointers&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;If you use Java, Python. They don’t have pointers, so they are not allowed to
+access devices, you have to access them through JVM. There is no system
+programming possible for these languages.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;programming-language-type&quot;&gt;Programming Language Type&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/pl-programming-and-computer-language.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;machine language&lt;/li&gt;
+  &lt;li&gt;asseble language: writing operating system.&lt;/li&gt;
+  &lt;li&gt;hybrid lanuage: JVM as an interpreter&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;compiler&lt;/li&gt;
+  &lt;li&gt;intepreter&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/pl/pl-programming-and-computer.html</link>
+    <guid>/pl/pl-programming-and-computer</guid>
+    <pubDate>Wed, 06 May 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
     <title>P.G.M.I.: Inference in Temporal Networks</title>
     <description>
 </description>
@@ -1150,6 +1189,11 @@ scp .ssh/id_rsa.pub hy@192.168.1.1:/home/hy/id_rsa.pub
 learning systems.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;top-conference&quot;&gt;top conference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://openreview.net/group?id=ICLR.cc/2020/Conference&quot;&gt;ICLR&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
@@ -10172,7 +10216,7 @@ distribution in our training set.&lt;/li&gt;
   </item>
 
   <item>
-    <title>C.S.T.: Recursion</title>
+    <title>A.R.: Recursion</title>
     <description>
 &lt;p&gt;####&lt;/p&gt;
 &lt;ol&gt;
@@ -10626,6 +10670,46 @@ a tree.&lt;/li&gt;
   </item>
 
   <item>
+    <title>D.S.: summary</title>
+    <description>
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Data strucutre means how to organise your data in memory.&lt;/li&gt;
+  &lt;li&gt;ADT: Abstract Data Type
+    &lt;ul&gt;
+      &lt;li&gt;it means data and operation.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;phycical-data-structure&quot;&gt;Phycical Data Structure&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Array&lt;/li&gt;
+  &lt;li&gt;Matrices&lt;/li&gt;
+  &lt;li&gt;Linked List&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;logical-data-structure&quot;&gt;Logical Data Structure&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Stack&lt;/li&gt;
+  &lt;li&gt;Quenen&lt;/li&gt;
+  &lt;li&gt;Tree&lt;/li&gt;
+  &lt;li&gt;Graph&lt;/li&gt;
+  &lt;li&gt;Hashing&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Hashing&lt;/li&gt;
+  &lt;li&gt;Sorting&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/cs/computer-science-data-structure-summary.html</link>
+    <guid>/cs/computer-science-data-structure-summary</guid>
+    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
     <title>D.S.: Stack</title>
     <description>
 </description>
@@ -10649,6 +10733,15 @@ a tree.&lt;/li&gt;
 </description>
     <link>/cs/computer-science-data-structure-priority-queue.html</link>
     <guid>/cs/computer-science-data-structure-priority-queue</guid>
+    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>D.S.: Matrices</title>
+    <description>
+</description>
+    <link>/cs/computer-science-data-structure-matrices.html</link>
+    <guid>/cs/computer-science-data-structure-matrices</guid>
     <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
   </item>
 
@@ -10852,6 +10945,15 @@ number of pointer changs, O(1)&lt;/li&gt;
   </item>
 
   <item>
+    <title>D.S.: Arrays</title>
+    <description>
+</description>
+    <link>/cs/computer-science-data-structure-arrays.html</link>
+    <guid>/cs/computer-science-data-structure-arrays</guid>
+    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
     <title>D.S.: 2-3 Tree</title>
     <description>
 </description>
@@ -10960,6 +11062,64 @@ it’s better for everything.&lt;/li&gt;
 </description>
     <link>/cs/computer-science-algorithm-summary.html</link>
     <guid>/cs/computer-science-algorithm-summary</guid>
+    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>A.R.: Recursion</title>
+    <description>
+&lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Recursion: a function call itself.
+    &lt;ul&gt;
+      &lt;li&gt;it must stop somewhere, otherwise it will lead to infinite calling.&lt;/li&gt;
+      &lt;li&gt;it has two phases, calling phase(ascending phase), returning phase(descending
+phase)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-code&quot;&gt;void foo(int n){
+    if(n &amp;gt; 0){
+        1. calling: Ascending phase
+        2. fun(n-1)
+        3. returning: Descending time
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;analysisetracing&quot;&gt;Analysise(tracing)&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;a recursive function raise to a tree. keep the tree in mind.
+    &lt;pre&gt;&lt;code class=&quot;language-code&quot;&gt;void foo(n){
+ if(n &amp;gt; 0){
+     foo(n-1);
+     foo(n-2)
+     print(n)
+ }
+}
+foo(4)
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;&lt;img src=&quot;/images/computer-science-algorithm-recursion.png&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;difference-with-loops&quot;&gt;difference with loops&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;In loops, you only have ascending phase&lt;/li&gt;
+  &lt;li&gt;In recursive function, you have ascending phase and descending phase&lt;/li&gt;
+  &lt;li&gt;So you can utilize this to code easily.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;recursion-type&quot;&gt;Recursion Type&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;linear recursion&lt;/li&gt;
+  &lt;li&gt;tree recursion&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/cs/computer-science-algorithm-recursion.html</link>
+    <guid>/cs/computer-science-algorithm-recursion</guid>
     <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
   </item>
 
@@ -13680,6 +13840,8 @@ data structure, performs two stages:&lt;/p&gt;
   &lt;li&gt;second if there is no vertices then visited vertices are popped.&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;h4 id=&quot;graph-exploration&quot;&gt;Graph Exploration&lt;/h4&gt;
+
 &lt;p&gt;####&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;class classification&lt;/li&gt;
@@ -13699,18 +13861,21 @@ data structure, performs two stages:&lt;/p&gt;
     <title>G.T.A.: Breadth First Search</title>
     <description>
 &lt;h4 id=&quot;bfs&quot;&gt;BFS&lt;/h4&gt;
+&lt;p&gt;BFS stands for Breadth First Search is a vertex based techinique for finding
+   a shortest path in graph.&lt;/p&gt;
 &lt;ol&gt;
-  &lt;li&gt;BFS stands for Breadth First Search is a vertex based techinique for finding
-a shortest path in graph.
+  &lt;li&gt;It uses a Queue data structure which follows first in first out. In BFS, one
+  vertex is selected at a time when it is visited and marked then its adjacent
+  are visited and stored in the queue.
     &lt;ul&gt;
-      &lt;li&gt;It uses a Queue data structure which follows first in first out. In BFS, one
-vertex is selected at a time when it is visited and marked then its adjacent
-are visited and stored in the queue.&lt;/li&gt;
+      &lt;li&gt;step 1: visiting a vertex&lt;/li&gt;
+      &lt;li&gt;step 2: exploration&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;####&lt;/p&gt;
+&lt;h4 id=&quot;graph-explaniaton&quot;&gt;Graph Explaniaton&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/math-discrete-graph-theory-bfs.png&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;application&quot;&gt;Application&lt;/h4&gt;
 &lt;ol&gt;
@@ -18679,6 +18844,64 @@ arguments passed as keyword are stroed in a dict called &lt;strong&gt;kwargs&lt;
   </item>
 
   <item>
+    <title>Python: Build Neural Network With Any Topology</title>
+    <description>
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;layer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;layer_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;output_channels&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;variable_scope&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;layer_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reuse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;AUTO_REUSE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;w&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get_variable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;weight&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shape&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shape&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;output_channels&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get_variable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;bias&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shape&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;output_channels&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;summary_bias&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;summary&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;histogram&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;bias&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;matmul&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;
+
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;tensorflow&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tf&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# use NumPy to produce data
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x_data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;float32&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rand&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;y_data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,[[&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],[&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.300&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;layer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;first&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;layer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;second&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;layer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;third&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;layer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;fourth&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# loss
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loss&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reduce_mean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;square&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;summary_loss&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;summary&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;scalar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;loss&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loss&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;optimizer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;train&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GradientDescentOptimizer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.01&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;train&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;optimizer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;minimize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loss&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# init
+&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;init&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;initialize_all_variables&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;merged&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;summary&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;merge_all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# run graph
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Session&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sess&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;sess&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;writer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;summary&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;FileWriter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;./ann&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sess&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;step&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;40000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;sess&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;summary&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sess&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;merged&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;writer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_summary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;summary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;step&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;step&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;step&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sess&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loss&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;tricky-things&quot;&gt;Tricky Things&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/pl/pl-python-tensorflow-neural-network-with-any-topology.html</link>
+    <guid>/pl/pl-python-tensorflow-neural-network-with-any-topology</guid>
+    <pubDate>Wed, 18 Sep 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
     <title>Python Copy</title>
     <description>
 &lt;h4 id=&quot;copy-in-python&quot;&gt;copy in Python&lt;/h4&gt;
@@ -20960,6 +21183,50 @@ Difference: The difference is how we train them&lt;/p&gt;
     <link>/ai/AI-ML-Gradient-Boosting-Algorithm.html</link>
     <guid>/ai/AI-ML-Gradient-Boosting-Algorithm</guid>
     <pubDate>Thu, 11 Jul 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Latex: Tree</title>
+    <description>&lt;pre&gt;&lt;code class=&quot;language-tree&quot;&gt;\begin{tikzpicture}
+    \tikzstyle{level 1}=[sibling distance=12mm]
+    \tikzstyle{level 2}=[sibling distance=12mm]
+    \tikzstyle{level 3}=[sibling distance=12mm]
+    \tikzstyle{level 4}=[sibling distance=12mm]
+    \node (root) {foo(4)}
+        child {
+            child{
+                child{
+                    child
+                    child
+                    child
+                }
+                child
+                child
+            }
+            child 
+            child
+        }
+        child
+        child;
+    \node at (root-1) {foo(3)};
+    \node at (root-2) {foo(2)};
+    \node at (root-3) {print(4)};
+    \node at (root-1-1) {foo(2)};
+    \node at (root-1-2) {foo(1)};
+    \node at (root-1-3) {print(3)};
+    \node at (root-1-1-1) {foo(1)};
+    \node at (root-1-1-2) {foo(0)};
+    \node at (root-1-1-3) {print(2)};
+    \node at (root-1-1-1-1) {foo(0)};
+    \node at (root-1-1-1-2) {foo(-2)};
+    \node at (root-1-1-1-3) {print(1)};
+\end{tikzpicture}
+&lt;/code&gt;&lt;/pre&gt;
+
+</description>
+    <link>/pl/pl-latex-tikz-tree.html</link>
+    <guid>/pl/pl-latex-tikz-tree</guid>
+    <pubDate>Wed, 10 Jul 2019 00:00:00 +0900</pubDate>
   </item>
 
   <item>
@@ -24716,320 +24983,6 @@ a blank line&lt;/p&gt;
   </item>
 
   <item>
-    <title>C++: Container</title>
-    <description>
-&lt;h3 id=&quot;intro&quot;&gt;Intro&lt;/h3&gt;
-
-&lt;p&gt;STL标准模板库解决了数据结构和算法的抽象问题
-vector和deque的底层是对数组的封装，所以提供了对元素的快速随机访问。&lt;br /&gt;
-不足是，在删除元素时，付出的开销更大。&lt;br /&gt;
-list类型在任何位置都能快速插入和删除。访问某个元素要求遍历所设计的其他元素.&lt;/p&gt;
-&lt;h3 id=&quot;容器操作&quot;&gt;容器操作&lt;/h3&gt;
-
-&lt;hr /&gt;
-
-&lt;h4 id=&quot;构造函数&quot;&gt;构造函数&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;C c;           默认构造函数，拷贝空容器&lt;/li&gt;
-  &lt;li&gt;C c1(c2);      构造c2的拷贝c1&lt;/li&gt;
-  &lt;li&gt;C c(b, e);     构造c, 将迭代器b和e指定的范围内的元素拷贝到c&lt;/li&gt;
-  &lt;li&gt;C c{a, b, c};  列表初始化c&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-
-&lt;h5 id=&quot;赋值和swap&quot;&gt;赋值和swap&lt;/h5&gt;
-
-&lt;p&gt;在新标准库中，容器既提供成员函数版本的swap, 也提供了非成员版本的swap.其中,非成员版本的swap在泛型编程中非常重要。&lt;/p&gt;
-
-&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vector&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vector&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;c1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;swap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;swap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//推荐使用这一种，泛型编程&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;auto&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;容器种类&quot;&gt;容器种类&lt;/h3&gt;
-&lt;hr /&gt;
-
-&lt;h4 id=&quot;string&quot;&gt;string&lt;/h4&gt;
-&lt;hr /&gt;
-
-&lt;h5 id=&quot;数值转换&quot;&gt;数值转换&lt;/h5&gt;
-&lt;hr /&gt;
-
-&lt;h5 id=&quot;string搜索操作&quot;&gt;string搜索操作&lt;/h5&gt;
-&lt;hr /&gt;
-
-&lt;h4 id=&quot;vector&quot;&gt;vector&lt;/h4&gt;
-&lt;p&gt;所有标准库容器都有支持递增运算的迭代器。也支持==和!=运算&lt;br /&gt;
-因为vector和string的底层是array, 它的底层支持+ - &amp;lt; &amp;gt; &amp;gt;= &amp;lt;=等操作&lt;/p&gt;
-&lt;hr /&gt;
-
-&lt;font color=&quot;red&quot;&gt;代码块1&lt;/font&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;vector&amp;lt;Point2d&amp;gt; container1;
-    Point2d p1(2,3);
-	Point2d p2(3,4);
-	Point2d p3(1,7);
-	container1.push_back(p1);
-	container1.push_back(p2);
-	container1.push_back(p3);
-	auto var = container1.begin();
-	var = var+2;
-	cout&amp;lt;&amp;lt;*var;        //Point2d 底层重载了输出运算符
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;h4 id=&quot;forward_list&quot;&gt;forward_list&lt;/h4&gt;
-&lt;hr /&gt;
-
-&lt;h4 id=&quot;list&quot;&gt;list&lt;/h4&gt;
-&lt;p&gt;sort算法需要容器有随机访问迭代器,list的容器并没有随机访问迭代器.&lt;br /&gt;
-因此它自定义了算法.&lt;/p&gt;
-&lt;font color=&quot;red&quot;&gt;代码块2&lt;/font&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bool Smaller(const cv::Point2d p1,const cv::Point2d p2){
-	    return atan2(p1.y,p1.x)&amp;lt;atan2(p2.y,p2.x);
-}
-std::list&amp;lt;cv::Point2d&amp;gt; list_container;
-    cv::Point2d p1(2,3);
-    cv::Point2d p2(3,4);
-    list_container.push_back(p1);
-    list_container.push_back(p2);
-    list_container.sort(Smaller);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-</description>
-    <link>/pl/pl-c++-container.html</link>
-    <guid>/pl/pl-c++-container</guid>
-    <pubDate>Sun, 04 Mar 2018 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>C++: Class</title>
-    <description>
-&lt;h3 id=&quot;封装&quot;&gt;封装&lt;/h3&gt;
-
-&lt;p&gt;类的定义可以使用struct或者class关键字，struct是从c继承来的&lt;br /&gt;
-使用class定义类，则定义在第一个访问标号前的任何成员权限都为private&lt;br /&gt;
-使用struct定义类，则都为public，其他没差。&lt;/p&gt;
-
-&lt;p&gt;java的类更像是c++类的一种简化。c++中的类能够控制在初始化，复制，赋值和销毁对象时发生的操作。java的类没有这种能力。&lt;br /&gt;
-python, java和c++中，都隐约存在this指针这个概念。&amp;lt;/br&amp;gt;
-只不过，java和c++都隐藏的比较深一点。对于 属于对象的成员函数来说，都有对象的指针与他们绑定
-在一起，这个参数是隐藏。python就比较干脆了，告诉你有这个指针，即为self，调用的时候，不需要
-指明。&lt;/p&gt;
-&lt;font color=&quot;red&quot;&gt;代码段1&lt;/font&gt;
-
-&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;iostream&amp;gt;
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Sales_item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;nl&quot;&gt;public:&lt;/span&gt;
-		&lt;span class=&quot;c1&quot;&gt;//const成员不能改变其所操作的对象的数据成员，const必须同时出现在声明和定义中。&lt;/span&gt;
-		&lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;avg_price&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;const&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-		&lt;span class=&quot;kt&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;same_isbn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Sales_item&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rhs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;const&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-			&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rhs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-		&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-		&lt;span class=&quot;c1&quot;&gt;//构造函数的初始化列表&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;Sales_item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;units_sold&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;revenue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){}&lt;/span&gt;
-	&lt;span class=&quot;nl&quot;&gt;private:&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-		&lt;span class=&quot;kt&quot;&gt;unsigned&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;units_sold&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-		&lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;revenue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;	
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;构造函数&quot;&gt;构造函数&lt;/h4&gt;
-&lt;p&gt;定义: 类通过一个或几个特殊的成员函数来控制其对象的初始化过程，这些函数叫做构造函数&lt;br /&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;编译器默认会为类合成无参数的构造函数，如果类自己定义了构造函数，编译器不再提供无参构造函数&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;one parameter constructor&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;	
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;//定义类&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Foo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;//错误，编译器不会再提供无参数的构造函数&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Foo&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;f2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;h4 id=&quot;拷贝构造函数&quot;&gt;拷贝构造函数&lt;/h4&gt;
-
-&lt;p&gt;定义: 如果一个构造函数的第一个参数是自身类类型的引用，且任何额外参数都有默认值，此构造函数为拷贝构造函数&lt;br /&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;如果类定义只有一个参数且该参数类型为自身类类型的引用，编译器不再为该类提供默认拷贝构造函数。&lt;font color=&quot;blue&quot;&gt;如果类定义了重载的拷贝构造函数，即参数不同的构造函数，编译器还会合成只有一个参数是自身类类型的引用拷贝构造函数，这与构造函数不一样，构造函数是只有类定义的有构造函数，编译器就不再合成&lt;/font&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-
-&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;instance&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;copy constructor&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;	
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;//定义类&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Foo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Foo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;//正确编译器还是会合成，只有一个自身类引用的构造函数&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;h4 id=&quot;拷贝赋值运算符&quot;&gt;拷贝赋值运算符&lt;/h4&gt;
-
-&lt;p&gt;定义: 如果类未定义自己的拷贝赋值运算符，编译器会为它合成一个&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h4 id=&quot;移动构造函数&quot;&gt;移动构造函数&lt;/h4&gt;
-
-&lt;hr /&gt;
-
-&lt;h4 id=&quot;移动赋值运算符&quot;&gt;移动赋值运算符&lt;/h4&gt;
-&lt;p&gt;定义: 移动赋值&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h4 id=&quot;析构函数&quot;&gt;析构函数&lt;/h4&gt;
-&lt;p&gt;定义: 析构函数执行与构造函数相反的操作:,构造函数初始化对象的非static数据成员;析构函数释放对象使用的资源，并销毁对象的非static数据成员&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-&lt;h4 id=&quot;const成员函数&quot;&gt;const成员函数&lt;/h4&gt;
-
-&lt;font color=&quot;green&quot;&gt;上段代码1中,isbn函数参数列表后有const关键字，
-const的作用修改this指针的类型&lt;/font&gt;
-&lt;p&gt;默认情况下，this的类型是指向类类型非常量版本的常量指针，在Salesdata成员函数
-中，this的类型是Salesdata *const&lt;br /&gt;
-尽管this是隐士的，需要遵循初始化规则。&lt;font color=&quot;green&quot;&gt;我们不能把
-this绑定到一个常量对象上, 我们不能在一个常量对象上调用普通的成员函数&lt;/font&gt;&lt;/p&gt;
-&lt;font color=&quot;red&quot;&gt;代码段2&lt;/font&gt;
-
-&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Sales_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;nl&quot;&gt;public:&lt;/span&gt;
-	    &lt;span class=&quot;n&quot;&gt;Sales_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
-	    &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;const&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	    &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;non_const&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Sales_data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	    &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;the number of the book&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;iu&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Sales_data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;non_const&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	    &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;nont const member function&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;//调用&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Sales_data&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;demo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Sales_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;demo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;non_const&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;//error:none const function is called on the const object&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;demo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;继承&quot;&gt;继承&lt;/h3&gt;
-
-&lt;p&gt;c++语言中，必须将两种成员函数区分开来&lt;br /&gt;
-1 基类希望其派生类进行覆盖的函数，虚函数virtual&lt;br /&gt;
-2 基类希望派生类直接继承不要改变的函数&lt;br /&gt;&lt;/p&gt;
-</description>
-    <link>/pl/pl-c++-class.html</link>
-    <guid>/pl/pl-c++-class</guid>
-    <pubDate>Sat, 03 Mar 2018 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>C++: Data Type</title>
-    <description>
-&lt;h3 id=&quot;intro&quot;&gt;intro&lt;/h3&gt;
-
-&lt;p&gt;数据的初始化分为两种: &lt;br /&gt; 
-直接初始化: 使用assignment operator&lt;br /&gt;&lt;br /&gt;
-复制初始化: 使用(),将初始化值放在圆括号内。&lt;br /&gt;&lt;br /&gt;
-对于类类型对象，直接初始化直接调用与实参匹配的构造函数。复制初始化
-调用复制构造函数，然后使用复制构造函数将临时对象复制到正在创建的对象。
-1 引用数据类型是一种复合类型，通过在变量名前添加&amp;amp;来定义。&lt;/p&gt;
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;指针&quot;&gt;指针&lt;/h3&gt;
-
-&lt;h4 id=&quot;定义&quot;&gt;定义&lt;/h4&gt;
-
-&lt;p&gt;指针: (point to)是一种复合类型。指针实现了对其他对象的间接访问。&lt;br /&gt;
-1 指针本身就是一个对象，允许对指针的赋值和拷贝。&lt;br /&gt;
-2 指针无需在定义时赋初值。&lt;br /&gt;&lt;/p&gt;
-&lt;hr /&gt;
-
-&lt;h4 id=&quot;空指针&quot;&gt;空指针&lt;/h4&gt;
-
-&lt;p&gt;空指针不指向任何对象，在使用一个指针之前首先检查它是否为空。&lt;br /&gt;
-因为在写程序的时候，往往是空指针把程序搞崩溃。&lt;br /&gt;&lt;/p&gt;
-&lt;hr /&gt;
-
-&lt;h4 id=&quot;void&quot;&gt;void*&lt;/h4&gt;
-
-&lt;p&gt;void* 一种特殊的指针类型，用于存放任意对象的地址。&lt;/p&gt;
-
-&lt;h4 id=&quot;const和指针&quot;&gt;const和指针&lt;/h4&gt;
-
-&lt;p&gt;指向常量的指针pointer to const 不能用于改变其所指对象的值。&lt;br /&gt;&lt;/p&gt;
-
-&lt;font color=&quot;green&quot;&gt;要想存放常量对象的地址，只能使用指向常量的指针。&lt;/font&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//不能使用普通指针指向常量的地址
-const double pi =3.14;  //pi 是常量，值不能改变
-double *ptr = &amp;amp;pi;      //错误: ptr是一个普通指针
-//但是却可以使用const指针指向非const对象
-double deta = 0.0;
-const double *ptr = &amp;amp;deta;
-//为什么呢？const指针的含义是不可以通过指针改变所指向对象的值，至于指向的
-//对象是不是const对象，它是不care的
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;引用&quot;&gt;引用&lt;/h3&gt;
-
-&lt;h4 id=&quot;左引用&quot;&gt;左引用&lt;/h4&gt;
-
-&lt;h5 id=&quot;定义-1&quot;&gt;定义&lt;/h5&gt;
-
-&lt;p&gt;定义: 引用不是对象,引用是为已经存在的对象所起的另外一个名字.因为引用不是对象,所以不能定义引用的引用.&lt;br /&gt;&lt;/p&gt;
-&lt;hr /&gt;
-
-&lt;h5 id=&quot;reference-to-const&quot;&gt;reference to const&lt;/h5&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//不能让一个非常量引用指向一个常量引用
- const int ci = 1024;
- int &amp;amp;r1 = ci;
-// 允许将一个const int&amp;amp; 绑定到一个普通的int对象上
-int i =42;
-const int &amp;amp;r2 = i;
-//为什么呢？指导思想和指针是一样的。const的引用的含义是不可以通过引用改变
-//所引用对象的值，至于引用对象是不是const的它不care
-//const的意思是，我不允许所引用的对象通过我改变它的值。
-//如果你能通过改变所引用的值，你随便，你开心就好
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;h4 id=&quot;右值引用&quot;&gt;右值引用&lt;/h4&gt;
-
-&lt;p&gt;#####产生的原因&lt;/p&gt;
-
-</description>
-    <link>/pl/pl-c++-data-type.html</link>
-    <guid>/pl/pl-c++-data-type</guid>
-    <pubDate>Fri, 02 Mar 2018 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
     <title>CLI: Find</title>
     <description>
 &lt;h4 id=&quot;what-does-the-command-do-&quot;&gt;what does the command do ?&lt;/h4&gt;
@@ -27538,203 +27491,6 @@ java Main   运行Main.class字节码文件&lt;/p&gt;
   </item>
 
   <item>
-    <title>C++: 迭代器</title>
-    <description>
-&lt;h3 id=&quot;intro&quot;&gt;intro&lt;/h3&gt;
-
-&lt;h4 id=&quot;谓词&quot;&gt;谓词&lt;/h4&gt;
-&lt;p&gt;谓词本质是可调用的表达式，返回结果是一个能用作条件的值。&lt;br /&gt;
-一元谓词: 接受单一参数unary predicate&lt;br /&gt;
-二元谓词: 接受两个参数binary predicate&lt;br /&gt;
-接受谓词参数的算法对输入序列中的元素调用谓词，因此元素类型必须转换为谓词的参数类型&lt;/p&gt;
-
-&lt;h4 id=&quot;迭代器&quot;&gt;迭代器&lt;/h4&gt;
-&lt;p&gt;迭代器令算法不依赖于容器，但算法依赖于元素类型的操作。&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;输入迭代器&lt;/li&gt;
-  &lt;li&gt;输出迭代器&lt;/li&gt;
-  &lt;li&gt;前向迭代器&lt;/li&gt;
-  &lt;li&gt;双向迭代器&lt;/li&gt;
-  &lt;li&gt;随机访问迭代器&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;算法&quot;&gt;算法&lt;/h3&gt;
-&lt;h4 id=&quot;简单查找算法&quot;&gt;简单查找算法&lt;/h4&gt;
-
-&lt;h5 id=&quot;find&quot;&gt;find&lt;/h5&gt;
-&lt;p&gt;find(beg, end, val)&lt;br /&gt;
-return 返回一个迭代器，指向输入序列中第一个等于val的元素。&lt;br /&gt;
-find_if(beg, end, unaryPred)&lt;br /&gt;
-return 返回一个迭代器， 指向第一个满足unaryPred的元素 &lt;br /&gt;
-parameter 因为谓词的参数为容器的元素类型，因此，谓词不能是成员函数&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-cpp,monokai&quot;&gt;//谓词
-bool my_minus(int a){
-	    return (a-1) == 2;
-}
-//主调函数
-list&amp;lt;int&amp;gt; container;
-container.push_back(3);
-container.push_back(8);
-auto var = find_if(container.begin(), container.end(),my_minus);
-cout&amp;lt;&amp;lt;*var;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&quot;写容器元素的算法&quot;&gt;写容器元素的算法&lt;/h4&gt;
-
-&lt;h5 id=&quot;fill_n&quot;&gt;fill_n&lt;/h5&gt;
-
-&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vector&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;container&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;back_insert_iterator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vector&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;itr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;back_inserter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;container&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fill_n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;itr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//算法需要的只是迭代器，有了迭代器它就很开心了&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;排序&quot;&gt;排序&lt;/h4&gt;
-&lt;h5 id=&quot;sort&quot;&gt;sort()&lt;/h5&gt;
-
-&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;truct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;my_point&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;nl&quot;&gt;public:&lt;/span&gt;
-	    &lt;span class=&quot;n&quot;&gt;my_point&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-	    &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	    &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	   &lt;span class=&quot;cm&quot;&gt;/*
-	   这里重载操作符的时候有两点要说清楚
-	   1 属于对象的成员函数都存在隐藏的this指针，对于该函数而言，x属于某个对象的。
-	   2 应该是语法默认规定，类内重载&amp;lt;, 函数为const类型， 参数为const类型
-	    否则会报如下错误
-	    error: invalid operands to binary expression ('const my_point' and 'const my_point')
-	    bool operator()(const _T1&amp;amp; __x, const _T1&amp;amp; __y) const {return __x &amp;lt; __y;}
-	   */&lt;/span&gt;
-	    &lt;span class=&quot;kt&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;operator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;my_point&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;my&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;my&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-		&lt;span class=&quot;c1&quot;&gt;//第二种比较方法&lt;/span&gt;
-		&lt;span class=&quot;kt&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;is_compare&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;my_point&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;my_point&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-			    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-		&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-		&lt;span class=&quot;c1&quot;&gt;//------------------------------------------------------&lt;/span&gt;
-		&lt;span class=&quot;c1&quot;&gt;//-------------------------------------------------------&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;my_point&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;container&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;my_point&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;my_point&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;my_point&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;container&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;push_back&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;container&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;push_back&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;container&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;push_back&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;container&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-      &lt;span class=&quot;c1&quot;&gt;//container.sort(is_compare)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h4 id=&quot;最小值和最大值&quot;&gt;最小值和最大值&lt;/h4&gt;
-&lt;h5 id=&quot;minval1-val2-comp&quot;&gt;min(val1, val2, comp)&lt;/h5&gt;
-&lt;p&gt;参数和返回类型都是const的引用，意味着对象不会被拷贝&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bool is_true(int a,int b){
-	    return 0;
-}
-std::cout&amp;lt;&amp;lt;max(3,5,is_true);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;minmax_element(beg, end, comp)&lt;br /&gt;
-param beg和end都是迭代器&lt;br /&gt;
-      comp是自定义的比较函数，该比较函数不能是一个成员函数。为什么
-	  我的理解是，成员函数默认有一个this指针作为参数。而该比较函数的
-	  参数仅有两个，是两个迭代器所指向的对象。
-return 返回值是一个pair容器，成员为指向对象的指针。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bool is_smaller(Point2d p1,Point2d p2){
-	    return p1.x&amp;lt;p2.x;
-}
-list&amp;lt;Point2d&amp;gt; container;
-Point2d p1( 0,-1);
-Point2d p11(1.5,0);
-Point2d p2( 1, 1);
-Point2d p3( 0, 1);
-Point2d p4(-1, 1);
-container.push_back(p1);
-container.push_back(p11);
-container.push_back(p2);
-container.push_back(p3);
-container.push_back(p4);
-pair&amp;lt;list&amp;lt;Point2d&amp;gt;::iterator,list&amp;lt;Point2d&amp;gt;::iterator&amp;gt; var=minmax_element(container.begin(),container.end(),is_smaller);
-std::cout&amp;lt;&amp;lt;*(var.first)&amp;lt;&amp;lt;*(var.second);    
-//简单写法
-auto copy_var=minmax_element(container.begin(),container.end(),is_smaller);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-</description>
-    <link>/pl/pl-c++-iterator.html</link>
-    <guid>/pl/pl-c++-iterator</guid>
-    <pubDate>Fri, 06 May 2016 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>C++: Stream</title>
-    <description>
-&lt;h4 id=&quot;intro&quot;&gt;Intro&lt;/h4&gt;
-
-&lt;h5 id=&quot;介绍&quot;&gt;介绍&lt;/h5&gt;
-
-&lt;p&gt;I/O操作: 写程序的时候，变量的命名是相对程序而言的。&lt;br /&gt; &lt;br /&gt;
-输入: 指的是从程序外向程序内发出的动作。&lt;br /&gt;
-输出: 指的是从程序内向程序外发出的动作。&lt;br /&gt;
-inputstream即是从程序外读数据，outputstream是向程序外写数据。&lt;br /&gt;&lt;/p&gt;
-&lt;hr /&gt;
-
-&lt;h5 id=&quot;msb--lsb&quot;&gt;MSB &amp;amp;&amp;amp; LSB&lt;/h5&gt;
-
-&lt;p&gt;most significant bit和least significant bit，前者采用Big endian方式存储数据，后者采用little endian存储数据&lt;br /&gt;
-CPU有两大派系, IBM的Power PC和Inter的x86系列。PowerPC采用big endian，x86采用littleendian 存储数据。苹果电脑自2005年起，旗下电脑转用Intel CPU&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h5 id=&quot;文本文件和二进制文件&quot;&gt;文本文件和二进制文件&lt;/h5&gt;
-
-&lt;font color=&quot;red&quot;&gt;代码段1&lt;/font&gt;
-
-&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;文本文件和二进制本质上都是用&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;和&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;表示的。&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;12000&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//采用二进制的方式存储，仅占用4个字节&lt;/span&gt;
-			 &lt;span class=&quot;c1&quot;&gt;//文本存储需要五个字节。&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;h4 id=&quot;strinstream&quot;&gt;strinstream&lt;/h4&gt;
-&lt;p&gt;主要用来使字符串和数值之间的转换&lt;/p&gt;
-
-&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//字符串转数值&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1234&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ostringstream&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ss&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;ss&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;//数值转字符串&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;istringstream&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ss&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;ss&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;hr /&gt;
-
-&lt;h4 id=&quot;文件流&quot;&gt;文件流&lt;/h4&gt;
-&lt;font color=&quot;red&quot;&gt;代码段3&lt;/font&gt;
-
-&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//绑定输出流，如果文件不存在，则会创建该文件。&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ofstream&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;output.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;//setw()只对其后面紧跟的输出产生作用&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;setfill&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sc&quot;&gt;'*'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;setw&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ifstream&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;input.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;eof&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()){&lt;/span&gt;
-	&lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-</description>
-    <link>/pl/pl-c++-stream.html</link>
-    <guid>/pl/pl-c++-stream</guid>
-    <pubDate>Thu, 05 May 2016 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
     <title>Java: Container</title>
     <description>
 &lt;ul id=&quot;markdown-toc&quot;&gt;
@@ -27823,126 +27579,6 @@ CPU有两大派系, IBM的Power PC和Inter的x86系列。PowerPC采用big endian
     <link>/pl/pl-java-container.html</link>
     <guid>/pl/pl-java-container</guid>
     <pubDate>Wed, 04 May 2016 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>C++: Keywords</title>
-    <description>
-&lt;h4 id=&quot;explicit&quot;&gt;explicit&lt;/h4&gt;
-&lt;p&gt;c++为只用传递一个参数的构造函数定义了一个隐士转换&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-cpp,monokai&quot;&gt;class Animal{
-	public:
-	    Animal(){
-        cout&amp;lt;&amp;lt;&quot;no parameter constructor&quot;&amp;lt;&amp;lt;endl;
-        }
-	    explicit Animal(int a){
-	    cout&amp;lt;&amp;lt;&quot;parameter constructor&quot;&amp;lt;&amp;lt;endl;
-	    }
-};
-Animal dog = 3         //报错，无法使用explicit Animal构造器
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class Animal{
-	public:
-	    Animal(){
-        cout&amp;lt;&amp;lt;&quot;no parameter constructor&quot;&amp;lt;&amp;lt;endl;
-	    }
-	    Animal(int a){
-        cout&amp;lt;&amp;lt;&quot;parameter constructor&quot;&amp;lt;&amp;lt;endl;
-	    }
-};
-Animal dog = 3        //隐士调用Animal(int a)构造函数
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;auto&quot;&gt;auto&lt;/h4&gt;
-&lt;font color=&quot;red&quot;&gt;代码段1&lt;/font&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;list&amp;lt;Point2d&amp;gt; container;
-Point2d p1( 0,-1);
-container.push_back(p1);
-//下面的做法并不会改变容器内的值,因为var不是指针，也是引用; 
-for(auto var:container){ 
-	var.x=1;
-	var.y=2;
-}
-//正确示范
-for(auto itr=container.begin();itr!=container.end();itr++){
-    itr-&amp;gt;x=itr-&amp;gt;x/x_border;
-    itr-&amp;gt;y=itr-&amp;gt;y/y_border;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;hr /&gt;
-
-&lt;h4 id=&quot;char&quot;&gt;char&lt;/h4&gt;
-&lt;p&gt;ANSI C提供了三种字符类型, char, signed char, unsigned char&lt;br /&gt;
-signed char取值范围-128-127 unsigned char取值范围0-255&lt;br /&gt;
-char是Implementation Defined, 未明确定义。一般用signed char或者unsigned char&lt;br /&gt;
-来实现。VC编译器和x86上的GCC把char定义为signed char, arm-linux-gcc把char定义&lt;br /&gt;
-unsigned char&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;char a = -1;
-printf(&quot;%d&quot;, a);//a等于-1,说明我的机器把char当作signed char处理
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;h4 id=&quot;typedef&quot;&gt;typedef&lt;/h4&gt;
-
-&lt;p&gt;1 定义与平台无关的类型，方便程序的移值。&lt;/p&gt;
-&lt;hr /&gt;
-
-&lt;h4 id=&quot;const&quot;&gt;const&lt;/h4&gt;
-&lt;p&gt;顶层const: 表示指针本身是个常量&lt;br /&gt;
-底层const: 表示指针所指的对象是一个常量&lt;br /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;int i = 0;  
-int *const p1 = &amp;amp;i;     //不能改变p1的值，顶层const
-const int ci = 42;      //不能改变ci的值，顶层const
-const int *p2 = &amp;amp;ci;    //允许改变p2的值，底层const
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;hr /&gt;
-
-&lt;h4 id=&quot;null&quot;&gt;NULL&lt;/h4&gt;
-
-&lt;p&gt;在计算机语言中，有且仅有一个表示“无”的值，c++中为NULL，因为C++为弱类型的语言，可以进行默认的隐式转换&lt;/p&gt;
-&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;//3&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-</description>
-    <link>/pl/pl-c++-keyword.html</link>
-    <guid>/pl/pl-c++-keyword</guid>
-    <pubDate>Wed, 04 May 2016 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>C++:  Template</title>
-    <description>
-&lt;h4 id=&quot;intro&quot;&gt;intro&lt;/h4&gt;
-&lt;p&gt;OOP和范型编程都能处理在编写程序时不知道类型的情况。不同之处在于
-OOP能处理类型在程序运行之前都未知的情况，范型编程中，编译时就能获知类型。&lt;/p&gt;
-&lt;hr /&gt;
-
-&lt;h4 id=&quot;function-template&quot;&gt;function template&lt;/h4&gt;
-
-&lt;p&gt;define&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;template &amp;lt;typename price&amp;gt; bool isCheaper(price p1,price p2){
-	    return p1&amp;lt;p2;
-        }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;instantiation&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//函数模板能自己推断参数类型
-compare(2.0,12.0);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;hr /&gt;
-&lt;hr /&gt;
-
-&lt;h4 id=&quot;class-template&quot;&gt;class template&lt;/h4&gt;
-&lt;p&gt;类模板用来生成类的蓝图，与函数模板不同，编译器不能为类模板推断模板参数类型&lt;/p&gt;
-
-</description>
-    <link>/pl/pl-c++-template.html</link>
-    <guid>/pl/pl-c++-template</guid>
-    <pubDate>Tue, 03 May 2016 00:00:00 +0900</pubDate>
   </item>
 
   <item>
@@ -28060,59 +27696,6 @@ compare(2.0,12.0);
 </description>
     <link>/pl/pl-java-class-load.html</link>
     <guid>/pl/pl-java-class-load</guid>
-    <pubDate>Mon, 02 May 2016 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>C++: Reload Operator</title>
-    <description>
-&lt;p&gt;重载的运算符不过是有特殊名字的函数&lt;/p&gt;
-&lt;h4&gt;重载下标运算符&lt;/h4&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[]   下标操作符必须是成员函数
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4&gt;重载输出运算符&lt;/h4&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;&amp;lt;     不能是成员函数
-参数1: 非常量ostream对象的引用,非常量的原因是向流写入内容会改变其状态  
-                               引用的原因是因为我们无法直接复制一个ostream对象  
-参数2: 常量的引用, 引用是因为避免复制实参  
-                   常量是因为打印不会改变对象的内容  
-class Worker{
-	public:
-	    int age;
-	    std::string name;
-	public:
-	    Worker(): age(18),name(&quot;hello&quot;){}
-};
-std::ostream &amp;amp;operator&amp;lt;&amp;lt;(std::ostream &amp;amp;os, const Worker &amp;amp;worker){
-	    os&amp;lt;&amp;lt;worker.age&amp;lt;&amp;lt;&quot; &quot;&amp;lt;&amp;lt;worker.name;
-	    return os;
-}
-//call
-Worker worker;
-std::cout&amp;lt;&amp;lt;worker;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4&gt;重载输入运算符&lt;/h4&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt;
-参数1: 读取流的引用;
-参数2: 非常量对象的引用;
-std::istream &amp;amp;operator&amp;gt;&amp;gt;(std::istream &amp;amp;is,Worker &amp;amp;worker){
-	    is&amp;gt;&amp;gt;worker.age&amp;gt;&amp;gt;worker.name;
-	    return is;
-}
-//call
-    Worker worker;
-    std::cout&amp;lt;&amp;lt;worker;
-    std::cin&amp;gt;&amp;gt;worker;
-    std::cout&amp;lt;&amp;lt;worker;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-</description>
-    <link>/pl/pl-c++-load-operator.html</link>
-    <guid>/pl/pl-c++-load-operator</guid>
     <pubDate>Mon, 02 May 2016 00:00:00 +0900</pubDate>
   </item>
 
@@ -28477,6 +28060,696 @@ std::istream &amp;amp;operator&amp;gt;&amp;gt;(std::istream &amp;amp;is,Worker &
   </item>
 
   <item>
+    <title>C++:  Template</title>
+    <description>
+&lt;h4 id=&quot;intro&quot;&gt;intro&lt;/h4&gt;
+&lt;p&gt;OOP和范型编程都能处理在编写程序时不知道类型的情况。不同之处在于
+OOP能处理类型在程序运行之前都未知的情况，范型编程中，编译时就能获知类型。&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;function-template&quot;&gt;function template&lt;/h4&gt;
+
+&lt;p&gt;define&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;template &amp;lt;typename price&amp;gt; bool isCheaper(price p1,price p2){
+	    return p1&amp;lt;p2;
+        }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;instantiation&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//函数模板能自己推断参数类型
+compare(2.0,12.0);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;class-template&quot;&gt;class template&lt;/h4&gt;
+&lt;p&gt;类模板用来生成类的蓝图，与函数模板不同，编译器不能为类模板推断模板参数类型&lt;/p&gt;
+
+</description>
+    <link>/pl/pl-c++-template.html</link>
+    <guid>/pl/pl-c++-template</guid>
+    <pubDate>Sun, 03 Apr 2016 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>C++: Stream</title>
+    <description>
+&lt;h4 id=&quot;stream&quot;&gt;Stream&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;to access data that from outside of a program
+    &lt;ul&gt;
+      &lt;li&gt;Inputstream: access data from outside of a program.&lt;/li&gt;
+      &lt;li&gt;Outputstream: send data out of the program.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;so we have IOS, which means:
+    &lt;ul&gt;
+      &lt;li&gt;Inputstream: istream, ifstream&lt;/li&gt;
+      &lt;li&gt;Outputstream: ostream, ofstream&lt;/li&gt;
+      &lt;li&gt;cin is an object of istream, cout is an object of ostream.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h5 id=&quot;msb--lsb&quot;&gt;MSB &amp;amp;&amp;amp; LSB&lt;/h5&gt;
+
+&lt;p&gt;most significant bit和least significant bit，前者采用Big endian方式存储数据，后者采用little endian存储数据&lt;br /&gt;
+CPU有两大派系, IBM的Power PC和Inter的x86系列。PowerPC采用big endian，x86采用littleendian 存储数据。苹果电脑自2005年起，旗下电脑转用Intel CPU&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h5 id=&quot;文本文件和二进制文件&quot;&gt;文本文件和二进制文件&lt;/h5&gt;
+
+&lt;font color=&quot;red&quot;&gt;代码段1&lt;/font&gt;
+
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;文本文件和二进制本质上都是用&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;和&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;表示的。&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;12000&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//采用二进制的方式存储，仅占用4个字节&lt;/span&gt;
+			 &lt;span class=&quot;c1&quot;&gt;//文本存储需要五个字节。&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;strinstream&quot;&gt;strinstream&lt;/h4&gt;
+&lt;p&gt;主要用来使字符串和数值之间的转换&lt;/p&gt;
+
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//字符串转数值&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1234&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ostringstream&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ss&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;ss&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//数值转字符串&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;istringstream&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ss&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;ss&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;文件流&quot;&gt;文件流&lt;/h4&gt;
+&lt;font color=&quot;red&quot;&gt;代码段3&lt;/font&gt;
+
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//绑定输出流，如果文件不存在，则会创建该文件。&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ofstream&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;output.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//setw()只对其后面紧跟的输出产生作用&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;setfill&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sc&quot;&gt;'*'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;setw&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ifstream&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;input.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;eof&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()){&lt;/span&gt;
+	&lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+    <link>/pl/pl-c++-stream.html</link>
+    <guid>/pl/pl-c++-stream</guid>
+    <pubDate>Sun, 03 Apr 2016 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>C++: Reload Operator</title>
+    <description>
+&lt;p&gt;重载的运算符不过是有特殊名字的函数&lt;/p&gt;
+&lt;h4&gt;重载下标运算符&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[]   下标操作符必须是成员函数
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4&gt;重载输出运算符&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;&amp;lt;     不能是成员函数
+参数1: 非常量ostream对象的引用,非常量的原因是向流写入内容会改变其状态  
+                               引用的原因是因为我们无法直接复制一个ostream对象  
+参数2: 常量的引用, 引用是因为避免复制实参  
+                   常量是因为打印不会改变对象的内容  
+class Worker{
+	public:
+	    int age;
+	    std::string name;
+	public:
+	    Worker(): age(18),name(&quot;hello&quot;){}
+};
+std::ostream &amp;amp;operator&amp;lt;&amp;lt;(std::ostream &amp;amp;os, const Worker &amp;amp;worker){
+	    os&amp;lt;&amp;lt;worker.age&amp;lt;&amp;lt;&quot; &quot;&amp;lt;&amp;lt;worker.name;
+	    return os;
+}
+//call
+Worker worker;
+std::cout&amp;lt;&amp;lt;worker;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4&gt;重载输入运算符&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt;
+参数1: 读取流的引用;
+参数2: 非常量对象的引用;
+std::istream &amp;amp;operator&amp;gt;&amp;gt;(std::istream &amp;amp;is,Worker &amp;amp;worker){
+	    is&amp;gt;&amp;gt;worker.age&amp;gt;&amp;gt;worker.name;
+	    return is;
+}
+//call
+    Worker worker;
+    std::cout&amp;lt;&amp;lt;worker;
+    std::cin&amp;gt;&amp;gt;worker;
+    std::cout&amp;lt;&amp;lt;worker;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+    <link>/pl/pl-c++-load-operator.html</link>
+    <guid>/pl/pl-c++-load-operator</guid>
+    <pubDate>Sun, 03 Apr 2016 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>C++: Keywords</title>
+    <description>
+&lt;h4 id=&quot;explicit&quot;&gt;explicit&lt;/h4&gt;
+&lt;p&gt;c++为只用传递一个参数的构造函数定义了一个隐士转换&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-cpp,monokai&quot;&gt;class Animal{
+	public:
+	    Animal(){
+        cout&amp;lt;&amp;lt;&quot;no parameter constructor&quot;&amp;lt;&amp;lt;endl;
+        }
+	    explicit Animal(int a){
+	    cout&amp;lt;&amp;lt;&quot;parameter constructor&quot;&amp;lt;&amp;lt;endl;
+	    }
+};
+Animal dog = 3         //报错，无法使用explicit Animal构造器
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class Animal{
+	public:
+	    Animal(){
+        cout&amp;lt;&amp;lt;&quot;no parameter constructor&quot;&amp;lt;&amp;lt;endl;
+	    }
+	    Animal(int a){
+        cout&amp;lt;&amp;lt;&quot;parameter constructor&quot;&amp;lt;&amp;lt;endl;
+	    }
+};
+Animal dog = 3        //隐士调用Animal(int a)构造函数
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;auto&quot;&gt;auto&lt;/h4&gt;
+&lt;font color=&quot;red&quot;&gt;代码段1&lt;/font&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;list&amp;lt;Point2d&amp;gt; container;
+Point2d p1( 0,-1);
+container.push_back(p1);
+//下面的做法并不会改变容器内的值,因为var不是指针，也是引用; 
+for(auto var:container){ 
+	var.x=1;
+	var.y=2;
+}
+//正确示范
+for(auto itr=container.begin();itr!=container.end();itr++){
+    itr-&amp;gt;x=itr-&amp;gt;x/x_border;
+    itr-&amp;gt;y=itr-&amp;gt;y/y_border;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;char&quot;&gt;char&lt;/h4&gt;
+&lt;p&gt;ANSI C提供了三种字符类型, char, signed char, unsigned char&lt;br /&gt;
+signed char取值范围-128-127 unsigned char取值范围0-255&lt;br /&gt;
+char是Implementation Defined, 未明确定义。一般用signed char或者unsigned char&lt;br /&gt;
+来实现。VC编译器和x86上的GCC把char定义为signed char, arm-linux-gcc把char定义&lt;br /&gt;
+unsigned char&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;char a = -1;
+printf(&quot;%d&quot;, a);//a等于-1,说明我的机器把char当作signed char处理
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;typedef&quot;&gt;typedef&lt;/h4&gt;
+
+&lt;p&gt;1 定义与平台无关的类型，方便程序的移值。&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;const&quot;&gt;const&lt;/h4&gt;
+&lt;p&gt;顶层const: 表示指针本身是个常量&lt;br /&gt;
+底层const: 表示指针所指的对象是一个常量&lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;int i = 0;  
+int *const p1 = &amp;amp;i;     //不能改变p1的值，顶层const
+const int ci = 42;      //不能改变ci的值，顶层const
+const int *p2 = &amp;amp;ci;    //允许改变p2的值，底层const
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;null&quot;&gt;NULL&lt;/h4&gt;
+
+&lt;p&gt;在计算机语言中，有且仅有一个表示“无”的值，c++中为NULL，因为C++为弱类型的语言，可以进行默认的隐式转换&lt;/p&gt;
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;//3&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+    <link>/pl/pl-c++-keyword.html</link>
+    <guid>/pl/pl-c++-keyword</guid>
+    <pubDate>Sun, 03 Apr 2016 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>C++: 迭代器</title>
+    <description>
+&lt;h3 id=&quot;intro&quot;&gt;intro&lt;/h3&gt;
+
+&lt;h4 id=&quot;谓词&quot;&gt;谓词&lt;/h4&gt;
+&lt;p&gt;谓词本质是可调用的表达式，返回结果是一个能用作条件的值。&lt;br /&gt;
+一元谓词: 接受单一参数unary predicate&lt;br /&gt;
+二元谓词: 接受两个参数binary predicate&lt;br /&gt;
+接受谓词参数的算法对输入序列中的元素调用谓词，因此元素类型必须转换为谓词的参数类型&lt;/p&gt;
+
+&lt;h4 id=&quot;迭代器&quot;&gt;迭代器&lt;/h4&gt;
+&lt;p&gt;迭代器令算法不依赖于容器，但算法依赖于元素类型的操作。&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;输入迭代器&lt;/li&gt;
+  &lt;li&gt;输出迭代器&lt;/li&gt;
+  &lt;li&gt;前向迭代器&lt;/li&gt;
+  &lt;li&gt;双向迭代器&lt;/li&gt;
+  &lt;li&gt;随机访问迭代器&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;算法&quot;&gt;算法&lt;/h3&gt;
+&lt;h4 id=&quot;简单查找算法&quot;&gt;简单查找算法&lt;/h4&gt;
+
+&lt;h5 id=&quot;find&quot;&gt;find&lt;/h5&gt;
+&lt;p&gt;find(beg, end, val)&lt;br /&gt;
+return 返回一个迭代器，指向输入序列中第一个等于val的元素。&lt;br /&gt;
+find_if(beg, end, unaryPred)&lt;br /&gt;
+return 返回一个迭代器， 指向第一个满足unaryPred的元素 &lt;br /&gt;
+parameter 因为谓词的参数为容器的元素类型，因此，谓词不能是成员函数&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-cpp,monokai&quot;&gt;//谓词
+bool my_minus(int a){
+	    return (a-1) == 2;
+}
+//主调函数
+list&amp;lt;int&amp;gt; container;
+container.push_back(3);
+container.push_back(8);
+auto var = find_if(container.begin(), container.end(),my_minus);
+cout&amp;lt;&amp;lt;*var;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;写容器元素的算法&quot;&gt;写容器元素的算法&lt;/h4&gt;
+
+&lt;h5 id=&quot;fill_n&quot;&gt;fill_n&lt;/h5&gt;
+
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vector&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;container&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;back_insert_iterator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vector&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;itr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;back_inserter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;container&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fill_n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;itr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//算法需要的只是迭代器，有了迭代器它就很开心了&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;排序&quot;&gt;排序&lt;/h4&gt;
+&lt;h5 id=&quot;sort&quot;&gt;sort()&lt;/h5&gt;
+
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;truct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;my_point&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;nl&quot;&gt;public:&lt;/span&gt;
+	    &lt;span class=&quot;n&quot;&gt;my_point&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	    &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	    &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	   &lt;span class=&quot;cm&quot;&gt;/*
+	   这里重载操作符的时候有两点要说清楚
+	   1 属于对象的成员函数都存在隐藏的this指针，对于该函数而言，x属于某个对象的。
+	   2 应该是语法默认规定，类内重载&amp;lt;, 函数为const类型， 参数为const类型
+	    否则会报如下错误
+	    error: invalid operands to binary expression ('const my_point' and 'const my_point')
+	    bool operator()(const _T1&amp;amp; __x, const _T1&amp;amp; __y) const {return __x &amp;lt; __y;}
+	   */&lt;/span&gt;
+	    &lt;span class=&quot;kt&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;operator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;my_point&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;my&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;my&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+		&lt;span class=&quot;c1&quot;&gt;//第二种比较方法&lt;/span&gt;
+		&lt;span class=&quot;kt&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;is_compare&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;my_point&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;my_point&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+			    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+		&lt;span class=&quot;c1&quot;&gt;//------------------------------------------------------&lt;/span&gt;
+		&lt;span class=&quot;c1&quot;&gt;//-------------------------------------------------------&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;my_point&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;container&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;my_point&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;my_point&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;my_point&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;container&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;push_back&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;container&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;push_back&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;container&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;push_back&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;container&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+      &lt;span class=&quot;c1&quot;&gt;//container.sort(is_compare)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h4 id=&quot;最小值和最大值&quot;&gt;最小值和最大值&lt;/h4&gt;
+&lt;h5 id=&quot;minval1-val2-comp&quot;&gt;min(val1, val2, comp)&lt;/h5&gt;
+&lt;p&gt;参数和返回类型都是const的引用，意味着对象不会被拷贝&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bool is_true(int a,int b){
+	    return 0;
+}
+std::cout&amp;lt;&amp;lt;max(3,5,is_true);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;minmax_element(beg, end, comp)&lt;br /&gt;
+param beg和end都是迭代器&lt;br /&gt;
+      comp是自定义的比较函数，该比较函数不能是一个成员函数。为什么
+	  我的理解是，成员函数默认有一个this指针作为参数。而该比较函数的
+	  参数仅有两个，是两个迭代器所指向的对象。
+return 返回值是一个pair容器，成员为指向对象的指针。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bool is_smaller(Point2d p1,Point2d p2){
+	    return p1.x&amp;lt;p2.x;
+}
+list&amp;lt;Point2d&amp;gt; container;
+Point2d p1( 0,-1);
+Point2d p11(1.5,0);
+Point2d p2( 1, 1);
+Point2d p3( 0, 1);
+Point2d p4(-1, 1);
+container.push_back(p1);
+container.push_back(p11);
+container.push_back(p2);
+container.push_back(p3);
+container.push_back(p4);
+pair&amp;lt;list&amp;lt;Point2d&amp;gt;::iterator,list&amp;lt;Point2d&amp;gt;::iterator&amp;gt; var=minmax_element(container.begin(),container.end(),is_smaller);
+std::cout&amp;lt;&amp;lt;*(var.first)&amp;lt;&amp;lt;*(var.second);    
+//简单写法
+auto copy_var=minmax_element(container.begin(),container.end(),is_smaller);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+    <link>/pl/pl-c++-iterator.html</link>
+    <guid>/pl/pl-c++-iterator</guid>
+    <pubDate>Sun, 03 Apr 2016 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>C++: Data Type</title>
+    <description>
+&lt;h3 id=&quot;intro&quot;&gt;intro&lt;/h3&gt;
+
+&lt;p&gt;数据的初始化分为两种: &lt;br /&gt; 
+直接初始化: 使用assignment operator&lt;br /&gt;&lt;br /&gt;
+复制初始化: 使用(),将初始化值放在圆括号内。&lt;br /&gt;&lt;br /&gt;
+对于类类型对象，直接初始化直接调用与实参匹配的构造函数。复制初始化
+调用复制构造函数，然后使用复制构造函数将临时对象复制到正在创建的对象。
+1 引用数据类型是一种复合类型，通过在变量名前添加&amp;amp;来定义。&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;指针&quot;&gt;指针&lt;/h3&gt;
+
+&lt;h4 id=&quot;定义&quot;&gt;定义&lt;/h4&gt;
+
+&lt;p&gt;指针: (point to)是一种复合类型。指针实现了对其他对象的间接访问。&lt;br /&gt;
+1 指针本身就是一个对象，允许对指针的赋值和拷贝。&lt;br /&gt;
+2 指针无需在定义时赋初值。&lt;br /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;空指针&quot;&gt;空指针&lt;/h4&gt;
+
+&lt;p&gt;空指针不指向任何对象，在使用一个指针之前首先检查它是否为空。&lt;br /&gt;
+因为在写程序的时候，往往是空指针把程序搞崩溃。&lt;br /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;void&quot;&gt;void*&lt;/h4&gt;
+
+&lt;p&gt;void* 一种特殊的指针类型，用于存放任意对象的地址。&lt;/p&gt;
+
+&lt;h4 id=&quot;const和指针&quot;&gt;const和指针&lt;/h4&gt;
+
+&lt;p&gt;指向常量的指针pointer to const 不能用于改变其所指对象的值。&lt;br /&gt;&lt;/p&gt;
+
+&lt;font color=&quot;green&quot;&gt;要想存放常量对象的地址，只能使用指向常量的指针。&lt;/font&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//不能使用普通指针指向常量的地址
+const double pi =3.14;  //pi 是常量，值不能改变
+double *ptr = &amp;amp;pi;      //错误: ptr是一个普通指针
+//但是却可以使用const指针指向非const对象
+double deta = 0.0;
+const double *ptr = &amp;amp;deta;
+//为什么呢？const指针的含义是不可以通过指针改变所指向对象的值，至于指向的
+//对象是不是const对象，它是不care的
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;引用&quot;&gt;引用&lt;/h3&gt;
+
+&lt;h4 id=&quot;左引用&quot;&gt;左引用&lt;/h4&gt;
+
+&lt;h5 id=&quot;定义-1&quot;&gt;定义&lt;/h5&gt;
+
+&lt;p&gt;定义: 引用不是对象,引用是为已经存在的对象所起的另外一个名字.因为引用不是对象,所以不能定义引用的引用.&lt;br /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h5 id=&quot;reference-to-const&quot;&gt;reference to const&lt;/h5&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//不能让一个非常量引用指向一个常量引用
+ const int ci = 1024;
+ int &amp;amp;r1 = ci;
+// 允许将一个const int&amp;amp; 绑定到一个普通的int对象上
+int i =42;
+const int &amp;amp;r2 = i;
+//为什么呢？指导思想和指针是一样的。const的引用的含义是不可以通过引用改变
+//所引用对象的值，至于引用对象是不是const的它不care
+//const的意思是，我不允许所引用的对象通过我改变它的值。
+//如果你能通过改变所引用的值，你随便，你开心就好
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;右值引用&quot;&gt;右值引用&lt;/h4&gt;
+
+&lt;p&gt;#####产生的原因&lt;/p&gt;
+
+</description>
+    <link>/pl/pl-c++-data-type.html</link>
+    <guid>/pl/pl-c++-data-type</guid>
+    <pubDate>Sun, 03 Apr 2016 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>C++: Container</title>
+    <description>
+&lt;h3 id=&quot;intro&quot;&gt;Intro&lt;/h3&gt;
+
+&lt;p&gt;STL标准模板库解决了数据结构和算法的抽象问题
+vector和deque的底层是对数组的封装，所以提供了对元素的快速随机访问。&lt;br /&gt;
+不足是，在删除元素时，付出的开销更大。&lt;br /&gt;
+list类型在任何位置都能快速插入和删除。访问某个元素要求遍历所设计的其他元素.&lt;/p&gt;
+&lt;h3 id=&quot;容器操作&quot;&gt;容器操作&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;构造函数&quot;&gt;构造函数&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;C c;           默认构造函数，拷贝空容器&lt;/li&gt;
+  &lt;li&gt;C c1(c2);      构造c2的拷贝c1&lt;/li&gt;
+  &lt;li&gt;C c(b, e);     构造c, 将迭代器b和e指定的范围内的元素拷贝到c&lt;/li&gt;
+  &lt;li&gt;C c{a, b, c};  列表初始化c&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+
+&lt;h5 id=&quot;赋值和swap&quot;&gt;赋值和swap&lt;/h5&gt;
+
+&lt;p&gt;在新标准库中，容器既提供成员函数版本的swap, 也提供了非成员版本的swap.其中,非成员版本的swap在泛型编程中非常重要。&lt;/p&gt;
+
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vector&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vector&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;c1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;swap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;swap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//推荐使用这一种，泛型编程&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;auto&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;容器种类&quot;&gt;容器种类&lt;/h3&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;string&quot;&gt;string&lt;/h4&gt;
+&lt;hr /&gt;
+
+&lt;h5 id=&quot;数值转换&quot;&gt;数值转换&lt;/h5&gt;
+&lt;hr /&gt;
+
+&lt;h5 id=&quot;string搜索操作&quot;&gt;string搜索操作&lt;/h5&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;vector&quot;&gt;vector&lt;/h4&gt;
+&lt;p&gt;所有标准库容器都有支持递增运算的迭代器。也支持==和!=运算&lt;br /&gt;
+因为vector和string的底层是array, 它的底层支持+ - &amp;lt; &amp;gt; &amp;gt;= &amp;lt;=等操作&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;font color=&quot;red&quot;&gt;代码块1&lt;/font&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;vector&amp;lt;Point2d&amp;gt; container1;
+    Point2d p1(2,3);
+	Point2d p2(3,4);
+	Point2d p3(1,7);
+	container1.push_back(p1);
+	container1.push_back(p2);
+	container1.push_back(p3);
+	auto var = container1.begin();
+	var = var+2;
+	cout&amp;lt;&amp;lt;*var;        //Point2d 底层重载了输出运算符
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;forward_list&quot;&gt;forward_list&lt;/h4&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;list&quot;&gt;list&lt;/h4&gt;
+&lt;p&gt;sort算法需要容器有随机访问迭代器,list的容器并没有随机访问迭代器.&lt;br /&gt;
+因此它自定义了算法.&lt;/p&gt;
+&lt;font color=&quot;red&quot;&gt;代码块2&lt;/font&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bool Smaller(const cv::Point2d p1,const cv::Point2d p2){
+	    return atan2(p1.y,p1.x)&amp;lt;atan2(p2.y,p2.x);
+}
+std::list&amp;lt;cv::Point2d&amp;gt; list_container;
+    cv::Point2d p1(2,3);
+    cv::Point2d p2(3,4);
+    list_container.push_back(p1);
+    list_container.push_back(p2);
+    list_container.sort(Smaller);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+</description>
+    <link>/pl/pl-c++-container.html</link>
+    <guid>/pl/pl-c++-container</guid>
+    <pubDate>Sun, 03 Apr 2016 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>C++: Class</title>
+    <description>
+&lt;h3 id=&quot;封装&quot;&gt;封装&lt;/h3&gt;
+
+&lt;p&gt;类的定义可以使用struct或者class关键字，struct是从c继承来的&lt;br /&gt;
+使用class定义类，则定义在第一个访问标号前的任何成员权限都为private&lt;br /&gt;
+使用struct定义类，则都为public，其他没差。&lt;/p&gt;
+
+&lt;p&gt;java的类更像是c++类的一种简化。c++中的类能够控制在初始化，复制，赋值和销毁对象时发生的操作。java的类没有这种能力。&lt;br /&gt;
+python, java和c++中，都隐约存在this指针这个概念。&amp;lt;/br&amp;gt;
+只不过，java和c++都隐藏的比较深一点。对于 属于对象的成员函数来说，都有对象的指针与他们绑定
+在一起，这个参数是隐藏。python就比较干脆了，告诉你有这个指针，即为self，调用的时候，不需要
+指明。&lt;/p&gt;
+&lt;font color=&quot;red&quot;&gt;代码段1&lt;/font&gt;
+
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;iostream&amp;gt;
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Sales_item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;nl&quot;&gt;public:&lt;/span&gt;
+		&lt;span class=&quot;c1&quot;&gt;//const成员不能改变其所操作的对象的数据成员，const必须同时出现在声明和定义中。&lt;/span&gt;
+		&lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;avg_price&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;const&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;kt&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;same_isbn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Sales_item&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rhs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;const&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+			&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rhs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+		&lt;span class=&quot;c1&quot;&gt;//构造函数的初始化列表&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;Sales_item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;units_sold&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;revenue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){}&lt;/span&gt;
+	&lt;span class=&quot;nl&quot;&gt;private:&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;kt&quot;&gt;unsigned&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;units_sold&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;revenue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;	
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;1-constructor&quot;&gt;1. Constructor&lt;/h4&gt;
+&lt;p&gt;定义: 类通过一个或几个特殊的成员函数来控制其对象的初始化过程，这些函数叫做构造函数&lt;br /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;编译器默认会为类合成无参数的构造函数，如果类自己定义了构造函数，编译器不再提供无参构造函数&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;one parameter constructor&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;	
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//定义类&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Foo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;//错误，编译器不会再提供无参数的构造函数&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Foo&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;f2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;拷贝构造函数&quot;&gt;拷贝构造函数&lt;/h4&gt;
+
+&lt;p&gt;定义: 如果一个构造函数的第一个参数是自身类类型的引用，且任何额外参数都有默认值，此构造函数为拷贝构造函数&lt;br /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;如果类定义只有一个参数且该参数类型为自身类类型的引用，编译器不再为该类提供默认拷贝构造函数。&lt;font color=&quot;blue&quot;&gt;如果类定义了重载的拷贝构造函数，即参数不同的构造函数，编译器还会合成只有一个参数是自身类类型的引用拷贝构造函数，这与构造函数不一样，构造函数是只有类定义的有构造函数，编译器就不再合成&lt;/font&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;instance&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;copy constructor&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;	
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//定义类&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Foo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Foo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;//正确编译器还是会合成，只有一个自身类引用的构造函数&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;拷贝赋值运算符&quot;&gt;拷贝赋值运算符&lt;/h4&gt;
+
+&lt;p&gt;定义: 如果类未定义自己的拷贝赋值运算符，编译器会为它合成一个&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;移动构造函数&quot;&gt;移动构造函数&lt;/h4&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;移动赋值运算符&quot;&gt;移动赋值运算符&lt;/h4&gt;
+&lt;p&gt;定义: 移动赋值&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;2-destructor&quot;&gt;2. Destructor&lt;/h4&gt;
+&lt;p&gt;定义: 析构函数执行与构造函数相反的操作:,构造函数初始化对象的非static数据成员;析构函数释放对象使用的资源，并销毁对象的非static数据成员&lt;/p&gt;
+&lt;h4 id=&quot;const成员函数&quot;&gt;const成员函数&lt;/h4&gt;
+
+&lt;font color=&quot;green&quot;&gt;上段代码1中,isbn函数参数列表后有const关键字，
+const的作用修改this指针的类型&lt;/font&gt;
+&lt;p&gt;默认情况下，this的类型是指向类类型非常量版本的常量指针，在Salesdata成员函数
+中，this的类型是Salesdata *const&lt;br /&gt;
+尽管this是隐士的，需要遵循初始化规则。&lt;font color=&quot;green&quot;&gt;我们不能把
+this绑定到一个常量对象上, 我们不能在一个常量对象上调用普通的成员函数&lt;/font&gt;&lt;/p&gt;
+&lt;font color=&quot;red&quot;&gt;代码段2&lt;/font&gt;
+
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Sales_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;nl&quot;&gt;public:&lt;/span&gt;
+	    &lt;span class=&quot;n&quot;&gt;Sales_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+	    &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;const&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	    &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;non_const&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Sales_data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	    &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;the number of the book&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;iu&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Sales_data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;non_const&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	    &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;nont const member function&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//调用&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Sales_data&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;demo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Sales_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;demo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;non_const&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;//error:none const function is called on the const object&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;demo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;inheritance&quot;&gt;Inheritance&lt;/h3&gt;
+
+&lt;p&gt;c++语言中，必须将两种成员函数区分开来&lt;br /&gt;
+1 基类希望其派生类进行覆盖的函数，虚函数virtual&lt;br /&gt;
+2 基类希望派生类直接继承不要改变的函数&lt;br /&gt;&lt;/p&gt;
+</description>
+    <link>/pl/pl-c++-class.html</link>
+    <guid>/pl/pl-c++-class</guid>
+    <pubDate>Sun, 03 Apr 2016 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
     <title>C++: Memory</title>
     <description>
 &lt;h3 id=&quot;intro&quot;&gt;intro&lt;/h3&gt;
@@ -28509,6 +28782,11 @@ std::istream &amp;amp;operator&amp;gt;&amp;gt;(std::istream &amp;amp;is,Worker &
   <item>
     <title>C++: Compiler</title>
     <description>
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;gcc, g++, clang&lt;/li&gt;
+&lt;/ol&gt;
+
 &lt;h4 id=&quot;内存对齐&quot;&gt;内存对齐&lt;/h4&gt;
 &lt;blockquote&gt;
   &lt;p&gt;书写汇编语言时,处理器给我们能处理的内存块最小单位是一个字节大小。底层是如何处理的我们并不知道。我们可以把它看成一个黑箱。C++语言是汇编语言的高级形式。&lt;/p&gt;
@@ -28602,7 +28880,7 @@ boost::split(vec,&quot;hello|world|beautiful&quot;,is_any_of(&quot;|&quot;));
   </item>
 
   <item>
-    <title>C++: Vim</title>
+    <title>C++: Opencv</title>
     <description>
 &lt;p&gt;&lt;a href=&quot;http://code.google.com/p/googletest/w/list&quot;&gt;官方文档&lt;/a&gt;&lt;/p&gt;
 </description>
@@ -28612,7 +28890,7 @@ boost::split(vec,&quot;hello|world|beautiful&quot;,is_any_of(&quot;|&quot;));
   </item>
 
   <item>
-    <title>C++: Vim</title>
+    <title>C++: Opencv</title>
     <description>
 &lt;p&gt;&lt;a href=&quot;http://docs.opencv.org/master/d6/d6d/tutorial_mat_the_basic_image_container.html&quot;&gt;官方文档&lt;/a&gt;写得很不客气，there’s no point to using the old methods unless you’re a masochist programmer and you’re asking for trouble&lt;/p&gt;
 
@@ -28735,6 +29013,13 @@ compare(2.0,12.0);
 
 &lt;h4 id=&quot;class-template&quot;&gt;class template&lt;/h4&gt;
 &lt;p&gt;类模板用来生成类的蓝图，与函数模板不同，编译器不能为类模板推断模板参数类型&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;generic class: you can use the same class for multiple data types.
+    &lt;ul&gt;
+      &lt;li&gt;generic class is template.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
 
 </description>
     <link>/pl/pl-c++-template.html</link>
@@ -28743,24 +29028,181 @@ compare(2.0,12.0);
   </item>
 
   <item>
+    <title>C++: Struct</title>
+    <description>
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Struct can be defined as collection of data members under one name.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;define&lt;/li&gt;
+  &lt;li&gt;declaration&lt;/li&gt;
+  &lt;li&gt;initialization&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Rectangle&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Rectangle&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+    <link>/pl/pl-c++-struct.html</link>
+    <guid>/pl/pl-c++-struct</guid>
+    <pubDate>Tue, 10 Nov 2015 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>C++: Polymorphism</title>
+    <description>
+</description>
+    <link>/pl/pl-c++-polymorphism.html</link>
+    <guid>/pl/pl-c++-polymorphism</guid>
+    <pubDate>Tue, 10 Nov 2015 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>C++: OOP</title>
+    <description>
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;why data is modified by private ? function is modified by public?
+    &lt;ul&gt;
+      &lt;li&gt;just like a car, it has button you can push, the button is like a function,
+it’s public.&lt;/li&gt;
+      &lt;li&gt;But what’s in the button, you have no idea. It’s the data which is private.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    <link>/pl/pl-c++-oop.html</link>
+    <guid>/pl/pl-c++-oop</guid>
+    <pubDate>Tue, 10 Nov 2015 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
     <title>C++: Function</title>
     <description>
-&lt;ul&gt;
-  &lt;li&gt;函数是命名的代码块。并没有什么了不起。
-    &lt;h3 id=&quot;参数传递&quot;&gt;参数传递&lt;/h3&gt;
+&lt;h4 id=&quot;terminology&quot;&gt;Terminology&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Prototype, signature, header of a function means the following code&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Functions are called modules or procedures.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;#### 
+There are two piece of the code, so there will be two function in the memory.&lt;/p&gt;
+
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;iostream&amp;gt;
+&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;sum is &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;z&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;z&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;z&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/pl-cpp-function-diagram.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;function&quot;&gt;Function&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Grouping instructions is a function.&lt;/li&gt;
+  &lt;li&gt;Grouping data is a structure.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;1-pass-by-value&quot;&gt;1. Pass by Value&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;formal parameters&lt;/li&gt;
+  &lt;li&gt;actual parameters
+    &lt;ul&gt;
+      &lt;li&gt;形参的初始化方式和变量的初始化方式是一样的&lt;/li&gt;
+      &lt;li&gt;one function cannot access the variables of another function directly, it can
+access indirectly&lt;/li&gt;
+    &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;形参的初始化方式和变量的初始化方式是一样的&lt;/li&gt;
-  &lt;li&gt;和其他变量一样，形参的类型决定了形参和实参的交互方式&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
+&lt;/ol&gt;
 
-&lt;h4 id=&quot;引用传递&quot;&gt;引用传递&lt;/h4&gt;
-&lt;p&gt;如果形参是引用类型，它将绑定到对应的实参上&lt;/p&gt;
-&lt;hr /&gt;
+&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;iostream&amp;gt;
+&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;swap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;temp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;temp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;swap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;值传递&quot;&gt;值传递&lt;/h4&gt;
-&lt;p&gt;实参的值拷贝到形参&lt;/p&gt;
-&lt;hr /&gt;
+&lt;p&gt;&lt;img src=&quot;/images/pl-cpp-function-pass-by-value.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;2-pass-by-address&quot;&gt;2. Pass by Address&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;why I can’t understand pointers, because I don’t know to &lt;strong&gt;draw&lt;/strong&gt;.
+    &lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;iostream&amp;gt;
+&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;swap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+ &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;temp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+ &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+ &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;temp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+ &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+ &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+ &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+ &lt;span class=&quot;n&quot;&gt;swap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+ &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/pl-cpp-function-pass-by-pointer.png&quot; /&gt;&lt;/p&gt;
+&lt;h4 id=&quot;3-pass-by-reference&quot;&gt;3. Pass by Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;In this function, &lt;strong&gt;swap is not a separate function&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;It has became a part of main function and there is only one activation
+record.&lt;/li&gt;
+  &lt;li&gt;a machine code of the swap function will be pasted in main function.&lt;/li&gt;
+  &lt;li&gt;In nature, they are inline function.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;iostream&amp;gt;
+&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;swap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;temp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;temp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;swap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/images/pl-cpp-function-pass-by-reference.png&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;函数指针&quot;&gt;函数指针&lt;/h3&gt;
 &lt;ul&gt;
@@ -28770,6 +29212,58 @@ compare(2.0,12.0);
 </description>
     <link>/pl/pl-c++-function.html</link>
     <guid>/pl/pl-c++-function</guid>
+    <pubDate>Tue, 10 Nov 2015 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>C++: Function Parameters</title>
+    <description>
+&lt;h4 id=&quot;arrays&quot;&gt;Arrays&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Arrays can only be passed by address&lt;/li&gt;
+  &lt;li&gt;for the formal parameters in foo, you can replace &lt;strong&gt;a[]&lt;/strong&gt; with &lt;strong&gt;*a&lt;/strong&gt;, it
+still means the same thing.
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;int a[]&lt;/strong&gt; can only be used to point to array.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;*a&lt;/strong&gt; can be used to point an integer.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-code&quot;&gt;#include &amp;lt;iostream&amp;gt;
+void foo(int a[], int n){
+    for(int i=0; i&amp;lt;n; i++){
+        std::cout&amp;lt;&amp;lt;a[i];
+    }
+}
+
+int main(){
+  int a[5] = {2,4,1,6,4};
+  foo(a, 5);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/pl-cpp-function-parameter-array.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;return-value&quot;&gt;Return value&lt;/h4&gt;
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;iostream&amp;gt;
+&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;malloc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;sizeof&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/images/pl-cpp-function-parameter-array-return-value.png&quot; /&gt;&lt;/p&gt;
+
+</description>
+    <link>/pl/pl-c++-function-parameter.html</link>
+    <guid>/pl/pl-c++-function-parameter</guid>
     <pubDate>Tue, 10 Nov 2015 00:00:00 +0900</pubDate>
   </item>
 
@@ -28859,13 +29353,13 @@ cast-name是static, dynamic, const, reinterpret中的一种&lt;/type&gt;&lt;/p&g
   </item>
 
   <item>
-    <title>C++: Version</title>
+    <title>C++: Pointer and Reference</title>
     <description>
 &lt;h4 id=&quot;语言类型&quot;&gt;语言类型&lt;/h4&gt;
 &lt;ul&gt;
   &lt;li&gt;c++容忍隐士的类型转换，所以是一种种弱类型语言&lt;/li&gt;
   &lt;li&gt;c++编译时进行类型检查，程序运行时不能改变其结构，所以是静态语言
-    &lt;h4 id=&quot;版本问题&quot;&gt;版本问题&lt;/h4&gt;
+    &lt;h4 id=&quot;version&quot;&gt;Version&lt;/h4&gt;
   &lt;/li&gt;
   &lt;li&gt;c++11 版本，以前的C++代码风格极其混乱。&lt;/li&gt;
   &lt;li&gt;代码使用C++11的风格，以前的不要用了。&lt;/li&gt;
@@ -28874,26 +29368,42 @@ cast-name是static, dynamic, const, reinterpret中的一种&lt;/type&gt;&lt;/p&g
 &lt;p&gt;.h文件和.cpp文件  后缀名是为了给程序员看的，没有什么用。&lt;br /&gt;
 C++中，变量，函数使用之前需要声明，头文件k就是起声明的作用。&lt;/p&gt;
 </description>
-    <link>/pl/pl-c++-intro.html</link>
-    <guid>/pl/pl-c++-intro</guid>
+    <link>/pl/pl-c++-pointer-and-reference.html</link>
+    <guid>/pl/pl-c++-pointer-and-reference</guid>
     <pubDate>Sun, 01 Nov 2015 00:00:00 +0900</pubDate>
   </item>
 
   <item>
     <title>Cmake: Introduction</title>
     <description>
+&lt;h4 id=&quot;cmake&quot;&gt;Cmake&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;You must treat Cmake as a programming language with &lt;strong&gt;special syntax&lt;/strong&gt;, how
+to treat cmake as a programming language, things you need keep in mind
+    &lt;ul&gt;
+      &lt;li&gt;treat every statement with parenthesis as a function, figure out the function
+mean and related parameters&lt;/li&gt;
+      &lt;li&gt;it’s a special language, because it has predefined variable, you need pay
+attention.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Compared with maven, all the required library is in local, it doesn’t have
+default catagory structure.&lt;/li&gt;
+  &lt;li&gt;Both of them need configuration file, maven need “pom.xml”, cmake needs
+“CMakeLists.txt”&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cmake_minimum_required(VERSION 3.7)
+project(demo)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
 &lt;h4 id=&quot;make&quot;&gt;Make&lt;/h4&gt;
-&lt;p&gt;代码变成可执行文件，叫编译；&lt;br /&gt;
-编译的顺序，叫做构建;&lt;br /&gt;
-make是最常用的构建工具,make主要用来构建c语言的项目，实际上，任何主要某个文件有变化，就要重新构建项目，都可以用make构建&lt;/p&gt;
-&lt;hr /&gt;
+&lt;p&gt;make主要用来构建c语言的项目，实际上，任何主要某个文件有变化，就要重新构建项目，都可以用make构建&lt;/p&gt;
 
 &lt;h4 id=&quot;语法&quot;&gt;语法&lt;/h4&gt;
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;target&amp;gt; : &amp;lt;prerequisites&amp;gt;
 &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;tab] &amp;lt;commands&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;hr /&gt;
-
 &lt;ol&gt;
   &lt;li&gt;make命令在没有指定目标时，默认会执行makefile文件的第一个目标&lt;/li&gt;
   &lt;li&gt;make targetName 执行相应的代码
@@ -28907,27 +29417,10 @@ make是最常用的构建工具,make主要用来构建c语言的项目，实际�
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h4 id=&quot;cmake&quot;&gt;Cmake&lt;/h4&gt;
-&lt;p&gt;cmake is a cross-platform build system.&lt;/p&gt;
-
-&lt;p&gt;cmake也是一种编程语言，像c++一样。不过它有自己独特的语法结构.&lt;br /&gt;
-同maven相比，它没有网络仓库的概念，它的仓库需要在本地.&lt;br /&gt;
-也没有约定的目录结构.&lt;/p&gt;
-
-&lt;p&gt;相同的是，都有配置文件。在maven中是pom.xml.在cmake中是CMakeLists.txt&lt;/p&gt;
-
-&lt;p&gt;CMakeLists.txt文件的代码&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cmake_minimum_required(VERSION 3.7)
-project(demo)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;cmake常用命令&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cmake .. -G &quot;Unix Makefiles&quot;
-#cmake命令后的路径用来指出CMakeList.txt所在的位置。
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
 &lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
 &lt;ol&gt;
   &lt;li&gt;&lt;a href=&quot;https://cmake.org/cmake/help/latest/guide/tutorial/index.html&quot;&gt;document&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://gitlab.kitware.com/cmake/community/-/wikis/doc/cmake/Useful-Variables&quot;&gt;Cmake Variable&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </description>
     <link>/pl/pl-cmake-intro.html</link>

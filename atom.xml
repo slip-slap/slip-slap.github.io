@@ -3,7 +3,7 @@
   <title>Just Do It</title>
   <link href="/atom.xml" rel="self"/>
   <link href=""/>
-  <updated>2020-05-23T13:25:11+09:00</updated>
+  <updated>2020-05-27T09:47:34+09:00</updated>
   <id></id>
   <author>
     <name>reed</name>
@@ -76,19 +76,6 @@ is, on average the chain’s value does not change, regardless of what the
 current value $X_n$ actually is.
     
       a special clas...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Build Neural Network With Any Topology</title>
-    <link href="/pl/pl-python-tensorflow-neural-network-with-any-topology.html"/>
-    <updated>2020-05-09T00:00:00+09:00</updated>
-    <id>/pl/pl-python-tensorflow-neural-network-with-any-topology</id>
-    <content type="html">
-def layer(layer_name, data, output_channels):
-    with tf.variable_scope(layer_name,reuse=tf.AUTO_REUSE):
-        w = tf.get_variable(name=&quot;weight&quot;,shape=[data.shape[-1],output_channels])
-        b = tf.get_variable(name=&quot;bias&quot;,shape=[output_channels])
-        summary_bias = tf.summary.histogram...</content>
   </entry>
 
   <entry>
@@ -236,6 +223,42 @@ namely, we can generate from the conditional distribution of $Y_i$ given the
 values of all the other coordinates.
 
   Specif...</content>
+  </entry>
+
+  <entry>
+    <title>PL: Programming Strategy</title>
+    <link href="/pl/pl-programming-strategy.html"/>
+    <updated>2020-05-06T00:00:00+09:00</updated>
+    <id>/pl/pl-programming-strategy</id>
+    <content type="html">
+Methodology
+Among the following method, OOP is most successful and famous.
+
+  Modular or Procedural Programming
+    
+      this is in contrast with monolithic programming which means write all code in
+one function.
+    
+  
+  Object Oriented Programming
+  AOP: Aspect Oriented Programming
+  Struct...</content>
+  </entry>
+
+  <entry>
+    <title>PL: Programming and Computer</title>
+    <link href="/pl/pl-programming-and-computer.html"/>
+    <updated>2020-05-06T00:00:00+09:00</updated>
+    <id>/pl/pl-programming-and-computer</id>
+    <content type="html">
+####
+
+  No matter what  we are playing, one thing is very important archtiecture.
+    
+      assume you are the president of Hongkong, if you want to be a member of
+international game, you have to obey the rule in the name of “CHINA HONGKONG”,
+that’s the architecture set by China, so is Taiwan.
+...</content>
   </entry>
 
   <entry>
@@ -542,6 +565,11 @@ neural network
 learning systems.
     
   
+
+
+top conference
+
+  ICLR
 
 
 Reference
@@ -4671,7 +4699,7 @@ never occurs, and therefore, in almost all cases, the maxi...</content>
   </entry>
 
   <entry>
-    <title>C.S.T.: Recursion</title>
+    <title>A.R.: Recursion</title>
     <link href="/cs/computer-science-technique-recursion.html"/>
     <updated>2020-01-08T00:00:00+09:00</updated>
     <id>/cs/computer-science-technique-recursion</id>
@@ -4888,6 +4916,46 @@ class BiTreeNode{
   </entry>
 
   <entry>
+    <title>D.S.: summary</title>
+    <link href="/cs/computer-science-data-structure-summary.html"/>
+    <updated>2020-01-08T00:00:00+09:00</updated>
+    <id>/cs/computer-science-data-structure-summary</id>
+    <content type="html">
+####
+
+  Data strucutre means how to organise your data in memory.
+  ADT: Abstract Data Type
+    
+      it means data and operation.
+    
+  
+
+
+Phycical Data Structure
+
+  Array
+  Matrices
+  Linked List
+
+
+Logical Data Structure
+
+  Stack
+  Quenen
+  Tree
+  Graph
+  Hashing
+
+
+####
+
+  Hashing
+  Sorting
+
+</content>
+  </entry>
+
+  <entry>
     <title>D.S.: Stack</title>
     <link href="/cs/computer-science-data-structure-stack.html"/>
     <updated>2020-01-08T00:00:00+09:00</updated>
@@ -4910,6 +4978,15 @@ class BiTreeNode{
     <link href="/cs/computer-science-data-structure-priority-queue.html"/>
     <updated>2020-01-08T00:00:00+09:00</updated>
     <id>/cs/computer-science-data-structure-priority-queue</id>
+    <content type="html">
+</content>
+  </entry>
+
+  <entry>
+    <title>D.S.: Matrices</title>
+    <link href="/cs/computer-science-data-structure-matrices.html"/>
+    <updated>2020-01-08T00:00:00+09:00</updated>
+    <id>/cs/computer-science-data-structure-matrices</id>
     <content type="html">
 </content>
   </entry>
@@ -5043,6 +5120,15 @@ left rotate
   </entry>
 
   <entry>
+    <title>D.S.: Arrays</title>
+    <link href="/cs/computer-science-data-structure-arrays.html"/>
+    <updated>2020-01-08T00:00:00+09:00</updated>
+    <id>/cs/computer-science-data-structure-arrays</id>
+    <content type="html">
+</content>
+  </entry>
+
+  <entry>
     <title>D.S.: 2-3 Tree</title>
     <link href="/cs/computer-science-data-structure-2-3-tree.html"/>
     <updated>2020-01-08T00:00:00+09:00</updated>
@@ -5064,6 +5150,28 @@ create everything from scratch.
   At the beginning, they want to do something with a computer, they create a
 predefined procedure to let computer do the job.
   How to define the procedure? I think that’s all...</content>
+  </entry>
+
+  <entry>
+    <title>A.R.: Recursion</title>
+    <link href="/cs/computer-science-algorithm-recursion.html"/>
+    <updated>2020-01-08T00:00:00+09:00</updated>
+    <id>/cs/computer-science-algorithm-recursion</id>
+    <content type="html">
+Definition
+
+  Recursion: a function call itself.
+    
+      it must stop somewhere, otherwise it will lead to infinite calling.
+      it has two phases, calling phase(ascending phase), returning phase(descending
+phase)
+    
+  
+
+
+void foo(int n){
+    if(n &amp;gt; 0){
+        1. calling: Ascending ph...</content>
   </entry>
 
   <entry>
@@ -6286,6 +6394,8 @@ data structure, performs two stages:
   second if there is no vertices then visited vertices are popped.
 
 
+Graph Exploration
+
 ####
 
   class classification
@@ -6293,7 +6403,7 @@ data structure, performs two stages:
 
 Galois
 
-  DFS just provide u...</content>
+ ...</content>
   </entry>
 
   <entry>
@@ -6303,13 +6413,12 @@ Galois
     <id>/math/math-discrete-graph-theory-algorithm-breadth-first-search</id>
     <content type="html">
 BFS
+BFS stands for Breadth First Search is a vertex based techinique for finding
+   a shortest path in graph.
 
-  BFS stands for Breadth First Search is a vertex based techinique for finding
-a shortest path in graph.
-    
-      It uses a Queue data structure which follows first in first out. In BFS, one
-vertex is selected at a time when it is visited and marked then its adjacent
-are visited and store...</content>
+  It uses a Queue data structure which follows first in first out. In BFS, one
+  vertex is selected at a time when it is visited and marked then its adjacent
+  are visited and stored in...</content>
   </entry>
 
   <entry>
@@ -8296,6 +8405,19 @@ demo('ha', 'big', third='wilson', fourth='roy')
   </entry>
 
   <entry>
+    <title>Python: Build Neural Network With Any Topology</title>
+    <link href="/pl/pl-python-tensorflow-neural-network-with-any-topology.html"/>
+    <updated>2019-09-18T00:00:00+09:00</updated>
+    <id>/pl/pl-python-tensorflow-neural-network-with-any-topology</id>
+    <content type="html">
+def layer(layer_name, data, output_channels):
+    with tf.variable_scope(layer_name,reuse=tf.AUTO_REUSE):
+        w = tf.get_variable(name=&quot;weight&quot;,shape=[data.shape[-1],output_channels])
+        b = tf.get_variable(name=&quot;bias&quot;,shape=[output_channels])
+        summary_bias = tf.summary.histogram...</content>
+  </entry>
+
+  <entry>
     <title>Python Copy</title>
     <link href="/pl/pl-python-copy.html"/>
     <updated>2019-09-18T00:00:00+09:00</updated>
@@ -9082,6 +9204,23 @@ Brief Description for Ensemble, Bagging and Boosting
 An ensemble is just a collection of predictors which come together(e.g. mean of all predictions)
 to give a final prediction. The reason we use ensembles is that many different predictors trying to
 predict same target variable will perform a b...</content>
+  </entry>
+
+  <entry>
+    <title>Latex: Tree</title>
+    <link href="/pl/pl-latex-tikz-tree.html"/>
+    <updated>2019-07-10T00:00:00+09:00</updated>
+    <id>/pl/pl-latex-tikz-tree</id>
+    <content type="html">\begin{tikzpicture}
+    \tikzstyle{level 1}=[sibling distance=12mm]
+    \tikzstyle{level 2}=[sibling distance=12mm]
+    \tikzstyle{level 3}=[sibling distance=12mm]
+    \tikzstyle{level 4}=[sibling distance=12mm]
+    \node (root) {foo(4)}
+        child {
+            child{
+                child{
+ ...</content>
   </entry>
 
   <entry>
@@ -10363,85 +10502,6 @@ Basic drawing
   </entry>
 
   <entry>
-    <title>C++: Container</title>
-    <link href="/pl/pl-c++-container.html"/>
-    <updated>2018-03-04T00:00:00+09:00</updated>
-    <id>/pl/pl-c++-container</id>
-    <content type="html">
-Intro
-
-STL标准模板库解决了数据结构和算法的抽象问题
-vector和deque的底层是对数组的封装，所以提供了对元素的快速随机访问。
-不足是，在删除元素时，付出的开销更大。
-list类型在任何位置都能快速插入和删除。访问某个元素要求遍历所设计的其他元素.
-容器操作
-
-
-
-构造函数
-
-
-  C c;           默认构造函数，拷贝空容器
-  C c1(c2);      构造c2的拷贝c1
-  C c(b, e);     构造c, 将迭代器b和e指定的范围内的元素拷贝到c
-  C c{a, b, c};  列表初始化c
-
-
-
-赋值和swap
-
-在新标准库中，容器既提供成...</content>
-  </entry>
-
-  <entry>
-    <title>C++: Class</title>
-    <link href="/pl/pl-c++-class.html"/>
-    <updated>2018-03-03T00:00:00+09:00</updated>
-    <id>/pl/pl-c++-class</id>
-    <content type="html">
-封装
-
-类的定义可以使用struct或者class关键字，struct是从c继承来的
-使用class定义类，则定义在第一个访问标号前的任何成员权限都为private
-使用struct定义类，则都为public，其他没差。
-
-java的类更像是c++类的一种简化。c++中的类能够控制在初始化，复制，赋值和销毁对象时发生的操作。java的类没有这种能力。
-python, java和c++中，都隐约存在this指针这个概念。&amp;lt;/br&amp;gt;
-只不过，java和c++都隐藏的比较深一点。对于 属于对象的成员函数来说，都有对象的指针与他们绑定
-在一起，这个参数是隐藏。python就比较干脆...</content>
-  </entry>
-
-  <entry>
-    <title>C++: Data Type</title>
-    <link href="/pl/pl-c++-data-type.html"/>
-    <updated>2018-03-02T00:00:00+09:00</updated>
-    <id>/pl/pl-c++-data-type</id>
-    <content type="html">
-intro
-
-数据的初始化分为两种:  
-直接初始化: 使用assignment operator
-复制初始化: 使用(),将初始化值放在圆括号内。
-对于类类型对象，直接初始化直接调用与实参匹配的构造函数。复制初始化
-调用复制构造函数，然后使用复制构造函数将临时对象复制到正在创建的对象。
-1 引用数据类型是一种复合类型，通过在变量名前添加&amp;amp;来定义。
-
-
-指针
-
-定义
-
-指针: (point to)是一种复合类型。指针实现了对其他对象的间接访问。
-1 指针本身就是一个对象，允许对指针的赋值和拷贝。
-2 指针无需在定义时赋初值。
-
-
-空指针
-
-空指针不指向任何对象，在使用一个指针之...</content>
-  </entry>
-
-  <entry>
     <title>CLI: Find</title>
     <link href="/linux/linux-cli-find.html"/>
     <updated>2017-05-10T00:00:00+09:00</updated>
@@ -11298,61 +11358,6 @@ class文件的组织结构
   </entry>
 
   <entry>
-    <title>C++: 迭代器</title>
-    <link href="/pl/pl-c++-iterator.html"/>
-    <updated>2016-05-06T00:00:00+09:00</updated>
-    <id>/pl/pl-c++-iterator</id>
-    <content type="html">
-intro
-
-谓词
-谓词本质是可调用的表达式，返回结果是一个能用作条件的值。
-一元谓词: 接受单一参数unary predicate
-二元谓词: 接受两个参数binary predicate
-接受谓词参数的算法对输入序列中的元素调用谓词，因此元素类型必须转换为谓词的参数类型
-
-迭代器
-迭代器令算法不依赖于容器，但算法依赖于元素类型的操作。
-
-  输入迭代器
-  输出迭代器
-  前向迭代器
-  双向迭代器
-  随机访问迭代器
-
-
-算法
-简单查找算法
-
-find
-find(beg, end, val)
-return 返回一个迭代器，指向输入序列中第一个等于val的元素。
-find_if(b...</content>
-  </entry>
-
-  <entry>
-    <title>C++: Stream</title>
-    <link href="/pl/pl-c++-stream.html"/>
-    <updated>2016-05-05T00:00:00+09:00</updated>
-    <id>/pl/pl-c++-stream</id>
-    <content type="html">
-Intro
-
-介绍
-
-I/O操作: 写程序的时候，变量的命名是相对程序而言的。 
-输入: 指的是从程序外向程序内发出的动作。
-输出: 指的是从程序内向程序外发出的动作。
-inputstream即是从程序外读数据，outputstream是向程序外写数据。
-
-
-MSB &amp;amp;&amp;amp; LSB
-
-most significant bit和least significant bit，前者采用Big endian方式存储数据，后者采用little endian存储数据
-CPU有两大派系, IBM的Power PC和Inter的x86系列。PowerPC采用big endian，x86采用...</content>
-  </entry>
-
-  <entry>
     <title>Java: Container</title>
     <link href="/pl/pl-java-container.html"/>
     <updated>2016-05-04T00:00:00+09:00</updated>
@@ -11396,59 +11401,6 @@ intro
   </entry>
 
   <entry>
-    <title>C++: Keywords</title>
-    <link href="/pl/pl-c++-keyword.html"/>
-    <updated>2016-05-04T00:00:00+09:00</updated>
-    <id>/pl/pl-c++-keyword</id>
-    <content type="html">
-explicit
-c++为只用传递一个参数的构造函数定义了一个隐士转换
-
-class Animal{
-	public:
-	    Animal(){
-        cout&amp;lt;&amp;lt;&quot;no parameter constructor&quot;&amp;lt;&amp;lt;endl;
-        }
-	    explicit Animal(int a){
-	    cout&amp;lt;&amp;lt;&quot;parameter constructor&quot;&amp;lt;&amp;lt;endl;
-	    }
-};
-Animal dog = 3         //报错，无法使用explicit Animal构造器
-
-
-class...</content>
-  </entry>
-
-  <entry>
-    <title>C++:  Template</title>
-    <link href="/pl/pl-c++-template.html"/>
-    <updated>2016-05-03T00:00:00+09:00</updated>
-    <id>/pl/pl-c++-template</id>
-    <content type="html">
-intro
-OOP和范型编程都能处理在编写程序时不知道类型的情况。不同之处在于
-OOP能处理类型在程序运行之前都未知的情况，范型编程中，编译时就能获知类型。
-
-
-function template
-
-define
-template &amp;lt;typename price&amp;gt; bool isCheaper(price p1,price p2){
-	    return p1&amp;lt;p2;
-        }
-
-instantiation
-//函数模板能自己推断参数类型
-compare(2.0,12.0);
-
-
-
-
-class template
-类模板用来生成类的蓝图，与函数模板不同，编...</content>
-  </entry>
-
-  <entry>
     <title>Java: Class Loader</title>
     <link href="/pl/pl-java-class-load.html"/>
     <updated>2016-05-02T00:00:00+09:00</updated>
@@ -11485,31 +11437,6 @@ class template
 
 intro
 在C++语...</content>
-  </entry>
-
-  <entry>
-    <title>C++: Reload Operator</title>
-    <link href="/pl/pl-c++-load-operator.html"/>
-    <updated>2016-05-02T00:00:00+09:00</updated>
-    <id>/pl/pl-c++-load-operator</id>
-    <content type="html">
-重载的运算符不过是有特殊名字的函数
-重载下标运算符
-
-[]   下标操作符必须是成员函数
-
-
-重载输出运算符
-
-&amp;lt;&amp;lt;     不能是成员函数
-参数1: 非常量ostream对象的引用,非常量的原因是向流写入内容会改变其状态  
-                               引用的原因是因为我们无法直接复制一个ostream对象  
-参数2: 常量的引用, 引用是因为避免复制实参  
-                   常量是因为打印不会改变对象的内容  
-class Worker{
-	public:
-	    int age;
-	    std::stri...</content>
   </entry>
 
   <entry>
@@ -11784,6 +11711,217 @@ class Weekday{
   </entry>
 
   <entry>
+    <title>C++:  Template</title>
+    <link href="/pl/pl-c++-template.html"/>
+    <updated>2016-04-03T00:00:00+09:00</updated>
+    <id>/pl/pl-c++-template</id>
+    <content type="html">
+intro
+OOP和范型编程都能处理在编写程序时不知道类型的情况。不同之处在于
+OOP能处理类型在程序运行之前都未知的情况，范型编程中，编译时就能获知类型。
+
+
+function template
+
+define
+template &amp;lt;typename price&amp;gt; bool isCheaper(price p1,price p2){
+	    return p1&amp;lt;p2;
+        }
+
+instantiation
+//函数模板能自己推断参数类型
+compare(2.0,12.0);
+
+
+
+
+class template
+类模板用来生成类的蓝图，与函数模板不同，编...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Stream</title>
+    <link href="/pl/pl-c++-stream.html"/>
+    <updated>2016-04-03T00:00:00+09:00</updated>
+    <id>/pl/pl-c++-stream</id>
+    <content type="html">
+Stream
+
+  to access data that from outside of a program
+    
+      Inputstream: access data from outside of a program.
+      Outputstream: send data out of the program.
+    
+  
+  so we have IOS, which means:
+    
+      Inputstream: istream, ifstream
+      Outputstream: ostream, ofstream
+      ci...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Reload Operator</title>
+    <link href="/pl/pl-c++-load-operator.html"/>
+    <updated>2016-04-03T00:00:00+09:00</updated>
+    <id>/pl/pl-c++-load-operator</id>
+    <content type="html">
+重载的运算符不过是有特殊名字的函数
+重载下标运算符
+
+[]   下标操作符必须是成员函数
+
+
+重载输出运算符
+
+&amp;lt;&amp;lt;     不能是成员函数
+参数1: 非常量ostream对象的引用,非常量的原因是向流写入内容会改变其状态  
+                               引用的原因是因为我们无法直接复制一个ostream对象  
+参数2: 常量的引用, 引用是因为避免复制实参  
+                   常量是因为打印不会改变对象的内容  
+class Worker{
+	public:
+	    int age;
+	    std::stri...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Keywords</title>
+    <link href="/pl/pl-c++-keyword.html"/>
+    <updated>2016-04-03T00:00:00+09:00</updated>
+    <id>/pl/pl-c++-keyword</id>
+    <content type="html">
+explicit
+c++为只用传递一个参数的构造函数定义了一个隐士转换
+
+class Animal{
+	public:
+	    Animal(){
+        cout&amp;lt;&amp;lt;&quot;no parameter constructor&quot;&amp;lt;&amp;lt;endl;
+        }
+	    explicit Animal(int a){
+	    cout&amp;lt;&amp;lt;&quot;parameter constructor&quot;&amp;lt;&amp;lt;endl;
+	    }
+};
+Animal dog = 3         //报错，无法使用explicit Animal构造器
+
+
+class...</content>
+  </entry>
+
+  <entry>
+    <title>C++: 迭代器</title>
+    <link href="/pl/pl-c++-iterator.html"/>
+    <updated>2016-04-03T00:00:00+09:00</updated>
+    <id>/pl/pl-c++-iterator</id>
+    <content type="html">
+intro
+
+谓词
+谓词本质是可调用的表达式，返回结果是一个能用作条件的值。
+一元谓词: 接受单一参数unary predicate
+二元谓词: 接受两个参数binary predicate
+接受谓词参数的算法对输入序列中的元素调用谓词，因此元素类型必须转换为谓词的参数类型
+
+迭代器
+迭代器令算法不依赖于容器，但算法依赖于元素类型的操作。
+
+  输入迭代器
+  输出迭代器
+  前向迭代器
+  双向迭代器
+  随机访问迭代器
+
+
+算法
+简单查找算法
+
+find
+find(beg, end, val)
+return 返回一个迭代器，指向输入序列中第一个等于val的元素。
+find_if(b...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Data Type</title>
+    <link href="/pl/pl-c++-data-type.html"/>
+    <updated>2016-04-03T00:00:00+09:00</updated>
+    <id>/pl/pl-c++-data-type</id>
+    <content type="html">
+intro
+
+数据的初始化分为两种:  
+直接初始化: 使用assignment operator
+复制初始化: 使用(),将初始化值放在圆括号内。
+对于类类型对象，直接初始化直接调用与实参匹配的构造函数。复制初始化
+调用复制构造函数，然后使用复制构造函数将临时对象复制到正在创建的对象。
+1 引用数据类型是一种复合类型，通过在变量名前添加&amp;amp;来定义。
+
+
+指针
+
+定义
+
+指针: (point to)是一种复合类型。指针实现了对其他对象的间接访问。
+1 指针本身就是一个对象，允许对指针的赋值和拷贝。
+2 指针无需在定义时赋初值。
+
+
+空指针
+
+空指针不指向任何对象，在使用一个指针之...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Container</title>
+    <link href="/pl/pl-c++-container.html"/>
+    <updated>2016-04-03T00:00:00+09:00</updated>
+    <id>/pl/pl-c++-container</id>
+    <content type="html">
+Intro
+
+STL标准模板库解决了数据结构和算法的抽象问题
+vector和deque的底层是对数组的封装，所以提供了对元素的快速随机访问。
+不足是，在删除元素时，付出的开销更大。
+list类型在任何位置都能快速插入和删除。访问某个元素要求遍历所设计的其他元素.
+容器操作
+
+
+
+构造函数
+
+
+  C c;           默认构造函数，拷贝空容器
+  C c1(c2);      构造c2的拷贝c1
+  C c(b, e);     构造c, 将迭代器b和e指定的范围内的元素拷贝到c
+  C c{a, b, c};  列表初始化c
+
+
+
+赋值和swap
+
+在新标准库中，容器既提供成...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Class</title>
+    <link href="/pl/pl-c++-class.html"/>
+    <updated>2016-04-03T00:00:00+09:00</updated>
+    <id>/pl/pl-c++-class</id>
+    <content type="html">
+封装
+
+类的定义可以使用struct或者class关键字，struct是从c继承来的
+使用class定义类，则定义在第一个访问标号前的任何成员权限都为private
+使用struct定义类，则都为public，其他没差。
+
+java的类更像是c++类的一种简化。c++中的类能够控制在初始化，复制，赋值和销毁对象时发生的操作。java的类没有这种能力。
+python, java和c++中，都隐约存在this指针这个概念。&amp;lt;/br&amp;gt;
+只不过，java和c++都隐藏的比较深一点。对于 属于对象的成员函数来说，都有对象的指针与他们绑定
+在一起，这个参数是隐藏。python就比较干脆...</content>
+  </entry>
+
+  <entry>
     <title>C++: Memory</title>
     <link href="/pl/pl-c++-memory.html"/>
     <updated>2016-01-21T00:00:00+09:00</updated>
@@ -11819,6 +11957,11 @@ shared_ptr
     <updated>2016-01-20T00:00:00+09:00</updated>
     <id>/pl/pl-c++-compiler</id>
     <content type="html">
+####
+
+  gcc, g++, clang
+
+
 内存对齐
 
   书写汇编语言时,处理器给我们能处理的内存块最小单位是一个字节大小。底层是如何处理的我们并不知道。我们可以把它看成一个黑箱。C++语言是汇编语言的高级形式。
@@ -11839,7 +11982,7 @@ struct foo_3{
 foo_1 a;
 foo_2 b;
 foo_3 c;
-cout&amp;lt;&amp;lt; sizeof(a)&amp;lt;&amp;lt;...</content>
+cout...</content>
   </entry>
 
   <entry>
@@ -11865,7 +12008,7 @@ boost是一个可移植的，提供源代码的C++库，由于其对跨平台的
   </entry>
 
   <entry>
-    <title>C++: Vim</title>
+    <title>C++: Opencv</title>
     <link href="/pl/pl-c++-gtest.html"/>
     <updated>2016-01-18T00:00:00+09:00</updated>
     <id>/pl/pl-c++-gtest</id>
@@ -11875,7 +12018,7 @@ boost是一个可移植的，提供源代码的C++库，由于其对跨平台的
   </entry>
 
   <entry>
-    <title>C++: Vim</title>
+    <title>C++: Opencv</title>
     <link href="/pl/pl-c++-opencv.html"/>
     <updated>2016-01-17T00:00:00+09:00</updated>
     <id>/pl/pl-c++-opencv</id>
@@ -11992,34 +12135,113 @@ class template
   </entry>
 
   <entry>
+    <title>C++: Struct</title>
+    <link href="/pl/pl-c++-struct.html"/>
+    <updated>2015-11-10T00:00:00+09:00</updated>
+    <id>/pl/pl-c++-struct</id>
+    <content type="html">
+####
+
+  Struct can be defined as collection of data members under one name.
+
+
+####
+
+  define
+  declaration
+  initialization
+
+
+struct Rectangle {
+    int width;
+    int length;
+};
+
+struct Rectangle r;
+
+</content>
+  </entry>
+
+  <entry>
+    <title>C++: Polymorphism</title>
+    <link href="/pl/pl-c++-polymorphism.html"/>
+    <updated>2015-11-10T00:00:00+09:00</updated>
+    <id>/pl/pl-c++-polymorphism</id>
+    <content type="html">
+</content>
+  </entry>
+
+  <entry>
+    <title>C++: OOP</title>
+    <link href="/pl/pl-c++-oop.html"/>
+    <updated>2015-11-10T00:00:00+09:00</updated>
+    <id>/pl/pl-c++-oop</id>
+    <content type="html">
+####
+
+  why data is modified by private ? function is modified by public?
+    
+      just like a car, it has button you can push, the button is like a function,
+it’s public.
+      But what’s in the button, you have no idea. It’s the data which is private.
+    
+  
+
+
+
+  
+
+</content>
+  </entry>
+
+  <entry>
     <title>C++: Function</title>
     <link href="/pl/pl-c++-function.html"/>
     <updated>2015-11-10T00:00:00+09:00</updated>
     <id>/pl/pl-c++-function</id>
     <content type="html">
+Terminology
 
-  函数是命名的代码块。并没有什么了不起。
-    参数传递
+  Prototype, signature, header of a function means the following code
+
+
+void foo();
+
+
+
+  Functions are called modules or procedures.
+
+
+#### 
+There are two piece of the code, so there will be two function in the memory.
+
+#include &amp;lt;iostream&amp;gt;
+int add(int x, int y);
+
+int main(){
+ ...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Function Parameters</title>
+    <link href="/pl/pl-c++-function-parameter.html"/>
+    <updated>2015-11-10T00:00:00+09:00</updated>
+    <id>/pl/pl-c++-function-parameter</id>
+    <content type="html">
+Arrays
+
+  Arrays can only be passed by address
+  for the formal parameters in foo, you can replace a[] with *a, it
+still means the same thing.
+    
+      int a[] can only be used to point to array.
+      *a can be used to point an integer.
+    
   
-  形参的初始化方式和变量的初始化方式是一样的
-  和其他变量一样，形参的类型决定了形参和实参的交互方式
 
 
-
-引用传递
-如果形参是引用类型，它将绑定到对应的实参上
-
-
-值传递
-实参的值拷贝到形参
-
-
-函数指针
-
-  函数指针指向的是函数而非对象
-  当把函数名作为一个值使用时，该函数自动转换成指针
-
-</content>
+#include &amp;lt;iostream&amp;gt;
+void foo(int a[], in...</content>
   </entry>
 
   <entry>
@@ -12096,16 +12318,16 @@ cast-name是static, dynamic, const, reinterpret中的一种
   </entry>
 
   <entry>
-    <title>C++: Version</title>
-    <link href="/pl/pl-c++-intro.html"/>
+    <title>C++: Pointer and Reference</title>
+    <link href="/pl/pl-c++-pointer-and-reference.html"/>
     <updated>2015-11-01T00:00:00+09:00</updated>
-    <id>/pl/pl-c++-intro</id>
+    <id>/pl/pl-c++-pointer-and-reference</id>
     <content type="html">
 语言类型
 
   c++容忍隐士的类型转换，所以是一种种弱类型语言
   c++编译时进行类型检查，程序运行时不能改变其结构，所以是静态语言
-    版本问题
+    Version
   
   c++11 版本，以前的C++代码风格极其混乱。
   代码使用C++11的风格，以前的不要用了。
@@ -12122,27 +12344,14 @@ C++中，变量，函数使用之前需要声明，头文件k就是起声明的�
     <updated>2015-07-01T00:00:00+09:00</updated>
     <id>/pl/pl-cmake-intro</id>
     <content type="html">
-Make
-代码变成可执行文件，叫编译；
-编译的顺序，叫做构建;
-make是最常用的构建工具,make主要用来构建c语言的项目，实际上，任何主要某个文件有变化，就要重新构建项目，都可以用make构建
+Cmake
 
-
-语法
-&amp;lt;target&amp;gt; : &amp;lt;prerequisites&amp;gt;
-[tab] &amp;lt;commands&amp;gt;
-
-
-
-
-  make命令在没有指定目标时，默认会执行makefile文件的第一个目标
-  make targetName 执行相应的代码
-    do:
- echo &quot;default target&quot;
-clean:
- rm create
-create:
- ech...</content>
+  You must treat Cmake as a programming language with special syntax, how
+to treat cmake as a programming language, things you need keep in mind
+    
+      treat every statement with parenthesis as a function, figure out the function
+mean and related parameters
+      it’s a special langua...</content>
   </entry>
 
   <entry>
