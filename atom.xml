@@ -3,7 +3,7 @@
   <title>Just Do It</title>
   <link href="/atom.xml" rel="self"/>
   <link href=""/>
-  <updated>2020-05-27T09:47:34+09:00</updated>
+  <updated>2020-05-29T10:26:00+09:00</updated>
   <id></id>
   <author>
     <name>reed</name>
@@ -4699,24 +4699,6 @@ never occurs, and therefore, in almost all cases, the maxi...</content>
   </entry>
 
   <entry>
-    <title>A.R.: Recursion</title>
-    <link href="/cs/computer-science-technique-recursion.html"/>
-    <updated>2020-01-08T00:00:00+09:00</updated>
-    <id>/cs/computer-science-technique-recursion</id>
-    <content type="html">
-####
-
-  head recursion: the recursive call, when it happens, comes before other
-processing in the function.(think of it happening at the top).
-    
-      the head recursion technique can reduce the data passed to the recursive
-call
-    
-  
-  tail recursion: the processing occurs before the recur...</content>
-  </entry>
-
-  <entry>
     <title>C.S.T.: Pointers and Dynamic Memory</title>
     <link href="/cs/computer-science-technique-pointers-and-dynamic-memory.html"/>
     <updated>2020-01-08T00:00:00+09:00</updated>
@@ -4728,23 +4710,6 @@ call
 can write programs that grab blocks of memory on the fly, link them into
 useful strucures, and clean everything at the end so there is no residue,
 you’re not just someone who can do a little coding, you’re a pro...</content>
-  </entry>
-
-  <entry>
-    <title>C.S.P.: String</title>
-    <link href="/cs/computer-science-problem-string.html"/>
-    <updated>2020-01-08T00:00:00+09:00</updated>
-    <id>/cs/computer-science-problem-string</id>
-    <content type="html">
-1. Reverse String
-Write a function that takes a string as input and returns the string reversed
-
-public class Solution{
-    public static String reverseString(String s){
-        if(s == null || s.length() &amp;lt; 2) return s;
-        int i = 0;
-        int j = s.length() - 1;
-        char[] chars =...</content>
   </entry>
 
   <entry>
@@ -4890,254 +4855,6 @@ everything evolved.
   </entry>
 
   <entry>
-    <title>D.S.: Tree</title>
-    <link href="/cs/computer-science-data-structure-tree.html"/>
-    <updated>2020-01-08T00:00:00+09:00</updated>
-    <id>/cs/computer-science-data-structure-tree</id>
-    <content type="html">
-Array Representaion
-
-Rule
-
-  if a Node is at index $i$
-  its left child is at $2*i$
-  its left child is at $2*i+1$
-  its parent is at $i/2$
-
-
-Linked list presentation of Tree
-
-  we can based on the position relationship between parent and child, to create
-a tree.
-
-
-class BiTreeNode{
-	public char...</content>
-  </entry>
-
-  <entry>
-    <title>D.S.: summary</title>
-    <link href="/cs/computer-science-data-structure-summary.html"/>
-    <updated>2020-01-08T00:00:00+09:00</updated>
-    <id>/cs/computer-science-data-structure-summary</id>
-    <content type="html">
-####
-
-  Data strucutre means how to organise your data in memory.
-  ADT: Abstract Data Type
-    
-      it means data and operation.
-    
-  
-
-
-Phycical Data Structure
-
-  Array
-  Matrices
-  Linked List
-
-
-Logical Data Structure
-
-  Stack
-  Quenen
-  Tree
-  Graph
-  Hashing
-
-
-####
-
-  Hashing
-  Sorting
-
-</content>
-  </entry>
-
-  <entry>
-    <title>D.S.: Stack</title>
-    <link href="/cs/computer-science-data-structure-stack.html"/>
-    <updated>2020-01-08T00:00:00+09:00</updated>
-    <id>/cs/computer-science-data-structure-stack</id>
-    <content type="html">
-</content>
-  </entry>
-
-  <entry>
-    <title>D.S.: Red Black Tree</title>
-    <link href="/cs/computer-science-data-structure-red-black-tree.html"/>
-    <updated>2020-01-08T00:00:00+09:00</updated>
-    <id>/cs/computer-science-data-structure-red-black-tree</id>
-    <content type="html">
-</content>
-  </entry>
-
-  <entry>
-    <title>D.S.: Priority Queue</title>
-    <link href="/cs/computer-science-data-structure-priority-queue.html"/>
-    <updated>2020-01-08T00:00:00+09:00</updated>
-    <id>/cs/computer-science-data-structure-priority-queue</id>
-    <content type="html">
-</content>
-  </entry>
-
-  <entry>
-    <title>D.S.: Matrices</title>
-    <link href="/cs/computer-science-data-structure-matrices.html"/>
-    <updated>2020-01-08T00:00:00+09:00</updated>
-    <id>/cs/computer-science-data-structure-matrices</id>
-    <content type="html">
-</content>
-  </entry>
-
-  <entry>
-    <title>D.S.: Map</title>
-    <link href="/cs/computer-science-data-structure-map.html"/>
-    <updated>2020-01-08T00:00:00+09:00</updated>
-    <id>/cs/computer-science-data-structure-map</id>
-    <content type="html">
-基于数组和链表的map实现
-
-  数组用来存放哈希表
-  链表用来存放key
-
-
-class HashTable{
-	//哈希表
-	private static int hashTableSize=35;
-	//链表
-	private  List&amp;lt;Integer&amp;gt; list=new ArrayList&amp;lt;&amp;gt;();
-	private int[] hashTable=null;
-	//创建hash表
-	public void createHashTable(){
-		hashTable =new int[hashTableSize];
-		//初始化hash表
-		f...</content>
-  </entry>
-
-  <entry>
-    <title>D.S.: List</title>
-    <link href="/cs/computer-science-data-structure-list.html"/>
-    <updated>2020-01-08T00:00:00+09:00</updated>
-    <id>/cs/computer-science-data-structure-list</id>
-    <content type="html">
-####
-nodeDelete(node):
-    node.value = node.next.value
-    node.next  = node.next.next
-
-
-</content>
-  </entry>
-
-  <entry>
-    <title>D.S.: Heap</title>
-    <link href="/cs/computer-science-data-structure-heap.html"/>
-    <updated>2020-01-08T00:00:00+09:00</updated>
-    <id>/cs/computer-science-data-structure-heap</id>
-    <content type="html">
-Definition
-
-
-  First, Heap is complete binary tree.
-  node greater than its descendant.
-    
-      just like arranging apple in the mark, which is one on the top of the apple
-pyramid, the most fresh one, in this context, the maximum is the most fresh
-one.
-    
-  
-
-
-
-
-Operation
-
-  insert
-  delete...</content>
-  </entry>
-
-  <entry>
-    <title>D.S.: Hashing With Chaining</title>
-    <link href="/cs/computer-science-data-structure-hashing.html"/>
-    <updated>2020-01-08T00:00:00+09:00</updated>
-    <id>/cs/computer-science-data-structure-hashing</id>
-    <content type="html">
-Why this crap ?
-
-  we have linear search, its time complexity is $\Theta (n)$
-  we have binary search, its time complexity is $log_2^n$
-  The problem is: we need more, we don’t satisify with the current situation,
-we need more, how about constant time, can we do it? give it a shot.
-  The solutio...</content>
-  </entry>
-
-  <entry>
-    <title>D.S.: Dictionary</title>
-    <link href="/cs/computer-science-data-structure-dictionary.html"/>
-    <updated>2020-01-08T00:00:00+09:00</updated>
-    <id>/cs/computer-science-data-structure-dictionary</id>
-    <content type="html">
-</content>
-  </entry>
-
-  <entry>
-    <title>D.S.: Binary Search Tree</title>
-    <link href="/cs/computer-science-data-structure-binary-search-tree.html"/>
-    <updated>2020-01-08T00:00:00+09:00</updated>
-    <id>/cs/computer-science-data-structure-binary-search-tree</id>
-    <content type="html">
-Complete Binary Tree
-
-  how to identify a tree is complete binary tree, you can make use of the array
-representation
-
-
-Galois
-
-  We go to university to get degree, we learn staff from youtube.
-
-
-</content>
-  </entry>
-
-  <entry>
-    <title>D.S.: AVL Tree</title>
-    <link href="/cs/computer-science-data-structure-avl-tree.html"/>
-    <updated>2020-01-08T00:00:00+09:00</updated>
-    <id>/cs/computer-science-data-structure-avl-tree</id>
-    <content type="html">
-self-balancing binary search tree.
-
-left rotate
-
-  we call it left rotate because the root move to the left.
-    
-      the trick, find the target node that want to put operation on
-      if the operation is left rotate, than find the right child of the target node.
-      if the operation is rig...</content>
-  </entry>
-
-  <entry>
-    <title>D.S.: Arrays</title>
-    <link href="/cs/computer-science-data-structure-arrays.html"/>
-    <updated>2020-01-08T00:00:00+09:00</updated>
-    <id>/cs/computer-science-data-structure-arrays</id>
-    <content type="html">
-</content>
-  </entry>
-
-  <entry>
-    <title>D.S.: 2-3 Tree</title>
-    <link href="/cs/computer-science-data-structure-2-3-tree.html"/>
-    <updated>2020-01-08T00:00:00+09:00</updated>
-    <id>/cs/computer-science-data-structure-2-3-tree</id>
-    <content type="html">
-</content>
-  </entry>
-
-  <entry>
     <title>Summary: Algorithm</title>
     <link href="/cs/computer-science-algorithm-summary.html"/>
     <updated>2020-01-08T00:00:00+09:00</updated>
@@ -5150,37 +4867,6 @@ create everything from scratch.
   At the beginning, they want to do something with a computer, they create a
 predefined procedure to let computer do the job.
   How to define the procedure? I think that’s all...</content>
-  </entry>
-
-  <entry>
-    <title>A.R.: Recursion</title>
-    <link href="/cs/computer-science-algorithm-recursion.html"/>
-    <updated>2020-01-08T00:00:00+09:00</updated>
-    <id>/cs/computer-science-algorithm-recursion</id>
-    <content type="html">
-Definition
-
-  Recursion: a function call itself.
-    
-      it must stop somewhere, otherwise it will lead to infinite calling.
-      it has two phases, calling phase(ascending phase), returning phase(descending
-phase)
-    
-  
-
-
-void foo(int n){
-    if(n &amp;gt; 0){
-        1. calling: Ascending ph...</content>
-  </entry>
-
-  <entry>
-    <title>A.P.: Wildcard Matching</title>
-    <link href="/cs/computer-science-algorithm-problem-wildcard-matching.html"/>
-    <updated>2020-01-08T00:00:00+09:00</updated>
-    <id>/cs/computer-science-algorithm-problem-wildcard-matching</id>
-    <content type="html">
-</content>
   </entry>
 
   <entry>
@@ -5281,67 +4967,6 @@ Bounding Function
   </entry>
 
   <entry>
-    <title>A.P.: Matrix Multiplication</title>
-    <link href="/cs/computer-science-algorithm-problem-matrix-multiplication.html"/>
-    <updated>2020-01-08T00:00:00+09:00</updated>
-    <id>/cs/computer-science-algorithm-problem-matrix-multiplication</id>
-    <content type="html">
-</content>
-  </entry>
-
-  <entry>
-    <title>A.P.: LCS</title>
-    <link href="/cs/computer-science-algorithm-problem-longest-common-subsequence.html"/>
-    <updated>2020-01-08T00:00:00+09:00</updated>
-    <id>/cs/computer-science-algorithm-problem-longest-common-subsequence</id>
-    <content type="html">
-Problem
-
-  There are two strings A and B as following:
-
-
-
-  
-    
-      b
-      d
-      \0
-    
-  
-  
-    
-      0
-      1
-      2
-    
-  
-
-
-
-  
-    
-      a
-      b
-      c
-      d
-      \0
-    
-  
-  
-    
-      0
-      1
-      2
-      3
-      4
-    
-  
-
-
-2.1 Recursion Method(top down approach)...</content>
-  </entry>
-
-  <entry>
     <title>A.P.: KnapSack</title>
     <link href="/cs/computer-science-algorithm-problem-knapsack.html"/>
     <updated>2020-01-08T00:00:00+09:00</updated>
@@ -5407,51 +5032,43 @@ through the printing press one time, in order...</content>
   </entry>
 
   <entry>
-    <title>Knuth-Morris-Pratt String Matching</title>
-    <link href="/cs/computer-science-algorithm-problem-Knuth-Morris-Pratt-string-matching.html"/>
+    <title>A.D.: Recursion</title>
+    <link href="/cs/computer-science-algorithm-design-recursion.html"/>
     <updated>2020-01-08T00:00:00+09:00</updated>
-    <id>/cs/computer-science-algorithm-problem-Knuth-Morris-Pratt-string-matching</id>
+    <id>/cs/computer-science-algorithm-design-recursion</id>
     <content type="html">
+Definition
 
-  
+  Recursion: a function call itself.
     
-      String
-      a
-      b
-      a
-      b
-      c
-      a
-      b
-      c
-      a
-      b
-      a
-      b
-      a
-      b
-      d
+      it must stop somewhere, otherwise it will lead to infinite calling.
+      it has two phases, calling phase(ascending phase), returning phase(descending
+phase)
     
   
-  
+
+
+void foo(int n){
+    if(n &amp;gt; 0){
+        1. calling: Ascending ph...</content>
+  </entry>
+
+  <entry>
+    <title>A.D.: Common Mistakes of Recursion Design</title>
+    <link href="/cs/computer-science-algorithm-design-recursion-common-mistake.html"/>
+    <updated>2020-01-08T00:00:00+09:00</updated>
+    <id>/cs/computer-science-algorithm-design-recursion-common-mistake</id>
+    <content type="html">
+####
+
+  head recursion: the recursive call, when it happens, comes before other
+processing in the function.(think of it happening at the top).
     
-       
-      1
-      2
-      3
-      4
-      5
-      6
-      7
-      8
-      9
-      10
-      11
-      12
-      13
-      14
-      15
-    ...</content>
+      the head recursion technique can reduce the data passed to the recursive
+call
+    
+  
+  tail recursion: the processing occurs before the recur...</content>
   </entry>
 
   <entry>
@@ -5741,6 +5358,599 @@ Compare
 #### 
 a fancy cool analysis of data structure.
 </content>
+  </entry>
+
+  <entry>
+    <title>A.D.T.: Tree Representation</title>
+    <link href="/cs/computer-science-abstract-data-type-tree-representation.html"/>
+    <updated>2020-01-08T00:00:00+09:00</updated>
+    <id>/cs/computer-science-abstract-data-type-tree-representation</id>
+    <content type="html">
+Array Representaion
+
+Rule
+
+  if a Node is at index $i$
+  its left child is at $2*i$
+  its left child is at $2*i+1$
+  its parent is at $i/2$
+
+
+Linked list presentation of Tree
+
+  we can based on the position relationship between parent and child, to create
+a tree.
+
+</content>
+  </entry>
+
+  <entry>
+    <title>A.D.T.: Red Black Tree</title>
+    <link href="/cs/computer-science-abstract-data-type-tree-red-black.html"/>
+    <updated>2020-01-08T00:00:00+09:00</updated>
+    <id>/cs/computer-science-abstract-data-type-tree-red-black</id>
+    <content type="html">
+</content>
+  </entry>
+
+  <entry>
+    <title>A.D.T.: Tree Terminology</title>
+    <link href="/cs/computer-science-abstract-data-type-tree-introduction.html"/>
+    <updated>2020-01-08T00:00:00+09:00</updated>
+    <id>/cs/computer-science-abstract-data-type-tree-introduction</id>
+    <content type="html">
+Terminology
+
+  root
+  parent
+  child
+  descendents
+  siblings
+  ancestors
+  degree of nodes
+  internal nodes, external nodes
+  terminal nodes, nonleaf nodes
+  levels: count node
+  height: count edge
+
+
+####
+
+  left skewed tree
+  strict binary tree or proper/complete binary tree
+
+
+binary tree
+
+  a...</content>
+  </entry>
+
+  <entry>
+    <title>A.D.T.: Tree Implementation</title>
+    <link href="/cs/computer-science-abstract-data-type-tree-implementation.html"/>
+    <updated>2020-01-08T00:00:00+09:00</updated>
+    <id>/cs/computer-science-abstract-data-type-tree-implementation</id>
+    <content type="html">
+
+#include &amp;lt;iostream&amp;gt;
+
+struct node{
+    int data;
+    struct node *leftChild=nullptr;
+    struct node *rightChild=nullptr;
+    struct node *parent=nullptr;
+};
+
+void insert(struct node *node,int  data);
+void display(struct node *node);
+int getNodeHeight(struct node *node);
+int getBalanceFact...</content>
+  </entry>
+
+  <entry>
+    <title>A.D.T.: Binary Search Tree</title>
+    <link href="/cs/computer-science-abstract-data-type-tree-binary-search.html"/>
+    <updated>2020-01-08T00:00:00+09:00</updated>
+    <id>/cs/computer-science-abstract-data-type-tree-binary-search</id>
+    <content type="html">
+Complete Binary Tree
+
+  how to identify a tree is complete binary tree, you can make use of the array
+representation
+
+
+Drawback
+
+  The height of the binary search depends on the order of insertion.
+  You can’t control the insertion order.
+
+
+Galois
+
+  We go to university to get degree, we learn s...</content>
+  </entry>
+
+  <entry>
+    <title>A.D.T.: AVL Tree</title>
+    <link href="/cs/computer-science-abstract-data-type-tree-avl.html"/>
+    <updated>2020-01-08T00:00:00+09:00</updated>
+    <id>/cs/computer-science-abstract-data-type-tree-avl</id>
+    <content type="html">
+self-balancing binary search tree.
+
+balance factor
+
+  balance factor = height of left subtree - height of right subtree
+  valid factor = hl - hr = {-1, 0, 1}
+
+
+left rotate
+
+  we call it left rotate because the root move to the left.
+    
+      the trick, find the target node that want to put ope...</content>
+  </entry>
+
+  <entry>
+    <title>A.D.T.: 2-3 Tree</title>
+    <link href="/cs/computer-science-abstract-data-type-tree-2-3.html"/>
+    <updated>2020-01-08T00:00:00+09:00</updated>
+    <id>/cs/computer-science-abstract-data-type-tree-2-3</id>
+    <content type="html">
+</content>
+  </entry>
+
+  <entry>
+    <title>A.D.T.: summary</title>
+    <link href="/cs/computer-science-abstract-data-type-summary.html"/>
+    <updated>2020-01-08T00:00:00+09:00</updated>
+    <id>/cs/computer-science-abstract-data-type-summary</id>
+    <content type="html">
+####
+
+  Data strucutre means how to organise your data in memory.
+  ADT: Abstract Data Type
+    
+      it means data and operation.
+    
+  
+
+
+Phycical Data Structure
+
+  Array
+  Matrices
+  Linked List
+
+
+Logical Data Structure
+
+  Stack
+  Quenen
+  Tree
+  Graph
+  Hashing
+
+
+####
+
+  Hashing
+  Sorting
+
+</content>
+  </entry>
+
+  <entry>
+    <title>A.D.T.P.: Wildcard Matching</title>
+    <link href="/cs/computer-science-abstract-data-type-string-problem-wildcard-matching.html"/>
+    <updated>2020-01-08T00:00:00+09:00</updated>
+    <id>/cs/computer-science-abstract-data-type-string-problem-wildcard-matching</id>
+    <content type="html">
+</content>
+  </entry>
+
+  <entry>
+    <title>A.D.T.P.: Reverse String </title>
+    <link href="/cs/computer-science-abstract-data-type-string-problem-reverse.html"/>
+    <updated>2020-01-08T00:00:00+09:00</updated>
+    <id>/cs/computer-science-abstract-data-type-string-problem-reverse</id>
+    <content type="html">
+1. Reverse String
+Write a function that takes a string as input and returns the string reversed
+
+public class Solution{
+    public static String reverseString(String s){
+        if(s == null || s.length() &amp;lt; 2) return s;
+        int i = 0;
+        int j = s.length() - 1;
+        char[] chars =...</content>
+  </entry>
+
+  <entry>
+    <title>A.D.T.P.: Longest Common Subsequence</title>
+    <link href="/cs/computer-science-abstract-data-type-string-problem-longest-common-subsequence.html"/>
+    <updated>2020-01-08T00:00:00+09:00</updated>
+    <id>/cs/computer-science-abstract-data-type-string-problem-longest-common-subsequence</id>
+    <content type="html">
+Problem
+
+  There are two strings A and B as following:
+
+
+
+  
+    
+      b
+      d
+      \0
+    
+  
+  
+    
+      0
+      1
+      2
+    
+  
+
+
+
+  
+    
+      a
+      b
+      c
+      d
+      \0
+    
+  
+  
+    
+      0
+      1
+      2
+      3
+      4
+    
+  
+
+
+2.1 Recursion Method(top down approach)...</content>
+  </entry>
+
+  <entry>
+    <title>A.D.T.P.: Knuth-Morris-Pratt String Matching</title>
+    <link href="/cs/computer-science-abstract-data-type-string-problem-Knuth-Morris-Pratt-matching.html"/>
+    <updated>2020-01-08T00:00:00+09:00</updated>
+    <id>/cs/computer-science-abstract-data-type-string-problem-Knuth-Morris-Pratt-matching</id>
+    <content type="html">
+
+  
+    
+      String
+      a
+      b
+      a
+      b
+      c
+      a
+      b
+      c
+      a
+      b
+      a
+      b
+      a
+      b
+      d
+    
+  
+  
+    
+       
+      1
+      2
+      3
+      4
+      5
+      6
+      7
+      8
+      9
+      10
+      11
+      12
+      13
+      14
+      15
+    ...</content>
+  </entry>
+
+  <entry>
+    <title>A.D.T.: String</title>
+    <link href="/cs/computer-science-abstract-data-type-string-introduction.html"/>
+    <updated>2020-01-08T00:00:00+09:00</updated>
+    <id>/cs/computer-science-abstract-data-type-string-introduction</id>
+    <content type="html">
+####
+
+  basically, compuer doesn’t support characters
+  we define some set of numbers as characters.
+  ASCII codes for English, Unicodes for all language.
+
+
+Galois
+
+  String is one of the abstract data type, this is amazing! I just too familiar
+with string, so I forgot what it is in nature.
+  Th...</content>
+  </entry>
+
+  <entry>
+    <title>A.D.T.: Stack</title>
+    <link href="/cs/computer-science-abstract-data-type-stack.html"/>
+    <updated>2020-01-08T00:00:00+09:00</updated>
+    <id>/cs/computer-science-abstract-data-type-stack</id>
+    <content type="html">
+####
+
+  Data:
+    
+      space for storing elements
+      top pointer
+    
+  
+  Operatons
+    
+      push(x)
+      pop()
+      isEmpty()
+      isFull()
+      stackTop()
+      peek()
+    
+  
+
+
+#include &amp;lt;iostream&amp;gt;
+
+void push(struct Stack *s, int element);
+void isFull(struct Stack s);
+void is...</content>
+  </entry>
+
+  <entry>
+    <title>A.D.T.: Matrices</title>
+    <link href="/cs/computer-science-abstract-data-type-sparse-matrix.html"/>
+    <updated>2020-01-08T00:00:00+09:00</updated>
+    <id>/cs/computer-science-abstract-data-type-sparse-matrix</id>
+    <content type="html">
+Representation
+
+Operation
+
+  addition
+
+
+Galois
+
+  what is ADT ?, everything you meet in life? You want to express in computer
+language. Sparse Matrix, tree, stack, queue everything.
+
+</content>
+  </entry>
+
+  <entry>
+    <title>A.D.T.: Sparse Matrices</title>
+    <link href="/cs/computer-science-abstract-data-type-sparse-matrices.html"/>
+    <updated>2020-01-08T00:00:00+09:00</updated>
+    <id>/cs/computer-science-abstract-data-type-sparse-matrices</id>
+    <content type="html">
+</content>
+  </entry>
+
+  <entry>
+    <title>A.D.T.: Introduction of Priority Queue</title>
+    <link href="/cs/computer-science-abstract-data-type-queue-priority.html"/>
+    <updated>2020-01-08T00:00:00+09:00</updated>
+    <id>/cs/computer-science-abstract-data-type-queue-priority</id>
+    <content type="html">
+####
+
+  Data
+    
+      space for storing elements
+      front for deletion
+      rear for insertion
+    
+  
+  Operations:
+    
+      enqueue(x)
+      dequeue()
+      isEmpty()
+      isFull()
+      first()
+      last()
+    
+  
+
+
+Queue using Single Pointer
+Queue using Two Pointer
+enqueue-O(1)
+den...</content>
+  </entry>
+
+  <entry>
+    <title>A.D.T.: Polynomial</title>
+    <link href="/cs/computer-science-abstract-data-type-polynomial.html"/>
+    <updated>2020-01-08T00:00:00+09:00</updated>
+    <id>/cs/computer-science-abstract-data-type-polynomial</id>
+    <content type="html">
+Galois
+
+  Polynomial is also one type of ADT.
+
+</content>
+  </entry>
+
+  <entry>
+    <title>A.D.T.P.: Matrix Multiplication</title>
+    <link href="/cs/computer-science-abstract-data-type-matrix-problem-multiplication.html"/>
+    <updated>2020-01-08T00:00:00+09:00</updated>
+    <id>/cs/computer-science-abstract-data-type-matrix-problem-multiplication</id>
+    <content type="html">
+</content>
+  </entry>
+
+  <entry>
+    <title>A.D.T.: Map</title>
+    <link href="/cs/computer-science-abstract-data-type-map.html"/>
+    <updated>2020-01-08T00:00:00+09:00</updated>
+    <id>/cs/computer-science-abstract-data-type-map</id>
+    <content type="html">
+基于数组和链表的map实现
+
+  数组用来存放哈希表
+  链表用来存放key
+
+
+class HashTable{
+	//哈希表
+	private static int hashTableSize=35;
+	//链表
+	private  List&amp;lt;Integer&amp;gt; list=new ArrayList&amp;lt;&amp;gt;();
+	private int[] hashTable=null;
+	//创建hash表
+	public void createHashTable(){
+		hashTable =new int[hashTableSize];
+		//初始化hash表
+		f...</content>
+  </entry>
+
+  <entry>
+    <title>A.D.T.: List</title>
+    <link href="/cs/computer-science-abstract-data-type-list.html"/>
+    <updated>2020-01-08T00:00:00+09:00</updated>
+    <id>/cs/computer-science-abstract-data-type-list</id>
+    <content type="html">
+####
+nodeDelete(node):
+    node.value = node.next.value
+    node.next  = node.next.next
+
+
+</content>
+  </entry>
+
+  <entry>
+    <title>A.D.T.: Heap Introduction</title>
+    <link href="/cs/computer-science-abstract-data-type-heap.html"/>
+    <updated>2020-01-08T00:00:00+09:00</updated>
+    <id>/cs/computer-science-abstract-data-type-heap</id>
+    <content type="html">
+Definition
+
+
+  First, Heap is complete binary tree.
+  node greater than its descendant.
+    
+      just like arranging apple in the mark, which is one on the top of the apple
+pyramid, the most fresh one, in this context, the maximum is the most fresh
+one.
+    
+  
+
+
+
+
+Operation
+
+  insert
+  delete...</content>
+  </entry>
+
+  <entry>
+    <title>A.D.T.: Hashing With Chaining</title>
+    <link href="/cs/computer-science-abstract-data-type-hashing.html"/>
+    <updated>2020-01-08T00:00:00+09:00</updated>
+    <id>/cs/computer-science-abstract-data-type-hashing</id>
+    <content type="html">
+Why this crap ?
+
+  we have linear search, its time complexity is $\Theta (n)$
+  we have binary search, its time complexity is $log_2^n$
+  The problem is: we need more, we don’t satisify with the current situation,
+we need more, how about constant time, can we do it? give it a shot.
+  The solutio...</content>
+  </entry>
+
+  <entry>
+    <title>A.D.T.: Dictionary</title>
+    <link href="/cs/computer-science-abstract-data-type-dictionary.html"/>
+    <updated>2020-01-08T00:00:00+09:00</updated>
+    <id>/cs/computer-science-abstract-data-type-dictionary</id>
+    <content type="html">
+</content>
+  </entry>
+
+  <entry>
+    <title>A.D.T.: Array Representations</title>
+    <link href="/cs/computer-science-abstract-data-type-array-representation.html"/>
+    <updated>2020-01-08T00:00:00+09:00</updated>
+    <id>/cs/computer-science-abstract-data-type-array-representation</id>
+    <content type="html">
+2D arrays
+
+  The compiler allows us to access a number in the matrices with row index and
+column index.
+  But in nature, in the memory, it’s one dimensional, they put them in a
+contiguous memory, it’s a sugar.
+
+
+
+
+2D arrays and Compilers
+
+  why index in array in C++ starts with 0?  why why why?
+...</content>
+  </entry>
+
+  <entry>
+    <title>A.D.T.: Array</title>
+    <link href="/cs/computer-science-abstract-data-type-array-introduction.html"/>
+    <updated>2020-01-08T00:00:00+09:00</updated>
+    <id>/cs/computer-science-abstract-data-type-array-introduction</id>
+    <content type="html">
+####
+
+  representation is implemented by the compiler.
+  operations on their data is not given by the compiler.
+
+
+Array ADT
+
+  Data
+    
+      Array Space
+      size
+      length
+    
+  
+  Operations
+    
+      display()
+      add(x)
+      insert(index, x)
+      search(x)
+    
+  
+
+
+Galois
+
+  com...</content>
   </entry>
 
   <entry>
@@ -12245,6 +12455,36 @@ void foo(int a[], in...</content>
   </entry>
 
   <entry>
+    <title>C++: Array</title>
+    <link href="/pl/pl-c++-array.html"/>
+    <updated>2015-11-10T00:00:00+09:00</updated>
+    <id>/pl/pl-c++-array</id>
+    <content type="html">
+static array
+
+dynamic array
+
+#include &amp;lt;iostream&amp;gt;
+
+int main(){
+
+    // stack
+    int a[5]={1,3,5,2,0};
+    int *b;
+
+    //heap
+    b = new int[5];
+    for(int i=0; i&amp;lt;5; i++){
+       std::cout&amp;lt;&amp;lt;b[i]&amp;lt;&amp;lt;std::endl;
+       std::cout&amp;lt;&amp;lt;*(b+i)&amp;lt;&amp;lt;std::endl;
+    }
+}
+
+
+Increas...</content>
+  </entry>
+
+  <entry>
     <title>C++: Expression</title>
     <link href="/pl/pl-c++-express.html"/>
     <updated>2015-11-08T00:00:00+09:00</updated>
@@ -12306,10 +12546,10 @@ cast-name是static, dynamic, const, reinterpret中的一种
   </entry>
 
   <entry>
-    <title>C++: Container</title>
-    <link href="/pl/pl-c++-array.html"/>
+    <title>C++: STL</title>
+    <link href="/pl/pl-c++-stl.html"/>
     <updated>2015-11-03T00:00:00+09:00</updated>
-    <id>/pl/pl-c++-array</id>
+    <id>/pl/pl-c++-stl</id>
     <content type="html">
 在出现标准库之前，c++程序使用数组保存对象，现代c++程序更多地用vector取代数组
 与vector相比，数组的长度是固定的。
@@ -12327,15 +12567,23 @@ cast-name是static, dynamic, const, reinterpret中的一种
 
   c++容忍隐士的类型转换，所以是一种种弱类型语言
   c++编译时进行类型检查，程序运行时不能改变其结构，所以是静态语言
-    Version
-  
-  c++11 版本，以前的C++代码风格极其混乱。
-  代码使用C++11的风格，以前的不要用了。
 
 
-.h文件和.cpp文件  后缀名是为了给程序员看的，没有什么用。
-C++中，变量，函数使用之前需要声明，头文件k就是起声明的作用。
-</content>
+Arithmetic
+
+  p++
+  p–
+  p+1
+
+
+#include &amp;lt;iostream&amp;gt;
+
+int main(){
+    int a[5]={1,2,2,1,9};
+    int *p = a;
+    std::cout&amp;lt;&amp;lt;p++&amp;lt;&amp;lt;std::endl;
+    std::cout&amp;lt;&amp;lt;a+1&amp;lt;&amp;lt;std::endl;
+    std::cout&amp;lt;&amp;lt;*(a+1)...</content>
   </entry>
 
   <entry>
