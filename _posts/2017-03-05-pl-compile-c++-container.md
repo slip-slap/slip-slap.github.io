@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "C++: Container"
-keywords: ["c++", "container"]
-description: "c++"
+keywords: []
+description: 
 category: "PL"
 tags: ["c++","compile"]
 ---
