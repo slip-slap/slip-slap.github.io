@@ -3,7 +3,7 @@ layout: post
 title: "Management: Process"
 keywords: []
 description: 
-category: "os"
+category: "OS"
 tags: ["MNG"]
 ---
 {% include JB/setup %}

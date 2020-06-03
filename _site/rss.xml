@@ -5,8 +5,8 @@
   <description>Just Do It - </description>
   <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
   <link></link>
-  <lastBuildDate>Wed, 03 Jun 2020 20:19:21 +0900</lastBuildDate>
-  <pubDate>Wed, 03 Jun 2020 20:19:21 +0900</pubDate>
+  <lastBuildDate>Wed, 03 Jun 2020 22:33:38 +0900</lastBuildDate>
+  <pubDate>Wed, 03 Jun 2020 22:33:38 +0900</pubDate>
   <ttl>1800</ttl>
 
 
@@ -1010,169 +1010,6 @@ situation, we call Y the response variable and X the predictor variable.&lt;/li&
   </item>
 
   <item>
-    <title>Script: Batch Processing</title>
-    <description>
-&lt;h4 id=&quot;rename-filename&quot;&gt;Rename Filename&lt;/h4&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;i &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.md
-&lt;span class=&quot;k&quot;&gt;do
-   &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;var1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;i&lt;/span&gt;:0:10&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-   &lt;span class=&quot;nv&quot;&gt;var2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;i&lt;/span&gt;:10:100&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-   &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;var1&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;-code&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;var2&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-   &lt;span class=&quot;nb&quot;&gt;mv&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;var1&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;-code&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;var2&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-</description>
-    <link>/pl/pl-script-linux-batch-process.html</link>
-    <guid>/pl/pl-script-linux-batch-process</guid>
-    <pubDate>Thu, 30 Apr 2020 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>Script: Apple Script</title>
-    <description>
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;osascript &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'tell application &quot;System Events&quot;
-    tell application &quot;Adobe Acrobat Reader DC&quot; to activate
-    keystroke &quot;h&quot; using {command down, control down}
-    end tell'&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://eastmanreference.com/complete-list-of-applescript-key-codes&quot;&gt;Complete list of AppleScript key
-codes&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    <link>/pl/pl-script-apple.html</link>
-    <guid>/pl/pl-script-apple</guid>
-    <pubDate>Thu, 30 Apr 2020 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>Service: SSH</title>
-    <description>
-&lt;h4 id=&quot;介绍&quot;&gt;介绍&lt;/h4&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;ssh是一种协议，用于计算机之间的加密登陆。&lt;/li&gt;
-  &lt;li&gt;用户从本地计算机通过ssh登陆到另外一台计算机，是安全的&lt;/li&gt;
-  &lt;li&gt;ssh只是一种协议，具体由多种实现，主要讲开源的OpenSSH实现&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;使用&quot;&gt;使用&lt;/h4&gt;
-
-&lt;h5 id=&quot;登陆&quot;&gt;登陆&lt;/h5&gt;
-&lt;p&gt;ssh的登陆和mysql的远程登陆很像，可能mysql的底层使用的就是ssh来实现远程登陆的&lt;/p&gt;
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# 用户名user登陆host&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ssh user@host
-&lt;span class=&quot;c&quot;&gt;# 本地用户名和远程用户名相同&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ssh host
-&lt;span class=&quot;c&quot;&gt;# ssh的默认端口为22，使用p修改端口&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ssh &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; user@host
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;hr /&gt;
-
-&lt;h5 id=&quot;登陆过程&quot;&gt;登陆过程&lt;/h5&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;主机受到用户的登陆请求，把自己的公钥发给用户&lt;/li&gt;
-  &lt;li&gt;用户使用公钥将登陆密码加密，发送给主机&lt;/li&gt;
-  &lt;li&gt;主机用私钥解密登陆密码，密码正确，同意登陆&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h5 id=&quot;免密码登陆&quot;&gt;免密码登陆&lt;/h5&gt;
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# 在a机器下生成公钥/私钥对,在用户家目录下的.ssh文件中&lt;/span&gt;
-ssh-keygen &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; rsa
-&lt;span class=&quot;c&quot;&gt;# 使用scp命令，将a机器id_rsa.pub复制到b机器的.ssh/authorized_keys文件里&lt;/span&gt;
-scp .ssh/id_rsa.pub hy@192.168.1.1:/home/hy/id_rsa.pub
-&lt;span class=&quot;c&quot;&gt;# b机器把从a机器复制的id_rsa.pub添加到.ssh/authorized_keys中&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;id_rsa.pub &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; .ssh/authorized_keys
-&lt;span class=&quot;c&quot;&gt;# 修改authorized_keys的权限为600&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;chmod &lt;/span&gt;600 .ssh/authorized_keys
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;中间人攻击&quot;&gt;中间人攻击&lt;/h4&gt;
-
-&lt;p&gt;如果攻击者在用户与远程主机之间，用伪造的公钥，获取用户的登陆密码，再用这个密码登陆主机。&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h5 id=&quot;口令登陆&quot;&gt;口令登陆&lt;/h5&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;第一次登陆对方主机会出现对方的公钥指纹，用来验证host主机的真实性&lt;/li&gt;
-  &lt;li&gt;公钥指纹一般使用RSA算法生成，长达1024位，难以比较,所以使用MD5算法，变成一个128位的指纹&lt;/li&gt;
-  &lt;li&gt;远程主机的公钥被接受以后，文件会被保存在客户端的${HOME}/.ssh/known_hosts文件中。下次再链接该主机时，由于客户端已经有了服务器的公钥，跳过验证主机真实性的步骤，直接输入密码登陆&lt;/li&gt;
-  &lt;li&gt;在/etc/ssh/ssh_known_hosts文件中保存对所用用户都信赖的公钥&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    <link>/linux/linux-service-ssh.html</link>
-    <guid>/linux/linux-service-ssh</guid>
-    <pubDate>Thu, 30 Apr 2020 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>Service: Internet</title>
-    <description>
-&lt;ul&gt;
-  &lt;li&gt;TCP/IP: Transmission Control Protocol/Internet Protocol&lt;/li&gt;
-  &lt;li&gt;LAN: Local Area Network&lt;/li&gt;
-  &lt;li&gt;WAN: Wide Area Network&lt;/li&gt;
-  &lt;li&gt;DNS: Domain name system&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;netstat&quot;&gt;netstat&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;show network status&lt;/li&gt;
-  &lt;li&gt;netstat -p TCP 显示tcp协议&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;ip&quot;&gt;ip&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;internet protocol&lt;/li&gt;
-  &lt;li&gt;ip addr&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.cnblogs.com/gbyukg/p/3326825.html&quot;&gt;Curl&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-    <link>/linux/linux-service-internet.html</link>
-    <guid>/linux/linux-service-internet</guid>
-    <pubDate>Thu, 30 Apr 2020 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>Service: File</title>
-    <description>
-&lt;h4 id=&quot;file-protocol&quot;&gt;File Protocol&lt;/h4&gt;
-&lt;p&gt;Enter the following code in file exploer address bar or brower address bar.&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;file:///Users/
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-</description>
-    <link>/linux/linux-service-file.html</link>
-    <guid>/linux/linux-service-file</guid>
-    <pubDate>Thu, 30 Apr 2020 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>Service: Program Execution</title>
-    <description>
-&lt;h4 id=&quot;mac-os&quot;&gt;Mac OS&lt;/h4&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#The CXX compiler identification is unknown: xcode&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;xcode-select &lt;span class=&quot;nt&quot;&gt;--reset&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-</description>
-    <link>/linux/linux-service-compiler.html</link>
-    <guid>/linux/linux-service-compiler</guid>
-    <pubDate>Thu, 30 Apr 2020 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
     <title>Work: Journal</title>
     <description>
 &lt;h4 id=&quot;neural-network&quot;&gt;neural network&lt;/h4&gt;
@@ -1202,25 +1039,6 @@ learning systems.&lt;/li&gt;
 </description>
     <link>/work/work-journal.html</link>
     <guid>/work/work-journal</guid>
-    <pubDate>Tue, 28 Apr 2020 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>GUI: ITerm</title>
-    <description>
-&lt;p&gt;####&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;ITerm2 is a terminal emulator for MacOS.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;ITerm2, Zsh shell,tmux, vim&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-    <link>/linux/linux-gui-iterm.html</link>
-    <guid>/linux/linux-gui-iterm</guid>
     <pubDate>Tue, 28 Apr 2020 00:00:00 +0900</pubDate>
   </item>
 
@@ -22150,64 +21968,6 @@ which in Jensen’s inequality for two points. The Jensen’s inequality is(for 
   </item>
 
   <item>
-    <title>GUI: Mac Application</title>
-    <description>
-&lt;h4 id=&quot;vlc视频播放器&quot;&gt;VLC视频播放器&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;open-source&lt;/li&gt;
-  &lt;li&gt;support multiplatform&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;mathpix-snipping-tool&quot;&gt;Mathpix Snipping Tool&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;translate formul&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;mac-os-safari&quot;&gt;Mac OS Safari&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;User Agent String is to detect Internet Explore Version, For IE7, you can set like this &lt;strong&gt;Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;mac-os-finder&quot;&gt;Mac OS Finder&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;If you mac can’t connect to another computer, please check the finder
-preference.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;mac-os-chrome&quot;&gt;Mac OS Chrome&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Can’t chang default search engine in Chrome
-    &lt;ul&gt;
-      &lt;li&gt;Go to system preferences&lt;/li&gt;
-      &lt;li&gt;click the profile&lt;/li&gt;
-      &lt;li&gt;the list will inclue “Iky”, select this item and click “-“ on the left lower
-corner.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;youtute&quot;&gt;Youtute&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;The the video progress bar is very useful, it will remember where you left
-off. when you played next time, it will start from where you were.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://blogs.msdn.microsoft.com/ie/2006/09/20/the-ie7-user-agent-string/&quot;&gt;Ie7 User Agent String&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://support.apple.com/guide/mac-help/if-your-mac-cant-connect-to-another-computer-mchlp1656/mac&quot;&gt;connect to windows server&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://support.google.com/chrome/thread/23333087?hl=en&quot;&gt;can’t change default search engine in
-Chrome&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    <link>/linux/linux-gui-mac-gui-software.html</link>
-    <guid>/linux/linux-gui-mac-gui-software</guid>
-    <pubDate>Fri, 03 May 2019 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
     <title>P.A.S.M.: Normal Distribution</title>
     <description>
 &lt;h4 id=&quot;normal-distribution&quot;&gt;Normal Distribution&lt;/h4&gt;
@@ -23826,6 +23586,63 @@ The grammar is pretty simple&lt;/p&gt;
   </item>
 
   <item>
+    <title>Shell: Zsh</title>
+    <description>
+&lt;h4 id=&quot;功能&quot;&gt;功能&lt;/h4&gt;
+&lt;p&gt;chsh是一个linux命令，用来修改设定用户的shell&lt;/p&gt;
+
+&lt;h4 id=&quot;语法&quot;&gt;语法&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;chsh -m 修改配置当前用户的shell&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;插件&quot;&gt;插件&lt;/h4&gt;
+
+&lt;h5 id=&quot;autojump&quot;&gt;autojump&lt;/h5&gt;
+&lt;p&gt;cd 过一次的目录，下次都可以直接跳转&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /Users/huiyaozhang/Library/Caches/IntelliJIdea2017.1/tomcat/Unnamed_direckBank
+j tomcat
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h5 id=&quot;zsh-autosuggestions&quot;&gt;zsh-autosuggestions&lt;/h5&gt;
+
+&lt;p&gt;该命令是基于历史命令数据进行分析的，随着输入的命令越来越多，提示会越来越准确&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# 觉得提示正确&lt;/span&gt;
+ctrl+f 表示采纳
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h5 id=&quot;zsh-syntax-highlighting&quot;&gt;zsh-syntax-highlighting&lt;/h5&gt;
+
+&lt;p&gt;语法高亮&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/.oh-my-zsh/custom/plugins
+git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
+&lt;span class=&quot;c&quot;&gt;# 修改配置文件～/.zshrc&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;plugins&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=(&lt;/span&gt;git&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 修改为plugins&lt;span class=&quot;o&quot;&gt;=(&lt;/span&gt;git zsh-syntax-highlighting&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h4 id=&quot;参考链接&quot;&gt;参考链接&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/robbyrussell/oh-my-zsh&quot;&gt;zsh之github&lt;/a&gt;&lt;/p&gt;
+</description>
+    <link>/pl/pl-script-shell-zsh.html</link>
+    <guid>/pl/pl-script-shell-zsh</guid>
+    <pubDate>Mon, 03 Jul 2017 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Shell: Variables</title>
+    <description>
+</description>
+    <link>/pl/pl-script-shell-variables.html</link>
+    <guid>/pl/pl-script-shell-variables</guid>
+    <pubDate>Mon, 03 Jul 2017 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
     <title>Shell: Common Commands</title>
     <description>
 &lt;h4 id=&quot;alias&quot;&gt;alias&lt;/h4&gt;
@@ -23944,65 +23761,133 @@ The grammar is pretty simple&lt;/p&gt;
 &lt;/ol&gt;
 
 </description>
-    <link>/pl/pl-script-user-commands.html</link>
-    <guid>/pl/pl-script-user-commands</guid>
+    <link>/pl/pl-script-shell-user-commands.html</link>
+    <guid>/pl/pl-script-shell-user-commands</guid>
     <pubDate>Mon, 03 Jul 2017 00:00:00 +0900</pubDate>
   </item>
 
   <item>
-    <title>Shell: Zsh</title>
+    <title>Command: Tmux</title>
     <description>
-&lt;h4 id=&quot;功能&quot;&gt;功能&lt;/h4&gt;
-&lt;p&gt;chsh是一个linux命令，用来修改设定用户的shell&lt;/p&gt;
-
-&lt;h4 id=&quot;语法&quot;&gt;语法&lt;/h4&gt;
+&lt;h4 id=&quot;intro&quot;&gt;intro&lt;/h4&gt;
+&lt;p&gt;tmux is a terminal multiplexer，tmux使用C/S模型构建，it consists of the
+following unit:&lt;/p&gt;
 &lt;ol&gt;
-  &lt;li&gt;chsh -m 修改配置当前用户的shell&lt;/li&gt;
+  &lt;li&gt;server，输入tmux命令开启一个服务器&lt;/li&gt;
+  &lt;li&gt;session，一个服务器可以包含多个会话&lt;/li&gt;
+  &lt;li&gt;window， 一个会话可以包含多个窗口&lt;/li&gt;
+  &lt;li&gt;pane， 一个窗口一个包含多个面板&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h4 id=&quot;插件&quot;&gt;插件&lt;/h4&gt;
+&lt;h4 id=&quot;layout&quot;&gt;Layout&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;prefix+ space: change the layout from horizontal to vertial&lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;h5 id=&quot;autojump&quot;&gt;autojump&lt;/h5&gt;
-&lt;p&gt;cd 过一次的目录，下次都可以直接跳转&lt;/p&gt;
+&lt;h4 id=&quot;session-operation&quot;&gt;Session Operation&lt;/h4&gt;
 
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /Users/huiyaozhang/Library/Caches/IntelliJIdea2017.1/tomcat/Unnamed_direckBank
-j tomcat
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;exit current session:  prefix+d &lt;font color=&quot;red&quot;&gt;退出该session后，该session扔在后台运行&lt;/font&gt;&lt;/li&gt;
+  &lt;li&gt;check out all sessions: tmux ls&lt;/li&gt;
+  &lt;li&gt;re-enter session: tmux attach -t session-name&lt;/li&gt;
+  &lt;li&gt;create a session with specific name: tmux new -s name&lt;/li&gt;
+  &lt;li&gt;rename a session: tmux rename-session -t 3 paper&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;session-switch&quot;&gt;Session Switch&lt;/h5&gt;
+&lt;ol&gt;
+  &lt;li&gt;prefix+w :the shortcut key of vim plugin nerdtree is also prefix+w&lt;/li&gt;
+&lt;/ol&gt;
 &lt;hr /&gt;
 
-&lt;h5 id=&quot;zsh-autosuggestions&quot;&gt;zsh-autosuggestions&lt;/h5&gt;
+&lt;h4 id=&quot;功能&quot;&gt;功能&lt;/h4&gt;
 
-&lt;p&gt;该命令是基于历史命令数据进行分析的，随着输入的命令越来越多，提示会越来越准确&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# 觉得提示正确&lt;/span&gt;
-ctrl+f 表示采纳
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;为了使自身的快捷键和其他软件的快捷键
+互不干扰，tmux定义了快捷键前缀&lt;br /&gt;
+tmux默认的快捷键前缀是Ctrl-b&lt;br /&gt;
+Caps-Lock-a 用着更方便，可以在配置文件中自己设置&lt;/p&gt;
 &lt;hr /&gt;
 
-&lt;h5 id=&quot;zsh-syntax-highlighting&quot;&gt;zsh-syntax-highlighting&lt;/h5&gt;
+&lt;h4 id=&quot;window-operation&quot;&gt;window operation&lt;/h4&gt;
 
-&lt;p&gt;语法高亮&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;tmux kill-window -t window-name&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
 
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/.oh-my-zsh/custom/plugins
-git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
-&lt;span class=&quot;c&quot;&gt;# 修改配置文件～/.zshrc&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;plugins&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=(&lt;/span&gt;git&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 修改为plugins&lt;span class=&quot;o&quot;&gt;=(&lt;/span&gt;git zsh-syntax-highlighting&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;h4 id=&quot;pane-operation&quot;&gt;Pane Operation&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;up and down split screen:  prefix+”&lt;/li&gt;
+  &lt;li&gt;left and right split screen:  prefix+%&lt;/li&gt;
+  &lt;li&gt;switch screen: prefix+o&lt;/li&gt;
+  &lt;li&gt;关闭终端 prefix+x&lt;/li&gt;
+  &lt;li&gt;上下左右分屏切换 prfex+空格键&lt;/li&gt;
+  &lt;li&gt;上下分屏窗格切换 prefix+}&lt;/li&gt;
+  &lt;li&gt;full screen   prefix+z   (z which means zoom in and zoom out)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+
+&lt;h5 id=&quot;adjust-pane-size&quot;&gt;Adjust Pane Size&lt;/h5&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;bind&lt;/span&gt; &amp;lt; resize-pane &lt;span class=&quot;nt&quot;&gt;-L&lt;/span&gt; 2
+&lt;span class=&quot;nb&quot;&gt;bind&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; resize-pane &lt;span class=&quot;nt&quot;&gt;-R&lt;/span&gt; 2
+&lt;span class=&quot;nb&quot;&gt;bind &lt;/span&gt;_ resize-pane &lt;span class=&quot;nt&quot;&gt;-D&lt;/span&gt; 2
+&lt;span class=&quot;nb&quot;&gt;bind&lt;/span&gt; + resize-pane &lt;span class=&quot;nt&quot;&gt;-U&lt;/span&gt; 2
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h4 id=&quot;参考链接&quot;&gt;参考链接&lt;/h4&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://github.com/robbyrussell/oh-my-zsh&quot;&gt;zsh之github&lt;/a&gt;&lt;/p&gt;
-</description>
-    <link>/linux/pl-script-shell-zsh.html</link>
-    <guid>/linux/pl-script-shell-zsh</guid>
-    <pubDate>Mon, 03 Jul 2017 00:00:00 +0900</pubDate>
-  </item>
+&lt;h4 id=&quot;复制模式&quot;&gt;复制模式&lt;/h4&gt;
 
-  <item>
-    <title>Shell: Variables</title>
-    <description>
+&lt;p&gt;在tmux的配置文件.tmux.conf添加如下配置&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;setw &lt;span class=&quot;nt&quot;&gt;-g&lt;/span&gt; mode-keys vi
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;前缀键+[ 进入复制模式&lt;/li&gt;
+  &lt;li&gt;使用vi的j,h,k,l方向键移动光标&lt;/li&gt;
+  &lt;li&gt;按空格键开始选择复制区域&lt;/li&gt;
+  &lt;li&gt;选择完成后按enter键退出&lt;/li&gt;
+  &lt;li&gt;前缀键 ] 粘贴&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;配置文件&quot;&gt;配置文件&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;default configuration file:  ~/.tmux.conf&lt;/li&gt;
+  &lt;li&gt;reload tmux environment&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;type &lt;/span&gt;this &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;terminal &lt;span class=&quot;k&quot;&gt;if &lt;/span&gt;tmux is already running
+tmux &lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; ~/.tmux.conf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;plugin&quot;&gt;plugin&lt;/h4&gt;
+
+&lt;h4 id=&quot;tmux-plugin-manager&quot;&gt;Tmux Plugin Manager&lt;/h4&gt;
+
+&lt;p&gt;Just as the name noted, this is plugin is used to manage plugins of tmux&lt;/p&gt;
+
+&lt;h4 id=&quot;tmux-resurrect&quot;&gt;tmux-resurrect&lt;/h4&gt;
+&lt;p&gt;key bindings&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;prefix + Ctrl-s -save&lt;/li&gt;
+  &lt;li&gt;prefix + Ctrl-l -restore&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;reference&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/tmux-plugins/tpm&quot;&gt;Tmux Plugin Manager&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/tmux-plugins/tmux-resurrect&quot;&gt;Tmux Resurrect&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
 </description>
-    <link>/pl/pl-script-shell-variables.html</link>
-    <guid>/pl/pl-script-shell-variables</guid>
+    <link>/pl/pl-script-shell-tmux.html</link>
+    <guid>/pl/pl-script-shell-tmux</guid>
     <pubDate>Mon, 03 Jul 2017 00:00:00 +0900</pubDate>
   </item>
 
@@ -24023,7 +23908,7 @@ git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
   </item>
 
   <item>
-    <title>CLI: Time Schedule</title>
+    <title>Shell: Time Schedule</title>
     <description>
 &lt;h4 id=&quot;at的访问控制&quot;&gt;at的访问控制&lt;/h4&gt;
 &lt;ol&gt;
@@ -24043,8 +23928,26 @@ atq
 at &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; 1
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
-    <link>/linux/pl-script-shell-scheduling.html</link>
-    <guid>/linux/pl-script-shell-scheduling</guid>
+    <link>/pl/pl-script-shell-scheduling.html</link>
+    <guid>/pl/pl-script-shell-scheduling</guid>
+    <pubDate>Mon, 03 Jul 2017 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Shell: My Script</title>
+    <description>
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;i &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.md
+&lt;span class=&quot;k&quot;&gt;do
+   &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;var1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;i&lt;/span&gt;:0:10&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+   &lt;span class=&quot;nv&quot;&gt;var2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;i&lt;/span&gt;:10:100&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+   &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;var1&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;-code&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;var2&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+   &lt;span class=&quot;nb&quot;&gt;mv&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;var1&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;-code&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;var2&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+</description>
+    <link>/pl/pl-script-shell-my-script.html</link>
+    <guid>/pl/pl-script-shell-my-script</guid>
     <pubDate>Mon, 03 Jul 2017 00:00:00 +0900</pubDate>
   </item>
 
@@ -24097,6 +24000,48 @@ man sh
   </item>
 
   <item>
+    <title>Shell: Internet</title>
+    <description>
+&lt;ul&gt;
+  &lt;li&gt;TCP/IP: Transmission Control Protocol/Internet Protocol&lt;/li&gt;
+  &lt;li&gt;LAN: Local Area Network&lt;/li&gt;
+  &lt;li&gt;WAN: Wide Area Network&lt;/li&gt;
+  &lt;li&gt;DNS: Domain name system&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;netstat&quot;&gt;netstat&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;show network status&lt;/li&gt;
+  &lt;li&gt;netstat -p TCP 显示tcp协议&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;ip&quot;&gt;ip&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;internet protocol&lt;/li&gt;
+  &lt;li&gt;ip addr&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cnblogs.com/gbyukg/p/3326825.html&quot;&gt;Curl&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/pl/pl-script-shell-internet.html</link>
+    <guid>/pl/pl-script-shell-internet</guid>
+    <pubDate>Mon, 03 Jul 2017 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Shell: Control Block</title>
+    <description>
+</description>
+    <link>/pl/pl-script-shell-control-block.html</link>
+    <guid>/pl/pl-script-shell-control-block</guid>
+    <pubDate>Mon, 03 Jul 2017 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
     <title>Shell: Find</title>
     <description>
 &lt;h4 id=&quot;grammar&quot;&gt;grammar&lt;/h4&gt;
@@ -24121,17 +24066,586 @@ find &lt;span class=&quot;s2&quot;&gt;&quot;test&quot;&lt;/span&gt; &lt;span cla
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;findutils
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
-    <link>/pl/pl-script-shell-find.html</link>
-    <guid>/pl/pl-script-shell-find</guid>
+    <link>/pl/pl-script-shell-command-find.html</link>
+    <guid>/pl/pl-script-shell-command-find</guid>
     <pubDate>Mon, 03 Jul 2017 00:00:00 +0900</pubDate>
   </item>
 
   <item>
-    <title>Shell: Control Block</title>
+    <title>Command: Crontab</title>
     <description>
+&lt;h4 id=&quot;访问控制&quot;&gt;访问控制&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;当系统中有/etc/cron.allow文件时，只有写入此文件的用户可以使用crontab命令。&lt;/li&gt;
+  &lt;li&gt;当/etc/cron.allow存在时，/etc/cron.deny文件会被忽略,/etc/cron.allow文件的优先级更高&lt;/li&gt;
+  &lt;li&gt;当系统中只有/etc/cron.deny文件时，写入此文件的用户不能使用crontab命令&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;常用命令&quot;&gt;常用命令&lt;/h4&gt;
+&lt;table&gt;
+	&lt;tr&gt;
+		&lt;th&gt;项目&lt;/th&gt;
+		&lt;th&gt;*&lt;/th&gt;
+		&lt;th&gt;*&lt;/th&gt;
+		&lt;th&gt;*&lt;/th&gt;
+		&lt;th&gt;*&lt;/th&gt;
+		&lt;th&gt;*&lt;/th&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;含义&lt;/td&gt;
+		&lt;td&gt;每小时中的第几分钟&lt;/td&gt;
+		&lt;td&gt;每天当中的第几小时&lt;/td&gt;
+		&lt;td&gt;每月当中的第几天&lt;/td&gt;
+		&lt;td&gt;每年当中的第几月&lt;/td&gt;
+		&lt;td&gt;每周当中的星期几&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;范围&lt;/td&gt;
+		&lt;td&gt;0-59&lt;/td&gt;
+		&lt;td&gt;0-23&lt;/td&gt;
+		&lt;td&gt;1-31&lt;/td&gt;
+		&lt;td&gt;1-12&lt;/td&gt;
+		&lt;td&gt;0-7&lt;/td&gt;
+	&lt;/tr&gt;
+
+&lt;/table&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# 编辑定时任务&lt;/span&gt;
+crontab &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# 含义每个小时的第10分钟执行下列命令&lt;/span&gt;
+10 &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;ls&lt;/span&gt; /home &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; ~/temp 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
 </description>
-    <link>/pl/pl-script-shell-control-block.html</link>
-    <guid>/pl/pl-script-shell-control-block</guid>
+    <link>/pl/pl-script-shell-command-crontab.html</link>
+    <guid>/pl/pl-script-shell-command-crontab</guid>
+    <pubDate>Mon, 03 Jul 2017 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>SSH</title>
+    <description>
+&lt;h4 id=&quot;介绍&quot;&gt;介绍&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;ssh是一种协议，用于计算机之间的加密登陆。&lt;/li&gt;
+  &lt;li&gt;用户从本地计算机通过ssh登陆到另外一台计算机，是安全的&lt;/li&gt;
+  &lt;li&gt;ssh只是一种协议，具体由多种实现，主要讲开源的OpenSSH实现&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;使用&quot;&gt;使用&lt;/h4&gt;
+
+&lt;h5 id=&quot;登陆&quot;&gt;登陆&lt;/h5&gt;
+&lt;p&gt;ssh的登陆和mysql的远程登陆很像，可能mysql的底层使用的就是ssh来实现远程登陆的&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# 用户名user登陆host&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ssh user@host
+&lt;span class=&quot;c&quot;&gt;# 本地用户名和远程用户名相同&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ssh host
+&lt;span class=&quot;c&quot;&gt;# ssh的默认端口为22，使用p修改端口&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ssh &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; user@host
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h5 id=&quot;登陆过程&quot;&gt;登陆过程&lt;/h5&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;主机受到用户的登陆请求，把自己的公钥发给用户&lt;/li&gt;
+  &lt;li&gt;用户使用公钥将登陆密码加密，发送给主机&lt;/li&gt;
+  &lt;li&gt;主机用私钥解密登陆密码，密码正确，同意登陆&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h5 id=&quot;免密码登陆&quot;&gt;免密码登陆&lt;/h5&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# 在a机器下生成公钥/私钥对,在用户家目录下的.ssh文件中&lt;/span&gt;
+ssh-keygen &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; rsa
+&lt;span class=&quot;c&quot;&gt;# 使用scp命令，将a机器id_rsa.pub复制到b机器的.ssh/authorized_keys文件里&lt;/span&gt;
+scp .ssh/id_rsa.pub hy@192.168.1.1:/home/hy/id_rsa.pub
+&lt;span class=&quot;c&quot;&gt;# b机器把从a机器复制的id_rsa.pub添加到.ssh/authorized_keys中&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;id_rsa.pub &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; .ssh/authorized_keys
+&lt;span class=&quot;c&quot;&gt;# 修改authorized_keys的权限为600&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;chmod &lt;/span&gt;600 .ssh/authorized_keys
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;中间人攻击&quot;&gt;中间人攻击&lt;/h4&gt;
+
+&lt;p&gt;如果攻击者在用户与远程主机之间，用伪造的公钥，获取用户的登陆密码，再用这个密码登陆主机。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h5 id=&quot;口令登陆&quot;&gt;口令登陆&lt;/h5&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;第一次登陆对方主机会出现对方的公钥指纹，用来验证host主机的真实性&lt;/li&gt;
+  &lt;li&gt;公钥指纹一般使用RSA算法生成，长达1024位，难以比较,所以使用MD5算法，变成一个128位的指纹&lt;/li&gt;
+  &lt;li&gt;远程主机的公钥被接受以后，文件会被保存在客户端的${HOME}/.ssh/known_hosts文件中。下次再链接该主机时，由于客户端已经有了服务器的公钥，跳过验证主机真实性的步骤，直接输入密码登陆&lt;/li&gt;
+  &lt;li&gt;在/etc/ssh/ssh_known_hosts文件中保存对所用用户都信赖的公钥&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/pl/pl-script-service-ssh.html</link>
+    <guid>/pl/pl-script-service-ssh</guid>
+    <pubDate>Mon, 03 Jul 2017 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Editor: Vimscript</title>
+    <description>
+&lt;h3 id=&quot;1-introduction&quot;&gt;1. Introduction&lt;/h3&gt;
+&lt;p&gt;This software is plugin system, so it is very flexible and diffcult to learn.
+it heavily depends on the plugin and shortcut to improve the efficient.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;2-常用功能&quot;&gt;2. 常用功能&lt;/h3&gt;
+
+&lt;h4 id=&quot;21-setting&quot;&gt;2.1 Setting&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;set relativenumber!&lt;/li&gt;
+  &lt;li&gt;set cursorline&lt;/li&gt;
+  &lt;li&gt;syntax off  I spend a lot of time to fix this simple question, crap !!!!!!!!&lt;/li&gt;
+  &lt;li&gt;adjust window width
+    &lt;pre&gt;&lt;code class=&quot;language-code&quot;&gt;:nnoremap  &amp;lt;leader&amp;gt;+ :vertical res +10 &amp;lt;cr&amp;gt;
+:nnoremap  &amp;lt;leader&amp;gt;- :vertical res -10&amp;lt;cr&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;22-register&quot;&gt;2.2 register&lt;/h4&gt;
+&lt;p&gt;To access a register, type &lt;strong&gt;“a&lt;/strong&gt;, &lt;strong&gt;a&lt;/strong&gt; is the name of the register. &lt;br /&gt;
+:reg to check out the content of the  register &lt;br /&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;to paste from system clipboard on Mac  &lt;strong&gt;”*p&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;to copy into system clipboard on Mac &lt;strong&gt;”*yy&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;23-format&quot;&gt;2.3 format&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;select the lines of text you want to re-format:
+    &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;v
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;reformat it
+    &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gq
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;h4 id=&quot;24-code-folding&quot;&gt;2.4 Code folding&lt;/h4&gt;
+    &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s2&quot;&gt;&quot; 设置代码折叠方式
+set foldmethod=indent
+&quot;&lt;/span&gt; 打开全部折叠
+zR
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;25-search&quot;&gt;2.5 Search&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;/target 从文档的开始匹配目标字符串，n匹配下一个，N匹配上一个&lt;/li&gt;
+  &lt;li&gt;?target 从文档的结束位置匹配目标字符串，n匹配下一个，N匹配上一个&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;26-delete&quot;&gt;2.6 Delete&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;ctrl+w 删除光标所在行的光标之前的文字&lt;/li&gt;
+  &lt;li&gt;ndd 删除光标所在行的后n行，包括光标所在行&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;27-split-screen&quot;&gt;2.7 Split Screen&lt;/h4&gt;
+
+&lt;p&gt;命令行的快捷键和图形界面的快捷键不一样，&lt;font color=&quot;red&quot;&gt;图形界面的前缀键和命令键是同时按下的,命令行的前缀键和命令键常常分开&lt;/font&gt;使用tmux时，它的前缀键为ctrl+b&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;ctrl+w 为前缀键，j k h l上下左右切换&lt;/li&gt;
+  &lt;li&gt;ctrl+w 为前缀键 &amp;gt;可以改变窗口大小&lt;/li&gt;
+  &lt;li&gt;sp file  水平打开&lt;/li&gt;
+  &lt;li&gt;vsp file 垂直打开
+    &lt;h4 id=&quot;版本查看&quot;&gt;版本查看&lt;/h4&gt;
+    &lt;p&gt;:version 查看vim支持的插件，如python等
+:set  show vars different from defaults
+:h key-notation 查看键盘映射
+:ctrl+r anti-cancel
+:set colorcolumn=80 lenght marke&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;code-complete&quot;&gt;Code Complete&lt;/h4&gt;
+
+&lt;p&gt;ctrl+p 默认的代码补全功能是根据缓冲区中的内容进行正则匹配&lt;/p&gt;
+
+&lt;h4 id=&quot;javascript&quot;&gt;javascript&lt;/h4&gt;
+
+&lt;p&gt;在.vimrc配置文件中添加&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;ctrl+x ctrl+o 方向箭头选择补全的文本&lt;/p&gt;
+
+&lt;h4 id=&quot;十六进制查看&quot;&gt;十六进制查看&lt;/h4&gt;
+
+&lt;p&gt;在normal模式中输入”:%!xxd”
+切换回常规模式:”:%!xxd -r”&lt;/p&gt;
+
+&lt;h4 id=&quot;auto-indent&quot;&gt;auto indent&lt;/h4&gt;
+
+&lt;p&gt;vim在粘贴代码时会自动缩进，把代码搞得一团糟糕，需要提前设置&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;set paste&lt;/li&gt;
+  &lt;li&gt;set nopaste&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;copy into vim from GUI results missing line&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;before pasting to vim, make sure the Insert Mode is activated.&lt;/li&gt;
+  &lt;li&gt;the reason is that paste character &lt;strong&gt;i&lt;/strong&gt; or character &lt;strong&gt;o&lt;/strong&gt; will trigger
+insert mode, and you will miss everying before&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;joining-two-lines-with-j&quot;&gt;joining two lines with J&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;J joins the line the cursor is on with the line below&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;同时打开多个文件&quot;&gt;同时打开多个文件&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;vim -On file1 file2 n表示要打开的文件数，O大写表示打开垂直窗口&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;vim中执行shell命令&quot;&gt;vim中执行shell命令&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;!command
+不退出vim并执行shell命令command,输出命令显示在vim的命令区域，不改变当前编辑的文件内容&lt;/li&gt;
+  &lt;li&gt;r !command 将shell命令command的结果插入到当前行的下一行&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;tab与空格替换&quot;&gt;tab与空格替换&lt;/h4&gt;
+&lt;p&gt;a tab could be a different number of columns depending on your enviroment&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# substitue tab for space
+:set ts=4
+:set expandtab
+:%retab!
+
+# substitue space for tab
+:set ts=4
+:set noexpandtab
+:%retab!
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;3-mode&quot;&gt;3. Mode&lt;/h3&gt;
+
+&lt;h4 id=&quot;31-visual-mode&quot;&gt;3.1 Visual Mode&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Character mode: v (lower-case)&lt;/li&gt;
+  &lt;li&gt;Line mode: V(upper-case)&lt;/li&gt;
+  &lt;li&gt;Block mode: Ctrl+v&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;32-normal-mode&quot;&gt;3.2 Normal Mode&lt;/h4&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# 映射G键到别的东西&lt;/span&gt;
+:nnoremap G &lt;span class=&quot;nb&quot;&gt;dd&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# normal命令将顾及当前的所有映射,下面的命令将会删除光标所在行&lt;/span&gt;
+:normal G
+&lt;span class=&quot;c&quot;&gt;# normal!&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;33-recording-mode&quot;&gt;3.3 Recording Mode&lt;/h4&gt;
+
+&lt;p&gt;record type character into register&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;press q to enter into recording mode in normal mode, and vim begin to record
+your operation&lt;/li&gt;
+  &lt;li&gt;press q to end recording in normal mode&lt;/li&gt;
+  &lt;li&gt;press @&amp;lt;letter&amp;gt; to replay the recorded operation&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;4-plugin&quot;&gt;4. Plugin&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;For every plugin, you can refer to the instruction about how to use them.&lt;/li&gt;
+  &lt;li&gt;and in the vimrc file to setting.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;41-vundle-plugin&quot;&gt;4.1 vundle-plugin&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;BundleList 查看已经安装的插件&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;42-youcompleteme-plugin&quot;&gt;4.2 YouCompleteMe-plugin&lt;/h4&gt;
+&lt;p&gt;Maybe this is the most difficult plugin to install&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;YouCompleteMe itself work in client-server pattern&lt;/li&gt;
+  &lt;li&gt;Everytime you start vim, the &lt;strong&gt;thread systemd&lt;/strong&gt; will begin to work on some
+port.&lt;/li&gt;
+  &lt;li&gt;Actualy, you can start &lt;strong&gt;system manually&lt;/strong&gt;, to check whether you install it
+properly&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /path/to/YouCompleteMe/third_party/ycmd/
+&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;PYTHON_USED_DURING_BUILDING
+/some/path/to/python3
+&lt;span class=&quot;nb&quot;&gt;cp &lt;/span&gt;ycmd/default_settings.json &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+/some/path/to/python3 ycmd &lt;span class=&quot;nt&quot;&gt;--options_file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;default_settings.json
+serving on http://localhost:&amp;lt;some port&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# &lt;/span&gt;
+git clone https://github.com/Valloric/YouCompleteMe.git
+git submodule update &lt;span class=&quot;nt&quot;&gt;--init&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--recursive&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;43-nerdtree-plugin&quot;&gt;4.3 NERDTree-plugin&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;install
+    &lt;ul&gt;
+      &lt;li&gt;在.vim文件下创建autoload和bundle子文件夹&lt;/li&gt;
+      &lt;li&gt;下载pathogen.vim到autoload中&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/.vim &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;mkdir &lt;/span&gt;autoload &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;mkdir &lt;/span&gt;bundle &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;bundle
+curl &lt;span class=&quot;nt&quot;&gt;-LSso&lt;/span&gt; ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Add configuration to .vimrc file&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;execute pathogen#infect&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ol&gt;
+  &lt;li&gt;install NERDTree&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/.vim/bundle
+git clone https://github.com/scrooloose/nerdtree.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;usage
+    &lt;ul&gt;
+      &lt;li&gt;ctrl+w+w 切换窗口&lt;/li&gt;
+      &lt;li&gt;o 打开光标所在目录 O递归打开所有子目录&lt;/li&gt;
+      &lt;li&gt;p 回到光标坐在父目录&lt;/li&gt;
+      &lt;li&gt;r 刷新光标所在的子目录&lt;/li&gt;
+      &lt;li&gt;? pop-up help document&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;44-ctrlp-plugin&quot;&gt;4.4 CtrlP-plugin&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Configuration
+    &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;runtimepath^&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;~/.vim/bundle/ctrlp.vim
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;46-powerline-plugin&quot;&gt;4.6 powerline-plugin&lt;/h4&gt;
+&lt;h4 id=&quot;47-vimtex-plugin&quot;&gt;4.7 vimtex-plugin&lt;/h4&gt;
+
+&lt;p&gt;参考内容 &lt;br /&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;http://learnvimscriptthehardway.onefloweroneworld.com/chapters/12.html&quot;&gt;learn vim the hardest way&lt;/a&gt; &lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cs.swarthmore.edu/oldhelp/vim/help.html&quot;&gt;vim tip and tricks&lt;/a&gt; &lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://vim.sourceforge.io/docs.php&quot;&gt;vim教程官方网站&lt;/a&gt; &lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;ftp://ftp.vim.org/pub/vim/doc/book/vimbook-OPL.pdf&quot;&gt;vim官方网站pdf教程&lt;/a&gt; &lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/VundleVim/Vundle.vim&quot;&gt;vundle教程&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://ternjs.net/doc/manual.html#server&quot;&gt;tern安装教程&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://kien.github.io/ctrlp.vim/#installation&quot;&gt;CtrlP-plugin&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.hangge.com/blog/cache/detail_1537.html&quot;&gt;Emmet使用教程&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/johnbellone/vim&quot;&gt;how to add vim NERDTree plugin&lt;/a&gt; &lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/python-mode/python-mode&quot;&gt;pymode-plugin&lt;/a&gt; &lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/powerline/powerline&quot;&gt;powerline-plugin&lt;/a&gt; &lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/lervag/vimtex&quot;&gt;vimtex-plugin&lt;/a&gt; &lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/1527784/what-is-vim-recording-and-how-can-it-be-disabled&quot;&gt;vim recording mode&lt;/a&gt; &lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/1497958/how-do-i-use-vim-registers&quot;&gt;vim register&lt;/a&gt; &lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://thoughtbot.com/blog/wrap-existing-text-at-80-characters-in-vim&quot;&gt;vim format&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/ycm-core/YouCompleteMe&quot;&gt;YouCompleteMe&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/ycm-core/YouCompleteMe/wiki/Troubleshooting-steps-for-ycmd-server-SHUT-DOWN&quot;&gt;YouCompleteMe Trouble Shooting&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/pl/pl-script-editor-vimscript.html</link>
+    <guid>/pl/pl-script-editor-vimscript</guid>
+    <pubDate>Mon, 03 Jul 2017 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Editor: Sed</title>
+    <description>
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;\w 数字0-9，字母a-z及A-Z，下划线 &lt;font color=&quot;red&quot;&gt;因为在编程语言中，数字的命名都是数字字母下划线&lt;/font&gt;&lt;/li&gt;
+  &lt;li&gt;\W 非\w&lt;/li&gt;
+  &lt;li&gt;. 除去换行符以外的任意字符&lt;/li&gt;
+  &lt;li&gt;[] 字符范围&lt;/li&gt;
+  &lt;li&gt;[^…] 字符范围以外&lt;/li&gt;
+  &lt;li&gt;^ 行首&lt;/li&gt;
+  &lt;li&gt;$ 行尾&lt;/li&gt;
+  &lt;li&gt;()  分组, 并记录匹配到的字符串&lt;/li&gt;
+  &lt;li&gt;\n  使用分组符(x)匹配到的字符串
+    &lt;h4 id=&quot;repeat&quot;&gt;repeat&lt;/h4&gt;
+  &lt;/li&gt;
+  &lt;li&gt;x* x+ 贪婪匹配&lt;/li&gt;
+  &lt;li&gt;x* x+? 非贪婪匹配&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;x?      出现0次或一次&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;(?:x) 仅分组&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;awk&quot;&gt;Awk&lt;/h4&gt;
+&lt;h4 id=&quot;分割符&quot;&gt;分割符&lt;/h4&gt;
+&lt;p&gt;-F field-separator(默认为空格)&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;awk&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-F&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;':'&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'{print $3}'&lt;/span&gt; /etc/passwd
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;feature&quot;&gt;feature&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;the ability to filter text in a pipeline which particularly distinguishes it from other types of editors&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;语法&quot;&gt;语法&lt;/h4&gt;
+
+&lt;p&gt;命令行格式&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;options] &lt;span class=&quot;s1&quot;&gt;'command'&lt;/span&gt; file&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;s&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# options: -e; -n; -i&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# -n: suppress automatic printing of **pattern space**&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# what's the crap, what's the pattern space ? it's every text line that the sed command take in&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# command: 行定位(正则)+sed命令&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#  行定位可以使用行号,或者正则&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# 定位一行: x; /pattern/&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# 定位几行: x,y; /pattern/,/pattern/;&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# 反向选择: x,y!&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# 间隔行: first~step&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h5 id=&quot;增删改查&quot;&gt;增删改查&lt;/h5&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;a 在指定行之后插入&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;nl &lt;/span&gt;passwd | &lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'1,3a ========================'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;i在指定行之间插入&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;nl &lt;/span&gt;passwd | &lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'1,3i ========================'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;替换指定行&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;nl &lt;/span&gt;passwd | &lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'1,3c  ========================'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h5 id=&quot;替换行内容&quot;&gt;替换行内容&lt;/h5&gt;
+
+&lt;p&gt;这是sed核心的命令&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# 在使用替换命令的时候，注意参数的设置&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;temp | &lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'slipslap'&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'s/slipslap//'&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'s/\/.*est//'&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'s/13.*//'&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# batch substitution&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# find the target&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'/category: &quot;statitics&quot;/p'&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# replace the target&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'s/category: &quot;statitics&quot;/category: &quot;math&quot;/'&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'1,9c --- \nlayout: post \ntitle: &quot;C++: Vim&quot; \nkeywords: []
+\ndescription: \ncategory: &quot;code&quot; \ntags: [&quot;c++&quot;] \n--- \n
+
+
+'&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;####&lt;/p&gt;
+
+&lt;p&gt;脚本格式&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; scripgfile file&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;s&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;版本差异&quot;&gt;版本差异&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;in practice, you can discard the BSD based command, actually I prefer GNU style command&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;For mac system, when you use -i parameter, you have to provide an extension for your backups.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;explaination based on BSD platform such as Maca &lt;br /&gt;
+i extension
+Edit files in-place, saving backups with the specified extension.  If a zero-length extension is given, no backup will be saved.  It is not recommended to give a zero-length extension when in-place editing files, as you risk corruption or partial content in situations where disk space is exhausted, etc.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;explatination based on GNU/linux platform such as Redhat &lt;br /&gt;
+-i[SUFFIX], –in-place[=SUFFIX]
+edit files in place (makes backup if SUFFIX supplied)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'jjj'&lt;/span&gt;  &lt;span class=&quot;s1&quot;&gt;'1,5d'&lt;/span&gt; 2016-08-01-python-intro.md
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;grep&quot;&gt;grep&lt;/h3&gt;
+&lt;p&gt;grep命令是一种强大的文本搜索工具，使用正则表达式搜索文本，并把匹配的行打印处理&lt;/p&gt;
+&lt;h4 id=&quot;语法-1&quot;&gt;语法&lt;/h4&gt;
+&lt;p&gt;grep [option] pattern file&lt;/p&gt;
+&lt;h4 id=&quot;参数&quot;&gt;参数&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;-c  –count    计算符合样式的列数&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;sed&quot;&gt;sed&lt;/h3&gt;
+&lt;p&gt;文本行处理，增，删，替&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;语法-2&quot;&gt;语法&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;sed [options] ‘command’ file 命令行格式&lt;/li&gt;
+  &lt;li&gt;sed -f script file 脚本格式
+    &lt;h4 id=&quot;参数-1&quot;&gt;参数&lt;/h4&gt;
+  &lt;/li&gt;
+  &lt;li&gt;-n by default, each line of input is echoed to the standard output after all of the commands have been applied to it, the suppresses this behavior&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/pl/pl-script-editor-sed.html</link>
+    <guid>/pl/pl-script-editor-sed</guid>
+    <pubDate>Mon, 03 Jul 2017 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Apple Script</title>
+    <description>
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;osascript &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'tell application &quot;System Events&quot;
+    tell application &quot;Adobe Acrobat Reader DC&quot; to activate
+    keystroke &quot;h&quot; using {command down, control down}
+    end tell'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://eastmanreference.com/complete-list-of-applescript-key-codes&quot;&gt;Complete list of AppleScript key
+codes&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/pl/pl-script-applescript.html</link>
+    <guid>/pl/pl-script-applescript</guid>
     <pubDate>Mon, 03 Jul 2017 00:00:00 +0900</pubDate>
   </item>
 
@@ -26647,642 +27161,6 @@ parts that support and form the basic shape of something.&lt;/li&gt;
   </item>
 
   <item>
-    <title>CLI: Sed</title>
-    <description>
-&lt;p&gt;####&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;\w 数字0-9，字母a-z及A-Z，下划线 &lt;font color=&quot;red&quot;&gt;因为在编程语言中，数字的命名都是数字字母下划线&lt;/font&gt;&lt;/li&gt;
-  &lt;li&gt;\W 非\w&lt;/li&gt;
-  &lt;li&gt;. 除去换行符以外的任意字符&lt;/li&gt;
-  &lt;li&gt;[] 字符范围&lt;/li&gt;
-  &lt;li&gt;[^…] 字符范围以外&lt;/li&gt;
-  &lt;li&gt;^ 行首&lt;/li&gt;
-  &lt;li&gt;$ 行尾&lt;/li&gt;
-  &lt;li&gt;()  分组, 并记录匹配到的字符串&lt;/li&gt;
-  &lt;li&gt;\n  使用分组符(x)匹配到的字符串
-    &lt;h4 id=&quot;repeat&quot;&gt;repeat&lt;/h4&gt;
-  &lt;/li&gt;
-  &lt;li&gt;x* x+ 贪婪匹配&lt;/li&gt;
-  &lt;li&gt;x* x+? 非贪婪匹配&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;x?      出现0次或一次&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;(?:x) 仅分组&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;awk&quot;&gt;Awk&lt;/h4&gt;
-&lt;h4 id=&quot;分割符&quot;&gt;分割符&lt;/h4&gt;
-&lt;p&gt;-F field-separator(默认为空格)&lt;/p&gt;
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;awk&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-F&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;':'&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'{print $3}'&lt;/span&gt; /etc/passwd
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;feature&quot;&gt;feature&lt;/h4&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;the ability to filter text in a pipeline which particularly distinguishes it from other types of editors&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;hr /&gt;
-
-&lt;h4 id=&quot;语法&quot;&gt;语法&lt;/h4&gt;
-
-&lt;p&gt;命令行格式&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;options] &lt;span class=&quot;s1&quot;&gt;'command'&lt;/span&gt; file&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;s&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# options: -e; -n; -i&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# -n: suppress automatic printing of **pattern space**&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# what's the crap, what's the pattern space ? it's every text line that the sed command take in&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# command: 行定位(正则)+sed命令&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;#  行定位可以使用行号,或者正则&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# 定位一行: x; /pattern/&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# 定位几行: x,y; /pattern/,/pattern/;&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# 反向选择: x,y!&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# 间隔行: first~step&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;h5 id=&quot;增删改查&quot;&gt;增删改查&lt;/h5&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;a 在指定行之后插入&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;nl &lt;/span&gt;passwd | &lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'1,3a ========================'&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;i在指定行之间插入&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;nl &lt;/span&gt;passwd | &lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'1,3i ========================'&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;替换指定行&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;nl &lt;/span&gt;passwd | &lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'1,3c  ========================'&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h5 id=&quot;替换行内容&quot;&gt;替换行内容&lt;/h5&gt;
-
-&lt;p&gt;这是sed核心的命令&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# 在使用替换命令的时候，注意参数的设置&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;temp | &lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'slipslap'&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'s/slipslap//'&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'s/\/.*est//'&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'s/13.*//'&lt;/span&gt;
-
-&lt;span class=&quot;c&quot;&gt;# batch substitution&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# find the target&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'/category: &quot;statitics&quot;/p'&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# replace the target&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'s/category: &quot;statitics&quot;/category: &quot;math&quot;/'&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'1,9c --- \nlayout: post \ntitle: &quot;C++: Vim&quot; \nkeywords: []
-\ndescription: \ncategory: &quot;code&quot; \ntags: [&quot;c++&quot;] \n--- \n
-
-
-'&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;####&lt;/p&gt;
-
-&lt;p&gt;脚本格式&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; scripgfile file&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;s&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;版本差异&quot;&gt;版本差异&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;in practice, you can discard the BSD based command, actually I prefer GNU style command&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;For mac system, when you use -i parameter, you have to provide an extension for your backups.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;explaination based on BSD platform such as Maca &lt;br /&gt;
-i extension
-Edit files in-place, saving backups with the specified extension.  If a zero-length extension is given, no backup will be saved.  It is not recommended to give a zero-length extension when in-place editing files, as you risk corruption or partial content in situations where disk space is exhausted, etc.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;explatination based on GNU/linux platform such as Redhat &lt;br /&gt;
--i[SUFFIX], –in-place[=SUFFIX]
-edit files in place (makes backup if SUFFIX supplied)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'jjj'&lt;/span&gt;  &lt;span class=&quot;s1&quot;&gt;'1,5d'&lt;/span&gt; 2016-08-01-python-intro.md
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h3 id=&quot;grep&quot;&gt;grep&lt;/h3&gt;
-&lt;p&gt;grep命令是一种强大的文本搜索工具，使用正则表达式搜索文本，并把匹配的行打印处理&lt;/p&gt;
-&lt;h4 id=&quot;语法-1&quot;&gt;语法&lt;/h4&gt;
-&lt;p&gt;grep [option] pattern file&lt;/p&gt;
-&lt;h4 id=&quot;参数&quot;&gt;参数&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;-c  –count    计算符合样式的列数&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;sed&quot;&gt;sed&lt;/h3&gt;
-&lt;p&gt;文本行处理，增，删，替&lt;/p&gt;
-&lt;hr /&gt;
-
-&lt;h4 id=&quot;语法-2&quot;&gt;语法&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;sed [options] ‘command’ file 命令行格式&lt;/li&gt;
-  &lt;li&gt;sed -f script file 脚本格式
-    &lt;h4 id=&quot;参数-1&quot;&gt;参数&lt;/h4&gt;
-  &lt;/li&gt;
-  &lt;li&gt;-n by default, each line of input is echoed to the standard output after all of the commands have been applied to it, the suppresses this behavior&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    <link>/linux/linux-text-process.html</link>
-    <guid>/linux/linux-text-process</guid>
-    <pubDate>Mon, 08 May 2017 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>Terminal: Tmux</title>
-    <description>
-&lt;h4 id=&quot;intro&quot;&gt;intro&lt;/h4&gt;
-&lt;p&gt;tmux is a terminal multiplexer，tmux使用C/S模型构建，it consists of the
-following unit:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;server，输入tmux命令开启一个服务器&lt;/li&gt;
-  &lt;li&gt;session，一个服务器可以包含多个会话&lt;/li&gt;
-  &lt;li&gt;window， 一个会话可以包含多个窗口&lt;/li&gt;
-  &lt;li&gt;pane， 一个窗口一个包含多个面板&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;layout&quot;&gt;Layout&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;prefix+ space: change the layout from horizontal to vertial&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;session-operation&quot;&gt;Session Operation&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;exit current session:  prefix+d &lt;font color=&quot;red&quot;&gt;退出该session后，该session扔在后台运行&lt;/font&gt;&lt;/li&gt;
-  &lt;li&gt;check out all sessions: tmux ls&lt;/li&gt;
-  &lt;li&gt;re-enter session: tmux attach -t session-name&lt;/li&gt;
-  &lt;li&gt;create a session with specific name: tmux new -s name&lt;/li&gt;
-  &lt;li&gt;rename a session: tmux rename-session -t 3 paper&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h5 id=&quot;session-switch&quot;&gt;Session Switch&lt;/h5&gt;
-&lt;ol&gt;
-  &lt;li&gt;prefix+w :the shortcut key of vim plugin nerdtree is also prefix+w&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr /&gt;
-
-&lt;h4 id=&quot;功能&quot;&gt;功能&lt;/h4&gt;
-
-&lt;p&gt;为了使自身的快捷键和其他软件的快捷键
-互不干扰，tmux定义了快捷键前缀&lt;br /&gt;
-tmux默认的快捷键前缀是Ctrl-b&lt;br /&gt;
-Caps-Lock-a 用着更方便，可以在配置文件中自己设置&lt;/p&gt;
-&lt;hr /&gt;
-
-&lt;h4 id=&quot;window-operation&quot;&gt;window operation&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;tmux kill-window -t window-name&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-
-&lt;h4 id=&quot;pane-operation&quot;&gt;Pane Operation&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;up and down split screen:  prefix+”&lt;/li&gt;
-  &lt;li&gt;left and right split screen:  prefix+%&lt;/li&gt;
-  &lt;li&gt;switch screen: prefix+o&lt;/li&gt;
-  &lt;li&gt;关闭终端 prefix+x&lt;/li&gt;
-  &lt;li&gt;上下左右分屏切换 prfex+空格键&lt;/li&gt;
-  &lt;li&gt;上下分屏窗格切换 prefix+}&lt;/li&gt;
-  &lt;li&gt;full screen   prefix+z   (z which means zoom in and zoom out)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-
-&lt;h5 id=&quot;adjust-pane-size&quot;&gt;Adjust Pane Size&lt;/h5&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;bind&lt;/span&gt; &amp;lt; resize-pane &lt;span class=&quot;nt&quot;&gt;-L&lt;/span&gt; 2
-&lt;span class=&quot;nb&quot;&gt;bind&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; resize-pane &lt;span class=&quot;nt&quot;&gt;-R&lt;/span&gt; 2
-&lt;span class=&quot;nb&quot;&gt;bind &lt;/span&gt;_ resize-pane &lt;span class=&quot;nt&quot;&gt;-D&lt;/span&gt; 2
-&lt;span class=&quot;nb&quot;&gt;bind&lt;/span&gt; + resize-pane &lt;span class=&quot;nt&quot;&gt;-U&lt;/span&gt; 2
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;复制模式&quot;&gt;复制模式&lt;/h4&gt;
-
-&lt;p&gt;在tmux的配置文件.tmux.conf添加如下配置&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;setw &lt;span class=&quot;nt&quot;&gt;-g&lt;/span&gt; mode-keys vi
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;前缀键+[ 进入复制模式&lt;/li&gt;
-  &lt;li&gt;使用vi的j,h,k,l方向键移动光标&lt;/li&gt;
-  &lt;li&gt;按空格键开始选择复制区域&lt;/li&gt;
-  &lt;li&gt;选择完成后按enter键退出&lt;/li&gt;
-  &lt;li&gt;前缀键 ] 粘贴&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr /&gt;
-
-&lt;h4 id=&quot;配置文件&quot;&gt;配置文件&lt;/h4&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;default configuration file:  ~/.tmux.conf&lt;/li&gt;
-  &lt;li&gt;reload tmux environment&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;type &lt;/span&gt;this &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;terminal &lt;span class=&quot;k&quot;&gt;if &lt;/span&gt;tmux is already running
-tmux &lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; ~/.tmux.conf
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;h4 id=&quot;plugin&quot;&gt;plugin&lt;/h4&gt;
-
-&lt;h4 id=&quot;tmux-plugin-manager&quot;&gt;Tmux Plugin Manager&lt;/h4&gt;
-
-&lt;p&gt;Just as the name noted, this is plugin is used to manage plugins of tmux&lt;/p&gt;
-
-&lt;h4 id=&quot;tmux-resurrect&quot;&gt;tmux-resurrect&lt;/h4&gt;
-&lt;p&gt;key bindings&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;prefix + Ctrl-s -save&lt;/li&gt;
-  &lt;li&gt;prefix + Ctrl-l -restore&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;reference&quot;&gt;reference&lt;/h4&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/tmux-plugins/tpm&quot;&gt;Tmux Plugin Manager&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/tmux-plugins/tmux-resurrect&quot;&gt;Tmux Resurrect&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-    <link>/linux/linux-terminal-tmux.html</link>
-    <guid>/linux/linux-terminal-tmux</guid>
-    <pubDate>Sun, 07 May 2017 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>Terminal: Vim</title>
-    <description>
-&lt;h3 id=&quot;1-introduction&quot;&gt;1. Introduction&lt;/h3&gt;
-&lt;p&gt;This software is plugin system, so it is very flexible and diffcult to learn.
-it heavily depends on the plugin and shortcut to improve the efficient.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;2-常用功能&quot;&gt;2. 常用功能&lt;/h3&gt;
-
-&lt;h4 id=&quot;21-setting&quot;&gt;2.1 Setting&lt;/h4&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;set relativenumber!&lt;/li&gt;
-  &lt;li&gt;set cursorline&lt;/li&gt;
-  &lt;li&gt;syntax off  I spend a lot of time to fix this simple question, crap !!!!!!!!&lt;/li&gt;
-  &lt;li&gt;adjust window width
-    &lt;pre&gt;&lt;code class=&quot;language-code&quot;&gt;:nnoremap  &amp;lt;leader&amp;gt;+ :vertical res +10 &amp;lt;cr&amp;gt;
-:nnoremap  &amp;lt;leader&amp;gt;- :vertical res -10&amp;lt;cr&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;22-register&quot;&gt;2.2 register&lt;/h4&gt;
-&lt;p&gt;To access a register, type &lt;strong&gt;“a&lt;/strong&gt;, &lt;strong&gt;a&lt;/strong&gt; is the name of the register. &lt;br /&gt;
-:reg to check out the content of the  register &lt;br /&gt;&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;to paste from system clipboard on Mac  &lt;strong&gt;”*p&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;to copy into system clipboard on Mac &lt;strong&gt;”*yy&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;23-format&quot;&gt;2.3 format&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;select the lines of text you want to re-format:
-    &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;v
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;reformat it
-    &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gq
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;h4 id=&quot;24-code-folding&quot;&gt;2.4 Code folding&lt;/h4&gt;
-    &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s2&quot;&gt;&quot; 设置代码折叠方式
-set foldmethod=indent
-&quot;&lt;/span&gt; 打开全部折叠
-zR
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;25-search&quot;&gt;2.5 Search&lt;/h4&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;/target 从文档的开始匹配目标字符串，n匹配下一个，N匹配上一个&lt;/li&gt;
-  &lt;li&gt;?target 从文档的结束位置匹配目标字符串，n匹配下一个，N匹配上一个&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;26-delete&quot;&gt;2.6 Delete&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;ctrl+w 删除光标所在行的光标之前的文字&lt;/li&gt;
-  &lt;li&gt;ndd 删除光标所在行的后n行，包括光标所在行&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;27-split-screen&quot;&gt;2.7 Split Screen&lt;/h4&gt;
-
-&lt;p&gt;命令行的快捷键和图形界面的快捷键不一样，&lt;font color=&quot;red&quot;&gt;图形界面的前缀键和命令键是同时按下的,命令行的前缀键和命令键常常分开&lt;/font&gt;使用tmux时，它的前缀键为ctrl+b&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;ctrl+w 为前缀键，j k h l上下左右切换&lt;/li&gt;
-  &lt;li&gt;ctrl+w 为前缀键 &amp;gt;可以改变窗口大小&lt;/li&gt;
-  &lt;li&gt;sp file  水平打开&lt;/li&gt;
-  &lt;li&gt;vsp file 垂直打开
-    &lt;h4 id=&quot;版本查看&quot;&gt;版本查看&lt;/h4&gt;
-    &lt;p&gt;:version 查看vim支持的插件，如python等
-:set  show vars different from defaults
-:h key-notation 查看键盘映射
-:ctrl+r anti-cancel
-:set colorcolumn=80 lenght marke&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;code-complete&quot;&gt;Code Complete&lt;/h4&gt;
-
-&lt;p&gt;ctrl+p 默认的代码补全功能是根据缓冲区中的内容进行正则匹配&lt;/p&gt;
-
-&lt;h4 id=&quot;javascript&quot;&gt;javascript&lt;/h4&gt;
-
-&lt;p&gt;在.vimrc配置文件中添加&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;ctrl+x ctrl+o 方向箭头选择补全的文本&lt;/p&gt;
-
-&lt;h4 id=&quot;十六进制查看&quot;&gt;十六进制查看&lt;/h4&gt;
-
-&lt;p&gt;在normal模式中输入”:%!xxd”
-切换回常规模式:”:%!xxd -r”&lt;/p&gt;
-
-&lt;h4 id=&quot;auto-indent&quot;&gt;auto indent&lt;/h4&gt;
-
-&lt;p&gt;vim在粘贴代码时会自动缩进，把代码搞得一团糟糕，需要提前设置&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;set paste&lt;/li&gt;
-  &lt;li&gt;set nopaste&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;copy into vim from GUI results missing line&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;before pasting to vim, make sure the Insert Mode is activated.&lt;/li&gt;
-  &lt;li&gt;the reason is that paste character &lt;strong&gt;i&lt;/strong&gt; or character &lt;strong&gt;o&lt;/strong&gt; will trigger
-insert mode, and you will miss everying before&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;joining-two-lines-with-j&quot;&gt;joining two lines with J&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;J joins the line the cursor is on with the line below&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;同时打开多个文件&quot;&gt;同时打开多个文件&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;vim -On file1 file2 n表示要打开的文件数，O大写表示打开垂直窗口&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;vim中执行shell命令&quot;&gt;vim中执行shell命令&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;!command
-不退出vim并执行shell命令command,输出命令显示在vim的命令区域，不改变当前编辑的文件内容&lt;/li&gt;
-  &lt;li&gt;r !command 将shell命令command的结果插入到当前行的下一行&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;tab与空格替换&quot;&gt;tab与空格替换&lt;/h4&gt;
-&lt;p&gt;a tab could be a different number of columns depending on your enviroment&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# substitue tab for space
-:set ts=4
-:set expandtab
-:%retab!
-
-# substitue space for tab
-:set ts=4
-:set noexpandtab
-:%retab!
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;3-mode&quot;&gt;3. Mode&lt;/h3&gt;
-
-&lt;h4 id=&quot;31-visual-mode&quot;&gt;3.1 Visual Mode&lt;/h4&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Character mode: v (lower-case)&lt;/li&gt;
-  &lt;li&gt;Line mode: V(upper-case)&lt;/li&gt;
-  &lt;li&gt;Block mode: Ctrl+v&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;32-normal-mode&quot;&gt;3.2 Normal Mode&lt;/h4&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# 映射G键到别的东西&lt;/span&gt;
-:nnoremap G &lt;span class=&quot;nb&quot;&gt;dd&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# normal命令将顾及当前的所有映射,下面的命令将会删除光标所在行&lt;/span&gt;
-:normal G
-&lt;span class=&quot;c&quot;&gt;# normal!&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;33-recording-mode&quot;&gt;3.3 Recording Mode&lt;/h4&gt;
-
-&lt;p&gt;record type character into register&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;press q to enter into recording mode in normal mode, and vim begin to record
-your operation&lt;/li&gt;
-  &lt;li&gt;press q to end recording in normal mode&lt;/li&gt;
-  &lt;li&gt;press @&amp;lt;letter&amp;gt; to replay the recorded operation&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;4-plugin&quot;&gt;4. Plugin&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;For every plugin, you can refer to the instruction about how to use them.&lt;/li&gt;
-  &lt;li&gt;and in the vimrc file to setting.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;41-vundle-plugin&quot;&gt;4.1 vundle-plugin&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;BundleList 查看已经安装的插件&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;42-youcompleteme-plugin&quot;&gt;4.2 YouCompleteMe-plugin&lt;/h4&gt;
-&lt;p&gt;Maybe this is the most difficult plugin to install&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;YouCompleteMe itself work in client-server pattern&lt;/li&gt;
-  &lt;li&gt;Everytime you start vim, the &lt;strong&gt;thread systemd&lt;/strong&gt; will begin to work on some
-port.&lt;/li&gt;
-  &lt;li&gt;Actualy, you can start &lt;strong&gt;system manually&lt;/strong&gt;, to check whether you install it
-properly&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /path/to/YouCompleteMe/third_party/ycmd/
-&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;PYTHON_USED_DURING_BUILDING
-/some/path/to/python3
-&lt;span class=&quot;nb&quot;&gt;cp &lt;/span&gt;ycmd/default_settings.json &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
-/some/path/to/python3 ycmd &lt;span class=&quot;nt&quot;&gt;--options_file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;default_settings.json
-serving on http://localhost:&amp;lt;some port&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# &lt;/span&gt;
-git clone https://github.com/Valloric/YouCompleteMe.git
-git submodule update &lt;span class=&quot;nt&quot;&gt;--init&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--recursive&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;43-nerdtree-plugin&quot;&gt;4.3 NERDTree-plugin&lt;/h4&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;install
-    &lt;ul&gt;
-      &lt;li&gt;在.vim文件下创建autoload和bundle子文件夹&lt;/li&gt;
-      &lt;li&gt;下载pathogen.vim到autoload中&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/.vim &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;mkdir &lt;/span&gt;autoload &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;mkdir &lt;/span&gt;bundle &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;bundle
-curl &lt;span class=&quot;nt&quot;&gt;-LSso&lt;/span&gt; ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Add configuration to .vimrc file&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;execute pathogen#infect&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;ol&gt;
-  &lt;li&gt;install NERDTree&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/.vim/bundle
-git clone https://github.com/scrooloose/nerdtree.git
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;usage
-    &lt;ul&gt;
-      &lt;li&gt;ctrl+w+w 切换窗口&lt;/li&gt;
-      &lt;li&gt;o 打开光标所在目录 O递归打开所有子目录&lt;/li&gt;
-      &lt;li&gt;p 回到光标坐在父目录&lt;/li&gt;
-      &lt;li&gt;r 刷新光标所在的子目录&lt;/li&gt;
-      &lt;li&gt;? pop-up help document&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr /&gt;
-
-&lt;h4 id=&quot;44-ctrlp-plugin&quot;&gt;4.4 CtrlP-plugin&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Configuration
-    &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;runtimepath^&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;~/.vim/bundle/ctrlp.vim
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr /&gt;
-
-&lt;h4 id=&quot;46-powerline-plugin&quot;&gt;4.6 powerline-plugin&lt;/h4&gt;
-&lt;h4 id=&quot;47-vimtex-plugin&quot;&gt;4.7 vimtex-plugin&lt;/h4&gt;
-
-&lt;p&gt;参考内容 &lt;br /&gt;&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;http://learnvimscriptthehardway.onefloweroneworld.com/chapters/12.html&quot;&gt;learn vim the hardest way&lt;/a&gt; &lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.cs.swarthmore.edu/oldhelp/vim/help.html&quot;&gt;vim tip and tricks&lt;/a&gt; &lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://vim.sourceforge.io/docs.php&quot;&gt;vim教程官方网站&lt;/a&gt; &lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;ftp://ftp.vim.org/pub/vim/doc/book/vimbook-OPL.pdf&quot;&gt;vim官方网站pdf教程&lt;/a&gt; &lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/VundleVim/Vundle.vim&quot;&gt;vundle教程&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://ternjs.net/doc/manual.html#server&quot;&gt;tern安装教程&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://kien.github.io/ctrlp.vim/#installation&quot;&gt;CtrlP-plugin&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.hangge.com/blog/cache/detail_1537.html&quot;&gt;Emmet使用教程&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/johnbellone/vim&quot;&gt;how to add vim NERDTree plugin&lt;/a&gt; &lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/python-mode/python-mode&quot;&gt;pymode-plugin&lt;/a&gt; &lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/powerline/powerline&quot;&gt;powerline-plugin&lt;/a&gt; &lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/lervag/vimtex&quot;&gt;vimtex-plugin&lt;/a&gt; &lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/1527784/what-is-vim-recording-and-how-can-it-be-disabled&quot;&gt;vim recording mode&lt;/a&gt; &lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/1497958/how-do-i-use-vim-registers&quot;&gt;vim register&lt;/a&gt; &lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://thoughtbot.com/blog/wrap-existing-text-at-80-characters-in-vim&quot;&gt;vim format&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/ycm-core/YouCompleteMe&quot;&gt;YouCompleteMe&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/ycm-core/YouCompleteMe/wiki/Troubleshooting-steps-for-ycmd-server-SHUT-DOWN&quot;&gt;YouCompleteMe Trouble Shooting&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-    <link>/linux/linux-terminal-vim.html</link>
-    <guid>/linux/linux-terminal-vim</guid>
-    <pubDate>Sat, 06 May 2017 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>Linux: Summary</title>
-    <description>
-&lt;h4 id=&quot;intro&quot;&gt;intro&lt;/h4&gt;
-&lt;p&gt;学习mac，需要知道linux的设计哲学，Linux本质上是一个用户服务器模式，tmux借鉴了linux的设计模式，也是一个c/s架构的模式。&lt;br /&gt;
-在linux中，最重要的概念是用户和组&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;####
-隐藏文件在finder不可见&lt;/p&gt;
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;defaults write com.apple.finder AppleShowAllFiles &lt;span class=&quot;nt&quot;&gt;-bool&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;隐藏文件在finder中可见&lt;/p&gt;
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;defaults write com.apple.finder AppleShowAllFiles &lt;span class=&quot;nt&quot;&gt;-bool&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;在finder的偏好设置中，可以选择在桌面显示或者隐藏，硬盘，外置磁盘等&lt;/p&gt;
-
-&lt;h4 id=&quot;the-difference-between-linux-and-bsd&quot;&gt;The difference between Linux and BSD&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Linux is just the Linux Kernel. A typical Linux distributions are made of many pieces of software.
-That’s why linux is sometimes called GNU/Linux. There are many linux distributions, like Redhat,Ubuntu,Debian,
-if you want to install Linux, you will need to choose among the linux distributions first&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;BSDs are both a kernel and an operating system. For example, FreeBSD provides both the BSD kernel and the operating system.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Both of Linux and BSDs are compilant with POSIX standard.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;mac-os-x-linux-and-bsd&quot;&gt;Mac OS X, Linux, and BSD&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Mac OS X distribution is based on BSD kernel and BSD operationg system. The command line in the Mac OS X is not as powerful as GNU/linux.&lt;/li&gt;
-  &lt;li&gt;Although both of them are compilant with POSIX standard, the grammar are little different. GNU/linux seems more simple and powerfull. so
-you should replace Mac OS X utilities with GNU core utilities.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;在linux中，一切皆文件。&lt;/p&gt;
-
-&lt;p&gt;打包和压缩，是两个概念&lt;br /&gt;
-打包，把许多文件变成一个文件；压缩，把大文件变小。&lt;/p&gt;
-
-&lt;p&gt;cd - 回到上一个工作目录&lt;br /&gt;
-touch filename touch新建的文件没有执行权限，需要赋予相应的执行权限&lt;/p&gt;
-
-&lt;p&gt;gcc 是c语言的编译器&lt;br /&gt;
-g++ 是c++的编译器。&lt;/p&gt;
-
-&lt;h4 id=&quot;replace-macos-command-wich-gnu-version&quot;&gt;replace MacOS command wich GNU version&lt;/h4&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# contains the most essential UNIX commands, such as ls, cat&lt;/span&gt;
-brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;coreutils
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;reference&quot;&gt;reference&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.topbug.net/blog/2013/04/14/install-and-use-gnu-command-line-tools-in-mac-os-x/&quot;&gt;Install and Use GNU command on MacOS&lt;/a&gt;&lt;/p&gt;
-</description>
-    <link>/linux/linux-summary.html</link>
-    <guid>/linux/linux-summary</guid>
-    <pubDate>Fri, 05 May 2017 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
     <title>Java: 多线程</title>
     <description>
 &lt;h4 id=&quot;创建与启动&quot;&gt;创建与启动&lt;/h4&gt;
@@ -28565,7 +28443,7 @@ java Main   运行Main.class字节码文件&lt;/p&gt;
   </item>
 
   <item>
-    <title>CLI: Git Branch</title>
+    <title>Git Branch</title>
     <description>
 &lt;h4 id=&quot;操作&quot;&gt;操作&lt;/h4&gt;
 &lt;ul&gt;
@@ -28609,7 +28487,7 @@ git checkout develop
   </item>
 
   <item>
-    <title>CLI: Git Local Management</title>
+    <title>Git Local Management</title>
     <description>
 &lt;p&gt;在git里，一切皆为分支。
 git是世界上最先进的分布式控制系统。CVS和SVN都是集中式的版本控制系统。&lt;/p&gt;
@@ -28662,22 +28540,6 @@ git管理。&lt;/p&gt;
 </description>
     <link>/jekyll.html</link>
     <guid>/jekyll</guid>
-    <pubDate>Mon, 20 Mar 2017 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>CLI: Git</title>
-    <description>
-&lt;p&gt;查看HEAD&lt;/p&gt;
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cat&lt;/span&gt; .git/HEAD
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;git中提交时，会保存一个提交(commit)对象，该对象包含一个指向暂存内容快照的指针。包含本次提交的作者等相关信息。包含零个或多个指向该提交对象的父对象指针。首次提交是没有直接祖先的。&lt;/p&gt;
-
-</description>
-    <link>/linux/git.html</link>
-    <guid>/linux/git</guid>
     <pubDate>Mon, 20 Mar 2017 00:00:00 +0900</pubDate>
   </item>
 
@@ -30613,68 +30475,8 @@ different folders.&lt;/li&gt;
   </item>
 
   <item>
-    <title>Management: Access</title>
+    <title>Os Centos7</title>
     <description>
-&lt;h4 id=&quot;访问控制&quot;&gt;访问控制&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;当系统中有/etc/cron.allow文件时，只有写入此文件的用户可以使用crontab命令。&lt;/li&gt;
-  &lt;li&gt;当/etc/cron.allow存在时，/etc/cron.deny文件会被忽略,/etc/cron.allow文件的优先级更高&lt;/li&gt;
-  &lt;li&gt;当系统中只有/etc/cron.deny文件时，写入此文件的用户不能使用crontab命令&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;常用命令&quot;&gt;常用命令&lt;/h4&gt;
-&lt;table&gt;
-	&lt;tr&gt;
-		&lt;th&gt;项目&lt;/th&gt;
-		&lt;th&gt;*&lt;/th&gt;
-		&lt;th&gt;*&lt;/th&gt;
-		&lt;th&gt;*&lt;/th&gt;
-		&lt;th&gt;*&lt;/th&gt;
-		&lt;th&gt;*&lt;/th&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;含义&lt;/td&gt;
-		&lt;td&gt;每小时中的第几分钟&lt;/td&gt;
-		&lt;td&gt;每天当中的第几小时&lt;/td&gt;
-		&lt;td&gt;每月当中的第几天&lt;/td&gt;
-		&lt;td&gt;每年当中的第几月&lt;/td&gt;
-		&lt;td&gt;每周当中的星期几&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;范围&lt;/td&gt;
-		&lt;td&gt;0-59&lt;/td&gt;
-		&lt;td&gt;0-23&lt;/td&gt;
-		&lt;td&gt;1-31&lt;/td&gt;
-		&lt;td&gt;1-12&lt;/td&gt;
-		&lt;td&gt;0-7&lt;/td&gt;
-	&lt;/tr&gt;
-
-&lt;/table&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# 编辑定时任务&lt;/span&gt;
-crontab &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# 含义每个小时的第10分钟执行下列命令&lt;/span&gt;
-10 &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;ls&lt;/span&gt; /home &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; ~/temp 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-</description>
-    <link>/os/os-crontab.html</link>
-    <guid>/os/os-crontab</guid>
-    <pubDate>Sat, 16 May 2015 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>centos7</title>
-    <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#新特性&quot; id=&quot;markdown-toc-新特性&quot;&gt;新特性&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#systemd&quot; id=&quot;markdown-toc-systemd&quot;&gt;systemd&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#服务器运行级别&quot; id=&quot;markdown-toc-服务器运行级别&quot;&gt;服务器运行级别&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#配置文件&quot; id=&quot;markdown-toc-配置文件&quot;&gt;配置文件&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#查看服务的状态&quot; id=&quot;markdown-toc-查看服务的状态&quot;&gt;查看服务的状态&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
 &lt;h4 id=&quot;新特性&quot;&gt;新特性&lt;/h4&gt;
 &lt;ol&gt;
   &lt;li&gt;使用systemd后台管理程序linux系统和服务&lt;/li&gt;
@@ -30704,22 +30506,158 @@ runlevel
 &lt;p&gt;在centos7该为systemctl list-unit-files &amp;lt;hr /&amp;gt;
 之前为chkconfig –list&lt;/p&gt;
 </description>
-    <link>/linux/os-centos7.html</link>
-    <guid>/linux/os-centos7</guid>
+    <link>/os-centos7.html</link>
+    <guid>/os-centos7</guid>
     <pubDate>Sat, 16 May 2015 00:00:00 +0900</pubDate>
   </item>
 
   <item>
-    <title>Os Macos Cflag</title>
-    <description>&lt;h4 id=&quot;作用&quot;&gt;作用&lt;/h4&gt;
-&lt;p&gt;控制在find中的显示&lt;/p&gt;
+    <title>OS: Summary</title>
+    <description>
+&lt;h4 id=&quot;intro&quot;&gt;intro&lt;/h4&gt;
+&lt;p&gt;学习mac，需要知道linux的设计哲学，Linux本质上是一个用户服务器模式，tmux借鉴了linux的设计模式，也是一个c/s架构的模式。&lt;br /&gt;
+在linux中，最重要的概念是用户和组&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;####
+隐藏文件在finder不可见&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;defaults write com.apple.finder AppleShowAllFiles &lt;span class=&quot;nt&quot;&gt;-bool&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;隐藏文件在finder中可见&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;defaults write com.apple.finder AppleShowAllFiles &lt;span class=&quot;nt&quot;&gt;-bool&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;在finder的偏好设置中，可以选择在桌面显示或者隐藏，硬盘，外置磁盘等&lt;/p&gt;
+
+&lt;h4 id=&quot;the-difference-between-linux-and-bsd&quot;&gt;The difference between Linux and BSD&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Linux is just the Linux Kernel. A typical Linux distributions are made of many pieces of software.
+That’s why linux is sometimes called GNU/Linux. There are many linux distributions, like Redhat,Ubuntu,Debian,
+if you want to install Linux, you will need to choose among the linux distributions first&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;BSDs are both a kernel and an operating system. For example, FreeBSD provides both the BSD kernel and the operating system.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Both of Linux and BSDs are compilant with POSIX standard.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;mac-os-x-linux-and-bsd&quot;&gt;Mac OS X, Linux, and BSD&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Mac OS X distribution is based on BSD kernel and BSD operationg system. The command line in the Mac OS X is not as powerful as GNU/linux.&lt;/li&gt;
+  &lt;li&gt;Although both of them are compilant with POSIX standard, the grammar are little different. GNU/linux seems more simple and powerfull. so
+you should replace Mac OS X utilities with GNU core utilities.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;在linux中，一切皆文件。&lt;/p&gt;
+
+&lt;p&gt;打包和压缩，是两个概念&lt;br /&gt;
+打包，把许多文件变成一个文件；压缩，把大文件变小。&lt;/p&gt;
+
+&lt;p&gt;cd - 回到上一个工作目录&lt;br /&gt;
+touch filename touch新建的文件没有执行权限，需要赋予相应的执行权限&lt;/p&gt;
+
+&lt;p&gt;gcc 是c语言的编译器&lt;br /&gt;
+g++ 是c++的编译器。&lt;/p&gt;
+
+&lt;h4 id=&quot;replace-macos-command-wich-gnu-version&quot;&gt;replace MacOS command wich GNU version&lt;/h4&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# contains the most essential UNIX commands, such as ls, cat&lt;/span&gt;
+brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;coreutils
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;reference&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.topbug.net/blog/2013/04/14/install-and-use-gnu-command-line-tools-in-mac-os-x/&quot;&gt;Install and Use GNU command on MacOS&lt;/a&gt;&lt;/p&gt;
+</description>
+    <link>/os/os-summary.html</link>
+    <guid>/os/os-summary</guid>
+    <pubDate>Fri, 08 May 2015 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Mac Application</title>
+    <description>
+&lt;h4 id=&quot;vlc视频播放器&quot;&gt;VLC视频播放器&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;open-source&lt;/li&gt;
+  &lt;li&gt;support multiplatform&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;mathpix-snipping-tool&quot;&gt;Mathpix Snipping Tool&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;translate formul&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;mac-os-safari&quot;&gt;Mac OS Safari&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;User Agent String is to detect Internet Explore Version, For IE7, you can set like this &lt;strong&gt;Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;mac-os-finder&quot;&gt;Mac OS Finder&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;If you mac can’t connect to another computer, please check the finder
+preference.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;控制在find中的显示&quot;&gt;控制在find中的显示&lt;/h4&gt;
 &lt;ul&gt;
   &lt;li&gt;chflags hidden filepath/filename 隐藏&lt;/li&gt;
   &lt;li&gt;chflags nohidden filepath/filename 显示&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h4 id=&quot;mac-os-chrome&quot;&gt;Mac OS Chrome&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Can’t chang default search engine in Chrome
+    &lt;ul&gt;
+      &lt;li&gt;Go to system preferences&lt;/li&gt;
+      &lt;li&gt;click the profile&lt;/li&gt;
+      &lt;li&gt;the list will inclue “Iky”, select this item and click “-“ on the left lower
+corner.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;youtute&quot;&gt;Youtute&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;The the video progress bar is very useful, it will remember where you left
+off. when you played next time, it will start from where you were.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blogs.msdn.microsoft.com/ie/2006/09/20/the-ie7-user-agent-string/&quot;&gt;Ie7 User Agent String&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://support.apple.com/guide/mac-help/if-your-mac-cant-connect-to-another-computer-mchlp1656/mac&quot;&gt;connect to windows server&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://support.google.com/chrome/thread/23333087?hl=en&quot;&gt;can’t change default search engine in
+Chrome&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
 </description>
-    <link>/os-macOS-cflag.html</link>
-    <guid>/os-macOS-cflag</guid>
+    <link>/os/os-macOS-software.html</link>
+    <guid>/os/os-macOS-software</guid>
+    <pubDate>Fri, 08 May 2015 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>MacOS: ITerm</title>
+    <description>
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;ITerm2 is a terminal emulator for MacOS.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;ITerm2, Zsh shell,tmux, vim&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/os/os-macOS-iterm.html</link>
+    <guid>/os/os-macOS-iterm</guid>
     <pubDate>Fri, 08 May 2015 00:00:00 +0900</pubDate>
   </item>
 

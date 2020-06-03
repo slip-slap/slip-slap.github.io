@@ -3,7 +3,7 @@ layout: post
 title: "Management: Access"
 keywords: []
 description: 
-category: "os"
+category: "OS"
 tags: ["MNG"]
 ---
 {% include JB/setup %}

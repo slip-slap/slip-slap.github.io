@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "CLI: Time Schedule"
+title: "Shell: Time Schedule"
 keywords: []
 description: 
-category: "linux"
-tags: ["CLI"]
+category: "PL"
+tags: ["script","shell"]
 ---
 {% include JB/setup %}
 

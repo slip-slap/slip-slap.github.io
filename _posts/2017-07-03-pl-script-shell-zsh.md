@@ -3,8 +3,8 @@ layout: post
 title: "Shell: Zsh"
 keywords: [] 
 description: 
-category: "linux"
-tags: ["terminal"]
+category: "PL"
+tags: []
 ---
 
 {% include JB/setup %}

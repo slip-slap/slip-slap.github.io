@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "CLI: Git Branch"
+title: "Git Branch"
 keywords: []
 description: 
 category: 
