@@ -1,0 +1,72 @@
+I"O
+<p>####</p>
+
+<h3 id="最简单的tex代码">最简单的Tex代码</h3>
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\documentclass</span><span class="na">[11pt]</span><span class="p">{</span>article<span class="p">}</span>
+<span class="nt">\begin{document}</span>
+<span class="nt">\end{document}</span>
+</code></pre></div></div>
+
+<p>there are two ways to get a line break
+type two backslashes
+a blank line</p>
+
+<h3 id="图形绘制工具tikz">图形绘制工具Tikz</h3>
+
+<h4 id="basic-drawing">Basic drawing</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>\<span class="n">documentclass</span><span class="p">[</span><span class="mi">11</span><span class="n">pt</span><span class="p">]{</span><span class="n">article</span><span class="p">}</span>
+\<span class="n">usepackage</span><span class="p">{</span><span class="n">tikz</span><span class="p">}</span>
+
+\<span class="n">begin</span><span class="p">{</span><span class="n">document</span><span class="p">}</span>
+
+\<span class="n">begin</span><span class="p">{</span><span class="n">tikzpicture</span><span class="p">}</span>
+
+\<span class="n">draw</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="n">parabola</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">);</span>
+
+\<span class="n">end</span><span class="p">{</span><span class="n">tikzpicture</span><span class="p">}</span>
+
+
+\<span class="n">end</span><span class="p">{</span><span class="n">document</span><span class="p">}</span>
+</code></pre></div></div>
+
+<h4 id="creating-flowcharts">Creating Flowcharts</h4>
+
+<ul>
+  <li>load up the tikz package
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>\<span class="n">usepackage</span><span class="p">{</span><span class="n">tikz</span><span class="p">}</span>
+\<span class="n">usetikzlibrary</span><span class="p">{</span><span class="n">shapes</span><span class="p">.</span><span class="n">geometric</span><span class="p">,</span> <span class="n">arrows</span><span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>define basic components of a flowchart</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>\<span class="n">tikzstyle</span><span class="p">{</span><span class="n">process</span><span class="p">}</span> <span class="o">=</span> <span class="p">[</span><span class="n">rectangle</span><span class="p">,</span> <span class="n">minimum</span> <span class="n">width</span><span class="o">=</span><span class="mi">3</span><span class="n">cm</span><span class="p">,</span> <span class="n">minimum</span> <span class="n">height</span><span class="o">=</span><span class="mi">1</span><span class="n">cm</span><span class="p">,</span> <span class="n">text</span> <span class="n">centered</span><span class="p">,</span> <span class="n">draw</span><span class="o">=</span><span class="n">black</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="n">orange</span><span class="err">!</span><span class="mi">30</span><span class="p">]</span>
+\<span class="n">tikzstyle</span><span class="p">{</span><span class="n">decision</span><span class="p">}</span> <span class="o">=</span> <span class="p">[</span><span class="n">diamond</span><span class="p">,</span> <span class="n">minimum</span> <span class="n">width</span><span class="o">=</span><span class="mi">3</span><span class="n">cm</span><span class="p">,</span> <span class="n">minimum</span> <span class="n">height</span><span class="o">=</span><span class="mi">1</span><span class="n">cm</span>
+\<span class="n">tikzstyle</span><span class="p">{</span><span class="n">arrow</span><span class="p">}</span> <span class="o">=</span> <span class="p">[</span><span class="n">thick</span><span class="p">,</span><span class="o">-&gt;</span><span class="p">,</span><span class="o">&gt;=</span><span class="n">stealth</span><span class="p">]</span>
+</code></pre></div></div>
+<ul>
+  <li>to build our flowchart, we need use \tikzpicture environment</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>\<span class="n">begin</span><span class="p">{</span><span class="n">tikzpicture</span><span class="p">}[</span><span class="n">node</span> <span class="n">distance</span><span class="o">=</span><span class="mi">2</span><span class="n">cm</span><span class="p">]</span>
+\<span class="n">node</span> <span class="p">(</span><span class="n">pro1</span><span class="p">)</span> <span class="p">[</span><span class="n">process</span><span class="p">,</span> <span class="n">below</span> <span class="n">of</span><span class="o">=</span><span class="n">in1</span><span class="p">]</span> <span class="p">{</span><span class="n">Process</span> <span class="mi">1</span><span class="p">};</span>
+\<span class="n">node</span> <span class="p">(</span><span class="n">dec1</span><span class="p">)</span> <span class="p">[</span><span class="n">decision</span><span class="p">,</span> <span class="n">below</span> <span class="n">of</span><span class="o">=</span><span class="n">pro1</span><span class="p">]</span> <span class="p">{</span><span class="n">Decision</span> <span class="mi">1</span><span class="p">};</span>
+\<span class="n">end</span><span class="p">{</span><span class="n">tikzpicture</span><span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>build Arrow</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>\<span class="n">draw</span> <span class="p">[</span><span class="n">arrow</span><span class="p">]</span> <span class="p">(</span><span class="n">pro1</span><span class="p">)</span> <span class="o">--</span> <span class="p">(</span><span class="n">dec1</span><span class="p">);</span>
+\<span class="n">draw</span> <span class="p">[</span><span class="n">arrow</span><span class="p">]</span> <span class="p">(</span><span class="n">dec1</span><span class="p">)</span> <span class="o">--</span> <span class="p">(</span><span class="n">pro2a</span><span class="p">);</span>
+\<span class="n">draw</span> <span class="p">[</span><span class="n">arrow</span><span class="p">]</span> <span class="p">(</span><span class="n">dec1</span><span class="p">)</span> <span class="o">--</span> <span class="p">(</span><span class="n">pro2b</span><span class="p">);</span>
+</code></pre></div></div>
+<h4 id="creating-mind-maps">Creating Mind Maps</h4>
+<hr />
+
+<h3 id="参考内容-">参考内容 <br /></h3>
+<p><a href="https://www.overleaf.com/learn/latex/LaTeX_Graphics_using_TikZ:_A_Tutorial_for_Beginners_(Part_1)%E2%80%94Basic_Drawing">LaTeX Graphics using TikZ tutorial</a> <br /></p>
+
+:ET

@@ -1,0 +1,26 @@
+I"�
+<h4 id="what-does-the-command-do-">what does the command do ?</h4>
+<p>在指定目录下查找文件。如果使用该命令时，不设置任何参数，则find命令将在当前目录下查找子目录与文件。并且将查到的字目录和文件全部进行显示</p>
+
+<h4 id="语法">语法</h4>
+
+<p>find [参数]</p>
+
+<p>the following is some examle:</p>
+
+<ol>
+  <li>find . 列出当前目录及子目录下所有文件和文件夹</li>
+  <li>find / -cmin -15 查找最近15分钟更新的文件</li>
+  <li>-exec</li>
+</ol>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># -exec参数必须以\; 结尾</span>
+<span class="c"># 查找当前目录下文件名为test的文件，并找到满足"xxx-xxxx-xxxx"规律所在行内容</span>
+find <span class="s2">"test"</span> <span class="nt">-exec</span> <span class="nb">grep</span> <span class="nt">-in</span>  <span class="s2">"^[0-9]</span><span class="se">\{</span><span class="s2">3</span><span class="se">\}</span><span class="s2">-[0-9]</span><span class="se">\{</span><span class="s2">4</span><span class="se">\}</span><span class="s2">"</span> <span class="nb">test</span> <span class="se">\;</span>
+</code></pre></div></div>
+
+<h4 id="replace-the-command-with-gnu-version">replace the command with GNU version</h4>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew <span class="nb">install </span>findutils
+</code></pre></div></div>
+:ET

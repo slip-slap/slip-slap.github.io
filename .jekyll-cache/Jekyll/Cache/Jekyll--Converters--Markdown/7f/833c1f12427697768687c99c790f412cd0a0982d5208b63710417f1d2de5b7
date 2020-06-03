@@ -1,0 +1,51 @@
+I"�
+<h5 id="基于数组和链表的map实现">基于数组和链表的map实现</h5>
+<ol>
+  <li>数组用来存放哈希表</li>
+  <li>链表用来存放key</li>
+</ol>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">HashTable</span><span class="o">{</span>
+	<span class="c1">//哈希表</span>
+	<span class="kd">private</span> <span class="kd">static</span> <span class="kt">int</span> <span class="n">hashTableSize</span><span class="o">=</span><span class="mi">35</span><span class="o">;</span>
+	<span class="c1">//链表</span>
+	<span class="kd">private</span>  <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">list</span><span class="o">=</span><span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;();</span>
+	<span class="kd">private</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">hashTable</span><span class="o">=</span><span class="kc">null</span><span class="o">;</span>
+	<span class="c1">//创建hash表</span>
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">createHashTable</span><span class="o">(){</span>
+		<span class="n">hashTable</span> <span class="o">=</span><span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">hashTableSize</span><span class="o">];</span>
+		<span class="c1">//初始化hash表</span>
+		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">hashTable</span><span class="o">.</span><span class="na">length</span><span class="o">;</span><span class="n">i</span><span class="o">++){</span>
+			<span class="n">hashTable</span><span class="o">[</span><span class="n">i</span><span class="o">]=</span><span class="mi">1</span><span class="o">;</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
+	<span class="kd">public</span> <span class="kt">int</span> <span class="nf">getTableAddress</span><span class="o">(</span><span class="kt">int</span> <span class="n">key</span><span class="o">){</span>
+		<span class="k">return</span> <span class="n">key</span><span class="o">%</span><span class="mi">31</span><span class="o">;</span>
+	<span class="o">}</span>
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">put</span><span class="o">(</span><span class="kt">int</span> <span class="n">number</span><span class="o">,</span><span class="kt">int</span> <span class="n">age</span><span class="o">){</span>
+		<span class="kt">int</span> <span class="n">address</span><span class="o">=</span><span class="n">getTableAddress</span><span class="o">(</span><span class="n">number</span><span class="o">);</span>
+		<span class="n">hashTable</span><span class="o">[</span><span class="n">address</span><span class="o">]=</span><span class="n">age</span><span class="o">;</span>
+		<span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">number</span><span class="o">);</span>
+	<span class="o">}</span>
+	<span class="c1">//显示哈希表</span>
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">display</span><span class="o">(){</span>
+		<span class="k">for</span><span class="o">(</span><span class="nc">Integer</span> <span class="kt">var</span><span class="o">:</span><span class="n">list</span><span class="o">){</span>
+		<span class="c1">//计算在hash表中的位置</span>
+		<span class="kt">int</span> <span class="n">address</span><span class="o">=</span><span class="n">getTableAddress</span><span class="o">(</span><span class="kt">var</span><span class="o">.</span><span class="na">intValue</span><span class="o">());</span>
+		<span class="c1">//hash表的值</span>
+		<span class="kt">int</span> <span class="n">value</span><span class="o">=</span><span class="n">hashTable</span><span class="o">[</span><span class="n">address</span><span class="o">];</span>
+		<span class="nc">StringBuilder</span> <span class="n">sb</span><span class="o">=</span><span class="k">new</span> <span class="nc">StringBuilder</span><span class="o">();</span>
+		<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="kt">var</span><span class="o">);</span>
+		<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">": "</span><span class="o">);</span>
+		<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">value</span><span class="o">);</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">sb</span><span class="o">);</span>
+    	<span class="o">}</span>
+    <span class="o">}</span>
+	<span class="c1">//根据key找到value</span>
+	<span class="kd">public</span> <span class="kt">int</span> <span class="nf">find</span><span class="o">(</span><span class="kt">int</span> <span class="n">key</span><span class="o">){</span>
+		<span class="kt">int</span> <span class="n">address</span><span class="o">=</span><span class="n">getTableAddress</span><span class="o">(</span><span class="n">key</span><span class="o">);</span>
+		<span class="k">return</span> <span class="n">hashTable</span><span class="o">[</span><span class="n">address</span><span class="o">];</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+:ET

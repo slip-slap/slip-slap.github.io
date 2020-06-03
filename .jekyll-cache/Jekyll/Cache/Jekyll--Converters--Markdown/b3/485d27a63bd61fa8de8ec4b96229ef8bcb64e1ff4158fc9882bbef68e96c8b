@@ -1,0 +1,46 @@
+I"<
+<p>重载的运算符不过是有特殊名字的函数</p>
+<h4>重载下标运算符</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[]   下标操作符必须是成员函数
+</code></pre></div></div>
+
+<h4>重载输出运算符</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;&lt;     不能是成员函数
+参数1: 非常量ostream对象的引用,非常量的原因是向流写入内容会改变其状态  
+                               引用的原因是因为我们无法直接复制一个ostream对象  
+参数2: 常量的引用, 引用是因为避免复制实参  
+                   常量是因为打印不会改变对象的内容  
+class Worker{
+	public:
+	    int age;
+	    std::string name;
+	public:
+	    Worker(): age(18),name("hello"){}
+};
+std::ostream &amp;operator&lt;&lt;(std::ostream &amp;os, const Worker &amp;worker){
+	    os&lt;&lt;worker.age&lt;&lt;" "&lt;&lt;worker.name;
+	    return os;
+}
+//call
+Worker worker;
+std::cout&lt;&lt;worker;
+</code></pre></div></div>
+
+<h4>重载输入运算符</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;
+参数1: 读取流的引用;
+参数2: 非常量对象的引用;
+std::istream &amp;operator&gt;&gt;(std::istream &amp;is,Worker &amp;worker){
+	    is&gt;&gt;worker.age&gt;&gt;worker.name;
+	    return is;
+}
+//call
+    Worker worker;
+    std::cout&lt;&lt;worker;
+    std::cin&gt;&gt;worker;
+    std::cout&lt;&lt;worker;
+</code></pre></div></div>
+:ET

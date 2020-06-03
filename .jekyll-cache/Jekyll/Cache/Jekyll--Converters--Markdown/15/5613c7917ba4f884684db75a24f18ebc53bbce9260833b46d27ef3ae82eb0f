@@ -1,0 +1,16 @@
+I"¡
+<h4 id="method">method</h4>
+<ol>
+  <li>operator.itemgetter(items): return a callable object that fetches item from its operand, using the operandâ€™s <strong>getitem</strong>()</li>
+  <li>f = itemgetter(2), the call f(r) returns r[2]</li>
+  <li>f = itemgetter(2, 5, 3), the call g(r) returns (r[2], r[5], r[3])</li>
+</ol>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">itemgetter</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">)(</span><span class="s">'ABCDEFG'</span><span class="p">)</span>
+<span class="c1"># ('B', 'D', 'F')
+</span>
+<span class="c1"># the following code has the same result
+</span><span class="n">fun1</span> <span class="o">=</span> <span class="n">itemgetter</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">fun1</span><span class="p">(</span><span class="s">'ABCDEFG'</span><span class="p">)</span>
+</code></pre></div></div>
+:ET

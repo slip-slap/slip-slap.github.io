@@ -1,0 +1,41 @@
+I"ü
+<h4 id="what-the-crap-is-a-context-manager">what the crap is a context manager?</h4>
+
+<p>The main motivation behind the context manager in python is a source acquisition and release mechanism
+which prevents resource leak</p>
+
+<h4 id="what-is-csv">what is CSV?</h4>
+
+<p>CSV stands for comma separated values, itâ€™s just another plain text file.</p>
+
+<h4 id="input-and-output-of-csv-file">Input and Output of CSV file</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">csv</span>
+
+<span class="c1"># write file, and create a context manager
+</span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">"me.csv"</span><span class="p">,</span><span class="s">'w'</span><span class="p">)</span> <span class="k">as</span> <span class="n">csv_file</span><span class="p">:</span>
+    <span class="c1"># indent the code, and create a variable hold a writer object
+</span>    <span class="c1"># the default delimiter is comma
+</span>    <span class="c1"># the csv_file must have a 'write' method
+</span>    <span class="c1"># you obtain csv_writer object by passing a return object of 'open()' method
+</span>    <span class="c1"># actually, it just like the decorator pattern in Java
+</span>    <span class="c1"># the csv.writer() method accept another object who has 'writer()' method
+</span>    <span class="c1"># and the csv.writer() method is more powerful, it can write a list object 
+</span>    <span class="c1"># althogh csv_file has write method, it can only write 'string object'
+</span>    <span class="c1"># so please use csv.writer to wrap up the the return object of the 'open()' method
+</span>    <span class="c1"># It more convient and more powerful
+</span>    <span class="n">csv_writer</span> <span class="o">=</span> <span class="n">csv</span><span class="p">.</span><span class="n">writer</span><span class="p">(</span><span class="n">csv_file</span><span class="p">,</span><span class="n">delimiter</span><span class="o">=</span><span class="s">'</span><span class="se">\t</span><span class="s">'</span><span class="p">)</span>
+    <span class="n">csv_writer</span><span class="p">.</span><span class="n">writerow</span><span class="p">([</span><span class="s">'beautiful'</span><span class="p">,</span><span class="s">'weired'</span><span class="p">,</span><span class="s">'angel'</span><span class="p">])</span>
+
+<span class="c1"># read file
+</span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">"me.csv"</span><span class="p">,</span><span class="s">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">my_file</span><span class="p">:</span>
+    <span class="n">csv_reader</span> <span class="o">=</span> <span class="n">csv</span><span class="p">.</span><span class="n">reader</span><span class="p">(</span><span class="n">my_file</span><span class="p">,</span><span class="n">delimiter</span><span class="o">=</span><span class="s">'</span><span class="se">\t</span><span class="s">'</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">csv_reader</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h4 id="inference">Inference</h4>
+<ol>
+  <li><a href="https://mattgathu.github.io/python-context-managers/">why the context manager exists</a></li>
+</ol>
+:ET

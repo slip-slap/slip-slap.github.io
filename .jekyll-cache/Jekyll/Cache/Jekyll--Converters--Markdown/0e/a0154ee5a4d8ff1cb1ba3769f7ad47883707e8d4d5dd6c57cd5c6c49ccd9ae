@@ -1,0 +1,42 @@
+I"½
+<h4 id="display-a-picutre">Display a picutre</h4>
+<p>In nature, There is no difference between text label and picture label. <br />
+So, you can put a picture in a label. <br />
+Programming look into the essence of the world.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">from</span> <span class="nn">PyQt5.QtWidgets</span> <span class="kn">import</span> <span class="n">QApplication</span><span class="p">,</span> <span class="n">QWidget</span><span class="p">,</span> <span class="n">QLabel</span>
+<span class="kn">from</span> <span class="nn">PyQt5.QtGui</span> <span class="kn">import</span> <span class="n">QIcon</span><span class="p">,</span> <span class="n">QPixmap</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+
+
+<span class="k">class</span> <span class="nc">App</span><span class="p">(</span><span class="n">QWidget</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">().</span><span class="n">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">title</span> <span class="o">=</span> <span class="s">'PyQt5 image - pythonspot.com'</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">left</span> <span class="o">=</span> <span class="mi">10</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">top</span> <span class="o">=</span> <span class="mi">10</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">width</span> <span class="o">=</span> <span class="mi">640</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">height</span> <span class="o">=</span> <span class="mi">480</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">initUI</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">initUI</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">setWindowTitle</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">title</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">setGeometry</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">left</span><span class="p">,</span> <span class="bp">self</span><span class="p">.</span><span class="n">top</span><span class="p">,</span> <span class="bp">self</span><span class="p">.</span><span class="n">width</span><span class="p">,</span> <span class="bp">self</span><span class="p">.</span><span class="n">height</span><span class="p">)</span>
+
+        <span class="c1"># Create widget
+</span>        <span class="n">label</span> <span class="o">=</span> <span class="n">QLabel</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="n">pixmap</span> <span class="o">=</span> <span class="n">QPixmap</span><span class="p">(</span><span class="s">'df.png'</span><span class="p">)</span>
+        <span class="n">label</span><span class="p">.</span><span class="n">setPixmap</span><span class="p">(</span><span class="n">pixmap</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">resize</span><span class="p">(</span><span class="n">pixmap</span><span class="p">.</span><span class="n">width</span><span class="p">(),</span><span class="n">pixmap</span><span class="p">.</span><span class="n">height</span><span class="p">())</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">(</span><span class="n">sys</span><span class="p">.</span><span class="n">argv</span><span class="p">)</span>
+    <span class="n">ex</span> <span class="o">=</span> <span class="n">App</span><span class="p">()</span>
+    <span class="n">sys</span><span class="p">.</span><span class="nb">exit</span><span class="p">(</span><span class="n">app</span><span class="p">.</span><span class="n">exec_</span><span class="p">())</span>
+
+</code></pre></div></div>
+:ET

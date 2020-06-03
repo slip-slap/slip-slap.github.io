@@ -1,0 +1,196 @@
+I"o
+<h4 id="introduction">Introduction</h4>
+<p>TensorBoard is a visualization software that comes with any standard Tensorflow
+installation. In Google’s words: “The compuations you’ll use Tensorflow for(like
+training a massive deep neural network)”</p>
+
+<h4 id="启动tensorboard">启动tensorboard</h4>
+<p>python /path/to/tensorflow/install/directory/tensorflow/tensorboard/tensorboard.py –logdir/to/log-directory</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python /Users/huiyaozhang/Library/Python/2.7/lib/python/site-packages/tensorflow/tensorboard/tensorboard.py <span class="nt">--logdir</span><span class="o">=</span>/tmp/tensorflow/mnist/logs 
+</code></pre></div></div>
+
+<h3 id="demo">Demo</h3>
+
+<h4 id="visualizing-the-graph">Visualizing the Graph</h4>
+
+<ol>
+  <li>create a simple compuation graph</li>
+</ol>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="n">tf</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">constant</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">constant</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+<span class="k">with</span> <span class="n">tf</span><span class="p">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">sess</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">c</span><span class="p">))</span>
+</code></pre></div></div>
+
+<ol>
+  <li>To visualize the program with TensorBoard, we need to write log files of the program. <br />
+To write event files, we first need to create a <strong>writer</strong> for those logs, using the following line. <br />
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">writer</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">summary</span><span class="p">.</span><span class="n">FileWriter</span><span class="p">([</span><span class="n">logdir</span><span class="p">],</span> <span class="p">[</span><span class="n">graph</span><span class="p">])</span>
+</code></pre></div>    </div>
+    <p>where [logdir] is the folder where you want to store those log files. <br />
+where [graph] is the graph of the program we’re working on <br /></p>
+  </li>
+</ol>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="n">tf</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">constant</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">constant</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+<span class="k">with</span> <span class="n">tf</span><span class="p">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
+    <span class="n">writer</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">summary</span><span class="p">.</span><span class="n">FileWriter</span><span class="p">(</span><span class="s">'./graphs'</span><span class="p">,</span><span class="n">sess</span><span class="p">.</span><span class="n">graph</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">sess</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">c</span><span class="p">))</span>
+</code></pre></div></div>
+
+<ol>
+  <li>To make TensorBoard understand the names of your ops, you have to explicitly name them</li>
+</ol>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="n">tf</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">constant</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">"a"</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">constant</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">"b"</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">"addition"</span><span class="p">)</span>
+<span class="k">with</span> <span class="n">tf</span><span class="p">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
+    <span class="n">writer</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">summary</span><span class="p">.</span><span class="n">FileWriter</span><span class="p">(</span><span class="s">'./graphs'</span><span class="p">,</span><span class="n">sess</span><span class="p">.</span><span class="n">graph</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">sess</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">c</span><span class="p">))</span>
+</code></pre></div></div>
+
+<ol>
+  <li>remark
+    <ul>
+      <li>if you run your code several times with the same [logdir], there are will be
+multiple event files in your [logdir], TF will show only the latest graph and
+display the warning of multiple event files. To get rid of the warning, delete
+the event files you no longer need or save them in different [logdir] folders.</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="writing-summaries-to-visualize-learning">Writing Summaries to Visualize Learning</h4>
+
+<p>So far we only focused on how to visualize the graph in TensorBoard. In this
+second part, we are now going to use a special operation called <strong>summary</strong> to
+visualize the model parameters(like weights and biases of a neural network),
+metrics(like loss or accuracy value), and images(like input images to a
+network). <br />
+Summary is a special TensorBoard operation that takes in a regular tensor and
+outputs the summarized data to your disk(i.e. in the event file).  Basically,
+there are three main types of summaries:</p>
+
+<h5 id="demo-1">demo</h5>
+<p>Randomly pick values from a standard Normal distribution, N(0,1), and plot them one after the other.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="n">tf</span>
+<span class="n">x_scalar</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">get_variable</span><span class="p">(</span><span class="s">'x_scalar'</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">[],</span> <span class="n">initializer</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="n">truncated_normal_initializer</span><span class="p">(</span><span class="n">mean</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">stddev</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+<span class="c1"># step the scalar summary
+</span><span class="n">first_summary</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">summary</span><span class="p">.</span><span class="n">scalar</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s">'my_first_summary'</span><span class="p">,</span> <span class="n">tensor</span><span class="o">=</span><span class="n">x_scalar</span><span class="p">)</span>
+<span class="n">init</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">global_variables_initializer</span><span class="p">()</span> 
+<span class="k">with</span> <span class="n">tf</span><span class="p">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
+    <span class="c1"># creating the writer inside the session
+</span>    <span class="n">writer</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">summary</span><span class="p">.</span><span class="n">FileWriter</span><span class="p">(</span><span class="s">'./graphs'</span><span class="p">,</span> <span class="n">sess</span><span class="p">.</span><span class="n">graph</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">step</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span>
+        <span class="n">sess</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">init</span><span class="p">)</span>
+        <span class="c1"># evaluate the scalar summary
+</span>        <span class="n">summary</span> <span class="o">=</span> <span class="n">sess</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">first_summary</span><span class="p">)</span>
+        <span class="c1"># add the summary to the writer(i.e. to the event file)
+</span>        <span class="n">writer</span><span class="p">.</span><span class="n">add_summary</span><span class="p">(</span><span class="n">summary</span><span class="p">,</span><span class="n">step</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h5 id="tfsummaryhistogram">tf.summary.histogram</h5>
+<p>It’s for plotting the histogram of the values of non-scalar tensor. This gives us a view of how does the histogram of the tensor values change
+over time or iterations. In the case of neural networks, it’s commonly used to monitor the changes of weights and biases distributions. It’s
+very useful in detecting behavior of the network parameters like when many of the weights shrink to almost zero or grow largely.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="n">tf</span>
+<span class="n">x_scalar</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">get_variable</span><span class="p">(</span><span class="s">'x_scalar'</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">[],</span> <span class="n">initializer</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="n">truncated_normal_initializer</span><span class="p">(</span><span class="n">mean</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">stddev</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">x_matrix</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">get_variable</span><span class="p">(</span><span class="s">'x_matrix'</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">[</span><span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">],</span> <span class="n">initializer</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="n">truncated_normal_initializer</span><span class="p">(</span><span class="n">mean</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">stddev</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">first_summary</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">summary</span><span class="p">.</span><span class="n">scalar</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s">'my_first_summary'</span><span class="p">,</span> <span class="n">tensor</span><span class="o">=</span><span class="n">x_scalar</span><span class="p">)</span>
+<span class="n">histogram_summary</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">summary</span><span class="p">.</span><span class="n">histogram</span><span class="p">(</span><span class="s">'my_histogram_summary'</span><span class="p">,</span> <span class="n">x_matrix</span><span class="p">)</span>
+<span class="n">init</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">global_variables_initializer</span><span class="p">()</span> 
+<span class="k">with</span> <span class="n">tf</span><span class="p">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
+    <span class="n">writer</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">summary</span><span class="p">.</span><span class="n">FileWriter</span><span class="p">(</span><span class="s">'./graphs'</span><span class="p">,</span> <span class="n">sess</span><span class="p">.</span><span class="n">graph</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">step</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span>
+        <span class="n">sess</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">init</span><span class="p">)</span>
+        <span class="n">summary1</span><span class="p">,</span> <span class="n">summary2</span> <span class="o">=</span> <span class="n">sess</span><span class="p">.</span><span class="n">run</span><span class="p">([</span><span class="n">first_summary</span><span class="p">,</span><span class="n">histogram_summary</span><span class="p">])</span>
+        <span class="n">writer</span><span class="p">.</span><span class="n">add_summary</span><span class="p">(</span><span class="n">summary1</span><span class="p">,</span><span class="n">step</span><span class="p">)</span>        
+        <span class="n">writer</span><span class="p">.</span><span class="n">add_summary</span><span class="p">(</span><span class="n">summary2</span><span class="p">,</span><span class="n">step</span><span class="p">)</span>
+</code></pre></div></div>
+<ol>
+  <li>if you open TensorBoard in your browser, you’ll  find two new tabs added to the top menu: “Distributions” and “Histograms”.</li>
+  <li>As you can see in the figure, the “Distributions” tab contains a plot that shows the distribution of the values of the tensor(y-axis)
+throw steps(x-axis).</li>
+  <li>In the distribution tab, the bottom line(the very light one) shows the minimum value has changed over time, and the line in the middle shows how the 
+median has changed.</li>
+  <li>in the histogram panel, each chart shows temporal slices of data, where each slice is a histogram of the tensor at a given step, it’s organized with 
+the oldest timestep in the back, and the most recent timestep in front.</li>
+</ol>
+
+<h4 id="tfsummarymerege_all">tf.summary.merege_all()</h4>
+<p>To make running and writing the summaries extremly inefficient. the way around it is to merge all summaries in you graph and run them at once inside 
+your session. This can be done using <strong>tf.summary.merge_all()</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="n">tf</span>
+<span class="n">x_scalar</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">get_variable</span><span class="p">(</span><span class="s">'x_scalar'</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">[],</span> <span class="n">initializer</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="n">truncated_normal_initializer</span><span class="p">(</span><span class="n">mean</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">stddev</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">x_matrix</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">get_variable</span><span class="p">(</span><span class="s">'x_matrix'</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">[</span><span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">],</span> <span class="n">initializer</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="n">truncated_normal_initializer</span><span class="p">(</span><span class="n">mean</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">stddev</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">first_summary</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">summary</span><span class="p">.</span><span class="n">scalar</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s">'my_first_summary'</span><span class="p">,</span> <span class="n">tensor</span><span class="o">=</span><span class="n">x_scalar</span><span class="p">)</span>
+<span class="n">histogram_summary</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">summary</span><span class="p">.</span><span class="n">histogram</span><span class="p">(</span><span class="s">'my_histogram_summary'</span><span class="p">,</span> <span class="n">x_matrix</span><span class="p">)</span>
+
+<span class="c1"># merge all summaries
+</span><span class="n">merged</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">summary</span><span class="p">.</span><span class="n">merge_all</span><span class="p">()</span>
+<span class="n">init</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">global_variables_initializer</span><span class="p">()</span> 
+<span class="k">with</span> <span class="n">tf</span><span class="p">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
+    <span class="n">writer</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">summary</span><span class="p">.</span><span class="n">FileWriter</span><span class="p">(</span><span class="s">'./graphs'</span><span class="p">,</span> <span class="n">sess</span><span class="p">.</span><span class="n">graph</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">step</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span>
+        <span class="n">sess</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">init</span><span class="p">)</span>
+        <span class="n">summary</span> <span class="o">=</span> <span class="n">sess</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">merged</span><span class="p">)</span>
+        <span class="n">writer</span><span class="p">.</span><span class="n">add_summary</span><span class="p">(</span><span class="n">summary</span><span class="p">,</span><span class="n">step</span><span class="p">)</span>        
+</code></pre></div></div>
+
+<h4 id="tfsummaryimage">tf.summary.image</h4>
+<p>As its name showd, this type of summary is for writing and visualizing tensors as images. In thce case of neural networks, this is 
+usually used for tracking the images that are either fed to the network or the images generated in the output, such as the reconstructed 
+images in an autoencoder; or the fake images made by the generator model of a GAN. However, in general, this can be used for plotting any tensor.
+For example, you can visualize a weight matrix of size 30*40 as an image of 30*40 pixels.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">tf</span><span class="p">.</span><span class="n">summary</span><span class="p">.</span><span class="n">image</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">tensor</span><span class="p">,</span> <span class="n">max_outputs</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</code></pre></div></div>
+<ol>
+  <li>where name is the name for the generated node, tensor is the desired tensor to be written as an image summary.</li>
+  <li>The tensor that you feed to tf.summary.image must be a 4-D tensor of shape ** [batch_size, height, width, channels]** where batch_size
+is the number of images in the batch, height and width determines the size of the image and channels.</li>
+</ol>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="n">tf</span>
+<span class="n">gs</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">get_variable</span><span class="p">(</span><span class="s">'grayscale'</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">[</span><span class="mi">30</span><span class="p">,</span><span class="mi">10</span><span class="p">],</span> <span class="n">initializer</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="n">truncated_normal_initializer</span><span class="p">(</span><span class="n">mean</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">stddev</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">c</span>  <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">get_variable</span><span class="p">(</span><span class="s">'color'</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">[</span><span class="mi">50</span><span class="p">,</span><span class="mi">30</span><span class="p">],</span> <span class="n">initializer</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="n">truncated_normal_initializer</span><span class="p">(</span><span class="n">mean</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">stddev</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+
+<span class="c1"># step 1: reshape to 4D tensors
+</span><span class="n">gs_reshape</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">gs</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="n">c_reshape</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+
+<span class="c1"># step 1: summary
+#tf.summary.image("gray",gs_reshape)
+# DO NOT FORGET WRITE THE RETURN VALUE
+</span><span class="n">gs_summary</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="n">summary</span><span class="p">.</span><span class="n">image</span><span class="p">(</span><span class="s">"gray"</span><span class="p">,</span><span class="n">gs_reshape</span><span class="p">)</span>
+<span class="c1">#tf.summary.image("c", c_reshape, max_outputs=5)
+</span><span class="n">c_summary</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="n">summary</span><span class="p">.</span><span class="n">image</span><span class="p">(</span><span class="s">"c"</span><span class="p">,</span> <span class="n">c_reshape</span><span class="p">,</span> <span class="n">max_outputs</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="c1"># step 2: merge
+</span><span class="n">merged</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">summary</span><span class="p">.</span><span class="n">merge_all</span><span class="p">()</span>
+
+<span class="n">init</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">global_variables_initializer</span><span class="p">()</span>
+
+<span class="k">with</span> <span class="n">tf</span><span class="p">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
+    <span class="n">writer</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">summary</span><span class="p">.</span><span class="n">FileWriter</span><span class="p">(</span><span class="s">'./graph'</span><span class="p">,</span><span class="n">sess</span><span class="p">.</span><span class="n">graph</span><span class="p">)</span>
+    <span class="n">sess</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">init</span><span class="p">)</span>
+    <span class="n">summary</span><span class="o">=</span><span class="n">sess</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">merged</span><span class="p">)</span>
+    <span class="n">writer</span><span class="p">.</span><span class="n">add_summary</span><span class="p">(</span><span class="n">summary</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h4 id="reference">Reference</h4>
+<ol>
+  <li><a href="https://www.easy-tensorflow.com/tf-tutorials/basics/introduction-to-tensorboard">tensorboard lesson</a></li>
+</ol>
+:ET

@@ -3,7 +3,7 @@
   <title>Just Do It</title>
   <link href="/atom.xml" rel="self"/>
   <link href=""/>
-  <updated>2020-05-29T10:26:00+09:00</updated>
+  <updated>2020-06-03T13:50:24+09:00</updated>
   <id></id>
   <author>
     <name>reed</name>
@@ -35,7 +35,8 @@ random variable $I_A$ assoc...</content>
     <id>/math/math-apply-stochastic-process-renewal-process-renewal-reward-processes</id>
     <content type="html">
 Time-average Residual Life
-
+\(\int_{0}^{t} y(\tau) d \tau=\frac{1}{2} \sum_{i=1}^{n(t)}
+x_{i}^{2}+\int_{\tau=s_{n(t)}}^{t} y(\tau) d \tau\)
 
 
 
@@ -107,13 +108,9 @@ time or space.
 
 formula
 
+\[P(k \text { events in interval })=e^{-\lambda} \frac{\lambda^{k}}{k !}\]
 
-
- is a parameter which stands for events/time * time period
-
-Definition
-
-  If an arrival process has ...</content>
+\(\lambda\) is a parameter...</content>
   </entry>
 
   <entry>
@@ -216,13 +213,10 @@ Metropolis Hastings Algorithm
     <id>/math/math-apply-stochastic-process-markov-chain-apply-gibbs-sampling</id>
     <content type="html">
 Process
-Suppose we want to generate samples from the joint distribution of , Further suppose that we can
-generate from each of the full conditionalal distributions, where 
-
-namely, we can generate from the conditional distribution of $Y_i$ given the
-values of all the other coordinates.
-
-  Specif...</content>
+Suppose we want to generate samples from the joint distribution of \(\left(Y_{1}, \ldots, Y_{k}\right) \in R^{k}\), Further suppose that we can
+generate from each of the full conditionalal distributions\(Y_{i} |
+Y_{-i}=y_{-i}\), where 
+\(Y_{-i}=\left(Y_{1}, \ldots, Y_{i-1}, Y_{i+1}, \ldo...</content>
   </entry>
 
   <entry>
@@ -300,7 +294,7 @@ Concept
 variable. Let $\phi(X,Y)$ be a factor. We define the factor marginalization
 of Y in $\phi$, denoted by $\sum_Y \phi$, to be a factor $\psi$ over X such
 that: 
-
+\(\psi(\boldsymbol{X})=\sum_{Y} \phi(\boldsymbol{X}, Y)\)
 
 
 </content>
@@ -339,11 +333,9 @@ with a subset of variables
     <content type="html">
 A decision-making situation D
 
-  a set of outcomes 
-  a set of possible actions that the agent can take, 
-  A probabilistic outcome model , which defines a lottery $\pi_{\alpa}$, which specifies a probability
-distribution over outcomes given that the action was taken.
-  a utility function , wher...</content>
+  a set of outcomes \(\mathcal{O}=\left\{o_{1}, \ldots, o_{N}\right\}\)
+  a set of possible actions that the agent can take, \(\mathcal{A}=\left\{a_{1}, \dots, a_{K}\right\}\)
+  A probabilistic outcome model \(P: \mathcal{A} \mapsto \Delta_{\mathcal{O}}\), which de...</content>
   </entry>
 
   <entry>
@@ -572,11 +564,14 @@ top conference
   ICLR
 
 
+Machine Learning Repository
+
+  UCI
+
+
 Reference
 
-  IEEE Transactions on Neural Networks and Learning System
-
-</content>
+  IEEE Transactions on Neural ...</content>
   </entry>
 
   <entry>
@@ -653,16 +648,15 @@ The answer is to unify the function, unify space.
     <id>/math/math-change-tensor-delta-operator-and-gradient</id>
     <content type="html">
 Delta Operator and Gradient
-
+\(\nabla f=\left\langle\frac{\partial}{\partial x} f, \frac{\partial}{\partial y}
+f, \frac{\partial}{\partial z} f\right\rangle\)
 
 Example of Vector and Covector
 
   $\nabla {f}$ obtains a vector
   $df$  obtains a covector
     
-      For a very very long time, I just can’t understand why $df$ is a covector,
-because as soon as I see the sign $df$, the expression such as 
-come into my mind, that’s...</content>
+      For a very very long time, I just c...</content>
   </entry>
 
   <entry>
@@ -681,9 +675,7 @@ that you use.
 
 
 Covector Component
-
-
-  In a more con...</content>
+\(\begin{array}{l...</content>
   </entry>
 
   <entry>
@@ -4423,29 +4415,6 @@ I can learn from her.
   </entry>
 
   <entry>
-    <title>CLI: Jekyll</title>
-    <link href="/linux/linux-cli-jekyll.html"/>
-    <updated>2020-03-12T00:00:00+09:00</updated>
-    <id>/linux/linux-cli-jekyll</id>
-    <content type="html">
-Jekyll
-
-  jekyll server
-  jekyll serve –host=0.0.0.0
-    
-      This will make Jekyll’s HTTP server bind to all available IPs.
-    
-  
-
-
-Reference
-
-  Connect to a locally build Server
-
-</content>
-  </entry>
-
-  <entry>
     <title>AI: Summary</title>
     <link href="/ai/AI.html"/>
     <updated>2020-03-12T00:00:00+09:00</updated>
@@ -4658,7 +4627,7 @@ symptoms
 
 
 Definition
-Let  be some set of random variables, and let  be their o...</content>
+Let \(\boldsymbol{X}=\left\{X_{1}, \ldots, X_{n}\right\}\...</content>
   </entry>
 
   <entry>
@@ -4733,6 +4702,24 @@ public class Solution{
   </entry>
 
   <entry>
+    <title>OS: Threads</title>
+    <link href="/cs/computer-science-operating-system-threads.html"/>
+    <updated>2020-01-08T00:00:00+09:00</updated>
+    <id>/cs/computer-science-operating-system-threads</id>
+    <content type="html">
+Definition
+
+  A thread is a basic unit of CPU utilization. It shares with other threads
+belonging to the same process its code section, data section, and other
+operating system resources, such as open files and signals.
+    
+      A thread ID
+      A program counter
+      A register set
+      A ...</content>
+  </entry>
+
+  <entry>
     <title>OS: System Programs</title>
     <link href="/cs/computer-science-operating-system-system-programs.html"/>
     <updated>2020-01-08T00:00:00+09:00</updated>
@@ -4795,6 +4782,21 @@ the process.
   </entry>
 
   <entry>
+    <title>OS: Sockets</title>
+    <link href="/cs/computer-science-operating-system-sockets.html"/>
+    <updated>2020-01-08T00:00:00+09:00</updated>
+    <id>/cs/computer-science-operating-system-sockets</id>
+    <content type="html">
+####
+
+  A Socket is defined as an endpoint for communication
+  A pair of process communicating over a network employ a pair of sockets-one
+ofr each process
+  A socket is identified by an IP address concatenated with a port number.
+  The server waits for incoming client requests by listening to a...</content>
+  </entry>
+
+  <entry>
     <title>OS: Services</title>
     <link href="/cs/computer-science-operating-system-services.html"/>
     <updated>2020-01-08T00:00:00+09:00</updated>
@@ -4818,6 +4820,44 @@ the process.
 
 
 </content>
+  </entry>
+
+  <entry>
+    <title>OS: Process Management</title>
+    <link href="/cs/computer-science-operating-system-process-management.html"/>
+    <updated>2020-01-08T00:00:00+09:00</updated>
+    <id>/cs/computer-science-operating-system-process-management</id>
+    <content type="html">
+Definition
+
+  Process: A process can be thought of as a program in execution
+  Thread: A thread is the unit of execution with a process. A process can have
+one thread to many threads.
+
+
+Process State
+
+  New: The process is being created.
+  Running: Instructions are being executed.
+  Waiting: The...</content>
+  </entry>
+
+  <entry>
+    <title>OS: Interprocess Communication</title>
+    <link href="/cs/computer-science-operating-system-process-communication.html"/>
+    <updated>2020-01-08T00:00:00+09:00</updated>
+    <id>/cs/computer-science-operating-system-process-communication</id>
+    <content type="html">
+###
+
+  Processes executing concurrently in the operating system maybe either
+independent processes or cooperating processes.
+
+
+
+  Independent processes: They cannot affect or be affected by the other
+processes executing in the system.
+  Cooperating processes: They can affect or be affected by th...</content>
   </entry>
 
   <entry>
@@ -4877,20 +4917,16 @@ predefined procedure to let computer do the job.
     <content type="html">
 Dynamic Programming Solutiong(Top to down)
 
-
+\[g(i, s)=\min _{k \in S}\left\{c_{i k}+g(k, s-\{k\})\right\}\]
 
 2. Recursive Tree
 
 
 3. Recursive Table
 
+\[\begin{array}{l}g(2, \phi)=5 \\ g(3, \phi)=6 \\ g(4,\phi)=8\end{array}\]
 
-
-
-
-
-
-</content>
+\[\begin{array}{l}g(2,\{3\})=15 \\ g(2,\{4\})=18 \\ g(3,\{2\})=18 \\ g(...</content>
   </entry>
 
   <entry>
@@ -4905,17 +4941,14 @@ Dynamic Programming Solutiong(Top to down)
   the trick is how to redefine
 
 
-
+\[\begin{array}{l}\cdot \sum_{i=1}^{k} \omega_{i} x_{i}+\omega_{k+1} \leqslant m
+\\ \sum_{i=1}^{k} \omega_{i} x_{1}+\sum_{i=k+1}^{n} \omega_{i}&amp;gt; m \end{array}\]
 
 
 
 Galois
 
-  Don’t be nervous, make use of knowledge you have, it’s just another tree
-recursive problem
-
-
-</content>
+  Don’t be nervous, make use of knowledge you have, it’s jus...</content>
   </entry>
 
   <entry>
@@ -5279,7 +5312,7 @@ Difference Between Backtracking and Dynamic Programming
   exponential $O(2^n)$
 
 
-
+\[1&amp;lt;\log n&amp;lt;\sqrt{n}&amp;lt;n&amp;lt;n \log n&amp;lt;n^{2}&amp;lt;n^{3}&amp;lt;\cdots&amp;lt;2^{n}&amp;lt;3^{n}&amp;lt;\ldots&amp;lt;n^{n}\]
 
 </content>
   </entry>
@@ -5306,19 +5339,17 @@ this, why we divide problem into P and NP, there must be a reason.
     <updated>2020-01-08T00:00:00+09:00</updated>
     <id>/cs/computer-science-algorithm-analysis-master-theorem</id>
     <content type="html">
+\[T(n)=a T\left(\frac{n}{b}\right)+f(n)\]
 
-
-
+\[\begin{array}{l}T(n)=T(n-1)+1-O(n) \\ T(n)=T(n-1)+n-O\left(n^{2}\right) \\
+T(n)=T(n-1)+\log n-O(n \log n) \\ T(n)=2 T(n-1)+1-O\left(2^{n}\right) \\ T(n)=3
+T(n-1)+1-O\left(3^{n}\right)\end{array}\]
 
 ####
 
   recursive tree
     
-      for any recursive problem, just draw the recursive tree,
-    
-  
-
-</content>
+      for any recursive p...</content>
   </entry>
 
   <entry>
@@ -5335,18 +5366,8 @@ infinity
 
 
 Compare
-
-
-
-
-#### 
-
-
-
-
-
-
-</content>
+\(\begin{array}{c}f(n)=n^{2} \log n+n \\ 1 \times n^{2} \log n \leq n^{2} \log n+n
+\leq 10\left(n^{2} \log n\right)\end{array}\)...</content>
   </entry>
 
   <entry>
@@ -5961,13 +5982,13 @@ Galois
     <content type="html">
 Ising
 
-  
+  \(E(\mathrm{x} ; J, H)=-\left[\frac{1}{2} \sum_{m, n} J_{m n} x_{m} x_{n}+\sum_{n}
+H x_{n}\right]\)
     
       The coupling between neighbouring spins is J. we define $J_{mn}=J$ if m and n
 are neighbours and $J_{mn}=0$ otherwise.
       H is the applied field
-      We have included the factor of $\frac{1}{2}$, because each pair is counted
-twice in the first sum, once as (m,n) and once...</content>
+      We have included the f...</content>
   </entry>
 
   <entry>
@@ -5980,7 +6001,8 @@ Gaussian Channel
 
   The Gaussian channel has a real input x and a real output y. THe conditional
 distribution of y given x is a Gaussian distribution.
-
+\(P(y | x)=\frac{1}{\sqrt{2 \pi \sigma^{2}}} \exp \left[-(y-x)^{2} / 2
+\sigma^{2}\right]\)
 
 </content>
   </entry>
@@ -6044,7 +6066,7 @@ Definition
     <id>/math/math-change-mathematical-analysis-beta-function</id>
     <content type="html">
 Definition
- 
+\(\mathrm{B}(x, y)=\int_{0}^{1} t^{x-1}(1-t)^{y-1} d t\) 
 
   the beta function, also called the Euler integral of the first kind.
 
@@ -6052,10 +6074,7 @@ Definition
 Properties
 
   Symmetry: B(x,y)=B(y,x)
-  Relationship between gamma function and beta function: 
-  when x and y are positive integers: 
-
-</content>
+  Relationship between gamma function and beta function: \(\mathrm{B}(x, y)=\frac{\Gamma(x) \Gamma(y)}{\Gamma(x+y)}...</content>
   </entry>
 
   <entry>
@@ -6075,9 +6094,7 @@ $A_{\mathcal{X}}$
 
 
 Capacity of Channel Q:
-
-
-  The capacity of a channel i...</content>
+\(C(Q)=\max _{\mathcal{P}_{X}} ...</content>
   </entry>
 
   <entry>
@@ -6298,25 +6315,11 @@ geometry,even we are motivated by those...</content>
     <content type="html">
 Two different way of linear equation
 First
- 
-Vector 
- as a linaer combination of $v_1,v_2,v_3$
-
-Geometry
-
-
-
-
-
-Second
-
-
-Geometry Interpretation
-The difference of geometry meaning between square matrix and $m\times
-   n$-matrix
-
-  square matrix means mapping: in same space
-  $m\times n$-matrix mea...</content>
+\(x_{1}\left(\begin{array}{l}{3} \\ {1} \\
+{2}\end{array}\right)+x_{2}\left(\begin{array}{l}{1} \\ {3} \\
+{5}\end{array}\right)+x_{3}\left(\begin{array}{l}{0} \\ {2} \\
+{4}\end{array}\right)=\left(\begin{array}{c}{-5} \\ {7} \\
+{10}\end{array}\right)\) ...</content>
   </entry>
 
   <entry>
@@ -6365,10 +6368,10 @@ the vertices of G;
 colour.
     
   
-  chromatic number: , of G is the minimum k for which G is
+  chromatic number: \(\chi(G)\), of G is the minimum k for which G is
 k-colourable;
     
-      if , ...</content>
+...</content>
   </entry>
 
   <entry>
@@ -6641,20 +6644,14 @@ Definition
 
   Transformation: An $m\times n$ matrix A defines a linear transformation from
 $V^n$ to $V^m$ by: 
-
-
+\(T(\vec{v}) \equiv A \vec{v}\)
+\(\vec{v} \in V^{n} \quad T(\vec{v}) \in V^{m}\)
 
 
 Vector And Affine Space
 A vector $\vec{v}$ is an ordered pair of points in an affine space.
 
-Kernal and Image
-
-$T: V^4 \rightarrow V^3$
-
-
-
-  Kernel: A vector $\vec{v} \in V^4$ is a ...</content>
+Kernal an...</content>
   </entry>
 
   <entry>
@@ -6667,10 +6664,9 @@ Intuitive Explaination of Matrix
 If somebody suddly comes in, and ask what does this matrix transformation do?
 
 Just show him the eigenvalue and eigenvector. 
-
-This matrix just stands for the reflection in two dimensional space. So one
-natural questions is what’s the eigenvalue of this matrix. 
-...</content>
+\(A=\left(\begin{array}{rr}{-\frac{3}{5}} &amp;amp; {\frac{4}{5}} \\ {\frac{4}{5}} &amp;amp;
+{\frac{3}{5}}\end{array}\right)\)
+This matrix just s...</content>
   </entry>
 
   <entry>
@@ -6680,20 +6676,21 @@ natural questions is what’s the eigenvalue of this matrix.
     <id>/math/math-structure-linear-algebra-3-3-matrices-and-application</id>
     <content type="html">
 How to understand the matrix T?
+\(T=
+\left(\begin{array}{lll}{1} &amp;amp; {0} &amp;amp; {0} \\ {0} &amp;amp; {1} &amp;amp; {0} \\ {0} &amp;amp; {0} &amp;amp;
+{1}\end{array}\right)\)
 
-
-
-
-
-
-
-  we can understand this matric coloumn by coloumn.
-  The first coloumn which is the image of the vector $\vec{e_1}$
-  The second coloumn which is the image of the vector $\vec{e_2}$
-  The third coloumn which is the image of the vector $\vec{e_3}$
-
-
-Project...</content>
+\(\left(\begin{array}{l}
+{1}  \\ 
+{0}  \\ 
+{0}
+\end{array}\right) 
+=T(\vec{e_1})\)
+\(\left(\begin{array}{l}
+{0}  \\ 
+{1}  \\ 
+{0}
+\end{a...</content>
   </entry>
 
   <entry>
@@ -6772,13 +6769,12 @@ CPDs not as tables listing all of the conditional probabil...</content>
 Definition
 
   A sufficient statistics function $\tau$ from assignments to $\mathcal{X}$ to
-.
+\(\mathcal{R}^{K}\).
   A parameter space that is a convex set 
-
+\(\Theta \subseteq \mathcal{R}^{M}\)
 of legal parameters.
   A natural parameter function t from $\mathcal{R}^{M}$ to $\mathcal{R}^{K}$.
-  An auxiliary measure A over $\mathcal{X}$
-Each vector of pa...</content>
+  An a...</content>
   </entry>
 
   <entry>
@@ -6820,14 +6816,13 @@ weired.
     <content type="html">
 Notation
 
-  : to simplify writing column vectors in-line with other text, sometimes they
+  \(\boldsymbol{x}=\left[\begin{array}{llll}{x_{1}} &amp;amp; {x_{2}} &amp;amp; {\dots} &amp;amp;
+{x_{m}}\end{array}\right]^{\mathrm{T}}\): to simplify writing column vectors in-line with other text, sometimes they
 are written as row vectors with the transpose operation applied to them.
 
 
 
-Spanning Sets
-A set of vector  is a spanning set for 
-$\mathcal{A^3} \leftrightarrow$ for every vector $\vec{v} \in \mathcal{A^3}$ ...</content>
+Spannin...</content>
   </entry>
 
   <entry>
@@ -6838,18 +6833,11 @@ $\mathcal{A^3} \leftrightarrow$ for every vector $\vec{v} \in \mathcal{A^3}$ ...
     <content type="html">
 Question: What is $\Delta (A)$ ?
 if $\vec{v_1}$,$\vec{v_2}$,$\vec{v_3}$ are columns of A then,
+\(\vec{v}_{1} \vee \vec{v}_{2} \vee \vec{v}_{3}=\Delta\left(e_{1} v e_{2} v
+e_{3}\right)\)
 
-
-
-
-
-
-How to Understand
-Geometrically
-
-  You could think of a determinant as a volume. Think of the columns of the matrix
-as vectors at the origin forming the edges of a skewed box. The determinant
-giv...</content>
+\[A=\left(\begin{array}{lll}{a} &amp;amp; {b} &amp;amp; {c} \\ {d} &amp;amp; {e} &amp;amp; {f} \\ {g} &amp;amp; {h} &amp;amp;
+{i}\end...</content>
   </entry>
 
   <entry>
@@ -6860,30 +6848,13 @@ giv...</content>
     <content type="html">
 Linear Approximations to Nonlinear Maps
 For Example: 
+\(T\left(\left(\begin{array}{l}{x} \\
+{y}\end{array}\right)\right)=\left(\begin{array}{l}{x^{2}+y} \\
+{x-y^{3}}\end{array}\right)\)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-The matrix 
-
-is the derivative
-
-Galois
-
-  Derivatives are linear transformations
-
-
-</content>
+\[T\left(\left(\begin{array}{l}{2} \\
+{1}\end{array}\right)\right)=\left(\begin{array}{l}{6} \\
+{7}\end{array...</content>
   </entry>
 
   <entry>
@@ -6904,12 +6875,11 @@ Galois
 problem with differential
 $d(xy)=xdy+ydx$
 
- 
+\((x+dx)(y+dy)-xy=xdy+ydx+dxdy\) 
 
   Leibniz think $dxdy$ are too small, you can get rid of them.
   at that time the concept of “limit” havn’t appear. Newton has the same idea.
-  As far as I am concerned, if you get rid of something, such as $dxdy$, and
-they are not equal zero, the re...</content>
+  As far as I am concerned, if you get rid of something, such as $dxdy$, and...</content>
   </entry>
 
   <entry>
@@ -6919,31 +6889,12 @@ they are not equal zero, the re...</content>
     <id>/math/math-apply-probability-and-statistics-toolbox-variational-method</id>
     <content type="html">
 1. Motivation
+\(P(\mathbf{x})=\frac{1}{Z} P^{*}(\mathbf{x})=\frac{1}{Z} e^{-E(\mathbf{x})}\)
 
-
-   is simple, but not simple enough
-  solution: approximate  by a simpler distribution .
-Adjust  to get the ‘best’ approximation.
-  THen approximate 
-
-
-2. Method
-
-  
-    
-  
-  
-    
-  
-  we can substitue $P(x)$ into formula 1, and we got
-
-  variational free energy
-
-
-
-Galois
-
-  Th...</content>
+  \(E(x)\) is simple, but not simple enough
+  solution: approximate \(P(X)\) by a simpler distribution \(Q(x;\theta)\).
+Adjust \(\theta\) to get the ‘best’ approximation.
+  THen approximate \(\sum_{x} \...</content>
   </entry>
 
   <entry>
@@ -7015,16 +6966,15 @@ Likelihood Pr...</content>
     <updated>2019-12-10T00:00:00+09:00</updated>
     <id>/math/math-apply-probability-and-statistics-model-inference-laplace-method</id>
     <content type="html">
+\[Z_{P} \equiv \int P^{*}(x) \mathrm{d} x\]
 
+\[\ln P^{*}(x) \simeq \ln
+P^{*}\left(x_{0}\right)-\frac{c}{2}\left(x-x_{0}\right)^{2}+\cdots\]
 
+\[Q^{*}(x) \equiv P^{*}\left(x_{0}\right) \exp
+\left[-\frac{c}{2}\left(x-x_{0}\right)^{2}\right]\]
 
-
-
-
-
-
-
-</content>
+\[Z_{Q}=P^{*}\left(x_{0}\right) \sqrt{\frac{2 \pi}{c}}\...</content>
   </entry>
 
   <entry>
@@ -7048,12 +6998,12 @@ all
     <id>/math/math-change-calculus-integral-of-special-function</id>
     <content type="html">
 Gamma Function
-
+\(\Gamma(z)=\int_{0}^{\infty} x^{z-1} e^{-x} d x, \quad \mathfrak{R}(z)&amp;gt;0\)
 
 Gauss Integral
+\(\int_{-\infty}^{\infty} e^{-x^{2}} d x=\sqrt{\pi}\)
 
-
-
+\[\int_{-\infty}^{\infty} e^{-a(x+b)^{2}} d x=\sqrt{\frac{\pi}{a}}\]
 
 Inference
 
@@ -7073,23 +7023,12 @@ Inference
 
 
 Poisson Distribution
-
+\(P(X(t)=k)=\frac{(\lambda t)^{k} e^{-\lambda t}}{k !}\)
 
 For the probability of the number of events happen equal to 0 
+\(P(X&amp;gt;t)=\frac{(\lambda t)^{0} e^{-\lambda t}}{0 !}=e^{-\lambda t}\)
 
-
-
-
-
-
-Expectation:
-
-
-Reference
-
-  指数分布的期望和方差CSDN
-
-</content>
+\[P(X&amp;lt;=t)=1-e^{-\lambda t}\...</content>
   </entry>
 
   <entry>
@@ -7098,20 +7037,11 @@ Reference
     <updated>2019-12-03T00:00:00+09:00</updated>
     <id>/math/math-change-calculus-of-variations</id>
     <content type="html">
-
-
-Galois
-
-  This method just simply this problem to what will happen when we find the
-target funtion. we will get a extremal function.
-  I think Lagrange use the same idea to solve KKT problem.
-
-
-Reference
-
-  Calculus of Variations
-
-</content>
+\[\begin{aligned}\left.\int_{x_{1}}^{x_{2}} \frac{d L}{d
+\varepsilon}\right|_{\varepsilon=0} d x
+&amp;amp;=\int_{x_{1}}^{x_{2}}\left(\frac{\partial L}{\partial f} \eta+\frac{\partial
+L}{\partial f^{\prime}} \eta^{\prime}\right) d x \\ &amp;amp;=\int_{x_{1}}^{x_{2}}
+\frac{\partial L}{\partial f} \eta d x...</content>
   </entry>
 
   <entry>
@@ -7231,22 +7161,13 @@ dimensional space, and projective geometry can be used to study these...</conten
     <id>/math/math-space-affine-geometry-algebra</id>
     <content type="html">
 HAHA
-
+\(\begin{aligned} \vec{c} &amp;amp;=\vec{a}+\lambda(\vec{b}-\vec{a}) \\ &amp;amp;=\vec{a}-\lambda
+\vec{a}+\lambda \vec{b} \\ &amp;amp;=(1-\lambda) \vec{a}+\lambda \vec{b}\end{aligned}\)
 
 Affine combination of $\vec{a}$ and $\vec{b}$ 
 Affine means: the sum of coefficient equals to 1 
 
-
-
-HAHA
-A bivector can simplify the area algebraicly, allow us think area pure
-algebraicly, we want to apply algebra to geometry.
-
-Properties
-
-
-Claim
-In the plane, every bivector is a multiple...</content>
+\[\begin{array}{l}...</content>
   </entry>
 
   <entry>
@@ -7331,13 +7252,13 @@ and algebra.
 Definition
 In mathematics, a path in topological space X is a continuous function f from
 unit interval I=[0,1] to X 
-
+\(f: I \rightarrow X\)
 
 Homotopic path
 
 Definition
 
-  toological space: may be defined as a set of po...</content>
+  toological space: may be ...</content>
   </entry>
 
   <entry>
@@ -7387,11 +7308,10 @@ A surface M is orientable which means we can con...</content>
 Concept
 In algebraic topology, the Euler characteristic or Euler number is a topological
 invariant, a number that describes a topological space’s shape or structure
-regardless of the way it is bent. It is commonly denoted by 
+regardless of the way it is bent. It is commonly denoted by \(\chi\)
 
 HAHA
-You can make a model, doesn’t mean it is a mathematic object.
-Eu...</content>
+You can make a model, doesn’t mean it is a mathematic ob...</content>
   </entry>
 
   <entry>
@@ -7418,13 +7338,13 @@ which one is better ?
     <id>/math/math-structure-algebraic-topology-1-2-dimensional-objects</id>
     <content type="html">
 HAHA
- 
+\(A^{2}=A^{\prime} \times A^{\prime}\) 
 Product of lines: this is a construction of topological spaces.
 
 Borromean Rings
 In mathematics, the Borromean rings consist of three topological circles which
 are linked but where removing any one ring leaves the other two unconnected. In
-other words, no two of the three rings are linked...</content>
+other words...</content>
   </entry>
 
   <entry>
@@ -7506,9 +7426,8 @@ definition
 Quaternion are a number system that extends the complex numbers. A feature of
 quaternions is that multiplication of two quaternons is noncommutative.
 Quaternions are generally represented in the form: 
-
-where a,b,c and d are real numbers, and i,j, and k are the fundamental
-quaternion ...</content>
+\(a+b \mathbf{i}+c \mathbf{j}+d \mathbf{k}\)
+where a,b,c and d are real numbers, an...</content>
   </entry>
 
   <entry>
@@ -7616,23 +7535,15 @@ of rational numbers in round brackets.
     <id>/math/math-change-tensor-kronecker-delta-function</id>
     <content type="html">
 Definition
-
+\(\delta_{i j}=\left\{\begin{array}{ll}{0} &amp;amp; {\text { if } i \neq j} \\ {1} &amp;amp;
+{\text { if } i=j}\end{array}\right.\)
 
 Example
 The inner product of vector: 
-
+\(\mathbf{a} \cdot \mathbf{b}=\sum_{i, j=1}^{n} a_{i} \delta_{i j} b_{j}\)
 
 For example: 
- 
-where $\delta_{12}$ and $\delta_{21}$ are zeros
-
-Properties
-
-
-  
-    for the third formula, maybe you need spent a little time to think about it,
-but it’s not that difficult. for the two items, we only need consider about
-the f...</content>
+\(a=\sum_{i j} a_{i} c_{j} \del...</content>
   </entry>
 
   <entry>
@@ -7687,19 +7598,11 @@ Application of Curvatrue In Curve
     <content type="html">
 Line integral of a scalar field
 For some scalar field 
+\(f: \mathbb{U} \subseteq \mathbb{R}^{n} \rightarrow \mathbb{R}\)
+the line integral along a piecewise smooth curve \(c \subset \mathbb{U}\) is defined as
 
-the line integral along a piecewise smooth curve  is defined as
-
-
-
-
-
-Remark
-A line integral of a scalar field is thus a line integral of a vector field
-where the vectors are always tangential to the line.
-
-Remark
-For a long time, I was so c...</content>
+\[\int_{\mathcal{C}} f(\mathbf{r}) d s=\int_{a}^{b}
+f(\mathbf{r}(t))\left|\mathbf{r}^{...</content>
   </entry>
 
   <entry>
@@ -7820,10 +7723,10 @@ quadratic form and homogeneous polynomials
 
   In mathematics, a quadratic form is a polynomial with terms all of degree
 two, for example,
-
+\(4x^2 + 2xy - 3y^2\)
 is a quadratic form in the variables x and y. The coefficients usually belongs
 to a fixed field K.
-  homogeneous polynomials, a homogeneous polynomial is a p...</content>
+  homogeneous polynomials, a homogene...</content>
   </entry>
 
   <entry>
@@ -7861,16 +7764,12 @@ for military application
     <content type="html">Definition Cross-ration: the cross-ratio of aquadruple of distince points
 on the real line with coordiantes $z_1,z_2,z_3,z_4$ is given by:
 
-
+\[($z_1,z_2;z_3,z_4$)=\frac{(z_3-z_1)(z_4-z_2)}{(z_3-z_2)(z_4-z_1)}\]
 
 HAHA
 Cayley: All geometry are projective geometry
 
-How to deal with projective geometry in a algbraic way?
-
-Solution: Homogeneous Coordinates
-
-  Homogeneou...</content>
+How to deal with projective geometr...</content>
   </entry>
 
   <entry>
@@ -7955,13 +7854,8 @@ on the integers that is compatible with the operations on integers: addition, su
 
 Polynomial arithmetic in Field (prime=11)
 Example:
-
-and, 
-
-
-if k=p 
-
-...</content>
+\(q=\alpha^{k}\)
+a...</content>
   </entry>
 
   <entry>
@@ -8006,24 +7900,11 @@ Introduction
 Geodesic are curves where the acceleration vector is normal to the surface.
 Formula
 
+\(\frac{d^{2} \vec{R}}{d \lambda^{2}}=\left(\frac{d^{2} \vec{R}}{d
+\lambda^{2}}\right)^{n o r m a l}+\left(\frac{d^{2} \vec{R}}{d
+\lambda^{2}}\right)^{t a n g e n t i a l}\)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</content>
+\(\frac{d \vec{R}}{d \l...</content>
   </entry>
 
   <entry>
@@ -8036,23 +7917,9 @@ Metric Tensor
 
 Metric tensor is used to measure the length of vector. Please remember the
 following picture 
-
-
-Obtain
-
-
-Arc Length
- 
-Just  the same as: 
-
-
-Einstein Notation  $c^1=x, c^2=y$
-
-
-Galois
-
-  When I first encounter the metric tenosr, I totally have no idea what does
-this stand for. Beca...</content>
+\(g_{\vec{e}_{i}}=\left[\begin{array}{ll}{\overrightarrow{e_{1}} \cdot
+\overrightarrow{e_{1}}} &amp;amp; {\overrightarrow{e_{1}} \cdot \overrightarrow{e_{2}}}
+\\ {\overrightarrow{e_{2}} \cdot...</content>
   </entry>
 
   <entry>
@@ -8062,7 +7929,7 @@ this stand for. Beca...</content>
     <id>/math/math-structure-abstract-algebra-ring</id>
     <content type="html">
 Definition
-Ring:  A ring is a set of elements under , not commutative under 
+Ring:  A ring is a set of elements under \(\times, -,+\), not commutative under \(\times\)
 
   At first, ring is a concept generialize the integer
 
@@ -8074,14 +7941,11 @@ Example
   
   
     Matrix
-  matrix, .
+ \(2\times 2\) matrix, \(a,b,c,d \in R \times\).
   
 
 
-
-rings generalize matrix, which are pretty important.
-
-  Interger...</content>
+\(\...</content>
   </entry>
 
   <entry>
@@ -8132,15 +7996,12 @@ group: set of elements
   Closed under Operation: *
   Inverses: inverses exists for all x
   Identity element: e
-  associative: =
+  associative: \((A\ast B)\ast C\)=\(A\ast (B\ast C)\)
 
 
 Remark
 why we need these properties ? 
-The answer is we want to solve equation. 
-
-
-we say element...</content>
+The answer is we wan...</content>
   </entry>
 
   <entry>
@@ -8153,12 +8014,11 @@ Question 1: what is a linear map ?
 A linear map is from a vector space to another vector space
 
 Question 2: How to define a point p on a manifold ?
-define  is a smooth manifold 
-curve  is at least  
-suppose 
+define \((M,O,\mathscr{A})\) is a smooth manifold 
+curve \(\gamma: R \rightarrow M\) is at least \(C^{1}\) 
+suppose \(\gamma(\lambda_{o})=p\)
 
-Question 3:  what is the velocity of a curve  at point p ?
-Based on question 2, we defi...</content>
+Quest...</content>
   </entry>
 
   <entry>
@@ -8188,8 +8048,7 @@ tangent space a length and angle between vectors in the same tangent space, also
 inner product structure.
 
 Definition 1: Metrics
-A metric on a smooth manifold  is a (0,2)-tensor field.
-</content>
+A metric on a smooth manifold \((M,O,\mathscr{A})\) is a (0,2)...</content>
   </entry>
 
   <entry>
@@ -8200,10 +8059,10 @@ A metric on a smooth manifold  is a (0,2)-tensor field.
     <content type="html">
 Introduction
 Completion of our “lift” of analysis of chart to the manifold level. 
-Our aim is, given a function, integrate on a manifold  
+Our aim is, given a function, integrate on a manifold \(\int_{M}f\) 
 
 Definition 1: Volume Forms
-On a smooth manifold,, a (0,n-dim)-tensor field  is called Volume Form
+On a smooth manifold,\((M,O,\mathscr{A})\), a (0,n-dim)-tensor field \(\Omega\) is called Volume Form
 
 </content>
   </entry>
@@ -8219,9 +8078,9 @@ and the answer is theory of bundles.
 
 Definition 1: Bundles
 A bundle is a triple consists of three pieces of
-data.    where E is a smooth manifold, also under the
-name “total space”;  is a smooth map(surjectile), also under the name of
-“projection map”; M is a...</content>
+data.  \((E,\Pi,M)\)  where E is a smooth manifold, also under the
+name “total space”; \(\Pi\) is a smooth map(surjectile), also under the name of
+“pro...</content>
   </entry>
 
   <entry>
@@ -8244,26 +8103,16 @@ diff- ...</content>
     <id>/math/math-space-riemann-geometry-connection</id>
     <content type="html">
 A
-According to the knowledge before, we saw a vector field X can be used to provide a directional derivative of a function  
+According to the knowledge before, we saw a vector field X can be used to provide a directional derivative of a function \(f \in C^{\infty} M\) 
+\(\nabla_{x}f:= Xf\)
 
-
- 
+\(\nabla_{x}f= Xf = (df)X\) 
 
   
-    
+\[X: C^{\infty} \rightarrow C^{\infty}(M)\]
   
   
-    
-  
-  
-    
-  
-
-
-Directional derivative of tensor field
-we formulate a wish list of properties what the  acting on a tensor field should have.
-
-Ques...</content>
+\[df: \Gamma (TM) \rightarrow C^{\infty}(M)\...</content>
   </entry>
 
   <entry>
@@ -8311,8 +8160,7 @@ and analyzing the relationship between the geometric structure of this manifold 
 estimation using this model.
 
 terminology 1: statictical model S
- 
-where  is a subset of  and ...</content>
+\(S=\left\{p_{\xi}=p(x ; \xi)...</content>
   </entry>
 
   <entry>
@@ -8336,9 +8184,9 @@ machine learning is for doing optimization of statistical manifolds.
     <content type="html">
 background
 when investigating the properties of the Fisher metric g and the
--connection , and also when applying them to
+\(\alpha\)-connection \(\nabla^{\alpha}\), and also when applying them to
 particular problems, it is important to consier them not individually, but
-rather as the triple 
+rather as the triple \((g,\nabla^{\alpha},\nabla^{-\alpha})\)
 </content>
   </entry>
 
@@ -8371,18 +8219,8 @@ components.
 
 derivative
 
-
-
-Assumption
-Basic Vectors are equal to partial derivatives, which means:
-
-
-Vector field along a curve.
-
-
-
-
-Gr...</content>
+\[\frac{\partial c_{i}}{\partial p_{j}} \frac{\partial p_{j}}{\partial
+c_{k}}=\frac{d c_{i}}{d c_{k}}=\left\{\...</content>
   </entry>
 
   <entry>
@@ -8415,10 +8253,8 @@ classification
   order: the number of highest derivative in a differential equation.
 
 
-
-is second order since the highest derivative is  is the second derivative.
-
-  degree: In mathematics, the degree of a different...</content>
+\(y^{\prime \prime}+x y^{\prime}-x^{3} y=\sin x\)
+is second order since the highest derivative is \(y^{\prime \prime}\) is the s...</content>
   </entry>
 
   <entry>
@@ -8501,25 +8337,6 @@ Terminology
   </entry>
 
   <entry>
-    <title>Python: Operator</title>
-    <link href="/pl/pl-python-operator-module.html"/>
-    <updated>2019-10-07T00:00:00+09:00</updated>
-    <id>/pl/pl-python-operator-module</id>
-    <content type="html">
-method
-
-  operator.itemgetter(items): return a callable object that fetches item from its operand, using the operand’s getitem()
-  f = itemgetter(2), the call f(r) returns r[2]
-  f = itemgetter(2, 5, 3), the call g(r) returns (r[2], r[5], r[3])
-
-
-itemgetter(1,3,5)('ABCDEFG')
-# ('B', 'D', 'F')
-
-#...</content>
-  </entry>
-
-  <entry>
     <title>G.T.: Perfect Information Games</title>
     <link href="/math/math-apply-game-theory-perfect-information-games.html"/>
     <updated>2019-10-07T00:00:00+09:00</updated>
@@ -8552,11 +8369,10 @@ following procedure.
     <content type="html">
 Definition
 
-  A game-frame in strategic form is a list of four items(a quadruple)  where :
+  A game-frame in strategic form is a list of four items(a quadruple) \(\left\langle I,\left(S_{1}, S_{2}, \ldots, S_{n}\right), O, f\right\rangle\) where :
     
       $I = {1,2,\cdots,n}$ is a set of players
-       is a list of sets, one for each player, for every Player $i \in I$, $S_i$ is
-the set of strategies of Player $i$. We denote by S the Cartesian pro...</content>
+      \(\left(S_{1}, S_{2}, \ldots, S_{n}\right)\) is a list of sets, one f...</content>
   </entry>
 
   <entry>
@@ -8595,70 +8411,6 @@ component
   </entry>
 
   <entry>
-    <title>Python: Asterisk Operator</title>
-    <link href="/pl/pl-python-operator-asterisk.html"/>
-    <updated>2019-09-27T00:00:00+09:00</updated>
-    <id>/pl/pl-python-operator-asterisk</id>
-    <content type="html">
-Introduction
-Asterisk plays very important role in python
-
-packing the containers
-
-review the following code
-def demo(*args, **kwargs):
-    print(args,&quot; and &quot;,kwargs)     
-demo('ha', 'big', third='wilson', fourth='roy')
-
-
-  the asterisk mark before args is not used to get the address or content ...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Build Neural Network With Any Topology</title>
-    <link href="/pl/pl-python-tensorflow-neural-network-with-any-topology.html"/>
-    <updated>2019-09-18T00:00:00+09:00</updated>
-    <id>/pl/pl-python-tensorflow-neural-network-with-any-topology</id>
-    <content type="html">
-def layer(layer_name, data, output_channels):
-    with tf.variable_scope(layer_name,reuse=tf.AUTO_REUSE):
-        w = tf.get_variable(name=&quot;weight&quot;,shape=[data.shape[-1],output_channels])
-        b = tf.get_variable(name=&quot;bias&quot;,shape=[output_channels])
-        summary_bias = tf.summary.histogram...</content>
-  </entry>
-
-  <entry>
-    <title>Python Copy</title>
-    <link href="/pl/pl-python-copy.html"/>
-    <updated>2019-09-18T00:00:00+09:00</updated>
-    <id>/pl/pl-python-copy</id>
-    <content type="html">
-copy in Python
-In Python, Assignment statements do not copy objects, they create bindings between a target and an object. 
-When we use = operator user thinks that this creates a new object; well, it doesn’t. It only creates a new  
-variable that shares the reference of the original object. 
-
-dee...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Collections and Algorithm</title>
-    <link href="/pl/pl-python-collections.html"/>
-    <updated>2019-09-16T00:00:00+09:00</updated>
-    <id>/pl/pl-python-collections</id>
-    <content type="html">
-Collections
-
-what is collections module
-
-  
-    Collections in Python are containers that are used to store collections of
-data, for example, list, dict, set, tuple etc. These are built-in
-collections. Several modules have been developed that provide additional data
-structures to store collectio...</content>
-  </entry>
-
-  <entry>
     <title>Latex: Neural Network,Flowchart</title>
     <link href="/pl/pl-latex-diagram-neural-network-flowchart.html"/>
     <updated>2019-09-16T00:00:00+09:00</updated>
@@ -8693,46 +8445,6 @@ step 1: prepare the dataset
   </entry>
 
   <entry>
-    <title>Python: Pyqt5 Menu Event Handling</title>
-    <link href="/pl/pl-python-pyqt5-menu-action.html"/>
-    <updated>2019-09-12T00:00:00+09:00</updated>
-    <id>/pl/pl-python-pyqt5-menu-action</id>
-    <content type="html">
-Event Handling
-
-  used the Code Integrated Template
-  click File-&amp;gt;Open, pop up dialoge
-
-
-# -*- coding: utf-8 -*-
-
-# Form implementation generated from reading ui file 'menu.ui'
-#
-# Created by: PyQt5 UI code generator 5.9.2
-#
-# WARNING! All changes made in this file will be lost!
-
-from PyQt5 i...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Picture Display</title>
-    <link href="/pl/pl-python-pyqt5-display-image.html"/>
-    <updated>2019-09-12T00:00:00+09:00</updated>
-    <id>/pl/pl-python-pyqt5-display-image</id>
-    <content type="html">
-Display a picutre
-In nature, There is no difference between text label and picture label. 
-So, you can put a picture in a label. 
-Programming look into the essence of the world.
-
-import sys
-from PyQt5.QtWidgets import QApplication, QWidget, QLabel
-from PyQt5.QtGui import QIcon, QPixmap
-import ma...</content>
-  </entry>
-
-  <entry>
     <title>Code: Summary</title>
     <link href="/pl/pl-summary.html"/>
     <updated>2019-09-10T00:00:00+09:00</updated>
@@ -8749,62 +8461,6 @@ For a new code library is just a bundle of functions and classes.
 Common Short
 
 ...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Qt Designer</title>
-    <link href="/pl/pl-python-QT-designer.html"/>
-    <updated>2019-09-05T00:00:00+09:00</updated>
-    <id>/pl/pl-python-QT-designer</id>
-    <content type="html">
-Widget
-
-  TextLabel: what does label mean? According to Merriam-Webster: to put a word
-or name on something to describe or identify it.
-  Graphics View: what does view mean? According to Merriam-Webster: it is a
-picture of a place So Graphics View jus a place to put picture.  So Tree
-view, List ...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Code Integrated Template of QT Designer and Pyqt5</title>
-    <link href="/pl/pl-python-pyqt-qtdesigner-code-template.html"/>
-    <updated>2019-09-04T00:00:00+09:00</updated>
-    <id>/pl/pl-python-pyqt-qtdesigner-code-template</id>
-    <content type="html">
-signal and slot
-If you have a programming backgound, you may hear about event handling where you interact with a widget
-and a function is executed. 
-The idea in PyQt5 is the same but definitions are a bit different. 
-So when you click a QPushButton, a signal is emitted. The signal name in this c...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Pyqtgraph</title>
-    <link href="/pl/pl-python-pyqtgraph.html"/>
-    <updated>2019-09-03T00:00:00+09:00</updated>
-    <id>/pl/pl-python-pyqtgraph</id>
-    <content type="html">
-what’s pyqtgraph
-pyqtgraph is born for dynamic graph, matplotlib is for static graph.
-
-demo
-
-import numpy as np
-import pyqtgraph as pg
-
-# create the app
-app = pg.mkQApp()
-win = pg.GraphicsWindow()
-win.resize(600,400)
-p = win.addPlot()
-curve = p.plot()
-
-data = []
-idx = 0
-N = 200
-
-def updateCurveD...</content>
   </entry>
 
   <entry>
@@ -8863,22 +8519,6 @@ Reference
   lstm-neural-network-from-scratch
   understanding architecture of LSTM cell from scratch with code
   anyone can learn to code an LSTM-RNN in python
-
-</content>
-  </entry>
-
-  <entry>
-    <title>Python: Keras</title>
-    <link href="/pl/pl-python-keras-model.html"/>
-    <updated>2019-08-19T00:00:00+09:00</updated>
-    <id>/pl/pl-python-keras-model</id>
-    <content type="html">
-from keras.models import load_model
-model=load_model('model.h5')
-# x is test data
-y=model.predict(x)
-print(y)
-
 
 </content>
   </entry>
@@ -9056,9 +8696,7 @@ two questions come out: tangent of line, and the area, volume problem
 
 $y=x^2$ just a special case of p(x,y)=0
 
-
-
-</content>
+\[\frac{d y}{d x}=-\frac{\left(\frac{\partial P}{\partial x}\right)}{\left(\fra...</content>
   </entry>
 
   <entry>
@@ -9110,9 +8748,7 @@ Newton’s method is a root-finding algorithm which produces successively better
 approximations to the roots of a real-valued function.  The most basic version
 starts with a single-variable function f defined for a real variable x. 
 
-
-
-</content>
+\[x_{1}=x_{0}-\frac{f\left(x_{0}\right)}{f^{\prime}\l...</content>
   </entry>
 
   <entry>
@@ -9140,10 +8776,7 @@ Metric Space: a metric space is a set together with a metric on the set, The met
 any two members of the set. 
 A metric space is an ordered pair(M,d), where M is a set and d is a metric on M. 
 
-
-
-
-  The distance from a point...</content>
+\[d : M \times M \rightarrow \...</content>
   </entry>
 
   <entry>
@@ -9224,26 +8857,12 @@ formula
 
   
     one dimensional Jacobian 
-
+\(\int_{a}^{b} f(x) \mathrm{d} x=\int_{\alpha}^{\beta} f(x(u)) \frac{\mathrm{d}
+x}{\mathrm{d} u} \mathrm{d} u\)
   
   
     two dimensional Jacobian 
-
-  
-  
-    three dimensional Jacobian 
-
-  
-
-
-where 
-
-
-Reference
-
-  Jacobians
-
-</content>
+\(\iint_{R} f(x, y) \mathrm{d} x \mathrm{d} y=\iint...</content>
   </entry>
 
   <entry>
@@ -9254,13 +8873,10 @@ Reference
     <content type="html">
 Hessian Matrix
 
-
-
-application
-In practice, engineering problem includes many variables is  very complicate,
-Taylor expansion is used to simulates the target function.  which needs
-Hessian Matrix
-</content>
+\[H(f)=\left[\begin{array}{cccc}{\frac{\partial^{2} f}{\partial x_{1}^{2}}} &amp;amp;
+{\frac{\partial^{2} f}{\partial x_{1} \partial x_{2}}} &amp;amp; {\cdots} &amp;amp;
+{\frac{\partial^{2} f}{\partial x_{1} \partial x_{n}}} \\ {\frac{\partial^{2}
+f}{\partial x_{2} \partial x_{1}}} &amp;amp; {\f...</content>
   </entry>
 
   <entry>
@@ -9273,10 +8889,8 @@ open set
 
   In 2-dimensional plane coordinate, we have distance concept, which is very eazy to understand.
   According to this concept, we can define continuity 
-
-This rule can be applied to n-dimensional space, so we can define open ball
-  we abstract the open ball concept as open set
-  open se...</content>
+\(\left|x-x_{0}\right|&amp;lt;\delta \Rightarrow\left|f(x)-f\left(x_{0}\right)\right|&amp;lt;\varepsilon\)
+This rule can be applied to n-dimen...</content>
   </entry>
 
   <entry>
@@ -9380,14 +8994,10 @@ what the crap of Adaboost ?
 It focuses on classification problems and aims to convert a set of weak
 classifiers into a strong one.
 
-
+\[F(x)=\operatorname{sign}\left(\sum_{m=1}^{M} \theta_{m} f_{m}(x)\right)\]
 
 where f_m stands for the m_th weak classifier and theta_m is the
-corresponding weight.  It is exactly the weighted combination of M weak
-classifiers.
-
-Train
-For ...</content>
+corresponding weight....</content>
   </entry>
 
   <entry>
@@ -9519,198 +9129,6 @@ You c...</content>
   </entry>
 
   <entry>
-    <title>Python:  pdb</title>
-    <link href="/pl/pl-python-pdb.html"/>
-    <updated>2019-07-05T00:00:00+09:00</updated>
-    <id>/pl/pl-python-pdb</id>
-    <content type="html">
-initiate pdb
-
-python3 -m pdb foo.py
-
-
-add breakpoint
-
-import pdb
-pdb.set_trace()
-
-
-Stepping through code
-
-One of the strongest feature of pdb is that we can move through our code in various ways:
-
-
-  n(ext): n command runs the code on current line at full-speed and takes us to the next line in t...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Common Error</title>
-    <link href="/pl/pl-python-error-debug.html"/>
-    <updated>2019-07-05T00:00:00+09:00</updated>
-    <id>/pl/pl-python-error-debug</id>
-    <content type="html">
-NoneType error
-
-whenever you see an error that include ‘NoneType’ that means you have an operand
-or an object that is None when you expecting something else.
-
-invalid syntax
-when you encounter this error in python, probably you make a error. 
-and the line number with the invalid syntax is not th...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Obtain Variable Value in Tensorflow</title>
-    <link href="/pl/pl-python-tensorflow-obtain-variable.html"/>
-    <updated>2019-07-04T00:00:00+09:00</updated>
-    <id>/pl/pl-python-tensorflow-obtain-variable</id>
-    <content type="html">
-introduction
-you can treat tensorflow as a blackbox, when we want to check the tensor.
-tensorflow provide some api to get the tensor
-
-check the tensor with tf.Session()
-
-check the variable
-
-Tensorflow provides graph collections that group the variables. To access the
-variables you can run the fo...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Ipython with Tensorflow</title>
-    <link href="/pl/pl-python-tensorflow-ipython.html"/>
-    <updated>2019-07-03T00:00:00+09:00</updated>
-    <id>/pl/pl-python-tensorflow-ipython</id>
-    <content type="html">
-pitfall
-Ipython bring you the benefits, but also the pitfall
-
-how to get the lost code back in ipython
-
-when you delete the code, and you want them back, you can using the following
-method to get them back.
-
-def rescue_code(function):
-    import inspect
-        get_ipython().set_next_input(&quot;&quot;.jo...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Concept in Tensorflow</title>
-    <link href="/pl/pl-python-tensorflow-concept.html"/>
-    <updated>2019-07-03T00:00:00+09:00</updated>
-    <id>/pl/pl-python-tensorflow-concept</id>
-    <content type="html">
-what the crap is the rank?
-
-  
-    The rank of a tensor is different is not the same as the rank of a matrix.
-the rank of a tensor is the number of indices required to uniquely select each element of the tensor. also
-known as “order”,”ndims” or “degree”
-  
-  
-    numpy compatibility, Equivalent ...</content>
-  </entry>
-
-  <entry>
-    <title>Python: PIL package</title>
-    <link href="/pl/pl-python-PIL.html"/>
-    <updated>2019-07-02T00:00:00+09:00</updated>
-    <id>/pl/pl-python-PIL</id>
-    <content type="html">
-what is PIL
-
-convert between a PIL Image and a numpy array
-
-from PIL import Image
-import numpy as np
-
-# the conversion from Image to array
-im = Image.open(&quot;sample.png&quot;)
-np\_im = np.array(im)
-print(np\_im.shape)
-
-# the conversion from array to Image
-new_im = Image.fromarray(np_im)
-# for grey imag...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Closure</title>
-    <link href="/pl/pl-python-closure.html"/>
-    <updated>2019-06-26T00:00:00+09:00</updated>
-    <id>/pl/pl-python-closure</id>
-    <content type="html">
-Why Closures?
-All the crap comes out because of the concept of non-local variable. First let’s define some concept.
-
-  nested funciton: A function defined inside another function is called nested function.
-
-
-The Criteria of a Closure
-
-  it must have a nested function (function inside a function)...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Tensorboard</title>
-    <link href="/pl/pl-python-tensorflow-tensorboard.html"/>
-    <updated>2019-06-25T00:00:00+09:00</updated>
-    <id>/pl/pl-python-tensorflow-tensorboard</id>
-    <content type="html">
-Introduction
-TensorBoard is a visualization software that comes with any standard Tensorflow
-installation. In Google’s words: “The compuations you’ll use Tensorflow for(like
-training a massive deep neural network)”
-
-启动tensorboard
-python /path/to/tensorflow/install/directory/tensorflow/tensorboar...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Define Variable in Tensorflow</title>
-    <link href="/pl/pl-python-tensorflow-sharing-variable.html"/>
-    <updated>2019-06-25T00:00:00+09:00</updated>
-    <id>/pl/pl-python-tensorflow-sharing-variable</id>
-    <content type="html">
-variable sharing
-
-It is a mechanism in Tensorflow that allows for sharing variables accessed in different part of the code
-without passing the reference around. 
-In traditional method, when you want to use the same variable in different method, you have to pass the variable by function parameter...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Introduction of Tensorflow</title>
-    <link href="/pl/pl-python-tensorflow-intro.html"/>
-    <updated>2019-06-25T00:00:00+09:00</updated>
-    <id>/pl/pl-python-tensorflow-intro</id>
-    <content type="html">
-what is the crap of tensorflow ?
-
-  tensorflow means tensor flows in graph
-  the tensorflow defines a compute graph, and you can define operation in the graph.
-  the purpose of the compute graph is to reuse the graph model. reuse reuse reuseis the most important thing
-
-
-how to use tensorflow to ...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Broadcasting in Tensorflow</title>
-    <link href="/pl/pl-python-tensorflow-broadcasting-mechanism.html"/>
-    <updated>2019-06-25T00:00:00+09:00</updated>
-    <id>/pl/pl-python-tensorflow-broadcasting-mechanism</id>
-    <content type="html">
-what the crap is broadcasting ?
-Broadcasting is the process of making arrays with different shapes have
-compatible shapes for arithmetic operations.
-
-</content>
-  </entry>
-
-  <entry>
     <title>DL: Convolutional Neural Network</title>
     <link href="/ai/AI-ML-DL-convolution-neural-network.html"/>
     <updated>2019-06-18T00:00:00+09:00</updated>
@@ -9718,24 +9136,7 @@ compatible shapes for arithmetic operations.
     <content type="html">
 differentiate a cross Entropy Cost Function
 
-
-
-
-
-
-
-combine the above two conditions:
-
-
-
-since  is a one-hot vector:
-
-
-Galois
-
-  The relationship between neural network and convolutional neural network is how
-to treat the input signal. If the network is full connected, then it is
-neural network, ...</content>
+\[\begin{aligned} \frac{\partial L}{\partial z_{i}} &amp;amp;=\frac{\partial L}{\partial a_{j}} \cdot \frac{\partial a_{j}}{\partial z_{i}} \\ &amp;amp;=\frac{\partial\left(-\sum_{j}^{n} y_{j} \ln a_{j}\right)}{\partial a_{j}} \cdot \frac{\partial a_{j}}{\par...</content>
   </entry>
 
   <entry>
@@ -9751,46 +9152,6 @@ continuous change of shape or size of figures.
   Algebraic means use algebraic to study topology.
   we are not asking the distance, what are the essential features of these
 mathematic objects which ...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Openml</title>
-    <link href="/pl/pl-python-openml.html"/>
-    <updated>2019-06-15T00:00:00+09:00</updated>
-    <id>/pl/pl-python-openml</id>
-    <content type="html">
-what the crap of openml
-
-An automated machine learning environment.
-
-import openml
-
-# obtain dataset list
-dataset_list = openml.datasets.list_datasets()
-dataset_list_pd = pd.DataFrame.from_dict(dataset_list,orient='index')
-
-# get the mnist dataset ID
-dataset_list_pd[dataset_list_pd.name.str.cont...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Input and Output Stream</title>
-    <link href="/pl/pl-python-io.html"/>
-    <updated>2019-06-11T00:00:00+09:00</updated>
-    <id>/pl/pl-python-io</id>
-    <content type="html">
-what the crap is a context manager?
-
-The main motivation behind the context manager in python is a source acquisition and release mechanism
-which prevents resource leak
-
-what is CSV?
-
-CSV stands for comma separated values, it’s just another plain text file.
-
-Input and Output of CSV file
-
-import ...</content>
   </entry>
 
   <entry>
@@ -9829,19 +9190,6 @@ def f_0(x):
 def f_j(x, beta):
     &quot;&quot;&quot; Intermediate distribution: interpolation between f_0 and f_n &quot;&quot;&quot;
     return f_0(x)**beta * f_0(x...</content>
-  </entry>
-
-  <entry>
-    <title>Python: For Loop</title>
-    <link href="/pl/pl-python-principal-iterator.html"/>
-    <updated>2019-06-10T00:00:00+09:00</updated>
-    <id>/pl/pl-python-principal-iterator</id>
-    <content type="html">
-what the crap of iterator protocol?
-
-  Just as Javabean protocol, a JavaBean Class is  the kind of class that has a getter() and setter() method for every Class 
-In python, the iterator protocol is that one method needs to be defined for container objects to provide iteration support 
-container....</content>
   </entry>
 
   <entry>
@@ -9967,30 +9315,6 @@ similarities of the corresponding low-dimensional points in t...</content>
   </entry>
 
   <entry>
-    <title>Python: List, Dict and Tuple</title>
-    <link href="/pl/pl-python-built-in-data-structure.html"/>
-    <updated>2019-05-27T00:00:00+09:00</updated>
-    <id>/pl/pl-python-built-in-data-structure</id>
-    <content type="html">
-dict
-
-my_dict = {'a':4,'b':5}
-for key,value in my_dict.items():
-    print(key,value)
-# print value
-a 4
-b 5
-
-
-common mistake about tuple
-
-If we print the variable index, and the output is like the code in the comment line. 
-it means, it is a tuple, and the first element is an array
-
-a = [1,3,4,5,...</content>
-  </entry>
-
-  <entry>
     <title>Hidden Markov Model</title>
     <link href="/ai/AI-ML-Hidden-Markov-Model.html"/>
     <updated>2019-05-27T00:00:00+09:00</updated>
@@ -9999,11 +9323,10 @@ a = [1,3,4,5,...</content>
 Components of A HMM
 
 
-   a set of N states
-   a transition probability matrix A, each  representing the probability of moving 
-form state  to state , 
-   a sequence of T observations
-   a sequence of observation likelihoods, also called emission probabilities, each expressing a probability of an...</content>
+  \(Q=q_{1}q_{2}...q_{N}\) a set of N states
+  \(A=a_{11}...a_{ij}...a_{NN}\) a transition probability matrix A, each \(a_{ij}\) representing the probability of moving 
+form state \(i\) to state \(j\), \(s.t. \sum_{j=1}^Na_{ij}=1 \forall i\)
+  \(O=o_1o_2...o_T\) a sequence ...</content>
   </entry>
 
   <entry>
@@ -10032,12 +9355,8 @@ Definition
   
   Linear functional: if V is a normed space over F and T:V-F is a linear
 operator, then we call T a linear functional on V.
-  A mapping A:  is linear if
-
-
-
-Topology
-In topology, an open map is a function between two topologic...</content>
+  A mapping A: \(U \rightarrow V\) is linear if
+\(A(\alpha \mathbf{x}+\beta \mathbf{y})=\alpha A \mat...</content>
   </entry>
 
   <entry>
@@ -10054,7 +9373,7 @@ for example,
   the target is GPA
 
 
-given the observation data(x,), and x has two components, which is th...</content>
+given the observation data(x,\(\hat{y}\)), and x has two components, ...</content>
   </entry>
 
   <entry>
@@ -10093,24 +9412,6 @@ kind of pull the Gauss distribution to the left, beca...</content>
   </entry>
 
   <entry>
-    <title>Python: Inspect Module</title>
-    <link href="/pl/pl-python-inspect.html"/>
-    <updated>2019-05-23T00:00:00+09:00</updated>
-    <id>/pl/pl-python-inspect</id>
-    <content type="html">
-function: get the source code
-
-import inspect
-from scipy.stats import bernoulli
-
-code = inspect.getsource(bernoulli.rvs)
-print(code)
-
-
-</content>
-  </entry>
-
-  <entry>
     <title>Boltzmann Machine</title>
     <link href="/ai/AI-boltzmann-machine-neural-network.html"/>
     <updated>2019-05-23T00:00:00+09:00</updated>
@@ -10138,36 +9439,6 @@ Boltzmann Machine
     
       Supervised
       Convolutional Neur...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Tqdm Package</title>
-    <link href="/pl/pl-python-tqdm.html"/>
-    <updated>2019-05-22T00:00:00+09:00</updated>
-    <id>/pl/pl-python-tqdm</id>
-    <content type="html">
-tqdm
-
-  tqdm: means progress in Arabic
-  function: instantly make your loops show a progress meter -  just wrap any iterable with tqdm tqdm(iterable), and you are done
-
-
-useage
-
-
-  command line mode
-
-
-seq 100000000 | tqdm --total 100000000 | wc -l
-
-
-
-  python code mode
-
-
-from tqdm import tqdm
-
-f...</content>
   </entry>
 
   <entry>
@@ -10234,24 +9505,6 @@ Architecture...</content>
   </entry>
 
   <entry>
-    <title>Python: Lambda Expression</title>
-    <link href="/pl/pl-python-lambda-expression.html"/>
-    <updated>2019-05-20T00:00:00+09:00</updated>
-    <id>/pl/pl-python-lambda-expression</id>
-    <content type="html">
-numbers = (1, 2, 3, 4)
-result = map(lambda x: x*x, numbers)
-print(result)
-
-# converting map object to set
-numbersSquare = set(result)
-print(numbersSquare)
-
-
-</content>
-  </entry>
-
-  <entry>
     <title>P.A.S.T.B.: Monte Carlo</title>
     <link href="/math/math-apply-probability-and-statistics-toolbox-monte-carlo.html"/>
     <updated>2019-05-20T00:00:00+09:00</updated>
@@ -10286,49 +9539,6 @@ SVD means decomposition matrix transformation into three parts, which includes r
   </entry>
 
   <entry>
-    <title>Python: Juypter</title>
-    <link href="/pl/pl-python-anaconda-jupyter.html"/>
-    <updated>2019-05-16T00:00:00+09:00</updated>
-    <id>/pl/pl-python-anaconda-jupyter</id>
-    <content type="html">
-how to use
-
-sudo jupyter notebook --allow-root
-
-
-integrated with matplotlib
-put %matplotlib inline in the first cell of the notebook to plot
-%matplotlib inline
-
-import matplotlib
-import numpy as np
-import matplotlib.pyplot as plt
-
-
-set default brower for
-
-
-  first, you need to generate the jupyt...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Sklearn</title>
-    <link href="/pl/pl-python-sklearn.html"/>
-    <updated>2019-05-14T00:00:00+09:00</updated>
-    <id>/pl/pl-python-sklearn</id>
-    <content type="html">
-Component of scikit-learn
-
-
-  Supervised learning algorithms:  LR(Linear Regression), SVM(Support Vector Machine), Decision Trees, and Bayesian
-  Unsupervised learning algorithms: Clustering, PCA(principal component analysis)
-  Various toy datasets: IRIS dataset,Boston house prices dataset
-
-
-</content>
-  </entry>
-
-  <entry>
     <title>Model: NLP</title>
     <link href="/cs/AI-ML-NLP.html"/>
     <updated>2019-05-14T00:00:00+09:00</updated>
@@ -10340,51 +9550,6 @@ TF-IDF
   TF: Term Frequency, which measures how frequently a term accurs in a document. since every document is different in length.
 It is possible that a word would appear much more times in long documents than shorter ones. Thus, the term frequency is often
 divided by the document length as ...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Scipy Module</title>
-    <link href="/pl/pl-python-scipy.html"/>
-    <updated>2019-05-13T00:00:00+09:00</updated>
-    <id>/pl/pl-python-scipy</id>
-    <content type="html">
-statis
-
-
-  this module contains the common distribution, like uniform distribution, norm
-distribution, poisson distribution, binom distribution etc.
-  There are common functions among all these distributions. like rvs which
-generates random variables,cdf function
-
-
-
-  RV: random variables
-  cdf:...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Matplotlib and Seaborn</title>
-    <link href="/pl/pl-python-matplotlib-seaborn.html"/>
-    <updated>2019-05-13T00:00:00+09:00</updated>
-    <id>/pl/pl-python-matplotlib-seaborn</id>
-    <content type="html">
-matplotlib
-
-how to plot
-The general method of use this module to generate a fig
-
-
-  obtain a Figure instance
-  obtain a AxesSubplot instance
-  use AxesSubplot instance to plot
-
-
-import matplotlib.pyplot as plt
-
-# obtain Figure instance 
-fig = plt.figure()
-# 2 obtain AxesSubplot instance axes1
-ax...</content>
   </entry>
 
   <entry>
@@ -10444,22 +9609,7 @@ Also named as Gaussian distribution.
 
 The multivariate normal distribution is:
 
-
-
-For the 2-D Normal Gaussian Distribution,The following is the formula:
-
-
-
-2-dimensional  
-
-
-Reference
-
-  multivariate normal
-distribution
-
-
-</content>
+\[f_{\mathbf{X}}\left(x_{1}, \ldots, x_{k}\right)=\frac{\exp \left(-\frac{1}{2}(\mathbf{x}-\boldsymbol{\mu})^{\mathrm{T}} \mathbf{\Sigma}^{-1}(\mathbf{x}-\boldsymbol{\mu})\right)}{\sqrt{(2 \pi)^{k...</content>
   </entry>
 
   <entry>
@@ -10516,12 +9666,11 @@ parametrized by two positive shape parameters, denoted by $\alpha$ and $\beta$.
 1. Definition
 
   
-    For , fisher information is to answer the question: 
-How useful is the random variable X in determining the unkown parameter 
+    For \(p(X | \theta)\), fisher information is to answer the question: 
+How useful is the random variable X in determining the unkown parameter \(\theta\)
   
   the fisher information is a frequentist concept
-  The fisher information is a way of measuring the amount of information that
-observable variab...</content>
+  The fisher information is a way of measuring the amount of informa...</content>
   </entry>
 
   <entry>
@@ -10542,10 +9691,7 @@ The essential difference between frequentist and bayesian statisticians is in
 
 The Bayes’s theorem:
 
-
-
-
-  The thing P(|x...</content>
+\[P(\theta | x)=\fr...</content>
   </entry>
 
   <entry>
@@ -10555,7 +9701,8 @@ The Bayes’s theorem:
     <id>/ai/AI-ML-supervised-support-vector-machine</id>
     <content type="html">
 Introduction
- 
+\(\begin{array}{l}{\vec{w} \cdot \vec{u} \geq c} \\ {\vec{w} \cdot \vec{u}+b
+\geqslant 0}\end{array}\) 
 where $c=-b$
 
   For the equation above, we don’t know use which $\vec{w}$ and b
@@ -10564,17 +9711,7 @@ where $c=-b$
 
 The KKT conditions are:
 
-
-
-Galois
-
-  we want to draw a line in the plane to separate two class, there are so many
-method to draw a line,
-
-
-Reference
-
-  KK...</content>
+\[\begin{aligned} \alpha_{i...</content>
   </entry>
 
   <entry>
@@ -10632,12 +9769,8 @@ Output layer
   If N.N. is a classifer, t
 
 
-
-
-the formulation  is used to mean “the probability of  given  “
-the cost function
-
-If this is ...</content>
+\[\begin{align*}
+  &amp;amp; \phi(x,y) = \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right...</content>
   </entry>
 
   <entry>
@@ -10712,56 +9845,1033 @@ Basic drawing
   </entry>
 
   <entry>
-    <title>CLI: Find</title>
-    <link href="/linux/linux-cli-find.html"/>
-    <updated>2017-05-10T00:00:00+09:00</updated>
-    <id>/linux/linux-cli-find</id>
+    <title>Python: Tqdm Package</title>
+    <link href="/pl/pl-script-python-tqdm.html"/>
+    <updated>2017-06-03T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-tqdm</id>
     <content type="html">
-what does the command do ?
-在指定目录下查找文件。如果使用该命令时，不设置任何参数，则find命令将在当前目录下查找子目录与文件。并且将查到的字目录和文件全部进行显示
+tqdm
 
-语法
-
-find [参数]
-
-the following is some examle:
+  tqdm: means progress in Arabic
+  function: instantly make your loops show a progress meter -  just wrap any iterable with tqdm tqdm(iterable), and you are done
 
 
-  find . 列出当前目录及子目录下所有文件和文件夹
-  find / -cmin -15 查找最近15分钟更新的文件
-  -exec
+useage
 
 
-# -exec参数必须以\; 结尾
-# 查找当前目录下文件名为test的文件，并找到满足&quot;xxx-xxxx-xxxx&quot;规律所在行内容
-find &quot;test&quot; ...</content>
+  command line mode
+
+
+seq 100000000 | tqdm --total 100000000 | wc -l
+
+
+
+  python code mode
+
+
+from tqdm import tqdm
+
+f...</content>
   </entry>
 
   <entry>
-    <title>CLI: Common Command Line</title>
-    <link href="/linux/linux-cli-common.html"/>
-    <updated>2017-05-09T00:00:00+09:00</updated>
-    <id>/linux/linux-cli-common</id>
+    <title>Pl Script Python Tool</title>
+    <link href="/pl-script-python-tool.html"/>
+    <updated>2017-06-03T00:00:00+09:00</updated>
+    <id>/pl-script-python-tool</id>
     <content type="html">
-alias
-If you want to create permanent aliases, just modify corresponding configuration file. 
 
-  for Bash Shell modify ~/.bashrc
-  for Zsh Shell  modify ~/.zshrc
+layout: post
+title: “Python: Module”
+keywords: []
+category: “PL”
+tags: [“python”,”script”]
+tags: [“python”]
+—
+
+功能
+教程python的module管理工具
 
 
-alias ls=&quot;ls --auto=color&quot; 
+使用
+</content>
+  </entry>
 
-head
+  <entry>
+    <title>Python: Tensorboard</title>
+    <link href="/pl/pl-script-python-tensorflow-tensorboard.html"/>
+    <updated>2017-06-03T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-tensorflow-tensorboard</id>
+    <content type="html">
+Introduction
+TensorBoard is a visualization software that comes with any standard Tensorflow
+installation. In Google’s words: “The compuations you’ll use Tensorflow for(like
+training a massive deep neural network)”
 
-  显示开头或结尾某个数量的文字区块
-  head [参数]  [文件]
+启动tensorboard
+python /path/to/tensorflow/install/directory/tensorflow/tensorboar...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Define Variable in Tensorflow</title>
+    <link href="/pl/pl-script-python-tensorflow-sharing-variable.html"/>
+    <updated>2017-06-03T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-tensorflow-sharing-variable</id>
+    <content type="html">
+variable sharing
+
+It is a mechanism in Tensorflow that allows for sharing variables accessed in different part of the code
+without passing the reference around. 
+In traditional method, when you want to use the same variable in different method, you have to pass the variable by function parameter...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Obtain Variable Value in Tensorflow</title>
+    <link href="/pl/pl-script-python-tensorflow-obtain-variable.html"/>
+    <updated>2017-06-03T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-tensorflow-obtain-variable</id>
+    <content type="html">
+introduction
+you can treat tensorflow as a blackbox, when we want to check the tensor.
+tensorflow provide some api to get the tensor
+
+check the tensor with tf.Session()
+
+check the variable
+
+Tensorflow provides graph collections that group the variables. To access the
+variables you can run the fo...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Build Neural Network With Any Topology</title>
+    <link href="/pl/pl-script-python-tensorflow-neural-network-with-any-topology.html"/>
+    <updated>2017-06-03T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-tensorflow-neural-network-with-any-topology</id>
+    <content type="html">
+def layer(layer_name, data, output_channels):
+    with tf.variable_scope(layer_name,reuse=tf.AUTO_REUSE):
+        w = tf.get_variable(name=&quot;weight&quot;,shape=[data.shape[-1],output_channels])
+        b = tf.get_variable(name=&quot;bias&quot;,shape=[output_channels])
+        summary_bias = tf.summary.histogram...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Ipython with Tensorflow</title>
+    <link href="/pl/pl-script-python-tensorflow-ipython.html"/>
+    <updated>2017-06-03T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-tensorflow-ipython</id>
+    <content type="html">
+pitfall
+Ipython bring you the benefits, but also the pitfall
+
+how to get the lost code back in ipython
+
+when you delete the code, and you want them back, you can using the following
+method to get them back.
+
+def rescue_code(function):
+    import inspect
+        get_ipython().set_next_input(&quot;&quot;.jo...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Introduction of Tensorflow</title>
+    <link href="/pl/pl-script-python-tensorflow-intro.html"/>
+    <updated>2017-06-03T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-tensorflow-intro</id>
+    <content type="html">
+what is the crap of tensorflow ?
+
+  tensorflow means tensor flows in graph
+  the tensorflow defines a compute graph, and you can define operation in the graph.
+  the purpose of the compute graph is to reuse the graph model. reuse reuse reuseis the most important thing
+
+
+how to use tensorflow to ...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Concept in Tensorflow</title>
+    <link href="/pl/pl-script-python-tensorflow-concept.html"/>
+    <updated>2017-06-03T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-tensorflow-concept</id>
+    <content type="html">
+what the crap is the rank?
+
   
-    
-      
-        
-          -n 显示行数   ls
-          hea...</content>
+    The rank of a tensor is different is not the same as the rank of a matrix.
+the rank of a tensor is the number of indices required to uniquely select each element of the tensor. also
+known as “order”,”ndims” or “degree”
+  
+  
+    numpy compatibility, Equivalent ...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Broadcasting in Tensorflow</title>
+    <link href="/pl/pl-script-python-tensorflow-broadcasting-mechanism.html"/>
+    <updated>2017-06-03T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-tensorflow-broadcasting-mechanism</id>
+    <content type="html">
+what the crap is broadcasting ?
+Broadcasting is the process of making arrays with different shapes have
+compatible shapes for arithmetic operations.
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Python: Sys</title>
+    <link href="/pl/pl-script-python-sys.html"/>
+    <updated>2017-06-03T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-sys</id>
+    <content type="html">
+intro
+文档sys: this module provides access to some variables used or maintained by the interpreter and to functions that interact strongly with the interpreter
+
+功能
+
+sys.path
+
+The interpreter finds [import package] according to the order of path in the sys.path list.
+
+print(sys.path)
+# system path
+...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Statement</title>
+    <link href="/pl/pl-script-python-statement.html"/>
+    <updated>2017-06-03T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-statement</id>
+    <content type="html">
+layout: post
+ title: “pythonIO”
+ keywords: [“python”, “IO”] 
+description: “python”
+ category: “python”
+ tags: [“language”, “IO”]
+
+colon: used chiefly to direct attention to matter as a list, explanation,quotation,or amplification that follows
+//与c++和java相比,最大的特点就是去掉了()
+for &amp;lt;statement&amp;gt; in &amp;...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Sklearn</title>
+    <link href="/pl/pl-script-python-sklearn.html"/>
+    <updated>2017-06-03T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-sklearn</id>
+    <content type="html">
+Component of scikit-learn
+
+
+  Supervised learning algorithms:  LR(Linear Regression), SVM(Support Vector Machine), Decision Trees, and Bayesian
+  Unsupervised learning algorithms: Clustering, PCA(principal component analysis)
+  Various toy datasets: IRIS dataset,Boston house prices dataset
+
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Python: Scipy Module</title>
+    <link href="/pl/pl-script-python-scipy.html"/>
+    <updated>2017-06-03T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-scipy</id>
+    <content type="html">
+statis
+
+
+  this module contains the common distribution, like uniform distribution, norm
+distribution, poisson distribution, binom distribution etc.
+  There are common functions among all these distributions. like rvs which
+generates random variables,cdf function
+
+
+
+  RV: random variables
+  cdf:...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Pyqtgraph</title>
+    <link href="/pl/pl-script-python-pyqtgraph.html"/>
+    <updated>2017-06-03T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-pyqtgraph</id>
+    <content type="html">
+what’s pyqtgraph
+pyqtgraph is born for dynamic graph, matplotlib is for static graph.
+
+demo
+
+import numpy as np
+import pyqtgraph as pg
+
+# create the app
+app = pg.mkQApp()
+win = pg.GraphicsWindow()
+win.resize(600,400)
+p = win.addPlot()
+curve = p.plot()
+
+data = []
+idx = 0
+N = 200
+
+def updateCurveD...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Pyqt5 Menu Event Handling</title>
+    <link href="/pl/pl-script-python-pyqt5-menu-action.html"/>
+    <updated>2017-06-03T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-pyqt5-menu-action</id>
+    <content type="html">
+Event Handling
+
+  used the Code Integrated Template
+  click File-&amp;gt;Open, pop up dialoge
+
+
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'menu.ui'
+#
+# Created by: PyQt5 UI code generator 5.9.2
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 i...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Picture Display</title>
+    <link href="/pl/pl-script-python-pyqt5-display-image.html"/>
+    <updated>2017-06-03T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-pyqt5-display-image</id>
+    <content type="html">
+Display a picutre
+In nature, There is no difference between text label and picture label. 
+So, you can put a picture in a label. 
+Programming look into the essence of the world.
+
+import sys
+from PyQt5.QtWidgets import QApplication, QWidget, QLabel
+from PyQt5.QtGui import QIcon, QPixmap
+import ma...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Code Integrated Template of QT Designer and Pyqt5</title>
+    <link href="/pl/pl-script-python-pyqt-qtdesigner-code-template.html"/>
+    <updated>2017-06-03T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-pyqt-qtdesigner-code-template</id>
+    <content type="html">
+signal and slot
+If you have a programming backgound, you may hear about event handling where you interact with a widget
+and a function is executed. 
+The idea in PyQt5 is the same but definitions are a bit different. 
+So when you click a QPushButton, a signal is emitted. The signal name in this c...</content>
+  </entry>
+
+  <entry>
+    <title>Python: For Loop</title>
+    <link href="/pl/pl-script-python-principal-iterator.html"/>
+    <updated>2017-06-03T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-principal-iterator</id>
+    <content type="html">
+what the crap of iterator protocol?
+
+  Just as Javabean protocol, a JavaBean Class is  the kind of class that has a getter() and setter() method for every Class 
+In python, the iterator protocol is that one method needs to be defined for container objects to provide iteration support 
+container....</content>
+  </entry>
+
+  <entry>
+    <title>Python:  pdb</title>
+    <link href="/pl/pl-script-python-pdb.html"/>
+    <updated>2017-06-03T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-pdb</id>
+    <content type="html">
+initiate pdb
+
+python3 -m pdb foo.py
+
+
+add breakpoint
+
+import pdb
+pdb.set_trace()
+
+
+Stepping through code
+
+One of the strongest feature of pdb is that we can move through our code in various ways:
+
+
+  n(ext): n command runs the code on current line at full-speed and takes us to the next line in t...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Pandas </title>
+    <link href="/pl/pl-script-python-pandas.html"/>
+    <updated>2017-06-03T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-pandas</id>
+    <content type="html">名字由来: panel data和data analysis。panel data是经济学中关于多维数据集的一个术语
+，pandas也提供了panel的数据类型。
+
+what is the difference between Series and DataFrame ?
+
+  According to Pandas Docs DataFrame
+can be thought as a dict-like container for Series Objects
+  As Pandas can be thought as a dict-like container for Series ...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Package Manager</title>
+    <link href="/pl/pl-script-python-package-manager.html"/>
+    <updated>2017-06-03T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-package-manager</id>
+    <content type="html">
+1. Pip
+
+1.1 Install
+
+pip install tensorflow==1.13.2
+
+
+install package by python3
+
+python3 -m pip install matplotlib
+
+
+2. Conda
+
+2.1 Install
+
+conda install matplotlib
+
+
+Prompt
+
+  There is a prompt in your terminal which says “base”, it means your
+environment, you can turn it off by the following ...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Os module</title>
+    <link href="/pl/pl-script-python-os.html"/>
+    <updated>2017-06-03T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-os</id>
+    <content type="html">intro
+os: this module provides a portable way of using operating system dependent
+functionality
+功能
+
+
+常用功能
+import os
+# 清屏
+os.system('clear')
+# 获得当前文件名
+os.path.abspath(__file__)
+# 获得当前文件所在位置的目录名
+os.getcwd()         
+
+
+
+目录操作
+
+  os.walk(top，topdown)
+  top根目录下的每一个文件夹包括他自己，产生三元组(dirpath,dirnames,filena...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Operator</title>
+    <link href="/pl/pl-script-python-operator-module.html"/>
+    <updated>2017-06-03T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-operator-module</id>
+    <content type="html">
+method
+
+  operator.itemgetter(items): return a callable object that fetches item from its operand, using the operand’s getitem()
+  f = itemgetter(2), the call f(r) returns r[2]
+  f = itemgetter(2, 5, 3), the call g(r) returns (r[2], r[5], r[3])
+
+
+itemgetter(1,3,5)('ABCDEFG')
+# ('B', 'D', 'F')
+
+#...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Asterisk Operator</title>
+    <link href="/pl/pl-script-python-operator-asterisk.html"/>
+    <updated>2017-06-03T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-operator-asterisk</id>
+    <content type="html">
+Introduction
+Asterisk plays very important role in python
+
+packing the containers
+
+review the following code
+def demo(*args, **kwargs):
+    print(args,&quot; and &quot;,kwargs)     
+demo('ha', 'big', third='wilson', fourth='roy')
+
+
+  the asterisk mark before args is not used to get the address or content ...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Openml</title>
+    <link href="/pl/pl-script-python-openml.html"/>
+    <updated>2017-06-03T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-openml</id>
+    <content type="html">
+what the crap of openml
+
+An automated machine learning environment.
+
+import openml
+
+# obtain dataset list
+dataset_list = openml.datasets.list_datasets()
+dataset_list_pd = pd.DataFrame.from_dict(dataset_list,orient='index')
+
+# get the mnist dataset ID
+dataset_list_pd[dataset_list_pd.name.str.cont...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Numpy</title>
+    <link href="/pl/pl-script-python-numpy.html"/>
+    <updated>2017-06-03T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-numpy</id>
+    <content type="html">
+random module
+This module is consists of two components, they are 
+
+  simple random data
+  Distributions, such as uniform distribution, normal distribution,poisson distribution etc.
+
+
+np.random.uniform(-2,2,(3,4))
+
+
+common function
+
+np.where()
+
+  The input argument of this API is bool value
+  th...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Module</title>
+    <link href="/pl/pl-script-python-module.html"/>
+    <updated>2017-06-03T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-module</id>
+    <content type="html">
+name属性
+the name attribute must be set to the fully-qualified name of the module. this
+name is used to uniquely identify the module in the import system
+</content>
+  </entry>
+
+  <entry>
+    <title>Python: Matplotlib and Seaborn</title>
+    <link href="/pl/pl-script-python-matplotlib-seaborn.html"/>
+    <updated>2017-06-03T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-matplotlib-seaborn</id>
+    <content type="html">
+matplotlib
+
+how to plot
+The general method of use this module to generate a fig
+
+
+  obtain a Figure instance
+  obtain a AxesSubplot instance
+  use AxesSubplot instance to plot
+
+
+import matplotlib.pyplot as plt
+
+# obtain Figure instance 
+fig = plt.figure()
+# 2 obtain AxesSubplot instance axes1
+ax...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Lambda Expression</title>
+    <link href="/pl/pl-script-python-lambda-expression.html"/>
+    <updated>2017-06-03T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-lambda-expression</id>
+    <content type="html">
+numbers = (1, 2, 3, 4)
+result = map(lambda x: x*x, numbers)
+print(result)
+
+# converting map object to set
+numbersSquare = set(result)
+print(numbersSquare)
+
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Python: Keyword</title>
+    <link href="/pl/pl-script-python-keyword.html"/>
+    <updated>2017-06-03T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-keyword</id>
+    <content type="html">
+pass
+
+# 占位语句，啥都不干
+# 保证格式或是语义的完整性
+for i in range(10):
+    pass
+    print(i)
+
+
+global,local and nonlocal
+
+  global variables, a variable declared outside of the function or in global scope is known as global variable. This means, global variable can be
+accessed inside or outside of the function.
+ ...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Keras</title>
+    <link href="/pl/pl-script-python-keras-model.html"/>
+    <updated>2017-06-03T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-keras-model</id>
+    <content type="html">
+from keras.models import load_model
+model=load_model('model.h5')
+# x is test data
+y=model.predict(x)
+print(y)
+
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Python: Input and Output Stream</title>
+    <link href="/pl/pl-script-python-io.html"/>
+    <updated>2017-06-03T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-io</id>
+    <content type="html">
+what the crap is a context manager?
+
+The main motivation behind the context manager in python is a source acquisition and release mechanism
+which prevents resource leak
+
+what is CSV?
+
+CSV stands for comma separated values, it’s just another plain text file.
+
+Input and Output of CSV file
+
+import ...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Introduction</title>
+    <link href="/pl/pl-script-python-intro.html"/>
+    <updated>2017-06-03T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-intro</id>
+    <content type="html">
+语言类型
+
+  python不允许隐士类型转换，强类型语言
+  python可以在程序运行时改变其结构，是动态语言
+
+
+
+历史问题
+官方文档c++选择向下兼容c，很负责；
+python3不向下兼容python2,抛弃累赘。
+
+在python中, 变量是没有类型的; 类型属于对象。
+java是面向对象的，可是并不彻底。python是彻底面向对象的，int类型也是对象
+面向对象只是一种编程思想，它的实现还是函数那一套。
+
+java和c++都是有函数入口的，即为main函数。
+python没有所谓的main函数，从脚本的起始位置开始执行。
+
+c++通过include包含相关头文件和库
+jav...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Inspect Module</title>
+    <link href="/pl/pl-script-python-inspect.html"/>
+    <updated>2017-06-03T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-inspect</id>
+    <content type="html">
+function: get the source code
+
+import inspect
+from scipy.stats import bernoulli
+
+code = inspect.getsource(bernoulli.rvs)
+print(code)
+
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Python: Function</title>
+    <link href="/pl/pl-script-python-function.html"/>
+    <updated>2017-06-03T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-function</id>
+    <content type="html">
+function
+Function is the first-class citizen in python
+
+Function Calls
+
+  Pass by value
+  Pass by reference
+  Pass by Object reference
+Python is a PASS-BY-OBJECT-REFERENCE programming language
+
+
+*args and **kwargs
+
+
+  in a function, use the symbol * to take in a variable number of arguments, by ...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Exception</title>
+    <link href="/pl/pl-script-python-exception.html"/>
+    <updated>2017-06-03T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-exception</id>
+    <content type="html">with...as...
+
+class Demo:
+    def __enter__(self):
+        print(&quot;enter function&quot;)
+        return &quot;Foo&quot;
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        print(&quot;exit&quot;)
+
+with Demo() as demo:
+    print(&quot;hello&quot;)
+# __enter__
+# __exit__可以处理异常参数
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Python: Common Error</title>
+    <link href="/pl/pl-script-python-error-debug.html"/>
+    <updated>2017-06-03T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-error-debug</id>
+    <content type="html">
+NoneType error
+
+whenever you see an error that include ‘NoneType’ that means you have an operand
+or an object that is None when you expecting something else.
+
+invalid syntax
+when you encounter this error in python, probably you make a error. 
+and the line number with the invalid syntax is not th...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Meta-functiion</title>
+    <link href="/pl/pl-script-python-data-type.html"/>
+    <updated>2017-06-03T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-data-type</id>
+    <content type="html">
+None
+# None是一个空对象，没有方法和属性
+
+
+数据类型间的转换
+
+str(var)     #转化为str类型
+int(var)     #转化为int类型
+
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Python Copy</title>
+    <link href="/pl/pl-script-python-copy.html"/>
+    <updated>2017-06-03T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-copy</id>
+    <content type="html">
+copy in Python
+In Python, Assignment statements do not copy objects, they create bindings between a target and an object. 
+When we use = operator user thinks that this creates a new object; well, it doesn’t. It only creates a new  
+variable that shares the reference of the original object. 
+
+dee...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Container</title>
+    <link href="/pl/pl-script-python-container.html"/>
+    <updated>2017-06-03T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-container</id>
+    <content type="html">
+intro
+python里的元组,列表和字典类比c++中的顺序容器和关联容器来理解。
+c++的容器只是容器，并没有提供算法。python的容器提供了非常多的算法.
+
+
+list
+
+
+list.append(var)  #向容器中添加元素
+
+
+tuple
+元组产生的原因: return语句只能返回单个对象，将一组对象直接打包存储于其中的一个单一对象，这个对象叫做元组
+
+
+
+dictionary
+foo={&quot;x&quot;:3,&quot;y&quot;:4};
+foo[&quot;x&quot;];
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Python: Collections and Algorithm</title>
+    <link href="/pl/pl-script-python-collections.html"/>
+    <updated>2017-06-03T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-collections</id>
+    <content type="html">
+Collections
+
+what is collections module
+
+  
+    Collections in Python are containers that are used to store collections of
+data, for example, list, dict, set, tuple etc. These are built-in
+collections. Several modules have been developed that provide additional data
+structures to store collectio...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Closure</title>
+    <link href="/pl/pl-script-python-closure.html"/>
+    <updated>2017-06-03T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-closure</id>
+    <content type="html">
+Why Closures?
+All the crap comes out because of the concept of non-local variable. First let’s define some concept.
+
+  nested funciton: A function defined inside another function is called nested function.
+
+
+The Criteria of a Closure
+
+  it must have a nested function (function inside a function)...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Class</title>
+    <link href="/pl/pl-script-python-class.html"/>
+    <updated>2017-06-03T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-class</id>
+    <content type="html">
+create
+
+python是有Unix shell和c的语法习惯，c是没有new关键字的，所以python也没有，创建对象直接调用构造函数。
+
+# self表示this指针
+class Test:
+    def my_print(self):
+        print(self)
+        print(self.__class__)
+
+t = Test()
+t.my_print()
+Test.my_print(t)
+
+
+
+多态
+
+class Duck:
+    def __init__(self):
+	    print(&quot;__init__&quot;)
+ 
+    def slee...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Built-in Function</title>
+    <link href="/pl/pl-script-python-built-in-function.html"/>
+    <updated>2017-06-03T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-built-in-function</id>
+    <content type="html">
+built-in function
+dir()
+# 作用: 显示对象或模块的方法和属性
+var = 3
+dir(var)
+
+
+zip function
+
+
+  grammar: zip(*iterables)
+  function: make an iterator that aggregates from each of the iterables
+
+
+x = [2,3,5]
+y = [5,8,3]
+z = [2,9,1]
+list(zip(x,y,z))
+
+
+reference
+
+  official document
+
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Python: List, Dict and Tuple</title>
+    <link href="/pl/pl-script-python-built-in-data-structure.html"/>
+    <updated>2017-06-03T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-built-in-data-structure</id>
+    <content type="html">
+dict
+
+my_dict = {'a':4,'b':5}
+for key,value in my_dict.items():
+    print(key,value)
+# print value
+a 4
+b 5
+
+
+common mistake about tuple
+
+If we print the variable index, and the output is like the code in the comment line. 
+it means, it is a tuple, and the first element is an array
+
+a = [1,3,4,5,...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Argparse</title>
+    <link href="/pl/pl-script-python-argparse.html"/>
+    <updated>2017-06-03T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-argparse</id>
+    <content type="html">
+该module主要有两个参数分别为Positional arguments和Optional arguments
+positional arguments 作为命令行运行的时候必须有
+optional arguments   作为命令行运行的时候可有可无
+区别:positional arguments使用时候前没有’-‘或者’–‘符号，参数只要一个就是它本身
+     optional arguments前面有’-‘和’–‘,后面有别的参数
+
+使用方式
+positional arguments
+import argparse
+parser = argparse.ArgumentPars...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Juypter</title>
+    <link href="/pl/pl-script-python-anaconda-jupyter.html"/>
+    <updated>2017-06-03T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-anaconda-jupyter</id>
+    <content type="html">
+how to use
+
+sudo jupyter notebook --allow-root
+
+
+integrated with matplotlib
+put %matplotlib inline in the first cell of the notebook to plot
+%matplotlib inline
+
+import matplotlib
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+set default brower for
+
+
+  first, you need to generate the jupyt...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Container</title>
+    <link href="/pl/pl-script-python-algorthim.html"/>
+    <updated>2017-06-03T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-algorthim</id>
+    <content type="html">常见的容器有list, tuple, dictionary提供相同的算法
+len(var)  #元素个数
+max(var)  #元素最大值
+min(var)  #元素最小值
+
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Python: Qt Designer</title>
+    <link href="/pl/pl-script-python-QT-designer.html"/>
+    <updated>2017-06-03T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-QT-designer</id>
+    <content type="html">
+Widget
+
+  TextLabel: what does label mean? According to Merriam-Webster: to put a word
+or name on something to describe or identify it.
+  Graphics View: what does view mean? According to Merriam-Webster: it is a
+picture of a place So Graphics View jus a place to put picture.  So Tree
+view, List ...</content>
+  </entry>
+
+  <entry>
+    <title>Python: PIL package</title>
+    <link href="/pl/pl-script-python-PIL.html"/>
+    <updated>2017-06-03T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-PIL</id>
+    <content type="html">
+what is PIL
+
+convert between a PIL Image and a numpy array
+
+from PIL import Image
+import numpy as np
+
+# the conversion from Image to array
+im = Image.open(&quot;sample.png&quot;)
+np\_im = np.array(im)
+print(np\_im.shape)
+
+# the conversion from array to Image
+new_im = Image.fromarray(np_im)
+# for grey imag...</content>
   </entry>
 
   <entry>
@@ -10905,6 +11015,541 @@ defaults write com.apple.finder AppleShowAllFiles -bool true
   </entry>
 
   <entry>
+    <title>Java: 多线程</title>
+    <link href="/pl/pl-compile-java-thread.html"/>
+    <updated>2017-04-06T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-java-thread</id>
+    <content type="html">
+创建与启动
+
+
+
+继承自Thread类
+
+class Foo extends Thread{
+	@Override
+	public void run() {
+		for(int i=0;i&amp;lt;50;i++){
+		System.out.println(&quot;继承线程&quot;+this.getName());
+		}
+	}
+}
+
+
+匿名类
+
+//创建十个线程并启动
+for(int i=0;i&amp;lt;10;i++){
+    new Thread(new Runnable() {
+        @Override
+        public void run() {
+            ...</content>
+  </entry>
+
+  <entry>
+    <title>Java: String</title>
+    <link href="/pl/pl-compile-java-string.html"/>
+    <updated>2017-04-06T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-java-string</id>
+    <content type="html">
+介绍
+
+  String类使用底层使用字符数组保存字符串，有final修饰，String对象是不可变的
+  StringBuilder和StringBuffer都继承自AbstractStringBuilder类，也使用字符串保留数组。
+  String中的对象是不可变的，可以理解为长了，线程安全。StringBuffer对方法加了同步锁，也是线程安全的
+
+
+
+功能
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Java: Socket</title>
+    <link href="/pl/pl-compile-java-socket.html"/>
+    <updated>2017-04-06T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-java-socket</id>
+    <content type="html">
+socket阻塞
+服务器端的阻塞有两种
+
+  ServerSocket的accept方法会产生阻塞
+  文件的io会产生阻塞
+
+
+
+//客户端请求
+public class Client {
+
+    public void getAsset() throws IOException, InterruptedException {
+        Socket socket=new Socket(&quot;127.0.0.1&quot;,8089);
+        OutputStream outputStream=socket.getOutputStream();
+        socket.cl...</content>
+  </entry>
+
+  <entry>
+    <title>Java: reflection</title>
+    <link href="/pl/pl-compile-java-reflection.html"/>
+    <updated>2017-04-06T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-java-reflection</id>
+    <content type="html">
+Intro
+反射是得到类的元数据的过程
+
+
+Class对象
+
+  
+    编译后的字节码文件，即.class文件就是Class类的Class对象
+  
+  Java虚拟机类加载系统根据将对应Class对象加载到JVM中，根据类对象创建实例对象
+
+
+
+Class对象的加载
+
+
+Class.forName()
+该方法的调用返回一个对应类的Class对象，无需通过持有该类的实例对象
+引用而去获得Class对象。
+
+
+Class字面常量
+
+  通过字面量的方法获取Class对象的引用不会自动初始化该类
+  接口，数组和基本数据类型都可以通过该方法获得Class对象
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Java: Jvm</title>
+    <link href="/pl/pl-compile-java-jvm.html"/>
+    <updated>2017-04-06T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-java-jvm</id>
+    <content type="html">
+class文件的组织结构
+.class文件是由子节组成的文件，又叫字节码文件
+
+
+魔数
+由java编译器编译而成的class文件的前四个字节都是“OxCAFEBABE”
+作用，即JVM在尝试加载某个文件到内存中的时候，会首先判断此class文件有没有JVM认为可以接受的”签名”，即JVM会首先读取文件的前四个字节，判断这四个字节是否是”0xCAFEBABE”,如果是则JVM会认为可以将此冷箭当作class文件来加载使用
+
+
+版本号
+
+垃圾回收机制
+
+
+垃圾回收算法
+
+  标记-清除算法，首先标记出所有需要回收的对象，然后回收所有需要回收的对象，该算法缺点是内存块回收之后不连续，导致下一...</content>
+  </entry>
+
+  <entry>
+    <title>Java: IO</title>
+    <link href="/pl/pl-compile-java-io.html"/>
+    <updated>2017-04-06T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-java-io</id>
+    <content type="html">
+intro
+
+流操作主要在java.io包下,类结构如下图
+
+
+
+
+字节流
+
+
+
+OutputStream
+
+
+
+FileOutputStream
+
+//这里的文件创建的地方要注意
+File file =new File(&quot;db.properties&quot;);
+if(!file.exists()){
+	file.createNewFile();
+}
+//创建输出流，可追加
+OutputStream os=new FileOutputStream(&quot;db.properties&quot;,true);
+os.write(new String(&quot;hehe&quot;).getBytes());
+os.write(...</content>
+  </entry>
+
+  <entry>
+    <title>Java: Interface</title>
+    <link href="/pl/pl-compile-java-interface.html"/>
+    <updated>2017-04-06T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-java-interface</id>
+    <content type="html">
+特征
+
+  属性有固定的修饰符: public static final
+  函数有固定的修饰符: public abstract,函数不能有方法体。
+
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Java: Enum</title>
+    <link href="/pl/pl-compile-java-enum.html"/>
+    <updated>2017-04-06T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-java-enum</id>
+    <content type="html">
+intro
+枚举类型反编译之后也是类，该类用final关键字修饰
+
+
+产生原因
+//枚举类型的引入
+class Weekday{
+	private Weekday(){};
+	public static final Weekday MONDAY= new Weekday();
+	public static final Weekday TUESDAY= new Weekday();
+	public static final Weekday WENDESDAY= new Weekday();
+	public static final Weekday THURSDAY= new Weekda...</content>
+  </entry>
+
+  <entry>
+    <title>JAVA: Copy Control</title>
+    <link href="/pl/pl-compile-java-copy-control.html"/>
+    <updated>2017-04-06T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-java-copy-control</id>
+    <content type="html">
+intro
+在c++中，有一章专门讲拷贝控制，java把这个问题简单化了，简化成深拷贝与浅拷贝
+
+
+浅拷贝
+
+
+问题的产生
+class Foo{
+	private int age;
+	private Date date;
+	public int getA() {
+		return age;
+	}
+	public void setA(int age) {
+		this.age = age;
+	}
+	public Date getDate() {
+		return date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;...</content>
+  </entry>
+
+  <entry>
+    <title>Java: Container</title>
+    <link href="/pl/pl-compile-java-container.html"/>
+    <updated>2017-04-06T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-java-container</id>
+    <content type="html">
+
+  intro
+  set    
+      intro
+    
+  
+  list    
+      intro
+    
+  
+  字典容器    
+      intro
+      properties
+      map        
+          map的遍历
+        
+      
+    
+  
+
+
+intro
+java的容器类都在java.util包下，主要的接口
+set
+intro
+实现set接口的类主要有TreeSet
+
+
+
+list
+
+
+intro
+
+  实现list接口的有LinkedList, ArrayList, Vector, s...</content>
+  </entry>
+
+  <entry>
+    <title>Java: Command Line</title>
+    <link href="/pl/pl-compile-java-cmd.html"/>
+    <updated>2017-04-06T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-java-cmd</id>
+    <content type="html">
+运行
+java [字节码的名字] 
+java Main   运行Main.class字节码文件
+
+java路径
+
+  相对路径 指的是JVM的启动路径
+    File file=new File(&quot;config.xml&quot;);
+file.createNewFile();
+// 如果jvm在/Users/ 目录下启动,则会在/Users目录下创建config.xml文件
+// tomcat的启动目录为安装目录的bin文件下，在servlet中以相对路径读取文件
+// 相对路径为tomcat的启动目录
+    
+  
+
+
+javac
+
+javac -d . HelloServlet.jav...</content>
+  </entry>
+
+  <entry>
+    <title>Java: Class</title>
+    <link href="/pl/pl-compile-java-class.html"/>
+    <updated>2017-04-06T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-java-class</id>
+    <content type="html">
+类的三大特点，封装，继承和多态，集中封装和继承是多态的基础
+
+构造器，只是一个函数，函数只是一段需要执行的代码，就这么简单。
+类的组成
+
+
+普通代码块
+
+
+构造代码块
+直接在类中定义且没有加static关键字的代码块称为构造代码块。
+构造代码块属于对象
+，在对象创建时被执行，每次创建对象都会被调用，
+构造代码块的执行顺序优于类构造函数
+
+
+静态代码块
+java中使用static关键字声明的代码块，静态代码块用于初始化类
+为类的属性初始化。每个静态块只会执行一次。静态代码块属于类
+类的构造器
+
+
+调用方法
+
+  可以通过new关键字调用
+  通过反射调用
+
+
+
+区别
+
+  Class.n...</content>
+  </entry>
+
+  <entry>
+    <title>Java: Class Loader</title>
+    <link href="/pl/pl-compile-java-class-load.html"/>
+    <updated>2017-04-06T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-java-class-load</id>
+    <content type="html">
+
+  intro
+  类加载过程    
+      源文件
+      加载
+      链接        
+          验证
+          准备
+          解析
+        
+      
+      初始化
+      使用
+      卸载
+    
+  
+  类加载器    
+      类与类加载器
+      类加载器        
+          启动类加载器
+          扩展类加载器
+          应用程序类加载器
+        
+      
+      类加载器工作原理
+    
+  
+
+
+intro
+在C++语...</content>
+  </entry>
+
+  <entry>
+    <title>Java: Annotation</title>
+    <link href="/pl/pl-compile-java-annotation.html"/>
+    <updated>2017-04-06T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-java-annotation</id>
+    <content type="html">
+介绍
+注解也叫作元数据，为我们在代码中添o加信息提供了一种形式化的方法
+
+  metadata: data that provides information about other data
+
+
+
+使用
+
+
+注解的定义
+
+  源码注解   注解在源码中存在
+  编译时注解 注解在源码和.class文件中都存在
+  运行时注解 在运行阶段起作用的注解，甚至影响程序运行逻辑的注解
+    注解的分类
+  
+
+
+
+JDK注解
+JDK注解@Override，@Deprecated和@Suppvisewarnings都是编译时注解
+
+
+第三方注解
+
+
+自定义注解
+
+
+package tuesd...</content>
+  </entry>
+
+  <entry>
+    <title>Java: Array</title>
+    <link href="/pl/pl-compile-java-System.html"/>
+    <updated>2017-04-06T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-java-System</id>
+    <content type="html">
+arraycopy
+查看源代码里面使用的是native方法，看不到底层代码，里面应该维护指针
+
+
+数组拷贝
+void foo(){
+    int[] src=new int[]{1,2,3,8,23,5,3,7,8};
+	int[] dest=new int[10];
+	System.arraycopy(src, 2, dest, 3, 5);
+	System.out.println(Arrays.toString(dest));
+}
+
+
+
+系统属性
+
+  属性名        属性值
+  java.version  Java运行时的环境版本
+  java.home     Java...</content>
+  </entry>
+
+  <entry>
+    <title>Java: Enumberation</title>
+    <link href="/pl/pl-compile-java-Enumeration.html"/>
+    <updated>2017-04-06T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-java-Enumeration</id>
+    <content type="html">
+作用
+Enumeration是一个接口,源码如下
+package java.util;
+
+pubic interface Enumeration&amp;lt;E&amp;gt;{
+	boolean hasMoreElements();
+	E nextElement();
+}
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Java: Calendar</title>
+    <link href="/pl/pl-compile-java-Calendar.html"/>
+    <updated>2017-04-06T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-java-Calendar</id>
+    <content type="html">
+Calendar
+Calendar类是一个抽象类，功能比Date类强大，实现比Date复杂
+
+
+使用
+Calendar cal=Calendar.getInstance();
+System.out.println(calendar.get(Calendar.YEAR));
+
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Java: BigDecimal</title>
+    <link href="/pl/pl-compile-java-BigDecimal.html"/>
+    <updated>2017-04-06T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-java-BigDecimal</id>
+    <content type="html">
+作用
+精确运算
+
+
+使用方法
+
+  使用String对象构建BigDecimal对象
+  调用相应的方法进行算术运算
+  把BigDecimal对象转换成float,double等类型
+
+
+
+代码
+BigDecimal bd=new BigDecimal(&quot;0.06&quot;);
+System.out.println(bd.add(new BigDecimal(&quot;0.01&quot;)));
+
+</content>
+  </entry>
+
+  <entry>
+    <title>GNU: pkg-config</title>
+    <link href="/linux/linux-gnu-pkgconfig.html"/>
+    <updated>2017-03-24T00:00:00+09:00</updated>
+    <id>/linux/linux-gnu-pkgconfig</id>
+    <content type="html">
+</content>
+  </entry>
+
+  <entry>
+    <title>GNU: make</title>
+    <link href="/linux/linux-gnu-make.html"/>
+    <updated>2017-03-24T00:00:00+09:00</updated>
+    <id>/linux/linux-gnu-make</id>
+    <content type="html">
+Make
+make主要用来构建c语言的项目，实际上，任何主要某个文件有变化，就要重新构建项目，都可以用make构建
+
+语法
+&amp;lt;target&amp;gt; : &amp;lt;prerequisites&amp;gt;
+[tab] &amp;lt;commands&amp;gt;
+
+</content>
+  </entry>
+
+  <entry>
     <title>CLI: Git Branch</title>
     <link href="/linux/linux-cli-git-branch.html"/>
     <updated>2017-03-23T00:00:00+09:00</updated>
@@ -10968,6 +11613,78 @@ git由三个概念，分别是工作区，版本库和暂存区，add命令把�
   </entry>
 
   <entry>
+    <title>CLI: Time Schedule</title>
+    <link href="/linux/linux-cli-time-scheduling.html"/>
+    <updated>2017-03-20T00:00:00+09:00</updated>
+    <id>/linux/linux-cli-time-scheduling</id>
+    <content type="html">
+at的访问控制
+
+  如果系统中有/etc/at.allow文件，那么只有写入/etc/at.allow文件中的用户可以使用at命令，/etc/at.deny文件会被忽略
+  如果系统中没有/etc/at.allow文件，只有/etc/at.deny文件，那么写入/etc/at.deny文件中的用户不能使用at命令。对root不起作用
+  如果系统中这两个文件都不存在，那么只有root用户可以使用at命令
+
+
+常用命令
+# ctrl+d表示结束任务
+at now +5 minutes
+at&amp;gt; ls
+at&amp;gt; &amp;lt;EOT&amp;gt;
+# 查看任务列表
+atq
+# 查看任务详细信...</content>
+  </entry>
+
+  <entry>
+    <title>CLI: Shell</title>
+    <link href="/linux/linux-cli-shell.html"/>
+    <updated>2017-03-20T00:00:00+09:00</updated>
+    <id>/linux/linux-cli-shell</id>
+    <content type="html">
+简介
+每个操作系统都有自己的shell，图形界面的或者命令行的。图形界面显示就是有鼠标箭头，命令行也有相应的显示工具。
+shell是linux的外壳，负责外界与linux内核的交互；linux常用的内核有sh,bash,csh等，通过以下命令可以查看mac下的shell类型
+cat /etc/shells
+
+通过以下命令查看shell的类型
+echo $SHELL
+
+
+shell脚本
+小程序堆积成大程序，要养成写脚本的习惯
+#/bin/bash
+echo &quot;hello world&quot;
+
+Check Out System Variable
+echo $HOME
+
+Shell Tutoria...</content>
+  </entry>
+
+  <entry>
+    <title>CLI: Jekyll</title>
+    <link href="/linux/linux-cli-jekyll.html"/>
+    <updated>2017-03-20T00:00:00+09:00</updated>
+    <id>/linux/linux-cli-jekyll</id>
+    <content type="html">
+Jekyll
+
+  jekyll server
+  jekyll serve –host=0.0.0.0
+    
+      This will make Jekyll’s HTTP server bind to all available IPs.
+    
+  
+
+
+Reference
+
+  Connect to a locally build Server
+
+</content>
+  </entry>
+
+  <entry>
     <title>CLI: Git</title>
     <link href="/linux/linux-cli-git.html"/>
     <updated>2017-03-20T00:00:00+09:00</updated>
@@ -10984,1342 +11701,63 @@ git中提交时，会保存一个提交(commit)对象，该对象包含一个指
   </entry>
 
   <entry>
-    <title>Python: Package Manager</title>
-    <link href="/pl/pl-python-package-manager.html"/>
-    <updated>2016-08-17T00:00:00+09:00</updated>
-    <id>/pl/pl-python-package-manager</id>
+    <title>CLI: Find</title>
+    <link href="/linux/linux-cli-find.html"/>
+    <updated>2017-03-20T00:00:00+09:00</updated>
+    <id>/linux/linux-cli-find</id>
     <content type="html">
-1. Pip
+what does the command do ?
+在指定目录下查找文件。如果使用该命令时，不设置任何参数，则find命令将在当前目录下查找子目录与文件。并且将查到的字目录和文件全部进行显示
 
-1.1 Install
+语法
 
-pip install tensorflow==1.13.2
+find [参数]
 
-
-install package by python3
-
-python3 -m pip install matplotlib
+the following is some examle:
 
 
-2. Conda
-
-2.1 Install
-
-conda install matplotlib
+  find . 列出当前目录及子目录下所有文件和文件夹
+  find / -cmin -15 查找最近15分钟更新的文件
+  -exec
 
 
-Prompt
-
-  There is a prompt in your terminal which says “base”, it means your
-environment, you can turn it off by the following ...</content>
+# -exec参数必须以\; 结尾
+# 查找当前目录下文件名为test的文件，并找到满足&quot;xxx-xxxx-xxxx&quot;规律所在行内容
+find &quot;test&quot; ...</content>
   </entry>
 
   <entry>
-    <title>Python: Module</title>
-    <link href="/pl/pl-python-module.html"/>
-    <updated>2016-08-17T00:00:00+09:00</updated>
-    <id>/pl/pl-python-module</id>
+    <title>CLI: Common Command Line</title>
+    <link href="/linux/linux-cli-common.html"/>
+    <updated>2017-03-20T00:00:00+09:00</updated>
+    <id>/linux/linux-cli-common</id>
     <content type="html">
-name属性
-the name attribute must be set to the fully-qualified name of the module. this
-name is used to uniquely identify the module in the import system
-</content>
-  </entry>
+alias
+If you want to create permanent aliases, just modify corresponding configuration file. 
 
-  <entry>
-    <title>Python: Keyword</title>
-    <link href="/pl/pl-python-keyword.html"/>
-    <updated>2016-08-17T00:00:00+09:00</updated>
-    <id>/pl/pl-python-keyword</id>
-    <content type="html">
-pass
+  for Bash Shell modify ~/.bashrc
+  for Zsh Shell  modify ~/.zshrc
 
-# 占位语句，啥都不干
-# 保证格式或是语义的完整性
-for i in range(10):
-    pass
-    print(i)
 
+alias ls=&quot;ls --auto=color&quot; 
 
-global,local and nonlocal
+head
 
-  global variables, a variable declared outside of the function or in global scope is known as global variable. This means, global variable can be
-accessed inside or outside of the function.
- ...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Pandas </title>
-    <link href="/pl/pl-python-pandas.html"/>
-    <updated>2016-08-14T00:00:00+09:00</updated>
-    <id>/pl/pl-python-pandas</id>
-    <content type="html">名字由来: panel data和data analysis。panel data是经济学中关于多维数据集的一个术语
-，pandas也提供了panel的数据类型。
-
-what is the difference between Series and DataFrame ?
-
-  According to Pandas Docs DataFrame
-can be thought as a dict-like container for Series Objects
-  As Pandas can be thought as a dict-like container for Series ...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Os module</title>
-    <link href="/pl/pl-python-os.html"/>
-    <updated>2016-08-12T00:00:00+09:00</updated>
-    <id>/pl/pl-python-os</id>
-    <content type="html">intro
-os: this module provides a portable way of using operating system dependent
-functionality
-功能
-
-
-常用功能
-import os
-# 清屏
-os.system('clear')
-# 获得当前文件名
-os.path.abspath(__file__)
-# 获得当前文件所在位置的目录名
-os.getcwd()         
-
-
-
-目录操作
-
-  os.walk(top，topdown)
-  top根目录下的每一个文件夹包括他自己，产生三元组(dirpath,dirnames,filena...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Sys</title>
-    <link href="/pl/pl-python-sys.html"/>
-    <updated>2016-08-11T00:00:00+09:00</updated>
-    <id>/pl/pl-python-sys</id>
-    <content type="html">
-intro
-文档sys: this module provides access to some variables used or maintained by the interpreter and to functions that interact strongly with the interpreter
-
-功能
-
-sys.path
-
-The interpreter finds [import package] according to the order of path in the sys.path list.
-
-print(sys.path)
-# system path
-...</content>
-  </entry>
-
-  <entry>
-    <title>Pl Python Tool</title>
-    <link href="/pl-python-tool.html"/>
-    <updated>2016-08-10T00:00:00+09:00</updated>
-    <id>/pl-python-tool</id>
-    <content type="html">
-
-layout: post
-title: “Python: Module”
-keywords: []
-category: “PL”
-category: “code”
-tags: [“python”]
-—
-
-功能
-教程python的module管理工具
-
-
-使用
-</content>
-  </entry>
-
-  <entry>
-    <title>Python: Argparse</title>
-    <link href="/pl/pl-python-argparse.html"/>
-    <updated>2016-08-10T00:00:00+09:00</updated>
-    <id>/pl/pl-python-argparse</id>
-    <content type="html">
-该module主要有两个参数分别为Positional arguments和Optional arguments
-positional arguments 作为命令行运行的时候必须有
-optional arguments   作为命令行运行的时候可有可无
-区别:positional arguments使用时候前没有’-‘或者’–‘符号，参数只要一个就是它本身
-     optional arguments前面有’-‘和’–‘,后面有别的参数
-
-使用方式
-positional arguments
-import argparse
-parser = argparse.ArgumentPars...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Container</title>
-    <link href="/pl/pl-python-container.html"/>
-    <updated>2016-08-09T00:00:00+09:00</updated>
-    <id>/pl/pl-python-container</id>
-    <content type="html">
-intro
-python里的元组,列表和字典类比c++中的顺序容器和关联容器来理解。
-c++的容器只是容器，并没有提供算法。python的容器提供了非常多的算法.
-
-
-list
-
-
-list.append(var)  #向容器中添加元素
-
-
-tuple
-元组产生的原因: return语句只能返回单个对象，将一组对象直接打包存储于其中的一个单一对象，这个对象叫做元组
-
-
-
-dictionary
-foo={&quot;x&quot;:3,&quot;y&quot;:4};
-foo[&quot;x&quot;];
-
-</content>
-  </entry>
-
-  <entry>
-    <title>Python: Exception</title>
-    <link href="/pl/pl-python-exception.html"/>
-    <updated>2016-08-07T00:00:00+09:00</updated>
-    <id>/pl/pl-python-exception</id>
-    <content type="html">with...as...
-
-class Demo:
-    def __enter__(self):
-        print(&quot;enter function&quot;)
-        return &quot;Foo&quot;
-
-    def __exit__(self, exc_type, exc_val, exc_tb):
-        print(&quot;exit&quot;)
-
-with Demo() as demo:
-    print(&quot;hello&quot;)
-# __enter__
-# __exit__可以处理异常参数
-
-</content>
-  </entry>
-
-  <entry>
-    <title>Python: Numpy</title>
-    <link href="/pl/pl-python-numpy.html"/>
-    <updated>2016-08-06T00:00:00+09:00</updated>
-    <id>/pl/pl-python-numpy</id>
-    <content type="html">
-random module
-This module is consists of two components, they are 
-
-  simple random data
-  Distributions, such as uniform distribution, normal distribution,poisson distribution etc.
-
-
-np.random.uniform(-2,2,(3,4))
-
-
-common function
-
-np.where()
-
-  The input argument of this API is bool value
-  th...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Built-in Function</title>
-    <link href="/pl/pl-python-built-in-function.html"/>
-    <updated>2016-08-05T00:00:00+09:00</updated>
-    <id>/pl/pl-python-built-in-function</id>
-    <content type="html">
-built-in function
-dir()
-# 作用: 显示对象或模块的方法和属性
-var = 3
-dir(var)
-
-
-zip function
-
-
-  grammar: zip(*iterables)
-  function: make an iterator that aggregates from each of the iterables
-
-
-x = [2,3,5]
-y = [5,8,3]
-z = [2,9,1]
-list(zip(x,y,z))
-
-
-reference
-
-  official document
-
-
-</content>
-  </entry>
-
-  <entry>
-    <title>Python: Function</title>
-    <link href="/pl/pl-python-function.html"/>
-    <updated>2016-08-04T00:00:00+09:00</updated>
-    <id>/pl/pl-python-function</id>
-    <content type="html">
-function
-Function is the first-class citizen in python
-
-Function Calls
-
-  Pass by value
-  Pass by reference
-  Pass by Object reference
-Python is a PASS-BY-OBJECT-REFERENCE programming language
-
-
-*args and **kwargs
-
-
-  in a function, use the symbol * to take in a variable number of arguments, by ...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Container</title>
-    <link href="/pl/pl-python-algorthim.html"/>
-    <updated>2016-08-04T00:00:00+09:00</updated>
-    <id>/pl/pl-python-algorthim</id>
-    <content type="html">常见的容器有list, tuple, dictionary提供相同的算法
-len(var)  #元素个数
-max(var)  #元素最大值
-min(var)  #元素最小值
-
-
-</content>
-  </entry>
-
-  <entry>
-    <title>Python: Statement</title>
-    <link href="/pl/pl-python-statement.html"/>
-    <updated>2016-08-03T00:00:00+09:00</updated>
-    <id>/pl/pl-python-statement</id>
-    <content type="html">
-layout: post
- title: “pythonIO”
- keywords: [“python”, “IO”] 
-description: “python”
- category: “python”
- tags: [“language”, “IO”]
-
-colon: used chiefly to direct attention to matter as a list, explanation,quotation,or amplification that follows
-//与c++和java相比,最大的特点就是去掉了()
-for &amp;lt;statement&amp;gt; in &amp;...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Class</title>
-    <link href="/pl/pl-python-class.html"/>
-    <updated>2016-08-03T00:00:00+09:00</updated>
-    <id>/pl/pl-python-class</id>
-    <content type="html">
-create
-
-python是有Unix shell和c的语法习惯，c是没有new关键字的，所以python也没有，创建对象直接调用构造函数。
-
-# self表示this指针
-class Test:
-    def my_print(self):
-        print(self)
-        print(self.__class__)
-
-t = Test()
-t.my_print()
-Test.my_print(t)
-
-
-
-多态
-
-class Duck:
-    def __init__(self):
-	    print(&quot;__init__&quot;)
- 
-    def slee...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Meta-functiion</title>
-    <link href="/pl/pl-python-data-type.html"/>
-    <updated>2016-08-02T00:00:00+09:00</updated>
-    <id>/pl/pl-python-data-type</id>
-    <content type="html">
-None
-# None是一个空对象，没有方法和属性
-
-
-数据类型间的转换
-
-str(var)     #转化为str类型
-int(var)     #转化为int类型
-
-
-</content>
-  </entry>
-
-  <entry>
-    <title>Python: Introduction</title>
-    <link href="/pl/pl-python-intro.html"/>
-    <updated>2016-08-01T00:00:00+09:00</updated>
-    <id>/pl/pl-python-intro</id>
-    <content type="html">
-语言类型
-
-  python不允许隐士类型转换，强类型语言
-  python可以在程序运行时改变其结构，是动态语言
-
-
-
-历史问题
-官方文档c++选择向下兼容c，很负责；
-python3不向下兼容python2,抛弃累赘。
-
-在python中, 变量是没有类型的; 类型属于对象。
-java是面向对象的，可是并不彻底。python是彻底面向对象的，int类型也是对象
-面向对象只是一种编程思想，它的实现还是函数那一套。
-
-java和c++都是有函数入口的，即为main函数。
-python没有所谓的main函数，从脚本的起始位置开始执行。
-
-c++通过include包含相关头文件和库
-jav...</content>
-  </entry>
-
-  <entry>
-    <title>Java: Socket</title>
-    <link href="/pl/pl-java-socket.html"/>
-    <updated>2016-05-10T00:00:00+09:00</updated>
-    <id>/pl/pl-java-socket</id>
-    <content type="html">
-socket阻塞
-服务器端的阻塞有两种
-
-  ServerSocket的accept方法会产生阻塞
-  文件的io会产生阻塞
-
-
-
-//客户端请求
-public class Client {
-
-    public void getAsset() throws IOException, InterruptedException {
-        Socket socket=new Socket(&quot;127.0.0.1&quot;,8089);
-        OutputStream outputStream=socket.getOutputStream();
-        socket.cl...</content>
-  </entry>
-
-  <entry>
-    <title>Java: Command Line</title>
-    <link href="/pl/pl-java-cmd.html"/>
-    <updated>2016-05-09T00:00:00+09:00</updated>
-    <id>/pl/pl-java-cmd</id>
-    <content type="html">
-运行
-java [字节码的名字] 
-java Main   运行Main.class字节码文件
-
-java路径
-
-  相对路径 指的是JVM的启动路径
-    File file=new File(&quot;config.xml&quot;);
-file.createNewFile();
-// 如果jvm在/Users/ 目录下启动,则会在/Users目录下创建config.xml文件
-// tomcat的启动目录为安装目录的bin文件下，在servlet中以相对路径读取文件
-// 相对路径为tomcat的启动目录
-    
+  显示开头或结尾某个数量的文字区块
+  head [参数]  [文件]
   
-
-
-javac
-
-javac -d . HelloServlet.jav...</content>
-  </entry>
-
-  <entry>
-    <title>Java: IO</title>
-    <link href="/pl/pl-java-io.html"/>
-    <updated>2016-05-08T00:00:00+09:00</updated>
-    <id>/pl/pl-java-io</id>
-    <content type="html">
-intro
-
-流操作主要在java.io包下,类结构如下图
-
-
-
-
-字节流
-
-
-
-OutputStream
-
-
-
-FileOutputStream
-
-//这里的文件创建的地方要注意
-File file =new File(&quot;db.properties&quot;);
-if(!file.exists()){
-	file.createNewFile();
-}
-//创建输出流，可追加
-OutputStream os=new FileOutputStream(&quot;db.properties&quot;,true);
-os.write(new String(&quot;hehe&quot;).getBytes());
-os.write(...</content>
-  </entry>
-
-  <entry>
-    <title>JAVA: Copy Control</title>
-    <link href="/pl/pl-java-copy-control.html"/>
-    <updated>2016-05-08T00:00:00+09:00</updated>
-    <id>/pl/pl-java-copy-control</id>
-    <content type="html">
-intro
-在c++中，有一章专门讲拷贝控制，java把这个问题简单化了，简化成深拷贝与浅拷贝
-
-
-浅拷贝
-
-
-问题的产生
-class Foo{
-	private int age;
-	private Date date;
-	public int getA() {
-		return age;
-	}
-	public void setA(int age) {
-		this.age = age;
-	}
-	public Date getDate() {
-		return date;
-	}
-
-	public void setDate(Date date) {
-		this.date = date;...</content>
-  </entry>
-
-  <entry>
-    <title>Java: 多线程</title>
-    <link href="/pl/pl-java-thread.html"/>
-    <updated>2016-05-07T00:00:00+09:00</updated>
-    <id>/pl/pl-java-thread</id>
-    <content type="html">
-创建与启动
-
-
-
-继承自Thread类
-
-class Foo extends Thread{
-	@Override
-	public void run() {
-		for(int i=0;i&amp;lt;50;i++){
-		System.out.println(&quot;继承线程&quot;+this.getName());
-		}
-	}
-}
-
-
-匿名类
-
-//创建十个线程并启动
-for(int i=0;i&amp;lt;10;i++){
-    new Thread(new Runnable() {
-        @Override
-        public void run() {
-            ...</content>
-  </entry>
-
-  <entry>
-    <title>Java: Jvm</title>
-    <link href="/pl/pl-java-jvm.html"/>
-    <updated>2016-05-06T00:00:00+09:00</updated>
-    <id>/pl/pl-java-jvm</id>
-    <content type="html">
-class文件的组织结构
-.class文件是由子节组成的文件，又叫字节码文件
-
-
-魔数
-由java编译器编译而成的class文件的前四个字节都是“OxCAFEBABE”
-作用，即JVM在尝试加载某个文件到内存中的时候，会首先判断此class文件有没有JVM认为可以接受的”签名”，即JVM会首先读取文件的前四个字节，判断这四个字节是否是”0xCAFEBABE”,如果是则JVM会认为可以将此冷箭当作class文件来加载使用
-
-
-版本号
-
-垃圾回收机制
-
-
-垃圾回收算法
-
-  标记-清除算法，首先标记出所有需要回收的对象，然后回收所有需要回收的对象，该算法缺点是内存块回收之后不连续，导致下一...</content>
-  </entry>
-
-  <entry>
-    <title>Java: Container</title>
-    <link href="/pl/pl-java-container.html"/>
-    <updated>2016-05-04T00:00:00+09:00</updated>
-    <id>/pl/pl-java-container</id>
-    <content type="html">
-
-  intro
-  set    
-      intro
     
-  
-  list    
-      intro
-    
-  
-  字典容器    
-      intro
-      properties
-      map        
-          map的遍历
-        
       
-    
-  
-
-
-intro
-java的容器类都在java.util包下，主要的接口
-set
-intro
-实现set接口的类主要有TreeSet
-
-
-
-list
-
-
-intro
-
-  实现list接口的有LinkedList, ArrayList, Vector, s...</content>
-  </entry>
-
-  <entry>
-    <title>Java: Class Loader</title>
-    <link href="/pl/pl-java-class-load.html"/>
-    <updated>2016-05-02T00:00:00+09:00</updated>
-    <id>/pl/pl-java-class-load</id>
-    <content type="html">
-
-  intro
-  类加载过程    
-      源文件
-      加载
-      链接        
-          验证
-          准备
-          解析
         
-      
-      初始化
-      使用
-      卸载
-    
-  
-  类加载器    
-      类与类加载器
-      类加载器        
-          启动类加载器
-          扩展类加载器
-          应用程序类加载器
-        
-      
-      类加载器工作原理
-    
-  
-
-
-intro
-在C++语...</content>
-  </entry>
-
-  <entry>
-    <title>Java: Annotation</title>
-    <link href="/pl/pl-java-annotation.html"/>
-    <updated>2016-04-09T00:00:00+09:00</updated>
-    <id>/pl/pl-java-annotation</id>
-    <content type="html">
-介绍
-注解也叫作元数据，为我们在代码中添o加信息提供了一种形式化的方法
-
-  metadata: data that provides information about other data
-
-
-
-使用
-
-
-注解的定义
-
-  源码注解   注解在源码中存在
-  编译时注解 注解在源码和.class文件中都存在
-  运行时注解 在运行阶段起作用的注解，甚至影响程序运行逻辑的注解
-    注解的分类
-  
-
-
-
-JDK注解
-JDK注解@Override，@Deprecated和@Suppvisewarnings都是编译时注解
-
-
-第三方注解
-
-
-自定义注解
-
-
-package tuesd...</content>
-  </entry>
-
-  <entry>
-    <title>Java: reflection</title>
-    <link href="/pl/pl-java-reflection.html"/>
-    <updated>2016-04-08T00:00:00+09:00</updated>
-    <id>/pl/pl-java-reflection</id>
-    <content type="html">
-Intro
-反射是得到类的元数据的过程
-
-
-Class对象
-
-  
-    编译后的字节码文件，即.class文件就是Class类的Class对象
-  
-  Java虚拟机类加载系统根据将对应Class对象加载到JVM中，根据类对象创建实例对象
-
-
-
-Class对象的加载
-
-
-Class.forName()
-该方法的调用返回一个对应类的Class对象，无需通过持有该类的实例对象
-引用而去获得Class对象。
-
-
-Class字面常量
-
-  通过字面量的方法获取Class对象的引用不会自动初始化该类
-  接口，数组和基本数据类型都可以通过该方法获得Class对象
-
-</content>
-  </entry>
-
-  <entry>
-    <title>Java: Array</title>
-    <link href="/pl/pl-java-System.html"/>
-    <updated>2016-04-07T00:00:00+09:00</updated>
-    <id>/pl/pl-java-System</id>
-    <content type="html">
-arraycopy
-查看源代码里面使用的是native方法，看不到底层代码，里面应该维护指针
-
-
-数组拷贝
-void foo(){
-    int[] src=new int[]{1,2,3,8,23,5,3,7,8};
-	int[] dest=new int[10];
-	System.arraycopy(src, 2, dest, 3, 5);
-	System.out.println(Arrays.toString(dest));
-}
-
-
-
-系统属性
-
-  属性名        属性值
-  java.version  Java运行时的环境版本
-  java.home     Java...</content>
-  </entry>
-
-  <entry>
-    <title>Java: String</title>
-    <link href="/pl/pl-java-String.html"/>
-    <updated>2016-04-07T00:00:00+09:00</updated>
-    <id>/pl/pl-java-String</id>
-    <content type="html">
-介绍
-
-  String类使用底层使用字符数组保存字符串，有final修饰，String对象是不可变的
-  StringBuilder和StringBuffer都继承自AbstractStringBuilder类，也使用字符串保留数组。
-  String中的对象是不可变的，可以理解为长了，线程安全。StringBuffer对方法加了同步锁，也是线程安全的
-
-
-
-功能
-
-</content>
-  </entry>
-
-  <entry>
-    <title>Java: Calendar</title>
-    <link href="/pl/pl-java-Calendar.html"/>
-    <updated>2016-04-07T00:00:00+09:00</updated>
-    <id>/pl/pl-java-Calendar</id>
-    <content type="html">
-Calendar
-Calendar类是一个抽象类，功能比Date类强大，实现比Date复杂
-
-
-使用
-Calendar cal=Calendar.getInstance();
-System.out.println(calendar.get(Calendar.YEAR));
-
-
-</content>
-  </entry>
-
-  <entry>
-    <title>Java: BigDecimal</title>
-    <link href="/pl/pl-java-BigDecimal.html"/>
-    <updated>2016-04-07T00:00:00+09:00</updated>
-    <id>/pl/pl-java-BigDecimal</id>
-    <content type="html">
-作用
-精确运算
-
-
-使用方法
-
-  使用String对象构建BigDecimal对象
-  调用相应的方法进行算术运算
-  把BigDecimal对象转换成float,double等类型
-
-
-
-代码
-BigDecimal bd=new BigDecimal(&quot;0.06&quot;);
-System.out.println(bd.add(new BigDecimal(&quot;0.01&quot;)));
-
-</content>
-  </entry>
-
-  <entry>
-    <title>Java: Interface</title>
-    <link href="/pl/pl-java-interface.html"/>
-    <updated>2016-04-06T00:00:00+09:00</updated>
-    <id>/pl/pl-java-interface</id>
-    <content type="html">
-特征
-
-  属性有固定的修饰符: public static final
-  函数有固定的修饰符: public abstract,函数不能有方法体。
-
-
-</content>
-  </entry>
-
-  <entry>
-    <title>Java: Class</title>
-    <link href="/pl/pl-java-class.html"/>
-    <updated>2016-04-06T00:00:00+09:00</updated>
-    <id>/pl/pl-java-class</id>
-    <content type="html">
-类的三大特点，封装，继承和多态，集中封装和继承是多态的基础
-
-构造器，只是一个函数，函数只是一段需要执行的代码，就这么简单。
-类的组成
-
-
-普通代码块
-
-
-构造代码块
-直接在类中定义且没有加static关键字的代码块称为构造代码块。
-构造代码块属于对象
-，在对象创建时被执行，每次创建对象都会被调用，
-构造代码块的执行顺序优于类构造函数
-
-
-静态代码块
-java中使用static关键字声明的代码块，静态代码块用于初始化类
-为类的属性初始化。每个静态块只会执行一次。静态代码块属于类
-类的构造器
-
-
-调用方法
-
-  可以通过new关键字调用
-  通过反射调用
-
-
-
-区别
-
-  Class.n...</content>
-  </entry>
-
-  <entry>
-    <title>Java: String</title>
-    <link href="/pl/pl-java-string.html"/>
-    <updated>2016-04-05T00:00:00+09:00</updated>
-    <id>/pl/pl-java-string</id>
-    <content type="html">
-字符分割
-String[] a=&quot;ab@cd&quot;.split(&quot;@&quot;);
-		for(String v:a){
-			System.out.println(v);
-		}
-
-</content>
-  </entry>
-
-  <entry>
-    <title>Java: Enumberation</title>
-    <link href="/pl/pl-java-Enumeration.html"/>
-    <updated>2016-04-04T00:00:00+09:00</updated>
-    <id>/pl/pl-java-Enumeration</id>
-    <content type="html">
-作用
-Enumeration是一个接口,源码如下
-package java.util;
-
-pubic interface Enumeration&amp;lt;E&amp;gt;{
-	boolean hasMoreElements();
-	E nextElement();
-}
-
-</content>
-  </entry>
-
-  <entry>
-    <title>Java: Enum</title>
-    <link href="/pl/pl-java-enum.html"/>
-    <updated>2016-04-03T00:00:00+09:00</updated>
-    <id>/pl/pl-java-enum</id>
-    <content type="html">
-intro
-枚举类型反编译之后也是类，该类用final关键字修饰
-
-
-产生原因
-//枚举类型的引入
-class Weekday{
-	private Weekday(){};
-	public static final Weekday MONDAY= new Weekday();
-	public static final Weekday TUESDAY= new Weekday();
-	public static final Weekday WENDESDAY= new Weekday();
-	public static final Weekday THURSDAY= new Weekda...</content>
+          -n 显示行数   ls
+          hea...</content>
   </entry>
 
   <entry>
     <title>C++:  Template</title>
-    <link href="/pl/pl-c++-template.html"/>
-    <updated>2016-04-03T00:00:00+09:00</updated>
-    <id>/pl/pl-c++-template</id>
-    <content type="html">
-intro
-OOP和范型编程都能处理在编写程序时不知道类型的情况。不同之处在于
-OOP能处理类型在程序运行之前都未知的情况，范型编程中，编译时就能获知类型。
-
-
-function template
-
-define
-template &amp;lt;typename price&amp;gt; bool isCheaper(price p1,price p2){
-	    return p1&amp;lt;p2;
-        }
-
-instantiation
-//函数模板能自己推断参数类型
-compare(2.0,12.0);
-
-
-
-
-class template
-类模板用来生成类的蓝图，与函数模板不同，编...</content>
-  </entry>
-
-  <entry>
-    <title>C++: Stream</title>
-    <link href="/pl/pl-c++-stream.html"/>
-    <updated>2016-04-03T00:00:00+09:00</updated>
-    <id>/pl/pl-c++-stream</id>
-    <content type="html">
-Stream
-
-  to access data that from outside of a program
-    
-      Inputstream: access data from outside of a program.
-      Outputstream: send data out of the program.
-    
-  
-  so we have IOS, which means:
-    
-      Inputstream: istream, ifstream
-      Outputstream: ostream, ofstream
-      ci...</content>
-  </entry>
-
-  <entry>
-    <title>C++: Reload Operator</title>
-    <link href="/pl/pl-c++-load-operator.html"/>
-    <updated>2016-04-03T00:00:00+09:00</updated>
-    <id>/pl/pl-c++-load-operator</id>
-    <content type="html">
-重载的运算符不过是有特殊名字的函数
-重载下标运算符
-
-[]   下标操作符必须是成员函数
-
-
-重载输出运算符
-
-&amp;lt;&amp;lt;     不能是成员函数
-参数1: 非常量ostream对象的引用,非常量的原因是向流写入内容会改变其状态  
-                               引用的原因是因为我们无法直接复制一个ostream对象  
-参数2: 常量的引用, 引用是因为避免复制实参  
-                   常量是因为打印不会改变对象的内容  
-class Worker{
-	public:
-	    int age;
-	    std::stri...</content>
-  </entry>
-
-  <entry>
-    <title>C++: Keywords</title>
-    <link href="/pl/pl-c++-keyword.html"/>
-    <updated>2016-04-03T00:00:00+09:00</updated>
-    <id>/pl/pl-c++-keyword</id>
-    <content type="html">
-explicit
-c++为只用传递一个参数的构造函数定义了一个隐士转换
-
-class Animal{
-	public:
-	    Animal(){
-        cout&amp;lt;&amp;lt;&quot;no parameter constructor&quot;&amp;lt;&amp;lt;endl;
-        }
-	    explicit Animal(int a){
-	    cout&amp;lt;&amp;lt;&quot;parameter constructor&quot;&amp;lt;&amp;lt;endl;
-	    }
-};
-Animal dog = 3         //报错，无法使用explicit Animal构造器
-
-
-class...</content>
-  </entry>
-
-  <entry>
-    <title>C++: 迭代器</title>
-    <link href="/pl/pl-c++-iterator.html"/>
-    <updated>2016-04-03T00:00:00+09:00</updated>
-    <id>/pl/pl-c++-iterator</id>
-    <content type="html">
-intro
-
-谓词
-谓词本质是可调用的表达式，返回结果是一个能用作条件的值。
-一元谓词: 接受单一参数unary predicate
-二元谓词: 接受两个参数binary predicate
-接受谓词参数的算法对输入序列中的元素调用谓词，因此元素类型必须转换为谓词的参数类型
-
-迭代器
-迭代器令算法不依赖于容器，但算法依赖于元素类型的操作。
-
-  输入迭代器
-  输出迭代器
-  前向迭代器
-  双向迭代器
-  随机访问迭代器
-
-
-算法
-简单查找算法
-
-find
-find(beg, end, val)
-return 返回一个迭代器，指向输入序列中第一个等于val的元素。
-find_if(b...</content>
-  </entry>
-
-  <entry>
-    <title>C++: Data Type</title>
-    <link href="/pl/pl-c++-data-type.html"/>
-    <updated>2016-04-03T00:00:00+09:00</updated>
-    <id>/pl/pl-c++-data-type</id>
-    <content type="html">
-intro
-
-数据的初始化分为两种:  
-直接初始化: 使用assignment operator
-复制初始化: 使用(),将初始化值放在圆括号内。
-对于类类型对象，直接初始化直接调用与实参匹配的构造函数。复制初始化
-调用复制构造函数，然后使用复制构造函数将临时对象复制到正在创建的对象。
-1 引用数据类型是一种复合类型，通过在变量名前添加&amp;amp;来定义。
-
-
-指针
-
-定义
-
-指针: (point to)是一种复合类型。指针实现了对其他对象的间接访问。
-1 指针本身就是一个对象，允许对指针的赋值和拷贝。
-2 指针无需在定义时赋初值。
-
-
-空指针
-
-空指针不指向任何对象，在使用一个指针之...</content>
-  </entry>
-
-  <entry>
-    <title>C++: Container</title>
-    <link href="/pl/pl-c++-container.html"/>
-    <updated>2016-04-03T00:00:00+09:00</updated>
-    <id>/pl/pl-c++-container</id>
-    <content type="html">
-Intro
-
-STL标准模板库解决了数据结构和算法的抽象问题
-vector和deque的底层是对数组的封装，所以提供了对元素的快速随机访问。
-不足是，在删除元素时，付出的开销更大。
-list类型在任何位置都能快速插入和删除。访问某个元素要求遍历所设计的其他元素.
-容器操作
-
-
-
-构造函数
-
-
-  C c;           默认构造函数，拷贝空容器
-  C c1(c2);      构造c2的拷贝c1
-  C c(b, e);     构造c, 将迭代器b和e指定的范围内的元素拷贝到c
-  C c{a, b, c};  列表初始化c
-
-
-
-赋值和swap
-
-在新标准库中，容器既提供成...</content>
-  </entry>
-
-  <entry>
-    <title>C++: Class</title>
-    <link href="/pl/pl-c++-class.html"/>
-    <updated>2016-04-03T00:00:00+09:00</updated>
-    <id>/pl/pl-c++-class</id>
-    <content type="html">
-封装
-
-类的定义可以使用struct或者class关键字，struct是从c继承来的
-使用class定义类，则定义在第一个访问标号前的任何成员权限都为private
-使用struct定义类，则都为public，其他没差。
-
-java的类更像是c++类的一种简化。c++中的类能够控制在初始化，复制，赋值和销毁对象时发生的操作。java的类没有这种能力。
-python, java和c++中，都隐约存在this指针这个概念。&amp;lt;/br&amp;gt;
-只不过，java和c++都隐藏的比较深一点。对于 属于对象的成员函数来说，都有对象的指针与他们绑定
-在一起，这个参数是隐藏。python就比较干脆...</content>
-  </entry>
-
-  <entry>
-    <title>C++: Memory</title>
-    <link href="/pl/pl-c++-memory.html"/>
-    <updated>2016-01-21T00:00:00+09:00</updated>
-    <id>/pl/pl-c++-memory</id>
-    <content type="html">
-intro
-自动分配
-全局对象在程序启动时分配，程序结束时销毁。
-局部对象，进入其定义所在的程序时被创建，离开时销毁
-局部static对象在第一次使用前分配，程序结束时销毁
-
-
-动态分配
-除了静态内存和栈内存，每个程序还拥有一个内存池。称为自由空间，free store或堆heap
-动态分配的对象的生存期与他们在哪里创建是无关的，只有当显示地被释放时，对象才会被销毁
-
-
-智能指针
-智能指针产生的原因是对象在销毁时，会调用它的析构函数。
-
-
-shared_ptr
-
-
-直接管理内存
-
-</content>
-  </entry>
-
-  <entry>
-    <title>C++: Compiler</title>
-    <link href="/pl/pl-c++-compiler.html"/>
-    <updated>2016-01-20T00:00:00+09:00</updated>
-    <id>/pl/pl-c++-compiler</id>
-    <content type="html">
-####
-
-  gcc, g++, clang
-
-
-内存对齐
-
-  书写汇编语言时,处理器给我们能处理的内存块最小单位是一个字节大小。底层是如何处理的我们并不知道。我们可以把它看成一个黑箱。C++语言是汇编语言的高级形式。
-  struct foo_1{
-    char a;
-    int  b;
-    };
-struct foo_2{
-    char a;
-    char b;
-    int  c;
-};
-struct foo_3{
-    char a;
-    int  c;
-    char b;
-};
-foo_1 a;
-foo_2 b;
-foo_3 c;
-cout...</content>
-  </entry>
-
-  <entry>
-    <title>C++: Boost</title>
-    <link href="/pl/pl-c++-boost.html"/>
-    <updated>2016-01-19T00:00:00+09:00</updated>
-    <id>/pl/pl-c++-boost</id>
-    <content type="html">
-介绍
-boost是一个可移植的，提供源代码的C++库，由于其对跨平台的强调，对标准C++的强调，与编写平台无关。大部分的boost库功能使用只需要包括相应的头文件即可，少数如正则表达式库和文件系统库需要连接库。
-
-
-文件系统库
-
-
-使用方法
-
-  头文件&amp;lt;boost/filesystem.hpp&amp;gt;提供对文件系统的重要操作，它定义了path类，是filesystem库的基础
-  头文件&amp;lt;boost/filesystem/fstream.hpp&amp;gt;是对std::fstream的一个补充。
-文件系统库使用前需要链接相应的库文件
-  需要添加链接库
-    # demo表...</content>
-  </entry>
-
-  <entry>
-    <title>C++: Opencv</title>
-    <link href="/pl/pl-c++-gtest.html"/>
-    <updated>2016-01-18T00:00:00+09:00</updated>
-    <id>/pl/pl-c++-gtest</id>
-    <content type="html">
-官方文档
-</content>
-  </entry>
-
-  <entry>
-    <title>C++: Opencv</title>
-    <link href="/pl/pl-c++-opencv.html"/>
-    <updated>2016-01-17T00:00:00+09:00</updated>
-    <id>/pl/pl-c++-opencv</id>
-    <content type="html">
-官方文档写得很不客气，there’s no point to using the old methods unless you’re a masochist programmer and you’re asking for trouble
-
-绘制椭圆代码，参考文献
-#define w 400
-cv::Mat img=Mat::zeros(w,w,CV_8UC3);
-cv::ellipse(img,Point(w/2,w/2),Size(w/4,w/16),0,0,360,Scalar(255,0,255),2,3);
-imshow(&quot;demo&quot;,img);
-waitKey(0);
-
-</content>
-  </entry>
-
-  <entry>
-    <title>C++: OpenCV</title>
-    <link href="/pl/pl-c++-opencv-highgui.html"/>
-    <updated>2016-01-16T00:00:00+09:00</updated>
-    <id>/pl/pl-c++-opencv-highgui</id>
-    <content type="html">
-reference
-VideoCapture cap(0); // open the default camera
-         if(!cap.isOpened())  // check if we succeeded
-         return -1;
-
-         Mat edges;
-         namedWindow(&quot;edges&quot;,1);
-         for(;;){
-         Mat frame;
-	     cap &amp;gt;&amp;gt; frame; // get a new frame from camera
-	     cvtColor...</content>
-  </entry>
-
-  <entry>
-    <title>C++: Eigen</title>
-    <link href="/pl/pl-c++-Eigen.html"/>
-    <updated>2016-01-14T00:00:00+09:00</updated>
-    <id>/pl/pl-c++-Eigen</id>
-    <content type="html">
-官方文档
-//默认是列向量
-Eigen::Vector4d a(1,2,3,4);//构造初始化
-Eigen::Vector4d b;
-b&amp;lt;&amp;lt;1,2,3,4;//赋值初始化
-
-
-</content>
-  </entry>
-
-  <entry>
-    <title>C++: Code Normal</title>
-    <link href="/pl/pl-c++-causal.html"/>
-    <updated>2016-01-01T00:00:00+09:00</updated>
-    <id>/pl/pl-c++-causal</id>
-    <content type="html">
-如下代码:
-while(first!=last){
-	 ++first
-	}
-
-left-inclusive interval,左闭合空间的意义:
-当first与last相等时，迭代器范围为空
-当first与last不相等时，迭代器范围内至少有一个元素，而且first指向该区间的第一个元素，通过若干次自增运算可以使first不断增大，知道first==last为止。
-
-
-和表达式相比，函数比表达式好理解，容易维护，重用性好
-缺点就是，效率差，调用函数之前需要保存寄存器，复制实参，程序跳转等操作。
-
-封装是一项将低层次的元素组合起来形成新的高层次实体的技术，函数是封装的一种形式 ，函数所...</content>
-  </entry>
-
-  <entry>
-    <title>C++: Macro</title>
-    <link href="/pl/pl-c++-macro.html"/>
-    <updated>2015-12-26T00:00:00+09:00</updated>
-    <id>/pl/pl-c++-macro</id>
-    <content type="html">
-宏: 就是指令的集合
-#define PRINT(A) std::cout&amp;lt;&amp;lt;&quot;this is output: &quot;&amp;lt;&amp;lt;#A&amp;lt;&amp;lt;std::endl
-PRINT(&quot;hello&quot;);
-
-</content>
-  </entry>
-
-  <entry>
-    <title>C++: Template</title>
-    <link href="/pl/pl-c++-template.html"/>
-    <updated>2015-12-03T00:00:00+09:00</updated>
-    <id>/pl/pl-c++-template</id>
+    <link href="/pl/pl-compile-c++-template.html"/>
+    <updated>2017-03-05T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-template</id>
     <content type="html">
 intro
 OOP和范型编程都能处理在编写程序时不知道类型的情况。不同之处在于
@@ -12346,9 +11784,9 @@ class template
 
   <entry>
     <title>C++: Struct</title>
-    <link href="/pl/pl-c++-struct.html"/>
-    <updated>2015-11-10T00:00:00+09:00</updated>
-    <id>/pl/pl-c++-struct</id>
+    <link href="/pl/pl-compile-c++-struct.html"/>
+    <updated>2017-03-05T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-struct</id>
     <content type="html">
 ####
 
@@ -12373,145 +11811,81 @@ struct Rectangle r;
   </entry>
 
   <entry>
+    <title>C++: Stream</title>
+    <link href="/pl/pl-compile-c++-stream.html"/>
+    <updated>2017-03-05T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-stream</id>
+    <content type="html">
+Stream
+
+  to access data that from outside of a program
+    
+      Inputstream: access data from outside of a program.
+      Outputstream: send data out of the program.
+    
+  
+  so we have IOS, which means:
+    
+      Inputstream: istream, ifstream
+      Outputstream: ostream, ofstream
+      ci...</content>
+  </entry>
+
+  <entry>
+    <title>C++: STL</title>
+    <link href="/pl/pl-compile-c++-stl.html"/>
+    <updated>2017-03-05T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-stl</id>
+    <content type="html">
+在出现标准库之前，c++程序使用数组保存对象，现代c++程序更多地用vector取代数组
+与vector相比，数组的长度是固定的。
+只有当程序强调速度的时候才在类的实现内部使用数组和指针。
+</content>
+  </entry>
+
+  <entry>
     <title>C++: Polymorphism</title>
-    <link href="/pl/pl-c++-polymorphism.html"/>
-    <updated>2015-11-10T00:00:00+09:00</updated>
-    <id>/pl/pl-c++-polymorphism</id>
+    <link href="/pl/pl-compile-c++-polymorphism.html"/>
+    <updated>2017-03-05T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-polymorphism</id>
     <content type="html">
 </content>
   </entry>
 
   <entry>
-    <title>C++: OOP</title>
-    <link href="/pl/pl-c++-oop.html"/>
-    <updated>2015-11-10T00:00:00+09:00</updated>
-    <id>/pl/pl-c++-oop</id>
+    <title>C++: Pointer and Reference</title>
+    <link href="/pl/pl-compile-c++-pointer-and-reference.html"/>
+    <updated>2017-03-05T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-pointer-and-reference</id>
     <content type="html">
-####
+语言类型
 
-  why data is modified by private ? function is modified by public?
-    
-      just like a car, it has button you can push, the button is like a function,
-it’s public.
-      But what’s in the button, you have no idea. It’s the data which is private.
-    
-  
+  c++容忍隐士的类型转换，所以是一种种弱类型语言
+  c++编译时进行类型检查，程序运行时不能改变其结构，所以是静态语言
 
 
+Arithmetic
 
-  
+  p++
+  p–
+  p+1
 
-</content>
-  </entry>
-
-  <entry>
-    <title>C++: Function</title>
-    <link href="/pl/pl-c++-function.html"/>
-    <updated>2015-11-10T00:00:00+09:00</updated>
-    <id>/pl/pl-c++-function</id>
-    <content type="html">
-Terminology
-
-  Prototype, signature, header of a function means the following code
-
-
-void foo();
-
-
-
-  Functions are called modules or procedures.
-
-
-#### 
-There are two piece of the code, so there will be two function in the memory.
-
-#include &amp;lt;iostream&amp;gt;
-int add(int x, int y);
-
-int main(){
- ...</content>
-  </entry>
-
-  <entry>
-    <title>C++: Function Parameters</title>
-    <link href="/pl/pl-c++-function-parameter.html"/>
-    <updated>2015-11-10T00:00:00+09:00</updated>
-    <id>/pl/pl-c++-function-parameter</id>
-    <content type="html">
-Arrays
-
-  Arrays can only be passed by address
-  for the formal parameters in foo, you can replace a[] with *a, it
-still means the same thing.
-    
-      int a[] can only be used to point to array.
-      *a can be used to point an integer.
-    
-  
-
-
-#include &amp;lt;iostream&amp;gt;
-void foo(int a[], in...</content>
-  </entry>
-
-  <entry>
-    <title>C++: Array</title>
-    <link href="/pl/pl-c++-array.html"/>
-    <updated>2015-11-10T00:00:00+09:00</updated>
-    <id>/pl/pl-c++-array</id>
-    <content type="html">
-static array
-
-dynamic array
 
 #include &amp;lt;iostream&amp;gt;
 
 int main(){
-
-    // stack
-    int a[5]={1,3,5,2,0};
-    int *b;
-
-    //heap
-    b = new int[5];
-    for(int i=0; i&amp;lt;5; i++){
-       std::cout&amp;lt;&amp;lt;b[i]&amp;lt;&amp;lt;std::endl;
-       std::cout&amp;lt;&amp;lt;*(b+i)&amp;lt;&amp;lt;std::endl;
-    }
-}
-
-
-Increas...</content>
-  </entry>
-
-  <entry>
-    <title>C++: Expression</title>
-    <link href="/pl/pl-c++-express.html"/>
-    <updated>2015-11-08T00:00:00+09:00</updated>
-    <id>/pl/pl-c++-express</id>
-    <content type="html">
-类型转换
-隐士转换
-C++语言不会直接将两个不同类型的值相加，而是先根据类型转换的规则将运算的
-类型统一后，再求值。
-int ival = 3.541 + 3;
-// 1 3转换成double型，结果类型为double
-// 2 初始化过程中，初始化对象的类型无法改变，初始值被转化为该对象的类型
-
-
-显示转换
-表达式 cast-name(expression)
-type: 转换的目标类型，expression要转换的值
-cast-name是static, dynamic, const, reinterpret中的一种
-
-</content>
+    int a[5]={1,2,2,1,9};
+    int *p = a;
+    std::cout&amp;lt;&amp;lt;p++&amp;lt;&amp;lt;std::endl;
+    std::cout&amp;lt;&amp;lt;a+1&amp;lt;&amp;lt;std::endl;
+    std::cout&amp;lt;&amp;lt;*(a+1)...</content>
   </entry>
 
   <entry>
     <title>C++: Operator</title>
-    <link href="/pl/pl-c++-operator.html"/>
-    <updated>2015-11-04T00:00:00+09:00</updated>
-    <id>/pl/pl-c++-operator</id>
+    <link href="/pl/pl-compile-c++-operator.html"/>
+    <updated>2017-03-05T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-operator</id>
     <content type="html">
 位运算符
 
@@ -12546,44 +11920,499 @@ cast-name是static, dynamic, const, reinterpret中的一种
   </entry>
 
   <entry>
-    <title>C++: STL</title>
-    <link href="/pl/pl-c++-stl.html"/>
-    <updated>2015-11-03T00:00:00+09:00</updated>
-    <id>/pl/pl-c++-stl</id>
+    <title>C++: Opencv</title>
+    <link href="/pl/pl-compile-c++-opencv.html"/>
+    <updated>2017-03-05T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-opencv</id>
     <content type="html">
-在出现标准库之前，c++程序使用数组保存对象，现代c++程序更多地用vector取代数组
-与vector相比，数组的长度是固定的。
-只有当程序强调速度的时候才在类的实现内部使用数组和指针。
+官方文档写得很不客气，there’s no point to using the old methods unless you’re a masochist programmer and you’re asking for trouble
+
+绘制椭圆代码，参考文献
+#define w 400
+cv::Mat img=Mat::zeros(w,w,CV_8UC3);
+cv::ellipse(img,Point(w/2,w/2),Size(w/4,w/16),0,0,360,Scalar(255,0,255),2,3);
+imshow(&quot;demo&quot;,img);
+waitKey(0);
+
 </content>
   </entry>
 
   <entry>
-    <title>C++: Pointer and Reference</title>
-    <link href="/pl/pl-c++-pointer-and-reference.html"/>
-    <updated>2015-11-01T00:00:00+09:00</updated>
-    <id>/pl/pl-c++-pointer-and-reference</id>
+    <title>C++: OpenCV</title>
+    <link href="/pl/pl-compile-c++-opencv-highgui.html"/>
+    <updated>2017-03-05T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-opencv-highgui</id>
     <content type="html">
-语言类型
+reference
+VideoCapture cap(0); // open the default camera
+         if(!cap.isOpened())  // check if we succeeded
+         return -1;
 
-  c++容忍隐士的类型转换，所以是一种种弱类型语言
-  c++编译时进行类型检查，程序运行时不能改变其结构，所以是静态语言
+         Mat edges;
+         namedWindow(&quot;edges&quot;,1);
+         for(;;){
+         Mat frame;
+	     cap &amp;gt;&amp;gt; frame; // get a new frame from camera
+	     cvtColor...</content>
+  </entry>
+
+  <entry>
+    <title>C++: OOP</title>
+    <link href="/pl/pl-compile-c++-oop.html"/>
+    <updated>2017-03-05T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-oop</id>
+    <content type="html">
+####
+
+  why data is modified by private ? function is modified by public?
+    
+      just like a car, it has button you can push, the button is like a function,
+it’s public.
+      But what’s in the button, you have no idea. It’s the data which is private.
+    
+  
 
 
-Arithmetic
 
-  p++
-  p–
-  p+1
+  
 
+</content>
+  </entry>
+
+  <entry>
+    <title>C++: Memory</title>
+    <link href="/pl/pl-compile-c++-memory.html"/>
+    <updated>2017-03-05T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-memory</id>
+    <content type="html">
+intro
+自动分配
+全局对象在程序启动时分配，程序结束时销毁。
+局部对象，进入其定义所在的程序时被创建，离开时销毁
+局部static对象在第一次使用前分配，程序结束时销毁
+
+
+动态分配
+除了静态内存和栈内存，每个程序还拥有一个内存池。称为自由空间，free store或堆heap
+动态分配的对象的生存期与他们在哪里创建是无关的，只有当显示地被释放时，对象才会被销毁
+
+
+智能指针
+智能指针产生的原因是对象在销毁时，会调用它的析构函数。
+
+
+shared_ptr
+
+
+直接管理内存
+
+</content>
+  </entry>
+
+  <entry>
+    <title>C++: Macro</title>
+    <link href="/pl/pl-compile-c++-macro.html"/>
+    <updated>2017-03-05T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-macro</id>
+    <content type="html">
+宏: 就是指令的集合
+#define PRINT(A) std::cout&amp;lt;&amp;lt;&quot;this is output: &quot;&amp;lt;&amp;lt;#A&amp;lt;&amp;lt;std::endl
+PRINT(&quot;hello&quot;);
+
+</content>
+  </entry>
+
+  <entry>
+    <title>C++: Lvalues and Rvalues</title>
+    <link href="/pl/pl-compile-c++-lvalue-and-rvalue.html"/>
+    <updated>2017-03-05T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-lvalue-and-rvalue</id>
+    <content type="html">
+####
+
+  2.rvalue: a temporary value
+
+
+###
+
+  you can’t take an lvalue reference form an rvalue.
+  you can take an lvalue reference form an lvalue.
+
+
+####
+
+  the keyword const will ask the compiler do something.
+    
+      compier will probably create like a temporary variable to storage
+      th...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Reload Operator</title>
+    <link href="/pl/pl-compile-c++-load-operator.html"/>
+    <updated>2017-03-05T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-load-operator</id>
+    <content type="html">
+重载的运算符不过是有特殊名字的函数
+重载下标运算符
+
+[]   下标操作符必须是成员函数
+
+
+重载输出运算符
+
+&amp;lt;&amp;lt;     不能是成员函数
+参数1: 非常量ostream对象的引用,非常量的原因是向流写入内容会改变其状态  
+                               引用的原因是因为我们无法直接复制一个ostream对象  
+参数2: 常量的引用, 引用是因为避免复制实参  
+                   常量是因为打印不会改变对象的内容  
+class Worker{
+	public:
+	    int age;
+	    std::stri...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Keywords</title>
+    <link href="/pl/pl-compile-c++-keyword.html"/>
+    <updated>2017-03-05T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-keyword</id>
+    <content type="html">
+explicit
+c++为只用传递一个参数的构造函数定义了一个隐士转换
+
+class Animal{
+	public:
+	    Animal(){
+        cout&amp;lt;&amp;lt;&quot;no parameter constructor&quot;&amp;lt;&amp;lt;endl;
+        }
+	    explicit Animal(int a){
+	    cout&amp;lt;&amp;lt;&quot;parameter constructor&quot;&amp;lt;&amp;lt;endl;
+	    }
+};
+Animal dog = 3         //报错，无法使用explicit Animal构造器
+
+
+class...</content>
+  </entry>
+
+  <entry>
+    <title>C++: 迭代器</title>
+    <link href="/pl/pl-compile-c++-iterator.html"/>
+    <updated>2017-03-05T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-iterator</id>
+    <content type="html">
+intro
+
+谓词
+谓词本质是可调用的表达式，返回结果是一个能用作条件的值。
+一元谓词: 接受单一参数unary predicate
+二元谓词: 接受两个参数binary predicate
+接受谓词参数的算法对输入序列中的元素调用谓词，因此元素类型必须转换为谓词的参数类型
+
+迭代器
+迭代器令算法不依赖于容器，但算法依赖于元素类型的操作。
+
+  输入迭代器
+  输出迭代器
+  前向迭代器
+  双向迭代器
+  随机访问迭代器
+
+
+算法
+简单查找算法
+
+find
+find(beg, end, val)
+return 返回一个迭代器，指向输入序列中第一个等于val的元素。
+find_if(b...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Opencv</title>
+    <link href="/pl/pl-compile-c++-gtest.html"/>
+    <updated>2017-03-05T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-gtest</id>
+    <content type="html">
+官方文档
+</content>
+  </entry>
+
+  <entry>
+    <title>C++: Function</title>
+    <link href="/pl/pl-compile-c++-function.html"/>
+    <updated>2017-03-05T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-function</id>
+    <content type="html">
+Terminology
+
+  Prototype, signature, header of a function means the following code
+
+
+void foo();
+
+
+
+  Functions are called modules or procedures.
+
+
+#### 
+There are two piece of the code, so there will be two function in the memory.
+
+#include &amp;lt;iostream&amp;gt;
+int add(int x, int y);
+
+int main(){
+ ...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Function Parameters</title>
+    <link href="/pl/pl-compile-c++-function-parameter.html"/>
+    <updated>2017-03-05T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-function-parameter</id>
+    <content type="html">
+Arrays
+
+  Arrays can only be passed by address
+  for the formal parameters in foo, you can replace a[] with *a, it
+still means the same thing.
+    
+      int a[] can only be used to point to array.
+      *a can be used to point an integer.
+    
+  
+
+
+#include &amp;lt;iostream&amp;gt;
+void foo(int a[], in...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Expression</title>
+    <link href="/pl/pl-compile-c++-express.html"/>
+    <updated>2017-03-05T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-express</id>
+    <content type="html">
+类型转换
+隐士转换
+C++语言不会直接将两个不同类型的值相加，而是先根据类型转换的规则将运算的
+类型统一后，再求值。
+int ival = 3.541 + 3;
+// 1 3转换成double型，结果类型为double
+// 2 初始化过程中，初始化对象的类型无法改变，初始值被转化为该对象的类型
+
+
+显示转换
+表达式 cast-name(expression)
+type: 转换的目标类型，expression要转换的值
+cast-name是static, dynamic, const, reinterpret中的一种
+
+</content>
+  </entry>
+
+  <entry>
+    <title>C++: Data Type</title>
+    <link href="/pl/pl-compile-c++-data-type.html"/>
+    <updated>2017-03-05T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-data-type</id>
+    <content type="html">
+intro
+
+数据的初始化分为两种:  
+直接初始化: 使用assignment operator
+复制初始化: 使用(),将初始化值放在圆括号内。
+对于类类型对象，直接初始化直接调用与实参匹配的构造函数。复制初始化
+调用复制构造函数，然后使用复制构造函数将临时对象复制到正在创建的对象。
+1 引用数据类型是一种复合类型，通过在变量名前添加&amp;amp;来定义。
+
+
+指针
+
+定义
+
+指针: (point to)是一种复合类型。指针实现了对其他对象的间接访问。
+1 指针本身就是一个对象，允许对指针的赋值和拷贝。
+2 指针无需在定义时赋初值。
+
+
+空指针
+
+空指针不指向任何对象，在使用一个指针之...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Container</title>
+    <link href="/pl/pl-compile-c++-container.html"/>
+    <updated>2017-03-05T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-container</id>
+    <content type="html">
+Intro
+
+STL标准模板库解决了数据结构和算法的抽象问题
+vector和deque的底层是对数组的封装，所以提供了对元素的快速随机访问。
+不足是，在删除元素时，付出的开销更大。
+list类型在任何位置都能快速插入和删除。访问某个元素要求遍历所设计的其他元素.
+容器操作
+
+
+
+构造函数
+
+
+  C c;           默认构造函数，拷贝空容器
+  C c1(c2);      构造c2的拷贝c1
+  C c(b, e);     构造c, 将迭代器b和e指定的范围内的元素拷贝到c
+  C c{a, b, c};  列表初始化c
+
+
+
+赋值和swap
+
+在新标准库中，容器既提供成...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Compiler</title>
+    <link href="/pl/pl-compile-c++-compiler.html"/>
+    <updated>2017-03-05T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-compiler</id>
+    <content type="html">
+####
+
+  gcc, g++, clang
+
+
+内存对齐
+
+  书写汇编语言时,处理器给我们能处理的内存块最小单位是一个字节大小。底层是如何处理的我们并不知道。我们可以把它看成一个黑箱。C++语言是汇编语言的高级形式。
+  struct foo_1{
+    char a;
+    int  b;
+    };
+struct foo_2{
+    char a;
+    char b;
+    int  c;
+};
+struct foo_3{
+    char a;
+    int  c;
+    char b;
+};
+foo_1 a;
+foo_2 b;
+foo_3 c;
+cout...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Class</title>
+    <link href="/pl/pl-compile-c++-class.html"/>
+    <updated>2017-03-05T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-class</id>
+    <content type="html">
+封装
+
+类的定义可以使用struct或者class关键字，struct是从c继承来的
+使用class定义类，则定义在第一个访问标号前的任何成员权限都为private
+使用struct定义类，则都为public，其他没差。
+
+java的类更像是c++类的一种简化。c++中的类能够控制在初始化，复制，赋值和销毁对象时发生的操作。java的类没有这种能力。
+python, java和c++中，都隐约存在this指针这个概念。&amp;lt;/br&amp;gt;
+只不过，java和c++都隐藏的比较深一点。对于 属于对象的成员函数来说，都有对象的指针与他们绑定
+在一起，这个参数是隐藏。python就比较干脆...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Code Normal</title>
+    <link href="/pl/pl-compile-c++-causal.html"/>
+    <updated>2017-03-05T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-causal</id>
+    <content type="html">
+如下代码:
+while(first!=last){
+	 ++first
+	}
+
+left-inclusive interval,左闭合空间的意义:
+当first与last相等时，迭代器范围为空
+当first与last不相等时，迭代器范围内至少有一个元素，而且first指向该区间的第一个元素，通过若干次自增运算可以使first不断增大，知道first==last为止。
+
+
+和表达式相比，函数比表达式好理解，容易维护，重用性好
+缺点就是，效率差，调用函数之前需要保存寄存器，复制实参，程序跳转等操作。
+
+封装是一项将低层次的元素组合起来形成新的高层次实体的技术，函数是封装的一种形式 ，函数所...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Boost</title>
+    <link href="/pl/pl-compile-c++-boost.html"/>
+    <updated>2017-03-05T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-boost</id>
+    <content type="html">
+介绍
+boost是一个可移植的，提供源代码的C++库，由于其对跨平台的强调，对标准C++的强调，与编写平台无关。大部分的boost库功能使用只需要包括相应的头文件即可，少数如正则表达式库和文件系统库需要连接库。
+
+
+文件系统库
+
+
+使用方法
+
+  头文件&amp;lt;boost/filesystem.hpp&amp;gt;提供对文件系统的重要操作，它定义了path类，是filesystem库的基础
+  头文件&amp;lt;boost/filesystem/fstream.hpp&amp;gt;是对std::fstream的一个补充。
+文件系统库使用前需要链接相应的库文件
+  需要添加链接库
+    # demo表...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Array</title>
+    <link href="/pl/pl-compile-c++-array.html"/>
+    <updated>2017-03-05T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-array</id>
+    <content type="html">
+static array
+
+dynamic array
 
 #include &amp;lt;iostream&amp;gt;
 
 int main(){
-    int a[5]={1,2,2,1,9};
-    int *p = a;
-    std::cout&amp;lt;&amp;lt;p++&amp;lt;&amp;lt;std::endl;
-    std::cout&amp;lt;&amp;lt;a+1&amp;lt;&amp;lt;std::endl;
-    std::cout&amp;lt;&amp;lt;*(a+1)...</content>
+
+    // stack
+    int a[5]={1,3,5,2,0};
+    int *b;
+
+    //heap
+    b = new int[5];
+    for(int i=0; i&amp;lt;5; i++){
+       std::cout&amp;lt;&amp;lt;b[i]&amp;lt;&amp;lt;std::endl;
+       std::cout&amp;lt;&amp;lt;*(b+i)&amp;lt;&amp;lt;std::endl;
+    }
+}
+
+
+Increas...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Eigen</title>
+    <link href="/pl/pl-compile-c++-Eigen.html"/>
+    <updated>2017-03-05T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-Eigen</id>
+    <content type="html">
+官方文档
+//默认是列向量
+Eigen::Vector4d a(1,2,3,4);//构造初始化
+Eigen::Vector4d b;
+b&amp;lt;&amp;lt;1,2,3,4;//赋值初始化
+
+
+</content>
   </entry>
 
   <entry>
@@ -12655,70 +12484,53 @@ Intro
   </entry>
 
   <entry>
-    <title>网络安全</title>
-    <link href="/linux/linux-internet-attack.html"/>
+    <title>Management: Access</title>
+    <link href="/os/os-internet-attack.html"/>
     <updated>2015-05-22T00:00:00+09:00</updated>
-    <id>/linux/linux-internet-attack</id>
+    <id>/os/os-internet-attack</id>
     <content type="html">
-  主机扫描    
-      fping
-      hping
-    
-  
-  路由扫描    
-      traceroute
-      mtr
-    
-  
-  批量服务扫描    
-      nmap        
-          常用功能
-        
-      
-      ncat
-    
-  
-  常见网络攻击策略
-
-
-主机扫描
-
-
 fping
-
-
 
 hping
 
-
-
 路由扫描
-
 
 traceroute
 
-
-
 mtr
 
-
-
 批量服务扫描
-
 
 nmap
 
 常用功能
 # 查看肉鸡开放的端口
 sudo nmap -sS 47.75.37.163
-...</content>
+# 显示信息如下
+PORT     STATE  SERVICE
+22/tcp   open   ssh
+80/tcp   closed http
+443/tcp  closed https
+3128/tcp closed squid-http
+3389/tcp closed ms-wbt-server
+
+
+
+
+ncat
+
+
+
+常见网络攻击策略
+
+</content>
   </entry>
 
   <entry>
     <title>Management: Process</title>
-    <link href="/linux/linux-management-process.html"/>
+    <link href="/os/os-management-process.html"/>
     <updated>2015-05-17T00:00:00+09:00</updated>
-    <id>/linux/linux-management-process</id>
+    <id>/os/os-management-process</id>
     <content type="html">
 Kill
 用来终止指定的进程，终止前台的进程可以使用Ctrl+c, 终止后台的进程必须使用kill命令
@@ -12746,10 +12558,33 @@ ps命令默认显示4列信息
   </entry>
 
   <entry>
+    <title>Kernel</title>
+    <link href="/os/os-kernel.html"/>
+    <updated>2015-05-17T00:00:00+09:00</updated>
+    <id>/os/os-kernel</id>
+    <content type="html">
+Kernel
+
+  linux
+  Mach
+  BSD
+  XNU: kernel of Darwin
+
+
+OS
+
+  GNU/linux
+  Windows
+  Mac OS
+
+</content>
+  </entry>
+
+  <entry>
     <title>Management: User</title>
-    <link href="/linux/linux-management-user.html"/>
+    <link href="/os/os-management-user.html"/>
     <updated>2015-05-16T00:00:00+09:00</updated>
-    <id>/linux/linux-management-user</id>
+    <id>/os/os-management-user</id>
     <content type="html">
 说明
 该文件只能使用visudo命令打开编辑，如果有语法错误，则不能保存
@@ -12778,13 +12613,13 @@ usermod -aG docker $USER
   </entry>
 
   <entry>
-    <title>Mangement: Software</title>
-    <link href="/linux/linux-management-software.html"/>
+    <title>Mangement: Software Package</title>
+    <link href="/os/os-management-software.html"/>
     <updated>2015-05-16T00:00:00+09:00</updated>
-    <id>/linux/linux-management-software</id>
+    <id>/os/os-management-software</id>
     <content type="html">
-Brew
-作用
+1. Mac OS
+1.1 作用
 the missing package manager for macos, 和centos下的yumhe ubuntu下的apt-get类似
 
   brew的安装目录在/usr/local/Cellar
@@ -12797,18 +12632,19 @@ the missing package manager for macos, 和centos下的yumhe ubuntu下的apt-get�
   brew install boost-python
   brew upgrade boost
   brew info boost  查看boost相关信息
+  brew link
 
 
 xcode-select
 
-  Manages the active developer director...</content>
+  Manages the acti...</content>
   </entry>
 
   <entry>
     <title>Management: Disk</title>
-    <link href="/linux/linux-management-disk.html"/>
+    <link href="/os/os-management-disk.html"/>
     <updated>2015-05-16T00:00:00+09:00</updated>
-    <id>/linux/linux-management-disk</id>
+    <id>/os/os-management-disk</id>
     <content type="html">
 df
 df -h
@@ -12822,9 +12658,9 @@ sudo du -h --max-depth=1 /var
 
   <entry>
     <title>Management: Access</title>
-    <link href="/linux/linux-management-access.html"/>
+    <link href="/os/os-management-access.html"/>
     <updated>2015-05-16T00:00:00+09:00</updated>
-    <id>/linux/linux-management-access</id>
+    <id>/os/os-management-access</id>
     <content type="html">
 功能
 在linux系统中，默认只有三种权限，文件夹的所有者，所属组，非所有者所属组用户,
@@ -12843,33 +12679,87 @@ dumpe2fs -h /dev/vda1 | grep mount options:
   </entry>
 
   <entry>
-    <title>CLI: Time Schedule</title>
-    <link href="/linux/linux-cli-time-scheduling.html"/>
+    <title>GNU: Gcc</title>
+    <link href="/linux/os-gnu-gcc.html"/>
     <updated>2015-05-16T00:00:00+09:00</updated>
-    <id>/linux/linux-cli-time-scheduling</id>
+    <id>/linux/os-gnu-gcc</id>
     <content type="html">
-at的访问控制
+Environment Variables
 
-  如果系统中有/etc/at.allow文件，那么只有写入/etc/at.allow文件中的用户可以使用at命令，/etc/at.deny文件会被忽略
-  如果系统中没有/etc/at.allow文件，只有/etc/at.deny文件，那么写入/etc/at.deny文件中的用户不能使用at命令。对root不起作用
-  如果系统中这两个文件都不存在，那么只有root用户可以使用at命令
+  PATH: For searching the executables and run-time shared libraries.
+  CPATH: For searching the include-paths for headers. It is searched after
+paths specified in **-I** options.
+  LiBRARY_PATH: For searching library-paths for link libraries. It is searched
+afer paths spef...</content>
+  </entry>
+
+  <entry>
+    <title>Directory Hierarch</title>
+    <link href="/os/os-directory-structure.html"/>
+    <updated>2015-05-16T00:00:00+09:00</updated>
+    <id>/os/os-directory-structure</id>
+    <content type="html">
+proc
+
+  linux提供了一种通过/proc文件系统，在运行时访问内核内部数据结构，改变内核设置的机制。
+  proc文件系统是一个伪文件系统，只存在内存中，不占用外存空间
+  /proc下有三个很重要的目录，net，scsi和sys；sys是可写的，可以通过它来访问或者修改内核参数
+
+
+常用设置
+# 关闭icmp协议
+sysctl -w net.ipv4.icmp_echo_ignore_all=1
+
+
+Galois
+
+  The directory structure of an operating system must have hierarch
+property, be...</content>
+  </entry>
+
+  <entry>
+    <title>Management: Access</title>
+    <link href="/os/os-crontab.html"/>
+    <updated>2015-05-16T00:00:00+09:00</updated>
+    <id>/os/os-crontab</id>
+    <content type="html">
+访问控制
+
+  当系统中有/etc/cron.allow文件时，只有写入此文件的用户可以使用crontab命令。
+  当/etc/cron.allow存在时，/etc/cron.deny文件会被忽略,/etc/cron.allow文件的优先级更高
+  当系统中只有/etc/cron.deny文件时，写入此文件的用户不能使用crontab命令
 
 
 常用命令
-# ctrl+d表示结束任务
-at now +5 minutes
-at&amp;gt; ls
-at&amp;gt; &amp;lt;EOT&amp;gt;
-# 查看任务列表
-atq
-# 查看任务详细信...</content>
+
+	
+		项目
+		*
+		*
+		*
+		*
+		*
+	
+	
+		含义
+		每小时中的第几分钟
+		每天当中的第几小时
+		每月当中的第几天
+		每年当中的第几月
+		每周当中的星期几
+	
+	
+		范围
+		0-59
+		0-23
+...</content>
   </entry>
 
   <entry>
     <title>centos7</title>
-    <link href="/linux/linux-centos7.html"/>
+    <link href="/linux/os-centos7.html"/>
     <updated>2015-05-16T00:00:00+09:00</updated>
-    <id>/linux/linux-centos7</id>
+    <id>/linux/os-centos7</id>
     <content type="html">
   新特性
   systemd
@@ -12906,73 +12796,10 @@ runlevel
   </entry>
 
   <entry>
-    <title>centos7的目录结构</title>
-    <link href="/linux/linux-centos7-directory-structure.html"/>
-    <updated>2015-05-16T00:00:00+09:00</updated>
-    <id>/linux/linux-centos7-directory-structure</id>
-    <content type="html">
-  proc
-  常用设置
-
-
-proc
-
-  linux提供了一种通过/proc文件系统，在运行时访问内核内部数据结构，改变内核设置的机制。
-  proc文件系统是一个伪文件系统，只存在内存中，不占用外存空间
-  /proc下有三个很重要的目录，net，scsi和sys；sys是可写的，可以通过它来访问或者修改内核参数
-
-
-常用设置
-# 关闭icmp协议
-sysctl -w net.ipv4.icmp_echo_ignore_all=1
-
-</content>
-  </entry>
-
-  <entry>
-    <title>crontab</title>
-    <link href="/linux/linux-centos7-crontab.html"/>
-    <updated>2015-05-16T00:00:00+09:00</updated>
-    <id>/linux/linux-centos7-crontab</id>
-    <content type="html">
-  访问控制
-  常用命令
-
-
-访问控制
-
-  当系统中有/etc/cron.allow文件时，只有写入此文件的用户可以使用crontab命令。
-  当/etc/cron.allow存在时，/etc/cron.deny文件会被忽略,/etc/cron.allow文件的优先级更高
-  当系统中只有/etc/cron.deny文件时，写入此文件的用户不能使用crontab命令
-
-
-常用命令
-
-	
-		项目
-		*
-		*
-		*
-		*
-		*
-	
-	
-		含义
-		每小时中的第几分钟
-		每天当中的第几小时
-		每月当中的第几天
-		每年当中的第几月
-		每周当中的星期几
-	
-	
-		范...</content>
-  </entry>
-
-  <entry>
-    <title>Linux Cflag</title>
-    <link href="/linux-cflag.html"/>
+    <title>Os Macos Cflag</title>
+    <link href="/os-macOS-cflag.html"/>
     <updated>2015-05-08T00:00:00+09:00</updated>
-    <id>/linux-cflag</id>
+    <id>/os-macOS-cflag</id>
     <content type="html">作用
 控制在find中的显示
 
@@ -12980,32 +12807,6 @@ sysctl -w net.ipv4.icmp_echo_ignore_all=1
   chflags nohidden filepath/filename 显示
 
 </content>
-  </entry>
-
-  <entry>
-    <title>CLI: Shell</title>
-    <link href="/linux/linux-cli-shell.html"/>
-    <updated>2015-05-01T00:00:00+09:00</updated>
-    <id>/linux/linux-cli-shell</id>
-    <content type="html">
-简介
-每个操作系统都有自己的shell，图形界面的或者命令行的。图形界面显示就是有鼠标箭头，命令行也有相应的显示工具。
-shell是linux的外壳，负责外界与linux内核的交互；linux常用的内核有sh,bash,csh等，通过以下命令可以查看mac下的shell类型
-cat /etc/shells
-
-通过以下命令查看shell的类型
-echo $SHELL
-
-
-shell脚本
-小程序堆积成大程序，要养成写脚本的习惯
-#/bin/bash
-echo &quot;hello world&quot;
-
-Check Out System Variable
-echo $HOME
-
-Shell Tutoria...</content>
   </entry>
 
 

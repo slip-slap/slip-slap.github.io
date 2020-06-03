@@ -1,0 +1,35 @@
+I"R
+
+<h4 id="static-array">static array</h4>
+
+<h4 id="dynamic-array">dynamic array</h4>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+
+    <span class="c1">// stack</span>
+    <span class="kt">int</span> <span class="n">a</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">};</span>
+    <span class="kt">int</span> <span class="o">*</span><span class="n">b</span><span class="p">;</span>
+
+    <span class="c1">//heap</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">[</span><span class="mi">5</span><span class="p">];</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">5</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+       <span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+       <span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;*</span><span class="p">(</span><span class="n">b</span><span class="o">+</span><span class="n">i</span><span class="p">)</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h4 id="increasing-array-size">Increasing Array Size</h4>
+<ol>
+  <li>why array size can not increase directly?
+    <ul>
+      <li>Because the memory of array is contiguous. If you increase the size at the end
+of current array. You don’t know whether the following address is used by the
+other program.</li>
+      <li>so the only way is create a big array.</li>
+    </ul>
+  </li>
+</ol>
+:ET

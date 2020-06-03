@@ -1,0 +1,80 @@
+I"
+<p>####</p>
+<ol>
+  <li>head recursion: the recursive call, when it happens, comes before other
+processing in the function.(think of it happening at the top).
+    <ul>
+      <li><strong>the head recursion technique can reduce the data passed to the recursive
+call</strong></li>
+    </ul>
+  </li>
+  <li>tail recursion: the processing occurs before the recursive call.
+    <ul>
+      <li><strong>the tail recursion techique can result in passing additional data to recursive
+calls</strong>.</li>
+    </ul>
+  </li>
+  <li>no matter it is head recursion or tail recursion, the problem we want to
+study can be divided into three parts:
+    <ul>
+      <li>parameter</li>
+      <li>return</li>
+      <li>multiple recursion</li>
+    </ul>
+  </li>
+</ol>
+
+<p>#### 
+Recursive programming is a great way to show yourself that you can solve
+difficult problems.</p>
+<ol>
+  <li>Write an iterative function to solve the problem.</li>
+  <li>Write a “dispatcher” function.
+    <ul>
+      <li>Dispatcher function solves problem for some “minimal” data set.</li>
+      <li>in this case, when size parameter == 0</li>
+      <li>Dispatcher calls iterative function to handle non-minimal cases</li>
+      <li>must pass smaller data set to iterative function. in this case, passing size
+-1 for third parameter does the trick.</li>
+    </ul>
+  </li>
+  <li>In dispatcher, replace call to iterative function with call to dispatcher.</li>
+</ol>
+
+<h4 id="application-in-dynamic-data-structures">Application in Dynamic Data Structures</h4>
+
+<h4 id="linkedlist">LinkedList</h4>
+<p>Recursion requires us to divide the problem, to be able to pass a reduced
+version of the original problem to the recursive call. <strong>There is only one way to
+divide a singly linked list: the first node in the list and the rest of the
+list.</strong></p>
+
+<h5 id="binary-trees">Binary Trees</h5>
+<ol>
+  <li>More complicated structures may require multiple recursive calls.</li>
+  <li>For applying recursion, we will conceptualize trees as having three parts:
+    <ul>
+      <li>the node at the top, known as the root node;</li>
+      <li>all of the nodes reached from the left link of the root, known as the left
+subtree.</li>
+      <li>all of the nodes reached from the right link of the root, known as the right
+subtree.</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="common-mistakes">Common Mistakes</h4>
+
+<h5 id="parameters">Parameters</h5>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+</code></pre></div></div>
+
+<h5 id="global-variables">Global Variables</h5>
+<ol>
+  <li>The use of global variables is generally a poor programming pracice, although
+it is sometimes permissible for performance reasons. <strong>Global variables
+should always be avoided in recursive functions when possible</strong></li>
+</ol>
+
+:ET

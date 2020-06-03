@@ -1,0 +1,88 @@
+I"�
+<h4 id="introduction">Introduction</h4>
+<ol>
+  <li>
+    <p>The likelihood function is one of the most basic concepts in statistical
+inference, Entire theores of inference have been constructed based on it.</p>
+  </li>
+  <li>
+    <p>Likelihood inferences are based only on the data $s$ and the model
+${P_{\theta} \theta \in \Omega}$</p>
+  </li>
+</ol>
+
+<h4 id="likelihood-principle">Likelihood Principle</h4>
+<p>If two model and data combinations yield equivalent likeihood functions, then
+inferences about the unknown parameter must be the same.</p>
+
+<h4 id="lthetas">$L(\theta|s)$</h4>
+<p>$L(\theta|s)$ is simply the probability of $s$ occuring when $\theta$ is the
+true value.</p>
+
+<h4 id="location-normal-model">location normal model</h4>
+<p>The location normal model is impractical for many applications, as it assumes
+that the variance is known, while the mean is unknown. For example, if we are
+interested in the distribution of heights in a population, it seems unlikely
+that we will know the population variance but not known the population mean.</p>
+
+<h4 id="factorization-theorem">Factorization Theorem</h4>
+<p>If the density(or probability function) for a model factors as
+$f_{\theta}=h(s)g_{\theta}(T(s))$, where $g_{\theta}$ and h are nonnegative,
+then T is a sufficient statistic.</p>
+
+<h4 id="sufficient-statistics">Sufficient Statistics</h4>
+<p>The equivalence for inference of positive multiples of the likelihood function
+leads to a useful equivalence amongst possible data values coming from the same
+model. For example, suppose data values $s_1$ and $s_2$ are such that 
+\(L(\cdot|s_1)=cL(\cdot|s_2)\) for some $c&gt;0$. From the point of view of
+likelihood, we are indifferent as to whether we obtained the data $s_1$ or the
+data $s_2$, as they lead to the same likelihood ratios.</p>
+
+<h4 id="maximum-likelihood-estimationpoint-estimate">Maximum Likelihood Estimation(Point Estimate)</h4>
+<p>When we are interested in a point estimate of $\theta$, then a value
+$\hat{\theta}(s)$ that maximizes $L(\theta|s)$ is sensible choice, as this value
+is the best supported by the data.<br />
+\(L(\hat{\theta}(s) | s) \geq L(\theta | s)\)</p>
+
+<h5 id="definition">Definition</h5>
+<p>We call $\hat{\theta}: S \rightarrow \Omega$ for every $\theta \in \Omega$ a
+maximum likelihood estimator, and the value $\hat{\theta}(s)$ is called a
+maximum likelihood estimate, or MLE for short.</p>
+
+<h4 id="properties">Properties</h4>
+<ol>
+  <li>
+    <p>consistent:
+An estimator is consistent if, as the sample size increase, the
+estimates(produced by the estimator) “converge” to the true value of the
+parameter estimated. To be slightly more precise-consistency means that, as the
+sample size increases, the sampling distribution of the estimator becomes
+increasingly concentrated at the true parameter value.</p>
+  </li>
+  <li>
+    <p>unbiased:
+on average, it hits the true parameter value. That is, the mean of the sampling
+distribution of the estimator is equal to the true parameter.</p>
+  </li>
+</ol>
+
+<h4 id="galois">Galois</h4>
+<ol>
+  <li>There are two principal paradigms for statistics: this is the sampling
+theory. In sampling theory, also known as frequentis or orthodox statistics,
+one invents <strong>estimators</strong> of quantities of interest and then chooses between
+those estimators using some criterion measuring their sampling properties;
+    <ul>
+      <li>The problem is with this theory, thereis no clear principle for deciding
+which criterion to use to measure the performance of an estimator;</li>
+      <li><strong>Is there any systematic procedure for construction of optimal estimators</strong></li>
+    </ul>
+  </li>
+  <li>In Bayseian inference, <strong>in contrast, once we have made explicit all our
+assumptions about the model and the data, our inferences are mechanical</strong>,
+whatever question we with to pose.</li>
+  <li>Why likelihood inference are so popular, because we want our inferences to
+depend only on <strong>the model</strong>  ${P_{\theta}: \theta \in  \Omega}$ and the <strong>data</strong> $s$.</li>
+</ol>
+
+:ET

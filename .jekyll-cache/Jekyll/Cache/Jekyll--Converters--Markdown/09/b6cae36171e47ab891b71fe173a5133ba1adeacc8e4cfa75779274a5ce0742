@@ -1,0 +1,31 @@
+I"�
+<h4 id="简介">简介</h4>
+<p>每个操作系统都有自己的shell，图形界面的或者命令行的。图形界面显示就是有鼠标箭头，命令行也有相应的显示工具。<br />
+shell是linux的外壳，负责外界与linux内核的交互；linux常用的内核有sh,bash,csh等，通过以下命令可以查看mac下的shell类型</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cat</span> /etc/shells
+</code></pre></div></div>
+<p>通过以下命令查看shell的类型</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="nv">$SHELL</span>
+</code></pre></div></div>
+
+<h5 id="shell脚本">shell脚本</h5>
+<p>小程序堆积成大程序，要养成写脚本的习惯</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#/bin/bash</span>
+<span class="nb">echo</span> <span class="s2">"hello world"</span>
+</code></pre></div></div>
+<h4 id="check-out-system-variable">Check Out System Variable</h4>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="nv">$HOME</span>
+</code></pre></div></div>
+<h4 id="shell-tutorial">Shell Tutorial</h4>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 查看sh命令的帮助文档</span>
+man sh
+</code></pre></div></div>
+
+<h4 id="common-problem">Common Problem</h4>
+
+<h4 id="ls-command-not-found">ls: command not found</h4>
+<p>很可能是系统环境变量所导致的问题，解决办法</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span>/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/root/bin
+</code></pre></div></div>
+:ET

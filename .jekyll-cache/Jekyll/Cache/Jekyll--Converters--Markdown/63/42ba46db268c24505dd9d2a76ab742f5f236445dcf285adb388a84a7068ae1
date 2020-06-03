@@ -1,0 +1,21 @@
+I"�
+<p><a href="http://docs.opencv.org/2.4/modules/highgui/doc/highgui.html">reference</a></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>VideoCapture cap(0); // open the default camera
+         if(!cap.isOpened())  // check if we succeeded
+         return -1;
+
+         Mat edges;
+         namedWindow("edges",1);
+         for(;;){
+         Mat frame;
+	     cap &gt;&gt; frame; // get a new frame from camera
+	     cvtColor(frame, edges, CV_BGR2GRAY);
+	     GaussianBlur(edges, edges, Size(7,7), 1.5, 1.5);
+	     Canny(edges, edges, 0, 30, 3);
+	     imshow("edges", edges);
+	     char alph=(char)waitKey(3);
+	     if(alph=='s')
+	     break;    //键盘响应函数
+	     }
+</code></pre></div></div>
+:ET

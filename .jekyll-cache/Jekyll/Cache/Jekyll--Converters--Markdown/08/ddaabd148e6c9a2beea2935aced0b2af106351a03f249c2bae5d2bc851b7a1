@@ -1,0 +1,26 @@
+I"f
+<h4 id="dict">dict</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s">'a'</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span><span class="s">'b'</span><span class="p">:</span><span class="mi">5</span><span class="p">}</span>
+<span class="k">for</span> <span class="n">key</span><span class="p">,</span><span class="n">value</span> <span class="ow">in</span> <span class="n">my_dict</span><span class="p">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">value</span><span class="p">)</span>
+<span class="c1"># print value
+</span><span class="n">a</span> <span class="mi">4</span>
+<span class="n">b</span> <span class="mi">5</span>
+</code></pre></div></div>
+
+<h4 id="common-mistake-about-tuple">common mistake about tuple</h4>
+
+<p>If we print the variable index, and the output is like the code in the comment line. <br />
+it means, <strong>it is a tuple, and the first element is an array</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="n">index</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">where</span><span class="p">(</span><span class="n">b</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">length</span> <span class="o">=</span> <span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">length</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">i</span><span class="p">]])</span>
+
+<span class="c1">#(array([2, 3, 5]),)
+</span></code></pre></div></div>
+:ET

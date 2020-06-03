@@ -1,0 +1,36 @@
+I"�	
+<h4 id="what-the-crap-of-iterator-protocol">what the crap of iterator protocol?</h4>
+<ol>
+  <li>Just as Javabean protocol, a JavaBean Class is  the kind of class that has a <strong>getter()</strong> and <strong>setter()</strong> method for every Class <br />
+In python, the iterator protocol is that one method needs to be defined for container objects to provide iteration support <br />
+<strong>container.__iter__()</strong></li>
+  <li>The iterator objects themselves are required to support the following two methods
+      <strong>iterator.__iter__()</strong> <br />
+      <strong>iterator.next()</strong></li>
+  <li>The three methods form the iterator protocol.</li>
+</ol>
+
+<h4 id="what-is-iterator-">what is iterator ?</h4>
+<p>In the view of C++, you can just treat it as a pointer</p>
+
+<h4 id="builtin-method-iter-and-next">builtin method <strong>iter()</strong> and <strong>next()</strong></h4>
+<ol>
+  <li>each time call the <strong>iter()</strong> method, it will call the iterator object <strong>__iter__()</strong> or the iterable container object <strong>__iter__()</strong> <br />
+if the input argument of <strong>iter()</strong> is a list, it will call the iterable container object’s <strong>__iter__()</strong> method, <br />
+and return a new iterator object. <br />
+if the input argument of <strong>iter()</strong> is a iterator, it will call the iterator object’s <strong>__iter__()</strong> method,
+and return the iterator itself. <br /></li>
+  <li>each time call the <strong>next()</strong> method, it will call the iterator object <strong>__next__()</strong></li>
+</ol>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># each time call the __iter__() will generate a new object
+</span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">]</span>
+<span class="n">iter_1</span><span class="o">=</span><span class="n">a</span><span class="p">.</span><span class="n">__iter__</span><span class="p">()</span>
+<span class="n">iter_2</span><span class="o">=</span><span class="n">a</span><span class="p">.</span><span class="n">__iter__</span><span class="p">()</span>
+<span class="s">"""
+&lt;list_iterator object at 0x122fd0748&gt;
+&lt;list_iterator object at 0x122fd00f0&gt;
+"""</span>
+</code></pre></div></div>
+
+:ET

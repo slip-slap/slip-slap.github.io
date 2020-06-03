@@ -1,0 +1,125 @@
+I"�$
+<h3 id="封装">封装</h3>
+
+<p>类的定义可以使用struct或者class关键字，struct是从c继承来的<br />
+使用class定义类，则定义在第一个访问标号前的任何成员权限都为private<br />
+使用struct定义类，则都为public，其他没差。</p>
+
+<p>java的类更像是c++类的一种简化。c++中的类能够控制在初始化，复制，赋值和销毁对象时发生的操作。java的类没有这种能力。<br />
+python, java和c++中，都隐约存在this指针这个概念。&lt;/br&gt;
+只不过，java和c++都隐藏的比较深一点。对于 属于对象的成员函数来说，都有对象的指针与他们绑定
+在一起，这个参数是隐藏。python就比较干脆了，告诉你有这个指针，即为self，调用的时候，不需要
+指明。</p>
+<font color="red">代码段1</font>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</span><span class="k">namespace</span> <span class="n">HY</span><span class="p">{</span>
+	<span class="k">class</span> <span class="nc">Sales_item</span><span class="p">{</span>
+	<span class="nl">public:</span>
+		<span class="c1">//const成员不能改变其所操作的对象的数据成员，const必须同时出现在声明和定义中。</span>
+		<span class="kt">double</span> <span class="n">avg_price</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+		<span class="kt">bool</span> <span class="n">same_isbn</span><span class="p">(</span><span class="k">const</span> <span class="n">Sales_item</span> <span class="o">&amp;</span><span class="n">rhs</span><span class="p">)</span> <span class="k">const</span><span class="p">{</span>
+			<span class="k">return</span> <span class="n">isbn</span><span class="o">==</span><span class="n">rhs</span><span class="p">.</span><span class="n">isbn</span><span class="p">;</span>
+		<span class="p">}</span>
+		<span class="c1">//构造函数的初始化列表</span>
+		<span class="n">Sales_item</span><span class="p">()</span><span class="o">:</span> <span class="n">units_sold</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span><span class="n">revenue</span><span class="p">(</span><span class="mf">0.0</span><span class="p">){}</span>
+	<span class="nl">private:</span>
+		<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">isbn</span><span class="p">;</span>
+		<span class="kt">unsigned</span> <span class="n">units_sold</span><span class="p">;</span>
+		<span class="kt">double</span> <span class="n">revenue</span><span class="p">;</span>
+	<span class="p">};</span>	
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h4 id="1-constructor">1. Constructor</h4>
+<p>定义: 类通过一个或几个特殊的成员函数来控制其对象的初始化过程，这些函数叫做构造函数<br /></p>
+<ul>
+  <li>编译器默认会为类合成无参数的构造函数，如果类自己定义了构造函数，编译器不再提供无参构造函数</li>
+</ul>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Foo</span><span class="p">{</span>
+	<span class="n">Foo</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">){</span>
+		<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"one parameter constructor"</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+	<span class="p">}</span>	
+<span class="p">}</span>
+<span class="c1">//定义类</span>
+<span class="n">Foo</span> <span class="n">f1</span><span class="p">;</span>    <span class="c1">//错误，编译器不会再提供无参数的构造函数</span>
+<span class="n">Foo</span> <span class="nf">f2</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</code></pre></div></div>
+
+<hr />
+
+<h4 id="拷贝构造函数">拷贝构造函数</h4>
+
+<p>定义: 如果一个构造函数的第一个参数是自身类类型的引用，且任何额外参数都有默认值，此构造函数为拷贝构造函数<br /></p>
+<ul>
+  <li>如果类定义只有一个参数且该参数类型为自身类类型的引用，编译器不再为该类提供默认拷贝构造函数。<font color="blue">如果类定义了重载的拷贝构造函数，即参数不同的构造函数，编译器还会合成只有一个参数是自身类类型的引用拷贝构造函数，这与构造函数不一样，构造函数是只有类定义的有构造函数，编译器就不再合成</font></li>
+</ul>
+<hr />
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Foo</span><span class="p">{</span>
+	<span class="n">Foo</span><span class="p">(</span><span class="n">Foo</span><span class="o">&amp;</span> <span class="n">instance</span><span class="p">,</span> <span class="kt">int</span> <span class="n">a</span><span class="p">){</span>
+		<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"copy constructor"</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+	<span class="p">}</span>	
+<span class="p">}</span>
+<span class="c1">//定义类</span>
+<span class="n">Foo</span> <span class="n">f1</span><span class="p">;</span>
+<span class="n">Foo</span> <span class="n">f2</span><span class="p">(</span><span class="n">f1</span><span class="p">)</span>  <span class="c1">//正确编译器还是会合成，只有一个自身类引用的构造函数</span>
+</code></pre></div></div>
+
+<hr />
+
+<h4 id="拷贝赋值运算符">拷贝赋值运算符</h4>
+
+<p>定义: 如果类未定义自己的拷贝赋值运算符，编译器会为它合成一个<br /></p>
+
+<hr />
+
+<h4 id="移动构造函数">移动构造函数</h4>
+
+<hr />
+
+<h4 id="移动赋值运算符">移动赋值运算符</h4>
+<p>定义: 移动赋值</p>
+
+<hr />
+
+<h4 id="2-destructor">2. Destructor</h4>
+<p>定义: 析构函数执行与构造函数相反的操作:,构造函数初始化对象的非static数据成员;析构函数释放对象使用的资源，并销毁对象的非static数据成员</p>
+<h4 id="const成员函数">const成员函数</h4>
+
+<font color="green">上段代码1中,isbn函数参数列表后有const关键字，
+const的作用修改this指针的类型</font>
+<p>默认情况下，this的类型是指向类类型非常量版本的常量指针，在Salesdata成员函数
+中，this的类型是Salesdata *const<br />
+尽管this是隐士的，需要遵循初始化规则。<font color="green">我们不能把
+this绑定到一个常量对象上, 我们不能在一个常量对象上调用普通的成员函数</font></p>
+<font color="red">代码段2</font>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Sales_data</span><span class="p">{</span>
+	<span class="nl">public:</span>
+	    <span class="n">Sales_data</span><span class="p">(){</span>
+	    <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">isbn</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+	    <span class="kt">void</span> <span class="n">non_const</span><span class="p">();</span>
+<span class="p">};</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">Sales_data</span><span class="o">::</span><span class="n">isbn</span><span class="p">()</span> <span class="k">const</span> <span class="p">{</span>
+	    <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"the number of the book"</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
+	    <span class="k">return</span> <span class="s">"iu"</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kt">void</span> <span class="n">Sales_data</span><span class="o">::</span><span class="n">non_const</span><span class="p">()</span> <span class="p">{</span>
+	    <span class="n">cout</span><span class="o">&lt;&lt;</span> <span class="s">"nont const member function"</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c1">//调用</span>
+<span class="k">const</span> <span class="n">Sales_data</span> <span class="n">demo</span> <span class="o">=</span> <span class="n">Sales_data</span><span class="p">();</span>
+<span class="n">demo</span><span class="p">.</span><span class="n">non_const</span><span class="p">();</span>  <span class="c1">//error:none const function is called on the const object</span>
+<span class="n">demo</span><span class="p">.</span><span class="n">isbn</span><span class="p">();</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="inheritance">Inheritance</h3>
+
+<p>c++语言中，必须将两种成员函数区分开来<br />
+1 基类希望其派生类进行覆盖的函数，虚函数virtual<br />
+2 基类希望派生类直接继承不要改变的函数<br /></p>
+:ET

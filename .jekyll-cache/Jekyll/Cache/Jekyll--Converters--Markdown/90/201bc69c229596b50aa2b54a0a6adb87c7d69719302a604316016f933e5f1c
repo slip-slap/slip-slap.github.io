@@ -1,0 +1,33 @@
+I"�
+<h4 id="message-passing-rule-set-a">Message-passing rule-set A</h4>
+<h4 id="message-passing-rule-set-b">Message-passing rule-set B</h4>
+
+<h4 id="min-sum-algorithm-or-viterbi-algorithm">Min-sum Algorithm or Viterbi Algorithm</h4>
+
+<p><img src="/images/math-discrete-graph-theory-message-passing.png" /></p>
+<ol>
+  <li>Each node can broadcast its cost to its descendants once it knows the costs
+of all its possible predecessors.</li>
+  <li>The cost of <strong>A</strong> is zero, we pass this news on to <strong>H</strong> and <strong>I</strong>., as the
+message passes along each edge in the graph, the cost of that edge is added.
+We find the costs of H and I are 4 and 1 respectively. figure(a)</li>
+  <li>what about <strong>K</strong>, out of the edge <strong>H-K</strong> comes the message that a path of
+cost 5 exists from <strong>A</strong> to <strong>K</strong> via <strong>H</strong>; and from edge <strong>I-K</strong> we learn
+of an alternative path of cost 3 figure(b)</li>
+  <li>The min-sum algorithm sets the cost of <strong>K</strong> equal to the minimum of these,
+and records which was the smallest-cost route into <strong>K</strong> by retaining only
+hte edge <strong>I-K</strong> and pruning away the other edges leading to K, fiugre(c)</li>
+</ol>
+
+<h4 id="galois">Galois</h4>
+<ol>
+  <li>One reason that graph theory is important is because we can use graph 
+to complete some calculation.</li>
+  <li>Message-passing rule-set A and message-passing rule-set B just make use the
+structure of the graph and do some math.</li>
+  <li>At first, I read the phrase “message-passing rule-set A”, I don’t know how to
+separate the sentence, it should be like this “message-passing rule” for “set
+A”. I just need a lot of time to understand something.</li>
+</ol>
+
+:ET

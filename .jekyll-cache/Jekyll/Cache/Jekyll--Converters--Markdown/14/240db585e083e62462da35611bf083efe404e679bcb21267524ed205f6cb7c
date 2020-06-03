@@ -1,0 +1,83 @@
+I"�
+<h4 id="what-is-the-crap-of-tensorflow-">what is the crap of tensorflow ?</h4>
+<ol>
+  <li>tensorflow means tensor flows in graph</li>
+  <li>the tensorflow defines a compute graph, and you can define operation in the graph.</li>
+  <li>the purpose of the compute graph is to reuse the graph model. <strong>reuse reuse reuseis the most important thing</strong></li>
+</ol>
+
+<h4 id="how-to-use-tensorflow-to-calculate-">how to use tensorflow to calculate ?</h4>
+
+<p>define a graph, which includes three part:</p>
+<ol>
+  <li>define placeholder. placeholder is kind of the arguments of a function.</li>
+  <li>define variable. variable is belong to the graph itself. <strong>I think this is the core part of a graph</strong>, in machine learning the variable value
+is the part we want learn.</li>
+  <li>define an operation. such as add, matmul etc.
+in some degree, you can treat the tensorflow graph as a function. A function is a set of operations that you can reuse. but the special of a tensorflow
+graph is you can get the value of any node in the graph.</li>
+</ol>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="n">tf</span>
+
+<span class="c1"># define the placeholder, just as the argument of a function
+</span><span class="n">a</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="p">.</span><span class="n">float32</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s">'a'</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="p">.</span><span class="n">float32</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s">'b'</span><span class="p">)</span>
+<span class="c1"># define the variable, variable means the value will change in the graph
+</span><span class="n">random_var</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="p">.</span><span class="n">random_normal</span><span class="p">([</span><span class="mi">1</span><span class="p">]))</span>
+<span class="c1"># define operation
+</span><span class="n">c</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">random_var</span><span class="p">)</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="c1"># define an operation which initialize all variables
+</span><span class="n">init</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">initialize_all_variables</span><span class="p">()</span>
+
+<span class="c1"># the following two line code creat the session and initial the graph
+</span><span class="n">sess</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">Session</span><span class="p">()</span>
+<span class="n">sess</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">init</span><span class="p">)</span>
+
+<span class="n">optimizer</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">train</span><span class="p">.</span><span class="n">GradientDescentOptimizer</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">optimizer</span><span class="p">.</span><span class="n">minimize</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<span class="n">sess</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">result</span><span class="p">,</span><span class="n">feed_dict</span><span class="o">=</span><span class="p">{</span><span class="n">a</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span><span class="n">b</span><span class="p">:</span><span class="mi">2</span><span class="p">})</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sess</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">random_var</span><span class="p">))</span>
+
+</code></pre></div></div>
+
+<h4 id="the-difference-between-tensorflow-and-other-python-library">The difference between tensorflow and other python library</h4>
+<p>Library just provide the <strong>new class and new method</strong> to write more concise and efficient code. <br />
+Tensorflow is not <strong>just only a Python library</strong>.</p>
+
+<h4>demo 直线拟合</h4>
+<p><br /></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import tensorflow as tf
+import numpy as np
+
+# use NumPy to produce data
+x_data = np.float32(np.random.rand(2, 100))
+y_data = np.dot([0.100, 0.200], x_data) + 0.300
+
+# build a linear model
+b = tf.Variable(tf.zeros([1]))
+w = tf.Variable(tf.random_uniform([1, 2], -1.0, 1.0))
+y = tf.matmul(w, x_data) + b
+
+# loss
+loss = tf.reduce_mean(tf.square(y - y_data))
+optimizer = tf.train.GradientDescentOptimizer(0.5)
+train = optimizer.minimize(loss)
+
+# init
+
+init = tf.initialize_all_variables()
+
+
+# run graph
+sess = tf.Session()
+sess.run(init)
+
+for step in range(0, 401):
+    sess.run(train)
+    if step % 20 == 0:
+        print(step, sess.run(w), sess.run(b))
+
+</code></pre></div></div>
+:ET

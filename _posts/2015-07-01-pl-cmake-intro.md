@@ -29,24 +29,6 @@ project(demo)
 
 
 
-#### Make 
-make主要用来构建c语言的项目，实际上，任何主要某个文件有变化，就要重新构建项目，都可以用make构建
-
-#### 语法
-```shell
-<target> : <prerequisites>
-[tab] <commands>
-```
-1. make命令在没有指定目标时，默认会执行makefile文件的第一个目标
-2. make targetName 执行相应的代码
-```makefile
-do:
-	echo "default target"
-clean:
-	rm create
-create:
-	echo "create a file" > create
-```
 
 #### Reference
 1. [document](https://cmake.org/cmake/help/latest/guide/tutorial/index.html)

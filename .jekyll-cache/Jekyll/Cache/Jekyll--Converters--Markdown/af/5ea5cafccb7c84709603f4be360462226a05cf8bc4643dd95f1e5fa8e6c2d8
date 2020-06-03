@@ -1,0 +1,29 @@
+I"
+<h4 id="what-the-crap-of-adaboost-">what the crap of Adaboost ?</h4>
+
+<p>It focuses on classification problems and aims to convert a set of weak
+classifiers into a strong one.</p>
+
+\[F(x)=\operatorname{sign}\left(\sum_{m=1}^{M} \theta_{m} f_{m}(x)\right)\]
+
+<p>where f_m stands for the m_th weak classifier and theta_m is the
+corresponding weight. <br /> It is exactly the weighted combination of M weak
+classifiers.</p>
+
+<h4 id="train">Train</h4>
+<p>For any classifier with accuracy higher than 50%, the weight is positive. The
+more accurate the classifier, the larger the weight. While for the classifier
+with less than 50% accuracy, the weights is negative. It means that we combine
+its prediction by flipping the sign. <br /></p>
+
+<p>For example, we can turn a classifier with 40% accuracy into 60% accuracy by
+flipping the sign of the prediction.  Thus even the classifier performs worse
+than random guessing, it still contributes to the final prediction.  We only
+don’t want any classifier with exac 50% accuracy, which doesn’t add any
+information and thus contributes nothing to the final prediction.</p>
+
+<h4 id="a-statistical-view-of-boosting">A Statistical View of Boosting</h4>
+<p>In the view of a statistist, AdaBoost was actually minimizing the exponential
+loss function</p>
+
+:ET

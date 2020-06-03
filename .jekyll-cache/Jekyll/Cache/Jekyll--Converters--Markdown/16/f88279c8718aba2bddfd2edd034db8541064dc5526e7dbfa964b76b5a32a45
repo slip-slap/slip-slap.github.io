@@ -1,0 +1,25 @@
+I"�
+<h4 id="proc">proc</h4>
+<ol>
+  <li>linux提供了一种通过/proc文件系统，在运行时访问内核内部数据结构，改变内核设置的机制。</li>
+  <li>proc文件系统是一个伪文件系统，只存在内存中，不占用外存空间</li>
+  <li>/proc下有三个很重要的目录，net，scsi和sys；sys是可写的，可以通过它来访问或者修改内核参数</li>
+</ol>
+
+<h4 id="常用设置">常用设置</h4>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 关闭icmp协议</span>
+sysctl <span class="nt">-w</span> net.ipv4.icmp_echo_ignore_all<span class="o">=</span>1
+</code></pre></div></div>
+
+<h4 id="galois">Galois</h4>
+<ol>
+  <li>The directory structure of an operating system must have hierarch
+property, because some files are important to run the operation system, some
+are not, we need to put them in different folders.</li>
+  <li>Modern operation system is designed to be accessed by multiple users,
+according to the privelege of the users, we have to have the hierarch, for
+example, some library is designed for operation system use, some are for
+develop application, they are different, so we have to separate them into
+different folders.</li>
+</ol>
+:ET

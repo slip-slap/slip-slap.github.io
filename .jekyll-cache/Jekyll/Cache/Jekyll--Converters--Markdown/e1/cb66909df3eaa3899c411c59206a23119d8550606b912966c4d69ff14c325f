@@ -1,0 +1,19 @@
+I"�
+<h4 id="at的访问控制">at的访问控制</h4>
+<ol>
+  <li>如果系统中有/etc/at.allow文件，那么只有写入/etc/at.allow文件中的用户可以使用at命令，/etc/at.deny文件会被忽略</li>
+  <li>如果系统中没有/etc/at.allow文件，只有/etc/at.deny文件，那么写入/etc/at.deny文件中的用户不能使用at命令。对root不起作用</li>
+  <li>如果系统中这两个文件都不存在，那么只有root用户可以使用at命令</li>
+</ol>
+
+<h4 id="常用命令">常用命令</h4>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># ctrl+d表示结束任务</span>
+at now +5 minutes
+at&gt; <span class="nb">ls
+</span>at&gt; &lt;EOT&gt;
+<span class="c"># 查看任务列表</span>
+atq
+<span class="c"># 查看任务详细信息,后面的数字表示对应哪一条消息的内容</span>
+at <span class="nt">-c</span> 1
+</code></pre></div></div>
+:ET

@@ -1,0 +1,25 @@
+I"	
+<h4 id="说明">说明</h4>
+<p>该文件只能使用visudo命令打开编辑，如果有语法错误，则不能保存</p>
+<hr />
+
+<h4 id="为普通用户添加root权限">为普通用户添加root权限</h4>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 在"root ALL=(ALL) ALL"添加一行</span>
+username <span class="nv">ALL</span><span class="o">=(</span>All<span class="o">)</span>  ALL
+</code></pre></div></div>
+
+<h4 id="组">组</h4>
+
+<h4 id="增删">增删</h4>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 增加组</span>
+groupadd docker
+</code></pre></div></div>
+<hr />
+
+<h4 id="用户">用户</h4>
+
+<h5 id="修改用户组">修改用户组</h5>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># user modify</span>
+usermod <span class="nt">-aG</span> docker <span class="nv">$USER</span>
+</code></pre></div></div>
+:ET

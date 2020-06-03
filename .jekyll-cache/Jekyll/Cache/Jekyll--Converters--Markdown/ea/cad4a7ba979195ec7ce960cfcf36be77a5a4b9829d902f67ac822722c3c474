@@ -1,0 +1,13 @@
+I"9
+<h4 id="rename-filename">Rename Filename</h4>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for </span>i <span class="k">in</span> <span class="k">*</span>.md
+<span class="k">do
+   </span><span class="nv">var1</span><span class="o">=</span><span class="s2">"</span><span class="k">${</span><span class="nv">i</span>:0:10<span class="k">}</span><span class="s2">"</span>
+   <span class="nv">var2</span><span class="o">=</span><span class="s2">"</span><span class="k">${</span><span class="nv">i</span>:10:100<span class="k">}</span><span class="s2">"</span>
+   <span class="nb">echo</span> <span class="s2">"</span><span class="k">${</span><span class="nv">var1</span><span class="k">}</span><span class="s2">-code</span><span class="k">${</span><span class="nv">var2</span><span class="k">}</span><span class="s2">"</span>
+   <span class="nb">mv</span> <span class="s2">"</span><span class="k">${</span><span class="nv">i</span><span class="k">}</span><span class="s2">"</span> <span class="s2">"</span><span class="k">${</span><span class="nv">var1</span><span class="k">}</span><span class="s2">-code</span><span class="k">${</span><span class="nv">var2</span><span class="k">}</span><span class="s2">"</span>
+<span class="k">done</span>
+</code></pre></div></div>
+
+:ET

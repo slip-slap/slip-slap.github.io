@@ -1,0 +1,28 @@
+I"C
+<h4 id="intro">intro</h4>
+<p>枚举类型反编译之后也是类，该类用final关键字修饰</p>
+<hr />
+
+<h4 id="产生原因">产生原因</h4>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//枚举类型的引入</span>
+<span class="kd">class</span> <span class="nc">Weekday</span><span class="o">{</span>
+	<span class="kd">private</span> <span class="nf">Weekday</span><span class="o">(){};</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="nc">Weekday</span> <span class="no">MONDAY</span><span class="o">=</span> <span class="k">new</span> <span class="nc">Weekday</span><span class="o">();</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="nc">Weekday</span> <span class="no">TUESDAY</span><span class="o">=</span> <span class="k">new</span> <span class="nc">Weekday</span><span class="o">();</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="nc">Weekday</span> <span class="no">WENDESDAY</span><span class="o">=</span> <span class="k">new</span> <span class="nc">Weekday</span><span class="o">();</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="nc">Weekday</span> <span class="no">THURSDAY</span><span class="o">=</span> <span class="k">new</span> <span class="nc">Weekday</span><span class="o">();</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="nc">Weekday</span> <span class="no">FRIDAY</span><span class="o">=</span> <span class="k">new</span> <span class="nc">Weekday</span><span class="o">();</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="nc">Weekday</span> <span class="no">SATURDAY</span><span class="o">=</span> <span class="k">new</span> <span class="nc">Weekday</span><span class="o">();</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="nc">Weekday</span> <span class="no">SUNDAY</span><span class="o">=</span> <span class="k">new</span> <span class="nc">Weekday</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<hr />
+
+<h4 id="使用">使用</h4>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">enum</span> <span class="nc">Sex</span><span class="o">{</span>
+	<span class="no">BOY</span><span class="o">,</span><span class="no">GIRL</span><span class="o">;</span>
+<span class="o">}</span>
+<span class="c1">//toString()方法返回子面值</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="nc">Sex</span><span class="o">.</span><span class="na">BOY</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
+</code></pre></div></div>
+:ET
