@@ -3,7 +3,7 @@
   <title>Just Do It</title>
   <link href="/atom.xml" rel="self"/>
   <link href=""/>
-  <updated>2020-06-04T14:23:59+09:00</updated>
+  <updated>2020-06-04T16:13:13+09:00</updated>
   <id></id>
   <author>
     <name>reed</name>
@@ -11621,7 +11621,17 @@ Environment Variables
     <updated>2017-03-07T00:00:00+09:00</updated>
     <id>/pl/pl-script-cmake-packages</id>
     <content type="html">
-</content>
+find_package
+
+
+  find_package is supposed to work with Find&amp;lt;package&amp;gt;.cmake module
+  The purpose of the file is to define the search rules for the package and set
+different variables, such as &amp;lt;package&amp;gt;_FOUND, &amp;lt;package&amp;gt;_INCLUDE_DIRS
+and &amp;lt;package&amp;gt;_LIBRARIES.
+
+
+
+  CMakeLists....</content>
   </entry>
 
   <entry>
@@ -12182,6 +12192,30 @@ find_if(b...</content>
     <content type="html">
 官方文档
 </content>
+  </entry>
+
+  <entry>
+    <title>C++: Googletest</title>
+    <link href="/pl/pl-compile-c++-googletest.html"/>
+    <updated>2017-03-05T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-googletest</id>
+    <content type="html">
+CMake configuration
+
+cmake_minimum_required(VERSION 3.10)
+
+project(hello_world)
+
+set(CMAKE_C_STANDARD 99)
+set(CMAKE_CXX_STANDARD 11)
+
+#GTest
+ADD_SUBDIRECTORY(googletest)
+enable_testing()
+include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
+
+add_executable(app main.cpp )
+target_li...</content>
   </entry>
 
   <entry>

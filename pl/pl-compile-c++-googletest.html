@@ -11,9 +11,9 @@
 <head>
   <meta charset="UTF-8">
 
-  <title>Python: Function - Just Do It</title>
+  <title>C++: Googletest - Just Do It</title>
   <meta name="keywords" content="">
-  <meta name="description" content="python">
+  
   <meta name="author" content="reed">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -4004,25 +4004,25 @@ $(document).ready(function() {
       <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
 
     <header>
-      <h1>Python: Function</h1>
+      <h1>C++: Googletest</h1>
     </header>
 
     <section>
       <div class="post-extra">
         <div class="pull-left">
-          <span>03 June 2017</span>
+          <span>05 March 2017</span>
         </div>
         <div class="pull-right">
           
 
 
   <span id="share">
-  <a class="wechat" target="_blank" title="分享到微信" href="http://chart.apis.google.com/chart?cht=qr&amp;chs=300x300&amp;chl=/pl/pl-script-python-function.html"><i class="icon-large icon-wechat"></i></a>
-  <a class="weibo" target="_blank" title="分享到微博" href="http://service.weibo.com/share/share.php?title=Python: Function - Just Do It&amp;url=/pl/pl-script-python-function.html&amp;type=3&amp;searchPic=1"><i class="icon-large icon-weibo"></i></a>
-  <a class="qzone" target="_blank" title="分享到 QQ 空间" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=/pl/pl-script-python-function.html&amp;title=Python: Function - Just Do It&amp;summary=python&amp;site="><i class="icon-large icon-qzone"></i></a>
-  <a class="twitter" target="_blank" title="Share to Twitter" href="https://twitter.com/intent/tweet?url=/pl/pl-script-python-function.html&amp;text=Python: Function - Just Do It&amp;via="><i class="icon-large icon-twitter"></i></a>
-  <a class="facebook" target="_blank" title="Share to Facebook" href="http://www.facebook.com/sharer.php?u=/pl/pl-script-python-function.html&amp;t=Python: Function - Just Do It"><i class="icon-large icon-facebook-sign"></i></a>
-  <a class="googleplus" target="_blank" title="Share to Google+" href="https://plus.google.com/share?url=/pl/pl-script-python-function.html"><i class="icon-large icon-google-plus-sign"></i></a>
+  <a class="wechat" target="_blank" title="分享到微信" href="http://chart.apis.google.com/chart?cht=qr&amp;chs=300x300&amp;chl=/pl/pl-compile-c++-googletest.html"><i class="icon-large icon-wechat"></i></a>
+  <a class="weibo" target="_blank" title="分享到微博" href="http://service.weibo.com/share/share.php?title=C++: Googletest - Just Do It&amp;url=/pl/pl-compile-c++-googletest.html&amp;type=3&amp;searchPic=1"><i class="icon-large icon-weibo"></i></a>
+  <a class="qzone" target="_blank" title="分享到 QQ 空间" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=/pl/pl-compile-c++-googletest.html&amp;title=C++: Googletest - Just Do It&amp;summary=&amp;site="><i class="icon-large icon-qzone"></i></a>
+  <a class="twitter" target="_blank" title="Share to Twitter" href="https://twitter.com/intent/tweet?url=/pl/pl-compile-c++-googletest.html&amp;text=C++: Googletest - Just Do It&amp;via="><i class="icon-large icon-twitter"></i></a>
+  <a class="facebook" target="_blank" title="Share to Facebook" href="http://www.facebook.com/sharer.php?u=/pl/pl-compile-c++-googletest.html&amp;t=C++: Googletest - Just Do It"><i class="icon-large icon-facebook-sign"></i></a>
+  <a class="googleplus" target="_blank" title="Share to Google+" href="https://plus.google.com/share?url=/pl/pl-compile-c++-googletest.html"><i class="icon-large icon-google-plus-sign"></i></a>
 </span>
 
 
@@ -4032,65 +4032,29 @@ $(document).ready(function() {
         </div>
       </div>
       
-<h4 id="function">function</h4>
-<p>Function is the first-class citizen in python</p>
+<h4 id="cmake-configuration">CMake configuration</h4>
 
-<h4 id="function-calls">Function Calls</h4>
-<ol>
-  <li>Pass by value</li>
-  <li>Pass by reference</li>
-  <li>Pass by Object reference
-Python is a PASS-BY-OBJECT-REFERENCE programming language</li>
-</ol>
+<div class="language-cmake highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cmake_minimum_required</span><span class="p">(</span>VERSION 3.10<span class="p">)</span>
 
-<h4 id="args-and-kwargs">*args and **kwargs</h4>
+<span class="nb">project</span><span class="p">(</span>hello_world<span class="p">)</span>
 
-<ol>
-  <li>in a function, use the symbol * to take in a variable number of arguments, by convention, it is often used with the word args</li>
-  <li>in a function, use the symbol ** to take in a keyworded,variable-length argument</li>
-  <li>using the *, the variable we associate with the * becomes an iterable meaning you can do things like iterate over it.</li>
-</ol>
+<span class="nb">set</span><span class="p">(</span>CMAKE_C_STANDARD 99<span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span>CMAKE_CXX_STANDARD 11<span class="p">)</span>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># multify function with * marker
-</span><span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="o">*</span><span class="n">a</span><span class="p">):</span>
-    <span class="n">result</span><span class="o">=</span><span class="mi">1</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">a</span><span class="p">:</span>
-        <span class="n">result</span><span class="o">=</span><span class="n">result</span><span class="o">*</span><span class="n">i</span>
-    <span class="k">return</span> <span class="n">result</span>
-        
-<span class="n">result</span><span class="o">=</span><span class="n">test</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="c1">#GTest</span>
+<span class="nf">ADD_SUBDIRECTORY</span><span class="p">(</span>googletest<span class="p">)</span>
+<span class="nb">enable_testing</span><span class="p">()</span>
+<span class="nb">include_directories</span><span class="p">(</span><span class="si">${</span><span class="nv">gtest_SOURCE_DIR</span><span class="si">}</span>/include <span class="si">${</span><span class="nv">gtest_SOURCE_DIR</span><span class="si">}</span><span class="p">)</span>
 
-<span class="c1">##############################################################
-# function with ** marker
-</span><span class="k">def</span> <span class="nf">fun</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">key</span><span class="p">,</span><span class="n">value</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">.</span><span class="n">items</span><span class="p">():</span>
-        <span class="k">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">value</span><span class="p">)</span>
-        
-<span class="n">fun</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="n">b</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="nb">add_executable</span><span class="p">(</span>app main.cpp <span class="p">)</span>
+<span class="nb">target_link_libraries</span><span class="p">(</span>app gtest gtest_main<span class="p">)</span>
+<span class="nb">add_test</span><span class="p">(</span>app app<span class="p">)</span>
 </code></pre></div></div>
 
-<h4 id="common-errors">common errors</h4>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">norm</span>
-<span class="n">norm</span><span class="p">.</span><span class="n">rvs</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">loc</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
-
-<span class="c1"># error information
-</span>
-<span class="n">File</span> <span class="s">"&lt;ipython-input-51-6f874d889d4d&gt;"</span><span class="p">,</span> <span class="n">line</span> <span class="mi">2</span>
-    <span class="n">norm</span><span class="p">.</span><span class="n">rvs</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">loc</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
-                    <span class="o">^</span>
-<span class="nb">SyntaxError</span><span class="p">:</span> <span class="n">positional</span> <span class="n">argument</span> <span class="n">follows</span> <span class="n">keyword</span> <span class="n">argument</span>
-
-<span class="c1"># explaination
-</span><span class="n">keyword</span> <span class="n">argument</span> <span class="ow">is</span> <span class="n">just</span> <span class="n">another</span> <span class="n">positional</span> <span class="n">argument</span> <span class="k">with</span> <span class="n">a</span> <span class="n">default</span> <span class="n">value</span>
-</code></pre></div></div>
-
-<h4 id="reference">Reference</h4>
+<h4 id="reference">reference</h4>
 <ol>
-  <li><a href="https://www.geeksforgeeks.org/args-kwargs-python/">*args and **kwargs in Python</a></li>
+  <li><a href="https://github.com/google/googletest">googletest</a></li>
 </ol>
-
 
       
       <footer>
@@ -4138,9 +4102,9 @@ Python is a PASS-BY-OBJECT-REFERENCE programming language</li>
 
   
      
-    	<li><a href="/tags.html#python-ref">python <span>51</span></a></li>
+    	<li><a href="/tags.html#compile-ref">compile <span>48</span></a></li>
      
-    	<li><a href="/tags.html#script-ref">script <span>90</span></a></li>
+    	<li><a href="/tags.html#c++-ref">c++ <span>30</span></a></li>
     
   
 
@@ -4153,11 +4117,11 @@ Python is a PASS-BY-OBJECT-REFERENCE programming language</li>
   <div class="pagination">
     <ul>
       
-      <li class="prev"><a href="/pl/pl-script-python-exception.html" title="Python: Exception">&larr; 上一篇</a></li>
+      <li class="prev"><a href="/pl/pl-compile-c++-function.html" title="C++: Function">&larr; 上一篇</a></li>
       
       <li><a href="/archive.html">文章列表</a></li>
       
-      <li class="next"><a href="/pl/pl-script-python-inspect.html" title="Python: Inspect Module">下一篇 &rarr;</a></li>
+      <li class="next"><a href="/pl/pl-compile-c++-gtest.html" title="C++: Opencv">下一篇 &rarr;</a></li>
       
     </ul>
   </div>
@@ -4175,9 +4139,9 @@ Python is a PASS-BY-OBJECT-REFERENCE programming language</li>
     var disqus_developer = 1;
     var disqus_shortname = 'just-do-it-1';
     
-    var disqus_identifier = 'Python: Function';
-    var disqus_title = 'Python: Function';
-    var disqus_url = '/pl/pl-script-python-function.html';
+    var disqus_identifier = 'C++: Googletest';
+    var disqus_title = 'C++: Googletest';
+    var disqus_url = '/pl/pl-compile-c++-googletest.html';
     
     
     (function() {

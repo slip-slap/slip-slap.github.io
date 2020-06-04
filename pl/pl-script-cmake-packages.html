@@ -142,7 +142,7 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">636</span>
+<span title="文章总数">637</span>
 <ul>
 
 
@@ -3262,7 +3262,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#March-2017">2017 年 03 月 (44)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2017">2017 年 03 月 (45)</a></li>
     
   
 
@@ -3400,7 +3405,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#OS-ref">OS (22)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (144)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (145)</a></li>
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
@@ -3447,7 +3452,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#c++-ref" style="font-size: 11.5pt; color: #777;">c++</a>
+    <a href="/tags.html#c++-ref" style="font-size: 11.5pt; color: #666;">c++</a>
   
     
     
@@ -4027,6 +4032,32 @@ $(document).ready(function() {
         </div>
       </div>
       
+<h4 id="find_package">find_package</h4>
+
+<ol>
+  <li>find_package is supposed to work with Find&lt;package&gt;.cmake module</li>
+  <li>The purpose of the file is to define the search rules for the package and set
+different variables, such as &lt;package&gt;_FOUND, &lt;package&gt;_INCLUDE_DIRS
+and &lt;package&gt;_LIBRARIES.</li>
+</ol>
+
+<ul>
+  <li>CMakeLists.txt</li>
+</ul>
+
+<div class="language-cmake highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cmake_minimum_required</span><span class="p">(</span>VERSION 3.10<span class="p">)</span>
+<span class="nb">project</span><span class="p">(</span>hello_world<span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span>CMAKE_MODULE_PATH <span class="s2">"/Users/kismet/Documents/code/cmake_code/tutorial/CMake/Help/guide/tutorial/my_step/cmake/modules"</span><span class="p">)</span>
+<span class="nb">find_package</span><span class="p">(</span>Opencv REQUIRED<span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li>FindOpencv.cmake</li>
+</ul>
+
+<div class="language-cmake highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">message</span><span class="p">(</span><span class="s2">"this is find opencv"</span><span class="p">)</span>
+</code></pre></div></div>
+
 
       
       <footer>
@@ -4055,7 +4086,7 @@ $(document).ready(function() {
   
      
     	<li><a href="/categories.html#PL-ref">
-    		PL <span>144</span>
+    		PL <span>145</span>
     	</a></li>
     
   
