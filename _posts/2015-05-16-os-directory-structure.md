@@ -4,7 +4,7 @@ title: "Directory Hierarch"
 keywords: []
 description: 
 category: "OS"
-tags: ["MNG"]
+tags: []
 ---
 {% include JB/setup %}
 

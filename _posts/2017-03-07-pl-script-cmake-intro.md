@@ -33,6 +33,13 @@ tags: ["cmake","script"]
 3. Both of them need configuration file, maven need "pom.xml", cmake needs
    "CMakeLists.txt"
 
+#### With Make
+1. Make is designed to debug c language, but it's not easy to use.
+2. So cmake comes out, the code you write in CMakeLists.txt would be translated
+   to Makefile.
+3. for example **add\_executable(Tutorial tutorial.cxx)** in CMakeLists,
+   actually will be translated into corresponding make language, such as
+   compile, link etc.
 
 
 

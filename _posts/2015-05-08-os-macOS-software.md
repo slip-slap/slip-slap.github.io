@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Mac Application"
+title: "MacOS Software"
 keywords: []
 description: 
 category: "OS"
-tags: [""]
+tags: []
 ---
 {% include JB/setup %}
 

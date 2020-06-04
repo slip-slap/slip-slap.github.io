@@ -4,7 +4,7 @@ title: "Management: Access"
 keywords: []
 description: 
 category: "OS"
-tags: ["MNG"]
+tags: []
 ---
 {% include JB/setup %}
 

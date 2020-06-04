@@ -5,8 +5,8 @@
   <description>Just Do It - </description>
   <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
   <link></link>
-  <lastBuildDate>Wed, 03 Jun 2020 22:33:38 +0900</lastBuildDate>
-  <pubDate>Wed, 03 Jun 2020 22:33:38 +0900</pubDate>
+  <lastBuildDate>Thu, 04 Jun 2020 14:23:59 +0900</lastBuildDate>
+  <pubDate>Thu, 04 Jun 2020 14:23:59 +0900</pubDate>
   <ttl>1800</ttl>
 
 
@@ -10060,351 +10060,6 @@ position.&lt;/li&gt;
 </description>
     <link>/cs/computer-science-problem-jump-game.html</link>
     <guid>/cs/computer-science-problem-jump-game</guid>
-    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>OS: Threads</title>
-    <description>
-&lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;A thread is a basic unit of CPU utilization. It shares with other threads
-belonging to the same process its code section, data section, and other
-operating system resources, such as open files and signals.
-    &lt;ul&gt;
-      &lt;li&gt;A thread ID&lt;/li&gt;
-      &lt;li&gt;A program counter&lt;/li&gt;
-      &lt;li&gt;A register set&lt;/li&gt;
-      &lt;li&gt;A stack&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;benefits&quot;&gt;Benefits&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Utilization of multiprocessor: the benefits of multithreading can be greatly
-increased in a multiprocessor architecture, where the thread maybe running in
-parallel on different processors. A single-threaded process can only run on
-one CPU, no matter how many are available. Multithreading on a multi-CPU
-machine increases concurrency.&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    <link>/cs/computer-science-operating-system-threads.html</link>
-    <guid>/cs/computer-science-operating-system-threads</guid>
-    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>OS: System Programs</title>
-    <description>
-&lt;p&gt;####&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Program loading and execution
-    &lt;ul&gt;
-      &lt;li&gt;absolute loaders&lt;/li&gt;
-      &lt;li&gt;relocatable loaders&lt;/li&gt;
-      &lt;li&gt;linkage editors&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;communications&quot;&gt;Communications&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Creating virtual connections among processes, users, and computer systems.&lt;/li&gt;
-  &lt;li&gt;allowing users to send messages to one another’s screens.&lt;/li&gt;
-  &lt;li&gt;to browse webpages.&lt;/li&gt;
-  &lt;li&gt;to log in remotesly or to transfer files from one machine to another.&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    <link>/cs/computer-science-operating-system-system-programs.html</link>
-    <guid>/cs/computer-science-operating-system-system-programs</guid>
-    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>OS: System Call</title>
-    <description>
-&lt;p&gt;####&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;System calls provide an interface to the servies made available by an
-Operating System.
-    &lt;ul&gt;
-      &lt;li&gt;A simple task like copying like copying the contents of one file to another
-file, we had to run a lot of system calls. Many system calls were executed in
-the process.&lt;/li&gt;
-      &lt;li&gt;These calls are generally available as routines written in C and C++&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;####&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Process Control calls
-    &lt;ul&gt;
-      &lt;li&gt;end, abort&lt;/li&gt;
-      &lt;li&gt;load execute&lt;/li&gt;
-      &lt;li&gt;create process, terminate process&lt;/li&gt;
-      &lt;li&gt;get process attributes, set process attributes&lt;/li&gt;
-      &lt;li&gt;wait for time&lt;/li&gt;
-      &lt;li&gt;wait event, signal event&lt;/li&gt;
-      &lt;li&gt;allocate and free memory&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;File Manipulation calls
-    &lt;ul&gt;
-      &lt;li&gt;create file, delete file&lt;/li&gt;
-      &lt;li&gt;open, close&lt;/li&gt;
-      &lt;li&gt;read, write, reosition&lt;/li&gt;
-      &lt;li&gt;get file attributes, set file attributes&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Device Management calls
-    &lt;ul&gt;
-      &lt;li&gt;request device, release device&lt;/li&gt;
-      &lt;li&gt;read, write, reposition&lt;/li&gt;
-      &lt;li&gt;get device attributes, set device attributes&lt;/li&gt;
-      &lt;li&gt;logically attach or detach devices&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Information Maintenance calls
-    &lt;ul&gt;
-      &lt;li&gt;get time or date, set time or date&lt;/li&gt;
-      &lt;li&gt;get system data, set system data&lt;/li&gt;
-      &lt;li&gt;get process, file, or device attributes&lt;/li&gt;
-      &lt;li&gt;set process, file, or device attribtues&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Communications calls
-    &lt;ul&gt;
-      &lt;li&gt;create, delete commnication connection&lt;/li&gt;
-      &lt;li&gt;send, receive messages&lt;/li&gt;
-      &lt;li&gt;transfer status information&lt;/li&gt;
-      &lt;li&gt;attach or detach remote devices&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    <link>/cs/computer-science-operating-system-system-call.html</link>
-    <guid>/cs/computer-science-operating-system-system-call</guid>
-    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>OS: Structure</title>
-    <description>
-&lt;p&gt;&lt;img src=&quot;/images/icomputer-science-operating-system-structure.png&quot; /&gt;&lt;/p&gt;
-</description>
-    <link>/cs/computer-science-operating-system-structure.html</link>
-    <guid>/cs/computer-science-operating-system-structure</guid>
-    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>OS: Storeage Structure</title>
-    <description>
-&lt;p&gt;&amp;lt;img src=/images/computer-science-operating-system-storage-structure.png&amp;gt;&lt;/p&gt;
-
-</description>
-    <link>/cs/computer-science-operating-system-storage-structure.html</link>
-    <guid>/cs/computer-science-operating-system-storage-structure</guid>
-    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>OS: Sockets</title>
-    <description>
-&lt;p&gt;####&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;A Socket is defined as an endpoint for communication&lt;/li&gt;
-  &lt;li&gt;A pair of process communicating over a network employ a pair of sockets-one
-ofr each process&lt;/li&gt;
-  &lt;li&gt;A socket is identified by an IP address concatenated with a port number.&lt;/li&gt;
-  &lt;li&gt;The server waits for incoming client requests by listening to a specified
-port. Once a request is received, the server accepts a connection from the
-client socket to complete the connection.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;For a long time, socket is a very mysterious thing for me, it’s just code for
-communication.&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    <link>/cs/computer-science-operating-system-sockets.html</link>
-    <guid>/cs/computer-science-operating-system-sockets</guid>
-    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>OS: Services</title>
-    <description>
-&lt;ol&gt;
-  &lt;li&gt;User Interface&lt;/li&gt;
-  &lt;li&gt;Program Execution&lt;/li&gt;
-  &lt;li&gt;I/O Operations&lt;/li&gt;
-  &lt;li&gt;File System Manipulation&lt;/li&gt;
-  &lt;li&gt;Communications&lt;/li&gt;
-  &lt;li&gt;Error Detection&lt;/li&gt;
-  &lt;li&gt;Resource Allocation&lt;/li&gt;
-  &lt;li&gt;Accounting&lt;/li&gt;
-  &lt;li&gt;Protection and Security&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;####&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Process: A program loaded into memory and executing is called a “PROCESS”&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-    <link>/cs/computer-science-operating-system-services.html</link>
-    <guid>/cs/computer-science-operating-system-services</guid>
-    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>OS: Process Management</title>
-    <description>
-&lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Process: A process can be thought of as a program in execution&lt;/li&gt;
-  &lt;li&gt;Thread: A thread is the unit of execution with a process. A process can have
-one thread to many threads.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;process-state&quot;&gt;Process State&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;New: The process is being created.&lt;/li&gt;
-  &lt;li&gt;Running: Instructions are being executed.&lt;/li&gt;
-  &lt;li&gt;Waiting: The process is waiting for some event to occur(such as an I/O
-completion or reception of a signal)&lt;/li&gt;
-  &lt;li&gt;Ready: The process is waiting to be assigned to a processor.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;process-control-block&quot;&gt;Process Control Block&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Process State&lt;/li&gt;
-  &lt;li&gt;Process Number&lt;/li&gt;
-  &lt;li&gt;Program Counter&lt;/li&gt;
-  &lt;li&gt;Registers&lt;/li&gt;
-  &lt;li&gt;Memory Limits&lt;/li&gt;
-  &lt;li&gt;List of open files&lt;/li&gt;
-  &lt;li&gt;I/O status information&lt;/li&gt;
-  &lt;li&gt;Memory management information&lt;/li&gt;
-  &lt;li&gt;Accounting Information&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    <link>/cs/computer-science-operating-system-process-management.html</link>
-    <guid>/cs/computer-science-operating-system-process-management</guid>
-    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>OS: Interprocess Communication</title>
-    <description>
-&lt;p&gt;###&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Processes executing concurrently in the operating system maybe either
-independent processes or cooperating processes.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Independent processes: They cannot affect or be affected by the other
-processes executing in the system.&lt;/li&gt;
-  &lt;li&gt;Cooperating processes: They can affect or be affected by the other processes
-executing in the system.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;ipc-method&quot;&gt;IPC Method&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;Shared memory: In the shared-memory model, a region of memory that is shared
-by cooperating processes is established. Processes can then exchange
-information by reading and writing data to the shared region.&lt;/li&gt;
-  &lt;li&gt;Message passing: In the messaging model, communication takes place by means
-of messages exchanged between the cooperating processes.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;message-passing-systems&quot;&gt;Message Passing Systems&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;If processes P and Q want to communicate, they must send messages to and
-receive messages from each other.
-    &lt;ul&gt;
-      &lt;li&gt;a communicationt link must exist between them.&lt;/li&gt;
-      &lt;li&gt;this link can be implemented in a variety of ways. there are several methods
-for logically implementing a link and send() /receive() operations, like:&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h5 id=&quot;direct-or-indirect-communication&quot;&gt;Direct or indirect communication.&lt;/h5&gt;
-&lt;h5 id=&quot;synchronous-or-asynchronous-commninication&quot;&gt;Synchronous or asynchronous commninication&lt;/h5&gt;
-&lt;h5 id=&quot;automatic-or-explicit-buffering&quot;&gt;automatic or explicit buffering&lt;/h5&gt;
-
-&lt;h3 id=&quot;galois&quot;&gt;Galois&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;For a long time, I was confused the problem such as consumer and producer
-problem, multithread problem.&lt;/li&gt;
-  &lt;li&gt;In nature, they are just IPC problems.&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-    <link>/cs/computer-science-operating-system-process-communication.html</link>
-    <guid>/cs/computer-science-operating-system-process-communication</guid>
-    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>OS: Computer System Operation</title>
-    <description>
-&lt;p&gt;####&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;An Operating System(OS) is a program that manages the computer hardware&lt;/li&gt;
-  &lt;li&gt;It also provides a basis for Apllication Programs and acts as an intermediary
-between computer user and hardware.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;####&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Bootstrap Program: The initial program that runs when a computer is powered
-up or rebooted.
-    &lt;ul&gt;
-      &lt;li&gt;it is stored in the ROM&lt;/li&gt;
-      &lt;li&gt;it must know how to load the OS and start executing that system&lt;/li&gt;
-      &lt;li&gt;it must locate and load into memory the OS kernel&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Interrupt:
-    &lt;ul&gt;
-      &lt;li&gt;The occurence of an event is usually signalled by an Interrupt from hardware
-of software&lt;/li&gt;
-      &lt;li&gt;Hardware may trigger an interrupt at any time by sending a signal to the CPU,
-usually by the way of the sytem bus.&lt;/li&gt;
-      &lt;li&gt;Interrupt means: stop and do something else.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;System Call(Monitor call): Software may trigger an interrupt by executing a
-special operation called System call.&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    <link>/cs/computer-science-operating-system-operation.html</link>
-    <guid>/cs/computer-science-operating-system-operation</guid>
-    <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>OS: Computer System Architecture</title>
-    <description>
-&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;For a long time, I have no idea what how does computer work. What the hell is
-a CPU ?  If you have any questions about anything, No back how fancy they
-look like ? Just go back to the history where it started. Figure about how
-everything evolved.&lt;/li&gt;
-  &lt;li&gt;computer is supposed to do some computing work, anything else is build on
-this basic block, keep that in mind forever.&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    <link>/cs/computer-science-operating-system-computer-system-architecture.html</link>
-    <guid>/cs/computer-science-operating-system-computer-system-architecture</guid>
     <pubDate>Wed, 08 Jan 2020 00:00:00 +0900</pubDate>
   </item>
 
@@ -23586,6 +23241,15 @@ The grammar is pretty simple&lt;/p&gt;
   </item>
 
   <item>
+    <title>Make: Variable</title>
+    <description>
+</description>
+    <link>/pl/pl-script-make-variable.html</link>
+    <guid>/pl/pl-script-make-variable</guid>
+    <pubDate>Wed, 12 Jul 2017 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
     <title>Shell: Zsh</title>
     <description>
 &lt;h4 id=&quot;功能&quot;&gt;功能&lt;/h4&gt;
@@ -23636,6 +23300,25 @@ git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
   <item>
     <title>Shell: Variables</title>
     <description>
+&lt;h4 id=&quot;intro&quot;&gt;Intro&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Variable names are case-sensitive&lt;/li&gt;
+  &lt;li&gt;their values are of type string
+    &lt;ul&gt;
+      &lt;li&gt;reference&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-cmake highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;evaluated inside a quoted arguement&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-cmake highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;variable_name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/directory&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
 </description>
     <link>/pl/pl-script-shell-variables.html</link>
     <guid>/pl/pl-script-shell-variables</guid>
@@ -24303,11 +23986,21 @@ insert mode, and you will miss everying before&lt;/li&gt;
   &lt;li&gt;J joins the line the cursor is on with the line below&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h4 id=&quot;同时打开多个文件&quot;&gt;同时打开多个文件&lt;/h4&gt;
+&lt;h4 id=&quot;open-file&quot;&gt;open file&lt;/h4&gt;
 
-&lt;ul&gt;
+&lt;ol&gt;
   &lt;li&gt;vim -On file1 file2 n表示要打开的文件数，O大写表示打开垂直窗口&lt;/li&gt;
-&lt;/ul&gt;
+  &lt;li&gt;open a new window below the current one
+    &lt;ul&gt;
+      &lt;li&gt;:new filename&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;open a new window beside the current one
+    &lt;ul&gt;
+      &lt;li&gt;:vert new filename&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;h4 id=&quot;vim中执行shell命令&quot;&gt;vim中执行shell命令&lt;/h4&gt;
 
@@ -24364,6 +24057,28 @@ your operation&lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr /&gt;
 
+&lt;p&gt;参考内容 &lt;br /&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;http://learnvimscriptthehardway.onefloweroneworld.com/chapters/12.html&quot;&gt;learn vim the hardest way&lt;/a&gt; &lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cs.swarthmore.edu/oldhelp/vim/help.html&quot;&gt;vim tip and tricks&lt;/a&gt; &lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://vim.sourceforge.io/docs.php&quot;&gt;vim教程官方网站&lt;/a&gt; &lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;ftp://ftp.vim.org/pub/vim/doc/book/vimbook-OPL.pdf&quot;&gt;vim官方网站pdf教程&lt;/a&gt; &lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/VundleVim/Vundle.vim&quot;&gt;vundle教程&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://ternjs.net/doc/manual.html#server&quot;&gt;tern安装教程&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://kien.github.io/ctrlp.vim/#installation&quot;&gt;CtrlP-plugin&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/1527784/what-is-vim-recording-and-how-can-it-be-disabled&quot;&gt;vim recording mode&lt;/a&gt; &lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/1497958/how-do-i-use-vim-registers&quot;&gt;vim register&lt;/a&gt; &lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://thoughtbot.com/blog/wrap-existing-text-at-80-characters-in-vim&quot;&gt;vim format&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/pl/pl-script-editor-vimscript.html</link>
+    <guid>/pl/pl-script-editor-vimscript</guid>
+    <pubDate>Mon, 03 Jul 2017 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Editor: Vimscript Plugin</title>
+    <description>
 &lt;h3 id=&quot;4-plugin&quot;&gt;4. Plugin&lt;/h3&gt;
 &lt;ol&gt;
   &lt;li&gt;For every plugin, you can refer to the instruction about how to use them.&lt;/li&gt;
@@ -24452,30 +24167,18 @@ git clone https://github.com/scrooloose/nerdtree.git
 &lt;h4 id=&quot;46-powerline-plugin&quot;&gt;4.6 powerline-plugin&lt;/h4&gt;
 &lt;h4 id=&quot;47-vimtex-plugin&quot;&gt;4.7 vimtex-plugin&lt;/h4&gt;
 
-&lt;p&gt;参考内容 &lt;br /&gt;&lt;/p&gt;
 &lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;http://learnvimscriptthehardway.onefloweroneworld.com/chapters/12.html&quot;&gt;learn vim the hardest way&lt;/a&gt; &lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.cs.swarthmore.edu/oldhelp/vim/help.html&quot;&gt;vim tip and tricks&lt;/a&gt; &lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://vim.sourceforge.io/docs.php&quot;&gt;vim教程官方网站&lt;/a&gt; &lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;ftp://ftp.vim.org/pub/vim/doc/book/vimbook-OPL.pdf&quot;&gt;vim官方网站pdf教程&lt;/a&gt; &lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/VundleVim/Vundle.vim&quot;&gt;vundle教程&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://ternjs.net/doc/manual.html#server&quot;&gt;tern安装教程&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://kien.github.io/ctrlp.vim/#installation&quot;&gt;CtrlP-plugin&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.hangge.com/blog/cache/detail_1537.html&quot;&gt;Emmet使用教程&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/ycm-core/YouCompleteMe&quot;&gt;YouCompleteMe&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/ycm-core/YouCompleteMe/wiki/Troubleshooting-steps-for-ycmd-server-SHUT-DOWN&quot;&gt;YouCompleteMe Trouble Shooting&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/johnbellone/vim&quot;&gt;how to add vim NERDTree plugin&lt;/a&gt; &lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/python-mode/python-mode&quot;&gt;pymode-plugin&lt;/a&gt; &lt;br /&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/powerline/powerline&quot;&gt;powerline-plugin&lt;/a&gt; &lt;br /&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/lervag/vimtex&quot;&gt;vimtex-plugin&lt;/a&gt; &lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/1527784/what-is-vim-recording-and-how-can-it-be-disabled&quot;&gt;vim recording mode&lt;/a&gt; &lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/1497958/how-do-i-use-vim-registers&quot;&gt;vim register&lt;/a&gt; &lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://thoughtbot.com/blog/wrap-existing-text-at-80-characters-in-vim&quot;&gt;vim format&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/ycm-core/YouCompleteMe&quot;&gt;YouCompleteMe&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/ycm-core/YouCompleteMe/wiki/Troubleshooting-steps-for-ycmd-server-SHUT-DOWN&quot;&gt;YouCompleteMe Trouble Shooting&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
-
 </description>
-    <link>/pl/pl-script-editor-vimscript.html</link>
-    <guid>/pl/pl-script-editor-vimscript</guid>
+    <link>/pl/pl-script-editor-vimscript-plugin.html</link>
+    <guid>/pl/pl-script-editor-vimscript-plugin</guid>
     <pubDate>Mon, 03 Jul 2017 00:00:00 +0900</pubDate>
   </item>
 
@@ -28544,6 +28247,28 @@ git管理。&lt;/p&gt;
   </item>
 
   <item>
+    <title>Make: Rules</title>
+    <description>
+&lt;h4 id=&quot;make&quot;&gt;Make&lt;/h4&gt;
+&lt;p&gt;make主要用来构建c语言的项目，实际上，任何主要某个文件有变化，就要重新构建项目，都可以用make构建&lt;/p&gt;
+
+&lt;h4 id=&quot;语法&quot;&gt;语法&lt;/h4&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;target&amp;gt; : &amp;lt;prerequisites&amp;gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;tab] &amp;lt;commands&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;suffix&quot;&gt;Suffix&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Make uses a special target, named &lt;strong&gt;.SUFFIXES&lt;/strong&gt; to allow you to define your
+own suffixed&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/pl/pl-script-make-rule.html</link>
+    <guid>/pl/pl-script-make-rule</guid>
+    <pubDate>Sun, 12 Mar 2017 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
     <title>Cmake: Modules</title>
     <description>
 &lt;p&gt;&lt;a href=&quot;https://cmake.org/cmake/help/v3.0/module/FindPkgConfig.html&quot;&gt;官方文档&lt;/a&gt;看完直接想吐。&lt;br /&gt;
@@ -28559,22 +28284,6 @@ target_link_libraries(untitled ${FOO_LIBRARIES})
     <link>/pl/pl-script-cmake-pkg-check-modules.html</link>
     <guid>/pl/pl-script-cmake-pkg-check-modules</guid>
     <pubDate>Fri, 10 Mar 2017 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>make</title>
-    <description>
-&lt;h4 id=&quot;make&quot;&gt;Make&lt;/h4&gt;
-&lt;p&gt;make主要用来构建c语言的项目，实际上，任何主要某个文件有变化，就要重新构建项目，都可以用make构建&lt;/p&gt;
-
-&lt;h4 id=&quot;语法&quot;&gt;语法&lt;/h4&gt;
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;target&amp;gt; : &amp;lt;prerequisites&amp;gt;
-&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;tab] &amp;lt;commands&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-</description>
-    <link>/pl/pl-script-make.html</link>
-    <guid>/pl/pl-script-make</guid>
-    <pubDate>Tue, 07 Mar 2017 00:00:00 +0900</pubDate>
   </item>
 
   <item>
@@ -28608,15 +28317,11 @@ the calling process. Values can be changed using the &lt;strong&gt;set()&lt;/str
   </item>
 
   <item>
-    <title>CMake: Libraryies</title>
+    <title>CMake: Packages</title>
     <description>
-&lt;p&gt;&lt;a href=&quot;https://cmake.org/cmake/help/v3.0/command/target_link_libraries.html&quot;&gt;官方文档&lt;/a&gt;&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#使用这个语法的时候，target必须通过add_executable()或者add_library()创建
-target_link_libraries(&amp;lt;target&amp;gt; [item])
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
-    <link>/pl/pl-script-cmake-target-link-libraries.html</link>
-    <guid>/pl/pl-script-cmake-target-link-libraries</guid>
+    <link>/pl/pl-script-cmake-packages.html</link>
+    <guid>/pl/pl-script-cmake-packages</guid>
     <pubDate>Tue, 07 Mar 2017 00:00:00 +0900</pubDate>
   </item>
 
@@ -28653,6 +28358,16 @@ default catagory structure.&lt;/li&gt;
 “CMakeLists.txt”&lt;/li&gt;
 &lt;/ol&gt;
 
+&lt;h4 id=&quot;with-make&quot;&gt;With Make&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Make is designed to debug c language, but it’s not easy to use.&lt;/li&gt;
+  &lt;li&gt;So cmake comes out, the code you write in CMakeLists.txt would be translated
+to Makefile.&lt;/li&gt;
+  &lt;li&gt;for example &lt;strong&gt;add_executable(Tutorial tutorial.cxx)&lt;/strong&gt; in CMakeLists,
+actually will be translated into corresponding make language, such as
+compile, link etc.&lt;/li&gt;
+&lt;/ol&gt;
+
 &lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
 &lt;ol&gt;
   &lt;li&gt;&lt;a href=&quot;https://cmake.org/cmake/help/latest/guide/tutorial/index.html&quot;&gt;document&lt;/a&gt;&lt;/li&gt;
@@ -28686,6 +28401,89 @@ default catagory structure.&lt;/li&gt;
 </description>
     <link>/pl/pl-script-cmake-control-structures.html</link>
     <guid>/pl/pl-script-cmake-control-structures</guid>
+    <pubDate>Tue, 07 Mar 2017 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>CMake: Compile Features</title>
+    <description>
+</description>
+    <link>/pl/pl-script-cmake-compile-features.html</link>
+    <guid>/pl/pl-script-cmake-compile-features</guid>
+    <pubDate>Tue, 07 Mar 2017 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Commands: Scripting Commands</title>
+    <description>
+&lt;h4 id=&quot;examples&quot;&gt;Examples&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;create a file named hello.txt with the following content.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-cmake highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Hello world!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;         &lt;span class=&quot;c1&quot;&gt;# A message to print&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;run the script&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cmake &lt;span class=&quot;nt&quot;&gt;-P&lt;/span&gt; hello.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://preshing.com/20170522/learn-cmakes-scripting-language-in-15-minutes/&quot;&gt;CMake Scripting Language&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/pl/pl-script-cmake-commands-script.html</link>
+    <guid>/pl/pl-script-cmake-commands-script</guid>
+    <pubDate>Tue, 07 Mar 2017 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Commands: Project Commands</title>
+    <description>
+&lt;h4 id=&quot;these-commands-are-available-only-in-cmake-projects&quot;&gt;These commands are available only in CMake projects&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://cmake.org/cmake/help/v3.0/command/target_link_libraries.html&quot;&gt;官方文档&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#使用这个语法的时候，target必须通过add_executable()或者add_library()创建
+target_link_libraries(&amp;lt;target&amp;gt; [item])
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+    <link>/pl/pl-script-cmake-commands-project.html</link>
+    <guid>/pl/pl-script-cmake-commands-project</guid>
+    <pubDate>Tue, 07 Mar 2017 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>CMake: Command-Line Tools</title>
+    <description>
+&lt;h4 id=&quot;1-cmake&quot;&gt;1. cmake&lt;/h4&gt;
+&lt;h4 id=&quot;2-ctest&quot;&gt;2. ctest&lt;/h4&gt;
+&lt;h4 id=&quot;3-cpack&quot;&gt;3. cpack&lt;/h4&gt;
+</description>
+    <link>/pl/pl-script-cmake-command-line-tool.html</link>
+    <guid>/pl/pl-script-cmake-command-line-tool</guid>
+    <pubDate>Tue, 07 Mar 2017 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>CMake: Build System</title>
+    <description>
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;A CMake-based buildsystem is organized as a set of high-level logical
+targets.&lt;/li&gt;
+  &lt;li&gt;Each target corresponds to an executable or library.&lt;/li&gt;
+  &lt;li&gt;Dependencies between the targets are expressed in the buildsystem to
+determine the build order and the rules for regeneraton to change&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/pl/pl-script-cmake-buildsystem.html</link>
+    <guid>/pl/pl-script-cmake-buildsystem</guid>
     <pubDate>Tue, 07 Mar 2017 00:00:00 +0900</pubDate>
   </item>
 
@@ -30512,6 +30310,132 @@ runlevel
   </item>
 
   <item>
+    <title>OS: Threads</title>
+    <description>
+&lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;A thread is a basic unit of CPU utilization. It shares with other threads
+belonging to the same process its code section, data section, and other
+operating system resources, such as open files and signals.
+    &lt;ul&gt;
+      &lt;li&gt;A thread ID&lt;/li&gt;
+      &lt;li&gt;A program counter&lt;/li&gt;
+      &lt;li&gt;A register set&lt;/li&gt;
+      &lt;li&gt;A stack&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;benefits&quot;&gt;Benefits&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Utilization of multiprocessor: the benefits of multithreading can be greatly
+increased in a multiprocessor architecture, where the thread maybe running in
+parallel on different processors. A single-threaded process can only run on
+one CPU, no matter how many are available. Multithreading on a multi-CPU
+machine increases concurrency.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/os/os-threads.html</link>
+    <guid>/os/os-threads</guid>
+    <pubDate>Fri, 08 May 2015 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>OS: System Programs</title>
+    <description>
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Program loading and execution
+    &lt;ul&gt;
+      &lt;li&gt;absolute loaders&lt;/li&gt;
+      &lt;li&gt;relocatable loaders&lt;/li&gt;
+      &lt;li&gt;linkage editors&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;communications&quot;&gt;Communications&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Creating virtual connections among processes, users, and computer systems.&lt;/li&gt;
+  &lt;li&gt;allowing users to send messages to one another’s screens.&lt;/li&gt;
+  &lt;li&gt;to browse webpages.&lt;/li&gt;
+  &lt;li&gt;to log in remotesly or to transfer files from one machine to another.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/os/os-system-programs.html</link>
+    <guid>/os/os-system-programs</guid>
+    <pubDate>Fri, 08 May 2015 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>OS: System Call</title>
+    <description>
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;System calls provide an interface to the servies made available by an
+Operating System.
+    &lt;ul&gt;
+      &lt;li&gt;A simple task like copying like copying the contents of one file to another
+file, we had to run a lot of system calls. Many system calls were executed in
+the process.&lt;/li&gt;
+      &lt;li&gt;These calls are generally available as routines written in C and C++&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Process Control calls
+    &lt;ul&gt;
+      &lt;li&gt;end, abort&lt;/li&gt;
+      &lt;li&gt;load execute&lt;/li&gt;
+      &lt;li&gt;create process, terminate process&lt;/li&gt;
+      &lt;li&gt;get process attributes, set process attributes&lt;/li&gt;
+      &lt;li&gt;wait for time&lt;/li&gt;
+      &lt;li&gt;wait event, signal event&lt;/li&gt;
+      &lt;li&gt;allocate and free memory&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;File Manipulation calls
+    &lt;ul&gt;
+      &lt;li&gt;create file, delete file&lt;/li&gt;
+      &lt;li&gt;open, close&lt;/li&gt;
+      &lt;li&gt;read, write, reosition&lt;/li&gt;
+      &lt;li&gt;get file attributes, set file attributes&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Device Management calls
+    &lt;ul&gt;
+      &lt;li&gt;request device, release device&lt;/li&gt;
+      &lt;li&gt;read, write, reposition&lt;/li&gt;
+      &lt;li&gt;get device attributes, set device attributes&lt;/li&gt;
+      &lt;li&gt;logically attach or detach devices&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Information Maintenance calls
+    &lt;ul&gt;
+      &lt;li&gt;get time or date, set time or date&lt;/li&gt;
+      &lt;li&gt;get system data, set system data&lt;/li&gt;
+      &lt;li&gt;get process, file, or device attributes&lt;/li&gt;
+      &lt;li&gt;set process, file, or device attribtues&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Communications calls
+    &lt;ul&gt;
+      &lt;li&gt;create, delete commnication connection&lt;/li&gt;
+      &lt;li&gt;send, receive messages&lt;/li&gt;
+      &lt;li&gt;transfer status information&lt;/li&gt;
+      &lt;li&gt;attach or detach remote devices&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/os/os-system-call.html</link>
+    <guid>/os/os-system-call</guid>
+    <pubDate>Fri, 08 May 2015 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
     <title>OS: Summary</title>
     <description>
 &lt;h4 id=&quot;intro&quot;&gt;intro&lt;/h4&gt;
@@ -30579,7 +30503,208 @@ brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;coreutils
   </item>
 
   <item>
-    <title>Mac Application</title>
+    <title>OS: Structure</title>
+    <description>
+&lt;p&gt;&lt;img src=&quot;/images/icomputer-science-operating-system-structure.png&quot; /&gt;&lt;/p&gt;
+</description>
+    <link>/os/os-structure.html</link>
+    <guid>/os/os-structure</guid>
+    <pubDate>Fri, 08 May 2015 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>OS: Storeage Structure</title>
+    <description>
+&lt;p&gt;&amp;lt;img src=/images/computer-science-operating-system-storage-structure.png&amp;gt;&lt;/p&gt;
+
+</description>
+    <link>/os/os-storage-structure.html</link>
+    <guid>/os/os-storage-structure</guid>
+    <pubDate>Fri, 08 May 2015 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>OS: Sockets</title>
+    <description>
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;A Socket is defined as an endpoint for communication&lt;/li&gt;
+  &lt;li&gt;A pair of process communicating over a network employ a pair of sockets-one
+ofr each process&lt;/li&gt;
+  &lt;li&gt;A socket is identified by an IP address concatenated with a port number.&lt;/li&gt;
+  &lt;li&gt;The server waits for incoming client requests by listening to a specified
+port. Once a request is received, the server accepts a connection from the
+client socket to complete the connection.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;For a long time, socket is a very mysterious thing for me, it’s just code for
+communication.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/os/os-sockets.html</link>
+    <guid>/os/os-sockets</guid>
+    <pubDate>Fri, 08 May 2015 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>OS: Services</title>
+    <description>
+&lt;ol&gt;
+  &lt;li&gt;User Interface&lt;/li&gt;
+  &lt;li&gt;Program Execution&lt;/li&gt;
+  &lt;li&gt;I/O Operations&lt;/li&gt;
+  &lt;li&gt;File System Manipulation&lt;/li&gt;
+  &lt;li&gt;Communications&lt;/li&gt;
+  &lt;li&gt;Error Detection&lt;/li&gt;
+  &lt;li&gt;Resource Allocation&lt;/li&gt;
+  &lt;li&gt;Accounting&lt;/li&gt;
+  &lt;li&gt;Protection and Security&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Process: A program loaded into memory and executing is called a “PROCESS”&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/os/os-services.html</link>
+    <guid>/os/os-services</guid>
+    <pubDate>Fri, 08 May 2015 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>OS: Process Management</title>
+    <description>
+&lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Process: A process can be thought of as a program in execution&lt;/li&gt;
+  &lt;li&gt;Thread: A thread is the unit of execution with a process. A process can have
+one thread to many threads.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;process-state&quot;&gt;Process State&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;New: The process is being created.&lt;/li&gt;
+  &lt;li&gt;Running: Instructions are being executed.&lt;/li&gt;
+  &lt;li&gt;Waiting: The process is waiting for some event to occur(such as an I/O
+completion or reception of a signal)&lt;/li&gt;
+  &lt;li&gt;Ready: The process is waiting to be assigned to a processor.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;process-control-block&quot;&gt;Process Control Block&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Process State&lt;/li&gt;
+  &lt;li&gt;Process Number&lt;/li&gt;
+  &lt;li&gt;Program Counter&lt;/li&gt;
+  &lt;li&gt;Registers&lt;/li&gt;
+  &lt;li&gt;Memory Limits&lt;/li&gt;
+  &lt;li&gt;List of open files&lt;/li&gt;
+  &lt;li&gt;I/O status information&lt;/li&gt;
+  &lt;li&gt;Memory management information&lt;/li&gt;
+  &lt;li&gt;Accounting Information&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/os/os-process-management.html</link>
+    <guid>/os/os-process-management</guid>
+    <pubDate>Fri, 08 May 2015 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>OS: Interprocess Communication</title>
+    <description>
+&lt;p&gt;###&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Processes executing concurrently in the operating system maybe either
+independent processes or cooperating processes.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Independent processes: They cannot affect or be affected by the other
+processes executing in the system.&lt;/li&gt;
+  &lt;li&gt;Cooperating processes: They can affect or be affected by the other processes
+executing in the system.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;ipc-method&quot;&gt;IPC Method&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;Shared memory: In the shared-memory model, a region of memory that is shared
+by cooperating processes is established. Processes can then exchange
+information by reading and writing data to the shared region.&lt;/li&gt;
+  &lt;li&gt;Message passing: In the messaging model, communication takes place by means
+of messages exchanged between the cooperating processes.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;message-passing-systems&quot;&gt;Message Passing Systems&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;If processes P and Q want to communicate, they must send messages to and
+receive messages from each other.
+    &lt;ul&gt;
+      &lt;li&gt;a communicationt link must exist between them.&lt;/li&gt;
+      &lt;li&gt;this link can be implemented in a variety of ways. there are several methods
+for logically implementing a link and send() /receive() operations, like:&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h5 id=&quot;direct-or-indirect-communication&quot;&gt;Direct or indirect communication.&lt;/h5&gt;
+&lt;h5 id=&quot;synchronous-or-asynchronous-commninication&quot;&gt;Synchronous or asynchronous commninication&lt;/h5&gt;
+&lt;h5 id=&quot;automatic-or-explicit-buffering&quot;&gt;automatic or explicit buffering&lt;/h5&gt;
+
+&lt;h3 id=&quot;galois&quot;&gt;Galois&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;For a long time, I was confused the problem such as consumer and producer
+problem, multithread problem.&lt;/li&gt;
+  &lt;li&gt;In nature, they are just IPC problems.&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/os/os-process-communication.html</link>
+    <guid>/os/os-process-communication</guid>
+    <pubDate>Fri, 08 May 2015 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>OS: Computer System Operation</title>
+    <description>
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;An Operating System(OS) is a program that manages the computer hardware&lt;/li&gt;
+  &lt;li&gt;It also provides a basis for Apllication Programs and acts as an intermediary
+between computer user and hardware.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Bootstrap Program: The initial program that runs when a computer is powered
+up or rebooted.
+    &lt;ul&gt;
+      &lt;li&gt;it is stored in the ROM&lt;/li&gt;
+      &lt;li&gt;it must know how to load the OS and start executing that system&lt;/li&gt;
+      &lt;li&gt;it must locate and load into memory the OS kernel&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Interrupt:
+    &lt;ul&gt;
+      &lt;li&gt;The occurence of an event is usually signalled by an Interrupt from hardware
+of software&lt;/li&gt;
+      &lt;li&gt;Hardware may trigger an interrupt at any time by sending a signal to the CPU,
+usually by the way of the sytem bus.&lt;/li&gt;
+      &lt;li&gt;Interrupt means: stop and do something else.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;System Call(Monitor call): Software may trigger an interrupt by executing a
+special operation called System call.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/os/os-operation.html</link>
+    <guid>/os/os-operation</guid>
+    <pubDate>Fri, 08 May 2015 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>MacOS Software</title>
     <description>
 &lt;h4 id=&quot;vlc视频播放器&quot;&gt;VLC视频播放器&lt;/h4&gt;
 
@@ -30658,6 +30783,24 @@ Chrome&lt;/a&gt;&lt;/li&gt;
 </description>
     <link>/os/os-macOS-iterm.html</link>
     <guid>/os/os-macOS-iterm</guid>
+    <pubDate>Fri, 08 May 2015 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>OS: Computer System Architecture</title>
+    <description>
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;For a long time, I have no idea what how does computer work. What the hell is
+a CPU ?  If you have any questions about anything, No back how fancy they
+look like ? Just go back to the history where it started. Figure about how
+everything evolved.&lt;/li&gt;
+  &lt;li&gt;computer is supposed to do some computing work, anything else is build on
+this basic block, keep that in mind forever.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/os/os-computer-system-architecture.html</link>
+    <guid>/os/os-computer-system-architecture</guid>
     <pubDate>Fri, 08 May 2015 00:00:00 +0900</pubDate>
   </item>
 
