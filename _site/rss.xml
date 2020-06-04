@@ -5,8 +5,8 @@
   <description>Just Do It - </description>
   <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
   <link></link>
-  <lastBuildDate>Thu, 04 Jun 2020 14:23:59 +0900</lastBuildDate>
-  <pubDate>Thu, 04 Jun 2020 14:23:59 +0900</pubDate>
+  <lastBuildDate>Thu, 04 Jun 2020 16:13:13 +0900</lastBuildDate>
+  <pubDate>Thu, 04 Jun 2020 16:13:13 +0900</pubDate>
   <ttl>1800</ttl>
 
 
@@ -28319,6 +28319,32 @@ the calling process. Values can be changed using the &lt;strong&gt;set()&lt;/str
   <item>
     <title>CMake: Packages</title>
     <description>
+&lt;h4 id=&quot;find_package&quot;&gt;find_package&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;find_package is supposed to work with Find&amp;lt;package&amp;gt;.cmake module&lt;/li&gt;
+  &lt;li&gt;The purpose of the file is to define the search rules for the package and set
+different variables, such as &amp;lt;package&amp;gt;_FOUND, &amp;lt;package&amp;gt;_INCLUDE_DIRS
+and &amp;lt;package&amp;gt;_LIBRARIES.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;CMakeLists.txt&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-cmake highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cmake_minimum_required&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;VERSION 3.10&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;project&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;hello_world&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;CMAKE_MODULE_PATH &lt;span class=&quot;s2&quot;&gt;&quot;/Users/kismet/Documents/code/cmake_code/tutorial/CMake/Help/guide/tutorial/my_step/cmake/modules&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;find_package&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;Opencv REQUIRED&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;FindOpencv.cmake&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-cmake highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;this is find opencv&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
 </description>
     <link>/pl/pl-script-cmake-packages.html</link>
     <guid>/pl/pl-script-cmake-packages</guid>
@@ -29244,6 +29270,38 @@ auto copy_var=minmax_element(container.begin(),container.end(),is_smaller);
 </description>
     <link>/pl/pl-compile-c++-gtest.html</link>
     <guid>/pl/pl-compile-c++-gtest</guid>
+    <pubDate>Sun, 05 Mar 2017 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>C++: Googletest</title>
+    <description>
+&lt;h4 id=&quot;cmake-configuration&quot;&gt;CMake configuration&lt;/h4&gt;
+
+&lt;div class=&quot;language-cmake highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cmake_minimum_required&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;VERSION 3.10&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;project&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;hello_world&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;CMAKE_C_STANDARD 99&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;CMAKE_CXX_STANDARD 11&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;#GTest&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;ADD_SUBDIRECTORY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;googletest&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;enable_testing&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;include_directories&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;gtest_SOURCE_DIR&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;/include &lt;span class=&quot;si&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;gtest_SOURCE_DIR&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;add_executable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;app main.cpp &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;target_link_libraries&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;app gtest gtest_main&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;add_test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;app app&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/google/googletest&quot;&gt;googletest&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/pl/pl-compile-c++-googletest.html</link>
+    <guid>/pl/pl-compile-c++-googletest</guid>
     <pubDate>Sun, 05 Mar 2017 00:00:00 +0900</pubDate>
   </item>
 
