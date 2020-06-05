@@ -3,7 +3,7 @@
   <title>Just Do It</title>
   <link href="/atom.xml" rel="self"/>
   <link href=""/>
-  <updated>2020-06-04T16:13:13+09:00</updated>
+  <updated>2020-06-05T17:59:42+09:00</updated>
   <id></id>
   <author>
     <name>reed</name>
@@ -8065,7 +8065,7 @@ component
   </entry>
 
   <entry>
-    <title>Code: Summary</title>
+    <title>PL: Summary</title>
     <link href="/pl/pl-summary.html"/>
     <updated>2019-09-10T00:00:00+09:00</updated>
     <id>/pl/pl-summary</id>
@@ -9276,6 +9276,1409 @@ Output layer
   </entry>
 
   <entry>
+    <title>PL: Naming Convention</title>
+    <link href="/pl/pl-naming-convention.html"/>
+    <updated>2018-12-12T00:00:00+09:00</updated>
+    <id>/pl/pl-naming-convention</id>
+    <content type="html">
+####
+
+  Camel Case: (someVar, someClass)
+  Pascal Case:(SomeVar, SomeClass)
+
+
+H
+
+  underscores and lowercase was the style perferred by Bjarne Stroustrup in
+“The C++ Programming Language”. He made a statement along the lines that
+underscores in names were to be preferred because it was more read...</content>
+  </entry>
+
+  <entry>
+    <title>PL: Regex Expression</title>
+    <link href="/pl/pl-regex-expression.html"/>
+    <updated>2018-10-13T00:00:00+09:00</updated>
+    <id>/pl/pl-regex-expression</id>
+    <content type="html">
+Intro
+
+  在正则中，大多数的字符只是其本身的含义，只需要记住一些转义后的字符即可
+  
+    
+      在正则中已经失去其本来的含义，表示一种贪婪匹配
+    
+  
+  ？在正则中依然表示问号，添加转义字符后\?才表示匹配一次或者零次
+  （）括号依然表示括号本身的括号含义，添加转义符之后才表示一种子元素
+  []这个不好比较特殊，已经被转义
+
+
+类型
+正则表达式和数学表达式的创建方法是一样的,因此正则表达式也用相应的一些运算符
+
+
+字符
+
+  特定字符 ‘X’
+  范围内字符:[0-9],[259], [a-zA-Z,:]  grep ‘[^0-9]’ passwd
+...</content>
+  </entry>
+
+  <entry>
+    <title>Make: Variable</title>
+    <link href="/pl/pl-script-make-variable.html"/>
+    <updated>2018-10-12T00:00:00+09:00</updated>
+    <id>/pl/pl-script-make-variable</id>
+    <content type="html">
+H
+
+  By default, Makefile targets are “file targets”. they are used to build files
+from other files. Make assumes its target is a file, and this makes writing
+Makefiles relatively easy.
+  sometimes you want your Makefile to run commands that do not represent
+physical files in the file system. Go...</content>
+  </entry>
+
+  <entry>
+    <title>Make: Rules</title>
+    <link href="/pl/pl-script-make-rule.html"/>
+    <updated>2018-10-12T00:00:00+09:00</updated>
+    <id>/pl/pl-script-make-rule</id>
+    <content type="html">
+Make
+make主要用来构建c语言的项目，实际上，任何主要某个文件有变化，就要重新构建项目，都可以用make构建
+
+语法
+target [target...] : [dependent ....]
+    [command ...]
+
+
+Suffix
+
+  Make uses a special target, named .SUFFIXES to allow you to define your
+own suffixed
+
+</content>
+  </entry>
+
+  <entry>
+    <title>CMake: Variables</title>
+    <link href="/pl/pl-script-cmake-variables.html"/>
+    <updated>2018-10-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-cmake-variables</id>
+    <content type="html">####
+
+  Variables are the basic unit of storage in the CMake Language. Their values
+are always of string type
+  set() and unset() commands explicitly set or unset a variable.
+  variable names are case-sensitive
+
+
+Environment Variables
+
+  Environment Variables are like ordinary Variables, with the...</content>
+  </entry>
+
+  <entry>
+    <title>Cmake: Modules</title>
+    <link href="/pl/pl-script-cmake-pkg-check-modules.html"/>
+    <updated>2018-10-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-cmake-pkg-check-modules</id>
+    <content type="html">
+官方文档看完直接想吐。
+上代码
+find_package(PkgConfig REQUIRED)
+#pkg_check_modules(FOO,OPENCV) 这是错误写法，中间没有逗号，而且有空格
+pkg_check_modules(FOO OPENCV)
+include_directories(${FOO_INCLUDE_DIRS})
+target_link_libraries(untitled ${FOO_LIBRARIES})
+
+
+</content>
+  </entry>
+
+  <entry>
+    <title>CMake: Packages</title>
+    <link href="/pl/pl-script-cmake-packages.html"/>
+    <updated>2018-10-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-cmake-packages</id>
+    <content type="html">
+find_package
+
+
+  find_package is supposed to work with Find&amp;lt;package&amp;gt;.cmake module
+  The purpose of the file is to define the search rules for the package and set
+different variables, such as &amp;lt;package&amp;gt;_FOUND, &amp;lt;package&amp;gt;_INCLUDE_DIRS
+and &amp;lt;package&amp;gt;_LIBRARIES.
+
+
+
+  CMakeLists....</content>
+  </entry>
+
+  <entry>
+    <title>Cmake: Introduction</title>
+    <link href="/pl/pl-script-cmake-intro.html"/>
+    <updated>2018-10-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-cmake-intro</id>
+    <content type="html">
+Organization
+
+  CMake input files are written in the “CMake Language” in source files named
+CMakeLists.txt or ending in a .cmake file name extension. CMake
+Language source files in a project are organized into:
+    
+      Directories
+      Scripts
+      Modules
+    
+  
+
+
+CMake
+
+  You must treat ...</content>
+  </entry>
+
+  <entry>
+    <title>CMake: Control Structures</title>
+    <link href="/pl/pl-script-cmake-control-structures.html"/>
+    <updated>2018-10-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-cmake-control-structures</id>
+    <content type="html">Conditional Blocks
+
+if()/elseif()/else()/endif()
+
+
+Loops
+
+foreach()/endforeach() 
+while()/endwhile()
+
+
+Command Definitions
+
+macro()/endmacro()
+function()/endfunction()
+
+
+</content>
+  </entry>
+
+  <entry>
+    <title>CMake: Compile Features</title>
+    <link href="/pl/pl-script-cmake-compile-features.html"/>
+    <updated>2018-10-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-cmake-compile-features</id>
+    <content type="html">
+</content>
+  </entry>
+
+  <entry>
+    <title>Commands: Scripting Commands</title>
+    <link href="/pl/pl-script-cmake-commands-script.html"/>
+    <updated>2018-10-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-cmake-commands-script</id>
+    <content type="html">
+Examples
+
+  create a file named hello.txt with the following content.
+
+
+message(&quot;Hello world!&quot;)         # A message to print
+
+
+
+  run the script
+
+
+cmake -P hello.txt
+
+
+Reference
+
+  CMake Scripting Language
+
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Commands: Project Commands</title>
+    <link href="/pl/pl-script-cmake-commands-project.html"/>
+    <updated>2018-10-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-cmake-commands-project</id>
+    <content type="html">
+These commands are available only in CMake projects
+
+官方文档
+#使用这个语法的时候，target必须通过add_executable()或者add_library()创建
+target_link_libraries(&amp;lt;target&amp;gt; [item])
+
+</content>
+  </entry>
+
+  <entry>
+    <title>CMake: Command-Line Tools</title>
+    <link href="/pl/pl-script-cmake-command-line-tool.html"/>
+    <updated>2018-10-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-cmake-command-line-tool</id>
+    <content type="html">
+1. cmake
+2. ctest
+3. cpack
+</content>
+  </entry>
+
+  <entry>
+    <title>CMake: Build System</title>
+    <link href="/pl/pl-script-cmake-buildsystem.html"/>
+    <updated>2018-10-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-cmake-buildsystem</id>
+    <content type="html">
+####
+
+  A CMake-based buildsystem is organized as a set of high-level logical
+targets.
+  Each target corresponds to an executable or library.
+  Dependencies between the targets are expressed in the buildsystem to
+determine the build order and the rules for regeneraton to change
+
+
+</content>
+  </entry>
+
+  <entry>
+    <title>C++: Package Manager</title>
+    <link href="/pl/pl-compile-c++-package-manager.html"/>
+    <updated>2018-09-13T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-package-manager</id>
+    <content type="html">
+Introduction
+Here is the list conan, cpm, dds, pacm, hunter, vcpkg
+
+1.1 Brew
+the missing package manager for macos, 和centos下的yumhe ubuntu下的apt-get类似
+
+  brew的安装目录在/usr/local/Cellar
+  配置目录在/usr/local/etc
+  命令目录在/usr/local/bin
+
+
+使用
+
+  brew install pyenv
+    
+      it will put pyenv-related file und...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Compiler</title>
+    <link href="/pl/pl-compile-c++-compiler.html"/>
+    <updated>2018-09-13T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-compiler</id>
+    <content type="html">
+1 Clang
+
+2 GNU
+Environment Variables
+
+  PATH: For searching the executables and run-time shared libraries.
+  CPATH: For searching the include-paths for headers. It is searched after
+paths specified in **-I** options.
+  LiBRARY_PATH: For searching library-paths for link libraries. It is searched
+...</content>
+  </entry>
+
+  <entry>
+    <title>C++:  Template</title>
+    <link href="/pl/pl-compile-c++-template.html"/>
+    <updated>2018-09-12T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-template</id>
+    <content type="html">
+intro
+OOP和范型编程都能处理在编写程序时不知道类型的情况。不同之处在于
+OOP能处理类型在程序运行之前都未知的情况，范型编程中，编译时就能获知类型。
+
+
+function template
+
+define
+template &amp;lt;typename price&amp;gt; bool isCheaper(price p1,price p2){
+	    return p1&amp;lt;p2;
+        }
+
+instantiation
+//函数模板能自己推断参数类型
+compare(2.0,12.0);
+
+
+
+
+class template
+类模板用来生成类的蓝图，与函数模板不同，编...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Struct</title>
+    <link href="/pl/pl-compile-c++-struct.html"/>
+    <updated>2018-09-12T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-struct</id>
+    <content type="html">
+####
+
+  Struct can be defined as collection of data members under one name.
+
+
+####
+
+  define
+  declaration
+  initialization
+
+
+struct Rectangle {
+    int width;
+    int length;
+};
+
+struct Rectangle r;
+
+</content>
+  </entry>
+
+  <entry>
+    <title>C++: Stream</title>
+    <link href="/pl/pl-compile-c++-stream.html"/>
+    <updated>2018-09-12T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-stream</id>
+    <content type="html">
+Stream
+
+  to access data that from outside of a program
+    
+      Inputstream: access data from outside of a program.
+      Outputstream: send data out of the program.
+    
+  
+  so we have IOS, which means:
+    
+      Inputstream: istream, ifstream
+      Outputstream: ostream, ofstream
+      ci...</content>
+  </entry>
+
+  <entry>
+    <title>C++: STL</title>
+    <link href="/pl/pl-compile-c++-stl.html"/>
+    <updated>2018-09-12T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-stl</id>
+    <content type="html">
+在出现标准库之前，c++程序使用数组保存对象，现代c++程序更多地用vector取代数组
+与vector相比，数组的长度是固定的。
+只有当程序强调速度的时候才在类的实现内部使用数组和指针。
+</content>
+  </entry>
+
+  <entry>
+    <title>C++: Polymorphism</title>
+    <link href="/pl/pl-compile-c++-polymorphism.html"/>
+    <updated>2018-09-12T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-polymorphism</id>
+    <content type="html">
+</content>
+  </entry>
+
+  <entry>
+    <title>C++: Pointer and Reference</title>
+    <link href="/pl/pl-compile-c++-pointer-and-reference.html"/>
+    <updated>2018-09-12T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-pointer-and-reference</id>
+    <content type="html">
+语言类型
+
+  c++容忍隐士的类型转换，所以是一种种弱类型语言
+  c++编译时进行类型检查，程序运行时不能改变其结构，所以是静态语言
+
+
+Arithmetic
+
+  p++
+  p–
+  p+1
+
+
+#include &amp;lt;iostream&amp;gt;
+
+int main(){
+    int a[5]={1,2,2,1,9};
+    int *p = a;
+    std::cout&amp;lt;&amp;lt;p++&amp;lt;&amp;lt;std::endl;
+    std::cout&amp;lt;&amp;lt;a+1&amp;lt;&amp;lt;std::endl;
+    std::cout&amp;lt;&amp;lt;*(a+1)...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Operator</title>
+    <link href="/pl/pl-compile-c++-operator.html"/>
+    <updated>2018-09-12T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-operator</id>
+    <content type="html">
+位运算符
+
+
+	
+		 ~  位求反        
+		 &amp;lt;&amp;lt; 左移          
+		 &amp;gt;&amp;gt; 右移          
+		  &amp;amp; 位与   256&amp;amp;7  
+		  | 位或          
+		  ^ 异或          
+	
+
+
+
+点运算符
+
+.(dot operator): 点操作符通过它的左操作数取得有操作数，点操作符的右操作数不是对象或值，而是成员的名字。
+
+
+箭头运算符
+
+-&amp;gt;(arrow operator): 箭头操作符包含点操作符和解引用操作符。
+
+
+[]: 下标操作符
+
+
+
+函数调用操作符
+()(call...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Opencv</title>
+    <link href="/pl/pl-compile-c++-opencv.html"/>
+    <updated>2018-09-12T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-opencv</id>
+    <content type="html">
+官方文档写得很不客气，there’s no point to using the old methods unless you’re a masochist programmer and you’re asking for trouble
+
+绘制椭圆代码，参考文献
+#define w 400
+cv::Mat img=Mat::zeros(w,w,CV_8UC3);
+cv::ellipse(img,Point(w/2,w/2),Size(w/4,w/16),0,0,360,Scalar(255,0,255),2,3);
+imshow(&quot;demo&quot;,img);
+waitKey(0);
+
+</content>
+  </entry>
+
+  <entry>
+    <title>C++: OpenCV</title>
+    <link href="/pl/pl-compile-c++-opencv-highgui.html"/>
+    <updated>2018-09-12T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-opencv-highgui</id>
+    <content type="html">
+reference
+VideoCapture cap(0); // open the default camera
+         if(!cap.isOpened())  // check if we succeeded
+         return -1;
+
+         Mat edges;
+         namedWindow(&quot;edges&quot;,1);
+         for(;;){
+         Mat frame;
+	     cap &amp;gt;&amp;gt; frame; // get a new frame from camera
+	     cvtColor...</content>
+  </entry>
+
+  <entry>
+    <title>C++: OOP</title>
+    <link href="/pl/pl-compile-c++-oop.html"/>
+    <updated>2018-09-12T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-oop</id>
+    <content type="html">
+####
+
+  why data is modified by private ? function is modified by public?
+    
+      just like a car, it has button you can push, the button is like a function,
+it’s public.
+      But what’s in the button, you have no idea. It’s the data which is private.
+    
+  
+
+
+
+  
+
+</content>
+  </entry>
+
+  <entry>
+    <title>C++: Memory</title>
+    <link href="/pl/pl-compile-c++-memory.html"/>
+    <updated>2018-09-12T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-memory</id>
+    <content type="html">
+intro
+自动分配
+全局对象在程序启动时分配，程序结束时销毁。
+局部对象，进入其定义所在的程序时被创建，离开时销毁
+局部static对象在第一次使用前分配，程序结束时销毁
+
+
+动态分配
+除了静态内存和栈内存，每个程序还拥有一个内存池。称为自由空间，free store或堆heap
+动态分配的对象的生存期与他们在哪里创建是无关的，只有当显示地被释放时，对象才会被销毁
+
+
+智能指针
+智能指针产生的原因是对象在销毁时，会调用它的析构函数。
+
+
+shared_ptr
+
+
+直接管理内存
+
+</content>
+  </entry>
+
+  <entry>
+    <title>C++: Macro</title>
+    <link href="/pl/pl-compile-c++-macro.html"/>
+    <updated>2018-09-12T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-macro</id>
+    <content type="html">
+宏: 就是指令的集合
+#define PRINT(A) std::cout&amp;lt;&amp;lt;&quot;this is output: &quot;&amp;lt;&amp;lt;#A&amp;lt;&amp;lt;std::endl
+PRINT(&quot;hello&quot;);
+
+</content>
+  </entry>
+
+  <entry>
+    <title>C++: Lvalues and Rvalues</title>
+    <link href="/pl/pl-compile-c++-lvalue-and-rvalue.html"/>
+    <updated>2018-09-12T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-lvalue-and-rvalue</id>
+    <content type="html">
+####
+
+  2.rvalue: a temporary value
+
+
+###
+
+  you can’t take an lvalue reference form an rvalue.
+  you can take an lvalue reference form an lvalue.
+
+
+####
+
+  the keyword const will ask the compiler do something.
+    
+      compier will probably create like a temporary variable to storage
+      th...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Reload Operator</title>
+    <link href="/pl/pl-compile-c++-load-operator.html"/>
+    <updated>2018-09-12T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-load-operator</id>
+    <content type="html">
+重载的运算符不过是有特殊名字的函数
+重载下标运算符
+
+[]   下标操作符必须是成员函数
+
+
+重载输出运算符
+
+&amp;lt;&amp;lt;     不能是成员函数
+参数1: 非常量ostream对象的引用,非常量的原因是向流写入内容会改变其状态  
+                               引用的原因是因为我们无法直接复制一个ostream对象  
+参数2: 常量的引用, 引用是因为避免复制实参  
+                   常量是因为打印不会改变对象的内容  
+class Worker{
+	public:
+	    int age;
+	    std::stri...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Keywords</title>
+    <link href="/pl/pl-compile-c++-keyword.html"/>
+    <updated>2018-09-12T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-keyword</id>
+    <content type="html">
+explicit
+c++为只用传递一个参数的构造函数定义了一个隐士转换
+
+class Animal{
+	public:
+	    Animal(){
+        cout&amp;lt;&amp;lt;&quot;no parameter constructor&quot;&amp;lt;&amp;lt;endl;
+        }
+	    explicit Animal(int a){
+	    cout&amp;lt;&amp;lt;&quot;parameter constructor&quot;&amp;lt;&amp;lt;endl;
+	    }
+};
+Animal dog = 3         //报错，无法使用explicit Animal构造器
+
+
+class...</content>
+  </entry>
+
+  <entry>
+    <title>C++: 迭代器</title>
+    <link href="/pl/pl-compile-c++-iterator.html"/>
+    <updated>2018-09-12T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-iterator</id>
+    <content type="html">
+intro
+
+谓词
+谓词本质是可调用的表达式，返回结果是一个能用作条件的值。
+一元谓词: 接受单一参数unary predicate
+二元谓词: 接受两个参数binary predicate
+接受谓词参数的算法对输入序列中的元素调用谓词，因此元素类型必须转换为谓词的参数类型
+
+迭代器
+迭代器令算法不依赖于容器，但算法依赖于元素类型的操作。
+
+  输入迭代器
+  输出迭代器
+  前向迭代器
+  双向迭代器
+  随机访问迭代器
+
+
+算法
+简单查找算法
+
+find
+find(beg, end, val)
+return 返回一个迭代器，指向输入序列中第一个等于val的元素。
+find_if(b...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Opencv</title>
+    <link href="/pl/pl-compile-c++-gtest.html"/>
+    <updated>2018-09-12T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-gtest</id>
+    <content type="html">
+官方文档
+</content>
+  </entry>
+
+  <entry>
+    <title>C++: Googletest</title>
+    <link href="/pl/pl-compile-c++-googletest.html"/>
+    <updated>2018-09-12T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-googletest</id>
+    <content type="html">
+CMake configuration
+
+cmake_minimum_required(VERSION 3.10)
+
+project(hello_world)
+
+set(CMAKE_C_STANDARD 99)
+set(CMAKE_CXX_STANDARD 11)
+
+#GTest
+ADD_SUBDIRECTORY(googletest)
+enable_testing()
+include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
+
+add_executable(app main.cpp )
+target_li...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Function</title>
+    <link href="/pl/pl-compile-c++-function.html"/>
+    <updated>2018-09-12T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-function</id>
+    <content type="html">
+Terminology
+
+  Prototype, signature, header of a function means the following code
+
+
+void foo();
+
+
+
+  Functions are called modules or procedures.
+
+
+#### 
+There are two piece of the code, so there will be two function in the memory.
+
+#include &amp;lt;iostream&amp;gt;
+int add(int x, int y);
+
+int main(){
+ ...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Function Parameters</title>
+    <link href="/pl/pl-compile-c++-function-parameter.html"/>
+    <updated>2018-09-12T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-function-parameter</id>
+    <content type="html">
+Arrays
+
+  Arrays can only be passed by address
+  for the formal parameters in foo, you can replace a[] with *a, it
+still means the same thing.
+    
+      int a[] can only be used to point to array.
+      *a can be used to point an integer.
+    
+  
+
+
+#include &amp;lt;iostream&amp;gt;
+void foo(int a[], in...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Expression</title>
+    <link href="/pl/pl-compile-c++-express.html"/>
+    <updated>2018-09-12T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-express</id>
+    <content type="html">
+类型转换
+隐士转换
+C++语言不会直接将两个不同类型的值相加，而是先根据类型转换的规则将运算的
+类型统一后，再求值。
+int ival = 3.541 + 3;
+// 1 3转换成double型，结果类型为double
+// 2 初始化过程中，初始化对象的类型无法改变，初始值被转化为该对象的类型
+
+
+显示转换
+表达式 cast-name(expression)
+type: 转换的目标类型，expression要转换的值
+cast-name是static, dynamic, const, reinterpret中的一种
+
+</content>
+  </entry>
+
+  <entry>
+    <title>C++: Data Type</title>
+    <link href="/pl/pl-compile-c++-data-type.html"/>
+    <updated>2018-09-12T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-data-type</id>
+    <content type="html">
+intro
+
+数据的初始化分为两种:  
+直接初始化: 使用assignment operator
+复制初始化: 使用(),将初始化值放在圆括号内。
+对于类类型对象，直接初始化直接调用与实参匹配的构造函数。复制初始化
+调用复制构造函数，然后使用复制构造函数将临时对象复制到正在创建的对象。
+1 引用数据类型是一种复合类型，通过在变量名前添加&amp;amp;来定义。
+
+
+指针
+
+定义
+
+指针: (point to)是一种复合类型。指针实现了对其他对象的间接访问。
+1 指针本身就是一个对象，允许对指针的赋值和拷贝。
+2 指针无需在定义时赋初值。
+
+
+空指针
+
+空指针不指向任何对象，在使用一个指针之...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Container</title>
+    <link href="/pl/pl-compile-c++-container.html"/>
+    <updated>2018-09-12T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-container</id>
+    <content type="html">
+Intro
+
+STL标准模板库解决了数据结构和算法的抽象问题
+vector和deque的底层是对数组的封装，所以提供了对元素的快速随机访问。
+不足是，在删除元素时，付出的开销更大。
+list类型在任何位置都能快速插入和删除。访问某个元素要求遍历所设计的其他元素.
+容器操作
+
+
+
+构造函数
+
+
+  C c;           默认构造函数，拷贝空容器
+  C c1(c2);      构造c2的拷贝c1
+  C c(b, e);     构造c, 将迭代器b和e指定的范围内的元素拷贝到c
+  C c{a, b, c};  列表初始化c
+
+
+
+赋值和swap
+
+在新标准库中，容器既提供成...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Class</title>
+    <link href="/pl/pl-compile-c++-class.html"/>
+    <updated>2018-09-12T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-class</id>
+    <content type="html">
+封装
+
+类的定义可以使用struct或者class关键字，struct是从c继承来的
+使用class定义类，则定义在第一个访问标号前的任何成员权限都为private
+使用struct定义类，则都为public，其他没差。
+
+java的类更像是c++类的一种简化。c++中的类能够控制在初始化，复制，赋值和销毁对象时发生的操作。java的类没有这种能力。
+python, java和c++中，都隐约存在this指针这个概念。&amp;lt;/br&amp;gt;
+只不过，java和c++都隐藏的比较深一点。对于 属于对象的成员函数来说，都有对象的指针与他们绑定
+在一起，这个参数是隐藏。python就比较干脆...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Code Normal</title>
+    <link href="/pl/pl-compile-c++-causal.html"/>
+    <updated>2018-09-12T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-causal</id>
+    <content type="html">
+如下代码:
+while(first!=last){
+	 ++first
+	}
+
+left-inclusive interval,左闭合空间的意义:
+当first与last相等时，迭代器范围为空
+当first与last不相等时，迭代器范围内至少有一个元素，而且first指向该区间的第一个元素，通过若干次自增运算可以使first不断增大，知道first==last为止。
+
+
+和表达式相比，函数比表达式好理解，容易维护，重用性好
+缺点就是，效率差，调用函数之前需要保存寄存器，复制实参，程序跳转等操作。
+
+封装是一项将低层次的元素组合起来形成新的高层次实体的技术，函数是封装的一种形式 ，函数所...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Boost</title>
+    <link href="/pl/pl-compile-c++-boost.html"/>
+    <updated>2018-09-12T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-boost</id>
+    <content type="html">
+介绍
+boost是一个可移植的，提供源代码的C++库，由于其对跨平台的强调，对标准C++的强调，与编写平台无关。大部分的boost库功能使用只需要包括相应的头文件即可，少数如正则表达式库和文件系统库需要连接库。
+
+
+文件系统库
+
+
+使用方法
+
+  头文件&amp;lt;boost/filesystem.hpp&amp;gt;提供对文件系统的重要操作，它定义了path类，是filesystem库的基础
+  头文件&amp;lt;boost/filesystem/fstream.hpp&amp;gt;是对std::fstream的一个补充。
+文件系统库使用前需要链接相应的库文件
+  需要添加链接库
+    # demo表...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Array</title>
+    <link href="/pl/pl-compile-c++-array.html"/>
+    <updated>2018-09-12T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-array</id>
+    <content type="html">
+static array
+
+dynamic array
+
+#include &amp;lt;iostream&amp;gt;
+
+int main(){
+
+    // stack
+    int a[5]={1,3,5,2,0};
+    int *b;
+
+    //heap
+    b = new int[5];
+    for(int i=0; i&amp;lt;5; i++){
+       std::cout&amp;lt;&amp;lt;b[i]&amp;lt;&amp;lt;std::endl;
+       std::cout&amp;lt;&amp;lt;*(b+i)&amp;lt;&amp;lt;std::endl;
+    }
+}
+
+
+Increas...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Eigen</title>
+    <link href="/pl/pl-compile-c++-Eigen.html"/>
+    <updated>2018-09-12T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-Eigen</id>
+    <content type="html">
+官方文档
+//默认是列向量
+Eigen::Vector4d a(1,2,3,4);//构造初始化
+Eigen::Vector4d b;
+b&amp;lt;&amp;lt;1,2,3,4;//赋值初始化
+
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Editor: Vimscript</title>
+    <link href="/pl/pl-script-editor-vimscript.html"/>
+    <updated>2018-08-12T00:00:00+09:00</updated>
+    <id>/pl/pl-script-editor-vimscript</id>
+    <content type="html">
+1. Introduction
+This software is plugin system, so it is very flexible and diffcult to learn.
+it heavily depends on the plugin and shortcut to improve the efficient.
+
+
+
+2. 常用功能
+
+2.1 Setting
+
+
+  set relativenumber!
+  set cursorline
+  syntax off  I spend a lot of time to fix this simple question, ...</content>
+  </entry>
+
+  <entry>
+    <title>Editor: Vimscript Plugin</title>
+    <link href="/pl/pl-script-editor-vimscript-plugin.html"/>
+    <updated>2018-08-12T00:00:00+09:00</updated>
+    <id>/pl/pl-script-editor-vimscript-plugin</id>
+    <content type="html">
+4. Plugin
+
+  For every plugin, you can refer to the instruction about how to use them.
+  and in the vimrc file to setting.
+
+
+4.1 vundle-plugin
+
+  BundleList 查看已经安装的插件
+
+
+4.2 YouCompleteMe-plugin
+Maybe this is the most difficult plugin to install
+
+  YouCompleteMe itself work in client-server patte...</content>
+  </entry>
+
+  <entry>
+    <title>Editor: Sed</title>
+    <link href="/pl/pl-script-editor-sed.html"/>
+    <updated>2018-08-12T00:00:00+09:00</updated>
+    <id>/pl/pl-script-editor-sed</id>
+    <content type="html">
+####
+
+  \w 数字0-9，字母a-z及A-Z，下划线 因为在编程语言中，数字的命名都是数字字母下划线
+  \W 非\w
+  . 除去换行符以外的任意字符
+  [] 字符范围
+  [^…] 字符范围以外
+  ^ 行首
+  $ 行尾
+  ()  分组, 并记录匹配到的字符串
+  \n  使用分组符(x)匹配到的字符串
+    repeat
+  
+  x* x+ 贪婪匹配
+  x* x+? 非贪婪匹配
+  
+    x?      出现0次或一次
+  
+  (?:x) 仅分组
+
+
+Awk
+分割符
+-F field-separator(默认为空格)
+awk -F ':' '{print...</content>
+  </entry>
+
+  <entry>
+    <title>Command: DIY</title>
+    <link href="/pl/pl-script-shell-comman-diy.html"/>
+    <updated>2018-08-08T00:00:00+09:00</updated>
+    <id>/pl/pl-script-shell-comman-diy</id>
+    <content type="html">
+Command Type
+In linux, nothing is secret, you can get any where and know everything. A
+command can be one of the four different things:
+
+  An executable program, such as files we saw in /usr/bin. Within this
+category, programs can be compiled binaries such as programs written in C and
+C++, or pr...</content>
+  </entry>
+
+  <entry>
+    <title>Shell: Environment</title>
+    <link href="/pl/pl-script-shell-envrionment.html"/>
+    <updated>2018-08-07T00:00:00+09:00</updated>
+    <id>/pl/pl-script-shell-envrionment</id>
+    <content type="html">Introduction
+Shell maintains a body of information during our shell session called the
+environment. Data stored in the environment is used by programs to determine
+facts about our configuration.
+
+Environment Established
+
+  When we log to the system, the bash program starts, and reads a series of
+...</content>
+  </entry>
+
+  <entry>
+    <title>Shell: Zsh</title>
+    <link href="/pl/pl-script-shell-zsh.html"/>
+    <updated>2018-08-06T00:00:00+09:00</updated>
+    <id>/pl/pl-script-shell-zsh</id>
+    <content type="html">
+功能
+chsh是一个linux命令，用来修改设定用户的shell
+
+语法
+
+  chsh -m 修改配置当前用户的shell
+
+
+插件
+
+autojump
+cd 过一次的目录，下次都可以直接跳转
+
+cd /Users/huiyaozhang/Library/Caches/IntelliJIdea2017.1/tomcat/Unnamed_direckBank
+j tomcat
+
+
+
+zsh-autosuggestions
+
+该命令是基于历史命令数据进行分析的，随着输入的命令越来越多，提示会越来越准确
+
+# 觉得提示正确
+ctrl+f 表示采纳
+
+
+
+zsh-syntax-highlig...</content>
+  </entry>
+
+  <entry>
+    <title>Shell: Variables</title>
+    <link href="/pl/pl-script-shell-variables.html"/>
+    <updated>2018-08-06T00:00:00+09:00</updated>
+    <id>/pl/pl-script-shell-variables</id>
+    <content type="html">
+Intro
+
+  Variable names are case-sensitive
+  their values are of type string
+    
+      reference
+    
+  
+
+
+
+
+
+  evaluated inside a quoted arguement
+
+
+&quot;${variable_name}/directory&quot;
+
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Command: Tmux</title>
+    <link href="/pl/pl-script-shell-tmux.html"/>
+    <updated>2018-08-06T00:00:00+09:00</updated>
+    <id>/pl/pl-script-shell-tmux</id>
+    <content type="html">
+intro
+tmux is a terminal multiplexer，tmux使用C/S模型构建，it consists of the
+following unit:
+
+  server，输入tmux命令开启一个服务器
+  session，一个服务器可以包含多个会话
+  window， 一个会话可以包含多个窗口
+  pane， 一个窗口一个包含多个面板
+
+
+Layout
+
+  prefix+ space: change the layout from horizontal to vertial
+
+
+Session Operation
+
+
+  exit current session...</content>
+  </entry>
+
+  <entry>
+    <title>Shell: System Call</title>
+    <link href="/pl/pl-script-shell-system-call.html"/>
+    <updated>2018-08-06T00:00:00+09:00</updated>
+    <id>/pl/pl-script-shell-system-call</id>
+    <content type="html">
+Demo
+
+reference
+
+  System call
+
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Shell: My Script</title>
+    <link href="/pl/pl-script-shell-script.html"/>
+    <updated>2018-08-06T00:00:00+09:00</updated>
+    <id>/pl/pl-script-shell-script</id>
+    <content type="html">
+for i in *.md
+do
+   var1=&quot;${i:0:10}&quot;
+   var2=&quot;${i:10:100}&quot;
+   echo &quot;${var1}-code${var2}&quot;
+   mv &quot;${i}&quot; &quot;${var1}-code${var2}&quot;
+done
+
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Shell: Time Schedule</title>
+    <link href="/pl/pl-script-shell-scheduling.html"/>
+    <updated>2018-08-06T00:00:00+09:00</updated>
+    <id>/pl/pl-script-shell-scheduling</id>
+    <content type="html">
+at的访问控制
+
+  如果系统中有/etc/at.allow文件，那么只有写入/etc/at.allow文件中的用户可以使用at命令，/etc/at.deny文件会被忽略
+  如果系统中没有/etc/at.allow文件，只有/etc/at.deny文件，那么写入/etc/at.deny文件中的用户不能使用at命令。对root不起作用
+  如果系统中这两个文件都不存在，那么只有root用户可以使用at命令
+
+
+常用命令
+# ctrl+d表示结束任务
+at now +5 minutes
+at&amp;gt; ls
+at&amp;gt; &amp;lt;EOT&amp;gt;
+# 查看任务列表
+atq
+# 查看任务详细信...</content>
+  </entry>
+
+  <entry>
+    <title>Shell: Process</title>
+    <link href="/pl/pl-script-shell-process.html"/>
+    <updated>2018-08-06T00:00:00+09:00</updated>
+    <id>/pl/pl-script-shell-process</id>
+    <content type="html">
+Kill
+用来终止指定的进程，终止前台的进程可以使用Ctrl+c, 终止后台的进程必须使用kill命令
+
+介绍
+ps类似于命令行界面的任务管理器，查看进程状态
+
+
+ps
+ps命令默认显示4列信息
+
+  PID: process ID
+  PPID: parent process ID 程序的父进程号
+  TTY: 命令所运行的位置(终端)
+  TIME: 运行着的该命令所占用的CPU时间
+  CMD: 该进程所运行的命令
+
+
+
+参数
+
+  -u 根据用户过滤进程，ps -u huiyaozhang 查看用户huiyaozhang的进程
+  -a 显示一个终端所有进程
+  -x 显示没有...</content>
+  </entry>
+
+  <entry>
+    <title>Shell: Introduction</title>
+    <link href="/pl/pl-script-shell-introduction.html"/>
+    <updated>2018-08-06T00:00:00+09:00</updated>
+    <id>/pl/pl-script-shell-introduction</id>
+    <content type="html">
+####
+
+  A shell script is a computer program designed to be run by the Unix/Linux
+shell which could be one of the following:
+    
+      Bourne Shell
+      C Shell
+      The GNU Bourne-Again Shell
+    
+  
+  A shell is a command-line interpreter and typical operations performed by
+shell scripts in...</content>
+  </entry>
+
+  <entry>
+    <title>Shell: Internet</title>
+    <link href="/pl/pl-script-shell-internet.html"/>
+    <updated>2018-08-06T00:00:00+09:00</updated>
+    <id>/pl/pl-script-shell-internet</id>
+    <content type="html">
+
+  TCP/IP: Transmission Control Protocol/Internet Protocol
+  LAN: Local Area Network
+  WAN: Wide Area Network
+  DNS: Domain name system
+
+
+netstat
+
+  show network status
+  netstat -p TCP 显示tcp协议
+
+
+ip
+
+  internet protocol
+  ip addr
+
+
+Reference
+
+  Curl
+
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Shell: Control Block</title>
+    <link href="/pl/pl-script-shell-control-block.html"/>
+    <updated>2018-08-06T00:00:00+09:00</updated>
+    <id>/pl/pl-script-shell-control-block</id>
+    <content type="html">
+</content>
+  </entry>
+
+  <entry>
+    <title>Shell: Find</title>
+    <link href="/pl/pl-script-shell-command-find.html"/>
+    <updated>2018-08-06T00:00:00+09:00</updated>
+    <id>/pl/pl-script-shell-command-find</id>
+    <content type="html">
+grammar
+
+find [参数]
+
+the following is some examle:
+
+
+  find . 列出当前目录及子目录下所有文件和文件夹
+  find / -cmin -15 查找最近15分钟更新的文件
+  -exec
+
+
+# -exec参数必须以\; 结尾
+# 查找当前目录下文件名为test的文件，并找到满足&quot;xxx-xxxx-xxxx&quot;规律所在行内容
+find &quot;test&quot; -exec grep -in  &quot;^[0-9]\{3\}-[0-9]\{4\}&quot; test \;
+
+
+replace the command with GNU version
+
+brew...</content>
+  </entry>
+
+  <entry>
+    <title>Shell: File System</title>
+    <link href="/pl/pl-script-shell-command-file-manipulation.html"/>
+    <updated>2018-08-06T00:00:00+09:00</updated>
+    <id>/pl/pl-script-shell-command-file-manipulation</id>
+    <content type="html">
+output information of command ls
+
+  -rwx-xrr-x: permissions
+  1: number of linked hard-links
+  root: owner of the file
+  root: to which group this file belongs to
+  6444: size
+  09-22 15:46: modification/creation date and time
+  test: file directory name
+
+
+-rwx-xrr-x 1 root root 6444 09-22 15:46...</content>
+  </entry>
+
+  <entry>
+    <title>Command: Crontab</title>
+    <link href="/pl/pl-script-shell-command-crontab.html"/>
+    <updated>2018-08-06T00:00:00+09:00</updated>
+    <id>/pl/pl-script-shell-command-crontab</id>
+    <content type="html">
+访问控制
+
+  当系统中有/etc/cron.allow文件时，只有写入此文件的用户可以使用crontab命令。
+  当/etc/cron.allow存在时，/etc/cron.deny文件会被忽略,/etc/cron.allow文件的优先级更高
+  当系统中只有/etc/cron.deny文件时，写入此文件的用户不能使用crontab命令
+
+
+常用命令
+
+	
+		项目
+		*
+		*
+		*
+		*
+		*
+	
+	
+		含义
+		每小时中的第几分钟
+		每天当中的第几小时
+		每月当中的第几天
+		每年当中的第几月
+		每周当中的星期几
+	
+	
+		范围
+		0-59
+		0-23
+...</content>
+  </entry>
+
+  <entry>
     <title>Script: Summary</title>
     <link href="/pl/pl-script-summary.html"/>
     <updated>2018-06-06T00:00:00+09:00</updated>
@@ -9488,1483 +10891,58 @@ step 1: prepare the dataset
   </entry>
 
   <entry>
-    <title>Make: Variable</title>
-    <link href="/pl/pl-script-make-variable.html"/>
-    <updated>2017-07-12T00:00:00+09:00</updated>
-    <id>/pl/pl-script-make-variable</id>
+    <title>Java: Environment</title>
+    <link href="/pl/pl-compile-java-environment.html"/>
+    <updated>2018-04-03T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-java-environment</id>
     <content type="html">
-</content>
+JVM
+class文件的组织结构
+.class文件是由子节组成的文件，又叫字节码文件
+
+
+魔数
+由java编译器编译而成的class文件的前四个字节都是“OxCAFEBABE”
+作用，即JVM在尝试加载某个文件到内存中的时候，会首先判断此class文件有没有JVM认为可以接受的”签名”，即JVM会首先读取文件的前四个字节，判断这四个字节是否是”0xCAFEBABE”,如果是则JVM会认为可以将此冷箭当作class文件来加载使用
+
+
+版本号
+
+垃圾回收机制
+
+
+垃圾回收算法
+
+  标记-清除算法，首先标记出所有需要回收的对象，然后回收所有需要回收的对象，该算法缺点是内存块回收之后不连续，...</content>
   </entry>
 
   <entry>
-    <title>Shell: Zsh</title>
-    <link href="/pl/pl-script-shell-zsh.html"/>
-    <updated>2017-07-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-shell-zsh</id>
+    <title>Java: Package Manager</title>
+    <link href="/pl/pl-compile-java-package-manager.md.html"/>
+    <updated>2018-04-02T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-java-package-manager.md</id>
     <content type="html">
-功能
-chsh是一个linux命令，用来修改设定用户的shell
-
-语法
-
-  chsh -m 修改配置当前用户的shell
+简介
+官网和cmake一样，maven也用来构建项目。
+maven有个仓库的概念，怎么理解这个概念呢。顶级域名有com, org等。顶级域名具有不可重复性，因此可以用来作为包名。google,alibaba会把自己开发的一些框架贡献给开源社区。
 
 
-插件
-
-autojump
-cd 过一次的目录，下次都可以直接跳转
-
-cd /Users/huiyaozhang/Library/Caches/IntelliJIdea2017.1/tomcat/Unnamed_direckBank
-j tomcat
+属性
 
 
+POM属性
 
-zsh-autosuggestions
-
-该命令是基于历史命令数据进行分析的，随着输入的命令越来越多，提示会越来越准确
-
-# 觉得提示正确
-ctrl+f 表示采纳
-
-
-
-zsh-syntax-highlig...</content>
-  </entry>
-
-  <entry>
-    <title>Shell: Variables</title>
-    <link href="/pl/pl-script-shell-variables.html"/>
-    <updated>2017-07-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-shell-variables</id>
-    <content type="html">
-Intro
-
-  Variable names are case-sensitive
-  their values are of type string
+  {basedir} 表示项目更目录
+  {version} 表示项目版本
     
-      reference
-    
-  
-
-
-
-
-
-  evaluated inside a quoted arguement
-
-
-&quot;${variable_name}/directory&quot;
-
-
-</content>
-  </entry>
-
-  <entry>
-    <title>Shell: Common Commands</title>
-    <link href="/pl/pl-script-shell-user-commands.html"/>
-    <updated>2017-07-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-shell-user-commands</id>
-    <content type="html">
-alias
-If you want to create permanent aliases, just modify corresponding configuration file. 
-
-  for Bash Shell modify ~/.bashrc
-  for Zsh Shell  modify ~/.zshrc
-
-
-alias ls=&quot;ls --auto=color&quot; 
-
-head
-
-  显示开头或结尾某个数量的文字区块
-  head [参数]  [文件]
-  
-    
-      
-        
-          -n 显示行数   ls
-          hea...</content>
-  </entry>
-
-  <entry>
-    <title>Command: Tmux</title>
-    <link href="/pl/pl-script-shell-tmux.html"/>
-    <updated>2017-07-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-shell-tmux</id>
-    <content type="html">
-intro
-tmux is a terminal multiplexer，tmux使用C/S模型构建，it consists of the
-following unit:
-
-  server，输入tmux命令开启一个服务器
-  session，一个服务器可以包含多个会话
-  window， 一个会话可以包含多个窗口
-  pane， 一个窗口一个包含多个面板
-
-
-Layout
-
-  prefix+ space: change the layout from horizontal to vertial
-
-
-Session Operation
-
-
-  exit current session...</content>
-  </entry>
-
-  <entry>
-    <title>Shell: System Call</title>
-    <link href="/pl/pl-script-shell-system-call.html"/>
-    <updated>2017-07-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-shell-system-call</id>
-    <content type="html">
-Demo
-
-reference
-
-  System call
-
-
-</content>
-  </entry>
-
-  <entry>
-    <title>Shell: Time Schedule</title>
-    <link href="/pl/pl-script-shell-scheduling.html"/>
-    <updated>2017-07-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-shell-scheduling</id>
-    <content type="html">
-at的访问控制
-
-  如果系统中有/etc/at.allow文件，那么只有写入/etc/at.allow文件中的用户可以使用at命令，/etc/at.deny文件会被忽略
-  如果系统中没有/etc/at.allow文件，只有/etc/at.deny文件，那么写入/etc/at.deny文件中的用户不能使用at命令。对root不起作用
-  如果系统中这两个文件都不存在，那么只有root用户可以使用at命令
-
-
-常用命令
-# ctrl+d表示结束任务
-at now +5 minutes
-at&amp;gt; ls
-at&amp;gt; &amp;lt;EOT&amp;gt;
-# 查看任务列表
-atq
-# 查看任务详细信...</content>
-  </entry>
-
-  <entry>
-    <title>Shell: My Script</title>
-    <link href="/pl/pl-script-shell-my-script.html"/>
-    <updated>2017-07-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-shell-my-script</id>
-    <content type="html">
-for i in *.md
-do
-   var1=&quot;${i:0:10}&quot;
-   var2=&quot;${i:10:100}&quot;
-   echo &quot;${var1}-code${var2}&quot;
-   mv &quot;${i}&quot; &quot;${var1}-code${var2}&quot;
-done
-
-
-</content>
-  </entry>
-
-  <entry>
-    <title>Shell: Introduction</title>
-    <link href="/pl/pl-script-shell-introduction.html"/>
-    <updated>2017-07-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-shell-introduction</id>
-    <content type="html">
-####
-
-  A shell script is a computer program designed to be run by the Unix/Linux
-shell which could be one of the following:
-    
-      Bourne Shell
-      C Shell
-      The GNU Bourne-Again Shell
-    
-  
-  A shell is a command-line interpreter and typical operations performed by
-shell scripts in...</content>
-  </entry>
-
-  <entry>
-    <title>Shell: Internet</title>
-    <link href="/pl/pl-script-shell-internet.html"/>
-    <updated>2017-07-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-shell-internet</id>
-    <content type="html">
-
-  TCP/IP: Transmission Control Protocol/Internet Protocol
-  LAN: Local Area Network
-  WAN: Wide Area Network
-  DNS: Domain name system
-
-
-netstat
-
-  show network status
-  netstat -p TCP 显示tcp协议
-
-
-ip
-
-  internet protocol
-  ip addr
-
-
-Reference
-
-  Curl
-
-
-</content>
-  </entry>
-
-  <entry>
-    <title>Shell: Control Block</title>
-    <link href="/pl/pl-script-shell-control-block.html"/>
-    <updated>2017-07-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-shell-control-block</id>
-    <content type="html">
-</content>
-  </entry>
-
-  <entry>
-    <title>Shell: Find</title>
-    <link href="/pl/pl-script-shell-command-find.html"/>
-    <updated>2017-07-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-shell-command-find</id>
-    <content type="html">
-grammar
-
-find [参数]
-
-the following is some examle:
-
-
-  find . 列出当前目录及子目录下所有文件和文件夹
-  find / -cmin -15 查找最近15分钟更新的文件
-  -exec
-
-
-# -exec参数必须以\; 结尾
-# 查找当前目录下文件名为test的文件，并找到满足&quot;xxx-xxxx-xxxx&quot;规律所在行内容
-find &quot;test&quot; -exec grep -in  &quot;^[0-9]\{3\}-[0-9]\{4\}&quot; test \;
-
-
-replace the command with GNU version
-
-brew...</content>
-  </entry>
-
-  <entry>
-    <title>Command: Crontab</title>
-    <link href="/pl/pl-script-shell-command-crontab.html"/>
-    <updated>2017-07-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-shell-command-crontab</id>
-    <content type="html">
-访问控制
-
-  当系统中有/etc/cron.allow文件时，只有写入此文件的用户可以使用crontab命令。
-  当/etc/cron.allow存在时，/etc/cron.deny文件会被忽略,/etc/cron.allow文件的优先级更高
-  当系统中只有/etc/cron.deny文件时，写入此文件的用户不能使用crontab命令
-
-
-常用命令
-
-	
-		项目
-		*
-		*
-		*
-		*
-		*
-	
-	
-		含义
-		每小时中的第几分钟
-		每天当中的第几小时
-		每月当中的第几天
-		每年当中的第几月
-		每周当中的星期几
-	
-	
-		范围
-		0-59
-		0-23
-...</content>
-  </entry>
-
-  <entry>
-    <title>SSH</title>
-    <link href="/pl/pl-script-service-ssh.html"/>
-    <updated>2017-07-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-service-ssh</id>
-    <content type="html">
-介绍
-
-
-  ssh是一种协议，用于计算机之间的加密登陆。
-  用户从本地计算机通过ssh登陆到另外一台计算机，是安全的
-  ssh只是一种协议，具体由多种实现，主要讲开源的OpenSSH实现
-
-
-使用
-
-登陆
-ssh的登陆和mysql的远程登陆很像，可能mysql的底层使用的就是ssh来实现远程登陆的
-# 用户名user登陆host
-$ ssh user@host
-# 本地用户名和远程用户名相同
-$ ssh host
-# ssh的默认端口为22，使用p修改端口
-$ ssh -p user@host
-
-
-
-登陆过程
-
-
-  主机受到用户的登陆请求，把自己的公钥发给用户
-  用户使用公钥...</content>
-  </entry>
-
-  <entry>
-    <title>Editor: Vimscript</title>
-    <link href="/pl/pl-script-editor-vimscript.html"/>
-    <updated>2017-07-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-editor-vimscript</id>
-    <content type="html">
-1. Introduction
-This software is plugin system, so it is very flexible and diffcult to learn.
-it heavily depends on the plugin and shortcut to improve the efficient.
-
-
-
-2. 常用功能
-
-2.1 Setting
-
-
-  set relativenumber!
-  set cursorline
-  syntax off  I spend a lot of time to fix this simple question, ...</content>
-  </entry>
-
-  <entry>
-    <title>Editor: Vimscript Plugin</title>
-    <link href="/pl/pl-script-editor-vimscript-plugin.html"/>
-    <updated>2017-07-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-editor-vimscript-plugin</id>
-    <content type="html">
-4. Plugin
-
-  For every plugin, you can refer to the instruction about how to use them.
-  and in the vimrc file to setting.
-
-
-4.1 vundle-plugin
-
-  BundleList 查看已经安装的插件
-
-
-4.2 YouCompleteMe-plugin
-Maybe this is the most difficult plugin to install
-
-  YouCompleteMe itself work in client-server patte...</content>
-  </entry>
-
-  <entry>
-    <title>Editor: Sed</title>
-    <link href="/pl/pl-script-editor-sed.html"/>
-    <updated>2017-07-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-editor-sed</id>
-    <content type="html">
-####
-
-  \w 数字0-9，字母a-z及A-Z，下划线 因为在编程语言中，数字的命名都是数字字母下划线
-  \W 非\w
-  . 除去换行符以外的任意字符
-  [] 字符范围
-  [^…] 字符范围以外
-  ^ 行首
-  $ 行尾
-  ()  分组, 并记录匹配到的字符串
-  \n  使用分组符(x)匹配到的字符串
-    repeat
-  
-  x* x+ 贪婪匹配
-  x* x+? 非贪婪匹配
-  
-    x?      出现0次或一次
-  
-  (?:x) 仅分组
-
-
-Awk
-分割符
--F field-separator(默认为空格)
-awk -F ':' '{print...</content>
-  </entry>
-
-  <entry>
-    <title>Apple Script</title>
-    <link href="/pl/pl-script-applescript.html"/>
-    <updated>2017-07-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-applescript</id>
-    <content type="html">
-osascript -e 'tell application &quot;System Events&quot;
-    tell application &quot;Adobe Acrobat Reader DC&quot; to activate
-    keystroke &quot;h&quot; using {command down, control down}
-    end tell'
-
-
-Reference
-
-  Complete list of AppleScript key
-codes
-
-</content>
-  </entry>
-
-  <entry>
-    <title>Python: Tqdm Package</title>
-    <link href="/pl/pl-script-python-tqdm.html"/>
-    <updated>2017-06-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-tqdm</id>
-    <content type="html">
-tqdm
-
-  tqdm: means progress in Arabic
-  function: instantly make your loops show a progress meter -  just wrap any iterable with tqdm tqdm(iterable), and you are done
-
-
-useage
-
-
-  command line mode
-
-
-seq 100000000 | tqdm --total 100000000 | wc -l
-
-
-
-  python code mode
-
-
-from tqdm import tqdm
-
-f...</content>
-  </entry>
-
-  <entry>
-    <title>Pl Script Python Tool</title>
-    <link href="/pl-script-python-tool.html"/>
-    <updated>2017-06-03T00:00:00+09:00</updated>
-    <id>/pl-script-python-tool</id>
-    <content type="html">
-
-layout: post
-title: “Python: Module”
-keywords: []
-category: “PL”
-tags: [“python”,”script”]
-tags: [“python”]
-—
-
-功能
-教程python的module管理工具
-
-
-使用
-</content>
-  </entry>
-
-  <entry>
-    <title>Python: Tensorboard</title>
-    <link href="/pl/pl-script-python-tensorflow-tensorboard.html"/>
-    <updated>2017-06-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-tensorflow-tensorboard</id>
-    <content type="html">
-Introduction
-TensorBoard is a visualization software that comes with any standard Tensorflow
-installation. In Google’s words: “The compuations you’ll use Tensorflow for(like
-training a massive deep neural network)”
-
-启动tensorboard
-python /path/to/tensorflow/install/directory/tensorflow/tensorboar...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Define Variable in Tensorflow</title>
-    <link href="/pl/pl-script-python-tensorflow-sharing-variable.html"/>
-    <updated>2017-06-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-tensorflow-sharing-variable</id>
-    <content type="html">
-variable sharing
-
-It is a mechanism in Tensorflow that allows for sharing variables accessed in different part of the code
-without passing the reference around. 
-In traditional method, when you want to use the same variable in different method, you have to pass the variable by function parameter...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Obtain Variable Value in Tensorflow</title>
-    <link href="/pl/pl-script-python-tensorflow-obtain-variable.html"/>
-    <updated>2017-06-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-tensorflow-obtain-variable</id>
-    <content type="html">
-introduction
-you can treat tensorflow as a blackbox, when we want to check the tensor.
-tensorflow provide some api to get the tensor
-
-check the tensor with tf.Session()
-
-check the variable
-
-Tensorflow provides graph collections that group the variables. To access the
-variables you can run the fo...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Build Neural Network With Any Topology</title>
-    <link href="/pl/pl-script-python-tensorflow-neural-network-with-any-topology.html"/>
-    <updated>2017-06-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-tensorflow-neural-network-with-any-topology</id>
-    <content type="html">
-def layer(layer_name, data, output_channels):
-    with tf.variable_scope(layer_name,reuse=tf.AUTO_REUSE):
-        w = tf.get_variable(name=&quot;weight&quot;,shape=[data.shape[-1],output_channels])
-        b = tf.get_variable(name=&quot;bias&quot;,shape=[output_channels])
-        summary_bias = tf.summary.histogram...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Ipython with Tensorflow</title>
-    <link href="/pl/pl-script-python-tensorflow-ipython.html"/>
-    <updated>2017-06-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-tensorflow-ipython</id>
-    <content type="html">
-pitfall
-Ipython bring you the benefits, but also the pitfall
-
-how to get the lost code back in ipython
-
-when you delete the code, and you want them back, you can using the following
-method to get them back.
-
-def rescue_code(function):
-    import inspect
-        get_ipython().set_next_input(&quot;&quot;.jo...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Introduction of Tensorflow</title>
-    <link href="/pl/pl-script-python-tensorflow-intro.html"/>
-    <updated>2017-06-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-tensorflow-intro</id>
-    <content type="html">
-what is the crap of tensorflow ?
-
-  tensorflow means tensor flows in graph
-  the tensorflow defines a compute graph, and you can define operation in the graph.
-  the purpose of the compute graph is to reuse the graph model. reuse reuse reuseis the most important thing
-
-
-how to use tensorflow to ...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Concept in Tensorflow</title>
-    <link href="/pl/pl-script-python-tensorflow-concept.html"/>
-    <updated>2017-06-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-tensorflow-concept</id>
-    <content type="html">
-what the crap is the rank?
-
-  
-    The rank of a tensor is different is not the same as the rank of a matrix.
-the rank of a tensor is the number of indices required to uniquely select each element of the tensor. also
-known as “order”,”ndims” or “degree”
-  
-  
-    numpy compatibility, Equivalent ...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Broadcasting in Tensorflow</title>
-    <link href="/pl/pl-script-python-tensorflow-broadcasting-mechanism.html"/>
-    <updated>2017-06-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-tensorflow-broadcasting-mechanism</id>
-    <content type="html">
-what the crap is broadcasting ?
-Broadcasting is the process of making arrays with different shapes have
-compatible shapes for arithmetic operations.
-
-</content>
-  </entry>
-
-  <entry>
-    <title>Python: Sys</title>
-    <link href="/pl/pl-script-python-sys.html"/>
-    <updated>2017-06-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-sys</id>
-    <content type="html">
-intro
-文档sys: this module provides access to some variables used or maintained by the interpreter and to functions that interact strongly with the interpreter
-
-功能
-
-sys.path
-
-The interpreter finds [import package] according to the order of path in the sys.path list.
-
-print(sys.path)
-# system path
-...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Statement</title>
-    <link href="/pl/pl-script-python-statement.html"/>
-    <updated>2017-06-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-statement</id>
-    <content type="html">
-layout: post
- title: “pythonIO”
- keywords: [“python”, “IO”] 
-description: “python”
- category: “python”
- tags: [“language”, “IO”]
-
-colon: used chiefly to direct attention to matter as a list, explanation,quotation,or amplification that follows
-//与c++和java相比,最大的特点就是去掉了()
-for &amp;lt;statement&amp;gt; in &amp;...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Sklearn</title>
-    <link href="/pl/pl-script-python-sklearn.html"/>
-    <updated>2017-06-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-sklearn</id>
-    <content type="html">
-Component of scikit-learn
-
-
-  Supervised learning algorithms:  LR(Linear Regression), SVM(Support Vector Machine), Decision Trees, and Bayesian
-  Unsupervised learning algorithms: Clustering, PCA(principal component analysis)
-  Various toy datasets: IRIS dataset,Boston house prices dataset
-
-
-</content>
-  </entry>
-
-  <entry>
-    <title>Python: Scipy Module</title>
-    <link href="/pl/pl-script-python-scipy.html"/>
-    <updated>2017-06-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-scipy</id>
-    <content type="html">
-statis
-
-
-  this module contains the common distribution, like uniform distribution, norm
-distribution, poisson distribution, binom distribution etc.
-  There are common functions among all these distributions. like rvs which
-generates random variables,cdf function
-
-
-
-  RV: random variables
-  cdf:...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Pyqtgraph</title>
-    <link href="/pl/pl-script-python-pyqtgraph.html"/>
-    <updated>2017-06-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-pyqtgraph</id>
-    <content type="html">
-what’s pyqtgraph
-pyqtgraph is born for dynamic graph, matplotlib is for static graph.
-
-demo
-
-import numpy as np
-import pyqtgraph as pg
-
-# create the app
-app = pg.mkQApp()
-win = pg.GraphicsWindow()
-win.resize(600,400)
-p = win.addPlot()
-curve = p.plot()
-
-data = []
-idx = 0
-N = 200
-
-def updateCurveD...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Pyqt5 Menu Event Handling</title>
-    <link href="/pl/pl-script-python-pyqt5-menu-action.html"/>
-    <updated>2017-06-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-pyqt5-menu-action</id>
-    <content type="html">
-Event Handling
-
-  used the Code Integrated Template
-  click File-&amp;gt;Open, pop up dialoge
-
-
-# -*- coding: utf-8 -*-
-
-# Form implementation generated from reading ui file 'menu.ui'
-#
-# Created by: PyQt5 UI code generator 5.9.2
-#
-# WARNING! All changes made in this file will be lost!
-
-from PyQt5 i...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Picture Display</title>
-    <link href="/pl/pl-script-python-pyqt5-display-image.html"/>
-    <updated>2017-06-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-pyqt5-display-image</id>
-    <content type="html">
-Display a picutre
-In nature, There is no difference between text label and picture label. 
-So, you can put a picture in a label. 
-Programming look into the essence of the world.
-
-import sys
-from PyQt5.QtWidgets import QApplication, QWidget, QLabel
-from PyQt5.QtGui import QIcon, QPixmap
-import ma...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Code Integrated Template of QT Designer and Pyqt5</title>
-    <link href="/pl/pl-script-python-pyqt-qtdesigner-code-template.html"/>
-    <updated>2017-06-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-pyqt-qtdesigner-code-template</id>
-    <content type="html">
-signal and slot
-If you have a programming backgound, you may hear about event handling where you interact with a widget
-and a function is executed. 
-The idea in PyQt5 is the same but definitions are a bit different. 
-So when you click a QPushButton, a signal is emitted. The signal name in this c...</content>
-  </entry>
-
-  <entry>
-    <title>Python: For Loop</title>
-    <link href="/pl/pl-script-python-principal-iterator.html"/>
-    <updated>2017-06-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-principal-iterator</id>
-    <content type="html">
-what the crap of iterator protocol?
-
-  Just as Javabean protocol, a JavaBean Class is  the kind of class that has a getter() and setter() method for every Class 
-In python, the iterator protocol is that one method needs to be defined for container objects to provide iteration support 
-container....</content>
-  </entry>
-
-  <entry>
-    <title>Python:  pdb</title>
-    <link href="/pl/pl-script-python-pdb.html"/>
-    <updated>2017-06-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-pdb</id>
-    <content type="html">
-initiate pdb
-
-python3 -m pdb foo.py
-
-
-add breakpoint
-
-import pdb
-pdb.set_trace()
-
-
-Stepping through code
-
-One of the strongest feature of pdb is that we can move through our code in various ways:
-
-
-  n(ext): n command runs the code on current line at full-speed and takes us to the next line in t...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Pandas </title>
-    <link href="/pl/pl-script-python-pandas.html"/>
-    <updated>2017-06-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-pandas</id>
-    <content type="html">名字由来: panel data和data analysis。panel data是经济学中关于多维数据集的一个术语
-，pandas也提供了panel的数据类型。
-
-what is the difference between Series and DataFrame ?
-
-  According to Pandas Docs DataFrame
-can be thought as a dict-like container for Series Objects
-  As Pandas can be thought as a dict-like container for Series ...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Package Manager</title>
-    <link href="/pl/pl-script-python-package-manager.html"/>
-    <updated>2017-06-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-package-manager</id>
-    <content type="html">
-1. Pip
-
-1.1 Install
-
-pip install tensorflow==1.13.2
-
-
-install package by python3
-
-python3 -m pip install matplotlib
-
-
-2. Conda
-
-2.1 Install
-
-conda install matplotlib
-
-
-Prompt
-
-  There is a prompt in your terminal which says “base”, it means your
-environment, you can turn it off by the following ...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Os module</title>
-    <link href="/pl/pl-script-python-os.html"/>
-    <updated>2017-06-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-os</id>
-    <content type="html">intro
-os: this module provides a portable way of using operating system dependent
-functionality
-功能
-
-
-常用功能
-import os
-# 清屏
-os.system('clear')
-# 获得当前文件名
-os.path.abspath(__file__)
-# 获得当前文件所在位置的目录名
-os.getcwd()         
-
-
-
-目录操作
-
-  os.walk(top，topdown)
-  top根目录下的每一个文件夹包括他自己，产生三元组(dirpath,dirnames,filena...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Operator</title>
-    <link href="/pl/pl-script-python-operator-module.html"/>
-    <updated>2017-06-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-operator-module</id>
-    <content type="html">
-method
-
-  operator.itemgetter(items): return a callable object that fetches item from its operand, using the operand’s getitem()
-  f = itemgetter(2), the call f(r) returns r[2]
-  f = itemgetter(2, 5, 3), the call g(r) returns (r[2], r[5], r[3])
-
-
-itemgetter(1,3,5)('ABCDEFG')
-# ('B', 'D', 'F')
-
-#...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Asterisk Operator</title>
-    <link href="/pl/pl-script-python-operator-asterisk.html"/>
-    <updated>2017-06-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-operator-asterisk</id>
-    <content type="html">
-Introduction
-Asterisk plays very important role in python
-
-packing the containers
-
-review the following code
-def demo(*args, **kwargs):
-    print(args,&quot; and &quot;,kwargs)     
-demo('ha', 'big', third='wilson', fourth='roy')
-
-
-  the asterisk mark before args is not used to get the address or content ...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Openml</title>
-    <link href="/pl/pl-script-python-openml.html"/>
-    <updated>2017-06-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-openml</id>
-    <content type="html">
-what the crap of openml
-
-An automated machine learning environment.
-
-import openml
-
-# obtain dataset list
-dataset_list = openml.datasets.list_datasets()
-dataset_list_pd = pd.DataFrame.from_dict(dataset_list,orient='index')
-
-# get the mnist dataset ID
-dataset_list_pd[dataset_list_pd.name.str.cont...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Numpy</title>
-    <link href="/pl/pl-script-python-numpy.html"/>
-    <updated>2017-06-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-numpy</id>
-    <content type="html">
-random module
-This module is consists of two components, they are 
-
-  simple random data
-  Distributions, such as uniform distribution, normal distribution,poisson distribution etc.
-
-
-np.random.uniform(-2,2,(3,4))
-
-
-common function
-
-np.where()
-
-  The input argument of this API is bool value
-  th...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Module</title>
-    <link href="/pl/pl-script-python-module.html"/>
-    <updated>2017-06-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-module</id>
-    <content type="html">
-name属性
-the name attribute must be set to the fully-qualified name of the module. this
-name is used to uniquely identify the module in the import system
-</content>
-  </entry>
-
-  <entry>
-    <title>Python: Matplotlib and Seaborn</title>
-    <link href="/pl/pl-script-python-matplotlib-seaborn.html"/>
-    <updated>2017-06-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-matplotlib-seaborn</id>
-    <content type="html">
-matplotlib
-
-how to plot
-The general method of use this module to generate a fig
-
-
-  obtain a Figure instance
-  obtain a AxesSubplot instance
-  use AxesSubplot instance to plot
-
-
-import matplotlib.pyplot as plt
-
-# obtain Figure instance 
-fig = plt.figure()
-# 2 obtain AxesSubplot instance axes1
-ax...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Lambda Expression</title>
-    <link href="/pl/pl-script-python-lambda-expression.html"/>
-    <updated>2017-06-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-lambda-expression</id>
-    <content type="html">
-numbers = (1, 2, 3, 4)
-result = map(lambda x: x*x, numbers)
-print(result)
-
-# converting map object to set
-numbersSquare = set(result)
-print(numbersSquare)
-
-
-</content>
-  </entry>
-
-  <entry>
-    <title>Python: Keyword</title>
-    <link href="/pl/pl-script-python-keyword.html"/>
-    <updated>2017-06-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-keyword</id>
-    <content type="html">
-pass
-
-# 占位语句，啥都不干
-# 保证格式或是语义的完整性
-for i in range(10):
-    pass
-    print(i)
-
-
-global,local and nonlocal
-
-  global variables, a variable declared outside of the function or in global scope is known as global variable. This means, global variable can be
-accessed inside or outside of the function.
- ...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Keras</title>
-    <link href="/pl/pl-script-python-keras-model.html"/>
-    <updated>2017-06-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-keras-model</id>
-    <content type="html">
-from keras.models import load_model
-model=load_model('model.h5')
-# x is test data
-y=model.predict(x)
-print(y)
-
-
-</content>
-  </entry>
-
-  <entry>
-    <title>Python: Input and Output Stream</title>
-    <link href="/pl/pl-script-python-io.html"/>
-    <updated>2017-06-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-io</id>
-    <content type="html">
-what the crap is a context manager?
-
-The main motivation behind the context manager in python is a source acquisition and release mechanism
-which prevents resource leak
-
-what is CSV?
-
-CSV stands for comma separated values, it’s just another plain text file.
-
-Input and Output of CSV file
-
-import ...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Introduction</title>
-    <link href="/pl/pl-script-python-intro.html"/>
-    <updated>2017-06-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-intro</id>
-    <content type="html">
-语言类型
-
-  python不允许隐士类型转换，强类型语言
-  python可以在程序运行时改变其结构，是动态语言
-
-
-
-历史问题
-官方文档c++选择向下兼容c，很负责；
-python3不向下兼容python2,抛弃累赘。
-
-在python中, 变量是没有类型的; 类型属于对象。
-java是面向对象的，可是并不彻底。python是彻底面向对象的，int类型也是对象
-面向对象只是一种编程思想，它的实现还是函数那一套。
-
-java和c++都是有函数入口的，即为main函数。
-python没有所谓的main函数，从脚本的起始位置开始执行。
-
-c++通过include包含相关头文件和库
-jav...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Inspect Module</title>
-    <link href="/pl/pl-script-python-inspect.html"/>
-    <updated>2017-06-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-inspect</id>
-    <content type="html">
-function: get the source code
-
-import inspect
-from scipy.stats import bernoulli
-
-code = inspect.getsource(bernoulli.rvs)
-print(code)
-
-
-</content>
-  </entry>
-
-  <entry>
-    <title>Python: Function</title>
-    <link href="/pl/pl-script-python-function.html"/>
-    <updated>2017-06-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-function</id>
-    <content type="html">
-function
-Function is the first-class citizen in python
-
-Function Calls
-
-  Pass by value
-  Pass by reference
-  Pass by Object reference
-Python is a PASS-BY-OBJECT-REFERENCE programming language
-
-
-*args and **kwargs
-
-
-  in a function, use the symbol * to take in a variable number of arguments, by ...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Exception</title>
-    <link href="/pl/pl-script-python-exception.html"/>
-    <updated>2017-06-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-exception</id>
-    <content type="html">with...as...
-
-class Demo:
-    def __enter__(self):
-        print(&quot;enter function&quot;)
-        return &quot;Foo&quot;
-
-    def __exit__(self, exc_type, exc_val, exc_tb):
-        print(&quot;exit&quot;)
-
-with Demo() as demo:
-    print(&quot;hello&quot;)
-# __enter__
-# __exit__可以处理异常参数
-
-</content>
-  </entry>
-
-  <entry>
-    <title>Python: Common Error</title>
-    <link href="/pl/pl-script-python-error-debug.html"/>
-    <updated>2017-06-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-error-debug</id>
-    <content type="html">
-NoneType error
-
-whenever you see an error that include ‘NoneType’ that means you have an operand
-or an object that is None when you expecting something else.
-
-invalid syntax
-when you encounter this error in python, probably you make a error. 
-and the line number with the invalid syntax is not th...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Meta-functiion</title>
-    <link href="/pl/pl-script-python-data-type.html"/>
-    <updated>2017-06-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-data-type</id>
-    <content type="html">
-None
-# None是一个空对象，没有方法和属性
-
-
-数据类型间的转换
-
-str(var)     #转化为str类型
-int(var)     #转化为int类型
-
-
-</content>
-  </entry>
-
-  <entry>
-    <title>Python Copy</title>
-    <link href="/pl/pl-script-python-copy.html"/>
-    <updated>2017-06-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-copy</id>
-    <content type="html">
-copy in Python
-In Python, Assignment statements do not copy objects, they create bindings between a target and an object. 
-When we use = operator user thinks that this creates a new object; well, it doesn’t. It only creates a new  
-variable that shares the reference of the original object. 
-
-dee...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Container</title>
-    <link href="/pl/pl-script-python-container.html"/>
-    <updated>2017-06-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-container</id>
-    <content type="html">
-intro
-python里的元组,列表和字典类比c++中的顺序容器和关联容器来理解。
-c++的容器只是容器，并没有提供算法。python的容器提供了非常多的算法.
-
-
-list
-
-
-list.append(var)  #向容器中添加元素
-
-
-tuple
-元组产生的原因: return语句只能返回单个对象，将一组对象直接打包存储于其中的一个单一对象，这个对象叫做元组
-
-
-
-dictionary
-foo={&quot;x&quot;:3,&quot;y&quot;:4};
-foo[&quot;x&quot;];
-
-</content>
-  </entry>
-
-  <entry>
-    <title>Python: Collections and Algorithm</title>
-    <link href="/pl/pl-script-python-collections.html"/>
-    <updated>2017-06-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-collections</id>
-    <content type="html">
-Collections
-
-what is collections module
-
-  
-    Collections in Python are containers that are used to store collections of
-data, for example, list, dict, set, tuple etc. These are built-in
-collections. Several modules have been developed that provide additional data
-structures to store collectio...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Closure</title>
-    <link href="/pl/pl-script-python-closure.html"/>
-    <updated>2017-06-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-closure</id>
-    <content type="html">
-Why Closures?
-All the crap comes out because of the concept of non-local variable. First let’s define some concept.
-
-  nested funciton: A function defined inside another function is called nested function.
-
-
-The Criteria of a Closure
-
-  it must have a nested function (function inside a function)...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Class</title>
-    <link href="/pl/pl-script-python-class.html"/>
-    <updated>2017-06-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-class</id>
-    <content type="html">
-create
-
-python是有Unix shell和c的语法习惯，c是没有new关键字的，所以python也没有，创建对象直接调用构造函数。
-
-# self表示this指针
-class Test:
-    def my_print(self):
-        print(self)
-        print(self.__class__)
-
-t = Test()
-t.my_print()
-Test.my_print(t)
-
-
-
-多态
-
-class Duck:
-    def __init__(self):
-	    print(&quot;__init__&quot;)
- 
-    def slee...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Built-in Function</title>
-    <link href="/pl/pl-script-python-built-in-function.html"/>
-    <updated>2017-06-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-built-in-function</id>
-    <content type="html">
-built-in function
-dir()
-# 作用: 显示对象或模块的方法和属性
-var = 3
-dir(var)
-
-
-zip function
-
-
-  grammar: zip(*iterables)
-  function: make an iterator that aggregates from each of the iterables
-
-
-x = [2,3,5]
-y = [5,8,3]
-z = [2,9,1]
-list(zip(x,y,z))
-
-
-reference
-
-  official document
-
-
-</content>
-  </entry>
-
-  <entry>
-    <title>Python: List, Dict and Tuple</title>
-    <link href="/pl/pl-script-python-built-in-data-structure.html"/>
-    <updated>2017-06-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-built-in-data-structure</id>
-    <content type="html">
-dict
-
-my_dict = {'a':4,'b':5}
-for key,value in my_dict.items():
-    print(key,value)
-# print value
-a 4
-b 5
-
-
-common mistake about tuple
-
-If we print the variable index, and the output is like the code in the comment line. 
-it means, it is a tuple, and the first element is an array
-
-a = [1,3,4,5,...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Argparse</title>
-    <link href="/pl/pl-script-python-argparse.html"/>
-    <updated>2017-06-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-argparse</id>
-    <content type="html">
-该module主要有两个参数分别为Positional arguments和Optional arguments
-positional arguments 作为命令行运行的时候必须有
-optional arguments   作为命令行运行的时候可有可无
-区别:positional arguments使用时候前没有’-‘或者’–‘符号，参数只要一个就是它本身
-     optional arguments前面有’-‘和’–‘,后面有别的参数
-
-使用方式
-positional arguments
-import argparse
-parser = argparse.ArgumentPars...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Juypter</title>
-    <link href="/pl/pl-script-python-anaconda-jupyter.html"/>
-    <updated>2017-06-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-anaconda-jupyter</id>
-    <content type="html">
-how to use
-
-sudo jupyter notebook --allow-root
-
-
-integrated with matplotlib
-put %matplotlib inline in the first cell of the notebook to plot
-%matplotlib inline
-
-import matplotlib
-import numpy as np
-import matplotlib.pyplot as plt
-
-
-set default brower for
-
-
-  first, you need to generate the jupyt...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Container</title>
-    <link href="/pl/pl-script-python-algorthim.html"/>
-    <updated>2017-06-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-algorthim</id>
-    <content type="html">常见的容器有list, tuple, dictionary提供相同的算法
-len(var)  #元素个数
-max(var)  #元素最大值
-min(var)  #元素最小值
-
-
-</content>
-  </entry>
-
-  <entry>
-    <title>Python: Qt Designer</title>
-    <link href="/pl/pl-script-python-QT-designer.html"/>
-    <updated>2017-06-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-QT-designer</id>
-    <content type="html">
-Widget
-
-  TextLabel: what does label mean? According to Merriam-Webster: to put a word
-or name on something to describe or identify it.
-  Graphics View: what does view mean? According to Merriam-Webster: it is a
-picture of a place So Graphics View jus a place to put picture.  So Tree
-view, List ...</content>
-  </entry>
-
-  <entry>
-    <title>Python: PIL package</title>
-    <link href="/pl/pl-script-python-PIL.html"/>
-    <updated>2017-06-03T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-PIL</id>
-    <content type="html">
-what is PIL
-
-convert between a PIL Image and a numpy array
-
-from PIL import Image
-import numpy as np
-
-# the conversion from Image to array
-im = Image.open(&quot;sample.png&quot;)
-np\_im = np.array(im)
-print(np\_im.shape)
-
-# the conversion from array to Image
-new_im = Image.fromarray(np_im)
-# for grey imag...</content>
+      ${project.build.directory} 表示主源码路径，默认为target
+      ${project.build.outputDirectory} 构建过程输出目录，默认为target/classe...</content>
   </entry>
 
   <entry>
     <title>Java: 多线程</title>
     <link href="/pl/pl-compile-java-thread.html"/>
-    <updated>2017-04-06T00:00:00+09:00</updated>
+    <updated>2018-04-01T00:00:00+09:00</updated>
     <id>/pl/pl-compile-java-thread</id>
     <content type="html">
 创建与启动
@@ -10996,7 +10974,7 @@ for(int i=0;i&amp;lt;10;i++){
   <entry>
     <title>Java: String</title>
     <link href="/pl/pl-compile-java-string.html"/>
-    <updated>2017-04-06T00:00:00+09:00</updated>
+    <updated>2018-04-01T00:00:00+09:00</updated>
     <id>/pl/pl-compile-java-string</id>
     <content type="html">
 介绍
@@ -11015,7 +10993,7 @@ for(int i=0;i&amp;lt;10;i++){
   <entry>
     <title>Java: Socket</title>
     <link href="/pl/pl-compile-java-socket.html"/>
-    <updated>2017-04-06T00:00:00+09:00</updated>
+    <updated>2018-04-01T00:00:00+09:00</updated>
     <id>/pl/pl-compile-java-socket</id>
     <content type="html">
 socket阻塞
@@ -11038,7 +11016,7 @@ public class Client {
   <entry>
     <title>Java: reflection</title>
     <link href="/pl/pl-compile-java-reflection.html"/>
-    <updated>2017-04-06T00:00:00+09:00</updated>
+    <updated>2018-04-01T00:00:00+09:00</updated>
     <id>/pl/pl-compile-java-reflection</id>
     <content type="html">
 Intro
@@ -11071,34 +11049,9 @@ Class字面常量
   </entry>
 
   <entry>
-    <title>Java: Jvm</title>
-    <link href="/pl/pl-compile-java-jvm.html"/>
-    <updated>2017-04-06T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-java-jvm</id>
-    <content type="html">
-class文件的组织结构
-.class文件是由子节组成的文件，又叫字节码文件
-
-
-魔数
-由java编译器编译而成的class文件的前四个字节都是“OxCAFEBABE”
-作用，即JVM在尝试加载某个文件到内存中的时候，会首先判断此class文件有没有JVM认为可以接受的”签名”，即JVM会首先读取文件的前四个字节，判断这四个字节是否是”0xCAFEBABE”,如果是则JVM会认为可以将此冷箭当作class文件来加载使用
-
-
-版本号
-
-垃圾回收机制
-
-
-垃圾回收算法
-
-  标记-清除算法，首先标记出所有需要回收的对象，然后回收所有需要回收的对象，该算法缺点是内存块回收之后不连续，导致下一...</content>
-  </entry>
-
-  <entry>
     <title>Java: IO</title>
     <link href="/pl/pl-compile-java-io.html"/>
-    <updated>2017-04-06T00:00:00+09:00</updated>
+    <updated>2018-04-01T00:00:00+09:00</updated>
     <id>/pl/pl-compile-java-io</id>
     <content type="html">
 intro
@@ -11132,7 +11085,7 @@ os.write(...</content>
   <entry>
     <title>Java: Interface</title>
     <link href="/pl/pl-compile-java-interface.html"/>
-    <updated>2017-04-06T00:00:00+09:00</updated>
+    <updated>2018-04-01T00:00:00+09:00</updated>
     <id>/pl/pl-compile-java-interface</id>
     <content type="html">
 特征
@@ -11147,7 +11100,7 @@ os.write(...</content>
   <entry>
     <title>Java: Enum</title>
     <link href="/pl/pl-compile-java-enum.html"/>
-    <updated>2017-04-06T00:00:00+09:00</updated>
+    <updated>2018-04-01T00:00:00+09:00</updated>
     <id>/pl/pl-compile-java-enum</id>
     <content type="html">
 intro
@@ -11165,9 +11118,9 @@ class Weekday{
   </entry>
 
   <entry>
-    <title>JAVA: Copy Control</title>
+    <title>Java: Copy Control</title>
     <link href="/pl/pl-compile-java-copy-control.html"/>
-    <updated>2017-04-06T00:00:00+09:00</updated>
+    <updated>2018-04-01T00:00:00+09:00</updated>
     <id>/pl/pl-compile-java-copy-control</id>
     <content type="html">
 intro
@@ -11198,7 +11151,7 @@ class Foo{
   <entry>
     <title>Java: Container</title>
     <link href="/pl/pl-compile-java-container.html"/>
-    <updated>2017-04-06T00:00:00+09:00</updated>
+    <updated>2018-04-01T00:00:00+09:00</updated>
     <id>/pl/pl-compile-java-container</id>
     <content type="html">
 
@@ -11241,7 +11194,7 @@ intro
   <entry>
     <title>Java: Command Line</title>
     <link href="/pl/pl-compile-java-cmd.html"/>
-    <updated>2017-04-06T00:00:00+09:00</updated>
+    <updated>2018-04-01T00:00:00+09:00</updated>
     <id>/pl/pl-compile-java-cmd</id>
     <content type="html">
 运行
@@ -11268,7 +11221,7 @@ javac -d . HelloServlet.jav...</content>
   <entry>
     <title>Java: Class</title>
     <link href="/pl/pl-compile-java-class.html"/>
-    <updated>2017-04-06T00:00:00+09:00</updated>
+    <updated>2018-04-01T00:00:00+09:00</updated>
     <id>/pl/pl-compile-java-class</id>
     <content type="html">
 类的三大特点，封装，继承和多态，集中封装和继承是多态的基础
@@ -11308,7 +11261,7 @@ java中使用static关键字声明的代码块，静态代码块用于初始化�
   <entry>
     <title>Java: Class Loader</title>
     <link href="/pl/pl-compile-java-class-load.html"/>
-    <updated>2017-04-06T00:00:00+09:00</updated>
+    <updated>2018-04-01T00:00:00+09:00</updated>
     <id>/pl/pl-compile-java-class-load</id>
     <content type="html">
 
@@ -11347,7 +11300,7 @@ intro
   <entry>
     <title>Java: Annotation</title>
     <link href="/pl/pl-compile-java-annotation.html"/>
-    <updated>2017-04-06T00:00:00+09:00</updated>
+    <updated>2018-04-01T00:00:00+09:00</updated>
     <id>/pl/pl-compile-java-annotation</id>
     <content type="html">
 介绍
@@ -11386,7 +11339,7 @@ package tuesd...</content>
   <entry>
     <title>Java: Array</title>
     <link href="/pl/pl-compile-java-System.html"/>
-    <updated>2017-04-06T00:00:00+09:00</updated>
+    <updated>2018-04-01T00:00:00+09:00</updated>
     <id>/pl/pl-compile-java-System</id>
     <content type="html">
 arraycopy
@@ -11413,7 +11366,7 @@ void foo(){
   <entry>
     <title>Java: Enumberation</title>
     <link href="/pl/pl-compile-java-Enumeration.html"/>
-    <updated>2017-04-06T00:00:00+09:00</updated>
+    <updated>2018-04-01T00:00:00+09:00</updated>
     <id>/pl/pl-compile-java-Enumeration</id>
     <content type="html">
 作用
@@ -11431,7 +11384,7 @@ pubic interface Enumeration&amp;lt;E&amp;gt;{
   <entry>
     <title>Java: Calendar</title>
     <link href="/pl/pl-compile-java-Calendar.html"/>
-    <updated>2017-04-06T00:00:00+09:00</updated>
+    <updated>2018-04-01T00:00:00+09:00</updated>
     <id>/pl/pl-compile-java-Calendar</id>
     <content type="html">
 Calendar
@@ -11449,7 +11402,7 @@ System.out.println(calendar.get(Calendar.YEAR));
   <entry>
     <title>Java: BigDecimal</title>
     <link href="/pl/pl-compile-java-BigDecimal.html"/>
-    <updated>2017-04-06T00:00:00+09:00</updated>
+    <updated>2018-04-01T00:00:00+09:00</updated>
     <id>/pl/pl-compile-java-BigDecimal</id>
     <content type="html">
 作用
@@ -11467,6 +11420,1574 @@ System.out.println(calendar.get(Calendar.YEAR));
 代码
 BigDecimal bd=new BigDecimal(&quot;0.06&quot;);
 System.out.println(bd.add(new BigDecimal(&quot;0.01&quot;)));
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Python: Environment</title>
+    <link href="/pl/pl-script-python-envrionment.html"/>
+    <updated>2018-03-03T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-envrionment</id>
+    <content type="html">Reference
+
+  pyenv
+  how to set a default python3
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Python: Package Manager</title>
+    <link href="/pl/pl-script-python-package-manager.html"/>
+    <updated>2018-03-02T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-package-manager</id>
+    <content type="html">
+1. Pip
+
+1.1 Install
+
+pip install tensorflow==1.13.2
+
+
+install package by python3
+
+python3 -m pip install matplotlib
+
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Python: Tqdm Package</title>
+    <link href="/pl/pl-script-python-tqdm.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-tqdm</id>
+    <content type="html">
+tqdm
+
+  tqdm: means progress in Arabic
+  function: instantly make your loops show a progress meter -  just wrap any iterable with tqdm tqdm(iterable), and you are done
+
+
+useage
+
+
+  command line mode
+
+
+seq 100000000 | tqdm --total 100000000 | wc -l
+
+
+
+  python code mode
+
+
+from tqdm import tqdm
+
+f...</content>
+  </entry>
+
+  <entry>
+    <title>Pl Script Python Tool</title>
+    <link href="/pl-script-python-tool.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl-script-python-tool</id>
+    <content type="html">
+
+layout: post
+title: “Python: aaaaModule”
+keywords: []
+category: “PL”
+tags: [“python”,”script”]
+—
+
+功能
+教程python的module管理工具
+
+
+使用
+</content>
+  </entry>
+
+  <entry>
+    <title>Python: Tensorboard</title>
+    <link href="/pl/pl-script-python-tensorflow-tensorboard.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-tensorflow-tensorboard</id>
+    <content type="html">
+Introduction
+TensorBoard is a visualization software that comes with any standard Tensorflow
+installation. In Google’s words: “The compuations you’ll use Tensorflow for(like
+training a massive deep neural network)”
+
+启动tensorboard
+python /path/to/tensorflow/install/directory/tensorflow/tensorboar...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Define Variable in Tensorflow</title>
+    <link href="/pl/pl-script-python-tensorflow-sharing-variable.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-tensorflow-sharing-variable</id>
+    <content type="html">
+variable sharing
+
+It is a mechanism in Tensorflow that allows for sharing variables accessed in different part of the code
+without passing the reference around. 
+In traditional method, when you want to use the same variable in different method, you have to pass the variable by function parameter...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Obtain Variable Value in Tensorflow</title>
+    <link href="/pl/pl-script-python-tensorflow-obtain-variable.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-tensorflow-obtain-variable</id>
+    <content type="html">
+introduction
+you can treat tensorflow as a blackbox, when we want to check the tensor.
+tensorflow provide some api to get the tensor
+
+check the tensor with tf.Session()
+
+check the variable
+
+Tensorflow provides graph collections that group the variables. To access the
+variables you can run the fo...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Build Neural Network With Any Topology</title>
+    <link href="/pl/pl-script-python-tensorflow-neural-network-with-any-topology.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-tensorflow-neural-network-with-any-topology</id>
+    <content type="html">
+def layer(layer_name, data, output_channels):
+    with tf.variable_scope(layer_name,reuse=tf.AUTO_REUSE):
+        w = tf.get_variable(name=&quot;weight&quot;,shape=[data.shape[-1],output_channels])
+        b = tf.get_variable(name=&quot;bias&quot;,shape=[output_channels])
+        summary_bias = tf.summary.histogram...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Ipython with Tensorflow</title>
+    <link href="/pl/pl-script-python-tensorflow-ipython.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-tensorflow-ipython</id>
+    <content type="html">
+pitfall
+Ipython bring you the benefits, but also the pitfall
+
+how to get the lost code back in ipython
+
+when you delete the code, and you want them back, you can using the following
+method to get them back.
+
+def rescue_code(function):
+    import inspect
+        get_ipython().set_next_input(&quot;&quot;.jo...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Introduction of Tensorflow</title>
+    <link href="/pl/pl-script-python-tensorflow-intro.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-tensorflow-intro</id>
+    <content type="html">
+what is the crap of tensorflow ?
+
+  tensorflow means tensor flows in graph
+  the tensorflow defines a compute graph, and you can define operation in the graph.
+  the purpose of the compute graph is to reuse the graph model. reuse reuse reuseis the most important thing
+
+
+how to use tensorflow to ...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Concept in Tensorflow</title>
+    <link href="/pl/pl-script-python-tensorflow-concept.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-tensorflow-concept</id>
+    <content type="html">
+what the crap is the rank?
+
+  
+    The rank of a tensor is different is not the same as the rank of a matrix.
+the rank of a tensor is the number of indices required to uniquely select each element of the tensor. also
+known as “order”,”ndims” or “degree”
+  
+  
+    numpy compatibility, Equivalent ...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Broadcasting in Tensorflow</title>
+    <link href="/pl/pl-script-python-tensorflow-broadcasting-mechanism.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-tensorflow-broadcasting-mechanism</id>
+    <content type="html">
+what the crap is broadcasting ?
+Broadcasting is the process of making arrays with different shapes have
+compatible shapes for arithmetic operations.
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Python: Sys</title>
+    <link href="/pl/pl-script-python-sys.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-sys</id>
+    <content type="html">
+intro
+文档sys: this module provides access to some variables used or maintained by the interpreter and to functions that interact strongly with the interpreter
+
+功能
+
+sys.path
+
+The interpreter finds [import package] according to the order of path in the sys.path list.
+
+print(sys.path)
+# system path
+...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Statement</title>
+    <link href="/pl/pl-script-python-statement.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-statement</id>
+    <content type="html">
+layout: post
+ title: “pythonIO”
+ keywords: [“python”, “IO”] 
+description: “python”
+ category: “python”
+ tags: [“language”, “IO”]
+
+colon: used chiefly to direct attention to matter as a list, explanation,quotation,or amplification that follows
+//与c++和java相比,最大的特点就是去掉了()
+for &amp;lt;statement&amp;gt; in &amp;...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Sklearn</title>
+    <link href="/pl/pl-script-python-sklearn.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-sklearn</id>
+    <content type="html">
+Component of scikit-learn
+
+
+  Supervised learning algorithms:  LR(Linear Regression), SVM(Support Vector Machine), Decision Trees, and Bayesian
+  Unsupervised learning algorithms: Clustering, PCA(principal component analysis)
+  Various toy datasets: IRIS dataset,Boston house prices dataset
+
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Python: Scipy Module</title>
+    <link href="/pl/pl-script-python-scipy.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-scipy</id>
+    <content type="html">
+statis
+
+
+  this module contains the common distribution, like uniform distribution, norm
+distribution, poisson distribution, binom distribution etc.
+  There are common functions among all these distributions. like rvs which
+generates random variables,cdf function
+
+
+
+  RV: random variables
+  cdf:...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Pyqtgraph</title>
+    <link href="/pl/pl-script-python-pyqtgraph.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-pyqtgraph</id>
+    <content type="html">
+what’s pyqtgraph
+pyqtgraph is born for dynamic graph, matplotlib is for static graph.
+
+demo
+
+import numpy as np
+import pyqtgraph as pg
+
+# create the app
+app = pg.mkQApp()
+win = pg.GraphicsWindow()
+win.resize(600,400)
+p = win.addPlot()
+curve = p.plot()
+
+data = []
+idx = 0
+N = 200
+
+def updateCurveD...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Pyqt5 Menu Event Handling</title>
+    <link href="/pl/pl-script-python-pyqt5-menu-action.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-pyqt5-menu-action</id>
+    <content type="html">
+Event Handling
+
+  used the Code Integrated Template
+  click File-&amp;gt;Open, pop up dialoge
+
+
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'menu.ui'
+#
+# Created by: PyQt5 UI code generator 5.9.2
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 i...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Picture Display</title>
+    <link href="/pl/pl-script-python-pyqt5-display-image.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-pyqt5-display-image</id>
+    <content type="html">
+Display a picutre
+In nature, There is no difference between text label and picture label. 
+So, you can put a picture in a label. 
+Programming look into the essence of the world.
+
+import sys
+from PyQt5.QtWidgets import QApplication, QWidget, QLabel
+from PyQt5.QtGui import QIcon, QPixmap
+import ma...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Code Integrated Template of QT Designer and Pyqt5</title>
+    <link href="/pl/pl-script-python-pyqt-qtdesigner-code-template.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-pyqt-qtdesigner-code-template</id>
+    <content type="html">
+signal and slot
+If you have a programming backgound, you may hear about event handling where you interact with a widget
+and a function is executed. 
+The idea in PyQt5 is the same but definitions are a bit different. 
+So when you click a QPushButton, a signal is emitted. The signal name in this c...</content>
+  </entry>
+
+  <entry>
+    <title>Python: For Loop</title>
+    <link href="/pl/pl-script-python-principal-iterator.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-principal-iterator</id>
+    <content type="html">
+what the crap of iterator protocol?
+
+  Just as Javabean protocol, a JavaBean Class is  the kind of class that has a getter() and setter() method for every Class 
+In python, the iterator protocol is that one method needs to be defined for container objects to provide iteration support 
+container....</content>
+  </entry>
+
+  <entry>
+    <title>Python:  pdb</title>
+    <link href="/pl/pl-script-python-pdb.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-pdb</id>
+    <content type="html">
+initiate pdb
+
+python3 -m pdb foo.py
+
+
+add breakpoint
+
+import pdb
+pdb.set_trace()
+
+
+Stepping through code
+
+One of the strongest feature of pdb is that we can move through our code in various ways:
+
+
+  n(ext): n command runs the code on current line at full-speed and takes us to the next line in t...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Pandas </title>
+    <link href="/pl/pl-script-python-pandas.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-pandas</id>
+    <content type="html">名字由来: panel data和data analysis。panel data是经济学中关于多维数据集的一个术语
+，pandas也提供了panel的数据类型。
+
+what is the difference between Series and DataFrame ?
+
+  According to Pandas Docs DataFrame
+can be thought as a dict-like container for Series Objects
+  As Pandas can be thought as a dict-like container for Series ...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Os module</title>
+    <link href="/pl/pl-script-python-os.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-os</id>
+    <content type="html">intro
+os: this module provides a portable way of using operating system dependent
+functionality
+功能
+
+
+常用功能
+import os
+# 清屏
+os.system('clear')
+# 获得当前文件名
+os.path.abspath(__file__)
+# 获得当前文件所在位置的目录名
+os.getcwd()         
+
+
+
+目录操作
+
+  os.walk(top，topdown)
+  top根目录下的每一个文件夹包括他自己，产生三元组(dirpath,dirnames,filena...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Operator</title>
+    <link href="/pl/pl-script-python-operator-module.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-operator-module</id>
+    <content type="html">
+method
+
+  operator.itemgetter(items): return a callable object that fetches item from its operand, using the operand’s getitem()
+  f = itemgetter(2), the call f(r) returns r[2]
+  f = itemgetter(2, 5, 3), the call g(r) returns (r[2], r[5], r[3])
+
+
+itemgetter(1,3,5)('ABCDEFG')
+# ('B', 'D', 'F')
+
+#...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Asterisk Operator</title>
+    <link href="/pl/pl-script-python-operator-asterisk.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-operator-asterisk</id>
+    <content type="html">
+Introduction
+Asterisk plays very important role in python
+
+packing the containers
+
+review the following code
+def demo(*args, **kwargs):
+    print(args,&quot; and &quot;,kwargs)     
+demo('ha', 'big', third='wilson', fourth='roy')
+
+
+  the asterisk mark before args is not used to get the address or content ...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Openml</title>
+    <link href="/pl/pl-script-python-openml.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-openml</id>
+    <content type="html">
+what the crap of openml
+
+An automated machine learning environment.
+
+import openml
+
+# obtain dataset list
+dataset_list = openml.datasets.list_datasets()
+dataset_list_pd = pd.DataFrame.from_dict(dataset_list,orient='index')
+
+# get the mnist dataset ID
+dataset_list_pd[dataset_list_pd.name.str.cont...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Numpy</title>
+    <link href="/pl/pl-script-python-numpy.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-numpy</id>
+    <content type="html">
+random module
+This module is consists of two components, they are 
+
+  simple random data
+  Distributions, such as uniform distribution, normal distribution,poisson distribution etc.
+
+
+np.random.uniform(-2,2,(3,4))
+
+
+common function
+
+np.where()
+
+  The input argument of this API is bool value
+  th...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Module</title>
+    <link href="/pl/pl-script-python-module.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-module</id>
+    <content type="html">
+name属性
+the name attribute must be set to the fully-qualified name of the module. this
+name is used to uniquely identify the module in the import system
+</content>
+  </entry>
+
+  <entry>
+    <title>Python: Matplotlib and Seaborn</title>
+    <link href="/pl/pl-script-python-matplotlib-seaborn.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-matplotlib-seaborn</id>
+    <content type="html">
+matplotlib
+
+how to plot
+The general method of use this module to generate a fig
+
+
+  obtain a Figure instance
+  obtain a AxesSubplot instance
+  use AxesSubplot instance to plot
+
+
+import matplotlib.pyplot as plt
+
+# obtain Figure instance 
+fig = plt.figure()
+# 2 obtain AxesSubplot instance axes1
+ax...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Lambda Expression</title>
+    <link href="/pl/pl-script-python-lambda-expression.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-lambda-expression</id>
+    <content type="html">
+numbers = (1, 2, 3, 4)
+result = map(lambda x: x*x, numbers)
+print(result)
+
+# converting map object to set
+numbersSquare = set(result)
+print(numbersSquare)
+
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Python: Keyword</title>
+    <link href="/pl/pl-script-python-keyword.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-keyword</id>
+    <content type="html">
+pass
+
+# 占位语句，啥都不干
+# 保证格式或是语义的完整性
+for i in range(10):
+    pass
+    print(i)
+
+
+global,local and nonlocal
+
+  global variables, a variable declared outside of the function or in global scope is known as global variable. This means, global variable can be
+accessed inside or outside of the function.
+ ...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Keras</title>
+    <link href="/pl/pl-script-python-keras-model.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-keras-model</id>
+    <content type="html">
+from keras.models import load_model
+model=load_model('model.h5')
+# x is test data
+y=model.predict(x)
+print(y)
+
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Python: Input and Output Stream</title>
+    <link href="/pl/pl-script-python-io.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-io</id>
+    <content type="html">
+what the crap is a context manager?
+
+The main motivation behind the context manager in python is a source acquisition and release mechanism
+which prevents resource leak
+
+what is CSV?
+
+CSV stands for comma separated values, it’s just another plain text file.
+
+Input and Output of CSV file
+
+import ...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Introduction</title>
+    <link href="/pl/pl-script-python-intro.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-intro</id>
+    <content type="html">
+语言类型
+
+  python不允许隐士类型转换，强类型语言
+  python可以在程序运行时改变其结构，是动态语言
+
+
+在python中, 变量是没有类型的; 类型属于对象。
+java是面向对象的，可是并不彻底。python是彻底面向对象的，int类型也是对象
+面向对象只是一种编程思想，它的实现还是函数那一套。
+
+java和c++都是有函数入口的，即为main函数。
+python没有所谓的main函数，从脚本的起始位置开始执行。
+
+文件夹中有__init__.py文件夹为python的包，java并没有这样的要求
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Python: Inspect Module</title>
+    <link href="/pl/pl-script-python-inspect.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-inspect</id>
+    <content type="html">
+function: get the source code
+
+import inspect
+from scipy.stats import bernoulli
+
+code = inspect.getsource(bernoulli.rvs)
+print(code)
+
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Python: Function</title>
+    <link href="/pl/pl-script-python-function.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-function</id>
+    <content type="html">
+function
+Function is the first-class citizen in python
+
+Function Calls
+
+  Pass by value
+  Pass by reference
+  Pass by Object reference
+Python is a PASS-BY-OBJECT-REFERENCE programming language
+
+
+*args and **kwargs
+
+
+  in a function, use the symbol * to take in a variable number of arguments, by ...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Exception</title>
+    <link href="/pl/pl-script-python-exception.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-exception</id>
+    <content type="html">with...as...
+
+class Demo:
+    def __enter__(self):
+        print(&quot;enter function&quot;)
+        return &quot;Foo&quot;
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        print(&quot;exit&quot;)
+
+with Demo() as demo:
+    print(&quot;hello&quot;)
+# __enter__
+# __exit__可以处理异常参数
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Python: Common Error</title>
+    <link href="/pl/pl-script-python-error-debug.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-error-debug</id>
+    <content type="html">
+NoneType error
+
+whenever you see an error that include ‘NoneType’ that means you have an operand
+or an object that is None when you expecting something else.
+
+invalid syntax
+when you encounter this error in python, probably you make a error. 
+and the line number with the invalid syntax is not th...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Meta-functiion</title>
+    <link href="/pl/pl-script-python-data-type.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-data-type</id>
+    <content type="html">
+None
+# None是一个空对象，没有方法和属性
+
+
+数据类型间的转换
+
+str(var)     #转化为str类型
+int(var)     #转化为int类型
+
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Python Copy</title>
+    <link href="/pl/pl-script-python-copy.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-copy</id>
+    <content type="html">
+copy in Python
+In Python, Assignment statements do not copy objects, they create bindings between a target and an object. 
+When we use = operator user thinks that this creates a new object; well, it doesn’t. It only creates a new  
+variable that shares the reference of the original object. 
+
+dee...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Container</title>
+    <link href="/pl/pl-script-python-container.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-container</id>
+    <content type="html">
+intro
+python里的元组,列表和字典类比c++中的顺序容器和关联容器来理解。
+c++的容器只是容器，并没有提供算法。python的容器提供了非常多的算法.
+
+
+list
+
+
+list.append(var)  #向容器中添加元素
+
+
+tuple
+元组产生的原因: return语句只能返回单个对象，将一组对象直接打包存储于其中的一个单一对象，这个对象叫做元组
+
+
+
+dictionary
+foo={&quot;x&quot;:3,&quot;y&quot;:4};
+foo[&quot;x&quot;];
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Python: Collections and Algorithm</title>
+    <link href="/pl/pl-script-python-collections.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-collections</id>
+    <content type="html">
+Collections
+
+what is collections module
+
+  
+    Collections in Python are containers that are used to store collections of
+data, for example, list, dict, set, tuple etc. These are built-in
+collections. Several modules have been developed that provide additional data
+structures to store collectio...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Closure</title>
+    <link href="/pl/pl-script-python-closure.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-closure</id>
+    <content type="html">
+Why Closures?
+All the crap comes out because of the concept of non-local variable. First let’s define some concept.
+
+  nested funciton: A function defined inside another function is called nested function.
+
+
+The Criteria of a Closure
+
+  it must have a nested function (function inside a function)...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Class</title>
+    <link href="/pl/pl-script-python-class.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-class</id>
+    <content type="html">
+create
+
+python是有Unix shell和c的语法习惯，c是没有new关键字的，所以python也没有，创建对象直接调用构造函数。
+
+# self表示this指针
+class Test:
+    def my_print(self):
+        print(self)
+        print(self.__class__)
+
+t = Test()
+t.my_print()
+Test.my_print(t)
+
+
+
+多态
+
+class Duck:
+    def __init__(self):
+	    print(&quot;__init__&quot;)
+ 
+    def slee...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Built-in Function</title>
+    <link href="/pl/pl-script-python-built-in-function.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-built-in-function</id>
+    <content type="html">
+built-in function
+dir()
+# 作用: 显示对象或模块的方法和属性
+var = 3
+dir(var)
+
+
+zip function
+
+
+  grammar: zip(*iterables)
+  function: make an iterator that aggregates from each of the iterables
+
+
+x = [2,3,5]
+y = [5,8,3]
+z = [2,9,1]
+list(zip(x,y,z))
+
+
+reference
+
+  official document
+
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Python: List, Dict and Tuple</title>
+    <link href="/pl/pl-script-python-built-in-data-structure.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-built-in-data-structure</id>
+    <content type="html">
+dict
+
+my_dict = {'a':4,'b':5}
+for key,value in my_dict.items():
+    print(key,value)
+# print value
+a 4
+b 5
+
+
+common mistake about tuple
+
+If we print the variable index, and the output is like the code in the comment line. 
+it means, it is a tuple, and the first element is an array
+
+a = [1,3,4,5,...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Argparse</title>
+    <link href="/pl/pl-script-python-argparse.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-argparse</id>
+    <content type="html">
+该module主要有两个参数分别为Positional arguments和Optional arguments
+positional arguments 作为命令行运行的时候必须有
+optional arguments   作为命令行运行的时候可有可无
+区别:positional arguments使用时候前没有’-‘或者’–‘符号，参数只要一个就是它本身
+     optional arguments前面有’-‘和’–‘,后面有别的参数
+
+使用方式
+positional arguments
+import argparse
+parser = argparse.ArgumentPars...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Juypter</title>
+    <link href="/pl/pl-script-python-anaconda-jupyter.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-anaconda-jupyter</id>
+    <content type="html">
+how to use
+
+sudo jupyter notebook --allow-root
+
+
+integrated with matplotlib
+put %matplotlib inline in the first cell of the notebook to plot
+%matplotlib inline
+
+import matplotlib
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+set default brower for
+
+
+  first, you need to generate the jupyt...</content>
+  </entry>
+
+  <entry>
+    <title>Python: Container</title>
+    <link href="/pl/pl-script-python-algorthim.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-algorthim</id>
+    <content type="html">常见的容器有list, tuple, dictionary提供相同的算法
+len(var)  #元素个数
+max(var)  #元素最大值
+min(var)  #元素最小值
+
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Python: Qt Designer</title>
+    <link href="/pl/pl-script-python-QT-designer.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-QT-designer</id>
+    <content type="html">
+Widget
+
+  TextLabel: what does label mean? According to Merriam-Webster: to put a word
+or name on something to describe or identify it.
+  Graphics View: what does view mean? According to Merriam-Webster: it is a
+picture of a place So Graphics View jus a place to put picture.  So Tree
+view, List ...</content>
+  </entry>
+
+  <entry>
+    <title>Python: PIL package</title>
+    <link href="/pl/pl-script-python-PIL.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-PIL</id>
+    <content type="html">
+what is PIL
+
+convert between a PIL Image and a numpy array
+
+from PIL import Image
+import numpy as np
+
+# the conversion from Image to array
+im = Image.open(&quot;sample.png&quot;)
+np\_im = np.array(im)
+print(np\_im.shape)
+
+# the conversion from array to Image
+new_im = Image.fromarray(np_im)
+# for grey imag...</content>
+  </entry>
+
+  <entry>
+    <title>OS: Threads</title>
+    <link href="/os/os-threads.html"/>
+    <updated>2018-02-12T00:00:00+09:00</updated>
+    <id>/os/os-threads</id>
+    <content type="html">
+Definition
+
+  A thread is a basic unit of CPU utilization. It shares with other threads
+belonging to the same process its code section, data section, and other
+operating system resources, such as open files and signals.
+    
+      A thread ID
+      A program counter
+      A register set
+      A ...</content>
+  </entry>
+
+  <entry>
+    <title>OS: System Programs</title>
+    <link href="/os/os-system-programs.html"/>
+    <updated>2018-02-12T00:00:00+09:00</updated>
+    <id>/os/os-system-programs</id>
+    <content type="html">
+####
+
+  Program loading and execution
+    
+      absolute loaders
+      relocatable loaders
+      linkage editors
+    
+  
+
+
+Communications
+
+  Creating virtual connections among processes, users, and computer systems.
+  allowing users to send messages to one another’s screens.
+  to browse webpage...</content>
+  </entry>
+
+  <entry>
+    <title>OS: System Call</title>
+    <link href="/os/os-system-call.html"/>
+    <updated>2018-02-12T00:00:00+09:00</updated>
+    <id>/os/os-system-call</id>
+    <content type="html">
+####
+
+  System calls provide an interface to the servies made available by an
+Operating System.
+    
+      A simple task like copying like copying the contents of one file to another
+file, we had to run a lot of system calls. Many system calls were executed in
+the process.
+      These calls are ...</content>
+  </entry>
+
+  <entry>
+    <title>OS: Summary</title>
+    <link href="/os/os-summary.html"/>
+    <updated>2018-02-12T00:00:00+09:00</updated>
+    <id>/os/os-summary</id>
+    <content type="html">
+intro
+学习mac，需要知道linux的设计哲学，Linux本质上是一个用户服务器模式，tmux借鉴了linux的设计模式，也是一个c/s架构的模式。
+在linux中，最重要的概念是用户和组
+
+
+
+####
+隐藏文件在finder不可见
+defaults write com.apple.finder AppleShowAllFiles -bool false
+
+隐藏文件在finder中可见
+defaults write com.apple.finder AppleShowAllFiles -bool true
+
+在finder的偏好设置中，可以选择在桌面显示或者隐藏，硬盘，外置磁盘...</content>
+  </entry>
+
+  <entry>
+    <title>OS: Structure</title>
+    <link href="/os/os-structure.html"/>
+    <updated>2018-02-12T00:00:00+09:00</updated>
+    <id>/os/os-structure</id>
+    <content type="html">
+
+</content>
+  </entry>
+
+  <entry>
+    <title>OS: Storeage Structure</title>
+    <link href="/os/os-storage-structure.html"/>
+    <updated>2018-02-12T00:00:00+09:00</updated>
+    <id>/os/os-storage-structure</id>
+    <content type="html">
+&amp;lt;img src=/images/computer-science-operating-system-storage-structure.png&amp;gt;
+
+</content>
+  </entry>
+
+  <entry>
+    <title>OS: Sockets</title>
+    <link href="/os/os-sockets.html"/>
+    <updated>2018-02-12T00:00:00+09:00</updated>
+    <id>/os/os-sockets</id>
+    <content type="html">
+####
+
+  A Socket is defined as an endpoint for communication
+  A pair of process communicating over a network employ a pair of sockets-one
+ofr each process
+  A socket is identified by an IP address concatenated with a port number.
+  The server waits for incoming client requests by listening to a...</content>
+  </entry>
+
+  <entry>
+    <title>OS: Services</title>
+    <link href="/os/os-services.html"/>
+    <updated>2018-02-12T00:00:00+09:00</updated>
+    <id>/os/os-services</id>
+    <content type="html">
+
+  User Interface
+  Program Execution
+  I/O Operations
+  File System Manipulation
+  Communications
+  Error Detection
+  Resource Allocation
+  Accounting
+  Protection and Security
+
+
+####
+
+  Process: A program loaded into memory and executing is called a “PROCESS”
+
+
+</content>
+  </entry>
+
+  <entry>
+    <title>OS: Process Management</title>
+    <link href="/os/os-process-management.html"/>
+    <updated>2018-02-12T00:00:00+09:00</updated>
+    <id>/os/os-process-management</id>
+    <content type="html">
+Definition
+
+  Process: A process can be thought of as a program in execution
+  Thread: A thread is the unit of execution with a process. A process can have
+one thread to many threads.
+
+
+Process State
+
+  New: The process is being created.
+  Running: Instructions are being executed.
+  Waiting: The...</content>
+  </entry>
+
+  <entry>
+    <title>OS: Interprocess Communication</title>
+    <link href="/os/os-process-communication.html"/>
+    <updated>2018-02-12T00:00:00+09:00</updated>
+    <id>/os/os-process-communication</id>
+    <content type="html">
+###
+
+  Processes executing concurrently in the operating system maybe either
+independent processes or cooperating processes.
+
+
+
+  Independent processes: They cannot affect or be affected by the other
+processes executing in the system.
+  Cooperating processes: They can affect or be affected by th...</content>
+  </entry>
+
+  <entry>
+    <title>OS: Computer System Operation</title>
+    <link href="/os/os-operation.html"/>
+    <updated>2018-02-12T00:00:00+09:00</updated>
+    <id>/os/os-operation</id>
+    <content type="html">
+####
+
+  An Operating System(OS) is a program that manages the computer hardware
+  It also provides a basis for Apllication Programs and acts as an intermediary
+between computer user and hardware.
+
+
+####
+
+  Bootstrap Program: The initial program that runs when a computer is powered
+up or rebooted...</content>
+  </entry>
+
+  <entry>
+    <title>Management: User</title>
+    <link href="/os/os-management-user.html"/>
+    <updated>2018-02-12T00:00:00+09:00</updated>
+    <id>/os/os-management-user</id>
+    <content type="html">
+说明
+该文件只能使用visudo命令打开编辑，如果有语法错误，则不能保存
+
+
+为普通用户添加root权限
+# 在&quot;root ALL=(ALL) ALL&quot;添加一行
+username ALL=(All)  ALL
+
+
+组
+
+增删
+# 增加组
+groupadd docker
+
+
+
+用户
+
+修改用户组
+# user modify
+usermod -aG docker $USER
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Os Management Disk</title>
+    <link href="/os-management-disk.html"/>
+    <updated>2018-02-12T00:00:00+09:00</updated>
+    <id>/os-management-disk</id>
+    <content type="html">
+df
+df -h
+
+du
+
+sudo du -h --max-depth=1 /var
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Management: Access</title>
+    <link href="/os/os-management-access.html"/>
+    <updated>2018-02-12T00:00:00+09:00</updated>
+    <id>/os/os-management-access</id>
+    <content type="html">
+功能
+在linux系统中，默认只有三种权限，文件夹的所有者，所属组，非所有者所属组用户,
+这样的分组在复杂的文件权限管理中是无法使用的，acl就是为了弥补这一缺陷而存在。
+
+
+查看磁盘是否开启acl权限
+# dumpe2fs 查询指定分区详细文件系统信息的命令
+dumpe2fs -h /dev/vda1 | grep mount options:
+# user_xattr acl 磁盘开启了acl权限
+
+
+设置acl权限
+# 为文件设置acl权限后，使用ls -l查看文件信息,后面多了一个加号
+# -rw-rwxr--+ 1 hy   hy    379 2月  23 20:09 do...</content>
+  </entry>
+
+  <entry>
+    <title>MacOS Software</title>
+    <link href="/os/os-macOS-software.html"/>
+    <updated>2018-02-12T00:00:00+09:00</updated>
+    <id>/os/os-macOS-software</id>
+    <content type="html">
+VLC视频播放器
+
+
+  open-source
+  support multiplatform
+
+
+Mathpix Snipping Tool
+
+
+  translate formul
+
+
+Mac OS Safari
+
+  User Agent String is to detect Internet Explore Version, For IE7, you can set like this Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)
+
+
+Mac OS Finder
+
+  If you mac can’t connect ...</content>
+  </entry>
+
+  <entry>
+    <title>MacOS: Software Management</title>
+    <link href="/os/os-macOS-software-management.html"/>
+    <updated>2018-02-12T00:00:00+09:00</updated>
+    <id>/os/os-macOS-software-management</id>
+    <content type="html">
+xcode-select
+
+  Manages the active developer directory for Xcode and BSD tools.
+
+
+xcode-select --install
+# Opens a user interface dialog to request automatic insallation of the command
+line developer tools.
+
+Relationship
+
+  brew is a command, it needs some environment.
+  xcode-select –install pr...</content>
+  </entry>
+
+  <entry>
+    <title>MacOS: ITerm</title>
+    <link href="/os/os-macOS-iterm.html"/>
+    <updated>2018-02-12T00:00:00+09:00</updated>
+    <id>/os/os-macOS-iterm</id>
+    <content type="html">
+####
+
+  ITerm2 is a terminal emulator for MacOS.
+
+
+Galois
+
+  ITerm2, Zsh shell,tmux, vim
+
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Kernel</title>
+    <link href="/os/os-kernel.html"/>
+    <updated>2018-02-12T00:00:00+09:00</updated>
+    <id>/os/os-kernel</id>
+    <content type="html">
+Kernel
+
+  linux
+  Mach
+  BSD
+  XNU: kernel of Darwin
+
+
+OS
+
+  GNU/linux
+  Windows
+  Mac OS
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Management: Access</title>
+    <link href="/os/os-internet-attack.html"/>
+    <updated>2018-02-12T00:00:00+09:00</updated>
+    <id>/os/os-internet-attack</id>
+    <content type="html">
+fping
+
+hping
+
+路由扫描
+
+traceroute
+
+mtr
+
+批量服务扫描
+
+nmap
+
+常用功能
+# 查看肉鸡开放的端口
+sudo nmap -sS 47.75.37.163
+# 显示信息如下
+PORT     STATE  SERVICE
+22/tcp   open   ssh
+80/tcp   closed http
+443/tcp  closed https
+3128/tcp closed squid-http
+3389/tcp closed ms-wbt-server
+
+
+
+
+ncat
+
+
+
+常见网络攻击策略
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Directory Hierarch</title>
+    <link href="/os/os-directory-structure.html"/>
+    <updated>2018-02-12T00:00:00+09:00</updated>
+    <id>/os/os-directory-structure</id>
+    <content type="html">
+proc
+
+  linux提供了一种通过/proc文件系统，在运行时访问内核内部数据结构，改变内核设置的机制。
+  proc文件系统是一个伪文件系统，只存在内存中，不占用外存空间
+  /proc下有三个很重要的目录，net，scsi和sys；sys是可写的，可以通过它来访问或者修改内核参数
+
+
+常用设置
+# 关闭icmp协议
+sysctl -w net.ipv4.icmp_echo_ignore_all=1
+
+
+Galois
+
+  The directory structure of an operating system must have hierarch
+property, be...</content>
+  </entry>
+
+  <entry>
+    <title>OS: Computer System Architecture</title>
+    <link href="/os/os-computer-system-architecture.html"/>
+    <updated>2018-02-12T00:00:00+09:00</updated>
+    <id>/os/os-computer-system-architecture</id>
+    <content type="html">
+Galois
+
+  For a long time, I have no idea what how does computer work. What the hell is
+a CPU ?  If you have any questions about anything, No back how fancy they
+look like ? Just go back to the history where it started. Figure about how
+everything evolved.
+  computer is supposed to do some compu...</content>
+  </entry>
+
+  <entry>
+    <title>Os Centos7</title>
+    <link href="/os-centos7.html"/>
+    <updated>2018-02-12T00:00:00+09:00</updated>
+    <id>/os-centos7</id>
+    <content type="html">
+新特性
+
+  使用systemd后台管理程序linux系统和服务
+  使用firewalld后台程序管理防火墙服务
+
+
+
+
+systemd
+
+  systemd是linux系统的一个超级后台程序，主要用于管理linux系统后台程序和服务。使用pstree命令查看系统程序时，systemd是所有程序的祖辈程序
+  systemctl是管理systemd程序的基本命令。
+
+
+
+
+服务器运行级别
+# 查看系统运行级别
+runlevel
+
+
+配置文件
+在/etc/initab文件中，保存了系统开机后进入哪个运行级别&amp;lt;hr /&amp;gt;
+在centos7中，该配置文件已经被systemd所取...</content>
+  </entry>
+
+  <entry>
+    <title>Hardware: CUDA</title>
+    <link href="/os/os-hardware-cuda.html"/>
+    <updated>2018-02-09T00:00:00+09:00</updated>
+    <id>/os/os-hardware-cuda</id>
+    <content type="html">
+CUDA: compute unified device architecture
+</content>
+  </entry>
+
+  <entry>
+    <title>SSH</title>
+    <link href="/pl/pl-script-service-ssh.html"/>
+    <updated>2017-07-03T00:00:00+09:00</updated>
+    <id>/pl/pl-script-service-ssh</id>
+    <content type="html">
+介绍
+
+
+  ssh是一种协议，用于计算机之间的加密登陆。
+  用户从本地计算机通过ssh登陆到另外一台计算机，是安全的
+  ssh只是一种协议，具体由多种实现，主要讲开源的OpenSSH实现
+
+
+使用
+
+登陆
+ssh的登陆和mysql的远程登陆很像，可能mysql的底层使用的就是ssh来实现远程登陆的
+# 用户名user登陆host
+$ ssh user@host
+# 本地用户名和远程用户名相同
+$ ssh host
+# ssh的默认端口为22，使用p修改端口
+$ ssh -p user@host
+
+
+
+登陆过程
+
+
+  主机受到用户的登陆请求，把自己的公钥发给用户
+  用户使用公钥...</content>
+  </entry>
+
+  <entry>
+    <title>Apple Script</title>
+    <link href="/pl/pl-script-applescript.html"/>
+    <updated>2017-07-03T00:00:00+09:00</updated>
+    <id>/pl/pl-script-applescript</id>
+    <content type="html">
+osascript -e 'tell application &quot;System Events&quot;
+    tell application &quot;Adobe Acrobat Reader DC&quot; to activate
+    keystroke &quot;h&quot; using {command down, control down}
+    end tell'
+
+
+Reference
+
+  Complete list of AppleScript key
+codes
 
 </content>
   </entry>
@@ -11555,1437 +13076,6 @@ Reference
   Connect to a locally build Server
 
 </content>
-  </entry>
-
-  <entry>
-    <title>Make: Rules</title>
-    <link href="/pl/pl-script-make-rule.html"/>
-    <updated>2017-03-12T00:00:00+09:00</updated>
-    <id>/pl/pl-script-make-rule</id>
-    <content type="html">
-Make
-make主要用来构建c语言的项目，实际上，任何主要某个文件有变化，就要重新构建项目，都可以用make构建
-
-语法
-&amp;lt;target&amp;gt; : &amp;lt;prerequisites&amp;gt;
-[tab] &amp;lt;commands&amp;gt;
-
-
-Suffix
-
-  Make uses a special target, named .SUFFIXES to allow you to define your
-own suffixed
-
-</content>
-  </entry>
-
-  <entry>
-    <title>Cmake: Modules</title>
-    <link href="/pl/pl-script-cmake-pkg-check-modules.html"/>
-    <updated>2017-03-10T00:00:00+09:00</updated>
-    <id>/pl/pl-script-cmake-pkg-check-modules</id>
-    <content type="html">
-官方文档看完直接想吐。
-上代码
-find_package(PkgConfig REQUIRED)
-#pkg_check_modules(FOO,OPENCV) 这是错误写法，中间没有逗号，而且有空格
-pkg_check_modules(FOO OPENCV)
-include_directories(${FOO_INCLUDE_DIRS})
-target_link_libraries(untitled ${FOO_LIBRARIES})
-
-
-</content>
-  </entry>
-
-  <entry>
-    <title>CMake: Variables</title>
-    <link href="/pl/pl-script-cmake-variables.html"/>
-    <updated>2017-03-07T00:00:00+09:00</updated>
-    <id>/pl/pl-script-cmake-variables</id>
-    <content type="html">####
-
-  Variables are the basic unit of storage in the CMake Language. Their values
-are always of string type
-  set() and unset() commands explicitly set or unset a variable.
-  variable names are case-sensitive
-
-
-Environment Variables
-
-  Environment Variables are like ordinary Variables, with the...</content>
-  </entry>
-
-  <entry>
-    <title>CMake: Packages</title>
-    <link href="/pl/pl-script-cmake-packages.html"/>
-    <updated>2017-03-07T00:00:00+09:00</updated>
-    <id>/pl/pl-script-cmake-packages</id>
-    <content type="html">
-find_package
-
-
-  find_package is supposed to work with Find&amp;lt;package&amp;gt;.cmake module
-  The purpose of the file is to define the search rules for the package and set
-different variables, such as &amp;lt;package&amp;gt;_FOUND, &amp;lt;package&amp;gt;_INCLUDE_DIRS
-and &amp;lt;package&amp;gt;_LIBRARIES.
-
-
-
-  CMakeLists....</content>
-  </entry>
-
-  <entry>
-    <title>Cmake: Introduction</title>
-    <link href="/pl/pl-script-cmake-intro.html"/>
-    <updated>2017-03-07T00:00:00+09:00</updated>
-    <id>/pl/pl-script-cmake-intro</id>
-    <content type="html">
-Organization
-
-  CMake input files are written in the “CMake Language” in source files named
-CMakeLists.txt or ending in a .cmake file name extension. CMake
-Language source files in a project are organized into:
-    
-      Directories
-      Scripts
-      Modules
-    
-  
-
-
-CMake
-
-  You must treat ...</content>
-  </entry>
-
-  <entry>
-    <title>CMake: Control Structures</title>
-    <link href="/pl/pl-script-cmake-control-structures.html"/>
-    <updated>2017-03-07T00:00:00+09:00</updated>
-    <id>/pl/pl-script-cmake-control-structures</id>
-    <content type="html">Conditional Blocks
-
-if()/elseif()/else()/endif()
-
-
-Loops
-
-foreach()/endforeach() 
-while()/endwhile()
-
-
-Command Definitions
-
-macro()/endmacro()
-function()/endfunction()
-
-
-</content>
-  </entry>
-
-  <entry>
-    <title>CMake: Compile Features</title>
-    <link href="/pl/pl-script-cmake-compile-features.html"/>
-    <updated>2017-03-07T00:00:00+09:00</updated>
-    <id>/pl/pl-script-cmake-compile-features</id>
-    <content type="html">
-</content>
-  </entry>
-
-  <entry>
-    <title>Commands: Scripting Commands</title>
-    <link href="/pl/pl-script-cmake-commands-script.html"/>
-    <updated>2017-03-07T00:00:00+09:00</updated>
-    <id>/pl/pl-script-cmake-commands-script</id>
-    <content type="html">
-Examples
-
-  create a file named hello.txt with the following content.
-
-
-message(&quot;Hello world!&quot;)         # A message to print
-
-
-
-  run the script
-
-
-cmake -P hello.txt
-
-
-Reference
-
-  CMake Scripting Language
-
-
-</content>
-  </entry>
-
-  <entry>
-    <title>Commands: Project Commands</title>
-    <link href="/pl/pl-script-cmake-commands-project.html"/>
-    <updated>2017-03-07T00:00:00+09:00</updated>
-    <id>/pl/pl-script-cmake-commands-project</id>
-    <content type="html">
-These commands are available only in CMake projects
-
-官方文档
-#使用这个语法的时候，target必须通过add_executable()或者add_library()创建
-target_link_libraries(&amp;lt;target&amp;gt; [item])
-
-</content>
-  </entry>
-
-  <entry>
-    <title>CMake: Command-Line Tools</title>
-    <link href="/pl/pl-script-cmake-command-line-tool.html"/>
-    <updated>2017-03-07T00:00:00+09:00</updated>
-    <id>/pl/pl-script-cmake-command-line-tool</id>
-    <content type="html">
-1. cmake
-2. ctest
-3. cpack
-</content>
-  </entry>
-
-  <entry>
-    <title>CMake: Build System</title>
-    <link href="/pl/pl-script-cmake-buildsystem.html"/>
-    <updated>2017-03-07T00:00:00+09:00</updated>
-    <id>/pl/pl-script-cmake-buildsystem</id>
-    <content type="html">
-####
-
-  A CMake-based buildsystem is organized as a set of high-level logical
-targets.
-  Each target corresponds to an executable or library.
-  Dependencies between the targets are expressed in the buildsystem to
-determine the build order and the rules for regeneraton to change
-
-
-</content>
-  </entry>
-
-  <entry>
-    <title>C++: Library Manager</title>
-    <link href="/pl/pl-compile-c++-library-manager.html"/>
-    <updated>2017-03-06T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-library-manager</id>
-    <content type="html">1. Mac OS
-1.1 Brew
-the missing package manager for macos, 和centos下的yumhe ubuntu下的apt-get类似
-
-  brew的安装目录在/usr/local/Cellar
-  配置目录在/usr/local/etc
-  命令目录在/usr/local/bin
-
-
-使用
-
-  brew install boost-python
-  brew upgrade boost
-  brew info boost  查看boost相关信息
-  brew link
-
-
-1.2 Port
-
-</content>
-  </entry>
-
-  <entry>
-    <title>C++: Compiler</title>
-    <link href="/pl/pl-compile-c++-compiler.html"/>
-    <updated>2017-03-06T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-compiler</id>
-    <content type="html">
-Environment Variables
-
-  PATH: For searching the executables and run-time shared libraries.
-  CPATH: For searching the include-paths for headers. It is searched after
-paths specified in **-I** options.
-  LiBRARY_PATH: For searching library-paths for link libraries. It is searched
-afer paths spef...</content>
-  </entry>
-
-  <entry>
-    <title>C++:  Template</title>
-    <link href="/pl/pl-compile-c++-template.html"/>
-    <updated>2017-03-05T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-template</id>
-    <content type="html">
-intro
-OOP和范型编程都能处理在编写程序时不知道类型的情况。不同之处在于
-OOP能处理类型在程序运行之前都未知的情况，范型编程中，编译时就能获知类型。
-
-
-function template
-
-define
-template &amp;lt;typename price&amp;gt; bool isCheaper(price p1,price p2){
-	    return p1&amp;lt;p2;
-        }
-
-instantiation
-//函数模板能自己推断参数类型
-compare(2.0,12.0);
-
-
-
-
-class template
-类模板用来生成类的蓝图，与函数模板不同，编...</content>
-  </entry>
-
-  <entry>
-    <title>C++: Struct</title>
-    <link href="/pl/pl-compile-c++-struct.html"/>
-    <updated>2017-03-05T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-struct</id>
-    <content type="html">
-####
-
-  Struct can be defined as collection of data members under one name.
-
-
-####
-
-  define
-  declaration
-  initialization
-
-
-struct Rectangle {
-    int width;
-    int length;
-};
-
-struct Rectangle r;
-
-</content>
-  </entry>
-
-  <entry>
-    <title>C++: Stream</title>
-    <link href="/pl/pl-compile-c++-stream.html"/>
-    <updated>2017-03-05T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-stream</id>
-    <content type="html">
-Stream
-
-  to access data that from outside of a program
-    
-      Inputstream: access data from outside of a program.
-      Outputstream: send data out of the program.
-    
-  
-  so we have IOS, which means:
-    
-      Inputstream: istream, ifstream
-      Outputstream: ostream, ofstream
-      ci...</content>
-  </entry>
-
-  <entry>
-    <title>C++: STL</title>
-    <link href="/pl/pl-compile-c++-stl.html"/>
-    <updated>2017-03-05T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-stl</id>
-    <content type="html">
-在出现标准库之前，c++程序使用数组保存对象，现代c++程序更多地用vector取代数组
-与vector相比，数组的长度是固定的。
-只有当程序强调速度的时候才在类的实现内部使用数组和指针。
-</content>
-  </entry>
-
-  <entry>
-    <title>C++: Polymorphism</title>
-    <link href="/pl/pl-compile-c++-polymorphism.html"/>
-    <updated>2017-03-05T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-polymorphism</id>
-    <content type="html">
-</content>
-  </entry>
-
-  <entry>
-    <title>C++: Pointer and Reference</title>
-    <link href="/pl/pl-compile-c++-pointer-and-reference.html"/>
-    <updated>2017-03-05T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-pointer-and-reference</id>
-    <content type="html">
-语言类型
-
-  c++容忍隐士的类型转换，所以是一种种弱类型语言
-  c++编译时进行类型检查，程序运行时不能改变其结构，所以是静态语言
-
-
-Arithmetic
-
-  p++
-  p–
-  p+1
-
-
-#include &amp;lt;iostream&amp;gt;
-
-int main(){
-    int a[5]={1,2,2,1,9};
-    int *p = a;
-    std::cout&amp;lt;&amp;lt;p++&amp;lt;&amp;lt;std::endl;
-    std::cout&amp;lt;&amp;lt;a+1&amp;lt;&amp;lt;std::endl;
-    std::cout&amp;lt;&amp;lt;*(a+1)...</content>
-  </entry>
-
-  <entry>
-    <title>C++: Operator</title>
-    <link href="/pl/pl-compile-c++-operator.html"/>
-    <updated>2017-03-05T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-operator</id>
-    <content type="html">
-位运算符
-
-
-	
-		 ~  位求反        
-		 &amp;lt;&amp;lt; 左移          
-		 &amp;gt;&amp;gt; 右移          
-		  &amp;amp; 位与   256&amp;amp;7  
-		  | 位或          
-		  ^ 异或          
-	
-
-
-
-点运算符
-
-.(dot operator): 点操作符通过它的左操作数取得有操作数，点操作符的右操作数不是对象或值，而是成员的名字。
-
-
-箭头运算符
-
--&amp;gt;(arrow operator): 箭头操作符包含点操作符和解引用操作符。
-
-
-[]: 下标操作符
-
-
-
-函数调用操作符
-()(call...</content>
-  </entry>
-
-  <entry>
-    <title>C++: Opencv</title>
-    <link href="/pl/pl-compile-c++-opencv.html"/>
-    <updated>2017-03-05T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-opencv</id>
-    <content type="html">
-官方文档写得很不客气，there’s no point to using the old methods unless you’re a masochist programmer and you’re asking for trouble
-
-绘制椭圆代码，参考文献
-#define w 400
-cv::Mat img=Mat::zeros(w,w,CV_8UC3);
-cv::ellipse(img,Point(w/2,w/2),Size(w/4,w/16),0,0,360,Scalar(255,0,255),2,3);
-imshow(&quot;demo&quot;,img);
-waitKey(0);
-
-</content>
-  </entry>
-
-  <entry>
-    <title>C++: OpenCV</title>
-    <link href="/pl/pl-compile-c++-opencv-highgui.html"/>
-    <updated>2017-03-05T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-opencv-highgui</id>
-    <content type="html">
-reference
-VideoCapture cap(0); // open the default camera
-         if(!cap.isOpened())  // check if we succeeded
-         return -1;
-
-         Mat edges;
-         namedWindow(&quot;edges&quot;,1);
-         for(;;){
-         Mat frame;
-	     cap &amp;gt;&amp;gt; frame; // get a new frame from camera
-	     cvtColor...</content>
-  </entry>
-
-  <entry>
-    <title>C++: OOP</title>
-    <link href="/pl/pl-compile-c++-oop.html"/>
-    <updated>2017-03-05T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-oop</id>
-    <content type="html">
-####
-
-  why data is modified by private ? function is modified by public?
-    
-      just like a car, it has button you can push, the button is like a function,
-it’s public.
-      But what’s in the button, you have no idea. It’s the data which is private.
-    
-  
-
-
-
-  
-
-</content>
-  </entry>
-
-  <entry>
-    <title>C++: Memory</title>
-    <link href="/pl/pl-compile-c++-memory.html"/>
-    <updated>2017-03-05T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-memory</id>
-    <content type="html">
-intro
-自动分配
-全局对象在程序启动时分配，程序结束时销毁。
-局部对象，进入其定义所在的程序时被创建，离开时销毁
-局部static对象在第一次使用前分配，程序结束时销毁
-
-
-动态分配
-除了静态内存和栈内存，每个程序还拥有一个内存池。称为自由空间，free store或堆heap
-动态分配的对象的生存期与他们在哪里创建是无关的，只有当显示地被释放时，对象才会被销毁
-
-
-智能指针
-智能指针产生的原因是对象在销毁时，会调用它的析构函数。
-
-
-shared_ptr
-
-
-直接管理内存
-
-</content>
-  </entry>
-
-  <entry>
-    <title>C++: Macro</title>
-    <link href="/pl/pl-compile-c++-macro.html"/>
-    <updated>2017-03-05T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-macro</id>
-    <content type="html">
-宏: 就是指令的集合
-#define PRINT(A) std::cout&amp;lt;&amp;lt;&quot;this is output: &quot;&amp;lt;&amp;lt;#A&amp;lt;&amp;lt;std::endl
-PRINT(&quot;hello&quot;);
-
-</content>
-  </entry>
-
-  <entry>
-    <title>C++: Lvalues and Rvalues</title>
-    <link href="/pl/pl-compile-c++-lvalue-and-rvalue.html"/>
-    <updated>2017-03-05T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-lvalue-and-rvalue</id>
-    <content type="html">
-####
-
-  2.rvalue: a temporary value
-
-
-###
-
-  you can’t take an lvalue reference form an rvalue.
-  you can take an lvalue reference form an lvalue.
-
-
-####
-
-  the keyword const will ask the compiler do something.
-    
-      compier will probably create like a temporary variable to storage
-      th...</content>
-  </entry>
-
-  <entry>
-    <title>C++: Reload Operator</title>
-    <link href="/pl/pl-compile-c++-load-operator.html"/>
-    <updated>2017-03-05T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-load-operator</id>
-    <content type="html">
-重载的运算符不过是有特殊名字的函数
-重载下标运算符
-
-[]   下标操作符必须是成员函数
-
-
-重载输出运算符
-
-&amp;lt;&amp;lt;     不能是成员函数
-参数1: 非常量ostream对象的引用,非常量的原因是向流写入内容会改变其状态  
-                               引用的原因是因为我们无法直接复制一个ostream对象  
-参数2: 常量的引用, 引用是因为避免复制实参  
-                   常量是因为打印不会改变对象的内容  
-class Worker{
-	public:
-	    int age;
-	    std::stri...</content>
-  </entry>
-
-  <entry>
-    <title>C++: Keywords</title>
-    <link href="/pl/pl-compile-c++-keyword.html"/>
-    <updated>2017-03-05T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-keyword</id>
-    <content type="html">
-explicit
-c++为只用传递一个参数的构造函数定义了一个隐士转换
-
-class Animal{
-	public:
-	    Animal(){
-        cout&amp;lt;&amp;lt;&quot;no parameter constructor&quot;&amp;lt;&amp;lt;endl;
-        }
-	    explicit Animal(int a){
-	    cout&amp;lt;&amp;lt;&quot;parameter constructor&quot;&amp;lt;&amp;lt;endl;
-	    }
-};
-Animal dog = 3         //报错，无法使用explicit Animal构造器
-
-
-class...</content>
-  </entry>
-
-  <entry>
-    <title>C++: 迭代器</title>
-    <link href="/pl/pl-compile-c++-iterator.html"/>
-    <updated>2017-03-05T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-iterator</id>
-    <content type="html">
-intro
-
-谓词
-谓词本质是可调用的表达式，返回结果是一个能用作条件的值。
-一元谓词: 接受单一参数unary predicate
-二元谓词: 接受两个参数binary predicate
-接受谓词参数的算法对输入序列中的元素调用谓词，因此元素类型必须转换为谓词的参数类型
-
-迭代器
-迭代器令算法不依赖于容器，但算法依赖于元素类型的操作。
-
-  输入迭代器
-  输出迭代器
-  前向迭代器
-  双向迭代器
-  随机访问迭代器
-
-
-算法
-简单查找算法
-
-find
-find(beg, end, val)
-return 返回一个迭代器，指向输入序列中第一个等于val的元素。
-find_if(b...</content>
-  </entry>
-
-  <entry>
-    <title>C++: Opencv</title>
-    <link href="/pl/pl-compile-c++-gtest.html"/>
-    <updated>2017-03-05T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-gtest</id>
-    <content type="html">
-官方文档
-</content>
-  </entry>
-
-  <entry>
-    <title>C++: Googletest</title>
-    <link href="/pl/pl-compile-c++-googletest.html"/>
-    <updated>2017-03-05T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-googletest</id>
-    <content type="html">
-CMake configuration
-
-cmake_minimum_required(VERSION 3.10)
-
-project(hello_world)
-
-set(CMAKE_C_STANDARD 99)
-set(CMAKE_CXX_STANDARD 11)
-
-#GTest
-ADD_SUBDIRECTORY(googletest)
-enable_testing()
-include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
-
-add_executable(app main.cpp )
-target_li...</content>
-  </entry>
-
-  <entry>
-    <title>C++: Function</title>
-    <link href="/pl/pl-compile-c++-function.html"/>
-    <updated>2017-03-05T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-function</id>
-    <content type="html">
-Terminology
-
-  Prototype, signature, header of a function means the following code
-
-
-void foo();
-
-
-
-  Functions are called modules or procedures.
-
-
-#### 
-There are two piece of the code, so there will be two function in the memory.
-
-#include &amp;lt;iostream&amp;gt;
-int add(int x, int y);
-
-int main(){
- ...</content>
-  </entry>
-
-  <entry>
-    <title>C++: Function Parameters</title>
-    <link href="/pl/pl-compile-c++-function-parameter.html"/>
-    <updated>2017-03-05T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-function-parameter</id>
-    <content type="html">
-Arrays
-
-  Arrays can only be passed by address
-  for the formal parameters in foo, you can replace a[] with *a, it
-still means the same thing.
-    
-      int a[] can only be used to point to array.
-      *a can be used to point an integer.
-    
-  
-
-
-#include &amp;lt;iostream&amp;gt;
-void foo(int a[], in...</content>
-  </entry>
-
-  <entry>
-    <title>C++: Expression</title>
-    <link href="/pl/pl-compile-c++-express.html"/>
-    <updated>2017-03-05T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-express</id>
-    <content type="html">
-类型转换
-隐士转换
-C++语言不会直接将两个不同类型的值相加，而是先根据类型转换的规则将运算的
-类型统一后，再求值。
-int ival = 3.541 + 3;
-// 1 3转换成double型，结果类型为double
-// 2 初始化过程中，初始化对象的类型无法改变，初始值被转化为该对象的类型
-
-
-显示转换
-表达式 cast-name(expression)
-type: 转换的目标类型，expression要转换的值
-cast-name是static, dynamic, const, reinterpret中的一种
-
-</content>
-  </entry>
-
-  <entry>
-    <title>C++: Data Type</title>
-    <link href="/pl/pl-compile-c++-data-type.html"/>
-    <updated>2017-03-05T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-data-type</id>
-    <content type="html">
-intro
-
-数据的初始化分为两种:  
-直接初始化: 使用assignment operator
-复制初始化: 使用(),将初始化值放在圆括号内。
-对于类类型对象，直接初始化直接调用与实参匹配的构造函数。复制初始化
-调用复制构造函数，然后使用复制构造函数将临时对象复制到正在创建的对象。
-1 引用数据类型是一种复合类型，通过在变量名前添加&amp;amp;来定义。
-
-
-指针
-
-定义
-
-指针: (point to)是一种复合类型。指针实现了对其他对象的间接访问。
-1 指针本身就是一个对象，允许对指针的赋值和拷贝。
-2 指针无需在定义时赋初值。
-
-
-空指针
-
-空指针不指向任何对象，在使用一个指针之...</content>
-  </entry>
-
-  <entry>
-    <title>C++: Container</title>
-    <link href="/pl/pl-compile-c++-container.html"/>
-    <updated>2017-03-05T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-container</id>
-    <content type="html">
-Intro
-
-STL标准模板库解决了数据结构和算法的抽象问题
-vector和deque的底层是对数组的封装，所以提供了对元素的快速随机访问。
-不足是，在删除元素时，付出的开销更大。
-list类型在任何位置都能快速插入和删除。访问某个元素要求遍历所设计的其他元素.
-容器操作
-
-
-
-构造函数
-
-
-  C c;           默认构造函数，拷贝空容器
-  C c1(c2);      构造c2的拷贝c1
-  C c(b, e);     构造c, 将迭代器b和e指定的范围内的元素拷贝到c
-  C c{a, b, c};  列表初始化c
-
-
-
-赋值和swap
-
-在新标准库中，容器既提供成...</content>
-  </entry>
-
-  <entry>
-    <title>C++: Class</title>
-    <link href="/pl/pl-compile-c++-class.html"/>
-    <updated>2017-03-05T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-class</id>
-    <content type="html">
-封装
-
-类的定义可以使用struct或者class关键字，struct是从c继承来的
-使用class定义类，则定义在第一个访问标号前的任何成员权限都为private
-使用struct定义类，则都为public，其他没差。
-
-java的类更像是c++类的一种简化。c++中的类能够控制在初始化，复制，赋值和销毁对象时发生的操作。java的类没有这种能力。
-python, java和c++中，都隐约存在this指针这个概念。&amp;lt;/br&amp;gt;
-只不过，java和c++都隐藏的比较深一点。对于 属于对象的成员函数来说，都有对象的指针与他们绑定
-在一起，这个参数是隐藏。python就比较干脆...</content>
-  </entry>
-
-  <entry>
-    <title>C++: Code Normal</title>
-    <link href="/pl/pl-compile-c++-causal.html"/>
-    <updated>2017-03-05T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-causal</id>
-    <content type="html">
-如下代码:
-while(first!=last){
-	 ++first
-	}
-
-left-inclusive interval,左闭合空间的意义:
-当first与last相等时，迭代器范围为空
-当first与last不相等时，迭代器范围内至少有一个元素，而且first指向该区间的第一个元素，通过若干次自增运算可以使first不断增大，知道first==last为止。
-
-
-和表达式相比，函数比表达式好理解，容易维护，重用性好
-缺点就是，效率差，调用函数之前需要保存寄存器，复制实参，程序跳转等操作。
-
-封装是一项将低层次的元素组合起来形成新的高层次实体的技术，函数是封装的一种形式 ，函数所...</content>
-  </entry>
-
-  <entry>
-    <title>C++: Boost</title>
-    <link href="/pl/pl-compile-c++-boost.html"/>
-    <updated>2017-03-05T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-boost</id>
-    <content type="html">
-介绍
-boost是一个可移植的，提供源代码的C++库，由于其对跨平台的强调，对标准C++的强调，与编写平台无关。大部分的boost库功能使用只需要包括相应的头文件即可，少数如正则表达式库和文件系统库需要连接库。
-
-
-文件系统库
-
-
-使用方法
-
-  头文件&amp;lt;boost/filesystem.hpp&amp;gt;提供对文件系统的重要操作，它定义了path类，是filesystem库的基础
-  头文件&amp;lt;boost/filesystem/fstream.hpp&amp;gt;是对std::fstream的一个补充。
-文件系统库使用前需要链接相应的库文件
-  需要添加链接库
-    # demo表...</content>
-  </entry>
-
-  <entry>
-    <title>C++: Array</title>
-    <link href="/pl/pl-compile-c++-array.html"/>
-    <updated>2017-03-05T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-array</id>
-    <content type="html">
-static array
-
-dynamic array
-
-#include &amp;lt;iostream&amp;gt;
-
-int main(){
-
-    // stack
-    int a[5]={1,3,5,2,0};
-    int *b;
-
-    //heap
-    b = new int[5];
-    for(int i=0; i&amp;lt;5; i++){
-       std::cout&amp;lt;&amp;lt;b[i]&amp;lt;&amp;lt;std::endl;
-       std::cout&amp;lt;&amp;lt;*(b+i)&amp;lt;&amp;lt;std::endl;
-    }
-}
-
-
-Increas...</content>
-  </entry>
-
-  <entry>
-    <title>C++: Eigen</title>
-    <link href="/pl/pl-compile-c++-Eigen.html"/>
-    <updated>2017-03-05T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-Eigen</id>
-    <content type="html">
-官方文档
-//默认是列向量
-Eigen::Vector4d a(1,2,3,4);//构造初始化
-Eigen::Vector4d b;
-b&amp;lt;&amp;lt;1,2,3,4;//赋值初始化
-
-
-</content>
-  </entry>
-
-  <entry>
-    <title>PL: Regex Expression</title>
-    <link href="/pl/pl-regex-expression.html"/>
-    <updated>2015-05-23T00:00:00+09:00</updated>
-    <id>/pl/pl-regex-expression</id>
-    <content type="html">
-Intro
-
-  正则表达式描述了一种字符串匹配的模式，用来检查一个串是否含有某种子串，它不属于某种语言，但是不同的语言对它的支持不一样。
-  正则表达式是一种引擎匹配工具，没啥牛逼的
-  字符有本身的含义，比如字母，数字和下划线，如果需要赋予其别的含义只能通过转义符来实现，比如\w表示所有的字符
-  在正则中，大多数的字符只是其本身的含义，只需要记住一些转义后的字符即可
-  
-    
-      在正则中已经失去其本来的含义，表示一种贪婪匹配
-    
-  
-  ？在正则中依然表示问号，添加转义字符后\?才表示匹配一次或者零次
-  （）括号依然表示括号本身的括号含义，添加转义符之后...</content>
-  </entry>
-
-  <entry>
-    <title>Management: Access</title>
-    <link href="/os/os-internet-attack.html"/>
-    <updated>2015-05-22T00:00:00+09:00</updated>
-    <id>/os/os-internet-attack</id>
-    <content type="html">
-fping
-
-hping
-
-路由扫描
-
-traceroute
-
-mtr
-
-批量服务扫描
-
-nmap
-
-常用功能
-# 查看肉鸡开放的端口
-sudo nmap -sS 47.75.37.163
-# 显示信息如下
-PORT     STATE  SERVICE
-22/tcp   open   ssh
-80/tcp   closed http
-443/tcp  closed https
-3128/tcp closed squid-http
-3389/tcp closed ms-wbt-server
-
-
-
-
-ncat
-
-
-
-常见网络攻击策略
-
-</content>
-  </entry>
-
-  <entry>
-    <title>Management: Process</title>
-    <link href="/os/os-management-process.html"/>
-    <updated>2015-05-17T00:00:00+09:00</updated>
-    <id>/os/os-management-process</id>
-    <content type="html">
-Kill
-用来终止指定的进程，终止前台的进程可以使用Ctrl+c, 终止后台的进程必须使用kill命令
-
-介绍
-ps类似于命令行界面的任务管理器，查看进程状态
-
-
-ps
-ps命令默认显示4列信息
-
-  PID: process ID
-  PPID: parent process ID 程序的父进程号
-  TTY: 命令所运行的位置(终端)
-  TIME: 运行着的该命令所占用的CPU时间
-  CMD: 该进程所运行的命令
-
-
-
-参数
-
-  -u 根据用户过滤进程，ps -u huiyaozhang 查看用户huiyaozhang的进程
-  -a 显示一个终端所有进程
-  -x 显示没有...</content>
-  </entry>
-
-  <entry>
-    <title>Kernel</title>
-    <link href="/os/os-kernel.html"/>
-    <updated>2015-05-17T00:00:00+09:00</updated>
-    <id>/os/os-kernel</id>
-    <content type="html">
-Kernel
-
-  linux
-  Mach
-  BSD
-  XNU: kernel of Darwin
-
-
-OS
-
-  GNU/linux
-  Windows
-  Mac OS
-
-</content>
-  </entry>
-
-  <entry>
-    <title>Management: User</title>
-    <link href="/os/os-management-user.html"/>
-    <updated>2015-05-16T00:00:00+09:00</updated>
-    <id>/os/os-management-user</id>
-    <content type="html">
-说明
-该文件只能使用visudo命令打开编辑，如果有语法错误，则不能保存
-
-
-为普通用户添加root权限
-# 在&quot;root ALL=(ALL) ALL&quot;添加一行
-username ALL=(All)  ALL
-
-
-组
-
-增删
-# 增加组
-groupadd docker
-
-
-
-用户
-
-修改用户组
-# user modify
-usermod -aG docker $USER
-
-</content>
-  </entry>
-
-  <entry>
-    <title>Mangement: Software Package</title>
-    <link href="/os/os-management-software.html"/>
-    <updated>2015-05-16T00:00:00+09:00</updated>
-    <id>/os/os-management-software</id>
-    <content type="html">
-xcode-select
-
-  Manages the active developer directory for Xcode and BSD tools.
-
-
-xcode-select --install
-# Opens a user interface dialog to request automatic insallation of the command
-line developer tools.
-
-Relationship
-
-  brew is a command, it needs some environment.
-  xcode-select –install pr...</content>
-  </entry>
-
-  <entry>
-    <title>Management: Disk</title>
-    <link href="/os/os-management-disk.html"/>
-    <updated>2015-05-16T00:00:00+09:00</updated>
-    <id>/os/os-management-disk</id>
-    <content type="html">
-df
-df -h
-
-du
-
-sudo du -h --max-depth=1 /var
-
-</content>
-  </entry>
-
-  <entry>
-    <title>Management: Access</title>
-    <link href="/os/os-management-access.html"/>
-    <updated>2015-05-16T00:00:00+09:00</updated>
-    <id>/os/os-management-access</id>
-    <content type="html">
-功能
-在linux系统中，默认只有三种权限，文件夹的所有者，所属组，非所有者所属组用户,
-这样的分组在复杂的文件权限管理中是无法使用的，acl就是为了弥补这一缺陷而存在。
-
-
-查看磁盘是否开启acl权限
-# dumpe2fs 查询指定分区详细文件系统信息的命令
-dumpe2fs -h /dev/vda1 | grep mount options:
-# user_xattr acl 磁盘开启了acl权限
-
-
-设置acl权限
-# 为文件设置acl权限后，使用ls -l查看文件信息,后面多了一个加号
-# -rw-rwxr--+ 1 hy   hy    379 2月  23 20:09 do...</content>
-  </entry>
-
-  <entry>
-    <title>Directory Hierarch</title>
-    <link href="/os/os-directory-structure.html"/>
-    <updated>2015-05-16T00:00:00+09:00</updated>
-    <id>/os/os-directory-structure</id>
-    <content type="html">
-proc
-
-  linux提供了一种通过/proc文件系统，在运行时访问内核内部数据结构，改变内核设置的机制。
-  proc文件系统是一个伪文件系统，只存在内存中，不占用外存空间
-  /proc下有三个很重要的目录，net，scsi和sys；sys是可写的，可以通过它来访问或者修改内核参数
-
-
-常用设置
-# 关闭icmp协议
-sysctl -w net.ipv4.icmp_echo_ignore_all=1
-
-
-Galois
-
-  The directory structure of an operating system must have hierarch
-property, be...</content>
-  </entry>
-
-  <entry>
-    <title>Os Centos7</title>
-    <link href="/os-centos7.html"/>
-    <updated>2015-05-16T00:00:00+09:00</updated>
-    <id>/os-centos7</id>
-    <content type="html">
-新特性
-
-  使用systemd后台管理程序linux系统和服务
-  使用firewalld后台程序管理防火墙服务
-
-
-
-
-systemd
-
-  systemd是linux系统的一个超级后台程序，主要用于管理linux系统后台程序和服务。使用pstree命令查看系统程序时，systemd是所有程序的祖辈程序
-  systemctl是管理systemd程序的基本命令。
-
-
-
-
-服务器运行级别
-# 查看系统运行级别
-runlevel
-
-
-配置文件
-在/etc/initab文件中，保存了系统开机后进入哪个运行级别&amp;lt;hr /&amp;gt;
-在centos7中，该配置文件已经被systemd所取...</content>
-  </entry>
-
-  <entry>
-    <title>OS: Threads</title>
-    <link href="/os/os-threads.html"/>
-    <updated>2015-05-08T00:00:00+09:00</updated>
-    <id>/os/os-threads</id>
-    <content type="html">
-Definition
-
-  A thread is a basic unit of CPU utilization. It shares with other threads
-belonging to the same process its code section, data section, and other
-operating system resources, such as open files and signals.
-    
-      A thread ID
-      A program counter
-      A register set
-      A ...</content>
-  </entry>
-
-  <entry>
-    <title>OS: System Programs</title>
-    <link href="/os/os-system-programs.html"/>
-    <updated>2015-05-08T00:00:00+09:00</updated>
-    <id>/os/os-system-programs</id>
-    <content type="html">
-####
-
-  Program loading and execution
-    
-      absolute loaders
-      relocatable loaders
-      linkage editors
-    
-  
-
-
-Communications
-
-  Creating virtual connections among processes, users, and computer systems.
-  allowing users to send messages to one another’s screens.
-  to browse webpage...</content>
-  </entry>
-
-  <entry>
-    <title>OS: System Call</title>
-    <link href="/os/os-system-call.html"/>
-    <updated>2015-05-08T00:00:00+09:00</updated>
-    <id>/os/os-system-call</id>
-    <content type="html">
-####
-
-  System calls provide an interface to the servies made available by an
-Operating System.
-    
-      A simple task like copying like copying the contents of one file to another
-file, we had to run a lot of system calls. Many system calls were executed in
-the process.
-      These calls are ...</content>
-  </entry>
-
-  <entry>
-    <title>OS: Summary</title>
-    <link href="/os/os-summary.html"/>
-    <updated>2015-05-08T00:00:00+09:00</updated>
-    <id>/os/os-summary</id>
-    <content type="html">
-intro
-学习mac，需要知道linux的设计哲学，Linux本质上是一个用户服务器模式，tmux借鉴了linux的设计模式，也是一个c/s架构的模式。
-在linux中，最重要的概念是用户和组
-
-
-
-####
-隐藏文件在finder不可见
-defaults write com.apple.finder AppleShowAllFiles -bool false
-
-隐藏文件在finder中可见
-defaults write com.apple.finder AppleShowAllFiles -bool true
-
-在finder的偏好设置中，可以选择在桌面显示或者隐藏，硬盘，外置磁盘...</content>
-  </entry>
-
-  <entry>
-    <title>OS: Structure</title>
-    <link href="/os/os-structure.html"/>
-    <updated>2015-05-08T00:00:00+09:00</updated>
-    <id>/os/os-structure</id>
-    <content type="html">
-
-</content>
-  </entry>
-
-  <entry>
-    <title>OS: Storeage Structure</title>
-    <link href="/os/os-storage-structure.html"/>
-    <updated>2015-05-08T00:00:00+09:00</updated>
-    <id>/os/os-storage-structure</id>
-    <content type="html">
-&amp;lt;img src=/images/computer-science-operating-system-storage-structure.png&amp;gt;
-
-</content>
-  </entry>
-
-  <entry>
-    <title>OS: Sockets</title>
-    <link href="/os/os-sockets.html"/>
-    <updated>2015-05-08T00:00:00+09:00</updated>
-    <id>/os/os-sockets</id>
-    <content type="html">
-####
-
-  A Socket is defined as an endpoint for communication
-  A pair of process communicating over a network employ a pair of sockets-one
-ofr each process
-  A socket is identified by an IP address concatenated with a port number.
-  The server waits for incoming client requests by listening to a...</content>
-  </entry>
-
-  <entry>
-    <title>OS: Services</title>
-    <link href="/os/os-services.html"/>
-    <updated>2015-05-08T00:00:00+09:00</updated>
-    <id>/os/os-services</id>
-    <content type="html">
-
-  User Interface
-  Program Execution
-  I/O Operations
-  File System Manipulation
-  Communications
-  Error Detection
-  Resource Allocation
-  Accounting
-  Protection and Security
-
-
-####
-
-  Process: A program loaded into memory and executing is called a “PROCESS”
-
-
-</content>
-  </entry>
-
-  <entry>
-    <title>OS: Process Management</title>
-    <link href="/os/os-process-management.html"/>
-    <updated>2015-05-08T00:00:00+09:00</updated>
-    <id>/os/os-process-management</id>
-    <content type="html">
-Definition
-
-  Process: A process can be thought of as a program in execution
-  Thread: A thread is the unit of execution with a process. A process can have
-one thread to many threads.
-
-
-Process State
-
-  New: The process is being created.
-  Running: Instructions are being executed.
-  Waiting: The...</content>
-  </entry>
-
-  <entry>
-    <title>OS: Interprocess Communication</title>
-    <link href="/os/os-process-communication.html"/>
-    <updated>2015-05-08T00:00:00+09:00</updated>
-    <id>/os/os-process-communication</id>
-    <content type="html">
-###
-
-  Processes executing concurrently in the operating system maybe either
-independent processes or cooperating processes.
-
-
-
-  Independent processes: They cannot affect or be affected by the other
-processes executing in the system.
-  Cooperating processes: They can affect or be affected by th...</content>
-  </entry>
-
-  <entry>
-    <title>OS: Computer System Operation</title>
-    <link href="/os/os-operation.html"/>
-    <updated>2015-05-08T00:00:00+09:00</updated>
-    <id>/os/os-operation</id>
-    <content type="html">
-####
-
-  An Operating System(OS) is a program that manages the computer hardware
-  It also provides a basis for Apllication Programs and acts as an intermediary
-between computer user and hardware.
-
-
-####
-
-  Bootstrap Program: The initial program that runs when a computer is powered
-up or rebooted...</content>
-  </entry>
-
-  <entry>
-    <title>MacOS Software</title>
-    <link href="/os/os-macOS-software.html"/>
-    <updated>2015-05-08T00:00:00+09:00</updated>
-    <id>/os/os-macOS-software</id>
-    <content type="html">
-VLC视频播放器
-
-
-  open-source
-  support multiplatform
-
-
-Mathpix Snipping Tool
-
-
-  translate formul
-
-
-Mac OS Safari
-
-  User Agent String is to detect Internet Explore Version, For IE7, you can set like this Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)
-
-
-Mac OS Finder
-
-  If you mac can’t connect ...</content>
-  </entry>
-
-  <entry>
-    <title>MacOS: ITerm</title>
-    <link href="/os/os-macOS-iterm.html"/>
-    <updated>2015-05-08T00:00:00+09:00</updated>
-    <id>/os/os-macOS-iterm</id>
-    <content type="html">
-####
-
-  ITerm2 is a terminal emulator for MacOS.
-
-
-Galois
-
-  ITerm2, Zsh shell,tmux, vim
-
-
-</content>
-  </entry>
-
-  <entry>
-    <title>OS: Computer System Architecture</title>
-    <link href="/os/os-computer-system-architecture.html"/>
-    <updated>2015-05-08T00:00:00+09:00</updated>
-    <id>/os/os-computer-system-architecture</id>
-    <content type="html">
-Galois
-
-  For a long time, I have no idea what how does computer work. What the hell is
-a CPU ?  If you have any questions about anything, No back how fancy they
-look like ? Just go back to the history where it started. Figure about how
-everything evolved.
-  computer is supposed to do some compu...</content>
   </entry>
 
 

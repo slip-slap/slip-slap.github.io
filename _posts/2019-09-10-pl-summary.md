@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Code: Summary"
+title: "PL: Summary"
 keywords: [""]
 description: ""
 category: "PL"
