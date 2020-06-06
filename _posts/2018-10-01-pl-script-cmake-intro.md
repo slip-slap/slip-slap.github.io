@@ -1,6 +1,6 @@
 --- 
 layout: post 
-title: "Cmake: Introduction" 
+title: "CMake: Introduction" 
 keywords: [] 
 description: 
 category: "PL"

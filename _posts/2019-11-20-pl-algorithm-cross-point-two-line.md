@@ -3,8 +3,8 @@ layout: post
 title: "Algorithm: Intersection of Two Line"
 keywords: []
 description: 
-category: "PL"
-tags: ["algorithm"]
+category: 
+tags: []
 ---
 {% include JB/setup %}
 

@@ -1,6 +1,6 @@
 --- 
 layout: post 
-title: "Commands: Scripting Commands" 
+title: "CMake: Scripting Commands" 
 keywords: [] 
 description: 
 category: "PL"

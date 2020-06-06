@@ -1,0 +1,66 @@
+I"�	
+<p>####</p>
+<ol>
+  <li>The phrase regular expressions is also called regexes.</li>
+  <li>Each character in a regular expression is either a metacharacter, having a
+special meaning, or a regular character that has a literal meaning.</li>
+  <li>The metachacter syntax is designed specifically to represent prescribed
+targets in a concise and flexible way to direct the automation of text
+processing of a variety of input data.</li>
+</ol>
+
+<h4 id="regex-grammar">Regex Grammar</h4>
+
+<h4 id="range">Range</h4>
+<p>[259], [a-zA-Z,:]  grep ‘[^0-9]’ passwd</p>
+
+<h4 id="repeat">Repeat</h4>
+<ol>
+  <li>{n} exactly math n times</li>
+  <li>{n,} at least match n times</li>
+  <li>{n,m} at least match n times and at most match match m times.</li>
+</ol>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>转义字符在[]内失去作用，‘[.]’ 表示匹配.,而不是匹配任意字符
+</code></pre></div></div>
+<ol>
+  <li>.点号字符表示匹配任意字符</li>
+  <li>边界字符</li>
+</ol>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>^: ^root  匹配输入字符串的开始位置， 注意与[^]的区别
+<span class="nv">$:</span> <span class="nb">false</span><span class="nv">$ </span>匹配输入字符串的结尾位置
+<span class="s1">'^$'</span> 表示空行
+</code></pre></div></div>
+
+<h5 id="metacharacter">Metacharacter</h5>
+<ol>
+  <li>\w: 匹配人体字类字符，包括下划线([A-Za-z0-9_])</li>
+  <li>\W: 匹配任何非字类字符 ‘[^A-Za-z0-9_]’</li>
+  <li>\b: 代表单词的分隔</li>
+  <li>*   匹配0次或者n次</li>
+  <li>\+ 匹配1次或者n次</li>
+  <li>\? 匹配0次或者1次</li>
+</ol>
+
+<hr />
+
+<h4 id="example">Example</h4>
+
+<p>15到18位以X或者x或者数字结尾的身份证号</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">grep</span> <span class="s1">'[1-9]\([0-9]\{13\}\|[0-9]\{16\}\)[0-9Xx]'</span> <span class="nb">test</span>
+</code></pre></div></div>
+
+<p>匹配密码</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">grep</span> <span class="s1">'$\w\+$'</span>
+</code></pre></div></div>
+
+<h4 id="galois">Galois</h4>
+<ol>
+  <li>Treat regex as a language to describe string, just as we use english or
+japanese or chinese to describe our life.</li>
+  <li>It’s a language, just get use  to <strong>metacharacter grammar</strong></li>
+</ol>
+:ET

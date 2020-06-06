@@ -2,7 +2,7 @@
 layout: post
 title: "C++: Keywords"
 keywords: []
-description: "c++"
+description: 
 category: "PL"
 tags: ["c++","compile"]
 ---

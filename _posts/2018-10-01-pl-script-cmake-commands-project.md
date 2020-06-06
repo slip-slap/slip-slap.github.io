@@ -1,6 +1,6 @@
 --- 
 layout: post 
-title: "Commands: Project Commands" 
+title: "CMake: Project Commands" 
 keywords: [] 
 description: 
 category: "PL"
