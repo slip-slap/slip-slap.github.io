@@ -5,8 +5,8 @@
   <description>Just Do It - </description>
   <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
   <link></link>
-  <lastBuildDate>Sat, 06 Jun 2020 12:26:59 +0900</lastBuildDate>
-  <pubDate>Sat, 06 Jun 2020 12:26:59 +0900</pubDate>
+  <lastBuildDate>Sun, 07 Jun 2020 11:19:32 +0900</lastBuildDate>
+  <pubDate>Sun, 07 Jun 2020 11:19:32 +0900</pubDate>
   <ttl>1800</ttl>
 
 
@@ -21804,7 +21804,7 @@ Bernoulli, binomial.&lt;/p&gt;
 &lt;h3 id=&quot;1-definition&quot;&gt;1. Definition&lt;/h3&gt;
 &lt;ol&gt;
   &lt;li&gt;
-    &lt;p&gt;For \(p(X | \theta)\), fisher information is to answer the question: &lt;br /&gt;
+    &lt;p&gt;For \(p(X | \theta)\), fisher information is to answer the question: 
 &lt;strong&gt;How useful is the random variable X in determining the unkown parameter \(\theta\)&lt;/strong&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;the fisher information is a frequentist concept&lt;/li&gt;
@@ -24638,6 +24638,27 @@ git clone https://github.com/scrooloose/nerdtree.git
   </item>
 
   <item>
+    <title>Editor: Vimscript Philosophy</title>
+    <description>
+&lt;h4 id=&quot;always-stay-on-normal-mode&quot;&gt;Always Stay on Normal Mode&lt;/h4&gt;
+&lt;p&gt;The phiosophy of this is that vim commands are meant to be combined, and this
+makes a lot more sense once you begin grokking vim, and stop seeing files as
+something you edit, but instead as grid-like blocks of text that you can freely
+manipulate and command&lt;/p&gt;
+
+&lt;h5 id=&quot;normal-command-is-language&quot;&gt;Normal Command is Language&lt;/h5&gt;
+&lt;ol&gt;
+  &lt;li&gt;verbs: &lt;strong&gt;c&lt;/strong&gt;(change), &lt;strong&gt;d&lt;/strong&gt;(delete), &lt;strong&gt;y&lt;/strong&gt;(yank)&lt;/li&gt;
+  &lt;li&gt;nouns: &lt;strong&gt;w&lt;/strong&gt;(word) , &lt;strong&gt;}&lt;/strong&gt;(paragraph), &lt;strong&gt;G&lt;/strong&gt;(eof)&lt;/li&gt;
+  &lt;li&gt;adjective: numberical prefixes and your descriptors.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/pl/pl-script-editor-vimscript-philosophy.html</link>
+    <guid>/pl/pl-script-editor-vimscript-philosophy</guid>
+    <pubDate>Sun, 12 Aug 2018 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
     <title>Editor: Sed</title>
     <description>
 &lt;p&gt;####&lt;/p&gt;
@@ -24788,6 +24809,30 @@ edit files in place (makes backup if SUFFIX supplied)&lt;/li&gt;
   </item>
 
   <item>
+    <title>Shell: Environment</title>
+    <description>&lt;h4 id=&quot;introduction&quot;&gt;Introduction&lt;/h4&gt;
+&lt;p&gt;Shell maintains a body of information during our shell session called the
+environment. Data stored in the environment is used by programs to determine
+facts about our configuration.&lt;/p&gt;
+
+&lt;h4 id=&quot;environment-established&quot;&gt;Environment Established&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;When we log to the system, the &lt;strong&gt;bash&lt;/strong&gt; program starts, and reads a series of
+configuration scripts called startup files, which define the default
+environemnt shared by all users.&lt;/li&gt;
+  &lt;li&gt;This is followed by more startup files in our home directory that define our
+personal environment. The exact sequence depends on the type of shell session
+being started.&lt;/li&gt;
+  &lt;li&gt;There are tow kinds: a login shell session and a non-log-in shell session.&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/pl/pl-script-shell-envrionment.html</link>
+    <guid>/pl/pl-script-shell-envrionment</guid>
+    <pubDate>Thu, 09 Aug 2018 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
     <title>Shell: Text Processing</title>
     <description>&lt;p&gt;####&lt;/p&gt;
 &lt;ol&gt;
@@ -24822,7 +24867,37 @@ edit files in place (makes backup if SUFFIX supplied)&lt;/li&gt;
   </item>
 
   <item>
-    <title>Command: DIY</title>
+    <title>Shell: Quoting Mechanisms</title>
+    <description>
+&lt;h4 id=&quot;1-metacharacters&quot;&gt;1. Metacharacters&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Unix shell provides various metacharacters which have special meaning while
+using them in any shell script.
+    &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; ? &lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;' &quot; \ $ ; &amp;amp; ( ) | ^ &amp;lt; &amp;gt; space tab
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;2-quoting-mechanisme&quot;&gt;2. Quoting Mechanisme&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Single quote: All special characters between these quotes lost their special
+meaning&lt;/li&gt;
+  &lt;li&gt;Double quote: Most special characters between these quotes lost their special
+meaning with some exceptions&lt;/li&gt;
+  &lt;li&gt;Any character immediately following the backslash loses its special meaning.&lt;/li&gt;
+  &lt;li&gt;Anything in between back quotes would be treated as a command and would be
+executed.&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/pl/pl-script-shell-quoting-mechanism.html</link>
+    <guid>/pl/pl-script-shell-quoting-mechanism</guid>
+    <pubDate>Wed, 08 Aug 2018 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Shell: DIY Command</title>
     <description>
 &lt;h4 id=&quot;command-type&quot;&gt;Command Type&lt;/h4&gt;
 &lt;p&gt;In linux, nothing is secret, you can get any where and know everything. A
@@ -24864,30 +24939,6 @@ no response or an error message.&lt;/li&gt;
     <link>/pl/pl-script-shell-comman-diy.html</link>
     <guid>/pl/pl-script-shell-comman-diy</guid>
     <pubDate>Wed, 08 Aug 2018 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>Shell: Environment</title>
-    <description>&lt;h4 id=&quot;introduction&quot;&gt;Introduction&lt;/h4&gt;
-&lt;p&gt;Shell maintains a body of information during our shell session called the
-environment. Data stored in the environment is used by programs to determine
-facts about our configuration.&lt;/p&gt;
-
-&lt;h4 id=&quot;environment-established&quot;&gt;Environment Established&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;When we log to the system, the &lt;strong&gt;bash&lt;/strong&gt; program starts, and reads a series of
-configuration scripts called startup files, which define the default
-environemnt shared by all users.&lt;/li&gt;
-  &lt;li&gt;This is followed by more startup files in our home directory that define our
-personal environment. The exact sequence depends on the type of shell session
-being started.&lt;/li&gt;
-  &lt;li&gt;There are tow kinds: a login shell session and a non-log-in shell session.&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-    <link>/pl/pl-script-shell-envrionment.html</link>
-    <guid>/pl/pl-script-shell-envrionment</guid>
-    <pubDate>Tue, 07 Aug 2018 00:00:00 +0900</pubDate>
   </item>
 
   <item>
@@ -25104,24 +25155,6 @@ tmux &lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; ~/.tmux.conf
 </description>
     <link>/pl/pl-script-shell-system-call.html</link>
     <guid>/pl/pl-script-shell-system-call</guid>
-    <pubDate>Mon, 06 Aug 2018 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>Shell: My Script</title>
-    <description>
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;i &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.md
-&lt;span class=&quot;k&quot;&gt;do
-   &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;var1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;i&lt;/span&gt;:0:10&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-   &lt;span class=&quot;nv&quot;&gt;var2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;i&lt;/span&gt;:10:100&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-   &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;var1&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;-code&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;var2&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-   &lt;span class=&quot;nb&quot;&gt;mv&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;var1&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;-code&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;var2&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-</description>
-    <link>/pl/pl-script-shell-script.html</link>
-    <guid>/pl/pl-script-shell-script</guid>
     <pubDate>Mon, 06 Aug 2018 00:00:00 +0900</pubDate>
   </item>
 
@@ -25479,6 +25512,24 @@ crontab &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt;
     <link>/pl/pl-script-shell-command-crontab.html</link>
     <guid>/pl/pl-script-shell-command-crontab</guid>
     <pubDate>Mon, 06 Aug 2018 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Shell: My Script</title>
+    <description>
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;i &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.md
+&lt;span class=&quot;k&quot;&gt;do
+   &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;var1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;i&lt;/span&gt;:0:10&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+   &lt;span class=&quot;nv&quot;&gt;var2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;i&lt;/span&gt;:10:100&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+   &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;var1&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;-code&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;var2&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+   &lt;span class=&quot;nb&quot;&gt;mv&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;var1&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;-code&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;var2&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+</description>
+    <link>/pl/pl-script-shell-script.html</link>
+    <guid>/pl/pl-script-shell-script</guid>
+    <pubDate>Wed, 01 Aug 2018 00:00:00 +0900</pubDate>
   </item>
 
   <item>
@@ -30987,19 +31038,21 @@ codes&lt;/a&gt;&lt;/li&gt;
   </item>
 
   <item>
-    <title>Git Branch</title>
+    <title>Git:  Branch</title>
     <description>
 &lt;h4 id=&quot;操作&quot;&gt;操作&lt;/h4&gt;
 &lt;ul&gt;
-  &lt;li&gt;git branch                 显示分支&lt;/li&gt;
-  &lt;li&gt;git checkout master        切换分支&lt;/li&gt;
-  &lt;li&gt;git branch develop         创建分支  创建分支的名字为developj
-    &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git checkout &lt;span class=&quot;nt&quot;&gt;-b&lt;/span&gt; develop
+  &lt;li&gt;git branch                 display branch&lt;/li&gt;
+  &lt;li&gt;git checkout master        switch branch&lt;/li&gt;
+  &lt;li&gt;git branch develop         create branch&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git checkout &lt;span class=&quot;nt&quot;&gt;-b&lt;/span&gt; develop
 &lt;span class=&quot;c&quot;&gt;# 相当于执行下面两条命令&lt;/span&gt;
 git branch develop
 git checkout develop
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
   &lt;li&gt;git branch -d develop      删除分支 删除名字为develop的分支&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -31008,16 +31061,118 @@ git checkout develop
 &lt;span class=&quot;c&quot;&gt;# 不在工作目录，可能在.git或者别的目录，切换到工作目录即可&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
-    <link>/git-branch.html</link>
-    <guid>/git-branch</guid>
+    <link>/os/os-software-git-branch.html</link>
+    <guid>/os/os-software-git-branch</guid>
     <pubDate>Thu, 23 Mar 2017 00:00:00 +0900</pubDate>
   </item>
 
   <item>
-    <title> Git Remote Repository</title>
+    <title>Git:  Philosophy Behind the Scene</title>
     <description>
-&lt;p&gt;git支持多种协议，包括https, 但是通过ssh支持的原生git协议速度最快。&lt;/p&gt;
+&lt;h4 id=&quot;1-what-is-the-problem-&quot;&gt;1. What is the problem ?&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;assume you are a coder,  and work on a project. Accasionaly you revise you
+code, some days later, you want get things back to where they were.
+    &lt;ul&gt;
+      &lt;li&gt;one solution is every time you change your code, you make a copy, but as time
+goes on, this is a nightmare. Based on the timeline, we packed the code we get
+anywhere we want.&lt;/li&gt;
+      &lt;li&gt;the second solution is git.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
 
+&lt;h4 id=&quot;2-the-philosphy&quot;&gt;2. The Philosphy&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;if you check the code in your project carefully, your file can be divided
+into two classes, &lt;strong&gt;folder and text&lt;/strong&gt;.
+    &lt;ul&gt;
+      &lt;li&gt;In git, both the &lt;strong&gt;folder and text&lt;/strong&gt; ,separately, are abstracted as objects
+and blob.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;we are not satisfied with the timeline, we use a more complicated structure
+which is called &lt;strong&gt;graph&lt;/strong&gt; to track all the change.
+    &lt;ul&gt;
+      &lt;li&gt;how to connect these &lt;strong&gt;graph&lt;/strong&gt;, and what’s the direction of the two node ? The
+solution is pointer, and the direction is from descendant to ancestor.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;what’s the name of each node ? How to identify them ?
+    &lt;ul&gt;
+      &lt;li&gt;It use hash function, but it’s not readable, so we create a reference to them,
+you can it branch.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;3-example&quot;&gt;3. Example&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;git init: create .git file，
+    &lt;ul&gt;
+      &lt;li&gt;you can found objects and refs folder, this is the main file where git can
+track all the changes&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;mkdir &lt;/span&gt;my_git
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;_my_git
+git init
+&lt;span class=&quot;nb&quot;&gt;ls&lt;/span&gt; .git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;git log: to check commit information&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;hello world&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; my.py
+git add my.py
+git commit &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;x&quot;&lt;/span&gt; 
+git log
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img align=&quot;left&quot; src=&quot;/images/os-software-git-philosophy-first-coomit.png&quot; /&gt; &lt;br /&gt;
+&lt;br /&gt; &lt;br /&gt; &lt;br /&gt; &lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;dog&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; my.py
+git add my.py
+git commit &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;x&quot;&lt;/span&gt; 
+git log
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img align=&quot;left&quot; src=&quot;/images/os-software-git-philosophy-second-coomit.png&quot; /&gt; &lt;br /&gt;
+&lt;br /&gt; &lt;br /&gt; &lt;br /&gt; &lt;br /&gt; &lt;br /&gt; &lt;br /&gt; &lt;br /&gt; 
+&lt;br /&gt; &lt;br /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;git checkout &lt;hash-value&gt;: jump to previous state&lt;/hash-value&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# check current file content&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;my.py
+&lt;span class=&quot;c&quot;&gt;# hello world&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# dog&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# we get back to previous status, where hash value is&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# ad62409737e3e7160fa66b8ae62723b8c1beee96&lt;/span&gt;
+git checkout ad62409
+&lt;span class=&quot;c&quot;&gt;# now cat the my.py again, the content is&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# hello world&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;其实只能跟踪文件文件的改动，比如txt文件或者程序代码。
+版本控制系统可以告诉你每次的改动。但对于图片，视频等二进制文件，版本控制系统是无能为力的。&lt;/p&gt;
+
+&lt;p&gt;git由三个概念，分别是工作区，版本库和暂存区，add命令把文件由工作区
+添加到stage,即暂存区，commit命令把暂存区合并到版本库&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;git status 时刻掌握仓库当前的状态&lt;/li&gt;
+  &lt;li&gt;git diff 查看工作区和版本库的差别&lt;/li&gt;
+  &lt;li&gt;git reflog 记录你的每一次命令&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;git支持多种协议，包括https, 但是通过ssh支持的原生git协议速度最快。&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;添加远程库：git remote add origin git@github.com:slip-slap/slip-slap.github.io.git
 远程库的名字叫做origin，也可以改成别的，但是origin这个名字一看就知道是远程库&lt;/li&gt;
@@ -31025,42 +31180,8 @@ git checkout develop
 &lt;/ul&gt;
 
 </description>
-    <link>/git-remote-repository.html</link>
-    <guid>/git-remote-repository</guid>
-    <pubDate>Wed, 22 Mar 2017 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>Git Local Management</title>
-    <description>
-&lt;p&gt;在git里，一切皆为分支。
-git是世界上最先进的分布式控制系统。CVS和SVN都是集中式的版本控制系统。&lt;/p&gt;
-
-&lt;p&gt;所有的版本控制系统，其实只能跟踪文件文件的改动，比如txt文件或者程序代码。
-版本控制系统可以告诉你每次的改动。但对于图片，视频等二进制文件，版本控制系统是无能为力的。&lt;/p&gt;
-
-&lt;p&gt;git具有很多方便的功能，以分支为例。SVN也有分支结构，但是特别慢，就成了摆设
-git非常快。&lt;/p&gt;
-
-&lt;p&gt;git版本库即为仓库，repository，就是一个目录，目录里面的所有文件都可以被
-git管理。&lt;/p&gt;
-
-&lt;p&gt;git由三个概念，分别是工作区，版本库和暂存区，add命令把文件由工作区
-添加到stage,即暂存区，commit命令把暂存区合并到版本库&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;git init 把目录变成git可以管理的仓库，生成.git文件，跟踪管理版本库&lt;/li&gt;
-  &lt;li&gt;git add . 把当前文件夹得文件添加到仓库&lt;/li&gt;
-  &lt;li&gt;git commit -m “commit” 把文件提交到仓库&lt;/li&gt;
-  &lt;li&gt;git status 时刻掌握仓库当前的状态&lt;/li&gt;
-  &lt;li&gt;git diff 查看工作区和版本库的差别&lt;/li&gt;
-  &lt;li&gt;git log  显示总最近到最远的提交日志&lt;/li&gt;
-  &lt;li&gt;git reflog 记录你的每一次命令&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-    <link>/git-local-repository.html</link>
-    <guid>/git-local-repository</guid>
+    <link>/os/os-software-git-philosophy.html</link>
+    <guid>/os/os-software-git-philosophy</guid>
     <pubDate>Tue, 21 Mar 2017 00:00:00 +0900</pubDate>
   </item>
 

@@ -1,0 +1,115 @@
+I"t
+<h4 id="1-what-is-the-problem-">1. What is the problem ?</h4>
+<ol>
+  <li>assume you are a coder,  and work on a project. Accasionaly you revise you
+code, some days later, you want get things back to where they were.
+    <ul>
+      <li>one solution is every time you change your code, you make a copy, but as time
+goes on, this is a nightmare. Based on the timeline, we packed the code we get
+anywhere we want.</li>
+      <li>the second solution is git.</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="2-the-philosphy">2. The Philosphy</h4>
+<ol>
+  <li>if you check the code in your project carefully, your file can be divided
+into two classes, <strong>folder and text</strong>.
+    <ul>
+      <li>In git, both the <strong>folder and text</strong> ,separately, are abstracted as objects
+and blob.</li>
+    </ul>
+  </li>
+  <li>we are not satisfied with the timeline, we use a more complicated structure
+which is called <strong>graph</strong> to track all the change.
+    <ul>
+      <li>how to connect these <strong>graph</strong>, and what’s the direction of the two node ? The
+solution is pointer, and the direction is from descendant to ancestor.</li>
+    </ul>
+  </li>
+  <li>what’s the name of each node ? How to identify them ?
+    <ul>
+      <li>It use hash function, but it’s not readable, so we create a reference to them,
+you can it branch.</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="3-example">3. Example</h4>
+
+<ol>
+  <li>git init: create .git file，
+    <ul>
+      <li>you can found objects and refs folder, this is the main file where git can
+track all the changes</li>
+    </ul>
+  </li>
+</ol>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir </span>my_git
+<span class="nb">cd </span>_my_git
+git init
+<span class="nb">ls</span> .git
+</code></pre></div></div>
+
+<ol>
+  <li>git log: to check commit information</li>
+</ol>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"hello world"</span> <span class="o">&gt;</span> my.py
+git add my.py
+git commit <span class="nt">-m</span> <span class="s2">"x"</span> 
+git log
+</code></pre></div></div>
+<p><img align="left" src="/images/os-software-git-philosophy-first-coomit.png" /> <br />
+<br />
+<br />
+<br />
+<br /></p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"dog"</span> <span class="o">&gt;&gt;</span> my.py
+git add my.py
+git commit <span class="nt">-m</span> <span class="s2">"x"</span> 
+git log
+</code></pre></div></div>
+<p><img align="left" src="/images/os-software-git-philosophy-second-coomit.png" /> <br /></p>
+
+<ol>
+  <li>git checkout <hash-value>: jump to previous state</hash-value></li>
+</ol>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># check current file content</span>
+<span class="nb">cat </span>my.py
+<span class="c"># hello world</span>
+<span class="c"># dog</span>
+
+<span class="c"># we get back to previous status, where hash value is</span>
+<span class="c"># ad62409737e3e7160fa66b8ae62723b8c1beee96</span>
+git checkout ad62409
+<span class="c"># now cat the my.py again, the content is</span>
+<span class="c"># hello world</span>
+</code></pre></div></div>
+
+<p>其实只能跟踪文件文件的改动，比如txt文件或者程序代码。
+版本控制系统可以告诉你每次的改动。但对于图片，视频等二进制文件，版本控制系统是无能为力的。</p>
+
+<p>git由三个概念，分别是工作区，版本库和暂存区，add命令把文件由工作区
+添加到stage,即暂存区，commit命令把暂存区合并到版本库</p>
+
+<ul>
+  <li>git add . 把当前文件夹得文件添加到仓库</li>
+  <li>git status 时刻掌握仓库当前的状态</li>
+  <li>git diff 查看工作区和版本库的差别</li>
+  <li>git log  显示总最近到最远的提交日志</li>
+  <li>git reflog 记录你的每一次命令</li>
+</ul>
+
+<p>git支持多种协议，包括https, 但是通过ssh支持的原生git协议速度最快。</p>
+<ul>
+  <li>添加远程库：git remote add origin git@github.com:slip-slap/slip-slap.github.io.git
+远程库的名字叫做origin，也可以改成别的，但是origin这个名字一看就知道是远程库</li>
+  <li>把本地库的所有内容推送到远程库上 git push origin master</li>
+</ul>
+
+:ET

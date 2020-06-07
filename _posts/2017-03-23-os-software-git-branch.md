@@ -1,17 +1,18 @@
 ---
 layout: post
-title: "Git Branch"
+title: "Git:  Branch"
 keywords: []
 description: 
-category: 
+category: "OS" 
 tags: []
 ---
 {% include JB/setup %}
 
 #### 操作
-+ git branch                 显示分支
-+ git checkout master        切换分支
-+ git branch develop         创建分支  创建分支的名字为developj
++ git branch                 display branch
++ git checkout master        switch branch
++ git branch develop         create branch
+
 ```shell
 git checkout -b develop
 # 相当于执行下面两条命令

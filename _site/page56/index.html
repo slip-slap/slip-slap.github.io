@@ -142,7 +142,7 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">639</span>
+<span title="文章总数">640</span>
 <ul>
 
 
@@ -2836,7 +2836,17 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#August-2018">2018 年 08 月 (20)</a></li>
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#August-2018">2018 年 08 月 (22)</a></li>
     
   
 
@@ -3404,12 +3414,7 @@ $(document).ready(function() {
   
   
   
-
-  
-  
-  
-  
-    <li><a href="/archive.html#March-2017">2017 年 03 月 (4)</a></li>
+    <li><a href="/archive.html#March-2017">2017 年 03 月 (3)</a></li>
     
   
 
@@ -3422,9 +3427,9 @@ $(document).ready(function() {
 <span title="分类总数">8</span>
 <ul>
 
-  <li><a href="/categories.html#PL-ref">PL (148)</a></li>
+  <li><a href="/categories.html#OS-ref">OS (23)</a></li>
 
-  <li><a href="/categories.html#OS-ref">OS (21)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (150)</a></li>
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
@@ -3457,14 +3462,14 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#script-ref" style="font-size: 17.5pt; color: #111;">script</a>
+    <a href="/tags.html#script-ref" style="font-size: 17.5pt; color: #000;">script</a>
   
     
     
     
     
     
-    <a href="/tags.html#shell-ref" style="font-size: 10.5pt; color: #888;">shell</a>
+    <a href="/tags.html#shell-ref" style="font-size: 10.5pt; color: #777;">shell</a>
   
     
     
@@ -3513,7 +3518,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#editor-ref" style="font-size: 9pt; color: #999;">editor</a>
+    <a href="/tags.html#editor-ref" style="font-size: 9.5pt; color: #999;">editor</a>
   
     
     
@@ -4014,6 +4019,76 @@ $(document).ready(function() {
   <article class="nested">
 
     <header>
+      <h2><a href="/pl/pl-compile-java-enum.html" title="查看《Java: Enum》">Java: Enum</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+intro
+枚举类型反编译之后也是类，该类用final关键字修饰
+
+
+产生原因
+//枚举类型的引入
+class Weekday{
+	private Weekday(){};
+	public static final Weekday MONDAY= new Weekday();
+	public...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#April-2018" title="查看此月所有文章">01 April 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-compile-java-enum.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-compile-java-copy-control.html" title="查看《Java: Copy Control》">Java: Copy Control</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+intro
+在c++中，有一章专门讲拷贝控制，java把这个问题简单化了，简化成深拷贝与浅拷贝
+
+
+浅拷贝
+
+
+问题的产生
+class Foo{
+	private int age;
+	private Date date;
+	public int getA() {
+		return age;
+...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#April-2018" title="查看此月所有文章">01 April 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-compile-java-copy-control.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
       <h2><a href="/pl/pl-compile-java-container.html" title="查看《Java: Container》">Java: Container</a></h2>
     </header>
 
@@ -4288,72 +4363,6 @@ System.out.println(calendar.get(Calendar.YEAR));
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
         评论：<a href="/pl/pl-compile-java-Calendar.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-compile-java-BigDecimal.html" title="查看《Java: BigDecimal》">Java: BigDecimal</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-作用
-精确运算
-
-
-使用方法
-
-  使用String对象构建BigDecimal对象
-  调用相应的方法进行算术运算
-  把BigDecimal对象转换成float,double等类型
-
-
-
-代码
-BigDecimal bd=new BigDecimal("0.06");
-System.ou...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#April-2018" title="查看此月所有文章">01 April 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-compile-java-BigDecimal.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-script-python-envrionment.html" title="查看《Python: Environment》">Python: Environment</a></h2>
-    </header>
-
-    <section>
-      <p>
-        Reference
-
-  pyenv
-  how to set a default python3
-
-
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">18 March 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-python-envrionment.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 

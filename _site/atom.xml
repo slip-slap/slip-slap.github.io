@@ -3,7 +3,7 @@
   <title>Just Do It</title>
   <link href="/atom.xml" rel="self"/>
   <link href=""/>
-  <updated>2020-06-06T12:26:59+09:00</updated>
+  <updated>2020-06-07T11:19:32+09:00</updated>
   <id></id>
   <author>
     <name>reed</name>
@@ -10182,6 +10182,21 @@ Maybe this is the most difficult plugin to install
   </entry>
 
   <entry>
+    <title>Editor: Vimscript Philosophy</title>
+    <link href="/pl/pl-script-editor-vimscript-philosophy.html"/>
+    <updated>2018-08-12T00:00:00+09:00</updated>
+    <id>/pl/pl-script-editor-vimscript-philosophy</id>
+    <content type="html">
+Always Stay on Normal Mode
+The phiosophy of this is that vim commands are meant to be combined, and this
+makes a lot more sense once you begin grokking vim, and stop seeing files as
+something you edit, but instead as grid-like blocks of text that you can freely
+manipulate and command
+
+Normal Com...</content>
+  </entry>
+
+  <entry>
     <title>Editor: Sed</title>
     <link href="/pl/pl-script-editor-sed.html"/>
     <updated>2018-08-12T00:00:00+09:00</updated>
@@ -10212,6 +10227,22 @@ Awk
 分割符
 -F field-separator(默认为空格)
 awk -F ':' '{print...</content>
+  </entry>
+
+  <entry>
+    <title>Shell: Environment</title>
+    <link href="/pl/pl-script-shell-envrionment.html"/>
+    <updated>2018-08-09T00:00:00+09:00</updated>
+    <id>/pl/pl-script-shell-envrionment</id>
+    <content type="html">Introduction
+Shell maintains a body of information during our shell session called the
+environment. Data stored in the environment is used by programs to determine
+facts about our configuration.
+
+Environment Established
+
+  When we log to the system, the bash program starts, and reads a series of
+...</content>
   </entry>
 
   <entry>
@@ -10249,7 +10280,28 @@ sudo du -h --max-depth=1 /var
   </entry>
 
   <entry>
-    <title>Command: DIY</title>
+    <title>Shell: Quoting Mechanisms</title>
+    <link href="/pl/pl-script-shell-quoting-mechanism.html"/>
+    <updated>2018-08-08T00:00:00+09:00</updated>
+    <id>/pl/pl-script-shell-quoting-mechanism</id>
+    <content type="html">
+1. Metacharacters
+
+
+  Unix shell provides various metacharacters which have special meaning while
+using them in any shell script.
+    * ? [] ' &quot; \ $ ; &amp;amp; ( ) | ^ &amp;lt; &amp;gt; space tab
+    
+  
+
+
+2. Quoting Mechanisme
+
+  Single quote: All special characters between these quotes lost their special...</content>
+  </entry>
+
+  <entry>
+    <title>Shell: DIY Command</title>
     <link href="/pl/pl-script-shell-comman-diy.html"/>
     <updated>2018-08-08T00:00:00+09:00</updated>
     <id>/pl/pl-script-shell-comman-diy</id>
@@ -10261,22 +10313,6 @@ command can be one of the four different things:
   An executable program, such as files we saw in /usr/bin. Within this
 category, programs can be compiled binaries such as programs written in C and
 C++, or pr...</content>
-  </entry>
-
-  <entry>
-    <title>Shell: Environment</title>
-    <link href="/pl/pl-script-shell-envrionment.html"/>
-    <updated>2018-08-07T00:00:00+09:00</updated>
-    <id>/pl/pl-script-shell-envrionment</id>
-    <content type="html">Introduction
-Shell maintains a body of information during our shell session called the
-environment. Data stored in the environment is used by programs to determine
-facts about our configuration.
-
-Environment Established
-
-  When we log to the system, the bash program starts, and reads a series of
-...</content>
   </entry>
 
   <entry>
@@ -10381,24 +10417,6 @@ Demo
 reference
 
   System call
-
-
-</content>
-  </entry>
-
-  <entry>
-    <title>Shell: My Script</title>
-    <link href="/pl/pl-script-shell-script.html"/>
-    <updated>2018-08-06T00:00:00+09:00</updated>
-    <id>/pl/pl-script-shell-script</id>
-    <content type="html">
-for i in *.md
-do
-   var1=&quot;${i:0:10}&quot;
-   var2=&quot;${i:10:100}&quot;
-   echo &quot;${var1}-code${var2}&quot;
-   mv &quot;${i}&quot; &quot;${var1}-code${var2}&quot;
-done
 
 
 </content>
@@ -10604,6 +10622,24 @@ output information of command ls
 		0-59
 		0-23
 ...</content>
+  </entry>
+
+  <entry>
+    <title>Shell: My Script</title>
+    <link href="/pl/pl-script-shell-script.html"/>
+    <updated>2018-08-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-shell-script</id>
+    <content type="html">
+for i in *.md
+do
+   var1=&quot;${i:0:10}&quot;
+   var2=&quot;${i:10:100}&quot;
+   echo &quot;${var1}-code${var2}&quot;
+   mv &quot;${i}&quot; &quot;${var1}-code${var2}&quot;
+done
+
+
+</content>
   </entry>
 
   <entry>
@@ -12896,66 +12932,44 @@ codes
   </entry>
 
   <entry>
-    <title>Git Branch</title>
-    <link href="/git-branch.html"/>
+    <title>Git:  Branch</title>
+    <link href="/os/os-software-git-branch.html"/>
     <updated>2017-03-23T00:00:00+09:00</updated>
-    <id>/git-branch</id>
+    <id>/os/os-software-git-branch</id>
     <content type="html">
 操作
 
-  git branch                 显示分支
-  git checkout master        切换分支
-  git branch develop         创建分支  创建分支的名字为developj
-    git checkout -b develop
+  git branch                 display branch
+  git checkout master        switch branch
+  git branch develop         create branch
+
+
+git checkout -b develop
 # 相当于执行下面两条命令
 git branch develop
 git checkout develop
-    
-  
+
+
   git branch -d develop      删除分支 删除名字为develop的分支
 
 
 exception
-fatal: this operatio...</content>
+fatal: this operat...</content>
   </entry>
 
   <entry>
-    <title> Git Remote Repository</title>
-    <link href="/git-remote-repository.html"/>
-    <updated>2017-03-22T00:00:00+09:00</updated>
-    <id>/git-remote-repository</id>
-    <content type="html">
-git支持多种协议，包括https, 但是通过ssh支持的原生git协议速度最快。
-
-
-  添加远程库：git remote add origin git@github.com:slip-slap/slip-slap.github.io.git
-远程库的名字叫做origin，也可以改成别的，但是origin这个名字一看就知道是远程库
-  把本地库的所有内容推送到远程库上 git push origin master
-
-
-</content>
-  </entry>
-
-  <entry>
-    <title>Git Local Management</title>
-    <link href="/git-local-repository.html"/>
+    <title>Git:  Philosophy Behind the Scene</title>
+    <link href="/os/os-software-git-philosophy.html"/>
     <updated>2017-03-21T00:00:00+09:00</updated>
-    <id>/git-local-repository</id>
+    <id>/os/os-software-git-philosophy</id>
     <content type="html">
-在git里，一切皆为分支。
-git是世界上最先进的分布式控制系统。CVS和SVN都是集中式的版本控制系统。
+1. What is the problem ?
 
-所有的版本控制系统，其实只能跟踪文件文件的改动，比如txt文件或者程序代码。
-版本控制系统可以告诉你每次的改动。但对于图片，视频等二进制文件，版本控制系统是无能为力的。
-
-git具有很多方便的功能，以分支为例。SVN也有分支结构，但是特别慢，就成了摆设
-git非常快。
-
-git版本库即为仓库，repository，就是一个目录，目录里面的所有文件都可以被
-git管理。
-
-git由三个概念，分别是工作区，版本库和暂存区，add命令把文件由工作区
-添加到stage,即暂存区，com...</content>
+  assume you are a coder,  and work on a project. Accasionaly you revise you
+code, some days later, you want get things back to where they were.
+    
+      one solution is every time you change your code, you make a copy, but as time
+goes on, this is a nightmare. Based ...</content>
   </entry>
 
   <entry>

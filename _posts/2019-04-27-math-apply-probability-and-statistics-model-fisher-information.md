@@ -12,7 +12,7 @@ tags: ["apply","P.A.S.M."]
 ### 1. Definition
 1. For $$
 p(X | \theta)
-$$, fisher information is to answer the question: <br />
+$$, fisher information is to answer the question: 
 **How useful is the random variable X in determining the unkown parameter $$\theta$$**
 
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Command: DIY"
+title: "Shell: DIY Command"
 keywords: []
 description: 
 category: "PL"
