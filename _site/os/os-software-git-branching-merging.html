@@ -3498,6 +3498,13 @@ $(document).ready(function() {
     
     
     
+    <a href="/tags.html#jekyll-ref" style="font-size: 9pt; color: #999;">jekyll</a>
+  
+    
+    
+    
+    
+    
     <a href="/tags.html#MNG-ref" style="font-size: 9pt; color: #999;">MNG</a>
   
     
@@ -3506,13 +3513,6 @@ $(document).ready(function() {
     
     
     <a href="/tags.html#summary-ref" style="font-size: 10pt; color: #888;">summary</a>
-  
-    
-    
-    
-    
-    
-    <a href="/tags.html#jekyll-ref" style="font-size: 9pt; color: #999;">jekyll</a>
   
     
     
@@ -4096,26 +4096,23 @@ tag
 worktree
 </code></pre></div></div>
 
-<h4 id="操作">操作</h4>
+<h4 id="operation">Operation</h4>
 <ul>
   <li>git branch                 display branch</li>
-  <li>git checkout master        switch branch</li>
   <li>git branch develop         create branch</li>
+  <li>git checkout master        switch branch</li>
 </ul>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout <span class="nt">-b</span> develop
-<span class="c"># 相当于执行下面两条命令</span>
-git branch develop
-git checkout develop
-</code></pre></div></div>
-<ul>
-  <li>git branch -d develop      删除分支 删除名字为develop的分支</li>
-</ul>
+<h4 id="example-run-into-a-merge-conflict-quit-merge">Example: run into a merge conflict, quit merge</h4>
 
-<h4 id="exception">exception</h4>
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fatal: this operation must be run <span class="k">in </span>a work tree
-<span class="c"># 不在工作目录，可能在.git或者别的目录，切换到工作目录即可</span>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git reset <span class="nt">--merge</span>
 </code></pre></div></div>
+
+<h4 id="reference">Reference</h4>
+<ol>
+  <li><a href="https://bluecast.tech/blog/git-switch-branch/">switch and checkout</a></li>
+</ol>
+
 
       
       <footer>
@@ -4160,7 +4157,7 @@ git checkout develop
   <div class="pagination">
     <ul>
       
-      <li class="prev"><a href="/os/os-threads.html" title="OS: Threads">&larr; 上一篇</a></li>
+      <li class="prev"><a href="/os/os-software-git-sharing.html" title="Git: Sharing">&larr; 上一篇</a></li>
       
       <li><a href="/archive.html">文章列表</a></li>
       

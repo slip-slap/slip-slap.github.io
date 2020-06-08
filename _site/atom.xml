@@ -3,7 +3,7 @@
   <title>Just Do It</title>
   <link href="/atom.xml" rel="self"/>
   <link href=""/>
-  <updated>2020-06-08T11:32:38+09:00</updated>
+  <updated>2020-06-08T12:39:50+09:00</updated>
   <id></id>
   <author>
     <name>reed</name>
@@ -9228,29 +9228,18 @@ that’s the architecture set by China, so is Taiwan.
     <updated>2018-12-13T00:00:00+09:00</updated>
     <id>/pl/pl-programming-type-and-strategy</id>
     <content type="html">
-1. Type
+1. Outline
 
 
-1.1 Level
 
-  machine language
-  asseble language: writing operating system.
-  hybrid lanuage: JVM as an interpreter
-
-
-####
-
-  compiler
-  intepreter
-
-
-1.3 Strong and Weak
-1.4 Static and Dynamic
-
-2. Style
-Among the following method, OOP is most successful and famous.
-
-  Modular or Proced...</content>
+  Strong and Weak: Typing about when type information is acquired(compile time
+or runtime)
+  Static and Dynamic: How stricty types are distinguished(whether the language
+tries to do an implicit conversion from stings to numbers).
+  language type
+    
+      machine language
+      as...</content>
   </entry>
 
   <entry>
@@ -12455,6 +12444,448 @@ view, List ...</content>
   </entry>
 
   <entry>
+    <title>OS: Threads</title>
+    <link href="/os/os-threads.html"/>
+    <updated>2018-01-25T00:00:00+09:00</updated>
+    <id>/os/os-threads</id>
+    <content type="html">
+Definition
+
+  A thread is a basic unit of CPU utilization. It shares with other threads
+belonging to the same process its code section, data section, and other
+operating system resources, such as open files and signals.
+    
+      A thread ID
+      A program counter
+      A register set
+      A ...</content>
+  </entry>
+
+  <entry>
+    <title>OS: System Programs</title>
+    <link href="/os/os-system-programs.html"/>
+    <updated>2018-01-25T00:00:00+09:00</updated>
+    <id>/os/os-system-programs</id>
+    <content type="html">
+####
+
+  Program loading and execution
+    
+      absolute loaders
+      relocatable loaders
+      linkage editors
+    
+  
+
+
+Communications
+
+  Creating virtual connections among processes, users, and computer systems.
+  allowing users to send messages to one another’s screens.
+  to browse webpage...</content>
+  </entry>
+
+  <entry>
+    <title>OS: System Call</title>
+    <link href="/os/os-system-call.html"/>
+    <updated>2018-01-25T00:00:00+09:00</updated>
+    <id>/os/os-system-call</id>
+    <content type="html">
+####
+
+  System calls provide an interface to the servies made available by an
+Operating System.
+    
+      A simple task like copying like copying the contents of one file to another
+file, we had to run a lot of system calls. Many system calls were executed in
+the process.
+      These calls are ...</content>
+  </entry>
+
+  <entry>
+    <title>OS: Summary</title>
+    <link href="/os/os-summary.html"/>
+    <updated>2018-01-25T00:00:00+09:00</updated>
+    <id>/os/os-summary</id>
+    <content type="html">
+intro
+学习mac，需要知道linux的设计哲学，Linux本质上是一个用户服务器模式，tmux借鉴了linux的设计模式，也是一个c/s架构的模式。
+在linux中，最重要的概念是用户和组
+
+
+
+####
+隐藏文件在finder不可见
+defaults write com.apple.finder AppleShowAllFiles -bool false
+
+隐藏文件在finder中可见
+defaults write com.apple.finder AppleShowAllFiles -bool true
+
+在finder的偏好设置中，可以选择在桌面显示或者隐藏，硬盘，外置磁盘...</content>
+  </entry>
+
+  <entry>
+    <title>OS: Structure</title>
+    <link href="/os/os-structure.html"/>
+    <updated>2018-01-25T00:00:00+09:00</updated>
+    <id>/os/os-structure</id>
+    <content type="html">
+
+</content>
+  </entry>
+
+  <entry>
+    <title>OS: Storeage Structure</title>
+    <link href="/os/os-storage-structure.html"/>
+    <updated>2018-01-25T00:00:00+09:00</updated>
+    <id>/os/os-storage-structure</id>
+    <content type="html">
+&amp;lt;img src=/images/computer-science-operating-system-storage-structure.png&amp;gt;
+
+</content>
+  </entry>
+
+  <entry>
+    <title>OS: Sockets</title>
+    <link href="/os/os-sockets.html"/>
+    <updated>2018-01-25T00:00:00+09:00</updated>
+    <id>/os/os-sockets</id>
+    <content type="html">
+####
+
+  A Socket is defined as an endpoint for communication
+  A pair of process communicating over a network employ a pair of sockets-one
+ofr each process
+  A socket is identified by an IP address concatenated with a port number.
+  The server waits for incoming client requests by listening to a...</content>
+  </entry>
+
+  <entry>
+    <title>OS: Services</title>
+    <link href="/os/os-services.html"/>
+    <updated>2018-01-25T00:00:00+09:00</updated>
+    <id>/os/os-services</id>
+    <content type="html">
+
+  User Interface
+  Program Execution
+  I/O Operations
+  File System Manipulation
+  Communications
+  Error Detection
+  Resource Allocation
+  Accounting
+  Protection and Security
+
+
+####
+
+  Process: A program loaded into memory and executing is called a “PROCESS”
+
+
+</content>
+  </entry>
+
+  <entry>
+    <title>OS: Process Management</title>
+    <link href="/os/os-process-management.html"/>
+    <updated>2018-01-25T00:00:00+09:00</updated>
+    <id>/os/os-process-management</id>
+    <content type="html">
+Definition
+
+  Process: A process can be thought of as a program in execution
+  Thread: A thread is the unit of execution with a process. A process can have
+one thread to many threads.
+
+
+Process State
+
+  New: The process is being created.
+  Running: Instructions are being executed.
+  Waiting: The...</content>
+  </entry>
+
+  <entry>
+    <title>OS: Interprocess Communication</title>
+    <link href="/os/os-process-communication.html"/>
+    <updated>2018-01-25T00:00:00+09:00</updated>
+    <id>/os/os-process-communication</id>
+    <content type="html">
+###
+
+  Processes executing concurrently in the operating system maybe either
+independent processes or cooperating processes.
+
+
+
+  Independent processes: They cannot affect or be affected by the other
+processes executing in the system.
+  Cooperating processes: They can affect or be affected by th...</content>
+  </entry>
+
+  <entry>
+    <title>OS: Computer System Operation</title>
+    <link href="/os/os-operation.html"/>
+    <updated>2018-01-25T00:00:00+09:00</updated>
+    <id>/os/os-operation</id>
+    <content type="html">
+####
+
+  An Operating System(OS) is a program that manages the computer hardware
+  It also provides a basis for Apllication Programs and acts as an intermediary
+between computer user and hardware.
+
+
+####
+
+  Bootstrap Program: The initial program that runs when a computer is powered
+up or rebooted...</content>
+  </entry>
+
+  <entry>
+    <title>Management: User</title>
+    <link href="/os/os-management-user.html"/>
+    <updated>2018-01-25T00:00:00+09:00</updated>
+    <id>/os/os-management-user</id>
+    <content type="html">
+说明
+该文件只能使用visudo命令打开编辑，如果有语法错误，则不能保存
+
+
+为普通用户添加root权限
+# 在&quot;root ALL=(ALL) ALL&quot;添加一行
+username ALL=(All)  ALL
+
+
+组
+
+增删
+# 增加组
+groupadd docker
+
+
+
+用户
+
+修改用户组
+# user modify
+usermod -aG docker $USER
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Management: Access</title>
+    <link href="/os/os-management-access.html"/>
+    <updated>2018-01-25T00:00:00+09:00</updated>
+    <id>/os/os-management-access</id>
+    <content type="html">
+功能
+在linux系统中，默认只有三种权限，文件夹的所有者，所属组，非所有者所属组用户,
+这样的分组在复杂的文件权限管理中是无法使用的，acl就是为了弥补这一缺陷而存在。
+
+
+查看磁盘是否开启acl权限
+# dumpe2fs 查询指定分区详细文件系统信息的命令
+dumpe2fs -h /dev/vda1 | grep mount options:
+# user_xattr acl 磁盘开启了acl权限
+
+
+设置acl权限
+# 为文件设置acl权限后，使用ls -l查看文件信息,后面多了一个加号
+# -rw-rwxr--+ 1 hy   hy    379 2月  23 20:09 do...</content>
+  </entry>
+
+  <entry>
+    <title>MacOS Software</title>
+    <link href="/os/os-macOS-software.html"/>
+    <updated>2018-01-25T00:00:00+09:00</updated>
+    <id>/os/os-macOS-software</id>
+    <content type="html">
+VLC视频播放器
+
+
+  open-source
+  support multiplatform
+
+
+Mathpix Snipping Tool
+
+
+  translate formul
+
+
+Mac OS Safari
+
+  User Agent String is to detect Internet Explore Version, For IE7, you can set like this Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)
+
+
+Mac OS Finder
+
+  If you mac can’t connect ...</content>
+  </entry>
+
+  <entry>
+    <title>MacOS: Software Management</title>
+    <link href="/os/os-macOS-software-management.html"/>
+    <updated>2018-01-25T00:00:00+09:00</updated>
+    <id>/os/os-macOS-software-management</id>
+    <content type="html">
+xcode-select
+
+  Manages the active developer directory for Xcode and BSD tools.
+
+
+xcode-select --install
+# Opens a user interface dialog to request automatic insallation of the command
+line developer tools.
+
+Relationship
+
+  brew is a command, it needs some environment.
+  xcode-select –install pr...</content>
+  </entry>
+
+  <entry>
+    <title>MacOS: ITerm</title>
+    <link href="/os/os-macOS-iterm.html"/>
+    <updated>2018-01-25T00:00:00+09:00</updated>
+    <id>/os/os-macOS-iterm</id>
+    <content type="html">
+####
+
+  ITerm2 is a terminal emulator for MacOS.
+
+
+Galois
+
+  ITerm2, Zsh shell,tmux, vim
+
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Kernel</title>
+    <link href="/os/os-kernel.html"/>
+    <updated>2018-01-25T00:00:00+09:00</updated>
+    <id>/os/os-kernel</id>
+    <content type="html">
+Kernel
+
+  linux
+  Mach
+  BSD
+  XNU: kernel of Darwin
+
+
+OS
+
+  GNU/linux
+  Windows
+  Mac OS
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Management: Access</title>
+    <link href="/os/os-internet-attack.html"/>
+    <updated>2018-01-25T00:00:00+09:00</updated>
+    <id>/os/os-internet-attack</id>
+    <content type="html">
+fping
+
+hping
+
+路由扫描
+
+traceroute
+
+mtr
+
+批量服务扫描
+
+nmap
+
+常用功能
+# 查看肉鸡开放的端口
+sudo nmap -sS 47.75.37.163
+# 显示信息如下
+PORT     STATE  SERVICE
+22/tcp   open   ssh
+80/tcp   closed http
+443/tcp  closed https
+3128/tcp closed squid-http
+3389/tcp closed ms-wbt-server
+
+
+
+
+ncat
+
+
+
+常见网络攻击策略
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Hardware: CUDA</title>
+    <link href="/os/os-hardware-cuda.html"/>
+    <updated>2018-01-25T00:00:00+09:00</updated>
+    <id>/os/os-hardware-cuda</id>
+    <content type="html">
+
+  CUDA: cuda short for compute unified device architecture is a parallel
+computing and application programming interface model, It allows developers
+to use a CUDA-enabled graphics processing unit(GPU) for general purpose
+processing - an approach termed GPGPU(General computing on Graphics
+Proces...</content>
+  </entry>
+
+  <entry>
+    <title>Directory Hierarch</title>
+    <link href="/os/os-directory-structure.html"/>
+    <updated>2018-01-25T00:00:00+09:00</updated>
+    <id>/os/os-directory-structure</id>
+    <content type="html">
+proc
+
+  linux提供了一种通过/proc文件系统，在运行时访问内核内部数据结构，改变内核设置的机制。
+  proc文件系统是一个伪文件系统，只存在内存中，不占用外存空间
+  /proc下有三个很重要的目录，net，scsi和sys；sys是可写的，可以通过它来访问或者修改内核参数
+
+
+常用设置
+# 关闭icmp协议
+sysctl -w net.ipv4.icmp_echo_ignore_all=1
+
+
+Galois
+
+  The directory structure of an operating system must have hierarch
+property, be...</content>
+  </entry>
+
+  <entry>
+    <title>OS: Computer System Architecture</title>
+    <link href="/os/os-computer-system-architecture.html"/>
+    <updated>2018-01-25T00:00:00+09:00</updated>
+    <id>/os/os-computer-system-architecture</id>
+    <content type="html">
+Galois
+
+  For a long time, I have no idea what how does computer work. What the hell is
+a CPU ?  If you have any questions about anything, No back how fancy they
+look like ? Just go back to the history where it started. Figure about how
+everything evolved.
+  computer is supposed to do some compu...</content>
+  </entry>
+
+  <entry>
     <title>Git:  Philosophy Behind the Scene</title>
     <link href="/os/os-software-git-philosophy.html"/>
     <updated>2018-01-18T00:00:00+09:00</updated>
@@ -12530,126 +12961,25 @@ tag
 worktree
 
 
-操作
+Operation
 
   git branch                 display branch
-  git checkout master        switch branch
   git branch develop         create branch
+  git checkout master        switch branch
 
 
-git checkout -b develop
-# 相当于执行下面两条命令
-git branch develop
-git checkout develop
+Example: run into a merge conflict, quit merge
+
+git reset --merge
 
 
-  git branch -d ...</content>
+Reference
+
+  switch a...</content>
   </entry>
 
   <entry>
-    <title>OS: Threads</title>
-    <link href="/os/os-threads.html"/>
-    <updated>2018-01-15T00:00:00+09:00</updated>
-    <id>/os/os-threads</id>
-    <content type="html">
-Definition
-
-  A thread is a basic unit of CPU utilization. It shares with other threads
-belonging to the same process its code section, data section, and other
-operating system resources, such as open files and signals.
-    
-      A thread ID
-      A program counter
-      A register set
-      A ...</content>
-  </entry>
-
-  <entry>
-    <title>OS: System Programs</title>
-    <link href="/os/os-system-programs.html"/>
-    <updated>2018-01-15T00:00:00+09:00</updated>
-    <id>/os/os-system-programs</id>
-    <content type="html">
-####
-
-  Program loading and execution
-    
-      absolute loaders
-      relocatable loaders
-      linkage editors
-    
-  
-
-
-Communications
-
-  Creating virtual connections among processes, users, and computer systems.
-  allowing users to send messages to one another’s screens.
-  to browse webpage...</content>
-  </entry>
-
-  <entry>
-    <title>OS: System Call</title>
-    <link href="/os/os-system-call.html"/>
-    <updated>2018-01-15T00:00:00+09:00</updated>
-    <id>/os/os-system-call</id>
-    <content type="html">
-####
-
-  System calls provide an interface to the servies made available by an
-Operating System.
-    
-      A simple task like copying like copying the contents of one file to another
-file, we had to run a lot of system calls. Many system calls were executed in
-the process.
-      These calls are ...</content>
-  </entry>
-
-  <entry>
-    <title>OS: Summary</title>
-    <link href="/os/os-summary.html"/>
-    <updated>2018-01-15T00:00:00+09:00</updated>
-    <id>/os/os-summary</id>
-    <content type="html">
-intro
-学习mac，需要知道linux的设计哲学，Linux本质上是一个用户服务器模式，tmux借鉴了linux的设计模式，也是一个c/s架构的模式。
-在linux中，最重要的概念是用户和组
-
-
-
-####
-隐藏文件在finder不可见
-defaults write com.apple.finder AppleShowAllFiles -bool false
-
-隐藏文件在finder中可见
-defaults write com.apple.finder AppleShowAllFiles -bool true
-
-在finder的偏好设置中，可以选择在桌面显示或者隐藏，硬盘，外置磁盘...</content>
-  </entry>
-
-  <entry>
-    <title>OS: Structure</title>
-    <link href="/os/os-structure.html"/>
-    <updated>2018-01-15T00:00:00+09:00</updated>
-    <id>/os/os-structure</id>
-    <content type="html">
-
-</content>
-  </entry>
-
-  <entry>
-    <title>OS: Storeage Structure</title>
-    <link href="/os/os-storage-structure.html"/>
-    <updated>2018-01-15T00:00:00+09:00</updated>
-    <id>/os/os-storage-structure</id>
-    <content type="html">
-&amp;lt;img src=/images/computer-science-operating-system-storage-structure.png&amp;gt;
-
-</content>
-  </entry>
-
-  <entry>
-    <title>Git: Collaborate</title>
+    <title>Git: Sharing</title>
     <link href="/os/os-software-git-sharing.html"/>
     <updated>2018-01-15T00:00:00+09:00</updated>
     <id>/os/os-software-git-sharing</id>
@@ -12662,347 +12992,15 @@ push
 remote
 submodule
 
-</content>
-  </entry>
 
-  <entry>
-    <title>OS: Sockets</title>
-    <link href="/os/os-sockets.html"/>
-    <updated>2018-01-15T00:00:00+09:00</updated>
-    <id>/os/os-sockets</id>
-    <content type="html">
-####
+Pull and Fetch
+In the default mode, git pull is shorthand for get fetch followed by
+**git merge FETCH_HEAD **
 
-  A Socket is defined as an endpoint for communication
-  A pair of process communicating over a network employ a pair of sockets-one
-ofr each process
-  A socket is identified by an IP address concatenated with a port number.
-  The server waits for incoming client requests by listening to a...</content>
-  </entry>
 
-  <entry>
-    <title>OS: Services</title>
-    <link href="/os/os-services.html"/>
-    <updated>2018-01-15T00:00:00+09:00</updated>
-    <id>/os/os-services</id>
-    <content type="html">
-
-  User Interface
-  Program Execution
-  I/O Operations
-  File System Manipulation
-  Communications
-  Error Detection
-  Resource Allocation
-  Accounting
-  Protection and Security
-
-
-####
-
-  Process: A program loaded into memory and executing is called a “PROCESS”
-
-
-</content>
-  </entry>
-
-  <entry>
-    <title>OS: Process Management</title>
-    <link href="/os/os-process-management.html"/>
-    <updated>2018-01-15T00:00:00+09:00</updated>
-    <id>/os/os-process-management</id>
-    <content type="html">
-Definition
-
-  Process: A process can be thought of as a program in execution
-  Thread: A thread is the unit of execution with a process. A process can have
-one thread to many threads.
-
-
-Process State
-
-  New: The process is being created.
-  Running: Instructions are being executed.
-  Waiting: The...</content>
-  </entry>
-
-  <entry>
-    <title>OS: Interprocess Communication</title>
-    <link href="/os/os-process-communication.html"/>
-    <updated>2018-01-15T00:00:00+09:00</updated>
-    <id>/os/os-process-communication</id>
-    <content type="html">
-###
-
-  Processes executing concurrently in the operating system maybe either
-independent processes or cooperating processes.
-
-
-
-  Independent processes: They cannot affect or be affected by the other
-processes executing in the system.
-  Cooperating processes: They can affect or be affected by th...</content>
-  </entry>
-
-  <entry>
-    <title>OS: Computer System Operation</title>
-    <link href="/os/os-operation.html"/>
-    <updated>2018-01-15T00:00:00+09:00</updated>
-    <id>/os/os-operation</id>
-    <content type="html">
-####
-
-  An Operating System(OS) is a program that manages the computer hardware
-  It also provides a basis for Apllication Programs and acts as an intermediary
-between computer user and hardware.
-
-
-####
-
-  Bootstrap Program: The initial program that runs when a computer is powered
-up or rebooted...</content>
-  </entry>
-
-  <entry>
-    <title>Management: User</title>
-    <link href="/os/os-management-user.html"/>
-    <updated>2018-01-15T00:00:00+09:00</updated>
-    <id>/os/os-management-user</id>
-    <content type="html">
-说明
-该文件只能使用visudo命令打开编辑，如果有语法错误，则不能保存
-
-
-为普通用户添加root权限
-# 在&quot;root ALL=(ALL) ALL&quot;添加一行
-username ALL=(All)  ALL
-
-
-组
-
-增删
-# 增加组
-groupadd docker
-
-
-
-用户
-
-修改用户组
-# user modify
-usermod -aG docker $USER
-
-</content>
-  </entry>
-
-  <entry>
-    <title>Management: Access</title>
-    <link href="/os/os-management-access.html"/>
-    <updated>2018-01-15T00:00:00+09:00</updated>
-    <id>/os/os-management-access</id>
-    <content type="html">
-功能
-在linux系统中，默认只有三种权限，文件夹的所有者，所属组，非所有者所属组用户,
-这样的分组在复杂的文件权限管理中是无法使用的，acl就是为了弥补这一缺陷而存在。
-
-
-查看磁盘是否开启acl权限
-# dumpe2fs 查询指定分区详细文件系统信息的命令
-dumpe2fs -h /dev/vda1 | grep mount options:
-# user_xattr acl 磁盘开启了acl权限
-
-
-设置acl权限
-# 为文件设置acl权限后，使用ls -l查看文件信息,后面多了一个加号
-# -rw-rwxr--+ 1 hy   hy    379 2月  23 20:09 do...</content>
-  </entry>
-
-  <entry>
-    <title>MacOS Software</title>
-    <link href="/os/os-macOS-software.html"/>
-    <updated>2018-01-15T00:00:00+09:00</updated>
-    <id>/os/os-macOS-software</id>
-    <content type="html">
-VLC视频播放器
-
-
-  open-source
-  support multiplatform
-
-
-Mathpix Snipping Tool
-
-
-  translate formul
-
-
-Mac OS Safari
-
-  User Agent String is to detect Internet Explore Version, For IE7, you can set like this Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)
-
-
-Mac OS Finder
-
-  If you mac can’t connect ...</content>
-  </entry>
-
-  <entry>
-    <title>MacOS: Software Management</title>
-    <link href="/os/os-macOS-software-management.html"/>
-    <updated>2018-01-15T00:00:00+09:00</updated>
-    <id>/os/os-macOS-software-management</id>
-    <content type="html">
-xcode-select
-
-  Manages the active developer directory for Xcode and BSD tools.
-
-
-xcode-select --install
-# Opens a user interface dialog to request automatic insallation of the command
-line developer tools.
-
-Relationship
-
-  brew is a command, it needs some environment.
-  xcode-select –install pr...</content>
-  </entry>
-
-  <entry>
-    <title>MacOS: ITerm</title>
-    <link href="/os/os-macOS-iterm.html"/>
-    <updated>2018-01-15T00:00:00+09:00</updated>
-    <id>/os/os-macOS-iterm</id>
-    <content type="html">
-####
-
-  ITerm2 is a terminal emulator for MacOS.
-
-
-Galois
-
-  ITerm2, Zsh shell,tmux, vim
-
-
-</content>
-  </entry>
-
-  <entry>
-    <title>Kernel</title>
-    <link href="/os/os-kernel.html"/>
-    <updated>2018-01-15T00:00:00+09:00</updated>
-    <id>/os/os-kernel</id>
-    <content type="html">
-Kernel
-
-  linux
-  Mach
-  BSD
-  XNU: kernel of Darwin
-
-
-OS
-
-  GNU/linux
-  Windows
-  Mac OS
-
-</content>
-  </entry>
-
-  <entry>
-    <title>Management: Access</title>
-    <link href="/os/os-internet-attack.html"/>
-    <updated>2018-01-15T00:00:00+09:00</updated>
-    <id>/os/os-internet-attack</id>
-    <content type="html">
-fping
-
-hping
-
-路由扫描
-
-traceroute
-
-mtr
-
-批量服务扫描
-
-nmap
-
-常用功能
-# 查看肉鸡开放的端口
-sudo nmap -sS 47.75.37.163
-# 显示信息如下
-PORT     STATE  SERVICE
-22/tcp   open   ssh
-80/tcp   closed http
-443/tcp  closed https
-3128/tcp closed squid-http
-3389/tcp closed ms-wbt-server
-
-
-
-
-ncat
-
-
-
-常见网络攻击策略
-
-</content>
-  </entry>
-
-  <entry>
-    <title>Hardware: CUDA</title>
-    <link href="/os/os-hardware-cuda.html"/>
-    <updated>2018-01-15T00:00:00+09:00</updated>
-    <id>/os/os-hardware-cuda</id>
-    <content type="html">
-
-  CUDA: cuda short for compute unified device architecture is a parallel
-computing and application programming interface model, It allows developers
-to use a CUDA-enabled graphics processing unit(GPU) for general purpose
-processing - an approach termed GPGPU(General computing on Graphics
-Proces...</content>
-  </entry>
-
-  <entry>
-    <title>Directory Hierarch</title>
-    <link href="/os/os-directory-structure.html"/>
-    <updated>2018-01-15T00:00:00+09:00</updated>
-    <id>/os/os-directory-structure</id>
-    <content type="html">
-proc
-
-  linux提供了一种通过/proc文件系统，在运行时访问内核内部数据结构，改变内核设置的机制。
-  proc文件系统是一个伪文件系统，只存在内存中，不占用外存空间
-  /proc下有三个很重要的目录，net，scsi和sys；sys是可写的，可以通过它来访问或者修改内核参数
-
-
-常用设置
-# 关闭icmp协议
-sysctl -w net.ipv4.icmp_echo_ignore_all=1
-
-
-Galois
-
-  The directory structure of an operating system must have hierarch
-property, be...</content>
-  </entry>
-
-  <entry>
-    <title>OS: Computer System Architecture</title>
-    <link href="/os/os-computer-system-architecture.html"/>
-    <updated>2018-01-15T00:00:00+09:00</updated>
-    <id>/os/os-computer-system-architecture</id>
-    <content type="html">
-Galois
-
-  For a long time, I have no idea what how does computer work. What the hell is
-a CPU ?  If you have any questions about anything, No back how fancy they
-look like ? Just go back to the history where it started. Figure about how
-everything evolved.
-  computer is supposed to do some compu...</content>
+  
+    git fetch: is the command that tells you local git to retrieve the latest
+meta-data info from the original(yet doesn’t do any file trans...</content>
   </entry>
 
   <entry>

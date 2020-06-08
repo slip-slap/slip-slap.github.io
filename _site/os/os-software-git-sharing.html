@@ -11,7 +11,7 @@
 <head>
   <meta charset="UTF-8">
 
-  <title>Git: Collaborate - Just Do It</title>
+  <title>Git: Sharing - Just Do It</title>
   <meta name="keywords" content="">
   
   <meta name="author" content="reed">
@@ -3498,6 +3498,13 @@ $(document).ready(function() {
     
     
     
+    <a href="/tags.html#jekyll-ref" style="font-size: 9pt; color: #999;">jekyll</a>
+  
+    
+    
+    
+    
+    
     <a href="/tags.html#MNG-ref" style="font-size: 9pt; color: #999;">MNG</a>
   
     
@@ -3506,13 +3513,6 @@ $(document).ready(function() {
     
     
     <a href="/tags.html#summary-ref" style="font-size: 10pt; color: #888;">summary</a>
-  
-    
-    
-    
-    
-    
-    <a href="/tags.html#jekyll-ref" style="font-size: 9pt; color: #999;">jekyll</a>
   
     
     
@@ -4057,7 +4057,7 @@ $(document).ready(function() {
       <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
 
     <header>
-      <h1>Git: Collaborate</h1>
+      <h1>Git: Sharing</h1>
     </header>
 
     <section>
@@ -4071,10 +4071,10 @@ $(document).ready(function() {
 
   <span id="share">
   <a class="wechat" target="_blank" title="分享到微信" href="http://chart.apis.google.com/chart?cht=qr&amp;chs=300x300&amp;chl=/os/os-software-git-sharing.html"><i class="icon-large icon-wechat"></i></a>
-  <a class="weibo" target="_blank" title="分享到微博" href="http://service.weibo.com/share/share.php?title=Git: Collaborate - Just Do It&amp;url=/os/os-software-git-sharing.html&amp;type=3&amp;searchPic=1"><i class="icon-large icon-weibo"></i></a>
-  <a class="qzone" target="_blank" title="分享到 QQ 空间" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=/os/os-software-git-sharing.html&amp;title=Git: Collaborate - Just Do It&amp;summary=&amp;site="><i class="icon-large icon-qzone"></i></a>
-  <a class="twitter" target="_blank" title="Share to Twitter" href="https://twitter.com/intent/tweet?url=/os/os-software-git-sharing.html&amp;text=Git: Collaborate - Just Do It&amp;via="><i class="icon-large icon-twitter"></i></a>
-  <a class="facebook" target="_blank" title="Share to Facebook" href="http://www.facebook.com/sharer.php?u=/os/os-software-git-sharing.html&amp;t=Git: Collaborate - Just Do It"><i class="icon-large icon-facebook-sign"></i></a>
+  <a class="weibo" target="_blank" title="分享到微博" href="http://service.weibo.com/share/share.php?title=Git: Sharing - Just Do It&amp;url=/os/os-software-git-sharing.html&amp;type=3&amp;searchPic=1"><i class="icon-large icon-weibo"></i></a>
+  <a class="qzone" target="_blank" title="分享到 QQ 空间" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=/os/os-software-git-sharing.html&amp;title=Git: Sharing - Just Do It&amp;summary=&amp;site="><i class="icon-large icon-qzone"></i></a>
+  <a class="twitter" target="_blank" title="Share to Twitter" href="https://twitter.com/intent/tweet?url=/os/os-software-git-sharing.html&amp;text=Git: Sharing - Just Do It&amp;via="><i class="icon-large icon-twitter"></i></a>
+  <a class="facebook" target="_blank" title="Share to Facebook" href="http://www.facebook.com/sharer.php?u=/os/os-software-git-sharing.html&amp;t=Git: Sharing - Just Do It"><i class="icon-large icon-facebook-sign"></i></a>
   <a class="googleplus" target="_blank" title="Share to Google+" href="https://plus.google.com/share?url=/os/os-software-git-sharing.html"><i class="icon-large icon-google-plus-sign"></i></a>
 </span>
 
@@ -4093,6 +4093,28 @@ push
 remote
 submodule
 </code></pre></div></div>
+
+<h4 id="pull-and-fetch">Pull and Fetch</h4>
+<p>In the default mode, <strong>git pull</strong> is shorthand for <strong>get fetch</strong> followed by
+**git merge FETCH_HEAD **</p>
+
+<ol>
+  <li>
+    <p>git fetch: is the command that tells you local git to retrieve the latest
+meta-data info from the original(yet doesn’t do any file transferring.) It’s
+more like just checking to see if there are nay changes available.</p>
+  </li>
+  <li>
+    <p>git pull: on the other hand does that and brings those changes from the
+reomote repository.</p>
+  </li>
+</ol>
+
+<h4 id="reference">Reference</h4>
+<ol>
+  <li><a href="https://stackoverflow.com/questions/292357/what-is-the-difference-between-git-pull-and-git-fetch">fetch and pull 1</a></li>
+  <li><a href="https://www.freecodecamp.org/news/git-fetch-vs-pull/#:~:text=git%20fetch%20is%20the%20command,changes%20from%20the%20remote%20repository.">fetch and pull 2</a></li>
+</ol>
 
       
       <footer>
@@ -4137,11 +4159,11 @@ submodule
   <div class="pagination">
     <ul>
       
-      <li class="prev"><a href="/os/os-sockets.html" title="OS: Sockets">&larr; 上一篇</a></li>
+      <li class="prev"><a href="/os/os-software-git-patching.html" title="Git: Patching">&larr; 上一篇</a></li>
       
       <li><a href="/archive.html">文章列表</a></li>
       
-      <li class="next"><a href="/os/os-storage-structure.html" title="OS: Storeage Structure">下一篇 &rarr;</a></li>
+      <li class="next"><a href="/os/os-software-git-branching-merging.html" title="Git:  Branching and Merging">下一篇 &rarr;</a></li>
       
     </ul>
   </div>
@@ -4159,8 +4181,8 @@ submodule
     var disqus_developer = 1;
     var disqus_shortname = 'just-do-it-1';
     
-    var disqus_identifier = 'Git: Collaborate';
-    var disqus_title = 'Git: Collaborate';
+    var disqus_identifier = 'Git: Sharing';
+    var disqus_title = 'Git: Sharing';
     var disqus_url = '/os/os-software-git-sharing.html';
     
     

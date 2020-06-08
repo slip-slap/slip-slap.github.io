@@ -8,21 +8,22 @@ tags: []
 ---
 {% include JB/setup %}
 
-#### 1. Type
+#### 1. Outline
 <img src="{{IMAGE_PATH}}/pl-programming-and-computer-language.png">
 
-
-##### 1.1 Level 
-1. machine language
-2. asseble language: writing operating system.
-3. hybrid lanuage: JVM as an interpreter
+1. Strong and Weak: Typing about when type information is acquired(compile time
+   or runtime)
+2. Static and Dynamic: How stricty types are distinguished(whether the language
+   tries to do an implicit conversion from stings to numbers).
+3. language type  
+- machine language
+- asseble language: writing operating system.
+- hybrid lanuage: JVM as an interpreter
 
 #### 
 1. compiler
 2. intepreter
 
-#### 1.3 Strong and Weak
-#### 1.4 Static and Dynamic
 
 
 #### 2. Style
