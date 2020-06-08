@@ -14,21 +14,35 @@ tags: []
 - one solution is every time you change your code, you make a copy, but as time
   goes on, this is a nightmare. Based on the timeline, we packed the code we get
   anywhere we want.
-- the second solution is git.
+- the second solution is git, and git is an artifact.
 
 
 #### 2. The Philosphy
 1. if you check the code in your project carefully, your file can be divided
    into two classes, **folder and text**.
-- In git, both the **folder and text** ,separately, are abstracted as objects
-  and blob.
+- In git, both the **folder and text** ,separately, are abstracted as **tree 
+  and blob**, we call them objects in general.
 2. we are not satisfied with the timeline, we use a more complicated structure
-   which is called **graph** to track all the change.
+   which is called **graph** to track all the change, each point in a timeline
+   is a snapshot of the project. We have a fancy terminology for snapshot, which
+   is called **commits**
 - how to connect these **graph**, and what's the direction of the two node ? The
   solution is pointer, and the direction is from descendant to ancestor.
 3. what's the name of each node ? How to identify them ?
 - It use hash function, but it's not readable, so we create a reference to them,
   you can it branch.
+
+```python
+type blob=array<byte>
+type tree=map<string, tree|blob>>
+type commits={
+parents = array<commit>
+author = string<>
+message = string<>
+snapshot = tree
+}
+```
+
 
 
 

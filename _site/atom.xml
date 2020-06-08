@@ -3,7 +3,7 @@
   <title>Just Do It</title>
   <link href="/atom.xml" rel="self"/>
   <link href=""/>
-  <updated>2020-06-07T11:19:32+09:00</updated>
+  <updated>2020-06-08T11:32:38+09:00</updated>
   <id></id>
   <author>
     <name>reed</name>
@@ -10137,28 +10137,6 @@ boost是一个可移植的，提供源代码的C++库，由于其对跨平台的
   </entry>
 
   <entry>
-    <title>Editor: Vimscript</title>
-    <link href="/pl/pl-script-editor-vimscript.html"/>
-    <updated>2018-08-12T00:00:00+09:00</updated>
-    <id>/pl/pl-script-editor-vimscript</id>
-    <content type="html">
-1. Introduction
-This software is plugin system, so it is very flexible and diffcult to learn.
-it heavily depends on the plugin and shortcut to improve the efficient.
-
-
-
-2. 常用功能
-
-2.1 Setting
-
-
-  set relativenumber!
-  set cursorline
-  syntax off  I spend a lot of time to fix this simple question, ...</content>
-  </entry>
-
-  <entry>
     <title>Editor: Vimscript Plugin</title>
     <link href="/pl/pl-script-editor-vimscript-plugin.html"/>
     <updated>2018-08-12T00:00:00+09:00</updated>
@@ -10194,6 +10172,47 @@ something you edit, but instead as grid-like blocks of text that you can freely
 manipulate and command
 
 Normal Com...</content>
+  </entry>
+
+  <entry>
+    <title>Editor: Vimscript Normal Mode</title>
+    <link href="/pl/pl-script-editor-vimscript-normal-mode.html"/>
+    <updated>2018-08-12T00:00:00+09:00</updated>
+    <id>/pl/pl-script-editor-vimscript-normal-mode</id>
+    <content type="html">
+1. Introduction
+Why this is called normal mode ? Because this is the most important mode. Just
+be always on this mode.
+
+2.1 Navigation
+
+  w: jump to the start of the next word
+  b: jump to the
+  ^: jump to the start of the line
+  $: jump to the end of the line
+  {: jump to the start of current p...</content>
+  </entry>
+
+  <entry>
+    <title>Editor: Vimscript</title>
+    <link href="/pl/pl-script-editor-vimscript-configuration.html"/>
+    <updated>2018-08-12T00:00:00+09:00</updated>
+    <id>/pl/pl-script-editor-vimscript-configuration</id>
+    <content type="html">
+1. Introduction
+This software is plugin system, so it is very flexible and diffcult to learn.
+it heavily depends on the plugin and shortcut to improve the efficient.
+
+
+
+2. 常用功能
+
+2.1 Setting
+
+
+  set relativenumber!
+  set cursorline
+  syntax off  I spend a lot of time to fix this simple question, ...</content>
   </entry>
 
   <entry>
@@ -10587,7 +10606,7 @@ output information of command ls
   </entry>
 
   <entry>
-    <title>Command: Crontab</title>
+    <title>Shell: Crontab</title>
     <link href="/pl/pl-script-shell-command-crontab.html"/>
     <updated>2018-08-06T00:00:00+09:00</updated>
     <id>/pl/pl-script-shell-command-crontab</id>
@@ -12436,9 +12455,101 @@ view, List ...</content>
   </entry>
 
   <entry>
+    <title>Git:  Philosophy Behind the Scene</title>
+    <link href="/os/os-software-git-philosophy.html"/>
+    <updated>2018-01-18T00:00:00+09:00</updated>
+    <id>/os/os-software-git-philosophy</id>
+    <content type="html">
+1. What is the problem ?
+
+  assume you are a coder,  and work on a project. Accasionaly you revise you
+code, some days later, you want get things back to where they were.
+    
+      one solution is every time you change your code, you make a copy, but as time
+goes on, this is a nightmare. Based ...</content>
+  </entry>
+
+  <entry>
+    <title>Git: Basic Snapshotting </title>
+    <link href="/os/os-software-git-basic-snapshotting.html"/>
+    <updated>2018-01-17T00:00:00+09:00</updated>
+    <id>/os/os-software-git-basic-snapshotting</id>
+    <content type="html">
+####
+
+add
+status
+diff
+commit
+nots
+restore
+reset
+rm
+mv
+
+</content>
+  </entry>
+
+  <entry>
+    <title> Jekyll</title>
+    <link href="/pl/pl-script-jekyll.html"/>
+    <updated>2018-01-16T00:00:00+09:00</updated>
+    <id>/pl/pl-script-jekyll</id>
+    <content type="html">
+Jekyll
+
+  jekyll server
+  jekyll serve –host=0.0.0.0
+    
+      This will make Jekyll’s HTTP server bind to all available IPs.
+    
+  
+
+
+Reference
+
+  Connect to a locally build Server
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Git:  Branching and Merging</title>
+    <link href="/os/os-software-git-branching-merging.html"/>
+    <updated>2018-01-16T00:00:00+09:00</updated>
+    <id>/os/os-software-git-branching-merging</id>
+    <content type="html">
+branch
+checkout
+switch
+merge
+mergetool
+log
+stash
+tag
+worktree
+
+
+操作
+
+  git branch                 display branch
+  git checkout master        switch branch
+  git branch develop         create branch
+
+
+git checkout -b develop
+# 相当于执行下面两条命令
+git branch develop
+git checkout develop
+
+
+  git branch -d ...</content>
+  </entry>
+
+  <entry>
     <title>OS: Threads</title>
     <link href="/os/os-threads.html"/>
-    <updated>2018-02-12T00:00:00+09:00</updated>
+    <updated>2018-01-15T00:00:00+09:00</updated>
     <id>/os/os-threads</id>
     <content type="html">
 Definition
@@ -12456,7 +12567,7 @@ operating system resources, such as open files and signals.
   <entry>
     <title>OS: System Programs</title>
     <link href="/os/os-system-programs.html"/>
-    <updated>2018-02-12T00:00:00+09:00</updated>
+    <updated>2018-01-15T00:00:00+09:00</updated>
     <id>/os/os-system-programs</id>
     <content type="html">
 ####
@@ -12480,7 +12591,7 @@ Communications
   <entry>
     <title>OS: System Call</title>
     <link href="/os/os-system-call.html"/>
-    <updated>2018-02-12T00:00:00+09:00</updated>
+    <updated>2018-01-15T00:00:00+09:00</updated>
     <id>/os/os-system-call</id>
     <content type="html">
 ####
@@ -12497,7 +12608,7 @@ the process.
   <entry>
     <title>OS: Summary</title>
     <link href="/os/os-summary.html"/>
-    <updated>2018-02-12T00:00:00+09:00</updated>
+    <updated>2018-01-15T00:00:00+09:00</updated>
     <id>/os/os-summary</id>
     <content type="html">
 intro
@@ -12519,7 +12630,7 @@ defaults write com.apple.finder AppleShowAllFiles -bool true
   <entry>
     <title>OS: Structure</title>
     <link href="/os/os-structure.html"/>
-    <updated>2018-02-12T00:00:00+09:00</updated>
+    <updated>2018-01-15T00:00:00+09:00</updated>
     <id>/os/os-structure</id>
     <content type="html">
 
@@ -12529,7 +12640,7 @@ defaults write com.apple.finder AppleShowAllFiles -bool true
   <entry>
     <title>OS: Storeage Structure</title>
     <link href="/os/os-storage-structure.html"/>
-    <updated>2018-02-12T00:00:00+09:00</updated>
+    <updated>2018-01-15T00:00:00+09:00</updated>
     <id>/os/os-storage-structure</id>
     <content type="html">
 &amp;lt;img src=/images/computer-science-operating-system-storage-structure.png&amp;gt;
@@ -12538,9 +12649,26 @@ defaults write com.apple.finder AppleShowAllFiles -bool true
   </entry>
 
   <entry>
+    <title>Git: Collaborate</title>
+    <link href="/os/os-software-git-sharing.html"/>
+    <updated>2018-01-15T00:00:00+09:00</updated>
+    <id>/os/os-software-git-sharing</id>
+    <content type="html">
+####
+
+fetch
+pull
+push
+remote
+submodule
+
+</content>
+  </entry>
+
+  <entry>
     <title>OS: Sockets</title>
     <link href="/os/os-sockets.html"/>
-    <updated>2018-02-12T00:00:00+09:00</updated>
+    <updated>2018-01-15T00:00:00+09:00</updated>
     <id>/os/os-sockets</id>
     <content type="html">
 ####
@@ -12555,7 +12683,7 @@ ofr each process
   <entry>
     <title>OS: Services</title>
     <link href="/os/os-services.html"/>
-    <updated>2018-02-12T00:00:00+09:00</updated>
+    <updated>2018-01-15T00:00:00+09:00</updated>
     <id>/os/os-services</id>
     <content type="html">
 
@@ -12581,7 +12709,7 @@ ofr each process
   <entry>
     <title>OS: Process Management</title>
     <link href="/os/os-process-management.html"/>
-    <updated>2018-02-12T00:00:00+09:00</updated>
+    <updated>2018-01-15T00:00:00+09:00</updated>
     <id>/os/os-process-management</id>
     <content type="html">
 Definition
@@ -12601,7 +12729,7 @@ Process State
   <entry>
     <title>OS: Interprocess Communication</title>
     <link href="/os/os-process-communication.html"/>
-    <updated>2018-02-12T00:00:00+09:00</updated>
+    <updated>2018-01-15T00:00:00+09:00</updated>
     <id>/os/os-process-communication</id>
     <content type="html">
 ###
@@ -12619,7 +12747,7 @@ processes executing in the system.
   <entry>
     <title>OS: Computer System Operation</title>
     <link href="/os/os-operation.html"/>
-    <updated>2018-02-12T00:00:00+09:00</updated>
+    <updated>2018-01-15T00:00:00+09:00</updated>
     <id>/os/os-operation</id>
     <content type="html">
 ####
@@ -12638,7 +12766,7 @@ up or rebooted...</content>
   <entry>
     <title>Management: User</title>
     <link href="/os/os-management-user.html"/>
-    <updated>2018-02-12T00:00:00+09:00</updated>
+    <updated>2018-01-15T00:00:00+09:00</updated>
     <id>/os/os-management-user</id>
     <content type="html">
 说明
@@ -12670,7 +12798,7 @@ usermod -aG docker $USER
   <entry>
     <title>Management: Access</title>
     <link href="/os/os-management-access.html"/>
-    <updated>2018-02-12T00:00:00+09:00</updated>
+    <updated>2018-01-15T00:00:00+09:00</updated>
     <id>/os/os-management-access</id>
     <content type="html">
 功能
@@ -12692,7 +12820,7 @@ dumpe2fs -h /dev/vda1 | grep mount options:
   <entry>
     <title>MacOS Software</title>
     <link href="/os/os-macOS-software.html"/>
-    <updated>2018-02-12T00:00:00+09:00</updated>
+    <updated>2018-01-15T00:00:00+09:00</updated>
     <id>/os/os-macOS-software</id>
     <content type="html">
 VLC视频播放器
@@ -12721,7 +12849,7 @@ Mac OS Finder
   <entry>
     <title>MacOS: Software Management</title>
     <link href="/os/os-macOS-software-management.html"/>
-    <updated>2018-02-12T00:00:00+09:00</updated>
+    <updated>2018-01-15T00:00:00+09:00</updated>
     <id>/os/os-macOS-software-management</id>
     <content type="html">
 xcode-select
@@ -12742,7 +12870,7 @@ Relationship
   <entry>
     <title>MacOS: ITerm</title>
     <link href="/os/os-macOS-iterm.html"/>
-    <updated>2018-02-12T00:00:00+09:00</updated>
+    <updated>2018-01-15T00:00:00+09:00</updated>
     <id>/os/os-macOS-iterm</id>
     <content type="html">
 ####
@@ -12761,7 +12889,7 @@ Galois
   <entry>
     <title>Kernel</title>
     <link href="/os/os-kernel.html"/>
-    <updated>2018-02-12T00:00:00+09:00</updated>
+    <updated>2018-01-15T00:00:00+09:00</updated>
     <id>/os/os-kernel</id>
     <content type="html">
 Kernel
@@ -12784,7 +12912,7 @@ OS
   <entry>
     <title>Management: Access</title>
     <link href="/os/os-internet-attack.html"/>
-    <updated>2018-02-12T00:00:00+09:00</updated>
+    <updated>2018-01-15T00:00:00+09:00</updated>
     <id>/os/os-internet-attack</id>
     <content type="html">
 fping
@@ -12825,9 +12953,23 @@ ncat
   </entry>
 
   <entry>
+    <title>Hardware: CUDA</title>
+    <link href="/os/os-hardware-cuda.html"/>
+    <updated>2018-01-15T00:00:00+09:00</updated>
+    <id>/os/os-hardware-cuda</id>
+    <content type="html">
+
+  CUDA: cuda short for compute unified device architecture is a parallel
+computing and application programming interface model, It allows developers
+to use a CUDA-enabled graphics processing unit(GPU) for general purpose
+processing - an approach termed GPGPU(General computing on Graphics
+Proces...</content>
+  </entry>
+
+  <entry>
     <title>Directory Hierarch</title>
     <link href="/os/os-directory-structure.html"/>
-    <updated>2018-02-12T00:00:00+09:00</updated>
+    <updated>2018-01-15T00:00:00+09:00</updated>
     <id>/os/os-directory-structure</id>
     <content type="html">
 proc
@@ -12851,7 +12993,7 @@ property, be...</content>
   <entry>
     <title>OS: Computer System Architecture</title>
     <link href="/os/os-computer-system-architecture.html"/>
-    <updated>2018-02-12T00:00:00+09:00</updated>
+    <updated>2018-01-15T00:00:00+09:00</updated>
     <id>/os/os-computer-system-architecture</id>
     <content type="html">
 Galois
@@ -12864,17 +13006,33 @@ everything evolved.
   </entry>
 
   <entry>
-    <title>Hardware: CUDA</title>
-    <link href="/os/os-hardware-cuda.html"/>
-    <updated>2018-02-09T00:00:00+09:00</updated>
-    <id>/os/os-hardware-cuda</id>
+    <title>Git: Patching</title>
+    <link href="/os/os-software-git-patching.html"/>
+    <updated>2018-01-14T00:00:00+09:00</updated>
+    <id>/os/os-software-git-patching</id>
     <content type="html">
+shell
 
-  CUDA: cuda short for compute unified device architecture is a parallel
-computing and application programming interface model, It allows developers
-to use a CUDA-enabled graphics processing unit(GPU) for general purpose
-processing - an approach termed GPGPU(General computing on Graphics
-Proces...</content>
+apply
+cherry-pick
+diff
+rebase
+revert
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Git: Debugging</title>
+    <link href="/os/os-software-git-debugging.html"/>
+    <updated>2018-01-13T00:00:00+09:00</updated>
+    <id>/os/os-software-git-debugging</id>
+    <content type="html">
+bisect
+blameo
+grep
+
+</content>
   </entry>
 
   <entry>
@@ -12927,70 +13085,6 @@ Reference
 
   Complete list of AppleScript key
 codes
-
-</content>
-  </entry>
-
-  <entry>
-    <title>Git:  Branch</title>
-    <link href="/os/os-software-git-branch.html"/>
-    <updated>2017-03-23T00:00:00+09:00</updated>
-    <id>/os/os-software-git-branch</id>
-    <content type="html">
-操作
-
-  git branch                 display branch
-  git checkout master        switch branch
-  git branch develop         create branch
-
-
-git checkout -b develop
-# 相当于执行下面两条命令
-git branch develop
-git checkout develop
-
-
-  git branch -d develop      删除分支 删除名字为develop的分支
-
-
-exception
-fatal: this operat...</content>
-  </entry>
-
-  <entry>
-    <title>Git:  Philosophy Behind the Scene</title>
-    <link href="/os/os-software-git-philosophy.html"/>
-    <updated>2017-03-21T00:00:00+09:00</updated>
-    <id>/os/os-software-git-philosophy</id>
-    <content type="html">
-1. What is the problem ?
-
-  assume you are a coder,  and work on a project. Accasionaly you revise you
-code, some days later, you want get things back to where they were.
-    
-      one solution is every time you change your code, you make a copy, but as time
-goes on, this is a nightmare. Based ...</content>
-  </entry>
-
-  <entry>
-    <title> Jekyll</title>
-    <link href="/jekyll.html"/>
-    <updated>2017-03-20T00:00:00+09:00</updated>
-    <id>/jekyll</id>
-    <content type="html">
-Jekyll
-
-  jekyll server
-  jekyll serve –host=0.0.0.0
-    
-      This will make Jekyll’s HTTP server bind to all available IPs.
-    
-  
-
-
-Reference
-
-  Connect to a locally build Server
 
 </content>
   </entry>

@@ -3,8 +3,8 @@ layout: post
 title: " Jekyll"
 keywords: []
 description: 
-category: 
-tags: []
+category: "PL" 
+tags: ["jekyll","script"]
 ---
 {% include JB/setup %}
 

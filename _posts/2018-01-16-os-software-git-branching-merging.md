@@ -1,12 +1,26 @@
 ---
 layout: post
-title: "Git:  Branch"
+title: "Git:  Branching and Merging"
 keywords: []
 description: 
 category: "OS" 
 tags: []
 ---
 {% include JB/setup %}
+
+
+```shell
+branch
+checkout
+switch
+merge
+mergetool
+log
+stash
+tag
+worktree
+```
+
 
 #### 操作
 + git branch                 display branch

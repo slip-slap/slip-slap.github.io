@@ -142,7 +142,7 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">640</span>
+<span title="文章总数">645</span>
 <ul>
 
 
@@ -2846,7 +2846,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#August-2018">2018 年 08 月 (22)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#August-2018">2018 年 08 月 (23)</a></li>
     
   
 
@@ -3383,7 +3388,42 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#February-2018">2018 年 02 月 (21)</a></li>
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#January-2018">2018 年 01 月 (28)</a></li>
     
   
 
@@ -3400,24 +3440,6 @@ $(document).ready(function() {
     
   
 
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-    <li><a href="/archive.html#March-2017">2017 年 03 月 (3)</a></li>
-    
-  
-
 </ul>
 
         </section>
@@ -3427,9 +3449,9 @@ $(document).ready(function() {
 <span title="分类总数">8</span>
 <ul>
 
-  <li><a href="/categories.html#OS-ref">OS (23)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (152)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (150)</a></li>
+  <li><a href="/categories.html#OS-ref">OS (27)</a></li>
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
@@ -3448,7 +3470,7 @@ $(document).ready(function() {
         </section>
         <section>
           <a href="/tags.html" title="查看所有标签"><i class="icon-fixed-width icon-tags"></i> 标签云</a>
-<span title="标签总数">71</span>
+<span title="标签总数">72</span>
 <div id="tag-cloud">
 
 
@@ -3484,6 +3506,13 @@ $(document).ready(function() {
     
     
     <a href="/tags.html#summary-ref" style="font-size: 10pt; color: #888;">summary</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#jekyll-ref" style="font-size: 9pt; color: #999;">jekyll</a>
   
     
     
@@ -4019,6 +4048,36 @@ $(document).ready(function() {
   <article class="nested">
 
     <header>
+      <h2><a href="/pl/pl-script-shell-tmux.html" title="查看《Command: Tmux》">Command: Tmux</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+intro
+tmux is a terminal multiplexer，tmux使用C/S模型构建，it consists of the
+following unit:
+
+  server，输入tmux命令开启一个服务器
+  session，一个服务器可以包含多个会话
+  window， ...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#August-2018" title="查看此月所有文章">06 August 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-script-shell-tmux.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
       <h2><a href="/pl/pl-script-shell-system-call.html" title="查看《Shell: System Call》">Shell: System Call</a></h2>
     </header>
 
@@ -4263,7 +4322,7 @@ output information of command ls
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-shell-command-crontab.html" title="查看《Command: Crontab》">Command: Crontab</a></h2>
+      <h2><a href="/pl/pl-script-shell-command-crontab.html" title="查看《Shell: Crontab》">Shell: Crontab</a></h2>
     </header>
 
     <section>
@@ -4283,39 +4342,6 @@ output information of command ls
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
         评论：<a href="/pl/pl-script-shell-command-crontab.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-script-shell-script.html" title="查看《Shell: My Script》">Shell: My Script</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-for i in *.md
-do
-   var1="${i:0:10}"
-   var2="${i:10:100}"
-   echo "${var1}-code${var2}"
-   mv "${i}" "${var1}-code${var2}"
-done
-
-
-
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#August-2018" title="查看此月所有文章">01 August 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-shell-script.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -4360,7 +4386,7 @@ done
 
     <!-- Current Page -->
     <li class="active">
-      <span class="page_number ">第 53/64 页</span>
+      <span class="page_number ">第 53/65 页</span>
     </li>
 
     <!-- Next Page -->
@@ -4370,7 +4396,7 @@ done
 
     <!-- Last Page -->
     
-    <li><a href="/page64">&raquo;&raquo;</a></li>
+    <li><a href="/page65">&raquo;&raquo;</a></li>
     
   </ul>
 </section>

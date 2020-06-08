@@ -8,7 +8,6 @@ tags: ["c++","compile"]
 --- 
 {% include JB/setup %}
 
-
 [官方文档](http://eigen.tuxfamily.org/dox/GettingStarted.html)
 ```
 //默认是列向量

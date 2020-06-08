@@ -158,16 +158,6 @@ a tab could be a different number of columns depending on your enviroment
 2. Line mode: V(upper-case)
 3. Block mode: Ctrl+v
 
-#### 3.2 Normal Mode
-
-```shell
-# 映射G键到别的东西
-:nnoremap G dd
-# normal命令将顾及当前的所有映射,下面的命令将会删除光标所在行
-:normal G
-# normal!
-```
-
 #### 3.3 Recording Mode
 
 record type character into register
