@@ -124,6 +124,10 @@ $(document).ready(function() {
           <a href="/" title="查看最近发表"><i class="icon-fixed-width icon-edit"></i> 最近发表</a>
 <ul>
 
+  <li><a href="/work/work-presentation.html" title="查看《Work: Speak》">Work: Speak</a></li>
+
+  <li><a href="/work/work-journal.html" title="查看《Work: Journal》">Work: Journal</a></li>
+
   <li><a href="/math/math-apply-stochastic-process-renewal-process-wald-equality.html" title="查看《R.P.: Wald's Equality》">R.P.: Wald's Equality</a></li>
 
   <li><a href="/math/math-apply-stochastic-process-renewal-process-renewal-reward-processes.html" title="查看《R.P.: Renewal Rewards》">R.P.: Renewal Rewards</a></li>
@@ -132,19 +136,28 @@ $(document).ready(function() {
 
   <li><a href="/math/math-apply-stochastic-process-martingales.html" title="查看《S.P.: Martingles》">S.P.: Martingles</a></li>
 
-  <li><a href="/math/math-apply-stochastic-process-summary.html" title="查看《S.P.: summary》">S.P.: summary</a></li>
-
-  <li><a href="/math/math-apply-stochastic-process-poisson-process-introduction.html" title="查看《P.P.: Introduction》">P.P.: Introduction</a></li>
-
 </ul>
 
         </section>
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">645</span>
+<span title="文章总数">646</span>
 <ul>
 
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#June-2020">2020 年 06 月 (2)</a></li>
+    
+  
 
   
   
@@ -283,12 +296,7 @@ $(document).ready(function() {
   
   
   
-
-  
-  
-  
-  
-    <li><a href="/archive.html#April-2020">2020 年 04 月 (2)</a></li>
+    <li><a href="/archive.html#April-2020">2020 年 04 月 (1)</a></li>
     
   
 
@@ -3463,7 +3471,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#言葉-ref">言葉 (142)</a></li>
 
-  <li><a href="/categories.html#work-ref">work (1)</a></li>
+  <li><a href="/categories.html#work-ref">work (2)</a></li>
 
 </ul>
 
@@ -4096,18 +4104,18 @@ be always on this mode.</p>
   <li>^: jump to the start of the line</li>
   <li>$: jump to the end of the line</li>
   <li>{: jump to the start of current paragraph</li>
-  <li>}: jump to the end of current paragraph</li>
-</ol>
-
-<h4 id="22-action">2.2 Action</h4>
-<ol>
+  <li>}: jump to the end of current paragraph
+    <h4 id="22-action">2.2 Action</h4>
+  </li>
   <li>d: delete</li>
   <li>y: copy</li>
+  <li>p: paste</li>
+  <li>r: replace</li>
 </ol>
 
 <h4 id="23-combination">2.3 Combination</h4>
 <ol>
-  <li>General form: <strong>Action+Navigation</strong>
+  <li>General form: <strong>Action+Number+Navigation</strong>
     <ul>
       <li>d5w</li>
       <li>y3}</li>
@@ -4115,7 +4123,7 @@ be always on this mode.</p>
   </li>
 </ol>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 映射G键到别的东西</span>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 映射G33e4东3</span>
 :nnoremap G <span class="nb">dd</span>
 <span class="c"># normal命令将顾及当前的所有映射,下面的命令将会删除光标所在行</span>
 :normal G

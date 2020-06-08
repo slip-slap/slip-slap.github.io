@@ -21,18 +21,19 @@ be always on this mode.
 4. $: jump to the end of the line
 5. {: jump to the start of current paragraph
 6. }: jump to the end of current paragraph
-
 #### 2.2 Action
 1. d: delete
 2. y: copy
+3. p: paste
+4. r: replace
 
 #### 2.3 Combination
-1. General form: **Action+Navigation**
+1. General form: **Action+Number+Navigation**
 - d5w
 - y3}
 
 ```shell
-# 映射G键到别的东西
+# 映射G33e4东3
 :nnoremap G dd
 # normal命令将顾及当前的所有映射,下面的命令将会删除光标所在行
 :normal G
