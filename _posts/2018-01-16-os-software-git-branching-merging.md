@@ -22,6 +22,10 @@ worktree
 ```
 
 
+can only be run after the merge has resulted in conflicts.
+git merge --continue
+
+
 #### Operation 
 + git branch                 display branch
 + git branch develop         create branch

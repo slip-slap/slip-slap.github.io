@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Python: Scipy Module"
+title: "Python Package: Scipy"
 keywords: []
 description: "scipy"
 category: "PL"

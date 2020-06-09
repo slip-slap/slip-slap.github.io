@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Python: Matplotlib and Seaborn"
+title: "Python Package: Matplotlib and Seaborn"
 keywords: []
 description: ""
 category: "PL"

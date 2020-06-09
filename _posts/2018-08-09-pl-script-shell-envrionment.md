@@ -24,3 +24,11 @@ facts about our configuration.
 
 
 
+#### Design
+1. The philosophy of shell script arise from UNIX. **Breaking complex tasks into
+   simpler subtasks**
+2. So the grammar in shell script seems very weird just because the way it
+   works.
+
+
+

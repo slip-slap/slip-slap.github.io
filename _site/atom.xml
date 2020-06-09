@@ -3,7 +3,7 @@
   <title>Just Do It</title>
   <link href="/atom.xml" rel="self"/>
   <link href=""/>
-  <updated>2020-06-08T21:11:26+09:00</updated>
+  <updated>2020-06-09T16:43:22+09:00</updated>
   <id></id>
   <author>
     <name>reed</name>
@@ -9296,6 +9296,16 @@ left-inclusive interval,左闭合空间的意义:
   </entry>
 
   <entry>
+    <title>PL: Debugging and Profiling</title>
+    <link href="/pl/pl-debugging-and-profiling.html"/>
+    <updated>2018-12-10T00:00:00+09:00</updated>
+    <id>/pl/pl-debugging-and-profiling</id>
+    <content type="html">
+log
+</content>
+  </entry>
+
+  <entry>
     <title>PL: Regular Expression</title>
     <link href="/pl/pl-regular-expression.html"/>
     <updated>2018-10-13T00:00:00+09:00</updated>
@@ -10141,6 +10151,27 @@ boost是一个可移植的，提供源代码的C++库，由于其对跨平台的
   </entry>
 
   <entry>
+    <title>Editor: Vimscript Visual Mode</title>
+    <link href="/pl/pl-script-editor-vimscript-visual-mode.html"/>
+    <updated>2018-08-12T00:00:00+09:00</updated>
+    <id>/pl/pl-script-editor-vimscript-visual-mode</id>
+    <content type="html">
+####
+
+  Character mode: v
+  Line mode: V
+  Block mode: &amp;lt;c-v&amp;gt;
+
+
+####
+
+  %: work based in visual mode
+
+
+</content>
+  </entry>
+
+  <entry>
     <title>Editor: Vimscript Plugin</title>
     <link href="/pl/pl-script-editor-vimscript-plugin.html"/>
     <updated>2018-08-12T00:00:00+09:00</updated>
@@ -10386,20 +10417,15 @@ Intro
   their values are of type string
     
       reference
+      Unlike some other programming languages, the shell does not care about the
+type of data assigned to a variable; it treats them all as strings.
     
   
 
 
+Example
 
-
-
-  evaluated inside a quoted arguement
-
-
-&quot;${variable_name}/directory&quot;
-
-
-</content>
+a=z					# assign the string &quot;z...</content>
   </entry>
 
   <entry>
@@ -10497,6 +10523,24 @@ ps命令默认显示4列信息
   -u 根据用户过滤进程，ps -u huiyaozhang 查看用户huiyaozhang的进程
   -a 显示一个终端所有进程
   -x 显示没有...</content>
+  </entry>
+
+  <entry>
+    <title>Shell: DIY Tricks</title>
+    <link href="/pl/pl-script-shell-keyboard-tricks.html"/>
+    <updated>2018-08-06T00:00:00+09:00</updated>
+    <id>/pl/pl-script-shell-keyboard-tricks</id>
+    <content type="html">
+Introductin
+Bash uses a library called Readline to implement command line editing.
+
+ctrl-a: move cursor to the beginning of the line
+ctrl-e: move cursor to the end of the line
+alt-f:  move cursor forward one word
+alt-b: move cursor backward one word
+
+
+</content>
   </entry>
 
   <entry>
@@ -11416,7 +11460,15 @@ System.out.println(bd.add(new BigDecimal(&quot;0.01&quot;)));
     <link href="/pl/pl-script-python-envrionment.html"/>
     <updated>2018-03-18T00:00:00+09:00</updated>
     <id>/pl/pl-script-python-envrionment</id>
-    <content type="html">Reference
+    <content type="html">####
+
+pyenv versions: checkout all versions
+pyenv global 3.6.8: set global version 
+pyenv install 3.6.8
+pyenv uninstall 3.6.8
+
+
+Reference
 
   pyenv
   how to set a default python3
@@ -11536,26 +11588,6 @@ for &amp;lt;statement&amp;gt; in &amp;...</content>
   </entry>
 
   <entry>
-    <title>Python: Scipy Module</title>
-    <link href="/pl/pl-script-python-scipy.html"/>
-    <updated>2018-03-16T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-scipy</id>
-    <content type="html">
-statis
-
-
-  this module contains the common distribution, like uniform distribution, norm
-distribution, poisson distribution, binom distribution etc.
-  There are common functions among all these distributions. like rvs which
-generates random variables,cdf function
-
-
-
-  RV: random variables
-  cdf:...</content>
-  </entry>
-
-  <entry>
     <title>Python: For Loop</title>
     <link href="/pl/pl-script-python-principal-iterator.html"/>
     <updated>2018-03-16T00:00:00+09:00</updated>
@@ -11591,21 +11623,6 @@ One of the strongest feature of pdb is that we can move through our code in vari
 
 
   n(ext): n command runs the code on current line at full-speed and takes us to the next line in t...</content>
-  </entry>
-
-  <entry>
-    <title>Python: Pandas </title>
-    <link href="/pl/pl-script-python-pandas.html"/>
-    <updated>2018-03-16T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-pandas</id>
-    <content type="html">名字由来: panel data和data analysis。panel data是经济学中关于多维数据集的一个术语
-，pandas也提供了panel的数据类型。
-
-what is the difference between Series and DataFrame ?
-
-  According to Pandas Docs DataFrame
-can be thought as a dict-like container for Series Objects
-  As Pandas can be thought as a dict-like container for Series ...</content>
   </entry>
 
   <entry>
@@ -11696,30 +11713,6 @@ dataset_list_pd[dataset_list_pd.name.str.cont...</content>
   </entry>
 
   <entry>
-    <title>Python: Numpy</title>
-    <link href="/pl/pl-script-python-numpy.html"/>
-    <updated>2018-03-16T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-numpy</id>
-    <content type="html">
-random module
-This module is consists of two components, they are 
-
-  simple random data
-  Distributions, such as uniform distribution, normal distribution,poisson distribution etc.
-
-
-np.random.uniform(-2,2,(3,4))
-
-
-common function
-
-np.where()
-
-  The input argument of this API is bool value
-  th...</content>
-  </entry>
-
-  <entry>
     <title>Python: Module</title>
     <link href="/pl/pl-script-python-module.html"/>
     <updated>2018-03-16T00:00:00+09:00</updated>
@@ -11729,31 +11722,6 @@ name属性
 the name attribute must be set to the fully-qualified name of the module. this
 name is used to uniquely identify the module in the import system
 </content>
-  </entry>
-
-  <entry>
-    <title>Python: Matplotlib and Seaborn</title>
-    <link href="/pl/pl-script-python-matplotlib-seaborn.html"/>
-    <updated>2018-03-16T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-matplotlib-seaborn</id>
-    <content type="html">
-matplotlib
-
-how to plot
-The general method of use this module to generate a fig
-
-
-  obtain a Figure instance
-  obtain a AxesSubplot instance
-  use AxesSubplot instance to plot
-
-
-import matplotlib.pyplot as plt
-
-# obtain Figure instance 
-fig = plt.figure()
-# 2 obtain AxesSubplot instance axes1
-ax...</content>
   </entry>
 
   <entry>
@@ -11841,24 +11809,6 @@ python没有所谓的main函数，从脚本的起始位置开始执行。
   </entry>
 
   <entry>
-    <title>Python: Inspect Module</title>
-    <link href="/pl/pl-script-python-inspect.html"/>
-    <updated>2018-03-16T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-inspect</id>
-    <content type="html">
-function: get the source code
-
-import inspect
-from scipy.stats import bernoulli
-
-code = inspect.getsource(bernoulli.rvs)
-print(code)
-
-
-</content>
-  </entry>
-
-  <entry>
     <title>Python: Function</title>
     <link href="/pl/pl-script-python-function.html"/>
     <updated>2018-03-16T00:00:00+09:00</updated>
@@ -11940,17 +11890,18 @@ int(var)     #转化为int类型
   </entry>
 
   <entry>
-    <title>Python Copy</title>
+    <title>Python:  Copy</title>
     <link href="/pl/pl-script-python-copy.html"/>
     <updated>2018-03-16T00:00:00+09:00</updated>
     <id>/pl/pl-script-python-copy</id>
     <content type="html">
 copy in Python
-In Python, Assignment statements do not copy objects, they create bindings between a target and an object. 
-When we use = operator user thinks that this creates a new object; well, it doesn’t. It only creates a new  
-variable that shares the reference of the original object. 
+In Python, Assignment statements do not copy objects, they create bindings
+between a target and an object.  When we use = operator user thinks that
+this creates a new object; well, it doesn’t. It only creates a new  variable
+that shares the reference of the original object.
 
-dee...</content>
+deep ...</content>
   </entry>
 
   <entry>
@@ -12191,9 +12142,93 @@ new_im = Image.fromarray(np_im)
   </entry>
 
   <entry>
+    <title>Python Package: Scipy</title>
+    <link href="/pl/pl-script-python-package-scipy.html"/>
+    <updated>2018-03-12T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-package-scipy</id>
+    <content type="html">
+statis
+
+
+  this module contains the common distribution, like uniform distribution, norm
+distribution, poisson distribution, binom distribution etc.
+  There are common functions among all these distributions. like rvs which
+generates random variables,cdf function
+
+
+
+  RV: random variables
+  cdf:...</content>
+  </entry>
+
+  <entry>
+    <title>Python Package: Pandas</title>
+    <link href="/pl/pl-script-python-package-pandas.html"/>
+    <updated>2018-03-12T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-package-pandas</id>
+    <content type="html">名字由来: panel data和data analysis。panel data是经济学中关于多维数据集的一个术语
+，pandas也提供了panel的数据类型。
+
+what is the difference between Series and DataFrame ?
+
+  According to Pandas Docs DataFrame
+can be thought as a dict-like container for Series Objects
+  As Pandas can be thought as a dict-like container for Series ...</content>
+  </entry>
+
+  <entry>
+    <title>Python Package: Numpy</title>
+    <link href="/pl/pl-script-python-package-numpy.html"/>
+    <updated>2018-03-12T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-package-numpy</id>
+    <content type="html">
+random module
+This module is consists of two components, they are 
+
+  simple random data
+  Distributions, such as uniform distribution, normal distribution,poisson distribution etc.
+
+
+np.random.uniform(-2,2,(3,4))
+
+
+common function
+
+np.where()
+
+  The input argument of this API is bool value
+  th...</content>
+  </entry>
+
+  <entry>
+    <title>Python Package: Matplotlib and Seaborn</title>
+    <link href="/pl/pl-script-python-package-matplotlib-seaborn.html"/>
+    <updated>2018-03-12T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-package-matplotlib-seaborn</id>
+    <content type="html">
+matplotlib
+
+how to plot
+The general method of use this module to generate a fig
+
+
+  obtain a Figure instance
+  obtain a AxesSubplot instance
+  use AxesSubplot instance to plot
+
+
+import matplotlib.pyplot as plt
+
+# obtain Figure instance 
+fig = plt.figure()
+# 2 obtain AxesSubplot instance axes1
+ax...</content>
+  </entry>
+
+  <entry>
     <title>Python ML: Tensorboard</title>
     <link href="/pl/pl-script-python-ml-tensorflow-tensorboard.html"/>
-    <updated>2018-03-15T00:00:00+09:00</updated>
+    <updated>2018-03-10T00:00:00+09:00</updated>
     <id>/pl/pl-script-python-ml-tensorflow-tensorboard</id>
     <content type="html">
 Introduction
@@ -12208,7 +12243,7 @@ python /path/to/tensorflow/install/directory/tensorflow/tensorboar...</content>
   <entry>
     <title>Python ML: Define Variable in Tensorflow</title>
     <link href="/pl/pl-script-python-ml-tensorflow-sharing-variable.html"/>
-    <updated>2018-03-15T00:00:00+09:00</updated>
+    <updated>2018-03-10T00:00:00+09:00</updated>
     <id>/pl/pl-script-python-ml-tensorflow-sharing-variable</id>
     <content type="html">
 variable sharing
@@ -12221,7 +12256,7 @@ In traditional method, when you want to use the same variable in different metho
   <entry>
     <title>Python ML: Obtain Variable Value in Tensorflow</title>
     <link href="/pl/pl-script-python-ml-tensorflow-obtain-variable.html"/>
-    <updated>2018-03-15T00:00:00+09:00</updated>
+    <updated>2018-03-10T00:00:00+09:00</updated>
     <id>/pl/pl-script-python-ml-tensorflow-obtain-variable</id>
     <content type="html">
 introduction
@@ -12239,7 +12274,7 @@ variables you can run the fo...</content>
   <entry>
     <title>Python ML: Build Neural Network With Any Topology</title>
     <link href="/pl/pl-script-python-ml-tensorflow-neural-network-with-any-topology.html"/>
-    <updated>2018-03-15T00:00:00+09:00</updated>
+    <updated>2018-03-10T00:00:00+09:00</updated>
     <id>/pl/pl-script-python-ml-tensorflow-neural-network-with-any-topology</id>
     <content type="html">
 def layer(layer_name, data, output_channels):
@@ -12252,7 +12287,7 @@ def layer(layer_name, data, output_channels):
   <entry>
     <title>Python ML: Ipython with Tensorflow</title>
     <link href="/pl/pl-script-python-ml-tensorflow-ipython.html"/>
-    <updated>2018-03-15T00:00:00+09:00</updated>
+    <updated>2018-03-10T00:00:00+09:00</updated>
     <id>/pl/pl-script-python-ml-tensorflow-ipython</id>
     <content type="html">
 pitfall
@@ -12271,7 +12306,7 @@ def rescue_code(function):
   <entry>
     <title>Python ML: Introduction of Tensorflow</title>
     <link href="/pl/pl-script-python-ml-tensorflow-intro.html"/>
-    <updated>2018-03-15T00:00:00+09:00</updated>
+    <updated>2018-03-10T00:00:00+09:00</updated>
     <id>/pl/pl-script-python-ml-tensorflow-intro</id>
     <content type="html">
 what is the crap of tensorflow ?
@@ -12287,7 +12322,7 @@ how to use tensorflow to ...</content>
   <entry>
     <title>Python ML: Concept in Tensorflow</title>
     <link href="/pl/pl-script-python-ml-tensorflow-concept.html"/>
-    <updated>2018-03-15T00:00:00+09:00</updated>
+    <updated>2018-03-10T00:00:00+09:00</updated>
     <id>/pl/pl-script-python-ml-tensorflow-concept</id>
     <content type="html">
 what the crap is the rank?
@@ -12304,7 +12339,7 @@ known as “order”,”ndims” or “degree”
   <entry>
     <title>Python ML: Broadcasting in Tensorflow</title>
     <link href="/pl/pl-script-python-ml-tensorflow-broadcasting-mechanism.html"/>
-    <updated>2018-03-15T00:00:00+09:00</updated>
+    <updated>2018-03-10T00:00:00+09:00</updated>
     <id>/pl/pl-script-python-ml-tensorflow-broadcasting-mechanism</id>
     <content type="html">
 what the crap is broadcasting ?
@@ -12317,7 +12352,7 @@ compatible shapes for arithmetic operations.
   <entry>
     <title>Python ML: Sklearn</title>
     <link href="/pl/pl-script-python-ml-sklearn.html"/>
-    <updated>2018-03-15T00:00:00+09:00</updated>
+    <updated>2018-03-10T00:00:00+09:00</updated>
     <id>/pl/pl-script-python-ml-sklearn</id>
     <content type="html">
 Component of scikit-learn
@@ -12334,7 +12369,7 @@ Component of scikit-learn
   <entry>
     <title>Python ML: Keras</title>
     <link href="/pl/pl-script-python-ml-keras-model.html"/>
-    <updated>2018-03-15T00:00:00+09:00</updated>
+    <updated>2018-03-10T00:00:00+09:00</updated>
     <id>/pl/pl-script-python-ml-keras-model</id>
     <content type="html">
 from keras.models import load_model
@@ -12350,7 +12385,7 @@ print(y)
   <entry>
     <title>Python ML: CUDNN</title>
     <link href="/pl/pl-script-python-ml-cuda.html"/>
-    <updated>2018-03-15T00:00:00+09:00</updated>
+    <updated>2018-03-10T00:00:00+09:00</updated>
     <id>/pl/pl-script-python-ml-cuda</id>
     <content type="html">
 concept
@@ -12365,7 +12400,7 @@ convolution, pooling, normalization, and activation layers.
   <entry>
     <title>Python Qt: Integrated Template of QT Designer</title>
     <link href="/pl/pl-script-python-qt5-qtdesigner-code-template.html"/>
-    <updated>2018-03-14T00:00:00+09:00</updated>
+    <updated>2018-03-06T00:00:00+09:00</updated>
     <id>/pl/pl-script-python-qt5-qtdesigner-code-template</id>
     <content type="html">
 signal and slot
@@ -12378,7 +12413,7 @@ So when you click a QPushButton, a signal is emitted. The signal name in this c.
   <entry>
     <title>Python Qt: Pyqtgraph</title>
     <link href="/pl/pl-script-python-qt5-pyqtgraph.html"/>
-    <updated>2018-03-14T00:00:00+09:00</updated>
+    <updated>2018-03-06T00:00:00+09:00</updated>
     <id>/pl/pl-script-python-qt5-pyqtgraph</id>
     <content type="html">
 what’s pyqtgraph
@@ -12406,7 +12441,7 @@ def updateCurveD...</content>
   <entry>
     <title>Python Qt: Menu Event Handling</title>
     <link href="/pl/pl-script-python-qt5-menu-action.html"/>
-    <updated>2018-03-14T00:00:00+09:00</updated>
+    <updated>2018-03-06T00:00:00+09:00</updated>
     <id>/pl/pl-script-python-qt5-menu-action</id>
     <content type="html">
 Event Handling
@@ -12429,7 +12464,7 @@ from PyQt5 i...</content>
   <entry>
     <title>Python Qt: Picture Display</title>
     <link href="/pl/pl-script-python-qt5-display-image.html"/>
-    <updated>2018-03-14T00:00:00+09:00</updated>
+    <updated>2018-03-06T00:00:00+09:00</updated>
     <id>/pl/pl-script-python-qt5-display-image</id>
     <content type="html">
 Display a picutre
@@ -12446,7 +12481,7 @@ import ma...</content>
   <entry>
     <title>Python Qt: Designer</title>
     <link href="/pl/pl-script-python-qt5-designer.html"/>
-    <updated>2018-03-14T00:00:00+09:00</updated>
+    <updated>2018-03-06T00:00:00+09:00</updated>
     <id>/pl/pl-script-python-qt5-designer</id>
     <content type="html">
 Widget
@@ -12862,6 +12897,21 @@ Proces...</content>
   </entry>
 
   <entry>
+    <title>Hardware: CPU</title>
+    <link href="/os/os-hardware-cpu.html"/>
+    <updated>2018-01-25T00:00:00+09:00</updated>
+    <id>/os/os-hardware-cpu</id>
+    <content type="html">
+J
+
+  x86 is an Intel CPU architecture that originated with the 16-bit 8086
+processor in 1978. Today, the term “x86” is used generally to refer to any
+32-bit processor compatible with the x86 instruction set.
+    
+      In Its 40 years of existence, the x86 architecture has added many new feature...</content>
+  </entry>
+
+  <entry>
     <title>Directory Hierarch</title>
     <link href="/os/os-directory-structure.html"/>
     <updated>2018-01-25T00:00:00+09:00</updated>
@@ -12933,7 +12983,14 @@ reset
 rm
 mv
 
-</content>
+
+Detached Head
+
+  Detached head means you are no longer on a branch, you have checked out a
+single commit in the history
+    
+      why we have this, what’s the advantage?
+      If you want to delete you changes associated with the detached ...</content>
   </entry>
 
   <entry>
@@ -12976,6 +13033,9 @@ tag
 worktree
 
 
+can only be run after the merge has resulted in conflicts.
+git merge –continue
+
 Operation
 
   git branch                 display branch
@@ -12983,14 +13043,7 @@ Operation
   git checkout master        switch branch
 
 
-Example: run into a merge conflict, quit merge
-
-git reset --merge
-
-
-Reference
-
-  switch a...</content>
+Example: ...</content>
   </entry>
 
   <entry>

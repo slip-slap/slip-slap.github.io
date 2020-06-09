@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Python: Numpy"
+title: "Python Package: Numpy"
 keywords: []
 description: ""
 category: "PL"

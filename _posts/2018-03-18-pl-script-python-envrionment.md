@@ -8,6 +8,15 @@ tags: ["script","python"]
 ---
 
 
+####
+
+```shell
+pyenv versions: checkout all versions
+pyenv global 3.6.8: set global version 
+pyenv install 3.6.8
+pyenv uninstall 3.6.8
+```
+
 
 #### Reference
 1. [pyenv](https://github.com/pyenv/pyenv)

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Python: Pandas "
+title: "Python Package: Pandas"
 keywords: ["pandas"]
 description: ""
 category: "PL"

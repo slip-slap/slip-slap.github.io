@@ -1,0 +1,14 @@
+I"u
+<h4 id="copy-in-python">copy in Python</h4>
+<p>In Python, Assignment statements do not copy objects, they create bindings
+between a target and an object.  When we use <strong>=</strong> operator user thinks that
+this creates a new object; well, it doesn’t. It only creates a new  variable
+that shares the reference of the original object.</p>
+
+<h4 id="deep-copy">deep copy</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">copy</span>
+<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">copy</span><span class="p">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</code></pre></div></div>
+:ET

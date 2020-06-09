@@ -142,7 +142,7 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">646</span>
+<span title="文章总数">649</span>
 <ul>
 
 
@@ -2540,7 +2540,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#December-2018">2018 年 12 月 (4)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#December-2018">2018 年 12 月 (5)</a></li>
     
   
 
@@ -2859,7 +2864,17 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#August-2018">2018 年 08 月 (23)</a></li>
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#August-2018">2018 年 08 月 (25)</a></li>
     
   
 
@@ -3283,12 +3298,7 @@ $(document).ready(function() {
   
   
   
-
-  
-  
-  
-  
-    <li><a href="/archive.html#March-2018">2018 年 03 月 (53)</a></li>
+    <li><a href="/archive.html#March-2018">2018 年 03 月 (52)</a></li>
     
   
 
@@ -3431,7 +3441,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#January-2018">2018 年 01 月 (28)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#January-2018">2018 年 01 月 (29)</a></li>
     
   
 
@@ -3457,9 +3472,9 @@ $(document).ready(function() {
 <span title="分类总数">8</span>
 <ul>
 
-  <li><a href="/categories.html#PL-ref">PL (152)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (154)</a></li>
 
-  <li><a href="/categories.html#OS-ref">OS (27)</a></li>
+  <li><a href="/categories.html#OS-ref">OS (28)</a></li>
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
@@ -3492,7 +3507,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#script-ref" style="font-size: 17.5pt; color: #000;">script</a>
+    <a href="/tags.html#script-ref" style="font-size: 18pt; color: #000;">script</a>
   
     
     
@@ -3527,7 +3542,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#python-ref" style="font-size: 13.5pt; color: #444;">python</a>
+    <a href="/tags.html#python-ref" style="font-size: 13.5pt; color: #555;">python</a>
   
     
     
@@ -4099,11 +4114,30 @@ $(document).ready(function() {
   <li>their values are of type string
     <ul>
       <li>reference</li>
+      <li>Unlike some other programming languages, the shell does not care about the
+type of data assigned to a variable; it treats them all as strings.</li>
     </ul>
   </li>
 </ol>
 
-<div class="language-cmake highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<h4 id="example">Example</h4>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">a</span><span class="o">=</span>z					<span class="c"># assign the string "z" to variable a.</span>
+<span class="nv">b</span><span class="o">=</span><span class="s2">"a string"</span>		<span class="c"># embedded spaces must be within quotes.</span>
+<span class="nv">d</span><span class="o">=</span><span class="si">$(</span><span class="nb">ls</span> <span class="nt">-l</span> foo.txt<span class="si">)</span>  <span class="c"># results of a command</span>
+</code></pre></div></div>
+
+<h4 id="example-1">Example</h4>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">filename</span><span class="o">=</span><span class="s2">"myfile"</span>
+<span class="nb">touch</span> <span class="nv">$filename</span>
+<span class="nb">mv</span> <span class="nv">$filenmae</span> <span class="nv">$filename1</span>
+<span class="c"># this attempt fails because the shell interprets the second argument of the mv</span>
+<span class="c"># command as a new variable, the problem can be overcome this way</span>
+<span class="nb">mv</span> <span class="nv">$filename</span> <span class="k">${</span><span class="nv">filename</span><span class="k">}</span>1
+<span class="c"># by adding the surrounding braces the shell no longer the trailing **1** an</span>
+part of variable name.
+</code></pre></div></div>
 
 <ul>
   <li>evaluated inside a quoted arguement</li>
@@ -4140,7 +4174,7 @@ $(document).ready(function() {
   
      
     	<li><a href="/categories.html#PL-ref">
-    		PL <span>152</span>
+    		PL <span>154</span>
     	</a></li>
     
   
@@ -4159,9 +4193,9 @@ $(document).ready(function() {
 
   
      
-    	<li><a href="/tags.html#shell-ref">shell <span>18</span></a></li>
+    	<li><a href="/tags.html#shell-ref">shell <span>19</span></a></li>
      
-    	<li><a href="/tags.html#script-ref">script <span>100</span></a></li>
+    	<li><a href="/tags.html#script-ref">script <span>101</span></a></li>
     
   
 

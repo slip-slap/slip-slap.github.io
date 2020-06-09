@@ -1,17 +1,18 @@
 ---
 layout: post
-title: "Python Copy"
-keywords: ["python", "introduction"]
-description: "python"
+title: "Python:  Copy"
+keywords: []
+description: 
 category: "PL"
 tags: ["python","script"]
 ---
 {% include JB/setup %}
 
 #### copy in Python
-In Python, Assignment statements do not copy objects, they create bindings between a target and an object. <br />
-When we use **=** operator user thinks that this creates a new object; well, it doesn't. It only creates a new <br /> 
-variable that shares the reference of the original object. <br />
+In Python, Assignment statements do not copy objects, they create bindings
+between a target and an object.  When we use **=** operator user thinks that
+this creates a new object; well, it doesn't. It only creates a new  variable
+that shares the reference of the original object. 
 
 
 #### deep copy
