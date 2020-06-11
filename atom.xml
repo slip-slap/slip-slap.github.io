@@ -3,7 +3,7 @@
   <title>Just Do It</title>
   <link href="/atom.xml" rel="self"/>
   <link href=""/>
-  <updated>2020-06-09T16:43:22+09:00</updated>
+  <updated>2020-06-11T15:44:22+09:00</updated>
   <id></id>
   <author>
     <name>reed</name>
@@ -22,6 +22,13 @@
   Promise
   Inspiration: If someone who is not insterested in artificial intelligence,
 maybe he just not interested in interesting things.
+
+
+####
+
+  teach ideas
+  teach skills
+  transmitting facts
 
 </content>
   </entry>
@@ -9301,8 +9308,71 @@ left-inclusive interval,左闭合空间的意义:
     <updated>2018-12-10T00:00:00+09:00</updated>
     <id>/pl/pl-debugging-and-profiling</id>
     <content type="html">
-log
+A
+A debugger can start some process and debug it, or attach itself to an existing
+process. It can single-step through code, set breakpoins and run to them,
+examine variable values and stack traces.
+
+
+  modern debugger are complex beast, but the foundation is very simple.
+  Debuggers start with o...</content>
+  </entry>
+
+  <entry>
+    <title>CMake: Introduction</title>
+    <link href="/pl/pl-script-cmake-intro.html"/>
+    <updated>2018-11-27T00:00:00+09:00</updated>
+    <id>/pl/pl-script-cmake-intro</id>
+    <content type="html">
+Organization
+
+  CMake input files are written in the “CMake Language” in source files named
+CMakeLists.txt or ending in a .cmake file name extension. CMake
+Language source files in a project are organized into:
+    
+      Directories
+      Scripts
+      Modules
+    
+  
+
+
+CMake
+
+  You must treat ...</content>
+  </entry>
+
+  <entry>
+    <title>CMake: Concept</title>
+    <link href="/pl/pl-script-cmake-concept.html"/>
+    <updated>2018-11-26T00:00:00+09:00</updated>
+    <id>/pl/pl-script-cmake-concept</id>
+    <content type="html">
+####
+
+  CMake’s execution begins by creating an instance of the cmake class and
+passing the command line arguments to it.
+
 </content>
+  </entry>
+
+  <entry>
+    <title>CMake: Syntax</title>
+    <link href="/pl/pl-script-cmake-syntax.html"/>
+    <updated>2018-11-25T00:00:00+09:00</updated>
+    <id>/pl/pl-script-cmake-syntax</id>
+    <content type="html">Syntax
+
+  CMakeLists files follow a simple syntax consisting of comments, commands, and
+white space
+  A command: consists of the command name, opening parenthesis, white space
+separated arguments and a closing parenthesis.
+  All white space are ignored except to separated arguments.
+
+
+Variable
+
+ ...</content>
   </entry>
 
   <entry>
@@ -9358,21 +9428,25 @@ own suffixed
   </entry>
 
   <entry>
-    <title>CMake: Variables</title>
-    <link href="/pl/pl-script-cmake-variables.html"/>
+    <title>CMake: System Inspection</title>
+    <link href="/pl/pl-script-cmake-system-insepction.html"/>
     <updated>2018-10-01T00:00:00+09:00</updated>
-    <id>/pl/pl-script-cmake-variables</id>
-    <content type="html">####
+    <id>/pl/pl-script-cmake-system-insepction</id>
+    <content type="html">
+A
 
-  Variables are the basic unit of storage in the CMake Language. Their values
-are always of string type
-  set() and unset() commands explicitly set or unset a variable.
-  variable names are case-sensitive
+# find_library
+# find_path
+# find_program
+# find_package
 
 
-Environment Variables
+find_package
 
-  Environment Variables are like ordinary Variables, with the...</content>
+
+  find_package is supposed to work with Find&amp;lt;package&amp;gt;.cmake module
+  The purpose of the file is to define the search rules for the package and set
+different variables, such as &amp;lt;package&amp;gt;_FOUND, &amp;lt;package&amp;gt...</content>
   </entry>
 
   <entry>
@@ -9394,70 +9468,11 @@ target_link_libraries(untitled ${FOO_LIBRARIES})
   </entry>
 
   <entry>
-    <title>CMake: Packages</title>
-    <link href="/pl/pl-script-cmake-packages.html"/>
-    <updated>2018-10-01T00:00:00+09:00</updated>
-    <id>/pl/pl-script-cmake-packages</id>
-    <content type="html">
-find_package
-
-
-  find_package is supposed to work with Find&amp;lt;package&amp;gt;.cmake module
-  The purpose of the file is to define the search rules for the package and set
-different variables, such as &amp;lt;package&amp;gt;_FOUND, &amp;lt;package&amp;gt;_INCLUDE_DIRS
-and &amp;lt;package&amp;gt;_LIBRARIES.
-
-
-
-  CMakeLists....</content>
-  </entry>
-
-  <entry>
-    <title>CMake: Introduction</title>
-    <link href="/pl/pl-script-cmake-intro.html"/>
-    <updated>2018-10-01T00:00:00+09:00</updated>
-    <id>/pl/pl-script-cmake-intro</id>
-    <content type="html">
-Organization
-
-  CMake input files are written in the “CMake Language” in source files named
-CMakeLists.txt or ending in a .cmake file name extension. CMake
-Language source files in a project are organized into:
-    
-      Directories
-      Scripts
-      Modules
-    
-  
-
-
-CMake
-
-  You must treat ...</content>
-  </entry>
-
-  <entry>
     <title>CMake: Control Structures</title>
     <link href="/pl/pl-script-cmake-control-structures.html"/>
     <updated>2018-10-01T00:00:00+09:00</updated>
     <id>/pl/pl-script-cmake-control-structures</id>
-    <content type="html">Conditional Blocks
-
-if()/elseif()/else()/endif()
-
-
-Loops
-
-foreach()/endforeach() 
-while()/endwhile()
-
-
-Command Definitions
-
-macro()/endmacro()
-function()/endfunction()
-
-
+    <content type="html">
 </content>
   </entry>
 
@@ -9500,21 +9515,6 @@ Reference
   </entry>
 
   <entry>
-    <title>CMake: Project Commands</title>
-    <link href="/pl/pl-script-cmake-commands-project.html"/>
-    <updated>2018-10-01T00:00:00+09:00</updated>
-    <id>/pl/pl-script-cmake-commands-project</id>
-    <content type="html">
-These commands are available only in CMake projects
-
-官方文档
-#使用这个语法的时候，target必须通过add_executable()或者add_library()创建
-target_link_libraries(&amp;lt;target&amp;gt; [item])
-
-</content>
-  </entry>
-
-  <entry>
     <title>CMake: Command-Line Tools</title>
     <link href="/pl/pl-script-cmake-command-line-tool.html"/>
     <updated>2018-10-01T00:00:00+09:00</updated>
@@ -9545,9 +9545,51 @@ determine the build order and the rules for regeneraton to change
   </entry>
 
   <entry>
+    <title>C++: Essence</title>
+    <link href="/pl/pl-compile-c++-essence.html"/>
+    <updated>2018-09-30T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-essence</id>
+    <content type="html">
+What is C++ ?
+
+  Direct map to hardware
+    
+      of instructions and fundamental data types
+      initially from c
+    
+  
+  Zero-overhead abstraction
+    
+      classes with constructors and destructors, inheritance, generic programming,
+functional programming techniques
+      initially from ...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Compiler</title>
+    <link href="/pl/pl-compile-c++-compiler.html"/>
+    <updated>2018-09-29T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-compiler</id>
+    <content type="html">
+1 Clang
+
+  clang is the C compiler
+  Clang++ is the C++ compiler
+    
+      -std=: option picks which dialect of a particular language you want
+to use. if you need to ensure that you program is portable to an old C++98
+compiler, you can compile it with -std=c++98
+    
+  
+
+
+clang++ -std=c++11 my_...</content>
+  </entry>
+
+  <entry>
     <title>C++: Package Manager</title>
     <link href="/pl/pl-compile-c++-package-manager.html"/>
-    <updated>2018-09-13T00:00:00+09:00</updated>
+    <updated>2018-09-28T00:00:00+09:00</updated>
     <id>/pl/pl-compile-c++-package-manager</id>
     <content type="html">
 Introduction
@@ -9569,50 +9611,106 @@ the missing package manager for macos, 和centos下的yumhe ubuntu下的apt-get�
   </entry>
 
   <entry>
-    <title>C++: Compiler</title>
-    <link href="/pl/pl-compile-c++-compiler.html"/>
-    <updated>2018-09-13T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-compiler</id>
+    <title>C++: Pointer and Reference</title>
+    <link href="/pl/pl-compile-c++-pointer-and-reference.html"/>
+    <updated>2018-09-24T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-pointer-and-reference</id>
     <content type="html">
-1 Clang
+语言类型
 
-2 GNU
-Environment Variables
+  c++容忍隐士的类型转换，所以是一种种弱类型语言
+  c++编译时进行类型检查，程序运行时不能改变其结构，所以是静态语言
 
-  PATH: For searching the executables and run-time shared libraries.
-  CPATH: For searching the include-paths for headers. It is searched after
-paths specified in **-I** options.
-  LiBRARY_PATH: For searching library-paths for link libraries. It is searched
-...</content>
+
+Arithmetic
+
+  p++
+  p–
+  p+1
+
+
+#include &amp;lt;iostream&amp;gt;
+
+int main(){
+    int a[5]={1,2,2,1,9};
+    int *p = a;
+    std::cout&amp;lt;&amp;lt;p++&amp;lt;&amp;lt;std::endl;
+    std::cout&amp;lt;&amp;lt;a+1&amp;lt;&amp;lt;std::endl;
+    std::cout&amp;lt;&amp;lt;*(a+1)...</content>
   </entry>
 
   <entry>
-    <title>C++:  Template</title>
-    <link href="/pl/pl-compile-c++-template.html"/>
-    <updated>2018-09-12T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-template</id>
+    <title>C++: Operator</title>
+    <link href="/pl/pl-compile-c++-operator.html"/>
+    <updated>2018-09-24T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-operator</id>
     <content type="html">
-intro
-OOP和范型编程都能处理在编写程序时不知道类型的情况。不同之处在于
-OOP能处理类型在程序运行之前都未知的情况，范型编程中，编译时就能获知类型。
+位运算符
 
 
-function template
+	
+		 ~  位求反        
+		 &amp;lt;&amp;lt; 左移          
+		 &amp;gt;&amp;gt; 右移          
+		  &amp;amp; 位与   256&amp;amp;7  
+		  | 位或          
+		  ^ 异或          
+	
 
-define
-template &amp;lt;typename price&amp;gt; bool isCheaper(price p1,price p2){
-	    return p1&amp;lt;p2;
+
+  .(dot operator): 点操作符通过它的左操作数取得有操作数，点操作符的右操作数不是对象或值，而是成员的名字。
+  -&amp;gt;(arrow operator): 箭头操作符包含点操作符和解引用操作符。
+  []
+  ()(call operator): 调用操作符，如同其他操作符一样，...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Lvalues and Rvalues</title>
+    <link href="/pl/pl-compile-c++-lvalue-and-rvalue.html"/>
+    <updated>2018-09-24T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-lvalue-and-rvalue</id>
+    <content type="html">
+####
+
+  2.rvalue: a temporary value
+
+
+###
+
+  you can’t take an lvalue reference form an rvalue.
+  you can take an lvalue reference form an lvalue.
+
+
+####
+
+  the keyword const will ask the compiler do something.
+    
+      compier will probably create like a temporary variable to storage
+      th...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Keywords</title>
+    <link href="/pl/pl-compile-c++-keyword.html"/>
+    <updated>2018-09-24T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-keyword</id>
+    <content type="html">
+explicit
+c++为只用传递一个参数的构造函数定义了一个隐士转换
+
+class Animal{
+	public:
+	    Animal(){
+        cout&amp;lt;&amp;lt;&quot;no parameter constructor&quot;&amp;lt;&amp;lt;endl;
         }
+	    explicit Animal(int a){
+	    cout&amp;lt;&amp;lt;&quot;parameter constructor&quot;&amp;lt;&amp;lt;endl;
+	    }
+};
+Animal dog = 3         //报错，无法使用explicit Animal构造器
 
-instantiation
-//函数模板能自己推断参数类型
-compare(2.0,12.0);
 
-
-
-
-class template
-类模板用来生成类的蓝图，与函数模板不同，编...</content>
+class...</content>
   </entry>
 
   <entry>
@@ -9665,54 +9763,22 @@ Stream
   </entry>
 
   <entry>
-    <title>C++: Operator</title>
-    <link href="/pl/pl-compile-c++-operator.html"/>
-    <updated>2018-09-12T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-operator</id>
-    <content type="html">
-位运算符
-
-
-	
-		 ~  位求反        
-		 &amp;lt;&amp;lt; 左移          
-		 &amp;gt;&amp;gt; 右移          
-		  &amp;amp; 位与   256&amp;amp;7  
-		  | 位或          
-		  ^ 异或          
-	
-
-
-
-点运算符
-
-.(dot operator): 点操作符通过它的左操作数取得有操作数，点操作符的右操作数不是对象或值，而是成员的名字。
-
-
-箭头运算符
-
--&amp;gt;(arrow operator): 箭头操作符包含点操作符和解引用操作符。
-
-
-[]: 下标操作符
-
-
-
-函数调用操作符
-()(call...</content>
-  </entry>
-
-  <entry>
     <title>C++: Memory Management</title>
-    <link href="/pl/pl-compile-c++-memory.html"/>
+    <link href="/pl/pl-compile-c++-resource-management.html"/>
     <updated>2018-09-12T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-memory</id>
+    <id>/pl/pl-compile-c++-resource-management</id>
     <content type="html">
-自动分配
-动态分配
-直接管理内存
+H
 
-</content>
+  A resource is something that must be acquired and later released
+    
+      Explicitly or implicitly
+      Resource mangagement should not be manual, we don’t want leaks
+    
+  
+  A resource should have an owner
+    
+      usually a “handle” “handle” should present a well-defined and useful...</content>
   </entry>
 
   <entry>
@@ -9726,55 +9792,6 @@ Stream
 PRINT(&quot;hello&quot;);
 
 </content>
-  </entry>
-
-  <entry>
-    <title>C++: Lvalues and Rvalues</title>
-    <link href="/pl/pl-compile-c++-lvalue-and-rvalue.html"/>
-    <updated>2018-09-12T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-lvalue-and-rvalue</id>
-    <content type="html">
-####
-
-  2.rvalue: a temporary value
-
-
-###
-
-  you can’t take an lvalue reference form an rvalue.
-  you can take an lvalue reference form an lvalue.
-
-
-####
-
-  the keyword const will ask the compiler do something.
-    
-      compier will probably create like a temporary variable to storage
-      th...</content>
-  </entry>
-
-  <entry>
-    <title>C++: Keywords</title>
-    <link href="/pl/pl-compile-c++-keyword.html"/>
-    <updated>2018-09-12T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-keyword</id>
-    <content type="html">
-explicit
-c++为只用传递一个参数的构造函数定义了一个隐士转换
-
-class Animal{
-	public:
-	    Animal(){
-        cout&amp;lt;&amp;lt;&quot;no parameter constructor&quot;&amp;lt;&amp;lt;endl;
-        }
-	    explicit Animal(int a){
-	    cout&amp;lt;&amp;lt;&quot;parameter constructor&quot;&amp;lt;&amp;lt;endl;
-	    }
-};
-Animal dog = 3         //报错，无法使用explicit Animal构造器
-
-
-class...</content>
   </entry>
 
   <entry>
@@ -9808,6 +9825,32 @@ find
 find(beg, end, val)
 return 返回一个迭代器，指向输入序列中第一个等于val的元素。
 find_if(b...</content>
+  </entry>
+
+  <entry>
+    <title>C++ GP:  Template</title>
+    <link href="/pl/pl-compile-c++-gp-template.html"/>
+    <updated>2018-09-12T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-gp-template</id>
+    <content type="html">
+function template
+
+define
+template &amp;lt;typename price&amp;gt; bool isCheaper(price p1,price p2){
+	    return p1&amp;lt;p2;
+        }
+
+instantiation
+//函数模板能自己推断参数类型
+compare(2.0,12.0);
+
+
+
+
+class template
+类模板用来生成类的蓝图，与函数模板不同，编译器不能为类模板推断模板参数类型
+
+</content>
   </entry>
 
   <entry>
@@ -9898,48 +9941,14 @@ intro
 调用复制构造函数，然后使用复制构造函数将临时对象复制到正在创建的对象。
 1 引用数据类型是一种复合类型，通过在变量名前添加&amp;amp;来定义。
 
+void*
 
-指针
+void* 一种特殊的指针类型，用于存放任意对象的地址。
 
-定义
+const和指针
 
-指针: (point to)是一种复合类型。指针实现了对其他对象的间接访问。
-1 指针本身就是一个对象，允许对指针的赋值和拷贝。
-2 指针无需在定义时赋初值。
-
-
-空指针
-
-空指针不指向任何对象，在使用一个指针之...</content>
-  </entry>
-
-  <entry>
-    <title>C++: Container</title>
-    <link href="/pl/pl-compile-c++-container.html"/>
-    <updated>2018-09-12T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-container</id>
-    <content type="html">
-Intro
-
-vector和deque的底层是对数组的封装，所以提供了对元素的快速随机访问。
-list类型在任何位置都能快速插入和删除。访问某个元素要求遍历所设计的其他元素.
-容器操作
-
-
-
-构造函数
-
-
-  C c;           默认构造函数，拷贝空容器
-  C c1(c2);      构造c2的拷贝c1
-  C c(b, e);     构造c, 将迭代器b和e指定的范围内的元素拷贝到c
-  C c{a, b, c};  列表初始化c
-
-
-
-赋值和swap
-
-在新标准库中，容器既提供成员函数版本的swap, 也提供了非成员版本的swap.其中,非成员版本的swap在泛型编...</content>
+const double pi =3.14;  //pi 是常量，值不能改变
+double *ptr = &amp;amp;pi;      /...</content>
   </entry>
 
   <entry>
@@ -9970,35 +9979,6 @@ int main(){
 
 
 Increas...</content>
-  </entry>
-
-  <entry>
-    <title>C++: Pointer and Reference</title>
-    <link href="/pl/pl-compile-c++-pointer-and-reference.html"/>
-    <updated>2018-09-11T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-pointer-and-reference</id>
-    <content type="html">
-语言类型
-
-  c++容忍隐士的类型转换，所以是一种种弱类型语言
-  c++编译时进行类型检查，程序运行时不能改变其结构，所以是静态语言
-
-
-Arithmetic
-
-  p++
-  p–
-  p+1
-
-
-#include &amp;lt;iostream&amp;gt;
-
-int main(){
-    int a[5]={1,2,2,1,9};
-    int *p = a;
-    std::cout&amp;lt;&amp;lt;p++&amp;lt;&amp;lt;std::endl;
-    std::cout&amp;lt;&amp;lt;a+1&amp;lt;&amp;lt;std::endl;
-    std::cout&amp;lt;&amp;lt;*(a+1)...</content>
   </entry>
 
   <entry>
@@ -10058,15 +10038,77 @@ it’s public.
   </entry>
 
   <entry>
-    <title>C++ Library: STL</title>
+    <title>C++ OOP: Move Semantics</title>
+    <link href="/pl/pl-compile-c++-move-semantics.html"/>
+    <updated>2018-09-10T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-move-semantics</id>
+    <content type="html">#include &amp;lt;iostream&amp;gt;
+
+class string
+{
+	public:
+		string(const char* string)
+		{
+			std::cout&amp;lt;&amp;lt;&quot;created\n&quot;;
+			m_size = strlen(string);
+			m_data = new char[m_size];
+			memcpy(m_data,string,m_size);
+		}
+
+		string(const string&amp;amp; other)
+		{
+			std::cout&amp;lt;&amp;lt;&quot;copied\n&quot;;
+			m_size = ot...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Garbage Collection</title>
+    <link href="/pl/pl-compile-c++-garbage-collection.html"/>
+    <updated>2018-09-10T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-garbage-collection</id>
+    <content type="html">
+Apply these general in order
+
+
+  Store data in containers
+    
+      the semantics of the fundamental abstraction is reflected in the interface
+    
+  
+  Manage all resources with resource handles
+    
+      RAII
+      Not just memory: all resources
+    
+  
+  Use “smart pointers”
+    
+      they...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Container</title>
     <link href="/pl/pl-compile-c++-library-stl.html"/>
     <updated>2018-09-08T00:00:00+09:00</updated>
     <id>/pl/pl-compile-c++-library-stl</id>
     <content type="html">
+Intro
+
+vector和deque的底层是对数组的封装，所以提供了对元素的快速随机访问。
+list类型在任何位置都能快速插入和删除。访问某个元素要求遍历所设计的其他元素.
 在出现标准库之前，c++程序使用数组保存对象，现代c++程序更多地用vector取代数组
 与vector相比，数组的长度是固定的。
 只有当程序强调速度的时候才在类的实现内部使用数组和指针。
-</content>
+容器操作
+
+
+
+构造函数
+
+
+  C c;           默认构造函数，拷贝空容器
+  C c1(c2);      构造c2的拷贝c1
+  C c(b, e);     构造c, 将迭代器b和e指定的范围内的元素拷贝到...</content>
   </entry>
 
   <entry>
@@ -10692,21 +10734,23 @@ output information of command ls
   </entry>
 
   <entry>
-    <title>Shell: My Script</title>
+    <title>Shell: Script</title>
     <link href="/pl/pl-script-shell-script.html"/>
     <updated>2018-08-01T00:00:00+09:00</updated>
     <id>/pl/pl-script-shell-script</id>
     <content type="html">
-for i in *.md
-do
-   var1=&quot;${i:0:10}&quot;
-   var2=&quot;${i:10:100}&quot;
-   echo &quot;${var1}-code${var2}&quot;
-   mv &quot;${i}&quot; &quot;${var1}-code${var2}&quot;
-done
+Input Parameters
+
+  Unlike C++, Java, which have an entry point, we can pass actual parameters
+to formal parameters.
+  In Shell script, it design a new way to accept input parameters
 
 
-</content>
+# $0: name of executable file
+# $1, $2: first and second parameters of the program
+# $@: all input parameters
+
+...</content>
   </entry>
 
   <entry>
@@ -12226,25 +12270,56 @@ ax...</content>
   </entry>
 
   <entry>
-    <title>Python ML: Tensorboard</title>
-    <link href="/pl/pl-script-python-ml-tensorflow-tensorboard.html"/>
-    <updated>2018-03-10T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-ml-tensorflow-tensorboard</id>
+    <title>Python TF: Introduction</title>
+    <link href="/pl/pl-script-python-tensorflow-intro.html"/>
+    <updated>2018-03-11T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-tensorflow-intro</id>
     <content type="html">
-Introduction
-TensorBoard is a visualization software that comes with any standard Tensorflow
-installation. In Google’s words: “The compuations you’ll use Tensorflow for(like
-training a massive deep neural network)”
+what is the crap of tensorflow ?
 
-启动tensorboard
-python /path/to/tensorflow/install/directory/tensorflow/tensorboar...</content>
+  tensorflow means tensor flows in graph
+  the tensorflow defines a compute graph, and you can define operation in the graph.
+  the purpose of the compute graph is to reuse the graph model. reuse reuse reuseis the most important thing
+
+
+how to use tensorflow to ...</content>
   </entry>
 
   <entry>
-    <title>Python ML: Define Variable in Tensorflow</title>
-    <link href="/pl/pl-script-python-ml-tensorflow-sharing-variable.html"/>
+    <title>Python TF: Concept</title>
+    <link href="/pl/pl-script-python-tensorflow-concept.html"/>
+    <updated>2018-03-11T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-tensorflow-concept</id>
+    <content type="html">
+what the crap is the rank?
+
+  
+    The rank of a tensor is different is not the same as the rank of a matrix.
+the rank of a tensor is the number of indices required to uniquely select each element of the tensor. also
+known as “order”,”ndims” or “degree”
+  
+  
+    numpy compatibility, Equivalent ...</content>
+  </entry>
+
+  <entry>
+    <title>Python TF: Broadcasting</title>
+    <link href="/pl/pl-script-python-tensorflow-broadcasting-mechanism.html"/>
+    <updated>2018-03-11T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-tensorflow-broadcasting-mechanism</id>
+    <content type="html">
+what the crap is broadcasting ?
+Broadcasting is the process of making arrays with different shapes have
+compatible shapes for arithmetic operations.
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Python TF: Define Variable</title>
+    <link href="/pl/pl-script-python-tensorflow-sharing-variable.html"/>
     <updated>2018-03-10T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-ml-tensorflow-sharing-variable</id>
+    <id>/pl/pl-script-python-tensorflow-sharing-variable</id>
     <content type="html">
 variable sharing
 
@@ -12254,10 +12329,10 @@ In traditional method, when you want to use the same variable in different metho
   </entry>
 
   <entry>
-    <title>Python ML: Obtain Variable Value in Tensorflow</title>
-    <link href="/pl/pl-script-python-ml-tensorflow-obtain-variable.html"/>
+    <title>Python TF: Obtain Variable Value</title>
+    <link href="/pl/pl-script-python-tensorflow-obtain-variable.html"/>
     <updated>2018-03-10T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-ml-tensorflow-obtain-variable</id>
+    <id>/pl/pl-script-python-tensorflow-obtain-variable</id>
     <content type="html">
 introduction
 you can treat tensorflow as a blackbox, when we want to check the tensor.
@@ -12272,81 +12347,16 @@ variables you can run the fo...</content>
   </entry>
 
   <entry>
-    <title>Python ML: Build Neural Network With Any Topology</title>
-    <link href="/pl/pl-script-python-ml-tensorflow-neural-network-with-any-topology.html"/>
+    <title>Python TF: Build Neural Network With Any Topology</title>
+    <link href="/pl/pl-script-python-tensorflow-neural-network-with-any-topology.html"/>
     <updated>2018-03-10T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-ml-tensorflow-neural-network-with-any-topology</id>
+    <id>/pl/pl-script-python-tensorflow-neural-network-with-any-topology</id>
     <content type="html">
 def layer(layer_name, data, output_channels):
     with tf.variable_scope(layer_name,reuse=tf.AUTO_REUSE):
         w = tf.get_variable(name=&quot;weight&quot;,shape=[data.shape[-1],output_channels])
         b = tf.get_variable(name=&quot;bias&quot;,shape=[output_channels])
         summary_bias = tf.summary.histogram...</content>
-  </entry>
-
-  <entry>
-    <title>Python ML: Ipython with Tensorflow</title>
-    <link href="/pl/pl-script-python-ml-tensorflow-ipython.html"/>
-    <updated>2018-03-10T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-ml-tensorflow-ipython</id>
-    <content type="html">
-pitfall
-Ipython bring you the benefits, but also the pitfall
-
-how to get the lost code back in ipython
-
-when you delete the code, and you want them back, you can using the following
-method to get them back.
-
-def rescue_code(function):
-    import inspect
-        get_ipython().set_next_input(&quot;&quot;.jo...</content>
-  </entry>
-
-  <entry>
-    <title>Python ML: Introduction of Tensorflow</title>
-    <link href="/pl/pl-script-python-ml-tensorflow-intro.html"/>
-    <updated>2018-03-10T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-ml-tensorflow-intro</id>
-    <content type="html">
-what is the crap of tensorflow ?
-
-  tensorflow means tensor flows in graph
-  the tensorflow defines a compute graph, and you can define operation in the graph.
-  the purpose of the compute graph is to reuse the graph model. reuse reuse reuseis the most important thing
-
-
-how to use tensorflow to ...</content>
-  </entry>
-
-  <entry>
-    <title>Python ML: Concept in Tensorflow</title>
-    <link href="/pl/pl-script-python-ml-tensorflow-concept.html"/>
-    <updated>2018-03-10T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-ml-tensorflow-concept</id>
-    <content type="html">
-what the crap is the rank?
-
-  
-    The rank of a tensor is different is not the same as the rank of a matrix.
-the rank of a tensor is the number of indices required to uniquely select each element of the tensor. also
-known as “order”,”ndims” or “degree”
-  
-  
-    numpy compatibility, Equivalent ...</content>
-  </entry>
-
-  <entry>
-    <title>Python ML: Broadcasting in Tensorflow</title>
-    <link href="/pl/pl-script-python-ml-tensorflow-broadcasting-mechanism.html"/>
-    <updated>2018-03-10T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-ml-tensorflow-broadcasting-mechanism</id>
-    <content type="html">
-what the crap is broadcasting ?
-Broadcasting is the process of making arrays with different shapes have
-compatible shapes for arithmetic operations.
-
-</content>
   </entry>
 
   <entry>
@@ -12395,6 +12405,21 @@ GPU-accelerated library for deep neural networks. cuDNN provides highly tuned
 implementations for standard routines such as forward and backward
 convolution, pooling, normalization, and activation layers.
   CUDA Toolkit: ...</content>
+  </entry>
+
+  <entry>
+    <title>Python TF: Tensorboard</title>
+    <link href="/pl/pl-script-python-tensorflow-tensorboard.html"/>
+    <updated>2018-03-09T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-tensorflow-tensorboard</id>
+    <content type="html">
+Introduction
+TensorBoard is a visualization software that comes with any standard Tensorflow
+installation. In Google’s words: “The compuations you’ll use Tensorflow for(like
+training a massive deep neural network)”
+
+启动tensorboard
+python /path/to/tensorflow/install/directory/tensorflow/tensorboar...</content>
   </entry>
 
   <entry>

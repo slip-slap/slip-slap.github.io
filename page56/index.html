@@ -142,7 +142,7 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">649</span>
+<span title="文章总数">650</span>
 <ul>
 
 
@@ -2563,10 +2563,8 @@ $(document).ready(function() {
   
   
   
-
-  
-  
-  
+    <li><a href="/archive.html#November-2018">2018 年 11 月 (3)</a></li>
+    
   
 
   
@@ -2613,7 +2611,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#October-2018">2018 年 10 月 (13)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#October-2018">2018 年 10 月 (10)</a></li>
     
   
 
@@ -2746,7 +2749,17 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#September-2018">2018 年 09 月 (26)</a></li>
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#September-2018">2018 年 09 月 (28)</a></li>
     
   
 
@@ -3293,12 +3306,7 @@ $(document).ready(function() {
   
   
   
-
-  
-  
-  
-  
-    <li><a href="/archive.html#March-2018">2018 年 03 月 (52)</a></li>
+    <li><a href="/archive.html#March-2018">2018 年 03 月 (51)</a></li>
     
   
 
@@ -3472,7 +3480,7 @@ $(document).ready(function() {
 <span title="分类总数">8</span>
 <ul>
 
-  <li><a href="/categories.html#PL-ref">PL (154)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (155)</a></li>
 
   <li><a href="/categories.html#OS-ref">OS (28)</a></li>
 
@@ -3507,7 +3515,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#script-ref" style="font-size: 18pt; color: #000;">script</a>
+    <a href="/tags.html#script-ref" style="font-size: 17.5pt; color: #000;">script</a>
   
     
     
@@ -3577,7 +3585,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#c++-ref" style="font-size: 11pt; color: #777;">c++</a>
+    <a href="/tags.html#c++-ref" style="font-size: 11.5pt; color: #777;">c++</a>
   
     
     
@@ -4071,6 +4079,74 @@ $(document).ready(function() {
   <article class="nested">
 
     <header>
+      <h2><a href="/pl/pl-compile-java-package-manager.md.html" title="查看《Java: Package Manager》">Java: Package Manager</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+简介
+官网和cmake一样，maven也用来构建项目。
+maven有个仓库的概念，怎么理解这个概念呢。顶级域名有com, org等。顶级域名具有不可重复性，因此可以用来作为包名。google,alibaba会把自己开发的一些框架贡献给开源社区。
+
+
+属性
+
+
+POM属性
+
+  {basedi...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#April-2018" title="查看此月所有文章">02 April 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-compile-java-package-manager.md.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-compile-java-thread.html" title="查看《Java: 多线程》">Java: 多线程</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+创建与启动
+
+
+
+继承自Thread类
+
+class Foo extends Thread{
+	@Override
+	public void run() {
+		for(int i=0;i&lt;50;i++){
+		System.out.println("继承线程"+this.getNam...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#April-2018" title="查看此月所有文章">01 April 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-compile-java-thread.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
       <h2><a href="/pl/pl-compile-java-string.html" title="查看《Java: String》">Java: String</a></h2>
     </header>
 
@@ -4348,75 +4424,6 @@ class Foo{
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
         评论：<a href="/pl/pl-compile-java-container.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-compile-java-cmd.html" title="查看《Java: Command Line》">Java: Command Line</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-运行
-java [字节码的名字] 
-java Main   运行Main.class字节码文件
-
-java路径
-
-  相对路径 指的是JVM的启动路径
-    File file=new File("config.xml");
-file.createNewFile();
-// 如果jvm在/...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#April-2018" title="查看此月所有文章">01 April 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-compile-java-cmd.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-compile-java-class.html" title="查看《Java: Class》">Java: Class</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-类的三大特点，封装，继承和多态，集中封装和继承是多态的基础
-
-构造器，只是一个函数，函数只是一段需要执行的代码，就这么简单。
-类的组成
-
-
-普通代码块
-
-
-构造代码块
-直接在类中定义且没有加static关键字的代码块称为构造代码块。
-构造代码块属于对象
-，在对象创建时被执行，每次创建对象都会...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#April-2018" title="查看此月所有文章">01 April 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-compile-java-class.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
