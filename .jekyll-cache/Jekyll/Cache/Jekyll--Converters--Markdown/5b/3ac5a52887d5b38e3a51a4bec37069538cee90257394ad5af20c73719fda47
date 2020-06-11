@@ -1,0 +1,90 @@
+I"�
+<h3 id="intro">Intro</h3>
+
+<p>vector和deque的底层是对数组的封装，所以提供了对元素的快速随机访问。<br />
+list类型在任何位置都能快速插入和删除。访问某个元素要求遍历所设计的其他元素.
+在出现标准库之前，c++程序使用数组保存对象，现代c++程序更多地用vector取代数组<br />
+与vector相比，数组的长度是固定的。<br />
+只有当程序强调速度的时候才在类的实现内部使用数组和指针。</p>
+<h3 id="容器操作">容器操作</h3>
+
+<hr />
+
+<h4 id="构造函数">构造函数</h4>
+
+<ul>
+  <li>C c;           默认构造函数，拷贝空容器</li>
+  <li>C c1(c2);      构造c2的拷贝c1</li>
+  <li>C c(b, e);     构造c, 将迭代器b和e指定的范围内的元素拷贝到c</li>
+  <li>C c{a, b, c};  列表初始化c</li>
+</ul>
+<hr />
+
+<h5 id="赋值和swap">赋值和swap</h5>
+
+<p>在新标准库中，容器既提供成员函数版本的swap, 也提供了非成员版本的swap.其中,非成员版本的swap在泛型编程中非常重要。</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">c1</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">};</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">c2</span><span class="o">=</span><span class="p">{</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">};</span>
+<span class="n">c1</span><span class="p">.</span><span class="n">swap</span><span class="p">(</span><span class="n">c2</span><span class="p">);</span>
+<span class="n">std</span><span class="o">::</span><span class="n">swap</span><span class="p">(</span><span class="n">c1</span><span class="p">,</span> <span class="n">c2</span><span class="p">);</span><span class="c1">//推荐使用这一种，泛型编程</span>
+<span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="n">var</span><span class="o">:</span><span class="n">c1</span><span class="p">){</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">var</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="容器种类">容器种类</h3>
+<hr />
+
+<h4 id="string">string</h4>
+<hr />
+
+<h5 id="数值转换">数值转换</h5>
+<hr />
+
+<h5 id="string搜索操作">string搜索操作</h5>
+<hr />
+
+<h4 id="vector">vector</h4>
+<p>所有标准库容器都有支持递增运算的迭代器。也支持==和!=运算<br />
+因为vector和string的底层是array, 它的底层支持+ - &lt; &gt; &gt;= &lt;=等操作</p>
+<hr />
+
+<font color="red">代码块1</font>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vector&lt;Point2d&gt; container1;
+    Point2d p1(2,3);
+	Point2d p2(3,4);
+	Point2d p3(1,7);
+	container1.push_back(p1);
+	container1.push_back(p2);
+	container1.push_back(p3);
+	auto var = container1.begin();
+	var = var+2;
+	cout&lt;&lt;*var;        //Point2d 底层重载了输出运算符
+</code></pre></div></div>
+
+<hr />
+
+<h4 id="forward_list">forward_list</h4>
+<hr />
+
+<h4 id="list">list</h4>
+<p>sort算法需要容器有随机访问迭代器,list的容器并没有随机访问迭代器.<br />
+因此它自定义了算法.</p>
+<font color="red">代码块2</font>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bool Smaller(const cv::Point2d p1,const cv::Point2d p2){
+	    return atan2(p1.y,p1.x)&lt;atan2(p2.y,p2.x);
+}
+std::list&lt;cv::Point2d&gt; list_container;
+    cv::Point2d p1(2,3);
+    cv::Point2d p2(3,4);
+    list_container.push_back(p1);
+    list_container.push_back(p2);
+    list_container.sort(Smaller);
+</code></pre></div></div>
+
+:ET

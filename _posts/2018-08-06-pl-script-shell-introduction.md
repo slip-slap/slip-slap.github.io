@@ -21,24 +21,10 @@ tags: ["shell","script"]
 
 
 
-```shell
-cat /etc/shells
-```
-通过以下命令查看shell的类型
-```shell
-echo $SHELL
-```
 
-```shell
-#/bin/bash
-echo "hello world"
-```
 #### Check Out System Variable 
 ```shell
 echo $HOME
-```
-
-```shell
 # 查看sh命令的帮助文档
 man sh
 ```

@@ -142,7 +142,7 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">649</span>
+<span title="文章总数">650</span>
 <ul>
 
 
@@ -2563,10 +2563,8 @@ $(document).ready(function() {
   
   
   
-
-  
-  
-  
+    <li><a href="/archive.html#November-2018">2018 年 11 月 (3)</a></li>
+    
   
 
   
@@ -2613,7 +2611,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#October-2018">2018 年 10 月 (13)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#October-2018">2018 年 10 月 (10)</a></li>
     
   
 
@@ -2746,7 +2749,17 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#September-2018">2018 年 09 月 (26)</a></li>
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#September-2018">2018 年 09 月 (28)</a></li>
     
   
 
@@ -3293,12 +3306,7 @@ $(document).ready(function() {
   
   
   
-
-  
-  
-  
-  
-    <li><a href="/archive.html#March-2018">2018 年 03 月 (52)</a></li>
+    <li><a href="/archive.html#March-2018">2018 年 03 月 (51)</a></li>
     
   
 
@@ -3472,7 +3480,7 @@ $(document).ready(function() {
 <span title="分类总数">8</span>
 <ul>
 
-  <li><a href="/categories.html#PL-ref">PL (154)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (155)</a></li>
 
   <li><a href="/categories.html#OS-ref">OS (28)</a></li>
 
@@ -3507,7 +3515,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#script-ref" style="font-size: 18pt; color: #000;">script</a>
+    <a href="/tags.html#script-ref" style="font-size: 17.5pt; color: #000;">script</a>
   
     
     
@@ -3577,7 +3585,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#c++-ref" style="font-size: 11pt; color: #777;">c++</a>
+    <a href="/tags.html#c++-ref" style="font-size: 11.5pt; color: #777;">c++</a>
   
     
     
@@ -4071,6 +4079,37 @@ $(document).ready(function() {
   <article class="nested">
 
     <header>
+      <h2><a href="/pl/pl-compile-c++-data-type.html" title="查看《C++: Data Type》">C++: Data Type</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+intro
+
+数据的初始化分为两种:  
+直接初始化: 使用assignment operator
+复制初始化: 使用(),将初始化值放在圆括号内。
+对于类类型对象，直接初始化直接调用与实参匹配的构造函数。复制初始化
+调用复制构造函数，然后使用复制构造函数将临时对象复制到正在创建的对象。
+1...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">12 September 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-compile-c++-data-type.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
       <h2><a href="/pl/pl-compile-c++-array.html" title="查看《C++: Array》">C++: Array</a></h2>
     </header>
 
@@ -4100,46 +4139,6 @@ int main(){
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
         评论：<a href="/pl/pl-compile-c++-array.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-compile-c++-pointer-and-reference.html" title="查看《C++: Pointer and Reference》">C++: Pointer and Reference</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-语言类型
-
-  c++容忍隐士的类型转换，所以是一种种弱类型语言
-  c++编译时进行类型检查，程序运行时不能改变其结构，所以是静态语言
-
-
-Arithmetic
-
-  p++
-  p–
-  p+1
-
-
-#include &lt;iostream&gt;
-
-int main(){
-    i...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">11 September 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-compile-c++-pointer-and-reference.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -4234,16 +4233,80 @@ int main(){
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-compile-c++-library-stl.html" title="查看《C++ Library: STL》">C++ Library: STL</a></h2>
+      <h2><a href="/pl/pl-compile-c++-move-semantics.html" title="查看《C++ OOP: Move Semantics》">C++ OOP: Move Semantics</a></h2>
+    </header>
+
+    <section>
+      <p>
+        #include &lt;iostream&gt;
+
+class string
+{
+	public:
+		string(const char* string)
+		{
+			std::cout&lt;&lt;"created\n";
+			m_size = strlen(string);
+		...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">10 September 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-compile-c++-move-semantics.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-compile-c++-garbage-collection.html" title="查看《C++: Garbage Collection》">C++: Garbage Collection</a></h2>
     </header>
 
     <section>
       <p>
         
-在出现标准库之前，c++程序使用数组保存对象，现代c++程序更多地用vector取代数组
-与vector相比，数组的长度是固定的。
-只有当程序强调速度的时候才在类的实现内部使用数组和指针。
+Apply these general in order
 
+
+  Store data in containers
+    
+      the semantics of the fundamental abstraction is reflected in the interface
+  ...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">10 September 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-compile-c++-garbage-collection.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-compile-c++-library-stl.html" title="查看《C++: Container》">C++: Container</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Intro
+
+vector和deque的底层是对数组的封装，所以提供了对元素的快速随机访问。
+list类型在任何位置都能快速插入和删除。访问某个元素要求遍历所设计的其他元素.
+在出现标准库之前，c++程序使用数组保存对象，现代c++程序更多地用vector取代数组
+与vector相比，数组的...
       </p>
     </section>
 
@@ -4316,70 +4379,6 @@ ADD_S...
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
         评论：<a href="/pl/pl-compile-c++-library-googletest.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-compile-c++-library-eigen.html" title="查看《C++ Library: Eigen》">C++ Library: Eigen</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-官方文档
-//默认是列向量
-Eigen::Vector4d a(1,2,3,4);//构造初始化
-Eigen::Vector4d b;
-b&lt;&lt;1,2,3,4;//赋值初始化
-
-
-
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">07 September 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-compile-c++-library-eigen.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-compile-c++-library-boost.html" title="查看《C++ Library: Boost》">C++ Library: Boost</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-介绍
-boost是一个可移植的，提供源代码的C++库，由于其对跨平台的强调，对标准C++的强调，与编写平台无关。大部分的boost库功能使用只需要包括相应的头文件即可，少数如正则表达式库和文件系统库需要连接库。
-
-
-文件系统库
-
-
-使用方法
-
-  头文件&lt;boost/filesyste...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">07 September 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-compile-c++-library-boost.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 

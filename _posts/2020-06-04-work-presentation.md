@@ -13,3 +13,9 @@ tags: []
 1. Promise
 2. Inspiration: If someone who is not insterested in artificial intelligence,
    maybe he just not interested in interesting things.
+
+
+####
+1. teach ideas
+2. teach skills
+3. transmitting facts
