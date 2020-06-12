@@ -1,4 +1,4 @@
-I"3
+I"�	
 <h4 id="explicit">explicit</h4>
 <p>c++为只用传递一个参数的构造函数定义了一个隐士转换</p>
 
@@ -27,7 +27,6 @@ Animal dog = 3        //隐士调用Animal(int a)构造函数
 </code></pre></div></div>
 
 <h4 id="auto">auto</h4>
-<font color="red">代码段1</font>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>list&lt;Point2d&gt; container;
 Point2d p1( 0,-1);
@@ -56,23 +55,7 @@ unsigned char</p>
 printf("%d", a);//a等于-1,说明我的机器把char当作signed char处理
 </code></pre></div></div>
 
-<hr />
-
 <h4 id="typedef">typedef</h4>
-
-<p>1 定义与平台无关的类型，方便程序的移值。</p>
-<hr />
-
-<h4 id="const">const</h4>
-<p>顶层const: 表示指针本身是个常量<br />
-底层const: 表示指针所指的对象是一个常量<br /></p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int i = 0;  
-int *const p1 = &amp;i;     //不能改变p1的值，顶层const
-const int ci = 42;      //不能改变ci的值，顶层const
-const int *p2 = &amp;ci;    //允许改变p2的值，底层const
-</code></pre></div></div>
-<hr />
 
 <h4 id="null">NULL</h4>
 

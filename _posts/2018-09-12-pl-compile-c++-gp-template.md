@@ -8,24 +8,47 @@ tags: ["c++","compile"]
 ---
 {% include JB/setup %}
 
-#### function template
+#### function and class template
+1. they are convenient, but don't use them, too difficult to debug.
+2. It just use the compiler to generate code.
+
+```cpp
+#include <iostream>
+#include <string>
+
+template<typename T>
+void my_print(T value)
+{
+	std::cout<<value<<"\n";
+}
+
+template<typename class_type, int N>
+class array
+{
+	private:
+		class_type m_array[N];
+	public:
+		int get_size() const
+		{
+			return N;
+		}
+};
+
+int main()
+{
+	my_print("hello world!");
+	array<int,50> my_array;
+	std::cout<<my_array.get_size()<<"\n";
+	std::cin.get();
+}
+```
 
 
-define
-```
-template <typename price> bool isCheaper(price p1,price p2){
-	    return p1<p2;
-        }
-```
-instantiation
-```
-//函数模板能自己推断参数类型
-compare(2.0,12.0);
-```
----
-<hr />
-#### class template  
-类模板用来生成类的蓝图，与函数模板不同，编译器不能为类模板推断模板参数类型
+#### Galois
+1. C++ provides a lot of features, but we don't need to use them, it's up to
+   you, based on your practice.
+
+
 
 
 

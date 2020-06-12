@@ -10,13 +10,11 @@ tags: ["c++","compile"]
 
 ####
 1. Struct can be defined as collection of data members under one name.
+2. The only reason that we still have struct is backward compatibility.
 
 
-#### 
-1. define
-2. declaration
-3. initialization
 
+#### Example
 ```cpp
 struct Rectangle {
     int width;

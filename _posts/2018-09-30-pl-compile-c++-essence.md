@@ -18,7 +18,7 @@ tags: ["compile","c++"]
   functional programming techniques
 - initially from Simula
 
-2. Much of the inspiration came from operating system
+3. Much of the inspiration came from operating system
 
 #### The Future of C++
 1. Better at it for modern hardware and techniques.
@@ -28,4 +28,16 @@ tags: ["compile","c++"]
 #### Key Strengths:
 1. Software infrastructure
 2. resource-constrained applications
+
+
+#### Galois
+1. C++ is a beast, it has two many features Macro, OOP, GP. It doesn't mean we
+   have to use them. Why C++ is so flexible, because it has two stages,
+   compile,liner. During the two stages, you can do a lot staff, acutally many
+   fancy grammer exists, just because the two stages.
+2. The first thing that differentiate from any othe language is mapping
+   operationg to hardware, the second is zero-overhead
+3. If C++ want to continue its advantage in programming language, it must adapt
+   to new hardware, and make use of them. 
+
 
