@@ -7,7 +7,8 @@ category: "PL"
 tags: ["c++","compile"]
 --- 
 {% include JB/setup %}
-<h4>位运算符</h4><br/>
+
+#### bit operator
 <div>
 	<ol>
 		<li> ~  位求反        </li>
@@ -25,4 +26,5 @@ tags: ["c++","compile"]
 5. &(dereference operator):解引用操作符  
 6. &(reference): 引用操作符
 
+#### reload operator
 

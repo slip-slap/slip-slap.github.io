@@ -9,7 +9,6 @@ tags: ["python","script"]
 {% include JB/setup %}
 
 #### what is the crap of tensorflow ?
-1. tensorflow means tensor flows in graph
 2. the tensorflow defines a compute graph, and you can define operation in the graph.
 3. the purpose of the compute graph is to reuse the graph model. **reuse reuse reuseis the most important thing**
 

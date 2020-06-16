@@ -9,14 +9,14 @@ tags: ["editor","script"]
 {% include JB/setup %}
 
 
-### 4. Plugin
+### 1. Plugin
 1. For every plugin, you can refer to the instruction about how to use them.
 2. and in the vimrc file to setting.
 
-#### 4.1 vundle-plugin
+#### 1.1 vundle-plugin
 1. BundleList 查看已经安装的插件
 
-#### 4.2 YouCompleteMe-plugin
+#### 1.2 YouCompleteMe-plugin
 Maybe this is the most difficult plugin to install
 1. YouCompleteMe itself work in client-server pattern
 2. Everytime you start vim, the **thread systemd** will begin to work on some
@@ -72,19 +72,21 @@ git clone https://github.com/scrooloose/nerdtree.git
 - r 刷新光标所在的子目录
 - ? pop-up help document
 <hr />
-#### 4.4 CtrlP-plugin
+#### 1.4 CtrlP-plugin
 1. Configuration
 ```shell
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 ```
 <hr />
 
-#### 4.6 powerline-plugin
-#### 4.7 vimtex-plugin
+#### 1.5 powerline-plugin
+#### 1.6 vimtex-plugin
+#### 1.7 surround vim
 
-18. [YouCompleteMe](https://github.com/ycm-core/YouCompleteMe)
-19. [YouCompleteMe Trouble Shooting](https://github.com/ycm-core/YouCompleteMe/wiki/Troubleshooting-steps-for-ycmd-server-SHUT-DOWN)
 
-10. [how to add vim NERDTree plugin](https://github.com/johnbellone/vim) <br />
-13. [powerline-plugin](https://github.com/powerline/powerline) <br />
-14. [vimtex-plugin](https://github.com/lervag/vimtex) <br />
+1. [YouCompleteMe](https://github.com/ycm-core/YouCompleteMe)
+2. [YouCompleteMe Trouble Shooting](https://github.com/ycm-core/YouCompleteMe/wiki/Troubleshooting-steps-for-ycmd-server-SHUT-DOWN)
+3. [how to add vim NERDTree plugin](https://github.com/johnbellone/vim) 
+4. [powerline-plugin](https://github.com/powerline/powerline) 
+5. [vimtex-plugin](https://github.com/lervag/vimtex) 
+6. [vim surround](https://github.com/tpope/vim-surround)

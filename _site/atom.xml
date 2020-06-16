@@ -3,13 +3,151 @@
   <title>Just Do It</title>
   <link href="/atom.xml" rel="self"/>
   <link href=""/>
-  <updated>2020-06-12T12:46:13+09:00</updated>
+  <updated>2020-06-16T16:41:08+09:00</updated>
   <id></id>
   <author>
     <name>reed</name>
     <email>zhanghy1012@gmail.com</email>
   </author>
 
+
+  <entry>
+    <title>Work: Journal</title>
+    <link href="/work/finance.html"/>
+    <updated>2020-06-12T00:00:00+09:00</updated>
+    <id>/work/finance</id>
+    <content type="html">
+What is finance
+
+  Mathematics + Dollar
+
+
+Valuation
+
+  How are financial assets valued ?
+  How should financial assets be valued ?
+  How do financial markets determine asset values ?
+  How well do financial markets work ?
+
+
+Management
+
+  How much should I save/spend ?
+  What should I buy/sell ?
+...</content>
+  </entry>
+
+  <entry>
+    <title>Work: Value</title>
+    <link href="/work/economy-value.html"/>
+    <updated>2020-06-12T00:00:00+09:00</updated>
+    <id>/work/economy-value</id>
+    <content type="html">
+
+  financial assets: also named securities, bond is a financial asset, and also
+a security.
+    
+      Example, The bank provides the corporation with cash in exchange for a
+financial asset, which is the corporation’s promise to repay the loan with
+interest. An ordinary bank loan is not a securi...</content>
+  </entry>
+
+  <entry>
+    <title>Work: Finanical</title>
+    <link href="/work/economy-terminology.html"/>
+    <updated>2020-06-12T00:00:00+09:00</updated>
+    <id>/work/economy-terminology</id>
+    <content type="html">
+Terminology
+
+  Markets
+  Exchanges
+  OTC
+  Regions
+  Loans
+  Bonds
+  Commodity
+  Real Estate
+  Mortgages
+  ABS
+  Derivatives
+  Structures Products
+  Asset Class
+  Equity
+  Fixed-Income Security
+  Leverage
+  Book Value
+
+
+B
+
+  Investment Horizon: refers to the total length of time that an investor...</content>
+  </entry>
+
+  <entry>
+    <title>: Stock</title>
+    <link href="/work/economy-stock.html"/>
+    <updated>2020-06-12T00:00:00+09:00</updated>
+    <id>/work/economy-stock</id>
+    <content type="html">
+Terminology
+
+  Market Value: also known as market cap, is calculated by multiplying a
+company’s outstanding shares by its current market price.
+    
+      outstanding: publicly issued and sold
+    
+  
+  Book Value;
+    
+      Formula: Book Value = Total assets - Total liabilities
+    
+  
+
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Work: Portfolio Management</title>
+    <link href="/work/economy-portfolio.html"/>
+    <updated>2020-06-12T00:00:00+09:00</updated>
+    <id>/work/economy-portfolio</id>
+    <content type="html">
+Observations
+Math, model
+Observations
+###
+ Portfolio manager
+
+A
+Cash, CD, Bank Deposites, UST Bills, bonds, corporate bonds, ccommodities, oil,
+gold, currencies, Mutual FUnds, Real estate, Lotteries, paintings
+</content>
+  </entry>
+
+  <entry>
+    <title>Option</title>
+    <link href="/work/economy-option.html"/>
+    <updated>2020-06-12T00:00:00+09:00</updated>
+    <id>/work/economy-option</id>
+    <content type="html">
+A
+
+  A right to buy or sell something for a specified price during a specified
+period of time.
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Capital Asset Pricing Model</title>
+    <link href="/work/economy-capital-asset-pricing-model.html"/>
+    <updated>2020-06-12T00:00:00+09:00</updated>
+    <id>/work/economy-capital-asset-pricing-model</id>
+    <content type="html">
+</content>
+  </entry>
 
   <entry>
     <title>Work: Speak</title>
@@ -9625,6 +9763,27 @@ the missing package manager for macos, 和centos下的yumhe ubuntu下的apt-get�
   </entry>
 
   <entry>
+    <title>C++: Reference</title>
+    <link href="/pl/pl-compile-c++-reference.html"/>
+    <updated>2018-09-24T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-reference</id>
+    <content type="html">
+I
+
+  reference is used to diffence two situation copy and reference during
+function call
+
+
+Galois
+
+  I just stay in Python, Java too long time, forget the original appearance of
+the world.
+  Reference just make use of the hardware.
+
+</content>
+  </entry>
+
+  <entry>
     <title>C++: Pointer and Reference</title>
     <link href="/pl/pl-compile-c++-pointer-and-reference.html"/>
     <updated>2018-09-24T00:00:00+09:00</updated>
@@ -9659,8 +9818,7 @@ int main(){
     <updated>2018-09-24T00:00:00+09:00</updated>
     <id>/pl/pl-compile-c++-operator</id>
     <content type="html">
-位运算符
-
+bit operator
 
 	
 		 ~  位求反        
@@ -9675,7 +9833,7 @@ int main(){
   .(dot operator): 点操作符通过它的左操作数取得有操作数，点操作符的右操作数不是对象或值，而是成员的名字。
   -&amp;gt;(arrow operator): 箭头操作符包含点操作符和解引用操作符。
   []
-  ()(call operator): 调用操作符，如同其他操作符一样，...</content>
+  ()(call operator): 调用操作符，如同其...</content>
   </entry>
 
   <entry>
@@ -9762,11 +9920,19 @@ I
   New allocate memory in heap
 
 
-reference
+#include &amp;lt;iostream&amp;gt;
+#include &amp;lt;memory&amp;gt;
 
-  cpp rererence
 
-</content>
+void* operator new (size_t size)
+{
+    std::cout&amp;lt;&amp;lt;&quot;allocating &quot;&amp;lt;&amp;lt;size&amp;lt;&amp;lt; &quot; bytes&quot;&amp;lt;&amp;lt; &quot;\n&quot;;
+
+    return malloc(size);
+}
+void operator delete[] (void* memory) noexcept
+{
+    std::cout&amp;lt;&amp;l...</content>
   </entry>
 
   <entry>
@@ -9792,24 +9958,43 @@ with pointer
   </entry>
 
   <entry>
-    <title>C++: Stream</title>
-    <link href="/pl/pl-compile-c++-stream.html"/>
-    <updated>2018-09-12T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-stream</id>
+    <title>C++: Error</title>
+    <link href="/pl/pl-compile-c++-error.html"/>
+    <updated>2018-09-24T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-error</id>
     <content type="html">
-Stream
+Type
 
-  to access data that from outside of a program
-    
-      Inputstream: access data from outside of a program.
-      Outputstream: send data out of the program.
-    
-  
-  so we have IOS, which means:
-    
-      Inputstream: istream, ifstream
-      Outputstream: ostream, ofstream
-      ci...</content>
+  syntax error: compiler
+  logic error:  debugger
+  run time error: Exception
+
+</content>
+  </entry>
+
+  <entry>
+    <title>C++: For Statement</title>
+    <link href="/pl/pl-compile-c++-for-statement.html"/>
+    <updated>2018-09-20T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-for-statement</id>
+    <content type="html">
+Use Nested for Loop to Print
+
+#include &amp;lt;iostream&amp;gt;
+#include &amp;lt;string&amp;gt;
+
+
+void print_square()
+{
+	for(int i=0;i&amp;lt;4;i++)
+	{
+		int line_head = 4*i + 1;
+		for(int j=0;j&amp;lt;4;j++)
+		{
+			std::string s_number = std::to_string(line_head+j);
+			if(s_number.length() &amp;lt; 2)
+			{
+				s_number.ap...</content>
   </entry>
 
   <entry>
@@ -9853,20 +10038,8 @@ PRINT(&quot;hello&quot;);
 intro
 
 谓词
-谓词本质是可调用的表达式，返回结果是一个能用作条件的值。
 一元谓词: 接受单一参数unary predicate
 二元谓词: 接受两个参数binary predicate
-接受谓词参数的算法对输入序列中的元素调用谓词，因此元素类型必须转换为谓词的参数类型
-
-迭代器
-迭代器令算法不依赖于容器，但算法依赖于元素类型的操作。
-
-  输入迭代器
-  输出迭代器
-  前向迭代器
-  双向迭代器
-  随机访问迭代器
-
 
 算法
 简单查找算法
@@ -9874,7 +10047,35 @@ intro
 find
 find(beg, end, val)
 return 返回一个迭代器，指向输入序列中第一个等于val的元素。
-find_if(b...</content>
+find_if(beg, end, unaryPred)
+return 返回一个迭代器， 指向第一个满足unaryPred的元素 
+parameter 因为谓词的参数为容器的元素类型，因此，谓词不能是成员函数
+
+//谓词
+bool my_minus(int a){
+	    return (a-1) == 2;
+...</content>
+  </entry>
+
+  <entry>
+    <title>C++: IO</title>
+    <link href="/pl/pl-compile-c++-io.html"/>
+    <updated>2018-09-12T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-io</id>
+    <content type="html">
+Stream
+
+  to access data that from outside of a program
+    
+      Inputstream: access data from outside of a program.
+      Outputstream: send data out of the program.
+    
+  
+  so we have IOS, which means:
+    
+      Inputstream: istream, ifstream
+      Outputstream: ostream, ofstream
+      ci...</content>
   </entry>
 
   <entry>
@@ -10031,6 +10232,65 @@ Increas...</content>
 
   <entry>
     <title>C++: Reload Operator</title>
+    <link href="/pl/pl-compile-c++-overload.html"/>
+    <updated>2018-09-11T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-overload</id>
+    <content type="html">
+A
+
+  operoator overload just a special function name;
+
+
+#include &amp;lt;iostream&amp;gt;
+
+class complex_number
+{
+
+	private:
+		int actual_part; 
+        int virtual_part;
+
+    public:
+		complex_number()
+		{}
+
+		complex_number(int actual_part, int virtual_part)
+		{
+			this-&amp;gt;actual_part = actual_part;
+...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Overload</title>
+    <link href="/pl/pl-compile-c++-overload-output-marker.html"/>
+    <updated>2018-09-11T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-overload-output-marker</id>
+    <content type="html">
+#include &amp;lt;iostream&amp;gt;
+
+class complex_number
+{
+
+	private:
+		int actual_part; 
+        int virtual_part;
+
+    public:
+		complex_number()
+		{}
+
+		complex_number(int actual_part, int virtual_part)
+		{
+			this-&amp;gt;actual_part = actual_part;
+			this-&amp;gt;virtual_part = virtual_part;
+		}
+
+	friend 
+	...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Reload Operator</title>
     <link href="/pl/pl-compile-c++-load-operator.html"/>
     <updated>2018-09-11T00:00:00+09:00</updated>
     <id>/pl/pl-compile-c++-load-operator</id>
@@ -10044,14 +10304,20 @@ Increas...</content>
 重载输出运算符
 
 &amp;lt;&amp;lt;     不能是成员函数
-参数1: 非常量ostream对象的引用,非常量的原因是向流写入内容会改变其状态  
-                               引用的原因是因为我们无法直接复制一个ostream对象  
-参数2: 常量的引用, 引用是因为避免复制实参  
-                   常量是因为打印不会改变对象的内容  
-class Worker{
-	public:
-	    int age;
-	    std::stri...</content>
+
+
+重载输入运算符
+
+&amp;gt;&amp;gt;
+参数1: 读取流的引用;
+参数2: 非常量对象的引用;
+std::istream &amp;amp;operator&amp;gt;&amp;gt;(std::istream &amp;amp;is,Worker &amp;amp;worker){
+	    is&amp;gt;&amp;gt;worker.age&amp;gt;&amp;gt;worker.name;
+	    return is;
+}
+//call
+    Worker worker;
+    ...</content>
   </entry>
 
   <entry>
@@ -10083,6 +10349,61 @@ struct Rectangle r;
     <updated>2018-09-10T00:00:00+09:00</updated>
     <id>/pl/pl-compile-c++-oop-polymorphism</id>
     <content type="html">
+</content>
+  </entry>
+
+  <entry>
+    <title>C++ OOP: Inheritance</title>
+    <link href="/pl/pl-compile-c++-oop-inheritancer.html"/>
+    <updated>2018-09-10T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-oop-inheritancer</id>
+    <content type="html">
+#include &amp;lt;iostream&amp;gt;
+#include &amp;lt;string&amp;gt;
+
+
+void print_square()
+{
+	for(int i=0;i&amp;lt;4;i++)
+	{
+		int line_head = 4*i + 1;
+		for(int j=0;j&amp;lt;4;j++)
+		{
+			std::string s_number = std::to_string(line_head+j);
+			if(s_number.length() &amp;lt; 2)
+			{
+				s_number.append(&quot; &quot;);
+			}
+			std::cout&amp;l...</content>
+  </entry>
+
+  <entry>
+    <title>C++ OOP: Friend</title>
+    <link href="/pl/pl-compile-c++-oop-friend.html"/>
+    <updated>2018-09-10T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-oop-friend</id>
+    <content type="html">friend function
+
+friend class
+
+Galois
+
+  At the beginning when I learn C++, one hard part is where I should put the
+keyword, and the reason is I don’t understand C++
+  This teacher explain friend in an very elegant way.
+    
+      wirte a function in the class
+      write the keyword friend in fr...</content>
+  </entry>
+
+  <entry>
+    <title>C++ OOP: Constructor</title>
+    <link href="/pl/pl-compile-c++-oop-constructor.html"/>
+    <updated>2018-09-10T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-oop-constructor</id>
+    <content type="html">Deep Copy Constructor
+Shallow Copy Constructor
+
 </content>
   </entry>
 
@@ -10158,7 +10479,17 @@ Apply these general in order
   </entry>
 
   <entry>
-    <title>C++: Container</title>
+    <title>C++: 11</title>
+    <link href="/pl/pl-compile-c++-version-c++11.html"/>
+    <updated>2018-09-09T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-version-c++11</id>
+    <content type="html">
+####
+</content>
+  </entry>
+
+  <entry>
+    <title>C++ STL: Container</title>
     <link href="/pl/pl-compile-c++-library-stl.html"/>
     <updated>2018-09-08T00:00:00+09:00</updated>
     <id>/pl/pl-compile-c++-library-stl</id>
@@ -10180,6 +10511,21 @@ list类型在任何位置都能快速插入和删除。访问某个元素要求�
   C c;           默认构造函数，拷贝空容器
   C c1(c2);      构造c2的拷贝c1
   C c(b, e);     构造c, 将迭代器b和e指定的范围内的元素拷贝到...</content>
+  </entry>
+
+  <entry>
+    <title>C++ STL: Architecture</title>
+    <link href="/pl/pl-compile-c++-library-stl-structure.html"/>
+    <updated>2018-09-08T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-library-stl-structure</id>
+    <content type="html">
+Introduction
+
+  Container
+  Iterator
+  Algorithm
+
+</content>
   </entry>
 
   <entry>
@@ -10290,18 +10636,18 @@ boost是一个可移植的，提供源代码的C++库，由于其对跨平台的
     <updated>2018-08-12T00:00:00+09:00</updated>
     <id>/pl/pl-script-editor-vimscript-plugin</id>
     <content type="html">
-4. Plugin
+1. Plugin
 
   For every plugin, you can refer to the instruction about how to use them.
   and in the vimrc file to setting.
 
 
-4.1 vundle-plugin
+1.1 vundle-plugin
 
   BundleList 查看已经安装的插件
 
 
-4.2 YouCompleteMe-plugin
+1.2 YouCompleteMe-plugin
 Maybe this is the most difficult plugin to install
 
   YouCompleteMe itself work in client-server patte...</content>
@@ -12341,6 +12687,25 @@ ax...</content>
   </entry>
 
   <entry>
+    <title>Python TF: Mimicking TF API</title>
+    <link href="/pl/pl-script-python-tensorflow-mimick-api.html"/>
+    <updated>2018-03-11T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-tensorflow-mimick-api</id>
+    <content type="html">
+Elements in a Computational Graph
+
+
+  Variables
+  Placeholders
+  Constants
+  Operations
+  Graph: A graph is like a central hub that connects all the variables,
+placeholders, constants to operations
+  Session: A session creates a runtime in which operations are executed and
+Tensors are evaluated....</content>
+  </entry>
+
+  <entry>
     <title>Python TF: Introduction</title>
     <link href="/pl/pl-script-python-tensorflow-intro.html"/>
     <updated>2018-03-11T00:00:00+09:00</updated>
@@ -12348,12 +12713,13 @@ ax...</content>
     <content type="html">
 what is the crap of tensorflow ?
 
-  tensorflow means tensor flows in graph
   the tensorflow defines a compute graph, and you can define operation in the graph.
   the purpose of the compute graph is to reuse the graph model. reuse reuse reuseis the most important thing
 
 
-how to use tensorflow to ...</content>
+how to use tensorflow to calculate ?
+
+define a graph, which includ...</content>
   </entry>
 
   <entry>
@@ -12371,19 +12737,6 @@ known as “order”,”ndims” or “degree”
   
   
     numpy compatibility, Equivalent ...</content>
-  </entry>
-
-  <entry>
-    <title>Python TF: Broadcasting</title>
-    <link href="/pl/pl-script-python-tensorflow-broadcasting-mechanism.html"/>
-    <updated>2018-03-11T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-tensorflow-broadcasting-mechanism</id>
-    <content type="html">
-what the crap is broadcasting ?
-Broadcasting is the process of making arrays with different shapes have
-compatible shapes for arithmetic operations.
-
-</content>
   </entry>
 
   <entry>
@@ -12428,6 +12781,26 @@ def layer(layer_name, data, output_channels):
         w = tf.get_variable(name=&quot;weight&quot;,shape=[data.shape[-1],output_channels])
         b = tf.get_variable(name=&quot;bias&quot;,shape=[output_channels])
         summary_bias = tf.summary.histogram...</content>
+  </entry>
+
+  <entry>
+    <title>Python TF: Connect Two Graph</title>
+    <link href="/pl/pl-script-python-tensorflow-connect-graph.html"/>
+    <updated>2018-03-10T00:00:00+09:00</updated>
+    <id>/pl/pl-script-python-tensorflow-connect-graph</id>
+    <content type="html">
+import tensorflow as tf
+
+def graph_add():
+    g = tf.Graph()
+    with g.as_default() as g:
+        a = tf.placeholder(tf.float32, [], name='a')
+        b = tf.placeholder(tf.float32, [], name='b')
+        c = tf.add(a, b, name='c')
+        return g.as_graph_def()
+
+def graph_pow():
+    g = tf.Gra...</content>
   </entry>
 
   <entry>

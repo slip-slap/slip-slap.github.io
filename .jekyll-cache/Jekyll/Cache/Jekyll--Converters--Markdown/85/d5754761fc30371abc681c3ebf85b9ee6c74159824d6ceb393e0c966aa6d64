@@ -1,0 +1,36 @@
+I"¯
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="n">tf</span>
+
+<span class="k">def</span> <span class="nf">graph_add</span><span class="p">():</span>
+    <span class="n">g</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">Graph</span><span class="p">()</span>
+    <span class="k">with</span> <span class="n">g</span><span class="p">.</span><span class="n">as_default</span><span class="p">()</span> <span class="k">as</span> <span class="n">g</span><span class="p">:</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="p">.</span><span class="n">float32</span><span class="p">,</span> <span class="p">[],</span> <span class="n">name</span><span class="o">=</span><span class="s">'a'</span><span class="p">)</span>
+        <span class="n">b</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="p">.</span><span class="n">float32</span><span class="p">,</span> <span class="p">[],</span> <span class="n">name</span><span class="o">=</span><span class="s">'b'</span><span class="p">)</span>
+        <span class="n">c</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">'c'</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">g</span><span class="p">.</span><span class="n">as_graph_def</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">graph_pow</span><span class="p">():</span>
+    <span class="n">g</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">Graph</span><span class="p">()</span>
+    <span class="k">with</span> <span class="n">g</span><span class="p">.</span><span class="n">as_default</span><span class="p">()</span> <span class="k">as</span> <span class="n">g</span><span class="p">:</span>
+        <span class="n">d</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="p">.</span><span class="n">float32</span><span class="p">,</span> <span class="p">[],</span> <span class="n">name</span><span class="o">=</span><span class="s">'d'</span><span class="p">)</span>
+        <span class="n">e</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="nb">pow</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">'e'</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">g</span><span class="p">.</span><span class="n">as_graph_def</span><span class="p">()</span>
+
+
+<span class="n">tf</span><span class="p">.</span><span class="n">reset_default_graph</span><span class="p">()</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="p">.</span><span class="n">float32</span><span class="p">,</span> <span class="p">[],</span> <span class="n">name</span><span class="o">=</span><span class="s">'a'</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="p">.</span><span class="n">float32</span><span class="p">,</span> <span class="p">[],</span> <span class="n">name</span><span class="o">=</span><span class="s">'b'</span><span class="p">)</span>
+
+<span class="p">[</span><span class="n">g1</span><span class="p">]</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">import_graph_def</span><span class="p">(</span><span class="n">graph_add</span><span class="p">(),</span> <span class="n">input_map</span><span class="o">=</span><span class="p">{</span><span class="s">'a'</span><span class="p">:</span> <span class="n">a</span><span class="p">,</span> \
+        <span class="s">'b'</span><span class="p">:</span> <span class="n">b</span><span class="p">},</span> <span class="n">return_elements</span><span class="o">=</span><span class="p">[</span><span class="s">'c:0'</span><span class="p">])</span>
+
+<span class="p">[</span><span class="n">g2</span><span class="p">]</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">import_graph_def</span><span class="p">(</span><span class="n">graph_pow</span><span class="p">(),</span> <span class="n">input_map</span><span class="o">=</span><span class="p">{</span><span class="s">'d'</span><span class="p">:</span> <span class="n">g1</span><span class="p">},</span> \
+        <span class="n">return_elements</span><span class="o">=</span><span class="p">[</span><span class="s">'e:0'</span><span class="p">])</span>  
+
+
+<span class="k">with</span> <span class="n">tf</span><span class="p">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
+    <span class="n">c</span><span class="p">,</span> <span class="n">e</span> <span class="o">=</span> <span class="n">sess</span><span class="p">.</span><span class="n">run</span><span class="p">([</span><span class="n">g1</span><span class="p">,</span><span class="n">g2</span><span class="p">],</span> <span class="n">feed_dict</span><span class="o">=</span><span class="p">{</span><span class="n">a</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span><span class="mi">20</span><span class="p">})</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+</code></pre></div></div>
+:ET
