@@ -4239,6 +4239,8 @@ compiler, you can compile it with -std=c++98</dialect></li>
 </ol>
 
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>clang++ <span class="nt">-std</span><span class="o">=</span>c++11 my_class.cpp
+clang++ <span class="si">$(</span>pkg-config <span class="nt">--cflags</span> <span class="nt">--libs</span> /usr/local/Cellar/opencv/4.3.0_4/lib/pkgconfig/opencv4.pc<span class="si">)</span> <span class="nt">-std</span><span class="o">=</span>c++14 smooth.cpp
+
 </code></pre></div></div>
 
 <h3 id="2-gnu">2 GNU</h3>

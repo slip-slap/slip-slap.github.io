@@ -19,6 +19,8 @@ tags: ["compile","c++"]
 
 ```shell
 clang++ -std=c++11 my_class.cpp
+clang++ $(pkg-config --cflags --libs /usr/local/Cellar/opencv/4.3.0_4/lib/pkgconfig/opencv4.pc) -std=c++14 smooth.cpp
+
 ```
 
 
