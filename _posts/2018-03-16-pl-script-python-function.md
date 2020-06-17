@@ -63,6 +63,13 @@ SyntaxError: positional argument follows keyword argument
 keyword argument is just another positional argument with a default value
 ```
 
+#### Galois
+1. Everything starts from C++, in C++, we are provided with three options in
+   parameter passing, by value, by reference, by pointer,  python deals with
+   this in an easy way. No pass by pointer.
+2. Python also make some tricks in parameter passing,  it add keyword argument,
+   you can treat them as optional argument. In C++, it doesn't have these fancy
+   terms, all parmeters are positional argument, You have to pass a value.
 
 
 #### Reference
