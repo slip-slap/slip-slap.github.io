@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "A.D.T.: Heap Introduction"
+title: "A.D.T.: Heap"
 keywords: []
 description: ""
 category: "CS"

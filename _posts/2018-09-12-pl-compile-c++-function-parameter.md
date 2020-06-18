@@ -68,6 +68,57 @@ int main(){
 
 #### 2. Struct
 
+```cpp
+
+#include <sys/types.h>
+#include <unistd.h>
+#include <stdio.h>
+#include <iostream>
+
+struct rectangle
+{
+	int length;
+	int width;
+};
+
+class triangle
+{
+	public:
+		int length;
+		int width;
+	triangle(int length, int width)
+	{
+		this->length = length;
+		this->width = width;
+	}
+
+};
+
+void test_parameter_pass_by_struct(struct rectangle * const rec)
+{
+	rec->length = 1;
+	rec->width = 2;
+	std::cout<<"length is "<<rec->length<<" width is "<< rec->width<<std::endl;
+}
+
+void test_parameter_pass_by_class(triangle &tri)
+{
+	tri.length = 1;
+	tri.width = 2;
+	std::cout<<"length is "<<tri.length<<" width is "<< tri.width<<std::endl;
+}
+
+int main()
+{
+
+	triangle tri(0,0);
+	test_parameter_pass_by_class(tri);
+	std::cout<<"length is "<<tri.length<<" width is "<< tri.width<<std::endl;
+}
+
+
+```
+
 
 #### Galois
 1. In C and C++, array can only be passed by address, this is mandatory.

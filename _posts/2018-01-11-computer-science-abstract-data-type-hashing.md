@@ -16,10 +16,21 @@ tags: ["A.D.T."]
 4. The solution is **hashing** !!! Just constant time, are you excited ? let's
    began our journey.
 
-####
+#### Type
+1. Open Hashing
+- Chaining
+2. Closed Hashing
+- Open Addressing
+- Linear Probing
+- Duadratic Probing
+- Double Hashing
 1. simple uniform hashing
-
 
 #### 
 1. Expected length of chain for k keys, m slots:  n over m, called $\alpha$, the
    load factor of the table.
+
+
+####  Galois
+1. Hashing is from key to location, then we put something on the location.
+

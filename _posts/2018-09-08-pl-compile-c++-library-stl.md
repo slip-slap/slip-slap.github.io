@@ -9,15 +9,8 @@ tags: ["c++","compile"]
 {% include JB/setup %}
 
 ### Intro
-
-vector和deque的底层是对数组的封装，所以提供了对元素的快速随机访问。  
 list类型在任何位置都能快速插入和删除。访问某个元素要求遍历所设计的其他元素.
-在出现标准库之前，c++程序使用数组保存对象，现代c++程序更多地用vector取代数组  
-与vector相比，数组的长度是固定的。  
-只有当程序强调速度的时候才在类的实现内部使用数组和指针。
-### 容器操作
 
-<hr />
 #### 构造函数
 
 + C c;           默认构造函数，拷贝空容器
@@ -39,41 +32,13 @@ for(auto var:c1){
 }
 ```
 
-<hr />
-### 容器种类
-<hr />
-#### string
-<hr />
-##### 数值转换
-<hr />
-##### string搜索操作
-<hr />
 #### vector
-所有标准库容器都有支持递增运算的迭代器。也支持==和!=运算<br/>
-因为vector和string的底层是array, 它的底层支持+ - < > >= <=等操作
-<hr />
-<font color="red">代码块1</font>
 
-```
-vector<Point2d> container1;
-    Point2d p1(2,3);
-	Point2d p2(3,4);
-	Point2d p3(1,7);
-	container1.push_back(p1);
-	container1.push_back(p2);
-	container1.push_back(p3);
-	auto var = container1.begin();
-	var = var+2;
-	cout<<*var;        //Point2d 底层重载了输出运算符
-```
-
-<hr />
 #### forward_list
-<hr />
+
 #### list  
 sort算法需要容器有随机访问迭代器,list的容器并没有随机访问迭代器.  
 因此它自定义了算法.
-<font color="red">代码块2</font>
 
 ```
 bool Smaller(const cv::Point2d p1,const cv::Point2d p2){

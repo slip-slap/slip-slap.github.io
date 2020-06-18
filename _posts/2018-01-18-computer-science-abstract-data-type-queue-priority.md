@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "A.D.T.: Introduction of Priority Queue"
+title: "A.D.T.: Priority Queue"
 keywords: []
 description: ""
 category: "CS"
