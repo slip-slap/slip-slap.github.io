@@ -1,0 +1,77 @@
+I"¿
+<h4 id="i">I</h4>
+<p>This keyword is related to the linker stage.</p>
+<ul>
+  <li>The linker is not going to look outside of the scope of this translation unit
+for that symbol definiton</li>
+  <li>kind of declaring a variable private in a class.</li>
+</ul>
+
+<h4 id="2-function-scope">2. function scope</h4>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</span><span class="kt">void</span> <span class="nf">age</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="k">static</span> <span class="kt">int</span> <span class="n">age</span> <span class="o">=</span> <span class="mi">18</span><span class="p">;</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"age is "</span><span class="o">&lt;&lt;</span> <span class="n">age</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+	<span class="n">age</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="n">age</span><span class="p">();</span><span class="c1">// 18 years old</span>
+	<span class="n">age</span><span class="p">();</span><span class="c1">// 19 years old</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h4 id="3-struct-scope">3. struct scope</h4>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+#include &lt;string&gt;
+</span>
+<span class="k">struct</span>  <span class="nc">student</span>
+<span class="p">{</span>
+	<span class="k">static</span> <span class="kt">int</span> <span class="n">student_number</span><span class="p">;</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">name</span><span class="p">;</span>
+	<span class="n">student</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">name</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="kt">int</span> <span class="n">student</span><span class="o">::</span><span class="n">student_number</span><span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="n">student</span><span class="o">::</span><span class="n">student</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">name</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="k">this</span><span class="o">-&gt;</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
+		<span class="n">student_number</span><span class="o">++</span><span class="p">;</span>
+	<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="k">struct</span> <span class="nc">student</span> <span class="n">stu_riam</span><span class="p">(</span><span class="s">"riam"</span><span class="p">);</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">stu_riam</span><span class="p">.</span><span class="n">student_number</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+	<span class="k">struct</span> <span class="nc">student</span> <span class="n">stu_anny</span><span class="p">(</span><span class="s">"anny"</span><span class="p">);</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">stu_anny</span><span class="p">.</span><span class="n">student_number</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h4 id="file-scope">File Scope</h4>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//my_main.cpp</span>
+<span class="cp">#include &lt;iostream&gt;
+</span>
+<span class="k">extern</span> <span class="kt">int</span> <span class="n">s_variable</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">function</span><span class="p">(){</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cin</span><span class="p">.</span><span class="n">get</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="c1">//static.cpp</span>
+<span class="kt">int</span> <span class="n">s_variable</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+<span class="k">static</span> <span class="kt">void</span> <span class="nf">function</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+:ET

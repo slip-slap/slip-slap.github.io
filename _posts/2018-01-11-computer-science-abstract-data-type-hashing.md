@@ -33,4 +33,5 @@ tags: ["A.D.T."]
 
 ####  Galois
 1. Hashing is from key to location, then we put something on the location.
+2. How to design hash function is the most important thing.
 

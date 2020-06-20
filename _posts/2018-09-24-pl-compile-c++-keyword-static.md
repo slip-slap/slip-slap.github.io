@@ -16,8 +16,55 @@ This keyword is related to the linker stage.
 - kind of declaring a variable private in a class.
 
 
+#### 2. function scope
 
-#### Example
+```cpp
+#include <iostream>
+void age()
+{
+	static int age = 18;
+	std::cout<<"age is "<< age<<std::endl;
+	age++;
+}
+
+int main()
+{
+	age();// 18 years old
+	age();// 19 years old
+}
+```
+
+#### 3. struct scope
+
+```cpp
+#include <iostream>
+#include <string>
+
+struct  student
+{
+	static int student_number;
+	std::string name;
+	student(std::string name);
+};
+
+int student::student_number= 0;
+student::student(std::string name)
+	{
+		this->name = name;
+		student_number++;
+	}
+
+int main()
+{
+	struct student stu_riam("riam");
+	std::cout<<stu_riam.student_number<<std::endl;
+	struct student stu_anny("anny");
+	std::cout<<stu_anny.student_number<<std::endl;
+}
+```
+
+
+#### File Scope 
 
 ```cpp
 //my_main.cpp

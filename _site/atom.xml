@@ -3,7 +3,7 @@
   <title>Just Do It</title>
   <link href="/atom.xml" rel="self"/>
   <link href=""/>
-  <updated>2020-06-18T21:12:54+09:00</updated>
+  <updated>2020-06-20T15:34:48+09:00</updated>
   <id></id>
   <author>
     <name>reed</name>
@@ -4899,6 +4899,8 @@ set startup-with-shell off
 Reference
 
   no symbol table is loaded
+  documentation
+
 
 </content>
   </entry>
@@ -4909,7 +4911,7 @@ Reference
     <updated>2018-09-29T00:00:00+09:00</updated>
     <id>/pl/pl-compile-c++-compiler</id>
     <content type="html">
-1 Clang
+1 LLVM Project clang
 
   clang is the C compiler
   Clang++ is the C++ compiler
@@ -4921,7 +4923,7 @@ compiler, you can compile it with -std=c++98
   
 
 
-clang++ -std=c++11 my_...</content>
+clang++ -...</content>
   </entry>
 
   <entry>
@@ -5085,14 +5087,13 @@ for that symbol definiton
   kind of declaring a variable private in a class.
 
 
-Example
+2. function scope
 
-//my_main.cpp
 #include &amp;lt;iostream&amp;gt;
-
-extern int s_variable;
-
-void function()...</content>
+void age()
+{
+	static int age = 18;
+	std::cou...</content>
   </entry>
 
   <entry>
@@ -5262,30 +5263,6 @@ Stream
       Inputstream: istream, ifstream
       Outputstream: ostream, ofstream
       ci...</content>
-  </entry>
-
-  <entry>
-    <title>C++ GP:  Template</title>
-    <link href="/pl/pl-compile-c++-gp-template.html"/>
-    <updated>2018-09-12T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-gp-template</id>
-    <content type="html">
-function and class template
-
-  they are convenient, but don’t use them, too difficult to debug.
-  It just use the compiler to generate code.
-
-
-#include &amp;lt;iostream&amp;gt;
-#include &amp;lt;string&amp;gt;
-
-template&amp;lt;typename T&amp;gt;
-void my_print(T value)
-{
-	std::cout&amp;lt;&amp;lt;value&amp;lt;&amp;lt;&quot;\n&quot;;
-}
-
-template&amp;l...</content>
   </entry>
 
   <entry>
@@ -5508,9 +5485,9 @@ std::istream &amp;amp;operator&amp;gt;&amp;gt;(std::istream &amp;amp;is,Worker &
 
   <entry>
     <title>C++: Struct</title>
-    <link href="/pl/pl-compile-c++-struct.html"/>
+    <link href="/pl/pl-compile-c++-oop-struct.html"/>
     <updated>2018-09-10T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-struct</id>
+    <id>/pl/pl-compile-c++-oop-struct</id>
     <content type="html">
 ####
 
@@ -5519,14 +5496,14 @@ std::istream &amp;amp;operator&amp;gt;&amp;gt;(std::istream &amp;amp;is,Worker &
 
 
 Example
-struct Rectangle {
-    int width;
-    int length;
-};
+#include &amp;lt;iostream&amp;gt;
+#include &amp;lt;string&amp;gt;
 
-struct Rectangle r;
-
-</content>
+void swap(int &amp;amp;a, int &amp;amp;b);
+void swap(int &amp;amp;a, int &amp;amp;b)
+{
+	int temp = a;
+	a...</content>
   </entry>
 
   <entry>
@@ -5536,6 +5513,30 @@ struct Rectangle r;
     <id>/pl/pl-compile-c++-oop-polymorphism</id>
     <content type="html">
 </content>
+  </entry>
+
+  <entry>
+    <title>C++ OOP: Move Semantics</title>
+    <link href="/pl/pl-compile-c++-oop-move-semantics.html"/>
+    <updated>2018-09-10T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-oop-move-semantics</id>
+    <content type="html">#include &amp;lt;iostream&amp;gt;
+
+class string
+{
+	public:
+		string(const char* string)
+		{
+			std::cout&amp;lt;&amp;lt;&quot;created\n&quot;;
+			m_size = strlen(string);
+			m_data = new char[m_size];
+			memcpy(m_data,string,m_size);
+		}
+
+		string(const string&amp;amp; other)
+		{
+			std::cout&amp;lt;&amp;lt;&quot;copied\n&quot;;
+			m_size = ot...</content>
   </entry>
 
   <entry>
@@ -5616,27 +5617,27 @@ it’s public.
   </entry>
 
   <entry>
-    <title>C++ OOP: Move Semantics</title>
-    <link href="/pl/pl-compile-c++-move-semantics.html"/>
+    <title>C++ GP:  Template</title>
+    <link href="/pl/pl-compile-c++-gp-template.html"/>
     <updated>2018-09-10T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-move-semantics</id>
-    <content type="html">#include &amp;lt;iostream&amp;gt;
+    <id>/pl/pl-compile-c++-gp-template</id>
+    <content type="html">
+function and class template
 
-class string
+  they are convenient, but don’t use them, too difficult to debug.
+  It just use the compiler to generate code.
+
+
+#include &amp;lt;iostream&amp;gt;
+#include &amp;lt;string&amp;gt;
+
+template&amp;lt;typename T&amp;gt;
+void my_print(T value)
 {
-	public:
-		string(const char* string)
-		{
-			std::cout&amp;lt;&amp;lt;&quot;created\n&quot;;
-			m_size = strlen(string);
-			m_data = new char[m_size];
-			memcpy(m_data,string,m_size);
-		}
+	std::cout&amp;lt;&amp;lt;value&amp;lt;&amp;lt;&quot;\n&quot;;
+}
 
-		string(const string&amp;amp; other)
-		{
-			std::cout&amp;lt;&amp;lt;&quot;copied\n&quot;;
-			m_size = ot...</content>
+template&amp;l...</content>
   </entry>
 
   <entry>
@@ -5665,13 +5666,25 @@ Apply these general in order
   </entry>
 
   <entry>
-    <title>C++: 11</title>
-    <link href="/pl/pl-compile-c++-version-c++11.html"/>
+    <title>C++ 11: Smart Pointer</title>
+    <link href="/pl/pl-compile-c++-version-c++11-smart-pointer.html"/>
     <updated>2018-09-09T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-version-c++11</id>
+    <id>/pl/pl-compile-c++-version-c++11-smart-pointer</id>
     <content type="html">
-####
-</content>
+unique_ptr
+
+  smart_pointer is implemented to prevent memory leaks
+    
+      it overload -&amp;gt; operator and * opeator
+      wraps a raw pointer
+      unique_ptr is always the unique ownership of associated raw pointer.
+    
+  
+
+
+A
+
+  we can not create a unique_ptr through assignment, it will ca...</content>
   </entry>
 
   <entry>
@@ -8172,49 +8185,86 @@ view, List ...</content>
   </entry>
 
   <entry>
-    <title>A.D.T.: summary</title>
-    <link href="/cs/computer-science-abstract-data-type-summary.html"/>
-    <updated>2018-01-28T00:00:00+09:00</updated>
-    <id>/cs/computer-science-abstract-data-type-summary</id>
+    <title>Debugger: Principle</title>
+    <link href="/pl/pl-tool-debugger-principle.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-tool-debugger-principle</id>
     <content type="html">
-####
+</content>
+  </entry>
 
-  Data strucutre means how to organise your data in memory.
-  ADT: Abstract Data Type
-    
-      it means data and operation.
-    
-  
+  <entry>
+    <title>Debugger: Pause</title>
+    <link href="/pl/pl-tool-debugger-pause.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-tool-debugger-pause</id>
+    <content type="html">
+Place
+GDB is very flexible about the meaning of “place”; 
+-. it could mean things as varied as a line of source code
+-. an address of code, a line number wihin a source file.
+
+GDB
+
+  A breakpoint tells GDB to pause execution at a particular location within the
+program.
+  A watchpoint tells GDB t...</content>
+  </entry>
+
+  <entry>
+    <title>Debugger: Multi-thread</title>
+    <link href="/pl/pl-tool-debugger-multi-thread.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-tool-debugger-multi-thread</id>
+    <content type="html">
+</content>
+  </entry>
+
+  <entry>
+    <title>Debugger: Inspecting</title>
+    <link href="/pl/pl-tool-debugger-inspecting.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-tool-debugger-inspecting</id>
+    <content type="html">
+A
+
+  Monitoring Local Variables
 
 
-Phycical Data Structure
-
-  Array
-  Matrices
-  Linked List
+info locals
 
 
-Logical Data Structure
+</content>
+  </entry>
 
-  Stack
-  Quenen
-  Tree
-  Graph
-  Hashing
+  <entry>
+    <title>Debugger: Crash</title>
+    <link href="/pl/pl-tool-debugger-crash.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-tool-debugger-crash</id>
+    <content type="html">
+When happen
 
+  the most common cause of a crash is for a program to attempt to access a
+memory location without having the permisson to do so. The hardware will
+sense this and execute a jump to the operating system.
+  The OS will normally announce that the program has caused a segmentation
+fault...</content>
+  </entry>
 
-####
-
-  Hashing
-  Sorting
-
+  <entry>
+    <title>Debugger: Alternative</title>
+    <link href="/pl/pl-tool-debugger-alternative.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-tool-debugger-alternative</id>
+    <content type="html">
 </content>
   </entry>
 
   <entry>
     <title>OS: Threads</title>
     <link href="/os/os-threads.html"/>
-    <updated>2018-01-25T00:00:00+09:00</updated>
+    <updated>2018-02-25T00:00:00+09:00</updated>
     <id>/os/os-threads</id>
     <content type="html">
 Definition
@@ -8232,7 +8282,7 @@ operating system resources, such as open files and signals.
   <entry>
     <title>OS: System Programs</title>
     <link href="/os/os-system-programs.html"/>
-    <updated>2018-01-25T00:00:00+09:00</updated>
+    <updated>2018-02-25T00:00:00+09:00</updated>
     <id>/os/os-system-programs</id>
     <content type="html">
 ####
@@ -8256,7 +8306,7 @@ Communications
   <entry>
     <title>OS: System Call</title>
     <link href="/os/os-system-call.html"/>
-    <updated>2018-01-25T00:00:00+09:00</updated>
+    <updated>2018-02-25T00:00:00+09:00</updated>
     <id>/os/os-system-call</id>
     <content type="html">
 ####
@@ -8273,7 +8323,7 @@ the process.
   <entry>
     <title>OS: Summary</title>
     <link href="/os/os-summary.html"/>
-    <updated>2018-01-25T00:00:00+09:00</updated>
+    <updated>2018-02-25T00:00:00+09:00</updated>
     <id>/os/os-summary</id>
     <content type="html">
 intro
@@ -8295,7 +8345,7 @@ defaults write com.apple.finder AppleShowAllFiles -bool true
   <entry>
     <title>OS: Structure</title>
     <link href="/os/os-structure.html"/>
-    <updated>2018-01-25T00:00:00+09:00</updated>
+    <updated>2018-02-25T00:00:00+09:00</updated>
     <id>/os/os-structure</id>
     <content type="html">
 
@@ -8305,7 +8355,7 @@ defaults write com.apple.finder AppleShowAllFiles -bool true
   <entry>
     <title>OS: Storeage Structure</title>
     <link href="/os/os-storage-structure.html"/>
-    <updated>2018-01-25T00:00:00+09:00</updated>
+    <updated>2018-02-25T00:00:00+09:00</updated>
     <id>/os/os-storage-structure</id>
     <content type="html">
 &amp;lt;img src=/images/computer-science-operating-system-storage-structure.png&amp;gt;
@@ -8316,7 +8366,7 @@ defaults write com.apple.finder AppleShowAllFiles -bool true
   <entry>
     <title>OS: Sockets</title>
     <link href="/os/os-sockets.html"/>
-    <updated>2018-01-25T00:00:00+09:00</updated>
+    <updated>2018-02-25T00:00:00+09:00</updated>
     <id>/os/os-sockets</id>
     <content type="html">
 ####
@@ -8331,7 +8381,7 @@ ofr each process
   <entry>
     <title>OS: Services</title>
     <link href="/os/os-services.html"/>
-    <updated>2018-01-25T00:00:00+09:00</updated>
+    <updated>2018-02-25T00:00:00+09:00</updated>
     <id>/os/os-services</id>
     <content type="html">
 
@@ -8357,7 +8407,7 @@ ofr each process
   <entry>
     <title>OS: Process Management</title>
     <link href="/os/os-process-management.html"/>
-    <updated>2018-01-25T00:00:00+09:00</updated>
+    <updated>2018-02-25T00:00:00+09:00</updated>
     <id>/os/os-process-management</id>
     <content type="html">
 Definition
@@ -8377,7 +8427,7 @@ Process State
   <entry>
     <title>OS: Interprocess Communication</title>
     <link href="/os/os-process-communication.html"/>
-    <updated>2018-01-25T00:00:00+09:00</updated>
+    <updated>2018-02-25T00:00:00+09:00</updated>
     <id>/os/os-process-communication</id>
     <content type="html">
 ###
@@ -8395,7 +8445,7 @@ processes executing in the system.
   <entry>
     <title>OS: Computer System Operation</title>
     <link href="/os/os-operation.html"/>
-    <updated>2018-01-25T00:00:00+09:00</updated>
+    <updated>2018-02-25T00:00:00+09:00</updated>
     <id>/os/os-operation</id>
     <content type="html">
 ####
@@ -8414,7 +8464,7 @@ up or rebooted...</content>
   <entry>
     <title>Management: User</title>
     <link href="/os/os-management-user.html"/>
-    <updated>2018-01-25T00:00:00+09:00</updated>
+    <updated>2018-02-25T00:00:00+09:00</updated>
     <id>/os/os-management-user</id>
     <content type="html">
 说明
@@ -8446,7 +8496,7 @@ usermod -aG docker $USER
   <entry>
     <title>Management: Access</title>
     <link href="/os/os-management-access.html"/>
-    <updated>2018-01-25T00:00:00+09:00</updated>
+    <updated>2018-02-25T00:00:00+09:00</updated>
     <id>/os/os-management-access</id>
     <content type="html">
 功能
@@ -8468,7 +8518,7 @@ dumpe2fs -h /dev/vda1 | grep mount options:
   <entry>
     <title>MacOS Software</title>
     <link href="/os/os-macOS-software.html"/>
-    <updated>2018-01-25T00:00:00+09:00</updated>
+    <updated>2018-02-25T00:00:00+09:00</updated>
     <id>/os/os-macOS-software</id>
     <content type="html">
 VLC视频播放器
@@ -8497,7 +8547,7 @@ Mac OS Finder
   <entry>
     <title>MacOS: Software Management</title>
     <link href="/os/os-macOS-software-management.html"/>
-    <updated>2018-01-25T00:00:00+09:00</updated>
+    <updated>2018-02-25T00:00:00+09:00</updated>
     <id>/os/os-macOS-software-management</id>
     <content type="html">
 xcode-select
@@ -8518,7 +8568,7 @@ Relationship
   <entry>
     <title>MacOS: ITerm</title>
     <link href="/os/os-macOS-iterm.html"/>
-    <updated>2018-01-25T00:00:00+09:00</updated>
+    <updated>2018-02-25T00:00:00+09:00</updated>
     <id>/os/os-macOS-iterm</id>
     <content type="html">
 ####
@@ -8537,7 +8587,7 @@ Galois
   <entry>
     <title>Kernel</title>
     <link href="/os/os-kernel.html"/>
-    <updated>2018-01-25T00:00:00+09:00</updated>
+    <updated>2018-02-25T00:00:00+09:00</updated>
     <id>/os/os-kernel</id>
     <content type="html">
 Kernel
@@ -8560,7 +8610,7 @@ OS
   <entry>
     <title>Management: Access</title>
     <link href="/os/os-internet-attack.html"/>
-    <updated>2018-01-25T00:00:00+09:00</updated>
+    <updated>2018-02-25T00:00:00+09:00</updated>
     <id>/os/os-internet-attack</id>
     <content type="html">
 fping
@@ -8601,38 +8651,9 @@ ncat
   </entry>
 
   <entry>
-    <title>Hardware: CUDA</title>
-    <link href="/os/os-hardware-cuda.html"/>
-    <updated>2018-01-25T00:00:00+09:00</updated>
-    <id>/os/os-hardware-cuda</id>
-    <content type="html">
-
-  CUDA: cuda short for compute unified device architecture is a parallel
-computing and application programming interface model, It allows developers
-to use a CUDA-enabled graphics processing unit(GPU) for general purpose
-processing - an approach termed GPGPU(General computing on Graphics
-Proces...</content>
-  </entry>
-
-  <entry>
-    <title>Hardware: CPU</title>
-    <link href="/os/os-hardware-cpu.html"/>
-    <updated>2018-01-25T00:00:00+09:00</updated>
-    <id>/os/os-hardware-cpu</id>
-    <content type="html">
-J
-
-  x86 is an Intel CPU architecture that originated with the 16-bit 8086
-processor in 1978. Today, the term “x86” is used generally to refer to any
-32-bit processor compatible with the x86 instruction set.
-    
-      In Its 40 years of existence, the x86 architecture has added many new feature...</content>
-  </entry>
-
-  <entry>
     <title>Directory Hierarch</title>
     <link href="/os/os-directory-structure.html"/>
-    <updated>2018-01-25T00:00:00+09:00</updated>
+    <updated>2018-02-25T00:00:00+09:00</updated>
     <id>/os/os-directory-structure</id>
     <content type="html">
 proc
@@ -8656,7 +8677,7 @@ property, be...</content>
   <entry>
     <title>OS: Computer System Architecture</title>
     <link href="/os/os-computer-system-architecture.html"/>
-    <updated>2018-01-25T00:00:00+09:00</updated>
+    <updated>2018-02-25T00:00:00+09:00</updated>
     <id>/os/os-computer-system-architecture</id>
     <content type="html">
 Galois
@@ -8666,6 +8687,203 @@ a CPU ?  If you have any questions about anything, No back how fancy they
 look like ? Just go back to the history where it started. Figure about how
 everything evolved.
   computer is supposed to do some compu...</content>
+  </entry>
+
+  <entry>
+    <title>Hardware: CUDA</title>
+    <link href="/os/os-hardware-cuda.html"/>
+    <updated>2018-02-19T00:00:00+09:00</updated>
+    <id>/os/os-hardware-cuda</id>
+    <content type="html">
+
+  CUDA: cuda short for compute unified device architecture is a parallel
+computing and application programming interface model, It allows developers
+to use a CUDA-enabled graphics processing unit(GPU) for general purpose
+processing - an approach termed GPGPU(General computing on Graphics
+Proces...</content>
+  </entry>
+
+  <entry>
+    <title>Hardware: CPU</title>
+    <link href="/os/os-hardware-cpu.html"/>
+    <updated>2018-02-19T00:00:00+09:00</updated>
+    <id>/os/os-hardware-cpu</id>
+    <content type="html">
+J
+
+  x86 is an Intel CPU architecture that originated with the 16-bit 8086
+processor in 1978. Today, the term “x86” is used generally to refer to any
+32-bit processor compatible with the x86 instruction set.
+    
+      In Its 40 years of existence, the x86 architecture has added many new feature...</content>
+  </entry>
+
+  <entry>
+    <title>Git:  Philosophy Behind the Scene</title>
+    <link href="/os/os-software-git-philosophy.html"/>
+    <updated>2018-02-18T00:00:00+09:00</updated>
+    <id>/os/os-software-git-philosophy</id>
+    <content type="html">
+1. What is the problem ?
+
+  assume you are a coder,  and work on a project. Accasionaly you revise you
+code, some days later, you want get things back to where they were.
+    
+      one solution is every time you change your code, you make a copy, but as time
+goes on, this is a nightmare. Based ...</content>
+  </entry>
+
+  <entry>
+    <title>Git: Basic Snapshotting </title>
+    <link href="/os/os-software-git-basic-snapshotting.html"/>
+    <updated>2018-02-17T00:00:00+09:00</updated>
+    <id>/os/os-software-git-basic-snapshotting</id>
+    <content type="html">
+####
+
+add
+status
+diff
+commit
+nots
+restore
+reset
+rm
+mv
+
+
+Detached Head
+
+  Detached head means you are no longer on a branch, you have checked out a
+single commit in the history
+    
+      why we have this, what’s the advantage?
+      If you want to delete you changes associated with the detached ...</content>
+  </entry>
+
+  <entry>
+    <title>Git:  Branching and Merging</title>
+    <link href="/os/os-software-git-branching-merging.html"/>
+    <updated>2018-02-16T00:00:00+09:00</updated>
+    <id>/os/os-software-git-branching-merging</id>
+    <content type="html">
+branch
+checkout
+switch
+merge
+mergetool
+log
+stash
+tag
+worktree
+
+
+can only be run after the merge has resulted in conflicts.
+git merge –continue
+
+Operation
+
+  git branch                 display branch
+  git branch develop         create branch
+  git checkout master        switch branch
+
+
+Example: ...</content>
+  </entry>
+
+  <entry>
+    <title>Git: Sharing</title>
+    <link href="/os/os-software-git-sharing.html"/>
+    <updated>2018-02-15T00:00:00+09:00</updated>
+    <id>/os/os-software-git-sharing</id>
+    <content type="html">
+####
+
+fetch
+pull
+push
+remote
+submodule
+
+
+Pull and Fetch
+In the default mode, git pull is shorthand for get fetch followed by
+**git merge FETCH_HEAD **
+
+
+  
+    git fetch: is the command that tells you local git to retrieve the latest
+meta-data info from the original(yet doesn’t do any file trans...</content>
+  </entry>
+
+  <entry>
+    <title>Git: Patching</title>
+    <link href="/os/os-software-git-patching.html"/>
+    <updated>2018-02-14T00:00:00+09:00</updated>
+    <id>/os/os-software-git-patching</id>
+    <content type="html">
+shell
+
+apply
+cherry-pick
+diff
+rebase
+revert
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Git: Debugging</title>
+    <link href="/os/os-software-git-debugging.html"/>
+    <updated>2018-02-13T00:00:00+09:00</updated>
+    <id>/os/os-software-git-debugging</id>
+    <content type="html">
+bisect
+blameo
+grep
+
+</content>
+  </entry>
+
+  <entry>
+    <title>A.D.T.: summary</title>
+    <link href="/cs/computer-science-abstract-data-type-summary.html"/>
+    <updated>2018-01-28T00:00:00+09:00</updated>
+    <id>/cs/computer-science-abstract-data-type-summary</id>
+    <content type="html">
+####
+
+  Data strucutre means how to organise your data in memory.
+  ADT: Abstract Data Type
+    
+      it means data and operation.
+    
+  
+
+
+Phycical Data Structure
+
+  Array
+  Matrices
+  Linked List
+
+
+Logical Data Structure
+
+  Stack
+  Quenen
+  Tree
+  Graph
+  Hashing
+
+
+####
+
+  Hashing
+  Sorting
+
+</content>
   </entry>
 
   <entry>
@@ -8882,6 +9100,58 @@ Problem
   </entry>
 
   <entry>
+    <title>A.D.T.: Matrices</title>
+    <link href="/cs/computer-science-abstract-data-type-sparse-matrix.html"/>
+    <updated>2018-01-19T00:00:00+09:00</updated>
+    <id>/cs/computer-science-abstract-data-type-sparse-matrix</id>
+    <content type="html">
+Representation
+
+Operation
+
+  addition
+
+
+Galois
+
+  what is ADT ?, everything you meet in life? You want to express in computer
+language. Sparse Matrix, tree, stack, queue everything.
+
+</content>
+  </entry>
+
+  <entry>
+    <title>A.D.T.: Sparse Matrices</title>
+    <link href="/cs/computer-science-abstract-data-type-sparse-matrices.html"/>
+    <updated>2018-01-19T00:00:00+09:00</updated>
+    <id>/cs/computer-science-abstract-data-type-sparse-matrices</id>
+    <content type="html">
+</content>
+  </entry>
+
+  <entry>
+    <title>A.D.T.: Polynomial</title>
+    <link href="/cs/computer-science-abstract-data-type-polynomial.html"/>
+    <updated>2018-01-19T00:00:00+09:00</updated>
+    <id>/cs/computer-science-abstract-data-type-polynomial</id>
+    <content type="html">
+Galois
+
+  Polynomial is also one type of ADT.
+
+</content>
+  </entry>
+
+  <entry>
+    <title>A.D.T.P.: Matrix Multiplication</title>
+    <link href="/cs/computer-science-abstract-data-type-matrix-problem-multiplication.html"/>
+    <updated>2018-01-19T00:00:00+09:00</updated>
+    <id>/cs/computer-science-abstract-data-type-matrix-problem-multiplication</id>
+    <content type="html">
+</content>
+  </entry>
+
+  <entry>
     <title>A.D.T.: List</title>
     <link href="/cs/computer-science-abstract-data-type-list.html"/>
     <updated>2018-01-19T00:00:00+09:00</updated>
@@ -8909,21 +9179,6 @@ class link_list
 		link_list(std::string name)
 		{
 			head = new ...</content>
-  </entry>
-
-  <entry>
-    <title>Git:  Philosophy Behind the Scene</title>
-    <link href="/os/os-software-git-philosophy.html"/>
-    <updated>2018-01-18T00:00:00+09:00</updated>
-    <id>/os/os-software-git-philosophy</id>
-    <content type="html">
-1. What is the problem ?
-
-  assume you are a coder,  and work on a project. Accasionaly you revise you
-code, some days later, you want get things back to where they were.
-    
-      one solution is every time you change your code, you make a copy, but as time
-goes on, this is a nightmare. Based ...</content>
   </entry>
 
   <entry>
@@ -8985,34 +9240,6 @@ class my_queue
   </entry>
 
   <entry>
-    <title>Git: Basic Snapshotting </title>
-    <link href="/os/os-software-git-basic-snapshotting.html"/>
-    <updated>2018-01-17T00:00:00+09:00</updated>
-    <id>/os/os-software-git-basic-snapshotting</id>
-    <content type="html">
-####
-
-add
-status
-diff
-commit
-nots
-restore
-reset
-rm
-mv
-
-
-Detached Head
-
-  Detached head means you are no longer on a branch, you have checked out a
-single commit in the history
-    
-      why we have this, what’s the advantage?
-      If you want to delete you changes associated with the detached ...</content>
-  </entry>
-
-  <entry>
     <title> Jekyll</title>
     <link href="/pl/pl-script-jekyll.html"/>
     <updated>2018-01-16T00:00:00+09:00</updated>
@@ -9033,61 +9260,6 @@ Reference
   Connect to a locally build Server
 
 </content>
-  </entry>
-
-  <entry>
-    <title>Git:  Branching and Merging</title>
-    <link href="/os/os-software-git-branching-merging.html"/>
-    <updated>2018-01-16T00:00:00+09:00</updated>
-    <id>/os/os-software-git-branching-merging</id>
-    <content type="html">
-branch
-checkout
-switch
-merge
-mergetool
-log
-stash
-tag
-worktree
-
-
-can only be run after the merge has resulted in conflicts.
-git merge –continue
-
-Operation
-
-  git branch                 display branch
-  git branch develop         create branch
-  git checkout master        switch branch
-
-
-Example: ...</content>
-  </entry>
-
-  <entry>
-    <title>Git: Sharing</title>
-    <link href="/os/os-software-git-sharing.html"/>
-    <updated>2018-01-15T00:00:00+09:00</updated>
-    <id>/os/os-software-git-sharing</id>
-    <content type="html">
-####
-
-fetch
-pull
-push
-remote
-submodule
-
-
-Pull and Fetch
-In the default mode, git pull is shorthand for get fetch followed by
-**git merge FETCH_HEAD **
-
-
-  
-    git fetch: is the command that tells you local git to retrieve the latest
-meta-data info from the original(yet doesn’t do any file trans...</content>
   </entry>
 
   <entry>
@@ -9124,41 +9296,11 @@ void is...</content>
   </entry>
 
   <entry>
-    <title>Git: Patching</title>
-    <link href="/os/os-software-git-patching.html"/>
-    <updated>2018-01-14T00:00:00+09:00</updated>
-    <id>/os/os-software-git-patching</id>
-    <content type="html">
-shell
-
-apply
-cherry-pick
-diff
-rebase
-revert
-
-</content>
-  </entry>
-
-  <entry>
     <title>A.D.T.P.: Parenthesis</title>
     <link href="/cs/computer-science-abstract-data-type-stack-problem-parenthesis.html"/>
     <updated>2018-01-14T00:00:00+09:00</updated>
     <id>/cs/computer-science-abstract-data-type-stack-problem-parenthesis</id>
     <content type="html">
-</content>
-  </entry>
-
-  <entry>
-    <title>Git: Debugging</title>
-    <link href="/os/os-software-git-debugging.html"/>
-    <updated>2018-01-13T00:00:00+09:00</updated>
-    <id>/os/os-software-git-debugging</id>
-    <content type="html">
-bisect
-blameo
-grep
-
 </content>
   </entry>
 
@@ -9179,9 +9321,9 @@ we need more, how about constant time, can we do it? give it a shot.
 
   <entry>
     <title>A.D.T.: Hash Chaining</title>
-    <link href="/cs/computer-science-abstract-data-type-hashing-map.html"/>
+    <link href="/cs/computer-science-abstract-data-type-hash-chaining.html"/>
     <updated>2018-01-10T00:00:00+09:00</updated>
-    <id>/cs/computer-science-abstract-data-type-hashing-map</id>
+    <id>/cs/computer-science-abstract-data-type-hash-chaining</id>
     <content type="html">
 基于数组和链表的map实现
 
@@ -9314,9 +9456,9 @@ binary tree
     <updated>2018-01-08T00:00:00+09:00</updated>
     <id>/cs/computer-science-abstract-data-type-tree-representation</id>
     <content type="html">
-Array Representaion
+Represenation
 
-Rule
+Array Representaion
 
   if a Node is at index $i$
   its left child is at $2*i$
@@ -9324,19 +9466,24 @@ Rule
   its parent is at $i/2$
 
 
-Linked list presentation of Tree
+Linked list presentation
 
   we can based on the position relationship between parent and child, to create
 a tree.
 
-</content>
+
+Tree
+
+Complete Binary Tree
+
+ ...</content>
   </entry>
 
   <entry>
-    <title>A.D.T.: Tree Implementation</title>
-    <link href="/cs/computer-science-abstract-data-type-tree-implementation.html"/>
+    <title>A.D.T.: Binary Search Tree Implementation</title>
+    <link href="/cs/computer-science-abstract-data-type-tree-binary-search-implementation.html"/>
     <updated>2018-01-08T00:00:00+09:00</updated>
-    <id>/cs/computer-science-abstract-data-type-tree-implementation</id>
+    <id>/cs/computer-science-abstract-data-type-tree-binary-search-implementation</id>
     <content type="html">
 
 #include &amp;lt;iostream&amp;gt;
@@ -9396,6 +9543,23 @@ left rotate
   we call it left rotate because the root move to the left.
     
       the trick, find the target node that want to put ope...</content>
+  </entry>
+
+  <entry>
+    <title>A.D.T.: AVL Tree Implementation</title>
+    <link href="/cs/computer-science-abstract-data-type-tree-avl-implementation.html"/>
+    <updated>2018-01-07T00:00:00+09:00</updated>
+    <id>/cs/computer-science-abstract-data-type-tree-avl-implementation</id>
+    <content type="html">
+#include &amp;lt;iostream&amp;gt;
+#include &amp;lt;string&amp;gt;
+#include &amp;lt;cmath&amp;gt;
+
+int get_node_height(struct node * node);
+int get_balance_factor(struct node * node);
+struct node * ll_rotation(struct node * unbalance_node);
+struct node * lr_rotation(struct node * unbalance_node);
+struct node * rr_rotati...</content>
   </entry>
 
   <entry>
@@ -9834,9 +9998,9 @@ Galois
 
   <entry>
     <title>Sort: Mergesort</title>
-    <link href="/cs/computer-science-algorithm-problem-sorting.html"/>
+    <link href="/cs/computer-science-algorithm-problem-sort-merge-implementation.html"/>
     <updated>2018-01-01T00:00:00+09:00</updated>
-    <id>/cs/computer-science-algorithm-problem-sorting</id>
+    <id>/cs/computer-science-algorithm-problem-sort-merge-implementation</id>
     <content type="html">
 
   sorting means putting data in a specified order.
@@ -9855,6 +10019,15 @@ Merge(A, B, m, n):
     
     for(; i&amp;lt;= m; i++);
     ...</content>
+  </entry>
+
+  <entry>
+    <title>A.P.: Sort</title>
+    <link href="/cs/computer-science-algorithm-problem-sort-introduction.html"/>
+    <updated>2018-01-01T00:00:00+09:00</updated>
+    <id>/cs/computer-science-algorithm-problem-sort-introduction</id>
+    <content type="html">
+</content>
   </entry>
 
   <entry>
@@ -9943,58 +10116,6 @@ History
 
   In old days when the printing was done, for each color, the paper has to pass
 through the printing press one time, in order...</content>
-  </entry>
-
-  <entry>
-    <title>A.D.T.: Matrices</title>
-    <link href="/cs/computer-science-abstract-data-type-sparse-matrix.html"/>
-    <updated>2018-01-01T00:00:00+09:00</updated>
-    <id>/cs/computer-science-abstract-data-type-sparse-matrix</id>
-    <content type="html">
-Representation
-
-Operation
-
-  addition
-
-
-Galois
-
-  what is ADT ?, everything you meet in life? You want to express in computer
-language. Sparse Matrix, tree, stack, queue everything.
-
-</content>
-  </entry>
-
-  <entry>
-    <title>A.D.T.: Sparse Matrices</title>
-    <link href="/cs/computer-science-abstract-data-type-sparse-matrices.html"/>
-    <updated>2018-01-01T00:00:00+09:00</updated>
-    <id>/cs/computer-science-abstract-data-type-sparse-matrices</id>
-    <content type="html">
-</content>
-  </entry>
-
-  <entry>
-    <title>A.D.T.: Polynomial</title>
-    <link href="/cs/computer-science-abstract-data-type-polynomial.html"/>
-    <updated>2018-01-01T00:00:00+09:00</updated>
-    <id>/cs/computer-science-abstract-data-type-polynomial</id>
-    <content type="html">
-Galois
-
-  Polynomial is also one type of ADT.
-
-</content>
-  </entry>
-
-  <entry>
-    <title>A.D.T.P.: Matrix Multiplication</title>
-    <link href="/cs/computer-science-abstract-data-type-matrix-problem-multiplication.html"/>
-    <updated>2018-01-01T00:00:00+09:00</updated>
-    <id>/cs/computer-science-abstract-data-type-matrix-problem-multiplication</id>
-    <content type="html">
-</content>
   </entry>
 
   <entry>

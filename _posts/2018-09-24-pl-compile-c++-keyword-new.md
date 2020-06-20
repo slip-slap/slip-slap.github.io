@@ -60,6 +60,8 @@ int main()
 
 
 
+#### Galois
+1. When keyword new is used, the return value is always **address**;
 
 
 

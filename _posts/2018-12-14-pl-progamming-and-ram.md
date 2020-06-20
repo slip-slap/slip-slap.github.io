@@ -16,6 +16,10 @@ tags: ["summary"]
 - You are a programmer, you have to understand the architecutre of the computer.
   Know what you can do, and what you can't.
 
+#### Main Memory Architecture
+<img src="{{IMAGE_PATH}}/pl-programming-and-ram-main-memory-architecture.png" />
+
+
 
 #### Thinking
 1. You are a programmer, you job is writing codes. The rest is up to computer.
@@ -70,8 +74,6 @@ For a new code library is just a bundle of functions and classes. <br />
 
 
 
-
-
-
 #### Reference 
 1. [Imperative-style and Symbolic-style](https://mxnet.incubator.apache.org/versions/master/architecture/program_model.html)
+2. [Memory Layout](https://cpp.tech-academy.co.uk/memory-layout/)

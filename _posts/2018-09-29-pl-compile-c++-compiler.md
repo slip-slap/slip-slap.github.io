@@ -9,7 +9,7 @@ tags: ["compile","c++"]
 {% include JB/setup %}
 
 
-### 1 Clang
+### 1 LLVM Project clang
 1. clang is the C compiler
 2. Clang++ is the C++ compiler
 - -std=<dialect>: option picks which dialect of a particular language you want
@@ -20,13 +20,30 @@ tags: ["compile","c++"]
 ```shell
 clang++ -std=c++11 my_class.cpp
 clang++ $(pkg-config --cflags --libs /usr/local/Cellar/opencv/4.3.0_4/lib/pkgconfig/opencv4.pc) -std=c++14 smooth.cpp
+```
+#### Stage Selection Options
+1. -E     Run the preprocessor stage.
+2. -S
+3. -c
 
+
+#### Assemble Code Generation
+
+```cpp
+// default output test.s
+clang++ -S -mllvm --x86-asm-syntax=intel test.cpp
+```
+#### Machine Code Generation without Linked
+
+```cpp
+clang++ -c test.cpp // default output test.o
 ```
 
 
 
 
-### 2 GNU
+
+### 2 GNU Project gcc
 #### Environment Variables
 1. PATH: For searching the executables and run-time shared libraries.
 2. CPATH: For searching the include-paths for headers. It is searched after

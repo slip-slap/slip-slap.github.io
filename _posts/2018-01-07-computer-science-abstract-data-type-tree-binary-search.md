@@ -10,7 +10,6 @@ tags: ["A.D.T."]
 
 
 
-
 #### Complete Binary Tree
 1. how to identify a tree is complete binary tree, you can make use of the array
    representation
