@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "A.D.T.: List"
+title: "A.D.T.: List Implementation"
 keywords: []
 description: 
 category: "CS"

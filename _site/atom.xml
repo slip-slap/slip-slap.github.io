@@ -3,7 +3,7 @@
   <title>Just Do It</title>
   <link href="/atom.xml" rel="self"/>
   <link href=""/>
-  <updated>2020-06-20T15:34:48+09:00</updated>
+  <updated>2020-06-20T19:15:23+09:00</updated>
   <id></id>
   <author>
     <name>reed</name>
@@ -9152,7 +9152,7 @@ Galois
   </entry>
 
   <entry>
-    <title>A.D.T.: List</title>
+    <title>A.D.T.: List Implementation</title>
     <link href="/cs/computer-science-abstract-data-type-list.html"/>
     <updated>2018-01-19T00:00:00+09:00</updated>
     <id>/cs/computer-science-abstract-data-type-list</id>
@@ -9179,6 +9179,33 @@ class link_list
 		link_list(std::string name)
 		{
 			head = new ...</content>
+  </entry>
+
+  <entry>
+    <title>Computer Science Abstract Data Type List Implementation</title>
+    <link href="/computer-science-abstract-data-type-list-implementation.html"/>
+    <updated>2018-01-19T00:00:00+09:00</updated>
+    <id>/computer-science-abstract-data-type-list-implementation</id>
+    <content type="html">layout: post
+title: “A.D.T.: List Operation”
+keywords: []
+description: 
+category: “CS”
+tags: [“A.D.T.”]
+—
+
+#include&amp;lt;iostream&amp;gt;
+struct node 
+{
+	int data;
+	struct node * ptr_next=nullptr;
+};
+
+struct node* head=nullptr;
+
+struct node* insert(struct node* ptr_node, int data)
+{
+	if(ptr_node== null...</content>
   </entry>
 
   <entry>
@@ -9519,9 +9546,11 @@ Drawback
   You can’t control the insertion order.
 
 
-Galois
-
-  We go to university to get degree, we learn s...</content>
+#include&amp;lt;iostream&amp;gt;
+struct node
+{
+	int data;
+	stru...</content>
   </entry>
 
   <entry>
@@ -9643,20 +9672,17 @@ class max_heap
     <updated>2018-01-03T00:00:00+09:00</updated>
     <id>/cs/computer-science-algorithm-design-recursion</id>
     <content type="html">
-Definition
+Pricipal
 
-  Recursion: a function call itself.
+  deal with the most trivial problem
+  divide problem into two part, current problem and subproblem.
+  return, if it has one, figure out the relationship between problem and
+subplem
     
-      it must stop somewhere, otherwise it will lead to infinite calling.
-      it has two phases, calling phase(ascending phase), returning phase(descending
-phase)
+      always you can use a math expression, for example, sum problem
+      n+subproblem(n-1)
     
-  
-
-
-void foo(int n){
-    if(n &amp;gt; 0){
-        1. calling: Ascending ph...</content>
+ ...</content>
   </entry>
 
   <entry>
@@ -9665,16 +9691,15 @@ void foo(int n){
     <updated>2018-01-03T00:00:00+09:00</updated>
     <id>/cs/computer-science-algorithm-design-recursion-common-mistake</id>
     <content type="html">
-####
+#### 
+Recursive programming is a great way to show yourself that you can solve
+difficult problems.
 
-  head recursion: the recursive call, when it happens, comes before other
-processing in the function.(think of it happening at the top).
+  Write an iterative function to solve the problem.
+  Write a “dispatcher” function.
     
-      the head recursion technique can reduce the data passed to the recursive
-call
-    
-  
-  tail recursion: the processing occurs before the recur...</content>
+      Dispatcher function solves problem for some “minimal” data set.
+      in this case, when size parame...</content>
   </entry>
 
   <entry>

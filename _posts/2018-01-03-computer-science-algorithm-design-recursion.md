@@ -8,6 +8,18 @@ tags: ["A.D."]
 ---
 {% include JB/setup %}
 
+#### Pricipal
+1. deal with the most trivial problem 
+2. divide problem into two part, current problem and subproblem.
+3. return, if it has one, figure out the relationship between problem and
+   subplem
+- always you can use a math expression, for example, sum problem
+- n+subproblem(n-1)
+
+4. **It's easy.**
+
+
+
 
 #### Definition
 1. Recursion: a function call itself.
@@ -24,6 +36,8 @@ void foo(int n){
     }
 }
 ```
+
+
 
 
 
