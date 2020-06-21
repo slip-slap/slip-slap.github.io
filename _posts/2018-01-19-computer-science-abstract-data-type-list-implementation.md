@@ -1,11 +1,14 @@
+---
 layout: post
-title: "A.D.T.: List Operation"
+title: "A.D.T.: List Implementation 2"
 keywords: []
 description: 
 category: "CS"
 tags: ["A.D.T."]
 ---
 {% include JB/setup %}
+
+#### A
 
 ```cpp
 #include<iostream>
