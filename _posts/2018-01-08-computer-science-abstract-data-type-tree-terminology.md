@@ -29,14 +29,21 @@ tags: ["Algorithm","A.D.T."]
 
 #### binary tree
 1. a node has 0, 1, or 2 children.
-1. Heights and nodes
+2. Heights and nodes
 - min Nodes n=h+1
 - max Nodes $n = 2^{h+1}- 1$
-- $log_2^n - 1 \leq h \leq n-1$
+- $log\_2^n - 1 \leq h \leq n-1$
 - deg(0) = deg(2)+1
+3. strict binary tree: node has o or 2 children.
 
-#### strict binary tree
-1. a node has o or 2 children.
+#### n-ary tree
+1. n-ary tree: a tree with each node  has no more than n children.
+- 2-3 tree: each node has 0,1,2 or 3 children. 
+- 2-3-4 tree: each node has 0,1,2,3 or 4 children
+2. strict n-ary tree: each node has 0 or n chldren.
+
+
+
 
 
 

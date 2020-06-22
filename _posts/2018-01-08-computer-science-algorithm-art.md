@@ -72,3 +72,19 @@ int main()
 
 2. set the initial state for your algorithm.
 
+
+
+#### Galois
+1. One day, I watched the video that Abdui Bari taught array copy by for loop.
+- initial state, define variable and initialize
+```cpp
+int a[10] ={1,2,3,1,2,3,1,2,3,8};
+int b[10]; 
+i = 0;
+```
+- loop stage, each time i plus one, repeat action a[i] = b[i];
+- I know, I know this is simple, but the idea is powerful, change counter, do
+  something, repeat this operation
+- algorithm is art.
+
+

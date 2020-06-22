@@ -1,0 +1,37 @@
+I">
+<h4 id="rule">Rule</h4>
+<ol>
+  <li>If you apple address in heap, you must return</li>
+</ol>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include&lt;iostream&gt;
+#include &lt;memory&gt;
+</span>
+<span class="k">class</span> <span class="nc">student</span>
+<span class="p">{</span>
+	<span class="nl">private:</span>
+		<span class="kt">int</span><span class="o">*</span> <span class="n">a</span> <span class="o">=</span><span class="k">new</span> <span class="kt">int</span><span class="p">[</span><span class="mi">20</span><span class="p">];</span>
+
+	<span class="nl">public:</span>
+		<span class="n">student</span><span class="p">()</span>
+		<span class="p">{</span>
+			<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"create"</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+		<span class="p">}</span>
+		<span class="o">~</span><span class="n">student</span><span class="p">()</span>
+		<span class="p">{</span>
+			<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"destroy"</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+		<span class="p">}</span>
+<span class="p">};</span>
+
+
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="n">student</span><span class="o">*</span> <span class="n">a</span> <span class="o">=</span> <span class="k">new</span> <span class="n">student</span><span class="p">();</span><span class="c1">// will not call ~student even the program end.</span>
+	<span class="n">student</span> <span class="n">b</span><span class="p">;</span> <span class="c1">//student will be called</span>
+	<span class="c1">//std::unique_ptr&lt;student&gt; b(new student());</span>
+<span class="p">}</span>
+
+
+</code></pre></div></div>
+:ET

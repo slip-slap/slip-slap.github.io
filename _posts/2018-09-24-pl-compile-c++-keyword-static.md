@@ -88,4 +88,11 @@ static void function()
 ```
 
 
+#### Galois
+1. This keyword is used by linker program, as you already know,there are preprocessor and
+   linker stage.
+2. static is used in linker stage, it will try to find this key word.
+
+
+
 

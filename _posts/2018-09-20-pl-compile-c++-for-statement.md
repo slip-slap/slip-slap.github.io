@@ -11,8 +11,6 @@ tags: ["c++","compile"]
 
 #### Use Nested for Loop to Print
 
-
-
 ```cpp
 #include <iostream>
 #include <string>

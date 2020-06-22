@@ -18,6 +18,14 @@ tags: ["A.D."]
 
 4. **It's easy.**
 
+#### Stage 
+There are two stages during recursive process.
+1. before call recursive function
+- deal with the special situation, such as,avoid infinite call
+- When return the end of the call stage, you also can do something.
+2. after call recursive function
+
+
 
 
 

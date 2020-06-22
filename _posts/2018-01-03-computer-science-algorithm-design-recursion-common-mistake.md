@@ -11,7 +11,7 @@ tags: ["A.D."]
 
 
 
-#### 
+####  Trashed Content
 Recursive programming is a great way to show yourself that you can solve
 difficult problems.
 1. Write an iterative function to solve the problem.
@@ -23,8 +23,6 @@ difficult problems.
   -1 for third parameter does the trick.
 3. In dispatcher, replace call to iterative function with call to dispatcher.
 
-
-#### Application in Dynamic Data Structures
 
 
 #### LinkedList
@@ -47,11 +45,6 @@ list.**
 
 #### Common Mistakes
 
-##### Parameters
-
-```python
-
-```
 
 ##### Global Variables
 1. The use of global variables is generally a poor programming pracice, although
