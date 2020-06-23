@@ -3,7 +3,7 @@
   <title>Just Do It</title>
   <link href="/atom.xml" rel="self"/>
   <link href=""/>
-  <updated>2020-06-22T16:40:17+09:00</updated>
+  <updated>2020-06-23T12:52:59+09:00</updated>
   <id></id>
   <author>
     <name>reed</name>
@@ -4394,6 +4394,16 @@ target_link_libraries(untitled ${FOO_LIBRARIES})
     <updated>2018-10-01T00:00:00+09:00</updated>
     <id>/pl/pl-script-cmake-compile-features</id>
     <content type="html">
+Using Command Line
+
+cmake -DCMAKE_CXX_COMPILER=clang++ -DCMAKE_C_COMPILER=clang
+
+
+Setting in CMakeLists.txt
+
+set(CMAKE_CXX_STANDARD 11)
+
+
 </content>
   </entry>
 
@@ -5446,9 +5456,8 @@ set(CMAKE_CXX_STANDARD 11)
 ADD_SUBDIRECTORY(googletest)
 enable_testing()
 include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
-
 add_executable(app main.cpp )
-target_li...</content>
+target_lin...</content>
   </entry>
 
   <entry>
@@ -5476,17 +5485,16 @@ b&amp;lt;&amp;lt;1,2,3,4;//赋值初始化
 介绍
 boost是一个可移植的，提供源代码的C++库，由于其对跨平台的强调，对标准C++的强调，与编写平台无关。大部分的boost库功能使用只需要包括相应的头文件即可，少数如正则表达式库和文件系统库需要连接库。
 
-
 文件系统库
 
 
-使用方法
-
   头文件&amp;lt;boost/filesystem.hpp&amp;gt;提供对文件系统的重要操作，它定义了path类，是filesystem库的基础
   头文件&amp;lt;boost/filesystem/fstream.hpp&amp;gt;是对std::fstream的一个补充。
-文件系统库使用前需要链接相应的库文件
-  需要添加链接库
-    # demo表...</content>
+
+
+path类
+path类是最重要的类，相当于opencv的Mat类
+//如果下面有googl...</content>
   </entry>
 
   <entry>
@@ -9759,6 +9767,32 @@ Galois
   </entry>
 
   <entry>
+    <title>A.P.: Quick Sort</title>
+    <link href="/cs/computer-science-algorithm-problem-sort-quicksort.html"/>
+    <updated>2018-01-01T00:00:00+09:00</updated>
+    <id>/cs/computer-science-algorithm-problem-sort-quicksort</id>
+    <content type="html">
+with selection sort
+
+  Selection sort is given the position, find the value.
+  Quick sort is given the value, find the position.
+
+
+Code Implementation
+
+#include&amp;lt;iostream&amp;gt;
+
+void swap(int &amp;amp;a, int&amp;amp; b)
+{
+	int temp = b;
+	b = a;
+	a = temp;
+}
+
+// I don't buy this name, finding position is...</content>
+  </entry>
+
+  <entry>
     <title>Sort: Mergesort</title>
     <link href="/cs/computer-science-algorithm-problem-sort-merge-implementation.html"/>
     <updated>2018-01-01T00:00:00+09:00</updated>
@@ -9784,11 +9818,17 @@ Merge(A, B, m, n):
   </entry>
 
   <entry>
-    <title>A.P.: Sort</title>
-    <link href="/cs/computer-science-algorithm-problem-sort-introduction.html"/>
+    <title>A.P.: Insertion Sort</title>
+    <link href="/cs/computer-science-algorithm-problem-sort-insertion.html"/>
     <updated>2018-01-01T00:00:00+09:00</updated>
-    <id>/cs/computer-science-algorithm-problem-sort-introduction</id>
+    <id>/cs/computer-science-algorithm-problem-sort-insertion</id>
     <content type="html">
+1. Array
+2. List
+
+  Insertion is designed for linked list
+
+
 </content>
   </entry>
 

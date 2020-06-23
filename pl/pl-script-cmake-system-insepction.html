@@ -142,7 +142,7 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">688</span>
+<span title="文章总数">689</span>
 <ul>
 
 
@@ -2836,7 +2836,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#January-2018">2018 年 01 月 (64)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#January-2018">2018 年 01 月 (65)</a></li>
     
   
 
@@ -3679,7 +3684,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
-  <li><a href="/categories.html#CS-ref">CS (65)</a></li>
+  <li><a href="/categories.html#CS-ref">CS (66)</a></li>
 
   <li><a href="/categories.html#OS-ref">OS (28)</a></li>
 
@@ -4333,6 +4338,18 @@ different variables, such as &lt;package&gt;_FOUND, &lt;package&gt;_INCLUDE_DIRS
 and &lt;package&gt;_LIBRARIES.</li>
 </ol>
 
+<h4 id="default">Default</h4>
+<ol>
+  <li>After you install boost, it will generate boost-related file under 
+<strong>/usr/local/lib/cmake/Boost-1.72.0</strong></li>
+  <li>When you write the following code in <strong>CMakeLists.txt</strong>, it will go to find
+related cmake file, for example <strong>BoostConfig.cmake</strong> or  <strong>BoostConfigVersion.cmake</strong></li>
+</ol>
+
+<div class="language-cmake highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">find_package</span><span class="p">(</span>Boost 1.72.0 COMPONENTS locale<span class="p">)</span>
+</code></pre></div></div>
+
+<h5 id="2self-define">2.Self-define</h5>
 <ul>
   <li>CMakeLists.txt</li>
 </ul>

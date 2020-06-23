@@ -142,7 +142,7 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">688</span>
+<span title="文章总数">689</span>
 <ul>
 
 
@@ -2836,7 +2836,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#January-2018">2018 年 01 月 (64)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#January-2018">2018 年 01 月 (65)</a></li>
     
   
 
@@ -3679,7 +3684,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
-  <li><a href="/categories.html#CS-ref">CS (65)</a></li>
+  <li><a href="/categories.html#CS-ref">CS (66)</a></li>
 
   <li><a href="/categories.html#OS-ref">OS (28)</a></li>
 
@@ -4318,37 +4323,24 @@ $(document).ready(function() {
       
 <h3 id="介绍">介绍</h3>
 <p>boost是一个可移植的，提供源代码的C++库，由于其对跨平台的强调，对标准C++的强调，与编写平台无关。大部分的boost库功能使用只需要包括相应的头文件即可，少数如正则表达式库和文件系统库需要连接库。</p>
-<hr />
 
 <h3 id="文件系统库">文件系统库</h3>
-<hr />
 
-<h4 id="使用方法">使用方法</h4>
 <ul>
   <li>头文件&lt;boost/filesystem.hpp&gt;提供对文件系统的重要操作，它定义了path类，是filesystem库的基础</li>
-  <li>头文件&lt;boost/filesystem/fstream.hpp&gt;是对std::fstream的一个补充。
-文件系统库使用前需要链接相应的库文件</li>
-  <li>需要添加链接库
-    <div class="language-cmake highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># demo表示生成的目标文件</span>
-<span class="nf">tar_link_libraries</span><span class="p">(</span>demo boost_system boost_filesystem<span class="p">)</span>
-</code></pre></div>    </div>
-  </li>
+  <li>头文件&lt;boost/filesystem/fstream.hpp&gt;是对std::fstream的一个补充。</li>
 </ul>
-<hr />
 
 <h4 id="path类">path类</h4>
 <p>path类是最重要的类，相当于opencv的Mat类</p>
-<font color="red">重载操作符/</font>
 <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//如果下面有googletest目录，可以直接进行拼接</span>
 <span class="n">boost</span><span class="o">::</span><span class="n">filesystem</span><span class="o">::</span><span class="n">path</span> <span class="n">full_path</span><span class="o">=</span><span class="n">boost</span><span class="o">::</span><span class="n">filesystem</span><span class="o">::</span><span class="n">current_path</span><span class="p">()</span><span class="o">/</span><span class="s">"googletest"</span><span class="p">;</span>
-
 </code></pre></div></div>
+
 <font color="red">获得当前文件路径与文件名</font>
 <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">boost</span><span class="o">::</span><span class="n">filesystem</span><span class="o">::</span><span class="n">path</span> <span class="n">file_path</span><span class="o">=</span><span class="n">boost</span><span class="o">::</span><span class="n">filesystem</span><span class="o">::</span><span class="n">current_path</span><span class="p">();</span><span class="c1">///*/*/a.txt</span>
 <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">filename</span><span class="o">=</span><span class="n">file_path</span><span class="p">.</span><span class="n">filename</span><span class="p">().</span><span class="n">string</span><span class="p">();</span><span class="c1">//a.txt</span>
 </code></pre></div></div>
-<hr />
-
 <font color="red">遍历当前目录下的子文件</font>
 <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;boost/filesystem.hpp&gt;
 </span><span class="kt">void</span> <span class="nf">readFile</span><span class="p">(){</span>
@@ -4363,9 +4355,18 @@ $(document).ready(function() {
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div></div>
-<h4 id="字符串分割">字符串分割</h4>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>std::vector&lt;std::string&gt; vec;
-boost::split(vec,"hello|world|beautiful",is_any_of("|"));
+
+<h4 id="boost-and-cmake">Boost and CMake</h4>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cmake_minimum_required<span class="o">(</span>VERSION 3.10<span class="o">)</span>
+project<span class="o">(</span>foo VERSION 1.0<span class="o">)</span>
+<span class="nb">set</span><span class="o">(</span>CMAKE_CXX_STANDARD 11<span class="o">)</span>
+<span class="c">#if cmake find target component, it would print some information in the</span>
+<span class="c">#terminal.</span>
+find_package<span class="o">(</span>Boost 1.72.0 COMPONENTS locale<span class="o">)</span>
+include_directories<span class="o">(</span><span class="k">${</span><span class="nv">Boost_INCLUDES_DIRS</span><span class="k">}</span><span class="o">)</span>
+add_executable<span class="o">(</span>demo reference.cpp<span class="o">)</span>
+target_link_libraries<span class="o">(</span>demo <span class="k">${</span><span class="nv">Boost_LIBRARIES</span><span class="k">}</span><span class="o">)</span>
 </code></pre></div></div>
 
 
