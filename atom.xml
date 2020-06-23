@@ -3,7 +3,7 @@
   <title>Just Do It</title>
   <link href="/atom.xml" rel="self"/>
   <link href=""/>
-  <updated>2020-06-23T12:52:59+09:00</updated>
+  <updated>2020-06-23T20:32:04+09:00</updated>
   <id></id>
   <author>
     <name>reed</name>
@@ -170,9 +170,9 @@ Genetic Algorithm
 
   <entry>
     <title>Adaptive Boosting</title>
-    <link href="/cs/AI-Adaptive-Boosting.html"/>
+    <link href="/ai/AI-Adaptive-Boosting.html"/>
     <updated>2020-06-10T00:00:00+09:00</updated>
-    <id>/cs/AI-Adaptive-Boosting</id>
+    <id>/ai/AI-Adaptive-Boosting</id>
     <content type="html">
 what the crap of Adaboost ?
 
@@ -498,9 +498,9 @@ of the random forest are make b...</content>
 
   <entry>
     <title>Model: NLP</title>
-    <link href="/cs/AI-ML-NLP.html"/>
+    <link href="/ai/AI-ML-NLP.html"/>
     <updated>2020-03-04T00:00:00+09:00</updated>
-    <id>/cs/AI-ML-NLP</id>
+    <id>/ai/AI-ML-NLP</id>
     <content type="html">
 TF-IDF
 
@@ -692,9 +692,26 @@ about
   </entry>
 
   <entry>
-    <title>Math and Logic</title>
+    <title>Set Theory</title>
+    <link href="/math/math-basic-set-theory.html"/>
+    <updated>2019-12-28T00:00:00+09:00</updated>
+    <id>/math/math-basic-set-theory</id>
+    <content type="html">
+Dense set
+Dense set: a subset A of a topological space X is called dense in(X) if every point x in X either belongs to A or is a limit point of A. 
+the closure of A is constiuting the whole set X.
+
+Examples
+The rational numbers are a dense subset of real numbers.
+
+Nowhere dense set
+In mathematic...</content>
+  </entry>
+
+  <entry>
+    <title>Logic</title>
     <link href="/math/math-basic-logic.html"/>
-    <updated>2019-12-29T00:00:00+09:00</updated>
+    <updated>2019-12-27T00:00:00+09:00</updated>
     <id>/math/math-basic-logic</id>
     <content type="html">
 Background
@@ -709,10 +726,10 @@ The Law of Thought
   </entry>
 
   <entry>
-    <title>Mathematical Analysis</title>
-    <link href="/math/math-change-introduction.html"/>
+    <title>M.A. summary</title>
+    <link href="/math/math-change-summary.html"/>
     <updated>2019-12-15T00:00:00+09:00</updated>
-    <id>/math/math-change-introduction</id>
+    <id>/math/math-change-summary</id>
     <content type="html">
 definition
 Mathematical analysis is the branch of mathematics dealing with limits and
@@ -903,7 +920,7 @@ numbers as a domain and the complex numbers as a codomain.
   </entry>
 
   <entry>
-    <title>Calculus Line</title>
+    <title>M.A.: Calculus Line</title>
     <link href="/math/math-change-mathematical-analysis-calculus-line.html"/>
     <updated>2019-12-10T00:00:00+09:00</updated>
     <id>/math/math-change-mathematical-analysis-calculus-line</id>
@@ -994,7 +1011,7 @@ operator, then we call T a linear functional on V.
   </entry>
 
   <entry>
-    <title>newton's method</title>
+    <title>F.A.: Newton's method</title>
     <link href="/math/math-change-functional-analysis-introduction.html"/>
     <updated>2019-12-01T00:00:00+09:00</updated>
     <id>/math/math-change-functional-analysis-introduction</id>
@@ -1003,8 +1020,9 @@ open set
 
   In 2-dimensional plane coordinate, we have distance concept, which is very eazy to understand.
   According to this concept, we can define continuity 
-\(\left|x-x_{0}\right|&amp;lt;\delta \Rightarrow\left|f(x)-f\left(x_{0}\right)\right|&amp;lt;\varepsilon\)
-This rule can be applied to n-dimen...</content>
+\(|x-x_{0}|&amp;lt;\delta |f(x)-f(x_{0})|&amp;lt;\varepsilon\)
+This rule can be applied to n-dimensional space, so we can define open ball
+  w...</content>
   </entry>
 
   <entry>
@@ -1212,32 +1230,17 @@ is second order since the highest derivative is \(y^{\prime \prime}\) is the s..
   </entry>
 
   <entry>
-    <title>Change: Summary</title>
-    <link href="/math/math-change-calculus-summary.html"/>
-    <updated>2019-11-15T00:00:00+09:00</updated>
-    <id>/math/math-change-calculus-summary</id>
-    <content type="html">
-problem with differential
-$d(xy)=xdy+ydx$
-
-\((x+dx)(y+dy)-xy=xdy+ydx+dxdy\) 
-
-  Leibniz think $dxdy$ are too small, you can get rid of them.
-  at that time the concept of “limit” havn’t appear. Newton has the same idea.
-  As far as I am concerned, if you get rid of something, such as $dxdy$, and...</content>
-  </entry>
-
-  <entry>
     <title>F.A. Introduction</title>
     <link href="/math/math-change-calculus-of-variations.html"/>
     <updated>2019-11-15T00:00:00+09:00</updated>
     <id>/math/math-change-calculus-of-variations</id>
     <content type="html">
-\[\begin{aligned}\left.\int_{x_{1}}^{x_{2}} \frac{d L}{d
-\varepsilon}\right|_{\varepsilon=0} d x
-&amp;amp;=\int_{x_{1}}^{x_{2}}\left(\frac{\partial L}{\partial f} \eta+\frac{\partial
-L}{\partial f^{\prime}} \eta^{\prime}\right) d x \\ &amp;amp;=\int_{x_{1}}^{x_{2}}
-\frac{\partial L}{\partial f} \eta d x...</content>
+$
+\begin{aligned}\left.\int_{x_{1}}^{x_{2}} \frac{d L}{d
+\varepsilon}\right|{\varepsilon=0} d x
+&amp;amp;=\int{x_{1}}^{x_{2}}\left(\frac{\partial L}{\partial f} \eta+\frac{\partial
+L}{\partial f^{\prime}} \eta^{\prime}\right) d x \ &amp;amp;=\int_{x_{1}}^{x_{2}}
+\frac{\partial L}{\partial f} \eta d x+\l...</content>
   </entry>
 
   <entry>
@@ -1848,23 +1851,6 @@ In geometry, inversive geometry is the study of those properties of figures that
 are preserved by a generalization of type of transformation of the Euclidean
 plane, called inversion. These transformations preserve angles and map
 generalized circles into generalized circles, where a generali...</content>
-  </entry>
-
-  <entry>
-    <title>Set Theory</title>
-    <link href="/math/math-philosophy-theory-set.html"/>
-    <updated>2019-08-07T00:00:00+09:00</updated>
-    <id>/math/math-philosophy-theory-set</id>
-    <content type="html">
-Dense set
-Dense set: a subset A of a topological space X is called dense in(X) if every point x in X either belongs to A or is a limit point of A. 
-the closure of A is constiuting the whole set X.
-
-Examples
-The rational numbers are a dense subset of real numbers.
-
-Nowhere dense set
-In mathematic...</content>
   </entry>
 
   <entry>
@@ -4213,84 +4199,9 @@ examine variable values and stack traces.
   </entry>
 
   <entry>
-    <title>CMake: Introduction</title>
-    <link href="/pl/pl-script-cmake-intro.html"/>
-    <updated>2018-11-27T00:00:00+09:00</updated>
-    <id>/pl/pl-script-cmake-intro</id>
-    <content type="html">
-Organization
-
-  CMake input files are written in the “CMake Language” in source files named
-CMakeLists.txt or ending in a .cmake file name extension. CMake
-Language source files in a project are organized into:
-    
-      Directories
-      Scripts
-      Modules
-    
-  
-
-
-CMake
-
-  You must treat ...</content>
-  </entry>
-
-  <entry>
-    <title>CMake: Concept</title>
-    <link href="/pl/pl-script-cmake-concept.html"/>
-    <updated>2018-11-26T00:00:00+09:00</updated>
-    <id>/pl/pl-script-cmake-concept</id>
-    <content type="html">
-####
-
-  CMake’s execution begins by creating an instance of the cmake class and
-passing the command line arguments to it.
-
-</content>
-  </entry>
-
-  <entry>
-    <title>CMake: Syntax</title>
-    <link href="/pl/pl-script-cmake-syntax.html"/>
-    <updated>2018-11-25T00:00:00+09:00</updated>
-    <id>/pl/pl-script-cmake-syntax</id>
-    <content type="html">Syntax
-
-  CMakeLists files follow a simple syntax consisting of comments, commands, and
-white space
-  A command: consists of the command name, opening parenthesis, white space
-separated arguments and a closing parenthesis.
-  All white space are ignored except to separated arguments.
-
-
-Variable
-
- ...</content>
-  </entry>
-
-  <entry>
-    <title>Algorithm: Intersection of Two Line</title>
-    <link href="/pl-algorithm-cross-point-two-line.html"/>
-    <updated>2018-11-20T00:00:00+09:00</updated>
-    <id>/pl-algorithm-cross-point-two-line</id>
-    <content type="html">
-Crap
-This is a very common question, but it is not simple.
-
-Solution
-
-  we use vector coordinate to solve this problem.
-  Given the two line, suppose they have intersect point
-  We can obtain the intersection point.
-  The last step is to determine weather this point is on the line
-  we can again...</content>
-  </entry>
-
-  <entry>
     <title>PL: Regular Expression</title>
     <link href="/pl/pl-regular-expression.html"/>
-    <updated>2018-10-13T00:00:00+09:00</updated>
+    <updated>2018-12-09T00:00:00+09:00</updated>
     <id>/pl/pl-regular-expression</id>
     <content type="html">
 1. Introcuction
@@ -4340,6 +4251,44 @@ own suffixed
   </entry>
 
   <entry>
+    <title>CMake: Introduction</title>
+    <link href="/pl/pl-script-cmake-intro.html"/>
+    <updated>2018-10-03T00:00:00+09:00</updated>
+    <id>/pl/pl-script-cmake-intro</id>
+    <content type="html">
+Organization
+
+  CMake input files are written in the “CMake Language” in source files named
+CMakeLists.txt or ending in a .cmake file name extension. CMake
+Language source files in a project are organized into:
+    
+      Directories
+      Scripts
+      Modules
+    
+  
+
+
+CMake
+
+  You must treat ...</content>
+  </entry>
+
+  <entry>
+    <title>CMake: Concept</title>
+    <link href="/pl/pl-script-cmake-concept.html"/>
+    <updated>2018-10-02T00:00:00+09:00</updated>
+    <id>/pl/pl-script-cmake-concept</id>
+    <content type="html">
+####
+
+  CMake’s execution begins by creating an instance of the cmake class and
+passing the command line arguments to it.
+
+</content>
+  </entry>
+
+  <entry>
     <title>CMake: System Inspection</title>
     <link href="/pl/pl-script-cmake-system-insepction.html"/>
     <updated>2018-10-01T00:00:00+09:00</updated>
@@ -4359,6 +4308,25 @@ find_package
   find_package is supposed to work with Find&amp;lt;package&amp;gt;.cmake module
   The purpose of the file is to define the search rules for the package and set
 different variables, such as &amp;lt;package&amp;gt;_FOUND, &amp;lt;package&amp;gt...</content>
+  </entry>
+
+  <entry>
+    <title>CMake: Syntax</title>
+    <link href="/pl/pl-script-cmake-syntax.html"/>
+    <updated>2018-10-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-cmake-syntax</id>
+    <content type="html">Syntax
+
+  CMakeLists files follow a simple syntax consisting of comments, commands, and
+white space
+  A command: consists of the command name, opening parenthesis, white space
+separated arguments and a closing parenthesis.
+  All white space are ignored except to separated arguments.
+
+
+Variable
+
+ ...</content>
   </entry>
 
   <entry>
@@ -4389,22 +4357,23 @@ target_link_libraries(untitled ${FOO_LIBRARIES})
   </entry>
 
   <entry>
-    <title>CMake: Compile Features</title>
+    <title>CMake: Compiler Setting</title>
     <link href="/pl/pl-script-cmake-compile-features.html"/>
     <updated>2018-10-01T00:00:00+09:00</updated>
     <id>/pl/pl-script-cmake-compile-features</id>
     <content type="html">
-Using Command Line
+Method
 
-cmake -DCMAKE_CXX_COMPILER=clang++ -DCMAKE_C_COMPILER=clang
-
-
-Setting in CMakeLists.txt
-
-set(CMAKE_CXX_STANDARD 11)
+  Generator can specify the compiler, some generators are tied to a specific
+compiler.
+  Set  environment variable
+  cache entry
 
 
-</content>
+CMake will try a list of usual compilers until it finds a working compiler, the
+list can be found in the files
+
+/usr/local/Cellar/cmake/3.17.3/share/cmake/Mo...</content>
   </entry>
 
   <entry>
@@ -4967,20 +4936,17 @@ int main(){
     <updated>2018-09-12T00:00:00+09:00</updated>
     <id>/pl/pl-compile-c++-function-parameter</id>
     <content type="html">
-Parameter Passing
+1. Introduction
+The semantics of argument passing are identical to the semantics of copy
+initialization, I read this in a book called “A Tour of C++”
+
+2. Parameter Passing
 
   pass by value
   pass by reference
     
       pass by reference is a grammer sugar, references are implemented using
-pointers. I think the reason they invite reference, because they don’t c++ be
-taken over by other programming language.
-    
-  
-  pass by address
-
-
-How to Choo...</content>
+point...</content>
   </entry>
 
   <entry>
@@ -5260,6 +5226,31 @@ keyword, and the reason is I don’t understand C++
 Shallow Copy Constructor
 
 </content>
+  </entry>
+
+  <entry>
+    <title>C++ OOP: Copy Constructor</title>
+    <link href="/pl/pl-compile-c++-oop-constructor-copy.html"/>
+    <updated>2018-09-10T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-oop-constructor-copy</id>
+    <content type="html">Introduction
+
+  When we care about copy constructor, during argument passing,
+because argument passing will call copy constructor.
+
+
+#include&amp;lt;iostream&amp;gt;
+
+class student
+{
+	public:
+		student()
+		{
+			std::cout&amp;lt;&amp;lt;&quot;call constructor&quot;&amp;lt;&amp;lt;std::endl;
+		}
+		student(const student&amp;amp; s)
+		{
+...</content>
   </entry>
 
   <entry>
@@ -6268,6 +6259,29 @@ step 1: prepare the dataset
 
 @article{liu2015comparison,
   title={Com...</content>
+  </entry>
+
+  <entry>
+    <title> Jekyll</title>
+    <link href="/pl/pl-script-jekyll.html"/>
+    <updated>2018-04-16T00:00:00+09:00</updated>
+    <id>/pl/pl-script-jekyll</id>
+    <content type="html">
+Jekyll
+
+  jekyll server
+  jekyll serve –host=0.0.0.0
+    
+      This will make Jekyll’s HTTP server bind to all available IPs.
+    
+  
+
+
+Reference
+
+  Connect to a locally build Server
+
+</content>
   </entry>
 
   <entry>
@@ -7928,6 +7942,44 @@ fault...</content>
   </entry>
 
   <entry>
+    <title>OS: Terminology</title>
+    <link href="/os/os-terminology.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/os/os-terminology</id>
+    <content type="html">
+Buffer and Cache
+
+  Buffer means: memory or data storage that is used to compensate for the
+differences in speed between processes or devices that exchange data.
+  Cache means: memory or data storage that is designed to store frequently
+accessed data to improve the speed of services.
+
+</content>
+  </entry>
+
+  <entry>
+    <title>OS: Summary</title>
+    <link href="/os/os-summary.html"/>
+    <updated>2018-03-01T00:00:00+09:00</updated>
+    <id>/os/os-summary</id>
+    <content type="html">
+intro
+学习mac，需要知道linux的设计哲学，Linux本质上是一个用户服务器模式，tmux借鉴了linux的设计模式，也是一个c/s架构的模式。
+在linux中，最重要的概念是用户和组
+
+
+
+####
+隐藏文件在finder不可见
+defaults write com.apple.finder AppleShowAllFiles -bool false
+
+隐藏文件在finder中可见
+defaults write com.apple.finder AppleShowAllFiles -bool true
+
+在finder的偏好设置中，可以选择在桌面显示或者隐藏，硬盘，外置磁盘...</content>
+  </entry>
+
+  <entry>
     <title>OS: Threads</title>
     <link href="/os/os-threads.html"/>
     <updated>2018-02-25T00:00:00+09:00</updated>
@@ -7984,28 +8036,6 @@ Operating System.
 file, we had to run a lot of system calls. Many system calls were executed in
 the process.
       These calls are ...</content>
-  </entry>
-
-  <entry>
-    <title>OS: Summary</title>
-    <link href="/os/os-summary.html"/>
-    <updated>2018-02-25T00:00:00+09:00</updated>
-    <id>/os/os-summary</id>
-    <content type="html">
-intro
-学习mac，需要知道linux的设计哲学，Linux本质上是一个用户服务器模式，tmux借鉴了linux的设计模式，也是一个c/s架构的模式。
-在linux中，最重要的概念是用户和组
-
-
-
-####
-隐藏文件在finder不可见
-defaults write com.apple.finder AppleShowAllFiles -bool false
-
-隐藏文件在finder中可见
-defaults write com.apple.finder AppleShowAllFiles -bool true
-
-在finder的偏好设置中，可以选择在桌面显示或者隐藏，硬盘，外置磁盘...</content>
   </entry>
 
   <entry>
@@ -8128,10 +8158,72 @@ up or rebooted...</content>
   </entry>
 
   <entry>
-    <title>Management: User</title>
-    <link href="/os/os-management-user.html"/>
+    <title>OS: Kernel</title>
+    <link href="/os/os-kernel.html"/>
     <updated>2018-02-25T00:00:00+09:00</updated>
-    <id>/os/os-management-user</id>
+    <id>/os/os-kernel</id>
+    <content type="html">
+Kernel
+
+  linux
+  Mach
+  BSD
+  XNU: kernel of Darwin
+
+
+OS
+
+  GNU/linux
+  Windows
+  Mac OS
+
+</content>
+  </entry>
+
+  <entry>
+    <title>OS: Directory Hierarch</title>
+    <link href="/os/os-directory-structure.html"/>
+    <updated>2018-02-25T00:00:00+09:00</updated>
+    <id>/os/os-directory-structure</id>
+    <content type="html">
+proc
+
+  linux提供了一种通过/proc文件系统，在运行时访问内核内部数据结构，改变内核设置的机制。
+  proc文件系统是一个伪文件系统，只存在内存中，不占用外存空间
+  /proc下有三个很重要的目录，net，scsi和sys；sys是可写的，可以通过它来访问或者修改内核参数
+
+
+常用设置
+# 关闭icmp协议
+sysctl -w net.ipv4.icmp_echo_ignore_all=1
+
+
+Galois
+
+  The directory structure of an operating system must have hierarch
+property, be...</content>
+  </entry>
+
+  <entry>
+    <title>OS: Computer System Architecture</title>
+    <link href="/os/os-computer-system-architecture.html"/>
+    <updated>2018-02-25T00:00:00+09:00</updated>
+    <id>/os/os-computer-system-architecture</id>
+    <content type="html">
+Galois
+
+  For a long time, I have no idea what how does computer work. What the hell is
+a CPU ?  If you have any questions about anything, No back how fancy they
+look like ? Just go back to the history where it started. Figure about how
+everything evolved.
+  computer is supposed to do some compu...</content>
+  </entry>
+
+  <entry>
+    <title>Linux: User Management</title>
+    <link href="/os/os-linux-user-management.html"/>
+    <updated>2018-02-22T00:00:00+09:00</updated>
+    <id>/os/os-linux-user-management</id>
     <content type="html">
 说明
 该文件只能使用visudo命令打开编辑，如果有语法错误，则不能保存
@@ -8160,124 +8252,10 @@ usermod -aG docker $USER
   </entry>
 
   <entry>
-    <title>Management: Access</title>
-    <link href="/os/os-management-access.html"/>
-    <updated>2018-02-25T00:00:00+09:00</updated>
-    <id>/os/os-management-access</id>
-    <content type="html">
-功能
-在linux系统中，默认只有三种权限，文件夹的所有者，所属组，非所有者所属组用户,
-这样的分组在复杂的文件权限管理中是无法使用的，acl就是为了弥补这一缺陷而存在。
-
-
-查看磁盘是否开启acl权限
-# dumpe2fs 查询指定分区详细文件系统信息的命令
-dumpe2fs -h /dev/vda1 | grep mount options:
-# user_xattr acl 磁盘开启了acl权限
-
-
-设置acl权限
-# 为文件设置acl权限后，使用ls -l查看文件信息,后面多了一个加号
-# -rw-rwxr--+ 1 hy   hy    379 2月  23 20:09 do...</content>
-  </entry>
-
-  <entry>
-    <title>MacOS Software</title>
-    <link href="/os/os-macOS-software.html"/>
-    <updated>2018-02-25T00:00:00+09:00</updated>
-    <id>/os/os-macOS-software</id>
-    <content type="html">
-VLC视频播放器
-
-
-  open-source
-  support multiplatform
-
-
-Mathpix Snipping Tool
-
-
-  translate formul
-
-
-Mac OS Safari
-
-  User Agent String is to detect Internet Explore Version, For IE7, you can set like this Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)
-
-
-Mac OS Finder
-
-  If you mac can’t connect ...</content>
-  </entry>
-
-  <entry>
-    <title>MacOS: Software Management</title>
-    <link href="/os/os-macOS-software-management.html"/>
-    <updated>2018-02-25T00:00:00+09:00</updated>
-    <id>/os/os-macOS-software-management</id>
-    <content type="html">
-xcode-select
-
-  Manages the active developer directory for Xcode and BSD tools.
-
-
-xcode-select --install
-# Opens a user interface dialog to request automatic insallation of the command
-line developer tools.
-
-Relationship
-
-  brew is a command, it needs some environment.
-  xcode-select –install pr...</content>
-  </entry>
-
-  <entry>
-    <title>MacOS: ITerm</title>
-    <link href="/os/os-macOS-iterm.html"/>
-    <updated>2018-02-25T00:00:00+09:00</updated>
-    <id>/os/os-macOS-iterm</id>
-    <content type="html">
-####
-
-  ITerm2 is a terminal emulator for MacOS.
-
-
-Galois
-
-  ITerm2, Zsh shell,tmux, vim
-
-
-</content>
-  </entry>
-
-  <entry>
-    <title>Kernel</title>
-    <link href="/os/os-kernel.html"/>
-    <updated>2018-02-25T00:00:00+09:00</updated>
-    <id>/os/os-kernel</id>
-    <content type="html">
-Kernel
-
-  linux
-  Mach
-  BSD
-  XNU: kernel of Darwin
-
-
-OS
-
-  GNU/linux
-  Windows
-  Mac OS
-
-</content>
-  </entry>
-
-  <entry>
-    <title>Management: Access</title>
-    <link href="/os/os-internet-attack.html"/>
-    <updated>2018-02-25T00:00:00+09:00</updated>
-    <id>/os/os-internet-attack</id>
+    <title>Linux: Internet Security</title>
+    <link href="/os/os-linux-internet-attack.html"/>
+    <updated>2018-02-22T00:00:00+09:00</updated>
+    <id>/os/os-linux-internet-attack</id>
     <content type="html">
 fping
 
@@ -8317,42 +8295,75 @@ ncat
   </entry>
 
   <entry>
-    <title>Directory Hierarch</title>
-    <link href="/os/os-directory-structure.html"/>
-    <updated>2018-02-25T00:00:00+09:00</updated>
-    <id>/os/os-directory-structure</id>
+    <title>Linux: Disk Management</title>
+    <link href="/os/os-linux-disk-management.html"/>
+    <updated>2018-02-22T00:00:00+09:00</updated>
+    <id>/os/os-linux-disk-management</id>
     <content type="html">
-proc
-
-  linux提供了一种通过/proc文件系统，在运行时访问内核内部数据结构，改变内核设置的机制。
-  proc文件系统是一个伪文件系统，只存在内存中，不占用外存空间
-  /proc下有三个很重要的目录，net，scsi和sys；sys是可写的，可以通过它来访问或者修改内核参数
+功能
+在linux系统中，默认只有三种权限，文件夹的所有者，所属组，非所有者所属组用户,
+这样的分组在复杂的文件权限管理中是无法使用的，acl就是为了弥补这一缺陷而存在。
 
 
-常用设置
-# 关闭icmp协议
-sysctl -w net.ipv4.icmp_echo_ignore_all=1
+查看磁盘是否开启acl权限
+# dumpe2fs 查询指定分区详细文件系统信息的命令
+dumpe2fs -h /dev/vda1 | grep mount options:
+# user_xattr acl 磁盘开启了acl权限
 
 
-Galois
-
-  The directory structure of an operating system must have hierarch
-property, be...</content>
+设置acl权限
+# 为文件设置acl权限后，使用ls -l查看文件信息,后面多了一个加号
+# -rw-rwxr--+ 1 hy   hy    379 2月  23 20:09 do...</content>
   </entry>
 
   <entry>
-    <title>OS: Computer System Architecture</title>
-    <link href="/os/os-computer-system-architecture.html"/>
-    <updated>2018-02-25T00:00:00+09:00</updated>
-    <id>/os/os-computer-system-architecture</id>
+    <title>MacOS: Software Tips and Tricks</title>
+    <link href="/os/os-macos-software-tips-and-tricks.html"/>
+    <updated>2018-02-20T00:00:00+09:00</updated>
+    <id>/os/os-macos-software-tips-and-tricks</id>
     <content type="html">
-Galois
+VLC视频播放器
 
-  For a long time, I have no idea what how does computer work. What the hell is
-a CPU ?  If you have any questions about anything, No back how fancy they
-look like ? Just go back to the history where it started. Figure about how
-everything evolved.
-  computer is supposed to do some compu...</content>
+
+  open-source
+  support multiplatform
+
+
+Mathpix Snipping Tool
+
+
+  translate formul
+
+
+Mac OS Safari
+
+  User Agent String is to detect Internet Explore Version, For IE7, you can set like this Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)
+
+
+Mac OS Finder
+
+  If you mac can’t connect ...</content>
+  </entry>
+
+  <entry>
+    <title>MacOS: Software Management</title>
+    <link href="/os/os-macos-software-management.html"/>
+    <updated>2018-02-20T00:00:00+09:00</updated>
+    <id>/os/os-macos-software-management</id>
+    <content type="html">
+xcode-select
+
+  Manages the active developer directory for Xcode and BSD tools.
+
+
+xcode-select --install
+# Opens a user interface dialog to request automatic insallation of the command
+line developer tools.
+
+Relationship
+
+  brew is a command, it needs some environment.
+  xcode-select –install pr...</content>
   </entry>
 
   <entry>
@@ -8375,13 +8386,13 @@ Proces...</content>
     <updated>2018-02-19T00:00:00+09:00</updated>
     <id>/os/os-hardware-cpu</id>
     <content type="html">
-J
+Intel
 
   x86 is an Intel CPU architecture that originated with the 16-bit 8086
 processor in 1978. Today, the term “x86” is used generally to refer to any
 32-bit processor compatible with the x86 instruction set.
     
-      In Its 40 years of existence, the x86 architecture has added many new feature...</content>
+      In Its 40 years of existence, the x86 architecture has added many new fea...</content>
   </entry>
 
   <entry>
@@ -8510,6 +8521,39 @@ blameo
 grep
 
 </content>
+  </entry>
+
+  <entry>
+    <title>Algorithm is Art</title>
+    <link href="/cs/computer-science-algorithm-art.html"/>
+    <updated>2018-01-29T00:00:00+09:00</updated>
+    <id>/cs/computer-science-algorithm-art</id>
+    <content type="html">
+A
+
+  When I watch how Abdul Bari write a program, or implement an algorithm! It’s an
+art.  He just do things in such an elegant and natural way.
+
+
+B
+
+  When he implement the BFS algorithm, he write the pseudo code step by step.
+You feel like it’s not difficult, it’s natural, eazy, elegant beauti...</content>
+  </entry>
+
+  <entry>
+    <title>CS: summary</title>
+    <link href="/cs/computer-science-algorithm-summary.html"/>
+    <updated>2018-01-28T00:00:00+09:00</updated>
+    <id>/cs/computer-science-algorithm-summary</id>
+    <content type="html">
+Introduction
+Computer scientists are one of the most talented people in the world, they
+create everything from scratch.
+
+  At the beginning, they want to do something with a computer, they create a
+predefined procedure to let computer do the job.
+  How to define the procedure? I think that’s all...</content>
   </entry>
 
   <entry>
@@ -8960,29 +9004,6 @@ class my_queue
   </entry>
 
   <entry>
-    <title> Jekyll</title>
-    <link href="/pl/pl-script-jekyll.html"/>
-    <updated>2018-01-16T00:00:00+09:00</updated>
-    <id>/pl/pl-script-jekyll</id>
-    <content type="html">
-Jekyll
-
-  jekyll server
-  jekyll serve –host=0.0.0.0
-    
-      This will make Jekyll’s HTTP server bind to all available IPs.
-    
-  
-
-
-Reference
-
-  Connect to a locally build Server
-
-</content>
-  </entry>
-
-  <entry>
     <title>A.D.T.: Stack</title>
     <link href="/cs/computer-science-abstract-data-type-stack.html"/>
     <updated>2018-01-15T00:00:00+09:00</updated>
@@ -9083,59 +9104,6 @@ void insert(struct node&amp;amp; customer,struct node * hash_chaining[])
 can write programs that grab blocks of memory on the fly, link them into
 useful strucures, and clean everything at the end so there is no residue,
 you’re not just someone who can do a little coding, you’re a pro...</content>
-  </entry>
-
-  <entry>
-    <title>Jump Game</title>
-    <link href="/cs/computer-science-problem-jump-game.html"/>
-    <updated>2018-01-08T00:00:00+09:00</updated>
-    <id>/cs/computer-science-problem-jump-game</id>
-    <content type="html">
-####
-
-  Given an array of non-negative integers, you are initially positioned at the
-first index of the array.
-  Each element in the array represents your maximum jump length at that
-position.
-  Determine if you are able to reach the last index.
-
-
-
-public class Solution{
-    public static boolea...</content>
-  </entry>
-
-  <entry>
-    <title>Summary: Algorithm</title>
-    <link href="/cs/computer-science-algorithm-summary.html"/>
-    <updated>2018-01-08T00:00:00+09:00</updated>
-    <id>/cs/computer-science-algorithm-summary</id>
-    <content type="html">
-Introduction
-Computer scientists are one of the most talented people in the world, they
-create everything from scratch.
-
-  At the beginning, they want to do something with a computer, they create a
-predefined procedure to let computer do the job.
-  How to define the procedure? I think that’s all...</content>
-  </entry>
-
-  <entry>
-    <title>Algorithm is Art</title>
-    <link href="/cs/computer-science-algorithm-art.html"/>
-    <updated>2018-01-08T00:00:00+09:00</updated>
-    <id>/cs/computer-science-algorithm-art</id>
-    <content type="html">
-A
-
-  When I watch how Abdul Bari write a program, or implement an algorithm! It’s an
-art.  He just do things in such an elegant and natural way.
-
-
-B
-
-  When he implement the BFS algorithm, he write the pseudo code step by step.
-You feel like it’s not difficult, it’s natural, eazy, elegant beauti...</content>
   </entry>
 
   <entry>
@@ -9767,6 +9735,40 @@ Galois
   </entry>
 
   <entry>
+    <title>A.P.: Selection Sort</title>
+    <link href="/cs/computer-science-algorithm-problem-sort-selection.html"/>
+    <updated>2018-01-01T00:00:00+09:00</updated>
+    <id>/cs/computer-science-algorithm-problem-sort-selection</id>
+    <content type="html">
+A
+
+#include &amp;lt;iostream&amp;gt;
+void swap(int &amp;amp;a, int &amp;amp;b)
+{
+	int temp = b;
+	b = a;
+	a =temp;
+}
+
+void selection_sort(int a[])
+{
+
+	for(int j=0;j&amp;lt;7;j++)
+	{
+		for(int i=j+1;i&amp;lt;8;i++)
+		{
+			if(a[j]&amp;gt;a[i]){swap(a[j],a[i]);}
+		}
+	}
+}
+
+int main()
+{
+	int a[8]={4,2,7,1,9,12,0,5};
+	selection_s...</content>
+  </entry>
+
+  <entry>
     <title>A.P.: Quick Sort</title>
     <link href="/cs/computer-science-algorithm-problem-sort-quicksort.html"/>
     <updated>2018-01-01T00:00:00+09:00</updated>
@@ -9793,7 +9795,7 @@ void swap(int &amp;amp;a, int&amp;amp; b)
   </entry>
 
   <entry>
-    <title>Sort: Mergesort</title>
+    <title>A.P.: Mergesort</title>
     <link href="/cs/computer-science-algorithm-problem-sort-merge-implementation.html"/>
     <updated>2018-01-01T00:00:00+09:00</updated>
     <id>/cs/computer-science-algorithm-problem-sort-merge-implementation</id>
@@ -9885,6 +9887,26 @@ Dynamic Programing(Bottom Up Problem)
       6
       7
  ...</content>
+  </entry>
+
+  <entry>
+    <title>A.P. Jump Game</title>
+    <link href="/cs/computer-science-algorithm-problem-jump-game.html"/>
+    <updated>2018-01-01T00:00:00+09:00</updated>
+    <id>/cs/computer-science-algorithm-problem-jump-game</id>
+    <content type="html">
+####
+
+  Given an array of non-negative integers, you are initially positioned at the
+first index of the array.
+  Each element in the array represents your maximum jump length at that
+position.
+  Determine if you are able to reach the last index.
+
+
+
+public class Solution{
+    public static boolea...</content>
   </entry>
 
   <entry>
