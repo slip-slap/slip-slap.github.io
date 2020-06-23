@@ -22,7 +22,6 @@ set(CMAKE_CXX_STANDARD 11)
 ADD_SUBDIRECTORY(googletest)
 enable_testing()
 include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
-
 add_executable(app main.cpp )
 target_link_libraries(app gtest gtest_main)
 add_test(app app)

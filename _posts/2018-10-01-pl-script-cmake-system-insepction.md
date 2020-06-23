@@ -29,7 +29,18 @@ tags: ["cmake","script"]
    different variables, such as \<package\>\_FOUND, \<package\>\_INCLUDE_DIRS
    and \<package\>\_LIBRARIES.
 
+#### Default
+1. After you install boost, it will generate boost-related file under 
+**/usr/local/lib/cmake/Boost-1.72.0**
+2. When you write the following code in **CMakeLists.txt**, it will go to find
+   related cmake file, for example **BoostConfig.cmake** or  **BoostConfigVersion.cmake**
 
+```cmake
+find_package(Boost 1.72.0 COMPONENTS locale)
+```
+
+
+##### 2.Self-define
 - CMakeLists.txt
 
 ```cmake

@@ -1,0 +1,24 @@
+I"¿
+<h4 id="cmake-configuration">CMake configuration</h4>
+
+<div class="language-cmake highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cmake_minimum_required</span><span class="p">(</span>VERSION 3.10<span class="p">)</span>
+
+<span class="nb">project</span><span class="p">(</span>hello_world<span class="p">)</span>
+
+<span class="nb">set</span><span class="p">(</span>CMAKE_C_STANDARD 99<span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span>CMAKE_CXX_STANDARD 11<span class="p">)</span>
+
+<span class="c1">#GTest</span>
+<span class="nf">ADD_SUBDIRECTORY</span><span class="p">(</span>googletest<span class="p">)</span>
+<span class="nb">enable_testing</span><span class="p">()</span>
+<span class="nb">include_directories</span><span class="p">(</span><span class="si">${</span><span class="nv">gtest_SOURCE_DIR</span><span class="si">}</span>/include <span class="si">${</span><span class="nv">gtest_SOURCE_DIR</span><span class="si">}</span><span class="p">)</span>
+<span class="nb">add_executable</span><span class="p">(</span>app main.cpp <span class="p">)</span>
+<span class="nb">target_link_libraries</span><span class="p">(</span>app gtest gtest_main<span class="p">)</span>
+<span class="nb">add_test</span><span class="p">(</span>app app<span class="p">)</span>
+</code></pre></div></div>
+
+<h4 id="reference">reference</h4>
+<ol>
+  <li><a href="https://github.com/google/googletest">googletest</a></li>
+</ol>
+:ET

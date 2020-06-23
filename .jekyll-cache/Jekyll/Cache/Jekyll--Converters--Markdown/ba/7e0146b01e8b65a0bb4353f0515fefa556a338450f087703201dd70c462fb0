@@ -1,0 +1,77 @@
+I"�"
+<h4 id="with-selection-sort">with selection sort</h4>
+<ol>
+  <li>Selection sort is given the position, find the value.</li>
+  <li>Quick sort is given the value, find the position.</li>
+</ol>
+
+<h4 id="code-implementation">Code Implementation</h4>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include&lt;iostream&gt;
+</span>
+<span class="kt">void</span> <span class="nf">swap</span><span class="p">(</span><span class="kt">int</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="kt">int</span><span class="o">&amp;</span> <span class="n">b</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="kt">int</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
+	<span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
+	<span class="n">a</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// I don't buy this name, finding position is a better name.</span>
+<span class="kt">int</span> <span class="nf">partition</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">[],</span><span class="kt">int</span> <span class="n">low</span><span class="p">,</span> <span class="kt">int</span> <span class="n">high</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="kt">int</span> <span class="n">key</span><span class="o">=</span><span class="n">a</span><span class="p">[</span><span class="n">low</span><span class="p">];</span>
+	<span class="kt">int</span> <span class="n">head</span> <span class="o">=</span> <span class="n">low</span><span class="p">;</span>
+	<span class="k">while</span><span class="p">(</span><span class="n">low</span><span class="o">&lt;</span><span class="n">high</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="c1">// the rule is very simple, but you just need do some paperwork</span>
+		<span class="c1">// but you should take care</span>
+		<span class="c1">// Step 1: move the pointer, remember where the pointer stop</span>
+		<span class="c1">// Step 2: do operation</span>
+		<span class="c1">// pointer stop at position which value greater then key;</span>
+		<span class="k">while</span><span class="p">(</span><span class="n">key</span><span class="o">&gt;=</span><span class="n">a</span><span class="p">[</span><span class="n">low</span><span class="p">]){</span><span class="n">low</span><span class="o">++</span><span class="p">;}</span>
+		<span class="c1">// pointer stop at posistion which value equal or less than key;</span>
+		<span class="k">while</span><span class="p">(</span><span class="n">key</span><span class="o">&lt;</span><span class="n">a</span><span class="p">[</span><span class="n">high</span><span class="p">]){</span><span class="n">high</span><span class="o">--</span><span class="p">;}</span>
+		<span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">low</span><span class="p">]</span><span class="o">&gt;</span><span class="n">a</span><span class="p">[</span><span class="n">high</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="n">low</span><span class="o">&lt;</span><span class="n">high</span><span class="p">){</span><span class="n">swap</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">low</span><span class="p">],</span><span class="n">a</span><span class="p">[</span><span class="n">high</span><span class="p">]);}</span>
+	<span class="p">}</span>
+	<span class="n">swap</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">head</span><span class="p">],</span><span class="n">a</span><span class="p">[</span><span class="n">high</span><span class="p">]);</span>
+	<span class="k">return</span> <span class="n">high</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">quick_sort</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">[],</span><span class="kt">int</span> <span class="n">low</span><span class="p">,</span> <span class="kt">int</span> <span class="n">high</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="k">if</span><span class="p">(</span><span class="n">low</span> <span class="o">&gt;=</span> <span class="n">high</span><span class="p">){</span><span class="k">return</span><span class="p">;}</span>
+	<span class="k">if</span><span class="p">(</span><span class="n">low</span> <span class="o">&lt;</span> <span class="n">high</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="kt">int</span> <span class="n">partition_position</span> <span class="o">=</span> <span class="n">partition</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">low</span><span class="p">,</span> <span class="n">high</span><span class="p">);</span>
+		<span class="n">quick_sort</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">low</span><span class="p">,</span><span class="n">partition_position</span><span class="p">);</span>
+		<span class="n">quick_sort</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">partition_position</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">high</span><span class="p">);</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="kt">int</span> <span class="n">A</span><span class="p">[</span><span class="mi">12</span><span class="p">]</span><span class="o">=</span><span class="p">{</span><span class="mi">12</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">1</span><span class="p">};</span>
+	<span class="kt">int</span> <span class="n">B</span><span class="p">[</span><span class="mi">13</span><span class="p">]</span><span class="o">=</span><span class="p">{</span><span class="mi">12</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">100000000</span><span class="p">};</span>
+
+	<span class="n">quick_sort</span><span class="p">(</span><span class="n">B</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">12</span><span class="p">);</span>
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">13</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">B</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h4 id="galois">Galois</h4>
+<ol>
+  <li>When you use recursive, never go into that recursive loop;</li>
+  <li>Just one thing to keep in mind, each time you call the recursive function,
+the call parameter is always the same.</li>
+  <li>
+    <p>when we create tree or linked list by recursive function, there are two
+parameters, every time we keep the call like the previous one.</p>
+  </li>
+  <li>Here, we have three parameters. It’s always the same, <strong>repeat the routine.
+It’s simple, repeat the routine</strong>.</li>
+</ol>
+
+:ET
