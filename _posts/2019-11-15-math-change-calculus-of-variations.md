@@ -8,7 +8,7 @@ tags: ["change","F.A."]
 ---
 {% include JB/setup %}
 
-$$
+$
 \begin{aligned}\left.\int_{x_{1}}^{x_{2}} \frac{d L}{d
 \varepsilon}\right|_{\varepsilon=0} d x
 &=\int_{x_{1}}^{x_{2}}\left(\frac{\partial L}{\partial f} \eta+\frac{\partial
@@ -18,7 +18,7 @@ f^{\prime}} \eta\right|_{x_{1}} ^{x_{2}}-\int_{x_{1}}^{x_{2}} \eta \frac{d}{d x}
 \frac{\partial L}{\partial f^{\prime}} d x \\
 &=\int_{x_{1}}^{x_{2}}\left(\frac{\partial L}{\partial f} \eta-\eta \frac{d}{d
 x} \frac{\partial L}{\partial f^{\prime}}\right) d x \end{aligned}
-$$
+$
 
 
 #### Galois

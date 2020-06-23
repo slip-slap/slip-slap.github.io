@@ -8,7 +8,7 @@ tags: []
 ---
 {% include JB/setup %}
 
-#### J
+#### Intel
 1. x86 is an Intel CPU architecture that originated with the 16-bit 8086
    processor in 1978. Today, the term "x86" is used generally to refer to any
    32-bit processor compatible with the x86 instruction set.
@@ -16,3 +16,7 @@ tags: []
   while remaining almost entirely backward-compatible, which is a achievement.
 
 2. x86\_64: 
+
+
+#### ARM
+Advanced RISC(Reduced instruction set computing) Machine

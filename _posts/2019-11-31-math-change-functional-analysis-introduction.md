@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "newton's method"
+title: "F.A.: Newton's method"
 keywords: ["analysis"]
 description: ""
 category: "math"
@@ -13,7 +13,7 @@ tags: ["apply"]
 1. In 2-dimensional plane coordinate, we have distance concept, which is very eazy to understand.
 2. According to this concept, we can define continuity <br />
 $$
-\left|x-x_{0}\right|<\delta \Rightarrow\left|f(x)-f\left(x_{0}\right)\right|<\varepsilon
+|x-x_{0}|<\delta |f(x)-f(x_{0})|<\varepsilon
 $$
 This rule can be applied to n-dimensional space, so we can define open ball
 3. we abstract the open ball concept as open set

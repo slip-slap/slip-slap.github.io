@@ -1,0 +1,126 @@
+I"�
+<h4 id="1-introduction">1. Introduction</h4>
+<p><strong>The semantics of argument passing are identical to the semantics of copy
+initialization</strong>, I read this in a book called “A Tour of C++”</p>
+
+<h4 id="2-parameter-passing">2. Parameter Passing</h4>
+<ol>
+  <li>pass by value</li>
+  <li>pass by reference
+    <ul>
+      <li>pass by reference is a grammer sugar, references are implemented using
+pointers. I think the reason they invite reference, because they don’t c++ be
+taken over by other programming language.</li>
+    </ul>
+  </li>
+  <li>pass by address</li>
+</ol>
+
+<h4 id="how-to-choose">How to Choose</h4>
+<ol>
+  <li>Use references when you can, and pointers when you have to.</li>
+</ol>
+
+<h4 id="1-arrays">1. Arrays</h4>
+<ol>
+  <li>Arrays can only be passed by address</li>
+  <li>for the formal parameters in foo, you can replace <strong>a[]</strong> with <strong>*a</strong>, it
+still means the same thing.
+    <ul>
+      <li><strong>int a[]</strong> can only be used to point to array.</li>
+      <li><strong>*a</strong> can be used to point an integer.</li>
+    </ul>
+  </li>
+</ol>
+
+<pre><code class="language-code">#include &lt;iostream&gt;
+void foo(int a[], int n){
+//void foo(int* a, int n){
+    for(int i=0; i&lt;n; i++){
+        std::cout&lt;&lt;a[i];
+    }
+}
+
+int main(){
+  int a[5] = {2,4,1,6,4};
+  foo(a, 5);
+}
+</code></pre>
+
+<p><img src="/images/pl-cpp-function-parameter-array.png" /></p>
+
+<h4 id="return-value">Return value</h4>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="cp">#include &lt;iostream&gt;
+</span><span class="kt">int</span> <span class="o">*</span> <span class="nf">foo</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">){</span>
+    <span class="kt">int</span> <span class="o">*</span><span class="n">a</span><span class="p">;</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="n">n</span><span class="o">*</span><span class="k">sizeof</span><span class="p">(</span><span class="n">n</span><span class="p">));</span>
+    <span class="k">return</span> <span class="n">a</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+  <span class="kt">int</span> <span class="o">*</span><span class="n">p</span><span class="p">;</span>
+  <span class="n">p</span> <span class="o">=</span> <span class="n">foo</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p><img src="/images/pl-cpp-function-parameter-array-return-value.png" /></p>
+
+<h4 id="2-struct">2. Struct</h4>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="cp">#include &lt;sys/types.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;iostream&gt;
+</span>
+<span class="k">struct</span> <span class="nc">rectangle</span>
+<span class="p">{</span>
+	<span class="kt">int</span> <span class="n">length</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">width</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="k">class</span> <span class="nc">triangle</span>
+<span class="p">{</span>
+	<span class="nl">public:</span>
+		<span class="kt">int</span> <span class="n">length</span><span class="p">;</span>
+		<span class="kt">int</span> <span class="n">width</span><span class="p">;</span>
+	<span class="n">triangle</span><span class="p">(</span><span class="kt">int</span> <span class="n">length</span><span class="p">,</span> <span class="kt">int</span> <span class="n">width</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="k">this</span><span class="o">-&gt;</span><span class="n">length</span> <span class="o">=</span> <span class="n">length</span><span class="p">;</span>
+		<span class="k">this</span><span class="o">-&gt;</span><span class="n">width</span> <span class="o">=</span> <span class="n">width</span><span class="p">;</span>
+	<span class="p">}</span>
+
+<span class="p">};</span>
+
+<span class="kt">void</span> <span class="nf">test_parameter_pass_by_struct</span><span class="p">(</span><span class="k">struct</span> <span class="nc">rectangle</span> <span class="o">*</span> <span class="k">const</span> <span class="n">rec</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="n">rec</span><span class="o">-&gt;</span><span class="n">length</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+	<span class="n">rec</span><span class="o">-&gt;</span><span class="n">width</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"length is "</span><span class="o">&lt;&lt;</span><span class="n">rec</span><span class="o">-&gt;</span><span class="n">length</span><span class="o">&lt;&lt;</span><span class="s">" width is "</span><span class="o">&lt;&lt;</span> <span class="n">rec</span><span class="o">-&gt;</span><span class="n">width</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">test_parameter_pass_by_class</span><span class="p">(</span><span class="n">triangle</span> <span class="o">&amp;</span><span class="n">tri</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="n">tri</span><span class="p">.</span><span class="n">length</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+	<span class="n">tri</span><span class="p">.</span><span class="n">width</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"length is "</span><span class="o">&lt;&lt;</span><span class="n">tri</span><span class="p">.</span><span class="n">length</span><span class="o">&lt;&lt;</span><span class="s">" width is "</span><span class="o">&lt;&lt;</span> <span class="n">tri</span><span class="p">.</span><span class="n">width</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+
+	<span class="n">triangle</span> <span class="n">tri</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+	<span class="n">test_parameter_pass_by_class</span><span class="p">(</span><span class="n">tri</span><span class="p">);</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"length is "</span><span class="o">&lt;&lt;</span><span class="n">tri</span><span class="p">.</span><span class="n">length</span><span class="o">&lt;&lt;</span><span class="s">" width is "</span><span class="o">&lt;&lt;</span> <span class="n">tri</span><span class="p">.</span><span class="n">width</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+</code></pre></div></div>
+
+<h4 id="galois">Galois</h4>
+<ol>
+  <li>In C and C++, array can only be passed by address, this is mandatory.</li>
+  <li>How parameter is passed. The most important thing about a function.</li>
+</ol>
+
+:ET

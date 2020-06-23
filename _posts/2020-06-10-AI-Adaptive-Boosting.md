@@ -3,7 +3,7 @@ layout: post
 title: "Adaptive Boosting"
 keywords: []
 description: ""
-category: "CS"
+category: "AI"
 tags: []
 ---
 {% include JB/setup %}

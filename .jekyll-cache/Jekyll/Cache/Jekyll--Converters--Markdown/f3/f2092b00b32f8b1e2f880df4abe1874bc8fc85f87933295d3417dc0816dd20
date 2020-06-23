@@ -1,0 +1,30 @@
+I"“<h4 id="introduction">Introduction</h4>
+<ol>
+  <li>When we care about copy constructor, during argument passing,
+because argument passing will call copy constructor.</li>
+</ol>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include&lt;iostream&gt;
+</span>
+<span class="k">class</span> <span class="nc">student</span>
+<span class="p">{</span>
+	<span class="nl">public:</span>
+		<span class="n">student</span><span class="p">()</span>
+		<span class="p">{</span>
+			<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"call constructor"</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+		<span class="p">}</span>
+		<span class="n">student</span><span class="p">(</span><span class="k">const</span> <span class="n">student</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">)</span>
+		<span class="p">{</span>
+			<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"call copy constructor"</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+		<span class="p">}</span>
+<span class="p">};</span>
+
+<span class="kt">void</span> <span class="nf">get_student_name</span><span class="p">(</span><span class="n">student</span> <span class="n">s</span><span class="p">){}</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="n">student</span> <span class="n">s1</span><span class="p">;</span>
+	<span class="n">get_student_name</span><span class="p">(</span><span class="n">s1</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+:ET

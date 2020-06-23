@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Sort: Mergesort"
+title: "A.P.: Mergesort"
 keywords: []
 description: ""
 category: "CS"
-tags: ["sort","Algorithm"]
+tags: ["A.P.","Algorithm"]
 ---
 {% include JB/setup %}
 

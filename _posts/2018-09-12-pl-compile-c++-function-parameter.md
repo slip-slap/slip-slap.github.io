@@ -8,7 +8,12 @@ tags: ["c++","compile"]
 --- 
 {% include JB/setup %}
 
-#### Parameter Passing
+#### 1. Introduction
+**The semantics of argument passing are identical to the semantics of copy
+initialization**, I read this in a book called "A Tour of C++"
+
+
+#### 2. Parameter Passing
 1. pass by value
 2. pass by reference
 - pass by reference is a grammer sugar, references are implemented using
@@ -123,3 +128,4 @@ int main()
 #### Galois
 1. In C and C++, array can only be passed by address, this is mandatory.
 2. How parameter is passed. The most important thing about a function.
+

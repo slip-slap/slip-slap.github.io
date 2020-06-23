@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Calculus Line"
+title: "M.A.: Calculus Line"
 keywords: [ ""]
 description: ""
 category: "math"
-tags: ["change"]
+tags: ["change","M.A."]
 ---
 {% include JB/setup %}
 

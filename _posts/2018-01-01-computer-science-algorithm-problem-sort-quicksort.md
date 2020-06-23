@@ -4,7 +4,7 @@ title: "A.P.: Quick Sort"
 keywords: []
 description: ""
 category: "CS"
-tags: ["sort"]
+tags: ["A.P."]
 ---
 {% include JB/setup %}
 
