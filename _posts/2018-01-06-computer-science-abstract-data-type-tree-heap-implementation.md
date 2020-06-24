@@ -12,6 +12,96 @@ tags: ["A.D.T."]
 1. we use array to implement heap data structure.
 
 
+#### Code
+```cpp
+#include<iostream>
+#include<cmath>
+
+void swap(int &a, int &b)
+{
+	int temp = b;
+	b = a;
+	a = temp;
+}
+
+void insert(int heap[],int key)
+{
+	// find last position
+	int last_pos=0;
+	while(heap[last_pos]!=0){last_pos++;}
+	heap[last_pos] = key;
+
+	//adjust heap
+	// position relation
+	// for position i. left child 2*i+1 right child 2*i+2
+	//                 parent position (i-1)/2
+	
+	int parent_pos = int(std::floor((last_pos-1)/2));
+	while(parent_pos >= 0)
+	{
+		if(heap[last_pos]>heap[parent_pos])
+		{
+			swap(heap[last_pos],heap[parent_pos]);
+			last_pos = parent_pos;
+			parent_pos = int(std::floor((last_pos-1)/2));
+		}else{break;}
+	}
+}
+
+void create(int a[],int size,int heap[])
+{
+	for(int i=0;i<size;i++)
+	{
+		insert(heap,a[i]);
+	}
+
+}
+
+void remove(int heap[],int last_element_position)
+{
+	int current_pos = 0;
+	while(2*current_pos+1 <= last_element_position)
+	{
+		if(2*current_pos+2<=last_element_position&&heap[current_pos*2+1]>heap[current_pos*2+2])
+		{
+			heap[current_pos] = heap[current_pos*2+1];
+			current_pos = current_pos*2+1;
+		}
+		if(2*current_pos+2<=last_element_position&&heap[current_pos*2+1]<heap[current_pos*2+2])
+		{
+			heap[current_pos] = heap[current_pos*2+2];
+			current_pos = current_pos*2+2;
+		}
+		if(2*current_pos+2>last_element_position)
+		{
+			heap[current_pos] = heap[current_pos*2+1];
+			current_pos = current_pos*2+1;
+		}
+	}
+	heap[last_element_position]=0;
+}
+
+int main()
+{
+	int heap[10]={0,0,0,0,0,0,0,0,0,0};
+	int a[10]={1,2,3,4,5,6,7,8,9,10};
+	create(a,10,heap);
+	for(int i=0;i<10;i++)
+	{
+		std::cout<<heap[i]<<" ";
+	}
+	std::cout<<std::endl;
+	remove(heap,9);
+	for(int i=0;i<10;i++)
+	{
+		std::cout<<heap[i]<<" ";
+	}
+}
+
+```
+
+2. Trashed Code
+
 
 ```cpp
 #include <iostream>

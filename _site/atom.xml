@@ -3,7 +3,7 @@
   <title>Just Do It</title>
   <link href="/atom.xml" rel="self"/>
   <link href=""/>
-  <updated>2020-06-23T20:32:04+09:00</updated>
+  <updated>2020-06-24T15:55:58+09:00</updated>
   <id></id>
   <author>
     <name>reed</name>
@@ -8530,15 +8530,14 @@ grep
     <id>/cs/computer-science-algorithm-art</id>
     <content type="html">
 A
+The title is named as data structure and algorithm, why this ? It means in a
+program, you must have these two things.
 
-  When I watch how Abdul Bari write a program, or implement an algorithm! It’s an
-art.  He just do things in such an elegant and natural way.
 
-
-B
-
-  When he implement the BFS algorithm, he write the pseudo code step by step.
-You feel like it’s not difficult, it’s natural, eazy, elegant beauti...</content>
+  data structure to describe your problem.
+  algorithm to solve your problem by your solution.
+    
+      this is trivial, but you need to realize this, during the array copy...</content>
   </entry>
 
   <entry>
@@ -8946,6 +8945,33 @@ struct node* insert(struct node* ptr_node, int data)
   </entry>
 
   <entry>
+    <title>A.D.T.: List Concatenate</title>
+    <link href="/cs/computer-science-abstract-data-type-list-concatenate.html"/>
+    <updated>2018-01-19T00:00:00+09:00</updated>
+    <id>/cs/computer-science-abstract-data-type-list-concatenate</id>
+    <content type="html">
+Code
+
+#include&amp;lt;iostream&amp;gt;
+
+struct node 
+{
+	int key;
+	struct node *ptr_next_node;
+};
+
+struct node* first;
+struct node* second;
+struct node* insert(struct node* ptr_node,int key);
+
+struct node* insert(struct node* ptr_node,int key)
+{
+	if(ptr_node == nullptr)
+	{
+		struct node * temp=new node()...</content>
+  </entry>
+
+  <entry>
     <title>A.D.T.: Priority Queue</title>
     <link href="/cs/computer-science-abstract-data-type-queue-priority.html"/>
     <updated>2018-01-18T00:00:00+09:00</updated>
@@ -9290,23 +9316,23 @@ A
   we use array to implement heap data structure.
 
 
-#include &amp;lt;iostream&amp;gt;
-#include &amp;lt;vector&amp;gt;
-#include &amp;lt;string&amp;gt;
-#include &amp;lt;cmath&amp;gt;
+Code
+#include&amp;lt;iostream&amp;gt;
+#include&amp;lt;cmath&amp;gt;
 
-
-class max_heap
+void swap(int &amp;amp;a, int &amp;amp;b)
 {
-	private:
-		int heap_array[15] = {0};
-		int pointer= 0;
-	public:
-		void insert(int priority)
-		{
-			if(pointer &amp;lt; 15)
-			{
-	...</content>
+	int temp = b;
+	b = a;
+	a = temp;
+}
+
+void insert(int heap[],int key)
+{
+	// find last position
+	int last_pos=0;
+	while(heap[last_pos]!=0){last_pos++;}
+	he...</content>
   </entry>
 
   <entry>
@@ -9478,6 +9504,27 @@ Greedy(a, n):
 
 
 topological sort of subproblem de...</content>
+  </entry>
+
+  <entry>
+    <title>A.D.: Shortest Path Problem</title>
+    <link href="/cs/computer-science-algorithm-design-dynamic-programming-shortest-path.html"/>
+    <updated>2018-01-03T00:00:00+09:00</updated>
+    <id>/cs/computer-science-algorithm-design-dynamic-programming-shortest-path</id>
+    <content type="html">
+AAA
+
+#include&amp;lt;iostream&amp;gt;
+#include &amp;lt;algorithm&amp;gt;
+#include &amp;lt;vector&amp;gt;
+#define I 32679
+int memo_table[4];
+int shortest_path(int g[4][4], int start, int end)
+{
+	if(start==end){return 0;}
+	std::vector&amp;lt;int&amp;gt; shortest_path_vector;
+	int shortest_path_length = 0;
+	for(int i=0;i&amp;lt;4;i++...</content>
   </entry>
 
   <entry>

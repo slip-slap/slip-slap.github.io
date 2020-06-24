@@ -10,7 +10,6 @@ tags: ["A.D.T."]
 
 1. reverseing: reverse element or reverse link.
 
-
 ```cpp
 #include<iostream>
 struct node

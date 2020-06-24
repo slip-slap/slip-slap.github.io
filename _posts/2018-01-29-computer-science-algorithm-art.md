@@ -8,15 +8,30 @@ tags: ["summary","Algorithm"]
 ---
 {% include JB/setup %}
 
+
+#### A
+The title is named as data structure and algorithm, why this ? It means in a
+program, you must have these two things.
+
+1. data structure to describe your problem.
+2. algorithm to solve your problem by your solution.
+- this is trivial, but you need to realize this, during the array copy program,
+  the data structure is two array, target arrary and a blank array. Don't forgot
+  another data struct.
+- pointer, yes it is trivial, but it is a data structure, we use an integer to
+  stands for this.
+- After data structure well prepared, the algorithm begin.
+3. Keep this in mind, data structure and algorithm, you need both of them in a
+   pgrogram.
+
+
+
 #### A
 1. When I watch how Abdul Bari write a program, or implement an algorithm! It's an
 art.  He just do things in such an elegant and natural way.
-
-
-#### B
-1. When he implement the BFS algorithm, he write the pseudo code step by step.
+2. When he implement the BFS algorithm, he write the pseudo code step by step.
    You feel like it's not difficult, it's natural, eazy, elegant beautiful.
-2. When he describe KMP algorithm, how he use the counter in pattern and target
+3. When he describe KMP algorithm, how he use the counter in pattern and target
    string.
 
 
