@@ -142,7 +142,7 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">691</span>
+<span title="文章总数">693</span>
 <ul>
 
 
@@ -2845,7 +2845,17 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#January-2018">2018 年 01 月 (67)</a></li>
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#January-2018">2018 年 01 月 (69)</a></li>
     
   
 
@@ -3688,7 +3698,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
-  <li><a href="/categories.html#CS-ref">CS (67)</a></li>
+  <li><a href="/categories.html#CS-ref">CS (69)</a></li>
 
   <li><a href="/categories.html#OS-ref">OS (28)</a></li>
 
@@ -3815,7 +3825,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#A.D.T.-ref" style="font-size: 11.5pt; color: #666;">A.D.T.</a>
+    <a href="/tags.html#A.D.T.-ref" style="font-size: 12pt; color: #666;">A.D.T.</a>
   
     
     
@@ -4352,61 +4362,26 @@ $(document).ready(function() {
 
 <h4 id="galois">Galois</h4>
 <ol>
-  <li>computer are not born with array, they are gift provided by the compiler.
-Don’t take anything for granted.</li>
+  <li>Array and list are the most important data structure, all the other data
+structure is derivated from this two basic structure.</li>
+  <li>String ,in nature, just array, but presents in a character way, no big deal.</li>
+  <li>
+    <p>computer are not born with array, they are gift provided by the compiler.
+Don’t take anything for granted.</p>
+  </li>
+  <li>It is not just array, given specific context, it can be used to stands for
+anything.
+    <ul>
+      <li>In breadth first search, array is used to denote visited node, -1 can denotes
+exist, 0 denotes nonexist</li>
+      <li>In finding a pair of sum, array is used as the hashtable, element value in the
+array is denoted whether they exist or not.</li>
+      <li>In minimum spanning tree algorithm, array can be used to save the tree.
+No matter whatever situation you are in, try to use array to denote related value,
+describe the semantics.</li>
+    </ul>
+  </li>
 </ol>
-
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-<span class="cp">#include &lt;iostream&gt;
-</span>
-<span class="kt">void</span> <span class="nf">insert</span><span class="p">(</span><span class="k">struct</span> <span class="nc">Array</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">index</span><span class="p">,</span> <span class="kt">int</span> <span class="n">element</span><span class="p">);</span>
-<span class="kt">void</span> <span class="nf">display</span><span class="p">(</span><span class="k">struct</span> <span class="nc">Array</span> <span class="o">*</span><span class="n">a</span><span class="p">);</span>
-
-<span class="k">struct</span> <span class="nc">Array</span><span class="p">{</span>
-    <span class="kt">int</span> <span class="n">size</span><span class="p">;</span>
-    <span class="kt">int</span> <span class="n">length</span><span class="p">;</span>
-    <span class="kt">int</span> <span class="o">*</span><span class="n">a</span><span class="p">;</span>
-<span class="p">};</span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
-    <span class="k">struct</span> <span class="nc">Array</span> <span class="n">array</span><span class="p">;</span>
-    <span class="n">array</span><span class="p">.</span><span class="n">a</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">[</span><span class="mi">20</span><span class="p">];</span>
-    <span class="n">array</span><span class="p">.</span><span class="n">size</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
-    <span class="n">array</span><span class="p">.</span><span class="n">length</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-
-    <span class="n">display</span><span class="p">(</span><span class="o">&amp;</span><span class="n">array</span><span class="p">);</span>
-    <span class="n">insert</span><span class="p">(</span><span class="o">&amp;</span><span class="n">array</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
-    <span class="n">insert</span><span class="p">(</span><span class="o">&amp;</span><span class="n">array</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">);</span>
-    <span class="n">insert</span><span class="p">(</span><span class="o">&amp;</span><span class="n">array</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">);</span>
-    <span class="n">insert</span><span class="p">(</span><span class="o">&amp;</span><span class="n">array</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
-    <span class="n">display</span><span class="p">(</span><span class="o">&amp;</span><span class="n">array</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="kt">void</span> <span class="nf">display</span><span class="p">(</span><span class="k">struct</span> <span class="nc">Array</span> <span class="o">*</span><span class="n">a</span><span class="p">){</span>
-    <span class="kt">int</span> <span class="n">length</span> <span class="o">=</span> <span class="p">(</span><span class="o">*</span><span class="n">a</span><span class="p">).</span><span class="n">length</span><span class="p">;</span>
-
-    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
-        <span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="o">*</span><span class="n">a</span><span class="p">).</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kt">void</span> <span class="nf">insert</span><span class="p">(</span><span class="k">struct</span> <span class="nc">Array</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">index</span><span class="p">,</span> <span class="kt">int</span> <span class="n">element</span><span class="p">){</span>
-    <span class="c1">// append the element  </span>
-    <span class="kt">int</span> <span class="n">length</span> <span class="o">=</span> <span class="p">(</span><span class="o">*</span><span class="n">a</span><span class="p">).</span><span class="n">length</span><span class="p">;</span>
-    <span class="p">(</span><span class="o">*</span><span class="n">a</span><span class="p">).</span><span class="n">a</span><span class="p">[</span><span class="n">length</span><span class="p">]</span> <span class="o">=</span> <span class="n">element</span><span class="p">;</span>
-    <span class="c1">// move forward</span>
-    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">length</span><span class="p">;</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="n">index</span><span class="p">;</span> <span class="n">i</span><span class="o">--</span><span class="p">){</span>
-
-        <span class="kt">int</span> <span class="n">temp</span><span class="p">;</span>
-        <span class="n">temp</span> <span class="o">=</span> <span class="p">(</span><span class="o">*</span><span class="n">a</span><span class="p">).</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
-        <span class="p">(</span><span class="o">*</span><span class="n">a</span><span class="p">).</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="o">*</span><span class="n">a</span><span class="p">).</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
-        <span class="p">(</span><span class="o">*</span><span class="n">a</span><span class="p">).</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="c1">// update length</span>
-    <span class="p">(</span><span class="o">*</span><span class="n">a</span><span class="p">).</span><span class="n">length</span> <span class="o">=</span> <span class="p">(</span><span class="o">*</span><span class="n">a</span><span class="p">).</span><span class="n">length</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
-<span class="p">}</span>
-
-</code></pre></div></div>
 
 
       
@@ -4436,7 +4411,7 @@ Don’t take anything for granted.</li>
   
      
     	<li><a href="/categories.html#CS-ref">
-    		CS <span>67</span>
+    		CS <span>69</span>
     	</a></li>
     
   
@@ -4455,7 +4430,7 @@ Don’t take anything for granted.</li>
 
   
      
-    	<li><a href="/tags.html#A.D.T.-ref">A.D.T. <span>32</span></a></li>
+    	<li><a href="/tags.html#A.D.T.-ref">A.D.T. <span>34</span></a></li>
     
   
 

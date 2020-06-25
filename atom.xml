@@ -3,7 +3,7 @@
   <title>Just Do It</title>
   <link href="/atom.xml" rel="self"/>
   <link href=""/>
-  <updated>2020-06-24T15:55:58+09:00</updated>
+  <updated>2020-06-25T20:00:23+09:00</updated>
   <id></id>
   <author>
     <name>reed</name>
@@ -8628,7 +8628,7 @@ Array ADT
 
 Galois
 
-  com...</content>
+  Arr...</content>
   </entry>
 
   <entry>
@@ -8654,12 +8654,40 @@ contiguous memory, it’s a sugar.
   </entry>
 
   <entry>
+    <title>A.D.T.: Array Operation</title>
+    <link href="/cs/computer-science-abstract-data-type-array-operation.html"/>
+    <updated>2018-01-23T00:00:00+09:00</updated>
+    <id>/cs/computer-science-abstract-data-type-array-operation</id>
+    <content type="html">
+Shift and Rotation
+
+#include&amp;lt;iostream&amp;gt;
+
+void shift_and_roation(int arr[],int size)
+{
+	int temp = arr[0];
+	for(int i=0;i&amp;lt;size-1;i++)
+	{arr[i]=arr[i+1];}
+	arr[size-1] = temp;
+}
+
+int main()
+{
+	int arr[5]={1,2,3,4,5};
+	shift_and_roation(arr,5);
+	for(int i=0;i&amp;lt;5;i++){std::cout&amp;lt;&amp;lt;arr[...</content>
+  </entry>
+
+  <entry>
     <title>A.D.T.: String</title>
     <link href="/cs/computer-science-abstract-data-type-string-introduction.html"/>
     <updated>2018-01-22T00:00:00+09:00</updated>
     <id>/cs/computer-science-abstract-data-type-string-introduction</id>
     <content type="html">
-####
+What is string?
+String just array, everymethod you learn in array. You can apply them in string.
+
+A
 
   basically, compuer doesn’t support characters
   we define some set of numbers as characters.
@@ -8668,9 +8696,7 @@ contiguous memory, it’s a sugar.
 
 Galois
 
-  String is one of the abstract data type, this is amazing! I just too familiar
-with string, so I forgot what it is in nature.
-  Th...</content>
+  String is one of the abstract data...</content>
   </entry>
 
   <entry>
@@ -8809,10 +8835,23 @@ Problem
   </entry>
 
   <entry>
-    <title>A.D.T.: Matrices</title>
-    <link href="/cs/computer-science-abstract-data-type-sparse-matrix.html"/>
+    <title>A.D.T.: Polynomial</title>
+    <link href="/cs/computer-science-abstract-data-type-polynomial.html"/>
     <updated>2018-01-19T00:00:00+09:00</updated>
-    <id>/cs/computer-science-abstract-data-type-sparse-matrix</id>
+    <id>/cs/computer-science-abstract-data-type-polynomial</id>
+    <content type="html">
+Galois
+
+  Polynomial is also one type of ADT.
+
+</content>
+  </entry>
+
+  <entry>
+    <title>A.D.T.: Matrices</title>
+    <link href="/cs/computer-science-abstract-data-type-matrix-sparse.html"/>
+    <updated>2018-01-19T00:00:00+09:00</updated>
+    <id>/cs/computer-science-abstract-data-type-matrix-sparse</id>
     <content type="html">
 Representation
 
@@ -8830,28 +8869,6 @@ language. Sparse Matrix, tree, stack, queue everything.
   </entry>
 
   <entry>
-    <title>A.D.T.: Sparse Matrices</title>
-    <link href="/cs/computer-science-abstract-data-type-sparse-matrices.html"/>
-    <updated>2018-01-19T00:00:00+09:00</updated>
-    <id>/cs/computer-science-abstract-data-type-sparse-matrices</id>
-    <content type="html">
-</content>
-  </entry>
-
-  <entry>
-    <title>A.D.T.: Polynomial</title>
-    <link href="/cs/computer-science-abstract-data-type-polynomial.html"/>
-    <updated>2018-01-19T00:00:00+09:00</updated>
-    <id>/cs/computer-science-abstract-data-type-polynomial</id>
-    <content type="html">
-Galois
-
-  Polynomial is also one type of ADT.
-
-</content>
-  </entry>
-
-  <entry>
     <title>A.D.T.P.: Matrix Multiplication</title>
     <link href="/cs/computer-science-abstract-data-type-matrix-problem-multiplication.html"/>
     <updated>2018-01-19T00:00:00+09:00</updated>
@@ -8862,9 +8879,9 @@ Galois
 
   <entry>
     <title>A.D.T.: List Implementation</title>
-    <link href="/cs/computer-science-abstract-data-type-list.html"/>
+    <link href="/cs/computer-science-abstract-data-type-list-single-linked.html"/>
     <updated>2018-01-19T00:00:00+09:00</updated>
-    <id>/cs/computer-science-abstract-data-type-list</id>
+    <id>/cs/computer-science-abstract-data-type-list-single-linked</id>
     <content type="html">
 #include &amp;lt;iostream&amp;gt;
 #include &amp;lt;vector&amp;gt;
@@ -8945,6 +8962,19 @@ struct node* insert(struct node* ptr_node, int data)
   </entry>
 
   <entry>
+    <title>A.D.T.: Double Linked List</title>
+    <link href="/cs/computer-science-abstract-data-type-list-doubly-linked.html"/>
+    <updated>2018-01-19T00:00:00+09:00</updated>
+    <id>/cs/computer-science-abstract-data-type-list-doubly-linked</id>
+    <content type="html">
+Application
+
+  Phone contact list, you can scroll up and down, it’s doubly linked list.
+
+</content>
+  </entry>
+
+  <entry>
     <title>A.D.T.: List Concatenate</title>
     <link href="/cs/computer-science-abstract-data-type-list-concatenate.html"/>
     <updated>2018-01-19T00:00:00+09:00</updated>
@@ -8969,6 +8999,15 @@ struct node* insert(struct node* ptr_node,int key)
 	if(ptr_node == nullptr)
 	{
 		struct node * temp=new node()...</content>
+  </entry>
+
+  <entry>
+    <title>A.D.T.: Circular Linked List</title>
+    <link href="/cs/computer-science-abstract-data-type-list-circular-linked.html"/>
+    <updated>2018-01-19T00:00:00+09:00</updated>
+    <id>/cs/computer-science-abstract-data-type-list-circular-linked</id>
+    <content type="html">
+</content>
   </entry>
 
   <entry>
