@@ -8,7 +8,11 @@ tags: ["A.D.T."]
 ---
 {% include JB/setup %}
 
-####
+
+#### What is string?
+String just array, everymethod you learn in array. You can apply them in string. 
+
+#### A
 1. basically, compuer doesn't support characters
 2. we define some set of numbers as characters.
 3. ASCII codes for English, Unicodes for all language.

@@ -11,7 +11,7 @@
 <head>
   <meta charset="UTF-8">
 
-  <title>A.D.T.: List Implementation - Just Do It</title>
+  <title>A.D.T.: Circular Linked List - Just Do It</title>
   <meta name="keywords" content="">
   
   <meta name="author" content="reed">
@@ -142,7 +142,7 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">691</span>
+<span title="文章总数">693</span>
 <ul>
 
 
@@ -2845,7 +2845,17 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#January-2018">2018 年 01 月 (67)</a></li>
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#January-2018">2018 年 01 月 (69)</a></li>
     
   
 
@@ -3688,7 +3698,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
-  <li><a href="/categories.html#CS-ref">CS (67)</a></li>
+  <li><a href="/categories.html#CS-ref">CS (69)</a></li>
 
   <li><a href="/categories.html#OS-ref">OS (28)</a></li>
 
@@ -3815,7 +3825,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#A.D.T.-ref" style="font-size: 11.5pt; color: #666;">A.D.T.</a>
+    <a href="/tags.html#A.D.T.-ref" style="font-size: 12pt; color: #666;">A.D.T.</a>
   
     
     
@@ -4297,7 +4307,7 @@ $(document).ready(function() {
       <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
 
     <header>
-      <h1>A.D.T.: List Implementation</h1>
+      <h1>A.D.T.: Circular Linked List</h1>
     </header>
 
     <section>
@@ -4310,12 +4320,12 @@ $(document).ready(function() {
 
 
   <span id="share">
-  <a class="wechat" target="_blank" title="分享到微信" href="http://chart.apis.google.com/chart?cht=qr&amp;chs=300x300&amp;chl=/cs/computer-science-abstract-data-type-list.html"><i class="icon-large icon-wechat"></i></a>
-  <a class="weibo" target="_blank" title="分享到微博" href="http://service.weibo.com/share/share.php?title=A.D.T.: List Implementation - Just Do It&amp;url=/cs/computer-science-abstract-data-type-list.html&amp;type=3&amp;searchPic=1"><i class="icon-large icon-weibo"></i></a>
-  <a class="qzone" target="_blank" title="分享到 QQ 空间" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=/cs/computer-science-abstract-data-type-list.html&amp;title=A.D.T.: List Implementation - Just Do It&amp;summary=&amp;site="><i class="icon-large icon-qzone"></i></a>
-  <a class="twitter" target="_blank" title="Share to Twitter" href="https://twitter.com/intent/tweet?url=/cs/computer-science-abstract-data-type-list.html&amp;text=A.D.T.: List Implementation - Just Do It&amp;via="><i class="icon-large icon-twitter"></i></a>
-  <a class="facebook" target="_blank" title="Share to Facebook" href="http://www.facebook.com/sharer.php?u=/cs/computer-science-abstract-data-type-list.html&amp;t=A.D.T.: List Implementation - Just Do It"><i class="icon-large icon-facebook-sign"></i></a>
-  <a class="googleplus" target="_blank" title="Share to Google+" href="https://plus.google.com/share?url=/cs/computer-science-abstract-data-type-list.html"><i class="icon-large icon-google-plus-sign"></i></a>
+  <a class="wechat" target="_blank" title="分享到微信" href="http://chart.apis.google.com/chart?cht=qr&amp;chs=300x300&amp;chl=/cs/computer-science-abstract-data-type-list-circular-linked.html"><i class="icon-large icon-wechat"></i></a>
+  <a class="weibo" target="_blank" title="分享到微博" href="http://service.weibo.com/share/share.php?title=A.D.T.: Circular Linked List - Just Do It&amp;url=/cs/computer-science-abstract-data-type-list-circular-linked.html&amp;type=3&amp;searchPic=1"><i class="icon-large icon-weibo"></i></a>
+  <a class="qzone" target="_blank" title="分享到 QQ 空间" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=/cs/computer-science-abstract-data-type-list-circular-linked.html&amp;title=A.D.T.: Circular Linked List - Just Do It&amp;summary=&amp;site="><i class="icon-large icon-qzone"></i></a>
+  <a class="twitter" target="_blank" title="Share to Twitter" href="https://twitter.com/intent/tweet?url=/cs/computer-science-abstract-data-type-list-circular-linked.html&amp;text=A.D.T.: Circular Linked List - Just Do It&amp;via="><i class="icon-large icon-twitter"></i></a>
+  <a class="facebook" target="_blank" title="Share to Facebook" href="http://www.facebook.com/sharer.php?u=/cs/computer-science-abstract-data-type-list-circular-linked.html&amp;t=A.D.T.: Circular Linked List - Just Do It"><i class="icon-large icon-facebook-sign"></i></a>
+  <a class="googleplus" target="_blank" title="Share to Google+" href="https://plus.google.com/share?url=/cs/computer-science-abstract-data-type-list-circular-linked.html"><i class="icon-large icon-google-plus-sign"></i></a>
 </span>
 
 
@@ -4325,83 +4335,6 @@ $(document).ready(function() {
         </div>
       </div>
       
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
-#include &lt;vector&gt;
-#include &lt;string&gt;
-</span>
-<span class="k">struct</span> <span class="nc">node</span> 
-<span class="p">{</span>
-	<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">name</span><span class="p">;</span>
-	<span class="k">struct</span> <span class="nc">node</span><span class="o">*</span> <span class="n">next_node</span><span class="o">=</span><span class="nb">nullptr</span><span class="p">;</span>
-<span class="p">};</span>
-
-<span class="k">class</span> <span class="nc">link_list</span>
-<span class="p">{</span>
-	<span class="nl">private:</span>
-		<span class="k">struct</span> <span class="nc">node</span> <span class="o">*</span> <span class="n">head</span><span class="p">;</span>
-		<span class="k">struct</span> <span class="nc">node</span> <span class="o">*</span> <span class="n">tail</span><span class="p">;</span>
-
-    <span class="nl">public:</span>
-		<span class="n">link_list</span><span class="p">(){}</span>
-
-		<span class="n">link_list</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">name</span><span class="p">)</span>
-		<span class="p">{</span>
-			<span class="n">head</span> <span class="o">=</span> <span class="k">new</span> <span class="n">node</span><span class="p">();</span>
-			<span class="n">head</span><span class="o">-&gt;</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
-			<span class="n">tail</span> <span class="o">=</span> <span class="n">head</span><span class="p">;</span>
-		<span class="p">}</span>
-
-		<span class="kt">void</span> <span class="n">insert</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">name</span><span class="p">)</span>
-		<span class="p">{</span>
-			<span class="k">struct</span> <span class="nc">node</span><span class="o">*</span> <span class="n">temp</span> <span class="o">=</span> <span class="k">new</span> <span class="n">node</span><span class="p">();</span>
-			<span class="n">temp</span><span class="o">-&gt;</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
-			<span class="n">tail</span><span class="o">-&gt;</span><span class="n">next_node</span> <span class="o">=</span> <span class="n">temp</span> <span class="p">;</span>
-			<span class="n">tail</span> <span class="o">=</span> <span class="n">tail</span><span class="o">-&gt;</span><span class="n">next_node</span><span class="p">;</span>
-		<span class="p">}</span>
-
-		<span class="kt">void</span> <span class="n">display</span><span class="p">()</span>
-		<span class="p">{</span>
-			<span class="k">struct</span> <span class="nc">node</span> <span class="o">*</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">head</span><span class="p">;</span>
-			<span class="k">while</span><span class="p">(</span><span class="n">temp</span><span class="o">!=</span><span class="nb">nullptr</span><span class="p">)</span>
-			<span class="p">{</span>
-				<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">temp</span><span class="o">-&gt;</span><span class="n">name</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-				<span class="n">temp</span> <span class="o">=</span> <span class="n">temp</span><span class="o">-&gt;</span><span class="n">next_node</span><span class="p">;</span>
-			<span class="p">}</span>
-		<span class="p">}</span>
-
-		<span class="c1">// can't remove the last node</span>
-		<span class="kt">void</span> <span class="n">remove</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">name</span><span class="p">)</span>
-		<span class="p">{</span>
-			<span class="k">struct</span> <span class="nc">node</span> <span class="o">*</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">head</span><span class="p">;</span>
-			<span class="k">while</span><span class="p">(</span><span class="n">temp</span><span class="o">!=</span><span class="nb">nullptr</span><span class="p">)</span>
-			<span class="p">{</span>
-				<span class="k">if</span><span class="p">(</span><span class="n">temp</span><span class="o">-&gt;</span><span class="n">name</span><span class="o">==</span> <span class="n">name</span><span class="o">&amp;&amp;</span><span class="n">temp</span><span class="o">-&gt;</span><span class="n">next_node</span><span class="o">!=</span><span class="nb">nullptr</span><span class="p">)</span>
-				<span class="p">{</span>
-					<span class="n">temp</span><span class="o">-&gt;</span><span class="n">name</span> <span class="o">=</span> <span class="n">temp</span><span class="o">-&gt;</span><span class="n">next_node</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">;</span>
-					<span class="n">temp</span><span class="o">-&gt;</span><span class="n">next_node</span> <span class="o">=</span> <span class="n">temp</span><span class="o">-&gt;</span><span class="n">next_node</span><span class="o">-&gt;</span><span class="n">next_node</span><span class="p">;</span>
-				<span class="p">}</span><span class="k">else</span>
-				<span class="p">{</span>
-					<span class="n">temp</span> <span class="o">=</span> <span class="n">temp</span><span class="o">-&gt;</span><span class="n">next_node</span><span class="p">;</span>
-				<span class="p">}</span>
-			<span class="p">}</span>
-		<span class="p">}</span>
-
-<span class="p">};</span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-
-	<span class="n">link_list</span> <span class="n">my_link_list</span><span class="p">(</span><span class="s">"zhang"</span><span class="p">);</span>
-	<span class="n">my_link_list</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="s">"niko"</span><span class="p">);</span>
-	<span class="n">my_link_list</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="s">"liam"</span><span class="p">);</span>
-	<span class="n">my_link_list</span><span class="p">.</span><span class="n">display</span><span class="p">();</span>
-	<span class="n">my_link_list</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="s">"zhang"</span><span class="p">);</span>
-	<span class="n">my_link_list</span><span class="p">.</span><span class="n">display</span><span class="p">();</span>
-
-<span class="p">}</span>
-
-</code></pre></div></div>
-
 
       
       <footer>
@@ -4430,7 +4363,7 @@ $(document).ready(function() {
   
      
     	<li><a href="/categories.html#CS-ref">
-    		CS <span>67</span>
+    		CS <span>69</span>
     	</a></li>
     
   
@@ -4449,7 +4382,7 @@ $(document).ready(function() {
 
   
      
-    	<li><a href="/tags.html#A.D.T.-ref">A.D.T. <span>32</span></a></li>
+    	<li><a href="/tags.html#A.D.T.-ref">A.D.T. <span>34</span></a></li>
     
   
 
@@ -4462,11 +4395,11 @@ $(document).ready(function() {
   <div class="pagination">
     <ul>
       
-      <li class="prev"><a href="/cs/computer-science-abstract-data-type-list-operation.html" title="A.D.T.: List Operation">&larr; 上一篇</a></li>
+      <li class="prev"><a href="/cs/computer-science-abstract-data-type-queue-priority.html" title="A.D.T.: Priority Queue">&larr; 上一篇</a></li>
       
       <li><a href="/archive.html">文章列表</a></li>
       
-      <li class="next"><a href="/cs/computer-science-abstract-data-type-matrix-problem-multiplication.html" title="A.D.T.P.: Matrix Multiplication">下一篇 &rarr;</a></li>
+      <li class="next"><a href="/cs/computer-science-abstract-data-type-list-concatenate.html" title="A.D.T.: List Concatenate">下一篇 &rarr;</a></li>
       
     </ul>
   </div>
@@ -4484,9 +4417,9 @@ $(document).ready(function() {
     var disqus_developer = 1;
     var disqus_shortname = 'just-do-it-1';
     
-    var disqus_identifier = 'A.D.T.: List Implementation';
-    var disqus_title = 'A.D.T.: List Implementation';
-    var disqus_url = '/cs/computer-science-abstract-data-type-list.html';
+    var disqus_identifier = 'A.D.T.: Circular Linked List';
+    var disqus_title = 'A.D.T.: Circular Linked List';
+    var disqus_url = '/cs/computer-science-abstract-data-type-list-circular-linked.html';
     
     
     (function() {

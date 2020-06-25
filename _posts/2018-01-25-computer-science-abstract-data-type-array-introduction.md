@@ -28,63 +28,21 @@ tags: ["A.D.T."]
 
 
 
-
 #### Galois
-1. computer are not born with array, they are gift provided by the compiler.
+1. Array and list are the most important data structure, all the other data
+   structure is derivated from this two basic structure.
+2. String ,in nature, just array, but presents in a character way, no big deal. 
+3. computer are not born with array, they are gift provided by the compiler.
    Don't take anything for granted.
 
+4. It is not just array, given specific context, it can be used to stands for
+   anything.
+- In breadth first search, array is used to denote visited node, -1 can denotes
+  exist, 0 denotes nonexist
+- In finding a pair of sum, array is used as the hashtable, element value in the
+  array is denoted whether they exist or not.
+- In minimum spanning tree algorithm, array can be used to save the tree.
+No matter whatever situation you are in, try to use array to denote related value,
+describe the semantics.
 
-
-```cpp
-
-#include <iostream>
-
-void insert(struct Array *a, int index, int element);
-void display(struct Array *a);
-
-struct Array{
-    int size;
-    int length;
-    int *a;
-};
-
-int main(){
-    struct Array array;
-    array.a = new int[20];
-    array.size = 20;
-    array.length = 0;
-
-    display(&array);
-    insert(&array, 0, 3);
-    insert(&array, 0, 4);
-    insert(&array, 0, 5);
-    insert(&array, 1, 2);
-    display(&array);
-}
-
-void display(struct Array *a){
-    int length = (*a).length;
-
-    for(int i=0; i<length; i++){
-        std::cout<<(*a).a[i]<<std::endl;
-    }
-}
-
-void insert(struct Array *a, int index, int element){
-    // append the element  
-    int length = (*a).length;
-    (*a).a[length] = element;
-    // move forward
-    for(int i=length; i > index; i--){
-
-        int temp;
-        temp = (*a).a[i-1];
-        (*a).a[i-1] = (*a).a[i];
-        (*a).a[i] = temp;
-    }
-    // update length
-    (*a).length = (*a).length + 1;
-}
-
-```
 

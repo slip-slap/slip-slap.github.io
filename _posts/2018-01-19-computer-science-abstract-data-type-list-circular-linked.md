@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "A.D.T.: Sparse Matrices"
+title: "A.D.T.: Circular Linked List"
 keywords: []
-description: ""
+description: 
 category: "CS"
 tags: ["A.D.T."]
 ---
