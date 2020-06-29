@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "the introduction of swarm intelligence algoritms"
-keywords: ["swarm intelligence","algorithms"]
+title: "Search: Swarm Intelligence"
+keywords: []
 description: "introduction"
 category: "AI"
-tags: ["algorithm"]
+tags: ["search"]
 ---
 {% include JB/setup %}
 

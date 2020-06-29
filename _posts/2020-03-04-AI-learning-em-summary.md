@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Expectation Maximization Algorithm"
-keywords: ["expectation", "algorithm"]
-description: ""
+title: "EM: summary"
+keywords: []
+description: 
 category: "AI"
-tags: ["algorithm"]
+tags: ["EM"]
 ---
 {% include JB/setup %}
 

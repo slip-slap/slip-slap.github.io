@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "ML: Principal Component Analysis "
-keywords: ["PCA"]
+title: "Manifold Learning: Principal Component Analysis "
+keywords: []
 description: ""
 category: "AI"
-tags: ["ML","unsupervised" ]
+tags: ["manifold" ]
 ---
 
 {% include JB/setup %}

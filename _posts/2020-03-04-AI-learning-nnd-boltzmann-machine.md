@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Boltzmann Machine"
+title: "N.N.D.: Boltzmann Machine"
 keywords: [] 
 description: ""
 category: "AI"
-tags: []
+tags: ["learning","N.N.D."]
 ---
 {% include JB/setup %}
 
