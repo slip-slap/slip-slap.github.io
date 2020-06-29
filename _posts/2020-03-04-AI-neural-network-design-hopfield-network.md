@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "ML: Hopfield Network"
+title: "N.N.D.: Hopfield Network"
 keywords: ["Hopfield" ]
 description: "neural network"
 category: "AI"
-tags: ["ML","supervised"]
+tags: ["N.N.D."]
 ---
 {% include JB/setup %}
 
@@ -15,6 +15,7 @@ tags: ["ML","supervised"]
 
 
 #### Architecture
+<img src="{{IMAGE_PATH}}/AI-neural-network-design-hopfield.png" />
 
 #### Formula
 
