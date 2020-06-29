@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "neural network with genetic algorithm"
-keywords: ["genetic algorithm", "neural network"]
-description: "neural network"
+keywords: []
+description: 
 category: "AI"
-tags: ["model" ]
+tags: []
 ---
 {% include JB/setup %}
 

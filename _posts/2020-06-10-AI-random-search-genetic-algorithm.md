@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "Genetic Algorithm"
-keywords: ["Genetic","random search"]
-description: "introduction"
+keywords: []
+description: 
 category: "AI"
-tags: ["algorithm"]
+tags: []
 ---
 {% include JB/setup %}
 

@@ -4,7 +4,7 @@ title: "Hidden Markov Model"
 keywords: ["Markov Chain", "HMM"]
 description: ""
 category: "AI"
-tags: ["model" ]
+tags: []
 ---
 {% include JB/setup %}
 
