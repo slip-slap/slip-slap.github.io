@@ -8,8 +8,6 @@ tags: ["EM"]
 ---
 {% include JB/setup %}
 
-
-
 #### EM algorithm
 
 EM is an algorithm for maximum the likelihood function
@@ -35,4 +33,19 @@ $$
 
 <img src="{{IMAGE_PATH}}/convex.png" height="" width="" />
 
+
+#### Galois
+1. EM algorithm, what does E and M, respectively, stand for? 
+2. They denote the expectation and maximum of the parameter theta that we are
+   looking for, nothing about the latent variable, it's just a tool to make the
+   topic eazier to understand.
+- suppose we have a mixed guassian model, they are $N_1(\mu^1,\sigma^1)$ and $N_2(\mu^2,\sigma^2)$
+- then the parameters are $(\mu^1,\sigma^1,\mu^2,\sigma^2)$, we want to
+  calculate their expectation 
+- Maximization the likelihood.
+
+
+
+#### Reference
+1. [Expectation and Maximization](https://en.wikipedia.org/wiki/Expectation%E2%80%93maximization_algorithm)
 

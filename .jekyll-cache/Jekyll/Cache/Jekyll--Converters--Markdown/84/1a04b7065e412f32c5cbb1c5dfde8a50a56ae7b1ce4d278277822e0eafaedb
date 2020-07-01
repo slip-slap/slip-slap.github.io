@@ -1,0 +1,47 @@
+I"�
+<h4 id="1-motivation">1. Motivation</h4>
+<p>$
+P(\mathbf{x})=\frac{1}{Z} P^{*}(\mathbf{x})=\frac{1}{Z} e^{-E(\mathbf{x})}
+$</p>
+<ul>
+  <li>$E(x)$ is simple, but not simple enough</li>
+  <li>solution: approximate $P(X)$ by a simpler distribution \(Q(x;\theta)\).
+Adjust $\theta$ to get the ‘best’ approximation.</li>
+  <li>THen approximate $
+\sum_{x} \phi(x) P(x) \text { by } \sum_{x} \phi(x) Q\left(x ; \theta^{*}\right)
+$</li>
+</ul>
+
+<h4 id="2-method">2. Method</h4>
+<ol>
+  <li>$
+D_{\mathrm{KL}}(Q | P)=\sum Q(x) \log \frac{Q(x)}{P(x)}
+$</li>
+  <li>
+    <p>$
+D_{\mathrm{KL}}(P | Q)=\sum_{x} P(x) \log \frac{P(x)}{Q(x)}
+$</p>
+  </li>
+  <li>we can substitue $P(x)$ into formula 1, and we got
+$
+D_{\mathrm{KL}}(Q | P)=\sum Q(x) \log \frac{Q(x)}{P(x)}
+= \sum_{x} Q(x)E(x)+log_e^z-H(Q)
+$</li>
+  <li>variational free energy
+$
+\tilde{F}(\theta)=\sum_{\mathbf{x}} Q(\mathbf{x} ; \theta) E(\mathbf{x})-\sum_{\mathbf{x}} Q(\mathbf{x} ; \theta) \ln \frac{1}{Q(\mathbf{x} ; \theta)}
+$</li>
+</ol>
+
+<h4 id="galois">Galois</h4>
+<ol>
+  <li>The core concept of this method is adjust the parameters.</li>
+  <li>How to adjust the parameters, it can be divided into two steps.</li>
+</ol>
+
+<h4 id="reference">Reference</h4>
+<ol>
+  <li><a href="https://www.quora.com/What-is-variational-inference">what is variational Inference</a></li>
+  <li><a href="https://www.cs.princeton.edu/courses/archive/fall11/cos597C/lectures/variational-inference-i.pdf">variational bayes</a></li>
+</ol>
+:ET
