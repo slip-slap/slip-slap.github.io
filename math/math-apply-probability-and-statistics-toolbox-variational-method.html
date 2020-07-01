@@ -142,7 +142,7 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">705</span>
+<span title="文章总数">707</span>
 <ul>
 
 
@@ -361,7 +361,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#March-2020">2020 年 03 月 (38)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2020">2020 年 03 月 (39)</a></li>
     
   
 
@@ -527,7 +532,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#December-2019">2019 年 12 月 (25)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#December-2019">2019 年 12 月 (26)</a></li>
     
   
 
@@ -3762,18 +3772,18 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#OS-ref">OS (28)</a></li>
 
-  <li><a href="/categories.html#math-ref">math (215)</a></li>
+  <li><a href="/categories.html#math-ref">math (216)</a></li>
 
   <li><a href="/categories.html#work-ref">work (9)</a></li>
 
-  <li><a href="/categories.html#AI-ref">AI (40)</a></li>
+  <li><a href="/categories.html#AI-ref">AI (41)</a></li>
 
 </ul>
 
         </section>
         <section>
           <a href="/tags.html" title="查看所有标签"><i class="icon-fixed-width icon-tags"></i> 标签云</a>
-<span title="标签总数">78</span>
+<span title="标签总数">79</span>
 <div id="tag-cloud">
 
 
@@ -4221,7 +4231,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#change-ref" style="font-size: 11.5pt; color: #777;">change</a>
+    <a href="/tags.html#change-ref" style="font-size: 11.5pt; color: #666;">change</a>
   
     
     
@@ -4242,7 +4252,14 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#M.A.-ref" style="font-size: 10pt; color: #888;">M.A.</a>
+    <a href="/tags.html#R.A.-ref" style="font-size: 10pt; color: #888;">R.A.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#M.A.-ref" style="font-size: 9pt; color: #999;">M.A.</a>
   
     
     
@@ -4270,7 +4287,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#learning-ref" style="font-size: 10.5pt; color: #888;">learning</a>
+    <a href="/tags.html#learning-ref" style="font-size: 10.5pt; color: #777;">learning</a>
   
     
     
@@ -4431,27 +4448,37 @@ $(document).ready(function() {
       </div>
       
 <h4 id="1-motivation">1. Motivation</h4>
-<p>\(P(\mathbf{x})=\frac{1}{Z} P^{*}(\mathbf{x})=\frac{1}{Z} e^{-E(\mathbf{x})}\)</p>
+<p>$
+P(\mathbf{x})=\frac{1}{Z} P^{*}(\mathbf{x})=\frac{1}{Z} e^{-E(\mathbf{x})}
+$</p>
 <ul>
-  <li>\(E(x)\) is simple, but not simple enough</li>
-  <li>solution: approximate \(P(X)\) by a simpler distribution \(Q(x;\theta)\).
-Adjust \(\theta\) to get the ‘best’ approximation.</li>
-  <li>THen approximate \(\sum_{x} \phi(x) P(x) \text { by } \sum_{x} \phi(x) Q\left(x ; \theta^{*}\right)\)</li>
+  <li>$E(x)$ is simple, but not simple enough</li>
+  <li>solution: approximate $P(X)$ by a simpler distribution \(Q(x;\theta)\).
+Adjust $\theta$ to get the ‘best’ approximation.</li>
+  <li>THen approximate $
+\sum_{x} \phi(x) P(x) \text { by } \sum_{x} \phi(x) Q\left(x ; \theta^{*}\right)
+$</li>
 </ul>
 
 <h4 id="2-method">2. Method</h4>
 <ol>
+  <li>$
+D_{\mathrm{KL}}(Q | P)=\sum Q(x) \log \frac{Q(x)}{P(x)}
+$</li>
   <li>
-\[D_{\mathrm{KL}}(Q \| P)=\sum Q(x) \log \frac{Q(x)}{P(x)}\]
-  </li>
-  <li>
-\[D_{\mathrm{KL}}(P \| Q)=\sum_{x} P(x) \log \frac{P(x)}{Q(x)}\]
+    <p>$
+D_{\mathrm{KL}}(P | Q)=\sum_{x} P(x) \log \frac{P(x)}{Q(x)}
+$</p>
   </li>
   <li>we can substitue $P(x)$ into formula 1, and we got
-\(D_{\mathrm{KL}}(Q \| P)=\sum Q(x) \log \frac{Q(x)}{P(x)}
-= \sum_{x} Q(x)E(x)+log_e^z-H(Q)\)</li>
+$
+D_{\mathrm{KL}}(Q | P)=\sum Q(x) \log \frac{Q(x)}{P(x)}
+= \sum_{x} Q(x)E(x)+log_e^z-H(Q)
+$</li>
   <li>variational free energy
-\(\tilde{F}(\theta)=\sum_{\mathbf{x}} Q(\mathbf{x} ; \theta) E(\mathbf{x})-\sum_{\mathbf{x}} Q(\mathbf{x} ; \theta) \ln \frac{1}{Q(\mathbf{x} ; \theta)}\)</li>
+$
+\tilde{F}(\theta)=\sum_{\mathbf{x}} Q(\mathbf{x} ; \theta) E(\mathbf{x})-\sum_{\mathbf{x}} Q(\mathbf{x} ; \theta) \ln \frac{1}{Q(\mathbf{x} ; \theta)}
+$</li>
 </ol>
 
 <h4 id="galois">Galois</h4>
@@ -4493,7 +4520,7 @@ Adjust \(\theta\) to get the ‘best’ approximation.</li>
   
      
     	<li><a href="/categories.html#math-ref">
-    		math <span>215</span>
+    		math <span>216</span>
     	</a></li>
     
   

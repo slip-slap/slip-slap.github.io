@@ -5,8 +5,8 @@
   <description>Just Do It - </description>
   <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
   <link></link>
-  <lastBuildDate>Mon, 29 Jun 2020 15:56:54 +0900</lastBuildDate>
-  <pubDate>Mon, 29 Jun 2020 15:56:54 +0900</pubDate>
+  <lastBuildDate>Wed, 01 Jul 2020 11:33:34 +0900</lastBuildDate>
+  <pubDate>Wed, 01 Jul 2020 11:33:34 +0900</pubDate>
   <ttl>1800</ttl>
 
 
@@ -383,6 +383,55 @@ and Bayesian networks.&lt;/li&gt;
   </item>
 
   <item>
+    <title>N.N.D.: Stability</title>
+    <description>
+&lt;h4 id=&quot;background&quot;&gt;Background&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;The output of a recurrent network could converge to a stable point, oscillate,
+or perhaps even diverge.
+    &lt;ul&gt;
+      &lt;li&gt;So our objective is to determine whether a particular set of nonlinear
+equations has points(or trajectories) to which its ouput might converge.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Recurrent networks are potentially more powerful than feedforward networks,
+since they are able to recognize and recall temporal, as well as spatial,
+patterns.
+    &lt;ul&gt;
+      &lt;li&gt;The behavior of these recurrent networks is much more complex than that of
+feedforward networks&lt;/li&gt;
+      &lt;li&gt;for feedforward networks, the output is constant(for a fixed input) and is a
+function only of the network input. For recurrent networks, however, the
+output of the network is a function of time.&lt;/li&gt;
+      &lt;li&gt;For a given input and a given initial network ouput, the response of the
+network may converge to a stable output or not.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;nonlinear-recurrent-network&quot;&gt;Nonlinear Recurrent Network&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/AI-learning-nnd-stability.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;f&quot;&gt;F&lt;/h4&gt;
+&lt;p&gt;You can think of $V(a)$ as a generalized energy function. The concept of the
+theorem is that if the energy of a system is continually decreasing($dV(a)/dt$
+negative definite), then it will eventually settle at some minimum energy state.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Lyapunov’s insight was to generalize the concept of energy, so that the
+theorem could be applied to systems where the energy is difficult to express
+or has no meaning.&lt;/li&gt;
+  &lt;li&gt;The theorem only states that if a suitable Lyapunov function $V(a)$ can be
+found, the system is stable. It gives us no information about the stability of
+the system in those situations where we are able to find such a function.&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+    <link>/ai/AI-learning-nnd-stability.html</link>
+    <guid>/ai/AI-learning-nnd-stability</guid>
+    <pubDate>Wed, 04 Mar 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
     <title>N.N.D.: Recurrent Neural Network</title>
     <description>
 &lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
@@ -570,7 +619,19 @@ energy function.&lt;/p&gt;
   <item>
     <title>N.N.D.: Grossberg Network</title>
     <description>
+&lt;h4 id=&quot;background&quot;&gt;Background&lt;/h4&gt;
+&lt;p&gt;Grossberg networks are so heavily influenced by biology that it is difficult to
+discuss his networks without putting them in their biological context. It is
+also important to note that biology provided the orginal inspiratons for the
+field of artificial neural networks.&lt;/p&gt;
+
 &lt;h4 id=&quot;inspiration&quot;&gt;Inspiration&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/AI-learning-nnd-grossberg-network-eyeball-and-retina.png&quot; /&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;In the figure, we have a schematic representation of the first stages of the
+visual system, much of what we will see is not actually present in the image
+projected onto retina.&lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;h4 id=&quot;lesson&quot;&gt;Lesson&lt;/h4&gt;
 &lt;p&gt;Alough the original inspiration for the field of artificial neural networks came
@@ -849,6 +910,35 @@ the response.&lt;/li&gt;
   <item>
     <title>N.N.D.: Adaptive Resonance Theory</title>
     <description>
+&lt;h4 id=&quot;background&quot;&gt;Background&lt;/h4&gt;
+&lt;p&gt;A key problem of the Grossberg network and the competitive networks is that they
+do not always form stable clusters.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Grossberg did show that if the number of input patterns is not too large, or
+if the input patterns do not form too many clusters relative to the number of
+    neurons in Layer 2, then the learning evntually stabilizes.&lt;/li&gt;
+  &lt;li&gt;He also showed the standard competitive networks do not have stable learning
+in response to arbitrary input patterns&lt;/li&gt;
+  &lt;li&gt;The learning instability occurs because of the network’s adaptability(or
+plasticity), which causes prior learning to be eroded by more recent learning.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;stabilityplasticity-dilemma&quot;&gt;Stability/plasticity Dilemma&lt;/h4&gt;
+&lt;p&gt;How can a system be receptive to significant new patterns and yet remain stable
+in response to irrelevant patterns?&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;We know biological systems are very good at this. For example, you can easily
+recognize your mother’s face, even if you have not seen her for a long time
+and have met many new people in the mean time.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;inspiration&quot;&gt;Inspiration&lt;/h4&gt;
+&lt;p&gt;The key innovation of ART is the use of expectations. As each input pattern is
+presented to the network, it is compared with the prototype vector that it most
+closely matches(the expectation). If the match between the prototype and the
+input vector is not adequeate, a new prototype is selected. In this way,
+previously learned memories (prototypes) are not eroded by new learning.&lt;/p&gt;
+
 </description>
     <link>/ai/AI-learning-nnd-adaptive-resonance-theory.html</link>
     <guid>/ai/AI-learning-nnd-adaptive-resonance-theory</guid>
@@ -1087,6 +1177,26 @@ which in Jensen’s inequality for two points. The Jensen’s inequality is(for 
 \[\varphi(\mathrm{E}[X]) \leq \mathrm{E}[\varphi(X)]\]
 
 &lt;p&gt;&lt;img src=&quot;/images/convex.png&quot; height=&quot;&quot; width=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;EM algorithm, what does E and M, respectively, stand for?&lt;/li&gt;
+  &lt;li&gt;They denote the expectation and maximum of the parameter theta that we are
+looking for, nothing about the latent variable, it’s just a tool to make the
+topic eazier to understand.
+    &lt;ul&gt;
+      &lt;li&gt;suppose we have a mixed guassian model, they are $N_1(\mu^1,\sigma^1)$ and $N_2(\mu^2,\sigma^2)$&lt;/li&gt;
+      &lt;li&gt;then the parameters are $(\mu^1,\sigma^1,\mu^2,\sigma^2)$, we want to
+calculate their expectation&lt;/li&gt;
+      &lt;li&gt;Maximization the likelihood.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Expectation%E2%80%93maximization_algorithm&quot;&gt;Expectation and Maximization&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
 
 </description>
     <link>/ai/AI-learning-em-summary.html</link>
@@ -2073,7 +2183,7 @@ J$\cdot$Gregory thinks that limit operation is also an arithmetical operation.&l
   </item>
 
   <item>
-    <title>M.A.: Variational method</title>
+    <title>R.A.: Variational method</title>
     <description>
 &lt;h4 id=&quot;terminology&quot;&gt;terminology&lt;/h4&gt;
 &lt;ol&gt;
@@ -2084,13 +2194,13 @@ structure on &lt;strong&gt;X&lt;/strong&gt;.&lt;/li&gt;
 &lt;/ol&gt;
 
 </description>
-    <link>/math/math-change-mathematical-analysis-variational-methods.html</link>
-    <guid>/math/math-change-mathematical-analysis-variational-methods</guid>
+    <link>/math/math-change-real-analysis-variational-methods.html</link>
+    <guid>/math/math-change-real-analysis-variational-methods</guid>
     <pubDate>Tue, 10 Dec 2019 00:00:00 +0900</pubDate>
   </item>
 
   <item>
-    <title>M.A.: Sequence and Series</title>
+    <title>R.A.: Sequence and Series</title>
     <description>
 &lt;h4 id=&quot;sequence&quot;&gt;Sequence&lt;/h4&gt;
 &lt;p&gt;a sequence is a function with a domain equal to the set of positive integers.&lt;/p&gt;
@@ -2154,13 +2264,13 @@ a single point.&lt;/p&gt;
   &lt;li&gt;&lt;a href=&quot;http://mathworld.wolfram.com/AlmostEverywhereConvergence.html&quot;&gt;almost everywhere convergence&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </description>
-    <link>/math/math-change-mathematical-analysis-sequence-and-series.html</link>
-    <guid>/math/math-change-mathematical-analysis-sequence-and-series</guid>
+    <link>/math/math-change-real-analysis-sequence-and-series.html</link>
+    <guid>/math/math-change-real-analysis-sequence-and-series</guid>
     <pubDate>Tue, 10 Dec 2019 00:00:00 +0900</pubDate>
   </item>
 
   <item>
-    <title>M.A.: Riemann Integral</title>
+    <title>R.A.: Riemann Integral</title>
     <description>
 &lt;h4 id=&quot;definition&quot;&gt;definition&lt;/h4&gt;
 &lt;ol&gt;
@@ -2169,13 +2279,26 @@ a single point.&lt;/p&gt;
 &lt;/ol&gt;
 
 </description>
-    <link>/math/math-change-mathematical-analysis-riemann-integral.html</link>
-    <guid>/math/math-change-mathematical-analysis-riemann-integral</guid>
+    <link>/math/math-change-real-analysis-riemann-integral.html</link>
+    <guid>/math/math-change-real-analysis-riemann-integral</guid>
     <pubDate>Tue, 10 Dec 2019 00:00:00 +0900</pubDate>
   </item>
 
   <item>
-    <title>M.A.: Polynomial Functions</title>
+    <title>R.A.: Real Number</title>
+    <description>
+&lt;h4 id=&quot;background&quot;&gt;Background&lt;/h4&gt;
+&lt;p&gt;You are of course free to design you own number system, possibly including one
+division by zero is plausible; but you will have to give up one of the axioms.&lt;/p&gt;
+
+</description>
+    <link>/math/math-change-real-analysis-real-numbers.html</link>
+    <guid>/math/math-change-real-analysis-real-numbers</guid>
+    <pubDate>Tue, 10 Dec 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>R.A.: Polynomial Functions</title>
     <description>
 &lt;p&gt;Polynomial functions are important because they are simple, easy to compute and
 approximate any continuous functions on an interval.&lt;/p&gt;
@@ -2185,13 +2308,13 @@ approximate any continuous functions on an interval.&lt;/p&gt;
 $A_1 [X_1,Y_1],A_2 [X_2,Y_2],A_n [X_n,Y_n],$ &lt;br /&gt;
 We expect the degree of $p(x)$ is n-1&lt;/p&gt;
 </description>
-    <link>/math/math-change-mathematical-analysis-polynomial-functions.html</link>
-    <guid>/math/math-change-mathematical-analysis-polynomial-functions</guid>
+    <link>/math/math-change-real-analysis-polynomial-functions.html</link>
+    <guid>/math/math-change-real-analysis-polynomial-functions</guid>
     <pubDate>Tue, 10 Dec 2019 00:00:00 +0900</pubDate>
   </item>
 
   <item>
-    <title>M.A.: Legendre Transformation</title>
+    <title>R.A.: Legendre Transformation</title>
     <description>
 &lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
 &lt;p&gt;You can just treat the legendre transformation as a dual problem. if you do it
@@ -2199,13 +2322,13 @@ this way, How about Fourier transformation ?  I think they are all the same in
 nature. It’s too difficult too solve a problem, and we can turn our attention to
 the mirror problem, and we will have a solution.&lt;/p&gt;
 </description>
-    <link>/math/math-change-mathematical-analysis-legendre-transormation.html</link>
-    <guid>/math/math-change-mathematical-analysis-legendre-transormation</guid>
+    <link>/math/math-change-real-analysis-legendre-transormation.html</link>
+    <guid>/math/math-change-real-analysis-legendre-transormation</guid>
     <pubDate>Tue, 10 Dec 2019 00:00:00 +0900</pubDate>
   </item>
 
   <item>
-    <title>M.A.: Jacobian Matrix</title>
+    <title>R.A.: Jacobian Matrix</title>
     <description>
 &lt;h4 id=&quot;jacobian-matrix&quot;&gt;Jacobian matrix&lt;/h4&gt;
 &lt;p&gt;Matrices are transformations of space&lt;/p&gt;
@@ -2240,13 +2363,13 @@ F(u, v, w)\left|\frac{\partial(x, y, z)}{\partial(u, v, w)}\right| \mathrm{d} u
   &lt;li&gt;&lt;a href=&quot;https://wenku.baidu.com/view/f56aa732b94ae45c3b3567ec102de2bd9605de8b.html&quot;&gt;Jacobians&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </description>
-    <link>/math/math-change-mathematical-analysis-jacobian-matrix.html</link>
-    <guid>/math/math-change-mathematical-analysis-jacobian-matrix</guid>
+    <link>/math/math-change-real-analysis-jacobian-matrix.html</link>
+    <guid>/math/math-change-real-analysis-jacobian-matrix</guid>
     <pubDate>Tue, 10 Dec 2019 00:00:00 +0900</pubDate>
   </item>
 
   <item>
-    <title>M.A.: Integral of Special Function</title>
+    <title>R.A.: Integral of Special Function</title>
     <description>
 &lt;h4 id=&quot;gamma-function&quot;&gt;Gamma Function&lt;/h4&gt;
 &lt;p&gt;\(\Gamma(z)=\int_{0}^{\infty} x^{z-1} e^{-x} d x, \quad \mathfrak{R}(z)&amp;gt;0\)&lt;/p&gt;
@@ -2261,13 +2384,13 @@ F(u, v, w)\left|\frac{\partial(x, y, z)}{\partial(u, v, w)}\right| \mathrm{d} u
   &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Gaussian_integral&quot;&gt;Gaussian Integral&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </description>
-    <link>/math/math-change-mathematical-analysis-integral-of-special-function.html</link>
-    <guid>/math/math-change-mathematical-analysis-integral-of-special-function</guid>
+    <link>/math/math-change-real-analysis-integral-of-special-function.html</link>
+    <guid>/math/math-change-real-analysis-integral-of-special-function</guid>
     <pubDate>Tue, 10 Dec 2019 00:00:00 +0900</pubDate>
   </item>
 
   <item>
-    <title>M.A.: Hessian Matrix</title>
+    <title>R.A.: Hessian Matrix</title>
     <description>
 &lt;h4 id=&quot;hessian-matrix&quot;&gt;Hessian Matrix&lt;/h4&gt;
 
@@ -2285,13 +2408,13 @@ f}{\partial x_{2} \partial x_{1}}} &amp;amp; {\frac{\partial^{2} f}{\partial x_{
 Taylor expansion is used to simulates the target function. &lt;br /&gt; which needs
 Hessian Matrix&lt;/p&gt;
 </description>
-    <link>/math/math-change-mathematical-analysis-hessian-matrix.html</link>
-    <guid>/math/math-change-mathematical-analysis-hessian-matrix</guid>
+    <link>/math/math-change-real-analysis-hessian-matrix.html</link>
+    <guid>/math/math-change-real-analysis-hessian-matrix</guid>
     <pubDate>Tue, 10 Dec 2019 00:00:00 +0900</pubDate>
   </item>
 
   <item>
-    <title>M.A.: Change Order of Integration, Differention and limit</title>
+    <title>R.A.: Change Order of Integration, Differention and limit</title>
     <description>
 &lt;h4 id=&quot;change-order-between-integration-and-differenation&quot;&gt;Change Order between Integration and Differenation&lt;/h4&gt;
 
@@ -2308,13 +2431,13 @@ Hessian Matrix&lt;/p&gt;
 \[\frac{d y}{d x}=-\frac{\left(\frac{\partial P}{\partial x}\right)}{\left(\frac{\partial P}{\partial y}\right)}\]
 
 </description>
-    <link>/math/math-change-mathematical-analysis-function.html</link>
-    <guid>/math/math-change-mathematical-analysis-function</guid>
+    <link>/math/math-change-real-analysis-function.html</link>
+    <guid>/math/math-change-real-analysis-function</guid>
     <pubDate>Tue, 10 Dec 2019 00:00:00 +0900</pubDate>
   </item>
 
   <item>
-    <title>M.A.: Fourier Transformation</title>
+    <title>R.A.: Fourier Transformation</title>
     <description>
 &lt;h4 id=&quot;a-circle-in-different-coordinate-systems&quot;&gt;a circle in different coordinate systems&lt;/h4&gt;
 &lt;ol&gt;
@@ -2336,13 +2459,67 @@ function&lt;/strong&gt; to represent any transcental function.&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.matongxue.com/madocs/723.html&quot;&gt;Laplace Transformation&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </description>
-    <link>/math/math-change-mathematical-analysis-fourier-transformation.html</link>
-    <guid>/math/math-change-mathematical-analysis-fourier-transformation</guid>
+    <link>/math/math-change-real-analysis-fourier-transformation.html</link>
+    <guid>/math/math-change-real-analysis-fourier-transformation</guid>
     <pubDate>Tue, 10 Dec 2019 00:00:00 +0900</pubDate>
   </item>
 
   <item>
-    <title>M.A.: Complex Analysis</title>
+    <title>R.A.: Calculus Line</title>
+    <description>
+&lt;h4 id=&quot;line-integral-of-a-scalar-field&quot;&gt;Line integral of a scalar field&lt;/h4&gt;
+&lt;p&gt;For some scalar field 
+\(f: \mathbb{U} \subseteq \mathbb{R}^{n} \rightarrow \mathbb{R}\)
+the line integral along a piecewise smooth curve \(c \subset \mathbb{U}\) is defined as&lt;/p&gt;
+
+\[\int_{\mathcal{C}} f(\mathbf{r}) d s=\int_{a}^{b}
+f(\mathbf{r}(t))\left|\mathbf{r}^{\prime}(t)\right| d t\]
+
+&lt;p&gt;&lt;img src=&quot;/images/math-change-calculus-line-scalar-field.gif&quot; /&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;remark&quot;&gt;Remark&lt;/h5&gt;
+&lt;p&gt;A line integral of a scalar field is thus a line integral of a vector field
+where the vectors are always tangential to the line.&lt;/p&gt;
+
+&lt;h4 id=&quot;remark-1&quot;&gt;Remark&lt;/h4&gt;
+&lt;p&gt;For a long time, I was so confused by the concept of field, what the crap is a
+field. All of a sudden, I understand, I was so happy, it is just a map, we call
+this a field just to generalize this phenomean.&lt;/p&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Line_integral&quot;&gt;wikipedia line integral&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/math/math-change-real-analysis-calculus-line.html</link>
+    <guid>/math/math-change-real-analysis-calculus-line</guid>
+    <pubDate>Tue, 10 Dec 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>R.A.: Beta Function</title>
+    <description>
+&lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
+&lt;p&gt;\(\mathrm{B}(x, y)=\int_{0}^{1} t^{x-1}(1-t)^{y-1} d t\) &lt;br /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;the beta function, also called the Euler integral of the first kind.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;properties&quot;&gt;Properties&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Symmetry: B(x,y)=B(y,x)&lt;/li&gt;
+  &lt;li&gt;Relationship between gamma function and beta function: \(\mathrm{B}(x, y)=\frac{\Gamma(x) \Gamma(y)}{\Gamma(x+y)}\)&lt;/li&gt;
+  &lt;li&gt;when x and y are positive integers: \(\mathrm{B}(x, y)=\frac{(x-1) !(y-1) !}{(x+y-1) !}\)&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/math/math-change-real-analysis-beta-function.html</link>
+    <guid>/math/math-change-real-analysis-beta-function</guid>
+    <pubDate>Tue, 10 Dec 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>R.A.: Complex Analysis</title>
     <description>
 &lt;h4 id=&quot;definition&quot;&gt;definition&lt;/h4&gt;
 &lt;ol&gt;
@@ -2372,63 +2549,9 @@ torus are all Riemann surfaces. we say it’s Riemann surface, is due to the con
 studying complex functions.&lt;/p&gt;
 
 </description>
-    <link>/math/math-change-mathematical-analysis-complex-function.html</link>
-    <guid>/math/math-change-mathematical-analysis-complex-function</guid>
-    <pubDate>Tue, 10 Dec 2019 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>M.A.: Calculus Line</title>
-    <description>
-&lt;h4 id=&quot;line-integral-of-a-scalar-field&quot;&gt;Line integral of a scalar field&lt;/h4&gt;
-&lt;p&gt;For some scalar field 
-\(f: \mathbb{U} \subseteq \mathbb{R}^{n} \rightarrow \mathbb{R}\)
-the line integral along a piecewise smooth curve \(c \subset \mathbb{U}\) is defined as&lt;/p&gt;
-
-\[\int_{\mathcal{C}} f(\mathbf{r}) d s=\int_{a}^{b}
-f(\mathbf{r}(t))\left|\mathbf{r}^{\prime}(t)\right| d t\]
-
-&lt;p&gt;&lt;img src=&quot;/images/math-change-calculus-line-scalar-field.gif&quot; /&gt;&lt;/p&gt;
-
-&lt;h5 id=&quot;remark&quot;&gt;Remark&lt;/h5&gt;
-&lt;p&gt;A line integral of a scalar field is thus a line integral of a vector field
-where the vectors are always tangential to the line.&lt;/p&gt;
-
-&lt;h4 id=&quot;remark-1&quot;&gt;Remark&lt;/h4&gt;
-&lt;p&gt;For a long time, I was so confused by the concept of field, what the crap is a
-field. All of a sudden, I understand, I was so happy, it is just a map, we call
-this a field just to generalize this phenomean.&lt;/p&gt;
-
-&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Line_integral&quot;&gt;wikipedia line integral&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-    <link>/math/math-change-mathematical-analysis-calculus-line.html</link>
-    <guid>/math/math-change-mathematical-analysis-calculus-line</guid>
-    <pubDate>Tue, 10 Dec 2019 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>M.A.: Beta Function</title>
-    <description>
-&lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
-&lt;p&gt;\(\mathrm{B}(x, y)=\int_{0}^{1} t^{x-1}(1-t)^{y-1} d t\) &lt;br /&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;the beta function, also called the Euler integral of the first kind.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;properties&quot;&gt;Properties&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Symmetry: B(x,y)=B(y,x)&lt;/li&gt;
-  &lt;li&gt;Relationship between gamma function and beta function: \(\mathrm{B}(x, y)=\frac{\Gamma(x) \Gamma(y)}{\Gamma(x+y)}\)&lt;/li&gt;
-  &lt;li&gt;when x and y are positive integers: \(\mathrm{B}(x, y)=\frac{(x-1) !(y-1) !}{(x+y-1) !}\)&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    <link>/math/math-change-mathematical-analysis-beta-function.html</link>
-    <guid>/math/math-change-mathematical-analysis-beta-function</guid>
-    <pubDate>Tue, 10 Dec 2019 00:00:00 +0900</pubDate>
+    <link>/math/math-change-complex-analysis-complex-function.html</link>
+    <guid>/math/math-change-complex-analysis-complex-function</guid>
+    <pubDate>Thu, 05 Dec 2019 00:00:00 +0900</pubDate>
   </item>
 
   <item>
@@ -8262,27 +8385,37 @@ way. (variational)&lt;/li&gt;
     <title>P.A.S.T.B.: Variational Inference</title>
     <description>
 &lt;h4 id=&quot;1-motivation&quot;&gt;1. Motivation&lt;/h4&gt;
-&lt;p&gt;\(P(\mathbf{x})=\frac{1}{Z} P^{*}(\mathbf{x})=\frac{1}{Z} e^{-E(\mathbf{x})}\)&lt;/p&gt;
+&lt;p&gt;$
+P(\mathbf{x})=\frac{1}{Z} P^{*}(\mathbf{x})=\frac{1}{Z} e^{-E(\mathbf{x})}
+$&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;\(E(x)\) is simple, but not simple enough&lt;/li&gt;
-  &lt;li&gt;solution: approximate \(P(X)\) by a simpler distribution \(Q(x;\theta)\).
-Adjust \(\theta\) to get the ‘best’ approximation.&lt;/li&gt;
-  &lt;li&gt;THen approximate \(\sum_{x} \phi(x) P(x) \text { by } \sum_{x} \phi(x) Q\left(x ; \theta^{*}\right)\)&lt;/li&gt;
+  &lt;li&gt;$E(x)$ is simple, but not simple enough&lt;/li&gt;
+  &lt;li&gt;solution: approximate $P(X)$ by a simpler distribution \(Q(x;\theta)\).
+Adjust $\theta$ to get the ‘best’ approximation.&lt;/li&gt;
+  &lt;li&gt;THen approximate $
+\sum_{x} \phi(x) P(x) \text { by } \sum_{x} \phi(x) Q\left(x ; \theta^{*}\right)
+$&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4 id=&quot;2-method&quot;&gt;2. Method&lt;/h4&gt;
 &lt;ol&gt;
+  &lt;li&gt;$
+D_{\mathrm{KL}}(Q | P)=\sum Q(x) \log \frac{Q(x)}{P(x)}
+$&lt;/li&gt;
   &lt;li&gt;
-\[D_{\mathrm{KL}}(Q \| P)=\sum Q(x) \log \frac{Q(x)}{P(x)}\]
-  &lt;/li&gt;
-  &lt;li&gt;
-\[D_{\mathrm{KL}}(P \| Q)=\sum_{x} P(x) \log \frac{P(x)}{Q(x)}\]
+    &lt;p&gt;$
+D_{\mathrm{KL}}(P | Q)=\sum_{x} P(x) \log \frac{P(x)}{Q(x)}
+$&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;we can substitue $P(x)$ into formula 1, and we got
-\(D_{\mathrm{KL}}(Q \| P)=\sum Q(x) \log \frac{Q(x)}{P(x)}
-= \sum_{x} Q(x)E(x)+log_e^z-H(Q)\)&lt;/li&gt;
+$
+D_{\mathrm{KL}}(Q | P)=\sum Q(x) \log \frac{Q(x)}{P(x)}
+= \sum_{x} Q(x)E(x)+log_e^z-H(Q)
+$&lt;/li&gt;
   &lt;li&gt;variational free energy
-\(\tilde{F}(\theta)=\sum_{\mathbf{x}} Q(\mathbf{x} ; \theta) E(\mathbf{x})-\sum_{\mathbf{x}} Q(\mathbf{x} ; \theta) \ln \frac{1}{Q(\mathbf{x} ; \theta)}\)&lt;/li&gt;
+$
+\tilde{F}(\theta)=\sum_{\mathbf{x}} Q(\mathbf{x} ; \theta) E(\mathbf{x})-\sum_{\mathbf{x}} Q(\mathbf{x} ; \theta) \ln \frac{1}{Q(\mathbf{x} ; \theta)}
+$&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
