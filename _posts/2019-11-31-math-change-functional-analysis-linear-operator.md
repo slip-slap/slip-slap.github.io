@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "F.A.:Introduction"
-keywords: [ "operator"]
+title: "F.A.: Introduction"
+keywords: []
 description: ""
 category: "math"
 tags: ["change","F.A."]
@@ -10,14 +10,15 @@ tags: ["change","F.A."]
 
 #### Definition
 1. F.A.: functional analysis
+
 #### what is linear operator
 
 1. Linear functional: if V is a normed space over F and T:V-F is a linear
    operator, then we call T a linear functional on V.
 2. A mapping A: $$ U \rightarrow V $$ is linear if
-$$
+$
 A(\alpha \mathbf{x}+\beta \mathbf{y})=\alpha A \mathbf{x}+\beta A \mathbf{y}
-$$
+$
 
 
 #### Topology

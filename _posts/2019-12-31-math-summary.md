@@ -100,6 +100,19 @@ discrete.
 
 <hr />
 
+#### Galois
+1. sometimes I think mathematicians are the most brillant people in the world,
+   they create so many beautiful things.
+2. Actually, there are som many problems which are undefined, the ability of
+   human is limited. 
+- $6/0$
+- vector + matrix
+- infinity + infinity
+
+
+
+
+
 #### Reference
 1. you often think space more geometric, such as metric space, Hilbert space,
    norm space. structure more algebraic, such as in group theory. 

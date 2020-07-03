@@ -142,7 +142,7 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">707</span>
+<span title="文章总数">714</span>
 <ul>
 
 
@@ -366,7 +366,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#March-2020">2020 年 03 月 (39)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2020">2020 年 03 月 (40)</a></li>
     
   
 
@@ -537,7 +542,37 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#December-2019">2019 年 12 月 (26)</a></li>
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#December-2019">2019 年 12 月 (32)</a></li>
     
   
 
@@ -3772,11 +3807,11 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#OS-ref">OS (28)</a></li>
 
-  <li><a href="/categories.html#math-ref">math (216)</a></li>
+  <li><a href="/categories.html#math-ref">math (222)</a></li>
 
   <li><a href="/categories.html#work-ref">work (9)</a></li>
 
-  <li><a href="/categories.html#AI-ref">AI (41)</a></li>
+  <li><a href="/categories.html#AI-ref">AI (42)</a></li>
 
 </ul>
 
@@ -4231,7 +4266,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#change-ref" style="font-size: 11.5pt; color: #666;">change</a>
+    <a href="/tags.html#change-ref" style="font-size: 12pt; color: #666;">change</a>
   
     
     
@@ -4252,7 +4287,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#R.A.-ref" style="font-size: 10pt; color: #888;">R.A.</a>
+    <a href="/tags.html#R.A.-ref" style="font-size: 10.5pt; color: #777;">R.A.</a>
   
     
     
@@ -4266,7 +4301,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#basic-ref" style="font-size: 9pt; color: #999;">basic</a>
+    <a href="/tags.html#basic-ref" style="font-size: 9.5pt; color: #999;">basic</a>
   
     
     
@@ -4449,20 +4484,37 @@ $(document).ready(function() {
       
 <h4 id="differentiate-a-cross-entropy-cost-function">differentiate a cross Entropy Cost Function</h4>
 
-\[\begin{aligned} \frac{\partial L}{\partial z_{i}} &amp;=\frac{\partial L}{\partial a_{j}} \cdot \frac{\partial a_{j}}{\partial z_{i}} \\ &amp;=\frac{\partial\left(-\sum_{j}^{n} y_{j} \ln a_{j}\right)}{\partial a_{j}} \cdot \frac{\partial a_{j}}{\partial z_{i}} \\ &amp;=-\sum_{j}^{n} y_{j} \frac{1}{a_{j}} \cdot \frac{\partial a_{j}}{\partial z_{i}} \end{aligned}\]
+<p>$
+\begin{aligned} \frac{\partial L}{\partial z_{i}} &amp;=\frac{\partial L}{\partial a_{j}} \cdot \frac{\partial a_{j}}{\partial z_{i}} \ &amp;=\frac{\partial\left(-\sum_{j}^{n} y_{j} \ln a_{j}\right)}{\partial a_{j}} \cdot \frac{\partial a_{j}}{\partial z_{i}} \ &amp;=-\sum_{j}^{n} y_{j} \frac{1}{a_{j}} \cdot \frac{\partial a_{j}}{\partial z_{i}} \end{aligned}
+$</p>
 
-\[\begin{aligned} \frac{\partial a_{j}}{\partial z_{i}} &amp;=\frac{\partial\left(\frac{e^{z_{i}}}{\sum_{k} e^{z_{k}}}\right)}{\partial z_{i}} \\ &amp;=\frac{e^{z_{i}} \cdot \sum_{k} e^{z_{k}}-\left(e^{z_{i}}\right)^{2}}{\left(\sum_{k} e^{z_{k}}\right)^{2}} \\ &amp;=\left(\frac{e^{z_{i}}}{\sum_{k} e^{z_{k}}}\right)\left(1-\frac{e^{z_{i}}}{\sum_{k} e^{z_{k}}}\right) \\ &amp;=a_{i}\left(1-a_{i}\right) \end{aligned}\]
+<p>$
+\begin{aligned} \frac{\partial a_{j}}{\partial z_{i}} &amp;=\frac{\partial\left(\frac{e^{z_{i}}}{\sum_{k} e^{z_{k}}}\right)}{\partial z_{i}} \ &amp;=\frac{e^{z_{i}} \cdot \sum_{k} e^{z_{k}}-\left(e^{z_{i}}\right)^{2}}{\left(\sum_{k} e^{z_{k}}\right)^{2}} \ &amp;=\left(\frac{e^{z_{i}}}{\sum_{k} e^{z_{k}}}\right)\left(1-\frac{e^{z_{i}}}{\sum_{k} e^{z_{k}}}\right) \ &amp;=a_{i}\left(1-a_{i}\right) \end{aligned}
+$</p>
 
-\[\frac{\partial a_{j}}{\partial z_{i}}=\frac{\partial\left(\frac{e^{z_{j}}}{\sum_{k} e^{z_{k}}}\right)}{\partial z_{i}}=\frac{0-e^{z_{j}} e^{z_{i}}}{\left(\sum_{k} e^{z_{k}}\right)^{2}}=-a_{j} a_{i}\]
+<p>$
+\frac{\partial a_{j}}{\partial z_{i}}=\frac{\partial\left(\frac{e^{z_{j}}}{\sum_{k} e^{z_{k}}}\right)}{\partial z_{i}}=\frac{0-e^{z_{j}} e^{z_{i}}}{\left(\sum_{k} e^{z_{k}}\right)^{2}}=-a_{j} a_{i}
+$</p>
 
 <p>combine the above two conditions:</p>
 
-\[\begin{aligned} \frac{\partial L}{\partial z_{i}} &amp;=-\sum_{j}^{n} y_{j} \frac{1}{a_{j}} \cdot \frac{\partial a_{j}}{\partial z_{i}} \\ &amp;=-y_{i} \frac{1}{a_{i}} \cdot a_{i}\left(1-a_{i}\right)-\sum_{j \neq i} y_{j} \frac{1}{a_{j}} \cdot\left(-a_{j} a_{i}\right) \\ &amp;=-y_{i}+a_{i} y_{i}+\sum_{j \neq i} y_{j} a_{i} \\ &amp;=-y_{i}+\sum_{j} y_{j} a_{i} \end{aligned}\]
+<p>$
+\begin{aligned} \frac{\partial L}{\partial z_{i}} &amp;=-\sum_{j}^{n} y_{j} \frac{1}{a_{j}} \cdot \frac{\partial a_{j}}{\partial z_{i}} \ &amp;=-y_{i} \frac{1}{a_{i}} \cdot a_{i}\left(1-a_{i}\right)-\sum_{j \neq i} y_{j} \frac{1}{a_{j}} \cdot\left(-a_{j} a_{i}\right) \ &amp;=-y_{i}+a_{i} y_{i}+\sum_{j \neq i} y_{j} a_{i} \ &amp;=-y_{i}+\sum_{j} y_{j} a_{i} \end{aligned}
+$</p>
 
-<p>since \(y_{i}\) is a one-hot vector:
-\(\begin{array}{c}{\sum_{j} y_{j} a_{i}=a_{i}} \\ {\frac{\partial L}{\partial z_{i}}=a_{i}-y_{i}}\end{array}\)</p>
+<p>since $y_{i}$ is a one-hot vector:</p>
+
+<p>$
+\begin{array}{c}{\sum_{j} y_{j} a_{i}=a_{i}} \ {\frac{\partial L}{\partial z_{i}}=a_{i}-y_{i}}\end{array}
+$</p>
 
 <h4 id="galois">Galois</h4>
+<ol>
+  <li>Convolutional neural network is nothing special.</li>
+  <li>Nobody knows why this work, but it worked very well.</li>
+</ol>
+
+<h4 id="trashed-comment">Trashed Comment</h4>
 <ol>
   <li>The relationship between neural network and convolutional neural network is how
 to treat the input signal. If the network is full connected, then it is
@@ -4472,15 +4524,10 @@ behavior.</li>
 </ol>
 
 <h4 id="inference">Inference</h4>
-<p>1.<a href="https://grzegorzgwardys.wordpress.com/2016/04/22/8/">Convolutional neural networks backpropagation: from intuition to derivation</a></p>
-
 <ol>
-  <li>
-    <p><a href="https://wu-2018.github.io/2018/11/02/differentiate-a-cross-entropy-cost-function.html">differentiate a cross entropy cost function</a></p>
-  </li>
-  <li>
-    <p><a href="https://cs231n.github.io">CS231</a></p>
-  </li>
+  <li><a href="https://grzegorzgwardys.wordpress.com/2016/04/22/8/">Convolutional neural networks backpropagation: from intuition to derivation</a></li>
+  <li><a href="https://wu-2018.github.io/2018/11/02/differentiate-a-cross-entropy-cost-function.html">differentiate a cross entropy cost function</a></li>
+  <li><a href="https://cs231n.github.io">CS231</a></li>
 </ol>
 
 
@@ -4511,7 +4558,7 @@ behavior.</li>
   
      
     	<li><a href="/categories.html#AI-ref">
-    		AI <span>41</span>
+    		AI <span>42</span>
     	</a></li>
     
   
@@ -4530,7 +4577,9 @@ behavior.</li>
 
   
      
-    	<li><a href="/tags.html#N.N.D.-ref">N.N.D. <span>17</span></a></li>
+    	<li><a href="/tags.html#N.N.D.-ref">N.N.D. <span>18</span></a></li>
+     
+    	<li><a href="/tags.html#learning-ref">learning <span>21</span></a></li>
     
   
 

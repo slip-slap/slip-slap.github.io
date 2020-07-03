@@ -3,7 +3,7 @@
   <title>Just Do It</title>
   <link href="/atom.xml" rel="self"/>
   <link href=""/>
-  <updated>2020-07-01T11:33:34+09:00</updated>
+  <updated>2020-07-03T10:07:32+09:00</updated>
   <id></id>
   <author>
     <name>reed</name>
@@ -115,8 +115,10 @@ similarities of the corresponding low-dimensional points in t...</content>
     <id>/ai/AI-support-vector-machine</id>
     <content type="html">
 Introduction
-\(\begin{array}{l}{\vec{w} \cdot \vec{u} \geq c} \\ {\vec{w} \cdot \vec{u}+b
-\geqslant 0}\end{array}\) 
+$
+\begin{array}{l}{\vec{w} \cdot \vec{u} \geq c} \ {\vec{w} \cdot \vec{u}+b
+\geqslant 0}\end{array}
+$ 
 where $c=-b$
 
   For the equation above, we don’t know use which $\vec{w}$ and b
@@ -125,7 +127,8 @@ where $c=-b$
 
 The KKT conditions are:
 
-\[\begin{aligned} \alpha_{i...</content>
+$
+\begin{aligned} \alpha_{i}...</content>
   </entry>
 
   <entry>
@@ -390,7 +393,8 @@ preceded by a TDL....</content>
     <content type="html">
 differentiate a cross Entropy Cost Function
 
-\[\begin{aligned} \frac{\partial L}{\partial z_{i}} &amp;amp;=\frac{\partial L}{\partial a_{j}} \cdot \frac{\partial a_{j}}{\partial z_{i}} \\ &amp;amp;=\frac{\partial\left(-\sum_{j}^{n} y_{j} \ln a_{j}\right)}{\partial a_{j}} \cdot \frac{\partial a_{j}}{\par...</content>
+$
+\begin{aligned} \frac{\partial L}{\partial z_{i}} &amp;amp;=\frac{\partial L}{\partial a_{j}} \cdot \frac{\partial a_{j}}{\partial z_{i}} \ &amp;amp;=\frac{\partial\left(-\sum_{j}^{n} y_{j} \ln a_{j}\right)}{\partial a_{j}} \cdot \frac{\partial a_{j}}{\part...</content>
   </entry>
 
   <entry>
@@ -437,6 +441,26 @@ Boltzmann Machine
     
       Supervised
       Convolutional Neur...</content>
+  </entry>
+
+  <entry>
+    <title>N.N.D.: Variations on Backpropagation</title>
+    <link href="/ai/AI-learning-nnd-backpropagation-variation.html"/>
+    <updated>2020-03-04T00:00:00+09:00</updated>
+    <id>/ai/AI-learning-nnd-backpropagation-variation</id>
+    <content type="html">
+Background
+
+  backpropagation algorithm is slow in converging
+
+
+Alternative
+
+  conjugate gradient algorithm
+  Newton’s Method
+
+
+</content>
   </entry>
 
   <entry>
@@ -893,6 +917,22 @@ about
   </entry>
 
   <entry>
+    <title>Philosophy</title>
+    <link href="/math/math-basic-philosphy.html"/>
+    <updated>2019-12-29T00:00:00+09:00</updated>
+    <id>/math/math-basic-philosphy</id>
+    <content type="html">
+Galois
+
+  Philosphers believed the world is built based on some essential building
+blocks. For example, the classic elements are water, fire.
+  So in real analysis, we believe the number system is built based on zero and
+increment operation.
+
+</content>
+  </entry>
+
+  <entry>
     <title>Set Theory</title>
     <link href="/math/math-basic-set-theory.html"/>
     <updated>2019-12-28T00:00:00+09:00</updated>
@@ -973,31 +1013,40 @@ a series is a list of numbers with a...</content>
   </entry>
 
   <entry>
-    <title>R.A.: Riemann Integral</title>
-    <link href="/math/math-change-real-analysis-riemann-integral.html"/>
-    <updated>2019-12-10T00:00:00+09:00</updated>
-    <id>/math/math-change-real-analysis-riemann-integral</id>
-    <content type="html">
-definition
-
-  Riemann integral, was the first rigorous definition on an interval.
-  Riemann integral is unsuitable for many theoretical purposes.
-
-
-</content>
-  </entry>
-
-  <entry>
     <title>R.A.: Real Number</title>
     <link href="/math/math-change-real-analysis-real-numbers.html"/>
     <updated>2019-12-10T00:00:00+09:00</updated>
     <id>/math/math-change-real-analysis-real-numbers</id>
     <content type="html">
 Background
-You are of course free to design you own number system, possibly including one
-division by zero is plausible; but you will have to give up one of the axioms.
 
-</content>
+  we have rigorously constructed three fundamental number systems:
+    
+      The natural number system N, The integers Z and the rational Q.
+    
+  
+
+
+History
+
+  Limit is a concept on one level is quite intuitive, but to pin down turn out
+to be quite difficult
+  Even the great mathe...</content>
+  </entry>
+
+  <entry>
+    <title>R.A.: Rational</title>
+    <link href="/math/math-change-real-analysis-rationals.html"/>
+    <updated>2019-12-10T00:00:00+09:00</updated>
+    <id>/math/math-change-real-analysis-rationals</id>
+    <content type="html">
+Background
+
+  We have now constructed the integers, with the operations of addition,
+subtraction, multiplication, and order and verified all the expected
+algebraic and order-theoretic properties. Now we will use a similar
+construction to build the rationals , adding division to our mix of
+operat...</content>
   </entry>
 
   <entry>
@@ -1014,6 +1063,21 @@ Find a polynomial $p(x)$ of lowest degree passing through n points
 $A_1 [X_1,Y_1],A_2 [X_2,Y_2],A_n [X_n,Y_n],$ 
 We expect the degree of $p(x)$ is n-1
 </content>
+  </entry>
+
+  <entry>
+    <title>R.A.: Limits of Sequences</title>
+    <link href="/math/math-change-real-analysis-limit-of-sequences.html"/>
+    <updated>2019-12-10T00:00:00+09:00</updated>
+    <id>/math/math-change-real-analysis-limit-of-sequences</id>
+    <content type="html">
+Extended Real Number System
+The extended real number system $R^\asterisk$ is the real line $R$ with two
+additional elements attached, called $+\infty$ and $-\infty$.
+
+  These elements are distinct from each other, and also distinct from every real
+number.
+  An extended real number is $x$ is call...</content>
   </entry>
 
   <entry>
@@ -1052,6 +1116,23 @@ x}{\mathrm{d} u} \mathrm{d} u\)
   </entry>
 
   <entry>
+    <title>R.A.: Riemann Integral</title>
+    <link href="/math/math-change-real-analysis-integral.html"/>
+    <updated>2019-12-10T00:00:00+09:00</updated>
+    <id>/math/math-change-real-analysis-integral</id>
+    <content type="html">
+Inspiration
+The idea of the Riemann integral is to try to integrate a function by first
+majorizing or minorizing that function by a piece constant function(which we
+already know how to integrate)
+
+Definition
+Let $f: I \rightarrow R$ be a bounded function on a bounded interval I.
+$
+\int_{I} f=\ba...</content>
+  </entry>
+
+  <entry>
     <title>R.A.: Integral of Special Function</title>
     <link href="/math/math-change-real-analysis-integral-of-special-function.html"/>
     <updated>2019-12-10T00:00:00+09:00</updated>
@@ -1073,6 +1154,23 @@ Inference
   </entry>
 
   <entry>
+    <title>R.A.: Integers</title>
+    <link href="/math/math-change-real-analysis-integers.html"/>
+    <updated>2019-12-10T00:00:00+09:00</updated>
+    <id>/math/math-change-real-analysis-integers</id>
+    <content type="html">
+Inspiration
+
+  We can characterize equality of differences using only the concept of addition
+    
+      so we will take advantage of our foreknowledge by building all this into the
+definition of the integers
+    
+  
+  we will temporarily write integers not as a difference $a-b$, but instead use...</content>
+  </entry>
+
+  <entry>
     <title>R.A.: Hessian Matrix</title>
     <link href="/math/math-change-real-analysis-hessian-matrix.html"/>
     <updated>2019-12-10T00:00:00+09:00</updated>
@@ -1087,7 +1185,7 @@ f}{\partial x_{2} \partial x_{1}}} &amp;amp; {\f...</content>
   </entry>
 
   <entry>
-    <title>R.A.: Change Order of Integration, Differention and limit</title>
+    <title>R.A.: Integration, Differention and limit</title>
     <link href="/math/math-change-real-analysis-function.html"/>
     <updated>2019-12-10T00:00:00+09:00</updated>
     <id>/math/math-change-real-analysis-function</id>
@@ -1121,6 +1219,37 @@ a circle in different coordinate systems
   </entry>
 
   <entry>
+    <title>R.A.: Differentiation of functions</title>
+    <link href="/math/math-change-real-analysis-differentiation.html"/>
+    <updated>2019-12-10T00:00:00+09:00</updated>
+    <id>/math/math-change-real-analysis-differentiation</id>
+    <content type="html">
+Background
+
+  In contrast to the geometric definition of derivatives, which uses tangents
+  The advantage of working analytically is we do not need to know the axioms of
+geometry
+  These definitions can be modified to handle functions of several variables,
+or functions whose values are vectors i...</content>
+  </entry>
+
+  <entry>
+    <title>R.A.: Continuous Functions</title>
+    <link href="/math/math-change-real-analysis-continuous-function.html"/>
+    <updated>2019-12-10T00:00:00+09:00</updated>
+    <id>/math/math-change-real-analysis-continuous-function</id>
+    <content type="html">
+Definition
+
+  
+    $\epsilon$-adherent points. Let $X$ be a subset of $R$, let $\epsilon&amp;gt;0$, and
+let $x \in R$. We say that x is $\epsilon-adherent$ to $X$ iff there exists a
+$y \in X$ which is $\epsilon-close$ to x
+  
+  Adherent points. Let $X$ be a subset of $R$, and let $x\in R$, we say th...</content>
+  </entry>
+
+  <entry>
     <title>R.A.: Calculus Line</title>
     <link href="/math/math-change-real-analysis-calculus-line.html"/>
     <updated>2019-12-10T00:00:00+09:00</updated>
@@ -1128,11 +1257,16 @@ a circle in different coordinate systems
     <content type="html">
 Line integral of a scalar field
 For some scalar field 
-\(f: \mathbb{U} \subseteq \mathbb{R}^{n} \rightarrow \mathbb{R}\)
-the line integral along a piecewise smooth curve \(c \subset \mathbb{U}\) is defined as
+$
+f: \mathbb{U} \subseteq \mathbb{R}^{n} \rightarrow \mathbb{R}
+$
+the line integral along a piecewise smooth curve $$
+c \subset \mathbb{U}
+$ is defined as
 
-\[\int_{\mathcal{C}} f(\mathbf{r}) d s=\int_{a}^{b}
-f(\mathbf{r}(t))\left|\mathbf{r}^{...</content>
+$
+\int_{\mathcal{C}} f(\mathbf{r}) d s=\int_{a}^{b}
+f(\mathbf{r}(t))\left|\mathbf{r}^...</content>
   </entry>
 
   <entry>
@@ -1208,7 +1342,7 @@ A metric space is an ordered pair(M,d), where M is a set and d is a metric on M.
   </entry>
 
   <entry>
-    <title>F.A.:Introduction</title>
+    <title>F.A.: Introduction</title>
     <link href="/math/math-change-functional-analysis-linear-operator.html"/>
     <updated>2019-12-01T00:00:00+09:00</updated>
     <id>/math/math-change-functional-analysis-linear-operator</id>
@@ -1216,12 +1350,16 @@ A metric space is an ordered pair(M,d), where M is a set and d is a metric on M.
 Definition
 
   F.A.: functional analysis
-    what is linear operator
-  
+
+
+what is linear operator
+
+
   Linear functional: if V is a normed space over F and T:V-F is a linear
 operator, then we call T a linear functional on V.
   A mapping A: \(U \rightarrow V\) is linear if
-\(A(\alpha \mathbf{x}+\beta \mathbf{y})=\alpha A \mat...</content>
+$
+A(\alpha \mathbf{x}+\beta \mathbf{y})=\alpha A \mathbf...</content>
   </entry>
 
   <entry>

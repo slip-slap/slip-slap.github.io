@@ -5,8 +5,8 @@
   <description>Just Do It - </description>
   <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
   <link></link>
-  <lastBuildDate>Wed, 01 Jul 2020 11:33:34 +0900</lastBuildDate>
-  <pubDate>Wed, 01 Jul 2020 11:33:34 +0900</pubDate>
+  <lastBuildDate>Fri, 03 Jul 2020 10:07:32 +0900</lastBuildDate>
+  <pubDate>Fri, 03 Jul 2020 10:07:32 +0900</pubDate>
   <ttl>1800</ttl>
 
 
@@ -245,8 +245,10 @@ similarities of the corresponding low-dimensional points in the embedding.&lt;/s
     <title>Support Vector Machine</title>
     <description>
 &lt;h4 id=&quot;introduction&quot;&gt;Introduction&lt;/h4&gt;
-&lt;p&gt;\(\begin{array}{l}{\vec{w} \cdot \vec{u} \geq c} \\ {\vec{w} \cdot \vec{u}+b
-\geqslant 0}\end{array}\) &lt;br /&gt;
+&lt;p&gt;$
+\begin{array}{l}{\vec{w} \cdot \vec{u} \geq c} \ {\vec{w} \cdot \vec{u}+b
+\geqslant 0}\end{array}
+$ &lt;br /&gt;
 where $c=-b$&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;For the equation above, we don’t know use which $\vec{w}$ and b&lt;/li&gt;
@@ -255,7 +257,9 @@ where $c=-b$&lt;/p&gt;
 
 &lt;p&gt;The KKT conditions are:&lt;/p&gt;
 
-\[\begin{aligned} \alpha_{i}=0 &amp;amp; \Rightarrow y^{(i)}\left(w^{T} x^{(i)}+b\right) \geq 1 \\ \alpha_{i}=C &amp;amp; \Rightarrow y^{(i)}\left(w^{T} x^{(i)}+b\right) \leq 1 \\ 0&amp;lt;\alpha_{i}&amp;lt;C &amp;amp; \Rightarrow y^{(i)}\left(w^{T} x^{(i)}+b\right)=1 \end{aligned}\]
+&lt;p&gt;$
+\begin{aligned} \alpha_{i}=0 &amp;amp; \Rightarrow y^{(i)}\left(w^{T} x^{(i)}+b\right) \geq 1 \ \alpha_{i}=C &amp;amp; \Rightarrow y^{(i)}\left(w^{T} x^{(i)}+b\right) \leq 1 \ 0&amp;lt;\alpha_{i}&amp;lt;C &amp;amp; \Rightarrow y^{(i)}\left(w^{T} x^{(i)}+b\right)=1 \end{aligned}
+$&lt;/p&gt;
 
 &lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
 &lt;ol&gt;
@@ -711,20 +715,37 @@ $\textbf{LW}^{1,3}$ and the corresponding TDL)&lt;/li&gt;
     <description>
 &lt;h4 id=&quot;differentiate-a-cross-entropy-cost-function&quot;&gt;differentiate a cross Entropy Cost Function&lt;/h4&gt;
 
-\[\begin{aligned} \frac{\partial L}{\partial z_{i}} &amp;amp;=\frac{\partial L}{\partial a_{j}} \cdot \frac{\partial a_{j}}{\partial z_{i}} \\ &amp;amp;=\frac{\partial\left(-\sum_{j}^{n} y_{j} \ln a_{j}\right)}{\partial a_{j}} \cdot \frac{\partial a_{j}}{\partial z_{i}} \\ &amp;amp;=-\sum_{j}^{n} y_{j} \frac{1}{a_{j}} \cdot \frac{\partial a_{j}}{\partial z_{i}} \end{aligned}\]
+&lt;p&gt;$
+\begin{aligned} \frac{\partial L}{\partial z_{i}} &amp;amp;=\frac{\partial L}{\partial a_{j}} \cdot \frac{\partial a_{j}}{\partial z_{i}} \ &amp;amp;=\frac{\partial\left(-\sum_{j}^{n} y_{j} \ln a_{j}\right)}{\partial a_{j}} \cdot \frac{\partial a_{j}}{\partial z_{i}} \ &amp;amp;=-\sum_{j}^{n} y_{j} \frac{1}{a_{j}} \cdot \frac{\partial a_{j}}{\partial z_{i}} \end{aligned}
+$&lt;/p&gt;
 
-\[\begin{aligned} \frac{\partial a_{j}}{\partial z_{i}} &amp;amp;=\frac{\partial\left(\frac{e^{z_{i}}}{\sum_{k} e^{z_{k}}}\right)}{\partial z_{i}} \\ &amp;amp;=\frac{e^{z_{i}} \cdot \sum_{k} e^{z_{k}}-\left(e^{z_{i}}\right)^{2}}{\left(\sum_{k} e^{z_{k}}\right)^{2}} \\ &amp;amp;=\left(\frac{e^{z_{i}}}{\sum_{k} e^{z_{k}}}\right)\left(1-\frac{e^{z_{i}}}{\sum_{k} e^{z_{k}}}\right) \\ &amp;amp;=a_{i}\left(1-a_{i}\right) \end{aligned}\]
+&lt;p&gt;$
+\begin{aligned} \frac{\partial a_{j}}{\partial z_{i}} &amp;amp;=\frac{\partial\left(\frac{e^{z_{i}}}{\sum_{k} e^{z_{k}}}\right)}{\partial z_{i}} \ &amp;amp;=\frac{e^{z_{i}} \cdot \sum_{k} e^{z_{k}}-\left(e^{z_{i}}\right)^{2}}{\left(\sum_{k} e^{z_{k}}\right)^{2}} \ &amp;amp;=\left(\frac{e^{z_{i}}}{\sum_{k} e^{z_{k}}}\right)\left(1-\frac{e^{z_{i}}}{\sum_{k} e^{z_{k}}}\right) \ &amp;amp;=a_{i}\left(1-a_{i}\right) \end{aligned}
+$&lt;/p&gt;
 
-\[\frac{\partial a_{j}}{\partial z_{i}}=\frac{\partial\left(\frac{e^{z_{j}}}{\sum_{k} e^{z_{k}}}\right)}{\partial z_{i}}=\frac{0-e^{z_{j}} e^{z_{i}}}{\left(\sum_{k} e^{z_{k}}\right)^{2}}=-a_{j} a_{i}\]
+&lt;p&gt;$
+\frac{\partial a_{j}}{\partial z_{i}}=\frac{\partial\left(\frac{e^{z_{j}}}{\sum_{k} e^{z_{k}}}\right)}{\partial z_{i}}=\frac{0-e^{z_{j}} e^{z_{i}}}{\left(\sum_{k} e^{z_{k}}\right)^{2}}=-a_{j} a_{i}
+$&lt;/p&gt;
 
 &lt;p&gt;combine the above two conditions:&lt;/p&gt;
 
-\[\begin{aligned} \frac{\partial L}{\partial z_{i}} &amp;amp;=-\sum_{j}^{n} y_{j} \frac{1}{a_{j}} \cdot \frac{\partial a_{j}}{\partial z_{i}} \\ &amp;amp;=-y_{i} \frac{1}{a_{i}} \cdot a_{i}\left(1-a_{i}\right)-\sum_{j \neq i} y_{j} \frac{1}{a_{j}} \cdot\left(-a_{j} a_{i}\right) \\ &amp;amp;=-y_{i}+a_{i} y_{i}+\sum_{j \neq i} y_{j} a_{i} \\ &amp;amp;=-y_{i}+\sum_{j} y_{j} a_{i} \end{aligned}\]
+&lt;p&gt;$
+\begin{aligned} \frac{\partial L}{\partial z_{i}} &amp;amp;=-\sum_{j}^{n} y_{j} \frac{1}{a_{j}} \cdot \frac{\partial a_{j}}{\partial z_{i}} \ &amp;amp;=-y_{i} \frac{1}{a_{i}} \cdot a_{i}\left(1-a_{i}\right)-\sum_{j \neq i} y_{j} \frac{1}{a_{j}} \cdot\left(-a_{j} a_{i}\right) \ &amp;amp;=-y_{i}+a_{i} y_{i}+\sum_{j \neq i} y_{j} a_{i} \ &amp;amp;=-y_{i}+\sum_{j} y_{j} a_{i} \end{aligned}
+$&lt;/p&gt;
 
-&lt;p&gt;since \(y_{i}\) is a one-hot vector:
-\(\begin{array}{c}{\sum_{j} y_{j} a_{i}=a_{i}} \\ {\frac{\partial L}{\partial z_{i}}=a_{i}-y_{i}}\end{array}\)&lt;/p&gt;
+&lt;p&gt;since $y_{i}$ is a one-hot vector:&lt;/p&gt;
+
+&lt;p&gt;$
+\begin{array}{c}{\sum_{j} y_{j} a_{i}=a_{i}} \ {\frac{\partial L}{\partial z_{i}}=a_{i}-y_{i}}\end{array}
+$&lt;/p&gt;
 
 &lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Convolutional neural network is nothing special.&lt;/li&gt;
+  &lt;li&gt;Nobody knows why this work, but it worked very well.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;trashed-comment&quot;&gt;Trashed Comment&lt;/h4&gt;
 &lt;ol&gt;
   &lt;li&gt;The relationship between neural network and convolutional neural network is how
 to treat the input signal. If the network is full connected, then it is
@@ -734,15 +755,10 @@ behavior.&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h4 id=&quot;inference&quot;&gt;Inference&lt;/h4&gt;
-&lt;p&gt;1.&lt;a href=&quot;https://grzegorzgwardys.wordpress.com/2016/04/22/8/&quot;&gt;Convolutional neural networks backpropagation: from intuition to derivation&lt;/a&gt;&lt;/p&gt;
-
 &lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://wu-2018.github.io/2018/11/02/differentiate-a-cross-entropy-cost-function.html&quot;&gt;differentiate a cross entropy cost function&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://cs231n.github.io&quot;&gt;CS231&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://grzegorzgwardys.wordpress.com/2016/04/22/8/&quot;&gt;Convolutional neural networks backpropagation: from intuition to derivation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://wu-2018.github.io/2018/11/02/differentiate-a-cross-entropy-cost-function.html&quot;&gt;differentiate a cross entropy cost function&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://cs231n.github.io&quot;&gt;CS231&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 </description>
@@ -880,6 +896,26 @@ E(v, h)&amp;amp;=-\sum_{i} a_{i} v_{i}-\sum_{j} b_{j} h_{j}-\sum_{i} \sum_{j} v_
 </description>
     <link>/ai/AI-learning-nnd-boltzmann-machine.html</link>
     <guid>/ai/AI-learning-nnd-boltzmann-machine</guid>
+    <pubDate>Wed, 04 Mar 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>N.N.D.: Variations on Backpropagation</title>
+    <description>
+&lt;h4 id=&quot;background&quot;&gt;Background&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;backpropagation algorithm is slow in converging&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;alternative&quot;&gt;Alternative&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;conjugate gradient algorithm&lt;/li&gt;
+  &lt;li&gt;Newton’s Method&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/ai/AI-learning-nnd-backpropagation-variation.html</link>
+    <guid>/ai/AI-learning-nnd-backpropagation-variation</guid>
     <pubDate>Wed, 04 Mar 2020 00:00:00 +0900</pubDate>
   </item>
 
@@ -2010,6 +2046,20 @@ errors).&lt;/li&gt;
 
 &lt;hr /&gt;
 
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;sometimes I think mathematicians are the most brillant people in the world,
+they create so many beautiful things.&lt;/li&gt;
+  &lt;li&gt;Actually, there are som many problems which are undefined, the ability of
+human is limited.
+    &lt;ul&gt;
+      &lt;li&gt;$6/0$&lt;/li&gt;
+      &lt;li&gt;vector + matrix&lt;/li&gt;
+      &lt;li&gt;infinity + infinity&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
 &lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
 &lt;ol&gt;
   &lt;li&gt;you often think space more geometric, such as metric space, Hilbert space,
@@ -2045,6 +2095,22 @@ denote an element in the set.&lt;/li&gt;
 </description>
     <link>/math/math-basic-set-theory-history.html</link>
     <guid>/math/math-basic-set-theory-history</guid>
+    <pubDate>Sun, 29 Dec 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Philosophy</title>
+    <description>
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Philosphers believed the world is built based on some essential building
+blocks. For example, the classic elements are water, fire.&lt;/li&gt;
+  &lt;li&gt;So in real analysis, we believe the number system is built based on zero and
+increment operation.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/math/math-basic-philosphy.html</link>
+    <guid>/math/math-basic-philosphy</guid>
     <pubDate>Sun, 29 Dec 2019 00:00:00 +0900</pubDate>
   </item>
 
@@ -2270,30 +2336,61 @@ a single point.&lt;/p&gt;
   </item>
 
   <item>
-    <title>R.A.: Riemann Integral</title>
-    <description>
-&lt;h4 id=&quot;definition&quot;&gt;definition&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Riemann integral, was the first rigorous definition on an interval.&lt;/li&gt;
-  &lt;li&gt;Riemann integral is unsuitable for many theoretical purposes.&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-    <link>/math/math-change-real-analysis-riemann-integral.html</link>
-    <guid>/math/math-change-real-analysis-riemann-integral</guid>
-    <pubDate>Tue, 10 Dec 2019 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
     <title>R.A.: Real Number</title>
     <description>
 &lt;h4 id=&quot;background&quot;&gt;Background&lt;/h4&gt;
-&lt;p&gt;You are of course free to design you own number system, possibly including one
-division by zero is plausible; but you will have to give up one of the axioms.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;we have rigorously constructed three fundamental number systems:
+    &lt;ul&gt;
+      &lt;li&gt;The natural number system N, The integers Z and the rational Q.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;history&quot;&gt;History&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Limit is a concept on one level is quite intuitive, but to pin down turn out
+to be quite difficult&lt;/li&gt;
+  &lt;li&gt;Even the great mathematician Euler and Newton had difficult with this
+concept. It was only until 19th century cauchy figure out how to deal with
+this concept rigorously.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;You are of course free to design you own number system, possibly including one
+division by zero is plausible; but you will have to give up one of the axioms.&lt;/li&gt;
+&lt;/ol&gt;
 
 </description>
     <link>/math/math-change-real-analysis-real-numbers.html</link>
     <guid>/math/math-change-real-analysis-real-numbers</guid>
+    <pubDate>Tue, 10 Dec 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>R.A.: Rational</title>
+    <description>
+&lt;h4 id=&quot;background&quot;&gt;Background&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;We have now constructed the integers, with the operations of addition,
+subtraction, multiplication, and order and verified all the expected
+algebraic and order-theoretic properties. Now we will use a similar
+construction to build the rationals , adding division to our mix of
+operations.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;A rational number is an expression of the form a//b where a and b are
+integers and b is non-zero; a//0 is not considered to be a rational number.
+Two rational numbers are considered to be equal, $a//b = c//d$, if and only if
+$ad = cb$, the set of all rational numbers is denoted $Q$&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/math/math-change-real-analysis-rationals.html</link>
+    <guid>/math/math-change-real-analysis-rationals</guid>
     <pubDate>Tue, 10 Dec 2019 00:00:00 +0900</pubDate>
   </item>
 
@@ -2310,6 +2407,34 @@ We expect the degree of $p(x)$ is n-1&lt;/p&gt;
 </description>
     <link>/math/math-change-real-analysis-polynomial-functions.html</link>
     <guid>/math/math-change-real-analysis-polynomial-functions</guid>
+    <pubDate>Tue, 10 Dec 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>R.A.: Limits of Sequences</title>
+    <description>
+&lt;h4 id=&quot;extended-real-number-system&quot;&gt;Extended Real Number System&lt;/h4&gt;
+&lt;p&gt;The extended real number system $R^\asterisk$ is the real line $R$ with two
+additional elements attached, called $+\infty$ and $-\infty$.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;These elements are distinct from each other, and also distinct from every real
+number.&lt;/li&gt;
+  &lt;li&gt;An extended real number is $x$ is called finite iff it is a real numer, and
+infinite iff it is equal to  $+\infty$ or $-\infty$.&lt;/li&gt;
+  &lt;li&gt;These new symbols $+\infty$ or $-\infty$, at present do not have much meaning,
+since we have no operations to manipulate them.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;we define $+\infty$ or $-\infty$, but there are only limit operations on
+these two elements.&lt;/li&gt;
+  &lt;li&gt;Our knowledge is so limited.&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/math/math-change-real-analysis-limit-of-sequences.html</link>
+    <guid>/math/math-change-real-analysis-limit-of-sequences</guid>
     <pubDate>Tue, 10 Dec 2019 00:00:00 +0900</pubDate>
   </item>
 
@@ -2369,6 +2494,37 @@ F(u, v, w)\left|\frac{\partial(x, y, z)}{\partial(u, v, w)}\right| \mathrm{d} u
   </item>
 
   <item>
+    <title>R.A.: Riemann Integral</title>
+    <description>
+&lt;h4 id=&quot;inspiration&quot;&gt;Inspiration&lt;/h4&gt;
+&lt;p&gt;The idea of the Riemann integral is to try to integrate a function by first
+majorizing or minorizing that function by a piece constant function(which we
+already know how to integrate)&lt;/p&gt;
+
+&lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
+&lt;p&gt;Let $f: I \rightarrow R$ be a bounded function on a bounded interval I.
+$
+\int_{I} f=\bar{\int}_{I} f
+$
+then we say that f is Riemann integrable on I and define&lt;/p&gt;
+
+&lt;p&gt;$
+\int_{I} f:=\int_{I} f=\bar{\int}_{I} f
+$&lt;/p&gt;
+
+&lt;h4 id=&quot;remark&quot;&gt;Remark&lt;/h4&gt;
+&lt;p&gt;Compare this definition to the relationship between the lim sup, lim inf, and
+limit of a sequence $a_n$. The lim sup is always greater then or equal to the
+lim inf, but they are only equal when sequence converges, and in this case they
+are both equal to the limit of the sequence.&lt;/p&gt;
+
+</description>
+    <link>/math/math-change-real-analysis-integral.html</link>
+    <guid>/math/math-change-real-analysis-integral</guid>
+    <pubDate>Tue, 10 Dec 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
     <title>R.A.: Integral of Special Function</title>
     <description>
 &lt;h4 id=&quot;gamma-function&quot;&gt;Gamma Function&lt;/h4&gt;
@@ -2386,6 +2542,37 @@ F(u, v, w)\left|\frac{\partial(x, y, z)}{\partial(u, v, w)}\right| \mathrm{d} u
 </description>
     <link>/math/math-change-real-analysis-integral-of-special-function.html</link>
     <guid>/math/math-change-real-analysis-integral-of-special-function</guid>
+    <pubDate>Tue, 10 Dec 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>R.A.: Integers</title>
+    <description>
+&lt;h4 id=&quot;inspiration&quot;&gt;Inspiration&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;We can characterize equality of differences using only the concept of addition
+    &lt;ul&gt;
+      &lt;li&gt;so we will take advantage of our foreknowledge by building all this into the
+definition of the integers&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;we will temporarily write integers not as a difference $a-b$, but instead use
+a new notation $a–b$ to define integers
+    &lt;ul&gt;
+      &lt;li&gt;$–$ is a meaningless place-holder, similar to the comma in the Cartesian
+co-ordinate notation $(x,y)$ for points in the plane.&lt;/li&gt;
+      &lt;li&gt;Later when we define substraction we will see that $a–b$ is in fact equal to
+$a-b$, and so we can discard the notation $–$&lt;/li&gt;
+      &lt;li&gt;These devices are similar to the scaffolding used to construct a building;
+they are temporarily essential to make sure the building is build correctly,
+but onc the building is completed they are thrown away and never used again.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/math/math-change-real-analysis-integers.html</link>
+    <guid>/math/math-change-real-analysis-integers</guid>
     <pubDate>Tue, 10 Dec 2019 00:00:00 +0900</pubDate>
   </item>
 
@@ -2414,7 +2601,7 @@ Hessian Matrix&lt;/p&gt;
   </item>
 
   <item>
-    <title>R.A.: Change Order of Integration, Differention and limit</title>
+    <title>R.A.: Integration, Differention and limit</title>
     <description>
 &lt;h4 id=&quot;change-order-between-integration-and-differenation&quot;&gt;Change Order between Integration and Differenation&lt;/h4&gt;
 
@@ -2465,15 +2652,126 @@ function&lt;/strong&gt; to represent any transcental function.&lt;/li&gt;
   </item>
 
   <item>
+    <title>R.A.: Differentiation of functions</title>
+    <description>
+&lt;h4 id=&quot;background&quot;&gt;Background&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;In contrast to the geometric definition of derivatives, which uses tangents&lt;/li&gt;
+  &lt;li&gt;The advantage of working analytically is we do not need to know the axioms of
+geometry&lt;/li&gt;
+  &lt;li&gt;These definitions can be modified to handle functions of several variables,
+or functions whose values are vectors instead of scalar.&lt;/li&gt;
+  &lt;li&gt;Furthermore, one’s geometric intuition becomes difficult to rely on once one
+has more than three dimensions in play.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;remark&quot;&gt;Remark&lt;/h4&gt;
+&lt;p&gt;One sometimes writes $\frac{df}{dx}$ instead of $f^\prime$. This notation is of
+course very familiar and convenient, but one has to be a little careful, because
+it is only safe to use as long as x is the only variable used to represent the
+input for f; &lt;strong&gt;otherwise one can get into all sorts of trouble.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;function $f: R \rightarrow R$ defined by $f(x):=x^2$ has derivative $\frac{df}{dx} = 2x$
+but the function $g: R \rightarrow R$ defined by $g(y) := y^2$ would seem to
+have derivative $\frac{dg}{dy} = 0$ if y and x are independent variables&lt;/li&gt;
+  &lt;li&gt;despite the fact that g and f are exactly the same function.&lt;/li&gt;
+  &lt;li&gt;because of this possible source of confusion, we will refrain from using the
+notation $\frac{df}{dx}$ whenever it could possibly lead to confusion&lt;/li&gt;
+  &lt;li&gt;This confusion becomes even worse in the calculus of several variables. There
+are ways to resolve these ambiguities, most notably by introducing the notion
+of differentiation along vector fields.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;chain-rule&quot;&gt;Chain Rule&lt;/h4&gt;
+
+&lt;h5 id=&quot;remark-1&quot;&gt;Remark&lt;/h5&gt;
+&lt;ol&gt;
+  &lt;li&gt;If one writes y for f(x), and z for g(y), then the chain rule can be written
+in the more visually appealing manner 
+\begin{equation}
+\frac{d z}{d x} = \frac{d z}{d y} \frac{d y}{d x}
+\end{equation}
+    &lt;ul&gt;
+      &lt;li&gt;However, this notation can be misleading(for instances it blurs the
+distinction between dependent variable and independent variable, especially
+for y)&lt;/li&gt;
+      &lt;li&gt;and leads one to believe that the quantities $dz, dy, dx$ can be manipulated
+like real numbers. However, these quantities are not real numbers&lt;/li&gt;
+      &lt;li&gt;In fact, we have not assigned any meaning to them at all, and treating them as
+such can lead to problems in the future.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Remember the first time I saw the derivative about a vector, I lost myself,
+what’s this ? look at this monster, I have no idea what does this mean ?&lt;/li&gt;
+  &lt;li&gt;I should take with analyticall definition, more abstract, more elegant, more
+fundamental.&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/math/math-change-real-analysis-differentiation.html</link>
+    <guid>/math/math-change-real-analysis-differentiation</guid>
+    <pubDate>Tue, 10 Dec 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>R.A.: Continuous Functions</title>
+    <description>
+&lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;$\epsilon$-adherent points. Let $X$ be a subset of $R$, let $\epsilon&amp;gt;0$, and
+let $x \in R$. We say that x is $\epsilon-adherent$ to $X$ iff there exists a
+$y \in X$ which is $\epsilon-close$ to x&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Adherent points. Let $X$ be a subset of $R$, and let $x\in R$, we say that x
+is an adheren point of X iff it is $\epsilon-adherent$ to $X$ for every
+$\epsilon &amp;gt; 0$&lt;/li&gt;
+  &lt;li&gt;Limit Points: Let $X$ be a subset of the real line. We say that x is a limit
+point(or a cluster point)  of $X$ iff it is an adherent poin of X\{x}. We
+say that x is an isolated point of $X$ if $x \in X$ and there exists some $
+epsilon &amp;gt; 0$ such that $|x-y|&amp;gt;\epsilon$ for all $y \in$ X \{x}
+    &lt;ul&gt;
+      &lt;li&gt;remark: It turns out that the set of adherent points splits into the set of
+limit points and the set of isolated points.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Sometimes, we think we are so smart, we can nail any problems, actually, we
+can’t, we only know very little about the world.&lt;/li&gt;
+  &lt;li&gt;continuous functions are the only function that we know, we can study, so
+many problem are unsolved.&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/math/math-change-real-analysis-continuous-function.html</link>
+    <guid>/math/math-change-real-analysis-continuous-function</guid>
+    <pubDate>Tue, 10 Dec 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
     <title>R.A.: Calculus Line</title>
     <description>
 &lt;h4 id=&quot;line-integral-of-a-scalar-field&quot;&gt;Line integral of a scalar field&lt;/h4&gt;
 &lt;p&gt;For some scalar field 
-\(f: \mathbb{U} \subseteq \mathbb{R}^{n} \rightarrow \mathbb{R}\)
-the line integral along a piecewise smooth curve \(c \subset \mathbb{U}\) is defined as&lt;/p&gt;
+$
+f: \mathbb{U} \subseteq \mathbb{R}^{n} \rightarrow \mathbb{R}
+$
+the line integral along a piecewise smooth curve $$
+c \subset \mathbb{U}
+$ is defined as&lt;/p&gt;
 
-\[\int_{\mathcal{C}} f(\mathbf{r}) d s=\int_{a}^{b}
-f(\mathbf{r}(t))\left|\mathbf{r}^{\prime}(t)\right| d t\]
+&lt;p&gt;$
+\int_{\mathcal{C}} f(\mathbf{r}) d s=\int_{a}^{b}
+f(\mathbf{r}(t))\left|\mathbf{r}^{\prime}(t)\right| d t
+$&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/math-change-calculus-line-scalar-field.gif&quot; /&gt;&lt;/p&gt;
 
@@ -2485,6 +2783,12 @@ where the vectors are always tangential to the line.&lt;/p&gt;
 &lt;p&gt;For a long time, I was so confused by the concept of field, what the crap is a
 field. All of a sudden, I understand, I was so happy, it is just a map, we call
 this a field just to generalize this phenomean.&lt;/p&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;scalar field, vector field, in this context, the word field is counterpart of
+ring.&lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
 &lt;ol&gt;
@@ -2672,17 +2976,22 @@ Q can be embeded in R, and R is complete.&lt;/p&gt;
   </item>
 
   <item>
-    <title>F.A.:Introduction</title>
+    <title>F.A.: Introduction</title>
     <description>
 &lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
 &lt;ol&gt;
-  &lt;li&gt;F.A.: functional analysis
-    &lt;h4 id=&quot;what-is-linear-operator&quot;&gt;what is linear operator&lt;/h4&gt;
-  &lt;/li&gt;
+  &lt;li&gt;F.A.: functional analysis&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;what-is-linear-operator&quot;&gt;what is linear operator&lt;/h4&gt;
+
+&lt;ol&gt;
   &lt;li&gt;Linear functional: if V is a normed space over F and T:V-F is a linear
 operator, then we call T a linear functional on V.&lt;/li&gt;
   &lt;li&gt;A mapping A: \(U \rightarrow V\) is linear if
-\(A(\alpha \mathbf{x}+\beta \mathbf{y})=\alpha A \mathbf{x}+\beta A \mathbf{y}\)&lt;/li&gt;
+$
+A(\alpha \mathbf{x}+\beta \mathbf{y})=\alpha A \mathbf{x}+\beta A \mathbf{y}
+$&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h4 id=&quot;topology&quot;&gt;Topology&lt;/h4&gt;

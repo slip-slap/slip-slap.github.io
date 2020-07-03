@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "R.A.: Change Order of Integration, Differention and limit"
+title: "R.A.: Integration, Differention and limit"
 keywords: [ ""]
 description: ""
 category: "math"
@@ -22,6 +22,7 @@ $y=x^2$ just a special case of p(x,y)=0
 $$
 \frac{d y}{d x}=-\frac{\left(\frac{\partial P}{\partial x}\right)}{\left(\frac{\partial P}{\partial y}\right)}
 $$
+
 
 
 
