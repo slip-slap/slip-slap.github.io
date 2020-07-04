@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "D.G.: Curvature In Surface"
+title: "D.G.: Curvature of Surface"
 keywords: ["calculus"]
 description: ""
 category: "math"

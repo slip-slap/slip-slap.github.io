@@ -53,9 +53,9 @@ The evolute of an involute is the original curve.
 
 #### Terminology: algebraic curve
 A curve with an equation:
-$$
+$
 P(x,y) = 0
-$$
+$
 where p is a ploynomial in x,y, usually with rational coefficients, which called algebraic curve.
 
 
