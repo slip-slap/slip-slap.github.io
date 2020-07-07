@@ -14,12 +14,12 @@ and the answer is theory of bundles.
 
 #### Definition 1: Bundles 
 A bundle is a triple consists of three pieces of
-data. <br /> $$(E,\Pi,M)$$ <br /> where E is a smooth manifold, also under the
-name "total space"; $$\Pi$$ is a smooth map(surjectile), also under the name of
+data. $(E,\Pi,M)$ where E is a smooth manifold, also under the
+name "total space"; $\Pi$ is a smooth map(surjectile), also under the name of
 "projection map"; M is a smooth manifold,also under the name "base space".
 
 #### Definition 2: Fiber
-$$(E,\Pi,M)$$ is a bundle, p is a point of the base space, we define the fiber
+$(E,\Pi,M)$ is a bundle, p is a point of the base space, we define the fiber
 over p is the preimage of {p}. 
 
 #### Definition 3: Section 
@@ -32,21 +32,19 @@ correspond to the vector field"  what type of field depends on the fiber. <br />
    bundle, where you construct the fibers from the cotangent spaces.
 2. what's a tensor field, over the base space, you construct the fibers,  
 
-
-
 #### Example
 E: cylinder M: circle 
 
 #### Definition 2: Tangent Bundle
-$$TM:= \bigcup\limits_{p\in M}^{\cdot}T_{p}M$$ <br />
+$TM:= \bigcup\limits_{p\in M}^{\cdot}T_{p}M$ <br />
 Then the definition of the Tangent Bundle is in the following: <br />
-$$\Pi : TM \rightarrow M$$ <br />
-$$X \mapsto p$$ <br />
-the unique point $$p \in M$$, and $$X \in T_{p}M$$
+$\Pi : TM \rightarrow M$ <br />
+$X \mapsto p$ <br />
+the unique point $p \in M$, and $X \in T_{p}M$
 
 #### Definition 3: Vector Field
 A smooth vector field is a smooth map:<br />
-$$\pi : TM \rightarrow M$$ <br />
+$\pi : TM \rightarrow M$ <br />
 and vector field is the map:
 $$vector field : M \rightarrow TM$$ <br />
 <br />
@@ -61,7 +59,7 @@ have.
 
 #### Definition 4: Tensor Field
 1. Given a bundle $$TM$$, $$\Gamma (TM)$$ : the set of vector field
-2. Construct a cotangent bundle $$T^{\ast}M$$, $$\Gamma (T^{\ast}M)$$ : the set
+2. Construct a cotangent bundle $T^{\ast}M$, $\Gamma (T^{\ast}M)$ : the set
    of covector field
 3. you can scale covector field by function
 4. then you get two $$C^{\infty}(M)$$-module
@@ -69,9 +67,9 @@ have.
    tensor field
 
 
-$$ T: \underbrace{\Gamma (T^{\ast}M) \times \cdots \times \Gamma
+$ T: \underbrace{\Gamma (T^{\ast}M) \times \cdots \times \Gamma
 (T^{\ast}M)}_{r} \times \underbrace{\Gamma (TM) \times \cdots \times \Gamma
-(TM)}_{s} \rightarrow  C^{\infty} (M) $$ <br />
+(TM)}_{s} \rightarrow  C^{\infty} (M) $ <br />
 
 
 #### remark

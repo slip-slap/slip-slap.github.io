@@ -13,20 +13,20 @@ A linear map is from a **vector space** to another **vector space**
 
 
 #### Question 2: How to define a point p on a manifold ?
-define $$(M,O,\mathscr{A})$$ is a smooth manifold <br />
-curve $$\gamma: R \rightarrow M$$ is at least $$C^{1}$$ <br />
-suppose $$\gamma(\lambda_{o})=p$$
+define $(M,O,\mathscr{A})$ is a smooth manifold <br />
+curve $\gamma: R \rightarrow M$ is at least $C^{1}$ <br />
+suppose $\gamma(\lambda_{o})=p$
 
 
-#### Question 3:  what is the velocity of a curve $$\alpha$$ at point p ?
+#### Question 3:  what is the velocity of a curve $\alpha$ at point p ?
 Based on question 2, we define a point on a manifold, and now we can define the velocity.
-The velocity of curve $$\alpha$$ at point p is the linear map. <br />
-$$V_{r,p}: C^{\infty}(M) \rightarrow R$$ <br />
+The velocity of curve $\alpha$ at point p is the linear map. <br />
+$V_{r,p}: C^{\infty}(M) \rightarrow R$ <br />
 Where V stands for velocity, r stands for curve, p stands for a point on curve.
-$$C^{\infty}$$ stands for continuous, M stands for deferential manifold. <br />
-$$C^{\infty}(M)$$: stand for a vector space: $${f: M \rightarrow R| f means smooth function}$$, equipped with the following structure <br /> 
-$$(f\bigoplus g)_{p}$$:= f(p)+g(p) <br /> 
-$$(\lambda\bigodot g)_{p}:= \lambda \cdot g(p)$$ <br /> 
+$C^{\infty}$ stands for continuous, M stands for deferential manifold. <br />
+$C^{\infty}(M)$: stand for a vector space: $${f: M \rightarrow R| f means smooth function}$$, equipped with the following structure <br /> 
+$(f\bigoplus g)_{p}$:= f(p)+g(p) <br /> 
+$(\lambda\bigodot g)_{p}:= \lambda \cdot g(p)$ <br /> 
 R is also a vector space, it's pretty simple.
 
 #### remark
@@ -37,11 +37,11 @@ some temperature function,
 
 
 ##### Tangent Vector Space
-Def: For each point $$p \in M$$, we define the set <br /> 
-$$T_{p}M :={v_{r,p}| r smooth curve}$$ <br />
+Def: For each point $p \in M$, we define the set <br /> 
+$T_{p}M :={v_{r,p}| r smooth curve}$ <br />
 which means tangent sapce to M at point P. <br />
 #### observation
-$$T_{p}M$$ can be made into a vector space
+$T_{p}M$ can be made into a vector space
 
 #### Component of a Vector respect to a chart
 

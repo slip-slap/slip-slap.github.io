@@ -1,12 +1,23 @@
 ---
 layout: post
-title: "L.G.L.A.: Classical Group "
+title: "L.T.: Matrix Exponential"
 keywords: []
 description: 
 category: "math"
-tags: ["構造","L.G.L.A."]
+tags: ["構造","L.T."]
 ---
 {% include JB/setup %}
+
+#### Definition
+If X is an $n \times n$ matrix, we define the exponential of $X$, denoted by
+$e^{X}$ or $exp X$, bu the usual power series
+$
+e^{X}=\sum_{m=0}^{\infty} \frac{X^{m}}{m !}
+$
+- Where $X^0$ is defined to be the identity matrix $I$ and where $X^m$ is the
+  repeated matirx product of X with itself.
+
+
 
 #### Terminology
 1. GL(N,R): general linear group, n-dimensional, The field is real number 
