@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "R.A.: Complex Analysis"
+title: "C.A.: Complex Function"
 keywords: [""]
 description: ""
 category: "math"
-tags: ["change","R.A."]
+tags: ["change","C.A."]
 ---
 {% include JB/setup %}
 

@@ -12,9 +12,9 @@ tags: ["構造","N.T."]
 Quaternion are a number system that extends the complex numbers. A feature of
 quaternions is that multiplication of two quaternons is noncommutative.
 Quaternions are generally represented in the form: <br />
-$$
+$
 a+b \mathbf{i}+c \mathbf{j}+d \mathbf{k}
-$$
+$
 where a,b,c and d are real numbers, and i,j, and k are the fundamental
 quaternion units. The quaternions were the first **noncommutative division 
 algebra** to be discovered.

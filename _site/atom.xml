@@ -3,7 +3,7 @@
   <title>Just Do It</title>
   <link href="/atom.xml" rel="self"/>
   <link href=""/>
-  <updated>2020-07-07T18:41:57+09:00</updated>
+  <updated>2020-07-09T23:24:32+09:00</updated>
   <id></id>
   <author>
     <name>reed</name>
@@ -94,6 +94,26 @@ The question is how to understand the coefficient between each $x_i$
   suppose a point value is 10, and the coefficient is very small which is
 0.02, you can understand this in this way, this contribution of this point is
 kind of pull the Gauss distribution to the left, beca...</content>
+  </entry>
+
+  <entry>
+    <title>Kmeans</title>
+    <link href="/AI-kmeans.html"/>
+    <updated>2020-05-24T00:00:00+09:00</updated>
+    <id>/AI-kmeans</id>
+    <content type="html">
+What does Kmeans do ?
+
+
+  The goal of this algorithm is to find groups in the data, with the number of groups represented by the variable K.
+
+
+
+
+formula
+
+All points with a cluster are closer in distance to their centroid than they are to any other centroid, and the mathematical condition
+for the...</content>
   </entry>
 
   <entry>
@@ -1031,20 +1051,15 @@ a series is a list of numbers with a...</content>
     <updated>2019-12-10T00:00:00+09:00</updated>
     <id>/math/math-change-real-analysis-real-numbers</id>
     <content type="html">
+HAHA
+Currently, we think real numbers are the basic building blocks of number, but,
+realy, Is this point view right?  Even this is right, how to explain $e\times\pi$,
+how to explain $e+\pi$, what does this mean?
+
 Background
 
   we have rigorously constructed three fundamental number systems:
-    
-      The natural number system N, The integers Z and the rational Q.
-    
-  
-
-
-History
-
-  Limit is a concept on one level is quite intuitive, but to pin down turn out
-to be quite difficult
-  Even the great mathe...</content>
+    ...</content>
   </entry>
 
   <entry>
@@ -1105,6 +1120,21 @@ this way, How about Fourier transformation ?  I think they are all the same in
 nature. It’s too difficult too solve a problem, and we can turn our attention to
 the mirror problem, and we will have a solution.
 </content>
+  </entry>
+
+  <entry>
+    <title>Real Function Theory: Lebesgue Integration</title>
+    <link href="/math/math-change-real-analysis-lebesgue-integration.html"/>
+    <updated>2019-12-10T00:00:00+09:00</updated>
+    <id>/math/math-change-real-analysis-lebesgue-integration</id>
+    <content type="html">
+definition
+
+  Lebesgue integral: extends the integral to a larger class of functions. It also extends the domains on which these functions can be defined.
+  Improper integral: a definite integral that has either or both limits infinite or an intergrand that approaches infinity
+
+
+Lebesgue’s Domin...</content>
   </entry>
 
   <entry>
@@ -1181,6 +1211,20 @@ definition of the integers
     
   
   we will temporarily write integers not as a difference $a-b$, but instead use...</content>
+  </entry>
+
+  <entry>
+    <title>A.A.: History</title>
+    <link href="/math/math-change-real-analysis-history.html"/>
+    <updated>2019-12-10T00:00:00+09:00</updated>
+    <id>/math/math-change-real-analysis-history</id>
+    <content type="html">
+HAHA
+
+  because of Arabic numbers and we can use it. Arabic numbers are the most important contribution 
+that India have done to modern science. Arabic numbers provide the possibility that you can use 
+them to calculate pretty easily.
+  Greek Number System: As the picture in the following, It is...</content>
   </entry>
 
   <entry>
@@ -1301,7 +1345,133 @@ Properties
   </entry>
 
   <entry>
-    <title>R.A.: Complex Analysis</title>
+    <title>C.A.: Series</title>
+    <link href="/math/math-change-complex-analysis-series.html"/>
+    <updated>2019-12-05T00:00:00+09:00</updated>
+    <id>/math/math-change-complex-analysis-series</id>
+    <content type="html">
+Problem
+Given a complex number $z$, what’s the meaning of $e^z$?
+
+  Does it make sense ? It doesn’t make any sense.
+  We can left this undefined, but just think about this
+$
+e(z)=\sum_{n=0}^{\infty} \frac{z^{n}}{n !}
+$ in real number domain.
+
+
+
+  Can we just replace z with complex number in the ...</content>
+  </entry>
+
+  <entry>
+    <title>C.A.: Schwarz-Christoffel Transformation</title>
+    <link href="/math/math-change-complex-analysis-schwarz-christoffel-transformation.html"/>
+    <updated>2019-12-05T00:00:00+09:00</updated>
+    <id>/math/math-change-complex-analysis-schwarz-christoffel-transformation</id>
+    <content type="html">
+</content>
+  </entry>
+
+  <entry>
+    <title>C.A.: Residues</title>
+    <link href="/math/math-change-complex-analysis-residues.html"/>
+    <updated>2019-12-05T00:00:00+09:00</updated>
+    <id>/math/math-change-complex-analysis-residues</id>
+    <content type="html">
+Theorem
+If a function $f$ is analytic everywhere in the finite plane except for a finite
+number of singular points interior to a positively oritented closed contour $C$
+
+$
+\int_{C} f(z) d z=2 \pi i \operatorname{Res}_{z=0}\left[\frac{1}{z^{2}}
+f\left(\frac{1}{z}\right)\right]
+$
+</content>
+  </entry>
+
+  <entry>
+    <title>C.A.: Application of Residues</title>
+    <link href="/math/math-change-complex-analysis-residues-application.html"/>
+    <updated>2019-12-05T00:00:00+09:00</updated>
+    <id>/math/math-change-complex-analysis-residues-application</id>
+    <content type="html">
+</content>
+  </entry>
+
+  <entry>
+    <title>C.A.: Integral</title>
+    <link href="/math/math-change-complex-analysis-integral.html"/>
+    <updated>2019-12-05T00:00:00+09:00</updated>
+    <id>/math/math-change-complex-analysis-integral</id>
+    <content type="html">
+Background
+Recall the definition of Riemann Integral
+
+(\int_{a}^{b} f(x) d x \equiv \lim {\max \Delta x{k} \rightarrow 0}
+\sum_{k=1}^{n} f\left(x_{k}^{*}\right) \Delta x_{k})
+
+
+  Can we just replace the variable with complex number?
+  of course we can.
+  after the lower bound and upper bound are...</content>
+  </entry>
+
+  <entry>
+    <title>C.A.: Elementary Function</title>
+    <link href="/math/math-change-complex-analysis-elementary-function.html"/>
+    <updated>2019-12-05T00:00:00+09:00</updated>
+    <id>/math/math-change-complex-analysis-elementary-function</id>
+    <content type="html">
+Background
+
+  Just to mimick elementary functions well studied in calculus
+  Define corresponding functions of a complex variable
+  To be specific, we define analytic functions of a complex variable z that
+reduce to the elementary functions in calculus when $z = x+i0$
+
+</content>
+  </entry>
+
+  <entry>
+    <title>C.A.: Conformal Mapping</title>
+    <link href="/math/math-change-complex-analysis-conformal-mapping.html"/>
+    <updated>2019-12-05T00:00:00+09:00</updated>
+    <id>/math/math-change-complex-analysis-conformal-mapping</id>
+    <content type="html">
+Background
+
+  f(x,y) = (u,v) where u = u(x,y) and v = v(x,y)
+  f(z) = w where z and w are complex numbers
+What’s the difference between the equations above ? No difference at all.
+We can do conformal mapping with complex number ?
+    
+      The reason we need this because comlex numbers give us ...</content>
+  </entry>
+
+  <entry>
+    <title>C.A.: Introduction</title>
+    <link href="/math/math-change-complex-analysis-complex-number.html"/>
+    <updated>2019-12-05T00:00:00+09:00</updated>
+    <id>/math/math-change-complex-analysis-complex-number</id>
+    <content type="html">
+Inspiration
+
+  What would you do if I tell you, I want a half of three person?
+    
+      Maybe you can do it, but I don’t want to see it.
+    
+  
+
+
+notation
+
+  N - natural numbers
+  Z - integer   Z was used to denote integers because a germany mathmatician  did a great job on ring theory. In ge...</content>
+  </entry>
+
+  <entry>
+    <title>C.A.: Complex Function</title>
     <link href="/math/math-change-complex-analysis-complex-function.html"/>
     <updated>2019-12-05T00:00:00+09:00</updated>
     <id>/math/math-change-complex-analysis-complex-function</id>
@@ -1311,6 +1481,220 @@ definition
   complex function: a function takes a complex argument and yields a complex result,In other words, it is a function that has a suset of the complex.
 numbers as a domain and the complex numbers as a codomain.
   The derivative of complex function is different from the derivative of re...</content>
+  </entry>
+
+  <entry>
+    <title>V.A.: Vector</title>
+    <link href="/math/math-change-vector-analysis-vector.html"/>
+    <updated>2019-12-01T00:00:00+09:00</updated>
+    <id>/math/math-change-vector-analysis-vector</id>
+    <content type="html">
+HH
+Because vector components behave contrary to the basis vectors, we say that 
+vector components are contra-variant
+
+The following is how basic and component transformation in different coordinate
+system.
+
+
+Notation, in order to remind the component is contravarient to the basic,
+so using the f...</content>
+  </entry>
+
+  <entry>
+    <title>V.A.: Vector Differentiation</title>
+    <link href="/math/math-change-vector-analysis-vector-differentiation.html"/>
+    <updated>2019-12-01T00:00:00+09:00</updated>
+    <id>/math/math-change-vector-analysis-vector-differentiation</id>
+    <content type="html">
+Definition
+
+  Partial derivatives of vectors: If $\mathbf{A}$ is a vector depending on more
+than one scalar variable, say $x,y,z$ for example, then we write
+$\mathbf{A}=\mathbf{A}(x,y,z)$, the partial derivative of $\mathbf{A}$ with
+respect to x is defined as 
+$
+\frac{\partial \mathbf{A}}{\parti...</content>
+  </entry>
+
+  <entry>
+    <title>V.A.: Summary</title>
+    <link href="/math/math-change-vector-analysis-summary.html"/>
+    <updated>2019-12-01T00:00:00+09:00</updated>
+    <id>/math/math-change-vector-analysis-summary</id>
+    <content type="html">
+Introduction
+If you understand tensors, you can get a lot insight in geometry; If you
+understand geometry, you can understand geometry more easily.
+
+
+
+Why we have tensors?
+The answer is to unify the function, unify space.
+
+  Functions in nature is a map, but what kind of up, how to define this m...</content>
+  </entry>
+
+  <entry>
+    <title>V.A.: Metric Tensor</title>
+    <link href="/math/math-change-vector-analysis-metric-tensor.html"/>
+    <updated>2019-12-01T00:00:00+09:00</updated>
+    <id>/math/math-change-vector-analysis-metric-tensor</id>
+    <content type="html">
+Metric Tensor
+
+Metric tensor is used to measure the length of vector. Please remember the
+following picture 
+\(g_{\vec{e}_{i}}=\left[\begin{array}{ll}{\overrightarrow{e_{1}} \cdot
+\overrightarrow{e_{1}}} &amp;amp; {\overrightarrow{e_{1}} \cdot \overrightarrow{e_{2}}}
+\\ {\overrightarrow{e_{2}} \cdot...</content>
+  </entry>
+
+  <entry>
+    <title>V.A.: Kronecker Delta</title>
+    <link href="/math/math-change-vector-analysis-kronecker-delta-function.html"/>
+    <updated>2019-12-01T00:00:00+09:00</updated>
+    <id>/math/math-change-vector-analysis-kronecker-delta-function</id>
+    <content type="html">
+Definition
+\(\delta_{i j}=\left\{\begin{array}{ll}{0} &amp;amp; {\text { if } i \neq j} \\ {1} &amp;amp;
+{\text { if } i=j}\end{array}\right.\)
+
+Example
+The inner product of vector: 
+\(\mathbf{a} \cdot \mathbf{b}=\sum_{i, j=1}^{n} a_{i} \delta_{i j} b_{j}\)
+
+For example: 
+\(a=\sum_{i j} a_{i} c_{j} \del...</content>
+  </entry>
+
+  <entry>
+    <title>V.A.: Introduction</title>
+    <link href="/math/math-change-vector-analysis-introduction.html"/>
+    <updated>2019-12-01T00:00:00+09:00</updated>
+    <id>/math/math-change-vector-analysis-introduction</id>
+    <content type="html">
+Definition
+
+  Scalar Field: If to each point $(x,y,z)$ of a region R in space there corresponds a number
+or scalar $ \phi(x, y, z) $, then $\phi$ is called scalar function of
+position or scalar point function and we say that a scalar filed $\phi$ has
+been defined in R.
+    
+      A scalar field ...</content>
+  </entry>
+
+  <entry>
+    <title>V.A.: Delta Operator and Gradient</title>
+    <link href="/math/math-change-vector-analysis-gradient-divergence-curl.html"/>
+    <updated>2019-12-01T00:00:00+09:00</updated>
+    <id>/math/math-change-vector-analysis-gradient-divergence-curl</id>
+    <content type="html">
+Definition
+
+  Gradient: let $\phi(x,y,z)$ be defined and differentiable at each point
+$(x,y,z)$ in a certain region of space(i.e. $\phi$ defines a differentiable
+scalar field). Then the gradient of $\phi$, written $\nabla \phi$ or grad
+$\phi$
+
+
+$
+\nabla \phi=\left(\frac{\partial}{\partial x}
+\ma...</content>
+  </entry>
+
+  <entry>
+    <title>V.A.: Dot and Cross Product</title>
+    <link href="/math/math-change-vector-analysis-dot-and-cross-product.html"/>
+    <updated>2019-12-01T00:00:00+09:00</updated>
+    <id>/math/math-change-vector-analysis-dot-and-cross-product</id>
+    <content type="html">
+Definition
+
+  
+    $\textbf{THE DOT OR SCLALAR PRODUCT}$ of two vectors $\textbf{A}$ and
+$\textbf{B}$, denoted by $\mathbf{A} \cdot \mathbf{B}$ (read $\textbf{A}$ dot
+$\textbf{B}$)$, is defined as the product of the magnitutes of $\textbf{A}$ and
+$\textbf{B} and the cosine of the angle $\theta$ ...</content>
+  </entry>
+
+  <entry>
+    <title>V.A.: Diverence Theorem</title>
+    <link href="/math/math-change-vector-analysis-divergence-theorem.html"/>
+    <updated>2019-12-01T00:00:00+09:00</updated>
+    <id>/math/math-change-vector-analysis-divergence-theorem</id>
+    <content type="html">
+</content>
+  </entry>
+
+  <entry>
+    <title>V.A.: Curvilinear Coordinates</title>
+    <link href="/math/math-change-vector-analysis-curvilinear-coordinates.html"/>
+    <updated>2019-12-01T00:00:00+09:00</updated>
+    <id>/math/math-change-vector-analysis-curvilinear-coordinates</id>
+    <content type="html">
+Definition
+
+  $\textbf{TRANSFORMATION OF COORDINATES}$. Let the rectangular coordinates $(x,y,z)$ of any point be expressed as functions of $u_1, u_2,u_3$ so that
+
+
+$
+x=x\left(u_{1}, u_{2}, u_{3}\right), \quad y=y\left(u_{1}, u_{2}, u_{3}\right),
+\quad z=z\left(u_{1}, u_{2}, u_{3}\right)
+$
+
+Give...</content>
+  </entry>
+
+  <entry>
+    <title>V.A.: Covector</title>
+    <link href="/math/math-change-vector-analysis-covector.html"/>
+    <updated>2019-12-01T00:00:00+09:00</updated>
+    <id>/math/math-change-vector-analysis-covector</id>
+    <content type="html">
+Covector
+Definition: A covector(row vector) is a function that takes a vector and
+produces a scalar.
+
+  Covectors are invarient, they are purely geometrical objects.
+  Covector component are not invariant, it’s depend on what coordinate system
+that you use.
+
+
+Covector Component
+\(\begin{array}{l...</content>
+  </entry>
+
+  <entry>
+    <title>V.A.: Calculus</title>
+    <link href="/math/math-change-vector-analysis-calculus.html"/>
+    <updated>2019-12-01T00:00:00+09:00</updated>
+    <id>/math/math-change-vector-analysis-calculus</id>
+    <content type="html">
+HH
+Tensor calculus study how tensors change over space, according to the following
+tensors in the picture, if we choose a coordinate system, we can measure the
+components.
+
+
+derivative
+
+\[\frac{\partial c_{i}}{\partial p_{j}} \frac{\partial p_{j}}{\partial
+c_{k}}=\frac{d c_{i}}{d c_{k}}=\left\{\...</content>
+  </entry>
+
+  <entry>
+    <title>V.A.: Introduction</title>
+    <link href="/math/math-change-tensor-analysis-introduction.html"/>
+    <updated>2019-12-01T00:00:00+09:00</updated>
+    <id>/math/math-change-tensor-analysis-introduction</id>
+    <content type="html">
+Definition
+
+  Tensor Fields: If to each point of a region in N dimensional space
+corresponds a definite tensor, we say that a tensor field has been defined,
+This is a vector field or a scalar field according as the tensor is of rank
+one or zero. It should be noted that a tensor or tensor field i...</content>
   </entry>
 
   <entry>
@@ -1424,148 +1808,6 @@ terminology
   </entry>
 
   <entry>
-    <title>V.A.: Introduction</title>
-    <link href="/math/math-change-vector-analysis-introduction.html"/>
-    <updated>2019-11-18T00:00:00+09:00</updated>
-    <id>/math/math-change-vector-analysis-introduction</id>
-    <content type="html">
-Introduction
-Vector analysis, is concerned with differentiation and integraion of vector
-fields, primarily in 3-dimensional Euclidean space $R^3$.
-
-Reference
-
-  vector calculus
-
-
-</content>
-  </entry>
-
-  <entry>
-    <title>Tensor: Vector</title>
-    <link href="/math/math-change-tensor-vector.html"/>
-    <updated>2019-11-15T00:00:00+09:00</updated>
-    <id>/math/math-change-tensor-vector</id>
-    <content type="html">
-HH
-Because vector components behave contrary to the basis vectors, we say that 
-vector components are contra-variant
-
-The following is how basic and component transformation in different coordinate
-system.
-
-
-Notation, in order to remind the component is contravarient to the basic,
-so using the f...</content>
-  </entry>
-
-  <entry>
-    <title>Tensor: Summary</title>
-    <link href="/math/math-change-tensor-summary.html"/>
-    <updated>2019-11-15T00:00:00+09:00</updated>
-    <id>/math/math-change-tensor-summary</id>
-    <content type="html">
-Introduction
-If you understand tensors, you can get a lot insight in geometry; If you
-understand geometry, you can understand geometry more easily.
-
-
-
-Why we have tensors?
-The answer is to unify the function, unify space.
-
-  Functions in nature is a map, but what kind of up, how to define this m...</content>
-  </entry>
-
-  <entry>
-    <title>Tensor: Metric Tensor</title>
-    <link href="/math/math-change-tensor-metric-tensor.html"/>
-    <updated>2019-11-15T00:00:00+09:00</updated>
-    <id>/math/math-change-tensor-metric-tensor</id>
-    <content type="html">
-Metric Tensor
-
-Metric tensor is used to measure the length of vector. Please remember the
-following picture 
-\(g_{\vec{e}_{i}}=\left[\begin{array}{ll}{\overrightarrow{e_{1}} \cdot
-\overrightarrow{e_{1}}} &amp;amp; {\overrightarrow{e_{1}} \cdot \overrightarrow{e_{2}}}
-\\ {\overrightarrow{e_{2}} \cdot...</content>
-  </entry>
-
-  <entry>
-    <title>Tensor: Kronecker Delta</title>
-    <link href="/math/math-change-tensor-kronecker-delta-function.html"/>
-    <updated>2019-11-15T00:00:00+09:00</updated>
-    <id>/math/math-change-tensor-kronecker-delta-function</id>
-    <content type="html">
-Definition
-\(\delta_{i j}=\left\{\begin{array}{ll}{0} &amp;amp; {\text { if } i \neq j} \\ {1} &amp;amp;
-{\text { if } i=j}\end{array}\right.\)
-
-Example
-The inner product of vector: 
-\(\mathbf{a} \cdot \mathbf{b}=\sum_{i, j=1}^{n} a_{i} \delta_{i j} b_{j}\)
-
-For example: 
-\(a=\sum_{i j} a_{i} c_{j} \del...</content>
-  </entry>
-
-  <entry>
-    <title>Tensor: Delta Operator and Gradient</title>
-    <link href="/math/math-change-tensor-delta-operator-and-gradient.html"/>
-    <updated>2019-11-15T00:00:00+09:00</updated>
-    <id>/math/math-change-tensor-delta-operator-and-gradient</id>
-    <content type="html">
-Delta Operator and Gradient
-\(\nabla f=\left\langle\frac{\partial}{\partial x} f, \frac{\partial}{\partial y}
-f, \frac{\partial}{\partial z} f\right\rangle\)
-
-Example of Vector and Covector
-
-  $\nabla {f}$ obtains a vector
-  $df$  obtains a covector
-    
-      For a very very long time, I just c...</content>
-  </entry>
-
-  <entry>
-    <title>Tensor: Covector</title>
-    <link href="/math/math-change-tensor-covector.html"/>
-    <updated>2019-11-15T00:00:00+09:00</updated>
-    <id>/math/math-change-tensor-covector</id>
-    <content type="html">
-Covector
-Definition: A covector(row vector) is a function that takes a vector and
-produces a scalar.
-
-  Covectors are invarient, they are purely geometrical objects.
-  Covector component are not invariant, it’s depend on what coordinate system
-that you use.
-
-
-Covector Component
-\(\begin{array}{l...</content>
-  </entry>
-
-  <entry>
-    <title>Tensor: Calculus</title>
-    <link href="/math/math-change-tensor-calculus.html"/>
-    <updated>2019-11-15T00:00:00+09:00</updated>
-    <id>/math/math-change-tensor-calculus</id>
-    <content type="html">
-HH
-Tensor calculus study how tensors change over space, according to the following
-tensors in the picture, if we choose a coordinate system, we can measure the
-components.
-
-
-derivative
-
-\[\frac{\partial c_{i}}{\partial p_{j}} \frac{\partial p_{j}}{\partial
-c_{k}}=\frac{d c_{i}}{d c_{k}}=\left\{\...</content>
-  </entry>
-
-  <entry>
     <title>Real Function Theory: Lebesgue Measure</title>
     <link href="/math/math-change-real-function-lebesgue-measure.html"/>
     <updated>2019-11-15T00:00:00+09:00</updated>
@@ -1578,21 +1820,6 @@ For n=1, 2, 3, in coincides with the standard measure of length, area, or volume
 measure of function
 
 </content>
-  </entry>
-
-  <entry>
-    <title>Real Function Theory: Lebesgue Integration</title>
-    <link href="/math/math-change-real-function-lebesgue-integration.html"/>
-    <updated>2019-11-15T00:00:00+09:00</updated>
-    <id>/math/math-change-real-function-lebesgue-integration</id>
-    <content type="html">
-definition
-
-  Lebesgue integral: extends the integral to a larger class of functions. It also extends the domains on which these functions can be defined.
-  Improper integral: a definite integral that has either or both limits infinite or an intergrand that approaches infinity
-
-
-Lebesgue’s Domin...</content>
   </entry>
 
   <entry>
@@ -2195,21 +2422,6 @@ Question 3:  ...</content>
   </entry>
 
   <entry>
-    <title>R.G.:  Multilinear Algebra</title>
-    <link href="/math/math-space-riemann-geometry-multilinear-algebra.html"/>
-    <updated>2019-09-21T00:00:00+09:00</updated>
-    <id>/math/math-space-riemann-geometry-multilinear-algebra</id>
-    <content type="html">
-Question 1: why we talk about multilinear algebra ?
-why we talk about multilinear space, if we equip the spacetime with a vector space, what does 5*paris mean? 
-It means nothing. 
-The reason why we talk about multilinear space is because the tangent spaces.
-
-Question 2: why study vector space?
-t...</content>
-  </entry>
-
-  <entry>
     <title>R.G.: Metric Manifold</title>
     <link href="/math/math-space-riemann-geometry-metric-manifolds.html"/>
     <updated>2019-09-21T00:00:00+09:00</updated>
@@ -2359,7 +2571,165 @@ generalized circles into generalized circles, where a generali...</content>
   </entry>
 
   <entry>
-    <title>Manifold: Submanifolds</title>
+    <title>A.T.: Topology</title>
+    <link href="/math/math-space-algebraic-topology.html"/>
+    <updated>2019-09-01T00:00:00+09:00</updated>
+    <id>/math/math-space-algebraic-topology</id>
+    <content type="html">
+Algebraic Topology
+
+  The study of geometrical properties and spatial relations unaffected by the
+continuous change of shape or size of figures.
+  Algebraic means use algebraic to study topology.
+  we are not asking the distance, what are the essential features of these
+mathematic objects which ...</content>
+  </entry>
+
+  <entry>
+    <title>A.T.: Surface Classification</title>
+    <link href="/math/math-space-algebraic-topology-surface-classification.html"/>
+    <updated>2019-09-01T00:00:00+09:00</updated>
+    <id>/math/math-space-algebraic-topology-surface-classification</id>
+    <content type="html">
+Compact Surface
+
+  A compact surface is a surface which is also a compact set. A compact surface
+has a triangulation with a finite number of triangles. The sphere and torus are
+compact.
+  compact means boundary and closed which doesn’t has any hole.
+
+
+HAHA
+With edges labelled by letters and dire...</content>
+  </entry>
+
+  <entry>
+    <title>A.T.: Simplex</title>
+    <link href="/math/math-space-algebraic-topology-simplex.html"/>
+    <updated>2019-09-01T00:00:00+09:00</updated>
+    <id>/math/math-space-algebraic-topology-simplex</id>
+    <content type="html">
+Definition
+In geometry, a simplex(plural: simplexes or simplices) is a generalization of
+the notion of a triangle or tetrahedron to artitrary dimensions. 
+
+  a 0-simplex is a point
+  a 1-simplex is a line segment
+  a 2-simplex is a triangle
+  a 3-simplex is a tetrahedron
+    
+      A spatial con...</content>
+  </entry>
+
+  <entry>
+    <title>A.T.: Euler-Poincare Characteristic</title>
+    <link href="/math/math-space-algebraic-topology-poincare-characteristic.html"/>
+    <updated>2019-09-01T00:00:00+09:00</updated>
+    <id>/math/math-space-algebraic-topology-poincare-characteristic</id>
+    <content type="html">
+Concept
+In algebraic topology, the Euler characteristic or Euler number is a topological
+invariant, a number that describes a topological space’s shape or structure
+regardless of the way it is bent. It is commonly denoted by \(\chi\)
+
+HAHA
+You can make a model, doesn’t mean it is a mathematic ob...</content>
+  </entry>
+
+  <entry>
+    <title>A.T.: Mobius, Klein, Orientability </title>
+    <link href="/math/math-space-algebraic-topology-mobius-klein.html"/>
+    <updated>2019-09-01T00:00:00+09:00</updated>
+    <id>/math/math-space-algebraic-topology-mobius-klein</id>
+    <content type="html">
+Introduction
+
+  Closed surfaces are divided into two classes, orientable and non-orientable.
+    
+      The sphere and the torus are examples of orientable surfaces;
+      The projective plane and the Mobius band are non-orientable.
+    
+  
+
+
+HAHA
+A surface M is orientable which means we can con...</content>
+  </entry>
+
+  <entry>
+    <title>A.T.: Homology</title>
+    <link href="/math/math-space-algebraic-topology-homology.html"/>
+    <updated>2019-09-01T00:00:00+09:00</updated>
+    <id>/math/math-space-algebraic-topology-homology</id>
+    <content type="html">
+HAHA
+As we prefer to write operation as addition, so loop is represented by
+a+b+c=b+c+a = c+a+b, because it is a closed loop geometry, we call this a cycle
+
+HAHA
+
+  chain: is going to be a word for random element in this free abelian group of
+random combination  with integer coefficient.
+  bound...</content>
+  </entry>
+
+  <entry>
+    <title>A.T.: Fundamental Group</title>
+    <link href="/math/math-space-algebraic-topology-fundamental-group.html"/>
+    <updated>2019-09-01T00:00:00+09:00</updated>
+    <id>/math/math-space-algebraic-topology-fundamental-group</id>
+    <content type="html">
+HAHA
+Fundamental group of a surface, which is a very important topic to link topology
+and algebra.
+
+Definition
+In mathematics, a path in topological space X is a continuous function f from
+unit interval I=[0,1] to X 
+\(f: I \rightarrow X\)
+
+Homotopic path
+
+Definition
+
+  toological space: may be ...</content>
+  </entry>
+
+  <entry>
+    <title>A.T.: Curvature</title>
+    <link href="/math/math-space-algebraic-topology-curvature.html"/>
+    <updated>2019-09-01T00:00:00+09:00</updated>
+    <id>/math/math-space-algebraic-topology-curvature</id>
+    <content type="html">
+Question: How to describe the amount of turning ?
+
+  360
+  2$\pi$
+  1 
+which one is better ?
+
+
+</content>
+  </entry>
+
+  <entry>
+    <title>A.T.: 1 and 2-dim Objects</title>
+    <link href="/math/math-space-algebraic-topology-1-2-dimensional-objects.html"/>
+    <updated>2019-09-01T00:00:00+09:00</updated>
+    <id>/math/math-space-algebraic-topology-1-2-dimensional-objects</id>
+    <content type="html">
+HAHA
+\(A^{2}=A^{\prime} \times A^{\prime}\) 
+Product of lines: this is a construction of topological spaces.
+
+Borromean Rings
+In mathematics, the Borromean rings consist of three topological circles which
+are linked but where removing any one ring leaves the other two unconnected. In
+other words...</content>
+  </entry>
+
+  <entry>
+    <title>M.T.: Submanifolds</title>
     <link href="/math/math-space-manifold-theory-submanifold.html"/>
     <updated>2019-08-30T00:00:00+09:00</updated>
     <id>/math/math-space-manifold-theory-submanifold</id>
@@ -2376,7 +2746,7 @@ k if for every $p\in S$ there is a coordinate ne...</content>
   </entry>
 
   <entry>
-    <title>Manifold Theory: Rank</title>
+    <title>M.T.: Rank</title>
     <link href="/math/math-space-manifold-theory-rank.html"/>
     <updated>2019-08-30T00:00:00+09:00</updated>
     <id>/math/math-space-manifold-theory-rank</id>
@@ -2391,7 +2761,7 @@ if it contains  $r \times r$ invertible submatrix
   </entry>
 
   <entry>
-    <title>Manifold: Introduction</title>
+    <title>M.T.: Introduction</title>
     <link href="/math/math-space-manifold-theory-inspiration.html"/>
     <updated>2019-08-30T00:00:00+09:00</updated>
     <id>/math/math-space-manifold-theory-inspiration</id>
@@ -2421,7 +2791,7 @@ continuously or smoothly from point t...</content>
   </entry>
 
   <entry>
-    <title>Manifold: Orientations</title>
+    <title>M.T.: Orientations</title>
     <link href="/math/math-space-manifold-orientation.html"/>
     <updated>2019-08-30T00:00:00+09:00</updated>
     <id>/math/math-space-manifold-orientation</id>
@@ -2436,7 +2806,7 @@ takes place:
   </entry>
 
   <entry>
-    <title>Manifold: Euclidean Spaces</title>
+    <title>M.T.: Euclidean Spaces</title>
     <link href="/math/math-space-manifold-euclidean-spaces.html"/>
     <updated>2019-08-30T00:00:00+09:00</updated>
     <id>/math/math-space-manifold-euclidean-spaces</id>
@@ -2450,7 +2820,7 @@ differential and integral calculus to a manifold...</content>
   </entry>
 
   <entry>
-    <title>Manifold: Differential Forms</title>
+    <title>M.T.: Differential Forms</title>
     <link href="/math/math-space-manifold-differential-forms.html"/>
     <updated>2019-08-30T00:00:00+09:00</updated>
     <id>/math/math-space-manifold-differential-forms</id>
@@ -2461,6 +2831,23 @@ Differential forms are generalizations of real-valued functions on a manifold.
   Instead of assigning to each point of the manifold a number, a differential
 k-form assigns to each point a k-covector on its tangent space.
   For k=0 and 1, differential k-forms are functions and covecto...</content>
+  </entry>
+
+  <entry>
+    <title>Structure: summary</title>
+    <link href="/math/math-structure-summary.html"/>
+    <updated>2019-08-15T00:00:00+09:00</updated>
+    <id>/math/math-structure-summary</id>
+    <content type="html">
+Why bother?
+
+  We prefer concept which are from intuition, such as the tangent line of a curve
+at a specific point, it is easy to understand.
+  Speaking of structure, it’s not something intuitive, it’s pure mathematics
+
+
+
+  for example, in real anaysis, we build structure addition of two numbers...</content>
   </entry>
 
   <entry>
@@ -2480,58 +2867,19 @@ a...</content>
   </entry>
 
   <entry>
-    <title>Abstract Algebra: Group Theory</title>
+    <title>A.A.: Introduction</title>
     <link href="/math/math-structure-abstract-algebra-introduction.html"/>
     <updated>2019-07-28T00:00:00+09:00</updated>
     <id>/math/math-structure-abstract-algebra-introduction</id>
     <content type="html">
-Group Definition
-group: set of elements
+Background
+Algebra is the abstract encapsulation of our intuition for composition
 
-  Operation: *   such as, addition, multiplication
-  Closed under Operation: *
-  Inverses: inverses exists for all x
-  Identity element: e
-  associative: \((A\ast B)\ast C\)=\(A\ast (B\ast C)\)
-
-
-Remark
-why we need these properties ? 
-The answer is we wan...</content>
-  </entry>
-
-  <entry>
-    <title>A.A.: Abelian Group</title>
-    <link href="/math/math-structure-abstract-algebra-abelian-group.html"/>
-    <updated>2019-07-27T00:00:00+09:00</updated>
-    <id>/math/math-structure-abstract-algebra-abelian-group</id>
-    <content type="html">
-HAHA
-Every finite commutative or abelian group is isomorphic to a direct sum of
-cyclic groups.
-
-Isomorphism of Groups
-In here, the meaning of the word isomorphism is kind of like equality, you can
-understand this way. 
-Definition: Groups G, H are isomorphic, written 
-$G \simeq H$, if we can find...</content>
-  </entry>
-
-  <entry>
-    <title>L.A.: Introduction</title>
-    <link href="/math/math-structure-linear-algebra-introduction.html"/>
-    <updated>2019-07-25T00:00:00+09:00</updated>
-    <id>/math/math-structure-linear-algebra-introduction</id>
-    <content type="html">
-Notation
-
-  \(\boldsymbol{x}=\left[\begin{array}{llll}{x_{1}} &amp;amp; {x_{2}} &amp;amp; {\dots} &amp;amp;
-{x_{m}}\end{array}\right]^{\mathrm{T}}\): to simplify writing column vectors in-line with other text, sometimes they
-are written as row vectors with the transpose operation applied to them.
-
-
-
-Spannin...</content>
+  By composition, we mean the concept of two object coming together to form a
+new one
+  For example, adding two numbers, or composing real valued single variable
+functions.
+  As we shall discover, the seemly simpl...</content>
   </entry>
 
   <entry>
@@ -2557,24 +2905,27 @@ Terminology
     <updated>2019-07-25T00:00:00+09:00</updated>
     <id>/math/math-structure-abstract-algebra-ring</id>
     <content type="html">
-Definition
-Ring:  A ring is a set of elements under \(\times, -,+\), not commutative under \(\times\)
+Background
 
-  At first, ring is a concept generialize the integer
+  Sets with a single binary operation satisfying certain axioms
+  We are often more interested in working with sets that have two binary
+operations
+    
+      If we consider a set with two such related binary operations satisfying
+certain axioms, we have algebraic structure called a ...</content>
+  </entry>
 
-
-Example
-
-  
-    Integer: Every Integer is a product of primes.
-  
-  
-    Matrix
- \(2\times 2\) matrix, \(a,b,c,d \in R \times\).
-  
-
-
-\(\...</content>
+  <entry>
+    <title>A.A.: Polynomials Ring</title>
+    <link href="/math/math-structure-abstract-algebra-ring-polynomials.html"/>
+    <updated>2019-07-25T00:00:00+09:00</updated>
+    <id>/math/math-structure-abstract-algebra-ring-polynomials</id>
+    <content type="html">
+Introduction
+It is probably no surprise that polynomials form a ring. In this chapter we
+ shall emphasize the algebraic structure of polynomials by studying polynomial
+ rings. We can prove prove many results for polynomial rings that are similar to
+ the theorems we proved for the integers.  Anal...</content>
   </entry>
 
   <entry>
@@ -2596,24 +2947,139 @@ subject to certain axioms such as the d...</content>
   </entry>
 
   <entry>
+    <title>A.A.: Group</title>
+    <link href="/math/math-structure-abstract-algebra-group.html"/>
+    <updated>2019-07-25T00:00:00+09:00</updated>
+    <id>/math/math-structure-abstract-algebra-group</id>
+    <content type="html">
+Group Definition
+group: set of elements
+
+  Operation: *   such as, addition, multiplication
+  Closed under Operation: *
+  Inverses: inverses exists for all x
+  Identity element: e
+  associative: \((A\ast B)\ast C\)=\(A\ast (B\ast C)\)
+
+
+Remark
+why we need these properties ? 
+The answer is we wan...</content>
+  </entry>
+
+  <entry>
+    <title>A.A.: Subgroup and Factor Group</title>
+    <link href="/math/math-structure-abstract-algebra-group-subgroup-and-factor-group.html"/>
+    <updated>2019-07-25T00:00:00+09:00</updated>
+    <id>/math/math-structure-abstract-algebra-group-subgroup-and-factor-group</id>
+    <content type="html">
+Background
+If H is a subgroup of a group G, then right cosets are not always the same as
+left cosets; that is, it is not always the case that $gH=Hg$ for all $g \in G$.
+The subgroups for which this property holds play a critical role in group
+theory. They allow for the construction of a new clas...</content>
+  </entry>
+
+  <entry>
+    <title>A.A.: Group Presentation</title>
+    <link href="/math/math-structure-abstract-algebra-group-presentation.html"/>
+    <updated>2019-07-25T00:00:00+09:00</updated>
+    <id>/math/math-structure-abstract-algebra-group-presentation</id>
+    <content type="html">
+Introduction
+In mathematics, a presentation is one method of specifying a group. A
+presentation of a group G comprises a set S of generators-so that every element
+of the group can be written as a product of some of these generators-and a set R
+of relations among those generators. We can say G ha...</content>
+  </entry>
+
+  <entry>
+    <title>A.A.: Permuation Group</title>
+    <link href="/math/math-structure-abstract-algebra-group-permutation.html"/>
+    <updated>2019-07-25T00:00:00+09:00</updated>
+    <id>/math/math-structure-abstract-algebra-group-permutation</id>
+    <content type="html">
+</content>
+  </entry>
+
+  <entry>
+    <title>A.A.: Isomorphism</title>
+    <link href="/math/math-structure-abstract-algebra-group-isomorphisms.html"/>
+    <updated>2019-07-25T00:00:00+09:00</updated>
+    <id>/math/math-structure-abstract-algebra-group-isomorphisms</id>
+    <content type="html">
+Definition
+
+  Let $ (G, *) \text { and }(H, \circ) $ be two groups. A $\textbf{homomorphism}$ 
+f, from G to H,is a map of sets  $ f: G \rightarrow H $, such that $f(x *
+y)=f(x)\circ f(y)$ $ \forall x, y \in G $. If $G=H$ and $f=Id_{G}$ we call $f$
+the identity homomorphism.
+
+
+
+  Intuitively one ...</content>
+  </entry>
+
+  <entry>
+    <title>A.A.: Cosets</title>
+    <link href="/math/math-structure-abstract-algebra-group-cosets.html"/>
+    <updated>2019-07-25T00:00:00+09:00</updated>
+    <id>/math/math-structure-abstract-algebra-group-cosets</id>
+    <content type="html">
+Definition
+Let G be a group and H a subgroup of G. Define a $\textbf{left coset}$ of H with
+representative  $g \in G$ to be the set
+$
+g H={g h: h \in H}
+$
+
+$\textbf{Right cosets}$ can defined similarly by
+$
+H g={h g: h \in H}
+$
+
+
+  If left and right cosets coincide or if it is clear from the con...</content>
+  </entry>
+
+  <entry>
+    <title>A.A.: Abelian Group</title>
+    <link href="/math/math-structure-abstract-algebra-group-abelian.html"/>
+    <updated>2019-07-25T00:00:00+09:00</updated>
+    <id>/math/math-structure-abstract-algebra-group-abelian</id>
+    <content type="html">
+HAHA
+Every finite commutative or abelian group is isomorphic to a direct sum of
+cyclic groups.
+
+Isomorphism of Groups
+In here, the meaning of the word isomorphism is kind of like equality, you can
+understand this way. 
+Definition: Groups G, H are isomorphic, written 
+$G \simeq H$, if we can find...</content>
+  </entry>
+
+  <entry>
     <title>A.A.: Field</title>
     <link href="/math/math-structure-abstract-algebra-field.html"/>
     <updated>2019-07-25T00:00:00+09:00</updated>
     <id>/math/math-structure-abstract-algebra-field</id>
     <content type="html">
-Field
-A field is a set F which is closed under two operations + and $\times$
+Background
+It is natural to ask whether or not some field contained in a larger field.
 
-  F is an abelian group under +
-  F-{0} (The set F without additive identity 0) is an abelian group under
-$\times$
+  We think of rational numbers, which reside inside real numbers.
+  In turn, the real numbers live inside the complex numbers.
+  We can study the relationship between Q and R, inquire the nature of these
+fiel...</content>
+  </entry>
 
-
-Reference
-
-  Field
-  Division Algebra
-
+  <entry>
+    <title>A.A.: Finite Field</title>
+    <link href="/math/math-structure-abstract-algebra-field-finite.html"/>
+    <updated>2019-07-25T00:00:00+09:00</updated>
+    <id>/math/math-structure-abstract-algebra-field-finite</id>
+    <content type="html">
 </content>
   </entry>
 
@@ -2650,6 +3116,23 @@ definite if the scalar $z^T Mz$ is strictly positive for every nonzero column
 z of n real numbers.
   Indefinite: A matrix that is not positive semi-definite and not negative
 semidefinite is called indefin...</content>
+  </entry>
+
+  <entry>
+    <title>L.A.: Introduction</title>
+    <link href="/math/math-structure-linear-algebra-introduction.html"/>
+    <updated>2019-07-24T00:00:00+09:00</updated>
+    <id>/math/math-structure-linear-algebra-introduction</id>
+    <content type="html">
+Notation
+
+  \(\boldsymbol{x}=\left[\begin{array}{llll}{x_{1}} &amp;amp; {x_{2}} &amp;amp; {\dots} &amp;amp;
+{x_{m}}\end{array}\right]^{\mathrm{T}}\): to simplify writing column vectors in-line with other text, sometimes they
+are written as row vectors with the transpose operation applied to them.
+
+
+
+Spannin...</content>
   </entry>
 
   <entry>
@@ -2782,35 +3265,6 @@ geometry,even we are motivated by those...</content>
   </entry>
 
   <entry>
-    <title>A.A.: Unitary Group</title>
-    <link href="/math/math-structure-abstract-algebra-special-unitary-group.html"/>
-    <updated>2019-07-20T00:00:00+09:00</updated>
-    <id>/math/math-structure-abstract-algebra-special-unitary-group</id>
-    <content type="html">
-Introduction
-
-  In mathematics, the special unitary group of degree n, denoted SU(n), is the
-Lie Group of $n \times n$ unitary matrices with determinant 1.
-    
-      More general unitary matrices may have complex determinants with absolute
-value 1, rather then real 1 in the special case.
-      ...</content>
-  </entry>
-
-  <entry>
-    <title>A.A.: Group Presentation</title>
-    <link href="/math/math-structure-abstract-algebra-group-presentation.html"/>
-    <updated>2019-07-20T00:00:00+09:00</updated>
-    <id>/math/math-structure-abstract-algebra-group-presentation</id>
-    <content type="html">
-Introduction
-In mathematics, a presentation is one method of specifying a group. A
-presentation of a group G comprises a set S of generators-so that every element
-of the group can be written as a product of some of these generators-and a set R
-of relations among those generators. We can say G ha...</content>
-  </entry>
-
-  <entry>
     <title>L.A.: Linear Equation</title>
     <link href="/math/math-structure-linear-algebra-application-linear-equations.html"/>
     <updated>2019-07-19T00:00:00+09:00</updated>
@@ -2842,161 +3296,18 @@ which is isomorphic to $V^n$ ...</content>
   </entry>
 
   <entry>
-    <title>A.T.: Simplex</title>
-    <link href="/math/math-structure-algebraic-topology-simplex.html"/>
-    <updated>2019-07-18T00:00:00+09:00</updated>
-    <id>/math/math-structure-algebraic-topology-simplex</id>
-    <content type="html">
-Definition
-In geometry, a simplex(plural: simplexes or simplices) is a generalization of
-the notion of a triangle or tetrahedron to artitrary dimensions. 
-
-  a 0-simplex is a point
-  a 1-simplex is a line segment
-  a 2-simplex is a triangle
-  a 3-simplex is a tetrahedron
-    
-      A spatial con...</content>
-  </entry>
-
-  <entry>
-    <title>A.T.: Topology</title>
-    <link href="/math/math-structure-algebraic-topology.html"/>
-    <updated>2019-07-17T00:00:00+09:00</updated>
-    <id>/math/math-structure-algebraic-topology</id>
-    <content type="html">
-Algebraic Topology
-
-  The study of geometrical properties and spatial relations unaffected by the
-continuous change of shape or size of figures.
-  Algebraic means use algebraic to study topology.
-  we are not asking the distance, what are the essential features of these
-mathematic objects which ...</content>
-  </entry>
-
-  <entry>
-    <title>A.T.: Homology</title>
-    <link href="/math/math-structure-algebraic-topology-homology.html"/>
-    <updated>2019-07-17T00:00:00+09:00</updated>
-    <id>/math/math-structure-algebraic-topology-homology</id>
-    <content type="html">
-HAHA
-As we prefer to write operation as addition, so loop is represented by
-a+b+c=b+c+a = c+a+b, because it is a closed loop geometry, we call this a cycle
-
-HAHA
-
-  chain: is going to be a word for random element in this free abelian group of
-random combination  with integer coefficient.
-  bound...</content>
-  </entry>
-
-  <entry>
-    <title>A.T.: Fundamental Group</title>
-    <link href="/math/math-structure-algebraic-topology-fundamental-group.html"/>
+    <title>M.A.: Introduction</title>
+    <link href="/math/math-structure-multilinear-algebra-introduction.html"/>
     <updated>2019-07-16T00:00:00+09:00</updated>
-    <id>/math/math-structure-algebraic-topology-fundamental-group</id>
+    <id>/math/math-structure-multilinear-algebra-introduction</id>
     <content type="html">
-HAHA
-Fundamental group of a surface, which is a very important topic to link topology
-and algebra.
+Question 1: why we talk about multilinear algebra ?
+why we talk about multilinear space, if we equip the spacetime with a vector space, what does 5*paris mean? 
+It means nothing. 
+The reason why we talk about multilinear space is because the tangent spaces.
 
-Definition
-In mathematics, a path in topological space X is a continuous function f from
-unit interval I=[0,1] to X 
-\(f: I \rightarrow X\)
-
-Homotopic path
-
-Definition
-
-  toological space: may be ...</content>
-  </entry>
-
-  <entry>
-    <title>A.T.: Surface Classification</title>
-    <link href="/math/math-structure-algebraic-topology-surface-classification.html"/>
-    <updated>2019-07-15T00:00:00+09:00</updated>
-    <id>/math/math-structure-algebraic-topology-surface-classification</id>
-    <content type="html">
-Compact Surface
-
-  A compact surface is a surface which is also a compact set. A compact surface
-has a triangulation with a finite number of triangles. The sphere and torus are
-compact.
-  compact means boundary and closed which doesn’t has any hole.
-
-
-HAHA
-With edges labelled by letters and dire...</content>
-  </entry>
-
-  <entry>
-    <title>A.T.: Mobius, Klein, Orientability </title>
-    <link href="/math/math-structure-algebraic-topology-mobius-klein.html"/>
-    <updated>2019-07-15T00:00:00+09:00</updated>
-    <id>/math/math-structure-algebraic-topology-mobius-klein</id>
-    <content type="html">
-Introduction
-
-  Closed surfaces are divided into two classes, orientable and non-orientable.
-    
-      The sphere and the torus are examples of orientable surfaces;
-      The projective plane and the Mobius band are non-orientable.
-    
-  
-
-
-HAHA
-A surface M is orientable which means we can con...</content>
-  </entry>
-
-  <entry>
-    <title>A.T.: Euler-Poincare Characteristic</title>
-    <link href="/math/math-structure-algebraic-topology-poincare-characteristic.html"/>
-    <updated>2019-07-14T00:00:00+09:00</updated>
-    <id>/math/math-structure-algebraic-topology-poincare-characteristic</id>
-    <content type="html">
-Concept
-In algebraic topology, the Euler characteristic or Euler number is a topological
-invariant, a number that describes a topological space’s shape or structure
-regardless of the way it is bent. It is commonly denoted by \(\chi\)
-
-HAHA
-You can make a model, doesn’t mean it is a mathematic ob...</content>
-  </entry>
-
-  <entry>
-    <title>A.T.: Curvature</title>
-    <link href="/math/math-structure-algebraic-topology-curvature.html"/>
-    <updated>2019-07-14T00:00:00+09:00</updated>
-    <id>/math/math-structure-algebraic-topology-curvature</id>
-    <content type="html">
-Question: How to describe the amount of turning ?
-
-  360
-  2$\pi$
-  1 
-which one is better ?
-
-
-</content>
-  </entry>
-
-  <entry>
-    <title>A.T.: 1 and 2-dim Objects</title>
-    <link href="/math/math-structure-algebraic-topology-1-2-dimensional-objects.html"/>
-    <updated>2019-07-14T00:00:00+09:00</updated>
-    <id>/math/math-structure-algebraic-topology-1-2-dimensional-objects</id>
-    <content type="html">
-HAHA
-\(A^{2}=A^{\prime} \times A^{\prime}\) 
-Product of lines: this is a construction of topological spaces.
-
-Borromean Rings
-In mathematics, the Borromean rings consist of three topological circles which
-are linked but where removing any one ring leaves the other two unconnected. In
-other words...</content>
+Question 2: why study vector space?
+t...</content>
   </entry>
 
   <entry>
@@ -3028,7 +3339,9 @@ definition
 Quaternion are a number system that extends the complex numbers. A feature of
 quaternions is that multiplication of two quaternons is noncommutative.
 Quaternions are generally represented in the form: 
-\(a+b \mathbf{i}+c \mathbf{j}+d \mathbf{k}\)
+$
+a+b \mathbf{i}+c \mathbf{j}+d \mathbf{k}
+$
 where a,b,c and d are real numbers, an...</content>
   </entry>
 
@@ -3053,10 +3366,59 @@ zero.
   </entry>
 
   <entry>
-    <title>L.T.: Matrix Exponential</title>
-    <link href="/math/math-structure-lie-theory-matrix-exponential.html"/>
+    <title>L.T.: Matrix Lie Groups</title>
+    <link href="/math/math-structure-lie-groups.html"/>
     <updated>2019-07-11T00:00:00+09:00</updated>
-    <id>/math/math-structure-lie-theory-matrix-exponential</id>
+    <id>/math/math-structure-lie-groups</id>
+    <content type="html">
+Definition
+A Lie group is, roughly speaking, a continuous group, that is, a group described
+by several real parameters. In this book, we consider matrix Lie groups, which
+are Lie groups realized as groups of matrices
+
+  Consider the set of all $2 \times 2$ real matrices with determinant 1, denot...</content>
+  </entry>
+
+  <entry>
+    <title>A.A.: Unitary Group</title>
+    <link href="/math/math-structure-lie-group-special-unitary.html"/>
+    <updated>2019-07-11T00:00:00+09:00</updated>
+    <id>/math/math-structure-lie-group-special-unitary</id>
+    <content type="html">
+Introduction
+
+  In mathematics, the special unitary group of degree n, denoted SU(n), is the
+Lie Group of $n \times n$ unitary matrices with determinant 1.
+    
+      More general unitary matrices may have complex determinants with absolute
+value 1, rather then real 1 in the special case.
+      ...</content>
+  </entry>
+
+  <entry>
+    <title>L.T.: Lie Algebras</title>
+    <link href="/math/math-structure-lie-algebra.html"/>
+    <updated>2019-07-11T00:00:00+09:00</updated>
+    <id>/math/math-structure-lie-algebra</id>
+    <content type="html">
+Background
+
+  Abstract Lie algebras are algebraic structures used in the Lie groups.
+  They are vector space endomorphisms of linear transformations that have a new
+operation that is neither associatve nor commutative, but referred to as the
+bracket operation, or commutator.
+
+
+Definition
+
+  A fi...</content>
+  </entry>
+
+  <entry>
+    <title>L.T.: Matrix Exponential</title>
+    <link href="/math/math-structure-lie-algebra-matrix-exponential.html"/>
+    <updated>2019-07-11T00:00:00+09:00</updated>
+    <id>/math/math-structure-lie-algebra-matrix-exponential</id>
     <content type="html">
 Definition
 If X is an $n \times n$ matrix, we define the exponential of $X$, denoted by
@@ -3070,40 +3432,10 @@ repeated matirx product of X with i...</content>
   </entry>
 
   <entry>
-    <title>L.T.: Matrix Lie Groups</title>
-    <link href="/math/math-structure-lie-theory-lie-groups.html"/>
+    <title>L.A.: Introduction</title>
+    <link href="/math/math-structure-lie-algebra-introduction.html"/>
     <updated>2019-07-11T00:00:00+09:00</updated>
-    <id>/math/math-structure-lie-theory-lie-groups</id>
-    <content type="html">
-Definition
-A Lie group is, roughly speaking, a continuous group, that is, a group described
-by several real parameters. In this book, we consider matrix Lie groups, which
-are Lie groups realized as groups of matrices
-
-  Consider the set of all $2 \times 2$ real matrices with determinant 1, denot...</content>
-  </entry>
-
-  <entry>
-    <title>L.T.: Lie Algebras</title>
-    <link href="/math/math-structure-lie-theory-lie-algebra.html"/>
-    <updated>2019-07-11T00:00:00+09:00</updated>
-    <id>/math/math-structure-lie-theory-lie-algebra</id>
-    <content type="html">
-Definition
-
-  A finite-dimensional real or complex Lie Algebra is a finite-dimensional real
-or complex vector space $ \mathfrak{g} $, together with a map $
-[\cdot, \cdot] \text { from } \mathfrak{g} \times \mathfrak{g}
-$ into $ \mathfrak{g} $, with the following properties:
-    
-      $[\cdot, \...</content>
-  </entry>
-
-  <entry>
-    <title>L.T.: Introduction</title>
-    <link href="/math/math-structure-lie-theory-introduction.html"/>
-    <updated>2019-07-11T00:00:00+09:00</updated>
-    <id>/math/math-structure-lie-theory-introduction</id>
+    <id>/math/math-structure-lie-algebra-introduction</id>
     <content type="html">
 Inspiration
 
@@ -3112,52 +3444,6 @@ equations that were quadratic, cubic, and quartic.
     
       He was able to prove that no closed form solution could be constructed for the
 general quintic(or any higher degree) equation using only the four s...</content>
-  </entry>
-
-  <entry>
-    <title>N.T.: Real Number</title>
-    <link href="/math/math-structure-number-theory-real-number.html"/>
-    <updated>2019-07-09T00:00:00+09:00</updated>
-    <id>/math/math-structure-number-theory-real-number</id>
-    <content type="html">
-HAHA
-Currently, we think real numbers are the basic building blocks of number, but,
-realy, Is this point view right?  Even this is right, how to explain $e\times\pi$,
-how to explain $e+\pi$, what does this mean?
-
-</content>
-  </entry>
-
-  <entry>
-    <title>A.A.: History</title>
-    <link href="/math/math-structure-number-theory-history.html"/>
-    <updated>2019-07-04T00:00:00+09:00</updated>
-    <id>/math/math-structure-number-theory-history</id>
-    <content type="html">
-HAHA
-
-  because of Arabic numbers and we can use it. Arabic numbers are the most important contribution 
-that India have done to modern science. Arabic numbers provide the possibility that you can use 
-them to calculate pretty easily.
-  Greek Number System: As the picture in the following, It is...</content>
-  </entry>
-
-  <entry>
-    <title>N.T.: Complex</title>
-    <link href="/math/math-structure-number-theory-complex.html"/>
-    <updated>2019-07-04T00:00:00+09:00</updated>
-    <id>/math/math-structure-number-theory-complex</id>
-    <content type="html">
-notation
-
-  N - natural numbers
-  Z - integer   Z was used to denote integers because a germany mathmatician  did a great job on ring theory. In germany language, integers are Zahlen.
-  Q - rational numbers (from quotient)
-  R - real numbers
-  C - complex numbers
-
-
-At first, there is only positi...</content>
   </entry>
 
   <entry>
@@ -3176,26 +3462,6 @@ Definition
 subspace of $ \Lambda (V) $ spanned by elements of the form
     
       $...</content>
-  </entry>
-
-  <entry>
-    <title>Kmeans</title>
-    <link href="/kmeans.html"/>
-    <updated>2019-05-24T00:00:00+09:00</updated>
-    <id>/kmeans</id>
-    <content type="html">
-What does Kmeans do ?
-
-
-  The goal of this algorithm is to find groups in the data, with the number of groups represented by the variable K.
-
-
-
-
-formula
-
-All points with a cluster are closer in distance to their centroid than they are to any other centroid, and the mathematical condition
-for the...</content>
   </entry>
 
   <entry>

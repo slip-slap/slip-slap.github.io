@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Manifold: Euclidean Spaces"
+title: "M.T.: Euclidean Spaces"
 keywords: [""]
 description: ""
 category: "math"
-tags: ["space","manifold"]
+tags: ["space","M.T."]
 ---
 {% include JB/setup %}
 

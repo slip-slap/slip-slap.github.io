@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Manifold: Orientations"
+title: "M.T.: Orientations"
 keywords: [""]
 description: ""
 category: "math"
-tags: ["space","manifold"]
+tags: ["space","M.T."]
 ---
 {% include JB/setup %}
 

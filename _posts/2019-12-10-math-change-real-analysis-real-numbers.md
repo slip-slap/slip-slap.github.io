@@ -8,6 +8,11 @@ tags: ["change","R.A."]
 ---
 {% include JB/setup %}
 
+#### HAHA
+Currently, we think real numbers are the basic building blocks of number, but,
+realy, Is this point view right?  Even this is right, how to explain $e\times\pi$,
+how to explain $e+\pi$, what does this mean?
+
 #### Background
 1. we have rigorously constructed three fundamental number systems:
 - The natural number system N, The integers Z and the rational Q.

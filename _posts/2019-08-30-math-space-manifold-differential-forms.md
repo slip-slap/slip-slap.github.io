@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Manifold: Differential Forms"
+title: "M.T.: Differential Forms"
 keywords: [""]
 description: ""
 category: "math"
-tags: ["space","manifold"]
+tags: ["space","M.T."]
 ---
 {% include JB/setup %}
 
