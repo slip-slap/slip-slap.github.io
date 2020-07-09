@@ -5,8 +5,8 @@
   <description>Just Do It - </description>
   <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
   <link></link>
-  <lastBuildDate>Tue, 07 Jul 2020 18:41:57 +0900</lastBuildDate>
-  <pubDate>Tue, 07 Jul 2020 18:41:57 +0900</pubDate>
+  <lastBuildDate>Thu, 09 Jul 2020 23:24:32 +0900</lastBuildDate>
+  <pubDate>Thu, 09 Jul 2020 23:24:32 +0900</pubDate>
   <ttl>1800</ttl>
 
 
@@ -192,6 +192,66 @@ calculate the mean, covaiance.&lt;/li&gt;
 </description>
     <link>/ai/AI-model-gaussian-mixture-model.html</link>
     <guid>/ai/AI-model-gaussian-mixture-model</guid>
+    <pubDate>Sun, 24 May 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Kmeans</title>
+    <description>
+&lt;h4 id=&quot;what-does-kmeans-do-&quot;&gt;What does Kmeans do ?&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The goal of this algorithm is to find groups in the data, with the number of groups represented by the variable K.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;formula&quot;&gt;formula&lt;/h4&gt;
+
+&lt;p&gt;All points with a cluster are closer in distance to their centroid than they are to any other centroid, and the mathematical condition
+for the K cluster \(C_{k}\) and the K centroid \(u_{k}\) can be expressed as: &lt;br /&gt;&lt;/p&gt;
+
+\[\text { Mnimize } \sum_{k=1}^{K} \sum_{\mathbf{x}_{n} \in C_{k}}\left\|\mathrm{x}_{n}-\mu_{k}\right\|^{2} \text { with respect to } C_{k}, \mu_{k}\]
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;application&quot;&gt;Application&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;customer segmentation&lt;/li&gt;
+  &lt;li&gt;Document Classification&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;the-relationship-between-em-algorithm-and-kmeans&quot;&gt;the relationship between EM algorithm and Kmeans&lt;/h4&gt;
+&lt;p&gt;The general EM scheme&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;The E-step, where each object is assigned to the centroid such that it is assigned to the most likely cluster
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;why why why the name is Expectation&lt;/strong&gt;, because in this step we assign the
+probability to each observation data, 0 or 1, &lt;strong&gt;then we can calculate the
+expectation of corresponding distribution.&lt;/strong&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;The M-step, where the model(=centroids) are recalculated(least square optimization)
+It differs from GMM:
+    &lt;ul&gt;
+      &lt;li&gt;it uses hard partitioning, each object is assigned to exactly one cluster&lt;/li&gt;
+      &lt;li&gt;the model are centroids only, no variance or covariance are taken into account&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.kaggle.com/shrutimechlearn/step-by-step-kmeans-explained-in-detail/data&quot;&gt;Step by step Kmeans&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stats.stackexchange.com/questions/76866/clustering-with-k-means-and-em-how-are-they-related&quot;&gt;Clustering with K-Means and EM: how are they related ?&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/AI-kmeans.html</link>
+    <guid>/AI-kmeans</guid>
     <pubDate>Sun, 24 May 2020 00:00:00 +0900</pubDate>
   </item>
 
@@ -2364,6 +2424,11 @@ a single point.&lt;/p&gt;
   <item>
     <title>R.A.: Real Number</title>
     <description>
+&lt;h4 id=&quot;haha&quot;&gt;HAHA&lt;/h4&gt;
+&lt;p&gt;Currently, we think real numbers are the basic building blocks of number, but,
+realy, Is this point view right?  Even this is right, how to explain $e\times\pi$,
+how to explain $e+\pi$, what does this mean?&lt;/p&gt;
+
 &lt;h4 id=&quot;background&quot;&gt;Background&lt;/h4&gt;
 &lt;ol&gt;
   &lt;li&gt;we have rigorously constructed three fundamental number systems:
@@ -2475,6 +2540,28 @@ the mirror problem, and we will have a solution.&lt;/p&gt;
 </description>
     <link>/math/math-change-real-analysis-legendre-transormation.html</link>
     <guid>/math/math-change-real-analysis-legendre-transormation</guid>
+    <pubDate>Tue, 10 Dec 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Real Function Theory: Lebesgue Integration</title>
+    <description>
+&lt;h4 id=&quot;definition&quot;&gt;definition&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Lebesgue integral: extends the integral to a larger class of functions. It also extends the domains on which these functions can be defined.&lt;/li&gt;
+  &lt;li&gt;Improper integral: a definite integral that has either or both limits infinite or an intergrand that approaches infinity&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;lebesgues-dominated-convergence-theorem&quot;&gt;Lebesgue’s Dominated Convergence Theorem&lt;/h4&gt;
+&lt;p&gt;Let \({f\_n}\) be a sequence of real-valued measurable functions on a measure space. Suppose that the sequence converges pointwise to a function
+f and is dominated by some integrable function g in the sense that.&lt;/p&gt;
+
+&lt;h4 id=&quot;application-of-lebesgue-integration&quot;&gt;application of Lebesgue integration&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/Lebesgue-integral.png&quot; /&gt;&lt;/p&gt;
+
+</description>
+    <link>/math/math-change-real-analysis-lebesgue-integration.html</link>
+    <guid>/math/math-change-real-analysis-lebesgue-integration</guid>
     <pubDate>Tue, 10 Dec 2019 00:00:00 +0900</pubDate>
   </item>
 
@@ -2599,6 +2686,32 @@ but onc the building is completed they are thrown away and never used again.&lt;
 </description>
     <link>/math/math-change-real-analysis-integers.html</link>
     <guid>/math/math-change-real-analysis-integers</guid>
+    <pubDate>Tue, 10 Dec 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>A.A.: History</title>
+    <description>
+&lt;h4 id=&quot;haha&quot;&gt;HAHA&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;because of Arabic numbers and we can use it. Arabic numbers are the most important contribution 
+that India have done to modern science. Arabic numbers provide the possibility that you can use 
+them to calculate pretty easily.&lt;/li&gt;
+  &lt;li&gt;Greek Number System: As the picture in the following, It is not possible to use them to,
+calucuate, If you want to use this do arithmetic, you at least a PHD.
+&lt;img src=&quot;/images/structure-number-theory-greek-number-system.png&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;Rome Number: I, II, III, IV, V, VI, VII, VIII, IX, X, XI, XII stands for 1 to 12, which is not 
+suit for arithmetic&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www-history.mcs.st-and.ac.uk/history/HistTopics/Greek_numbers.html&quot;&gt;Greek number system&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Roman_numerals&quot;&gt;Rome Number&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/math/math-change-real-analysis-history.html</link>
+    <guid>/math/math-change-real-analysis-history</guid>
     <pubDate>Tue, 10 Dec 2019 00:00:00 +0900</pubDate>
   </item>
 
@@ -2849,7 +2962,223 @@ ring.&lt;/li&gt;
   </item>
 
   <item>
-    <title>R.A.: Complex Analysis</title>
+    <title>C.A.: Series</title>
+    <description>
+&lt;h4 id=&quot;problem&quot;&gt;Problem&lt;/h4&gt;
+&lt;p&gt;Given a complex number $z$, what’s the meaning of $e^z$?&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Does it make sense ? It doesn’t make any sense.&lt;/li&gt;
+  &lt;li&gt;We can left this undefined, but just think about this
+$
+e(z)=\sum_{n=0}^{\infty} \frac{z^{n}}{n !}
+$ in real number domain.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Can we just replace z with complex number in the right part of this equation?&lt;/li&gt;
+  &lt;li&gt;of course, we can, but how about the right part of this equation.&lt;/li&gt;
+  &lt;li&gt;It’s reasonable, we just replace with complex number too.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;When study lie algebra, the way to expand the exponential functions is still
+the same.&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/math/math-change-complex-analysis-series.html</link>
+    <guid>/math/math-change-complex-analysis-series</guid>
+    <pubDate>Thu, 05 Dec 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>C.A.: Schwarz-Christoffel Transformation</title>
+    <description>
+</description>
+    <link>/math/math-change-complex-analysis-schwarz-christoffel-transformation.html</link>
+    <guid>/math/math-change-complex-analysis-schwarz-christoffel-transformation</guid>
+    <pubDate>Thu, 05 Dec 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>C.A.: Residues</title>
+    <description>
+&lt;h4 id=&quot;theorem&quot;&gt;Theorem&lt;/h4&gt;
+&lt;p&gt;If a function $f$ is analytic everywhere in the finite plane except for a finite
+number of singular points interior to a positively oritented closed contour $C$&lt;/p&gt;
+
+&lt;p&gt;$
+\int_{C} f(z) d z=2 \pi i \operatorname{Res}_{z=0}\left[\frac{1}{z^{2}}
+f\left(\frac{1}{z}\right)\right]
+$&lt;/p&gt;
+</description>
+    <link>/math/math-change-complex-analysis-residues.html</link>
+    <guid>/math/math-change-complex-analysis-residues</guid>
+    <pubDate>Thu, 05 Dec 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>C.A.: Application of Residues</title>
+    <description>
+</description>
+    <link>/math/math-change-complex-analysis-residues-application.html</link>
+    <guid>/math/math-change-complex-analysis-residues-application</guid>
+    <pubDate>Thu, 05 Dec 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>C.A.: Integral</title>
+    <description>
+&lt;h4 id=&quot;background&quot;&gt;Background&lt;/h4&gt;
+&lt;p&gt;Recall the definition of Riemann Integral&lt;/p&gt;
+
+&lt;p&gt;(\int_{a}^{b} f(x) d x \equiv \lim &lt;em&gt;{\max \Delta x&lt;/em&gt;{k} \rightarrow 0}
+\sum_{k=1}^{n} f\left(x_{k}^{*}\right) \Delta x_{k})&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Can we just replace the variable with complex number?&lt;/li&gt;
+  &lt;li&gt;of course we can.&lt;/li&gt;
+  &lt;li&gt;after the lower bound and upper bound are replaced by complex number,
+something very weired comes out.&lt;/li&gt;
+  &lt;li&gt;There are numberous integral path from complex number $a$ to complex number $b$,
+how to deal with this.&lt;/li&gt;
+  &lt;li&gt;very simple, choose one path.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;cauchy-goursat-theorem&quot;&gt;Cauchy-Goursat Theorem&lt;/h4&gt;
+&lt;p&gt;This theorem states if a function is analytic at all points interior to and on a
+simple contour C, then the value of the integral of the function around that
+contour is zero.&lt;/p&gt;
+
+</description>
+    <link>/math/math-change-complex-analysis-integral.html</link>
+    <guid>/math/math-change-complex-analysis-integral</guid>
+    <pubDate>Thu, 05 Dec 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>C.A.: Elementary Function</title>
+    <description>
+&lt;h4 id=&quot;background&quot;&gt;Background&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Just to mimick elementary functions well studied in calculus&lt;/li&gt;
+  &lt;li&gt;Define corresponding functions of a complex variable&lt;/li&gt;
+  &lt;li&gt;To be specific, we define analytic functions of a complex variable z that
+reduce to the elementary functions in calculus when $z = x+i0$&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/math/math-change-complex-analysis-elementary-function.html</link>
+    <guid>/math/math-change-complex-analysis-elementary-function</guid>
+    <pubDate>Thu, 05 Dec 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>C.A.: Conformal Mapping</title>
+    <description>
+&lt;h4 id=&quot;background&quot;&gt;Background&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;f(x,y) = (u,v) where u = u(x,y) and v = v(x,y)&lt;/li&gt;
+  &lt;li&gt;f(z) = w where z and w are complex numbers
+What’s the difference between the equations above ? No difference at all.
+We can do conformal mapping with complex number ?
+    &lt;ul&gt;
+      &lt;li&gt;The reason we need this because comlex numbers give us some advantage when we
+do comformal mapping.&lt;/li&gt;
+      &lt;li&gt;Conformal mappling doesn’t belong to complex number, just based on the
+properties of complex number, we can do conformal mapping better.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;note&quot;&gt;Note&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;conformal: leaving the size of the angle between corresponding curves
+unchanged &amp;lt;conformal transformation&amp;gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/math/math-change-complex-analysis-conformal-mapping.html</link>
+    <guid>/math/math-change-complex-analysis-conformal-mapping</guid>
+    <pubDate>Thu, 05 Dec 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>C.A.: Introduction</title>
+    <description>
+&lt;h4 id=&quot;inspiration&quot;&gt;Inspiration&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;What would you do if I tell you, I want a half of three person?
+    &lt;ul&gt;
+      &lt;li&gt;Maybe you can do it, but I don’t want to see it.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;notation&quot;&gt;notation&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;N - natural numbers&lt;/li&gt;
+  &lt;li&gt;Z - integer   Z was used to denote integers because a germany mathmatician  did a great job on ring theory. In germany language, integers are Zahlen.&lt;/li&gt;
+  &lt;li&gt;Q - rational numbers (from quotient)&lt;/li&gt;
+  &lt;li&gt;R - real numbers&lt;/li&gt;
+  &lt;li&gt;C - complex numbers&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;At first, there is only positive number and zero in the world, because they make sense. Natural numbes are closed 
+and operations of addition and multiplification. &lt;br /&gt;
+After minus operation was created, Natural numbers  is not closed any more. So negative numbers were invented.
+Numbers are extend from natural numbers to integer&lt;br /&gt;
+After divide operation was created, Integer is not closed any more. So rational numbers were invented.
+Numbers are extend from integer to rational numbers. &lt;br /&gt;
+Because the first math crisis,  $ \sqrt{2} $ comes out, in order to deal with these numbers. So irrational numbers were invented.
+Numbers are extend from ration numbers to real numbers. &lt;br /&gt;
+At last, we run into complex numbers, so what does $2^i$ mean, how to calulate this crap ? &lt;br /&gt;
+we can use Taylor expansion to calculate. &lt;br /&gt; 
+complex numbers is very useful to calculate integral problem.&lt;/p&gt;
+
+&lt;h4 id=&quot;imaginary-number-geometry-meaning&quot;&gt;imaginary number geometry meaning&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;i&lt;/strong&gt; is not a number, which means rotation 90 degree.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;1+i&lt;/strong&gt; stands for the rotate state&lt;/li&gt;
+  &lt;li&gt;The complex numbers allow us to consider scalings and rotations as two instances of the same thing;
+and by ensuring that negative reals have square roots, we get something every ploynominal equation can be 
+solved: &lt;strong&gt;complex number is the algebraic closure of R&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;history&quot;&gt;History&lt;/h4&gt;
+&lt;p&gt;$
+y^{3}=p y+q
+$ &lt;br /&gt;
+solution: &lt;br /&gt;
+$
+y^{3}=\sqrt{\frac{q}{2}+\sqrt{\left(\frac{q}{2}\right)^{2}-\left(\frac{p}{3}\right)^{3}}}+
+\sqrt[3]{\frac{q}{2}-\sqrt{\left(\frac{q}{2}\right)^{2}-\left(\frac{p}{3}\right)^{3}}}
+$&lt;/p&gt;
+
+&lt;p&gt;Example: &lt;br /&gt;
+$
+x^3=15x+4
+$
+solution: &lt;br /&gt;
+$
+x=\sqrt[3]{2+11 \sqrt{-1}}+\sqrt[3]{2-11 \sqrt{-1}}
+$&lt;/p&gt;
+
+&lt;p&gt;$
+\begin{array}{l}{(2+i)^{3}=2+11 i} \ {(2-i)^{3}=2-11 i}\end{array}
+$
+&lt;br /&gt;
+$
+x=2+i+2-i=4
+$&lt;/p&gt;
+</description>
+    <link>/math/math-change-complex-analysis-complex-number.html</link>
+    <guid>/math/math-change-complex-analysis-complex-number</guid>
+    <pubDate>Thu, 05 Dec 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>C.A.: Complex Function</title>
     <description>
 &lt;h4 id=&quot;definition&quot;&gt;definition&lt;/h4&gt;
 &lt;ol&gt;
@@ -2882,6 +3211,644 @@ studying complex functions.&lt;/p&gt;
     <link>/math/math-change-complex-analysis-complex-function.html</link>
     <guid>/math/math-change-complex-analysis-complex-function</guid>
     <pubDate>Thu, 05 Dec 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>V.A.: Vector</title>
+    <description>
+&lt;h4 id=&quot;hh&quot;&gt;HH&lt;/h4&gt;
+&lt;p&gt;Because vector components behave contrary to the basis vectors, we say that 
+vector components are contra-variant&lt;/p&gt;
+
+&lt;p&gt;The following is how basic and component transformation in different coordinate
+system.
+&lt;img src=&quot;/images/math-change-tensor-vector-compontent.png&quot; height=&quot;150&quot; width=&quot;300&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Notation, in order to remind the component is contravarient to the basic,
+so using the following summation.
+&lt;img src=&quot;/images/math-change-tensor-summation1.png&quot; height=&quot;150&quot; width=&quot;300&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;covector&quot;&gt;Covector&lt;/h4&gt;
+&lt;p&gt;A covector(row vector) is a function that takes a vector and produces a scalar.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Covectors are invarient, covector component are not invariant.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;two special covectors:&lt;/p&gt;
+
+&lt;h4 id=&quot;covector-visualization&quot;&gt;Covector Visualization&lt;/h4&gt;
+&lt;p&gt;This visualization is really nice because we don’t need to know everything about
+coordinate systems or components in order to understand how a covector acts on 
+a vector.&lt;/p&gt;
+
+&lt;h4 id=&quot;linear-map&quot;&gt;Linear Map&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Coordinate Definition: Matrics are the coordinate interpretation of linear
+maps.&lt;/li&gt;
+  &lt;li&gt;Geometric Definition: keep lines parallel, keep lines evenly spaced, keep the
+origin stationary.&lt;/li&gt;
+  &lt;li&gt;Abstract Algebra  Definition&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;tensor-notation&quot;&gt;Tensor Notation&lt;/h4&gt;
+&lt;p&gt;\(T_{r s t \dots}^{i j k \ldots}\)&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;m denotes contravarient indexes and n denotes covariant indexes&lt;/li&gt;
+  &lt;li&gt;we call T as (m,n)-tensor&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;notation&quot;&gt;Notation&lt;/h3&gt;
+
+&lt;h4 id=&quot;einstein-summation-convention&quot;&gt;Einstein Summation Convention&lt;/h4&gt;
+&lt;p&gt;\(\begin{aligned} \sum_{v=1}^{n} A_{\mu v} v_{v} &amp;amp; \rightarrow A_{\mu v} v_{v} \\
+\sum_{\beta=1}^{n} \sum_{\gamma=1}^{n} A_{\alpha \beta} B_{\beta \gamma}
+C_{\gamma \delta} &amp;amp; \rightarrow A_{\alpha \beta} B_{\beta \gamma} C_{\gamma
+\delta} \end{aligned}\)&lt;/p&gt;
+
+&lt;h4 id=&quot;diverence-notation&quot;&gt;Diverence Notation&lt;/h4&gt;
+&lt;p&gt;\(\begin{aligned} \nabla \cdot \vec{f} &amp;amp;=\left\langle\frac{\partial}{\partial
+x_{1}}, \frac{\partial}{\partial x_{2}}, \frac{\partial}{\partial
+x_{3}}\right\rangle \cdot\left\langle f_{1}, f_{2}, f_{3}\right\rangle \\
+&amp;amp;=\frac{\partial}{\partial x_{1}}\left(f_{1}\right)+\frac{\partial}{\partial
+x_{2}}\left(f_{1}\right)+\frac{\partial}{\partial x_{3}}\left(f_{3}\right) \\
+&amp;amp;=\partial_{1} f_{1}+\partial_{2} f_{2}+\partial_{3} f_{2} \end{aligned}\)&lt;/p&gt;
+
+&lt;h4 id=&quot;lapalacian&quot;&gt;Lapalacian&lt;/h4&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;In our subject of differential geometry, where you talk about manifolds, one
+difficulty is that the geometry is described by coordinates, &lt;strong&gt;but the coordinates
+do not have meaning, coordinates do not have meaning&lt;/strong&gt;, that’s why a lot of
+mathematican refuse to use coordinate to solve geometry problem. &lt;strong&gt;because
+coordinates means nothing&lt;/strong&gt;, in order to handle this kind of situation, an
+important tool is so-called tensor analysis, or Ricci calculus.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Compared with coordinates, vector is completely different. The exists of
+coordinates depends on what kind of coordinates you choose. But &lt;strong&gt;Vector
+actually is a geometry concept, which does not depend the coordinates you choose
+,They are alwasy being there&lt;/strong&gt;, to generalize the invariant property, we called
+this tensors. &lt;strong&gt;In nature, they are used, analogusly,  to describe the invariant
+property of geometry&lt;/strong&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Tensor_calculus&quot;&gt;Tensor Calculus&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://wenku.baidu.com/view/91fddd26b307e87100f69645.html&quot;&gt;绝对积分&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/math/math-change-vector-analysis-vector.html</link>
+    <guid>/math/math-change-vector-analysis-vector</guid>
+    <pubDate>Sun, 01 Dec 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>V.A.: Vector Differentiation</title>
+    <description>
+&lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Partial derivatives of vectors: If $\mathbf{A}$ is a vector depending on more
+than one scalar variable, say $x,y,z$ for example, then we write
+$\mathbf{A}=\mathbf{A}(x,y,z)$, the partial derivative of $\mathbf{A}$ with
+respect to x is defined as 
+$
+\frac{\partial \mathbf{A}}{\partial x}=\lim _{\Delta x \rightarrow 0}
+\frac{\mathbf{A}(x+\Delta x, y, z)-\mathbf{A}(x, y, z)}{\Delta x}
+$&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/math/math-change-vector-analysis-vector-differentiation.html</link>
+    <guid>/math/math-change-vector-analysis-vector-differentiation</guid>
+    <pubDate>Sun, 01 Dec 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>V.A.: Summary</title>
+    <description>
+&lt;h4 id=&quot;introduction&quot;&gt;Introduction&lt;/h4&gt;
+&lt;p&gt;If you understand tensors, you can get a lot insight in geometry; If you
+understand geometry, you can understand geometry more easily.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/math-change-tensor-summary.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;why-we-have-tensors&quot;&gt;Why we have tensors?&lt;/h4&gt;
+&lt;p&gt;The answer is to unify the function, unify space.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Functions in nature is a map, but what kind of up, how to define this map?&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;According to tensor theory, it can be consists of two building blocks, vector
+and covector, and covector is just a special vector whose image is real
+number.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;After you learn tensor staff, and now you look back into what you have
+learned, for example, differention operation, integration operation, in
+nature they are covectors, because they give you the numbers, just real
+numbers, a very special space. You  look back at the matrix transformation,
+and they just vectors.&lt;/li&gt;
+  &lt;li&gt;And covecter is the result we want, like the volume, weight, accelaration
+speed, probability. That’t the job of covectors, but we need vector to do
+some transformation, space transformation.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;revolution-of-notation&quot;&gt;Revolution of Notation&lt;/h4&gt;
+&lt;p&gt;When you check the history of math, it is also the history of how to rewrite our
+express.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;first we write an expression like \(x^2+2xy+y^2\)&lt;/li&gt;
+  &lt;li&gt;we can rewrite the exression in the matrix way.&lt;/li&gt;
+  &lt;li&gt;we can rewrite matrix in a kronecker way.
+we can decide what kind of notation system we take, but essiential it change
+nothing, just the expression form.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;how-to-denote-a-map&quot;&gt;How to denote a map&lt;/h4&gt;
+&lt;p&gt;\(\begin{array}{l}
+{\Lambda: v \rightarrow w} \\
+{\Lambda v \rightarrow w} \\
+{\Lambda (v) \rightarrow w} \\
+{\langle\Lambda, v\rangle \rightarrow w} \\
+{\langle,\Lambda,\rangle} \\
+\end{array}\)&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+\(\langle\Lambda, q v+b p\rangle= q\langle\Lambda, v\rangle+ b\langle\Lambda,
+p\rangle\)&lt;/p&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;If some notation is too complicate to understand, we can just break them
+down, for example the addition marker.&lt;/li&gt;
+  &lt;li&gt;what’s the point of tensor notation ? the point is create a new fancy way to
+rewrite the expression, that’s all the point.&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/math/math-change-vector-analysis-summary.html</link>
+    <guid>/math/math-change-vector-analysis-summary</guid>
+    <pubDate>Sun, 01 Dec 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>V.A.: Metric Tensor</title>
+    <description>
+&lt;h4 id=&quot;metric-tensor&quot;&gt;Metric Tensor&lt;/h4&gt;
+
+&lt;p&gt;Metric tensor is used to measure the length of vector. &lt;strong&gt;Please remember the
+following picture&lt;/strong&gt; 
+\(g_{\vec{e}_{i}}=\left[\begin{array}{ll}{\overrightarrow{e_{1}} \cdot
+\overrightarrow{e_{1}}} &amp;amp; {\overrightarrow{e_{1}} \cdot \overrightarrow{e_{2}}}
+\\ {\overrightarrow{e_{2}} \cdot \overrightarrow{e_{1}}} &amp;amp;
+{\overrightarrow{e_{2}} \cdot
+\overrightarrow{e_{2}}}\end{array}\right]_{\overrightarrow{e_{i}}}\)&lt;/p&gt;
+
+&lt;h4 id=&quot;obtain&quot;&gt;Obtain&lt;/h4&gt;
+&lt;p&gt;\(\begin{array}{l}{\text {arc length}=\lim _{\Delta t \rightarrow 0} \sum_{i}
+\frac{\left\|\vec{R}\left(t_{i+1}\right)-\vec{R}\left(t_{i}\right)\right\|}{\Delta
+t} \Delta t} \\ {\text {arclength}=\int\left\|\frac{d \vec{R}}{d t}\right\| d
+t}\end{array}\)&lt;/p&gt;
+
+&lt;h4 id=&quot;arc-length&quot;&gt;Arc Length&lt;/h4&gt;
+&lt;p&gt;\(\begin{aligned}\left\|\frac{d \vec{R}}{d \lambda}\right\|^{2} &amp;amp;=\frac{d
+\vec{R}}{d \lambda} \cdot \frac{d \vec{R}}{d \lambda} \\ &amp;amp;=\left(\frac{\partial
+\vec{R}}{\partial x} \frac{d x}{d \lambda}+\frac{\partial \vec{R}}{\partial y}
+\frac{d y}{d \lambda}\right) \cdot\left(\frac{\partial \vec{R}}{\partial x}
+\frac{d x}{d \lambda}+\frac{\partial \vec{R}}{\partial y} \frac{d y}{d
+\lambda}\right) \\ &amp;amp;=\left(\frac{d x}{d \lambda}\right)^{2}\left(\frac{\partial
+\vec{R}}{\partial x} \cdot \frac{\partial \vec{R}}{\partial x}\right)+2 \frac{d
+x}{d \lambda} \frac{d y}{d \lambda}\left(\frac{\partial \vec{R}}{\partial x}
+\cdot \frac{\partial \vec{R}}{\partial y}\right)+\left(\frac{d y}{d
+\lambda}\right)^{2}\left(\frac{\partial \vec{R}}{\partial y} \cdot
+\frac{\partial \vec{R}}{\partial y}\right) \end{aligned}\) &lt;br /&gt;
+Just  the same as: &lt;br /&gt;
+\(\begin{aligned}\|\vec{v}\|^{2} &amp;amp;=\vec{v} \cdot \vec{v} \\ &amp;amp;=\left(v^{1}
+\overrightarrow{e_{1}}+v^{2} \overrightarrow{e_{2}}\right) \cdot\left(v^{1}
+\overrightarrow{e_{1}}+v^{2} \overrightarrow{e_{2}}\right) \\
+&amp;amp;=\left(v^{1}\right)^{2}(\overrightarrow{e_{1}} \cdot \overrightarrow{e_{1}})+2
+v^{1} v^{2}(\overrightarrow{e_{1}} \cdot
+\overrightarrow{e_{2}})+\left(v^{2}\right)^{2}(\overrightarrow{e_{2}} \cdot
+\overrightarrow{e_{2}}) \end{aligned}\)&lt;/p&gt;
+
+&lt;p&gt;Einstein Notation  $c^1=x, c^2=y$&lt;br /&gt;
+\(\begin{aligned}\left\|\frac{d \vec{R}}{d \lambda}\right\|^{2} &amp;amp;=\frac{d
+\vec{R}}{d \lambda} \cdot \frac{d \vec{R}}{d \lambda} \\ &amp;amp;=\left(\frac{d c}{d
+\lambda} \frac{\partial \vec{R}}{\partial c^{i}}\right) \cdot\left(\frac{d
+c^{j}}{d \lambda} \frac{\partial \vec{R}}{\partial c^{j}}\right) \\ &amp;amp;=\frac{d
+c^{i}}{d \lambda} \frac{d c^{j}}{d \lambda}\left(\frac{\partial
+\vec{R}}{\partial c^{i}} \cdot \frac{\partial \vec{R}}{\partial c^{j}}\right)
+\end{aligned}\)&lt;/p&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;When I first encounter the metric tenosr, I totally have no idea what does
+this stand for. Because first I kind of afraid of matrix, I didn’t realize
+it’s a new form to rewrite the expression, It kinds of mysteric, and confuse
+to me; Second, tensor is a complete new to me.&lt;/li&gt;
+  &lt;li&gt;After you realized that metric tensor just a fancy way to rewrite the
+algebra expression, you are so happy.&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/math/math-change-vector-analysis-metric-tensor.html</link>
+    <guid>/math/math-change-vector-analysis-metric-tensor</guid>
+    <pubDate>Sun, 01 Dec 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>V.A.: Kronecker Delta</title>
+    <description>
+&lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
+&lt;p&gt;\(\delta_{i j}=\left\{\begin{array}{ll}{0} &amp;amp; {\text { if } i \neq j} \\ {1} &amp;amp;
+{\text { if } i=j}\end{array}\right.\)&lt;/p&gt;
+
+&lt;h4 id=&quot;example&quot;&gt;Example&lt;/h4&gt;
+&lt;p&gt;The inner product of vector: &lt;br /&gt;
+\(\mathbf{a} \cdot \mathbf{b}=\sum_{i, j=1}^{n} a_{i} \delta_{i j} b_{j}\)&lt;/p&gt;
+
+&lt;p&gt;For example: &lt;br /&gt;
+\(a=\sum_{i j} a_{i} c_{j} \delta_{i j}=b_1 c_1 \delta_{11}+b_1 c_2 \delta_{12}
+b_2 c_1 \delta_{21}+b_2 c_2 \delta_{22}\) &lt;br /&gt;
+where $\delta_{12}$ and $\delta_{21}$ are zeros&lt;/p&gt;
+
+&lt;h4 id=&quot;properties&quot;&gt;Properties&lt;/h4&gt;
+&lt;p&gt;\(\begin{aligned} \sum_{j} \delta_{i j} a_{j} &amp;amp;=a_{i} \\ \sum_{i} a_{i} \delta_{i
+j} &amp;amp;=a_{j} \\ \sum_{k} \delta_{i k} \delta_{k j} &amp;amp;=\delta_{i j} \end{aligned}\)&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;for the third formula, maybe you need spent a little time to think about it,
+but it’s not that difficult. for the two items, we only need consider about
+the first term \(\delta_{i k}\) is when i equals to k, so we only have
+\(\delta_{i i}\), it’s the same rule, we have only \(\delta_{j j}\), so what’s
+the result of \(\delta_{i i} \delta_{j j}\)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;it can also be treated as an identity matrix&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Why we invent this sign, becasue it can used to express our equation in a
+more compact and concise way, just like matrix, without any linear algebra
+background, you can just treat matrix sign, as a more efficient and compact
+way for expressions&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Kronecker_delta#Definitions_of_the_generalized_Kronecker_delta&quot;&gt;kronecker delta-wiki&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/math/math-change-vector-analysis-kronecker-delta-function.html</link>
+    <guid>/math/math-change-vector-analysis-kronecker-delta-function</guid>
+    <pubDate>Sun, 01 Dec 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>V.A.: Introduction</title>
+    <description>
+&lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Scalar Field: If to each point $(x,y,z)$ of a region R in space there corresponds a number
+or scalar $ \phi(x, y, z) $, then $\phi$ is called scalar function of
+position or scalar point function and we say that a scalar filed $\phi$ has
+been defined in R.
+    &lt;ul&gt;
+      &lt;li&gt;A scalar field which is independent of time is called a stationary or
+steady-state scalar field&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Vector Field: If to each point $(x,y,z)$ of a region R in space there
+Vcorresponds a vector $ \mathbf{V}(x, y, z) $, then $\mathbf{V}$ is called a
+vector function of position or vector point function and we say that a vector
+field $\mathbf{V}$ has been defined in R.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Vector_calculus&quot;&gt;vector calculus&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/math/math-change-vector-analysis-introduction.html</link>
+    <guid>/math/math-change-vector-analysis-introduction</guid>
+    <pubDate>Sun, 01 Dec 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>V.A.: Delta Operator and Gradient</title>
+    <description>
+&lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Gradient: let $\phi(x,y,z)$ be defined and differentiable at each point
+$(x,y,z)$ in a certain region of space(i.e. $\phi$ defines a differentiable
+scalar field). Then the gradient of $\phi$, written $\nabla \phi$ or grad
+$\phi$&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$
+\nabla \phi=\left(\frac{\partial}{\partial x}
+\mathbf{i}+\frac{\partial}{\partial y} \mathbf{j}+\frac{\partial}{\partial z}
+\mathbf{k}\right) \phi = 
+\frac{\partial \phi}{\partial x} \mathbf{i} +\frac{\partial \phi}{\partial
+y} \mathbf{j}+\frac{\partial \phi}{\partial z} \mathbf{k}
+$&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;$\textbf{THE CURL}$: if $\mathbf{V} (x,y,z)$ is a differentiable vector field
+then the curl or rotation of $\mathbf{V}$, written $\nabla \times
+\mathbf{V}$, curl $\mathbf{V}$ or rot $\mathbf{V}$, is defined by
+$
+\nabla \times \mathbf{v}=\left(\frac{\partial}{\partial x}
+\mathbf{i}+\frac{\partial}{\partial y} \mathbf{j}+\frac{\partial}{\partial z}
+\mathbf{k}\right) \times\left(V_{1} \mathbf{i}+V_{2} \mathbf{j}+V_{3}
+\mathbf{k}\right)
+ =\left|\begin{array}{ccc}\mathbf{i} &amp;amp; \mathbf{j} &amp;amp; \mathbf{k} &lt;br /&gt;
+ \frac{\partial}{\partial x} &amp;amp; \frac{\partial}{\partial y} &amp;amp;
+ \frac{\partial}{\partial z} \ V_{1} &amp;amp; V_{2} &amp;amp; V_{3}\end{array}\right|
+ $&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;delta-operator-and-gradient&quot;&gt;Delta Operator and Gradient&lt;/h4&gt;
+&lt;p&gt;\(\nabla f=\left\langle\frac{\partial}{\partial x} f, \frac{\partial}{\partial y}
+f, \frac{\partial}{\partial z} f\right\rangle\)&lt;/p&gt;
+
+&lt;h4 id=&quot;example-of-vector-and-covector&quot;&gt;Example of Vector and Covector&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;$\nabla {f}$ obtains a vector&lt;/li&gt;
+  &lt;li&gt;$df$  obtains a covector
+    &lt;ul&gt;
+      &lt;li&gt;For a very very long time, I just can’t understand why $df$ is a covector,
+because as soon as I see the sign $df$, the expression such as \(3dx+5dy+6dz\)
+come into my mind, that’s the form of \(df\), that’s calculation process of
+$df$, you should focus on the result of the $df$, it’s just a number.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;visulization&quot;&gt;Visulization&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/math-change-tensor-delta-operator-and-gradient.png&quot; height=&quot;200&quot; width=&quot;400&quot; /&gt;&lt;/p&gt;
+
+\[d f(\vec{v})=\nabla_{\vec{v}} f=\nabla f \cdot \vec{v}\]
+</description>
+    <link>/math/math-change-vector-analysis-gradient-divergence-curl.html</link>
+    <guid>/math/math-change-vector-analysis-gradient-divergence-curl</guid>
+    <pubDate>Sun, 01 Dec 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>V.A.: Dot and Cross Product</title>
+    <description>
+&lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;$\textbf{THE DOT OR SCLALAR PRODUCT}$ of two vectors $\textbf{A}$ and
+$\textbf{B}$, denoted by $\mathbf{A} \cdot \mathbf{B}$ (read $\textbf{A}$ dot
+$\textbf{B}$)$, is defined as the product of the magnitutes of $\textbf{A}$ and
+$\textbf{B} and the cosine of the angle $\theta$ between them. In symbols,
+$
+\mathbf{A} \cdot \mathbf{B}=A B \cos \theta, \quad 0 \leqq \theta \leqq \pi
+$&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;$\textbf{THE CROSS OR VECTOR PRODUCT}$ of $\textbf{A}$ and $\textbf{B}$ is a
+vector $
+\mathbf{C}=\mathbf{A} \times \mathbf{B}
+$ (read $\mathbf{A}$ cross $\mathbf{B}$). The magnitude of $\mathbf{A} \times \mathbf{B}$
+is defined as the product of the magnitudes of $\mathbf{A}$ and $\mathbf{B}$
+and the sine of the angle $\theta$ between them. The direction of the vector 
+$
+\mathbf{C}=\mathbf{A} \times \mathbf{B}
+$ is perpendicular to the plane of $\textbf{A}$ and $\textbf{B}$ and such
+that $\textbf{A}$ ,$\textbf{B}$ and $\textbf{C}$ form a right-handed system.
+In symbols,
+$
+\mathbf{A} \cdot \mathbf{B}=A B \sin \theta, \quad 0 \leqq \theta \leqq \pi
+$&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/math/math-change-vector-analysis-dot-and-cross-product.html</link>
+    <guid>/math/math-change-vector-analysis-dot-and-cross-product</guid>
+    <pubDate>Sun, 01 Dec 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>V.A.: Diverence Theorem</title>
+    <description>
+</description>
+    <link>/math/math-change-vector-analysis-divergence-theorem.html</link>
+    <guid>/math/math-change-vector-analysis-divergence-theorem</guid>
+    <pubDate>Sun, 01 Dec 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>V.A.: Curvilinear Coordinates</title>
+    <description>
+&lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;$\textbf{TRANSFORMATION OF COORDINATES}$. Let the rectangular coordinates $(x,y,z)$ of any point be expressed as functions of $u_1, u_2,u_3$ so that&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$
+x=x\left(u_{1}, u_{2}, u_{3}\right), \quad y=y\left(u_{1}, u_{2}, u_{3}\right),
+\quad z=z\left(u_{1}, u_{2}, u_{3}\right)
+$&lt;/p&gt;
+
+&lt;p&gt;Given a point P with rectangluar coordinates $(x,y,z)$ we can, associate a
+unique set of coordinates $(u_1,u_2,u_3)$ called curvilinear coordinates of P.&lt;/p&gt;
+
+</description>
+    <link>/math/math-change-vector-analysis-curvilinear-coordinates.html</link>
+    <guid>/math/math-change-vector-analysis-curvilinear-coordinates</guid>
+    <pubDate>Sun, 01 Dec 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>V.A.: Covector</title>
+    <description>
+&lt;h4 id=&quot;covector&quot;&gt;Covector&lt;/h4&gt;
+&lt;p&gt;Definition: A covector(row vector) is a function that takes a vector and
+produces a scalar.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Covectors are invarient, they are purely geometrical objects.&lt;/li&gt;
+  &lt;li&gt;Covector component are not invariant, it’s depend on what coordinate system
+that you use.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;covector-component&quot;&gt;Covector Component&lt;/h4&gt;
+&lt;p&gt;\(\begin{array}{ll}\epsilon^{1}(\overrightarrow{e_{1}})=1 &amp;amp;
+\epsilon^{1}(\overrightarrow{e_{2}})=0 \\ \epsilon^{2}(\overrightarrow{e_{1}})=0
+&amp;amp; \epsilon^{2}(\overrightarrow{e_{2}})=1\end{array}\)&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;In a more concise way
+\(\epsilon^{i}(\overrightarrow{e_{j}})=\delta_{i j}=\left\{\begin{array}{l}1 \text
+{ if } i=j \\ 0 \text { if } i \neq j\end{array}\right.\)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;inference&quot;&gt;inference&lt;/h4&gt;
+&lt;p&gt;\(\epsilon^{1}(\vec{v})=\epsilon^{1}\left(v^{1} \overrightarrow{e_{1}}+v^{2}
+\overrightarrow{e_{2}}\right)=v^{1} \epsilon^{1}(\overrightarrow{e_{1}})+v^{2}
+\epsilon^{1}(\overrightarrow{e_{2}})\)&lt;/p&gt;
+
+\[\epsilon^{2}(\vec{v})=\epsilon^{2}\left(v^{1} \overrightarrow{e_{1}}+v^{2}
+\overrightarrow{e_{2}}\right)=v^{1} \epsilon^{2}(\overrightarrow{e_{1}})+v^{2}
+\epsilon^{2}(\overrightarrow{e_{2}})=v^{2}\]
+
+&lt;p&gt;\(\begin{array}{l}\alpha(\vec{v})=\alpha\left(v^{1} \overrightarrow{e_{1}}+v^{2}
+\overrightarrow{e_{2}}\right)=v^{1} \alpha(\overrightarrow{e_{1}})+v^{2}
+\alpha(\overrightarrow{e_{2}}) \\ \text { Remember: }
+\epsilon^{1}(\vec{v})=v^{1} \quad \epsilon^{2}(\vec{v})=v^{2} \\
+\alpha(\vec{v})=\epsilon^{1}(\vec{v})
+\alpha(\overrightarrow{e_{1}})+\epsilon^{2}(\vec{v})
+\alpha(\overrightarrow{e_{1}}) \\ \text { Define: }
+\alpha(\overrightarrow{e_{1}})=\alpha_{1} \quad
+\alpha(\overrightarrow{e_{2}})=\alpha_{2} \\ \alpha(\vec{v})=\alpha_{1}
+\epsilon^{1}(\vec{v})+\alpha_{2} \epsilon^{2}(\vec{v})\end{array}\)
+\(\alpha=\alpha_{1} \epsilon^{1}+\alpha_{2} \epsilon^{2}\)&lt;/p&gt;
+
+&lt;p&gt;\begin{aligned} d f(\vec{v})=\nabla f \cdot \vec{v} &amp;amp;=\left((\nabla f)^{i}
+\overrightarrow{e_{i}}\right) \cdot\left(v^{j} \overrightarrow{e_{j}}\right) &lt;br /&gt;
+&amp;amp;=(\nabla f)^{i} v^{j}(\overrightarrow{e_{i}} \cdot \overrightarrow{e_{j}}) &lt;br /&gt;
+&amp;amp;=(\nabla f)^{i} v^{j} g_{i j} \end{aligned}&lt;/p&gt;
+
+&lt;h5 id=&quot;examples&quot;&gt;Examples&lt;/h5&gt;
+&lt;ol&gt;
+  &lt;li&gt;Integration and differention operation is a covector, because after the
+process, you get a real number.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;covector-visualization&quot;&gt;Covector Visualization&lt;/h4&gt;
+&lt;p&gt;This visualization is really nice because we don’t need to know everything about
+coordinate systems or components in order to understand how a covector acts on 
+a vector.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;The idea is beautiful, but if you don’t understand what is a covector in
+nature, this visualization is complete a disaster for you.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;linear-map&quot;&gt;Linear Map&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Coordinate Definition: Matrics are the coordinate interpretation of linear
+maps.&lt;/li&gt;
+  &lt;li&gt;Geometric Definition: keep lines parallel, keep lines evenly spaced, keep the
+origin stationary.&lt;/li&gt;
+  &lt;li&gt;Abstract Algebra  Definition&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;tensor-notation&quot;&gt;Tensor Notation&lt;/h4&gt;
+&lt;p&gt;\(T_{r s t \dots}^{i j k \ldots}\)&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;m denotes contravarient indexes and n denotes covariant indexes&lt;/li&gt;
+  &lt;li&gt;we call T as (m,n)-tensor&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;einstein-summation-convention&quot;&gt;Einstein Summation Convention&lt;/h4&gt;
+&lt;p&gt;\(\begin{aligned} \sum_{v=1}^{n} A_{\mu v} v_{v} &amp;amp; \rightarrow A_{\mu v} v_{v} \\
+\sum_{\beta=1}^{n} \sum_{\gamma=1}^{n} A_{\alpha \beta} B_{\beta \gamma}
+C_{\gamma \delta} &amp;amp; \rightarrow A_{\alpha \beta} B_{\beta \gamma} C_{\gamma
+\delta} \end{aligned}\)&lt;/p&gt;
+
+&lt;h4 id=&quot;delta-operator-and-gradient&quot;&gt;Delta Operator and Gradient&lt;/h4&gt;
+&lt;p&gt;\(\nabla f=\left\langle\frac{\partial}{\partial x} f, \frac{\partial}{\partial y}
+f, \frac{\partial}{\partial z} f\right\rangle\)&lt;/p&gt;
+
+&lt;h4 id=&quot;example-of-vector-and-covector&quot;&gt;Example of Vector and Covector&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;$\nabla {f}$ obtains a vector&lt;/li&gt;
+  &lt;li&gt;$df$  obtains a covector&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;diverence-notation&quot;&gt;Diverence Notation&lt;/h4&gt;
+&lt;p&gt;\(\begin{aligned} \nabla \cdot \vec{f} &amp;amp;=\left\langle\frac{\partial}{\partial
+x_{1}}, \frac{\partial}{\partial x_{2}}, \frac{\partial}{\partial
+x_{3}}\right\rangle \cdot\left\langle f_{1}, f_{2}, f_{3}\right\rangle \\
+&amp;amp;=\frac{\partial}{\partial x_{1}}\left(f_{1}\right)+\frac{\partial}{\partial
+x_{2}}\left(f_{1}\right)+\frac{\partial}{\partial x_{3}}\left(f_{3}\right) \\
+&amp;amp;=\partial_{1} f_{1}+\partial_{2} f_{2}+\partial_{3} f_{2} \end{aligned}\)&lt;/p&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+
+</description>
+    <link>/math/math-change-vector-analysis-covector.html</link>
+    <guid>/math/math-change-vector-analysis-covector</guid>
+    <pubDate>Sun, 01 Dec 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>V.A.: Calculus</title>
+    <description>
+&lt;h4 id=&quot;hh&quot;&gt;HH&lt;/h4&gt;
+&lt;p&gt;Tensor calculus study how tensors change over space, according to the following
+tensors in the picture, if we choose a coordinate system, we can measure the
+components.
+&lt;img src=&quot;/images/math-change-tensor-calculus.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;derivative&quot;&gt;derivative&lt;/h4&gt;
+
+\[\frac{\partial c_{i}}{\partial p_{j}} \frac{\partial p_{j}}{\partial
+c_{k}}=\frac{d c_{i}}{d c_{k}}=\left\{\begin{array}{l}{0 \text { if } i \neq k}
+\\ {1 i f i=k}\end{array}=\delta_{k}^{i}\right.\]
+
+&lt;h4 id=&quot;assumption&quot;&gt;Assumption&lt;/h4&gt;
+&lt;p&gt;Basic Vectors are equal to partial derivatives, which means:
+\(\begin{array}{l}{\frac{\partial \vec{R}}{\partial x}=\vec{e}_{x}} \\
+{\frac{\partial \vec{R}}{\partial y}=\vec{e}_{y}}\end{array}\)&lt;/p&gt;
+
+&lt;p&gt;Vector field along a curve.
+&lt;img src=&quot;/images/math-change-tensor-calculus-derivative.png&quot; /&gt;&lt;/p&gt;
+
+\[\frac{d \vec{R}}{d \lambda}=\frac{d x}{d \lambda} \frac{\partial
+\vec{R}}{\partial x}+\frac{d y}{d \lambda} \frac{\partial \vec{R}}{\partial
+y}=\frac{d r}{d \lambda} \frac{\partial \vec{R}}{\partial r}+\frac{d \theta}{d
+\lambda} \frac{\partial \vec{R}}{\partial \theta}\]
+
+&lt;h4 id=&quot;gradient-of-a-function&quot;&gt;Gradient of a Function&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/math-change-tensor-calculus-gradient.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;directional-derivative&quot;&gt;Directional Derivative&lt;/h4&gt;
+&lt;p&gt;The directional derivative generalize the concept of partial derivative in any
+direction.
+&lt;img src=&quot;/images/math-change-tensor-calculus-directional-derivative.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;differential-form&quot;&gt;Differential Form&lt;/h4&gt;
+&lt;p&gt;$d f(\vec{v})$ is the directional derivative $
+d f(\vec{v})=\nabla_{\vec{v}} f
+$
+geometrical interpretation which means the function $f$ moving through a point
+with velocity vector $\vec{v}$&lt;/p&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;p&gt;when you learn more about calculus, you get a lot insight into derivative.&lt;/p&gt;
+
+</description>
+    <link>/math/math-change-vector-analysis-calculus.html</link>
+    <guid>/math/math-change-vector-analysis-calculus</guid>
+    <pubDate>Sun, 01 Dec 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>V.A.: Introduction</title>
+    <description>
+&lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Tensor Fields: If to each point of a region in N dimensional space
+corresponds a definite tensor, we say that a tensor field has been defined,
+This is a vector field or a scalar field according as the tensor is of rank
+one or zero. It should be noted that a tensor or tensor field is not just the
+set of its components in one special coordinates system but all the possible
+sets under any transformation of coordinates.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/math/math-change-tensor-analysis-introduction.html</link>
+    <guid>/math/math-change-tensor-analysis-introduction</guid>
+    <pubDate>Sun, 01 Dec 2019 00:00:00 +0900</pubDate>
   </item>
 
   <item>
@@ -3188,493 +4155,6 @@ mapping the set S onto the set T&amp;gt;
   </item>
 
   <item>
-    <title>V.A.: Introduction</title>
-    <description>
-&lt;h4 id=&quot;introduction&quot;&gt;Introduction&lt;/h4&gt;
-&lt;p&gt;Vector analysis, is concerned with differentiation and integraion of vector
-fields, primarily in 3-dimensional Euclidean space $R^3$.&lt;/p&gt;
-
-&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Vector_calculus&quot;&gt;vector calculus&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-    <link>/math/math-change-vector-analysis-introduction.html</link>
-    <guid>/math/math-change-vector-analysis-introduction</guid>
-    <pubDate>Mon, 18 Nov 2019 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>Tensor: Vector</title>
-    <description>
-&lt;h4 id=&quot;hh&quot;&gt;HH&lt;/h4&gt;
-&lt;p&gt;Because vector components behave contrary to the basis vectors, we say that 
-vector components are contra-variant&lt;/p&gt;
-
-&lt;p&gt;The following is how basic and component transformation in different coordinate
-system.
-&lt;img src=&quot;/images/math-change-tensor-vector-compontent.png&quot; height=&quot;150&quot; width=&quot;300&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Notation, in order to remind the component is contravarient to the basic,
-so using the following summation.
-&lt;img src=&quot;/images/math-change-tensor-summation1.png&quot; height=&quot;150&quot; width=&quot;300&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;covector&quot;&gt;Covector&lt;/h4&gt;
-&lt;p&gt;A covector(row vector) is a function that takes a vector and produces a scalar.&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Covectors are invarient, covector component are not invariant.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;two special covectors:&lt;/p&gt;
-
-&lt;h4 id=&quot;covector-visualization&quot;&gt;Covector Visualization&lt;/h4&gt;
-&lt;p&gt;This visualization is really nice because we don’t need to know everything about
-coordinate systems or components in order to understand how a covector acts on 
-a vector.&lt;/p&gt;
-
-&lt;h4 id=&quot;linear-map&quot;&gt;Linear Map&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Coordinate Definition: Matrics are the coordinate interpretation of linear
-maps.&lt;/li&gt;
-  &lt;li&gt;Geometric Definition: keep lines parallel, keep lines evenly spaced, keep the
-origin stationary.&lt;/li&gt;
-  &lt;li&gt;Abstract Algebra  Definition&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;tensor-notation&quot;&gt;Tensor Notation&lt;/h4&gt;
-&lt;p&gt;\(T_{r s t \dots}^{i j k \ldots}\)&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;m denotes contravarient indexes and n denotes covariant indexes&lt;/li&gt;
-  &lt;li&gt;we call T as (m,n)-tensor&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;notation&quot;&gt;Notation&lt;/h3&gt;
-
-&lt;h4 id=&quot;einstein-summation-convention&quot;&gt;Einstein Summation Convention&lt;/h4&gt;
-&lt;p&gt;\(\begin{aligned} \sum_{v=1}^{n} A_{\mu v} v_{v} &amp;amp; \rightarrow A_{\mu v} v_{v} \\
-\sum_{\beta=1}^{n} \sum_{\gamma=1}^{n} A_{\alpha \beta} B_{\beta \gamma}
-C_{\gamma \delta} &amp;amp; \rightarrow A_{\alpha \beta} B_{\beta \gamma} C_{\gamma
-\delta} \end{aligned}\)&lt;/p&gt;
-
-&lt;h4 id=&quot;diverence-notation&quot;&gt;Diverence Notation&lt;/h4&gt;
-&lt;p&gt;\(\begin{aligned} \nabla \cdot \vec{f} &amp;amp;=\left\langle\frac{\partial}{\partial
-x_{1}}, \frac{\partial}{\partial x_{2}}, \frac{\partial}{\partial
-x_{3}}\right\rangle \cdot\left\langle f_{1}, f_{2}, f_{3}\right\rangle \\
-&amp;amp;=\frac{\partial}{\partial x_{1}}\left(f_{1}\right)+\frac{\partial}{\partial
-x_{2}}\left(f_{1}\right)+\frac{\partial}{\partial x_{3}}\left(f_{3}\right) \\
-&amp;amp;=\partial_{1} f_{1}+\partial_{2} f_{2}+\partial_{3} f_{2} \end{aligned}\)&lt;/p&gt;
-
-&lt;h4 id=&quot;lapalacian&quot;&gt;Lapalacian&lt;/h4&gt;
-
-&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;In our subject of differential geometry, where you talk about manifolds, one
-difficulty is that the geometry is described by coordinates, &lt;strong&gt;but the coordinates
-do not have meaning, coordinates do not have meaning&lt;/strong&gt;, that’s why a lot of
-mathematican refuse to use coordinate to solve geometry problem. &lt;strong&gt;because
-coordinates means nothing&lt;/strong&gt;, in order to handle this kind of situation, an
-important tool is so-called tensor analysis, or Ricci calculus.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Compared with coordinates, vector is completely different. The exists of
-coordinates depends on what kind of coordinates you choose. But &lt;strong&gt;Vector
-actually is a geometry concept, which does not depend the coordinates you choose
-,They are alwasy being there&lt;/strong&gt;, to generalize the invariant property, we called
-this tensors. &lt;strong&gt;In nature, they are used, analogusly,  to describe the invariant
-property of geometry&lt;/strong&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Tensor_calculus&quot;&gt;Tensor Calculus&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://wenku.baidu.com/view/91fddd26b307e87100f69645.html&quot;&gt;绝对积分&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-    <link>/math/math-change-tensor-vector.html</link>
-    <guid>/math/math-change-tensor-vector</guid>
-    <pubDate>Fri, 15 Nov 2019 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>Tensor: Summary</title>
-    <description>
-&lt;h4 id=&quot;introduction&quot;&gt;Introduction&lt;/h4&gt;
-&lt;p&gt;If you understand tensors, you can get a lot insight in geometry; If you
-understand geometry, you can understand geometry more easily.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/math-change-tensor-summary.png&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;why-we-have-tensors&quot;&gt;Why we have tensors?&lt;/h4&gt;
-&lt;p&gt;The answer is to unify the function, unify space.&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Functions in nature is a map, but what kind of up, how to define this map?&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;According to tensor theory, it can be consists of two building blocks, vector
-and covector, and covector is just a special vector whose image is real
-number.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;After you learn tensor staff, and now you look back into what you have
-learned, for example, differention operation, integration operation, in
-nature they are covectors, because they give you the numbers, just real
-numbers, a very special space. You  look back at the matrix transformation,
-and they just vectors.&lt;/li&gt;
-  &lt;li&gt;And covecter is the result we want, like the volume, weight, accelaration
-speed, probability. That’t the job of covectors, but we need vector to do
-some transformation, space transformation.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;revolution-of-notation&quot;&gt;Revolution of Notation&lt;/h4&gt;
-&lt;p&gt;When you check the history of math, it is also the history of how to rewrite our
-express.&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;first we write an expression like \(x^2+2xy+y^2\)&lt;/li&gt;
-  &lt;li&gt;we can rewrite the exression in the matrix way.&lt;/li&gt;
-  &lt;li&gt;we can rewrite matrix in a kronecker way.
-we can decide what kind of notation system we take, but essiential it change
-nothing, just the expression form.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;how-to-denote-a-map&quot;&gt;How to denote a map&lt;/h4&gt;
-&lt;p&gt;\(\begin{array}{l}
-{\Lambda: v \rightarrow w} \\
-{\Lambda v \rightarrow w} \\
-{\Lambda (v) \rightarrow w} \\
-{\langle\Lambda, v\rangle \rightarrow w} \\
-{\langle,\Lambda,\rangle} \\
-\end{array}\)&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;
-\(\langle\Lambda, q v+b p\rangle= q\langle\Lambda, v\rangle+ b\langle\Lambda,
-p\rangle\)&lt;/p&gt;
-
-&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;If some notation is too complicate to understand, we can just break them
-down, for example the addition marker.&lt;/li&gt;
-  &lt;li&gt;what’s the point of tensor notation ? the point is create a new fancy way to
-rewrite the expression, that’s all the point.&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-    <link>/math/math-change-tensor-summary.html</link>
-    <guid>/math/math-change-tensor-summary</guid>
-    <pubDate>Fri, 15 Nov 2019 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>Tensor: Metric Tensor</title>
-    <description>
-&lt;h4 id=&quot;metric-tensor&quot;&gt;Metric Tensor&lt;/h4&gt;
-
-&lt;p&gt;Metric tensor is used to measure the length of vector. &lt;strong&gt;Please remember the
-following picture&lt;/strong&gt; 
-\(g_{\vec{e}_{i}}=\left[\begin{array}{ll}{\overrightarrow{e_{1}} \cdot
-\overrightarrow{e_{1}}} &amp;amp; {\overrightarrow{e_{1}} \cdot \overrightarrow{e_{2}}}
-\\ {\overrightarrow{e_{2}} \cdot \overrightarrow{e_{1}}} &amp;amp;
-{\overrightarrow{e_{2}} \cdot
-\overrightarrow{e_{2}}}\end{array}\right]_{\overrightarrow{e_{i}}}\)&lt;/p&gt;
-
-&lt;h4 id=&quot;obtain&quot;&gt;Obtain&lt;/h4&gt;
-&lt;p&gt;\(\begin{array}{l}{\text {arc length}=\lim _{\Delta t \rightarrow 0} \sum_{i}
-\frac{\left\|\vec{R}\left(t_{i+1}\right)-\vec{R}\left(t_{i}\right)\right\|}{\Delta
-t} \Delta t} \\ {\text {arclength}=\int\left\|\frac{d \vec{R}}{d t}\right\| d
-t}\end{array}\)&lt;/p&gt;
-
-&lt;h4 id=&quot;arc-length&quot;&gt;Arc Length&lt;/h4&gt;
-&lt;p&gt;\(\begin{aligned}\left\|\frac{d \vec{R}}{d \lambda}\right\|^{2} &amp;amp;=\frac{d
-\vec{R}}{d \lambda} \cdot \frac{d \vec{R}}{d \lambda} \\ &amp;amp;=\left(\frac{\partial
-\vec{R}}{\partial x} \frac{d x}{d \lambda}+\frac{\partial \vec{R}}{\partial y}
-\frac{d y}{d \lambda}\right) \cdot\left(\frac{\partial \vec{R}}{\partial x}
-\frac{d x}{d \lambda}+\frac{\partial \vec{R}}{\partial y} \frac{d y}{d
-\lambda}\right) \\ &amp;amp;=\left(\frac{d x}{d \lambda}\right)^{2}\left(\frac{\partial
-\vec{R}}{\partial x} \cdot \frac{\partial \vec{R}}{\partial x}\right)+2 \frac{d
-x}{d \lambda} \frac{d y}{d \lambda}\left(\frac{\partial \vec{R}}{\partial x}
-\cdot \frac{\partial \vec{R}}{\partial y}\right)+\left(\frac{d y}{d
-\lambda}\right)^{2}\left(\frac{\partial \vec{R}}{\partial y} \cdot
-\frac{\partial \vec{R}}{\partial y}\right) \end{aligned}\) &lt;br /&gt;
-Just  the same as: &lt;br /&gt;
-\(\begin{aligned}\|\vec{v}\|^{2} &amp;amp;=\vec{v} \cdot \vec{v} \\ &amp;amp;=\left(v^{1}
-\overrightarrow{e_{1}}+v^{2} \overrightarrow{e_{2}}\right) \cdot\left(v^{1}
-\overrightarrow{e_{1}}+v^{2} \overrightarrow{e_{2}}\right) \\
-&amp;amp;=\left(v^{1}\right)^{2}(\overrightarrow{e_{1}} \cdot \overrightarrow{e_{1}})+2
-v^{1} v^{2}(\overrightarrow{e_{1}} \cdot
-\overrightarrow{e_{2}})+\left(v^{2}\right)^{2}(\overrightarrow{e_{2}} \cdot
-\overrightarrow{e_{2}}) \end{aligned}\)&lt;/p&gt;
-
-&lt;p&gt;Einstein Notation  $c^1=x, c^2=y$&lt;br /&gt;
-\(\begin{aligned}\left\|\frac{d \vec{R}}{d \lambda}\right\|^{2} &amp;amp;=\frac{d
-\vec{R}}{d \lambda} \cdot \frac{d \vec{R}}{d \lambda} \\ &amp;amp;=\left(\frac{d c}{d
-\lambda} \frac{\partial \vec{R}}{\partial c^{i}}\right) \cdot\left(\frac{d
-c^{j}}{d \lambda} \frac{\partial \vec{R}}{\partial c^{j}}\right) \\ &amp;amp;=\frac{d
-c^{i}}{d \lambda} \frac{d c^{j}}{d \lambda}\left(\frac{\partial
-\vec{R}}{\partial c^{i}} \cdot \frac{\partial \vec{R}}{\partial c^{j}}\right)
-\end{aligned}\)&lt;/p&gt;
-
-&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;When I first encounter the metric tenosr, I totally have no idea what does
-this stand for. Because first I kind of afraid of matrix, I didn’t realize
-it’s a new form to rewrite the expression, It kinds of mysteric, and confuse
-to me; Second, tensor is a complete new to me.&lt;/li&gt;
-  &lt;li&gt;After you realized that metric tensor just a fancy way to rewrite the
-algebra expression, you are so happy.&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-    <link>/math/math-change-tensor-metric-tensor.html</link>
-    <guid>/math/math-change-tensor-metric-tensor</guid>
-    <pubDate>Fri, 15 Nov 2019 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>Tensor: Kronecker Delta</title>
-    <description>
-&lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
-&lt;p&gt;\(\delta_{i j}=\left\{\begin{array}{ll}{0} &amp;amp; {\text { if } i \neq j} \\ {1} &amp;amp;
-{\text { if } i=j}\end{array}\right.\)&lt;/p&gt;
-
-&lt;h4 id=&quot;example&quot;&gt;Example&lt;/h4&gt;
-&lt;p&gt;The inner product of vector: &lt;br /&gt;
-\(\mathbf{a} \cdot \mathbf{b}=\sum_{i, j=1}^{n} a_{i} \delta_{i j} b_{j}\)&lt;/p&gt;
-
-&lt;p&gt;For example: &lt;br /&gt;
-\(a=\sum_{i j} a_{i} c_{j} \delta_{i j}=b_1 c_1 \delta_{11}+b_1 c_2 \delta_{12}
-b_2 c_1 \delta_{21}+b_2 c_2 \delta_{22}\) &lt;br /&gt;
-where $\delta_{12}$ and $\delta_{21}$ are zeros&lt;/p&gt;
-
-&lt;h4 id=&quot;properties&quot;&gt;Properties&lt;/h4&gt;
-&lt;p&gt;\(\begin{aligned} \sum_{j} \delta_{i j} a_{j} &amp;amp;=a_{i} \\ \sum_{i} a_{i} \delta_{i
-j} &amp;amp;=a_{j} \\ \sum_{k} \delta_{i k} \delta_{k j} &amp;amp;=\delta_{i j} \end{aligned}\)&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;for the third formula, maybe you need spent a little time to think about it,
-but it’s not that difficult. for the two items, we only need consider about
-the first term \(\delta_{i k}\) is when i equals to k, so we only have
-\(\delta_{i i}\), it’s the same rule, we have only \(\delta_{j j}\), so what’s
-the result of \(\delta_{i i} \delta_{j j}\)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;it can also be treated as an identity matrix&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Why we invent this sign, becasue it can used to express our equation in a
-more compact and concise way, just like matrix, without any linear algebra
-background, you can just treat matrix sign, as a more efficient and compact
-way for expressions&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Kronecker_delta#Definitions_of_the_generalized_Kronecker_delta&quot;&gt;kronecker delta-wiki&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    <link>/math/math-change-tensor-kronecker-delta-function.html</link>
-    <guid>/math/math-change-tensor-kronecker-delta-function</guid>
-    <pubDate>Fri, 15 Nov 2019 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>Tensor: Delta Operator and Gradient</title>
-    <description>
-&lt;h4 id=&quot;delta-operator-and-gradient&quot;&gt;Delta Operator and Gradient&lt;/h4&gt;
-&lt;p&gt;\(\nabla f=\left\langle\frac{\partial}{\partial x} f, \frac{\partial}{\partial y}
-f, \frac{\partial}{\partial z} f\right\rangle\)&lt;/p&gt;
-
-&lt;h4 id=&quot;example-of-vector-and-covector&quot;&gt;Example of Vector and Covector&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;$\nabla {f}$ obtains a vector&lt;/li&gt;
-  &lt;li&gt;$df$  obtains a covector
-    &lt;ul&gt;
-      &lt;li&gt;For a very very long time, I just can’t understand why $df$ is a covector,
-because as soon as I see the sign $df$, the expression such as \(3dx+5dy+6dz\)
-come into my mind, that’s the form of \(df\), that’s calculation process of
-$df$, you should focus on the result of the $df$, it’s just a number.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;visulization&quot;&gt;Visulization&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;/images/math-change-tensor-delta-operator-and-gradient.png&quot; height=&quot;200&quot; width=&quot;400&quot; /&gt;&lt;/p&gt;
-
-\[d f(\vec{v})=\nabla_{\vec{v}} f=\nabla f \cdot \vec{v}\]
-</description>
-    <link>/math/math-change-tensor-delta-operator-and-gradient.html</link>
-    <guid>/math/math-change-tensor-delta-operator-and-gradient</guid>
-    <pubDate>Fri, 15 Nov 2019 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>Tensor: Covector</title>
-    <description>
-&lt;h4 id=&quot;covector&quot;&gt;Covector&lt;/h4&gt;
-&lt;p&gt;Definition: A covector(row vector) is a function that takes a vector and
-produces a scalar.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Covectors are invarient, they are purely geometrical objects.&lt;/li&gt;
-  &lt;li&gt;Covector component are not invariant, it’s depend on what coordinate system
-that you use.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;covector-component&quot;&gt;Covector Component&lt;/h4&gt;
-&lt;p&gt;\(\begin{array}{ll}\epsilon^{1}(\overrightarrow{e_{1}})=1 &amp;amp;
-\epsilon^{1}(\overrightarrow{e_{2}})=0 \\ \epsilon^{2}(\overrightarrow{e_{1}})=0
-&amp;amp; \epsilon^{2}(\overrightarrow{e_{2}})=1\end{array}\)&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;In a more concise way
-\(\epsilon^{i}(\overrightarrow{e_{j}})=\delta_{i j}=\left\{\begin{array}{l}1 \text
-{ if } i=j \\ 0 \text { if } i \neq j\end{array}\right.\)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;inference&quot;&gt;inference&lt;/h4&gt;
-&lt;p&gt;\(\epsilon^{1}(\vec{v})=\epsilon^{1}\left(v^{1} \overrightarrow{e_{1}}+v^{2}
-\overrightarrow{e_{2}}\right)=v^{1} \epsilon^{1}(\overrightarrow{e_{1}})+v^{2}
-\epsilon^{1}(\overrightarrow{e_{2}})\)&lt;/p&gt;
-
-\[\epsilon^{2}(\vec{v})=\epsilon^{2}\left(v^{1} \overrightarrow{e_{1}}+v^{2}
-\overrightarrow{e_{2}}\right)=v^{1} \epsilon^{2}(\overrightarrow{e_{1}})+v^{2}
-\epsilon^{2}(\overrightarrow{e_{2}})=v^{2}\]
-
-&lt;p&gt;\(\begin{array}{l}\alpha(\vec{v})=\alpha\left(v^{1} \overrightarrow{e_{1}}+v^{2}
-\overrightarrow{e_{2}}\right)=v^{1} \alpha(\overrightarrow{e_{1}})+v^{2}
-\alpha(\overrightarrow{e_{2}}) \\ \text { Remember: }
-\epsilon^{1}(\vec{v})=v^{1} \quad \epsilon^{2}(\vec{v})=v^{2} \\
-\alpha(\vec{v})=\epsilon^{1}(\vec{v})
-\alpha(\overrightarrow{e_{1}})+\epsilon^{2}(\vec{v})
-\alpha(\overrightarrow{e_{1}}) \\ \text { Define: }
-\alpha(\overrightarrow{e_{1}})=\alpha_{1} \quad
-\alpha(\overrightarrow{e_{2}})=\alpha_{2} \\ \alpha(\vec{v})=\alpha_{1}
-\epsilon^{1}(\vec{v})+\alpha_{2} \epsilon^{2}(\vec{v})\end{array}\)
-\(\alpha=\alpha_{1} \epsilon^{1}+\alpha_{2} \epsilon^{2}\)&lt;/p&gt;
-
-&lt;p&gt;\begin{aligned} d f(\vec{v})=\nabla f \cdot \vec{v} &amp;amp;=\left((\nabla f)^{i}
-\overrightarrow{e_{i}}\right) \cdot\left(v^{j} \overrightarrow{e_{j}}\right) &lt;br /&gt;
-&amp;amp;=(\nabla f)^{i} v^{j}(\overrightarrow{e_{i}} \cdot \overrightarrow{e_{j}}) &lt;br /&gt;
-&amp;amp;=(\nabla f)^{i} v^{j} g_{i j} \end{aligned}&lt;/p&gt;
-
-&lt;h5 id=&quot;examples&quot;&gt;Examples&lt;/h5&gt;
-&lt;ol&gt;
-  &lt;li&gt;Integration and differention operation is a covector, because after the
-process, you get a real number.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;covector-visualization&quot;&gt;Covector Visualization&lt;/h4&gt;
-&lt;p&gt;This visualization is really nice because we don’t need to know everything about
-coordinate systems or components in order to understand how a covector acts on 
-a vector.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;The idea is beautiful, but if you don’t understand what is a covector in
-nature, this visualization is complete a disaster for you.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;linear-map&quot;&gt;Linear Map&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Coordinate Definition: Matrics are the coordinate interpretation of linear
-maps.&lt;/li&gt;
-  &lt;li&gt;Geometric Definition: keep lines parallel, keep lines evenly spaced, keep the
-origin stationary.&lt;/li&gt;
-  &lt;li&gt;Abstract Algebra  Definition&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;tensor-notation&quot;&gt;Tensor Notation&lt;/h4&gt;
-&lt;p&gt;\(T_{r s t \dots}^{i j k \ldots}\)&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;m denotes contravarient indexes and n denotes covariant indexes&lt;/li&gt;
-  &lt;li&gt;we call T as (m,n)-tensor&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;einstein-summation-convention&quot;&gt;Einstein Summation Convention&lt;/h4&gt;
-&lt;p&gt;\(\begin{aligned} \sum_{v=1}^{n} A_{\mu v} v_{v} &amp;amp; \rightarrow A_{\mu v} v_{v} \\
-\sum_{\beta=1}^{n} \sum_{\gamma=1}^{n} A_{\alpha \beta} B_{\beta \gamma}
-C_{\gamma \delta} &amp;amp; \rightarrow A_{\alpha \beta} B_{\beta \gamma} C_{\gamma
-\delta} \end{aligned}\)&lt;/p&gt;
-
-&lt;h4 id=&quot;delta-operator-and-gradient&quot;&gt;Delta Operator and Gradient&lt;/h4&gt;
-&lt;p&gt;\(\nabla f=\left\langle\frac{\partial}{\partial x} f, \frac{\partial}{\partial y}
-f, \frac{\partial}{\partial z} f\right\rangle\)&lt;/p&gt;
-
-&lt;h4 id=&quot;example-of-vector-and-covector&quot;&gt;Example of Vector and Covector&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;$\nabla {f}$ obtains a vector&lt;/li&gt;
-  &lt;li&gt;$df$  obtains a covector&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;diverence-notation&quot;&gt;Diverence Notation&lt;/h4&gt;
-&lt;p&gt;\(\begin{aligned} \nabla \cdot \vec{f} &amp;amp;=\left\langle\frac{\partial}{\partial
-x_{1}}, \frac{\partial}{\partial x_{2}}, \frac{\partial}{\partial
-x_{3}}\right\rangle \cdot\left\langle f_{1}, f_{2}, f_{3}\right\rangle \\
-&amp;amp;=\frac{\partial}{\partial x_{1}}\left(f_{1}\right)+\frac{\partial}{\partial
-x_{2}}\left(f_{1}\right)+\frac{\partial}{\partial x_{3}}\left(f_{3}\right) \\
-&amp;amp;=\partial_{1} f_{1}+\partial_{2} f_{2}+\partial_{3} f_{2} \end{aligned}\)&lt;/p&gt;
-
-&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
-
-</description>
-    <link>/math/math-change-tensor-covector.html</link>
-    <guid>/math/math-change-tensor-covector</guid>
-    <pubDate>Fri, 15 Nov 2019 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>Tensor: Calculus</title>
-    <description>
-&lt;h4 id=&quot;hh&quot;&gt;HH&lt;/h4&gt;
-&lt;p&gt;Tensor calculus study how tensors change over space, according to the following
-tensors in the picture, if we choose a coordinate system, we can measure the
-components.
-&lt;img src=&quot;/images/math-change-tensor-calculus.png&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;derivative&quot;&gt;derivative&lt;/h4&gt;
-
-\[\frac{\partial c_{i}}{\partial p_{j}} \frac{\partial p_{j}}{\partial
-c_{k}}=\frac{d c_{i}}{d c_{k}}=\left\{\begin{array}{l}{0 \text { if } i \neq k}
-\\ {1 i f i=k}\end{array}=\delta_{k}^{i}\right.\]
-
-&lt;h4 id=&quot;assumption&quot;&gt;Assumption&lt;/h4&gt;
-&lt;p&gt;Basic Vectors are equal to partial derivatives, which means:
-\(\begin{array}{l}{\frac{\partial \vec{R}}{\partial x}=\vec{e}_{x}} \\
-{\frac{\partial \vec{R}}{\partial y}=\vec{e}_{y}}\end{array}\)&lt;/p&gt;
-
-&lt;p&gt;Vector field along a curve.
-&lt;img src=&quot;/images/math-change-tensor-calculus-derivative.png&quot; /&gt;&lt;/p&gt;
-
-\[\frac{d \vec{R}}{d \lambda}=\frac{d x}{d \lambda} \frac{\partial
-\vec{R}}{\partial x}+\frac{d y}{d \lambda} \frac{\partial \vec{R}}{\partial
-y}=\frac{d r}{d \lambda} \frac{\partial \vec{R}}{\partial r}+\frac{d \theta}{d
-\lambda} \frac{\partial \vec{R}}{\partial \theta}\]
-
-&lt;h4 id=&quot;gradient-of-a-function&quot;&gt;Gradient of a Function&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/math-change-tensor-calculus-gradient.png&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;directional-derivative&quot;&gt;Directional Derivative&lt;/h4&gt;
-&lt;p&gt;The directional derivative generalize the concept of partial derivative in any
-direction.
-&lt;img src=&quot;/images/math-change-tensor-calculus-directional-derivative.png&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;differential-form&quot;&gt;Differential Form&lt;/h4&gt;
-&lt;p&gt;$d f(\vec{v})$ is the directional derivative $
-d f(\vec{v})=\nabla_{\vec{v}} f
-$
-geometrical interpretation which means the function $f$ moving through a point
-with velocity vector $\vec{v}$&lt;/p&gt;
-
-&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
-&lt;p&gt;when you learn more about calculus, you get a lot insight into derivative.&lt;/p&gt;
-
-</description>
-    <link>/math/math-change-tensor-calculus.html</link>
-    <guid>/math/math-change-tensor-calculus</guid>
-    <pubDate>Fri, 15 Nov 2019 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
     <title>Real Function Theory: Lebesgue Measure</title>
     <description>
 &lt;h4 id=&quot;definition&quot;&gt;definition&lt;/h4&gt;
@@ -3686,28 +4166,6 @@ For n=1, 2, 3, in coincides with the standard measure of length, area, or volume
 </description>
     <link>/math/math-change-real-function-lebesgue-measure.html</link>
     <guid>/math/math-change-real-function-lebesgue-measure</guid>
-    <pubDate>Fri, 15 Nov 2019 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>Real Function Theory: Lebesgue Integration</title>
-    <description>
-&lt;h4 id=&quot;definition&quot;&gt;definition&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Lebesgue integral: extends the integral to a larger class of functions. It also extends the domains on which these functions can be defined.&lt;/li&gt;
-  &lt;li&gt;Improper integral: a definite integral that has either or both limits infinite or an intergrand that approaches infinity&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;lebesgues-dominated-convergence-theorem&quot;&gt;Lebesgue’s Dominated Convergence Theorem&lt;/h4&gt;
-&lt;p&gt;Let \({f\_n}\) be a sequence of real-valued measurable functions on a measure space. Suppose that the sequence converges pointwise to a function
-f and is dominated by some integrable function g in the sense that.&lt;/p&gt;
-
-&lt;h4 id=&quot;application-of-lebesgue-integration&quot;&gt;application of Lebesgue integration&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;/images/Lebesgue-integral.png&quot; /&gt;&lt;/p&gt;
-
-</description>
-    <link>/math/math-change-real-function-lebesgue-integration.html</link>
-    <guid>/math/math-change-real-function-lebesgue-integration</guid>
     <pubDate>Fri, 15 Nov 2019 00:00:00 +0900</pubDate>
   </item>
 
@@ -5550,93 +6008,6 @@ which means tangent sapce to M at point P. &lt;br /&gt;&lt;/p&gt;
   </item>
 
   <item>
-    <title>R.G.:  Multilinear Algebra</title>
-    <description>
-&lt;h5 id=&quot;question-1-why-we-talk-about-multilinear-algebra-&quot;&gt;Question 1: why we talk about multilinear algebra ?&lt;/h5&gt;
-&lt;p&gt;why we talk about multilinear space, if we equip the spacetime with a vector space, what does 5*paris mean? &lt;br /&gt;
-It means nothing. &lt;br /&gt;
-The reason why we talk about multilinear space is because the tangent spaces.&lt;/p&gt;
-
-&lt;h5 id=&quot;question-2-why-study-vector-space&quot;&gt;Question 2: why study vector space?&lt;/h5&gt;
-&lt;p&gt;the benificial is following:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;for constuction of \(T_{P}M\), one needs an intermediate vector space&lt;/li&gt;
-  &lt;li&gt;tensor technique  are most easily understoodin in an abstract setting.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h5 id=&quot;definition-vector-space&quot;&gt;definition: vector space&lt;/h5&gt;
-&lt;p&gt;a vector space is a set V with two operations, plus and times \((V,+,-)\)  &lt;br /&gt;
-1): a set V &lt;br /&gt;
-2): +: V*V \(\rightarrow\) V “addition” &lt;br /&gt;&lt;/p&gt;
-
-&lt;h5 id=&quot;vector-space-of-homomorphisms&quot;&gt;vector space of Homomorphisms&lt;/h5&gt;
-&lt;p&gt;if \((V,+,\cdot)\) and \((W,+,\cdot)\) are vector spaces, then we can define the set
-all linear maps from one to another: &lt;br /&gt;
-\({\phi: V \rightarrow W}\) into a bag &lt;br /&gt;
-It’s actually just a set, and the set has a name, and the name is \(Hom(V,W)\) &lt;br /&gt;
-This just &lt;strong&gt;a set&lt;/strong&gt;, of all linear maps. &lt;br /&gt;
-Furthermore, we can make this set &lt;strong&gt;Hom(V,W)&lt;/strong&gt; becomes a vector space by add structure&lt;br /&gt;
-such as addition and multiplication. &lt;br /&gt;
-so \((Hom(V,W),+,\cdot)\) is also a vector space.&lt;/p&gt;
-
-&lt;h4 id=&quot;terminology-dual-vector-space&quot;&gt;terminology: dual vector space&lt;/h4&gt;
-&lt;p&gt;dual vector space just a heavily used special case. &lt;br /&gt;&lt;br /&gt;
-suppose \((V,+,\cdot)\) is a vector space. &lt;br /&gt;
-\(V^{\ast}:= {\phi: V \rightarrow R }\) &lt;br /&gt;
-real numbers are also vector space, so this is just another set &lt;strong&gt;Hom(V,R)&lt;/strong&gt;, and it is a special set&lt;br /&gt;
-V and \(V^{\ast}\) just the most basic building blocks  to build very complicat case. It’s clever to bring something down to 
-its elementry building blocks, that’s the only idea. &lt;br /&gt;
-\((V^{\ast},+,\cdot)\) define on Hom(V,R) is also a vector space. &lt;br /&gt;
-It has a speical name, it’s called &lt;strong&gt;dual vector space&lt;/strong&gt; to V.&lt;/p&gt;
-
-&lt;h4 id=&quot;example&quot;&gt;Example&lt;/h4&gt;
-&lt;p&gt;consider:  \(I: P \rightarrow R\) which means \(I \in P^{\ast}\) &lt;br /&gt;
-def \(I(p) := \int_{0}^{1}p(x)dx\) &lt;br /&gt;
-so \(I=\int_{0}^{1}dx\) is a covector&lt;/p&gt;
-
-&lt;h4 id=&quot;covector&quot;&gt;covector&lt;/h4&gt;
-&lt;p&gt;element \(\phi \in V^{\ast}\) are called covector.&lt;/p&gt;
-
-&lt;h4 id=&quot;tensor&quot;&gt;tensor&lt;/h4&gt;
-&lt;p&gt;let \((V,+,\cdot)\) be a vector space, An (r,s)-tensor T over V is a multilinear map: &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;\(T: \underbrace{V^{*} \times \cdots \times V^{*}}_{r} \times \underbrace{V \times \cdots \times V}_{s} \rightarrow \mathbf{R}\) &lt;br /&gt;
-That’s the logic we say V and \(V^{\ast}\) just the most basic building blocks.&lt;/p&gt;
-
-&lt;p&gt;So what does multilinear mean? &lt;br /&gt;&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;T(1,1)-tensor  &lt;br /&gt;
-\(T(\phi + \omega,v) = T(\phi,v)+T(\omega,v)\) &lt;br /&gt;
-\(T(\lambda \phi, v) = \lambda T(\phi,v)\) &lt;br /&gt;
-\(T(\phi,v+w) = T(\phi,v)+T(\phi,w)\) &lt;br /&gt;
-\(T( \phi, \lambda v) = \lambda T(\phi,v)\) &lt;br /&gt;
-\(T(\phi+\omega,v+w) = T(\phi,v)+T(\phi,w)+T(\omega,v)+T(\omega,w)\) &lt;br /&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;example-1-polyinomial&quot;&gt;Example 1: polyinomial&lt;/h4&gt;
-&lt;p&gt;\(g: P \times P \rightarrow R\) &lt;br /&gt;
-\((p,q) \mapsto \int_{0}^{1}dxp(x)q(x)\)  &lt;br /&gt;
-is a (0,2)-tensor over P.&lt;/p&gt;
-
-&lt;h4 id=&quot;example-2-vectors-and-covectors-as-tensors&quot;&gt;Example 2: Vectors and covectors as tensors&lt;/h4&gt;
-&lt;p&gt;\(\varphi \in V^{\ast} \rightarrow \varphi: V \rightarrow R \rightarrow \varphi (0,1)-tensor\) &lt;br /&gt;
-inner product is a (0,2)-tensor &lt;br /&gt;
-You know so many tensors, but maybe you never call them tensors.&lt;/p&gt;
-
-&lt;h4 id=&quot;remark&quot;&gt;Remark&lt;/h4&gt;
-&lt;p&gt;\(\epsilon^{1}, \epsilon^{2}\)&lt;/p&gt;
-
-&lt;h5 id=&quot;remark-1&quot;&gt;remark&lt;/h5&gt;
-&lt;p&gt;Compared with linear algebar on vector space, &lt;strong&gt;Multilinear Algebra&lt;/strong&gt; is the same field, emphasis just not only look at the linear maps,
-but multilinear maps.&lt;/p&gt;
-
-</description>
-    <link>/math/math-space-riemann-geometry-multilinear-algebra.html</link>
-    <guid>/math/math-space-riemann-geometry-multilinear-algebra</guid>
-    <pubDate>Sat, 21 Sep 2019 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
     <title>R.G.: Metric Manifold</title>
     <description>
 &lt;h4 id=&quot;introduction&quot;&gt;Introduction&lt;/h4&gt;
@@ -6049,7 +6420,319 @@ tractable when  an inversion is applied.&lt;/p&gt;
   </item>
 
   <item>
-    <title>Manifold: Submanifolds</title>
+    <title>A.T.: Topology</title>
+    <description>
+&lt;h4 id=&quot;algebraic-topology&quot;&gt;Algebraic Topology&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;The study of geometrical properties and spatial relations unaffected by the
+continuous change of shape or size of figures.&lt;/li&gt;
+  &lt;li&gt;Algebraic means use algebraic to study topology.&lt;/li&gt;
+  &lt;li&gt;we are not asking the distance, what are the essential features of these
+mathematic objects which are invarient under the continuous deformation.&lt;/li&gt;
+  &lt;li&gt;Through this course, we are going to have a good look at some objects which
+are realy centeral  in mathmatics.&lt;/li&gt;
+  &lt;li&gt;you are going to learn fundamental objects.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;four-dimensional-space-we-cant-image-four-dimensional-spacebut&quot;&gt;four dimensional space we can’t image four dimensional space.but&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;in zero-dimensional space, it’s a point&lt;/li&gt;
+  &lt;li&gt;in one-dimensional space, we cut along a point, the intersection  is a
+zero-dimensional space.&lt;/li&gt;
+  &lt;li&gt;in two-dimensional space, we cut along a line,  the intersection is a
+one-dimensional space.&lt;/li&gt;
+  &lt;li&gt;in three-dimensional space, we cut along a random plane, the intersection is
+a two-dimensional space.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;euler-numbers&quot;&gt;Euler Numbers&lt;/h4&gt;
+
+&lt;h4 id=&quot;remark-why-we-often-use-manifold-such-as-sphere-torus-because-they-are&quot;&gt;remark why we often use manifold, such as sphere, torus, because they are&lt;/h4&gt;
+&lt;p&gt;more fundamental objects, they are objects can be treated almost the same as
+them.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;torus is a fundamental object in mathematics.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;one-dimensional-objects&quot;&gt;One-dimensional Objects&lt;/h4&gt;
+&lt;p&gt;The space of all 1-dim subspace&lt;/p&gt;
+
+&lt;h4 id=&quot;concept-group-structure-on-a-circle&quot;&gt;Concept: Group Structure on a Circle&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;This is found by an India high school teacher, the level of India high school
+teacher, at least, some of them is very high.&lt;/li&gt;
+  &lt;li&gt;This concept is pure geometry, and you can prove it with algebraic geometry,
+I think that’s why mathematian don’t believe algebraic in geometry.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;construction-of-toplogical-space&quot;&gt;Construction of Toplogical Space&lt;/h4&gt;
+&lt;p&gt;Affine Plane($A^2$) is  &lt;br /&gt;
+\(A^2 \simeq A^1 \times A^1\)
+This formula means take order pairs.&lt;/p&gt;
+
+&lt;h4 id=&quot;remark&quot;&gt;Remark&lt;/h4&gt;
+&lt;p&gt;Product of space, $X \times Y$: [x,y] which x from X, y from Y.&lt;/p&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Why we study manifold ? what is a manifold ? what can we do with manifold ?&lt;/li&gt;
+  &lt;li&gt;Im my opinion, manifold is just a generalization of geometry object, the benefit
+of this generalization is we can find some intrinsic feature of some geometry,
+we can classification.&lt;/li&gt;
+  &lt;li&gt;For example, Euler characteristic can be generailzed by a sphere, that’s the
+power of generaization of the concept of geometry.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;In my opinion, topology is toplogy, how can we connect this to algebra.
+That’s impossible, but, but, but, There is an always amazning guy. He use
+group theory to connect the algebra and topology, That’s unbelievable.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;There is a very important properties in topology, which is isomorphism,
+&lt;strong&gt;why,why,why isomorphism is so important&lt;/strong&gt;, just because, by isomorphism, we
+can keep the intrinsic properties of target, and this provides us more efficient
+way to solve problems. For example, the polynomial space is isomorphic to
+vector space, and we can study polynomial space problems by study vector
+space.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/math/math-space-algebraic-topology.html</link>
+    <guid>/math/math-space-algebraic-topology</guid>
+    <pubDate>Sun, 01 Sep 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>A.T.: Surface Classification</title>
+    <description>
+&lt;h4 id=&quot;compact-surface&quot;&gt;Compact Surface&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;A compact surface is a surface which is also a compact set. A compact surface
+has a triangulation with a finite number of triangles. The sphere and torus are
+compact.&lt;/li&gt;
+  &lt;li&gt;compact means boundary and closed which doesn’t has any hole.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;haha&quot;&gt;HAHA&lt;/h4&gt;
+&lt;p&gt;With edges labelled by letters and directed, and every edge occurs exactly
+twice.&lt;/p&gt;
+
+</description>
+    <link>/math/math-space-algebraic-topology-surface-classification.html</link>
+    <guid>/math/math-space-algebraic-topology-surface-classification</guid>
+    <pubDate>Sun, 01 Sep 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>A.T.: Simplex</title>
+    <description>
+&lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
+&lt;p&gt;In geometry, a simplex(plural: simplexes or simplices) is a generalization of
+the notion of a triangle or tetrahedron to artitrary dimensions. &lt;br /&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;a 0-simplex is a point&lt;/li&gt;
+  &lt;li&gt;a 1-simplex is a line segment&lt;/li&gt;
+  &lt;li&gt;a 2-simplex is a triangle&lt;/li&gt;
+  &lt;li&gt;a 3-simplex is a tetrahedron
+    &lt;ul&gt;
+      &lt;li&gt;A spatial configuration of n dimensions determined by n+1 points in a space of
+dimension equal to or greater than n&lt;/li&gt;
+      &lt;li&gt;A triangle together with its interior determined by its three vertices is a
+two-dimensional simplex in hte plane or any space of higher dimension.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;boundary&quot;&gt;Boundary&lt;/h4&gt;
+
+&lt;p&gt;\(\begin{aligned} \partial(S) &amp;amp;=\left(v_{0} v_{1}\right)+\left(v_{1}
+v_{2}\right)+\left(v_{2} v_{0}\right) \\ &amp;amp;=\left(v_{0} v_{1}\right)-\left(v_{0}
+v_{2}\right)+\left(v_{1} v_{2}\right) \\ &amp;amp;=\sum_{i=0}^{2}(-1)^{i}\left(v_{0}
+\cdots \hat{v}_{i} \cdots v_{i}\right) \end{aligned}\) &lt;br /&gt;
+where hats means omit.&lt;/p&gt;
+
+</description>
+    <link>/math/math-space-algebraic-topology-simplex.html</link>
+    <guid>/math/math-space-algebraic-topology-simplex</guid>
+    <pubDate>Sun, 01 Sep 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>A.T.: Euler-Poincare Characteristic</title>
+    <description>
+&lt;h4 id=&quot;concept&quot;&gt;Concept&lt;/h4&gt;
+&lt;p&gt;In algebraic topology, the Euler characteristic or Euler number is a topological
+invariant, a number that describes a topological space’s shape or structure
+regardless of the way it is bent. It is commonly denoted by \(\chi\)&lt;/p&gt;
+
+&lt;h4 id=&quot;haha&quot;&gt;HAHA&lt;/h4&gt;
+&lt;p&gt;You can make a model, doesn’t mean it is a mathematic object.
+Euler’s formual holds for any polyhedron which has the topology of the sphere.&lt;/p&gt;
+
+</description>
+    <link>/math/math-space-algebraic-topology-poincare-characteristic.html</link>
+    <guid>/math/math-space-algebraic-topology-poincare-characteristic</guid>
+    <pubDate>Sun, 01 Sep 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>A.T.: Mobius, Klein, Orientability </title>
+    <description>
+&lt;h4 id=&quot;introduction&quot;&gt;Introduction&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Closed surfaces are divided into two classes, orientable and non-orientable.
+    &lt;ul&gt;
+      &lt;li&gt;The sphere and the torus are examples of orientable surfaces;&lt;/li&gt;
+      &lt;li&gt;The projective plane and the Mobius band are non-orientable.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;haha&quot;&gt;HAHA&lt;/h4&gt;
+&lt;p&gt;A surface M is orientable which means we can consistenly assign a notion of
+positive rotation as we move around.&lt;/p&gt;
+
+&lt;h4 id=&quot;mobius-band&quot;&gt;Mobius Band&lt;/h4&gt;
+&lt;p&gt;Mobius band is non-orientable.&lt;/p&gt;
+</description>
+    <link>/math/math-space-algebraic-topology-mobius-klein.html</link>
+    <guid>/math/math-space-algebraic-topology-mobius-klein</guid>
+    <pubDate>Sun, 01 Sep 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>A.T.: Homology</title>
+    <description>
+&lt;h4 id=&quot;haha&quot;&gt;HAHA&lt;/h4&gt;
+&lt;p&gt;As we prefer to write operation as addition, so loop is represented by
+a+b+c=b+c+a = c+a+b, because it is a closed loop geometry, we call this a &lt;strong&gt;cycle&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;haha-1&quot;&gt;HAHA&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;chain: is going to be a word for random element in this free abelian group of
+random combination  with integer coefficient.&lt;/li&gt;
+  &lt;li&gt;boundary: final point minus initial point&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;haha-2&quot;&gt;HAHA&lt;/h4&gt;
+&lt;p&gt;This is an algebraic way to detect whether we have a cycle or not.&lt;/p&gt;
+
+&lt;h4 id=&quot;haha-3&quot;&gt;HAHA&lt;/h4&gt;
+&lt;p&gt;Every Connected graph X has a spanning tree which includes all vertices.
+A tree with V vertices always has v-1 edges.&lt;/p&gt;
+
+&lt;h4 id=&quot;haha-4&quot;&gt;HAHA&lt;/h4&gt;
+&lt;p&gt;\(C_{3} \stackrel{\partial_{3}}{\rightarrow} C_{2}
+\stackrel{\partial_{2}}{\rightarrow} C_{1}
+\stackrel{\partial_{1}}{\rightarrow} C_{0}\)&lt;/p&gt;
+
+</description>
+    <link>/math/math-space-algebraic-topology-homology.html</link>
+    <guid>/math/math-space-algebraic-topology-homology</guid>
+    <pubDate>Sun, 01 Sep 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>A.T.: Fundamental Group</title>
+    <description>
+&lt;h4 id=&quot;haha&quot;&gt;HAHA&lt;/h4&gt;
+&lt;p&gt;Fundamental group of a surface, which is a very important topic to link topology
+and algebra.&lt;/p&gt;
+
+&lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
+&lt;p&gt;In mathematics, a path in topological space X is a continuous function f from
+unit interval I=[0,1] to X &lt;br /&gt;
+\(f: I \rightarrow X\)&lt;/p&gt;
+
+&lt;h4 id=&quot;homotopic-path&quot;&gt;Homotopic path&lt;/h4&gt;
+
+&lt;h4 id=&quot;definition-1&quot;&gt;Definition&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;toological space: may be defined as a set of points, along with a set of
+neighbourhoods for each point.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;In topology, two continuous functions from one topological space to another
+are called homotopic if one can be “continuously deformed into the other,
+such a deformation being called a homotopy between two functions.”&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;The most important thing is to convince ourself, this object is realy a
+group.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;group&quot;&gt;Group&lt;/h4&gt;
+&lt;p&gt;$\pi (m, x_0) $ is a group, with technically mathmatically theory of a group.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;closed&lt;/li&gt;
+  &lt;li&gt;identity element: constant loop, the loop doesn’t go anywhere, just stay at
+$x_0$&lt;/li&gt;
+  &lt;li&gt;associativity&lt;/li&gt;
+  &lt;li&gt;inverse element&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;p&gt;Why we are interested in subspace, it’s just like the subgroup in the group
+theory !!!!!!!!! &lt;br /&gt;
+These guys are co clever!!!!!!!!!!!!!&lt;/p&gt;
+
+</description>
+    <link>/math/math-space-algebraic-topology-fundamental-group.html</link>
+    <guid>/math/math-space-algebraic-topology-fundamental-group</guid>
+    <pubDate>Sun, 01 Sep 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>A.T.: Curvature</title>
+    <description>
+&lt;h4 id=&quot;question-how-to-describe-the-amount-of-turning-&quot;&gt;Question: How to describe the amount of turning ?&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;360&lt;/li&gt;
+  &lt;li&gt;2$\pi$&lt;/li&gt;
+  &lt;li&gt;1 
+which one is better ?
+&lt;img src=&quot;/images/math-stucutre-algebraic-topology-curvature.png&quot; /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/math/math-space-algebraic-topology-curvature.html</link>
+    <guid>/math/math-space-algebraic-topology-curvature</guid>
+    <pubDate>Sun, 01 Sep 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>A.T.: 1 and 2-dim Objects</title>
+    <description>
+&lt;h4 id=&quot;haha&quot;&gt;HAHA&lt;/h4&gt;
+&lt;p&gt;\(A^{2}=A^{\prime} \times A^{\prime}\) &lt;br /&gt;
+Product of lines: this is a construction of topological spaces.&lt;/p&gt;
+
+&lt;h4 id=&quot;borromean-rings&quot;&gt;Borromean Rings&lt;/h4&gt;
+&lt;p&gt;In mathematics, the Borromean rings consist of three topological circles which
+are linked but where removing any one ring leaves the other two unconnected. In
+other words, no two of the three rings are linked with each other as a Hopf
+link, but nonetheless all three are linked.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/math-structure-algebraic-topology-1-2-dimensional-objects-borromean-ring.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
+&lt;p&gt;Genus: A topologically invariant property of a surface defined as the largest
+number of nonintersecting simple closed curves that can be drawn on the surface
+without separating it. Roughly speaking, it is the number of holes in a surface.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;It can be described by the number of the holes, it’s a little bit
+informal, more careful definition, the maximum number of disjoint loops on the
+surface. &lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;http://mathworld.wolfram.com/Genus.html&quot;&gt;Genus&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Borromean_rings&quot;&gt;Borromean Rings&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/math/math-space-algebraic-topology-1-2-dimensional-objects.html</link>
+    <guid>/math/math-space-algebraic-topology-1-2-dimensional-objects</guid>
+    <pubDate>Sun, 01 Sep 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>M.T.: Submanifolds</title>
     <description>
 &lt;h4 id=&quot;inspiration&quot;&gt;Inspiration&lt;/h4&gt;
 &lt;ol&gt;
@@ -6074,7 +6757,7 @@ $&lt;/p&gt;
   </item>
 
   <item>
-    <title>Manifold Theory: Rank</title>
+    <title>M.T.: Rank</title>
     <description>
 &lt;h4 id=&quot;background&quot;&gt;Background&lt;/h4&gt;
 &lt;ol&gt;
@@ -6089,7 +6772,7 @@ if it contains  $r \times r$ invertible submatrix&lt;/li&gt;
   </item>
 
   <item>
-    <title>Manifold: Introduction</title>
+    <title>M.T.: Introduction</title>
     <description>
 &lt;h4 id=&quot;background&quot;&gt;Background&lt;/h4&gt;
 &lt;ol&gt;
@@ -6146,7 +6829,7 @@ their counterparts for bundles&lt;/p&gt;
   </item>
 
   <item>
-    <title>Manifold: Orientations</title>
+    <title>M.T.: Orientations</title>
     <description>
 &lt;h4 id=&quot;background&quot;&gt;Background&lt;/h4&gt;
 &lt;p&gt;It is a familiar fact from vector calculus that line and surface integrals
@@ -6164,7 +6847,7 @@ and to investigate various equivalent characterizations of orientation.&lt;/li&g
   </item>
 
   <item>
-    <title>Manifold: Euclidean Spaces</title>
+    <title>M.T.: Euclidean Spaces</title>
     <description>
 &lt;h4 id=&quot;background&quot;&gt;Background&lt;/h4&gt;
 &lt;ol&gt;
@@ -6192,7 +6875,7 @@ coordinate-independent concepts will make sense on a manifold.&lt;/li&gt;
   </item>
 
   <item>
-    <title>Manifold: Differential Forms</title>
+    <title>M.T.: Differential Forms</title>
     <description>
 &lt;h4 id=&quot;background&quot;&gt;Background&lt;/h4&gt;
 &lt;p&gt;Differential forms are generalizations of real-valued functions on a manifold.&lt;/p&gt;
@@ -6223,6 +6906,36 @@ forms&lt;/strong&gt;&lt;/p&gt;
     <link>/math/math-space-manifold-differential-forms.html</link>
     <guid>/math/math-space-manifold-differential-forms</guid>
     <pubDate>Fri, 30 Aug 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Structure: summary</title>
+    <description>
+&lt;h4 id=&quot;why-bother&quot;&gt;Why bother?&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;We prefer concept which are from intuition, such as the tangent line of a curve
+at a specific point, it is easy to understand.&lt;/li&gt;
+  &lt;li&gt;Speaking of structure, it’s not something intuitive, it’s pure mathematics&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;for example, in real anaysis, we build structure addition of two numbers.&lt;/li&gt;
+  &lt;li&gt;To mimick this property, we add structure on complex domain, what does it
+mean? I don’t know, it’s just the structure we want to adopt.&lt;/li&gt;
+  &lt;li&gt;we can also adopt $\sigma$ and $\delta$ to define limit on complex number
+domain.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;That’s the beauty of structure, we don’t need to know it’s meaning, but we
+know it makes sense.&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/math/math-structure-summary.html</link>
+    <guid>/math/math-structure-summary</guid>
+    <pubDate>Thu, 15 Aug 2019 00:00:00 +0900</pubDate>
   </item>
 
   <item>
@@ -6257,7 +6970,277 @@ and, &lt;br /&gt;
   </item>
 
   <item>
-    <title>Abstract Algebra: Group Theory</title>
+    <title>A.A.: Introduction</title>
+    <description>
+&lt;h4 id=&quot;background&quot;&gt;Background&lt;/h4&gt;
+&lt;p&gt;Algebra is the abstract encapsulation of our intuition for composition&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;By composition, we mean the concept of two object coming together to form a
+new one&lt;/li&gt;
+  &lt;li&gt;For example, adding two numbers, or composing real valued single variable
+functions.&lt;/li&gt;
+  &lt;li&gt;As we shall discover, the seemly simple idea of composition hides vast hidden
+depth.&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+    <link>/math/math-structure-abstract-algebra-introduction.html</link>
+    <guid>/math/math-structure-abstract-algebra-introduction</guid>
+    <pubDate>Sun, 28 Jul 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>A.A.: Vector Space</title>
+    <description>
+&lt;h4 id=&quot;why-vector-space-&quot;&gt;Why vector space ?&lt;/h4&gt;
+&lt;p&gt;We are pretty familiar with 2-dimensional and 3-dimensional vector space, and
+how about 4-dimensional vector space, such as spacetime.  we want to generalize
+this, so vector space comes.&lt;/p&gt;
+
+&lt;h4 id=&quot;terminology&quot;&gt;Terminology&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Linear Algebra: the study of vector space is also called linear algebra.&lt;/li&gt;
+  &lt;li&gt;Scalar: \(\overrightarrow{v}=(v_{1},v_{2},\cdots,v_{n})\) and
+\(\overrightarrow{v}=(c \cdot v_{1},c \cdot v_{2},\cdots,c \cdot v_{n})\),
+and c is called a scalar&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;vector-space-properties&quot;&gt;Vector Space Properties&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Addition \(\overrightarrow{v}\), \(\overrightarrow{w}\) are vectors, \(\overrightarrow{v} +  \overrightarrow{w}\) also a vector.&lt;/li&gt;
+  &lt;li&gt;Commutativity: \(\overrightarrow{v} +  \overrightarrow{w} = \overrightarrow{w} +  \overrightarrow{v}\)&lt;/li&gt;
+  &lt;li&gt;Identity element: \(0+  \overrightarrow{v} = \overrightarrow{v} +  0\)&lt;/li&gt;
+  &lt;li&gt;Inverses: \(\overrightarrow{v} +  \overrightarrow{-v} = \overrightarrow{-v} +  \overrightarrow{v} = 0\)&lt;/li&gt;
+  &lt;li&gt;Associativity: (\(\overrightarrow{v} +  \overrightarrow{w}) + \overrightarrow{z}= \overrightarrow{v} +  (\overrightarrow{w}+\overrightarrow{z})\)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;scalars-properties&quot;&gt;Scalars Properties&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;distributive properties: \(c \cdot (\overrightarrow{v}+\overrightarrow{w}) = c \cdot \overrightarrow{v} + c \cdot{\overrightarrow{w}}\)&lt;/li&gt;
+  &lt;li&gt;associative properties:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;So vector space are commutative groups&lt;/p&gt;
+
+&lt;h4 id=&quot;examples&quot;&gt;Examples&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;The following matrix under + operator: &lt;br /&gt;
+\(\begin{bmatrix}
+     a_{11} &amp;amp; a_{12} &amp;amp; a_{16} \\
+     a_{12} &amp;amp; a_{22} &amp;amp; a_{26} \\
+     a_{16} &amp;amp; a_{26} &amp;amp; a_{66} 
+ \end{bmatrix}\)&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;V ={Real polynomials of degree 5 or less} &lt;br /&gt;
+   \(V =a_{5} x^{5}+a_{4} x^{4}+a_{3} x^{3}+a_{2} x^{2}+a_{1} x+a_{0}\)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;\(V ={f(x)| \text { f is continuous on R}}\)
+    &lt;h4 id=&quot;relationship-between-linear-algebra-and-others-math-branches&quot;&gt;Relationship Between Linear Algebra and Others Math Branches&lt;/h4&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Linear algebra is central to almost all aeras of mathmatics.&lt;/li&gt;
+  &lt;li&gt;Linear algebra is fundamental in modern presentations of geometry, including
+for defining basic objects such as lines, planes and rotations.&lt;/li&gt;
+  &lt;li&gt;Functional Analysis may be basicaly viewed as the application of linear
+algebra to space of functions.&lt;/li&gt;
+  &lt;li&gt;most textbooks, introduce geometric space from linear algebra, and geometry
+is often presented at elementary level, as a subfield of linear algebra&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;basis-of-vector-spacelinear-space&quot;&gt;Basis of Vector Space(Linear Space)&lt;/h4&gt;
+&lt;p&gt;An (ordered) basis of a linear space $W$, is an ordered list 
+$B=[\vec{w_1},\vec{w_2},\cdots,\vec{w_n}]$ of elements of W with the properties:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Spanning set: every $w \in W$ can be written:
+\(w=a_{1} \vec{w}_{1}+a_{2} \vec{w}_{2}+\dots+a_{n} \vec{w}_{n}\)&lt;/li&gt;
+  &lt;li&gt;Linear independent
+\(a_{1} \vec{w}_{1}+a_{2} \vec{w}_{2}+\dots+a_{n} \vec{w}_{n}=\vec{0}\) $\rightarrow a_1=a_2=\cdots=a_n=0$&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h5 id=&quot;examples-1&quot;&gt;Examples 1&lt;/h5&gt;
+&lt;p&gt;$W=V^n$ where &lt;br /&gt;
+\(B=\left[e_{1}, e_{2}, \cdots, e_{n}\right]\) &lt;br /&gt;
+\(e_{i}=\left(\begin{array}{l}{0} \\ {0} \\ {\vdots} \\ {1} \\
+{0}\end{array}\right)\)&lt;/p&gt;
+
+&lt;h5 id=&quot;examples-2&quot;&gt;Examples 2&lt;/h5&gt;
+&lt;p&gt;$W=P^3$ where &lt;br /&gt;
+\(B=\left[1, \alpha, \alpha^{2}, \alpha^{3}\right]\)&lt;/p&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;What is a Vector Space?
+First, we need to answer this question. 
+To form a vector space, we only need to operation, addition and scalar
+multiplication, only this, It’s enough, no inner product, no corss product, only
+vector addition and scalar multiplication.&lt;strong&gt;It doesn’t need to define
+multiplication between two vectors, It doesn’t define inner product, That’s the
+other structure.&lt;/strong&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;Why we define like this, to generalize, in this way, the polynomial is also a
+vector space,too .&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;We must be very clear about this basic concept.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;How to denote the basic vector, as a computer scientist,we would perfer to $\vec{e_0} \vec_{e_1}, 
+\vec{e_2} \vec_{e_3}$, not start with &lt;strong&gt;1&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;reference&lt;/h4&gt;
+
+</description>
+    <link>/math/math-structure-abstract-algebra-vector-space.html</link>
+    <guid>/math/math-structure-abstract-algebra-vector-space</guid>
+    <pubDate>Thu, 25 Jul 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>A.A.: Ring</title>
+    <description>
+&lt;h4 id=&quot;background&quot;&gt;Background&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Sets with a single binary operation satisfying certain axioms&lt;/li&gt;
+  &lt;li&gt;We are often more interested in working with sets that have two binary
+operations
+    &lt;ul&gt;
+      &lt;li&gt;If we consider a set with two such related binary operations satisfying
+certain axioms, we have algebraic structure called a ring.&lt;/li&gt;
+      &lt;li&gt;In a ring, we add and multiply elements such as real numbers, complex numbers,
+matrices, and functions.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
+&lt;p&gt;Ring:  A ring is a set of elements under $\times, -,+$, not commutative under $\times$&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Ring with Unity or idenity: if there is an element  $1 \in R$ such that $
+1 \neq 0
+$ and $1a=a1=a$ for each element $a\in R$, we say that R is a ring with unity or
+identity&lt;/li&gt;
+  &lt;li&gt;Commutative ring: A ring R for which $ab=ba$ for all a,b in R is called a
+commutative ring.&lt;/li&gt;
+  &lt;li&gt;Integral domain: A commutative ring R with identity is called an integral
+domain if, for every $a,b \in R$ such that ab=0, either a=0 or b=0.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;ring-homomorphisms&quot;&gt;Ring Homomorphisms&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;In the study of groups, a homomorphism is a map that preserves the operation of
+the group. Similarly, a homomorphism between rings preserves the operations of
+addition and multiplication in the ring. More specifically, if R and S are
+rings, then a ring homomorphism is a map $\phi: R \rightarrow S$ satisfying
+$
+\begin{aligned} \phi(a+b) &amp;amp;=\phi(a)+\phi(b) \ \phi(a b) &amp;amp;=\phi(a) \phi(b)
+\end{aligned}
+$&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;for all $a,b \in R$. if $\phi: R \rightarrow S$ is a one-to-one and onto
+homomorphism, then $\phi$ is called an isomorphism of rings&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Kernel: The set of elments that a ring homomorphism maps to 0 plays a
+fundamental role in the theory of rings. For any ring homomorphism 
+$\phi: R \rightarrow S$, we define the kernel of a ring homomorphism to be
+the set&lt;/p&gt;
+
+    &lt;p&gt;$\text{ker} \phi ={r\in R: \phi(r)=0} $&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;ideal&quot;&gt;Ideal&lt;/h4&gt;
+&lt;p&gt;In group theory we found that normal subgroups play a special role. these
+subgroups have nice characteristics that make them more interesting to study
+than arbitrary subgroups. In ring theory the objects corresponding to normal
+subgroups are a special class of subrings called ideals.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Ideal: an ideal in a ring r is a subring I of R such that if a is in I and r
+is in R, both ar and ra are in I;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;example&quot;&gt;Example&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Integer: Every Integer is a product of primes.&lt;/li&gt;
+  &lt;li&gt;Intergers  are ring.&lt;/li&gt;
+  &lt;li&gt;Polynomials with coefficients Every Polynimial is a product of irreducible
+polynomials(instead of prime polynomials) &lt;br /&gt;
+$
+x^{15}-1=(x-1)\left(x^{2}+x+1\right)\left(x^{4}+x^{3}+x^{2}+x+1\right)
+\left(\begin{array}{c}{x^{8}-x^{7}+x^{5}-x^{4}}{+x^{3}-x+1}\end{array}\right)
+$&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;remark&quot;&gt;Remark&lt;/h4&gt;
+&lt;p&gt;When I begin to learn math, the operation 0 divides a number confuses me a lot. &lt;br /&gt;
+After talent French mathematician comes out group theory, everything change. In the point of view of group theory, you can treat everything you 
+meet as group with additive structure. For example, real numbers under operation addition is a group, totally true.
+but you want to add multiply structure to this group, It’s Ok, I accept your proposal, and then give it a new name,
+we call it a ring.&lt;/p&gt;
+
+</description>
+    <link>/math/math-structure-abstract-algebra-ring.html</link>
+    <guid>/math/math-structure-abstract-algebra-ring</guid>
+    <pubDate>Thu, 25 Jul 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>A.A.: Polynomials Ring</title>
+    <description>
+&lt;h4 id=&quot;introduction&quot;&gt;Introduction&lt;/h4&gt;
+&lt;p&gt;It is probably no surprise that polynomials form a ring. In this chapter we
+ shall emphasize the algebraic structure of polynomials by studying polynomial
+ rings. We can prove prove many results for polynomial rings that are similar to
+ the theorems we proved for the integers.  Analogs of prime numbers, the divsion
+ algorithm, and the Euclidean algorithm exist for polynomials.&lt;/p&gt;
+
+</description>
+    <link>/math/math-structure-abstract-algebra-ring-polynomials.html</link>
+    <guid>/math/math-structure-abstract-algebra-ring-polynomials</guid>
+    <pubDate>Thu, 25 Jul 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>A.A.: Module</title>
+    <description>
+&lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Module: vector space can be generialized something more powerfull, this is called module, which
+is a generialized vector space.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h5 id=&quot;difference&quot;&gt;difference&lt;/h5&gt;
+&lt;ol&gt;
+  &lt;li&gt;In a vector space, the set of scalars is a field and acts on the vectors by scalar multiplication,
+subject to certain axioms such as the distributive law.&lt;/li&gt;
+  &lt;li&gt;In a module, the scalars need only be a ring.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h5 id=&quot;relationship&quot;&gt;Relationship&lt;/h5&gt;
+&lt;ol&gt;
+  &lt;li&gt;Module is vector space with a ring of scalars&lt;/li&gt;
+  &lt;li&gt;Vector Space is module with a field of scalars&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h5 id=&quot;example&quot;&gt;Example&lt;/h5&gt;
+&lt;ol&gt;
+  &lt;li&gt;Modue: M =  any Abelian group&lt;/li&gt;
+  &lt;li&gt;Scalars: R = Z&lt;/li&gt;
+  &lt;li&gt;Every albelian group is a Z-module.&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/math/math-structure-abstract-algebra-module.html</link>
+    <guid>/math/math-structure-abstract-algebra-module</guid>
+    <pubDate>Thu, 25 Jul 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>A.A.: Group</title>
     <description>
 &lt;h4 id=&quot;group-definition&quot;&gt;Group Definition&lt;/h4&gt;
 &lt;p&gt;group: set of elements&lt;/p&gt;
@@ -6389,11 +7372,132 @@ He is a realy geinus.&lt;/p&gt;
   &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Dual_space#Algebraic_dual_space&quot;&gt;dual space&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/sumx2015/article/details/78909635&quot;&gt;linear functional&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
+</description>
+    <link>/math/math-structure-abstract-algebra-group.html</link>
+    <guid>/math/math-structure-abstract-algebra-group</guid>
+    <pubDate>Thu, 25 Jul 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>A.A.: Subgroup and Factor Group</title>
+    <description>
+&lt;h4 id=&quot;background&quot;&gt;Background&lt;/h4&gt;
+&lt;p&gt;If H is a subgroup of a group G, then right cosets are not always the same as
+left cosets; that is, it is not always the case that $gH=Hg$ for all $g \in G$.
+The subgroups for which this property holds play a critical role in group
+theory. They allow for the construction of a new class of groups.&lt;/p&gt;
+
+&lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;A subgroup H of a group G is normal in G if $gH = Hg$ for all $g\in G$. That is,
+a normal subgroup of group G is one in which the right and left cosets are
+precisely the same.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Factor Groups: If N is a normal subgroup of a group G, then the cosets of N
+in G from a group $G/N$ under the operation $(aN)(bN)=abN$. This group is
+called the $\textbf{factor}$ or $\textbf{quotient group}$ of G and N.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/math/math-structure-abstract-algebra-group-subgroup-and-factor-group.html</link>
+    <guid>/math/math-structure-abstract-algebra-group-subgroup-and-factor-group</guid>
+    <pubDate>Thu, 25 Jul 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>A.A.: Group Presentation</title>
+    <description>
+&lt;h4 id=&quot;introduction&quot;&gt;Introduction&lt;/h4&gt;
+&lt;p&gt;In mathematics, a presentation is one method of specifying a group. A
+presentation of a group G comprises a set S of generators-so that every element
+of the group can be written as a product of some of these generators-and a set R
+of relations among those generators. We can say G has presentation. &lt;br /&gt;
+\(\langle S | R\rangle\) &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;As a simple example, the cyclic group of order n has the presentation &lt;br /&gt;
+\(\langle a | a^n=1 \rangle\)&lt;/p&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Presentation_of_a_group&quot;&gt;Presentation of A Group-wiki&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/math/math-structure-abstract-algebra-group-presentation.html</link>
+    <guid>/math/math-structure-abstract-algebra-group-presentation</guid>
+    <pubDate>Thu, 25 Jul 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>A.A.: Permuation Group</title>
+    <description>
+</description>
+    <link>/math/math-structure-abstract-algebra-group-permutation.html</link>
+    <guid>/math/math-structure-abstract-algebra-group-permutation</guid>
+    <pubDate>Thu, 25 Jul 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>A.A.: Isomorphism</title>
+    <description>
+&lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Let $ (G, *) \text { and }(H, \circ) $ be two groups. A $\textbf{homomorphism}$ 
+f, from G to H,is a map of sets  $ f: G \rightarrow H $, such that $f(x *
+y)=f(x)\circ f(y)$ $ \forall x, y \in G $. If $G=H$ and $f=Id_{G}$ we call $f$
+the identity homomorphism.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Intuitively one should think about a homomorphism as a map of sets which
+preserves the underlying group structure. It’s the same idea as a linear map
+between vector spaces.&lt;/li&gt;
+  &lt;li&gt;A homomorphism $f: G\rightarrow H$ which is bijective is called an
+isomorphism. Two groups are said to be isomorphic if there exists an
+isomorphism between them. Intuitively two groups being isomorphic means that
+are the “same” group with relabelled elements.&lt;/li&gt;
+  &lt;li&gt;A homomorphism from a group to itself $f: G \rightarrow G$ is called an
+endomorphism. An endomorphism which is also an isomorphism is called an
+automorphism.&lt;/li&gt;
+&lt;/ul&gt;
 
 </description>
-    <link>/math/math-structure-abstract-algebra-introduction.html</link>
-    <guid>/math/math-structure-abstract-algebra-introduction</guid>
-    <pubDate>Sun, 28 Jul 2019 00:00:00 +0900</pubDate>
+    <link>/math/math-structure-abstract-algebra-group-isomorphisms.html</link>
+    <guid>/math/math-structure-abstract-algebra-group-isomorphisms</guid>
+    <pubDate>Thu, 25 Jul 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>A.A.: Cosets</title>
+    <description>
+&lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
+&lt;p&gt;Let G be a group and H a subgroup of G. Define a $\textbf{left coset}$ of H with
+representative  $g \in G$ to be the set
+$
+g H={g h: h \in H}
+$&lt;/p&gt;
+
+&lt;p&gt;$\textbf{Right cosets}$ can defined similarly by
+$
+H g={h g: h \in H}
+$&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;If left and right cosets coincide or if it is clear from the context to which
+type of coset that we are referring, we will use the word coset without
+specifying left or right.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;lagranges-theorem&quot;&gt;Lagrange’s Theorem&lt;/h4&gt;
+&lt;p&gt;Let H be a subgroup of G with $g \in G and define a map $\phi: H \rightarrow gH$ 
+by $\phi (h) = gh$. The map $\phi$ is bijective; hence, the number of elements
+in H is the same as the number of elements in gH.&lt;/p&gt;
+
+</description>
+    <link>/math/math-structure-abstract-algebra-group-cosets.html</link>
+    <guid>/math/math-structure-abstract-algebra-group-cosets</guid>
+    <pubDate>Thu, 25 Jul 2019 00:00:00 +0900</pubDate>
   </item>
 
   <item>
@@ -6477,259 +7581,27 @@ meaning of quotient and generalize this concept.&lt;/li&gt;
 &lt;/ol&gt;
 
 </description>
-    <link>/math/math-structure-abstract-algebra-abelian-group.html</link>
-    <guid>/math/math-structure-abstract-algebra-abelian-group</guid>
-    <pubDate>Sat, 27 Jul 2019 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>L.A.: Introduction</title>
-    <description>
-&lt;h4 id=&quot;notation&quot;&gt;Notation&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;\(\boldsymbol{x}=\left[\begin{array}{llll}{x_{1}} &amp;amp; {x_{2}} &amp;amp; {\dots} &amp;amp;
-{x_{m}}\end{array}\right]^{\mathrm{T}}\): to simplify writing column vectors in-line with other text, sometimes they
-are written as row vectors with the transpose operation applied to them.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;h4 id=&quot;spanning-sets&quot;&gt;Spanning Sets&lt;/h4&gt;
-&lt;p&gt;A set of vector \(\left\{\vec{v}_{1}, \vec{v}_{2}, \dots, \vec{v}_{n}\right\}\) is a spanning set for &lt;br /&gt;
-$\mathcal{A^3} \leftrightarrow$ for every vector $\vec{v} \in \mathcal{A^3}$ 
-can be written as: &lt;br /&gt;
-\(\vec{v}=a_{1} \vec{v}_{1}+a_{2} \vec{v}_{2}+\cdots+a_{n} \vec{v}_{n}\)&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;h4 id=&quot;linear-independent-sets&quot;&gt;Linear Independent Sets&lt;/h4&gt;
-&lt;p&gt;a set of vectors 
-\(\left\{\vec{v}_{1}, \vec{v}_{2}, \dots, \vec{v}_{n}\right\}\)
-in $\mathcal{A^3}$ is linearly independent
-$\leftrightarrow$ none of the vectors can be written as linear combination of
-the others.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;h5 id=&quot;example&quot;&gt;Example&lt;/h5&gt;
-&lt;p&gt;\(\begin{array}{l}{\left\{\left(\begin{array}{c}{2} \\ {3} \\
-{-1}\end{array}\right),\left(\begin{array}{c}{4} \\ {2} \\
-{1}\end{array}\right),\left(\begin{array}{c}{-2} \\ {5} \\
-{-5}\end{array}\right)\right\}} \\ {\left(\begin{array}{c}{-2} \\ {5} \\
-{-5}\end{array}\right)=3\left(\begin{array}{c}{2} \\ {3} \\
-{-1}\end{array}\right)-2\left(\begin{array}{c}{4} \\ {2} \\
-{1}\end{array}\right)}\end{array}\)&lt;/p&gt;
-
-&lt;p&gt;Geometrically it means these three vectors span a plane in $\mathcal{A^3}$&lt;/p&gt;
-
-&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;The origin of linear algebra is affine geometry. Because of affine geometry,
-we found linear algebra. After that, linear algebra is be treated as a
-independent branch.&lt;/li&gt;
-  &lt;li&gt;Linear algebra is just a tool for computation, &lt;strong&gt;It can used to deal with so
-many problems, just as a tool to calculation, don’t be afraid&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;We are so familiar with the computation of addition, minus,
-multiplication,division, but not too familiar with calculus, derivative,
-least familiar with matrix compuation. **As a mathematican, we shoud not
-afraid any calculation of math **&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    <link>/math/math-structure-linear-algebra-introduction.html</link>
-    <guid>/math/math-structure-linear-algebra-introduction</guid>
-    <pubDate>Thu, 25 Jul 2019 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>A.A.: Vector Space</title>
-    <description>
-&lt;h4 id=&quot;why-vector-space-&quot;&gt;Why vector space ?&lt;/h4&gt;
-&lt;p&gt;We are pretty familiar with 2-dimensional and 3-dimensional vector space, and
-how about 4-dimensional vector space, such as spacetime.  we want to generalize
-this, so vector space comes.&lt;/p&gt;
-
-&lt;h4 id=&quot;terminology&quot;&gt;Terminology&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Linear Algebra: the study of vector space is also called linear algebra.&lt;/li&gt;
-  &lt;li&gt;Scalar: \(\overrightarrow{v}=(v_{1},v_{2},\cdots,v_{n})\) and
-\(\overrightarrow{v}=(c \cdot v_{1},c \cdot v_{2},\cdots,c \cdot v_{n})\),
-and c is called a scalar&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;vector-space-properties&quot;&gt;Vector Space Properties&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Addition \(\overrightarrow{v}\), \(\overrightarrow{w}\) are vectors, \(\overrightarrow{v} +  \overrightarrow{w}\) also a vector.&lt;/li&gt;
-  &lt;li&gt;Commutativity: \(\overrightarrow{v} +  \overrightarrow{w} = \overrightarrow{w} +  \overrightarrow{v}\)&lt;/li&gt;
-  &lt;li&gt;Identity element: \(0+  \overrightarrow{v} = \overrightarrow{v} +  0\)&lt;/li&gt;
-  &lt;li&gt;Inverses: \(\overrightarrow{v} +  \overrightarrow{-v} = \overrightarrow{-v} +  \overrightarrow{v} = 0\)&lt;/li&gt;
-  &lt;li&gt;Associativity: (\(\overrightarrow{v} +  \overrightarrow{w}) + \overrightarrow{z}= \overrightarrow{v} +  (\overrightarrow{w}+\overrightarrow{z})\)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;scalars-properties&quot;&gt;Scalars Properties&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;distributive properties: \(c \cdot (\overrightarrow{v}+\overrightarrow{w}) = c \cdot \overrightarrow{v} + c \cdot{\overrightarrow{w}}\)&lt;/li&gt;
-  &lt;li&gt;associative properties:&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;So vector space are commutative groups&lt;/p&gt;
-
-&lt;h4 id=&quot;examples&quot;&gt;Examples&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;The following matrix under + operator: &lt;br /&gt;
-\(\begin{bmatrix}
-     a_{11} &amp;amp; a_{12} &amp;amp; a_{16} \\
-     a_{12} &amp;amp; a_{22} &amp;amp; a_{26} \\
-     a_{16} &amp;amp; a_{26} &amp;amp; a_{66} 
- \end{bmatrix}\)&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;V ={Real polynomials of degree 5 or less} &lt;br /&gt;
-   \(V =a_{5} x^{5}+a_{4} x^{4}+a_{3} x^{3}+a_{2} x^{2}+a_{1} x+a_{0}\)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;\(V ={f(x)| \text { f is continuous on R}}\)
-    &lt;h4 id=&quot;relationship-between-linear-algebra-and-others-math-branches&quot;&gt;Relationship Between Linear Algebra and Others Math Branches&lt;/h4&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Linear algebra is central to almost all aeras of mathmatics.&lt;/li&gt;
-  &lt;li&gt;Linear algebra is fundamental in modern presentations of geometry, including
-for defining basic objects such as lines, planes and rotations.&lt;/li&gt;
-  &lt;li&gt;Functional Analysis may be basicaly viewed as the application of linear
-algebra to space of functions.&lt;/li&gt;
-  &lt;li&gt;most textbooks, introduce geometric space from linear algebra, and geometry
-is often presented at elementary level, as a subfield of linear algebra&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;basis-of-vector-spacelinear-space&quot;&gt;Basis of Vector Space(Linear Space)&lt;/h4&gt;
-&lt;p&gt;An (ordered) basis of a linear space $W$, is an ordered list 
-$B=[\vec{w_1},\vec{w_2},\cdots,\vec{w_n}]$ of elements of W with the properties:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Spanning set: every $w \in W$ can be written:
-\(w=a_{1} \vec{w}_{1}+a_{2} \vec{w}_{2}+\dots+a_{n} \vec{w}_{n}\)&lt;/li&gt;
-  &lt;li&gt;Linear independent
-\(a_{1} \vec{w}_{1}+a_{2} \vec{w}_{2}+\dots+a_{n} \vec{w}_{n}=\vec{0}\) $\rightarrow a_1=a_2=\cdots=a_n=0$&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h5 id=&quot;examples-1&quot;&gt;Examples 1&lt;/h5&gt;
-&lt;p&gt;$W=V^n$ where &lt;br /&gt;
-\(B=\left[e_{1}, e_{2}, \cdots, e_{n}\right]\) &lt;br /&gt;
-\(e_{i}=\left(\begin{array}{l}{0} \\ {0} \\ {\vdots} \\ {1} \\
-{0}\end{array}\right)\)&lt;/p&gt;
-
-&lt;h5 id=&quot;examples-2&quot;&gt;Examples 2&lt;/h5&gt;
-&lt;p&gt;$W=P^3$ where &lt;br /&gt;
-\(B=\left[1, \alpha, \alpha^{2}, \alpha^{3}\right]\)&lt;/p&gt;
-
-&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;What is a Vector Space?
-First, we need to answer this question. 
-To form a vector space, we only need to operation, addition and scalar
-multiplication, only this, It’s enough, no inner product, no corss product, only
-vector addition and scalar multiplication.&lt;strong&gt;It doesn’t need to define
-multiplication between two vectors, It doesn’t define inner product, That’s the
-other structure.&lt;/strong&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;Why we define like this, to generalize, in this way, the polynomial is also a
-vector space,too .&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;We must be very clear about this basic concept.&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;How to denote the basic vector, as a computer scientist,we would perfer to $\vec{e_0} \vec_{e_1}, 
-\vec{e_2} \vec_{e_3}$, not start with &lt;strong&gt;1&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;reference&quot;&gt;reference&lt;/h4&gt;
-
-</description>
-    <link>/math/math-structure-abstract-algebra-vector-space.html</link>
-    <guid>/math/math-structure-abstract-algebra-vector-space</guid>
-    <pubDate>Thu, 25 Jul 2019 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>A.A.: Ring</title>
-    <description>
-&lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
-&lt;p&gt;Ring:  A ring is a set of elements under \(\times, -,+\), not commutative under \(\times\)&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;At first, ring is a concept generialize the integer&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h5 id=&quot;example&quot;&gt;Example&lt;/h5&gt;
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Integer: Every Integer is a product of primes.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Matrix
- \(2\times 2\) matrix, \(a,b,c,d \in R \times\).&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;\(\begin{bmatrix}
-		a &amp;amp; b \\
-		c &amp;amp; d  \\
-	\end{bmatrix}\)
-rings generalize matrix, which are pretty important.&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Intergers  are ring.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;polynomial&quot;&gt;Polynomial&lt;/h4&gt;
-&lt;p&gt;Polynomials with coefficients
-Every Polynimial is a product of irreducible polynomials(instead of prime polynomials) &lt;br /&gt;
-\(x^{15}-1=(x-1)\left(x^{2}+x+1\right)\left(x^{4}+x^{3}+x^{2}+x+1\right)
-\left(\begin{array}{c}{x^{8}-x^{7}+x^{5}-x^{4}}{+x^{3}-x+1}\end{array}\right)\)&lt;/p&gt;
-
-&lt;h4 id=&quot;remark&quot;&gt;Remark&lt;/h4&gt;
-&lt;p&gt;When I begin to learn math, the operation 0 divides a number confuses me a lot. &lt;br /&gt;
-After talent French mathematician comes out group theory, everything change. In the point of view of group theory, you can treat everything you 
-meet as group with additive structure. For example, real numbers under operation addition is a group, totally true.
-but you want to add multiply structure to this group, It’s Ok, I accept your proposal, and then give it a new name,
-we call it a ring.&lt;/p&gt;
-
-</description>
-    <link>/math/math-structure-abstract-algebra-ring.html</link>
-    <guid>/math/math-structure-abstract-algebra-ring</guid>
-    <pubDate>Thu, 25 Jul 2019 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>A.A.: Module</title>
-    <description>
-&lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Module: vector space can be generialized something more powerfull, this is called module, which
-is a generialized vector space.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h5 id=&quot;difference&quot;&gt;difference&lt;/h5&gt;
-&lt;ol&gt;
-  &lt;li&gt;In a vector space, the set of scalars is a field and acts on the vectors by scalar multiplication,
-subject to certain axioms such as the distributive law.&lt;/li&gt;
-  &lt;li&gt;In a module, the scalars need only be a ring.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h5 id=&quot;relationship&quot;&gt;Relationship&lt;/h5&gt;
-&lt;ol&gt;
-  &lt;li&gt;Module is vector space with a ring of scalars&lt;/li&gt;
-  &lt;li&gt;Vector Space is module with a field of scalars&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h5 id=&quot;example&quot;&gt;Example&lt;/h5&gt;
-&lt;ol&gt;
-  &lt;li&gt;Modue: M =  any Abelian group&lt;/li&gt;
-  &lt;li&gt;Scalars: R = Z&lt;/li&gt;
-  &lt;li&gt;Every albelian group is a Z-module.&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-    <link>/math/math-structure-abstract-algebra-module.html</link>
-    <guid>/math/math-structure-abstract-algebra-module</guid>
+    <link>/math/math-structure-abstract-algebra-group-abelian.html</link>
+    <guid>/math/math-structure-abstract-algebra-group-abelian</guid>
     <pubDate>Thu, 25 Jul 2019 00:00:00 +0900</pubDate>
   </item>
 
   <item>
     <title>A.A.: Field</title>
     <description>
-&lt;h4 id=&quot;field&quot;&gt;Field&lt;/h4&gt;
-&lt;p&gt;A field is a set F which is closed under two operations + and $\times$&lt;/p&gt;
+&lt;h4 id=&quot;background&quot;&gt;Background&lt;/h4&gt;
+&lt;p&gt;It is natural to ask whether or not some field contained in a larger field.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;We think of rational numbers, which reside inside real numbers.&lt;/li&gt;
+  &lt;li&gt;In turn, the real numbers live inside the complex numbers.&lt;/li&gt;
+  &lt;li&gt;We can study the relationship between Q and R, inquire the nature of these
+fields.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
 &lt;ol&gt;
+  &lt;li&gt;Extension Field: A field E is an extension field if f is a subfield of E.
+A field is a set F which is closed under two operations + and $\times$&lt;/li&gt;
   &lt;li&gt;F is an abelian group under +&lt;/li&gt;
   &lt;li&gt;F-{0} (The set F without additive identity 0) is an abelian group under
 $\times$&lt;/li&gt;
@@ -6743,6 +7615,15 @@ $\times$&lt;/li&gt;
 </description>
     <link>/math/math-structure-abstract-algebra-field.html</link>
     <guid>/math/math-structure-abstract-algebra-field</guid>
+    <pubDate>Thu, 25 Jul 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>A.A.: Finite Field</title>
+    <description>
+</description>
+    <link>/math/math-structure-abstract-algebra-field-finite.html</link>
+    <guid>/math/math-structure-abstract-algebra-field-finite</guid>
     <pubDate>Thu, 25 Jul 2019 00:00:00 +0900</pubDate>
   </item>
 
@@ -6821,6 +7702,61 @@ calculate inner product in high dimensional space, which &lt;strong&gt;means dis
 </description>
     <link>/math/math-structure-linear-algebra-positive-define.html</link>
     <guid>/math/math-structure-linear-algebra-positive-define</guid>
+    <pubDate>Wed, 24 Jul 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>L.A.: Introduction</title>
+    <description>
+&lt;h4 id=&quot;notation&quot;&gt;Notation&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;\(\boldsymbol{x}=\left[\begin{array}{llll}{x_{1}} &amp;amp; {x_{2}} &amp;amp; {\dots} &amp;amp;
+{x_{m}}\end{array}\right]^{\mathrm{T}}\): to simplify writing column vectors in-line with other text, sometimes they
+are written as row vectors with the transpose operation applied to them.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h4 id=&quot;spanning-sets&quot;&gt;Spanning Sets&lt;/h4&gt;
+&lt;p&gt;A set of vector \(\left\{\vec{v}_{1}, \vec{v}_{2}, \dots, \vec{v}_{n}\right\}\) is a spanning set for &lt;br /&gt;
+$\mathcal{A^3} \leftrightarrow$ for every vector $\vec{v} \in \mathcal{A^3}$ 
+can be written as: &lt;br /&gt;
+\(\vec{v}=a_{1} \vec{v}_{1}+a_{2} \vec{v}_{2}+\cdots+a_{n} \vec{v}_{n}\)&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h4 id=&quot;linear-independent-sets&quot;&gt;Linear Independent Sets&lt;/h4&gt;
+&lt;p&gt;a set of vectors 
+\(\left\{\vec{v}_{1}, \vec{v}_{2}, \dots, \vec{v}_{n}\right\}\)
+in $\mathcal{A^3}$ is linearly independent
+$\leftrightarrow$ none of the vectors can be written as linear combination of
+the others.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h5 id=&quot;example&quot;&gt;Example&lt;/h5&gt;
+&lt;p&gt;\(\begin{array}{l}{\left\{\left(\begin{array}{c}{2} \\ {3} \\
+{-1}\end{array}\right),\left(\begin{array}{c}{4} \\ {2} \\
+{1}\end{array}\right),\left(\begin{array}{c}{-2} \\ {5} \\
+{-5}\end{array}\right)\right\}} \\ {\left(\begin{array}{c}{-2} \\ {5} \\
+{-5}\end{array}\right)=3\left(\begin{array}{c}{2} \\ {3} \\
+{-1}\end{array}\right)-2\left(\begin{array}{c}{4} \\ {2} \\
+{1}\end{array}\right)}\end{array}\)&lt;/p&gt;
+
+&lt;p&gt;Geometrically it means these three vectors span a plane in $\mathcal{A^3}$&lt;/p&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;The origin of linear algebra is affine geometry. Because of affine geometry,
+we found linear algebra. After that, linear algebra is be treated as a
+independent branch.&lt;/li&gt;
+  &lt;li&gt;Linear algebra is just a tool for computation, &lt;strong&gt;It can used to deal with so
+many problems, just as a tool to calculation, don’t be afraid&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;We are so familiar with the computation of addition, minus,
+multiplication,division, but not too familiar with calculus, derivative,
+least familiar with matrix compuation. **As a mathematican, we shoud not
+afraid any calculation of math **&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/math/math-structure-linear-algebra-introduction.html</link>
+    <guid>/math/math-structure-linear-algebra-introduction</guid>
     <pubDate>Wed, 24 Jul 2019 00:00:00 +0900</pubDate>
   </item>
 
@@ -7262,56 +8198,6 @@ solve problem.&lt;/li&gt;
   </item>
 
   <item>
-    <title>A.A.: Unitary Group</title>
-    <description>
-&lt;h4 id=&quot;introduction&quot;&gt;Introduction&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;In mathematics, the &lt;strong&gt;special unitary group&lt;/strong&gt; of degree n, denoted SU(n), is the
-Lie Group of $n \times n$ unitary matrices with determinant 1.
-    &lt;ul&gt;
-      &lt;li&gt;More general unitary matrices may have complex determinants with absolute
-value 1, rather then real 1 in the special case.&lt;/li&gt;
-      &lt;li&gt;After the first sight of unitary, I am kind of scared, but actually, it is
-very simple, just the abstract of “Unit one”, because not sure about the unit,
-just create the word “unitary”&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Special_unitary_group&quot;&gt;Special Unitary Group-wiki&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    <link>/math/math-structure-abstract-algebra-special-unitary-group.html</link>
-    <guid>/math/math-structure-abstract-algebra-special-unitary-group</guid>
-    <pubDate>Sat, 20 Jul 2019 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>A.A.: Group Presentation</title>
-    <description>
-&lt;h4 id=&quot;introduction&quot;&gt;Introduction&lt;/h4&gt;
-&lt;p&gt;In mathematics, a presentation is one method of specifying a group. A
-presentation of a group G comprises a set S of generators-so that every element
-of the group can be written as a product of some of these generators-and a set R
-of relations among those generators. We can say G has presentation. &lt;br /&gt;
-\(\langle S | R\rangle\) &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;As a simple example, the cyclic group of order n has the presentation &lt;br /&gt;
-\(\langle a | a^n=1 \rangle\)&lt;/p&gt;
-
-&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Presentation_of_a_group&quot;&gt;Presentation of A Group-wiki&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    <link>/math/math-structure-abstract-algebra-group-presentation.html</link>
-    <guid>/math/math-structure-abstract-algebra-group-presentation</guid>
-    <pubDate>Sat, 20 Jul 2019 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
     <title>L.A.: Linear Equation</title>
     <description>
 &lt;h4 id=&quot;two-different-way-of-linear-equation&quot;&gt;Two different way of linear equation&lt;/h4&gt;
@@ -7538,315 +8424,94 @@ and
   </item>
 
   <item>
-    <title>A.T.: Simplex</title>
+    <title>M.A.: Introduction</title>
     <description>
-&lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
-&lt;p&gt;In geometry, a simplex(plural: simplexes or simplices) is a generalization of
-the notion of a triangle or tetrahedron to artitrary dimensions. &lt;br /&gt;&lt;/p&gt;
+&lt;h5 id=&quot;question-1-why-we-talk-about-multilinear-algebra-&quot;&gt;Question 1: why we talk about multilinear algebra ?&lt;/h5&gt;
+&lt;p&gt;why we talk about multilinear space, if we equip the spacetime with a vector space, what does 5*paris mean? &lt;br /&gt;
+It means nothing. &lt;br /&gt;
+The reason why we talk about multilinear space is because the tangent spaces.&lt;/p&gt;
+
+&lt;h5 id=&quot;question-2-why-study-vector-space&quot;&gt;Question 2: why study vector space?&lt;/h5&gt;
+&lt;p&gt;the benificial is following:&lt;/p&gt;
 &lt;ol&gt;
-  &lt;li&gt;a 0-simplex is a point&lt;/li&gt;
-  &lt;li&gt;a 1-simplex is a line segment&lt;/li&gt;
-  &lt;li&gt;a 2-simplex is a triangle&lt;/li&gt;
-  &lt;li&gt;a 3-simplex is a tetrahedron
-    &lt;ul&gt;
-      &lt;li&gt;A spatial configuration of n dimensions determined by n+1 points in a space of
-dimension equal to or greater than n&lt;/li&gt;
-      &lt;li&gt;A triangle together with its interior determined by its three vertices is a
-two-dimensional simplex in hte plane or any space of higher dimension.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
+  &lt;li&gt;for constuction of \(T_{P}M\), one needs an intermediate vector space&lt;/li&gt;
+  &lt;li&gt;tensor technique  are most easily understoodin in an abstract setting.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h4 id=&quot;boundary&quot;&gt;Boundary&lt;/h4&gt;
+&lt;h5 id=&quot;definition-vector-space&quot;&gt;definition: vector space&lt;/h5&gt;
+&lt;p&gt;a vector space is a set V with two operations, plus and times \((V,+,-)\)  &lt;br /&gt;
+1): a set V &lt;br /&gt;
+2): +: V*V $\rightarrow$ V “addition” &lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;\(\begin{aligned} \partial(S) &amp;amp;=\left(v_{0} v_{1}\right)+\left(v_{1}
-v_{2}\right)+\left(v_{2} v_{0}\right) \\ &amp;amp;=\left(v_{0} v_{1}\right)-\left(v_{0}
-v_{2}\right)+\left(v_{1} v_{2}\right) \\ &amp;amp;=\sum_{i=0}^{2}(-1)^{i}\left(v_{0}
-\cdots \hat{v}_{i} \cdots v_{i}\right) \end{aligned}\) &lt;br /&gt;
-where hats means omit.&lt;/p&gt;
+&lt;h5 id=&quot;vector-space-of-homomorphisms&quot;&gt;vector space of Homomorphisms&lt;/h5&gt;
+&lt;p&gt;if $(V,+,\cdot)$ and $(W,+,\cdot)$ are vector spaces, then we can define the set
+all linear maps from one to another: &lt;br /&gt;
+${\phi: V \rightarrow W}$ into a bag &lt;br /&gt;
+It’s actually just a set, and the set has a name, and the name is $Hom(V,W)$ &lt;br /&gt;
+This just &lt;strong&gt;a set&lt;/strong&gt;, of all linear maps. &lt;br /&gt;
+Furthermore, we can make this set &lt;strong&gt;Hom(V,W)&lt;/strong&gt; becomes a vector space by add structure&lt;br /&gt;
+such as addition and multiplication. &lt;br /&gt;
+so $(Hom(V,W),+,\cdot)$ is also a vector space.&lt;/p&gt;
 
-</description>
-    <link>/math/math-structure-algebraic-topology-simplex.html</link>
-    <guid>/math/math-structure-algebraic-topology-simplex</guid>
-    <pubDate>Thu, 18 Jul 2019 00:00:00 +0900</pubDate>
-  </item>
+&lt;h4 id=&quot;terminology-dual-vector-space&quot;&gt;terminology: dual vector space&lt;/h4&gt;
+&lt;p&gt;dual vector space just a heavily used special case. &lt;br /&gt;&lt;br /&gt;
+suppose \((V,+,\cdot)\) is a vector space. &lt;br /&gt;
+\(V^{\ast}:= {\phi: V \rightarrow R }\) &lt;br /&gt;
+real numbers are also vector space, so this is just another set &lt;strong&gt;Hom(V,R)&lt;/strong&gt;, and it is a special set&lt;br /&gt;
+V and \(V^{\ast}\) just the most basic building blocks  to build very complicat case. It’s clever to bring something down to 
+its elementry building blocks, that’s the only idea. &lt;br /&gt;
+\((V^{\ast},+,\cdot)\) define on Hom(V,R) is also a vector space. &lt;br /&gt;
+It has a speical name, it’s called &lt;strong&gt;dual vector space&lt;/strong&gt; to V.&lt;/p&gt;
 
-  <item>
-    <title>A.T.: Topology</title>
-    <description>
-&lt;h4 id=&quot;algebraic-topology&quot;&gt;Algebraic Topology&lt;/h4&gt;
+&lt;h4 id=&quot;example&quot;&gt;Example&lt;/h4&gt;
+&lt;p&gt;consider:  $I: P \rightarrow R$ which means $I \in P^{\ast}$ &lt;br /&gt;
+def $I(p) := \int_{0}^{1}p(x)dx $ &lt;br /&gt;
+so $I=\int_{0}^{1}dx$ is a covector&lt;/p&gt;
+
+&lt;h4 id=&quot;covector&quot;&gt;covector&lt;/h4&gt;
+&lt;p&gt;element \(\phi \in V^{\ast}\) are called covector.&lt;/p&gt;
+
+&lt;h4 id=&quot;tensor&quot;&gt;tensor&lt;/h4&gt;
+&lt;p&gt;let \((V,+,\cdot)\) be a vector space, An (r,s)-tensor T over V is a multilinear map: &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;$
+T: \underbrace{V^{&lt;em&gt;} \times \cdots \times V^{&lt;/em&gt;}}&lt;em&gt;{r} \times \underbrace{V \times \cdots \times V}&lt;/em&gt;{s} \rightarrow \mathbf{R}
+$ &lt;br /&gt;
+That’s the logic we say V and \(V^{\ast}\) just the most basic building blocks.&lt;/p&gt;
+
+&lt;p&gt;So what does multilinear mean? &lt;br /&gt;&lt;/p&gt;
 &lt;ol&gt;
-  &lt;li&gt;The study of geometrical properties and spatial relations unaffected by the
-continuous change of shape or size of figures.&lt;/li&gt;
-  &lt;li&gt;Algebraic means use algebraic to study topology.&lt;/li&gt;
-  &lt;li&gt;we are not asking the distance, what are the essential features of these
-mathematic objects which are invarient under the continuous deformation.&lt;/li&gt;
-  &lt;li&gt;Through this course, we are going to have a good look at some objects which
-are realy centeral  in mathmatics.&lt;/li&gt;
-  &lt;li&gt;you are going to learn fundamental objects.&lt;/li&gt;
+  &lt;li&gt;T(1,1)-tensor  &lt;br /&gt;
+$T(\phi + \omega,v) = T(\phi,v)+T(\omega,v) $ &lt;br /&gt;
+$T(\lambda \phi, v) = \lambda T(\phi,v)$ &lt;br /&gt;
+$T(\phi,v+w) = T(\phi,v)+T(\phi,w)$ &lt;br /&gt;
+$T( \phi, \lambda v) = \lambda T(\phi,v)$ &lt;br /&gt;
+$T(\phi+\omega,v+w) = T(\phi,v)+T(\phi,w)+T(\omega,v)+T(\omega,w)$ &lt;br /&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h4 id=&quot;four-dimensional-space-we-cant-image-four-dimensional-spacebut&quot;&gt;four dimensional space we can’t image four dimensional space.but&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;in zero-dimensional space, it’s a point&lt;/li&gt;
-  &lt;li&gt;in one-dimensional space, we cut along a point, the intersection  is a
-zero-dimensional space.&lt;/li&gt;
-  &lt;li&gt;in two-dimensional space, we cut along a line,  the intersection is a
-one-dimensional space.&lt;/li&gt;
-  &lt;li&gt;in three-dimensional space, we cut along a random plane, the intersection is
-a two-dimensional space.&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h4 id=&quot;example-1-polyinomial&quot;&gt;Example 1: polyinomial&lt;/h4&gt;
+&lt;p&gt;\(g: P \times P \rightarrow R\) &lt;br /&gt;
+\((p,q) \mapsto \int_{0}^{1}dxp(x)q(x)\)  &lt;br /&gt;
+is a (0,2)-tensor over P.&lt;/p&gt;
 
-&lt;h4 id=&quot;euler-numbers&quot;&gt;Euler Numbers&lt;/h4&gt;
-
-&lt;h4 id=&quot;remark-why-we-often-use-manifold-such-as-sphere-torus-because-they-are&quot;&gt;remark why we often use manifold, such as sphere, torus, because they are&lt;/h4&gt;
-&lt;p&gt;more fundamental objects, they are objects can be treated almost the same as
-them.&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;torus is a fundamental object in mathematics.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;one-dimensional-objects&quot;&gt;One-dimensional Objects&lt;/h4&gt;
-&lt;p&gt;The space of all 1-dim subspace&lt;/p&gt;
-
-&lt;h4 id=&quot;concept-group-structure-on-a-circle&quot;&gt;Concept: Group Structure on a Circle&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;This is found by an India high school teacher, the level of India high school
-teacher, at least, some of them is very high.&lt;/li&gt;
-  &lt;li&gt;This concept is pure geometry, and you can prove it with algebraic geometry,
-I think that’s why mathematian don’t believe algebraic in geometry.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;construction-of-toplogical-space&quot;&gt;Construction of Toplogical Space&lt;/h4&gt;
-&lt;p&gt;Affine Plane($A^2$) is  &lt;br /&gt;
-\(A^2 \simeq A^1 \times A^1\)
-This formula means take order pairs.&lt;/p&gt;
+&lt;h4 id=&quot;example-2-vectors-and-covectors-as-tensors&quot;&gt;Example 2: Vectors and covectors as tensors&lt;/h4&gt;
+&lt;p&gt;$\varphi \in V^{\ast} \rightarrow \varphi: V \rightarrow R \rightarrow \varphi (0,1)-tensor$ &lt;br /&gt;
+inner product is a (0,2)-tensor &lt;br /&gt;
+You know so many tensors, but maybe you never call them tensors.&lt;/p&gt;
 
 &lt;h4 id=&quot;remark&quot;&gt;Remark&lt;/h4&gt;
-&lt;p&gt;Product of space, $X \times Y$: [x,y] which x from X, y from Y.&lt;/p&gt;
+&lt;p&gt;$
+\epsilon^{1}, \epsilon^{2}
+$&lt;/p&gt;
 
-&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Why we study manifold ? what is a manifold ? what can we do with manifold ?&lt;/li&gt;
-  &lt;li&gt;Im my opinion, manifold is just a generalization of geometry object, the benefit
-of this generalization is we can find some intrinsic feature of some geometry,
-we can classification.&lt;/li&gt;
-  &lt;li&gt;For example, Euler characteristic can be generailzed by a sphere, that’s the
-power of generaization of the concept of geometry.&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;In my opinion, topology is toplogy, how can we connect this to algebra.
-That’s impossible, but, but, but, There is an always amazning guy. He use
-group theory to connect the algebra and topology, That’s unbelievable.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;There is a very important properties in topology, which is isomorphism,
-&lt;strong&gt;why,why,why isomorphism is so important&lt;/strong&gt;, just because, by isomorphism, we
-can keep the intrinsic properties of target, and this provides us more efficient
-way to solve problems. For example, the polynomial space is isomorphic to
-vector space, and we can study polynomial space problems by study vector
-space.&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    <link>/math/math-structure-algebraic-topology.html</link>
-    <guid>/math/math-structure-algebraic-topology</guid>
-    <pubDate>Wed, 17 Jul 2019 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>A.T.: Homology</title>
-    <description>
-&lt;h4 id=&quot;haha&quot;&gt;HAHA&lt;/h4&gt;
-&lt;p&gt;As we prefer to write operation as addition, so loop is represented by
-a+b+c=b+c+a = c+a+b, because it is a closed loop geometry, we call this a &lt;strong&gt;cycle&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;haha-1&quot;&gt;HAHA&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;chain: is going to be a word for random element in this free abelian group of
-random combination  with integer coefficient.&lt;/li&gt;
-  &lt;li&gt;boundary: final point minus initial point&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;haha-2&quot;&gt;HAHA&lt;/h4&gt;
-&lt;p&gt;This is an algebraic way to detect whether we have a cycle or not.&lt;/p&gt;
-
-&lt;h4 id=&quot;haha-3&quot;&gt;HAHA&lt;/h4&gt;
-&lt;p&gt;Every Connected graph X has a spanning tree which includes all vertices.
-A tree with V vertices always has v-1 edges.&lt;/p&gt;
-
-&lt;h4 id=&quot;haha-4&quot;&gt;HAHA&lt;/h4&gt;
-&lt;p&gt;\(C_{3} \stackrel{\partial_{3}}{\rightarrow} C_{2}
-\stackrel{\partial_{2}}{\rightarrow} C_{1}
-\stackrel{\partial_{1}}{\rightarrow} C_{0}\)&lt;/p&gt;
+&lt;h5 id=&quot;remark-1&quot;&gt;remark&lt;/h5&gt;
+&lt;p&gt;Compared with linear algebar on vector space, &lt;strong&gt;Multilinear Algebra&lt;/strong&gt; is the same field, emphasis just not only look at the linear maps,
+but multilinear maps.&lt;/p&gt;
 
 </description>
-    <link>/math/math-structure-algebraic-topology-homology.html</link>
-    <guid>/math/math-structure-algebraic-topology-homology</guid>
-    <pubDate>Wed, 17 Jul 2019 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>A.T.: Fundamental Group</title>
-    <description>
-&lt;h4 id=&quot;haha&quot;&gt;HAHA&lt;/h4&gt;
-&lt;p&gt;Fundamental group of a surface, which is a very important topic to link topology
-and algebra.&lt;/p&gt;
-
-&lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
-&lt;p&gt;In mathematics, a path in topological space X is a continuous function f from
-unit interval I=[0,1] to X &lt;br /&gt;
-\(f: I \rightarrow X\)&lt;/p&gt;
-
-&lt;h4 id=&quot;homotopic-path&quot;&gt;Homotopic path&lt;/h4&gt;
-
-&lt;h4 id=&quot;definition-1&quot;&gt;Definition&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;toological space: may be defined as a set of points, along with a set of
-neighbourhoods for each point.&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;In topology, two continuous functions from one topological space to another
-are called homotopic if one can be “continuously deformed into the other,
-such a deformation being called a homotopy between two functions.”&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;The most important thing is to convince ourself, this object is realy a
-group.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;group&quot;&gt;Group&lt;/h4&gt;
-&lt;p&gt;$\pi (m, x_0) $ is a group, with technically mathmatically theory of a group.&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;closed&lt;/li&gt;
-  &lt;li&gt;identity element: constant loop, the loop doesn’t go anywhere, just stay at
-$x_0$&lt;/li&gt;
-  &lt;li&gt;associativity&lt;/li&gt;
-  &lt;li&gt;inverse element&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
-&lt;p&gt;Why we are interested in subspace, it’s just like the subgroup in the group
-theory !!!!!!!!! &lt;br /&gt;
-These guys are co clever!!!!!!!!!!!!!&lt;/p&gt;
-
-</description>
-    <link>/math/math-structure-algebraic-topology-fundamental-group.html</link>
-    <guid>/math/math-structure-algebraic-topology-fundamental-group</guid>
+    <link>/math/math-structure-multilinear-algebra-introduction.html</link>
+    <guid>/math/math-structure-multilinear-algebra-introduction</guid>
     <pubDate>Tue, 16 Jul 2019 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>A.T.: Surface Classification</title>
-    <description>
-&lt;h4 id=&quot;compact-surface&quot;&gt;Compact Surface&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;A compact surface is a surface which is also a compact set. A compact surface
-has a triangulation with a finite number of triangles. The sphere and torus are
-compact.&lt;/li&gt;
-  &lt;li&gt;compact means boundary and closed which doesn’t has any hole.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;haha&quot;&gt;HAHA&lt;/h4&gt;
-&lt;p&gt;With edges labelled by letters and directed, and every edge occurs exactly
-twice.&lt;/p&gt;
-
-</description>
-    <link>/math/math-structure-algebraic-topology-surface-classification.html</link>
-    <guid>/math/math-structure-algebraic-topology-surface-classification</guid>
-    <pubDate>Mon, 15 Jul 2019 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>A.T.: Mobius, Klein, Orientability </title>
-    <description>
-&lt;h4 id=&quot;introduction&quot;&gt;Introduction&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Closed surfaces are divided into two classes, orientable and non-orientable.
-    &lt;ul&gt;
-      &lt;li&gt;The sphere and the torus are examples of orientable surfaces;&lt;/li&gt;
-      &lt;li&gt;The projective plane and the Mobius band are non-orientable.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;haha&quot;&gt;HAHA&lt;/h4&gt;
-&lt;p&gt;A surface M is orientable which means we can consistenly assign a notion of
-positive rotation as we move around.&lt;/p&gt;
-
-&lt;h4 id=&quot;mobius-band&quot;&gt;Mobius Band&lt;/h4&gt;
-&lt;p&gt;Mobius band is non-orientable.&lt;/p&gt;
-</description>
-    <link>/math/math-structure-algebraic-topology-mobius-klein.html</link>
-    <guid>/math/math-structure-algebraic-topology-mobius-klein</guid>
-    <pubDate>Mon, 15 Jul 2019 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>A.T.: Euler-Poincare Characteristic</title>
-    <description>
-&lt;h4 id=&quot;concept&quot;&gt;Concept&lt;/h4&gt;
-&lt;p&gt;In algebraic topology, the Euler characteristic or Euler number is a topological
-invariant, a number that describes a topological space’s shape or structure
-regardless of the way it is bent. It is commonly denoted by \(\chi\)&lt;/p&gt;
-
-&lt;h4 id=&quot;haha&quot;&gt;HAHA&lt;/h4&gt;
-&lt;p&gt;You can make a model, doesn’t mean it is a mathematic object.
-Euler’s formual holds for any polyhedron which has the topology of the sphere.&lt;/p&gt;
-
-</description>
-    <link>/math/math-structure-algebraic-topology-poincare-characteristic.html</link>
-    <guid>/math/math-structure-algebraic-topology-poincare-characteristic</guid>
-    <pubDate>Sun, 14 Jul 2019 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>A.T.: Curvature</title>
-    <description>
-&lt;h4 id=&quot;question-how-to-describe-the-amount-of-turning-&quot;&gt;Question: How to describe the amount of turning ?&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;360&lt;/li&gt;
-  &lt;li&gt;2$\pi$&lt;/li&gt;
-  &lt;li&gt;1 
-which one is better ?
-&lt;img src=&quot;/images/math-stucutre-algebraic-topology-curvature.png&quot; /&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    <link>/math/math-structure-algebraic-topology-curvature.html</link>
-    <guid>/math/math-structure-algebraic-topology-curvature</guid>
-    <pubDate>Sun, 14 Jul 2019 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>A.T.: 1 and 2-dim Objects</title>
-    <description>
-&lt;h4 id=&quot;haha&quot;&gt;HAHA&lt;/h4&gt;
-&lt;p&gt;\(A^{2}=A^{\prime} \times A^{\prime}\) &lt;br /&gt;
-Product of lines: this is a construction of topological spaces.&lt;/p&gt;
-
-&lt;h4 id=&quot;borromean-rings&quot;&gt;Borromean Rings&lt;/h4&gt;
-&lt;p&gt;In mathematics, the Borromean rings consist of three topological circles which
-are linked but where removing any one ring leaves the other two unconnected. In
-other words, no two of the three rings are linked with each other as a Hopf
-link, but nonetheless all three are linked.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/math-structure-algebraic-topology-1-2-dimensional-objects-borromean-ring.png&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
-&lt;p&gt;Genus: A topologically invariant property of a surface defined as the largest
-number of nonintersecting simple closed curves that can be drawn on the surface
-without separating it. Roughly speaking, it is the number of holes in a surface.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;It can be described by the number of the holes, it’s a little bit
-informal, more careful definition, the maximum number of disjoint loops on the
-surface. &lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;http://mathworld.wolfram.com/Genus.html&quot;&gt;Genus&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Borromean_rings&quot;&gt;Borromean Rings&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-    <link>/math/math-structure-algebraic-topology-1-2-dimensional-objects.html</link>
-    <guid>/math/math-structure-algebraic-topology-1-2-dimensional-objects</guid>
-    <pubDate>Sun, 14 Jul 2019 00:00:00 +0900</pubDate>
   </item>
 
   <item>
@@ -7888,7 +8553,9 @@ edges or at a vertex.
 &lt;p&gt;Quaternion are a number system that extends the complex numbers. A feature of
 quaternions is that multiplication of two quaternons is noncommutative.
 Quaternions are generally represented in the form: &lt;br /&gt;
-\(a+b \mathbf{i}+c \mathbf{j}+d \mathbf{k}\)
+$
+a+b \mathbf{i}+c \mathbf{j}+d \mathbf{k}
+$
 where a,b,c and d are real numbers, and i,j, and k are the fundamental
 quaternion units. The quaternions were the first &lt;strong&gt;noncommutative division 
 algebra&lt;/strong&gt; to be discovered.&lt;/p&gt;
@@ -7961,51 +8628,6 @@ zero.&lt;/li&gt;
   </item>
 
   <item>
-    <title>L.T.: Matrix Exponential</title>
-    <description>
-&lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
-&lt;p&gt;If X is an $n \times n$ matrix, we define the exponential of $X$, denoted by
-$e^{X}$ or $exp X$, bu the usual power series
-$
-e^{X}=\sum_{m=0}^{\infty} \frac{X^{m}}{m !}
-$&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Where $X^0$ is defined to be the identity matrix $I$ and where $X^m$ is the
-repeated matirx product of X with itself.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;terminology&quot;&gt;Terminology&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;GL(N,R): general linear group, n-dimensional, The field is real number&lt;/li&gt;
-  &lt;li&gt;GL(N,C): general linear group, n-dimensional, The field is complex number&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;GL(N,Q): general linear group, n-dimensional, The field is quaternion number 
-&lt;br /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Operation: I said it’s a group, I should tell you the group operation. The 
-operation are matrix multiplication.&lt;/li&gt;
-  &lt;li&gt;Element: All invertible $N \times N$ matrices with entries from corresponding
-field.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;definition-1&quot;&gt;Definition&lt;/h4&gt;
-&lt;p&gt;\(\begin{array}{l}{N_{(+,\cdot)} e_{n}} \\ {(,) \text{   }  \mathbb{F}}\end{array}\)
-A Vector space, given the basis unit, a certain field, vector space scalar and
-multiplication, inner product. That’s all we need for a vector space.&lt;/p&gt;
-
-&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;The relationship between Lie group and Lie Algebra, first, we have Lie group,
-and we want to study the properties of Lie group, so we call it lie algebra.&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-    <link>/math/math-structure-lie-theory-matrix-exponential.html</link>
-    <guid>/math/math-structure-lie-theory-matrix-exponential</guid>
-    <pubDate>Thu, 11 Jul 2019 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
     <title>L.T.: Matrix Lie Groups</title>
     <description>
 &lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
@@ -8045,17 +8667,52 @@ vibrant branch of mathematics.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4 id=&quot;application&quot;&gt;Application&lt;/h4&gt;
-&lt;p&gt;In manifold theory, Lie groups serve mainly as an importatn class of manifolds,
+&lt;p&gt;In manifold theory, Lie groups serve mainly as an important class of manifolds,
 and Lie algebras as examples of tangent spaces.&lt;/p&gt;
 </description>
-    <link>/math/math-structure-lie-theory-lie-groups.html</link>
-    <guid>/math/math-structure-lie-theory-lie-groups</guid>
+    <link>/math/math-structure-lie-groups.html</link>
+    <guid>/math/math-structure-lie-groups</guid>
+    <pubDate>Thu, 11 Jul 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>A.A.: Unitary Group</title>
+    <description>
+&lt;h4 id=&quot;introduction&quot;&gt;Introduction&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;In mathematics, the &lt;strong&gt;special unitary group&lt;/strong&gt; of degree n, denoted SU(n), is the
+Lie Group of $n \times n$ unitary matrices with determinant 1.
+    &lt;ul&gt;
+      &lt;li&gt;More general unitary matrices may have complex determinants with absolute
+value 1, rather then real 1 in the special case.&lt;/li&gt;
+      &lt;li&gt;After the first sight of unitary, I am kind of scared, but actually, it is
+very simple, just the abstract of “Unit one”, because not sure about the unit,
+just create the word “unitary”&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Special_unitary_group&quot;&gt;Special Unitary Group-wiki&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/math/math-structure-lie-group-special-unitary.html</link>
+    <guid>/math/math-structure-lie-group-special-unitary</guid>
     <pubDate>Thu, 11 Jul 2019 00:00:00 +0900</pubDate>
   </item>
 
   <item>
     <title>L.T.: Lie Algebras</title>
     <description>
+&lt;h4 id=&quot;background&quot;&gt;Background&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Abstract Lie algebras are algebraic structures used in the Lie groups.&lt;/li&gt;
+  &lt;li&gt;They are vector space endomorphisms of linear transformations that have a new
+operation that is neither associatve nor commutative, but referred to as the
+bracket operation, or commutator.&lt;/li&gt;
+&lt;/ol&gt;
+
 &lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
 &lt;ol&gt;
   &lt;li&gt;A finite-dimensional real or complex Lie Algebra is a finite-dimensional real
@@ -8074,14 +8731,64 @@ for all $X,Y, Z \in \mathfrak{g}$&lt;/li&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://scholarworks.lib.csusb.edu/cgi/viewcontent.cgi?referer=https://www.google.com/&amp;amp;httpsredir=1&amp;amp;article=1668&amp;amp;context=etd&quot;&gt;Lie Algebra&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
 </description>
-    <link>/math/math-structure-lie-theory-lie-algebra.html</link>
-    <guid>/math/math-structure-lie-theory-lie-algebra</guid>
+    <link>/math/math-structure-lie-algebra.html</link>
+    <guid>/math/math-structure-lie-algebra</guid>
     <pubDate>Thu, 11 Jul 2019 00:00:00 +0900</pubDate>
   </item>
 
   <item>
-    <title>L.T.: Introduction</title>
+    <title>L.T.: Matrix Exponential</title>
+    <description>
+&lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
+&lt;p&gt;If X is an $n \times n$ matrix, we define the exponential of $X$, denoted by
+$e^{X}$ or $exp X$, bu the usual power series
+$
+e^{X}=\sum_{m=0}^{\infty} \frac{X^{m}}{m !}
+$&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Where $X^0$ is defined to be the identity matrix $I$ and where $X^m$ is the
+repeated matirx product of X with itself.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;terminology&quot;&gt;Terminology&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;GL(N,R): general linear group, n-dimensional, The field is real number&lt;/li&gt;
+  &lt;li&gt;GL(N,C): general linear group, n-dimensional, The field is complex number&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;GL(N,Q): general linear group, n-dimensional, The field is quaternion number 
+&lt;br /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Operation: I said it’s a group, I should tell you the group operation. The 
+operation are matrix multiplication.&lt;/li&gt;
+  &lt;li&gt;Element: All invertible $N \times N$ matrices with entries from corresponding
+field.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;definition-1&quot;&gt;Definition&lt;/h4&gt;
+&lt;p&gt;\(\begin{array}{l}{N_{(+,\cdot)} e_{n}} \\ {(,) \text{   }  \mathbb{F}}\end{array}\)
+A Vector space, given the basis unit, a certain field, vector space scalar and
+multiplication, inner product. That’s all we need for a vector space.&lt;/p&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;The relationship between Lie group and Lie Algebra, first, we have Lie group,
+and we want to study the properties of Lie group, so we call it lie algebra.&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/math/math-structure-lie-algebra-matrix-exponential.html</link>
+    <guid>/math/math-structure-lie-algebra-matrix-exponential</guid>
+    <pubDate>Thu, 11 Jul 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>L.A.: Introduction</title>
     <description>
 &lt;h4 id=&quot;inspiration&quot;&gt;Inspiration&lt;/h4&gt;
 &lt;ol&gt;
@@ -8112,103 +8819,9 @@ algorithem for constructing the solution or simplification.&lt;/li&gt;
 &lt;/ol&gt;
 
 </description>
-    <link>/math/math-structure-lie-theory-introduction.html</link>
-    <guid>/math/math-structure-lie-theory-introduction</guid>
+    <link>/math/math-structure-lie-algebra-introduction.html</link>
+    <guid>/math/math-structure-lie-algebra-introduction</guid>
     <pubDate>Thu, 11 Jul 2019 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>N.T.: Real Number</title>
-    <description>
-&lt;h4 id=&quot;haha&quot;&gt;HAHA&lt;/h4&gt;
-&lt;p&gt;Currently, we think real numbers are the basic building blocks of number, but,
-realy, Is this point view right?  Even this is right, how to explain $e\times\pi$,
-how to explain $e+\pi$, what does this mean?&lt;/p&gt;
-
-</description>
-    <link>/math/math-structure-number-theory-real-number.html</link>
-    <guid>/math/math-structure-number-theory-real-number</guid>
-    <pubDate>Tue, 09 Jul 2019 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>A.A.: History</title>
-    <description>
-&lt;h4 id=&quot;haha&quot;&gt;HAHA&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;because of Arabic numbers and we can use it. Arabic numbers are the most important contribution 
-that India have done to modern science. Arabic numbers provide the possibility that you can use 
-them to calculate pretty easily.&lt;/li&gt;
-  &lt;li&gt;Greek Number System: As the picture in the following, It is not possible to use them to,
-calucuate, If you want to use this do arithmetic, you at least a PHD.
-&lt;img src=&quot;/images/structure-number-theory-greek-number-system.png&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;Rome Number: I, II, III, IV, V, VI, VII, VIII, IX, X, XI, XII stands for 1 to 12, which is not 
-suit for arithmetic&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www-history.mcs.st-and.ac.uk/history/HistTopics/Greek_numbers.html&quot;&gt;Greek number system&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Roman_numerals&quot;&gt;Rome Number&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    <link>/math/math-structure-number-theory-history.html</link>
-    <guid>/math/math-structure-number-theory-history</guid>
-    <pubDate>Thu, 04 Jul 2019 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>N.T.: Complex</title>
-    <description>
-&lt;h4 id=&quot;notation&quot;&gt;notation&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;N - natural numbers&lt;/li&gt;
-  &lt;li&gt;Z - integer   Z was used to denote integers because a germany mathmatician  did a great job on ring theory. In germany language, integers are Zahlen.&lt;/li&gt;
-  &lt;li&gt;Q - rational numbers (from quotient)&lt;/li&gt;
-  &lt;li&gt;R - real numbers&lt;/li&gt;
-  &lt;li&gt;C - complex numbers&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;At first, there is only positive number and zero in the world, because they make sense. Natural numbes are closed 
-and operations of addition and multiplification. &lt;br /&gt;
-After minus operation was created, Natural numbers  is not closed any more. So negative numbers were invented.
-Numbers are extend from natural numbers to integer&lt;br /&gt;
-After divide operation was created, Integer is not closed any more. So rational numbers were invented.
-Numbers are extend from integer to rational numbers. &lt;br /&gt;
-Because the first math crisis,  \(\sqrt{2}\) comes out, in order to deal with these numbers. So irrational numbers were invented.
-Numbers are extend from ration numbers to real numbers. &lt;br /&gt;
-At last, we run into complex numbers, so what does \(2^i\) mean, how to calulate this crap ? &lt;br /&gt;
-we can use Taylor expansion to calculate. &lt;br /&gt; 
-complex numbers is very useful to calculate integral problem.&lt;/p&gt;
-
-&lt;h4 id=&quot;imaginary-number-geometry-meaning&quot;&gt;imaginary number geometry meaning&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;strong&gt;i&lt;/strong&gt; is not a number, which means rotation 90 degree.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;1+i&lt;/strong&gt; stands for the rotate state&lt;/li&gt;
-  &lt;li&gt;The complex numbers allow us to consider scalings and rotations as two instances of the same thing;
-and by ensuring that negative reals have square roots, we get something every ploynominal equation can be 
-solved: &lt;strong&gt;complex number is the algebraic closure of R&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;history&quot;&gt;History&lt;/h4&gt;
-&lt;p&gt;\(y^{3}=p y+q\) &lt;br /&gt;
-solution: &lt;br /&gt;
-\(y^{3}=\sqrt{\frac{q}{2}+\sqrt{\left(\frac{q}{2}\right)^{2}-\left(\frac{p}{3}\right)^{3}}}+
-\sqrt[3]{\frac{q}{2}-\sqrt{\left(\frac{q}{2}\right)^{2}-\left(\frac{p}{3}\right)^{3}}}\)&lt;/p&gt;
-
-&lt;p&gt;Example: &lt;br /&gt;
-\(x^3=15x+4\)
-solution: &lt;br /&gt;
-\(x=\sqrt[3]{2+11 \sqrt{-1}}+\sqrt[3]{2-11 \sqrt{-1}}\)&lt;/p&gt;
-
-&lt;p&gt;\(\begin{array}{l}{(2+i)^{3}=2+11 i} \\ {(2-i)^{3}=2-11 i}\end{array}\)
-&lt;br /&gt;
-\(x=2+i+2-i=4\)&lt;/p&gt;
-
-</description>
-    <link>/math/math-structure-number-theory-complex.html</link>
-    <guid>/math/math-structure-number-theory-complex</guid>
-    <pubDate>Thu, 04 Jul 2019 00:00:00 +0900</pubDate>
   </item>
 
   <item>
@@ -8239,66 +8852,6 @@ $&lt;/li&gt;
     <link>/math/math-structure-exterior-algebra-introduction.html</link>
     <guid>/math/math-structure-exterior-algebra-introduction</guid>
     <pubDate>Sun, 30 Jun 2019 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>Kmeans</title>
-    <description>
-&lt;h4 id=&quot;what-does-kmeans-do-&quot;&gt;What does Kmeans do ?&lt;/h4&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;The goal of this algorithm is to find groups in the data, with the number of groups represented by the variable K.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;hr /&gt;
-
-&lt;h4 id=&quot;formula&quot;&gt;formula&lt;/h4&gt;
-
-&lt;p&gt;All points with a cluster are closer in distance to their centroid than they are to any other centroid, and the mathematical condition
-for the K cluster \(C_{k}\) and the K centroid \(u_{k}\) can be expressed as: &lt;br /&gt;&lt;/p&gt;
-
-\[\text { Mnimize } \sum_{k=1}^{K} \sum_{\mathbf{x}_{n} \in C_{k}}\left\|\mathrm{x}_{n}-\mu_{k}\right\|^{2} \text { with respect to } C_{k}, \mu_{k}\]
-
-&lt;hr /&gt;
-
-&lt;h4 id=&quot;application&quot;&gt;Application&lt;/h4&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;customer segmentation&lt;/li&gt;
-  &lt;li&gt;Document Classification&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;the-relationship-between-em-algorithm-and-kmeans&quot;&gt;the relationship between EM algorithm and Kmeans&lt;/h4&gt;
-&lt;p&gt;The general EM scheme&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;The E-step, where each object is assigned to the centroid such that it is assigned to the most likely cluster
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;why why why the name is Expectation&lt;/strong&gt;, because in this step we assign the
-probability to each observation data, 0 or 1, &lt;strong&gt;then we can calculate the
-expectation of corresponding distribution.&lt;/strong&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;The M-step, where the model(=centroids) are recalculated(least square optimization)
-It differs from GMM:
-    &lt;ul&gt;
-      &lt;li&gt;it uses hard partitioning, each object is assigned to exactly one cluster&lt;/li&gt;
-      &lt;li&gt;the model are centroids only, no variance or covariance are taken into account&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;hr /&gt;
-
-&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.kaggle.com/shrutimechlearn/step-by-step-kmeans-explained-in-detail/data&quot;&gt;Step by step Kmeans&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://stats.stackexchange.com/questions/76866/clustering-with-k-means-and-em-how-are-they-related&quot;&gt;Clustering with K-Means and EM: how are they related ?&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    <link>/kmeans.html</link>
-    <guid>/kmeans</guid>
-    <pubDate>Fri, 24 May 2019 00:00:00 +0900</pubDate>
   </item>
 
   <item>
