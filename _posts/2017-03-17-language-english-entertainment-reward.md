@@ -10,5 +10,6 @@ tags: ["英語"]
 
 #### Phrase
 1. golden statue
+2. golden raspberry award
 #### Phrase
 1. Make a speech

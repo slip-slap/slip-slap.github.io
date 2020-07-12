@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "L.T.: Lie Algebras"
+title: "Lie: Algebra"
 keywords: []
 description: 
 category: "math"
-tags: ["構造","L.T."]
+tags: ["構造","Lie"]
 ---
 {% include JB/setup %}
 

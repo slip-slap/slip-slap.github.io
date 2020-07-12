@@ -40,6 +40,6 @@ tags: ["英語"]
 -  the verb here is got. 
 2. you are not marriage material.
 3. we are man and wife now.
-4. The anniversary comeing up.
+4. The anniversary coming up.
 5. The band is ready
 

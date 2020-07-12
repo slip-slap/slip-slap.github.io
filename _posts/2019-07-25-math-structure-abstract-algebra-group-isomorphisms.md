@@ -25,3 +25,9 @@ the identity homomorphism.
   endomorphism. An endomorphism which is also an isomorphism is called an
   automorphism.
 
+<img src="{{IMAGE_PATH}}/math-structure-abstract-algebra-group-isomorphism.png" />
+
+#### Galois
+1. Isomorphism is the most important properties that we want to study, because
+   it means group classification.
+

@@ -25,6 +25,7 @@ tags: ["英語"]
 3. fried
 4. grilled
 5. smoked
+6. simmer
 
 #### Flavour
 1. overcooked
@@ -38,10 +39,10 @@ tags: ["英語"]
 8. meatball
 
 
-
 #### Food
 1. Stalk, root
 2. skin
+3. street food
 
 #### Phrase
 1. last stick of gum

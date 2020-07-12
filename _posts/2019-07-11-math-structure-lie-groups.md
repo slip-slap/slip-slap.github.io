@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "L.T.: Matrix Lie Groups"
+title: "Lie: Groups"
 keywords: []
 description: 
 category: "math"
-tags: ["構造","L.T."]
+tags: ["構造","Lie"]
 ---
 {% include JB/setup %}
 

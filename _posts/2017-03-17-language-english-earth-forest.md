@@ -19,10 +19,6 @@ tags: ["英語"]
 3. cut down
 
 
-
-
-
-
 #### sentence
 1. you can grow mushroom on stumps
 2. The root system is pretty solid, it'll take me a little while to pull them

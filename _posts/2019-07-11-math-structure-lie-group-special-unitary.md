@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "A.A.: Unitary Group"
+title: "Lie: Unitary Group"
 keywords: []
 description: ""
 category: "math"
-tags: ["構造","A.A."]
+tags: ["構造","Lie"]
 ---
 {% include JB/setup %}
 

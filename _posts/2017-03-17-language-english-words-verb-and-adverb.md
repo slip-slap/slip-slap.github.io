@@ -14,6 +14,7 @@ tags: ["英語"]
 - read out, speak out, shout out
 - point out, multify out, wipe out
 - jump out that window
+- cut out a wedge
 2. up: indicate direction to something
 - curl up 
 3. down: indicate direction to something
@@ -230,19 +231,9 @@ up and down implies completion, like emphasizing
 2. sort someone out: you make them realize that they have behaved wrongly.
 
 
-
-
-
 #### what a
 1. what a great view of the hall from here.
 
-
-
-
-
-
-#### leave
-1. left the people in the nursing home to die
 
 #### catch
 1. you go ahead, I will catch up.

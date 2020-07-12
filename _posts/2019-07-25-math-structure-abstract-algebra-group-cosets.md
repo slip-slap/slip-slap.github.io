@@ -32,4 +32,3 @@ by $\phi (h) = gh$. The map $\phi$ is bijective; hence, the number of elements
 in H is the same as the number of elements in gH.
 
 
-

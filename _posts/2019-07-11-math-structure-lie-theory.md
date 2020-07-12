@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "L.G.L.A: Normed Division Algebra"
+title: "Lie: Normed Division Algebra"
 keywords: []
 description: 
 category: "math"
-tags: ["構造","L.G.L.A."]
+tags: ["構造","Lie"]
 ---
 {% include JB/setup %}
 

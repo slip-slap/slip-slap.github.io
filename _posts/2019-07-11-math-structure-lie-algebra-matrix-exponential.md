@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "L.T.: Matrix Exponential"
+title: "Lie : Matrix Exponential"
 keywords: []
 description: 
 category: "math"
-tags: ["構造","L.T."]
+tags: ["構造","Lie"]
 ---
 {% include JB/setup %}
 
