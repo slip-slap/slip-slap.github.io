@@ -16,3 +16,6 @@ B: 行ってらっしゃい:
 - いたっしゃい is the command form of いらっしゃる
 
 
+
+
+

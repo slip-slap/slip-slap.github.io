@@ -600,6 +600,8 @@ any of the course work and without receiving credit)
 1. 日差し: sunlight
 2. 差す: to shine
 3. 目差す(めざす): to ait at
+4. 物差し: ruler
+
 
 
 #### body
@@ -860,11 +862,6 @@ japanese word is a metaphor
 
 
 
-
-
-
-
-
 #### 
 1. 日の出: sunrise
 2. 日の入り(ひのいり): sunset 
@@ -877,7 +874,6 @@ japanese word is a metaphor
 
 ####
 1. 哲学(てつがく)::wq
-
 
 ####
 1. 芸術(げいじゅつ)
@@ -915,16 +911,11 @@ japanese word is a metaphor
 3. 栽培する(さいばい): 
 
 
-
-
 #### 届け(とどけ)
 1. 離婚届: diverce paper
 2. 退職届: resign paper
 
 
-
-
-#### 
 
 #### 場
 1. 裏庭(うらにわ): back yard
@@ -1003,7 +994,6 @@ japanese word is a metaphor
 #### 
 1. 申請(しんせい):
 2. 申し込み: 
-
 
 
 #### i
@@ -1153,7 +1143,6 @@ japanese word is a metaphor
 4. 服装(ふくそう):
 
 
-
 #### 房
 1. 暖房
 2. 冷房
@@ -1188,9 +1177,6 @@ japanese word is a metaphor
 
 ####
 1. 朝寝坊(あさねぼう): oversleeping
-
-
-
 
 
 ####
@@ -1269,7 +1255,6 @@ japanese word is a metaphor
 #### shi
 1. 世界
 2. 勢力(せいりょく)
-
 
 
 ####

@@ -8,6 +8,18 @@ tags: ["構造","A.A."]
 ---
 {% include JB/setup %}
 
+
+#### Philosophy
+1. In linear algebra the predominant objects we study are the maps between
+   vector spaces, and not the vector space themselves.  The structure preserving
+   maps between vector spaces are more interesting than the spaces themselves.
+2. This is a deep observation and it is true far beyond the confines of linear
+   algebra. 
+3. Philosophically it's saying that an object in isolation is uninteresting;
+   it's how it relates to what's around it that matters.
+4. The world of group theory is no different. Here the objects are groups and
+   the maps between them are homomorphisms.
+
 #### Definition
 1. Let $ (G, *) \text { and }(H, \circ) $ be two groups. A $\textbf{homomorphism}$ 
 f, from G to H,is a map of sets  $ f: G \rightarrow H $, such that $f(x *

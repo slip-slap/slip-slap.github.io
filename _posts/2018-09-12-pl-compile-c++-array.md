@@ -38,3 +38,52 @@ int main(){
   of current array. You don't know whether the following address is used by the
   other program.
 - so the only way is create a big array.
+
+
+#### Function Parameter
+
+```cpp
+void test(int a[][5]) { }
+int main()
+{
+	int my_arr[5][5];
+	test(my_arr);
+	return 0;
+}
+```
+
+
+2. Method Two
+
+```cpp
+#include <iostream>
+
+void test(int** a) 
+{
+	for(int i=0;i<5;i++)
+	{
+		for(int j=0;j<5;j++)
+		{
+			std::cout<<a[i][j]<<" ";
+		}
+		std::cout<<std::endl;
+	}
+}
+int main()
+{
+	int** my_arr;
+	for(int i=0;i<5;i++)
+	{
+		*my_arr = new int[5];
+		 my_arr++;
+	}
+	test(my_arr);
+	return 0;
+}
+```
+
+
+
+
+
+

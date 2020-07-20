@@ -10,7 +10,6 @@ tags: ["英語"]
 
 ####
 1. security protection
-2. body guard
 3. body guard
 2. butler
 3. concubine

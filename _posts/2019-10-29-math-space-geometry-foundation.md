@@ -19,3 +19,8 @@ tags: ["space","geometry"]
    important geometrical theorems in such a manner as to bring out as clearly as
    possible the significance of the different groups of axioms and the scope of
    the conclusions to be derived from individual axioms.
+
+
+#### Galois
+1. What is geometry? According to Klein, he considered geometry to be the study
+of properties that are left uninvariant under transformation groups.   

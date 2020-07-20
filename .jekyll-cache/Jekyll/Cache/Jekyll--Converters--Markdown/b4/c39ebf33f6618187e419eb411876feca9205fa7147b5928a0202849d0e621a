@@ -1,0 +1,105 @@
+I"7
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</span>
+<span class="kt">bool</span>  <span class="nf">is_move_reasonable</span><span class="p">(</span><span class="kt">int</span> <span class="n">board</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">4</span><span class="p">],</span> <span class="kt">int</span> <span class="n">row</span><span class="p">,</span> <span class="kt">int</span> <span class="n">column</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="c1">// check row</span>
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">4</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="k">if</span><span class="p">(</span><span class="n">board</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="nb">false</span><span class="p">;}</span> <span class="p">}</span>
+	<span class="c1">// check column</span>
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">4</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="k">if</span><span class="p">(</span><span class="n">board</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">column</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="nb">false</span><span class="p">;}</span> <span class="p">}</span>
+
+	<span class="c1">// left up</span>
+    <span class="kt">int</span> <span class="n">left_up_row</span> <span class="o">=</span> <span class="n">row</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">left_up_column</span> <span class="o">=</span> <span class="n">column</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+	<span class="k">while</span><span class="p">(</span><span class="n">left_up_row</span><span class="o">&gt;=</span><span class="mi">0</span><span class="o">&amp;&amp;</span><span class="n">left_up_column</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="k">if</span><span class="p">(</span><span class="n">board</span><span class="p">[</span><span class="n">left_up_row</span><span class="p">][</span><span class="n">left_up_column</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="nb">false</span><span class="p">;}</span>
+		<span class="n">left_up_row</span><span class="o">--</span><span class="p">;</span>
+		<span class="n">left_up_column</span><span class="o">--</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="c1">// left down</span>
+    <span class="kt">int</span> <span class="n">left_down_row</span> <span class="o">=</span> <span class="n">row</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">left_down_column</span> <span class="o">=</span> <span class="n">column</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+	<span class="k">while</span><span class="p">(</span><span class="n">left_down_row</span><span class="o">&lt;</span><span class="mi">4</span><span class="o">&amp;&amp;</span><span class="n">left_down_column</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="k">if</span><span class="p">(</span><span class="n">board</span><span class="p">[</span><span class="n">left_down_row</span><span class="p">][</span><span class="n">left_down_column</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="nb">false</span><span class="p">;}</span>
+		<span class="n">left_down_row</span><span class="o">++</span><span class="p">;</span>
+		<span class="n">left_down_column</span><span class="o">--</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="c1">// right down</span>
+    <span class="kt">int</span> <span class="n">right_down_row</span><span class="o">=</span> <span class="n">row</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">right_down_column</span> <span class="o">=</span> <span class="n">column</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+
+	<span class="k">while</span><span class="p">(</span><span class="n">right_down_row</span><span class="o">&lt;</span><span class="mi">4</span><span class="o">&amp;&amp;</span><span class="n">right_down_column</span><span class="o">&lt;</span><span class="mi">4</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="k">if</span><span class="p">(</span><span class="n">board</span><span class="p">[</span><span class="n">right_down_row</span><span class="p">][</span><span class="n">right_down_column</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="nb">false</span><span class="p">;}</span>
+		<span class="n">right_down_row</span><span class="o">++</span><span class="p">;</span>
+		<span class="n">right_down_column</span><span class="o">++</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="c1">//right up</span>
+    <span class="kt">int</span> <span class="n">right_up_row</span><span class="o">=</span> <span class="n">row</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">right_up_column</span> <span class="o">=</span> <span class="n">column</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+	<span class="k">while</span><span class="p">(</span><span class="n">right_up_row</span><span class="o">&gt;=</span><span class="mi">0</span><span class="o">&amp;&amp;</span><span class="n">right_up_column</span><span class="o">&lt;</span><span class="mi">4</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="k">if</span><span class="p">(</span><span class="n">board</span><span class="p">[</span><span class="n">right_up_row</span><span class="p">][</span><span class="n">right_up_column</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="nb">false</span><span class="p">;}</span>
+		<span class="n">right_up_row</span><span class="o">--</span><span class="p">;</span>
+		<span class="n">right_up_column</span><span class="o">++</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">print_board</span><span class="p">(</span><span class="kt">int</span> <span class="n">board</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">4</span><span class="p">])</span>
+<span class="p">{</span>
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">4</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">k</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">k</span><span class="o">&lt;</span><span class="mi">4</span><span class="p">;</span><span class="n">k</span><span class="o">++</span><span class="p">)</span>
+		<span class="p">{</span>
+			<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">board</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">k</span><span class="p">]</span><span class="o">&lt;&lt;</span><span class="s">" "</span><span class="p">;</span>
+		<span class="p">}</span>
+		<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">bool</span> <span class="nf">queen_problem</span><span class="p">(</span><span class="kt">int</span> <span class="n">board</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">4</span><span class="p">],</span> <span class="kt">int</span> <span class="n">row</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="k">if</span><span class="p">(</span><span class="n">row</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="n">print_board</span><span class="p">(</span><span class="n">board</span><span class="p">);</span>
+		<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"*******"</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+		<span class="k">return</span> <span class="nb">true</span><span class="p">;}</span>
+
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">4</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="k">if</span><span class="p">(</span><span class="n">is_move_reasonable</span><span class="p">(</span><span class="n">board</span><span class="p">,</span><span class="n">row</span><span class="p">,</span><span class="n">i</span><span class="p">))</span>
+		<span class="p">{</span>
+			<span class="n">board</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+			<span class="n">queen_problem</span><span class="p">(</span><span class="n">board</span><span class="p">,</span><span class="n">row</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+			<span class="n">board</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+	<span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">initialize_board</span><span class="p">(</span><span class="kt">int</span> <span class="n">board</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">4</span><span class="p">])</span>
+<span class="p">{</span>
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">4</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">k</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">k</span><span class="o">&lt;</span><span class="mi">4</span><span class="p">;</span><span class="n">k</span><span class="o">++</span><span class="p">)</span>
+		<span class="p">{</span>
+			<span class="n">board</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="kt">int</span> <span class="n">board_4_4_size</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">4</span><span class="p">]</span> <span class="p">;</span>
+	<span class="n">initialize_board</span><span class="p">(</span><span class="n">board_4_4_size</span><span class="p">);</span>
+	<span class="n">queen_problem</span><span class="p">(</span><span class="n">board_4_4_size</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+:ET

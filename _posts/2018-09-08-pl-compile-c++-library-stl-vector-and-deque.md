@@ -28,3 +28,12 @@ int main()
 	std::cout<<char_vector[0]<<std::endl;
 }
 ```
+
+
+#### Two Dimensional Array
+
+```cpp
+std::vector<std::vector<int>> array_vector(5,std::vector<int> (5,0));
+```
+
+

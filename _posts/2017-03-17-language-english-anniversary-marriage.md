@@ -34,7 +34,6 @@ tags: ["英語"]
 6. four-layer birthday cake
 
 
-
 #### Sentence
 1. you got married too fast
 -  the verb here is got. 

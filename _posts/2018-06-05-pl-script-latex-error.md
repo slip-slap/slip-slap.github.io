@@ -7,6 +7,10 @@ category: "PL"
 tags: ["latex","script"]
 ---
 
+#### failed to arrange your figure properly
+1. If you draw help lines in your code, don't forgot to remove the help line, or
+   help grid.
+
 #### undefine
 
 1. tikz code can't surrounded by frame code which a keyword from beamer.

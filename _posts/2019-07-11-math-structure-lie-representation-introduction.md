@@ -8,6 +8,10 @@ tags: ["構造","Lie"]
 ---
 {% include JB/setup %}
 
+#### Group Element and Representation Element
+
+
+
 #### Inspiration
 If V is a finite-dimensional real or complex vector space, let $GL(V)$ denote
 the group of invertible linear transformations of V. If we choose a basis for V,
