@@ -49,6 +49,7 @@ tags: ["英語"]
 4. hit her in eyes
 5. punch me
 6. squeeze my hand
+7. rolled her eyes at such a lame idea.
 
 #### Sentence
 1. I shaved off my beard I had been growing for weeks.

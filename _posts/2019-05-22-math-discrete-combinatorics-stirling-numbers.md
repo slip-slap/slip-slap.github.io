@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Combinatorics: Stirling Numbers"
+title: "CMB: Stirling Numbers"
 keywords: ["bayesian"]
 description: ""
 category: "math"
-tags: ["discrete"]
+tags: ["discrete","CMB"]
 ---
 {% include JB/setup %}
 

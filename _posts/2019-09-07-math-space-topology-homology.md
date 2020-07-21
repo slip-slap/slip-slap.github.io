@@ -8,21 +8,21 @@ tags: ["space","A.T."]
 ---
 {% include JB/setup %}
 
-#### HAHA
+
+#### Motivation
+1. The fundamental group $\pi_1(X)$ is especially useful when studying spaces of
+   low dimension, as one would expect from its definition which involves only
+   maps from low-dimensional spaces into $X$.
+
+#### Terminology 
 As we prefer to write operation as addition, so loop is represented by
 a+b+c=b+c+a = c+a+b, because it is a closed loop geometry, we call this a **cycle**
 
-#### HAHA
 1. chain: is going to be a word for random element in this free abelian group of
 random combination  with integer coefficient.
 2. boundary: final point minus initial point
 
-#### HAHA
-This is an algebraic way to detect whether we have a cycle or not.
-
-#### HAHA
-Every Connected graph X has a spanning tree which includes all vertices.
-A tree with V vertices always has v-1 edges.
+- This is an algebraic way to detect whether we have a cycle or not.
 
 
 #### HAHA

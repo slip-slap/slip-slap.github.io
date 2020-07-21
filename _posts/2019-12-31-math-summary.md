@@ -8,6 +8,17 @@ tags: ["summary"]
 ---
 {% include JB/setup %}
 
+#### Galois
+We copy concept from one subject to another, and hope it may work.
+1. complement, in probability, in combinatorics
+2. function, in real analysis, in topology, in group theory
+3. duality, in geometry 
+4. generator, in group theory, in probability 
+
+
+
+
+
 #### 1. History
 
 ```

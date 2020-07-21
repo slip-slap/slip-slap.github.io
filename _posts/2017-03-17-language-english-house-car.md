@@ -26,6 +26,7 @@ tags: ["英語"]
 6. airbags
 7. tailpipe
 8. rest stop
+9. valid license plate
 
 
 ####

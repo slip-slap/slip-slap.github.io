@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "C.F. Introduction"
+title: "C.T. Introduction"
 keywords: []
 description: ""
 category: "math"
-tags: ["basic","C.F."]
+tags: ["basic","C.T."]
 ---
 {% include JB/setup %}
 
