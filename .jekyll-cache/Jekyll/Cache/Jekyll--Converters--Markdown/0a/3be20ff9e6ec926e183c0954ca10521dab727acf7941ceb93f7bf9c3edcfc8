@@ -1,0 +1,38 @@
+I"7	
+<h4 id="background">Background</h4>
+<p>Product and coproduct are the two ways of combining types. It turns out that a
+lot of data structures in everyday programming can be build using just these two
+mechanisms.</p>
+
+<h4 id="example">Example</h4>
+
+<div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">data</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kt">False</span> <span class="o">|</span> <span class="kt">True</span>
+<span class="kr">data</span> <span class="kt">Int</span>  <span class="o">=</span> <span class="o">-</span><span class="mi">2147483648</span> <span class="o">|</span> <span class="o">-</span><span class="mi">2147483647</span> <span class="o">|</span> <span class="o">...</span> <span class="o">|</span> <span class="o">-</span><span class="mi">1</span> <span class="o">|</span> <span class="mi">0</span> <span class="o">|</span> <span class="mi">1</span> <span class="o">|</span> <span class="mi">2</span> <span class="o">|</span> <span class="o">...</span> <span class="o">|</span> <span class="mi">2147483647</span>
+</code></pre></div></div>
+
+<ol>
+  <li>$\textbf{data}$ means that we’re defining a new data type. The part before
+the $\textbf{=}$ denotes the type, which is $\textbf{Bool}$</li>
+  <li>The parts after the $\textbf{=}$ are value constructors. They specify the
+different values that this type can have.</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>The $\textbf{</td>
+          <td>}$ is read as or.</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>So we can read this as: the $\textbf{Bool}$ type can have a value of
+$\textbf{True}$ or $\textbf{False}$</li>
+  <li>Both the type name and the value constructors have to be capital cased.</li>
+</ol>
+
+<h5 id="example-2">Example 2:</h5>
+
+<div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">data</span> <span class="kt">Shape</span> <span class="o">=</span> <span class="kt">Circle</span> <span class="kt">Float</span> <span class="kt">Float</span> <span class="kt">Float</span> <span class="o">|</span> <span class="kt">Rectangle</span> <span class="kt">Float</span> <span class="kt">Float</span> <span class="kt">Float</span> <span class="kt">Float</span>
+</code></pre></div></div>
+
+:ET

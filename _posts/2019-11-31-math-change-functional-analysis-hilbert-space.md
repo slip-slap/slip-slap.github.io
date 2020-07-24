@@ -38,6 +38,9 @@ bijective function has an inverse.
 mapping the set S onto the set T\>
 <img src="{{IMAGE_PATH}}/injective_surjective.png" height="" width="" />
 
+#### Galois
+1. injective: this words is the variation from injection,  for example, syringe.
+2. surjective: variation from projection.
 
 #### reference
 1. [injective-surjective-bijective](https://www.mathsisfun.com/sets/injective-surjective-bijective.html)

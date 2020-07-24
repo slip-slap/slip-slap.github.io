@@ -16,6 +16,13 @@ We copy concept from one subject to another, and hope it may work.
 4. generator, in group theory, in probability 
 
 
+#### Thoughts
+1. What is math ? It's all about math object. 
+2. What is math object, it's depends on how you define it.
+- Galois thought group is an math object.
+- Complex number maybe an object.
+
+
 
 
 
