@@ -1,0 +1,99 @@
+I"
+<h4 id="background">Background</h4>
+<p>Product and coproduct are the two ways of combining types. It turns out that a
+lot of data structures in everyday programming can be build using just these two
+mechanisms.</p>
+
+<h4 id="example">Example</h4>
+
+<div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">data</span> <span class="kt">Person</span> <span class="o">=</span> <span class="kt">MakePerson</span> <span class="kt">String</span> <span class="kt">Int</span>
+</code></pre></div></div>
+
+<ol>
+  <li>To the left of the $\textbf{=}$ is the type constructor and to the right can
+be one or more data constructors</li>
+  <li>The type constructor is the name of the type, which is used in type
+signatures</li>
+  <li>The data constructors are functions that takes a $\textbf{String}$ and an
+$\textbf{Int}$, and returns a $\textbf{Person}$</li>
+</ol>
+
+<div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">data</span> <span class="kt">Person</span> <span class="o">=</span> <span class="kt">Person</span> <span class="kt">String</span> <span class="kt">Int</span>
+</code></pre></div></div>
+
+<ol>
+  <li>When working with only one data constructor, it’s quite common to give it the
+same name as the type constructor.</li>
+</ol>
+
+<h4 id="sum-types">Sum Types</h4>
+
+<div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">data</span> <span class="kt">Person</span> <span class="o">=</span> <span class="kt">PersonWithAge</span> <span class="kt">String</span> <span class="kt">Int</span> <span class="o">|</span> <span class="kt">PersonWithoutAge</span> <span class="kt">String</span>
+</code></pre></div></div>
+
+<ol>
+  <li>Types can have more than one data constructor, these are called sum types
+because the total number of values you can build of a sum type is the sum of
+the number you can build with each of its constructors</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>The syntax is to separate each constructor by a $\textbf{</td>
+          <td>}$ symbol.</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ol>
+
+<h4 id="kinds-and-parameters">Kinds and Parameters</h4>
+
+<div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">data</span> <span class="kt">Person</span> <span class="n">a</span> <span class="o">=</span> <span class="kt">PersonWithThing</span> <span class="kt">String</span> <span class="n">a</span> <span class="o">|</span> <span class="kt">PersonWithoutThing</span> <span class="kt">String</span>
+</code></pre></div></div>
+
+<ol>
+  <li>The type we’ve defined here is $\textbf{Person a}$</li>
+  <li>The $\textbf{a}$ is called a type variable, anylowecase value will do, but
+its common to use $\textbf{a}$ because it’s short</li>
+</ol>
+
+<h4 id="example-1">Example</h4>
+
+<div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">data</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kt">False</span> <span class="o">|</span> <span class="kt">True</span>
+<span class="kr">data</span> <span class="kt">Int</span>  <span class="o">=</span> <span class="o">-</span><span class="mi">2147483648</span> <span class="o">|</span> <span class="o">-</span><span class="mi">2147483647</span> <span class="o">|</span> <span class="o">...</span> <span class="o">|</span> <span class="o">-</span><span class="mi">1</span> <span class="o">|</span> <span class="mi">0</span> <span class="o">|</span> <span class="mi">1</span> <span class="o">|</span> <span class="mi">2</span> <span class="o">|</span> <span class="o">...</span> <span class="o">|</span> <span class="mi">2147483647</span>
+</code></pre></div></div>
+
+<ol>
+  <li>$\textbf{data}$ means that we’re defining a new data type. The part before
+the $\textbf{=}$ denotes the type, which is $\textbf{Bool}$</li>
+  <li>The parts after the $\textbf{=}$ are value constructors. They specify the
+different values that this type can have.</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>The $\textbf{</td>
+          <td>}$ is read as or.</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>So we can read this as: the $\textbf{Bool}$ type can have a value of
+$\textbf{True}$ or $\textbf{False}$</li>
+  <li>Both the type name and the value constructors have to be capital cased.</li>
+</ol>
+
+<h5 id="example-2">Example 2:</h5>
+
+<div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">data</span> <span class="kt">Pair</span> <span class="n">a</span> <span class="n">b</span> <span class="o">=</span> <span class="kt">P</span> <span class="n">a</span> <span class="n">b</span>
+</code></pre></div></div>
+
+<ol>
+  <li>$\textbf{Pair a b}$ is the name of the type parameterized by two other types,
+a and b;</li>
+  <li>$\textbf{P}$ is the name of the data constructor. You define a pair type by
+passing two types to the $\textbf{Pair}$ type constructor.</li>
+</ol>
+
+:ET

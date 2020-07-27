@@ -79,6 +79,8 @@ tags: ["英語"]
 7. head shaving
 8. You are acting strange all day.
 9. I got your back
+1. pass by the park
+2. step away from
 
 
 

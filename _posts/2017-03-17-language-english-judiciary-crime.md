@@ -17,6 +17,7 @@ tags: ["英語"]
 5. supreme court
 6. judicial
 7. witness
+8. scammer
 
 
 
@@ -39,6 +40,7 @@ tags: ["英語"]
 4. trial
 5. murder
 6. cell
+7. scam
 
 
 ####

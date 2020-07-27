@@ -10,9 +10,12 @@ tags: ["英語"]
 
 ####
 1. subsidy
+2. coronavirus aid
 
 ####
 1. age or income restrictions
+2. save a little
+
 
 
 ####

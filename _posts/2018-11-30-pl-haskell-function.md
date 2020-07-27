@@ -40,6 +40,20 @@ lucky x = "sorry"
 ```
 
 1. When you call $\textbf{lucky}$, the patterns will be checked from top to bottom
-and when it conforms  to a pattern, the corresponding function body will be
+and when it conforms to a pattern, the corresponding function body will be
 used.
+
+#### Guards
+1. Whereas patterns are a way of making sure a value conforms to some form and
+deconstructing it, guards are a way of testing whether some property of a
+value(or several of them) are true of false.
+2. That sounds a lot like an if statement and it's very similar.
+3. The things is that guards are a lot more readable when you have serveral
+   condtitions and they play really nicely with patterns.
+
+
+
+#### Where
+
+
 

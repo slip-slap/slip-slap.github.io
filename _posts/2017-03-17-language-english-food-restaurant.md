@@ -20,6 +20,7 @@ tags: ["英語"]
 
 #### Phrase
 1. Five Dishes
+2. chopstick rest 箸置き
 
 ####
 1. goblet
@@ -37,4 +38,5 @@ tags: ["英語"]
 3. How much cash you got in your pocket right now?
 4. Have you ever taken the trash out?
 5. nailed every component
+6. take this away
 

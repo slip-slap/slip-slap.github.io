@@ -36,7 +36,10 @@ tags: ["英語"]
 6. dry
 7. disgusting
 8. ice-cold
-8. meatball
+9. meatball
+1. gross
+
+
 
 
 #### Food
@@ -49,3 +52,7 @@ tags: ["英語"]
 2. appetizer
 3. catch of the day
 6. crispy on the outside, juicy on the inside
+4. lay on the entray
+5. long-grain rice in/ medium grain, short grain
+6. turn this in the oil pan 
+
