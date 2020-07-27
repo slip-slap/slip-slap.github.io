@@ -142,7 +142,7 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">807</span>
+<span title="文章总数">815</span>
 <ul>
 
 
@@ -742,7 +742,22 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#December-2019">2019 年 12 月 (65)</a></li>
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#December-2019">2019 年 12 月 (68)</a></li>
     
   
 
@@ -1937,7 +1952,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#December-2018">2018 年 12 月 (6)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#December-2018">2018 年 12 月 (7)</a></li>
     
   
 
@@ -1980,7 +2000,27 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#November-2018">2018 年 11 月 (8)</a></li>
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#November-2018">2018 年 11 月 (12)</a></li>
     
   
 
@@ -4273,7 +4313,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#言葉-ref">言葉 (145)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (190)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (195)</a></li>
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
@@ -4281,7 +4321,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#OS-ref">OS (29)</a></li>
 
-  <li><a href="/categories.html#math-ref">math (292)</a></li>
+  <li><a href="/categories.html#math-ref">math (295)</a></li>
 
   <li><a href="/categories.html#work-ref">work (9)</a></li>
 
@@ -4509,7 +4549,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#haskell-ref" style="font-size: 9.5pt; color: #888;">haskell</a>
+    <a href="/tags.html#haskell-ref" style="font-size: 10pt; color: #888;">haskell</a>
   
     
     
@@ -4845,14 +4885,14 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#basic-ref" style="font-size: 10pt; color: #888;">basic</a>
+    <a href="/tags.html#basic-ref" style="font-size: 10.5pt; color: #888;">basic</a>
   
     
     
     
     
     
-    <a href="/tags.html#C.T.-ref" style="font-size: 9.5pt; color: #888;">C.T.</a>
+    <a href="/tags.html#C.T.-ref" style="font-size: 10pt; color: #888;">C.T.</a>
   
     
     
@@ -5003,6 +5043,296 @@ $(document).ready(function() {
   <article class="nested">
 
     <header>
+      <h2><a href="/pl/pl-compile-java-io.html" title="查看《Java: IO》">Java: IO</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+intro
+
+流操作主要在java.io包下,类结构如下图
+
+
+
+
+字节流
+
+
+
+OutputStream
+
+
+
+FileOutputStream
+
+//这里的文件创建的地方要注意
+File file =new File("db.properties");
+if(!file.exists()...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#April-2018" title="查看此月所有文章">01 April 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-compile-java-io.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-compile-java-interface.html" title="查看《Java: Interface》">Java: Interface</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+特征
+
+  属性有固定的修饰符: public static final
+  函数有固定的修饰符: public abstract,函数不能有方法体。
+
+
+
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#April-2018" title="查看此月所有文章">01 April 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-compile-java-interface.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-compile-java-enum.html" title="查看《Java: Enum》">Java: Enum</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+intro
+枚举类型反编译之后也是类，该类用final关键字修饰
+
+
+产生原因
+//枚举类型的引入
+class Weekday{
+	private Weekday(){};
+	public static final Weekday MONDAY= new Weekday();
+	public...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#April-2018" title="查看此月所有文章">01 April 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-compile-java-enum.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-compile-java-copy-control.html" title="查看《Java: Copy Control》">Java: Copy Control</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+intro
+在c++中，有一章专门讲拷贝控制，java把这个问题简单化了，简化成深拷贝与浅拷贝
+
+
+浅拷贝
+
+
+问题的产生
+class Foo{
+	private int age;
+	private Date date;
+	public int getA() {
+		return age;
+...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#April-2018" title="查看此月所有文章">01 April 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-compile-java-copy-control.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-compile-java-container.html" title="查看《Java: Container》">Java: Container</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+
+  intro
+  set    
+      intro
+    
+  
+  list    
+      intro
+    
+  
+  字典容器    
+      intro
+      properties
+      map        
+          map的遍历
+ ...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#April-2018" title="查看此月所有文章">01 April 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-compile-java-container.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-compile-java-cmd.html" title="查看《Java: Command Line》">Java: Command Line</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+运行
+java [字节码的名字] 
+java Main   运行Main.class字节码文件
+
+java路径
+
+  相对路径 指的是JVM的启动路径
+    File file=new File("config.xml");
+file.createNewFile();
+// 如果jvm在/...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#April-2018" title="查看此月所有文章">01 April 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-compile-java-cmd.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-compile-java-class.html" title="查看《Java: Class》">Java: Class</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+类的三大特点，封装，继承和多态，集中封装和继承是多态的基础
+
+构造器，只是一个函数，函数只是一段需要执行的代码，就这么简单。
+类的组成
+
+
+普通代码块
+
+
+构造代码块
+直接在类中定义且没有加static关键字的代码块称为构造代码块。
+构造代码块属于对象
+，在对象创建时被执行，每次创建对象都会...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#April-2018" title="查看此月所有文章">01 April 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-compile-java-class.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-compile-java-class-load.html" title="查看《Java: Class Loader》">Java: Class Loader</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+
+  intro
+  类加载过程    
+      源文件
+      加载
+      链接        
+          验证
+          准备
+          解析
+        
+      
+      初始化
+      使用
+      卸载
+    
+ ...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#April-2018" title="查看此月所有文章">01 April 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-compile-java-class-load.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
       <h2><a href="/pl/pl-compile-java-annotation.html" title="查看《Java: Annotation》">Java: Annotation</a></h2>
     </header>
 
@@ -5069,269 +5399,6 @@ void foo(){
 
   </article>
   
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-compile-java-Enumeration.html" title="查看《Java: Enumberation》">Java: Enumberation</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-作用
-Enumeration是一个接口,源码如下
-package java.util;
-
-pubic interface Enumeration&lt;E&gt;{
-	boolean hasMoreElements();
-	E nextElement();
-}
-
-
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#April-2018" title="查看此月所有文章">01 April 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-compile-java-Enumeration.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-compile-java-Calendar.html" title="查看《Java: Calendar》">Java: Calendar</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Calendar
-Calendar类是一个抽象类，功能比Date类强大，实现比Date复杂
-
-
-使用
-Calendar cal=Calendar.getInstance();
-System.out.println(calendar.get(Calendar.YEAR));
-
-
-
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#April-2018" title="查看此月所有文章">01 April 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-compile-java-Calendar.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-compile-java-BigDecimal.html" title="查看《Java: BigDecimal》">Java: BigDecimal</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-作用
-精确运算
-
-
-使用方法
-
-  使用String对象构建BigDecimal对象
-  调用相应的方法进行算术运算
-  把BigDecimal对象转换成float,double等类型
-
-
-
-代码
-BigDecimal bd=new BigDecimal("0.06");
-System.ou...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#April-2018" title="查看此月所有文章">01 April 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-compile-java-BigDecimal.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-script-python-envrionment.html" title="查看《Python: Environment》">Python: Environment</a></h2>
-    </header>
-
-    <section>
-      <p>
-        ####
-
-pyenv versions: checkout all versions
-pyenv global 3.6.8: set global version 
-pyenv install 3.6.8
-pyenv uninstall 3.6.8
-
-
-Reference
-
-  pyenv
-...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">18 March 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-python-envrionment.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-script-python-package-manager.html" title="查看《Python: Package Manager》">Python: Package Manager</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-1. Pip
-
-1.1 Install
-
-pip install tensorflow==1.13.2
-
-
-install package by python3
-
-python3 -m pip install matplotlib
-
-
-
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">17 March 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-python-package-manager.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-script-python-tqdm.html" title="查看《Python: Tqdm Package》">Python: Tqdm Package</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-tqdm
-
-  tqdm: means progress in Arabic
-  function: instantly make your loops show a progress meter -  just wrap any iterable with tqdm tqdm(iterab...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">16 March 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-python-tqdm.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl-script-python-tool.html" title="查看《Pl Script Python Tool》">Pl Script Python Tool</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-
-layout: post
-title: “Python: aaaaModule”
-keywords: []
-category: “PL”
-tags: [“python”,”script”]
-—
-
-功能
-教程python的module管理工具
-
-
-使用
-
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">16 March 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#-ref" title="查看此类别下的所有文章"></a>，
-        评论：<a href="/pl-script-python-tool.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-script-python-sys.html" title="查看《Python: Sys》">Python: Sys</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-intro
-文档sys: this module provides access to some variables used or maintained by the interpreter and to functions that interact strongly with the ...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">16 March 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-python-sys.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
 
   
     
@@ -5371,7 +5438,7 @@ intro
 
     <!-- Current Page -->
     <li class="active">
-      <span class="page_number ">第 48/81 页</span>
+      <span class="page_number ">第 48/82 页</span>
     </li>
 
     <!-- Next Page -->
@@ -5381,7 +5448,7 @@ intro
 
     <!-- Last Page -->
     
-    <li><a href="/page81">&raquo;&raquo;</a></li>
+    <li><a href="/page82">&raquo;&raquo;</a></li>
     
   </ul>
 </section>
