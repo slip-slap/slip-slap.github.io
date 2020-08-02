@@ -32,4 +32,5 @@ tags: ["英語"]
 ####  How is the work going on?
 1. There are three to go.
 2. I get done with most of it.
+3. leaving work
 

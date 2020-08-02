@@ -15,6 +15,9 @@ tags: ["英語"]
 3. mob
 4. the Chinese Coffee chain
 5. store
+6. front desk
+
+
 
 
 #### Action

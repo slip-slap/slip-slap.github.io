@@ -22,6 +22,7 @@ tags: ["英語"]
 2. life 
 3. afterlife
 4. knuckle-cracking
+5. facial hair
 
 #### action
 1. raise: raise up my head and look into the sky.

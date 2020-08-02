@@ -18,6 +18,7 @@ tags: ["英語"]
 7. ring bearer
 8. theme wedding
 9. band
+1. wedding reception
 
 
 ####

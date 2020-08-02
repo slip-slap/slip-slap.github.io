@@ -57,6 +57,7 @@ tags: ["英語"]
    visit launch site and control the launch.
 3. his presence will inspire the troop
 4. save the cities
+5. pull troops out of germany
 
 
 
