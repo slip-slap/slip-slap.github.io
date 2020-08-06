@@ -91,7 +91,10 @@ We are in a new subject, new terminology has to be define.
   object.
 - How, it's not easy, but we can do it.
 
-
+#### Galois
+1. In category theory, properties which are called 'universal' because they
+   state how the object being described relates to the entire universe in which
+   it lives
 
 
 #### Reference

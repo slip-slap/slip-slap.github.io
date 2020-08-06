@@ -49,7 +49,7 @@ But the question is how to study them ?
 anybody. you may say he is perfectism, but maybe he just selfish. Later on, another Russian guy 
 find Non-Euclidean geometry, to study his paper, Gauss learn Russian language.
 2. Bolyai find Non-euclidean geometry, and pushished it. and send the paper to Gauss, but gauss 
-ignore said I had alread find this. So his work is ignored by contempory scitentist.
+ignore said I had alread find this. So his work is ignored by contempory scientist.
 
 
 #### Relationship Between Geometry and Algebra
@@ -60,10 +60,6 @@ so cartesian coordiates is developed to deal with this geometry algebraicly.
 3. Affine Geometry, linear algebra is developed.
 4. Now we want to unify all these geometry in one framework. Tensor is
    coming.
-
-
-
-
 
 
 #### Example: Cartesian Geometry

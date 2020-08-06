@@ -10,3 +10,4 @@ tags: ["英語"]
 
 ####
 1. slow down the internet connection
+2. fiber optic network

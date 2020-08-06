@@ -1,27 +1,22 @@
 ---
 layout: post
-title: "Historical Geography"
+title: "The one who pass away"
 keywords: [] 
-description: "清单"
+description: ""
 category: "life"
 tags: ["life"]
 ---
 {% include JB/setup %}
 
-#### Mongol Empire
-1. Founder: Genghis Khan.
-2. Reigh 1206-1227
 
-#### Russia
-
-#### Roman
-
-#### China
+#### A
+1. Sulli(1994-2019): south korean actress
+2. An unknown teen: 17 jump off the bridge after his mother criticise him
 
 
 
-#### Notation
-1. B.C. stands for the english phrase before chirst.
-2. A.D. stands for coufusingly for a Lation phrase: anno domini(in the year of
-   lord-the year Jesus was born)
+#### Group Tragedy
+1. Jul 2020: 21 dead: a chinese bus plunging off a bridge into a deep reservoir
+
+
 

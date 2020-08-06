@@ -15,10 +15,6 @@ tags: ["haskell"]
 2. The body of the function follows the equal sign, the body of a function is
    always an expression, there are no statements in functions. The result of a
    function is this expression.
-3. the terseness is often shocking to newcomers but you will quickly see that is
-   makes perfect sense.
-4. Function definition and function call are the bread and butter of functional
-   programming so their syntax is reduced to the bare minimum.
 
 #### Example
 
@@ -53,7 +49,6 @@ value(or several of them) are true of false.
 
 
 
-#### Where
 
 
 

@@ -20,10 +20,22 @@ at a specific point, it is easy to understand.
 - we can also adopt $\sigma$ and $\delta$ to define limit on complex number
   domain.
 
+#### What is algebra?
+We already get used to addition, multiplication, and division. All the
+operations manipulate two elements, so they are called binary operation. 
+
+- Why the operation has to be binary? Could it be unary,n-ary ? Yes, it can.
 
 
 #### Galois
-1. That's the beauty of structure, we don't need to know it's meaning, but we
-   know it makes sense.
+1. From linear algebra, bool algebra, lattice theory, group thoery, to lie
+   algebra. We came a long way. But there are some pattern among them.
+- construction: we, people, human being, our understanding is very limited. We
+  can only understand something very basic, and we believe complex things are
+  build based on simple pattern, isn't that our limitation. Anyway, in number
+  theory, the construction is simple 1 + 1  = 2.
 
+
+#### Reference
+1. [Algebra](https://en.wikipedia.org/wiki/Algebra)
 

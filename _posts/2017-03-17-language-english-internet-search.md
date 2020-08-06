@@ -21,7 +21,8 @@ tags: ["英語"]
 1. enter
 2. refine your search
 3. narrow down the results
-
+4. activation code: 
+5. sign out
 
 ####
 1. Do you enter the correct mobile number?

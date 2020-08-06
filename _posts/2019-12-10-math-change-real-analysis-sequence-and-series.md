@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "R.A.: Sequence and Series"
+title: "R.A.: Series--Function Representation"
 keywords: []
 description: ""
 category: "math"
@@ -10,10 +10,7 @@ tags: ["change","R.A."]
 
 #### Sequence
 a sequence is a function with a domain equal to the set of positive integers.  
-
-
-#### convergence of sequence 
-Monotone convergence theorem: if a sequence is increasing and bounded above by a supremum, then the sequence will converge to the supremum.
+- Monotone convergence theorem: if a sequence is increasing and bounded above by a supremum, then the sequence will converge to the supremum.
 
 
 #### Series
@@ -65,7 +62,6 @@ Taylor expansion is very interesting, a function can be represents by a sum of t
 4. ..., and so on
 5. So we can represent the function with Taylor expansion. This is amazing!!!
 
-#### Laurent Series 
 
 
 #### Reference
