@@ -5,8 +5,8 @@
   <description>Just Do It - </description>
   <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
   <link></link>
-  <lastBuildDate>Wed, 26 Aug 2020 18:04:59 +0900</lastBuildDate>
-  <pubDate>Wed, 26 Aug 2020 18:04:59 +0900</pubDate>
+  <lastBuildDate>Wed, 26 Aug 2020 21:37:14 +0900</lastBuildDate>
+  <pubDate>Wed, 26 Aug 2020 21:37:14 +0900</pubDate>
   <ttl>1800</ttl>
 
 
@@ -15419,6 +15419,52 @@ passing two types to the $\textbf{Pair}$ type constructor.&lt;/li&gt;
   </item>
 
   <item>
+    <title>Assembly: Introduction</title>
+    <description>
+&lt;h4 id=&quot;reference&quot;&gt;reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.whoishostingthis.com/resources/assembly-language/&quot;&gt;Tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/pl/pl-assemble-introduction.html</link>
+    <guid>/pl/pl-assemble-introduction</guid>
+    <pubDate>Thu, 01 Nov 2018 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Assembly: Directives and Psedo-Opcodes</title>
+    <description>
+&lt;h4 id=&quot;disadvantage&quot;&gt;Disadvantage&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;The one major disadvantage to assembly language over pure machine code is that you must frist
+assemble and link a program before you can execute it.&lt;/li&gt;
+  &lt;li&gt;An assembler like Microsoft’s Assembler(MASM) provides a large number of features for assembly
+language prgrammaers. ALthough learning about these features takes a fair amount of time, they
+are so useful that it is well worth the effort.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;feature&quot;&gt;Feature&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Assembler directives are special instructions that provide information to the assembler but do
+not generate any code. Examples include the segment directive, equ, assume, and end. These
+mnemonics are not valid 80x86 instructions. They are messages to the assember, nothing else.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;A pseudo-opcode is a message to the assembler, just like an assembler directive, howevery a
+pseudo-opcode will emit object code bytes. Example of pseudo-opcodes include byte, word, dword,
+qword, and tbyte. These instructions emit the bytes of data specified by their operands but they
+are not true 80x86 machine instructions.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/pl/pl-assemble-directive-and-psudo-opcodes.html</link>
+    <guid>/pl/pl-assemble-directive-and-psudo-opcodes</guid>
+    <pubDate>Thu, 01 Nov 2018 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
     <title>Make: Variable</title>
     <description>
 &lt;h4 id=&quot;h&quot;&gt;H&lt;/h4&gt;
@@ -29545,6 +29591,68 @@ construct.&lt;/li&gt;
   </item>
 
   <item>
+    <title>Compiler: Parser LL(1)</title>
+    <description>
+&lt;h4 id=&quot;history&quot;&gt;History&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;A parser is a function that determines whether a pattern belongs to a language&lt;/li&gt;
+  &lt;li&gt;LL(1):
+    &lt;ul&gt;
+      &lt;li&gt;The first “L” in LL(1) stands for scanning the input from lett to right.&lt;/li&gt;
+      &lt;li&gt;The second “L” for producing a leftmost derivation&lt;/li&gt;
+      &lt;li&gt;The “1” for using one input symbol of lookahead at each step to make parsing action decisions.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;comment&quot;&gt;Comment&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;LL(1) parser only work for a large subset of the CFGs known as LL(1) grammar, although the set of
+context free languages recongnizable by an LL(1) grammar is a subset of the context free
+languages, it is a very large subset and you shoudn’t run into too many difficulties using this
+technique.&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/cs/computer-science-compiler-parser-ll1.html</link>
+    <guid>/cs/computer-science-compiler-parser-ll1</guid>
+    <pubDate>Thu, 01 Mar 2018 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Compiler: LR Parsing</title>
+    <description>
+&lt;h4 id=&quot;introduction&quot;&gt;Introduction&lt;/h4&gt;
+&lt;p&gt;The most prevalent type of bottom-up parser today is based on a concept called LR(k) parsing&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;The “L” is for left-to-right scanning of the input&lt;/li&gt;
+  &lt;li&gt;The “R” for constructing a rightmost derivation in reverse.&lt;/li&gt;
+  &lt;li&gt;The k for the number of input symbols of lookahead that are used in making parsing decisions.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;advantage&quot;&gt;Advantage&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;LR parsers can be constructed to recognize virtually all programming language constructs for
+which context-free grammars can be written&lt;/li&gt;
+  &lt;li&gt;The LR-parsing method is the most general nonbacktracking shift-reduce parsing method known, yet
+it can be implemented as efficiently as other, more primitive shift-reduce methods.&lt;/li&gt;
+  &lt;li&gt;An LR parser can detect a syntactic error as soon as it is possible to do so on a left-to-right
+scan of the input.&lt;/li&gt;
+  &lt;li&gt;The class of grammars that can be parsed using LR methods is a proper superset of the class of
+grammars that can be parsed with predictive or LL methods.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;disadvantage&quot;&gt;Disadvantage&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;It is too much work to construct an LR parser by hand for a typical programming-language grammar.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/cs/computer-science-compiler-parser-LR.html</link>
+    <guid>/cs/computer-science-compiler-parser-LR</guid>
+    <pubDate>Thu, 01 Mar 2018 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
     <title>Compiler: Introduction</title>
     <description>
 &lt;h4 id=&quot;compiler-structure&quot;&gt;Compiler Structure&lt;/h4&gt;
@@ -29645,6 +29753,18 @@ A^{*}=\left{x_{1} x_{2} x_{3} \ldots . . x_{k} \mid k \geqslant 0 \text { and } 
 x_{i} \in A\right}
 \end{equation}&lt;/li&gt;
 &lt;/ol&gt;
+
+&lt;h4 id=&quot;regular-expressions&quot;&gt;Regular Expressions&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;$\Phi$(the empty set) is a regular language and denotes the empty set&lt;/li&gt;
+  &lt;li&gt;$\epsilon$ is a regular expression. It denotes the set of languages containing only the empty
+string: ${\epsilon}$&lt;/li&gt;
+  &lt;li&gt;The $\Phi$ and $\epsilon$ are not the same. The empty set is a regular language that does not
+accept any strings, including strings of length zero. If a regular language is denoted by
+${\epsilon}$, then it accepts exactly one string, the string of length zero. This latter
+regular language accepts something, the former does not.&lt;/li&gt;
+&lt;/ol&gt;
+
 </description>
     <link>/cs/computer-science-theory-of-computation-regurlar-language.html</link>
     <guid>/cs/computer-science-theory-of-computation-regurlar-language</guid>
@@ -29742,9 +29862,26 @@ fora string w(that means two or more left derivation trees.)&lt;/li&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 
+&lt;ol&gt;
+  &lt;li&gt;You will find references to the term “machine” throughout automata theory literature. This term
+does not refer to some particular computer on which a program executes&lt;/li&gt;
+  &lt;li&gt;This is usually some function that reads a string of symbols as inpus and produces one of tho
+outputs: match or failure&lt;/li&gt;
+  &lt;li&gt;Each class of machine has a class of languages associated with it. Deterministic and
+nondeterministic finite state auotomata recognize the regular languages. Nondeterministic push
+down automata recognize the context free languages. Turing machines can recognize all
+recongnizable languages.&lt;/li&gt;
+&lt;/ol&gt;
+
 &lt;h4 id=&quot;derivation&quot;&gt;Derivation&lt;/h4&gt;
 &lt;p&gt;The set of all strings that can be derived from a Grammar is said to be the language generated from
 that Grammar&lt;/p&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;When I write a program to identify legal parenthesis, stack is indispensable. According to theory
+of computation, this program is a pushdown automata.&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     <link>/cs/computer-science-theory-of-computation-language.html</link>
     <guid>/cs/computer-science-theory-of-computation-language</guid>
@@ -29842,6 +29979,49 @@ minimum number of states possible&lt;/p&gt;
     <link>/cs/computer-science-theory-of-computation-determinstic-finite-automata.html</link>
     <guid>/cs/computer-science-theory-of-computation-determinstic-finite-automata</guid>
     <pubDate>Thu, 01 Feb 2018 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>TOC: Context Free Languages</title>
+    <description>
+&lt;h4 id=&quot;introduction&quot;&gt;Introduction&lt;/h4&gt;
+&lt;p&gt;Context Free languages provide a superset of the regular languages, if you can specify a class of
+patterns with a regular expression, you can express the same language using a context free grammar.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Examples of languages that are context free, but not regular, include the set of all strings
+representing common arithmetic expressions, legal Pascal or C source files, and MASM macros&lt;/li&gt;
+  &lt;li&gt;Context free languages are characterized by balance and nesting, for example, arithmetic
+expression have balanced sets of parenthesis. High level language statements like repeat… until
+allow nesting and are always balanced.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;b&quot;&gt;B&lt;/h4&gt;
+&lt;p&gt;A context free grammar contains two types of symbols: terminal symbols and nonterminal symbols.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;terminal symbols are the individual characters and strings that the context free grammar matches
+plus the empty string, $\epsilon$.&lt;/li&gt;
+  &lt;li&gt;Context free grammars use nonterminal symbols for function calls and definitions&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/cs/computer-science-theory-of-computation-context-free-language.html</link>
+    <guid>/cs/computer-science-theory-of-computation-context-free-language</guid>
+    <pubDate>Thu, 01 Feb 2018 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Microprocessor: Bus</title>
+    <description>
+&lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
+&lt;p&gt;Bus: a bundle of eight wires that typically goes to many places&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;The system bus connects the various components of a VNA machine. The 80x86 family has three major
+busses: the address bus, the data bus, and the control bus.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    <link>/cs/computer-science-microprocessor-system-bus.html</link>
+    <guid>/cs/computer-science-microprocessor-system-bus</guid>
+    <pubDate>Mon, 01 Jan 2018 00:00:00 +0900</pubDate>
   </item>
 
   <item>
@@ -29997,17 +30177,6 @@ bit. In the comparator, we have two bits that pass down from hightes bit positio
 </description>
     <link>/cs/computer-science-microprocessor-bytes-operation.html</link>
     <guid>/cs/computer-science-microprocessor-bytes-operation</guid>
-    <pubDate>Mon, 01 Jan 2018 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>Microprocessor: Bus</title>
-    <description>
-&lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
-&lt;p&gt;Bus: a bundle of eight wires that typically goes to many places&lt;/p&gt;
-</description>
-    <link>/cs/computer-science-microprocessor-bus.html</link>
-    <guid>/cs/computer-science-microprocessor-bus</guid>
     <pubDate>Mon, 01 Jan 2018 00:00:00 +0900</pubDate>
   </item>
 
