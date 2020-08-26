@@ -22,3 +22,15 @@ is unnesscary to mention the subject.
 
 #### B
 1. ほら見て、飛んでるよ
+
+
+#### C
+けど literally means 'but', but sometimes this is very delicate and subtle
+1. 田中ですけど: This is 田中, if you are expect someone else to answer this
+   telephone, I am sorry
+
+2. いい(のだ)けど: I wish
+- アメリカに留学できるといいんだけど
+
+
+

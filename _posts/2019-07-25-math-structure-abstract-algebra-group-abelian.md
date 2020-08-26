@@ -17,46 +17,46 @@ In here, the meaning of the word isomorphism is kind of like equality, you can
 understand this way. <br/>
 Definition: Groups G, H are isomorphic, written 
 $G \simeq H$, if we can find a bijection,$\phi G \rightarrow H$, satisfying
-$$
+$
 \begin{array}{l}{\varphi\left(e_{G}\right)=e_{H}} \\ {\varphi\left(g_{1} \times
 g_{2}\right)=\varphi\left(g_{1}\right) * \varphi\left(g_{2}\right)} \\
 {\varphi\left(g^{-1}\right)=(\varphi(g))^{-1}}\end{array}
-$$
+$
 
 for commutative groups, written additively: <br />
 
-$$
+$
 \begin{array}{l}{\varphi\left(O_{G}\right)=O_{H} \\ 
 \varphi\left(g_{1}+g_{2}\right)=\varphi\left(g_{1}\right)+\varphi\left(g_{2}\right)}
 \\ {\quad \varphi(-g)=-\varphi(g)}\end{array}
-$$
+$
 
 #### Example
-$$
+$
 \begin{array}{l|llll}{x} & {1} & {a} & {b} & {c} \\ \hline 1 & {1} & {a} & {b} &
 {c} \\ {a} & {a} & {1} & {c} & {b} \\ {b} & {b} & {c} & {1} & {a} \\ {c} & {c} &
 {b} & {a} & {1}\end{array}
-$$ <br />
+$ <br />
 
-$$
+$
 \begin{array}{l|llll}{+} & {(0,0)} & {(1,0)} & {(0,1)} & {(1,1)} \\ \hline 1 & {1} & {a} & {b} &
 {c} \\ {a} & {a} & {1} & {c} & {b} \\ {b} & {b} & {c} & {1} & {a} \\ {c} & {c} &
 {b} & {a} & {1}\end{array}
-$$ <br />
+$ <br />
 The map: <br />
 
-$$
+$
 \begin{array}{l}{\varphi: 1 \rightarrow(0,0)} \\ {a \rightarrow(1,0)} \\ {b
 \rightarrow(0,1)} \\ {c \rightarrow(1,1)}\end{array}
-$$
+$
 
 
 #### Order of An Element
 The order of An element $g \in (G,\ast)$ is the least positive integer n
 satisfying <br />
-$$
+$
 \underbrace{g * g * \cdots * g}_{n}=e
-$$ <br />
+$ <br />
 $ord(g) = n$
 
 1. in $Z_4$, ord(0)=1, ord(1)=ord(3)=4,ord(2)=2 
@@ -98,6 +98,9 @@ Group, Group**
 2. You can see, how insightfull these mathematican is !!! They extends the
    meaning of quotient and generalize this concept.
 
+
+#### Reference
+1. [Free mean](https://math.stackexchange.com/questions/1426691/what-does-the-free-in-free-abelian-group-or-free-group-mean)
 
 
 

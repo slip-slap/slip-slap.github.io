@@ -9,10 +9,6 @@ tags: ["構造","A.A."]
 {% include JB/setup %}
 
 
-
-
-
-
 #### Group Definition
 group: set of elements 
 1. Operation: *   such as, addition, multiplication
@@ -21,16 +17,14 @@ group: set of elements
 4. Identity element: e
 5. associative: $$(A\ast B)\ast C$$=$$A\ast (B\ast C)$$
 
-##### Remark
-why we need these properties ? <br />
-The answer is we want to solve equation. <br />
+- Why we need these properties ? 
+- The answer is we want to solve equation. 
 <img src="{{IMAGE_PATH}}/abstract-algebra-group-reason.png">
 
 
 we say elements, not numbers, because elements are more abstract.
 Identity element: an element that leaves any element of the set to which it belongs unchanged when combined with it by a specified operation.
 such as 0 in the set of all integers under addition or 1 in the set of positive integers under multiplication.
-<br />
 
 <img src="{{IMAGE_PATH}}/abstract-algebra-group.png">
 <br />
@@ -49,8 +43,8 @@ or **Abelian Group**  <br /> If G is not commutative, then G is called
 #### Subgroup
 H is used to denote subgroup, why, because H after G in alphabet ahahaha...
 Don't say mathematician are predictable <br />
-1. $$H \leq G$$ can be read H is a subgroup of G.
-2. $$H < G$$  H is a proper subgroup of G.
+1. $H \leq G$ can be read H is a subgroup of G.
+2. $H < G$  H is a proper subgroup of G.
 
 #### terminology 4:  Order
 The order of groups is the number of elements in the group.
@@ -60,10 +54,9 @@ Properties:
 1. Every row/column contains identity element
 2. Symmetric about diagonal, if the group is abelian.
 3. No duplicate elements in row and columns
-<br />
 
 <img src="{{IMAGE_PATH}}/abstract-algebra-cayley-table.png">
-<br />
+
 ##### Examples: Order 3
 <img src="{{IMAGE_PATH}}/abstract-algebra-caey-table-order3.png">
 
@@ -71,10 +64,10 @@ Properties:
 Gaussian used to partition the number integer into a few sets by mod, and treat new sets as a new number. <br />
 In group theory, this can be done by **normal group** ,and the result is **quotient group**. <br />
 1. In general, we can define the following:
-$$
+$
 Z_n for n=1,2,3,\cdots
 Z_n = {0,1,\cdots,n-1}
-$$
+$
 The operation is + = addition(mod n) <br />
 Here, the symbol + means group operation for expecially for commutative group.
 Actually group operation is addition plus mod n
@@ -126,6 +119,11 @@ polynomial just as a combination of translation, rotation which correspondent to
 division. <br />
 He is a realy geinus.
 
+#### Galois
+1. Identity Element? What does this word "Identity" mean ? 
+- This is defined by mapping, it reflect mapping relation.
+- We don't interested in isolated element, so everything is related with
+  mapping.
 
 
 

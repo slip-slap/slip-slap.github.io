@@ -91,12 +91,12 @@ tags: ["英語"]
    hospitalized patients.
 2. China concealed the extent of the coronavirus outbreak in its country,
    under-reporting both total cases and deaths.
-
 3. disease could be transimitted from animal fur to human.
 4. those who ended up in tensive care maybe left with permanent damage to their
    lungs and liver.
 5. dislocate your shoulder
 6. headaches and feeling dizzy may also be signs of COVID-19
 7. broke my leg
+8. low-grade depression
 
 

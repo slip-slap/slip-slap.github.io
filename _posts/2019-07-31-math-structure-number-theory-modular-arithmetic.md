@@ -16,18 +16,18 @@ on the integers that is compatible with the operations on integers: addition, su
 
 #### Polynomial arithmetic in Field (prime=11)
 Example:
-$$
+$
 q=\alpha^{k}
-$$
+$
 and, <br />
-$$
+$
 q(\alpha + \beta) = (\alpha + \beta)^{k}
-$$
+$
 
 if k=p <br />
-$$
+$
 q(\alpha) = \beta^{p}+(\alpha - \beta)^p
-$$
+$
 
 and 
 

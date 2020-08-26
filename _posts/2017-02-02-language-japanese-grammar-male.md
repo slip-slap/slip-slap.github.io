@@ -17,3 +17,10 @@ tags: ["日本語"]
 - そうかい。まだ大丈夫だろう
 - 本当にそうかい
 
+
+#### 3. ぞ・ぜ
+same meaning as よ, but less polite, decreaing politeness
+- 逃げるよ: 
+- 逃げるぞ: 
+- 逃げるぜ: 
+

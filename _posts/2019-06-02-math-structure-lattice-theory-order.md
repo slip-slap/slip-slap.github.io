@@ -16,6 +16,9 @@ tags: ["構造","L.T."]
 
 2. Ordered set: a nonempty set equipped with such a relation is called an
    ordered set or an order(or a partially ordered set or a poset)
+- Here, the word partially means that one element is not comparable with all the
+  other elements, but just a part of them. 
+- So the opposite word is total.
 
 
 3. An order $ (A ; \varrho) $ consists of a nonempty set A and a binary relation

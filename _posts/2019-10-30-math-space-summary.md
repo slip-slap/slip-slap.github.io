@@ -9,6 +9,7 @@ tags: ["space","summary"]
 {% include JB/setup %}
 
 
+
 #### Geometry
 1. one of the key aspects in geometry is invariance. This can be somewhat
    difficult to define, but the idea is that the properties or measurements
@@ -44,12 +45,6 @@ But the question is how to study them ?
    vector space is better option, because It doesn't change depend on the
    choosen coordinate system.
 
-#### History
-1. Gauss is the first guy who finds Non-Euclidean Geometry, but he keep this to himself, never told
-anybody. you may say he is perfectism, but maybe he just selfish. Later on, another Russian guy 
-find Non-Euclidean geometry, to study his paper, Gauss learn Russian language.
-2. Bolyai find Non-euclidean geometry, and pushished it. and send the paper to Gauss, but gauss 
-ignore said I had alread find this. So his work is ignored by contempory scientist.
 
 
 #### Relationship Between Geometry and Algebra

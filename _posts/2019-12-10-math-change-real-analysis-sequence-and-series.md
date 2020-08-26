@@ -44,9 +44,9 @@ $$
 
 #### Power Series
 
-$$
+$
 \sum_{n=0}^{\infty} a_{n}(x-c)^{n}=a_{0}+a_{1}(x-c)^{1}+a_{2}(x-c)^{2}+\cdots
-$$
+$
 
 
 #### Taylor Series

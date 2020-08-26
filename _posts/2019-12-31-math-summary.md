@@ -23,9 +23,6 @@ We copy concept from one subject to another, and hope it may work.
 - Complex number maybe an object.
 
 
-
-
-
 #### 1. History
 
 ```
@@ -65,7 +62,7 @@ discrete.
 
 1. Difference between space and structure
 
-- $$R^N$$, Banach space, Normed vector space, Metric space, Hilbert space,
+- $R^N$, Banach space, Normed vector space, Metric space, Hilbert space,
    Inner product space, vector space. modern mathematics uses many types of
    spaces.  it does not define the notion of "space" itself
 - Neither of these words space and structure have a single mathematical
@@ -84,16 +81,16 @@ discrete.
 
 <img src="{{IMAGE_PATH}}/math-greek-alphabet.jpg"  />
 
-1. $$ \xi \mapsto p_{\xi} $$: sign between $$\xi$$ and $$p_{\xi}$$ means maps to
-2. $$ \xi $$ and $$ \Xi $$ prounced |zai| in English, prounced |ksi| in modern
+1. $ \xi \mapsto p_{\xi} $: sign between $\xi$ and $p_{\xi}$ means maps to
+2. $ \xi $ and $ \Xi $ prounced |zai| in English, prounced |ksi| in modern
    Greek.
-3. $$\phi$$ or $$\varphi$$  and  $$\Phi$$, these two letters are the same, but little change
-4. $$\psi$$ and $$\Psi$$, usually stands for wave function in quanum mechanics.
+3. $\phi$ or $\varphi$  and  $\Phi$, these two letters are the same, but little change
+4. $\psi$ and $\Psi$, usually stands for wave function in quanum mechanics.
 
 
 ##### 3.2 Change Mathematics
-- $$\partial$$: denote as a partial derivative such as $$ \frac{\partial
-  z}{\partial x} $$.
+- $\partial$: denote as a partial derivative such as $ \frac{\partial
+  z}{\partial x} $.
 - It represents a specialized cursive letter of d. It may simply pronounced
    simply "dee".
 
@@ -126,9 +123,6 @@ discrete.
 - $6/0$
 - vector + matrix
 - infinity + infinity
-
-
-
 
 
 #### Reference
