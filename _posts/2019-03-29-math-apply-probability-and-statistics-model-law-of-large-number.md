@@ -11,7 +11,7 @@ tags: ["apply","P.A.S.M."]
 #### What is the crap of Sampling Distribution?
 1. Suppose $X_1,X_2,\cdots,X_n$ is an identically and independently distributed
    sequence, i.e.,$X_1,X_2,\cdots,X_n$ is a sample from some distribution, and
-   we are interested in the distribution of a **new random variable** $Y=h($X_1,X_2,\cdots,X_n$)$ for
+   we are interested in the distribution of a **new random variable** $Y=h(X_1,X_2,\cdots,X_n)$ for
    some function h.
 2. In particular, we might want to compute the distribution function of Y or
    perhaps its mean and variance. The distribution of Y is sometimes referred to
@@ -21,62 +21,53 @@ tags: ["apply","P.A.S.M."]
 
 #### Convergence
 1. Convergence in probability:
-A sequence of rv's $Z_1,Z_2,\cdots$ converges
-   in probability to a rv Z if 
-$$
-\lim _{n \rightarrow \infty}
-\operatorname{Pr}\left\{\left|Z_{n}-Z\right|>\epsilon\right\}=0
-$$ for every $\epsilon > 0$
+A sequence of rv's $Z_1,Z_2,\cdots$ converges in probability to a rv Z if $ \lim _{n \rightarrow
+\infty} \operatorname{Pr}\left\{\left|Z_{n}-Z\right|>\epsilon\right\}=0 $ for every $\epsilon > 0$
 2. Convergence in distribution:
-A sequence of rv's $Z_1,Z_2,\cdots$ converges
-   in distribution to a random variable $Z$ if 
-$$
-\lim _{n \rightarrow \infty} \mathrm{F}_{Z_{n}}(z)=\mathrm{F}_{Z}(z)
-$$
+A sequence of rv's $Z_1,Z_2,\cdots$ converges in distribution to a random variable $Z$ if $ \lim _{n
+\rightarrow \infty} \mathrm{F}_{Z_{n}}(z)=\mathrm{F}_{Z}(z) $
 at each $z$ for which $F_Z(z)$ is continuous.
+
 3. Convergence in mean square(MS): A sequence of rv's $Z_1,Z_2,\cdots$ converges
-   in mean square(MS) to a rv Z if 
-$$
-\left.\lim _{n \rightarrow \infty}
-\mathrm{E}\left[\left(Z_{n}-Z\right)^{2}\right]\right\} 0
-$$
+   in mean square(MS) to a rv Z if $ \left.\lim _{n \rightarrow \infty}
+   \mathrm{E}\left[\left(Z_{n}-Z\right)^{2}\right]\right\} 0 $
 
 4. Convergence with probability 1(WP1):
 Let $Z_1,Z_2,\cdot$ be a sequence of rv's in a sample space $\Omega$ and let Z
 be another rv in $\Omega$. Then $\{ Z_n; n\geq 1\}$ is defined to converge to Z
 with probability(WP1) if 
-$$
+$
 \operatorname{Pr}\left\{\omega \in \Omega: \lim _{n \rightarrow \infty}
 Z_{n}(\omega)=Z(\omega)\right\}=1
-$$
+$
 
 
 
 #### Basic Operator
 1. Expectation E(X)
-$$
+$
 \mathrm{E}[\mathrm{a} \mathrm{x}+\mathrm{b}]=\mathrm{aE}[\mathrm{X}]+\mathrm{b}
-$$
+$
 
 **you can treat expection is a linear operator**
 **you can treat expection is a linear operator**
 **you can treat expection is a linear operator**
 **Just unbelievable !!!**
 2. Variation D(X)
-$$
+$
 D(\mathrm{X})=\mathrm{E}\left[(\mathrm{X}-\mathrm{m})^{2}\right]
-$$ <br />
-$$
+$ <br />
+$
 D(X)=E(X^2)-m^2 
-$$
+$
 where m is the expected value E(X)
 
-$$
+$
 \operatorname{D}[a X+b]=a^{2} \operatorname{D}(X)
-$$
+$
 
 3. Proof
-$$
+$
 \begin{array}{l}{=\mathrm{E}\left[\mathrm{a}^{2} \mathrm{X}^{2}+2 \mathrm{ab}
 \mathrm{X}+\mathrm{b}^{2}\right]-(\mathrm{aE}(\mathrm{X})+\mathrm{b})^{2}} \\
 {=\mathrm{a}^{2} \mathrm{E}\left(\mathrm{X}^{2}\right)+2 \mathrm{ab}
@@ -85,26 +76,26 @@ $$
 {=\mathrm{a}^{2} \mathrm{E}\left(\mathrm{X}^{2}\right)-\mathrm{a}^{2}
 \mathrm{E}^{2}(\mathrm{x})=\mathrm{a}^{2}
 \operatorname{Var}(\mathrm{X})}\end{array}
-$$
+$
 
 #### Example: mean and variance of sample 
-$$
+$
 E(\bar{X})=E\left(\frac{X_{1}+X_{2}+\cdots+X_{n}}{n}\right)
-$$
+$
 <br />
-$$
+$
 E(\bar{X})=\frac{1}{n}\left[E\left(X_{1}\right)+E\left(X_{2}\right)+\cdots+E\left(X_{n}\right)\right]
-$$
+$
 <br />
-$$
+$
 \operatorname{D}(\bar{X})=\operatorname{D}\left(\frac{X_{1}+X_{2}+\cdots+X_{n}}{n}\right)
-$$
+$
 <br />
 
-$$
+$
 \operatorname{D}(\bar{X})=\operatorname{D}\left(\frac{1}{n}
 X_{1}+\frac{1}{n} X_{2}+\cdots+\frac{1}{n} X_{n}\right)
-$$
+$
 <br />
 
 #### Example 2:

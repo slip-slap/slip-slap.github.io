@@ -15,6 +15,7 @@ tags: ["英語"]
 
 #### Phrase
 1. restraining order
+2. impose new law
 
 #### Sentence
 1. How are restraining order issued and enforced?

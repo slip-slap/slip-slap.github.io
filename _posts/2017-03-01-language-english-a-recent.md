@@ -15,6 +15,7 @@ tags: ["英語"]
 3. took over the premise
 4. wedding reception
 5. kick out
+6. When the tide goes out that you learn who's been swimming naked
 
 
 #### Sentence

@@ -37,3 +37,4 @@ tags: ["英語"]
 
 ####
 1. flags are flown at half-mast.
+2. Take a poll

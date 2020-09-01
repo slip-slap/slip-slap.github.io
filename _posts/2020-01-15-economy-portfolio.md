@@ -15,5 +15,5 @@ Observations
  Portfolio manager
 
 #### A
-Cash, CD, Bank Deposites, UST Bills, bonds, corporate bonds, ccommodities, oil,
+Cash, CD, Bank Deposites, UST Bills, bonds, corporate bonds, commodities, oil,
 gold, currencies, Mutual FUnds, Real estate, Lotteries, paintings 

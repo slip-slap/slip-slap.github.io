@@ -1,23 +1,12 @@
 ---
 layout: post
-title: "G.T.: Introduction"
-keywords: [ ""]
+title: "Game Theory: Introduction"
+keywords: [""]
 description: ""
 category: "math"
 tags: ["apply","G.T."]
 ---
 {% include JB/setup %}
-
-#### Background
-Game theory is the study of mathematical models of strategic interaction among rational decision-makers. It has applications in all fields of social science
-, as well as in logic, systems science, and computer science.
-
-#### component
-1. player
-2. strategy  Notation s
-3. payoff    Notation u
-4. equilibrium
-
 
 #### reminder
 1. put yourself in ohter's shoes and try to figure out what they would do
@@ -26,9 +15,6 @@ Game theory is the study of mathematical models of strategic interaction among r
 4. Rational choices can lead to bad choices
 5. you can't get what you want until you know what you want
 
-#### Nash equilibrium
-A Nash Equilibrium is a set of strageties, one for each player, such that no player has 
-incentive to change his or her strategy given what the other players are doing
 
 
 #### prisoner's dilemma

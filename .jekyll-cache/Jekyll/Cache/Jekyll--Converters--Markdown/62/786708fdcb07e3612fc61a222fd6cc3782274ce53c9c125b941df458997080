@@ -1,9 +1,9 @@
-I"�
+I"�
 <h4 id="what-is-the-crap-of-sampling-distribution">What is the crap of Sampling Distribution?</h4>
 <ol>
   <li>Suppose $X_1,X_2,\cdots,X_n$ is an identically and independently distributed
 sequence, i.e.,$X_1,X_2,\cdots,X_n$ is a sample from some distribution, and
-we are interested in the distribution of a <strong>new random variable</strong> $Y=h($X_1,X_2,\cdots,X_n$)$ for
+we are interested in the distribution of a <strong>new random variable</strong> $Y=h(X_1,X_2,\cdots,X_n)$ for
 some function h.</li>
   <li>In particular, we might want to compute the distribution function of Y or
 perhaps its mean and variance. The distribution of Y is sometimes referred to
@@ -14,33 +14,35 @@ as its <strong>sampling distribution</strong></li>
 <h4 id="convergence">Convergence</h4>
 <ol>
   <li>Convergence in probability:
-A sequence of rv’s $Z_1,Z_2,\cdots$ converges
-in probability to a rv Z if 
-\(\lim _{n \rightarrow \infty}
-\operatorname{Pr}\left\{\left|Z_{n}-Z\right|&gt;\epsilon\right\}=0\) for every $\epsilon &gt; 0$</li>
-  <li>Convergence in distribution:
-A sequence of rv’s $Z_1,Z_2,\cdots$ converges
-in distribution to a random variable $Z$ if 
-\(\lim _{n \rightarrow \infty} \mathrm{F}_{Z_{n}}(z)=\mathrm{F}_{Z}(z)\)
-at each $z$ for which $F_Z(z)$ is continuous.</li>
+A sequence of rv’s $Z_1,Z_2,\cdots$ converges in probability to a rv Z if $ \lim <em>{n \rightarrow
+\infty} \operatorname{Pr}\left{\left|Z</em>{n}-Z\right|&gt;\epsilon\right}=0 $ for every $\epsilon &gt; 0$</li>
+  <li>
+    <p>Convergence in distribution:
+A sequence of rv’s $Z_1,Z_2,\cdots$ converges in distribution to a random variable $Z$ if $ \lim <em>{n
+\rightarrow \infty} \mathrm{F}</em>{Z_{n}}(z)=\mathrm{F}_{Z}(z) $
+at each $z$ for which $F_Z(z)$ is continuous.</p>
+  </li>
   <li>
     <p>Convergence in mean square(MS): A sequence of rv’s $Z_1,Z_2,\cdots$ converges
-in mean square(MS) to a rv Z if 
-\(\left.\lim _{n \rightarrow \infty}
-\mathrm{E}\left[\left(Z_{n}-Z\right)^{2}\right]\right\} 0\)</p>
+in mean square(MS) to a rv Z if $ \left.\lim <em>{n \rightarrow \infty}
+\mathrm{E}\left[\left(Z</em>{n}-Z\right)^{2}\right]\right} 0 $</p>
   </li>
   <li>Convergence with probability 1(WP1):
 Let $Z_1,Z_2,\cdot$ be a sequence of rv’s in a sample space $\Omega$ and let Z
 be another rv in $\Omega$. Then ${ Z_n; n\geq 1}$ is defined to converge to Z
 with probability(WP1) if 
-\(\operatorname{Pr}\left\{\omega \in \Omega: \lim _{n \rightarrow \infty}
-Z_{n}(\omega)=Z(\omega)\right\}=1\)</li>
+$
+\operatorname{Pr}\left{\omega \in \Omega: \lim <em>{n \rightarrow \infty}
+Z</em>{n}(\omega)=Z(\omega)\right}=1
+$</li>
 </ol>
 
 <h4 id="basic-operator">Basic Operator</h4>
 <ol>
   <li>Expectation E(X)
-\(\mathrm{E}[\mathrm{a} \mathrm{x}+\mathrm{b}]=\mathrm{aE}[\mathrm{X}]+\mathrm{b}\)</li>
+$
+\mathrm{E}[\mathrm{a} \mathrm{x}+\mathrm{b}]=\mathrm{aE}[\mathrm{X}]+\mathrm{b}
+$</li>
 </ol>
 
 <p><strong>you can treat expection is a linear operator</strong>
@@ -49,35 +51,51 @@ Z_{n}(\omega)=Z(\omega)\right\}=1\)</li>
 <strong>Just unbelievable !!!</strong></p>
 <ol>
   <li>Variation D(X)
-\(D(\mathrm{X})=\mathrm{E}\left[(\mathrm{X}-\mathrm{m})^{2}\right]\) <br />
-\(D(X)=E(X^2)-m^2\)
+$
+D(\mathrm{X})=\mathrm{E}\left[(\mathrm{X}-\mathrm{m})^{2}\right]
+$ <br />
+$
+D(X)=E(X^2)-m^2 
+$
 where m is the expected value E(X)</li>
 </ol>
 
-\[\operatorname{D}[a X+b]=a^{2} \operatorname{D}(X)\]
+<p>$
+\operatorname{D}[a X+b]=a^{2} \operatorname{D}(X)
+$</p>
 
 <ol>
   <li>Proof
-\(\begin{array}{l}{=\mathrm{E}\left[\mathrm{a}^{2} \mathrm{X}^{2}+2 \mathrm{ab}
-\mathrm{X}+\mathrm{b}^{2}\right]-(\mathrm{aE}(\mathrm{X})+\mathrm{b})^{2}} \\
+$
+\begin{array}{l}{=\mathrm{E}\left[\mathrm{a}^{2} \mathrm{X}^{2}+2 \mathrm{ab}
+\mathrm{X}+\mathrm{b}^{2}\right]-(\mathrm{aE}(\mathrm{X})+\mathrm{b})^{2}} <br />
 {=\mathrm{a}^{2} \mathrm{E}\left(\mathrm{X}^{2}\right)+2 \mathrm{ab}
 \mathrm{E}(\mathrm{x})+\mathrm{b}^{2}-\mathrm{a}^{2}
-\mathrm{E}^{2}(\mathrm{x})-2 \mathrm{abE}(\mathrm{x})-\mathrm{b}^{2}} \\
+\mathrm{E}^{2}(\mathrm{x})-2 \mathrm{abE}(\mathrm{x})-\mathrm{b}^{2}} <br />
 {=\mathrm{a}^{2} \mathrm{E}\left(\mathrm{X}^{2}\right)-\mathrm{a}^{2}
 \mathrm{E}^{2}(\mathrm{x})=\mathrm{a}^{2}
-\operatorname{Var}(\mathrm{X})}\end{array}\)</li>
+\operatorname{Var}(\mathrm{X})}\end{array}
+$</li>
 </ol>
 
 <h4 id="example-mean-and-variance-of-sample">Example: mean and variance of sample</h4>
-<p>\(E(\bar{X})=E\left(\frac{X_{1}+X_{2}+\cdots+X_{n}}{n}\right)\)
+<p>$
+E(\bar{X})=E\left(\frac{X_{1}+X_{2}+\cdots+X_{n}}{n}\right)
+$
 <br />
-\(E(\bar{X})=\frac{1}{n}\left[E\left(X_{1}\right)+E\left(X_{2}\right)+\cdots+E\left(X_{n}\right)\right]\)
+$
+E(\bar{X})=\frac{1}{n}\left[E\left(X_{1}\right)+E\left(X_{2}\right)+\cdots+E\left(X_{n}\right)\right]
+$
 <br />
-\(\operatorname{D}(\bar{X})=\operatorname{D}\left(\frac{X_{1}+X_{2}+\cdots+X_{n}}{n}\right)\)
+$
+\operatorname{D}(\bar{X})=\operatorname{D}\left(\frac{X_{1}+X_{2}+\cdots+X_{n}}{n}\right)
+$
 <br /></p>
 
-<p>\(\operatorname{D}(\bar{X})=\operatorname{D}\left(\frac{1}{n}
-X_{1}+\frac{1}{n} X_{2}+\cdots+\frac{1}{n} X_{n}\right)\)
+<p>$
+\operatorname{D}(\bar{X})=\operatorname{D}\left(\frac{1}{n}
+X_{1}+\frac{1}{n} X_{2}+\cdots+\frac{1}{n} X_{n}\right)
+$
 <br /></p>
 
 <h4 id="example-2">Example 2:</h4>
