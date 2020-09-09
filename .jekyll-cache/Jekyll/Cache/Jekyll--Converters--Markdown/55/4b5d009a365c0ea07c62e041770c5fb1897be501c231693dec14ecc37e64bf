@@ -1,0 +1,56 @@
+I"_
+
+<p>The reason we are transforming our vertices into all these different spaces is that some operations
+make more sense or are easizer to use in certain coordinate systems.</p>
+<ul>
+  <li>For example, when modifying your object it makes more sense to do this in local space, while
+calculating certain operations on the object with respect to the position of other objects makes
+more sense in world coordinate and so on.</li>
+</ul>
+
+<ol>
+  <li>Local coordinates are the coordinates of your object relative to its local origin; they’re the
+coordinates your object begins in.</li>
+  <li>The next step is to transform the local coordinates to world-space coordinates which are
+coordinates in respect of a larger world. These coordinates are relative to a global origin of
+the world, together with many other objects also placed relative to the world’s origin.
+    <ul>
+      <li>The coordinates of your object are transformed from local to world space, this is accomplished
+with the model matrix</li>
+    </ul>
+  </li>
+  <li>Next we transform the world coordinates to view-space coordinates in such a way that each
+coordinates is as seen from the camera or viewer’s point of view.
+    <ul>
+      <li>The view space is what people ususaly refer to as the camera of OpenGL(it is sometimes also known
+as the camera space or eye space)</li>
+      <li>view matrix that transform world coordinates to view space.</li>
+    </ul>
+  </li>
+  <li>After the coordinates are in view space we want to project them to clip coordinates. Clip
+coordinates are processed to the -1.0 and 1.0 range and determine which vertices will end up on
+the screen.
+    <ul>
+      <li>projection matrix: transform vertex coordinates from view to clip-space.</li>
+    </ul>
+  </li>
+  <li>And lastly we transform the clip coordinates to screen coordinates in a process we call viewport
+transform that transforms the coordinate from -1.0 and 1.0 to the coordinate range defined by
+glViewport. The resulting coordinates are then send to the rasterizer to turn them into
+fragments.</li>
+</ol>
+
+<h4 id="look-at">Look At</h4>
+<p>$
+\text {LookAt}=\left[\begin{array}{cccc}R_{-} x &amp; R_{-} y &amp; R_{-} z &amp; 0 \ U_{-} x &amp; U_{-y} &amp; U_{-z}
+&amp; 0 \ D_{-} x &amp; D_{-} y &amp; D_{-z} &amp; 0 \ 0 &amp; 0 &amp; 0 &amp; 1\end{array}\right] *\left[\begin{array}{cccc}1
+&amp; 0 &amp; 0 &amp; -P_{-} x \ 0 &amp; 1 &amp; 0 &amp; -P_{-y} \ 0 &amp; 0 &amp; 1 &amp; -P_{-z} \ 0 &amp; 0 &amp; 0 &amp; 1\end{array}\right]
+$</p>
+<ol>
+  <li>R is the right vector.</li>
+  <li>U is the up vector.</li>
+  <li>D is the direction vector.</li>
+  <li>P is the camera’s position vector.</li>
+</ol>
+
+:ET

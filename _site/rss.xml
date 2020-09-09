@@ -5,8 +5,8 @@
   <description>Just Do It - </description>
   <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
   <link></link>
-  <lastBuildDate>Tue, 08 Sep 2020 18:59:50 +0900</lastBuildDate>
-  <pubDate>Tue, 08 Sep 2020 18:59:50 +0900</pubDate>
+  <lastBuildDate>Wed, 09 Sep 2020 10:41:11 +0900</lastBuildDate>
+  <pubDate>Wed, 09 Sep 2020 10:41:11 +0900</pubDate>
   <ttl>1800</ttl>
 
 
@@ -15724,6 +15724,64 @@ passing two types to the $\textbf{Pair}$ type constructor.&lt;/li&gt;
   </item>
 
   <item>
+    <title>Assembly: x86 Instruction Set</title>
+    <description>
+&lt;h4 id=&quot;introduction&quot;&gt;Introduction&lt;/h4&gt;
+&lt;p&gt;The x86 CPUs provide 20 basic instruction classes.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Seven of these instructions have two operands&lt;/li&gt;
+  &lt;li&gt;Eight of these instructions have a single operand&lt;/li&gt;
+  &lt;li&gt;Five instructions have no operands at all&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;mov&quot;&gt;Mov&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;mov
+    &lt;pre&gt;&lt;code class=&quot;language-ass&quot;&gt;mov reg, reg/memory/constant
+mov memory, reg
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;ul&gt;
+      &lt;li&gt;reg is any of ax,bx,cx, or dx; constant is a numberic constant(using hexadecimal notation)&lt;/li&gt;
+      &lt;li&gt;memory is an operand specifying a memory location.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;add: adds the value of the second operand to the first (register) operand, leaving the sum in the
+first operand&lt;/li&gt;
+  &lt;li&gt;sub: subtract the value of the second operand from the first, leaving the difference in the first
+operand.&lt;/li&gt;
+  &lt;li&gt;cmp: compares the first operand against the second and saves the result of this comparison for
+use with one of the conditional jum instructions.&lt;/li&gt;
+  &lt;li&gt;and,or: compute the corresponding bitwise logical operations on the two operands and store the
+result into the first operand&lt;/li&gt;
+  &lt;li&gt;not: inverts the bits in the single memory or register operand.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;2-control-transfer-instructions&quot;&gt;2. Control Transfer Instructions&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;ja    dest – Jump if above&lt;/li&gt;
+  &lt;li&gt;jae   dest – Jump if above or equal&lt;/li&gt;
+  &lt;li&gt;jb    dest – Jump if below&lt;/li&gt;
+  &lt;li&gt;jbe   dest – Jump if below or equal&lt;/li&gt;
+  &lt;li&gt;je    dest – Jump if equal&lt;/li&gt;
+  &lt;li&gt;jne   dest – Jump if not equal&lt;/li&gt;
+  &lt;li&gt;jmp   dest – Uncontidional jump&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;3&quot;&gt;3.&lt;/h4&gt;
+&lt;p&gt;The get and put instructions let you read and write integer values.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Get will stop and prompt the user for a hexadecimal value and then store that value into the ax
+register.&lt;/li&gt;
+  &lt;li&gt;Put displays the value of the ax register.&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/pl/pl-assemble-memory-x86-instruction-set.html</link>
+    <guid>/pl/pl-assemble-memory-x86-instruction-set</guid>
+    <pubDate>Thu, 01 Nov 2018 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
     <title>Assembly: Procedure and Function</title>
     <description>
 &lt;h4 id=&quot;introduction&quot;&gt;Introduction&lt;/h4&gt;
@@ -18810,6 +18868,208 @@ target_link_libraries&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;demo &lt;span
     <link>/pl/pl-compile-c++-embedding.html</link>
     <guid>/pl/pl-compile-c++-embedding</guid>
     <pubDate>Thu, 06 Sep 2018 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Graphic Programming: OpenGL Workflow</title>
+    <description>
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// create object&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;GLuint&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;objectId&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;glGenObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;objectId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// bind object to context, bind means select&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;glBindObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GL_WINDOW_TARGET&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;objectId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// set options of object currently bound to GL_WINDOW_TARGET&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;glSetObjectOption&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GL_WINDOW_TARGET&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;GL_OPTION_WINDOW_WIDTH&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;800&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;glSetObjectOption&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GL_WINDOW_TARGET&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;GL_OPTION_WINDOW_HEIGHT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;600&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// Set context target back to default&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;glBindObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GL_WINDOW_TARGET&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Viewport&lt;/li&gt;
+  &lt;li&gt;Behind the scenes OpenGL uses the data specified via &lt;strong&gt;glViewport&lt;/strong&gt; to transform the 2D
+coordinates it processed to coordinates on your screen.
+    &lt;ul&gt;
+      &lt;li&gt;For example, a processed point of location(-0.5, 0.5) would(as its final transformation) be mapped
+to (200,450) in screen coordinates.&lt;/li&gt;
+      &lt;li&gt;Note that processed coordinates in OpenGL are between -1 and 1 so we effectively map from the
+range (-1 to 1) to (0, 800) and (0, 600)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Double buffer: When an application draws in a single buffer the resulting image might display
+flickering issues. This is because the resulting output image is not drawn in an instant, but
+drawn pixel by pixel and usually from left to right and top to bottom.
+    &lt;ul&gt;
+      &lt;li&gt;because these images are not displayed at an instant to the user, but rather via a step by step
+generation the result may contain quite a few artifacts.&lt;/li&gt;
+      &lt;li&gt;To circumvent these issues, windowing applications apply a double buffer for rendering.&lt;/li&gt;
+      &lt;li&gt;The front buffer contains the final output image that is shown at the screen, while all the
+rendering commands draw to the back buffer. As soon as all the rendering commands are finished we
+swap the back buffer to the front buffer so the image is instantly displayed to the user.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;shader&quot;&gt;Shader&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;In order for OpenGl to know what to make of your collection of coordinates and color values
+OpenGL requires you to hint what kind of render types you want to form with the data.
+    &lt;ul&gt;
+      &lt;li&gt;Do we want the data rendered as a collection of points, a collection of triangles or perhaps just
+one long line?&lt;/li&gt;
+      &lt;li&gt;Those hints are called primitives and are given to OpenGL while calling any of the drawing
+commands.&lt;/li&gt;
+      &lt;li&gt;Some of these hints are GL_POINTS, GL_TRIANGLES and GL_LINE_STRIP.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/pl/graphics-programming-opengl-workflow.html</link>
+    <guid>/pl/graphics-programming-opengl-workflow</guid>
+    <pubDate>Sat, 18 Aug 2018 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Graphics Programming: OpenGL Texture</title>
+    <description>
+&lt;h4 id=&quot;introduction&quot;&gt;Introduction&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Aside from images, textures can also be used to store a large collection of data to send to the
+shaders, but we’ll leave that for a different topic.
+    &lt;ul&gt;
+      &lt;li&gt;A texture is a 2D image (even 1D and 3D textures exist) used to add detail to an object&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;In order to map a texture to the triangle we need to tell each vertex of the triangle which part of
+the texture is corresponds to.&lt;/li&gt;
+  &lt;li&gt;Each vertex should thus have a texture coordinate associated with them that specifies what part
+of the texture image to sample from.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;terminology&quot;&gt;Terminology&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Retrieving the texture color using texture coordinates is called sampling.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;Gluint&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;texture&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;glGenTextures&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;texture&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;glBindTexture&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GL_TEXTURE_2D&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;texture&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;glTexImage2D&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GL_TEXTURE_2D&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;GL_RGB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;GL_RGB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;GL_UNSIGNED_BYTE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;glGenerateMipmap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GL_TEXTURE_2D&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Appling textures&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;GLfloat&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;vertices&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;c1&quot;&gt;// Positions // Colors // Texture Coords&lt;/span&gt;
+	&lt;span class=&quot;mf&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.0&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.0&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.0&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.0&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.0&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.0&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Top Right&lt;/span&gt;
+	&lt;span class=&quot;mf&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.0&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.0&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.0&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.0&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.0&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.0&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Bottom Right&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.0&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.0&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.0&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.0&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.0&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.0&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Bottom Left&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.0&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.0&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.0&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.0&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.0&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.0&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Top Left&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+    <link>/pl/graphics-programming-opengl-texture.html</link>
+    <guid>/pl/graphics-programming-opengl-texture</guid>
+    <pubDate>Sat, 18 Aug 2018 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Graphics Programming: OpenGL Introduction</title>
+    <description>
+&lt;h4 id=&quot;introduction&quot;&gt;Introduction&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Most implementations are built by graphics card manufactures. Whenever there is a bug in the
+implementation is usually solved by updating your video card drivers; those drivers include the
+newest versions of OpenGL that your card supports. This is one of the reasons why it’s always
+advised to occassionally update your graphic drivers.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.gl/&quot;&gt;Opengl Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/pl/graphics-programming-opengl-introduction.html</link>
+    <guid>/pl/graphics-programming-opengl-introduction</guid>
+    <pubDate>Sat, 18 Aug 2018 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Graphics Programming: Coordinate</title>
+    <description>
+&lt;p&gt;The reason we are transforming our vertices into all these different spaces is that some operations
+make more sense or are easizer to use in certain coordinate systems.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;For example, when modifying your object it makes more sense to do this in local space, while
+calculating certain operations on the object with respect to the position of other objects makes
+more sense in world coordinate and so on.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Local coordinates are the coordinates of your object relative to its local origin; they’re the
+coordinates your object begins in.&lt;/li&gt;
+  &lt;li&gt;The next step is to transform the local coordinates to world-space coordinates which are
+coordinates in respect of a larger world. These coordinates are relative to a global origin of
+the world, together with many other objects also placed relative to the world’s origin.
+    &lt;ul&gt;
+      &lt;li&gt;The coordinates of your object are transformed from local to world space, this is accomplished
+with the model matrix&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Next we transform the world coordinates to view-space coordinates in such a way that each
+coordinates is as seen from the camera or viewer’s point of view.
+    &lt;ul&gt;
+      &lt;li&gt;The view space is what people ususaly refer to as the camera of OpenGL(it is sometimes also known
+as the camera space or eye space)&lt;/li&gt;
+      &lt;li&gt;view matrix that transform world coordinates to view space.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;After the coordinates are in view space we want to project them to clip coordinates. Clip
+coordinates are processed to the -1.0 and 1.0 range and determine which vertices will end up on
+the screen.
+    &lt;ul&gt;
+      &lt;li&gt;projection matrix: transform vertex coordinates from view to clip-space.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;And lastly we transform the clip coordinates to screen coordinates in a process we call viewport
+transform that transforms the coordinate from -1.0 and 1.0 to the coordinate range defined by
+glViewport. The resulting coordinates are then send to the rasterizer to turn them into
+fragments.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;look-at&quot;&gt;Look At&lt;/h4&gt;
+&lt;p&gt;$
+\text {LookAt}=\left[\begin{array}{cccc}R_{-} x &amp;amp; R_{-} y &amp;amp; R_{-} z &amp;amp; 0 \ U_{-} x &amp;amp; U_{-y} &amp;amp; U_{-z}
+&amp;amp; 0 \ D_{-} x &amp;amp; D_{-} y &amp;amp; D_{-z} &amp;amp; 0 \ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1\end{array}\right] *\left[\begin{array}{cccc}1
+&amp;amp; 0 &amp;amp; 0 &amp;amp; -P_{-} x \ 0 &amp;amp; 1 &amp;amp; 0 &amp;amp; -P_{-y} \ 0 &amp;amp; 0 &amp;amp; 1 &amp;amp; -P_{-z} \ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1\end{array}\right]
+$&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;R is the right vector.&lt;/li&gt;
+  &lt;li&gt;U is the up vector.&lt;/li&gt;
+  &lt;li&gt;D is the direction vector.&lt;/li&gt;
+  &lt;li&gt;P is the camera’s position vector.&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/pl/graphics-programming-opengl-coordinate.html</link>
+    <guid>/pl/graphics-programming-opengl-coordinate</guid>
+    <pubDate>Sat, 18 Aug 2018 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Graphics Programming: OpenGL Color</title>
+    <description>
+</description>
+    <link>/pl/graphics-programming-opengl-color.html</link>
+    <guid>/pl/graphics-programming-opengl-color</guid>
+    <pubDate>Sat, 18 Aug 2018 00:00:00 +0900</pubDate>
   </item>
 
   <item>
