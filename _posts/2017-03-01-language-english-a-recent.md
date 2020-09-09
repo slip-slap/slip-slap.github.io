@@ -19,5 +19,6 @@ tags: ["英語"]
 
 
 #### Sentence
-1. Being kicked like a ball.
+1. Being kicked like a ball
+2. They are disconnected from the reality
 

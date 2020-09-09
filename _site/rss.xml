@@ -5,8 +5,8 @@
   <description>Just Do It - </description>
   <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
   <link></link>
-  <lastBuildDate>Tue, 01 Sep 2020 18:16:31 +0900</lastBuildDate>
-  <pubDate>Tue, 01 Sep 2020 18:16:31 +0900</pubDate>
+  <lastBuildDate>Tue, 08 Sep 2020 18:59:50 +0900</lastBuildDate>
+  <pubDate>Tue, 08 Sep 2020 18:59:50 +0900</pubDate>
   <ttl>1800</ttl>
 
 
@@ -15724,6 +15724,73 @@ passing two types to the $\textbf{Pair}$ type constructor.&lt;/li&gt;
   </item>
 
   <item>
+    <title>Assembly: Procedure and Function</title>
+    <description>
+&lt;h4 id=&quot;introduction&quot;&gt;Introduction&lt;/h4&gt;
+&lt;p&gt;The difference between functions and procedures in assembly langugae is mainly a matter of
+definition.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;The purpose for a function is to return some explicit value
+    &lt;ul&gt;
+      &lt;li&gt;To declare a function in assembly language, use the proc/endp directives.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;the purpose for a procedure is to execute some action&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/pl/pl-assemble-memory-procedure-and-function.html</link>
+    <guid>/pl/pl-assemble-memory-procedure-and-function</guid>
+    <pubDate>Thu, 01 Nov 2018 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Assembly: Memory Layout</title>
+    <description>
+&lt;h4 id=&quot;1-general-purpose-registers&quot;&gt;1. General Purpose Registers&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;ax register(accumulator): is where most arithmetic and logical computations take place, although
+you can do most arithmetic and logical operations in other registers, it is more efficient to use
+the ax register for such computations.&lt;/li&gt;
+  &lt;li&gt;bx register(base): has some special purposed as well. It is commonly used to hold indirect
+addresses.&lt;/li&gt;
+  &lt;li&gt;cx register(count): as its name implies, counts things, you often use it to count off the number
+of iterations in a loop or specifythe number of characters in a string.&lt;/li&gt;
+  &lt;li&gt;dx register(data): has two special purposes: it holds the overflow from certain arithmetic
+operations, and it holds I/O addresses when accessing data on the 80x86 I/O bus&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;2-segment-registers&quot;&gt;2. Segment Registers&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;cs: code segment&lt;/li&gt;
+  &lt;li&gt;ds: data segment&lt;/li&gt;
+  &lt;li&gt;es: extra segment&lt;/li&gt;
+  &lt;li&gt;ss: stack segment&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/pl/pl-assemble-memory-layout-and-access.html</link>
+    <guid>/pl/pl-assemble-memory-layout-and-access</guid>
+    <pubDate>Thu, 01 Nov 2018 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Assembly: ELF</title>
+    <description>
+&lt;h4 id=&quot;history&quot;&gt;History&lt;/h4&gt;
+&lt;p&gt;The binary file follows a specific structure, and one of the most common ones is named ELF that
+abbreviates Executable and Linkable Format&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;It is widely used for executable files, relocatable object files, shared libraries, and core
+dumps.&lt;/li&gt;
+  &lt;li&gt;ELF’s design is not limited to a specific processor, instruction set, or hardware architecture.:&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+    <link>/pl/pl-assemble-memory-elf.html</link>
+    <guid>/pl/pl-assemble-memory-elf</guid>
+    <pubDate>Thu, 01 Nov 2018 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
     <title>Assembly: Introduction</title>
     <description>
 &lt;h4 id=&quot;reference&quot;&gt;reference&lt;/h4&gt;
@@ -16205,6 +16272,31 @@ to new hardware, and make use of them.&lt;/li&gt;
 a compiler and combines them into one, executable program.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/pl-compiler-c++-linker.png&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Linking has nothing to do with C or C++ specifically: compilers just generate the object files.
+the linker then takes them as input without ever knowing what language compiled them. It might as
+well be Fortran.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;error&quot;&gt;Error&lt;/h4&gt;
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include&amp;lt;iostream&amp;gt;
+&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;my_tool&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;my_tool&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;hello world!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Undefined symbols for architecture x86_64:
+  &quot;my_tool()&quot;, referenced from:
+      _main in work-3e80d8.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
     <link>/pl/pl-compile-c++-linker.html</link>
     <guid>/pl/pl-compile-c++-linker</guid>
@@ -34565,6 +34657,7 @@ A bunch of bananas&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;Bean sprout&lt;/li&gt;
   &lt;li&gt;pork belly&lt;/li&gt;
+  &lt;li&gt;Pepper&lt;/li&gt;
 &lt;/ol&gt;
 </description>
     <link>/%E8%A8%80%E8%91%89/language-english-food-ingredient.html</link>
@@ -35977,7 +36070,8 @@ political issues&lt;/li&gt;
 
 &lt;h4 id=&quot;sentence&quot;&gt;Sentence&lt;/h4&gt;
 &lt;ol&gt;
-  &lt;li&gt;Being kicked like a ball.&lt;/li&gt;
+  &lt;li&gt;Being kicked like a ball&lt;/li&gt;
+  &lt;li&gt;They are disconnected from the reality&lt;/li&gt;
 &lt;/ol&gt;
 
 </description>

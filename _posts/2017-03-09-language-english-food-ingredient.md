@@ -11,3 +11,4 @@ tags: ["英語"]
 #### A
 1. Bean sprout
 2. pork belly
+3. Pepper
