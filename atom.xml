@@ -3,7 +3,7 @@
   <title>Just Do It</title>
   <link href="/atom.xml" rel="self"/>
   <link href=""/>
-  <updated>2020-09-08T18:59:50+09:00</updated>
+  <updated>2020-09-09T10:41:11+09:00</updated>
   <id></id>
   <author>
     <name>reed</name>
@@ -6179,6 +6179,30 @@ data Person = MakePerson String Int
   </entry>
 
   <entry>
+    <title>Assembly: x86 Instruction Set</title>
+    <link href="/pl/pl-assemble-memory-x86-instruction-set.html"/>
+    <updated>2018-11-01T00:00:00+09:00</updated>
+    <id>/pl/pl-assemble-memory-x86-instruction-set</id>
+    <content type="html">
+Introduction
+The x86 CPUs provide 20 basic instruction classes.
+
+  Seven of these instructions have two operands
+  Eight of these instructions have a single operand
+  Five instructions have no operands at all
+
+
+Mov
+
+  mov
+    mov reg, reg/memory/constant
+mov memory, reg
+
+    
+      reg is any of...</content>
+  </entry>
+
+  <entry>
     <title>Assembly: Procedure and Function</title>
     <link href="/pl/pl-assemble-memory-procedure-and-function.html"/>
     <updated>2018-11-01T00:00:00+09:00</updated>
@@ -7567,6 +7591,78 @@ Shell Embedding
 echo &quot;hello&quot;
 
 
+</content>
+  </entry>
+
+  <entry>
+    <title>Graphic Programming: OpenGL Workflow</title>
+    <link href="/pl/graphics-programming-opengl-workflow.html"/>
+    <updated>2018-08-18T00:00:00+09:00</updated>
+    <id>/pl/graphics-programming-opengl-workflow</id>
+    <content type="html">
+// create object
+GLuint objectId = 0;
+glGenObject(1, &amp;amp;objectId);
+// bind object to context, bind means select
+glBindObject(GL_WINDOW_TARGET, objectId);
+// set options of object currently bound to GL_WINDOW_TARGET
+glSetObjectOption(GL_WINDOW_TARGET, GL_OPTION_WINDOW_WIDTH, 800);
+glSetObjectOp...</content>
+  </entry>
+
+  <entry>
+    <title>Graphics Programming: OpenGL Texture</title>
+    <link href="/pl/graphics-programming-opengl-texture.html"/>
+    <updated>2018-08-18T00:00:00+09:00</updated>
+    <id>/pl/graphics-programming-opengl-texture</id>
+    <content type="html">
+Introduction
+
+  Aside from images, textures can also be used to store a large collection of data to send to the
+shaders, but we’ll leave that for a different topic.
+    
+      A texture is a 2D image (even 1D and 3D textures exist) used to add detail to an object
+    
+  
+
+
+####
+
+  In order to ma...</content>
+  </entry>
+
+  <entry>
+    <title>Graphics Programming: OpenGL Introduction</title>
+    <link href="/pl/graphics-programming-opengl-introduction.html"/>
+    <updated>2018-08-18T00:00:00+09:00</updated>
+    <id>/pl/graphics-programming-opengl-introduction</id>
+    <content type="html">
+Introduction
+
+  Most implementations are built by graphics card manufactures. Whenever there is a bug in the
+implementation is usually solved by updating your video card drivers; those drivers include the
+newest versions of OpenGL that your card supports. This is one of the reasons why it’s alwa...</content>
+  </entry>
+
+  <entry>
+    <title>Graphics Programming: Coordinate</title>
+    <link href="/pl/graphics-programming-opengl-coordinate.html"/>
+    <updated>2018-08-18T00:00:00+09:00</updated>
+    <id>/pl/graphics-programming-opengl-coordinate</id>
+    <content type="html">
+The reason we are transforming our vertices into all these different spaces is that some operations
+make more sense or are easizer to use in certain coordinate systems.
+
+  For example, when modifying your object it makes more sense to do this in local space, while
+calculating certain operations ...</content>
+  </entry>
+
+  <entry>
+    <title>Graphics Programming: OpenGL Color</title>
+    <link href="/pl/graphics-programming-opengl-color.html"/>
+    <updated>2018-08-18T00:00:00+09:00</updated>
+    <id>/pl/graphics-programming-opengl-color</id>
+    <content type="html">
 </content>
   </entry>
 
