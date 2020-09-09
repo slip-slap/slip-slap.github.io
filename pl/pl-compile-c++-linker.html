@@ -142,7 +142,7 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">889</span>
+<span title="文章总数">892</span>
 <ul>
 
 
@@ -2115,7 +2115,22 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#November-2018">2018 年 11 月 (19)</a></li>
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#November-2018">2018 年 11 月 (22)</a></li>
     
   
 
@@ -4695,7 +4710,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#言葉-ref">言葉 (181)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (202)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (205)</a></li>
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
@@ -4947,7 +4962,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#assembly-ref" style="font-size: 9pt; color: #999;">assembly</a>
+    <a href="/tags.html#assembly-ref" style="font-size: 9.5pt; color: #999;">assembly</a>
   
     
     
@@ -5519,6 +5534,31 @@ a compiler and combines them into one, executable program.</p>
 
 <p><img src="/images/pl-compiler-c++-linker.png" /></p>
 
+<ol>
+  <li>Linking has nothing to do with C or C++ specifically: compilers just generate the object files.
+the linker then takes them as input without ever knowing what language compiled them. It might as
+well be Fortran.</li>
+</ol>
+
+<h4 id="error">Error</h4>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include&lt;iostream&gt;
+</span><span class="kt">void</span> <span class="nf">my_tool</span><span class="p">();</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="n">my_tool</span><span class="p">();</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"hello world!"</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Undefined symbols for architecture x86_64:
+  "my_tool()", referenced from:
+      _main in work-3e80d8.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+</code></pre></div></div>
+
       
       <footer>
         <p>
@@ -5546,7 +5586,7 @@ a compiler and combines them into one, executable program.</p>
   
      
     	<li><a href="/categories.html#PL-ref">
-    		PL <span>202</span>
+    		PL <span>205</span>
     	</a></li>
     
   
