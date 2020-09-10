@@ -17,6 +17,13 @@ tags: ["日本語"]
 1. 振込
 2. 引き落とす
 
+
+####
+1. 決済(けっさい): payment
+2. 電子決済(でんしけっさい): electronic payment
+3. 預金(よきん): deposit, bank account
+4. 残高(ざんだか): balance
+
 ####
 1. 口座から引き落とす
 

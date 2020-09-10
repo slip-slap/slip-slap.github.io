@@ -17,8 +17,18 @@ tags: ["日本語"]
 
 
 
+#### みたい
+1. like something/someone
+- 彼は子供みたいに笑う: he smiles like a child.
+- コンピューターみたいに正確に計算できない: I can't calulate accurately as a computer
+
+
 
 #### Galois
 1. In Japanese, particle such as, に、と just a part of the word. For example,
 [一般に]
 
+
+
+#### reference
+1. [みたい](http://maggiesensei.com/2015/11/11/how-to-use-%E3%81%BF%E3%81%9F%E3%81%84-mitai/)

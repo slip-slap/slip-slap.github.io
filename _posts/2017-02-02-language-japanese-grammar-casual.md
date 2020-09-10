@@ -10,6 +10,7 @@ tags: ["日本語"]
 
 
 #### Have to do something
+
 ##### 1. 未然形(みぜんけい)+なくちゃ
 1. in casual conversation
 - 未然形+なくてはいけない・ならない = 未然形＋なくちゃ

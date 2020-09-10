@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "文法(ぶんぽう): "
+title: "文法(ぶんぽう): particle"
 keywords: []
 description: 
 category: "言葉"
@@ -116,14 +116,6 @@ tags: ["日本語"]
 - 今の子供が大人になるまでには、様々な研究が進んでいるだろう
 2. が indicates new information
 -
-
-
-
-
-
-
-
-
 
 
 
