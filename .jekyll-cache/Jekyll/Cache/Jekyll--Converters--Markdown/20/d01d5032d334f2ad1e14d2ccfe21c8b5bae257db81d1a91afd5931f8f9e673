@@ -1,0 +1,29 @@
+I"-
+<h4 id="why-bother">Why bother?</h4>
+<p>one purpose of having types is to make sure that variables are always used in the way that they were
+intended to be used.</p>
+<ol>
+  <li>typedefs provide a level of abstraction away from the actual types being used, allowing you, the
+programmer, to focus on the concept of just what a variable should mean.</li>
+  <li>This makes it easier to write clean code, but it also makes if far easier to modify your code</li>
+</ol>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">ScoreByName</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h4 id="program-once">program once</h4>
+<ol>
+  <li>it is header guard, this file will be included only once.</li>
+  <li>try to avoid double including
+    <ul>
+      <li>header guard are little piece of codes protect the contents of a header from being copied more
+than once.</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="reference">reference</h4>
+<ol>
+  <li><a href="https://www.cprogramming.com/tutorial/typedef.html">typedef</a></li>
+</ol>
+:ET

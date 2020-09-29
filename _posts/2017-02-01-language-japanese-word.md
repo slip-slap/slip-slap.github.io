@@ -8,9 +8,15 @@ tags: ["日本語"]
 ---
 {% include JB/setup %}
 
+
+#### 
+1. 行き帰り:
+- 仕事の行き帰りにコンビニに寄る(drop by a convenience store on the way to or from work)
+2. 好き嫌い:
+- 食べ物の好き嫌いが激しい(be a very picky eater)
+
 #### A
 1. 言い及ぶ(いいおよぶ): to refer to
-
 
 
 #### 1. 護

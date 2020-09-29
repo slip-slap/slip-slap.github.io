@@ -51,15 +51,3 @@ tags: ["日本語"]
 3. なかなか
 - あの映画はなかなか面白かったよ
 
-
-#### 
-1. すんなり: without difficult
-2. ぐちゃぐちゃ: untidy
-3. ホヤホヤ: fresh
-4. はきはき: promptly, smartly
-5. くよくよ: worry
-6. にやにや: smirking
-7. ぼんやり: aimlessly, absence of mind
-8. ふらふら: unsteady
-
-

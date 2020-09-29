@@ -53,7 +53,7 @@ $
 
 #### Definition
 Let G be a group acting on a set X.
-1. Fixed Point: A fixed point of an element  $g \in G$ is an element  $x \in X such that $g\cdot
+1. Fixed Point: A fixed point of an element  $g \in G$ is an element  $x \in X$ such that $g\cdot
 x = x$
 2. Stabilier: The stabilizer $G_x$ of a point $x \in X$ is the set of elements
    $g \in G $ such taht x if a fixed point of g.

@@ -8,6 +8,13 @@ tags: ["構造","summary"]
 ---
 {% include JB/setup %}
 
+#### update 2020.09.18
+#### What's all about?
+Structure is nothing but composition, create element from old to new.
+- Binary operation is composition,
+
+
+
 
 #### Why bother?
 1. We prefer concept which are from intuition, such as the tangent line of a curve

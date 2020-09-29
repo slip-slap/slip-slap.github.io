@@ -1,0 +1,28 @@
+I"�
+<p>####</p>
+<ol>
+  <li>why data is modified by private ? function is modified by public?
+    <ul>
+      <li>just like a car, it has button you can push, the button is like a function,
+it’s public.</li>
+      <li>But what’s in the button, you have no idea. It’s the data which is private.</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="galois">Galois</h4>
+<ol>
+  <li>Static class members are treated almost exactly like global variables/functions. Because they are
+not tied to an instance.
+    <ul>
+      <li>There is nothing to discuss regarding memory layout.</li>
+    </ul>
+  </li>
+  <li>Class member variables are duplicated for each instance as you can imagine, as each instance can
+have its own unique value for every member variable.</li>
+  <li>Class member functions only exist once in a code segment in memory. At a low level, they are just
+like normal global functions but they receive a pointer to this. With Visual studio on x86, it’s
+via ecx register using thiscall calling convention.</li>
+</ol>
+
+:ET

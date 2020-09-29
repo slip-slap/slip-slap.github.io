@@ -1,0 +1,43 @@
+I"y
+<h4 id="disadvantage">Disadvantage</h4>
+<ol>
+  <li>The one major disadvantage to assembly language over pure machine code is that you must frist
+assemble and link a program before you can execute it.</li>
+  <li>An assembler like Microsoft’s Assembler(MASM) provides a large number of features for assembly
+language prgrammaers. ALthough learning about these features takes a fair amount of time, they
+are so useful that it is well worth the effort.</li>
+</ol>
+
+<h4 id="feature">Feature</h4>
+
+<ol>
+  <li>A pseudo-opcode is a message to the assembler, just like an assembler directive, howevery a
+pseudo-opcode will emit object code bytes. Example of pseudo-opcodes include byte, word, dword,
+qword, and tbyte. These instructions emit the bytes of data specified by their operands but they
+are not true 80x86 machine instructions.</li>
+</ol>
+
+<h4 id="format">Format</h4>
+<p>Assembly language statements in a source file use the following format
+<strong>{Label} {Mnemonic {Operand}} {;Comment}</strong></p>
+<ol>
+  <li>
+    <p>Label field is (usually) an optional field containing a symbolic label for the current statement.
+Labels are used in assembly language, just as in HLLs, to mark lines as the target of GOTOs(jumps).
+You can also specify variables names, procedure names, and other entities using symbolic labels.</p>
+  </li>
+  <li>
+    <p>A mnemonic is an instruction name (e.g., mov, add, etc.). <strong>The word mnemonic means memory aid. mov
+is much easier to remember than the binary equivalent of the mov instruction.</strong> The braces denote
+that this term is optional. Note, however, that you cannot have an operand without a mnemonic.</p>
+    <ul>
+      <li>The mnemonic field contains an assembler instruction. Instructions are divided into three classes:
+80x86 machine instructions, assembler directives, and pseudo opcodes.</li>
+      <li>Assembler directives are special instructions that provide information to the assembler but do
+not generate any code. Examples include the segment directive, equ, assume, and end. These
+mnemonics are not valid 80x86 instructions. They are messages to the assember, nothing else.</li>
+    </ul>
+  </li>
+</ol>
+
+:ET
