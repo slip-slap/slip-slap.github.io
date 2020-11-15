@@ -8,7 +8,6 @@ tags: ["英語"]
 ---
 {% include JB/setup %}
 
-
 #### phrase
 1. hang up.
 2. hang on
@@ -16,3 +15,12 @@ tags: ["英語"]
 4. put joe on the phone 
 5. answer the phone
 6. left me a message
+7. pay phone
+8. International Operator
+
+
+#### On
+1. I'm on it
+2. move on
+3. some people is on it
+4. I will call back later

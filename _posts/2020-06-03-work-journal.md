@@ -8,6 +8,14 @@ tags: []
 ---
 {% include JB/setup %}
 
+
+#### Rankings of academic publishers
+1. Sage Publications
+2. 
+
+
+
+
 #### neural network
 1. IEEE Transactions on Neural Networks and Learning Systems
 - It covers the theory, design, and applications of neural networks and related

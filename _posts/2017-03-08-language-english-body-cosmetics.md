@@ -17,7 +17,7 @@ tags: ["英語"]
 6. tooth paste
 7. face mask moisture
 
-####
+#### device
 1. razor
 2. shaver, electric razor
 4. blade refill
@@ -37,9 +37,5 @@ tags: ["英語"]
 
 #### sentence
 1. sprinkle on your legs.
-
-####
-1. handbag
-
-####
-1. start wearing makeup
+2. handbag
+3. start wearing makeup

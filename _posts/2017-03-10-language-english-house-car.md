@@ -33,11 +33,14 @@ tags: ["英語"]
 1. drive
 2. ring the bell
 3. license plate
+4. driver license
+5. pull over
 
 #### failure
 1. backfire
 2. brake failure
 3. high-speed car chase
+4. get stopped by policeman for speeding
 
 
 

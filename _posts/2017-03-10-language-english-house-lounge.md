@@ -8,8 +8,6 @@ tags: ["英語"]
 ---
 {% include JB/setup %}
 
-
-
 ####
 1. staircase
 2. bookcase

@@ -20,9 +20,6 @@ tags: ["英語"]
 8. scammer
 
 
-
-
-
 #### Phrase
 1. final word
 2. last word
@@ -41,17 +38,16 @@ tags: ["英語"]
 5. murder
 6. cell
 7. scam
+8. stalking 
+9. follow 
 
 
-####
+#### phrase
 1. innocent
 2. guilty
 3. seiral killer
 4. plead guilt
 
-####
-1. stalking 
-2. follow 
 
 #### Sentence
 1. what is the crime that you committed ?
@@ -63,4 +59,5 @@ tags: ["英語"]
 6. give me a chance to defense myself
 7. serve his sentence
 8. put my finger through my eye, into my brain and swirl it around
+9. file my case
 

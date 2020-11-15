@@ -36,6 +36,9 @@ tags: ["英語"]
 1. Can I be your girlfriend?
 2. set him up on a date.
 3. which one do you like more?
+4. the email she sent me was really hurtful(an action that causes emotional pain)
+5. my girlfriend ditched me to go and get a drink with one of her friends
+- ditch someone: to leave a friend or a date alone to do something else more interesting.
 
 
 

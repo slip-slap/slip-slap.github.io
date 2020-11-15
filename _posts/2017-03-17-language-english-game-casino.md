@@ -39,4 +39,6 @@ sum and the winner takes all
 #### Sentence
 1. roll a six in three goes.
 2. you competitors don't stand a chance against you.
+3. I bet you are a: (to bet means to gamble, to risk money based on the outcome of a game like
+   poker.)
 

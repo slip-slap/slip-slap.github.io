@@ -26,3 +26,5 @@ tags: ["英語"]
 2. what's going on
 3. How was it going with you guys?
 4. How are you feeling today?
+5. pondering my life and universe
+6. I'll get right on that: you will do something immediately

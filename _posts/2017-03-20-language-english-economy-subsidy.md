@@ -11,6 +11,7 @@ tags: ["英語"]
 ####
 1. subsidy
 2. coronavirus aid
+3. allowance
 
 ####
 1. age or income restrictions

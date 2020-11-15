@@ -19,6 +19,8 @@ tags: ["英語"]
 2. one-way
 3. round-way
 4. boarding pass
+5. catway
+6. sideway
 
 ####
 

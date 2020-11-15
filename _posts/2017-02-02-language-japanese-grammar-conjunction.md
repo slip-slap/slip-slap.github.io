@@ -92,16 +92,7 @@ tags: ["日本語"]
   personality
 
 
-#### 8. because
-1. だって
-- 何を怒ってるの？
--  だって、約束を破ったじゃないか。
 
-
-#### about
-1. Aに対するB: A is the object, B is the action, attitude
-- 政府に対する国民の批判が高まっています: about the goverment
-- 私の質問に対して返事はありませんでした
 
 
 

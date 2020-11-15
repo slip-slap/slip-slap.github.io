@@ -7,3 +7,7 @@ category: "言葉"
 tags: ["英語"]
 ---
 {% include JB/setup %}
+
+
+#### Phrase
+1. pull the trigger

@@ -19,12 +19,16 @@ tags: ["日本語"]
 1. 契約を結ぶうえは、条件を慎重(しんちょう)に検討すべきである。
 
 
-
-
 #### 4. 上(じょう): in terms of 
 1. 教育上: in terms of education
 2. 法律上:             law
 3. 歴史上:
+
+
+#### 5. 以上: because of
+1. 家を建設した以上、その安全性については責任を取らなければならない(because you build this house,
+   you should take responsibilty for the safety)
+
 
 
 

@@ -1,4 +1,4 @@
----
+--
 layout: post
 title: "Body: Genetics"
 keywords: [""]
@@ -18,3 +18,10 @@ tags: ["英語"]
 6. locus
 7. allele
 8. penetrance
+
+
+
+#### Phrase
+1. get down on your knees
+2. I am in no position to ask you do anything
+

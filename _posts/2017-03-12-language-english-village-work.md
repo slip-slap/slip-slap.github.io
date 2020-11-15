@@ -10,6 +10,10 @@ tags: ["英語"]
 
 
 
-####
+#### Phrase
 1. sprinkle fertilizer
 2. wine cellar
+
+
+##### Sentence
+1. All you need to do is mix it with water and apply it to the shrub

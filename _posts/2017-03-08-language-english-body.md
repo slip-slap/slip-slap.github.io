@@ -82,6 +82,7 @@ tags: ["英語"]
 9. I got your back
 1. pass by the park
 2. step away from
+3. spit out
 
 
 
@@ -90,6 +91,7 @@ tags: ["英語"]
 2. He got brown hair and green eyes.
 3. average height, medium body
 4. size
+5. craw back to him and make a apologize
 
 
 

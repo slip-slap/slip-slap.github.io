@@ -27,16 +27,18 @@ tags: ["英語"]
 7. positive altitude
 8. a man of mercy
 
+#### Phrase
+1. peace and quiet
+2. absessive
+3. incredibly sensitive
+4. high-profile
+5. mental reservation
 
-####
+#### Sentence
 1. They are rich, sophisticated and elegant.
 2. I was too shy and passive
 3. what doen's kill you, makes you stronger
 4. I have a flaw, big deal
 
 
-####
-1. peace and quiet
-2. absessive
-3. incredibly sensitive
 

@@ -32,6 +32,8 @@ tags: ["英語"]
 
 #### Phrase
 1. turn on automatic renewal
+2. one million cash
+3. opening hours and holiday
 
 
 ####

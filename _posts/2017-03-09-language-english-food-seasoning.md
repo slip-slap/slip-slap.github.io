@@ -17,3 +17,7 @@ tags: ["英語"]
 6. minced gralic
 
 
+#### 
+1. I feel very dizzy
+2. prop her up, and walked to the lifts.
+

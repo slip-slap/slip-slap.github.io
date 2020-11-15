@@ -8,13 +8,17 @@ tags: ["英語"]
 ---
 {% include JB/setup %}
 
-
 #### 
+1. worry:  mishap
+2. concern is a calculated consideration and assesssment of actual danger. Concern is more
+   fact-based and geared-toward problem solving.
+
+#### 1 
 1. remove
 2. replace
 3. move
 
-####
+#### 2
 1. ask
 2. order
 3. force
@@ -141,4 +145,9 @@ For example, in "1 + 2", 1 and 2 are the operands and the plus operator is opera
 #### Problem and Issue
 1. If you want to obtain information by asking, use question
 2. doubt refers to a feeling. When you feel uncertain about something, use doubt
+
+
+#### reference
+1. [concern and
+   worry](https://self-coaching.net/worry-vs-concern-knowing-the-difference-can-save-you-from-anxiety/#:~:text=It's%20a%20form%20of%20self,and%20geared%20toward%20problem%2Dsolving.)
 

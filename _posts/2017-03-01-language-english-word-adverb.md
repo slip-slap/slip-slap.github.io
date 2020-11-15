@@ -19,6 +19,7 @@ tags: ["英語"]
 8. around
 9. across
 1. nearby
+2. through
 
 
 #### Sentence

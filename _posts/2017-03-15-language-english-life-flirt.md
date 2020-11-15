@@ -21,6 +21,8 @@ tags: ["英語"]
 4. chemistry
 5. that's not my type.
 6. hurt my feeling
+7. roll out of bed: means she left her bed in a very casual way, without taking care of her
+   appearance.
 
 
 ####

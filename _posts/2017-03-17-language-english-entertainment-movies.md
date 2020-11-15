@@ -8,6 +8,13 @@ tags: ["英語"]
 ---
 {% include JB/setup %}
 
+####
+1. blind shaft
+2. Farewell my concubine
+3. Devils on the doorstep
+4. infernal affairs
+5. In the mood for love
+
 #### 
 1. Leon: The professional(French) 
 2. Parasite(south Korea)

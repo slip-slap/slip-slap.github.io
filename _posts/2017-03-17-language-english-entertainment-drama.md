@@ -14,6 +14,7 @@ tags: ["英語"]
 4. show
 5. travel show
 6. understudy
+7. improvisational: performance with preparation
 
 
 #### action

@@ -7,9 +7,6 @@ category: "PL"
 tags: ["script","shell"]
 ---
 {% include JB/setup %}
-#### 说明
-该文件只能使用visudo命令打开编辑，如果有语法错误，则不能保存
-<hr />
 
 #### 为普通用户添加root权限
 ```shell
@@ -17,19 +14,17 @@ tags: ["script","shell"]
 username ALL=(All)  ALL
 ```
 
-#### 组
-
-#### 增删
+#### 1. group
 ```shell
-# 增加组
+# add group
 groupadd docker
-```
-<hr />
-
-#### 用户
-
-##### 修改用户组
-```shell
 # user modify
 usermod -aG docker $USER
+```
+
+#### 2. User
+Add a new user as sudoer using command line
+```shell
+# this change will take effect the next time the user logs in
+sudo adduser <username> sudo
 ```

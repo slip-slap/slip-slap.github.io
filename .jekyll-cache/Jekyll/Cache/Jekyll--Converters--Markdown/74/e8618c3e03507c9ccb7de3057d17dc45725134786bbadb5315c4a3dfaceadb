@@ -1,0 +1,19 @@
+I"
+<h4 id="为普通用户添加root权限">为普通用户添加root权限</h4>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 在"root ALL=(ALL) ALL"添加一行</span>
+username <span class="nv">ALL</span><span class="o">=(</span>All<span class="o">)</span>  ALL
+</code></pre></div></div>
+
+<h4 id="1-group">1. group</h4>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># add group</span>
+groupadd docker
+<span class="c"># user modify</span>
+usermod <span class="nt">-aG</span> docker <span class="nv">$USER</span>
+</code></pre></div></div>
+
+<h4 id="2-user">2. User</h4>
+<p>Add a new user as sudoer using command line</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># this change will take effect the next time the user logs in</span>
+<span class="nb">sudo </span>adduser &lt;username&gt; <span class="nb">sudo</span>
+</code></pre></div></div>
+:ET

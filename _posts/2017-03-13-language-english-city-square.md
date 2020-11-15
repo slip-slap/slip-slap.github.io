@@ -16,6 +16,8 @@ tags: ["英語"]
 
 #### Sentence
 1. I'd like to have a swan statue installed on the fountain.
+2. install column in the fountain
+3. it's a gap between two walls, the girl firmly got stuck there.
 
 
 

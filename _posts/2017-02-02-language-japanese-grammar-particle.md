@@ -8,6 +8,31 @@ tags: ["日本語"]
 ---
 {% include JB/setup %}
 
+#### 1 も
+1. you can't translate も to english words litterally, we emphasizes the amount or quantity which
+   comes before and it show one's feeling, that something is a lot/too much/too long
+
+- 一万円、もらった(neutral)
+- 一万円ももらった(you feel 10000 is a lot of money)
+
+2. も has a funtion to emphasizing which comes before も
+- 私の街には日本人は一人もいない
+
+
+
+
+
+#### か
+1. か is used for indirect question.
+- 今何時ですか
+- 今、何時か分かる？
+- どこに住んでいるか教えてください
+
+2. When you wonder something, you can attach か with な
+-　今電話してきたの田中さんかな(I wonder if the person just called me is 田中)
+
+
+
 #### ず
 1. conjugate ず to negative plain form, then remove the ない at the end of the
    sentence and replace it with ず. 
@@ -119,5 +144,8 @@ tags: ["日本語"]
 
 
 
+#### Reference
+1. [か](http://maggiesensei.com/2019/12/18/how-to-use-%e3%80%9c%e3%81%8b%ef%bc%8f%e3%80%9c%e3%81%8b%e3%81%a9%e3%81%86%e3%81%8b-ka-ka-douka/)
+2. [も](http://maggiesensei.com/2013/10/08/japanese-particle-%e3%82%82mo-to-emphasize-the-number-%e3%80%8c%e4%b8%80%e2%98%85%e3%82%82%e3%80%8d/)
 
 

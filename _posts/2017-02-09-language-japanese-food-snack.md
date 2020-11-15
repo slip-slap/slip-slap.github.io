@@ -8,6 +8,9 @@ tags: ["日本語"]
 ---
 {% include JB/setup %}
 
+#### C
+1. もち米(ごめ): glutinous rice
+
 
 #### A
 1. 春巻き(はるまき)

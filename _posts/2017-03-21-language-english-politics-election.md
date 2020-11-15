@@ -16,11 +16,9 @@ tags: ["英語"]
 5. approval rating
 6. subvert
 7. subversion
-
-####
-1. local goverment
-2. central goverment
-3. senator
+8. local goverment
+9. central goverment
+1. senator
 
 #### Patriotism and Nationalism
 1. patriotism: love that people feel for their country.
@@ -35,6 +33,7 @@ tags: ["英語"]
 3. magnify, overstate
 
 
-####
+#### Phrase
 1. flags are flown at half-mast.
 2. Take a poll
+3. exit poll

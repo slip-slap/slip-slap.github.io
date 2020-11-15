@@ -8,11 +8,6 @@ tags: ["summary"]
 ---
 {% include JB/setup %}
 
-#### intro
-学习mac，需要知道linux的设计哲学，Linux本质上是一个用户服务器模式，tmux借鉴了linux的设计模式，也是一个c/s架构的模式。<br />
-在linux中，最重要的概念是用户和组
-
-<hr />
 ####
 隐藏文件在finder不可见
 ```shell
@@ -32,8 +27,6 @@ if you want to install Linux, you will need to choose among the linux distributi
 
 
 + BSDs are both a kernel and an operating system. For example, FreeBSD provides both the BSD kernel and the operating system. 
-
-
 + Both of Linux and BSDs are compilant with POSIX standard.
 
 ### Mac OS X, Linux, and BSD
@@ -41,15 +34,6 @@ if you want to install Linux, you will need to choose among the linux distributi
 + Mac OS X distribution is based on BSD kernel and BSD operationg system. The command line in the Mac OS X is not as powerful as GNU/linux.
 + Although both of them are compilant with POSIX standard, the grammar are little different. GNU/linux seems more simple and powerfull. so
 you should replace Mac OS X utilities with GNU core utilities.
-
-
-在linux中，一切皆文件。
-
-打包和压缩，是两个概念  
-打包，把许多文件变成一个文件；压缩，把大文件变小。
-
-touch filename touch新建的文件没有执行权限，需要赋予相应的执行权限
-
 
 
 #### replace MacOS command wich GNU version

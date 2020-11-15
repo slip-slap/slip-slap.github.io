@@ -22,3 +22,11 @@ tags: ["英語"]
 
 ####
 1. throw lucky coin
+2. ten commandment 
+
+
+#### Conversation
+1. there are only two commandment here. 
+2. what's the second commandment
+3. see commandment one 
+4. you talking out side of your neck 

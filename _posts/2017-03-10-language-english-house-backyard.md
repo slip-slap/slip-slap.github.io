@@ -12,6 +12,7 @@ tags: ["英語"]
 1. ladder
 2. backyard
 3. frontyard
+4. hose
 
 
 ####

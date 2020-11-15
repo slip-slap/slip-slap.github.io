@@ -22,8 +22,24 @@ Ultimately there is no choice but to judge in the context not by "今度" itself
 2. この and これから are swapable
 - この先、雨が降るだろう
 - これから先、彼は立派な大人になるに間違いない
-
 3. prior
+
+
+#### 3. そりゃあまあ
+1. そりゃあ: means "that's", it is often used at the beggining of a sentence, like an interjection, to
+   indicate the speaker is trying to give some explanation
+2. まあ: is like "you know" or "well", used before unimportant or something that the listener may
+   already understand.
+3. ねえ: is like "... isn't it?" or "you know", used to show a positive response is expected.
+
+-  あの人のことが嫌いなの？どうして
+- そりゃあまあ、ねえ(B doesn't want to state the reason explicitly, but is expecting A would guess
+  it)
+
+
+#### Reference
+1. [そりゃあ](https://japanese.stackexchange.com/questions/42318/meaning-of-%e3%81%9d%e3%82%8a%e3%82%83%e3%81%82%e3%81%be%e3%81%81)
+
 
 
 

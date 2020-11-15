@@ -14,6 +14,8 @@ tags: ["英語"]
 2. summar camp
 3. grade school
 4. elementary school
+5. second year of my collage
+6. preschool
 
 
 ####
@@ -29,8 +31,6 @@ tags: ["英語"]
 1. bring up
 2. educate
 3. sign up
-
-
 
 ####
 1. educate my nephew

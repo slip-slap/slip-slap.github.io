@@ -8,7 +8,7 @@ tags: ["latex","script"]
 ---
 
 
-#### how to cite
+#### Method
 
 **step 1**: prepare the dataset <br />
 1.  create bibliography file with extension name "bib", such as **citation-database.bib**
@@ -29,7 +29,12 @@ tags: ["latex","script"]
 ```
 
 
-**step 2**: include the **citation-database.bib** file
+**step 2**: include the **citation-database.bib** file, without the extension
+1. There are a couple of reference style.
+- plain
+- unsrt
+- ieeetr
+- alpha
 
 ```latex
 \bibliographystyle{plain}
@@ -43,4 +48,21 @@ The grammar is pretty simple
 ```latex
 According to the paper\cite{liu2015comparison}
 ```
+#### Package
+
+#### 1. Natbib Package
+
+```latex
+%in the preamble
+%--------------------------------
+\usepackage{natbib}
+\bibliographystyle{stylename} %dinat, humannat, plainnat
+%--------------------------------
+\bibliography{bibfile} % where the bibliography will be printed
+```
+
+#### Reference
+1. [Natbib Package](https://www.overleaf.com/learn/latex/Natbib_bibliography_styles)
+
+
 

@@ -56,8 +56,12 @@ voice, but "x" should be amphasised.
 
 ####
 1. going to:  gonna
+- I am not(I ain't) going to say no to that: I ain't gonna-say-no-duh that
 2. want to:  wanna
 - what do you wanna to say?
+
+#### 1
+1. women carrying the bag: women cah-ring-duh bag
 
 
 

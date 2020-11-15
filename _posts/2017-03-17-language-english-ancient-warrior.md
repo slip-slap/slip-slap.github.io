@@ -16,6 +16,7 @@ tags: ["英語"]
 5. battilefield
 6. guards
 7. armor
+8. martial(relating to war or soldiers) art
 
 #### phrase
 1. 1 on 1

@@ -11,7 +11,10 @@ tags: ["英語"]
 ####
 1. ultrasound
 2. unborn baby
+3. tooth brushing
+
 
 
 ####
 1. nothing can ruin this moment, this is very special.
+2. no one is going to get hurt

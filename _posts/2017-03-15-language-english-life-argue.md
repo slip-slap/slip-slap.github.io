@@ -8,20 +8,16 @@ tags: ["英語"]
 ---
 {% include JB/setup %}
 
-####
+#### Phrase
 1. argue about
 2. fuck off
 3. freak out
+4. call it even
+5. we got in a fight
+6. drive me crazy
+7. shame on you: an expression used to make someone feel bad for their horrible behavior.
 
-
-
-
-#### Phrase
-1. call it even
-2. we got in a fight
-3. drive me crazy
-
-####
+#### Sentence
 1. buy me soda, we will even.
 2. I kind of relieved, I have a good time with you, I can't stand your friend
 3. let me get this straight, He got you to beg to sleep with him, he got you to
@@ -37,4 +33,5 @@ tags: ["英語"]
 1. the last person I want to see on earth.
 2. stop acting like a baby girl
 3. dispute her claim
+4. agree to disagree
 

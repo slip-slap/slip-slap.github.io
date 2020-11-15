@@ -16,3 +16,4 @@ tags: ["英語"]
 
 ####
 1. standby for the plane
+2. diarrhea trail

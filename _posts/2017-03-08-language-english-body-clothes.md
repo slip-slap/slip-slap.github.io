@@ -44,6 +44,7 @@ tags: ["英語"]
 2. suitcase
 3. compartment
 4. fancy clothes
+5. fancy suits
 
 
 #### Action
@@ -56,6 +57,7 @@ tags: ["英語"]
 2. you fly is open
 3. Where did I leave my knitting needles?
 4. you pant stuck on your leg.
+5. I got coffee on my shirt and can't get rid of the stain.
 
 
 #### Phrase
@@ -65,3 +67,5 @@ tags: ["英語"]
 4. slots in the pocket
 
 
+#### suitcase and showcase
+We need to make a special showcases large enough for a full suit of knight's armor.

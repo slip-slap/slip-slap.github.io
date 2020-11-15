@@ -11,4 +11,10 @@ tags: ["英語"]
 
 ####
 1. CIA agent
+2. bureau chief
+3. on your own
 
+
+####
+1. Do you have any opening for interns?
+2. He was tailed.

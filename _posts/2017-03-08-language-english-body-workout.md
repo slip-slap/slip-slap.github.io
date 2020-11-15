@@ -8,6 +8,11 @@ tags: ["英語"]
 ---
 {% include JB/setup %}
 
+#### Equipment
+1. barbell
+2. roller
+3. plank
+
 #### Phrase
 1. Exercise Routine
 2. warm up
@@ -15,20 +20,14 @@ tags: ["英語"]
 4. bend over backward
 
 
-#### Equipment
-1. barbell
-2. roller
-3. plank
 
 #### Phrase
 1. gym card
 2. gym membership
-
-####
-1. you are bleeding
-2. put on a little weight
-3. 132 pound
-
+3. you are bleeding
+4. put on a little weight
+5. 132 pound
+6. get patched up(patch up wound)
 
 ####
 1. I want to quit the gym

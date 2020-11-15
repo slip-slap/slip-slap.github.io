@@ -274,11 +274,6 @@ way of doing
 2. 勉強仲間: study relationship
 3. 飲み仲間: wine relationship
 
-#### かける indicates verb is being directed to someone
-1. 話かける: begin to talk(to someone)
-2. 笑いかける: to smile(at someone) 
-3. 呼びかける: to address(to someone)
-4. 問いかける: to ask(someone)
 
 #### 明け end
 1. 休み明け: just after a holiday break, the first day after the holidays

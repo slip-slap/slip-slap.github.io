@@ -10,3 +10,8 @@ tags: ["英語"]
 
 ####
 1. five eyes  alliance
+2. journalist
+
+#### Phrase
+1. Election fraud
+2. count every vote

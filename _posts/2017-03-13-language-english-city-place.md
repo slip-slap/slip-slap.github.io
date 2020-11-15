@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: "Life: City"
@@ -29,7 +28,6 @@ tags: ["英語"]
 5. street: A public way that has buildings on both side, that perpendicular to
    avenues.
 6. stone pathway
-
 
 #### Action
 1. granite-paved road
