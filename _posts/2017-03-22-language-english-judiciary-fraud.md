@@ -28,4 +28,6 @@ tags: ["英語"]
 
 
 #### 
-1. He is done nothing wrong
+1. He is done nothing wrong.
+2. come forward and testify.
+3. They are coming after my family.

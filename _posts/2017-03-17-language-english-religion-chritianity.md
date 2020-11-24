@@ -23,6 +23,7 @@ tags: ["英語"]
 ####
 1. throw lucky coin
 2. ten commandment 
+3. have a little faith
 
 
 #### Conversation

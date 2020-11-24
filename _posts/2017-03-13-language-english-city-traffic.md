@@ -41,6 +41,7 @@ tags: ["英語"]
 #### phrase
 1. run over
 2. pull over
+3. hit and run
 
 
 

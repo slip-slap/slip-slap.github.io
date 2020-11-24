@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Colloquial: つもり・よく"
+title: "Colloquial: つもり・よく・つまり"
 keywords: []
 description: ""
 category: "言葉"
@@ -42,10 +42,8 @@ Even the english translation is "I am going to", you don't use it for daily acti
 - 遠いところからよく来てくれました(Thank you for coming all this way)
 - よく仕事を引き受けてくれてありがとう(Thank you for taking on this job)
 
-
-
-
-
+### 3. つまり
+1. that is to say
 
 
 

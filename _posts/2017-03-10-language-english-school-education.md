@@ -31,6 +31,7 @@ tags: ["英語"]
 1. bring up
 2. educate
 3. sign up
-
-####
-1. educate my nephew
+4. educate my nephew
+5. junior 
+6. senior
+7. upperclassman

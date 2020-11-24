@@ -13,3 +13,9 @@ tags: ["英語"]
 1. dudes: calling someone a 'science dude' is saying that they are cool guys involed with that
    subject.
 - music dudes, american dudes, mechanic dudes.
+
+
+
+
+#### Phrase
+1. cut in front of me.

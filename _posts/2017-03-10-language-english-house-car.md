@@ -35,6 +35,7 @@ tags: ["英語"]
 3. license plate
 4. driver license
 5. pull over
+6. in the trunk
 
 #### failure
 1. backfire

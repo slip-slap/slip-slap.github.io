@@ -31,6 +31,5 @@ tags: ["日本語"]
 - 食通: food connoisseur
 
 
-
 #### Reference
 1. [通り](http://maggiesensei.com/2020/06/03/how-to-use-%e9%80%9a%e3%82%8a%e3%81%a8%e3%81%8a%e3%82%8a-toori/)

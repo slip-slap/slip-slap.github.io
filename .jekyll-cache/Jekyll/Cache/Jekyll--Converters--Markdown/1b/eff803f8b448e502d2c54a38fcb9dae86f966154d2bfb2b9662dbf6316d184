@@ -1,0 +1,86 @@
+I"�<h4 id="dpi-and-ppi">DPI and PPI</h4>
+<ol>
+  <li>PPI describes the resolution in pixels of a digital image.</li>
+  <li>DPI describes the the amount of ink dots on a printed image.</li>
+</ol>
+
+<h4 id="2-positioning">2. Positioning</h4>
+
+<h5 id="21-requirement">2.1 requirement</h5>
+<ol>
+  <li>The contents of this object, i.e., the image, cannot be broken over a page.</li>
+  <li>We should be able to specify the position of this object in the document</li>
+  <li>We should be able to add a caption to this object</li>
+  <li>We should be able to add a reference to this object, so that it can be cross-referenced
+elsewhere in the document</li>
+</ol>
+
+<h5 id="22-floats">2.2 Floats</h5>
+<p>In latex, floats are used to contain things that must be placed inside a single page, i,e, they
+cannot be broken over multiple pages. floats can be used to contain tables and figures, but we can
+define new custom floats as well.</p>
+<ol>
+  <li>The entity contained in a float is placed in a single page. If the entity(an image, for example)
+can not be contained in the space left in the current page, it is placed at the top of the next
+page</li>
+  <li>Floats can be positioned whereever we specify - top, middle, bottom, left, right</li>
+  <li>They can have a caption describing them.</li>
+  <li>They are numbered(so we can references to them)</li>
+</ol>
+
+<h4 id="3-basic-use">3. Basic Use</h4>
+
+<h5 id="32-mutiple-imagessubfigures">3.2 Mutiple images/subfigures</h5>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{figure}</span>[h!]
+<span class="k">\centering</span>
+	<span class="nt">\begin{subfigure}</span>[b]<span class="p">{</span>0.4<span class="k">\linewidth</span><span class="p">}</span>
+		<span class="k">\includegraphics</span><span class="na">[width=\linewidth{path_to.jpg}]</span>
+	<span class="nt">\end{subfigure}</span>
+	<span class="nt">\begin{subfigure}</span>[b]<span class="p">{</span>0.6<span class="k">\linewidth</span><span class="p">}</span>
+		<span class="k">\includegraphics</span><span class="na">[width=\linewidth{path_to.jpg}]</span>
+	<span class="nt">\end{subfigure}</span>
+	<span class="k">\caption</span><span class="p">{}</span>
+	<span class="k">\label</span><span class="p">{</span>fig:image<span class="p">_</span>xx<span class="p">}</span>
+<span class="nt">\end{figure}</span>
+</code></pre></div></div>
+
+<h4 id="3-package">3 Package</h4>
+
+<h5 id="31-graphicx-package">3.1 graphicx package</h5>
+<p>graphicx package takes care of the numbering and positioning of the image within the document.</p>
+<ol>
+  <li>\linewidth: the picture will be scaled to fit the width of the document, as a result, smaller
+pictures are upscaled and larger pictures dowscaled respectively..</li>
+  <li>
+    <p>the location in the document</p>
+    <ul>
+      <li>h(here): same location</li>
+      <li>t(top): top of page</li>
+      <li>b(bottom): bottom of page</li>
+      <li>p(page): on an extra page</li>
+      <li>!(override): will force the specified location</li>
+    </ul>
+  </li>
+</ol>
+
+<h5 id="32-float-package">3.2 float package</h5>
+<p>It allows to set the option to [H], which is even stricter than <a href="adding [h!] behind the figure environment \begin tag will force the figure to be shown at">h!</a></p>
+
+<h5 id="33-subcaption-package">3.3 subcaption package</h5>
+<p>This package provides <strong>subfigure</strong> environment;</p>
+
+<h5 id="34-subfigure-package">3.4 subfigure package</h5>
+
+<p>This package makes it easy to put subfigures in your figures. e.g., “Figure 1a and 1b”. For IEEE
+work, it is a good idea to load it with the tight package option to reduce the amount of white space
+around the subfigures.</p>
+
+<h4 id="reference">Reference</h4>
+<ol>
+  <li><a href="https://en.99designs.jp/blog/tips/ppi-vs-dpi-whats-the-difference/">DPI and PPI</a></li>
+  <li><a href="https://www.latex-tutorial.com/tutorials/figures/">figure in latex</a></li>
+  <li><a href="https://www.overleaf.com/learn/latex/Positioning_of_Figures">Positioning of Figures</a></li>
+</ol>
+
+:ET

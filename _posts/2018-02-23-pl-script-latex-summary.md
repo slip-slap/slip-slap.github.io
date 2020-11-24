@@ -8,78 +8,28 @@ tags: ["latex","script"]
 ---
 {% include JB/setup %}
 
+#### 1  Tex and Latex
+1. Tex is about formatting 
+2. Latex is about content
 
 
-#### 
-
-
-
-### 最简单的Tex代码 
-```latex
-\documentclass[11pt]{article}
-\begin{document}
-\end{document}
-```
-
-there are two ways to get a line break
-type two backslashes
-a blank line
-
-### 图形绘制工具Tikz
+#### 2. cls and sty
+1. .cls files are loaded with **\documentclass{}** command, .cls files are called classes.
+-  a class file will complete define the strucutre of a document
+- they are mandatory
+2. .sty files are loaded with **\usepackage{}** command, .sty files are called style files, or just
+   packages.
+- package or style file, they are provide something that class files doesn't accommodate, amendment
+  to class files, or improvement.
+- they are optional
 
 
 
-#### Basic drawing
-
-```python
-\documentclass[11pt]{article}
-\usepackage{tikz}
-
-\begin{document}
-
-\begin{tikzpicture}
-
-\draw (0,0) parabola (4,4);
-
-\end{tikzpicture}
 
 
-\end{document}
-```
 
-#### Creating Flowcharts
-
-+ load up the tikz package
-```python
-\usepackage{tikz}
-\usetikzlibrary{shapes.geometric, arrows}
-```
-+ define basic components of a flowchart 
-
-```python
-\tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=orange!30]
-\tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=1cm
-\tikzstyle{arrow} = [thick,->,>=stealth]
-```
-+ to build our flowchart, we need use \tikzpicture environment
-
-```python
-\begin{tikzpicture}[node distance=2cm]
-\node (pro1) [process, below of=in1] {Process 1};
-\node (dec1) [decision, below of=pro1] {Decision 1};
-\end{tikzpicture}
-```
-
-+ build Arrow
-
-```python
-\draw [arrow] (pro1) -- (dec1);
-\draw [arrow] (dec1) -- (pro2a);
-\draw [arrow] (dec1) -- (pro2b);
-```
-#### Creating Mind Maps
-<hr />
-### 参考内容 <br /> 
-[LaTeX Graphics using TikZ tutorial](https://www.overleaf.com/learn/latex/LaTeX_Graphics_using_TikZ:_A_Tutorial_for_Beginners_(Part_1)%E2%80%94Basic_Drawing) <br />                                                                                    
+#### 1. reference 
+1. [Latex and Tex](https://tex.stackexchange.com/questions/49/what-is-the-difference-between-tex-and-latex)
+2. [.cls and .sty file](https://tug.org/pracjourn/2005-3/asknelly/nelly-sty-&-cls.pdf)
 
 

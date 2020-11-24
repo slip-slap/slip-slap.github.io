@@ -12,6 +12,7 @@ tags: ["英語"]
 ####
 1. case
 2. pledge
+3. migrant worker
 
 
 

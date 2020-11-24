@@ -1,19 +1,30 @@
 ---
 layout: post
-title: "Latex: Image"
+title: "Latex: Figure"
 keywords: ["Tikz", "PGF"]
 description: 
 category: "PL"
 tags: ["latex","script"]
 ---
 
-#### DPI and PPI
+### 1. Basic knowledge of an Figure 
+
+#### 1.1 DPI and PPI
 1. PPI describes the resolution in pixels of a digital image. 
 2. DPI describes the the amount of ink dots on a printed image.
 
+#### 1.2 EPS file
+A file ends with eps extension, you can make it as large as a billboard you see on the side of the highway.
+If you want to include an eps file in your document, just treat as an image. There is one thing
+that you should keep in mind, save the extension!
+
+```latex
+\includegraphics[scale=1]{experiment_figure}
+```
 
 
-#### 2. Positioning
+
+### 2. Positioning
 
 ##### 2.1 requirement
 1. The contents of this object, i.e., the image, cannot be broken over a page.
@@ -34,7 +45,7 @@ define new custom floats as well.
 4. They are numbered(so we can references to them)
 
 
-#### 3. Basic Use
+### 3. Basic Use
 
 ##### 3.2 Mutiple images/subfigures 
 
@@ -53,9 +64,9 @@ define new custom floats as well.
 ```
 
 
-#### 3 Package
+### 4 Package
 
-##### 3.1 graphicx package
+#### 4.1 graphicx package
 graphicx package takes care of the numbering and positioning of the image within the document.
 1. \linewidth: the picture will be scaled to fit the width of the document, as a result, smaller
    pictures are upscaled and larger pictures dowscaled respectively..
@@ -67,13 +78,24 @@ graphicx package takes care of the numbering and positioning of the image within
 - p(page): on an extra page
 - !(override): will force the specified location
 
-##### 3.2 float package
+##### 4.2 float package
 It allows to set the option to [H], which is even stricter than [h!]
 
+##### 4.3 subcaption package
+This package provides **subfigure** environment;
+
+##### 4.4 subfigure package
+
+This package makes it easy to put subfigures in your figures. e.g., "Figure 1a and 1b". For IEEE
+work, it is a good idea to load it with the tight package option to reduce the amount of white space
+around the subfigures. 
 
 
-#### Reference
+
+### 5. Reference
 1. [DPI and PPI](https://en.99designs.jp/blog/tips/ppi-vs-dpi-whats-the-difference/)
 2. [figure in latex](https://www.latex-tutorial.com/tutorials/figures/)
 3. [Positioning of Figures](https://www.overleaf.com/learn/latex/Positioning_of_Figures)
+4. [eps format file within
+   latex](https://tex.stackexchange.com/questions/182467/including-eps-figure-in-pdflatex)
 

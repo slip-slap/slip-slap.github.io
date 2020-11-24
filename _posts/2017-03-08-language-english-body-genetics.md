@@ -18,10 +18,13 @@ tags: ["英語"]
 6. locus
 7. allele
 8. penetrance
+9. pulled his teeth, burn off his fingerprint
+1. arm folded
 
 
 
 #### Phrase
 1. get down on your knees
 2. I am in no position to ask you do anything
+3. the position you put me in
 

@@ -26,8 +26,9 @@ longtable package provides a convenient to make tables span multiple pages.
 ##### 5. rotating package
 If we add too many columns, we might be getting a table that's too wide for the page. In this
 situation, it's often best to simply rotate the table and print it in sideways.
-##### 6. 
 
+##### 6. mdwtab package
+mdwtab.sty which are used to format tables. 
 
 
 #### Reference

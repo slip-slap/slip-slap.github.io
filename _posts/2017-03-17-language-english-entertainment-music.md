@@ -12,3 +12,9 @@ tags: ["英語"]
 1. Freedom-(Django Unchain)  
 2. Nightcall-(Drive)
 3. Red Right Hand-(Peaky Blinders)
+
+
+
+#### 1. Terminology
+1. audio book
+2. voice acting

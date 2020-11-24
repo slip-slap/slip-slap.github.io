@@ -25,6 +25,7 @@ tags: ["英語"]
 #### Sentence
 1. China mourns victims with three-minute silence.
 2. when my time comes, I want be buried by the sea.
+3. collect the inheritance
 
 
 

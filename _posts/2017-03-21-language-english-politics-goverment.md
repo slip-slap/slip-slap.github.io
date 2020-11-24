@@ -20,6 +20,7 @@ tags: ["英語"]
 #### Department
 1. issue
 2. bureau of exit and entry department
+3. take down the goverment(overturn)
 
 
 ####

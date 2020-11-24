@@ -17,6 +17,7 @@ tags: ["英語"]
 6. left me a message
 7. pay phone
 8. International Operator
+9. local call
 
 
 #### On
@@ -24,3 +25,6 @@ tags: ["英語"]
 2. move on
 3. some people is on it
 4. I will call back later
+5. return my call
+6. Did the call go through
+

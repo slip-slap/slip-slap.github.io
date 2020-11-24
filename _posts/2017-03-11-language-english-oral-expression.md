@@ -19,7 +19,6 @@ tags: ["英語"]
 4. we are screwed
 - Don't screw up this
 
-
 5. angry:  pissed off 
 
 6. cancel: call off
@@ -28,5 +27,7 @@ tags: ["英語"]
 
 8. quick: hurry up
 
+9. sale: put up for
 
+1. crazy: these are bananas
 

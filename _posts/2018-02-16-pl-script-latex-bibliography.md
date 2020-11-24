@@ -7,6 +7,12 @@ category: "PL"
 tags: ["latex","script"]
 ---
 
+#### Introduction
+1. latex is a typesetting markup language is used to create formatted document.
+2. Bibtex is a tool to generate and format bibliography in a latex document.
+- use of biblatex package will generate a file with .bbl extension.
+
+
 
 #### Method
 
@@ -30,11 +36,8 @@ tags: ["latex","script"]
 
 
 **step 2**: include the **citation-database.bib** file, without the extension
-1. There are a couple of reference style.
-- plain
-- unsrt
-- ieeetr
-- alpha
+1. To choose a Bibtex bibliographic style file with extension .bst. In the following example, the
+   file is **plain.bst**
 
 ```latex
 \bibliographystyle{plain}
@@ -42,8 +45,7 @@ tags: ["latex","script"]
 \end{document}
 ```
 
-**step 3**: cite in the paper <br />
-The grammar is pretty simple
+**step 3**: to insert a citation where label is the label of a bibliography entry in a .bib file. 
 
 ```latex
 According to the paper\cite{liu2015comparison}
@@ -60,9 +62,11 @@ According to the paper\cite{liu2015comparison}
 %--------------------------------
 \bibliography{bibfile} % where the bibliography will be printed
 ```
+#### 2.  
 
 #### Reference
 1. [Natbib Package](https://www.overleaf.com/learn/latex/Natbib_bibliography_styles)
+2. [Latex and Bibtex](https://unimelb.libguides.com/latexbibtex)
 
 
 

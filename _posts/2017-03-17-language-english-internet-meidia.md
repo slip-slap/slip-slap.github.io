@@ -15,7 +15,8 @@ tags: ["英語"]
 ####
 1. open an account
 
-####
+#### Sentence
 1. help us trend the hashtag
+2. take to the twitter
 
 

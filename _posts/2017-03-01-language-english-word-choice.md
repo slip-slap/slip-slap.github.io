@@ -8,6 +8,14 @@ tags: ["英語"]
 ---
 {% include JB/setup %}
 
+####
+1. own: I am not in possession of it
+2. help: do me a favor
+
+#### 1.
+1. deal with: something that at least of some burden
+2. take care of: something which is no burden to a great burden
+
 #### 
 1. worry:  mishap
 2. concern is a calculated consideration and assesssment of actual danger. Concern is more

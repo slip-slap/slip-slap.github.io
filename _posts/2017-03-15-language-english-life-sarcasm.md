@@ -12,3 +12,8 @@ tags: ["英語"]
 1. this is a lovely tie, it's a shame around such a worthless neck.
 2. suck up the president.
 3. I wish my parents could have been here.
+
+
+####
+1. spitting on each other.
+2. spit it out.

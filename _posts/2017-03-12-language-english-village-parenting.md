@@ -22,6 +22,7 @@ tags: ["英語"]
 #### Sentence
 1. squirrel crack nuts
 2. she is a pretty mixed-race girl
+3. make up for the lost time
 
 
 

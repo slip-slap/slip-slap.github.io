@@ -22,6 +22,7 @@ tags: ["英語"]
 1. 1 on 1
 2. sword fight
 3. mortal enemy
+4. escourt the princess
 
 #### sentence
 1. the law of gravity doesn't apply in ancient China

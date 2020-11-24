@@ -12,6 +12,7 @@ tags: ["英語"]
 1. old best friends
 2. moral obligation
 3. opponents, but enemy
+4. I failed him
 
 #### Sentence
 1. I felt like you were someone I could open up to, there are so much in me, I
