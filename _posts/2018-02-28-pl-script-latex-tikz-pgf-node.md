@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Latex: Nodes in PGF"
+title: "Tikz and PGF: Node Mechanism "
 keywords: []
 description: ""
 category: "PL"

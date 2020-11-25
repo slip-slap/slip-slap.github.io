@@ -14,3 +14,7 @@ tags: ["英語"]
 3. I hate him with all my heart
 4. still got a way with ladies
 5. I can sense when woman are depressed and vulnerable, It's one of my gift.
+
+
+####
+1. Germany sense of humor

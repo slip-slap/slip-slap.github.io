@@ -58,6 +58,8 @@ tags: ["英語"]
 2. migrant worker
 3. migrant labour
 4. hunting dream
+5. day shift
+6. night shift
 
 
 #### Sentence

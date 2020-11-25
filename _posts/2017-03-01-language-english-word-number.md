@@ -11,6 +11,7 @@ tags: ["英語"]
 ####
 1. entry
 2. regular size
+3. several times
 
 ####
 1. a couple of days

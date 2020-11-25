@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Latex: Nodes and Matrix in PGF"
+title: "Tikz and PGF: Nodes and Matrix"
 keywords: []
 description: ""
 category: "PL"

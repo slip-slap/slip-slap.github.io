@@ -1,0 +1,35 @@
+I"f<h4 id="1-introduction">1. Introduction</h4>
+<p>A path is a series of straight and curved line segments. It is specified following a <strong>\path</strong>
+command and the specification must follow a special syntax.</p>
+
+<h4 id="2-grammar">2. Grammar</h4>
+
+<h5 id="21-path">2.1 Path</h5>
+
+<ol>
+  <li>grammar: **\path<specification>**: the **<specification>** is a long stream of path operations</specification></specification></li>
+</ol>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\path</span>(0,0)--(1,1); <span class="c">% nothing will drawn in your picture</span>
+</code></pre></div></div>
+<ol>
+  <li>the <strong>\path</strong> command does “nothing” with the path, it just “throws it away”.</li>
+  <li>an option like <strong>draw</strong> or <strong>fill</strong> must be given somewhere on the path. Commands like <strong>\draw</strong>
+do this implicitly.</li>
+</ol>
+
+<h5 id="21-move-to--and-line-to-operation">2.1 Move-To  and Line-To Operation</h5>
+
+<p>The <strong>Move-to</strong> Operation normally starts a path a certain point. This does not cause a line
+segement to be created, but it specifies the starting point of the next segment.</p>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{tikzpicture}</span>
+<span class="k">\draw</span> (0,0) --(2,0) (0,1) --(2,1);
+<span class="nt">\end{tikzpicture}</span>
+</code></pre></div></div>
+<ol>
+  <li>two move-to operations are specified: (0,0) and (0,1)</li>
+  <li>two line-to operations are –(2,0) and –(2,1)</li>
+</ol>
+
+:ET

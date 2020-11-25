@@ -8,24 +8,44 @@ tags: []
 ---
 {% include JB/setup %}
 
-#### 
+#### Introduction
 1. gradient based optimization
 2. stochastic optimization
 3. local minima
 4. locate globally optimum configurations
-5. The tuning of many parameters by trial and error 
+5. The tuning of many parameters by trial and error
+- However, there are many parameters in genetic algorithms that should be tuned.
+- without explicit parameter tuning.
 6. high computational intensity
 
 
 ####
 1. selection scheme
+- despite limited empirical succes in using this method or that, a general answer remains elusive.
 2. crossing set
 3. satisfy/meet/fullfil  the constraints
+4. preventing premature convergence on poor solutions
 
+
+#### representation of design variables
+1. improve the efficiency
+
+
+#### selection
+1. mating pool
+
+#### crossover
+1.   
+
+
+####
+1. constrained problems
+2. incorporating problem-specific knowledge
 
 #### Phase
 1. evaluate the objective function
 2. infeasible solution
+3. exploration and exploitation dilemma inherent in selection
 
 
 ####
@@ -37,3 +57,5 @@ Each gene in a chromosome corresponds basically a ply angle.
 
    $a = b$,
    where a = 3.
+
+

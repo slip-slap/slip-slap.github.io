@@ -10,7 +10,7 @@ tags: ["英語"]
 
 
 #### On the steet
-1. manhole
+1. manhole cover
 2. sewer
 3. sewage
 4. arch bridge
@@ -26,7 +26,7 @@ tags: ["英語"]
 
 
 #### house
-1. booth
+1. booth: roadside booth, roadside stands
 2. telephone booth
 3. stall
 4. bakery food stall
