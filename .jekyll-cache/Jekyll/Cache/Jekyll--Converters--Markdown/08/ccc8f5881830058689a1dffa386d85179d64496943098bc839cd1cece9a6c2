@@ -1,4 +1,4 @@
-I"∂<h4 id="1-introduction">1. Introduction</h4>
+I"è	<h4 id="1-introduction">1. Introduction</h4>
 <p>A path is a series of straight and curved line segments. It is specified following a <strong>\path</strong>
 command and the specification must follow a special syntax.</p>
 
@@ -32,6 +32,35 @@ segement to be created, but it specifies the starting point of the next segment.
   <li>two line-to operations are ‚Äì(2,0) and ‚Äì(2,1)</li>
 </ol>
 
-<h5 id="22-horizontal-and-vertical-lines">2.2 Horizontal and Vertical Lines</h5>
+<h5 id="22-specification-of-line-type">2.2 Specification of Line Type</h5>
+<ol>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>**-</td>
+          <td>**: means first horizontal, then vertical</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>**</td>
+          <td>-**: means first vertical, then horizontal</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ol>
+
+<h4 id="3-fancy-type">3. Fancy Type</h4>
+
+<h5 id="31-grid-operation">3.1 Grid Operation</h5>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\tikz</span><span class="na">[rotate=30]</span> <span class="k">\draw</span><span class="na">[step=1mm]</span> (0,0) grid (2,2);
+</code></pre></div></div>
 
 :ET

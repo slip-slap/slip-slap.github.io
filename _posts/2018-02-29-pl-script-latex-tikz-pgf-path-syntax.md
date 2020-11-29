@@ -41,7 +41,27 @@ segement to be created, but it specifies the starting point of the next segment.
 1. two move-to operations are specified: (0,0) and (0,1)
 2. two line-to operations are --(2,0) and --(2,1)
 
-##### 2.2 Horizontal and Vertical Lines
+##### 2.2 Specification of Line Type
+1. **-|**: means first horizontal, then vertical
+2. **|-**: means first vertical, then horizontal
+
+
+#### 3. Fancy Type
+
+##### 3.1 Grid Operation
+
+```latex
+\tikz[rotate=30] \draw[step=1mm] (0,0) grid (2,2);
+% the above line yields a grid filling the recangle, whose corners are at (1,1) and (3,3);
+```
+1. step: set the stepping in both x and y-direction.
+
+##### 3.2 Sine and Cosine Operation
+
+```latex
+\tikz \draw (0,0) rectangle (1,1) (0,0) sin (1,1)
+(2,0) rectangle +(1.57,1) (2,0) sin +(1.57,1);
+```
 
 
 

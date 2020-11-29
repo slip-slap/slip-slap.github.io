@@ -5832,7 +5832,7 @@ command and the specification must follow a special syntax.</p>
 do this implicitly.</li>
 </ol>
 
-<h5 id="21-move-to--and-line-to-operation">2.1 Move-To  and Line-To Operation</h5>
+<h5 id="21-move-to-and-line-to-operation">2.1 Move-To and Line-To Operation</h5>
 
 <p>The <strong>Move-to</strong> Operation normally starts a path a certain point. This does not cause a line
 segement to be created, but it specifies the starting point of the next segment.</p>
@@ -5845,6 +5845,47 @@ segement to be created, but it specifies the starting point of the next segment.
   <li>two move-to operations are specified: (0,0) and (0,1)</li>
   <li>two line-to operations are –(2,0) and –(2,1)</li>
 </ol>
+
+<h5 id="22-specification-of-line-type">2.2 Specification of Line Type</h5>
+<ol>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>**-</td>
+          <td>**: means first horizontal, then vertical</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>**</td>
+          <td>-**: means first vertical, then horizontal</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ol>
+
+<h4 id="3-fancy-type">3. Fancy Type</h4>
+
+<h5 id="31-grid-operation">3.1 Grid Operation</h5>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\tikz</span><span class="na">[rotate=30]</span> <span class="k">\draw</span><span class="na">[step=1mm]</span> (0,0) grid (2,2);
+<span class="c">% the above line yields a grid filling the recangle, whose corners are at (1,1) and (3,3);</span>
+</code></pre></div></div>
+<ol>
+  <li>step: set the stepping in both x and y-direction.</li>
+</ol>
+
+<h5 id="32-sine-and-cosine-operation">3.2 Sine and Cosine Operation</h5>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\tikz</span> <span class="k">\draw</span> (0,0) rectangle (1,1) (0,0) sin (1,1)
+(2,0) rectangle +(1.57,1) (2,0) sin +(1.57,1);
+</code></pre></div></div>
 
 
       
