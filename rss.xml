@@ -5,8 +5,8 @@
   <description>Just Do It - </description>
   <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
   <link></link>
-  <lastBuildDate>Wed, 25 Nov 2020 21:06:42 +0900</lastBuildDate>
-  <pubDate>Wed, 25 Nov 2020 21:06:42 +0900</pubDate>
+  <lastBuildDate>Fri, 27 Nov 2020 15:05:49 +0900</lastBuildDate>
+  <pubDate>Fri, 27 Nov 2020 15:05:49 +0900</pubDate>
   <ttl>1800</ttl>
 
 
@@ -289,6 +289,21 @@ $c = d + f$,&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;besides&lt;/li&gt;
   &lt;li&gt;in addition&lt;/li&gt;
+  &lt;li&gt;more over&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;produce-and-yield&quot;&gt;produce and yield&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;produce: make or manufacture from component or raw material
+    &lt;ul&gt;
+      &lt;li&gt;produce aircraft&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;yield: to give in return for labor expended, as payment or interest on what is expected.
+    &lt;ul&gt;
+      &lt;li&gt;the land yields grapes and tomatoo&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ol&gt;
 </description>
     <link>/work/work-word-common.html</link>
@@ -26973,7 +26988,7 @@ command and the specification must follow a special syntax.&lt;/p&gt;
 do this implicitly.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h5 id=&quot;21-move-to--and-line-to-operation&quot;&gt;2.1 Move-To  and Line-To Operation&lt;/h5&gt;
+&lt;h5 id=&quot;21-move-to-and-line-to-operation&quot;&gt;2.1 Move-To and Line-To Operation&lt;/h5&gt;
 
 &lt;p&gt;The &lt;strong&gt;Move-to&lt;/strong&gt; Operation normally starts a path a certain point. This does not cause a line
 segement to be created, but it specifies the starting point of the next segment.&lt;/p&gt;
@@ -26987,6 +27002,47 @@ segement to be created, but it specifies the starting point of the next segment.
   &lt;li&gt;two line-to operations are –(2,0) and –(2,1)&lt;/li&gt;
 &lt;/ol&gt;
 
+&lt;h5 id=&quot;22-specification-of-line-type&quot;&gt;2.2 Specification of Line Type&lt;/h5&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;table&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;**-&lt;/td&gt;
+          &lt;td&gt;**: means first horizontal, then vertical&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;table&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;**&lt;/td&gt;
+          &lt;td&gt;-**: means first vertical, then horizontal&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;3-fancy-type&quot;&gt;3. Fancy Type&lt;/h4&gt;
+
+&lt;h5 id=&quot;31-grid-operation&quot;&gt;3.1 Grid Operation&lt;/h5&gt;
+
+&lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;\tikz&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;[rotate=30]&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;\draw&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;[step=1mm]&lt;/span&gt; (0,0) grid (2,2);
+&lt;span class=&quot;c&quot;&gt;% the above line yields a grid filling the recangle, whose corners are at (1,1) and (3,3);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ol&gt;
+  &lt;li&gt;step: set the stepping in both x and y-direction.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h5 id=&quot;32-sine-and-cosine-operation&quot;&gt;3.2 Sine and Cosine Operation&lt;/h5&gt;
+
+&lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;\tikz&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;\draw&lt;/span&gt; (0,0) rectangle (1,1) (0,0) sin (1,1)
+(2,0) rectangle +(1.57,1) (2,0) sin +(1.57,1);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
 </description>
     <link>/pl/pl-script-latex-tikz-pgf-path-syntax.html</link>
     <guid>/pl/pl-script-latex-tikz-pgf-path-syntax</guid>
@@ -26995,7 +27051,61 @@ segement to be created, but it specifies the starting point of the next segment.
 
   <item>
     <title>Tikz and PGF: Node Mechanism </title>
-    <description>&lt;h4 id=&quot;placing-nodes-on-a-line-or-curve-explicitly&quot;&gt;Placing Nodes on a Line or Curve Explicitly&lt;/h4&gt;
+    <description>&lt;h4 id=&quot;introduction&quot;&gt;Introduction&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;A node is a small part of a picture
+    &lt;ul&gt;
+      &lt;li&gt;A node of shape &lt;strong&gt;circle&lt;/strong&gt; will be drawn as cricle; a node of shape &lt;strong&gt;rectangle&lt;/strong&gt; as a rectangle&lt;/li&gt;
+      &lt;li&gt;A node may also contain some text&lt;/li&gt;
+      &lt;li&gt;A node can get a name for later reference&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Code Example&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;\begin{tikzpicture}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\path&lt;/span&gt; ( 0,2) node [shape=circle,draw] &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+( 0,1) node [shape=circle,draw] &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+( 0,0) node [shape=circle,draw] &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+( 1,1) node [shape=rectangle,draw] &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+(-1,1) node [shape=rectangle,draw] &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;;
+&lt;span class=&quot;nt&quot;&gt;\end{tikzpicture}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The code &lt;strong&gt;(0,2) node [shape=circle, draw] {}&lt;/strong&gt; means the following: “in the main path, add a
+move-to to the coordinate (0,2). Then, temporarily suspend the construction of the main path while
+the node is build. This node will be a circle around an empty text. This circle is to be drawn, but
+not filled or otherwise used”&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;more simple grammar
+    &lt;ul&gt;
+      &lt;li&gt;The &lt;strong&gt;\node&lt;/strong&gt; command is an abbreviation for &lt;strong&gt;\path node&lt;/strong&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;\begin{tikzpicture}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\node&lt;/span&gt; at ( 0,2) [circle,draw] &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;;
+&lt;span class=&quot;k&quot;&gt;\node&lt;/span&gt; at ( 0,1) [circle,draw] &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;;
+&lt;span class=&quot;k&quot;&gt;\node&lt;/span&gt; at ( 0,0) [circle,draw] &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;;
+&lt;span class=&quot;k&quot;&gt;\node&lt;/span&gt; at ( 1,1) [rectangle,draw] &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;;
+&lt;span class=&quot;k&quot;&gt;\node&lt;/span&gt; at (-1,1) [rectangle,draw] &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;;
+&lt;span class=&quot;nt&quot;&gt;\end{tikzpicture}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;2-using-styles&quot;&gt;2. Using Styles&lt;/h4&gt;
+
+&lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;\tikzstyle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;place&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;=[circle,draw=blue!50,fill=blue!20,thick]
+&lt;span class=&quot;k&quot;&gt;\tikzstyle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;transition&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;=[rectangle,draw=black!50,fill=black!20,thick]
+&lt;span class=&quot;nt&quot;&gt;\begin{tikzpicture}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\node&lt;/span&gt; at ( 0,2) [place] &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;;
+&lt;span class=&quot;k&quot;&gt;\node&lt;/span&gt; at ( 0,1) [place] &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;;
+&lt;span class=&quot;k&quot;&gt;\node&lt;/span&gt; at ( 0,0) [place] &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;;
+&lt;span class=&quot;k&quot;&gt;\node&lt;/span&gt; at ( 1,1) [transition] &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;;
+&lt;span class=&quot;k&quot;&gt;\node&lt;/span&gt; at (-1,1) [transition] &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;;
+&lt;span class=&quot;nt&quot;&gt;\end{tikzpicture}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 </description>
     <link>/pl/pl-script-latex-tikz-pgf-node.html</link>
@@ -27232,14 +27342,22 @@ my data my data&lt;span class=&quot;k&quot;&gt;\cite&lt;/span&gt;&lt;span class=
   </item>
 
   <item>
-    <title>Tikz and PGF: Nodes and Matrix</title>
-    <description>&lt;h4 id=&quot;matrix&quot;&gt;\matrix&lt;/h4&gt;
+    <title>Tikz and PGF: Matrix</title>
+    <description>&lt;h4 id=&quot;introduction&quot;&gt;Introduction&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;You want to align parts of the picture. You with that the base lines of certain nodes should be
+on the same line.&lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;p&gt;&lt;strong&gt;\matrix&lt;/strong&gt; Inside {tikzpicture} this is an abbreviation for \path node[matrix]&lt;/p&gt;
+&lt;h4 id=&quot;matrix&quot;&gt;matrix&lt;/h4&gt;
+
+&lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;% the following command equals \path node[matrix]&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\matrix&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 </description>
-    <link>/pl/pl-script-latex-tikz-pgf-matrix-and-node.html</link>
-    <guid>/pl/pl-script-latex-tikz-pgf-matrix-and-node</guid>
+    <link>/pl/pl-script-latex-tikz-pgf-matrix.html</link>
+    <guid>/pl/pl-script-latex-tikz-pgf-matrix</guid>
     <pubDate>Mon, 26 Feb 2018 00:00:00 +0900</pubDate>
   </item>
 
