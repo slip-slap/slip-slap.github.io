@@ -78,6 +78,14 @@ graphicx package takes care of the numbering and positioning of the image within
 - p(page): on an extra page
 - !(override): will force the specified location
 
+##### 4.1.1: \resizebox
+scale figure or equation
+```latex
+\begin{figure}
+	\resizebox{.9\linewidth}{!}{\input{plot.tex}}
+\end{figure}
+```
+
 ##### 4.2 float package
 It allows to set the option to [H], which is even stricter than [h!]
 
@@ -98,4 +106,5 @@ around the subfigures.
 3. [Positioning of Figures](https://www.overleaf.com/learn/latex/Positioning_of_Figures)
 4. [eps format file within
    latex](https://tex.stackexchange.com/questions/182467/including-eps-figure-in-pdflatex)
+5. [scale an figure](https://tex.stackexchange.com/questions/98134/is-it-possible-to-scale-an-entire-beginfigure)
 

@@ -17,6 +17,80 @@ tags: ["latex","script"]
    particularly those within footnotes, will be rendered in bitmap form which will result in a
    document that can not be IEEE Xplore compliant!
 
+##### 1.1 Display a single equation
+To display an eauation, you have to use the equation\* or equation environment,
+depending on whether you wnat the equation to be numbered or not.
+
+```latex
+\begin{equation}
+\label{eu_eqn}
+e^{\pi i} + 1 = 0
+\end{equation}
+```
+
+#### 1.2 Displaying long equations
+1. For equations longer than a line use the multline environment, insert a
+   double back slash to set a point for the equation to be broken
+2. The first part will be aligned to the left
+3. The second part will be aligned to the right
+
+```latex
+\begin{multline}
+p(x) = 3x^6 + 14x^5y + 590x^4y^2 + 19x^3y^3\\ 
+- 12x^2y^4 - 12xy^5 + 2y^6 - a^3b^3
+\end{multline}
+```
+
+#### 1.3 Piecewise function
+
+```latex
+\begin{align}
+	f(x)  = 
+	\begin{cases}
+		x+5, & x>0 \\
+		x-5, & x<0
+	\end{cases}
+\end{align}
+```
+#### 1.4 Split
+#### 1.5 Matrix
+1. amsmath provides command to typeset matrices with different delimiters.
+
+```latex
+% 1. plain
+\begin{matrix}
+1 & 2 & 3\\
+a & b & c
+\end{matrix}
+
+% 2. round bracket
+\begin{pmatrix}
+1 & 2 & 3\\
+a & b & c
+\end{pmatrix}
+
+% 3. curly bracket
+\begin{Bmatrix}
+1 & 2 & 3\\
+a & b & c
+\end{Bmatrix}
+
+% 4. square bracket
+\begin{bmatrix}
+1 & 2 & 3\\
+a & b & c
+\end{bmatrix}
+
+% 5. pipes
+\begin{vmatrix}
+1 & 2 & 3\\
+a & b & c
+\end{vmatrix}
+```
+
+
+
+
 
 #### 2. mdwmath Package 
 1.  mdwmath.sty which is used to format equations
@@ -52,4 +126,10 @@ graphicx offers a **\resizebox** command to adjust an equation.
 
 #### Reference
 1. [Adjust equation size](https://tex.stackexchange.com/questions/35554/how-can-i-auto-adjust-a-equation-to-appear-in-the-entire-page-scale-to-equatio)
+
+
+
+#### Reference
+1. [Adjust equation size](https://tex.stackexchange.com/questions/35554/how-can-i-auto-adjust-a-equation-to-appear-in-the-entire-page-scale-to-equatio)
+2. [Piecewise function](https://tex.stackexchange.com/questions/246321/how-do-i-align-piecewise-functions/246323)
 

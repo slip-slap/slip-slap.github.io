@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Latex: Tree"
+title: "Tikz and pfg: Tree"
 keywords: ["Tikz", "PGF"]
 description: 
 category: "PL"

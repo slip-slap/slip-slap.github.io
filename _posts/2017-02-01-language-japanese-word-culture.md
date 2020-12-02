@@ -8,6 +8,12 @@ tags: ["日本語"]
 ---
 {% include JB/setup %}
 
+#### 
+1. 祠(ほこら): small wayside shrine, roadside shrine
+2. お地蔵さま(じぞ): stone statue 
+3. 灯籠(とうろう): hanging lantern
+
+
 #### 経費(けいひ)と自腹(じばら)
 1. このおもちゃ、経費で買ってくれる？(buy me this cat using company expense account)
 2. 自腹でお願いします: pay for it out of your own pocket

@@ -13,6 +13,11 @@ tags: ["日本語"]
 2. 配達員
 3. 配達日
 4. 速達
+5. 届ける(to send)
+
+####
+1. 仕出し(food delivery service)
+2. 仕出し弁当(box lunches for delivery)
 
 
 #### 分(ぶん)

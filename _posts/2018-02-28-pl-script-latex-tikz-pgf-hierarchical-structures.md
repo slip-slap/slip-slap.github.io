@@ -15,3 +15,20 @@ tags: ["latex","script"]
 
 
 
+#### Add caption to a Tikz picture
+
+```latex
+\begin{figure}
+\centering
+	\begin{tikzpicture}
+	<code>
+	\end{tikzpicture}
+\caption{title}
+\label{fig:title}
+\end{figure}
+```
+
+
+#### Reference
+1. [Add caption for a Tikz picture](https://tex.stackexchange.com/questions/24000/how-to-add-caption-for-a-tikz-picture)
+

@@ -14,6 +14,7 @@ tags: ["英語"]
 2. sewer
 3. sewage
 4. arch bridge
+5. wayside shrine
 
 #### sidewalk
 1. pole 

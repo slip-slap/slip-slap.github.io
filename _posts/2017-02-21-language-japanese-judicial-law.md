@@ -11,4 +11,5 @@ tags: ["日本語"]
 
 #### A
 1. 維持(いじ): maintenance, preservation
+2. 裁判(さいばん)
 

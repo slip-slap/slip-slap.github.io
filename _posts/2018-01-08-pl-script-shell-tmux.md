@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Command: Tmux"
+title: "shell: Tmux"
 keywords: []
 description: 
 category: "PL"
@@ -68,20 +68,6 @@ bind _ resize-pane -D 2
 bind + resize-pane -U 2
 ```
 
-#### 复制模式
-
-在tmux的配置文件.tmux.conf添加如下配置
-
-```shell
-setw -g mode-keys vi
-```
-
-1. 前缀键+[ 进入复制模式
-2. 使用vi的j,h,k,l方向键移动光标
-3. 按空格键开始选择复制区域
-4. 选择完成后按enter键退出
-5. 前缀键 ] 粘贴
-<hr />
 
 #### 配置文件
 

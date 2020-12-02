@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Editor: Vimscript"
+title: "Editor: Vimscript basic"
 keywords: []
 description: 
 category: "PL"
@@ -13,7 +13,6 @@ tags: ["editor","script"]
 This software is plugin system, so it is very flexible and diffcult to learn.
 it heavily depends on the plugin and shortcut to improve the efficient.
 
-<hr />
 
 ### 2. 常用功能 
 
@@ -22,11 +21,6 @@ it heavily depends on the plugin and shortcut to improve the efficient.
 1. set relativenumber!
 2. set cursorline
 3. syntax off  I spend a lot of time to fix this simple question, crap !!!!!!!!
-4. adjust window width
-```code
-:nnoremap  <leader>+ :vertical res +10 <cr>
-:nnoremap  <leader>- :vertical res -10<cr>
-```
 
 
 
@@ -46,11 +40,12 @@ v
 gq
 ```
 #### 2.4 Code folding 
+1. zc: fold up
+2. zR: unfold
+
 ```shell
-" 设置代码折叠方式
+" set the folding method in configuration file
 set foldmethod=indent
-" 打开全部折叠
-zR
 ```
 
 #### 2.5 Search
@@ -62,14 +57,6 @@ zR
 + ctrl+w 删除光标所在行的光标之前的文字
 + ndd 删除光标所在行的后n行，包括光标所在行
 
-#### 2.7 Split Screen
-
-命令行的快捷键和图形界面的快捷键不一样，<font
-color="red">图形界面的前缀键和命令键是同时按下的,命令行的前缀键和命令键常常分开</font>使用tmux时，它的前缀键为ctrl+b
-+ ctrl+w 为前缀键，j k h l上下左右切换
-+ ctrl+w 为前缀键 >可以改变窗口大小
-+ sp file  水平打开
-+ vsp file 垂直打开
 #### 版本查看
 :version 查看vim支持的插件，如python等
 :set  show vars different from defaults
@@ -152,11 +139,6 @@ a tab could be a different number of columns depending on your enviroment
 
 ### 3. Mode 
 
-#### 3.1 Visual Mode
-
-1. Character mode: v (lower-case)
-2. Line mode: V(upper-case)
-3. Block mode: Ctrl+v
 
 #### 3.3 Recording Mode
 

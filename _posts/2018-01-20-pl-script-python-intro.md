@@ -14,15 +14,21 @@ tags: ["python","script"]
 + python可以在程序运行时改变其结构，是动态语言
 
 
-在python中, 变量是没有类型的; 类型属于对象。
-java是面向对象的，可是并不彻底。python是彻底面向对象的，int类型也是对象<br/>
-面向对象只是一种编程思想，它的实现还是函数那一套。
-
-java和c++都是有函数入口的，即为main函数。
-python没有所谓的main函数，从脚本的起始位置开始执行。
-
 
 文件夹中有__init__.py文件夹为python的包，java并没有这样的要求
+
+
+#### 2. Line Break
+1. you can just have arguments on the next line without any problems.
+2. you can use explicit line break.
+
+```python
+result = call_function(argu1, argu2,
+					   argu3)
+result = call_function(argu1, argu2, \
+					   argu3)
+```
+
 
 
 
