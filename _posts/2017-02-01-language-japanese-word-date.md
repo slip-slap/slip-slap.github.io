@@ -20,6 +20,13 @@ tags: ["日本語"]
 2. 六ヶ月(ろっかげつ)
 3. 十ヶ月(じゅっかげつ)
 4. 先々月
+5. April 四月(しがつ)
+6. July  七月(しちがつ)
+7. September 九月(くがつ)
+
+##### 
+1. 毎月(まいつき)
+
 
 #### 年
 1. 年末(ねんまつ) 今年 去年 来年
@@ -29,20 +36,13 @@ tags: ["日本語"]
 
 
 #### counting and counters
-月 <br />
-1. April 四月(しがつ)
-2. July  七月(しちがつ)
-3. September 九月(くがつ)
-日 <br />
 <img src="{{IMAGE_PATH}}/japanese-date.png"/>
-分<br />
 1. 1分(いっぷん)
 2. 3分(さんぷん)
 3. 4分(よんぷん)
 4. 6分(ろっぷん)
 5. 8分(はっぷん)
 6. 10分(じゅっぷん)
-週<br />
 3. 8週間(はっしゅうかん)
 月 the small [ヶ] is totally different from ケ, it is the abbrevation for the kanji[箇]<br />
 

@@ -21,6 +21,7 @@ tags: ["英語"]
 1. disappointed my father.
 2. force
 3. physical relationship: sex
+4. getting laid: have sex
 
 ####
 1. how to express your feelings.

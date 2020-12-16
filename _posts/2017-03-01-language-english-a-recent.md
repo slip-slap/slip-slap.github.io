@@ -24,3 +24,10 @@ tags: ["英語"]
 2. They are disconnected from the reality
 3. Would you mind lowering you voice, please?
 
+
+
+####
+1. add note under the table
+2. get into my phone
+3. died at the age of 85
+

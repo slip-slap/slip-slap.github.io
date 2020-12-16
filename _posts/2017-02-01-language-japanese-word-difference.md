@@ -8,9 +8,30 @@ tags: ["日本語"]
 ---
 {% include JB/setup %}
 
-#### 都市・都会
-1. 都市 refers to cities in the sense of metropolitan areas as opposed to rural areas
-2. 都会 is roughly the same as  都市, but sounds more colloquial and less technical.
+
+#### 1. 苦手・下手
+1. 苦手: means that you think you are not good at something, which does not
+   necessarily mean you are really bad at it. Sometimes people who are actually
+   good at something still regard themselves 苦手 at it, because they either
+   think they are not good enough, or they simply do not like doing it.
+2. 下手: means you are bad at something.
+
+#### 2. 記入・入力
+1. 記入: for handwriting
+2. 入力: for typing
+
+
+
+
+### あたり
+1. この辺り: around here
+2. 一人当たり五千円: 5000 yen per person
+
+
+#### いがい
+1. これは以外に方法はない: this is the only way
+2. これは以外に安かった: unexpected cheap
+
 
 #### 切る・消す
 1. 電気を消す
@@ -86,6 +107,7 @@ B: 行ってらっしゃい:
 1.  売り切れ: sold out
 2.  売り出す: to put on the market, to put on sale
 - 新型のパソコンが売り出される: a new PC model is coming onto the market
+
 
 
 

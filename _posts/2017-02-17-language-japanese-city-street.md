@@ -9,18 +9,14 @@ tags: ["日本語"]
 {% include JB/setup %}
 
 
-####
+#### 1
 1. 町
 2. 田舎
 3. 都市
 4. 都心(としん)
 5. 市庁舎(しちょうしゃ): town hall
 6. 工業団地(こうぎょうだんち): industrial complex
-
-
-
-####
-1. 保育所: nursery school
+7. 保育所: nursery school
 
 ####
 1. 通り: street
@@ -35,4 +31,7 @@ tags: ["日本語"]
 9. マンホール(manhole):
 
 
+#### 都市・都会
+1. 都市 refers to cities in the sense of metropolitan areas as opposed to rural areas
+2. 都会 is roughly the same as  都市, but sounds more colloquial and less technical.
 

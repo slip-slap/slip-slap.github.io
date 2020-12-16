@@ -14,3 +14,7 @@ tags: ["日本語"]
 3. 祇園(ぎおん)祭
 
 
+
+####
+1. 六本木(ろっぽんぎ): litaterly, it means six lumbers. 
+2. 一本道(いっぽんみち): litterly, it means one-way

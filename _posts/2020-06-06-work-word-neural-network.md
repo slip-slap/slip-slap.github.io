@@ -17,6 +17,13 @@ tags: []
 3. training techiques
 3. feedforward neural network
 
+
+
+##### Training
+training algorithm plagued by the possible existance of local minima or "flat
+spots".
+The networks suffer from "the curse of dimensionality"
+
 #### Sentence
 1. Learning is viewed as the establishment of connections between neurons or modification of
    existing connections.

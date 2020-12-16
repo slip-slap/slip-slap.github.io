@@ -12,6 +12,7 @@ tags: ["英語"]
 1. a little chilly: a little cold
 2. It's freezing
 3. It's drizzling: a light rain 
+4. artificial rain/neural network
 
 
 

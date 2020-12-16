@@ -19,3 +19,7 @@ tags: []
 1. teach ideas
 2. teach skills
 3. transmitting facts
+
+
+#### Conclusion
+1. We have reviewed the use of ... for

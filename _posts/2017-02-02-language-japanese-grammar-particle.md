@@ -18,11 +18,7 @@ tags: ["日本語"]
 2. も has a funtion to emphasizing which comes before も
 - 私の街には日本人は一人もいない
 
-
-
-
-
-#### か
+#### 2 か
 1. か is used for indirect question.
 - 今何時ですか
 - 今、何時か分かる？
@@ -31,14 +27,9 @@ tags: ["日本語"]
 2. When you wonder something, you can attach か with な
 -　今電話してきたの田中さんかな(I wonder if the person just called me is 田中)
 
-
-
-#### ず
+#### 3 ず
 1. conjugate ず to negative plain form, then remove the ない at the end of the
    sentence and replace it with ず. 
-
-
-
 
 
 #### なし(ない): without
@@ -52,7 +43,7 @@ tags: ["日本語"]
 
 
 
-#### で
+#### 4 で
 1. place
 - ここでタバコを吸ってもいいですか
 - 私たちは学校で勉強します
@@ -83,7 +74,7 @@ tags: ["日本語"]
 
 
 
-#### に
+#### 5 に
 1. time
 - 次の電車は何時に出ますか
 - 東京オリンピックは２０２０年に開催されます

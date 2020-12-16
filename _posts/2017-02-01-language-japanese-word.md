@@ -8,6 +8,143 @@ tags: ["日本語"]
 ---
 {% include JB/setup %}
 
+#### 1. 限る
+1. 限る
+- 本日に限って、全商品二割引にさせていただきます。
+
+2. に限らず
+
+
+
+#### 1. 構う
+1. 検査の前夜から飲食禁止です、もっとも水は飲んでも構いません
+- もっとも: just
+
+#### 2. 兼ねる 
+1. Be unable to
+-  私の仕事なかなかか終わらなかった、見かねて山田さん手伝ってくれた。
+2. かねない: 恐れかある
+-  あの人ならそんな無責任なことも言いかねない。
+
+#### 3. 訳
+1. わけがない
+- わけがない、はずはない　conclusion
+-  冬に海で泳げるがわけはない。It's impossible to swim in winter
+-  歴史が好きだから、徳川家康が知らないはずない. If you like history, it is
+   impossible for you to don't know tokugawa ieyasu.
+
+2. わけにはいかない
+- 税(ぜい)金は,高くても払わないわけにはいかない: you have to pay your tax
+
+
+2. わけ: conclusion
+- 田中さん大学を卒業して三年だから、今年二十五歳になると言う訳だ。
+
+3. と言うわけではない: not that conclusion
+- 忙しくて本を読む暇がないが、本を読むのが嫌いだと言うわけではない
+
+
+
+#### 4. 次(し)第
+
+##### 1. as soon as
+1. 駅に着き次第、電話をください
+
+##### 2. depends on, it's up to
+- キャンプに行くか行かないか天気次第だ.
+- 信じるか信じないかはあなた次第だ.
+
+##### 3. gradually, little by little
+- 空が次第に暗くなってきた
+
+
+#### 5. 抜き
+1. ぬきに、抜きで、ぬきの
+- 彼女はお世辞抜きに素晴らしい人だ。
+- 今日の会議は難しい話抜きにして楽しくやりましょう。
+
+#### 6. 付け
+1. につけ: するたびに
+- 母は何かに付けて、小言(こごと)を言う
+2. no matter when
+- 暑いにつけ寒いに付け、うちのお婆さんは体の調子が悪いと言う。
+
+#### 1. 外
+1. 以外: besides
+- 中国以外ではどこの国の映画が人気があるんですか。
+
+#### 2. 人
+1. 友人
+2. 老人
+3. 主人(しゅじん): master
+
+
+#### 迄(まで)
+1. Until certain time
+- 月曜日から土曜日まで仕事です。
+- 今までありがとう(thank you for everything)
+
+2. までに(before)
+- 明日までにレポートを提出してください
+
+3. an indirect object marker, someone/certian place + まで + verb
+- 不審物を見つけたらに警察までご連絡ください
+- お手数ですが本社までお電話ください
+
+4. Even; also
+- もう、泣かないで、私まで悲しくなるよ。(Don't cry any more, that makes me feel sad)
+- 彼と結婚するの？おめでとう！ 私まで嬉くなってきた。(are you getting married to him, that makes me
+  happy, too)
+- この話は映画にまでなった.(the story was even make into a movie)
+
+
+5. ここ・そこ・あそこ + まで(to this extent, this much)
+- ここまでかわいい先生はいないでしょ。(I bet you can't find a teacher this cute)
+
+
+#### reference
+1. [まで](http://maggiesensei.com/2019/07/17/how-to-use-%E3%81%BE%E3%81%A7-made/)
+2. [次第](http://maggiesensei.com/2019/09/28/how-to-use-%e6%ac%a1%e7%ac%ac-%e3%81%97%e3%81%a0%e3%81%84-shidai/)
+#### 1. 屋・店
+1. 屋: has a long history, and a smaller place; 店: new introduce into Japan
+- 八百屋・本や・靴屋
+- 商店・用品店・喫茶店
+
+#### 2. 気にすると気になる
+1. ~をに気にする: worry about
+- あの噂が気になる: you are just curious about the gossip
+- 試験の結果を気にする
+2. 
+- あの噂(うわさ)を気になる: you have something to do with the rumor and you are worried about it.
+
+
+
+#### Galois
+1. There are very important words in English, For example, take, get, make. So
+   does Japanese. For example, もらう、なる is very common in daily life.
+
+#### 一般(いっぱん)
+1. 一般に: in general
+- 元中国体育員会が一般に広く普及させるために制定しためのである。
+
+2. 一般的
+- 一般的に、これまで日本ではサッカーより野球が広く普及してきた。
+
+
+
+#### みたい
+1. like something/someone
+- 彼は子供みたいに笑う: he smiles like a child.
+- コンピューターみたいに正確に計算できない: I can't calulate accurately as a computer
+
+#### Galois
+1. In Japanese, particle such as, に、と just a part of the word. For example,
+[一般に]
+
+
+
+#### reference
+1. [みたい](http://maggiesensei.com/2015/11/11/how-to-use-%E3%81%BF%E3%81%9F%E3%81%84-mitai/)
 
 #### 
 1. 行き帰り:

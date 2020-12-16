@@ -42,12 +42,6 @@ tags: ["日本語"]
 - [んです] is used to denote the reason.　
 2. そうですか
 
-#### ても and でも: even if
-1. there have the same meaning, just because the te-form of the word is
-   different, so it has two different types.
-2. で: (conjunction) and then, so
-3. て: indicate action
-4. も: even if
 
 ####
 1. 鈴木さんが中国にくるのを知っていますか。not yet
@@ -191,38 +185,6 @@ means: you can't get the result given the reason
 1. 日本人だからといって、日本の文化に詳しいとは限らない。not because someone is japanese, so he knows japanese culture well.
 
 
-#### oral
-1. お口にあうかどうかわかりませんが...
-2. A: ちょっとコンビニへ行ってきます。B:じゃ、お弁当を買ってきてくれませんか
-3. せっかくですけれど、今日は遠慮しておきます。(Thank you for inviting me, but sorry) 
-4. それを聞いて安心しました
-5. はい、ご用意できます (no problem, I can arange for you)
-6. かしこまりました　the serious version of "わかりました"
-7. この椅子、お使いになりますか。
-8. A: どうしたんですか？B: 足を踏まれたんです
-9. いつ日本へきたんですか。
-2. ごめんなさいね。ご心配をかけて
-3. 四月一日をもって、支社に転勤する事になりました。
-4. まさか彼と結婚することになるとは思ってもみなかった。
-5. なぜ海は青いのだろうか。 why the sea is blue
-6. 嬉しいなあ　(so happy)
-7. その子供はジュースをのみがっていた
-8. どのくらい日本語を勉強しましたか。
-9. みかんをいくつ買いましたか。
-1. 窓を閉めて、電気を消して、寝ました。
-2. １か月に2回映画をみます。
-3. 私の部屋に机があります。
-4. 日本の生活はどうですか。
-5. 奈良はどんな町ですか。
-6. お会計お願いします。
-7. よろしくお伝えください
-8. もしかして、彼は酔っているんじゃないですか。
-9. 奈しか欲しいものがあったら、遠慮なく言ってください
-1. 食欲(しょくよく)がありません
-2. 頭が重いです    headache
-3. お客様にを出しできないじゃないですか。
-4. 迷惑な行為
-5. 残業や休日出勤をするのは当たり前でした。(It's pretty common to work on weekend day)
 
 
 #### 敬語
@@ -676,8 +638,6 @@ but the form of the word is [変わっている], that's just the rule, you have
 1. 彼は変わった人だ　he is a strange man.
 
 
-
-
 #### ~もあれば〜もある
 1. この部屋には毛布(もうふ)もあれば、枕(まくら)もある。There are carpent and pillow in the room.
 
@@ -700,10 +660,5 @@ The extension meaning of this word is understand, control.
 
 #### ~までには
 1. 結果が出るまでには、長い年月が必要だろう. before the result comes out, There still needs a long time.
-
-
-
-
-
 
 

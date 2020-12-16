@@ -8,11 +8,9 @@ tags: ["日本語"]
 ---
 {% include JB/setup %}
 
-
 #### A
 1. ひとり暮らし: live alone
 2. 収入(しゅうにゅう): income
-
 
 
 #### B

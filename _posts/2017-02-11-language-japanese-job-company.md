@@ -29,7 +29,6 @@ tags: ["日本語"]
 #### B
 1. 会議が長(なが)引(び)く: the meeting is prolonged
 
-
 #### カタカナ
 1. オフ: 仕事がオフのひ: a day off work
 
