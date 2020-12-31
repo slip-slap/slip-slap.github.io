@@ -12,6 +12,7 @@ tags: ["英語"]
 1. flagship phone
 2. telephone card
 3. battery
+4. case
 
 
 #### 

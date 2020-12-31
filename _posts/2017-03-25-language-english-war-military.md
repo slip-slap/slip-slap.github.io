@@ -10,7 +10,6 @@ tags: ["英語"]
 
 ####
 1. forward
-2. ammunition
 
 ####
 1. division
@@ -18,9 +17,6 @@ tags: ["英語"]
 3. battlefield
 
 #### weapon
-1. ballistic missile
-2. bomb
-3. rocket
 4. Nazi-occupied France
 
 #### Action
@@ -36,6 +32,7 @@ tags: ["英語"]
 4. punch:
 5. hit:
 6. beat:
+7. surround
 
 
 #### Terminology
@@ -49,7 +46,6 @@ tags: ["英語"]
 1. proportional rataliate
 2. disproportion response
 3. martial arts
-
 
 #### Sentence
 1. The intelligence community concluded in a classified report.

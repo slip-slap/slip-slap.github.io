@@ -52,16 +52,6 @@ more polite. It means the company request you, just more polite.
 2. 受賞(じゅしょう): 
 3. 受胎(じゅたい):
 
-#### A
-1. 塩を渡してくれませんか。
-2. 送ってくれた本もう読みました。
-3. 水が欲しい
-4. 彼は水が欲しい
-
-In the above example, there aren't words such as "you", I in these sentence. But
-these sentences make sense automatically, how? by means to the verb. In japanese
-culture, always assumming the subject of the action is the one who speaks, so it
-is unnesscary to mention the subject.
 
 
 #### B

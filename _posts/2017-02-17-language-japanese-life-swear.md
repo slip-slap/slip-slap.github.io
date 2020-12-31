@@ -10,6 +10,7 @@ tags: ["日本語"]
 
 1. へたれ: incompetence, laziness
 2. 我慢できない: I can't stand with this
+3. アホ(阿保): idiot
 
 
 #### Level 2

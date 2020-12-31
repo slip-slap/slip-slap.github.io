@@ -16,7 +16,8 @@ tags: ["日本語"]
 #### C
 1. アイドル歌手: idol
 2. 現場なんか行くことないだろ
-
+3. 音楽配信: online music distribution
+4. 配信証明(はいしんしょうめい): proof of delivery
 
 
 ####

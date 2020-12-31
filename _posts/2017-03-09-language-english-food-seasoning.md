@@ -15,6 +15,8 @@ tags: ["英語"]
 4. chili oil
 5. minced green onion
 6. minced gralic
+7. black pepper
+8. chili pepper
 
 
 #### 

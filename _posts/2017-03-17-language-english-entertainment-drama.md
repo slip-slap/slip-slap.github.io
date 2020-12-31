@@ -31,6 +31,7 @@ tags: ["英語"]
 4. spoiler alert
 5. entertainer
 6. textbook acting
+7. subtitle
 
 
 ####

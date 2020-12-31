@@ -11,9 +11,16 @@ tags: ["英語"]
 ####
 1. online celebrity
 2. influencer
+3. free media
+4. whistleblowers
+5. hunger strike
+6. rebellious soul
+7. independent filmmaker
 
 ####
 1. open an account
+2. cover coronavirus outbreak
+3. pick quarrel and provoking trouble
 
 #### Sentence
 1. help us trend the hashtag

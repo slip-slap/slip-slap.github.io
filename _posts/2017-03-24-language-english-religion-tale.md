@@ -12,6 +12,8 @@ tags: ["英語"]
 ####
 1. supernatural
 2. rumor
+3. folklore
+4. mythology
 
 #### action
 1. transform

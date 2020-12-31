@@ -8,6 +8,11 @@ tags: ["日本語"]
 ---
 {% include JB/setup %}
 
+#### 屋敷・部屋
+1. 部屋: room
+- 部: its basic means part of something
+2. 屋敷: mansion
+
 
 #### 1. 苦手・下手
 1. 苦手: means that you think you are not good at something, which does not
@@ -20,9 +25,31 @@ tags: ["日本語"]
 1. 記入: for handwriting
 2. 入力: for typing
 
+#### 3. 異なる・違う
 
+1. 電話番号を違っている  the telephone number is different 
+2. 電話番号を間違って　　the telephone is wrong
 
+#### 4. 卵・玉子
+1. 卵: means before cooked egg
+2. 玉子: measn after cooked egg
 
+Example: 玉子焼き(cooked egg) 卵かけご飯(uncooked egg)
+
+#### 5. 屋・店
+1. 屋: has a long history, and a smaller place; 店: new introduce into Japan
+- 八百屋・本や・靴屋
+- 商店・用品店・喫茶店
+
+#### 6. 気にすると気になる
+1. ~をに気にする: worry about
+- あの噂が気になる: you are just curious about the gossip
+- 試験の結果を気にする
+- あの噂(うわさ)を気になる: you have something to do with the rumor and you are worried about it.
+
+#### 7. 世界・世の中
+1. 世界: world
+2. 世の中: society
 ### あたり
 1. この辺り: around here
 2. 一人当たり五千円: 5000 yen per person
@@ -93,9 +120,6 @@ B: 行ってらっしゃい:
 1. 腰掛ける: to sit on a chair or something that has a certain height.
 2. 座る: to sit on the floor or ground
 
-#### 5. world
-1. 世界: world
-2. 世の中: society
 
 
 #### 6. 受ける
@@ -107,7 +131,7 @@ B: 行ってらっしゃい:
 1.  売り切れ: sold out
 2.  売り出す: to put on the market, to put on sale
 - 新型のパソコンが売り出される: a new PC model is coming onto the market
-
+3. 売れる: to be well known, to be popular
 
 
 

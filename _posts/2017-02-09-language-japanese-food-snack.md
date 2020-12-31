@@ -25,28 +25,24 @@ tags: ["日本語"]
 
 #### B
 1. 杏(あんず)
-2. 揚げ饅頭(揚げまんじゅう): This may come from southern China, there are
-   filling within it 
-3. 中華饅頭
 
 ####
 1. 麻婆豆腐(まーぼーどうふ)
 2. 親子丼(おやこどん)
 3. 他人丼(たにんどん)
-4. 刺身
 5. 塩漬け
-6. 缶詰
 7. 椀子そば(わんこそば)
 8. 枝豆
-9. 水炊き
 1. 鶏肉
 2. 盛り合わせ
 3. 大根
 4. 食事
 2. 肉食
 3. 試食
-
-
+4. 駅弁: boxed lunch bought at a station, variety of sexual position
+5. 刺身:raw sliced fish 刺し: sliced raw fish 身: main part, meat as apposed to bone
+1. お粥(おかゆ)
+2. おかず
 
 ####
 1. 夫は料理が上手なのに、あまり作ってくれません。

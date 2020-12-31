@@ -13,6 +13,7 @@ tags: ["英語"]
 2. transport restriction
 3. Five carriages
 4. reserved seat
+5. strap(to hang onto)
 
 ####
 1. bar
@@ -22,14 +23,12 @@ tags: ["英語"]
 5. catway
 6. sideway
 
-####
-
 #### Traffic board
 1. traffic cone
 2. traffic sign
 3. warning sign
 4. stop sign
-
+5. traffic jam
 
 #### Action
 1. cut in front of me
@@ -43,8 +42,6 @@ tags: ["英語"]
 2. pull over
 3. hit and run
 
-
-
 #### Sentence
 1. The train was carrying 2 passengers and 5 staff when it crashed today.
 2. The generator car burst into flames.
@@ -54,5 +51,4 @@ tags: ["英語"]
 6. I got on the subway
 7. got off that plane with her.
 8. what does the sign say?
-
 

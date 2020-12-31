@@ -20,7 +20,6 @@ tags: ["英語"]
 9. band
 1. wedding reception
 
-
 ####
 1. remarriage
 2. reunion

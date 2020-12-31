@@ -33,12 +33,13 @@ tags: ["英語"]
 3. incredibly sensitive
 4. high-profile
 5. mental reservation
+6. composure
+7. reassuring
 
 #### Sentence
 1. They are rich, sophisticated and elegant.
 2. I was too shy and passive
 3. what doen's kill you, makes you stronger
 4. I have a flaw, big deal
-
 
 

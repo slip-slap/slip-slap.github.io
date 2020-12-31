@@ -21,6 +21,7 @@ tags: ["英語"]
 3. proper burial
 4. mark
 5. honour
+6. autopsy
 
 #### Sentence
 1. China mourns victims with three-minute silence.

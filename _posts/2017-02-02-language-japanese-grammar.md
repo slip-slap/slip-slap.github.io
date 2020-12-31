@@ -145,23 +145,6 @@ means: you don't need to <br />
 1. そこをなんとかしてください. please helpe me
 
 
-#### pronunciation
-
-1. 北: きた, ほく
-2. 境: さかい,きょう  環境
-4. 命: いのち, みょう　寿命 
-5. 長: ながい, ちょう 長時間
-9. 好: 好き, この　好み
-2. 受: 受付, じゅ　受講生(じゅこうせい)
-3. 表: おもて, 表情(ひょうじょう)
-4. 重: おもい, 重視(じゅうし) 
-5. 為: かわ, 為替: exchange
-6. 血: けつ, 高血圧: こうけつあつ
-7. 朝: あさ, 朝食: ちょうしょく
-8. 薬: くすり, 薬局: やっきょく  農薬 のうやく
-1. 手:      拍手: はくしゅ
-2. 水: みず, 断水: だんすい 
-3. 上: うえ, 上旬: じょうじゅん
 
 #### prounciation
 1. 方言: ほうげん 
@@ -239,29 +222,10 @@ Example: この本は面白いな.  <br />
 + 全部でいくらですかね。
 
 
-#### 〜ちゃって
-1. "~ちゃって" is short for "〜てしまって"
-2. "~じゃって" is short for "~でしまって"
-
-|   base form  |     te-form    | ta-form        | command form |
-|:------------:|:--------------:|----------------|--------------|
-| 食べてしまう | 食べてしまって | 食べてしまった | 食べてしまえ |
-|  食べちゃう  |  食べちゃって  | 食べちゃった   | 食べちゃえ   |
-| 飲んでしまう | 飲んでしまって | 飲んでしまった | 飲んでしまえ |
-| 飲んじゃう   | 飲んじゃって   | 飲んじゃった   | 飲んじゃえ   |
-
-
-
-
 #### 遠慮なく
 [遠慮なく] means [遠慮しないで] 不用客气 <br />
 
 何か欲しいのもあったら、遠慮なく言ってください
-
-
-
-
-
 
 
 #### verbます形ましょうか
@@ -397,10 +361,6 @@ is to tell others what we have heard.
 なんて素晴らしいんだろう
 
 
-
-
-
-
 #### でしょうとだろう
 "だろう" means essentially the same thing as "でしょう" except it sounds more masculine and is used mostly by male
 1. A: アリスはどこだ？B：寝ているだろう
@@ -477,10 +437,6 @@ do not agree
 いや、それはちょっと    
 
 
-
-
-
-
 #### Using [なさい] for polite command
 1. [~なさい] is the polite way to tell others what to do. It's used by attaching [なさい]
 to the **verb stem**. <br />
@@ -492,9 +448,6 @@ children.
 
 + 約束時間を守りなよ
 + 約束時間を守りなさいよ
-
-
-
 
 #### 文法
 1. 普通过去ら, ~  if...then...
@@ -511,42 +464,6 @@ Example: 便利でも、パソコンをつかいません
 
 
 
-#### number and time
-
-
-|      Data      |      Item      |       House      |     Number    | Weekday |
-|:--------------:|:--------------:|:----------------:|:-------------:|:-------:|
-| 一日　ついたち |      一つ      |  一軒　いっけん  |    １　いち   |  月曜日 |
-|  二日　ふつか  |      二つ      |   二軒　にけん   |     ２　に    |  火曜日 |
-|  三日　みっか  |  三つ　みっつ  |  三軒　さんげん  |    ３　さん   |  水曜日 |
-|  四日　よっか  |  四つ　よっつ  |  四軒　よんけん  |  ４　よん、し |  木曜日 |
-| 五日　いつか   | 五つ　いつつ   |   五軒　ごけん   |     5　ご     |  金曜日 |
-| 六日　むいか   | 六つ　むっつ   |  六軒　ろっけん  |    6　ろく    |  土曜日 |
-| 七日　なのか   | 7つ　ななつ    |  七軒　ななけん  | 7　なな、しち |  日曜日 |
-| 八日　ようか   | ８つ　やっつ   |  八軒　はっけん  |    ８　はち   |         |
-| 九日　ここのか | 九つ　ここのつ | 九軒　きゅうけん |   ９　きゅう  |         |
-| 十日　とおか   | 十　とお       | 十軒　じゅっけん |   10　じゅう  |         |
-
-
-
-
-
-#### verb-form
-
-
-|        Verb       |    u-sound   |    ru-sound    |    exception    |
-|:-----------------:|:------------:|:--------------:|:---------------:|
-|    Dictionary     |     買う     |     食べる     |   する    来る    |
-|      Te-form      |    買って    |     食べて     |   して    いって   |
-|      Ta-form      |    買った    |     食べた     |   した    行った   |
-|      Negative     |   買わない   |    食べない    |   しない  来ない  |
-|      Potenial     |    買える    |   食べられる   |   できる  来られる 修理できる|
-|      Passive      |   買われる   |   食べられる   |   させる  来られる |
-|     Imperative    |     買え     |     食べろ     |   しろ    こう    |
-|     prohibitive   |     買うな   |     食べるな   |   するな  くるな    |
-|     Causative     |   買わせる   |   食べせれる   |   させる  来させる |
-|     Volitional    |              |    食べよう    |   しよう  こよう  |
-| Causative-Passive | 買わせられる | 食べせれられる |                 |
 
 
 #### intransitive and transitive
@@ -576,18 +493,6 @@ Example 2: どこで買ったらいいですか？ <br />
 2. 間違う means wrong  間違い
 
 
-#### the difference between 異なると違う
-oral and formal
-
-Example:  <br />
-電話番号を違っている  the telephone number is different<br />
-電話番号を間違って　　the telephone is wrong
-
-### the difference between 卵 and 玉子
-1. 卵: means before cooked egg
-2. 玉子: measn after cooked egg
-
-Example: 玉子焼き(cooked egg) 卵かけご飯(uncooked egg)
 
 
 
@@ -640,9 +545,6 @@ but the form of the word is [変わっている], that's just the rule, you have
 
 #### ~もあれば〜もある
 1. この部屋には毛布(もうふ)もあれば、枕(まくら)もある。There are carpent and pillow in the room.
-
-
-
 
 #### 会場を押さえる
 The basic meaning of [押さえる] is "to fix".  

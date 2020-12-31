@@ -14,6 +14,15 @@ tags: ["日本語"]
 3. 鎮静剤(ちんせいざい): sedative
 4. 副作用(ふくさよう: side effect)
 5. 酔い止め(よいどめ): travel sickness pills
-6. 睡眠薬(すいみんやく): sleeping pills
 7. 使用期限(使用きげん): expiration date
+
+#### diease
+1. 胃痛(いつう): stomach-ache
+
+#### 薬
+1. 咳止め(せきどめ): cough medicine
+2. 痛み止め(いたみどめ): painkiller
+3. 睡眠薬(すいみんやく): sleeping pills
+
+
 

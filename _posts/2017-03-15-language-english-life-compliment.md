@@ -18,3 +18,8 @@ tags: ["英語"]
 
 ####
 1. Germany sense of humor
+2. I sincerely wish you happiness, cheerfulness, and success.
+3. May this new bring many good things and rich blessings and all those you
+   love.
+4. May everything on your wishlist come true. Happy Holidays!
+

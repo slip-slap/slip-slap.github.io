@@ -8,6 +8,13 @@ tags: []
 ---
 {% include JB/setup %}
 
+The analytical methods are generally quite cumbersome, and require many
+simplifying assumptions.
+
+ANN based methods have been proved to ba a reliable tool to model different
+engineering systems under practical conditions without involving in solving
+complicated mathematical models.
+
 #### 1. Foundation
 1. biological and psychological foundations of neural network
 
@@ -20,9 +27,11 @@ tags: []
 
 
 ##### Training
-training algorithm plagued by the possible existance of local minima or "flat
+1. training algorithm plagued by the possible existance of local minima or "flat
 spots".
-The networks suffer from "the curse of dimensionality"
+2. The networks suffer from "the curse of dimensionality"
+3. The mean square error between target and actual outputs averaged over all
+   examples(the desired and the prediction ouput values).
 
 #### Sentence
 1. Learning is viewed as the establishment of connections between neurons or modification of

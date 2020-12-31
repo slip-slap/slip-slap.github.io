@@ -25,11 +25,16 @@ tags: ["日本語"]
 
 #### Adult Product
 1. TENGA
+2. 口でして
+3. ドS: a person who extremely likes to tease
+4. ドM: A person who extremely likes to be teased
+5. 風俗(ふうぞく): sex service
 
-####
-1. 口でして
-2. ドS: a person who extremely likes to tease
-3. ドM: A person who extremely likes to be teased
+
+
+#### Sentence
+1. 紐(ヒモ)になりたい: man who is financially dependent on a woman
+
 
 
 
