@@ -142,7 +142,7 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">936</span>
+<span title="文章总数">940</span>
 <ul>
 
 
@@ -2850,7 +2850,17 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#May-2018">2018 年 05 月 (21)</a></li>
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#May-2018">2018 年 05 月 (23)</a></li>
     
   
 
@@ -4488,7 +4498,17 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#March-2017">2017 年 03 月 (113)</a></li>
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2017">2017 年 03 月 (115)</a></li>
     
   
 
@@ -4919,11 +4939,11 @@ $(document).ready(function() {
 <span title="分类总数">9</span>
 <ul>
 
-  <li><a href="/categories.html#言葉-ref">言葉 (194)</a></li>
+  <li><a href="/categories.html#言葉-ref">言葉 (196)</a></li>
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (215)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (217)</a></li>
 
   <li><a href="/categories.html#Algorithm-ref">Algorithm (78)</a></li>
 
@@ -5047,7 +5067,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#c++-ref" style="font-size: 13.5pt; color: #555;">c++</a>
+    <a href="/tags.html#c++-ref" style="font-size: 13pt; color: #555;">c++</a>
   
     
     
@@ -5096,7 +5116,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#git-ref" style="font-size: 9.5pt; color: #999;">git</a>
+    <a href="/tags.html#git-ref" style="font-size: 9.5pt; color: #888;">git</a>
   
     
     
@@ -5117,7 +5137,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#A.D.T.-ref" style="font-size: 12pt; color: #666;">A.D.T.</a>
+    <a href="/tags.html#A.D.T.-ref" style="font-size: 11.5pt; color: #666;">A.D.T.</a>
   
     
     
@@ -5411,7 +5431,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#space-ref" style="font-size: 14.5pt; color: #444;">space</a>
+    <a href="/tags.html#space-ref" style="font-size: 14pt; color: #444;">space</a>
   
     
     
@@ -5746,6 +5766,13 @@ $(document).ready(function() {
         </div>
       </div>
       
+<h4 id="1-what-is-version-control">1. What is version control?</h4>
+<ol>
+  <li>Records changes to a file or set of files over time</li>
+  <li>Revert selected files back to a previous state, revert the entire projected
+back to a previous state.</li>
+</ol>
+
 <h4 id="1-what-is-the-problem-">1. What is the problem ?</h4>
 <ol>
   <li>assume you are a coder,  and work on a project. Accasionaly you revise you
@@ -5785,15 +5812,24 @@ you can it branch.</li>
   </li>
 </ol>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">type</span> <span class="n">blob</span><span class="o">=</span><span class="n">array</span><span class="o">&lt;</span><span class="n">byte</span><span class="o">&gt;</span>
-<span class="nb">type</span> <span class="n">tree</span><span class="o">=</span><span class="nb">map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="n">tree</span><span class="o">|</span><span class="n">blob</span><span class="o">&gt;&gt;</span>
-<span class="nb">type</span> <span class="n">commits</span><span class="o">=</span><span class="p">{</span>
-<span class="n">parents</span> <span class="o">=</span> <span class="n">array</span><span class="o">&lt;</span><span class="n">commit</span><span class="o">&gt;</span>
-<span class="n">author</span> <span class="o">=</span> <span class="n">string</span><span class="o">&lt;&gt;</span>
-<span class="n">message</span> <span class="o">=</span> <span class="n">string</span><span class="o">&lt;&gt;</span>
-<span class="n">snapshot</span> <span class="o">=</span> <span class="n">tree</span>
-<span class="p">}</span>
-</code></pre></div></div>
+<h4 id="3-layout">3. Layout</h4>
+
+<p><img align="left" src="/images/os-software-git-philosophy-layout.png" /> <br /></p>
+
+<ul>
+  <li>I was confused by the term “checkout” for a long time, what does checkout 
+exactly do is bringing files stored in Repository to working directory.</li>
+  <li>The working tree is a single checkout of one version of the project, these
+files are pulled out of the compressed database in the Git directory and
+placed on disk for you to use or modify.</li>
+  <li>
+    <p>The staging area is a file, generally contained in your Git directory, that
+stores information about what will go into your next commit.</p>
+  </li>
+  <li>The git directory is where Git stores the metadata and object database for
+your project. This is the most important part of Git, and it is what is copied
+when you clone a repository from another computer.</li>
+</ul>
 
 <h4 id="3-example">3. Example</h4>
 
@@ -5849,23 +5885,9 @@ git checkout ad62409
 <span class="c"># hello world</span>
 </code></pre></div></div>
 
-<p>其实只能跟踪文件文件的改动，比如txt文件或者程序代码。
-版本控制系统可以告诉你每次的改动。但对于图片，视频等二进制文件，版本控制系统是无能为力的。</p>
-
-<p>git由三个概念，分别是工作区，版本库和暂存区，add命令把文件由工作区
-添加到stage,即暂存区，commit命令把暂存区合并到版本库</p>
-
 <ul>
-  <li>git status 时刻掌握仓库当前的状态</li>
   <li>git diff 查看工作区和版本库的差别</li>
   <li>git reflog 记录你的每一次命令</li>
-</ul>
-
-<p>git支持多种协议，包括https, 但是通过ssh支持的原生git协议速度最快。</p>
-<ul>
-  <li>添加远程库：git remote add origin git@github.com:slip-slap/slip-slap.github.io.git
-远程库的名字叫做origin，也可以改成别的，但是origin这个名字一看就知道是远程库</li>
-  <li>把本地库的所有内容推送到远程库上 git push origin master</li>
 </ul>
 
 
@@ -5896,7 +5918,7 @@ git checkout ad62409
   
      
     	<li><a href="/categories.html#PL-ref">
-    		PL <span>215</span>
+    		PL <span>217</span>
     	</a></li>
     
   
@@ -5915,9 +5937,9 @@ git checkout ad62409
 
   
      
-    	<li><a href="/tags.html#tool-ref">tool <span>12</span></a></li>
+    	<li><a href="/tags.html#tool-ref">tool <span>14</span></a></li>
      
-    	<li><a href="/tags.html#git-ref">git <span>7</span></a></li>
+    	<li><a href="/tags.html#git-ref">git <span>9</span></a></li>
     
   
 
@@ -6006,7 +6028,7 @@ $(document).ready(function () {
     </section>
 
     <footer id="bottom">
-      <p align="center">&copy; 2020 reed
+      <p align="center">&copy; 2021 reed
         with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
         and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
       </p>

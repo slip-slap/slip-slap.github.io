@@ -142,7 +142,7 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">936</span>
+<span title="文章总数">940</span>
 <ul>
 
 
@@ -2850,7 +2850,17 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#May-2018">2018 年 05 月 (21)</a></li>
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#May-2018">2018 年 05 月 (23)</a></li>
     
   
 
@@ -4488,7 +4498,17 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#March-2017">2017 年 03 月 (113)</a></li>
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2017">2017 年 03 月 (115)</a></li>
     
   
 
@@ -4919,11 +4939,11 @@ $(document).ready(function() {
 <span title="分类总数">9</span>
 <ul>
 
-  <li><a href="/categories.html#言葉-ref">言葉 (194)</a></li>
+  <li><a href="/categories.html#言葉-ref">言葉 (196)</a></li>
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (215)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (217)</a></li>
 
   <li><a href="/categories.html#Algorithm-ref">Algorithm (78)</a></li>
 
@@ -5047,7 +5067,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#c++-ref" style="font-size: 13.5pt; color: #555;">c++</a>
+    <a href="/tags.html#c++-ref" style="font-size: 13pt; color: #555;">c++</a>
   
     
     
@@ -5096,7 +5116,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#git-ref" style="font-size: 9.5pt; color: #999;">git</a>
+    <a href="/tags.html#git-ref" style="font-size: 9.5pt; color: #888;">git</a>
   
     
     
@@ -5117,7 +5137,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#A.D.T.-ref" style="font-size: 12pt; color: #666;">A.D.T.</a>
+    <a href="/tags.html#A.D.T.-ref" style="font-size: 11.5pt; color: #666;">A.D.T.</a>
   
     
     
@@ -5411,7 +5431,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#space-ref" style="font-size: 14.5pt; color: #444;">space</a>
+    <a href="/tags.html#space-ref" style="font-size: 14pt; color: #444;">space</a>
   
     
     
@@ -5709,6 +5729,79 @@ $(document).ready(function() {
   <article class="nested">
 
     <header>
+      <h2><a href="/pl/pl-compile-c++-overload.html" title="查看《C++: Reload Operator》">C++: Reload Operator</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+A
+
+  operoator overload just a special function name;
+
+
+#include &lt;iostream&gt;
+
+class complex_number
+{
+
+	private:
+		int actual_part; 
+        i...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">08 March 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-compile-c++-overload.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-compile-c++-overload-output-marker.html" title="查看《C++: Overload》">C++: Overload</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+#include &lt;iostream&gt;
+
+class complex_number
+{
+
+	private:
+		int actual_part; 
+        int virtual_part;
+
+    public:
+		complex_number()
+		{}
+
+	...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">08 March 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-compile-c++-overload-output-marker.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
       <h2><a href="/pl/pl-compile-c++-operator.html" title="查看《C++: Operator》">C++: Operator</a></h2>
     </header>
 
@@ -5951,68 +6044,6 @@ for that symbol de...
 
   </article>
   
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-compile-c++-keyword-new-reload.html" title="查看《C++ Keyword: New》">C++ Keyword: New</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Rule
-
-  If you apply address in heap, you must return
-
-
-#include&lt;iostream&gt;
-#include &lt;memory&gt;
-
-class student
-{
-	private:
-		int* a =new ...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">08 March 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-compile-c++-keyword-new-reload.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-compile-c++-keyword-hash-define.html" title="查看《C++: #include and #define》">C++: #include and #define</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-preprocessor
-The preprocessor is supposed to deal with these keywords.
-
-  you can treat them as a script, and preprocessor is engine to deal with ...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">08 March 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-compile-c++-keyword-hash-define.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
 
   
     
@@ -6098,7 +6129,7 @@ $(document).ready(function () {
     </section>
 
     <footer id="bottom">
-      <p align="center">&copy; 2020 reed
+      <p align="center">&copy; 2021 reed
         with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
         and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
       </p>

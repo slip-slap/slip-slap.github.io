@@ -5,8 +5,8 @@
   <description>Just Do It - </description>
   <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
   <link></link>
-  <lastBuildDate>Thu, 31 Dec 2020 11:01:30 +0900</lastBuildDate>
-  <pubDate>Thu, 31 Dec 2020 11:01:30 +0900</pubDate>
+  <lastBuildDate>Mon, 04 Jan 2021 12:33:50 +0900</lastBuildDate>
+  <pubDate>Mon, 04 Jan 2021 12:33:50 +0900</pubDate>
   <ttl>1800</ttl>
 
 
@@ -21449,6 +21449,13 @@ program.&lt;/li&gt;
   <item>
     <title>Git:  Philosophy Behind the Scene</title>
     <description>
+&lt;h4 id=&quot;1-what-is-version-control&quot;&gt;1. What is version control?&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Records changes to a file or set of files over time&lt;/li&gt;
+  &lt;li&gt;Revert selected files back to a previous state, revert the entire projected
+back to a previous state.&lt;/li&gt;
+&lt;/ol&gt;
+
 &lt;h4 id=&quot;1-what-is-the-problem-&quot;&gt;1. What is the problem ?&lt;/h4&gt;
 &lt;ol&gt;
   &lt;li&gt;assume you are a coder,  and work on a project. Accasionaly you revise you
@@ -21488,15 +21495,24 @@ you can it branch.&lt;/li&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;blob&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tree&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tree&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;blob&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;commits&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;parents&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;commit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;author&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;snapshot&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tree&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h4 id=&quot;3-layout&quot;&gt;3. Layout&lt;/h4&gt;
+
+&lt;p&gt;&lt;img align=&quot;left&quot; src=&quot;/images/os-software-git-philosophy-layout.png&quot; /&gt; &lt;br /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;I was confused by the term “checkout” for a long time, what does checkout 
+exactly do is bringing files stored in Repository to working directory.&lt;/li&gt;
+  &lt;li&gt;The working tree is a single checkout of one version of the project, these
+files are pulled out of the compressed database in the Git directory and
+placed on disk for you to use or modify.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The staging area is a file, generally contained in your Git directory, that
+stores information about what will go into your next commit.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;The git directory is where Git stores the metadata and object database for
+your project. This is the most important part of Git, and it is what is copied
+when you clone a repository from another computer.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h4 id=&quot;3-example&quot;&gt;3. Example&lt;/h4&gt;
 
@@ -21552,23 +21568,9 @@ git checkout ad62409
 &lt;span class=&quot;c&quot;&gt;# hello world&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;其实只能跟踪文件文件的改动，比如txt文件或者程序代码。
-版本控制系统可以告诉你每次的改动。但对于图片，视频等二进制文件，版本控制系统是无能为力的。&lt;/p&gt;
-
-&lt;p&gt;git由三个概念，分别是工作区，版本库和暂存区，add命令把文件由工作区
-添加到stage,即暂存区，commit命令把暂存区合并到版本库&lt;/p&gt;
-
 &lt;ul&gt;
-  &lt;li&gt;git status 时刻掌握仓库当前的状态&lt;/li&gt;
   &lt;li&gt;git diff 查看工作区和版本库的差别&lt;/li&gt;
   &lt;li&gt;git reflog 记录你的每一次命令&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;git支持多种协议，包括https, 但是通过ssh支持的原生git协议速度最快。&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;添加远程库：git remote add origin git@github.com:slip-slap/slip-slap.github.io.git
-远程库的名字叫做origin，也可以改成别的，但是origin这个名字一看就知道是远程库&lt;/li&gt;
-  &lt;li&gt;把本地库的所有内容推送到远程库上 git push origin master&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
@@ -21591,6 +21593,89 @@ revert
 </description>
     <link>/pl/pl-tool-git-patching.html</link>
     <guid>/pl/pl-tool-git-patching</guid>
+    <pubDate>Fri, 18 May 2018 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Git: Internals</title>
+    <description>
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;blob&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tree&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tree&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;blob&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;commits&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;parents&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;commit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;author&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;snapshot&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tree&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+    <link>/pl/pl-tool-git-internals.html</link>
+    <guid>/pl/pl-tool-git-internals</guid>
+    <pubDate>Fri, 18 May 2018 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Git: Configuration and Internals</title>
+    <description>
+&lt;p&gt;Just as other programs, the git configuration can be divided into three level.&lt;/p&gt;
+
+&lt;h3 id=&quot;1-configuration-file&quot;&gt;1. Configuration File&lt;/h3&gt;
+&lt;h4 id=&quot;11-system-level&quot;&gt;1.1 System level&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;a file named /etc/config: a file contain values applied to every use in this
+ system&lt;/li&gt;
+  &lt;li&gt;pass –system to git config, it reads and writes from this file&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git config &lt;span class=&quot;nt&quot;&gt;--system&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h4 id=&quot;12-global-level&quot;&gt;1.2 Global level&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;a file named ~/.gitconfig: values specifically to you.&lt;/li&gt;
+  &lt;li&gt;you can make Git read and writes by passing –global option to git config.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git config &lt;span class=&quot;nt&quot;&gt;--global&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;13-project-level&quot;&gt;1.3 Project level&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;a file named config, located in the git directory(.git/config): a file
+specific to that single repository..&lt;/li&gt;
+  &lt;li&gt;read from and write to this file with –local option&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git config &lt;span class=&quot;nt&quot;&gt;--local&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;2-set&quot;&gt;2. set&lt;/h3&gt;
+&lt;h4 id=&quot;21-your-identity&quot;&gt;2.1 Your Identity&lt;/h4&gt;
+&lt;p&gt;Git commit uses this information&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git config &lt;span class=&quot;nt&quot;&gt;--global&lt;/span&gt; user.name &lt;span class=&quot;s2&quot;&gt;&quot;Huiyao&quot;&lt;/span&gt;
+git config &lt;span class=&quot;nt&quot;&gt;--global&lt;/span&gt; user.email zhang@123.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;22-your-editor&quot;&gt;2.2 Your Editor&lt;/h4&gt;
+&lt;p&gt;You can configure the default text editor that will be used when Git needs you
+to type in a message. If not configured, Git uses your system’s default editor.&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git config &lt;span class=&quot;nt&quot;&gt;--global&lt;/span&gt; core.editor vim
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;3-display&quot;&gt;3. display&lt;/h3&gt;
+&lt;p&gt;Git might read the same configuration variable from more than one file, it’s
+possible that you have an unexpected value for one of these values and you don’t
+know why. In cases like that, you can query Git as to the origin for that value.&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git config &lt;span class=&quot;nt&quot;&gt;--list&lt;/span&gt;
+git config &lt;span class=&quot;nt&quot;&gt;--show-origin&lt;/span&gt; rerere.autoUpdate
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+</description>
+    <link>/pl/pl-tool-git-configuration.html</link>
+    <guid>/pl/pl-tool-git-configuration</guid>
     <pubDate>Fri, 18 May 2018 00:00:00 +0900</pubDate>
   </item>
 
@@ -21716,14 +21801,46 @@ git merge –continue&lt;/p&gt;
   </item>
 
   <item>
-    <title>Git: Basic Snapshotting </title>
+    <title>Git: Basic Operation</title>
     <description>
-&lt;p&gt;####&lt;/p&gt;
+&lt;h4 id=&quot;1-create-a-repository&quot;&gt;1. Create a repository&lt;/h4&gt;
 
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;add
-status
-diff
-commit
+&lt;h5 id=&quot;11-git-init&quot;&gt;1.1 git init&lt;/h5&gt;
+&lt;h5 id=&quot;12-git-clone&quot;&gt;1.2 git clone&lt;/h5&gt;
+&lt;p&gt;This command is git clone and not “checkout”. This is an important
+distinction-instead of getting just a working copy, Git receives a full copy of
+nearly all data that the server has.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Every version of every file for the history of the project is pulled down by
+default when you run git clone&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;13-lifecycle-of-the-status-of-your-files&quot;&gt;1.3 Lifecycle of the status of your files&lt;/h4&gt;
+&lt;p&gt;checking the status of your files&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git status
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img align=&quot;left&quot; src=&quot;/images/os-software-git-basic-file-lifecycle.png&quot; /&gt; &lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;14-tracking-new-files&quot;&gt;1.4 tracking new files&lt;/h4&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git add new-file
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;15-ignoring-files&quot;&gt;1.5 Ignoring Files&lt;/h4&gt;
+&lt;p&gt;Often, you’ll have a class of files that you don’t want Git to automatically add
+or even show you as being untracked.&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cat&lt;/span&gt; .gitignore
+&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.[oa]
+&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;~
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;the first line tells Git to ignore any files ending in “.o” or “.a”&lt;/li&gt;
+  &lt;li&gt;the second line tells git to ignore all files whose names end with a tilde(~)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;diff
 nots
 restore
 reset
@@ -21754,8 +21871,8 @@ only need to checkout the branch you were on&lt;/strong&gt;&lt;/li&gt;
 &lt;br /&gt; &lt;br /&gt; &lt;br /&gt; &lt;br /&gt;&lt;/p&gt;
 
 </description>
-    <link>/pl/pl-tool-git-basic-snapshotting.html</link>
-    <guid>/pl/pl-tool-git-basic-snapshotting</guid>
+    <link>/pl/pl-tool-git-basic-operation.html</link>
+    <guid>/pl/pl-tool-git-basic-operation</guid>
     <pubDate>Sun, 13 May 2018 00:00:00 +0900</pubDate>
   </item>
 
@@ -33614,6 +33731,7 @@ up the payment in cash from your local city.&lt;/li&gt;
   &lt;li&gt;turn on automatic renewal&lt;/li&gt;
   &lt;li&gt;one million cash&lt;/li&gt;
   &lt;li&gt;opening hours and holiday&lt;/li&gt;
+  &lt;li&gt;renew the deal&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;####&lt;/p&gt;
@@ -33630,75 +33748,21 @@ is not paid in full.(at a much higher rate than most form of debt)&lt;/li&gt;
   </item>
 
   <item>
-    <title>Language: Summary</title>
+    <title>Software: terminology</title>
     <description>
-&lt;h4 id=&quot;chinese&quot;&gt;Chinese&lt;/h4&gt;
-&lt;p&gt;I am a native Chinese speaker, but I don’t think I master this language at all.
-Of coures, I understand what people are talking about, every topic, every areaa,
-I can tell the small difference when people talk, the words, the tone. But the
-problem lies in me is I can’t express myself in a very concise and efficient
-way. I should master some words in different area.&lt;/p&gt;
-
-&lt;p&gt;In the 21st century, Chinese is the most important language in the world,
-because the Chinese powerfull econemy capability, and military ability. But the
-drawback of chinese is it is too difficult to master.&lt;/p&gt;
-
-&lt;h4 id=&quot;english&quot;&gt;English&lt;/h4&gt;
-&lt;p&gt;I have learn English for so many years. Currently, American is the most
-powerfull country in the earth, and English is the most popular language, There
-is no doubt about that.
-I can listen pretty well, I can understand what people are talking about, and I
-can express myself. But the problem is I should try to improve my express
-capabality, more accurate, more fluent.&lt;/p&gt;
-
-&lt;p&gt;I favour english most, because in the world, english is the most common used
-language in the world, for business, for communication, for techology, for
-scientist, I should learn english.&lt;/p&gt;
-
-&lt;h4 id=&quot;japanese&quot;&gt;Japanese&lt;/h4&gt;
-&lt;p&gt;But at first I learn Japanese, it is completely a nightmare, I was too focused
-on the meaning of every word in a phrase. I suffer a lot. I should treat them as
-a whole, expeciall in the context of conversation, it will be much more easier.
-Because Japanese language is influenced by Tang Dynasty and western countries, I
-can learn Japanese pretty easily, and the problem lies me is the listening. I
-should listen more, and memorize more words.&lt;/p&gt;
-
-&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
-&lt;p&gt;According to the experience that I learn language, here is some advices&lt;/p&gt;
+&lt;p&gt;####&lt;/p&gt;
 &lt;ol&gt;
-  &lt;li&gt;First, you need to memorize words, it’s the building blocks.&lt;/li&gt;
-  &lt;li&gt;Second, listen, listen, and listen, listen different topics&lt;/li&gt;
-  &lt;li&gt;memorize the word that is often used in some specific area.&lt;/li&gt;
-  &lt;li&gt;Maybe, the most important thing is &lt;strong&gt;Talk to yourself at home&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;For example, I love history, expecially world history, not only China or Japan,
-I want to figure out, what the the other people is doing when China is in Tang
-dynasty. Why Democracy and scitenist are very developed in Greece. I want to
-know Napoleon, Alexander, Kublai Khan, Sultan. If you want to talk about movies,
-you should the following famous movies, The shawshank Redemption, godfather, the
-lord of the rings, pulp fiction, Inception, The matrix, seven samurai,
-Crounching Tiger and hidden Dragon, The new world.&lt;/p&gt;
-
-&lt;h4 id=&quot;galois-1&quot;&gt;Galois&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;There is one word that confuse me a lot. According what I learn and express
-english in a chinese way. “let” is the choice to ask someone to do something.
-but, it’s not, in English, it is &lt;strong&gt;make&lt;/strong&gt;, I think this is the most frequent
-word in English, DON’T forget it.&lt;/li&gt;
-  &lt;li&gt;You can’t translate one language to the other language literly, because there
-is no words whose meaning are equivlant exactly between two different
-language. Before I went abroad, some guy told me if you go japan, you must
-master japanese. That’s so not true. Between two different language, the
-difficult is not only the prounciation, but also the word choice, some
-sentence make sense in your culture, but not in the other culture. You should
-try to picture the scenario,  and pay attention to their word choices.&lt;/li&gt;
+  &lt;li&gt;fine-grained control&lt;/li&gt;
+  &lt;li&gt;the conflict&lt;/li&gt;
+  &lt;li&gt;network latency overhead&lt;/li&gt;
+  &lt;li&gt;backward compatible&lt;/li&gt;
+  &lt;li&gt;undo operations&lt;/li&gt;
 &lt;/ol&gt;
 
 </description>
-    <link>/%E8%A8%80%E8%91%89/language-summary.html</link>
-    <guid>/%E8%A8%80%E8%91%89/language-summary</guid>
-    <pubDate>Fri, 17 Mar 2017 00:00:00 +0900</pubDate>
+    <link>/%E8%A8%80%E8%91%89/language-english-software-terminology.html</link>
+    <guid>/%E8%A8%80%E8%91%89/language-english-software-terminology</guid>
+    <pubDate>Sat, 18 Mar 2017 00:00:00 +0900</pubDate>
   </item>
 
   <item>
@@ -33782,15 +33846,85 @@ try to picture the scenario,  and pay attention to their word choices.&lt;/li&gt
 &lt;/ol&gt;
 
 &lt;p&gt;####&lt;/p&gt;
-
-&lt;p&gt;####&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;proper care&lt;/li&gt;
 &lt;/ol&gt;
 
 </description>
-    <link>/%E8%A8%80%E8%91%89/language-english-phone-software.html</link>
-    <guid>/%E8%A8%80%E8%91%89/language-english-phone-software</guid>
+    <link>/%E8%A8%80%E8%91%89/language-english-software-gui.html</link>
+    <guid>/%E8%A8%80%E8%91%89/language-english-software-gui</guid>
+    <pubDate>Sat, 18 Mar 2017 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Language: Summary</title>
+    <description>
+&lt;h4 id=&quot;chinese&quot;&gt;Chinese&lt;/h4&gt;
+&lt;p&gt;I am a native Chinese speaker, but I don’t think I master this language at all.
+Of coures, I understand what people are talking about, every topic, every areaa,
+I can tell the small difference when people talk, the words, the tone. But the
+problem lies in me is I can’t express myself in a very concise and efficient
+way. I should master some words in different area.&lt;/p&gt;
+
+&lt;p&gt;In the 21st century, Chinese is the most important language in the world,
+because the Chinese powerfull econemy capability, and military ability. But the
+drawback of chinese is it is too difficult to master.&lt;/p&gt;
+
+&lt;h4 id=&quot;english&quot;&gt;English&lt;/h4&gt;
+&lt;p&gt;I have learn English for so many years. Currently, American is the most
+powerfull country in the earth, and English is the most popular language, There
+is no doubt about that.
+I can listen pretty well, I can understand what people are talking about, and I
+can express myself. But the problem is I should try to improve my express
+capabality, more accurate, more fluent.&lt;/p&gt;
+
+&lt;p&gt;I favour english most, because in the world, english is the most common used
+language in the world, for business, for communication, for techology, for
+scientist, I should learn english.&lt;/p&gt;
+
+&lt;h4 id=&quot;japanese&quot;&gt;Japanese&lt;/h4&gt;
+&lt;p&gt;But at first I learn Japanese, it is completely a nightmare, I was too focused
+on the meaning of every word in a phrase. I suffer a lot. I should treat them as
+a whole, expeciall in the context of conversation, it will be much more easier.
+Because Japanese language is influenced by Tang Dynasty and western countries, I
+can learn Japanese pretty easily, and the problem lies me is the listening. I
+should listen more, and memorize more words.&lt;/p&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;p&gt;According to the experience that I learn language, here is some advices&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;First, you need to memorize words, it’s the building blocks.&lt;/li&gt;
+  &lt;li&gt;Second, listen, listen, and listen, listen different topics&lt;/li&gt;
+  &lt;li&gt;memorize the word that is often used in some specific area.&lt;/li&gt;
+  &lt;li&gt;Maybe, the most important thing is &lt;strong&gt;Talk to yourself at home&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;For example, I love history, expecially world history, not only China or Japan,
+I want to figure out, what the the other people is doing when China is in Tang
+dynasty. Why Democracy and scitenist are very developed in Greece. I want to
+know Napoleon, Alexander, Kublai Khan, Sultan. If you want to talk about movies,
+you should the following famous movies, The shawshank Redemption, godfather, the
+lord of the rings, pulp fiction, Inception, The matrix, seven samurai,
+Crounching Tiger and hidden Dragon, The new world.&lt;/p&gt;
+
+&lt;h4 id=&quot;galois-1&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;There is one word that confuse me a lot. According what I learn and express
+english in a chinese way. “let” is the choice to ask someone to do something.
+but, it’s not, in English, it is &lt;strong&gt;make&lt;/strong&gt;, I think this is the most frequent
+word in English, DON’T forget it.&lt;/li&gt;
+  &lt;li&gt;You can’t translate one language to the other language literly, because there
+is no words whose meaning are equivlant exactly between two different
+language. Before I went abroad, some guy told me if you go japan, you must
+master japanese. That’s so not true. Between two different language, the
+difficult is not only the prounciation, but also the word choice, some
+sentence make sense in your culture, but not in the other culture. You should
+try to picture the scenario,  and pay attention to their word choices.&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/%E8%A8%80%E8%91%89/language-summary.html</link>
+    <guid>/%E8%A8%80%E8%91%89/language-summary</guid>
     <pubDate>Fri, 17 Mar 2017 00:00:00 +0900</pubDate>
   </item>
 
@@ -34734,6 +34868,8 @@ worst, what’s the worst reason you turn me against my sister?&lt;/li&gt;
   &lt;li&gt;standby for the plane&lt;/li&gt;
   &lt;li&gt;diarrhea trail&lt;/li&gt;
   &lt;li&gt;look over:&lt;/li&gt;
+  &lt;li&gt;horse riding&lt;/li&gt;
+  &lt;li&gt;walk past the garden&lt;/li&gt;
 &lt;/ol&gt;
 
 </description>
@@ -37770,6 +37906,22 @@ never come to my mind when I need to use them.&lt;/li&gt;
 </description>
     <link>/%E8%A8%80%E8%91%89/language-english-oral-hit-back.html</link>
     <guid>/%E8%A8%80%E8%91%89/language-english-oral-hit-back</guid>
+    <pubDate>Wed, 01 Mar 2017 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Words: Go</title>
+    <description>
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;In German, we give everything a go.&lt;/li&gt;
+  &lt;li&gt;Go over some definition.&lt;/li&gt;
+  &lt;li&gt;if the server goes down for an hour.&lt;/li&gt;
+  &lt;li&gt;want everything to go smoothly.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/%E8%A8%80%E8%91%89/language-english-oral-go-backward.html</link>
+    <guid>/%E8%A8%80%E8%91%89/language-english-oral-go-backward</guid>
     <pubDate>Wed, 01 Mar 2017 00:00:00 +0900</pubDate>
   </item>
 
