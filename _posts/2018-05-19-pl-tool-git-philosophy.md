@@ -8,6 +8,11 @@ tags: ["tool","git"]
 ---
 {% include JB/setup %}
 
+#### 1. What is version control? 
+1. Records changes to a file or set of files over time
+2. Revert selected files back to a previous state, revert the entire projected
+   back to a previous state.
+
 #### 1. What is the problem ?
 1. assume you are a coder,  and work on a project. Accasionaly you revise you
    code, some days later, you want get things back to where they were.
@@ -32,18 +37,23 @@ tags: ["tool","git"]
 - It use hash function, but it's not readable, so we create a reference to them,
   you can it branch.
 
-```python
-type blob=array<byte>
-type tree=map<string, tree|blob>>
-type commits={
-parents = array<commit>
-author = string<>
-message = string<>
-snapshot = tree
-}
-```
+
+#### 3. Layout
+
+<img align="left" src="{{IMAGE_PATH}}/os-software-git-philosophy-layout.png" /> <br />
 
 
+- I was confused by the term "checkout" for a long time, what does checkout 
+  exactly do is bringing files stored in Repository to working directory.
+- The working tree is a single checkout of one version of the project, these
+  files are pulled out of the compressed database in the Git directory and
+  placed on disk for you to use or modify.
+- The staging area is a file, generally contained in your Git directory, that
+  stores information about what will go into your next commit.
+
+- The git directory is where Git stores the metadata and object database for
+  your project. This is the most important part of Git, and it is what is copied
+  when you clone a repository from another computer.
 
 
 #### 3. Example
@@ -98,25 +108,6 @@ git checkout ad62409
 # hello world
 ```
 
-
-
-
-
-其实只能跟踪文件文件的改动，比如txt文件或者程序代码。
-版本控制系统可以告诉你每次的改动。但对于图片，视频等二进制文件，版本控制系统是无能为力的。
-
-
-git由三个概念，分别是工作区，版本库和暂存区，add命令把文件由工作区
-添加到stage,即暂存区，commit命令把暂存区合并到版本库
-
-
-* git status 时刻掌握仓库当前的状态
 * git diff 查看工作区和版本库的差别
 * git reflog 记录你的每一次命令
-
-
-git支持多种协议，包括https, 但是通过ssh支持的原生git协议速度最快。
-* 添加远程库：git remote add origin git@github.com:slip-slap/slip-slap.github.io.git
-远程库的名字叫做origin，也可以改成别的，但是origin这个名字一看就知道是远程库
-* 把本地库的所有内容推送到远程库上 git push origin master
 

@@ -1,0 +1,117 @@
+I"
+<h4 id="1-what-is-version-control">1. What is version control?</h4>
+<ol>
+  <li>Records changes to a file or set of files over time</li>
+  <li>Revert selected files back to a previous state, revert the entire projected
+back to a previous state.</li>
+</ol>
+
+<h4 id="1-what-is-the-problem-">1. What is the problem ?</h4>
+<ol>
+  <li>assume you are a coder,  and work on a project. Accasionaly you revise you
+code, some days later, you want get things back to where they were.
+    <ul>
+      <li>one solution is every time you change your code, you make a copy, but as time
+goes on, this is a nightmare. Based on the timeline, we packed the code we get
+anywhere we want.</li>
+      <li>the second solution is git, and git is an artifact.</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="2-the-philosphy">2. The Philosphy</h4>
+<ol>
+  <li>if you check the code in your project carefully, your file can be divided
+into two classes, <strong>folder and text</strong>.
+    <ul>
+      <li>In git, both the <strong>folder and text</strong> ,separately, are abstracted as <strong>tree 
+and blob</strong>, we call them objects in general.</li>
+    </ul>
+  </li>
+  <li>we are not satisfied with the timeline, we use a more complicated structure
+which is called <strong>graph</strong> to track all the change, each point in a timeline
+is a snapshot of the project. We have a fancy terminology for snapshot, which
+is called <strong>commits</strong>
+    <ul>
+      <li>how to connect these <strong>graph</strong>, and what’s the direction of the two node ? The
+solution is pointer, and the direction is from descendant to ancestor.</li>
+    </ul>
+  </li>
+  <li>what’s the name of each node ? How to identify them ?
+    <ul>
+      <li>It use hash function, but it’s not readable, so we create a reference to them,
+you can it branch.</li>
+    </ul>
+  </li>
+</ol>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">type</span> <span class="n">blob</span><span class="o">=</span><span class="n">array</span><span class="o">&lt;</span><span class="n">byte</span><span class="o">&gt;</span>
+<span class="nb">type</span> <span class="n">tree</span><span class="o">=</span><span class="nb">map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="n">tree</span><span class="o">|</span><span class="n">blob</span><span class="o">&gt;&gt;</span>
+<span class="nb">type</span> <span class="n">commits</span><span class="o">=</span><span class="p">{</span>
+<span class="n">parents</span> <span class="o">=</span> <span class="n">array</span><span class="o">&lt;</span><span class="n">commit</span><span class="o">&gt;</span>
+<span class="n">author</span> <span class="o">=</span> <span class="n">string</span><span class="o">&lt;&gt;</span>
+<span class="n">message</span> <span class="o">=</span> <span class="n">string</span><span class="o">&lt;&gt;</span>
+<span class="n">snapshot</span> <span class="o">=</span> <span class="n">tree</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h4 id="3-example">3. Example</h4>
+
+<ol>
+  <li>git init: create .git file，
+    <ul>
+      <li>you can found objects and refs folder, this is the main file where git can
+track all the changes</li>
+    </ul>
+  </li>
+</ol>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir </span>my_git
+<span class="nb">cd </span>_my_git
+git init
+<span class="nb">ls</span> .git
+</code></pre></div></div>
+
+<ol>
+  <li>git log: to check commit information</li>
+</ol>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"hello world"</span> <span class="o">&gt;</span> my.py
+git add my.py
+git commit <span class="nt">-m</span> <span class="s2">"x"</span> 
+git log
+</code></pre></div></div>
+<p><img align="left" src="/images/os-software-git-philosophy-first-coomit.png" /> <br />
+<br /> <br /> <br /> <br /></p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"dog"</span> <span class="o">&gt;&gt;</span> my.py
+git add my.py
+git commit <span class="nt">-m</span> <span class="s2">"x"</span> 
+git log
+</code></pre></div></div>
+<p><img align="left" src="/images/os-software-git-philosophy-second-coomit.png" /> <br />
+<br /> <br /> <br /> <br /> <br /> <br /> <br /> 
+<br /> <br /></p>
+
+<ol>
+  <li>git checkout <hash-value>: jump to previous state</hash-value></li>
+</ol>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># check current file content</span>
+<span class="nb">cat </span>my.py
+<span class="c"># hello world</span>
+<span class="c"># dog</span>
+
+<span class="c"># we get back to previous status, where hash value is</span>
+<span class="c"># ad62409737e3e7160fa66b8ae62723b8c1beee96</span>
+git checkout ad62409
+<span class="c"># now cat the my.py again, the content is</span>
+<span class="c"># hello world</span>
+</code></pre></div></div>
+
+<ul>
+  <li>git diff 查看工作区和版本库的差别</li>
+  <li>git reflog 记录你的每一次命令</li>
+</ul>
+
+:ET

@@ -1,0 +1,37 @@
+I"z
+<p>Just as other programs, the git configuration can be divided into three level.</p>
+
+<h3 id="1-configuration-file">1. Configuration File</h3>
+<h4 id="11-system-level">1.1 System level</h4>
+<ol>
+  <li>a file named /etc/config: a file contain values applied to every use in this
+ system</li>
+  <li>pass –system to git config, it reads and writes from this file</li>
+</ol>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config <span class="nt">--system</span>
+</code></pre></div></div>
+<h4 id="12-global-level">1.2 Global level</h4>
+
+<ol>
+  <li>a file named ~/.gitconfig: values specifically to you.</li>
+  <li>you can make Git read and writes by passing –global option to git config.</li>
+</ol>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config <span class="nt">--global</span>
+</code></pre></div></div>
+
+<h4 id="13-project-level">1.3 Project level</h4>
+<ol>
+  <li>a file named config, located in the git directory(.git/config): a file
+specific to that single repository..</li>
+  <li>read from and write to this file with –local option</li>
+</ol>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config <span class="nt">--local</span>
+</code></pre></div></div>
+
+<h3 id="2-set">2. set</h3>
+<h3 id="3-display">3. display</h3>
+
+:ET

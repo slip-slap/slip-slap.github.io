@@ -33,7 +33,6 @@ tags: ["英語"]
 #### Terminology
 1. currency exhange
 
-
 ####
 1. the stock market drop 300 points
 2. The number of americans seeking unemployment benefits has hit a record high.

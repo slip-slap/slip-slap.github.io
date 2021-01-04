@@ -1,0 +1,47 @@
+I"�
+<h4 id="1-create-a-repository">1. Create a repository</h4>
+
+<h5 id="11-git-init">1.1 git init</h5>
+<h5 id="12-git-clone">1.2 git clone</h5>
+<p>This command is git clone and not “checkout”. This is an important
+distinction-instead of getting just a working copy, Git receives a full copy of
+nearly all data that the server has.</p>
+<ul>
+  <li>Every version of every file for the history of the project is pulled down by
+default when you run git clone</li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>add
+status
+diff
+commit
+nots
+restore
+reset
+<span class="nb">rm
+mv</span>
+</code></pre></div></div>
+
+<h4 id="detached-head">Detached Head</h4>
+<ol>
+  <li>Detached head means you are no longer on a branch, you have checked out a
+single commit in the history
+    <ul>
+      <li>why we have this, what’s the advantage?</li>
+      <li>If you want to delete you changes associated with the detached Head, <strong>you
+only need to checkout the branch you were on</strong></li>
+    </ul>
+  </li>
+</ol>
+
+<p><br />  <br />
+<img align="left" src="/images/os-software-git-basic-detach-head-before-switch.png" /> <br />
+<br /> <br /> <br /> <br /></p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git switch liam
+</code></pre></div></div>
+
+<p><img align="left" src="/images/os-software-git-basic-detach-head-after-switch.png" /> <br />
+<br /> <br /> <br /> <br /></p>
+
+:ET

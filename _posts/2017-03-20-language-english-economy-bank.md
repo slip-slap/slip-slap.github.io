@@ -34,6 +34,7 @@ tags: ["英語"]
 1. turn on automatic renewal
 2. one million cash
 3. opening hours and holiday
+4. renew the deal
 
 
 ####

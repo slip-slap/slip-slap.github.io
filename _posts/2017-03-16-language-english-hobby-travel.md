@@ -20,6 +20,8 @@ tags: ["英語"]
 1. standby for the plane
 2. diarrhea trail
 3. look over: 
+4. horse riding
+5. walk past the garden
 
 
 
