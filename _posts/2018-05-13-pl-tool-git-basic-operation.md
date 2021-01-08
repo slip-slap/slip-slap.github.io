@@ -19,8 +19,6 @@ nearly all data that the server has.
   default when you run git clone
 
 
-
-
 #### 1.3 Lifecycle of the status of your files
 checking the status of your files
 ```shell
@@ -50,9 +48,38 @@ cat .gitignore
 
 
 
+#### 1.6 git diff
+The git status is too vague for you, you want to know exactly what you changed,
+not just which files were changed. you can use git diff.
+- git diff shows you the exact lines added and removed-the patch
+
+
+### 2. Undoing Things
+
+#### 2.1 Undoing of a commit
+One of the common undos takes place when you commit too early and possibly
+forget to add some files, or you mess up your commit message. If you want to
+redo that commit, make the additional changes you forgot, stage them, and commit
+again using the --amend option
+- When you're amending your last commit, you're not so much fixing it as
+  replacing it entirely with a new, improved commit that pushes the old commit
+  out of the way and puts the new commit in its place.
+- Effectivelly, it's as if the previous commit never happened, and it won't show
+  up in your repository history.
 
 ```shell
-diff
+git commit -m 'Initial commit'
+git add forgotten_file
+git commit --amend
+```
+
+#### 2.2 Unstaging a staged file
+
+
+
+
+
+```shell
 nots
 restore
 reset
@@ -82,3 +109,6 @@ git switch liam
 src="{{IMAGE_PATH}}/os-software-git-basic-detach-head-after-switch.png" /> <br />
 <br /> <br /> <br /> <br />
 
+
+#### Reference
+1. [How to read the outputs of git diff](https://stackoverflow.com/questions/2529441/how-to-read-the-output-from-git-diff)

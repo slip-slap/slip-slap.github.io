@@ -10,10 +10,9 @@ tags: ["apply","P.A.S.M."]
 
 
 ### 1. Definition
-1. For $$
-p(X | \theta)
-$$, fisher information is to answer the question: 
-**How useful is the random variable X in determining the unkown parameter $$\theta$$**
+1. For $ p(X | \theta) $, fisher information is to answer the question: **How
+   useful is the random variable X in determining the unkown parameter
+   $\theta$**
 
 
 2. the fisher information is a frequentist concept
@@ -23,15 +22,16 @@ $$, fisher information is to answer the question:
 
 
 #### Terminology: Fisher Information
-The Fisher Information is a mearsure for the amount of the information that is expected within the
-prototypical trial X about the parameter of interest $\theta$. It is defined as the variance of the 
-so-called score function,i.e.,the derivative of the log-likelihood function with respect to the parameter.
+The Fisher Information is a mearsure for the amount of the information that is
+expected within the prototypical trial X about the parameter of interest
+$\theta$. It is defined as the variance of the so-called score function,i.e.,the
+derivative of the log-likelihood function with respect to the parameter.
 
-$$
+$
 I(\theta)=-E\left(\frac{\mathrm{d}^{2}}{\mathrm{d} \theta^{2}} \log f(X | \theta)\right)=-\int_{
     \mathcal{X}}\left(\frac{\mathrm{d}^{2}}{\mathrm{d} \theta^{2}} \log f(x | \theta)\right) 
     f(x | \theta) \mathrm{d} x
-$$
+$
 
 - **To calculate $I(\theta)$ we keep $\theta$ fixed and take the expectation with
   respect to all possible outcomes x**
@@ -47,12 +47,12 @@ $$
 
 #### 2.3 Minimum Description Length Paradigm: Model Complexity
 
-$$ \begin{aligned} \mathrm{AIC} &=-2 \log f(\vec{x} | \hat{\theta})+2 d \\
+$ \begin{aligned} \mathrm{AIC} &=-2 \log f(\vec{x} | \hat{\theta})+2 d \\
 \mathrm{BIC} &=-2 \log f(\vec{x} | \hat{\theta})+d \log (n) \\ \mathrm{FIA}
 &=\underbrace{-\log f(\vec{x} | \hat{\theta})}_{\text {Goodness-of-fit
 }}+\underbrace{\frac{d}{2} \log \frac{n}{2 \pi}}_{\text {Dimensionality
 }}+\underbrace{\log \left(\int_{\Theta} \sqrt{\operatorname{det} I(\theta)}
-\mathrm{d} \theta\right)}_{\text {Geometric complexity }} \end{aligned} $$
+\mathrm{d} \theta\right)}_{\text {Geometric complexity }} \end{aligned} $
 
 
 

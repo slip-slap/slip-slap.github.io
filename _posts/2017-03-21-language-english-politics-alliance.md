@@ -15,3 +15,4 @@ tags: ["英語"]
 #### Phrase
 1. Election fraud
 2. count every vote
+3. left it cut off from its neighbour and ally, China.

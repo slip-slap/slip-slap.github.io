@@ -20,3 +20,8 @@ Let {$X_n$} be simple random walk with $p=1/2$, then $X_{n+1}-X_n$ is equal to
 either 1 or -1, with probability 1/2 each. Hence, <br />
 $E(X_{n+1}-X_n|X_n)=(1)(1/2)+(-1)(1/2)=0$ <br />
 So {$X_n$} stays the same on average and is a maringale.
+
+
+
+#### Galois
+1. Simply put, Maritingales is a fair game.

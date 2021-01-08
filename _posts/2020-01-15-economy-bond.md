@@ -22,3 +22,7 @@ $
 
 #### 3. Inflation-indexed Bonds(also referred to as indexed Bonds)
 
+
+#### Category
+1. ZCB: Zero coupon bonds
+

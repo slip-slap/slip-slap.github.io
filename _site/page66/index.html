@@ -142,7 +142,7 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">940</span>
+<span title="文章总数">943</span>
 <ul>
 
 
@@ -435,6 +435,19 @@ $(document).ready(function() {
   
   
     <li><a href="/archive.html#March-2020">2020 年 03 月 (40)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#February-2020">2020 年 02 月 (2)</a></li>
     
   
 
@@ -4508,7 +4521,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#March-2017">2017 年 03 月 (115)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2017">2017 年 03 月 (116)</a></li>
     
   
 
@@ -4939,7 +4957,7 @@ $(document).ready(function() {
 <span title="分类总数">9</span>
 <ul>
 
-  <li><a href="/categories.html#言葉-ref">言葉 (196)</a></li>
+  <li><a href="/categories.html#言葉-ref">言葉 (197)</a></li>
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
@@ -4953,7 +4971,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#Economy-ref">Economy (2)</a></li>
 
-  <li><a href="/categories.html#work-ref">work (18)</a></li>
+  <li><a href="/categories.html#work-ref">work (20)</a></li>
 
   <li><a href="/categories.html#AI-ref">AI (42)</a></li>
 
@@ -5025,7 +5043,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#script-ref" style="font-size: 18pt; color: #000;">script</a>
+    <a href="/tags.html#script-ref" style="font-size: 17.5pt; color: #000;">script</a>
   
     
     
@@ -5729,6 +5747,69 @@ $(document).ready(function() {
   <article class="nested">
 
     <header>
+      <h2><a href="/pl/pl-script-cmake-pkg-check-modules.html" title="查看《CMake: Modules》">CMake: Modules</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+官方文档看完直接想吐。
+上代码
+find_package(PkgConfig REQUIRED)
+#pkg_check_modules(FOO,OPENCV) 这是错误写法，中间没有逗号，而且有空格
+pkg_check_modules(FOO OPENCV)
+include_director...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#February-2018" title="查看此月所有文章">05 February 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-script-cmake-pkg-check-modules.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-script-make-rule.html" title="查看《Make: Rules》">Make: Rules</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Make
+make主要用来构建c语言的项目，实际上，任何主要某个文件有变化，就要重新构建项目，都可以用make构建
+
+语法
+target [target...] : [dependent ....]
+    [command ...]
+
+
+Suffix
+
+  Make uses a spec...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#February-2018" title="查看此月所有文章">04 February 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-script-make-rule.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
       <h2><a href="/pl/pl-script-make-variable.html" title="查看《Make: Variable》">Make: Variable</a></h2>
     </header>
 
@@ -5962,69 +6043,6 @@ colon: used chie...
 
   </article>
   
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-script-python-principal-iterator.html" title="查看《Python: For Loop》">Python: For Loop</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-what the crap of iterator protocol?
-
-  Just as Javabean protocol, a JavaBean Class is  the kind of class that has a getter() and setter() method f...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">20 January 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-python-principal-iterator.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-script-python-pdb.html" title="查看《Python:  pdb》">Python:  pdb</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-initiate pdb
-
-python3 -m pdb foo.py
-
-
-add breakpoint
-
-import pdb
-pdb.set_trace()
-
-
-Stepping through code
-
-One of the strongest feature of pdb is t...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">20 January 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-python-pdb.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
 
   
     
@@ -6064,7 +6082,7 @@ One of the strongest feature of pdb is t...
 
     <!-- Current Page -->
     <li class="active">
-      <span class="page_number ">第 66/94 页</span>
+      <span class="page_number ">第 66/95 页</span>
     </li>
 
     <!-- Next Page -->
@@ -6074,7 +6092,7 @@ One of the strongest feature of pdb is t...
 
     <!-- Last Page -->
     
-    <li><a href="/page94">&raquo;&raquo;</a></li>
+    <li><a href="/page95">&raquo;&raquo;</a></li>
     
   </ul>
 </section>

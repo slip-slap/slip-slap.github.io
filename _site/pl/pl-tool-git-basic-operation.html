@@ -142,7 +142,7 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">940</span>
+<span title="文章总数">943</span>
 <ul>
 
 
@@ -435,6 +435,19 @@ $(document).ready(function() {
   
   
     <li><a href="/archive.html#March-2020">2020 年 03 月 (40)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#February-2020">2020 年 02 月 (2)</a></li>
     
   
 
@@ -4508,7 +4521,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#March-2017">2017 年 03 月 (115)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2017">2017 年 03 月 (116)</a></li>
     
   
 
@@ -4939,7 +4957,7 @@ $(document).ready(function() {
 <span title="分类总数">9</span>
 <ul>
 
-  <li><a href="/categories.html#言葉-ref">言葉 (196)</a></li>
+  <li><a href="/categories.html#言葉-ref">言葉 (197)</a></li>
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
@@ -4953,7 +4971,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#Economy-ref">Economy (2)</a></li>
 
-  <li><a href="/categories.html#work-ref">work (18)</a></li>
+  <li><a href="/categories.html#work-ref">work (20)</a></li>
 
   <li><a href="/categories.html#AI-ref">AI (42)</a></li>
 
@@ -5025,7 +5043,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#script-ref" style="font-size: 18pt; color: #000;">script</a>
+    <a href="/tags.html#script-ref" style="font-size: 17.5pt; color: #000;">script</a>
   
     
     
@@ -5803,8 +5821,36 @@ or even show you as being untracked.</p>
   <li>the second line tells git to ignore all files whose names end with a tilde(~)</li>
 </ul>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>diff
-nots
+<h4 id="16-git-diff">1.6 git diff</h4>
+<p>The git status is too vague for you, you want to know exactly what you changed,
+not just which files were changed. you can use git diff.</p>
+<ul>
+  <li>git diff shows you the exact lines added and removed-the patch</li>
+</ul>
+
+<h3 id="2-undoing-things">2. Undoing Things</h3>
+
+<h4 id="21-undoing-of-a-commit">2.1 Undoing of a commit</h4>
+<p>One of the common undos takes place when you commit too early and possibly
+forget to add some files, or you mess up your commit message. If you want to
+redo that commit, make the additional changes you forgot, stage them, and commit
+again using the –amend option</p>
+<ul>
+  <li>When you’re amending your last commit, you’re not so much fixing it as
+replacing it entirely with a new, improved commit that pushes the old commit
+out of the way and puts the new commit in its place.</li>
+  <li>Effectivelly, it’s as if the previous commit never happened, and it won’t show
+up in your repository history.</li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git commit <span class="nt">-m</span> <span class="s1">'Initial commit'</span>
+git add forgotten_file
+git commit <span class="nt">--amend</span>
+</code></pre></div></div>
+
+<h4 id="22-unstaging-a-staged-file">2.2 Unstaging a staged file</h4>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nots
 restore
 reset
 <span class="nb">rm
@@ -5833,6 +5879,10 @@ only need to checkout the branch you were on</strong></li>
 <p><img align="left" src="/images/os-software-git-basic-detach-head-after-switch.png" /> <br />
 <br /> <br /> <br /> <br /></p>
 
+<h4 id="reference">Reference</h4>
+<ol>
+  <li><a href="https://stackoverflow.com/questions/2529441/how-to-read-the-output-from-git-diff">How to read the outputs of git diff</a></li>
+</ol>
 
       
       <footer>

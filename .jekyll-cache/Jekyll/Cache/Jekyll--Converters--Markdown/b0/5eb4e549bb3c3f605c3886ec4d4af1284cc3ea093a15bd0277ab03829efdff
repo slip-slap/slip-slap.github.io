@@ -1,0 +1,56 @@
+I"f
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mergetool
+log
+stash
+tag
+</code></pre></div></div>
+
+<h4 id="1-branch">1. branch</h4>
+
+<p>can only be run after the merge has resulted in conflicts.
+git merge –continue</p>
+
+<h5 id="11-operation">1.1 Operation</h5>
+<ul>
+  <li>git branch                 display branch</li>
+  <li>git branch develop         create branch</li>
+</ul>
+
+<h4 id="2-rebase">2. rebase</h4>
+<p>This operation works by going to the common ancestor of the two branches(the one
+you’re on and the one you’re rebasing onto), getting the diff introduced by each
+commit of the branch you’re on</p>
+<ul>
+  <li>saving those diffs to temporary files</li>
+  <li>resetting the current branch to the same commit as the branch you are rebasing
+onto, and finally applying each change in turn.</li>
+</ul>
+
+<p><img align="left" src="/images/os-software-git-basic-rebase.png" /> <br /></p>
+
+<ul>
+  <li>don’t look the very explanation of it’s documentation, look at what does it
+do</li>
+  <li>it keeps the 2a615e commit, but throw the c07fbe away.</li>
+</ul>
+
+<h4 id="example-run-into-a-merge-conflict-quit-merge">Example: run into a merge conflict, quit merge</h4>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git reset <span class="nt">--merge</span>
+</code></pre></div></div>
+
+<h4 id="3-remote-branch">3. remote branch</h4>
+<p>The safe ways to change remote-tracking branches are with git fetch or as a
+side-effect of git-push;</p>
+<ul>
+  <li>You can’t work on remote-tracking branches directly.</li>
+  <li>In contrast, you can always switch to local branches and create new commits to
+move the tip of the branch forward.</li>
+</ul>
+
+<h4 id="reference">Reference</h4>
+<ol>
+  <li><a href="https://bluecast.tech/blog/git-switch-branch/">switch and checkout</a></li>
+</ol>
+
+:ET

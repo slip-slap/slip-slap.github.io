@@ -82,6 +82,18 @@ df.iloc[0,0]
 1. Pandas has tight integration with matplotlib.
 
 
+#### Dataframe, and list, numpy
+
+```shell
+# change the column one to a list
+
+col_one_to_list = df['one'].tolist()
+
+# change the column one to an array
+
+col_one_to_arrary = df['one'].to_numpy()
+```
+
 
 
 #### Reference

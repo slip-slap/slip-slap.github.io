@@ -15,3 +15,4 @@ tags: ["英語"]
 
 #### Market
 1. US oil goes negative for the first time.
+2. Trade between China and Korea has plummetted by about 80%.

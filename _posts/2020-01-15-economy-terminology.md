@@ -8,7 +8,6 @@ tags: []
 ---
 {% include JB/setup %}
 
-
 ### Terminology
 1. Markets
 2. Exchanges
@@ -90,5 +89,14 @@ tags: []
 - An asset's risk premium is a form of compensation for investors who tolerate
   the extra risk, compared to that of risk-free asset.
 - premium: a reward or recompense for a particular act.
+
+1. Arbitrage: is used to describes the act of buying a security in one market,
+   and simultaneously selling it in another market at a higher price, therefore
+   enabling investors to profit.
+
+2. delivery price:
+
+#### Reference
+1. [arbitrage](https://www.investopedia.com/ask/answers/what-is-arbitrage/)
 
 
