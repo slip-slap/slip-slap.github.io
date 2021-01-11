@@ -3,7 +3,7 @@
   <title>Just Do It</title>
   <link href="/atom.xml" rel="self"/>
   <link href=""/>
-  <updated>2021-01-08T14:46:59+09:00</updated>
+  <updated>2021-01-10T18:37:50+09:00</updated>
   <id></id>
   <author>
     <name>reed</name>
@@ -2296,10 +2296,48 @@ measure of function
   </entry>
 
   <entry>
-    <title>Differential Equation</title>
-    <link href="/math/math-change-differential-equation.html"/>
+    <title>Differential Equation: Laplace</title>
+    <link href="/math/math-change-differential-equation-laplace.html"/>
     <updated>2019-11-15T00:00:00+09:00</updated>
-    <id>/math/math-change-differential-equation</id>
+    <id>/math/math-change-differential-equation-laplace</id>
+    <content type="html">
+$
+F(s)=\int_{0}^{\infty} f(t) e^{-s t} dt
+$
+
+
+  $I(1) = \frac{1}{s}$
+  $I(t^n) = \frac{n!}{s^{n+1}}$
+  $I(sin(at)) = \frac{a}{s^2 - a^2}$
+  $I(cos(at)) = \frac{s}{s^2 + a^2}$
+
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Differential Equation: Introduction</title>
+    <link href="/math/math-change-differential-equation-introduction.html"/>
+    <updated>2019-11-15T00:00:00+09:00</updated>
+    <id>/math/math-change-differential-equation-introduction</id>
+    <content type="html">
+Why
+“Since Newton, mankind has come to realize that the laws of physics are always expressed in the language of differential equations.” -Stenven Strogatz
+
+Example 1
+
+Suppose an object begins to move at the speed $v_0$, it subjects to
+gravitational force, calculate its trajectory.
+
+
+  step one: ...</content>
+  </entry>
+
+  <entry>
+    <title>Differential Equation: Classification</title>
+    <link href="/math/math-change-differential-equation-classification.html"/>
+    <updated>2019-11-15T00:00:00+09:00</updated>
+    <id>/math/math-change-differential-equation-classification</id>
     <content type="html">
 classification
 
@@ -2308,7 +2346,9 @@ classification
   order: the number of highest derivative in a differential equation.
 
 
-\(y^{\prime \prime}+x y^{\prime}-x^{3} y=\sin x\)
+$
+y^{\prime \prime}+x y^{\prime}-x^{3} y=\sin x
+$
 is second order since the highest derivative is \(y^{\prime \prime}\) is the s...</content>
   </entry>
 
@@ -3841,30 +3881,6 @@ fiel...</content>
   </entry>
 
   <entry>
-    <title>L.A.: Transformation</title>
-    <link href="/math/math-structure-linear-algebra-transformation.html"/>
-    <updated>2019-07-24T00:00:00+09:00</updated>
-    <id>/math/math-structure-linear-algebra-transformation</id>
-    <content type="html">
-Definition
-
-  Transformation: An $m\times n$ matrix A defines a linear transformation from
-$V^n$ to $V^m$ by: 
-$
-T(\vec{v}) \equiv A \vec{v}
-$
-$
-\vec{v} \in V^{n} \quad T(\vec{v}) \in V^{m}
-$
-
-
-Vector And Affine Space
-A vector $\vec{v}$ is an ordered pair of points in an affine space.
-
-Kernal an...</content>
-  </entry>
-
-  <entry>
     <title>L.A.: Positive Define</title>
     <link href="/math/math-structure-linear-algebra-positive-define.html"/>
     <updated>2019-07-24T00:00:00+09:00</updated>
@@ -3894,6 +3910,30 @@ are written as row vectors with the transpose operation applied to them.
 
 
 Spannin...</content>
+  </entry>
+
+  <entry>
+    <title>L.A.: Fundamental Subspaces</title>
+    <link href="/math/math-structure-linear-algebra-fundamental-space.html"/>
+    <updated>2019-07-24T00:00:00+09:00</updated>
+    <id>/math/math-structure-linear-algebra-fundamental-space</id>
+    <content type="html">
+Definition
+
+  Transformation: An $m\times n$ matrix A defines a linear transformation from
+$V^n$ to $V^m$ by: 
+$
+T(\vec{v}) \equiv A \vec{v}
+$
+$
+\vec{v} \in V^{n} \quad T(\vec{v}) \in V^{m}
+$
+
+
+Vector And Affine Space
+A vector $\vec{v}$ is an ordered pair of points in an affine space.
+
+Kernal an...</content>
   </entry>
 
   <entry>
@@ -3938,9 +3978,10 @@ For Example:
 {y}\end{array}\right)\right)=\left(\begin{array}{l}{x^{2}+y} \\
 {x-y^{3}}\end{array}\right)\)
 
-\[T\left(\left(\begin{array}{l}{2} \\
-{1}\end{array}\right)\right)=\left(\begin{array}{l}{6} \\
-{7}\end{array...</content>
+$
+T\left(\left(\begin{array}{l}{2} 
+{1}\end{array}\right)\right)=\left(\begin{array}{l}{6} 
+{7}\end{array}\ri...</content>
   </entry>
 
   <entry>
@@ -3950,21 +3991,26 @@ For Example:
     <id>/math/math-structure-linear-algebra-3-3-matrices-and-application</id>
     <content type="html">
 How to understand the matrix T?
-\(T=
-\left(\begin{array}{lll}{1} &amp;amp; {0} &amp;amp; {0} \\ {0} &amp;amp; {1} &amp;amp; {0} \\ {0} &amp;amp; {0} &amp;amp;
-{1}\end{array}\right)\)
+$
+T=
+\left(\begin{array}{lll}{1} &amp;amp; {0} &amp;amp; {0} \ {0} &amp;amp; {1} &amp;amp; {0} \ {0} &amp;amp; {0} &amp;amp;
+{1}\end{array}\right)
+$
 
-\(\left(\begin{array}{l}
-{1}  \\ 
-{0}  \\ 
+$
+\left(\begin{array}{l}
+{1}  \ 
+{0}  \ 
 {0}
 \end{array}\right) 
-=T(\vec{e_1})\)
-\(\left(\begin{array}{l}
-{0}  \\ 
-{1}  \\ 
+=T(\vec{e_1})
+$
+$
+\left(\begin{array}{l}
+{0}  \ 
+{1}  \ 
 {0}
-\end{a...</content>
+\end{array}\...</content>
   </entry>
 
   <entry>
@@ -15870,11 +15916,14 @@ object
   Chicken Breast
   Egg White
   Peeled shrimp
+  steamed buns
 
 
 ####
 
   soy sauce
+  in makeshit canteens made of wooden poles and plastic sheets
+
 
 </content>
   </entry>
@@ -15895,7 +15944,10 @@ object
 
 
 ####
-A bunch of bananas
+
+  A bunch of bananas
+  Pringle chip
+
 
 Action
 
@@ -16028,6 +16080,7 @@ Cook Method
   grilled
   smoked
   simmer
+  heat up
 
 
 Flavour
@@ -16040,8 +16093,7 @@ Flavour
   dry
   disgusting
   ice-cold
-  meatball
-...</content>
+ ...</content>
   </entry>
 
   <entry>
@@ -17450,6 +17502,19 @@ Movie
   
   東野圭吾(ひがしのけいご)
 ...</content>
+  </entry>
+
+  <entry>
+    <title>娯楽: </title>
+    <link href="/%E8%A8%80%E8%91%89/language-japanese-entertainment-animation.html"/>
+    <updated>2017-02-17T00:00:00+09:00</updated>
+    <id>/%E8%A8%80%E8%91%89/language-japanese-entertainment-animation</id>
+    <content type="html">
+####
+
+  Violet Evergarden
+
+</content>
   </entry>
 
   <entry>

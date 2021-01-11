@@ -26,6 +26,7 @@ tags: ["英語"]
 4. grilled
 5. smoked
 6. simmer
+7. heat up
 
 #### Flavour
 1. overcooked

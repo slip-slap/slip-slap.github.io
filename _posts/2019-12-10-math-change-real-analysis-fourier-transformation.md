@@ -24,3 +24,4 @@ tags: ["change","R.A."]
 
 #### Reference
 1. [Laplace Transformation](https://www.matongxue.com/madocs/723.html)
+2. [Youtube Laplace Transformation](https://www.youtube.com/watch?v=n2y7n6jw5d0)

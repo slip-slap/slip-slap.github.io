@@ -142,7 +142,7 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">943</span>
+<span title="文章总数">946</span>
 <ul>
 
 
@@ -856,7 +856,17 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#November-2019">2019 年 11 月 (3)</a></li>
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#November-2019">2019 年 11 月 (5)</a></li>
     
   
 
@@ -4944,7 +4954,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#February-2017">2017 年 02 月 (83)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#February-2017">2017 年 02 月 (84)</a></li>
     
   
 
@@ -4957,7 +4972,7 @@ $(document).ready(function() {
 <span title="分类总数">9</span>
 <ul>
 
-  <li><a href="/categories.html#言葉-ref">言葉 (197)</a></li>
+  <li><a href="/categories.html#言葉-ref">言葉 (198)</a></li>
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
@@ -4967,7 +4982,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#CS-ref">CS (60)</a></li>
 
-  <li><a href="/categories.html#math-ref">math (305)</a></li>
+  <li><a href="/categories.html#math-ref">math (307)</a></li>
 
   <li><a href="/categories.html#Economy-ref">Economy (2)</a></li>
 
@@ -5785,29 +5800,37 @@ $(document).ready(function() {
       </div>
       
 <h4 id="how-to-understand-the-matrix-t">How to understand the matrix T?</h4>
-<p>\(T=
-\left(\begin{array}{lll}{1} &amp; {0} &amp; {0} \\ {0} &amp; {1} &amp; {0} \\ {0} &amp; {0} &amp;
-{1}\end{array}\right)\)</p>
+<p>$
+T=
+\left(\begin{array}{lll}{1} &amp; {0} &amp; {0} \ {0} &amp; {1} &amp; {0} \ {0} &amp; {0} &amp;
+{1}\end{array}\right)
+$</p>
 
-<p>\(\left(\begin{array}{l}
-{1}  \\ 
-{0}  \\ 
+<p>$
+\left(\begin{array}{l}
+{1}  \ 
+{0}  \ 
 {0}
 \end{array}\right) 
-=T(\vec{e_1})\)
-\(\left(\begin{array}{l}
-{0}  \\ 
-{1}  \\ 
+=T(\vec{e_1})
+$
+$
+\left(\begin{array}{l}
+{0}  \ 
+{1}  \ 
 {0}
 \end{array}\right)
-=T(\vec{e_2})\)</p>
+=T(\vec{e_2})
+$</p>
 
-<p>\(\left(\begin{array}{l}
-{0}  \\ 
-{1}  \\ 
+<p>$
+\left(\begin{array}{l}
+{0}  \ 
+{1}  \ 
 {0}
 \end{array}\right)
-=T(\vec{e_3})\)</p>
+=T(\vec{e_3})
+$</p>
 <ol>
   <li>we can understand this matric coloumn by coloumn.</li>
   <li>The first coloumn which is the image of the vector $\vec{e_1}$</li>
@@ -5820,13 +5843,15 @@ $(document).ready(function() {
 
 <h4 id="projection">Projection</h4>
 
-<p>\(P(\vec{u})=
+<p>$
+P(\vec{u})=
 \frac{1}{a \ell+b m+c n}\left(\begin{array}{ccc}{b m+c n} &amp; {-b \ell}
-&amp; {-c l} \\ 
-{-a m} &amp; {a \ell+c n} &amp; {-c m} \\ 
+&amp; {-c l} \ 
+{-a m} &amp; {a \ell+c n} &amp; {-c m} \ 
 {-a n} &amp; {-b n} &amp; {a \ell+b
-m}\end{array}\right)\left(\begin{array}{l}{x} \\ {y} \\ {z}
-\end{array}\right)\) <br />
+m}\end{array}\right)\left(\begin{array}{l}{x} \ {y} \ {z}
+\end{array}\right)
+$ <br />
 Properties:</p>
 <ol>
   <li>$p(\vec{v})=\vec{0}$</li>
@@ -5836,35 +5861,45 @@ Properties:</p>
 
 <h4 id="reflection">Reflection</h4>
 
-\[=\left(\begin{array}{l}{x} \\ {y} \\ {z}\end{array}\right)-\frac{2}{a \ell+b m+c
-n}\left(\begin{array}{lll}{a l} &amp; {b l} &amp; {c l} \\ {a m} &amp; {b m} &amp; {c m} \\ {a
-n} &amp; {b n} &amp; {c n}\end{array}\right)\left(\begin{array}{l}{x} \\ {y} \\
-{z}\end{array}\right)\]
+<p>$
+=\left(\begin{array}{l}{x} \ {y} \ {z}\end{array}\right)-\frac{2}{a \ell+b m+c
+n}\left(\begin{array}{lll}{a l} &amp; {b l} &amp; {c l} \ {a m} &amp; {b m} &amp; {c m} \ {a
+n} &amp; {b n} &amp; {c n}\end{array}\right)\left(\begin{array}{l}{x} \ {y} <br />
+{z}\end{array}\right)
+$</p>
 
-\[S: \frac{1}{a \ell+b m+c n}\left(\begin{array}{ccc}{-a l+b m+c n} &amp; {-2 b \ell}
-&amp; {-2 c l} \\ {-2 a m} &amp; {a l-b m+c n} &amp; {-2 c m} \\ {-2 a n} &amp; {-2 b n} &amp; {a
-l+b m-c n}\end{array}\right)\]
+<p>$
+S: \frac{1}{a \ell+b m+c n}\left(\begin{array}{ccc}{-a l+b m+c n} &amp; {-2 b \ell}
+&amp; {-2 c l} \ {-2 a m} &amp; {a l-b m+c n} &amp; {-2 c m} \ {-2 a n} &amp; {-2 b n} &amp; {a
+l+b m-c n}\end{array}\right)
+$</p>
 
 <h4 id="reflection-over-a-line">Reflection over a Line</h4>
-<p>\(=\frac{2}{a l+b m+c n}\left(\begin{array}{lll}{a l} &amp; {b l} &amp; {c l} \\ {a m} &amp;
-{b m} &amp; {c m} \\ {a n} &amp; {b n} &amp; {c
-n}\end{array}\right)\left(\begin{array}{l}{x} \\ {y} \\
-{z}\end{array}\right)-\left(\begin{array}{l}{x} \\ {y} \\ {z}\end{array}\right)\)</p>
+<p>$
+=\frac{2}{a l+b m+c n}\left(\begin{array}{lll}{a l} &amp; {b l} &amp; {c l} \ {a m} &amp;
+{b m} &amp; {c m} \ {a n} &amp; {b n} &amp; {c
+n}\end{array}\right)\left(\begin{array}{l}{x} \ {y} <br />
+{z}\end{array}\right)-\left(\begin{array}{l}{x} \ {y} \ {z}\end{array}\right)
+$</p>
 
 \[T: \frac{1}{a l+b m+c n}\left(\begin{array}{ccc}{a l-b m-c n} &amp; {2 b l} &amp; {2 c
 l} \\ {2 a m} &amp; {-a b+b m-c n} &amp; {2 c m} \\ {2 a n} &amp; {2 b n} &amp; {-a l-b m+c
 h}\end{array}\right)\]
 
 <h4 id="normal-vector">Normal Vector</h4>
-<p>\(\begin{array}{l}{P: \frac{1}{Q}\left(\begin{array}{ccc}{b^{2}+c^{2}-a b} &amp; {-a
-c} \\ {-a b} &amp; {a^{2}+c^{2}-b c} \\ {-a c} &amp; {-b c} &amp;
-{a^{2}+b^{2}}\end{array}\right)} \\ {R:
-\frac{1}{Q}\left(\begin{array}{ccc}{a^{2}} &amp; {a b} &amp; {a c} \\ {a b} &amp; {b^{2}} &amp;
-{b c} \\ {a c} &amp; {b c} &amp; {c^{2}}\end{array}\right)}\end{array}\)</p>
+<p>$
+\begin{array}{l}{P: \frac{1}{Q}\left(\begin{array}{ccc}{b^{2}+c^{2}-a b} &amp; {-a
+c} \ {-a b} &amp; {a^{2}+c^{2}-b c} \ {-a c} &amp; {-b c} &amp;
+{a^{2}+b^{2}}\end{array}\right)} \ {R:
+\frac{1}{Q}\left(\begin{array}{ccc}{a^{2}} &amp; {a b} &amp; {a c} \ {a b} &amp; {b^{2}} &amp;
+{b c} \ {a c} &amp; {b c} &amp; {c^{2}}\end{array}\right)}\end{array}
+$</p>
 
-\[S: \frac{1}{Q}\left(\begin{array}{ccc}{-a^{2}+b^{2}+c^{2}} &amp; {-2 a b} &amp; {-2 a c}
-\\ {-2 a b} &amp; {a^{2}-b^{2}+c^{2}} &amp; {-2 b c} \\ {-2 a c} &amp; {-2 b c} &amp;
-{a^{2}+b^{2}-c^{2}}\end{array}\right)\]
+<p>$
+S: \frac{1}{Q}\left(\begin{array}{ccc}{-a^{2}+b^{2}+c^{2}} &amp; {-2 a b} &amp; {-2 a c}
+\ {-2 a b} &amp; {a^{2}-b^{2}+c^{2}} &amp; {-2 b c} \ {-2 a c} &amp; {-2 b c} &amp;
+{a^{2}+b^{2}-c^{2}}\end{array}\right)
+$</p>
 
 
       
@@ -5894,7 +5929,7 @@ c} \\ {-a b} &amp; {a^{2}+c^{2}-b c} \\ {-a c} &amp; {-b c} &amp;
   
      
     	<li><a href="/categories.html#math-ref">
-    		math <span>305</span>
+    		math <span>307</span>
     	</a></li>
     
   

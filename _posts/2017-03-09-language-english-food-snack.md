@@ -16,7 +16,9 @@ tags: ["英語"]
 5. potted plants
 
 ####
-A bunch of bananas
+1. A bunch of bananas
+2. Pringle chip
+
 
 #### Action
 1. raise flowers

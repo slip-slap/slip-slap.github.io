@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "L.A.: Transformation"
+title: "L.A.: Fundamental Subspaces"
 keywords: [""]
 description: ""
 category: "math"
@@ -37,4 +37,11 @@ src="{{IMAGE_PATH}}/math-structure-linear-algebra-transformation-kernal-image.pn
 1. Kernel: A vector $\vec{v} \in V^4$ is a kernal vector for T <br />
 $\leftrightarrow$ $T(\vec{v}) \in V^4$
 2. Image: A vector $\vec{w} \in V^3$ is an image vector for T <br />
+
+
+#### Four fundamental space
+1. column space
+2. row space
+5. null space
+
 
