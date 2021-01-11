@@ -5,8 +5,8 @@
   <description>Just Do It - </description>
   <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
   <link></link>
-  <lastBuildDate>Fri, 08 Jan 2021 14:46:59 +0900</lastBuildDate>
-  <pubDate>Fri, 08 Jan 2021 14:46:59 +0900</pubDate>
+  <lastBuildDate>Sun, 10 Jan 2021 18:37:50 +0900</lastBuildDate>
+  <pubDate>Sun, 10 Jan 2021 18:37:50 +0900</pubDate>
   <ttl>1800</ttl>
 
 
@@ -3832,6 +3832,7 @@ function&lt;/strong&gt; to represent any transcental function.&lt;/li&gt;
 &lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
 &lt;ol&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.matongxue.com/madocs/723.html&quot;&gt;Laplace Transformation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=n2y7n6jw5d0&quot;&gt;Youtube Laplace Transformation&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </description>
     <link>/math/math-change-real-analysis-fourier-transformation.html</link>
@@ -5235,7 +5236,63 @@ For n=1, 2, 3, in coincides with the standard measure of length, area, or volume
   </item>
 
   <item>
-    <title>Differential Equation</title>
+    <title>Differential Equation: Laplace</title>
+    <description>
+&lt;p&gt;$
+F(s)=\int_{0}^{\infty} f(t) e^{-s t} dt
+$&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;$I(1) = \frac{1}{s}$&lt;/li&gt;
+  &lt;li&gt;$I(t^n) = \frac{n!}{s^{n+1}}$&lt;/li&gt;
+  &lt;li&gt;$I(sin(at)) = \frac{a}{s^2 - a^2}$&lt;/li&gt;
+  &lt;li&gt;$I(cos(at)) = \frac{s}{s^2 + a^2}$&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/math/math-change-differential-equation-laplace.html</link>
+    <guid>/math/math-change-differential-equation-laplace</guid>
+    <pubDate>Fri, 15 Nov 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Differential Equation: Introduction</title>
+    <description>
+&lt;h4 id=&quot;why&quot;&gt;Why&lt;/h4&gt;
+&lt;p&gt;“Since Newton, mankind has come to realize that the laws of physics are always expressed in the language of differential equations.” -Stenven Strogatz&lt;/p&gt;
+
+&lt;h4 id=&quot;example-1&quot;&gt;Example 1&lt;/h4&gt;
+
+&lt;p&gt;Suppose an object begins to move at the speed $v_0$, it subjects to
+gravitational force, calculate its trajectory.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;step one: $\frac{d^2y}{dt} = -g$&lt;/li&gt;
+  &lt;li&gt;step two: $\frac{dy}{dt} = -gt+v_0$&lt;/li&gt;
+  &lt;li&gt;final: $y = -0.5gt^2 + v_0t$&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;example-2-pendulum&quot;&gt;Example 2: pendulum&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Accerlate: $a = \frac{d^2y}{x} = -gsin(\theta)$&lt;/li&gt;
+  &lt;li&gt;$x=$&lt;/li&gt;
+  &lt;li&gt;$a = L\theta  = -gsin(\theta)$&lt;/li&gt;
+  &lt;li&gt;add air resistance: $\frac{d^2\theta}{t} = -\mu \frac{d\theta}{dt} - \frac{g}{L}sin(\theta (t)) $&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=p_di4Zn4wz4&quot;&gt;3blue1 Differential Equations&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/math/math-change-differential-equation-introduction.html</link>
+    <guid>/math/math-change-differential-equation-introduction</guid>
+    <pubDate>Fri, 15 Nov 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Differential Equation: Classification</title>
     <description>
 &lt;h4 id=&quot;classification&quot;&gt;classification&lt;/h4&gt;
 &lt;ol&gt;
@@ -5244,7 +5301,9 @@ For n=1, 2, 3, in coincides with the standard measure of length, area, or volume
   &lt;li&gt;order: the number of highest derivative in a differential equation.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;\(y^{\prime \prime}+x y^{\prime}-x^{3} y=\sin x\)
+&lt;p&gt;$
+y^{\prime \prime}+x y^{\prime}-x^{3} y=\sin x
+$
 is second order since the highest derivative is \(y^{\prime \prime}\) is the second derivative.&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;degree: In mathematics, the degree of a differential equation is the power of its highest derivative.&lt;/li&gt;
@@ -5255,7 +5314,9 @@ is second order since the highest derivative is \(y^{\prime \prime}\) is the sec
   &lt;li&gt;trivial solution: a solution or example that is riduculously simple and of little interest. Often solutions or examples involving the number
 0 are considered trivial. Nonzero solution or examples are considered nontrivial.
 For example:
-\(x+5 y=0\)
+$
+x+5 y=0
+$
 has the trivial solution x=0, y=0. Nontrivial solutions include x=5, y=-1&lt;/li&gt;
   &lt;li&gt;particular solution:&lt;/li&gt;
 &lt;/ol&gt;
@@ -5263,7 +5324,9 @@ has the trivial solution x=0, y=0. Nontrivial solutions include x=5, y=-1&lt;/li
 &lt;h4 id=&quot;classification-1&quot;&gt;classification&lt;/h4&gt;
 &lt;ol&gt;
   &lt;li&gt;homogenous differential equation: a differential equation is homogeneous when it can be this form:
-\(\frac{d y}{d x}=F\left(\frac{y}{x}\right)\)&lt;/li&gt;
+$
+\frac{d y}{d x}=F\left(\frac{y}{x}\right)
+$&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
@@ -5275,8 +5338,8 @@ software, we can find any numberical solution.&lt;/li&gt;
 &lt;/ol&gt;
 
 </description>
-    <link>/math/math-change-differential-equation.html</link>
-    <guid>/math/math-change-differential-equation</guid>
+    <link>/math/math-change-differential-equation-classification.html</link>
+    <guid>/math/math-change-differential-equation-classification</guid>
     <pubDate>Fri, 15 Nov 2019 00:00:00 +0900</pubDate>
   </item>
 
@@ -9181,48 +9244,6 @@ $\times$&lt;/li&gt;
   </item>
 
   <item>
-    <title>L.A.: Transformation</title>
-    <description>
-&lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Transformation: An $m\times n$ matrix A defines a linear transformation from
-$V^n$ to $V^m$ by: &lt;br /&gt;
-$
-T(\vec{v}) \equiv A \vec{v}
-$
-$
-\vec{v} \in V^{n} \quad T(\vec{v}) \in V^{m}
-$&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;vector-and-affine-space&quot;&gt;Vector And Affine Space&lt;/h4&gt;
-&lt;p&gt;A vector $\vec{v}$ is an ordered pair of points in an affine space.&lt;/p&gt;
-
-&lt;h4 id=&quot;kernal-and-image&quot;&gt;Kernal and Image&lt;/h4&gt;
-&lt;p&gt;$
-T\left(\left(\begin{array}{l}{x} \ {y} \ {z} &lt;br /&gt;
-{w}\end{array}\right)\right)=\left(\begin{array}{cccc}{1} &amp;amp; {0} &amp;amp; {4} &amp;amp; {-2} &lt;br /&gt;
-{1} &amp;amp; {-1} &amp;amp; {3} &amp;amp; {0} \ {1} &amp;amp; {1} &amp;amp; {5} &amp;amp;
-{-4}\end{array}\right)\left(\begin{array}{l}{x} \ {y} \ {z} &lt;br /&gt;
-{w}\end{array}\right)=\left(\begin{array}{l}{x+4 z-2 w} \ {x-y+3 z} \ {x+y+5
-z-4 w}\end{array}\right)
-$
-$T: V^4 \rightarrow V^3$
-&lt;img src=&quot;/images/math-structure-linear-algebra-transformation-kernal-image.png&quot; /&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Kernel: A vector $\vec{v} \in V^4$ is a kernal vector for T &lt;br /&gt;
-$\leftrightarrow$ $T(\vec{v}) \in V^4$&lt;/li&gt;
-  &lt;li&gt;Image: A vector $\vec{w} \in V^3$ is an image vector for T &lt;br /&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-    <link>/math/math-structure-linear-algebra-transformation.html</link>
-    <guid>/math/math-structure-linear-algebra-transformation</guid>
-    <pubDate>Wed, 24 Jul 2019 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
     <title>L.A.: Positive Define</title>
     <description>
 &lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
@@ -9316,6 +9337,55 @@ afraid any calculation of math **&lt;/li&gt;
 </description>
     <link>/math/math-structure-linear-algebra-introduction.html</link>
     <guid>/math/math-structure-linear-algebra-introduction</guid>
+    <pubDate>Wed, 24 Jul 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>L.A.: Fundamental Subspaces</title>
+    <description>
+&lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Transformation: An $m\times n$ matrix A defines a linear transformation from
+$V^n$ to $V^m$ by: &lt;br /&gt;
+$
+T(\vec{v}) \equiv A \vec{v}
+$
+$
+\vec{v} \in V^{n} \quad T(\vec{v}) \in V^{m}
+$&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;vector-and-affine-space&quot;&gt;Vector And Affine Space&lt;/h4&gt;
+&lt;p&gt;A vector $\vec{v}$ is an ordered pair of points in an affine space.&lt;/p&gt;
+
+&lt;h4 id=&quot;kernal-and-image&quot;&gt;Kernal and Image&lt;/h4&gt;
+&lt;p&gt;$
+T\left(\left(\begin{array}{l}{x} \ {y} \ {z} &lt;br /&gt;
+{w}\end{array}\right)\right)=\left(\begin{array}{cccc}{1} &amp;amp; {0} &amp;amp; {4} &amp;amp; {-2} &lt;br /&gt;
+{1} &amp;amp; {-1} &amp;amp; {3} &amp;amp; {0} \ {1} &amp;amp; {1} &amp;amp; {5} &amp;amp;
+{-4}\end{array}\right)\left(\begin{array}{l}{x} \ {y} \ {z} &lt;br /&gt;
+{w}\end{array}\right)=\left(\begin{array}{l}{x+4 z-2 w} \ {x-y+3 z} \ {x+y+5
+z-4 w}\end{array}\right)
+$
+$T: V^4 \rightarrow V^3$
+&lt;img src=&quot;/images/math-structure-linear-algebra-transformation-kernal-image.png&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Kernel: A vector $\vec{v} \in V^4$ is a kernal vector for T &lt;br /&gt;
+$\leftrightarrow$ $T(\vec{v}) \in V^4$&lt;/li&gt;
+  &lt;li&gt;Image: A vector $\vec{w} \in V^3$ is an image vector for T &lt;br /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;four-fundamental-space&quot;&gt;Four fundamental space&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;column space&lt;/li&gt;
+  &lt;li&gt;row space&lt;/li&gt;
+  &lt;li&gt;null space&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/math/math-structure-linear-algebra-fundamental-space.html</link>
+    <guid>/math/math-structure-linear-algebra-fundamental-space</guid>
     <pubDate>Wed, 24 Jul 2019 00:00:00 +0900</pubDate>
   </item>
 
@@ -9477,30 +9547,44 @@ for me in working with matrices.&lt;/li&gt;
 {y}\end{array}\right)\right)=\left(\begin{array}{l}{x^{2}+y} \\
 {x-y^{3}}\end{array}\right)\)&lt;/p&gt;
 
-\[T\left(\left(\begin{array}{l}{2} \\
-{1}\end{array}\right)\right)=\left(\begin{array}{l}{6} \\
-{7}\end{array}\right)\]
+&lt;p&gt;$
+T\left(\left(\begin{array}{l}{2} &lt;br /&gt;
+{1}\end{array}\right)\right)=\left(\begin{array}{l}{6} &lt;br /&gt;
+{7}\end{array}\right)
+$&lt;/p&gt;
 
-\[\vec{u}_{0}=\left(\begin{array}{l}{2} \\ {1}\end{array}\right)\]
+&lt;p&gt;$
+\vec{u}_{0}=\left(\begin{array}{l}{2} \ {1}\end{array}\right)
+$&lt;/p&gt;
 
-\[\vec{u}=\vec{u}_{0}+\left(\begin{array}{l}{d x} \\ {d
-y}\end{array}\right)=\left(\begin{array}{c}{2 + d x} \\ {1+d
-y}\end{array}\right)\]
+&lt;p&gt;$
+\vec{u}=\vec{u}_{0}+\left(\begin{array}{l}{d x} \ {d
+y}\end{array}\right)=\left(\begin{array}{c}{2 + d x} \ {1+d
+y}\end{array}\right)
+$&lt;/p&gt;
 
-\[T(\vec{u})=\left(\begin{array}{l}{(2+d x)^{2}+(1+d y)(2+d x)} \\ {2(2+d
-x)^{2}-(1+d y)^{3}}\end{array}\right)\]
+&lt;p&gt;$
+T(\vec{u})=\left(\begin{array}{l}{(2+d x)^{2}+(1+d y)(2+d x)} \ {2(2+d
+x)^{2}-(1+d y)^{3}}\end{array}\right)
+$&lt;/p&gt;
 
-\[\left(\begin{array}{l}{6} \\ {7}\end{array}\right)+\left(\begin{array}{l}{5 d
-x+2 d y} \\ {8 d x-3 d y}\end{array}\right)\]
+&lt;p&gt;$
+\left(\begin{array}{l}{6} \ {7}\end{array}\right)+\left(\begin{array}{l}{5 d
+x+2 d y} \ {8 d x-3 d y}\end{array}\right)
+$&lt;/p&gt;
 
-\[T\left(\left(\begin{array}{l}{2} \\
-{1}\end{array}\right)+\left(\begin{array}{l}{d x} \\ {d
-y}\end{array}\right)\right) \approx T\left(\left(\begin{array}{l}{2} \\
-{1}\end{array}\right)\right)+\left(\begin{array}{cc}{5} &amp;amp; {2} \\ {8} &amp;amp;
-{-3}\end{array}\right)\left(\begin{array}{l}{d x} \\ {d y}\end{array}\right)\]
+&lt;p&gt;$
+T\left(\left(\begin{array}{l}{2} &lt;br /&gt;
+{1}\end{array}\right)+\left(\begin{array}{l}{d x} \ {d
+y}\end{array}\right)\right) \approx T\left(\left(\begin{array}{l}{2} &lt;br /&gt;
+{1}\end{array}\right)\right)+\left(\begin{array}{cc}{5} &amp;amp; {2} \ {8} &amp;amp;
+{-3}\end{array}\right)\left(\begin{array}{l}{d x} \ {d y}\end{array}\right)
+$&lt;/p&gt;
 
 &lt;p&gt;The matrix 
-\(\left(\begin{array}{cc}{5} &amp;amp; {2} \\ {8} &amp;amp; {-3}\end{array}\right)\)
+$
+\left(\begin{array}{cc}{5} &amp;amp; {2} \ {8} &amp;amp; {-3}\end{array}\right)
+$
 is the derivative&lt;/p&gt;
 
 &lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
@@ -9518,29 +9602,37 @@ is the derivative&lt;/p&gt;
     <title>L.A.: Matrices and Application(3 times 3)</title>
     <description>
 &lt;h4 id=&quot;how-to-understand-the-matrix-t&quot;&gt;How to understand the matrix T?&lt;/h4&gt;
-&lt;p&gt;\(T=
-\left(\begin{array}{lll}{1} &amp;amp; {0} &amp;amp; {0} \\ {0} &amp;amp; {1} &amp;amp; {0} \\ {0} &amp;amp; {0} &amp;amp;
-{1}\end{array}\right)\)&lt;/p&gt;
+&lt;p&gt;$
+T=
+\left(\begin{array}{lll}{1} &amp;amp; {0} &amp;amp; {0} \ {0} &amp;amp; {1} &amp;amp; {0} \ {0} &amp;amp; {0} &amp;amp;
+{1}\end{array}\right)
+$&lt;/p&gt;
 
-&lt;p&gt;\(\left(\begin{array}{l}
-{1}  \\ 
-{0}  \\ 
+&lt;p&gt;$
+\left(\begin{array}{l}
+{1}  \ 
+{0}  \ 
 {0}
 \end{array}\right) 
-=T(\vec{e_1})\)
-\(\left(\begin{array}{l}
-{0}  \\ 
-{1}  \\ 
+=T(\vec{e_1})
+$
+$
+\left(\begin{array}{l}
+{0}  \ 
+{1}  \ 
 {0}
 \end{array}\right)
-=T(\vec{e_2})\)&lt;/p&gt;
+=T(\vec{e_2})
+$&lt;/p&gt;
 
-&lt;p&gt;\(\left(\begin{array}{l}
-{0}  \\ 
-{1}  \\ 
+&lt;p&gt;$
+\left(\begin{array}{l}
+{0}  \ 
+{1}  \ 
 {0}
 \end{array}\right)
-=T(\vec{e_3})\)&lt;/p&gt;
+=T(\vec{e_3})
+$&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;we can understand this matric coloumn by coloumn.&lt;/li&gt;
   &lt;li&gt;The first coloumn which is the image of the vector $\vec{e_1}$&lt;/li&gt;
@@ -9553,13 +9645,15 @@ is the derivative&lt;/p&gt;
 
 &lt;h4 id=&quot;projection&quot;&gt;Projection&lt;/h4&gt;
 
-&lt;p&gt;\(P(\vec{u})=
+&lt;p&gt;$
+P(\vec{u})=
 \frac{1}{a \ell+b m+c n}\left(\begin{array}{ccc}{b m+c n} &amp;amp; {-b \ell}
-&amp;amp; {-c l} \\ 
-{-a m} &amp;amp; {a \ell+c n} &amp;amp; {-c m} \\ 
+&amp;amp; {-c l} \ 
+{-a m} &amp;amp; {a \ell+c n} &amp;amp; {-c m} \ 
 {-a n} &amp;amp; {-b n} &amp;amp; {a \ell+b
-m}\end{array}\right)\left(\begin{array}{l}{x} \\ {y} \\ {z}
-\end{array}\right)\) &lt;br /&gt;
+m}\end{array}\right)\left(\begin{array}{l}{x} \ {y} \ {z}
+\end{array}\right)
+$ &lt;br /&gt;
 Properties:&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;$p(\vec{v})=\vec{0}$&lt;/li&gt;
@@ -9569,35 +9663,45 @@ Properties:&lt;/p&gt;
 
 &lt;h4 id=&quot;reflection&quot;&gt;Reflection&lt;/h4&gt;
 
-\[=\left(\begin{array}{l}{x} \\ {y} \\ {z}\end{array}\right)-\frac{2}{a \ell+b m+c
-n}\left(\begin{array}{lll}{a l} &amp;amp; {b l} &amp;amp; {c l} \\ {a m} &amp;amp; {b m} &amp;amp; {c m} \\ {a
-n} &amp;amp; {b n} &amp;amp; {c n}\end{array}\right)\left(\begin{array}{l}{x} \\ {y} \\
-{z}\end{array}\right)\]
+&lt;p&gt;$
+=\left(\begin{array}{l}{x} \ {y} \ {z}\end{array}\right)-\frac{2}{a \ell+b m+c
+n}\left(\begin{array}{lll}{a l} &amp;amp; {b l} &amp;amp; {c l} \ {a m} &amp;amp; {b m} &amp;amp; {c m} \ {a
+n} &amp;amp; {b n} &amp;amp; {c n}\end{array}\right)\left(\begin{array}{l}{x} \ {y} &lt;br /&gt;
+{z}\end{array}\right)
+$&lt;/p&gt;
 
-\[S: \frac{1}{a \ell+b m+c n}\left(\begin{array}{ccc}{-a l+b m+c n} &amp;amp; {-2 b \ell}
-&amp;amp; {-2 c l} \\ {-2 a m} &amp;amp; {a l-b m+c n} &amp;amp; {-2 c m} \\ {-2 a n} &amp;amp; {-2 b n} &amp;amp; {a
-l+b m-c n}\end{array}\right)\]
+&lt;p&gt;$
+S: \frac{1}{a \ell+b m+c n}\left(\begin{array}{ccc}{-a l+b m+c n} &amp;amp; {-2 b \ell}
+&amp;amp; {-2 c l} \ {-2 a m} &amp;amp; {a l-b m+c n} &amp;amp; {-2 c m} \ {-2 a n} &amp;amp; {-2 b n} &amp;amp; {a
+l+b m-c n}\end{array}\right)
+$&lt;/p&gt;
 
 &lt;h4 id=&quot;reflection-over-a-line&quot;&gt;Reflection over a Line&lt;/h4&gt;
-&lt;p&gt;\(=\frac{2}{a l+b m+c n}\left(\begin{array}{lll}{a l} &amp;amp; {b l} &amp;amp; {c l} \\ {a m} &amp;amp;
-{b m} &amp;amp; {c m} \\ {a n} &amp;amp; {b n} &amp;amp; {c
-n}\end{array}\right)\left(\begin{array}{l}{x} \\ {y} \\
-{z}\end{array}\right)-\left(\begin{array}{l}{x} \\ {y} \\ {z}\end{array}\right)\)&lt;/p&gt;
+&lt;p&gt;$
+=\frac{2}{a l+b m+c n}\left(\begin{array}{lll}{a l} &amp;amp; {b l} &amp;amp; {c l} \ {a m} &amp;amp;
+{b m} &amp;amp; {c m} \ {a n} &amp;amp; {b n} &amp;amp; {c
+n}\end{array}\right)\left(\begin{array}{l}{x} \ {y} &lt;br /&gt;
+{z}\end{array}\right)-\left(\begin{array}{l}{x} \ {y} \ {z}\end{array}\right)
+$&lt;/p&gt;
 
 \[T: \frac{1}{a l+b m+c n}\left(\begin{array}{ccc}{a l-b m-c n} &amp;amp; {2 b l} &amp;amp; {2 c
 l} \\ {2 a m} &amp;amp; {-a b+b m-c n} &amp;amp; {2 c m} \\ {2 a n} &amp;amp; {2 b n} &amp;amp; {-a l-b m+c
 h}\end{array}\right)\]
 
 &lt;h4 id=&quot;normal-vector&quot;&gt;Normal Vector&lt;/h4&gt;
-&lt;p&gt;\(\begin{array}{l}{P: \frac{1}{Q}\left(\begin{array}{ccc}{b^{2}+c^{2}-a b} &amp;amp; {-a
-c} \\ {-a b} &amp;amp; {a^{2}+c^{2}-b c} \\ {-a c} &amp;amp; {-b c} &amp;amp;
-{a^{2}+b^{2}}\end{array}\right)} \\ {R:
-\frac{1}{Q}\left(\begin{array}{ccc}{a^{2}} &amp;amp; {a b} &amp;amp; {a c} \\ {a b} &amp;amp; {b^{2}} &amp;amp;
-{b c} \\ {a c} &amp;amp; {b c} &amp;amp; {c^{2}}\end{array}\right)}\end{array}\)&lt;/p&gt;
+&lt;p&gt;$
+\begin{array}{l}{P: \frac{1}{Q}\left(\begin{array}{ccc}{b^{2}+c^{2}-a b} &amp;amp; {-a
+c} \ {-a b} &amp;amp; {a^{2}+c^{2}-b c} \ {-a c} &amp;amp; {-b c} &amp;amp;
+{a^{2}+b^{2}}\end{array}\right)} \ {R:
+\frac{1}{Q}\left(\begin{array}{ccc}{a^{2}} &amp;amp; {a b} &amp;amp; {a c} \ {a b} &amp;amp; {b^{2}} &amp;amp;
+{b c} \ {a c} &amp;amp; {b c} &amp;amp; {c^{2}}\end{array}\right)}\end{array}
+$&lt;/p&gt;
 
-\[S: \frac{1}{Q}\left(\begin{array}{ccc}{-a^{2}+b^{2}+c^{2}} &amp;amp; {-2 a b} &amp;amp; {-2 a c}
-\\ {-2 a b} &amp;amp; {a^{2}-b^{2}+c^{2}} &amp;amp; {-2 b c} \\ {-2 a c} &amp;amp; {-2 b c} &amp;amp;
-{a^{2}+b^{2}-c^{2}}\end{array}\right)\]
+&lt;p&gt;$
+S: \frac{1}{Q}\left(\begin{array}{ccc}{-a^{2}+b^{2}+c^{2}} &amp;amp; {-2 a b} &amp;amp; {-2 a c}
+\ {-2 a b} &amp;amp; {a^{2}-b^{2}+c^{2}} &amp;amp; {-2 b c} \ {-2 a c} &amp;amp; {-2 b c} &amp;amp;
+{a^{2}+b^{2}-c^{2}}\end{array}\right)
+$&lt;/p&gt;
 
 </description>
     <link>/math/math-structure-linear-algebra-3-3-matrices-and-application.html</link>
@@ -21857,6 +21961,13 @@ that points to it. This is referred to as a merge commit.&lt;/p&gt;
   &lt;li&gt;it is special it has more than one parent&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;ol&gt;
+  &lt;li&gt;merge specific files from another branch&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git checkout sourch_branch &amp;lt;paths&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
 &lt;h4 id=&quot;22-git--rebase&quot;&gt;2.2 git  rebase&lt;/h4&gt;
 &lt;p&gt;This operation works by going to the common ancestor of the two branches(the one
 you’re on and the one you’re rebasing onto), getting the diff introduced by each
@@ -21895,6 +22006,7 @@ move the tip of the branch forward.&lt;/li&gt;
 &lt;ol&gt;
   &lt;li&gt;&lt;a href=&quot;https://bluecast.tech/blog/git-switch-branch/&quot;&gt;switch and checkout&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://longair.net/blog/2009/04/16/git-fetch-and-merge/&quot;&gt;fetch and merge&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://jasonrudolph.com/blog/2009/02/25/git-tip-how-to-merge-specific-files-from-another-branch/&quot;&gt;Merge specific files from another branch&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 </description>
@@ -36404,12 +36516,15 @@ inside door.&lt;/li&gt;
   &lt;li&gt;Chicken Breast&lt;/li&gt;
   &lt;li&gt;Egg White&lt;/li&gt;
   &lt;li&gt;Peeled shrimp&lt;/li&gt;
+  &lt;li&gt;steamed buns&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;####&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;soy sauce&lt;/li&gt;
+  &lt;li&gt;in makeshit canteens made of wooden poles and plastic sheets&lt;/li&gt;
 &lt;/ol&gt;
+
 </description>
     <link>/%E8%A8%80%E8%91%89/language-english-food-traditional.html</link>
     <guid>/%E8%A8%80%E8%91%89/language-english-food-traditional</guid>
@@ -36428,8 +36543,11 @@ inside door.&lt;/li&gt;
   &lt;li&gt;potted plants&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;####
-A bunch of bananas&lt;/p&gt;
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;A bunch of bananas&lt;/li&gt;
+  &lt;li&gt;Pringle chip&lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;h4 id=&quot;action&quot;&gt;Action&lt;/h4&gt;
 &lt;ol&gt;
@@ -36569,6 +36687,7 @@ A bunch of bananas&lt;/p&gt;
   &lt;li&gt;grilled&lt;/li&gt;
   &lt;li&gt;smoked&lt;/li&gt;
   &lt;li&gt;simmer&lt;/li&gt;
+  &lt;li&gt;heat up&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h4 id=&quot;flavour&quot;&gt;Flavour&lt;/h4&gt;
@@ -39032,6 +39151,19 @@ of word.&lt;/li&gt;
 </description>
     <link>/%E8%A8%80%E8%91%89/language-japanese-entertainment-movies.html</link>
     <guid>/%E8%A8%80%E8%91%89/language-japanese-entertainment-movies</guid>
+    <pubDate>Fri, 17 Feb 2017 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>娯楽: </title>
+    <description>
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Violet Evergarden&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/%E8%A8%80%E8%91%89/language-japanese-entertainment-animation.html</link>
+    <guid>/%E8%A8%80%E8%91%89/language-japanese-entertainment-animation</guid>
     <pubDate>Fri, 17 Feb 2017 00:00:00 +0900</pubDate>
   </item>
 
