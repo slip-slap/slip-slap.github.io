@@ -32,9 +32,33 @@
   <!-- Scripts -->
   <script type="text/javascript" src="/assets/themes/twitter/js/jquery-1.11.1.min.js"></script>
   <!--[if lt IE 9]><script src="/assets/themes/twitter/js/html5shiv.min.js"></script><![endif]-->
-  <script type="text/javascript" async
+  <!--<script type="text/javascript" async
           src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
-  </script>
+  </script> -->
+	<script type="text/javascript">
+	window.MathJax = {
+	  tex: {
+		packages: ['base', 'ams']
+	  },
+	  loader: {
+		load: ['ui/menu', '[tex]/ams']
+	  },
+	  startup: {
+		ready() {
+		  MathJax.startup.defaultReady();
+		  const Macro = MathJax._.input.tex.Symbol.Macro;
+		  const MapHandler = MathJax._.input.tex.MapHandler.MapHandler;
+		  const Array = MathJax._.input.tex.ams.AmsMethods.default.Array;
+		  const env = new Macro('psmallmatrix', Array, [null, '(', ')', 'c', '.333em', '.2em', 'S', 1]);
+		  MapHandler.getMap('AMSmath-environment').add('psmallmatrix', env);
+		}
+	  }
+	};
+	</script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+
 </head> 
 <body>
 
@@ -124,17 +148,17 @@ $(document).ready(function() {
           <a href="/" title="查看最近发表"><i class="icon-fixed-width icon-edit"></i> 最近发表</a>
 <ul>
 
-  <li><a href="/work/work-publisher.html" title="查看《Publisher: Summary》">Publisher: Summary</a></li>
+  <li><a href="/ai/AI-convex-optimization-terminology.html" title="查看《C.O.: Terminology》">C.O.: Terminology</a></li>
 
-  <li><a href="/work/work-publisher-common-sense.html" title="查看《Publisher: Common sense》">Publisher: Common sense</a></li>
+  <li><a href="/ai/AI-convex-optimization-nomenclature.html" title="查看《C.O.: Nomenclature》">C.O.: Nomenclature</a></li>
 
-  <li><a href="/ai/AI-Adaptive-Boosting.html" title="查看《Adaptive Boosting》">Adaptive Boosting</a></li>
+  <li><a href="/ai/AI-convex-optimization-convex-function.html" title="查看《C.O.: Convex Functions》">C.O.: Convex Functions</a></li>
 
-  <li><a href="/work/work-word-neural-network.html" title="查看《Work: Neural Network》">Work: Neural Network</a></li>
+  <li><a href="/ai/AI-convex-optimization-lagrangian-duality.html" title="查看《C.O.: Lagrangian Duality》">C.O.: Lagrangian Duality</a></li>
 
-  <li><a href="/work/work-word-composite-material.html" title="查看《Word: Composite Material》">Word: Composite Material</a></li>
+  <li><a href="/ai/AI-convex-optimization-linear-programming-problem.html" title="查看《C.O.: Linear Programming》">C.O.: Linear Programming</a></li>
 
-  <li><a href="/work/work-word.html" title="查看《Work: Word》">Work: Word</a></li>
+  <li><a href="/ai/AI-convex-optimization-least-square-problem.html" title="查看《C.O.: Least squares》">C.O.: Least squares</a></li>
 
 </ul>
 
@@ -142,9 +166,52 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">946</span>
+<span title="文章总数">965</span>
 <ul>
 
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#August-2020">2020 年 08 月 (8)</a></li>
+    
+  
 
   
   
@@ -2108,6 +2175,59 @@ $(document).ready(function() {
   
   
   
+    <li><a href="/archive.html#December-2018">2018 年 12 月 (10)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
     <li><a href="/archive.html#November-2018">2018 年 11 月 (10)</a></li>
     
   
@@ -3349,7 +3469,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#March-2018">2018 年 03 月 (68)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2018">2018 年 03 月 (69)</a></li>
     
   
 
@@ -4976,7 +5101,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (217)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (228)</a></li>
 
   <li><a href="/categories.html#Algorithm-ref">Algorithm (78)</a></li>
 
@@ -4988,14 +5113,14 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#work-ref">work (20)</a></li>
 
-  <li><a href="/categories.html#AI-ref">AI (42)</a></li>
+  <li><a href="/categories.html#AI-ref">AI (50)</a></li>
 
 </ul>
 
         </section>
         <section>
           <a href="/tags.html" title="查看所有标签"><i class="icon-fixed-width icon-tags"></i> 标签云</a>
-<span title="标签总数">99</span>
+<span title="标签总数">101</span>
 <div id="tag-cloud">
 
 
@@ -5023,7 +5148,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #888;">summary</a>
+    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #777;">summary</a>
   
     
     
@@ -5058,7 +5183,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#script-ref" style="font-size: 17.5pt; color: #000;">script</a>
+    <a href="/tags.html#script-ref" style="font-size: 18pt; color: #000;">script</a>
   
     
     
@@ -5072,7 +5197,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#compile-ref" style="font-size: 14.5pt; color: #444;">compile</a>
+    <a href="/tags.html#compile-ref" style="font-size: 14pt; color: #444;">compile</a>
   
     
     
@@ -5248,6 +5373,13 @@ $(document).ready(function() {
     
     
     <a href="/tags.html#assembly-ref" style="font-size: 9.5pt; color: #888;">assembly</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#jekyll-ref" style="font-size: 9pt; color: #999;">jekyll</a>
   
     
     
@@ -5697,6 +5829,13 @@ $(document).ready(function() {
     
     <a href="/tags.html#supervised-ref" style="font-size: 9pt; color: #999;">supervised</a>
   
+    
+    
+    
+    
+    
+    <a href="/tags.html#C.O.-ref" style="font-size: 9.5pt; color: #888;">C.O.</a>
+  
 
 </div>
 
@@ -5762,24 +5901,22 @@ $(document).ready(function() {
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-tool-editor-vimscript-basic.html" title="查看《Editor: Vimscript basic》">Editor: Vimscript basic</a></h2>
+      <h2><a href="/pl/pl-tool-debugger-summary.html" title="查看《Debugger: Principle》">Debugger: Principle</a></h2>
     </header>
 
     <section>
       <p>
         
-1. Introduction
-This software is plugin system, so it is very flexible and diffcult to learn.
-it heavily depends on the plugin and shortcut to imp...
+
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#May-2018" title="查看此月所有文章">11 May 2018</a>，
+        发表日期：<a href="/archive.html#May-2018" title="查看此月所有文章">30 May 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-tool-editor-vimscript-basic.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-tool-debugger-summary.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5788,34 +5925,25 @@ it heavily depends on the plugin and shortcut to imp...
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-tool-editor-vimscript-visual-mode.html" title="查看《Editor: Vimscript Visual Mode》">Editor: Vimscript Visual Mode</a></h2>
+      <h2><a href="/pl/pl-tool-debugger-gdb-pause.html" title="查看《GDB: Pause》">GDB: Pause</a></h2>
     </header>
 
     <section>
       <p>
         
-####
-
-  Character mode: v
-  Line mode: V
-  Block mode: &lt;c-v&gt;
-
-
-####
-
-  %: work based in visual mode
-
-
-
+Place
+GDB is very flexible about the meaning of “place”; 
+-. it could mean things as varied as a line of source code
+-. an address of code, a line...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#May-2018" title="查看此月所有文章">03 May 2018</a>，
+        发表日期：<a href="/archive.html#May-2018" title="查看此月所有文章">29 May 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-tool-editor-vimscript-visual-mode.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-tool-debugger-gdb-pause.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5824,28 +5952,25 @@ it heavily depends on the plugin and shortcut to imp...
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-tool-editor-vimscript-normal-mode.html" title="查看《Editor: Vimscript Normal Mode》">Editor: Vimscript Normal Mode</a></h2>
+      <h2><a href="/pl/pl-tool-debugger-gdb-crash.html" title="查看《GDB: Crash》">GDB: Crash</a></h2>
     </header>
 
     <section>
       <p>
         
-1. Introduction
-Why this is called normal mode ? Because this is the most important mode. Just
-be always on this mode.
+When happen
 
-2.1 Navigation
-
-  w: jump ...
+  the most common cause of a crash is for a program to attempt to access a
+memory location without having the permisson to do so. The...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#May-2018" title="查看此月所有文章">02 May 2018</a>，
+        发表日期：<a href="/archive.html#May-2018" title="查看此月所有文章">27 May 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-tool-editor-vimscript-normal-mode.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-tool-debugger-gdb-crash.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5854,30 +5979,32 @@ be always on this mode.
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-tool-editor-vimscript-plugin.html" title="查看《Editor: Vimscript Plugin》">Editor: Vimscript Plugin</a></h2>
+      <h2><a href="/pl-tool-debugger-error.html" title="查看《Pl Tool Debugger Error》">Pl Tool Debugger Error</a></h2>
     </header>
 
     <section>
       <p>
-        
-1. Plugin
+        Problem: No symbol table is loaded
 
-  For every plugin, you can refer to the instruction about how to use them.
-  and in the vimrc file to setting.
+clang++ -std=c++11 system.cpp -ggdb
 
 
-1.1 vundle-plugin
+Problem: hang at debug
+inside the gdb
 
-  ...
+set startup-with-shell off
+
+
+Refer...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#May-2018" title="查看此月所有文章">01 May 2018</a>，
+        发表日期：<a href="/archive.html#May-2018" title="查看此月所有文章">26 May 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-tool-editor-vimscript-plugin.html#disqus_thread" title="查看此文章的评论"></a>
+        类别：<a href="/categories.html#-ref" title="查看此类别下的所有文章"></a>，
+        评论：<a href="/pl-tool-debugger-error.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5886,34 +6013,7 @@ be always on this mode.
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-tool-editor-vimscript-plugin-vimtex.html" title="查看《Editor: Vimtex》">Editor: Vimtex</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-####
-
-  The default compiler backend relies on latexmk, which is a perl script for running Latex the
-correct number of times to resolve cross refe...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#May-2018" title="查看此月所有文章">01 May 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-tool-editor-vimscript-plugin-vimtex.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-lazy-evaluation-haskell-summary.html" title="查看《Haskell: summary》">Haskell: summary</a></h2>
+      <h2><a href="/pl/pl-tool-debugger-gdb-inspecting.html" title="查看《GDB: Inspecting》">GDB: Inspecting</a></h2>
     </header>
 
     <section>
@@ -5921,17 +6021,22 @@ correct number of times to resolve cross refe...
         
 A
 
-  Category theory deals with structure - rather than dealing with particulars.
-It deals with the kind of structure that makes programs composab...
+  Monitoring Local Variables
+
+
+info locals
+
+
+
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#April-2018" title="查看此月所有文章">30 April 2018</a>，
+        发表日期：<a href="/archive.html#May-2018" title="查看此月所有文章">25 May 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-lazy-evaluation-haskell-summary.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-tool-debugger-gdb-inspecting.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5940,27 +6045,22 @@ It deals with the kind of structure that makes programs composab...
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-lazy-evaluation-haskell-types.html" title="查看《Haskell: Type》">Haskell: Type</a></h2>
+      <h2><a href="/pl/pl-tool-debugger-gdb-multi-thread.html" title="查看《GDB: Multi-thread》">GDB: Multi-thread</a></h2>
     </header>
 
     <section>
       <p>
         
-Jargon
 
-  names of concrete types always start with a capital letter
-  names of type variables start with a lowercase letter.
-  
-    $\textbf{::}$...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#April-2018" title="查看此月所有文章">20 April 2018</a>，
+        发表日期：<a href="/archive.html#May-2018" title="查看此月所有文章">24 May 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-lazy-evaluation-haskell-types.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-tool-debugger-gdb-multi-thread.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5969,29 +6069,25 @@ Jargon
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-lazy-evaluation-haskell-typeclasses.html" title="查看《Haskell: Typeclasses》">Haskell: Typeclasses</a></h2>
+      <h2><a href="/pl/pl-tool-git-philosophy.html" title="查看《Git:  Philosophy Behind the Scene》">Git:  Philosophy Behind the Scene</a></h2>
     </header>
 
     <section>
       <p>
         
-Background
+1. What is version control?
 
-  A typeclass defines a family of types that support a common interface
-
-
-Grammer
-
-  $\textbf{class Eq a where}$, this means that we’r...
+  Records changes to a file or set of files over time
+  Revert selected files back to a previous state, revert the en...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#April-2018" title="查看此月所有文章">20 April 2018</a>，
+        发表日期：<a href="/archive.html#May-2018" title="查看此月所有文章">19 May 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-lazy-evaluation-haskell-typeclasses.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-tool-git-philosophy.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6000,26 +6096,30 @@ Grammer
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-lazy-evaluation-haskell-tuple.html" title="查看《Haskell: Tuple》">Haskell: Tuple</a></h2>
+      <h2><a href="/pl/pl-tool-git-patching.html" title="查看《Git: Patching》">Git: Patching</a></h2>
     </header>
 
     <section>
       <p>
         
-Background
-In some ways, tuples are like lists, they are a way to store several values into
-a single value.
+shell
 
-  A list of numbers is a list of numb...
+apply
+cherry-pick
+diff
+rebase
+revert
+
+
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#April-2018" title="查看此月所有文章">20 April 2018</a>，
+        发表日期：<a href="/archive.html#May-2018" title="查看此月所有文章">18 May 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-lazy-evaluation-haskell-tuple.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-tool-git-patching.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6028,25 +6128,56 @@ a single value.
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-lazy-evaluation-haskell-recursive.html" title="查看《Haskell: Recursive》">Haskell: Recursive</a></h2>
+      <h2><a href="/pl/pl-tool-git-internals.html" title="查看《Git: Internals》">Git: Internals</a></h2>
     </header>
 
     <section>
       <p>
         
-Background
-
-  Recursion is important to Haskell because unlike imperative languages, you do
-computations in Haskell by declaring what something is...
+type blob=array&lt;byte&gt;
+type tree=map&lt;string, tree|blob&gt;&gt;
+type commits={
+parents = array&lt;commit&gt;
+author = string&lt;&gt;
+messag...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#April-2018" title="查看此月所有文章">20 April 2018</a>，
+        发表日期：<a href="/archive.html#May-2018" title="查看此月所有文章">18 May 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-lazy-evaluation-haskell-recursive.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-tool-git-internals.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-tool-git-configuration.html" title="查看《Git: Configuration and Internals》">Git: Configuration and Internals</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Just as other programs, the git configuration can be divided into three level.
+
+1. Configuration File
+1.1 System level
+
+  a file named /etc/config...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#May-2018" title="查看此月所有文章">18 May 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-tool-git-configuration.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6091,7 +6222,7 @@ computations in Haskell by declaring what something is...
 
     <!-- Current Page -->
     <li class="active">
-      <span class="page_number ">第 54/95 页</span>
+      <span class="page_number ">第 54/97 页</span>
     </li>
 
     <!-- Next Page -->
@@ -6101,7 +6232,7 @@ computations in Haskell by declaring what something is...
 
     <!-- Last Page -->
     
-    <li><a href="/page95">&raquo;&raquo;</a></li>
+    <li><a href="/page97">&raquo;&raquo;</a></li>
     
   </ul>
 </section>
@@ -6155,4 +6286,8 @@ $(document).ready(function () {
   
 </body>
 </html>
+
+
+
+
 

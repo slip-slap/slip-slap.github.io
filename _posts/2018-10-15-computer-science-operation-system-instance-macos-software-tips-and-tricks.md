@@ -42,9 +42,6 @@ tags: []
    off. when you played next time, it will start from where you were.
 
 
-
-
-
 #### Reference
 1. [Ie7 User Agent String](https://blogs.msdn.microsoft.com/ie/2006/09/20/the-ie7-user-agent-string/)
 2. [connect to windows server](https://support.apple.com/guide/mac-help/if-your-mac-cant-connect-to-another-computer-mchlp1656/mac)

@@ -32,9 +32,33 @@
   <!-- Scripts -->
   <script type="text/javascript" src="/assets/themes/twitter/js/jquery-1.11.1.min.js"></script>
   <!--[if lt IE 9]><script src="/assets/themes/twitter/js/html5shiv.min.js"></script><![endif]-->
-  <script type="text/javascript" async
+  <!--<script type="text/javascript" async
           src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
-  </script>
+  </script> -->
+	<script type="text/javascript">
+	window.MathJax = {
+	  tex: {
+		packages: ['base', 'ams']
+	  },
+	  loader: {
+		load: ['ui/menu', '[tex]/ams']
+	  },
+	  startup: {
+		ready() {
+		  MathJax.startup.defaultReady();
+		  const Macro = MathJax._.input.tex.Symbol.Macro;
+		  const MapHandler = MathJax._.input.tex.MapHandler.MapHandler;
+		  const Array = MathJax._.input.tex.ams.AmsMethods.default.Array;
+		  const env = new Macro('psmallmatrix', Array, [null, '(', ')', 'c', '.333em', '.2em', 'S', 1]);
+		  MapHandler.getMap('AMSmath-environment').add('psmallmatrix', env);
+		}
+	  }
+	};
+	</script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+
 </head> 
 <body>
 
@@ -124,17 +148,17 @@ $(document).ready(function() {
           <a href="/" title="查看最近发表"><i class="icon-fixed-width icon-edit"></i> 最近发表</a>
 <ul>
 
-  <li><a href="/work/work-publisher.html" title="查看《Publisher: Summary》">Publisher: Summary</a></li>
+  <li><a href="/ai/AI-convex-optimization-terminology.html" title="查看《C.O.: Terminology》">C.O.: Terminology</a></li>
 
-  <li><a href="/work/work-publisher-common-sense.html" title="查看《Publisher: Common sense》">Publisher: Common sense</a></li>
+  <li><a href="/ai/AI-convex-optimization-nomenclature.html" title="查看《C.O.: Nomenclature》">C.O.: Nomenclature</a></li>
 
-  <li><a href="/ai/AI-Adaptive-Boosting.html" title="查看《Adaptive Boosting》">Adaptive Boosting</a></li>
+  <li><a href="/ai/AI-convex-optimization-convex-function.html" title="查看《C.O.: Convex Functions》">C.O.: Convex Functions</a></li>
 
-  <li><a href="/work/work-word-neural-network.html" title="查看《Work: Neural Network》">Work: Neural Network</a></li>
+  <li><a href="/ai/AI-convex-optimization-lagrangian-duality.html" title="查看《C.O.: Lagrangian Duality》">C.O.: Lagrangian Duality</a></li>
 
-  <li><a href="/work/work-word-composite-material.html" title="查看《Word: Composite Material》">Word: Composite Material</a></li>
+  <li><a href="/ai/AI-convex-optimization-linear-programming-problem.html" title="查看《C.O.: Linear Programming》">C.O.: Linear Programming</a></li>
 
-  <li><a href="/work/work-word.html" title="查看《Work: Word》">Work: Word</a></li>
+  <li><a href="/ai/AI-convex-optimization-least-square-problem.html" title="查看《C.O.: Least squares》">C.O.: Least squares</a></li>
 
 </ul>
 
@@ -142,9 +166,52 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">946</span>
+<span title="文章总数">965</span>
 <ul>
 
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#August-2020">2020 年 08 月 (8)</a></li>
+    
+  
 
   
   
@@ -2108,6 +2175,59 @@ $(document).ready(function() {
   
   
   
+    <li><a href="/archive.html#December-2018">2018 年 12 月 (10)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
     <li><a href="/archive.html#November-2018">2018 年 11 月 (10)</a></li>
     
   
@@ -3349,7 +3469,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#March-2018">2018 年 03 月 (68)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2018">2018 年 03 月 (69)</a></li>
     
   
 
@@ -4976,7 +5101,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (217)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (228)</a></li>
 
   <li><a href="/categories.html#Algorithm-ref">Algorithm (78)</a></li>
 
@@ -4988,14 +5113,14 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#work-ref">work (20)</a></li>
 
-  <li><a href="/categories.html#AI-ref">AI (42)</a></li>
+  <li><a href="/categories.html#AI-ref">AI (50)</a></li>
 
 </ul>
 
         </section>
         <section>
           <a href="/tags.html" title="查看所有标签"><i class="icon-fixed-width icon-tags"></i> 标签云</a>
-<span title="标签总数">99</span>
+<span title="标签总数">101</span>
 <div id="tag-cloud">
 
 
@@ -5023,7 +5148,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #888;">summary</a>
+    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #777;">summary</a>
   
     
     
@@ -5058,7 +5183,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#script-ref" style="font-size: 17.5pt; color: #000;">script</a>
+    <a href="/tags.html#script-ref" style="font-size: 18pt; color: #000;">script</a>
   
     
     
@@ -5072,7 +5197,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#compile-ref" style="font-size: 14.5pt; color: #444;">compile</a>
+    <a href="/tags.html#compile-ref" style="font-size: 14pt; color: #444;">compile</a>
   
     
     
@@ -5248,6 +5373,13 @@ $(document).ready(function() {
     
     
     <a href="/tags.html#assembly-ref" style="font-size: 9.5pt; color: #888;">assembly</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#jekyll-ref" style="font-size: 9pt; color: #999;">jekyll</a>
   
     
     
@@ -5697,6 +5829,13 @@ $(document).ready(function() {
     
     <a href="/tags.html#supervised-ref" style="font-size: 9pt; color: #999;">supervised</a>
   
+    
+    
+    
+    
+    
+    <a href="/tags.html#C.O.-ref" style="font-size: 9.5pt; color: #888;">C.O.</a>
+  
 
 </div>
 
@@ -5762,27 +5901,289 @@ $(document).ready(function() {
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-compile-c++-resource-management.html" title="查看《C++: Memory Management》">C++: Memory Management</a></h2>
+      <h2><a href="/pl/pl-compile-java-socket.html" title="查看《Java: Socket》">Java: Socket</a></h2>
     </header>
 
     <section>
       <p>
         
-H
+socket阻塞
+服务器端的阻塞有两种
 
-  A resource is something that must be acquired and later released
+  ServerSocket的accept方法会产生阻塞
+  文件的io会产生阻塞
+
+
+
+//客户端请求
+public class Client {
+
+    public void getAsset() throws IOException, In...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">20 March 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-compile-java-socket.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-compile-java-reflection.html" title="查看《Java: reflection》">Java: reflection</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Intro
+反射是得到类的元数据的过程
+
+
+Class对象
+
+  
+    编译后的字节码文件，即.class文件就是Class类的Class对象
+  
+  Java虚拟机类加载系统根据将对应Class对象加载到JVM中，根据类对象创建实例对象
+
+
+
+Class对象的加载
+
+
+Class.f...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">20 March 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-compile-java-reflection.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-compile-java-package-manager.md.html" title="查看《Java: Package Manager》">Java: Package Manager</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+简介
+官网和cmake一样，maven也用来构建项目。
+maven有个仓库的概念，怎么理解这个概念呢。顶级域名有com, org等。顶级域名具有不可重复性，因此可以用来作为包名。google,alibaba会把自己开发的一些框架贡献给开源社区。
+
+
+属性
+
+
+POM属性
+
+  {basedi...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">20 March 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-compile-java-package-manager.md.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-compile-java-io.html" title="查看《Java: IO》">Java: IO</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+intro
+
+流操作主要在java.io包下,类结构如下图
+
+
+
+
+字节流
+
+
+
+OutputStream
+
+
+
+FileOutputStream
+
+//这里的文件创建的地方要注意
+File file =new File("db.properties");
+if(!file.exists()...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">20 March 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-compile-java-io.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-compile-java-interface.html" title="查看《Java: Interface》">Java: Interface</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+特征
+
+  属性有固定的修饰符: public static final
+  函数有固定的修饰符: public abstract,函数不能有方法体。
+
+
+
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">20 March 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-compile-java-interface.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-compile-java-enum.html" title="查看《Java: Enum》">Java: Enum</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+intro
+枚举类型反编译之后也是类，该类用final关键字修饰
+
+
+产生原因
+//枚举类型的引入
+class Weekday{
+	private Weekday(){};
+	public static final Weekday MONDAY= new Weekday();
+	public...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">20 March 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-compile-java-enum.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-compile-java-copy-control.html" title="查看《Java: Copy Control》">Java: Copy Control</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+intro
+在c++中，有一章专门讲拷贝控制，java把这个问题简单化了，简化成深拷贝与浅拷贝
+
+
+浅拷贝
+
+
+问题的产生
+class Foo{
+	private int age;
+	private Date date;
+	public int getA() {
+		return age;
+...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">20 March 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-compile-java-copy-control.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-compile-java-container.html" title="查看《Java: Container》">Java: Container</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+
+  intro
+  set    
+      intro
     
-      Explicitly or implicitly
-      Resource mangagement should not be...
+  
+  list    
+      intro
+    
+  
+  字典容器    
+      intro
+      properties
+      map        
+          map的遍历
+ ...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">08 March 2018</a>，
+        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">20 March 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-compile-c++-resource-management.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-compile-java-container.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5791,30 +6192,31 @@ H
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-compile-c++-reference.html" title="查看《C++: Reference》">C++: Reference</a></h2>
+      <h2><a href="/pl/pl-compile-java-cmd.html" title="查看《Java: Command Line》">Java: Command Line</a></h2>
     </header>
 
     <section>
       <p>
         
-I
+运行
+java [字节码的名字] 
+java Main   运行Main.class字节码文件
 
-  reference is used to diffence two situation copy and reference during
-function call
+java路径
 
-
-Galois
-
-  I just stay in Python, Java too long time, fo...
+  相对路径 指的是JVM的启动路径
+    File file=new File("config.xml");
+file.createNewFile();
+// 如果jvm在/...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">08 March 2018</a>，
+        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">20 March 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-compile-c++-reference.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-compile-java-cmd.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5823,265 +6225,34 @@ Galois
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-compile-c++-pointer.html" title="查看《C++: Pointer》">C++: Pointer</a></h2>
+      <h2><a href="/pl/pl-compile-java-class.html" title="查看《Java: Class》">Java: Class</a></h2>
     </header>
 
     <section>
       <p>
         
-1. Pointer Operation
+类的三大特点，封装，继承和多态，集中封装和继承是多态的基础
 
-  p++
-  p–
-  p+1
+构造器，只是一个函数，函数只是一段需要执行的代码，就这么简单。
+类的组成
 
 
-#include &lt;iostream&gt;
-int main(){
-    int a[5]={1,2,2,1,9};
-    int *p = a;
-    std::cout&lt;&lt;p++&...
+普通代码块
+
+
+构造代码块
+直接在类中定义且没有加static关键字的代码块称为构造代码块。
+构造代码块属于对象
+，在对象创建时被执行，每次创建对象都会...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">08 March 2018</a>，
+        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">20 March 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-compile-c++-pointer.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-compile-c++-package-manager.html" title="查看《C++: Package Manager》">C++: Package Manager</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Introduction
-Here is the list conan, cpm, dds, pacm, hunter, vcpkg
-
-1.1 Brew
-the missing package manager for macos, 和centos下的yumhe ubuntu下的apt-get...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">08 March 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-compile-c++-package-manager.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-compile-c++-overload.html" title="查看《C++: Reload Operator》">C++: Reload Operator</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-A
-
-  operoator overload just a special function name;
-
-
-#include &lt;iostream&gt;
-
-class complex_number
-{
-
-	private:
-		int actual_part; 
-        i...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">08 March 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-compile-c++-overload.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-compile-c++-overload-output-marker.html" title="查看《C++: Overload》">C++: Overload</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-#include &lt;iostream&gt;
-
-class complex_number
-{
-
-	private:
-		int actual_part; 
-        int virtual_part;
-
-    public:
-		complex_number()
-		{}
-
-	...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">08 March 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-compile-c++-overload-output-marker.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-compile-c++-operator.html" title="查看《C++: Operator》">C++: Operator</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-bit operator
-
-	
-		 ~  位求反        
-		 &lt;&lt; 左移          
-		 &gt;&gt; 右移          
-		  &amp; 位与   256&amp;7  
-		  | 位或          
-		  ^ 异或        ...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">08 March 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-compile-c++-operator.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-compile-c++-macro.html" title="查看《C++: Macro》">C++: Macro</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-#define PRINT(A) std::cout&lt;&lt;"this is output: "&lt;&lt;#A&lt;&lt;std::endl
-PRINT("hello");
-
-
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">08 March 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-compile-c++-macro.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-compile-c++-lvalue-and-rvalue.html" title="查看《C++: Lvalues and Rvalues》">C++: Lvalues and Rvalues</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-####
-
-  2.rvalue: a temporary value
-
-
-###
-
-  you can’t take an lvalue reference form an rvalue.
-  you can take an lvalue reference form an lvalue....
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">08 March 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-compile-c++-lvalue-and-rvalue.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-compile-c++-load-operator.html" title="查看《C++: Reload Operator》">C++: Reload Operator</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-重载的运算符不过是有特殊名字的函数
-重载下标运算符
-
-[]   下标操作符必须是成员函数
-
-
-重载输出运算符
-
-&lt;&lt;     不能是成员函数
-
-
-重载输入运算符
-
-&gt;&gt;
-参数1: 读取流的引用;
-参数2: 非常量对象的引用;
-std::istream &amp;ope...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">08 March 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-compile-c++-load-operator.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-compile-java-class.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6126,7 +6297,7 @@ std::istream &amp;ope...
 
     <!-- Current Page -->
     <li class="active">
-      <span class="page_number ">第 59/95 页</span>
+      <span class="page_number ">第 59/97 页</span>
     </li>
 
     <!-- Next Page -->
@@ -6136,7 +6307,7 @@ std::istream &amp;ope...
 
     <!-- Last Page -->
     
-    <li><a href="/page95">&raquo;&raquo;</a></li>
+    <li><a href="/page97">&raquo;&raquo;</a></li>
     
   </ul>
 </section>
@@ -6190,4 +6361,8 @@ $(document).ready(function () {
   
 </body>
 </html>
+
+
+
+
 

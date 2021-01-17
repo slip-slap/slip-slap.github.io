@@ -30,25 +30,48 @@ tags: ["latex","script"]
 ```
 
 
-#### Package
+#### 2 Package
 
-##### 1. siunitx package
+##### 2.1 siunitx package
 1. align numbers at decimal point
 
 ```latex
-\usepackage{siunitx} % Required for alignment
-\sisetup{
+  \usepackage{siunitx} % Required for alignment
+  \sisetup{
 	  round-mode          = places, % Rounds numbers
 	    round-precision     = 2, % to 2 places
 }
 ```
+##### makecell package
+add line break in a table cell
 
-##### 2. multirow package
+```latex
+
+\begin{table*}
+	\normalsize
+\caption{The optimum lay-ups using two distinct fiber angles under various biaxial loading cases}
+\label{tab:two_distinct_angle}
+\centering
+\begin{tabular}{clccc}
+	\toprule
+	\textbf{Loading} $N_{x}/N_{y}/N_{xy}$ \textbf{(MPa m)}   &
+	\makecell{\textbf{Optimum lay-up } \\ \textbf{sequences}  }                        &
+	\textbf{Laminate thickness} &  \makecell{\textbf{Safety factor } \\
+	\textbf{for Tsai-wu}}  &
+	\makecell{\textbf{Safety factor } \\ \textbf{for  maximum stress}}
+	 \\
+	\midrule
+	10/5/0        &  $[33_{29}/\text{-}39_{25}/\bar{\text{-}39}]_s$      &     109               &  1.0074      &  1.0246  \\
+	\bottomrule
+\end{tabular}
+\end{table*}
+```
+
+##### 2.2  multirow package
 1. grammar: \multirow{NUMBER_OF_ROWS}{WIDTH}{CONTENT}
 - It's used to make a row span several cells
 - Use an asterisk as an argument for the width, it means, this width should be
   determined automatically.
-
 
 ```latex
 \begin{table}[h!]
@@ -66,6 +89,8 @@ tags: ["latex","script"]
 	\end{center}
 \end{table}
 ```
+
+##### 2.3 multicol package
 
 ##### 3. booktabs package
 1. booktabs package provides much prettier horizontal separator. 

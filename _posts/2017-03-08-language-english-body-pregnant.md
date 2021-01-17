@@ -12,6 +12,7 @@ tags: ["英語"]
 1. ultrasound
 2. unborn baby
 3. tooth brushing
+4. blood had drained from her face
 
 
 

@@ -22,3 +22,4 @@ tags: ["英語"]
 ####
 1. In order to minimize person-to-person contact, you will not be able to pick
    up the payment in cash from your local city.
+2. People end up below the poverty line again

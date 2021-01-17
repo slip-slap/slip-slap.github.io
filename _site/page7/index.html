@@ -32,9 +32,33 @@
   <!-- Scripts -->
   <script type="text/javascript" src="/assets/themes/twitter/js/jquery-1.11.1.min.js"></script>
   <!--[if lt IE 9]><script src="/assets/themes/twitter/js/html5shiv.min.js"></script><![endif]-->
-  <script type="text/javascript" async
+  <!--<script type="text/javascript" async
           src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
-  </script>
+  </script> -->
+	<script type="text/javascript">
+	window.MathJax = {
+	  tex: {
+		packages: ['base', 'ams']
+	  },
+	  loader: {
+		load: ['ui/menu', '[tex]/ams']
+	  },
+	  startup: {
+		ready() {
+		  MathJax.startup.defaultReady();
+		  const Macro = MathJax._.input.tex.Symbol.Macro;
+		  const MapHandler = MathJax._.input.tex.MapHandler.MapHandler;
+		  const Array = MathJax._.input.tex.ams.AmsMethods.default.Array;
+		  const env = new Macro('psmallmatrix', Array, [null, '(', ')', 'c', '.333em', '.2em', 'S', 1]);
+		  MapHandler.getMap('AMSmath-environment').add('psmallmatrix', env);
+		}
+	  }
+	};
+	</script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+
 </head> 
 <body>
 
@@ -124,17 +148,17 @@ $(document).ready(function() {
           <a href="/" title="查看最近发表"><i class="icon-fixed-width icon-edit"></i> 最近发表</a>
 <ul>
 
-  <li><a href="/work/work-publisher.html" title="查看《Publisher: Summary》">Publisher: Summary</a></li>
+  <li><a href="/ai/AI-convex-optimization-terminology.html" title="查看《C.O.: Terminology》">C.O.: Terminology</a></li>
 
-  <li><a href="/work/work-publisher-common-sense.html" title="查看《Publisher: Common sense》">Publisher: Common sense</a></li>
+  <li><a href="/ai/AI-convex-optimization-nomenclature.html" title="查看《C.O.: Nomenclature》">C.O.: Nomenclature</a></li>
 
-  <li><a href="/ai/AI-Adaptive-Boosting.html" title="查看《Adaptive Boosting》">Adaptive Boosting</a></li>
+  <li><a href="/ai/AI-convex-optimization-convex-function.html" title="查看《C.O.: Convex Functions》">C.O.: Convex Functions</a></li>
 
-  <li><a href="/work/work-word-neural-network.html" title="查看《Work: Neural Network》">Work: Neural Network</a></li>
+  <li><a href="/ai/AI-convex-optimization-lagrangian-duality.html" title="查看《C.O.: Lagrangian Duality》">C.O.: Lagrangian Duality</a></li>
 
-  <li><a href="/work/work-word-composite-material.html" title="查看《Word: Composite Material》">Word: Composite Material</a></li>
+  <li><a href="/ai/AI-convex-optimization-linear-programming-problem.html" title="查看《C.O.: Linear Programming》">C.O.: Linear Programming</a></li>
 
-  <li><a href="/work/work-word.html" title="查看《Work: Word》">Work: Word</a></li>
+  <li><a href="/ai/AI-convex-optimization-least-square-problem.html" title="查看《C.O.: Least squares》">C.O.: Least squares</a></li>
 
 </ul>
 
@@ -142,9 +166,52 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">946</span>
+<span title="文章总数">965</span>
 <ul>
 
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#August-2020">2020 年 08 月 (8)</a></li>
+    
+  
 
   
   
@@ -2108,6 +2175,59 @@ $(document).ready(function() {
   
   
   
+    <li><a href="/archive.html#December-2018">2018 年 12 月 (10)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
     <li><a href="/archive.html#November-2018">2018 年 11 月 (10)</a></li>
     
   
@@ -3349,7 +3469,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#March-2018">2018 年 03 月 (68)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2018">2018 年 03 月 (69)</a></li>
     
   
 
@@ -4976,7 +5101,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (217)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (228)</a></li>
 
   <li><a href="/categories.html#Algorithm-ref">Algorithm (78)</a></li>
 
@@ -4988,14 +5113,14 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#work-ref">work (20)</a></li>
 
-  <li><a href="/categories.html#AI-ref">AI (42)</a></li>
+  <li><a href="/categories.html#AI-ref">AI (50)</a></li>
 
 </ul>
 
         </section>
         <section>
           <a href="/tags.html" title="查看所有标签"><i class="icon-fixed-width icon-tags"></i> 标签云</a>
-<span title="标签总数">99</span>
+<span title="标签总数">101</span>
 <div id="tag-cloud">
 
 
@@ -5023,7 +5148,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #888;">summary</a>
+    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #777;">summary</a>
   
     
     
@@ -5058,7 +5183,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#script-ref" style="font-size: 17.5pt; color: #000;">script</a>
+    <a href="/tags.html#script-ref" style="font-size: 18pt; color: #000;">script</a>
   
     
     
@@ -5072,7 +5197,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#compile-ref" style="font-size: 14.5pt; color: #444;">compile</a>
+    <a href="/tags.html#compile-ref" style="font-size: 14pt; color: #444;">compile</a>
   
     
     
@@ -5248,6 +5373,13 @@ $(document).ready(function() {
     
     
     <a href="/tags.html#assembly-ref" style="font-size: 9.5pt; color: #888;">assembly</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#jekyll-ref" style="font-size: 9pt; color: #999;">jekyll</a>
   
     
     
@@ -5697,6 +5829,13 @@ $(document).ready(function() {
     
     <a href="/tags.html#supervised-ref" style="font-size: 9pt; color: #999;">supervised</a>
   
+    
+    
+    
+    
+    
+    <a href="/tags.html#C.O.-ref" style="font-size: 9.5pt; color: #888;">C.O.</a>
+  
 
 </div>
 
@@ -5762,6 +5901,238 @@ $(document).ready(function() {
   <article class="nested">
 
     <header>
+      <h2><a href="/ai/AI-ML-Latent-Dirichlet-Allocation.html" title="查看《Latent Dirichlet Allocation for dummies》">Latent Dirichlet Allocation for dummies</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Latent Dirichlet Allocation
+
+1.idea:  Each document can be described by a distribution of topics and each topic can be described by a distribution...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#March-2020" title="查看此月所有文章">04 March 2020</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#AI-ref" title="查看此类别下的所有文章">AI</a>，
+        评论：<a href="/ai/AI-ML-Latent-Dirichlet-Allocation.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/ai/AI-ML-Hidden-Markov-Model.html" title="查看《Hidden Markov Model》">Hidden Markov Model</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Components of A HMM
+
+
+  \(Q=q_{1}q_{2}...q_{N}\) a set of N states
+  \(A=a_{11}...a_{ij}...a_{NN}\) a transition probability matrix A, each \(a_{i...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#March-2020" title="查看此月所有文章">04 March 2020</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#AI-ref" title="查看此类别下的所有文章">AI</a>，
+        评论：<a href="/ai/AI-ML-Hidden-Markov-Model.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/ai/AI-ML-Gradient-Boosting-Algorithm.html" title="查看《Gradient Boosting Algorithm(GBM)》">Gradient Boosting Algorithm(GBM)</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Brief Description for Ensemble, Bagging and Boosting
+
+An ensemble is just a collection of predictors which come together(e.g. mean of all predicti...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#March-2020" title="查看此月所有文章">04 March 2020</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#AI-ref" title="查看此类别下的所有文章">AI</a>，
+        评论：<a href="/ai/AI-ML-Gradient-Boosting-Algorithm.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/ai/AI-ML-GA-neural-network.html" title="查看《neural network with genetic algorithm》">neural network with genetic algorithm</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Feature Selection with Genetic Algorithm
+From customer segmentation to medical diagnosis, arise from complex relationship between features.
+
+Train...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#March-2020" title="查看此月所有文章">04 March 2020</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#AI-ref" title="查看此类别下的所有文章">AI</a>，
+        评论：<a href="/ai/AI-ML-GA-neural-network.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/work/secrurity-history-data.html" title="查看《Security: History Data》">Security: History Data</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Method
+
+  Yahoo finance
+  Tushare
+
+
+website
+
+  天天基金
+
+
+
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#February-2020" title="查看此月所有文章">15 February 2020</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#work-ref" title="查看此类别下的所有文章">work</a>，
+        评论：<a href="/work/secrurity-history-data.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/work/economy-quantitative-financey-introduction.html" title="查看《Quantitative Finance: Introduction》">Quantitative Finance: Introduction</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Reference
+
+  Applied quantitative finance
+
+
+
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#February-2020" title="查看此月所有文章">15 February 2020</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#work-ref" title="查看此类别下的所有文章">work</a>，
+        评论：<a href="/work/economy-quantitative-financey-introduction.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/work/economy.html" title="查看《Work: Journal》">Work: Journal</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+What is finance
+
+  Mathematics + Dollar
+
+
+Valuation
+
+  How are financial assets valued ?
+  How should financial assets be valued ?
+  How do financ...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#January-2020" title="查看此月所有文章">15 January 2020</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#work-ref" title="查看此类别下的所有文章">work</a>，
+        评论：<a href="/work/economy.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/economy/economy-value.html" title="查看《Economy: Value》">Economy: Value</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+
+  financial assets: also named securities, bond is a financial asset, and also
+a security.
+    
+      Example, The bank provides the corporation ...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#January-2020" title="查看此月所有文章">15 January 2020</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#Economy-ref" title="查看此类别下的所有文章">Economy</a>，
+        评论：<a href="/economy/economy-value.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
       <h2><a href="/work/economy-terminology.html" title="查看《Work: Finanical》">Work: Finanical</a></h2>
     </header>
 
@@ -5823,240 +6194,6 @@ Terminology
 
   </article>
   
-  <article class="nested">
-
-    <header>
-      <h2><a href="/work/economy-portfolio.html" title="查看《Work: Portfolio Management》">Work: Portfolio Management</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Observations
-Math, model
-Observations
-###
- Portfolio manager
-
-A
-Cash, CD, Bank Deposites, UST Bills, bonds, corporate bonds, commodities, oil,
-gol...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#January-2020" title="查看此月所有文章">15 January 2020</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#work-ref" title="查看此类别下的所有文章">work</a>，
-        评论：<a href="/work/economy-portfolio.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/work/economy-option.html" title="查看《Option》">Option</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-A
-
-  A right to buy or sell something for a specified price during a specified
-period of time.
-
-
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#January-2020" title="查看此月所有文章">15 January 2020</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#work-ref" title="查看此类别下的所有文章">work</a>，
-        评论：<a href="/work/economy-option.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/work/economy-capital-asset-pricing-model.html" title="查看《Capital Asset Pricing Model》">Capital Asset Pricing Model</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#January-2020" title="查看此月所有文章">15 January 2020</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#work-ref" title="查看此类别下的所有文章">work</a>，
-        评论：<a href="/work/economy-capital-asset-pricing-model.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/economy/economy-bond.html" title="查看《C.F.: Bond》">C.F.: Bond</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-1. Terminology
-
-  CPI(consumer price index): which measures the number of dollars that it takes to pay for a
-typical family purchase.
-
-
-2. Nominal...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#January-2020" title="查看此月所有文章">15 January 2020</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#Economy-ref" title="查看此类别下的所有文章">Economy</a>，
-        评论：<a href="/economy/economy-bond.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/math/math-summary.html" title="查看《Math: Summary》">Math: Summary</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Galois
-We copy concept from one subject to another, and hope it may work.
-
-  complement, in probability, in combinatorics
-  function, in real anal...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#December-2019" title="查看此月所有文章">31 December 2019</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
-        评论：<a href="/math/math-summary.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/math/math-basic-summary.html" title="查看《Basic: summary》">Basic: summary</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Set Theory
-
-  Mathematics is of any interest can be explained in terms of sets, functions, and
-relations.
-    
-      In real analysis, function is...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#December-2019" title="查看此月所有文章">30 December 2019</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
-        评论：<a href="/math/math-basic-summary.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/math/math-basic-philosphy-reasoning.html" title="查看《Philosophy: Reasoning》">Philosophy: Reasoning</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Background
-Aristotle said:”the man is rational animal.”
-
-Species of Argument
-Deductive, inductive, abductive, argument by analogy,
-
-terminology
-
- ...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#December-2019" title="查看此月所有文章">30 December 2019</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
-        评论：<a href="/math/math-basic-philosphy-reasoning.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/math/math-basic-set-theory-history.html" title="查看《Set Theory: History》">Set Theory: History</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Definition
-
-  1870 According to Cantor: A set is a collection of distinct or well-defined
-objects
-  Problems: what kind of objects.
-For example: 
-...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#December-2019" title="查看此月所有文章">29 December 2019</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
-        评论：<a href="/math/math-basic-set-theory-history.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
 
   
     
@@ -6096,7 +6233,7 @@ For example:
 
     <!-- Current Page -->
     <li class="active">
-      <span class="page_number ">第 7/95 页</span>
+      <span class="page_number ">第 7/97 页</span>
     </li>
 
     <!-- Next Page -->
@@ -6106,7 +6243,7 @@ For example:
 
     <!-- Last Page -->
     
-    <li><a href="/page95">&raquo;&raquo;</a></li>
+    <li><a href="/page97">&raquo;&raquo;</a></li>
     
   </ul>
 </section>
@@ -6160,4 +6297,8 @@ $(document).ready(function () {
   
 </body>
 </html>
+
+
+
+
 

@@ -32,9 +32,33 @@
   <!-- Scripts -->
   <script type="text/javascript" src="/assets/themes/twitter/js/jquery-1.11.1.min.js"></script>
   <!--[if lt IE 9]><script src="/assets/themes/twitter/js/html5shiv.min.js"></script><![endif]-->
-  <script type="text/javascript" async
+  <!--<script type="text/javascript" async
           src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
-  </script>
+  </script> -->
+	<script type="text/javascript">
+	window.MathJax = {
+	  tex: {
+		packages: ['base', 'ams']
+	  },
+	  loader: {
+		load: ['ui/menu', '[tex]/ams']
+	  },
+	  startup: {
+		ready() {
+		  MathJax.startup.defaultReady();
+		  const Macro = MathJax._.input.tex.Symbol.Macro;
+		  const MapHandler = MathJax._.input.tex.MapHandler.MapHandler;
+		  const Array = MathJax._.input.tex.ams.AmsMethods.default.Array;
+		  const env = new Macro('psmallmatrix', Array, [null, '(', ')', 'c', '.333em', '.2em', 'S', 1]);
+		  MapHandler.getMap('AMSmath-environment').add('psmallmatrix', env);
+		}
+	  }
+	};
+	</script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+
 </head> 
 <body>
 
@@ -124,17 +148,17 @@ $(document).ready(function() {
           <a href="/" title="查看最近发表"><i class="icon-fixed-width icon-edit"></i> 最近发表</a>
 <ul>
 
-  <li><a href="/work/work-publisher.html" title="查看《Publisher: Summary》">Publisher: Summary</a></li>
+  <li><a href="/ai/AI-convex-optimization-terminology.html" title="查看《C.O.: Terminology》">C.O.: Terminology</a></li>
 
-  <li><a href="/work/work-publisher-common-sense.html" title="查看《Publisher: Common sense》">Publisher: Common sense</a></li>
+  <li><a href="/ai/AI-convex-optimization-nomenclature.html" title="查看《C.O.: Nomenclature》">C.O.: Nomenclature</a></li>
 
-  <li><a href="/ai/AI-Adaptive-Boosting.html" title="查看《Adaptive Boosting》">Adaptive Boosting</a></li>
+  <li><a href="/ai/AI-convex-optimization-convex-function.html" title="查看《C.O.: Convex Functions》">C.O.: Convex Functions</a></li>
 
-  <li><a href="/work/work-word-neural-network.html" title="查看《Work: Neural Network》">Work: Neural Network</a></li>
+  <li><a href="/ai/AI-convex-optimization-lagrangian-duality.html" title="查看《C.O.: Lagrangian Duality》">C.O.: Lagrangian Duality</a></li>
 
-  <li><a href="/work/work-word-composite-material.html" title="查看《Word: Composite Material》">Word: Composite Material</a></li>
+  <li><a href="/ai/AI-convex-optimization-linear-programming-problem.html" title="查看《C.O.: Linear Programming》">C.O.: Linear Programming</a></li>
 
-  <li><a href="/work/work-word.html" title="查看《Work: Word》">Work: Word</a></li>
+  <li><a href="/ai/AI-convex-optimization-least-square-problem.html" title="查看《C.O.: Least squares》">C.O.: Least squares</a></li>
 
 </ul>
 
@@ -142,9 +166,52 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">946</span>
+<span title="文章总数">965</span>
 <ul>
 
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#August-2020">2020 年 08 月 (8)</a></li>
+    
+  
 
   
   
@@ -2108,6 +2175,59 @@ $(document).ready(function() {
   
   
   
+    <li><a href="/archive.html#December-2018">2018 年 12 月 (10)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
     <li><a href="/archive.html#November-2018">2018 年 11 月 (10)</a></li>
     
   
@@ -3349,7 +3469,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#March-2018">2018 年 03 月 (68)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2018">2018 年 03 月 (69)</a></li>
     
   
 
@@ -4976,7 +5101,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (217)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (228)</a></li>
 
   <li><a href="/categories.html#Algorithm-ref">Algorithm (78)</a></li>
 
@@ -4988,14 +5113,14 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#work-ref">work (20)</a></li>
 
-  <li><a href="/categories.html#AI-ref">AI (42)</a></li>
+  <li><a href="/categories.html#AI-ref">AI (50)</a></li>
 
 </ul>
 
         </section>
         <section>
           <a href="/tags.html" title="查看所有标签"><i class="icon-fixed-width icon-tags"></i> 标签云</a>
-<span title="标签总数">99</span>
+<span title="标签总数">101</span>
 <div id="tag-cloud">
 
 
@@ -5023,7 +5148,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #888;">summary</a>
+    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #777;">summary</a>
   
     
     
@@ -5058,7 +5183,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#script-ref" style="font-size: 17.5pt; color: #000;">script</a>
+    <a href="/tags.html#script-ref" style="font-size: 18pt; color: #000;">script</a>
   
     
     
@@ -5072,7 +5197,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#compile-ref" style="font-size: 14.5pt; color: #444;">compile</a>
+    <a href="/tags.html#compile-ref" style="font-size: 14pt; color: #444;">compile</a>
   
     
     
@@ -5248,6 +5373,13 @@ $(document).ready(function() {
     
     
     <a href="/tags.html#assembly-ref" style="font-size: 9.5pt; color: #888;">assembly</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#jekyll-ref" style="font-size: 9pt; color: #999;">jekyll</a>
   
     
     
@@ -5697,6 +5829,13 @@ $(document).ready(function() {
     
     <a href="/tags.html#supervised-ref" style="font-size: 9pt; color: #999;">supervised</a>
   
+    
+    
+    
+    
+    
+    <a href="/tags.html#C.O.-ref" style="font-size: 9.5pt; color: #888;">C.O.</a>
+  
 
 </div>
 
@@ -5762,27 +5901,36 @@ $(document).ready(function() {
   <article class="nested">
 
     <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-english-word-pronounciation.html" title="查看《Words: Pronunciation》">Words: Pronunciation</a></h2>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-english-house-backyard.html" title="查看《House: Yard》">House: Yard</a></h2>
     </header>
 
     <section>
       <p>
         
-p
+####
 
-  export
-    
-      this is a simple word, but for the moment I just realize how to pronounce it.
-the alphabet “x” has two sounds “k” and “s”. ...
+  ladder
+  backyard
+  frontyard
+  hose
+
+
+####
+
+  cover up the hole
+  electric drill
+  workpants
+
+
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">01 March 2017</a>，
+        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">10 March 2017</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-english-word-pronounciation.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/%E8%A8%80%E8%91%89/language-english-house-backyard.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5791,7 +5939,7 @@ the alphabet “x” has two sounds “k” and “s”. ...
   <article class="nested">
 
     <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-english-word-number.html" title="查看《Word: Date, Number》">Word: Date, Number</a></h2>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-english-house-architecture.html" title="查看《House: Architecture》">House: Architecture</a></h2>
     </header>
 
     <section>
@@ -5799,27 +5947,29 @@ the alphabet “x” has two sounds “k” and “s”. ...
         
 ####
 
-  entry
-  regular size
-  several times
+  fit closely
+  large rocks
+  ledge
+  pillar
 
 
 ####
 
-  a couple of days
-  a bunch of fresh apple
-  a pile of rubble
-  one out of 5
-  a couple of y...
+  behind the pillar
+
+
+####
+
+  It was build out of super-strong stone that can withstand...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">01 March 2017</a>，
+        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">10 March 2017</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-english-word-number.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/%E8%A8%80%E8%91%89/language-english-house-architecture.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5828,34 +5978,38 @@ the alphabet “x” has two sounds “k” and “s”. ...
   <article class="nested">
 
     <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-english-word-miscellaneous.html" title="查看《Word: Miscellaneous》">Word: Miscellaneous</a></h2>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-english-food-traditional.html" title="查看《Food: Chinese》">Food: Chinese</a></h2>
     </header>
 
     <section>
       <p>
         
-####
 
-  cigarette Tubes
-  a box of cigartte
-  hook rail
-  tube cases
-  pack of tissue
+  Hand-pulled Noodles
+  hotpot
 
 
 ####
 
-  anyone defy lockdown you will be shoot.
-  work ove...
+  Chicken Breast
+  Egg White
+  Peeled shrimp
+  steamed buns
+
+
+####
+
+  soy sauce
+  in makeshit canteens mad...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">01 March 2017</a>，
+        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">09 March 2017</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-english-word-miscellaneous.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/%E8%A8%80%E8%91%89/language-english-food-traditional.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5864,7 +6018,7 @@ the alphabet “x” has two sounds “k” and “s”. ...
   <article class="nested">
 
     <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-english-word-choice.html" title="查看《Word: Choice》">Word: Choice</a></h2>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-english-food-snack.html" title="查看《Fodd: Vegetarian》">Fodd: Vegetarian</a></h2>
     </header>
 
     <section>
@@ -5872,23 +6026,32 @@ the alphabet “x” has two sounds “k” and “s”. ...
         
 ####
 
-  own: I am not in possession of it
-  help: do me a favor
+  stalk
+  root
+  a proper apple
+  container
+  potted plants
 
 
-1.
+####
 
-  deal with: something that at least of some burden
-  take care of: somethin...
+  A bunch of bananas
+  Pringle chip
+
+
+Action
+
+  raise flowers
+  grow flo...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">01 March 2017</a>，
+        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">09 March 2017</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-english-word-choice.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/%E8%A8%80%E8%91%89/language-english-food-snack.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5897,7 +6060,45 @@ the alphabet “x” has two sounds “k” and “s”. ...
   <article class="nested">
 
     <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-english-word-adverb.html" title="查看《Life: Position》">Life: Position</a></h2>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-english-food-seasoning.html" title="查看《Food: Seasoning》">Food: Seasoning</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Chinese
+
+  soy sauce
+  cooking oil
+  baking soda
+  chili oil
+  minced green onion
+  minced gralic
+  black pepper
+  chili pepper
+
+
+####
+
+  I feel v...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">09 March 2017</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
+        评论：<a href="/%E8%A8%80%E8%91%89/language-english-food-seasoning.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-english-food-restaurant.html" title="查看《Food: Restaurant》">Food: Restaurant</a></h2>
     </header>
 
     <section>
@@ -5905,31 +6106,34 @@ the alphabet “x” has two sounds “k” and “s”. ...
         
 ####
 
-  the other side
-  the other end
-  front and rear
-  top
-  middle
-  bottom
-  next to
-  around
-  across
-  nearby
-  through
+  milk carton
+  a bag of sugar
+  latte
+  receipt
+  invoice
+  bill
+  inedible
 
 
-Sentence
+Phrase
 
-  live ...
+  Five Dishes
+  chopstick rest 箸置き
+
+
+####
+
+  goblet
+ ...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">01 March 2017</a>，
+        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">09 March 2017</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-english-word-adverb.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/%E8%A8%80%E8%91%89/language-english-food-restaurant.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5938,30 +6142,33 @@ Sentence
   <article class="nested">
 
     <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-english-oral-take-off.html" title="查看《Words: take》">Words: take</a></h2>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-english-food-ingredient.html" title="查看《Food: Ingredient》">Food: Ingredient</a></h2>
     </header>
 
     <section>
       <p>
         
-1.
+Vegetable
 
-  take back( prison break, Linc say something mean to Michel)
-  I took a man’s life(kill)
+  Bean sprout
+  pork belly
+  Pepper
 
 
-2. numbers
+Meat
 
-  This variable can only take discrete...
+Dessert
+
+  A pink rice cake filled with sweetened bean paste, wrapped with in a salt-preser...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">01 March 2017</a>，
+        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">09 March 2017</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-english-oral-take-off.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/%E8%A8%80%E8%91%89/language-english-food-ingredient.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5970,30 +6177,37 @@ Sentence
   <article class="nested">
 
     <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-english-oral-phrase.html" title="查看《Words: Verbs and Adverb》">Words: Verbs and Adverb</a></h2>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-english-food-cuisine.html" title="查看《Food》">Food</a></h2>
     </header>
 
     <section>
       <p>
         
-1. Adverb
+Cook Method
 
-  up: indicate direction to something
-    
-      curl up
-    
-  
-  down: indicate direction to something
-up and down implies completion...
+  Jelly
+  Jinger
+  Braised Pork
+  Fried Dumplings
+  Fried Rice
+  grilled corn
+  French Fries
+  Potato Chip
+
+
+####
+
+  steamed
+  poache...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">01 March 2017</a>，
+        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">09 March 2017</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-english-oral-phrase.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/%E8%A8%80%E8%91%89/language-english-food-cuisine.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6002,27 +6216,40 @@ up and down implies completion...
   <article class="nested">
 
     <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-english-oral-make-in-out.html" title="查看《Words: Make-In-Out》">Words: Make-In-Out</a></h2>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-english-body-workout.html" title="查看《Body: Workout》">Body: Workout</a></h2>
     </header>
 
     <section>
       <p>
         
-attached after verb
-out: from inside to outside
+Equipment
 
-  feel out, turn out, figure out
-  read out, speak out, shout out
-  point out, multify out, wipe ...
+  barbell
+  roller
+  plank
+
+
+Phrase
+
+  Exercise Routine
+  warm up
+  bend over
+  bend over backward
+
+
+Phrase
+
+  gym card
+  gym membershi...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">01 March 2017</a>，
+        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">08 March 2017</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-english-oral-make-in-out.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/%E8%A8%80%E8%91%89/language-english-body-workout.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6031,7 +6258,7 @@ out: from inside to outside
   <article class="nested">
 
     <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-english-oral-hit-back.html" title="查看《Words: Hit-back》">Words: Hit-back</a></h2>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-english-body-pregnant.html" title="查看《Body: Pregnant》">Body: Pregnant</a></h2>
     </header>
 
     <section>
@@ -6039,53 +6266,25 @@ out: from inside to outside
         
 ####
 
-  watch your back
+  ultrasound
+  unborn baby
+  tooth brushing
+  blood had drained from her face
 
 
+####
 
+  nothing can ruin this moment, this is very special.
+...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">01 March 2017</a>，
+        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">08 March 2017</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-english-oral-hit-back.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-english-oral-go-backward.html" title="查看《Words: Go》">Words: Go</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-####
-
-  What do you want from me?
-  where do you get this from?
-  Indicate it in red.
-
-
-####
-
-  In German, we give everything a go.
-  Go over some...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">01 March 2017</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-english-oral-go-backward.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/%E8%A8%80%E8%91%89/language-english-body-pregnant.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6130,7 +6329,7 @@ out: from inside to outside
 
     <!-- Current Page -->
     <li class="active">
-      <span class="page_number ">第 86/95 页</span>
+      <span class="page_number ">第 86/97 页</span>
     </li>
 
     <!-- Next Page -->
@@ -6140,7 +6339,7 @@ out: from inside to outside
 
     <!-- Last Page -->
     
-    <li><a href="/page95">&raquo;&raquo;</a></li>
+    <li><a href="/page97">&raquo;&raquo;</a></li>
     
   </ul>
 </section>
@@ -6194,4 +6393,8 @@ $(document).ready(function () {
   
 </body>
 </html>
+
+
+
+
 

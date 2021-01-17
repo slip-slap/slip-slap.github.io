@@ -32,9 +32,33 @@
   <!-- Scripts -->
   <script type="text/javascript" src="/assets/themes/twitter/js/jquery-1.11.1.min.js"></script>
   <!--[if lt IE 9]><script src="/assets/themes/twitter/js/html5shiv.min.js"></script><![endif]-->
-  <script type="text/javascript" async
+  <!--<script type="text/javascript" async
           src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
-  </script>
+  </script> -->
+	<script type="text/javascript">
+	window.MathJax = {
+	  tex: {
+		packages: ['base', 'ams']
+	  },
+	  loader: {
+		load: ['ui/menu', '[tex]/ams']
+	  },
+	  startup: {
+		ready() {
+		  MathJax.startup.defaultReady();
+		  const Macro = MathJax._.input.tex.Symbol.Macro;
+		  const MapHandler = MathJax._.input.tex.MapHandler.MapHandler;
+		  const Array = MathJax._.input.tex.ams.AmsMethods.default.Array;
+		  const env = new Macro('psmallmatrix', Array, [null, '(', ')', 'c', '.333em', '.2em', 'S', 1]);
+		  MapHandler.getMap('AMSmath-environment').add('psmallmatrix', env);
+		}
+	  }
+	};
+	</script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+
 </head> 
 <body>
 
@@ -124,17 +148,17 @@ $(document).ready(function() {
           <a href="/" title="查看最近发表"><i class="icon-fixed-width icon-edit"></i> 最近发表</a>
 <ul>
 
-  <li><a href="/work/work-publisher.html" title="查看《Publisher: Summary》">Publisher: Summary</a></li>
+  <li><a href="/ai/AI-convex-optimization-terminology.html" title="查看《C.O.: Terminology》">C.O.: Terminology</a></li>
 
-  <li><a href="/work/work-publisher-common-sense.html" title="查看《Publisher: Common sense》">Publisher: Common sense</a></li>
+  <li><a href="/ai/AI-convex-optimization-nomenclature.html" title="查看《C.O.: Nomenclature》">C.O.: Nomenclature</a></li>
 
-  <li><a href="/ai/AI-Adaptive-Boosting.html" title="查看《Adaptive Boosting》">Adaptive Boosting</a></li>
+  <li><a href="/ai/AI-convex-optimization-convex-function.html" title="查看《C.O.: Convex Functions》">C.O.: Convex Functions</a></li>
 
-  <li><a href="/work/work-word-neural-network.html" title="查看《Work: Neural Network》">Work: Neural Network</a></li>
+  <li><a href="/ai/AI-convex-optimization-lagrangian-duality.html" title="查看《C.O.: Lagrangian Duality》">C.O.: Lagrangian Duality</a></li>
 
-  <li><a href="/work/work-word-composite-material.html" title="查看《Word: Composite Material》">Word: Composite Material</a></li>
+  <li><a href="/ai/AI-convex-optimization-linear-programming-problem.html" title="查看《C.O.: Linear Programming》">C.O.: Linear Programming</a></li>
 
-  <li><a href="/work/work-word.html" title="查看《Work: Word》">Work: Word</a></li>
+  <li><a href="/ai/AI-convex-optimization-least-square-problem.html" title="查看《C.O.: Least squares》">C.O.: Least squares</a></li>
 
 </ul>
 
@@ -142,9 +166,52 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">946</span>
+<span title="文章总数">965</span>
 <ul>
 
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#August-2020">2020 年 08 月 (8)</a></li>
+    
+  
 
   
   
@@ -2108,6 +2175,59 @@ $(document).ready(function() {
   
   
   
+    <li><a href="/archive.html#December-2018">2018 年 12 月 (10)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
     <li><a href="/archive.html#November-2018">2018 年 11 月 (10)</a></li>
     
   
@@ -3349,7 +3469,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#March-2018">2018 年 03 月 (68)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2018">2018 年 03 月 (69)</a></li>
     
   
 
@@ -4976,7 +5101,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (217)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (228)</a></li>
 
   <li><a href="/categories.html#Algorithm-ref">Algorithm (78)</a></li>
 
@@ -4988,14 +5113,14 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#work-ref">work (20)</a></li>
 
-  <li><a href="/categories.html#AI-ref">AI (42)</a></li>
+  <li><a href="/categories.html#AI-ref">AI (50)</a></li>
 
 </ul>
 
         </section>
         <section>
           <a href="/tags.html" title="查看所有标签"><i class="icon-fixed-width icon-tags"></i> 标签云</a>
-<span title="标签总数">99</span>
+<span title="标签总数">101</span>
 <div id="tag-cloud">
 
 
@@ -5023,7 +5148,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #888;">summary</a>
+    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #777;">summary</a>
   
     
     
@@ -5058,7 +5183,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#script-ref" style="font-size: 17.5pt; color: #000;">script</a>
+    <a href="/tags.html#script-ref" style="font-size: 18pt; color: #000;">script</a>
   
     
     
@@ -5072,7 +5197,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#compile-ref" style="font-size: 14.5pt; color: #444;">compile</a>
+    <a href="/tags.html#compile-ref" style="font-size: 14pt; color: #444;">compile</a>
   
     
     
@@ -5248,6 +5373,13 @@ $(document).ready(function() {
     
     
     <a href="/tags.html#assembly-ref" style="font-size: 9.5pt; color: #888;">assembly</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#jekyll-ref" style="font-size: 9pt; color: #999;">jekyll</a>
   
     
     
@@ -5697,6 +5829,13 @@ $(document).ready(function() {
     
     <a href="/tags.html#supervised-ref" style="font-size: 9pt; color: #999;">supervised</a>
   
+    
+    
+    
+    
+    
+    <a href="/tags.html#C.O.-ref" style="font-size: 9.5pt; color: #888;">C.O.</a>
+  
 
 </div>
 
@@ -5762,6 +5901,224 @@ $(document).ready(function() {
   <article class="nested">
 
     <header>
+      <h2><a href="/math/math-structure-lie-groups.html" title="查看《Lie: Groups》">Lie: Groups</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Definition
+A Lie group is, roughly speaking, a continuous group, that is, a group described
+by several real parameters. In this book, we consider ...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#July-2019" title="查看此月所有文章">11 July 2019</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
+        评论：<a href="/math/math-structure-lie-groups.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/math/math-structure-lie-group-su-2.html" title="查看《Lie: SU(2)》">Lie: SU(2)</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#July-2019" title="查看此月所有文章">11 July 2019</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
+        评论：<a href="/math/math-structure-lie-group-su-2.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/math/math-structure-lie-group-special-unitary.html" title="查看《Lie: Unitary Group》">Lie: Unitary Group</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Introduction
+
+  In mathematics, the special unitary group of degree n, denoted SU(n), is the
+Lie Group of $n \times n$ unitary matrices with deter...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#July-2019" title="查看此月所有文章">11 July 2019</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
+        评论：<a href="/math/math-structure-lie-group-special-unitary.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/math/math-structure-lie-algebra-matrix-exponential.html" title="查看《Lie : Matrix Exponential》">Lie : Matrix Exponential</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Definition
+If X is an $n \times n$ matrix, we define the exponential of $X$, denoted by
+$e^{X}$ or $exp X$, bu the usual power series
+$
+e^{X}=\sum...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#July-2019" title="查看此月所有文章">11 July 2019</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
+        评论：<a href="/math/math-structure-lie-algebra-matrix-exponential.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/math/math-structure-lie-algebra-lie-bracket.html" title="查看《Lie: Lie Bracket》">Lie: Lie Bracket</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Inspiration
+
+  math is a language based our intuition, generalize this intuition or analogue
+  The inspriation of Lie Bracket, as fas as I am conc...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#July-2019" title="查看此月所有文章">11 July 2019</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
+        评论：<a href="/math/math-structure-lie-algebra-lie-bracket.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/math/math-structure-lie-algebra-introduction.html" title="查看《L.A.: Introduction》">L.A.: Introduction</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Inspiration
+
+  Galois(1811-1832) had used group theory to solve algebraic (polynomial)
+equations that were quadratic, cubic, and quartic.
+    
+   ...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#July-2019" title="查看此月所有文章">11 July 2019</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
+        评论：<a href="/math/math-structure-lie-algebra-introduction.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/math/math-structure-exterior-algebra-introduction.html" title="查看《E.A.: Introduction》">E.A.: Introduction</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+History
+The exterior algebra or Grassmann algebra after Hermann Grassmann, is the
+algebraic system whose product is the exterior product.
+
+Definit...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#June-2019" title="查看此月所有文章">30 June 2019</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
+        评论：<a href="/math/math-structure-exterior-algebra-introduction.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/math/math-structure-lattice-theory-order.html" title="查看《L.T.: Order》">L.T.: Order</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Definition
+
+  Ordering: A relation satisfying the following three properties
+    
+      Reflexivity: $a \leq a$
+      Antisymmetry: $a \leq b$ and...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#June-2019" title="查看此月所有文章">02 June 2019</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
+        评论：<a href="/math/math-structure-lattice-theory-order.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
       <h2><a href="/math/math-structure-lattice-theory-modularity.html" title="查看《L.T.: Modularity》">L.T.: Modularity</a></h2>
     </header>
 
@@ -5815,218 +6172,6 @@ $
 
   </article>
   
-  <article class="nested">
-
-    <header>
-      <h2><a href="/math/math-structure-lattice-theory-definition.html" title="查看《L.T.: Lattice》">L.T.: Lattice</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Definition
-
-  Lattice: An order $(L;\leq)$ is a lattice if $sup{a,b}$ and $inf{a,b}$
-exist for all $a,b \in L$
-    
-      In other words, lattice ...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#June-2019" title="查看此月所有文章">02 June 2019</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
-        评论：<a href="/math/math-structure-lattice-theory-definition.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/math/math-structure-lattice-theory-construction.html" title="查看《L.T.: Lattice Construction》">L.T.: Lattice Construction</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#June-2019" title="查看此月所有文章">02 June 2019</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
-        评论：<a href="/math/math-structure-lattice-theory-construction.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/math/math-discrete-combinatorics-stirling-numbers.html" title="查看《CMB: Stirling Numbers》">CMB: Stirling Numbers</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Combinatorial Interpretation
-Number Theoretic Interpretation
-
-Stirling Matrix
-
-  Stirling matrix of first kind: expressing raising powers in terms...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#May-2019" title="查看此月所有文章">22 May 2019</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
-        评论：<a href="/math/math-discrete-combinatorics-stirling-numbers.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/math/math-discrete-combinatorics-inclusion-exclusion.html" title="查看《CMB: Inclusion-exclusion Formula》">CMB: Inclusion-exclusion Formula</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#May-2019" title="查看此月所有文章">22 May 2019</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
-        评论：<a href="/math/math-discrete-combinatorics-inclusion-exclusion.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/math/math-discrete-combinatorics-combination-permutation.html" title="查看《CMB: Combinations and Permutations》">CMB: Combinations and Permutations</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#May-2019" title="查看此月所有文章">22 May 2019</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
-        评论：<a href="/math/math-discrete-combinatorics-combination-permutation.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/math/math-discrete-combinatorics-binomial-coefficient.html" title="查看《CMB: Binomial Coefficients》">CMB: Binomial Coefficients</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#May-2019" title="查看此月所有文章">22 May 2019</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
-        评论：<a href="/math/math-discrete-combinatorics-binomial-coefficient.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/math/math-discrete-graph-theory-vertex-colourings.html" title="查看《G.T.: Vertex Colourings》">G.T.: Vertex Colourings</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Concept
-
-  A k-vertex colouring of G is an assignment of k colours, $1,2,\cdots,k$ to
-the vertices of G;
-    
-      The colouring is proper if no ...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#May-2019" title="查看此月所有文章">18 May 2019</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
-        评论：<a href="/math/math-discrete-graph-theory-vertex-colourings.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/math/math-discrete-graph-theory-trees.html" title="查看《G.T.: Trees》">G.T.: Trees</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Concept
-
-  Acyclic graph: An acyclic graph is one that contains no cycles.
-  Tree: a tree is a connected acyclic graph
-    
-      If G is a tree, ...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#May-2019" title="查看此月所有文章">18 May 2019</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
-        评论：<a href="/math/math-discrete-graph-theory-trees.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
 
   
     
@@ -6066,7 +6211,7 @@ Concept
 
     <!-- Current Page -->
     <li class="active">
-      <span class="page_number ">第 27/95 页</span>
+      <span class="page_number ">第 27/97 页</span>
     </li>
 
     <!-- Next Page -->
@@ -6076,7 +6221,7 @@ Concept
 
     <!-- Last Page -->
     
-    <li><a href="/page95">&raquo;&raquo;</a></li>
+    <li><a href="/page97">&raquo;&raquo;</a></li>
     
   </ul>
 </section>
@@ -6130,4 +6275,8 @@ $(document).ready(function () {
   
 </body>
 </html>
+
+
+
+
 

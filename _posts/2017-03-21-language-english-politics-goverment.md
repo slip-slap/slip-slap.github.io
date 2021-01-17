@@ -13,6 +13,7 @@ tags: ["英語"]
 1. local municipal goverment office
 2. residence card
 3. law enforcement
+4. He served in the treasury department
 
 
 ####

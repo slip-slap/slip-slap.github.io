@@ -32,9 +32,33 @@
   <!-- Scripts -->
   <script type="text/javascript" src="/assets/themes/twitter/js/jquery-1.11.1.min.js"></script>
   <!--[if lt IE 9]><script src="/assets/themes/twitter/js/html5shiv.min.js"></script><![endif]-->
-  <script type="text/javascript" async
+  <!--<script type="text/javascript" async
           src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
-  </script>
+  </script> -->
+	<script type="text/javascript">
+	window.MathJax = {
+	  tex: {
+		packages: ['base', 'ams']
+	  },
+	  loader: {
+		load: ['ui/menu', '[tex]/ams']
+	  },
+	  startup: {
+		ready() {
+		  MathJax.startup.defaultReady();
+		  const Macro = MathJax._.input.tex.Symbol.Macro;
+		  const MapHandler = MathJax._.input.tex.MapHandler.MapHandler;
+		  const Array = MathJax._.input.tex.ams.AmsMethods.default.Array;
+		  const env = new Macro('psmallmatrix', Array, [null, '(', ')', 'c', '.333em', '.2em', 'S', 1]);
+		  MapHandler.getMap('AMSmath-environment').add('psmallmatrix', env);
+		}
+	  }
+	};
+	</script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+
 </head> 
 <body>
 
@@ -124,17 +148,17 @@ $(document).ready(function() {
           <a href="/" title="查看最近发表"><i class="icon-fixed-width icon-edit"></i> 最近发表</a>
 <ul>
 
-  <li><a href="/work/work-publisher.html" title="查看《Publisher: Summary》">Publisher: Summary</a></li>
+  <li><a href="/ai/AI-convex-optimization-terminology.html" title="查看《C.O.: Terminology》">C.O.: Terminology</a></li>
 
-  <li><a href="/work/work-publisher-common-sense.html" title="查看《Publisher: Common sense》">Publisher: Common sense</a></li>
+  <li><a href="/ai/AI-convex-optimization-nomenclature.html" title="查看《C.O.: Nomenclature》">C.O.: Nomenclature</a></li>
 
-  <li><a href="/ai/AI-Adaptive-Boosting.html" title="查看《Adaptive Boosting》">Adaptive Boosting</a></li>
+  <li><a href="/ai/AI-convex-optimization-convex-function.html" title="查看《C.O.: Convex Functions》">C.O.: Convex Functions</a></li>
 
-  <li><a href="/work/work-word-neural-network.html" title="查看《Work: Neural Network》">Work: Neural Network</a></li>
+  <li><a href="/ai/AI-convex-optimization-lagrangian-duality.html" title="查看《C.O.: Lagrangian Duality》">C.O.: Lagrangian Duality</a></li>
 
-  <li><a href="/work/work-word-composite-material.html" title="查看《Word: Composite Material》">Word: Composite Material</a></li>
+  <li><a href="/ai/AI-convex-optimization-linear-programming-problem.html" title="查看《C.O.: Linear Programming》">C.O.: Linear Programming</a></li>
 
-  <li><a href="/work/work-word.html" title="查看《Work: Word》">Work: Word</a></li>
+  <li><a href="/ai/AI-convex-optimization-least-square-problem.html" title="查看《C.O.: Least squares》">C.O.: Least squares</a></li>
 
 </ul>
 
@@ -142,9 +166,52 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">946</span>
+<span title="文章总数">965</span>
 <ul>
 
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#August-2020">2020 年 08 月 (8)</a></li>
+    
+  
 
   
   
@@ -2108,6 +2175,59 @@ $(document).ready(function() {
   
   
   
+    <li><a href="/archive.html#December-2018">2018 年 12 月 (10)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
     <li><a href="/archive.html#November-2018">2018 年 11 月 (10)</a></li>
     
   
@@ -3349,7 +3469,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#March-2018">2018 年 03 月 (68)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2018">2018 年 03 月 (69)</a></li>
     
   
 
@@ -4976,7 +5101,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (217)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (228)</a></li>
 
   <li><a href="/categories.html#Algorithm-ref">Algorithm (78)</a></li>
 
@@ -4988,14 +5113,14 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#work-ref">work (20)</a></li>
 
-  <li><a href="/categories.html#AI-ref">AI (42)</a></li>
+  <li><a href="/categories.html#AI-ref">AI (50)</a></li>
 
 </ul>
 
         </section>
         <section>
           <a href="/tags.html" title="查看所有标签"><i class="icon-fixed-width icon-tags"></i> 标签云</a>
-<span title="标签总数">99</span>
+<span title="标签总数">101</span>
 <div id="tag-cloud">
 
 
@@ -5023,7 +5148,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #888;">summary</a>
+    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #777;">summary</a>
   
     
     
@@ -5058,7 +5183,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#script-ref" style="font-size: 17.5pt; color: #000;">script</a>
+    <a href="/tags.html#script-ref" style="font-size: 18pt; color: #000;">script</a>
   
     
     
@@ -5072,7 +5197,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#compile-ref" style="font-size: 14.5pt; color: #444;">compile</a>
+    <a href="/tags.html#compile-ref" style="font-size: 14pt; color: #444;">compile</a>
   
     
     
@@ -5248,6 +5373,13 @@ $(document).ready(function() {
     
     
     <a href="/tags.html#assembly-ref" style="font-size: 9.5pt; color: #888;">assembly</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#jekyll-ref" style="font-size: 9pt; color: #999;">jekyll</a>
   
     
     
@@ -5697,6 +5829,13 @@ $(document).ready(function() {
     
     <a href="/tags.html#supervised-ref" style="font-size: 9pt; color: #999;">supervised</a>
   
+    
+    
+    
+    
+    
+    <a href="/tags.html#C.O.-ref" style="font-size: 9.5pt; color: #888;">C.O.</a>
+  
 
 </div>
 
@@ -5758,6 +5897,226 @@ $(document).ready(function() {
 
 <!-- Recent Posts  -->
 <section>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/math/math-discrete-graph-theory-matchings.html" title="查看《G.T.: Matchings》">G.T.: Matchings</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Concept
+
+  matching: A subset M of E is called a matching in G if its elements are links
+and no two are adjacent in G
+    
+      the two ends of a...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#May-2019" title="查看此月所有文章">18 May 2019</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
+        评论：<a href="/math/math-discrete-graph-theory-matchings.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/math/math-discrete-graph-theory-independent-sets-and-cliques.html" title="查看《G.T.: Independent Sets and Cliques》">G.T.: Independent Sets and Cliques</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Concept
+
+  Independent set: A subset S of V is called an independent set of G if no two
+vertices of S are adjacent in G.
+  Clique: A clique of a s...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#May-2019" title="查看此月所有文章">18 May 2019</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
+        评论：<a href="/math/math-discrete-graph-theory-independent-sets-and-cliques.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/math/math-discrete-graph-theory-graph-and-subgraph.html" title="查看《G.T.: Graph and Subgraphs》">G.T.: Graph and Subgraphs</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Graph, Loop, Link
+
+  A graph G is an ordered triple $(V(G),E(G),\psi_G)$ consisting of a nonempty set
+V(G) of vertices, a set E(G), disjoint from ...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#May-2019" title="查看此月所有文章">18 May 2019</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
+        评论：<a href="/math/math-discrete-graph-theory-graph-and-subgraph.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/math/math-discrete-graph-theory-euler-tours-and-hamilton-cycles.html" title="查看《G.T.: Euler Tours and Hamilton Cycles》">G.T.: Euler Tours and Hamilton Cycles</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Definition
+
+  Euler Trail: A trail that traverses every edge of G is called an Euler trail
+of G.
+  Tour: A tour of G is a closed walk that travers...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#May-2019" title="查看此月所有文章">18 May 2019</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
+        评论：<a href="/math/math-discrete-graph-theory-euler-tours-and-hamilton-cycles.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/math/math-discrete-graph-theory-edge-colourings.html" title="查看《G.T.: Edge Colourings》">G.T.: Edge Colourings</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Concept
+
+  K-edge Colouring: A k-edge colouring $\mathscr{C}$ of a loopless graph G is
+an assignment of k colours,$1,2,\cdots,k$  to the edges of ...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#May-2019" title="查看此月所有文章">18 May 2019</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
+        评论：<a href="/math/math-discrete-graph-theory-edge-colourings.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/math/math-discrete-graph-theory-directed-networks.html" title="查看《G.T.: Networks》">G.T.: Networks</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Concept
+
+  A network N is a digraph D with two distinguished subsets of vertices, X and
+Y, and a non-negative integer-valued function c defined on...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#May-2019" title="查看此月所有文章">18 May 2019</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
+        评论：<a href="/math/math-discrete-graph-theory-directed-networks.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/math/math-discrete-graph-theory-directed-graph.html" title="查看《G.T.: Directed Graphs》">G.T.: Directed Graphs</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Concept
+
+  Directed Graph D: a directed graph D is an ordered triple $(V(D),A(D),\psi_D)$ consisting of 
+a nonempty set $V(D)$ of vertices, a set ...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#May-2019" title="查看此月所有文章">18 May 2019</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
+        评论：<a href="/math/math-discrete-graph-theory-directed-graph.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/math/math-discrete-graph-theory-connectivity.html" title="查看《G.T.: Connectivity and Application》">G.T.: Connectivity and Application</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Concept
+
+  A minimal connected graph: deleting any edge disconnects it
+  Cut Vertex: graph can be disconnected by the deletiong of one vertex, its...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#May-2019" title="查看此月所有文章">18 May 2019</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
+        评论：<a href="/math/math-discrete-graph-theory-connectivity.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
   
   <article class="nested">
 
@@ -5825,226 +6184,6 @@ Min-sum Algorithm or Viterbi Algorithm
 
   </article>
   
-  <article class="nested">
-
-    <header>
-      <h2><a href="/math/math-discrete-graph-theory-algorithm-deepth-first-search.html" title="查看《G.T.A.: Deepth First Search》">G.T.A.: Deepth First Search</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-DFS
-DFS stands for Depth First Search is a edge based technique. It used the Stack
-data structure, performs two stages:
-
-  first visited vertices ...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#May-2019" title="查看此月所有文章">18 May 2019</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
-        评论：<a href="/math/math-discrete-graph-theory-algorithm-deepth-first-search.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/math/math-discrete-graph-theory-algorithm-breadth-first-search.html" title="查看《G.T.A.: Breadth First Search》">G.T.A.: Breadth First Search</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-BFS
-BFS stands for Breadth First Search is a vertex based techinique for finding
-   a shortest path in graph.
-
-  It uses a Queue data structure wh...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#May-2019" title="查看此月所有文章">18 May 2019</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
-        评论：<a href="/math/math-discrete-graph-theory-algorithm-breadth-first-search.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/math/math-apply-stochastic-process-delayed-renewal-process.html" title="查看《S.P.: Delayed Renewal Process》">S.P.: Delayed Renewal Process</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-C
-
-  Theorem: Assume that ${Z_n; n\geq 1}$ converges to $\alpha$ WP1 and assume
-that f(x) is areal valued function of a real variable that is cont...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2019" title="查看此月所有文章">30 March 2019</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
-        评论：<a href="/math/math-apply-stochastic-process-delayed-renewal-process.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/math/math-apply-stochastic-process-little-theorem.html" title="查看《S.P.: Little's Theorem》">S.P.: Little's Theorem</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Motivation
-what is N(t) at some finite value of t, N(t) is a random variable at some finite
-value of t. So you can’t evaluate it. But at least you...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2019" title="查看此月所有文章">29 March 2019</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
-        评论：<a href="/math/math-apply-stochastic-process-little-theorem.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/math/math-apply-probability-and-statistics-variational-bayes-em-algorithm.html" title="查看《P.A.S.: Variational Bayes Expectation Maximization》">P.A.S.: Variational Bayes Expectation Maximization</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-a simple linear regression
-Let’s look at a basic linear regression. we want to map input into real numbers.
-for example,
-
-  the input variable is ...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2019" title="查看此月所有文章">29 March 2019</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
-        评论：<a href="/math/math-apply-probability-and-statistics-variational-bayes-em-algorithm.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/math/math-apply-probability-and-statistics-toolbox-variational-method.html" title="查看《P.A.S.T.B.: Variational Inference》">P.A.S.T.B.: Variational Inference</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-1. Motivation
-$
-P(\mathbf{x})=\frac{1}{Z} P^{*}(\mathbf{x})=\frac{1}{Z} e^{-E(\mathbf{x})}
-$
-
-  $E(x)$ is simple, but not simple enough
-  solution...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2019" title="查看此月所有文章">29 March 2019</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
-        评论：<a href="/math/math-apply-probability-and-statistics-toolbox-variational-method.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/math/math-apply-probability-and-statistics-toolbox-monte-carlo.html" title="查看《P.A.S.T.B.: Monte Carlo》">P.A.S.T.B.: Monte Carlo</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-what is the crap Monte Carlo(MC) ?
-Monte Carlo sampling the area of a curve is usually done by throwing darts at the graph of
-your function and de...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2019" title="查看此月所有文章">29 March 2019</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
-        评论：<a href="/math/math-apply-probability-and-statistics-toolbox-monte-carlo.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/math/math-apply-probability-and-statistics-simulating-probability-distribution.html" title="查看《P.A.S.M.: Simulating Probability Distributions》">P.A.S.M.: Simulating Probability Distributions</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Solution
-
-  Let X be a random variable, with cululative distribution function F. Then the
-inverse cdf(or quantile function) of X is the function $...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2019" title="查看此月所有文章">29 March 2019</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
-        评论：<a href="/math/math-apply-probability-and-statistics-simulating-probability-distribution.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
 
   
     
@@ -6084,7 +6223,7 @@ inverse cdf(or quantile function) of X is the function $...
 
     <!-- Current Page -->
     <li class="active">
-      <span class="page_number ">第 29/95 页</span>
+      <span class="page_number ">第 29/97 页</span>
     </li>
 
     <!-- Next Page -->
@@ -6094,7 +6233,7 @@ inverse cdf(or quantile function) of X is the function $...
 
     <!-- Last Page -->
     
-    <li><a href="/page95">&raquo;&raquo;</a></li>
+    <li><a href="/page97">&raquo;&raquo;</a></li>
     
   </ul>
 </section>
@@ -6148,4 +6287,8 @@ $(document).ready(function () {
   
 </body>
 </html>
+
+
+
+
 

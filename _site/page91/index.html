@@ -32,9 +32,33 @@
   <!-- Scripts -->
   <script type="text/javascript" src="/assets/themes/twitter/js/jquery-1.11.1.min.js"></script>
   <!--[if lt IE 9]><script src="/assets/themes/twitter/js/html5shiv.min.js"></script><![endif]-->
-  <script type="text/javascript" async
+  <!--<script type="text/javascript" async
           src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
-  </script>
+  </script> -->
+	<script type="text/javascript">
+	window.MathJax = {
+	  tex: {
+		packages: ['base', 'ams']
+	  },
+	  loader: {
+		load: ['ui/menu', '[tex]/ams']
+	  },
+	  startup: {
+		ready() {
+		  MathJax.startup.defaultReady();
+		  const Macro = MathJax._.input.tex.Symbol.Macro;
+		  const MapHandler = MathJax._.input.tex.MapHandler.MapHandler;
+		  const Array = MathJax._.input.tex.ams.AmsMethods.default.Array;
+		  const env = new Macro('psmallmatrix', Array, [null, '(', ')', 'c', '.333em', '.2em', 'S', 1]);
+		  MapHandler.getMap('AMSmath-environment').add('psmallmatrix', env);
+		}
+	  }
+	};
+	</script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+
 </head> 
 <body>
 
@@ -124,17 +148,17 @@ $(document).ready(function() {
           <a href="/" title="查看最近发表"><i class="icon-fixed-width icon-edit"></i> 最近发表</a>
 <ul>
 
-  <li><a href="/work/work-publisher.html" title="查看《Publisher: Summary》">Publisher: Summary</a></li>
+  <li><a href="/ai/AI-convex-optimization-terminology.html" title="查看《C.O.: Terminology》">C.O.: Terminology</a></li>
 
-  <li><a href="/work/work-publisher-common-sense.html" title="查看《Publisher: Common sense》">Publisher: Common sense</a></li>
+  <li><a href="/ai/AI-convex-optimization-nomenclature.html" title="查看《C.O.: Nomenclature》">C.O.: Nomenclature</a></li>
 
-  <li><a href="/ai/AI-Adaptive-Boosting.html" title="查看《Adaptive Boosting》">Adaptive Boosting</a></li>
+  <li><a href="/ai/AI-convex-optimization-convex-function.html" title="查看《C.O.: Convex Functions》">C.O.: Convex Functions</a></li>
 
-  <li><a href="/work/work-word-neural-network.html" title="查看《Work: Neural Network》">Work: Neural Network</a></li>
+  <li><a href="/ai/AI-convex-optimization-lagrangian-duality.html" title="查看《C.O.: Lagrangian Duality》">C.O.: Lagrangian Duality</a></li>
 
-  <li><a href="/work/work-word-composite-material.html" title="查看《Word: Composite Material》">Word: Composite Material</a></li>
+  <li><a href="/ai/AI-convex-optimization-linear-programming-problem.html" title="查看《C.O.: Linear Programming》">C.O.: Linear Programming</a></li>
 
-  <li><a href="/work/work-word.html" title="查看《Work: Word》">Work: Word</a></li>
+  <li><a href="/ai/AI-convex-optimization-least-square-problem.html" title="查看《C.O.: Least squares》">C.O.: Least squares</a></li>
 
 </ul>
 
@@ -142,9 +166,52 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">946</span>
+<span title="文章总数">965</span>
 <ul>
 
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#August-2020">2020 年 08 月 (8)</a></li>
+    
+  
 
   
   
@@ -2108,6 +2175,59 @@ $(document).ready(function() {
   
   
   
+    <li><a href="/archive.html#December-2018">2018 年 12 月 (10)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
     <li><a href="/archive.html#November-2018">2018 年 11 月 (10)</a></li>
     
   
@@ -3349,7 +3469,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#March-2018">2018 年 03 月 (68)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2018">2018 年 03 月 (69)</a></li>
     
   
 
@@ -4976,7 +5101,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (217)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (228)</a></li>
 
   <li><a href="/categories.html#Algorithm-ref">Algorithm (78)</a></li>
 
@@ -4988,14 +5113,14 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#work-ref">work (20)</a></li>
 
-  <li><a href="/categories.html#AI-ref">AI (42)</a></li>
+  <li><a href="/categories.html#AI-ref">AI (50)</a></li>
 
 </ul>
 
         </section>
         <section>
           <a href="/tags.html" title="查看所有标签"><i class="icon-fixed-width icon-tags"></i> 标签云</a>
-<span title="标签总数">99</span>
+<span title="标签总数">101</span>
 <div id="tag-cloud">
 
 
@@ -5023,7 +5148,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #888;">summary</a>
+    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #777;">summary</a>
   
     
     
@@ -5058,7 +5183,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#script-ref" style="font-size: 17.5pt; color: #000;">script</a>
+    <a href="/tags.html#script-ref" style="font-size: 18pt; color: #000;">script</a>
   
     
     
@@ -5072,7 +5197,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#compile-ref" style="font-size: 14.5pt; color: #444;">compile</a>
+    <a href="/tags.html#compile-ref" style="font-size: 14pt; color: #444;">compile</a>
   
     
     
@@ -5248,6 +5373,13 @@ $(document).ready(function() {
     
     
     <a href="/tags.html#assembly-ref" style="font-size: 9.5pt; color: #888;">assembly</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#jekyll-ref" style="font-size: 9pt; color: #999;">jekyll</a>
   
     
     
@@ -5697,6 +5829,13 @@ $(document).ready(function() {
     
     <a href="/tags.html#supervised-ref" style="font-size: 9pt; color: #999;">supervised</a>
   
+    
+    
+    
+    
+    
+    <a href="/tags.html#C.O.-ref" style="font-size: 9.5pt; color: #888;">C.O.</a>
+  
 
 </div>
 
@@ -5762,7 +5901,7 @@ $(document).ready(function() {
   <article class="nested">
 
     <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-japanese-job-delivery.html" title="查看《仕事: 配達》">仕事: 配達</a></h2>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-japanese-life-girlfriend.html" title="查看《Girlfriend》">Girlfriend</a></h2>
     </header>
 
     <section>
@@ -5770,29 +5909,32 @@ $(document).ready(function() {
         
 ####
 
-  配達
-  配達員
-  配達日
-  速達
-  届ける(to send)
-  窓口
-  履歴書(りれきしよ)
+  話しかける:
+  イチャイチャ
+  タメ口: casual talk
+  合コン: joint party
+  好きなタイプ
 
 
 ####
 
-  仕出し(food delivery service)
-  仕出し弁当(box lunches for delivery)
-  宅配便(たくはいびん)　...
+  別れてください: let’s break up
+  カッコつけ: to try to look good
+  ダサい
+
+
+1
+
+ ...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#February-2017" title="查看此月所有文章">11 February 2017</a>，
+        发表日期：<a href="/archive.html#February-2017" title="查看此月所有文章">17 February 2017</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-japanese-job-delivery.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/%E8%A8%80%E8%91%89/language-japanese-life-girlfriend.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5801,38 +5943,27 @@ $(document).ready(function() {
   <article class="nested">
 
     <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-japanese-job-company.html" title="查看《仕事: 会社》">仕事: 会社</a></h2>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-japanese-life-garbage.html" title="查看《ライフ: ごみ》">ライフ: ごみ</a></h2>
     </header>
 
     <section>
       <p>
         
-####
-
-  名前: name
-  名札(なふだ): name card
-  
-    役員(やくいん): officer
-  
-  社員割引制度
-  就職活動
-
-
 A
 
-  就任(しゅうにん):
-  8時間勤務: an 8 hour day.
-  休みを取る
-  休暇(きゅうか)を取る:...
+  燃えるゴミ・燃えないゴミ: burnable garbage/unburnable garbage
+  生ゴミ: kitchen garbage
+  粗大(そだい)ゴミ: large-size garbage
+  指定のゴミ袋: garbage bag specified by t...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#February-2017" title="查看此月所有文章">11 February 2017</a>，
+        发表日期：<a href="/archive.html#February-2017" title="查看此月所有文章">17 February 2017</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-japanese-job-company.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/%E8%A8%80%E8%91%89/language-japanese-life-garbage.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5841,33 +5972,194 @@ A
   <article class="nested">
 
     <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-japanese-job-category.html" title="查看《仕事: 種類》">仕事: 種類</a></h2>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-japanese-life-friend.html" title="查看《: 友人》">: 友人</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+####
+
+  腐女子(ふじょし): woman who like comics depicting male homosexual love
+  連絡先: contact address
+  妄想(もうそう):delusion
+
+
+####
+
+  友達を作る
+
+
+B
+
+  友人を家に招(ま...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#February-2017" title="查看此月所有文章">17 February 2017</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
+        评论：<a href="/%E8%A8%80%E8%91%89/language-japanese-life-friend.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-japanese-entertainment-varity-show.html" title="查看《言葉: Variety Show》">言葉: Variety Show</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+####
+
+  娯楽(ごらく): entertainment
+  楽器(がっき)
+  音楽(おんがく)
+
+
+####
+
+  自慢できること
+  ハマっていることは？
+  東大生はモテる？
+  今悩(なやむ)んでることは
+  
+    女子の子が寄って来ても、俺がかっこいいから、東大生から
+ ...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#February-2017" title="查看此月所有文章">17 February 2017</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
+        评论：<a href="/%E8%A8%80%E8%91%89/language-japanese-entertainment-varity-show.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-japanese-entertainment-program.html" title="查看《娯楽: 番組》">娯楽: 番組</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+映画
+
+  1リットルの涙: 澤尻恵梨香(さわじりえりか)
+  女王の教室(じょうおう): 天海祐希(あまみゆき)
+  君の名は(きみのなは)
+  千と千尋の神隠し
+
+
+テレビ番組
+
+
+  リーガルハイ
+  結婚できない人
+  東京ラブストーリー
+  僕のヤバい妻
+  逃げるは恥ずかだでも役...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#February-2017" title="查看此月所有文章">17 February 2017</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
+        评论：<a href="/%E8%A8%80%E8%91%89/language-japanese-entertainment-program.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-japanese-entertainment-music.html" title="查看《娯楽: ドラマ》">娯楽: ドラマ</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+####
+
+  広告
+
+
+C
+
+  アイドル歌手: idol
+  現場なんか行くことないだろ
+  音楽配信: online music distribution
+  配信証明(はいしんしょうめい): proof of delivery
+
+
+####
+
+  上から目線の同情(どうじょう)
+  ...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#February-2017" title="查看此月所有文章">17 February 2017</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
+        评论：<a href="/%E8%A8%80%E8%91%89/language-japanese-entertainment-music.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-japanese-entertainment-movies.html" title="查看《娯楽: 映画》">娯楽: 映画</a></h2>
     </header>
 
     <section>
       <p>
         
 
-  ビジネスパートナー: bussiness partner
-  従業員(じゅうぎょういん): employee
-  同僚(どうりょう): collage
-  宝石商(ほうせきしょう): jeweler
+  監督(かんとく): director, manager
 
 
-工
+####
 
-  配管工(はいかんこう): plumber
-  修理工(しゅうりこう):
+  北野武(きたのたけし)
+  渡辺淳一(わたなべじゅんいち)
+  黒木瞳(くろきひとみ)
+  紫式部(むらさきしきぶ)
+  芥川龍之介(あくたがわりゅうのすけ)
+
+
+Movie
+
+  菊(きく)次郎(じろ)の夏
 ...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#February-2017" title="查看此月所有文章">11 February 2017</a>，
+        发表日期：<a href="/archive.html#February-2017" title="查看此月所有文章">17 February 2017</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-japanese-job-category.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/%E8%A8%80%E8%91%89/language-japanese-entertainment-movies.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5876,7 +6168,7 @@ A
   <article class="nested">
 
     <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-japanese-house-relative.html" title="查看《ハウス: 家族》">ハウス: 家族</a></h2>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-japanese-entertainment-animation.html" title="查看《娯楽: 》">娯楽: </a></h2>
     </header>
 
     <section>
@@ -5884,12 +6176,7 @@ A
         
 ####
 
-  お兄さん
-
-
-####
-
-  部屋の日当たりが悪いです
+  Violet Evergarden
 
 
       </p>
@@ -5897,10 +6184,10 @@ A
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#February-2017" title="查看此月所有文章">10 February 2017</a>，
+        发表日期：<a href="/archive.html#February-2017" title="查看此月所有文章">17 February 2017</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-japanese-house-relative.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/%E8%A8%80%E8%91%89/language-japanese-entertainment-animation.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5909,7 +6196,7 @@ A
   <article class="nested">
 
     <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-japanese-house-appliances.html" title="查看《House: 電気》">House: 電気</a></h2>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-japanese-earth-weather.html" title="查看《地球: 天気》">地球: 天気</a></h2>
     </header>
 
     <section>
@@ -5917,32 +6204,34 @@ A
         
 ####
 
-  音量(おんりょう):
-
-
-Action
-
-  一時停止(いちじていし): pause
-  テレビを消す
-  ラジオをつける
+  雨
+  梅雨(つゆ): rainy season
+  大雨(おおあめ): heavy rain
+  蒸し暑い
+  豪雨(ごうう)
+  猛暑(もうしょ)
 
 
 ####
 
-  プレーヤー: player
-  ラジオ: radio
-  ビデオテープ: video tape
-  ケーブルテレビ:
-  ズームレン...
+  降る
+  土砂降り(どしゃぶり): heavy rain
+
+
+####
+
+  雨降った場合.
+
+
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#February-2017" title="查看此月所有文章">10 February 2017</a>，
+        发表日期：<a href="/archive.html#February-2017" title="查看此月所有文章">17 February 2017</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-japanese-house-appliances.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/%E8%A8%80%E8%91%89/language-japanese-earth-weather.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5951,7 +6240,7 @@ Action
   <article class="nested">
 
     <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-japanese-food-traditional.html" title="查看《食べ物: 和食》">食べ物: 和食</a></h2>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-japanese-earth-environment.html" title="查看《地球: 環境》">地球: 環境</a></h2>
     </header>
 
     <section>
@@ -5959,89 +6248,9 @@ Action
         
 ####
 
-  散らし寿司: 什锦寿司
-  おにぎり(お握り): rice ball(often triangular, sometimes with a filling and
-wrapped in nori)
-  味噌: fermented condiment usu. made fro...
-      </p>
-    </section>
+  温室効果ガス
+  植林活動
 
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#February-2017" title="查看此月所有文章">09 February 2017</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-japanese-food-traditional.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-japanese-food-snack.html" title="查看《食べ物: おやつ》">食べ物: おやつ</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-C
-
-  もち米(ごめ): glutinous rice
-
-
-A
-
-  春巻き(はるまき)
-  羊の串(くし)焼き
-  握り寿司(にぎりずし)
-  巻き寿司
-
-
-焼き物
-
-  焼きソーセージ
-  焼き鳥(やきとり)
-  焼き卵
-
-
-B
-
-  杏(あんず)
-
-
-####
-
-  麻婆豆腐(まーぼ...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#February-2017" title="查看此月所有文章">09 February 2017</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-japanese-food-snack.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-japanese-food-seasoning.html" title="查看《食べ物: 調味料》">食べ物: 調味料</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-
-  醤油
-  明太:
-  胡椒(こしょう): black pepper
-  唐辛子(とうがらし): chili pepper
 
 
       </p>
@@ -6049,92 +6258,10 @@ B
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#February-2017" title="查看此月所有文章">09 February 2017</a>，
+        发表日期：<a href="/archive.html#February-2017" title="查看此月所有文章">17 February 2017</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-japanese-food-seasoning.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-japanese-food-restaurant.html" title="查看《食べ物: レストラン》">食べ物: レストラン</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-####
-
-  メニュー
-  注文
-  専門店
-  期間限定(きかんげんてい): time limited
-  営業時間
-  半額セール: a half price sale
-  特売品(とくばいひん): special
-  缶詰
-
-
-####
-
-  レジ袋
-  ベビー用品
-  バーコード読...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#February-2017" title="查看此月所有文章">09 February 2017</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-japanese-food-restaurant.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-japanese-food-ingredient.html" title="查看《食べ物: 材料》">食べ物: 材料</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-肉
-
-  さんま(秋刀魚): fish
-  まぐろ(鮪): 🍣 tuna
-  サーモン: salmon
-  うなぎ(鰻): eel
-
-
-野菜
-
-  竹の子: bamboo
-  もやし: bean sprouts
-  大根: carrot
-
-
-####
-
-  籠(かご): basket
-  ベ...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#February-2017" title="查看此月所有文章">09 February 2017</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-japanese-food-ingredient.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/%E8%A8%80%E8%91%89/language-japanese-earth-environment.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6179,7 +6306,7 @@ B
 
     <!-- Current Page -->
     <li class="active">
-      <span class="page_number ">第 91/95 页</span>
+      <span class="page_number ">第 91/97 页</span>
     </li>
 
     <!-- Next Page -->
@@ -6189,7 +6316,7 @@ B
 
     <!-- Last Page -->
     
-    <li><a href="/page95">&raquo;&raquo;</a></li>
+    <li><a href="/page97">&raquo;&raquo;</a></li>
     
   </ul>
 </section>
@@ -6243,4 +6370,8 @@ $(document).ready(function () {
   
 </body>
 </html>
+
+
+
+
 

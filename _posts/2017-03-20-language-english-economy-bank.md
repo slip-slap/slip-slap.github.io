@@ -29,6 +29,7 @@ tags: ["英語"]
 ####
 1. credit
 2. credit my bank acount 5000 dollars
+3. cost my savings
 
 #### Phrase
 1. turn on automatic renewal

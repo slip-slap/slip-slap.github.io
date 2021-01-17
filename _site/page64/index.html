@@ -32,9 +32,33 @@
   <!-- Scripts -->
   <script type="text/javascript" src="/assets/themes/twitter/js/jquery-1.11.1.min.js"></script>
   <!--[if lt IE 9]><script src="/assets/themes/twitter/js/html5shiv.min.js"></script><![endif]-->
-  <script type="text/javascript" async
+  <!--<script type="text/javascript" async
           src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
-  </script>
+  </script> -->
+	<script type="text/javascript">
+	window.MathJax = {
+	  tex: {
+		packages: ['base', 'ams']
+	  },
+	  loader: {
+		load: ['ui/menu', '[tex]/ams']
+	  },
+	  startup: {
+		ready() {
+		  MathJax.startup.defaultReady();
+		  const Macro = MathJax._.input.tex.Symbol.Macro;
+		  const MapHandler = MathJax._.input.tex.MapHandler.MapHandler;
+		  const Array = MathJax._.input.tex.ams.AmsMethods.default.Array;
+		  const env = new Macro('psmallmatrix', Array, [null, '(', ')', 'c', '.333em', '.2em', 'S', 1]);
+		  MapHandler.getMap('AMSmath-environment').add('psmallmatrix', env);
+		}
+	  }
+	};
+	</script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+
 </head> 
 <body>
 
@@ -124,17 +148,17 @@ $(document).ready(function() {
           <a href="/" title="查看最近发表"><i class="icon-fixed-width icon-edit"></i> 最近发表</a>
 <ul>
 
-  <li><a href="/work/work-publisher.html" title="查看《Publisher: Summary》">Publisher: Summary</a></li>
+  <li><a href="/ai/AI-convex-optimization-terminology.html" title="查看《C.O.: Terminology》">C.O.: Terminology</a></li>
 
-  <li><a href="/work/work-publisher-common-sense.html" title="查看《Publisher: Common sense》">Publisher: Common sense</a></li>
+  <li><a href="/ai/AI-convex-optimization-nomenclature.html" title="查看《C.O.: Nomenclature》">C.O.: Nomenclature</a></li>
 
-  <li><a href="/ai/AI-Adaptive-Boosting.html" title="查看《Adaptive Boosting》">Adaptive Boosting</a></li>
+  <li><a href="/ai/AI-convex-optimization-convex-function.html" title="查看《C.O.: Convex Functions》">C.O.: Convex Functions</a></li>
 
-  <li><a href="/work/work-word-neural-network.html" title="查看《Work: Neural Network》">Work: Neural Network</a></li>
+  <li><a href="/ai/AI-convex-optimization-lagrangian-duality.html" title="查看《C.O.: Lagrangian Duality》">C.O.: Lagrangian Duality</a></li>
 
-  <li><a href="/work/work-word-composite-material.html" title="查看《Word: Composite Material》">Word: Composite Material</a></li>
+  <li><a href="/ai/AI-convex-optimization-linear-programming-problem.html" title="查看《C.O.: Linear Programming》">C.O.: Linear Programming</a></li>
 
-  <li><a href="/work/work-word.html" title="查看《Work: Word》">Work: Word</a></li>
+  <li><a href="/ai/AI-convex-optimization-least-square-problem.html" title="查看《C.O.: Least squares》">C.O.: Least squares</a></li>
 
 </ul>
 
@@ -142,9 +166,52 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">946</span>
+<span title="文章总数">965</span>
 <ul>
 
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#August-2020">2020 年 08 月 (8)</a></li>
+    
+  
 
   
   
@@ -2108,6 +2175,59 @@ $(document).ready(function() {
   
   
   
+    <li><a href="/archive.html#December-2018">2018 年 12 月 (10)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
     <li><a href="/archive.html#November-2018">2018 年 11 月 (10)</a></li>
     
   
@@ -3349,7 +3469,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#March-2018">2018 年 03 月 (68)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2018">2018 年 03 月 (69)</a></li>
     
   
 
@@ -4976,7 +5101,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (217)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (228)</a></li>
 
   <li><a href="/categories.html#Algorithm-ref">Algorithm (78)</a></li>
 
@@ -4988,14 +5113,14 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#work-ref">work (20)</a></li>
 
-  <li><a href="/categories.html#AI-ref">AI (42)</a></li>
+  <li><a href="/categories.html#AI-ref">AI (50)</a></li>
 
 </ul>
 
         </section>
         <section>
           <a href="/tags.html" title="查看所有标签"><i class="icon-fixed-width icon-tags"></i> 标签云</a>
-<span title="标签总数">99</span>
+<span title="标签总数">101</span>
 <div id="tag-cloud">
 
 
@@ -5023,7 +5148,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #888;">summary</a>
+    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #777;">summary</a>
   
     
     
@@ -5058,7 +5183,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#script-ref" style="font-size: 17.5pt; color: #000;">script</a>
+    <a href="/tags.html#script-ref" style="font-size: 18pt; color: #000;">script</a>
   
     
     
@@ -5072,7 +5197,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#compile-ref" style="font-size: 14.5pt; color: #444;">compile</a>
+    <a href="/tags.html#compile-ref" style="font-size: 14pt; color: #444;">compile</a>
   
     
     
@@ -5248,6 +5373,13 @@ $(document).ready(function() {
     
     
     <a href="/tags.html#assembly-ref" style="font-size: 9.5pt; color: #888;">assembly</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#jekyll-ref" style="font-size: 9pt; color: #999;">jekyll</a>
   
     
     
@@ -5697,6 +5829,13 @@ $(document).ready(function() {
     
     <a href="/tags.html#supervised-ref" style="font-size: 9pt; color: #999;">supervised</a>
   
+    
+    
+    
+    
+    
+    <a href="/tags.html#C.O.-ref" style="font-size: 9.5pt; color: #888;">C.O.</a>
+  
 
 </div>
 
@@ -5762,26 +5901,60 @@ $(document).ready(function() {
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-latex-tikz-pgf-example-2.html" title="查看《Tikz and PGF: Example 2》">Tikz and PGF: Example 2</a></h2>
+      <h2><a href="/pl/pl-compile-c++-oop-move-semantics.html" title="查看《C++ OOP: Move Semantics》">C++ OOP: Move Semantics</a></h2>
+    </header>
+
+    <section>
+      <p>
+        #include
+class Student{
+	public:
+		Student(const char*  m_name){
+			std::cout&lt;&lt;"create"&lt;&lt;std::endl;
+		}
+		Student(const Student&amp; ot...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">02 March 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-compile-c++-oop-move-semantics.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-compile-c++-oop-inheritancer.html" title="查看《C++ OOP: Inheritance》">C++ OOP: Inheritance</a></h2>
     </header>
 
     <section>
       <p>
         
+#include &lt;iostream&gt;
+#include &lt;string&gt;
 
 
-\RequirePackage{fix-cm}
-\documentclass[11pt]{article}       % onecolumn (second format)
-%\smartqed  % flush right qed marks, e.g. at end of proo...
+void print_square()
+{
+	for(int i=0;i&lt;4;i++)
+	{
+		int line_head = 4*i + 1;
+		for(int j=0;j&l...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#February-2018" title="查看此月所有文章">27 February 2018</a>，
+        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">02 March 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-latex-tikz-pgf-example-2.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-compile-c++-oop-inheritancer.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5790,29 +5963,28 @@ $(document).ready(function() {
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-latex-tikz-pgf-matrix.html" title="查看《Tikz and PGF: Matrix》">Tikz and PGF: Matrix</a></h2>
+      <h2><a href="/pl/pl-compile-c++-oop-friend.html" title="查看《C++ OOP: Friend》">C++ OOP: Friend</a></h2>
     </header>
 
     <section>
       <p>
-        Introduction
+        friend function
 
-  You want to align parts of the picture. You with that the base lines of certain nodes should be
-on the same line.
+friend class
 
+Galois
 
-matrix
-
-% the f...
+  At the beginning when I learn C++, one hard part is where I should put the
+keyword, and the reason is I do...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#February-2018" title="查看此月所有文章">26 February 2018</a>，
+        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">02 March 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-latex-tikz-pgf-matrix.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-compile-c++-oop-friend.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5821,25 +5993,24 @@ matrix
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-latex-tikz-pgf-coordinate-system.html" title="查看《Tikz and PGF: The Coordinate System》">Tikz and PGF: The Coordinate System</a></h2>
+      <h2><a href="/pl/pl-compile-c++-oop-constructor.html" title="查看《C++ OOP: Constructor》">C++ OOP: Constructor</a></h2>
     </header>
 
     <section>
       <p>
-        1. Coordinate system canvas
+        Deep Copy Constructor
+Shallow Copy Constructor
 
 
-  x =  Distance by which the coordinate is to the right of the origin
-  y =  Distance by which the coordinate is abov...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#February-2018" title="查看此月所有文章">24 February 2018</a>，
+        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">02 March 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-latex-tikz-pgf-coordinate-system.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-compile-c++-oop-constructor.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5848,29 +6019,26 @@ matrix
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-latex-introduction.html" title="查看《Latex: Introduction》">Latex: Introduction</a></h2>
+      <h2><a href="/pl/pl-compile-c++-oop-constructor-copy.html" title="查看《C++ OOP: Copy Constructor》">C++ OOP: Copy Constructor</a></h2>
     </header>
 
     <section>
       <p>
-        
-1  Tex and Latex
+        1. When to use?
 
-  Tex is about formatting
-  Latex is about content
-
-
-Compiling
-Most latex compilers need to be re-run several times in order to ...
+  Copy constructor is called when a new object is created from an existing object, as a copy of the
+existing object
+    
+      pas...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#February-2018" title="查看此月所有文章">23 February 2018</a>，
+        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">02 March 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-latex-introduction.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-compile-c++-oop-constructor-copy.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5879,49 +6047,26 @@ Most latex compilers need to be re-run several times in order to ...
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-latex-table.html" title="查看《Latex: Table》">Latex: Table</a></h2>
-    </header>
-
-    <section>
-      <p>
-        Command
-
-  latex provides table environment to typeset a table
-  the paramaters follow tabular command specify the alignment each column
-  the vert...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#February-2018" title="查看此月所有文章">22 February 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-latex-table.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-script-latex-system-command.html" title="查看《Latex: System Command》">Latex: System Command</a></h2>
+      <h2><a href="/pl/pl-compile-c++-oop-class.html" title="查看《C++ OOP: Class》">C++ OOP: Class</a></h2>
     </header>
 
     <section>
       <p>
         
+####
 
+  why data is modified by private ? function is modified by public?
+    
+      just like a car, it has button you can push, the button is li...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#February-2018" title="查看此月所有文章">22 February 2018</a>，
+        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">02 March 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-latex-system-command.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-compile-c++-oop-class.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5930,24 +6075,24 @@ Most latex compilers need to be re-run several times in order to ...
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-latex-reference.html" title="查看《Latex: Bibliography》">Latex: Bibliography</a></h2>
+      <h2><a href="/pl/pl-script-latex-tikz-pgf-tree.html" title="查看《Tikz and pfg: Tree》">Tikz and pfg: Tree</a></h2>
     </header>
 
     <section>
       <p>
-        Introduction
-
-  latex is a typesetting markup language is used to create formatted document.
-  Bibtex is a tool to generate and format bibliography...
+        \begin{tikzpicture}
+    \tikzstyle{level 1}=[sibling distance=12mm]
+    \tikzstyle{level 2}=[sibling distance=12mm]
+    \tikzstyle{level 3}=[siblin...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#February-2018" title="查看此月所有文章">22 February 2018</a>，
+        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">02 March 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-latex-reference.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-script-latex-tikz-pgf-tree.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5956,24 +6101,24 @@ Most latex compilers need to be re-run several times in order to ...
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-latex-presentation.html" title="查看《Latex: Presentation》">Latex: Presentation</a></h2>
+      <h2><a href="/pl/pl-script-latex-tikz-pgf-introduction.html" title="查看《Tikz and PGF: Introduction》">Tikz and PGF: Introduction</a></h2>
     </header>
 
     <section>
       <p>
-        The compatibility between frame and matrix
-When \matrix command used in a \begin{frame} environment
+        the relationship between Tikz and PGF
 
-  add the ampersand replacement=\&amp; option ...
+
+  Tikz is a user-friendliness frontend of PGF library, where Tikz means “TikZ isn Kevin Zeichenprogramm.” T...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#February-2018" title="查看此月所有文章">22 February 2018</a>，
+        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">02 March 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-latex-presentation.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-script-latex-tikz-pgf-introduction.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5982,26 +6127,30 @@ When \matrix command used in a \begin{frame} environment
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-latex-math-equation.html" title="查看《Latex: Math Equation》">Latex: Math Equation</a></h2>
+      <h2><a href="/pl/pl-compile-c++-library-stl.html" title="查看《C++ STL: Container》">C++ STL: Container</a></h2>
     </header>
 
     <section>
       <p>
-        1. amsmath Package
+        
+Intro
+list类型在任何位置都能快速插入和删除。访问某个元素要求遍历所设计的其他元素.
 
-\usepackage[cmex10]{amsmath}
+构造函数
 
 
-  If using it, be sure to load this package with the cmex10 option to ensure that only type 1 fo...
+  C c;           默认构造函数，拷贝空容器
+  C c1(c2);      构造c2的拷贝c1
+  C c(b, e);     构造c, 将迭代器b和e指定的范围...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#February-2018" title="查看此月所有文章">22 February 2018</a>，
+        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">01 March 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-latex-math-equation.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-compile-c++-library-stl.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6010,30 +6159,26 @@ When \matrix command used in a \begin{frame} environment
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-latex-fonts.html" title="查看《Latex: Fonts》">Latex: Fonts</a></h2>
+      <h2><a href="/pl/pl-compile-c++-library-stl-vector-and-deque.html" title="查看《C++ STL: Vector and Deque》">C++ STL: Vector and Deque</a></h2>
     </header>
 
     <section>
       <p>
-        Common fonts
+        
+Vector, Deque and Array
 
-  serif and san serif
-
-
-Reference
-
-  serif and sans serif
-
-
+  Vector work exactly like array, just as we use list in python, you should use
+vector in C++;
+  Deque: double ended queu...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#February-2018" title="查看此月所有文章">22 February 2018</a>，
+        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">01 March 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-latex-fonts.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-compile-c++-library-stl-vector-and-deque.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6078,7 +6223,7 @@ Reference
 
     <!-- Current Page -->
     <li class="active">
-      <span class="page_number ">第 64/95 页</span>
+      <span class="page_number ">第 64/97 页</span>
     </li>
 
     <!-- Next Page -->
@@ -6088,7 +6233,7 @@ Reference
 
     <!-- Last Page -->
     
-    <li><a href="/page95">&raquo;&raquo;</a></li>
+    <li><a href="/page97">&raquo;&raquo;</a></li>
     
   </ul>
 </section>
@@ -6142,4 +6287,8 @@ $(document).ready(function () {
   
 </body>
 </html>
+
+
+
+
 

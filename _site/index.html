@@ -32,9 +32,33 @@
   <!-- Scripts -->
   <script type="text/javascript" src="/assets/themes/twitter/js/jquery-1.11.1.min.js"></script>
   <!--[if lt IE 9]><script src="/assets/themes/twitter/js/html5shiv.min.js"></script><![endif]-->
-  <script type="text/javascript" async
+  <!--<script type="text/javascript" async
           src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
-  </script>
+  </script> -->
+	<script type="text/javascript">
+	window.MathJax = {
+	  tex: {
+		packages: ['base', 'ams']
+	  },
+	  loader: {
+		load: ['ui/menu', '[tex]/ams']
+	  },
+	  startup: {
+		ready() {
+		  MathJax.startup.defaultReady();
+		  const Macro = MathJax._.input.tex.Symbol.Macro;
+		  const MapHandler = MathJax._.input.tex.MapHandler.MapHandler;
+		  const Array = MathJax._.input.tex.ams.AmsMethods.default.Array;
+		  const env = new Macro('psmallmatrix', Array, [null, '(', ')', 'c', '.333em', '.2em', 'S', 1]);
+		  MapHandler.getMap('AMSmath-environment').add('psmallmatrix', env);
+		}
+	  }
+	};
+	</script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+
 </head> 
 <body>
 
@@ -124,17 +148,17 @@ $(document).ready(function() {
           <a href="/" title="查看最近发表"><i class="icon-fixed-width icon-edit"></i> 最近发表</a>
 <ul>
 
-  <li><a href="/work/work-publisher.html" title="查看《Publisher: Summary》">Publisher: Summary</a></li>
+  <li><a href="/ai/AI-convex-optimization-terminology.html" title="查看《C.O.: Terminology》">C.O.: Terminology</a></li>
 
-  <li><a href="/work/work-publisher-common-sense.html" title="查看《Publisher: Common sense》">Publisher: Common sense</a></li>
+  <li><a href="/ai/AI-convex-optimization-nomenclature.html" title="查看《C.O.: Nomenclature》">C.O.: Nomenclature</a></li>
 
-  <li><a href="/ai/AI-Adaptive-Boosting.html" title="查看《Adaptive Boosting》">Adaptive Boosting</a></li>
+  <li><a href="/ai/AI-convex-optimization-convex-function.html" title="查看《C.O.: Convex Functions》">C.O.: Convex Functions</a></li>
 
-  <li><a href="/work/work-word-neural-network.html" title="查看《Work: Neural Network》">Work: Neural Network</a></li>
+  <li><a href="/ai/AI-convex-optimization-lagrangian-duality.html" title="查看《C.O.: Lagrangian Duality》">C.O.: Lagrangian Duality</a></li>
 
-  <li><a href="/work/work-word-composite-material.html" title="查看《Word: Composite Material》">Word: Composite Material</a></li>
+  <li><a href="/ai/AI-convex-optimization-linear-programming-problem.html" title="查看《C.O.: Linear Programming》">C.O.: Linear Programming</a></li>
 
-  <li><a href="/work/work-word.html" title="查看《Work: Word》">Work: Word</a></li>
+  <li><a href="/ai/AI-convex-optimization-least-square-problem.html" title="查看《C.O.: Least squares》">C.O.: Least squares</a></li>
 
 </ul>
 
@@ -142,9 +166,52 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">946</span>
+<span title="文章总数">965</span>
 <ul>
 
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#August-2020">2020 年 08 月 (8)</a></li>
+    
+  
 
   
   
@@ -2108,6 +2175,59 @@ $(document).ready(function() {
   
   
   
+    <li><a href="/archive.html#December-2018">2018 年 12 月 (10)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
     <li><a href="/archive.html#November-2018">2018 年 11 月 (10)</a></li>
     
   
@@ -3349,7 +3469,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#March-2018">2018 年 03 月 (68)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2018">2018 年 03 月 (69)</a></li>
     
   
 
@@ -4976,7 +5101,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (217)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (228)</a></li>
 
   <li><a href="/categories.html#Algorithm-ref">Algorithm (78)</a></li>
 
@@ -4988,14 +5113,14 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#work-ref">work (20)</a></li>
 
-  <li><a href="/categories.html#AI-ref">AI (42)</a></li>
+  <li><a href="/categories.html#AI-ref">AI (50)</a></li>
 
 </ul>
 
         </section>
         <section>
           <a href="/tags.html" title="查看所有标签"><i class="icon-fixed-width icon-tags"></i> 标签云</a>
-<span title="标签总数">99</span>
+<span title="标签总数">101</span>
 <div id="tag-cloud">
 
 
@@ -5023,7 +5148,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #888;">summary</a>
+    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #777;">summary</a>
   
     
     
@@ -5058,7 +5183,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#script-ref" style="font-size: 17.5pt; color: #000;">script</a>
+    <a href="/tags.html#script-ref" style="font-size: 18pt; color: #000;">script</a>
   
     
     
@@ -5072,7 +5197,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#compile-ref" style="font-size: 14.5pt; color: #444;">compile</a>
+    <a href="/tags.html#compile-ref" style="font-size: 14pt; color: #444;">compile</a>
   
     
     
@@ -5248,6 +5373,13 @@ $(document).ready(function() {
     
     
     <a href="/tags.html#assembly-ref" style="font-size: 9.5pt; color: #888;">assembly</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#jekyll-ref" style="font-size: 9pt; color: #999;">jekyll</a>
   
     
     
@@ -5697,6 +5829,13 @@ $(document).ready(function() {
     
     <a href="/tags.html#supervised-ref" style="font-size: 9pt; color: #999;">supervised</a>
   
+    
+    
+    
+    
+    
+    <a href="/tags.html#C.O.-ref" style="font-size: 9.5pt; color: #888;">C.O.</a>
+  
 
 </div>
 
@@ -5762,6 +5901,236 @@ $(document).ready(function() {
   <article class="nested">
 
     <header>
+      <h2><a href="/ai/AI-convex-optimization-terminology.html" title="查看《C.O.: Terminology》">C.O.: Terminology</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Problem
+
+  min $f_0(x)$
+  subject to $f_i(x) \leq b_i$, $i=1,\cdots, m$
+
+
+
+  $x=(x_1, \cdots, x_n)$: optimization variables
+  $f_0: R^n \rightarro...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#August-2020" title="查看此月所有文章">30 August 2020</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#AI-ref" title="查看此类别下的所有文章">AI</a>，
+        评论：<a href="/ai/AI-convex-optimization-terminology.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/ai/AI-convex-optimization-nomenclature.html" title="查看《C.O.: Nomenclature》">C.O.: Nomenclature</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+####
+
+  A vector $x^*$  is called optimal, or a solution of the problem, if it has
+the smallest objective value among all vectors that satisfy the...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#August-2020" title="查看此月所有文章">30 August 2020</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#AI-ref" title="查看此类别下的所有文章">AI</a>，
+        评论：<a href="/ai/AI-convex-optimization-nomenclature.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/ai/AI-convex-optimization-convex-function.html" title="查看《C.O.: Convex Functions》">C.O.: Convex Functions</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Indicator function
+
+  Indicator function of a convex set. Let $ C \subseteq \mathbf{R}^{n} $ be a
+convex set, and consider the function $\mathbf{I...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#August-2020" title="查看此月所有文章">29 August 2020</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#AI-ref" title="查看此类别下的所有文章">AI</a>，
+        评论：<a href="/ai/AI-convex-optimization-convex-function.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/ai/AI-convex-optimization-lagrangian-duality.html" title="查看《C.O.: Lagrangian Duality》">C.O.: Lagrangian Duality</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Problem formulation
+
+
+  minimize $f_0(x)$
+  subject to $f_i(x) \leq 0, i=1, \cdots, m$
+  $h_i(x)=0,i=1, \cdots, p$
+
+
+
+  we do not assume the probl...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#August-2020" title="查看此月所有文章">28 August 2020</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#AI-ref" title="查看此类别下的所有文章">AI</a>，
+        评论：<a href="/ai/AI-convex-optimization-lagrangian-duality.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/ai/AI-convex-optimization-linear-programming-problem.html" title="查看《C.O.: Linear Programming》">C.O.: Linear Programming</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Problem
+
+  minimize  $C^Tx$
+    
+      subject to $a_i^T \leq b_i, i=1,\cdots,m$
+    
+  
+  the objective and all constraint functions are linear
+ ...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#August-2020" title="查看此月所有文章">27 August 2020</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#AI-ref" title="查看此类别下的所有文章">AI</a>，
+        评论：<a href="/ai/AI-convex-optimization-linear-programming-problem.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/ai/AI-convex-optimization-least-square-problem.html" title="查看《C.O.: Least squares》">C.O.: Least squares</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#August-2020" title="查看此月所有文章">27 August 2020</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#AI-ref" title="查看此类别下的所有文章">AI</a>，
+        评论：<a href="/ai/AI-convex-optimization-least-square-problem.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/ai/AI-convex-optimization-convex-problem.html" title="查看《C.O.: Convex Problem》">C.O.: Convex Problem</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Gist
+The challenge, and art, in using convex optimization is in recognizing and
+formulating the problem.
+
+  Once this formutlation is done, solvin...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#August-2020" title="查看此月所有文章">26 August 2020</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#AI-ref" title="查看此类别下的所有文章">AI</a>，
+        评论：<a href="/ai/AI-convex-optimization-convex-problem.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/ai/AI-convex-optimization-summary.html" title="查看《C.O.: Summary》">C.O.: Summary</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+gist
+In fact the great watershed in optimization isn’t between linearity and
+nonlinearity, but convexity and nonconvexity
+
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#August-2020" title="查看此月所有文章">01 August 2020</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#AI-ref" title="查看此类别下的所有文章">AI</a>，
+        评论：<a href="/ai/AI-convex-optimization-summary.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
       <h2><a href="/work/work-publisher.html" title="查看《Publisher: Summary》">Publisher: Summary</a></h2>
     </header>
 
@@ -5811,245 +6180,6 @@ The American Association for the Advancement of Science is an American internati
 
   </article>
   
-  <article class="nested">
-
-    <header>
-      <h2><a href="/ai/AI-Adaptive-Boosting.html" title="查看《Adaptive Boosting》">Adaptive Boosting</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-what the crap of Adaboost ?
-
-It focuses on classification problems and aims to convert a set of weak
-classifiers into a strong one.
-
-\[F(x)=\opera...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#June-2020" title="查看此月所有文章">10 June 2020</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#AI-ref" title="查看此类别下的所有文章">AI</a>，
-        评论：<a href="/ai/AI-Adaptive-Boosting.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/work/work-word-neural-network.html" title="查看《Work: Neural Network》">Work: Neural Network</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-The analytical methods are generally quite cumbersome, and require many
-simplifying assumptions.
-
-ANN based methods have been proved to ba a relia...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#June-2020" title="查看此月所有文章">06 June 2020</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#work-ref" title="查看此类别下的所有文章">work</a>，
-        评论：<a href="/work/work-word-neural-network.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/work/work-word-composite-material.html" title="查看《Word: Composite Material》">Word: Composite Material</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-####
-
-  composite laminates
-  laminated composite plate
-  laminated composite
-
-
-####
-
-  laminate is only subject to in-plane loading and it is sym...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#June-2020" title="查看此月所有文章">06 June 2020</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#work-ref" title="查看此类别下的所有文章">work</a>，
-        评论：<a href="/work/work-word-composite-material.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/work/work-word.html" title="查看《Work: Word》">Work: Word</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-1.
-
-  optimal and optimum: an optimal value is essentially a local optimum.
-
-
-2. etc. is an abbreviation of “et cetera”
-
-  if “etc.” is used in th...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#June-2020" title="查看此月所有文章">05 June 2020</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#work-ref" title="查看此类别下的所有文章">work</a>，
-        评论：<a href="/work/work-word.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/work/work-word-genetic-algorithm.html" title="查看《Work: Genetic Algorithm》">Work: Genetic Algorithm</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Introduction
-
-  gradient based optimization
-  stochastic optimization
-  local minima
-  locate globally optimum configurations
-  The tuning of many...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#June-2020" title="查看此月所有文章">05 June 2020</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#work-ref" title="查看此类别下的所有文章">work</a>，
-        评论：<a href="/work/work-word-genetic-algorithm.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/work/work-word-equation.html" title="查看《Work: Equation》">Work: Equation</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Template 1
-The formula be written as
-	$a=b+1$,
-	$c=m^2$,
-where 
-	$a=1$,
-	$b=2$.
-
-Template 2
-From equation (2.94), the stress in the local are give...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#June-2020" title="查看此月所有文章">05 June 2020</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#work-ref" title="查看此类别下的所有文章">work</a>，
-        评论：<a href="/work/work-word-equation.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/work/work-word-common.html" title="查看《Work: Common》">Work: Common</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-####
-
-  a lot of: various, many
-  compared with: in comparsion to 
-####
-  criteria: is the plural form, meaning requirement which something is jud...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#June-2020" title="查看此月所有文章">05 June 2020</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#work-ref" title="查看此类别下的所有文章">work</a>，
-        评论：<a href="/work/work-word-common.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/work/work-table.html" title="查看《Work: Table》">Work: Table</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Template
-The tables show …
-Figures 6 and 7 show …
-
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#June-2020" title="查看此月所有文章">05 June 2020</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#work-ref" title="查看此类别下的所有文章">work</a>，
-        评论：<a href="/work/work-table.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
 
   
     
@@ -6085,7 +6215,7 @@ Figures 6 and 7 show …
 
     <!-- Current Page -->
     <li class="active">
-      <span class="page_number ">第 1/95 页</span>
+      <span class="page_number ">第 1/97 页</span>
     </li>
 
     <!-- Next Page -->
@@ -6095,7 +6225,7 @@ Figures 6 and 7 show …
 
     <!-- Last Page -->
     
-    <li><a href="/page95">&raquo;&raquo;</a></li>
+    <li><a href="/page97">&raquo;&raquo;</a></li>
     
   </ul>
 </section>
@@ -6149,4 +6279,8 @@ $(document).ready(function () {
   
 </body>
 </html>
+
+
+
+
 

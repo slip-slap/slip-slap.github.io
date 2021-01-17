@@ -32,9 +32,33 @@
   <!-- Scripts -->
   <script type="text/javascript" src="/assets/themes/twitter/js/jquery-1.11.1.min.js"></script>
   <!--[if lt IE 9]><script src="/assets/themes/twitter/js/html5shiv.min.js"></script><![endif]-->
-  <script type="text/javascript" async
+  <!--<script type="text/javascript" async
           src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
-  </script>
+  </script> -->
+	<script type="text/javascript">
+	window.MathJax = {
+	  tex: {
+		packages: ['base', 'ams']
+	  },
+	  loader: {
+		load: ['ui/menu', '[tex]/ams']
+	  },
+	  startup: {
+		ready() {
+		  MathJax.startup.defaultReady();
+		  const Macro = MathJax._.input.tex.Symbol.Macro;
+		  const MapHandler = MathJax._.input.tex.MapHandler.MapHandler;
+		  const Array = MathJax._.input.tex.ams.AmsMethods.default.Array;
+		  const env = new Macro('psmallmatrix', Array, [null, '(', ')', 'c', '.333em', '.2em', 'S', 1]);
+		  MapHandler.getMap('AMSmath-environment').add('psmallmatrix', env);
+		}
+	  }
+	};
+	</script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+
 </head> 
 <body>
 
@@ -124,17 +148,17 @@ $(document).ready(function() {
           <a href="/" title="查看最近发表"><i class="icon-fixed-width icon-edit"></i> 最近发表</a>
 <ul>
 
-  <li><a href="/work/work-publisher.html" title="查看《Publisher: Summary》">Publisher: Summary</a></li>
+  <li><a href="/ai/AI-convex-optimization-terminology.html" title="查看《C.O.: Terminology》">C.O.: Terminology</a></li>
 
-  <li><a href="/work/work-publisher-common-sense.html" title="查看《Publisher: Common sense》">Publisher: Common sense</a></li>
+  <li><a href="/ai/AI-convex-optimization-nomenclature.html" title="查看《C.O.: Nomenclature》">C.O.: Nomenclature</a></li>
 
-  <li><a href="/ai/AI-Adaptive-Boosting.html" title="查看《Adaptive Boosting》">Adaptive Boosting</a></li>
+  <li><a href="/ai/AI-convex-optimization-convex-function.html" title="查看《C.O.: Convex Functions》">C.O.: Convex Functions</a></li>
 
-  <li><a href="/work/work-word-neural-network.html" title="查看《Work: Neural Network》">Work: Neural Network</a></li>
+  <li><a href="/ai/AI-convex-optimization-lagrangian-duality.html" title="查看《C.O.: Lagrangian Duality》">C.O.: Lagrangian Duality</a></li>
 
-  <li><a href="/work/work-word-composite-material.html" title="查看《Word: Composite Material》">Word: Composite Material</a></li>
+  <li><a href="/ai/AI-convex-optimization-linear-programming-problem.html" title="查看《C.O.: Linear Programming》">C.O.: Linear Programming</a></li>
 
-  <li><a href="/work/work-word.html" title="查看《Work: Word》">Work: Word</a></li>
+  <li><a href="/ai/AI-convex-optimization-least-square-problem.html" title="查看《C.O.: Least squares》">C.O.: Least squares</a></li>
 
 </ul>
 
@@ -142,9 +166,52 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">946</span>
+<span title="文章总数">965</span>
 <ul>
 
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#August-2020">2020 年 08 月 (8)</a></li>
+    
+  
 
   
   
@@ -2108,6 +2175,59 @@ $(document).ready(function() {
   
   
   
+    <li><a href="/archive.html#December-2018">2018 年 12 月 (10)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
     <li><a href="/archive.html#November-2018">2018 年 11 月 (10)</a></li>
     
   
@@ -3349,7 +3469,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#March-2018">2018 年 03 月 (68)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2018">2018 年 03 月 (69)</a></li>
     
   
 
@@ -4976,7 +5101,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (217)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (228)</a></li>
 
   <li><a href="/categories.html#Algorithm-ref">Algorithm (78)</a></li>
 
@@ -4988,14 +5113,14 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#work-ref">work (20)</a></li>
 
-  <li><a href="/categories.html#AI-ref">AI (42)</a></li>
+  <li><a href="/categories.html#AI-ref">AI (50)</a></li>
 
 </ul>
 
         </section>
         <section>
           <a href="/tags.html" title="查看所有标签"><i class="icon-fixed-width icon-tags"></i> 标签云</a>
-<span title="标签总数">99</span>
+<span title="标签总数">101</span>
 <div id="tag-cloud">
 
 
@@ -5023,7 +5148,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #888;">summary</a>
+    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #777;">summary</a>
   
     
     
@@ -5058,7 +5183,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#script-ref" style="font-size: 17.5pt; color: #000;">script</a>
+    <a href="/tags.html#script-ref" style="font-size: 18pt; color: #000;">script</a>
   
     
     
@@ -5072,7 +5197,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#compile-ref" style="font-size: 14.5pt; color: #444;">compile</a>
+    <a href="/tags.html#compile-ref" style="font-size: 14pt; color: #444;">compile</a>
   
     
     
@@ -5248,6 +5373,13 @@ $(document).ready(function() {
     
     
     <a href="/tags.html#assembly-ref" style="font-size: 9.5pt; color: #888;">assembly</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#jekyll-ref" style="font-size: 9pt; color: #999;">jekyll</a>
   
     
     
@@ -5697,6 +5829,13 @@ $(document).ready(function() {
     
     <a href="/tags.html#supervised-ref" style="font-size: 9pt; color: #999;">supervised</a>
   
+    
+    
+    
+    
+    
+    <a href="/tags.html#C.O.-ref" style="font-size: 9.5pt; color: #888;">C.O.</a>
+  
 
 </div>
 
@@ -5762,24 +5901,22 @@ $(document).ready(function() {
   <article class="nested">
 
     <header>
-      <h2><a href="/life/life-international-politics.html" title="查看《International Politics》">International Politics</a></h2>
+      <h2><a href="/pl/pl-script-shell-control-block.html" title="查看《Shell: Control Block》">Shell: Control Block</a></h2>
     </header>
 
     <section>
       <p>
         
-Event: Trump called Covi-19 Chinese Virus
-Of course, he is a racist, it will course hatred between Chinese and American.
-The local will discrimate...
+
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#December-2017" title="查看此月所有文章">10 December 2017</a>，
+        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">08 January 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#life-ref" title="查看此类别下的所有文章">life</a>，
-        评论：<a href="/life/life-international-politics.html#disqus_thread" title="查看此文章的评论"></a>
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-script-shell-control-block.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5788,30 +5925,26 @@ The local will discrimate...
   <article class="nested">
 
     <header>
-      <h2><a href="/life/life-historical-geography.html" title="查看《The one who pass away》">The one who pass away</a></h2>
+      <h2><a href="/pl/pl-script-shell-comman-diy.html" title="查看《Shell: DIY Command》">Shell: DIY Command</a></h2>
     </header>
 
     <section>
       <p>
         
-A
+Command Type
+In linux, nothing is secret, you can get any where and know everything. A
+command can be one of the four different things:
 
-  Sulli(1994-2019): south korean actress
-  An unknown teen: 17 jump off the bridge after his mother criticise him
-
-
-Group Tragedy
-
-  Jul 2020: ...
+  An exec...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#December-2017" title="查看此月所有文章">10 December 2017</a>，
+        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">08 January 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#life-ref" title="查看此类别下的所有文章">life</a>，
-        评论：<a href="/life/life-historical-geography.html#disqus_thread" title="查看此文章的评论"></a>
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-script-shell-comman-diy.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5820,30 +5953,26 @@ Group Tragedy
   <article class="nested">
 
     <header>
-      <h2><a href="/life/life-books-and-movies-music.html" title="查看《Books, Movies and Music》">Books, Movies and Music</a></h2>
+      <h2><a href="/pl/pl-script-shell-command-crontab.html" title="查看《Shell: Crontab》">Shell: Crontab</a></h2>
     </header>
 
     <section>
       <p>
         
-Books
+访问控制
 
-  Things That Gain from Disorder
-  
-    Success and Luck
-Success is because of luck.
-  
-  李光耀观天下
-In this book, Li has the following conclus...
+  当系统中有/etc/cron.allow文件时，只有写入此文件的用户可以使用crontab命令。
+  当/etc/cron.allow存在时，/etc/cron.deny文件会被忽略,/etc/cron.allow文件的优先级更高
+  当系统中只有/etc/cron.deny...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#December-2017" title="查看此月所有文章">10 December 2017</a>，
+        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">07 January 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#life-ref" title="查看此类别下的所有文章">life</a>，
-        评论：<a href="/life/life-books-and-movies-music.html#disqus_thread" title="查看此文章的评论"></a>
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-script-shell-command-crontab.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5852,24 +5981,27 @@ In this book, Li has the following conclus...
   <article class="nested">
 
     <header>
-      <h2><a href="/life/life-interesting-story.html" title="查看《Interesting Finding》">Interesting Finding</a></h2>
+      <h2><a href="/pl/pl-script-shell-command-file-manipulation.html" title="查看《Shell: File System》">Shell: File System</a></h2>
     </header>
 
     <section>
       <p>
         
-Heads and Tails
-For a long time, I was confused about the head and tail of a coin, Which side
-is head ? I was thingking, after I saw this picture,...
+output information of command ls
+
+  -rwx-xrr-x: permissions
+  1: number of linked hard-links
+  root: owner of the file
+  root: to which group this...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#December-2017" title="查看此月所有文章">09 December 2017</a>，
+        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">06 January 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#life-ref" title="查看此类别下的所有文章">life</a>，
-        评论：<a href="/life/life-interesting-story.html#disqus_thread" title="查看此文章的评论"></a>
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-script-shell-command-file-manipulation.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5878,28 +6010,29 @@ is head ? I was thingking, after I saw this picture,...
   <article class="nested">
 
     <header>
-      <h2><a href="/life/life-transportation.html" title="查看《Transportation 》">Transportation </a></h2>
+      <h2><a href="/pl/pl-script-shell-system-call.html" title="查看《Shell: System Call》">Shell: System Call</a></h2>
     </header>
 
     <section>
       <p>
         
-Japanese Transporation
-The transportation system in Japan is very complicate.
-近鉄と阪急と京阪(けいはん)などを聞く時は、とういう意味ですが。
+Demo
 
-  近鉄はその会社の１つです
-  阪急はその会社の１つです
-  京阪...
+reference
+
+  System call
+
+
+
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#December-2017" title="查看此月所有文章">07 December 2017</a>，
+        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">05 January 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#life-ref" title="查看此类别下的所有文章">life</a>，
-        评论：<a href="/life/life-transportation.html#disqus_thread" title="查看此文章的评论"></a>
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-script-shell-system-call.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5908,111 +6041,23 @@ The transportation system in Japan is very complicate.
   <article class="nested">
 
     <header>
-      <h2><a href="/life/life-goods-list.html" title="查看《物品清单》">物品清单</a></h2>
+      <h2><a href="/pl/pl-script-shell-user-management.html" title="查看《Shell: User Management》">Shell: User Management</a></h2>
     </header>
 
     <section>
       <p>
         
-
-  2019.10.19 update
-
-
-旅行物品
-
-  29寸黑色拉箱
-  MUJI20英寸拉杆箱
-  双肩包
-  化妆品包
-  抽真空压缩袋+手泵
+为普通用户添加root权限
+# 在"root ALL=(ALL) ALL"添加一行
+username ALL=(All)  ALL
 
 
-生活用品
+1. group
+# add group
+groupadd docker
+# user modify
+usermod -aG docker $USER
 
-  台灯
-  ニトリ保温杯
-  印章&amp;印泥
-  MUJI アロマストーン(aroma stone) with e...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#December-2017" title="查看此月所有文章">01 December 2017</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#life-ref" title="查看此类别下的所有文章">life</a>，
-        评论：<a href="/life/life-goods-list.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-english-war-weapon.html" title="查看《War: Weapon》">War: Weapon</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-####
-
-  unmanned vechiel
-  ballistic missile
-  bomb
-  rocket
-  ammunition
-    Phrase
-  
-  pull the trigger
-
-
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">25 March 2017</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-english-war-weapon.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-english-war-military.html" title="查看《War: Military》">War: Military</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-####
-
-  forward
-
-
-####
-
-  division
-  column
-  battlefield
-
-
-weapon
-
-  Nazi-occupied France
-
-
-Action
-
-  match forward
-  blow the horn
-  open fire
 
 ...
       </p>
@@ -6020,10 +6065,10 @@ Action
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">25 March 2017</a>，
+        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">04 January 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-english-war-military.html#disqus_thread" title="查看此文章的评论"></a>
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-script-shell-user-management.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6032,34 +6077,24 @@ Action
   <article class="nested">
 
     <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-english-religion-tale.html" title="查看《Religion: Tale》">Religion: Tale</a></h2>
+      <h2><a href="/pl/pl-script-shell-disk-management.html" title="查看《Shell: Disk Management》">Shell: Disk Management</a></h2>
     </header>
 
     <section>
       <p>
         
-####
-
-  supernatural
-  rumor
-  folklore
-  mythology
-
-
-action
-
-  transform
-
-
+Disk Partitioning
+Disk partitioning is the creation of one or more regions on secondary storage(RAM is the first
+storage), so that each region can...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">24 March 2017</a>，
+        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">04 January 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-english-religion-tale.html#disqus_thread" title="查看此文章的评论"></a>
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-script-shell-disk-management.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6068,38 +6103,89 @@ action
   <article class="nested">
 
     <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-english-religion-chritianity.html" title="查看《Religion: Christianity》">Religion: Christianity</a></h2>
+      <h2><a href="/pl/pl-script-shell-device-management.html" title="查看《Shell: Device Management》">Shell: Device Management</a></h2>
     </header>
 
     <section>
       <p>
         
-####
+Reference
 
-  hijab
-  ritual
-  buddhism
-  buddhist
-  buddhistic
-  Muslim
-  Islam
-  Protestant
-  Christianity
+  TTY History
 
 
-####
-
-  throw lucky coin
-  ten commandmen...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">24 March 2017</a>，
+        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">04 January 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-english-religion-chritianity.html#disqus_thread" title="查看此文章的评论"></a>
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-script-shell-device-management.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-script-shell-command-find.html" title="查看《Shell: Find》">Shell: Find</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+grammar
+
+find [参数]
+
+the following is some examle:
+
+
+  find . 列出当前目录及子目录下所有文件和文件夹
+  find / -cmin -15 查找最近15分钟更新的文件
+  -exec
+
+
+# -exec参数必须以\; 结尾
+# 查找...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">01 January 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-script-shell-command-find.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/life/life-story-weng.html" title="查看《さようなら、Weng》">さようなら、Weng</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Nice to meet you, Wong
+2019.06.28, I saw a elegant girl. It was in the second floor of a very big mall.
+we were asked to stay in the second floor ...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#December-2017" title="查看此月所有文章">31 December 2017</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#life-ref" title="查看此类别下的所有文章">life</a>，
+        评论：<a href="/life/life-story-weng.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6144,7 +6230,7 @@ action
 
     <!-- Current Page -->
     <li class="active">
-      <span class="page_number ">第 75/95 页</span>
+      <span class="page_number ">第 75/97 页</span>
     </li>
 
     <!-- Next Page -->
@@ -6154,7 +6240,7 @@ action
 
     <!-- Last Page -->
     
-    <li><a href="/page95">&raquo;&raquo;</a></li>
+    <li><a href="/page97">&raquo;&raquo;</a></li>
     
   </ul>
 </section>
@@ -6208,4 +6294,8 @@ $(document).ready(function () {
   
 </body>
 </html>
+
+
+
+
 

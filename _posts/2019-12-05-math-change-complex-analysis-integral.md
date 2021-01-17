@@ -11,8 +11,10 @@ tags: ["change","C.A."]
 #### Background
 Recall the definition of Riemann Integral
 
+$$
 \(\int_{a}^{b} f(x) d x \equiv \lim _{\max \Delta x_{k} \rightarrow 0}
 \sum_{k=1}^{n} f\left(x_{k}^{*}\right) \Delta x_{k}\)
+$$
 
 
 - Can we just replace the variable with complex number? 

@@ -32,9 +32,33 @@
   <!-- Scripts -->
   <script type="text/javascript" src="/assets/themes/twitter/js/jquery-1.11.1.min.js"></script>
   <!--[if lt IE 9]><script src="/assets/themes/twitter/js/html5shiv.min.js"></script><![endif]-->
-  <script type="text/javascript" async
+  <!--<script type="text/javascript" async
           src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
-  </script>
+  </script> -->
+	<script type="text/javascript">
+	window.MathJax = {
+	  tex: {
+		packages: ['base', 'ams']
+	  },
+	  loader: {
+		load: ['ui/menu', '[tex]/ams']
+	  },
+	  startup: {
+		ready() {
+		  MathJax.startup.defaultReady();
+		  const Macro = MathJax._.input.tex.Symbol.Macro;
+		  const MapHandler = MathJax._.input.tex.MapHandler.MapHandler;
+		  const Array = MathJax._.input.tex.ams.AmsMethods.default.Array;
+		  const env = new Macro('psmallmatrix', Array, [null, '(', ')', 'c', '.333em', '.2em', 'S', 1]);
+		  MapHandler.getMap('AMSmath-environment').add('psmallmatrix', env);
+		}
+	  }
+	};
+	</script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+
 </head> 
 <body>
 
@@ -124,17 +148,17 @@ $(document).ready(function() {
           <a href="/" title="查看最近发表"><i class="icon-fixed-width icon-edit"></i> 最近发表</a>
 <ul>
 
-  <li><a href="/work/work-publisher.html" title="查看《Publisher: Summary》">Publisher: Summary</a></li>
+  <li><a href="/ai/AI-convex-optimization-terminology.html" title="查看《C.O.: Terminology》">C.O.: Terminology</a></li>
 
-  <li><a href="/work/work-publisher-common-sense.html" title="查看《Publisher: Common sense》">Publisher: Common sense</a></li>
+  <li><a href="/ai/AI-convex-optimization-nomenclature.html" title="查看《C.O.: Nomenclature》">C.O.: Nomenclature</a></li>
 
-  <li><a href="/ai/AI-Adaptive-Boosting.html" title="查看《Adaptive Boosting》">Adaptive Boosting</a></li>
+  <li><a href="/ai/AI-convex-optimization-convex-function.html" title="查看《C.O.: Convex Functions》">C.O.: Convex Functions</a></li>
 
-  <li><a href="/work/work-word-neural-network.html" title="查看《Work: Neural Network》">Work: Neural Network</a></li>
+  <li><a href="/ai/AI-convex-optimization-lagrangian-duality.html" title="查看《C.O.: Lagrangian Duality》">C.O.: Lagrangian Duality</a></li>
 
-  <li><a href="/work/work-word-composite-material.html" title="查看《Word: Composite Material》">Word: Composite Material</a></li>
+  <li><a href="/ai/AI-convex-optimization-linear-programming-problem.html" title="查看《C.O.: Linear Programming》">C.O.: Linear Programming</a></li>
 
-  <li><a href="/work/work-word.html" title="查看《Work: Word》">Work: Word</a></li>
+  <li><a href="/ai/AI-convex-optimization-least-square-problem.html" title="查看《C.O.: Least squares》">C.O.: Least squares</a></li>
 
 </ul>
 
@@ -142,9 +166,52 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">946</span>
+<span title="文章总数">965</span>
 <ul>
 
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#August-2020">2020 年 08 月 (8)</a></li>
+    
+  
 
   
   
@@ -2108,6 +2175,59 @@ $(document).ready(function() {
   
   
   
+    <li><a href="/archive.html#December-2018">2018 年 12 月 (10)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
     <li><a href="/archive.html#November-2018">2018 年 11 月 (10)</a></li>
     
   
@@ -3349,7 +3469,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#March-2018">2018 年 03 月 (68)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2018">2018 年 03 月 (69)</a></li>
     
   
 
@@ -4976,7 +5101,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (217)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (228)</a></li>
 
   <li><a href="/categories.html#Algorithm-ref">Algorithm (78)</a></li>
 
@@ -4988,14 +5113,14 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#work-ref">work (20)</a></li>
 
-  <li><a href="/categories.html#AI-ref">AI (42)</a></li>
+  <li><a href="/categories.html#AI-ref">AI (50)</a></li>
 
 </ul>
 
         </section>
         <section>
           <a href="/tags.html" title="查看所有标签"><i class="icon-fixed-width icon-tags"></i> 标签云</a>
-<span title="标签总数">99</span>
+<span title="标签总数">101</span>
 <div id="tag-cloud">
 
 
@@ -5023,7 +5148,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #888;">summary</a>
+    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #777;">summary</a>
   
     
     
@@ -5058,7 +5183,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#script-ref" style="font-size: 17.5pt; color: #000;">script</a>
+    <a href="/tags.html#script-ref" style="font-size: 18pt; color: #000;">script</a>
   
     
     
@@ -5072,7 +5197,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#compile-ref" style="font-size: 14.5pt; color: #444;">compile</a>
+    <a href="/tags.html#compile-ref" style="font-size: 14pt; color: #444;">compile</a>
   
     
     
@@ -5248,6 +5373,13 @@ $(document).ready(function() {
     
     
     <a href="/tags.html#assembly-ref" style="font-size: 9.5pt; color: #888;">assembly</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#jekyll-ref" style="font-size: 9pt; color: #999;">jekyll</a>
   
     
     
@@ -5697,6 +5829,13 @@ $(document).ready(function() {
     
     <a href="/tags.html#supervised-ref" style="font-size: 9pt; color: #999;">supervised</a>
   
+    
+    
+    
+    
+    
+    <a href="/tags.html#C.O.-ref" style="font-size: 9.5pt; color: #888;">C.O.</a>
+  
 
 </div>
 
@@ -5762,22 +5901,26 @@ $(document).ready(function() {
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-compile-c++-oop-polymorphism.html" title="查看《C++ OOP: Polymorphism》">C++ OOP: Polymorphism</a></h2>
+      <h2><a href="/pl/pl-compile-c++-keyword-typedef.html" title="查看《C++ Keyword: typedef》">C++ Keyword: typedef</a></h2>
     </header>
 
     <section>
       <p>
         
+Why bother?
+one purpose of having types is to make sure that variables are always used in the way that they were
+intended to be used.
 
+  typedefs ...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">02 March 2018</a>，
+        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">08 March 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-compile-c++-oop-polymorphism.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-compile-c++-keyword-typedef.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5786,27 +5929,26 @@ $(document).ready(function() {
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-compile-c++-oop-move-semantics.html" title="查看《C++ OOP: Move Semantics》">C++ OOP: Move Semantics</a></h2>
+      <h2><a href="/pl/pl-compile-c++-keyword-static.html" title="查看《C++ Keyword: static》">C++ Keyword: static</a></h2>
     </header>
 
     <section>
       <p>
-        #include
-class Student{
-	public:
-		Student(const char*  m_name){
-			std::cout&lt;&lt;"create"&lt;&lt;std::endl;
-		}
-		Student(const Student&amp; ot...
+        
+I
+This keyword is related to the linker stage.
+
+  The linker is not going to look outside of the scope of this translation unit
+for that symbol de...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">02 March 2018</a>，
+        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">08 March 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-compile-c++-oop-move-semantics.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-compile-c++-keyword-static.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5815,31 +5957,33 @@ class Student{
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-compile-c++-oop-inheritancer.html" title="查看《C++ OOP: Inheritance》">C++ OOP: Inheritance</a></h2>
+      <h2><a href="/pl/pl-compile-c++-keyword-new-reload.html" title="查看《C++ Keyword: New》">C++ Keyword: New</a></h2>
     </header>
 
     <section>
       <p>
         
-#include &lt;iostream&gt;
-#include &lt;string&gt;
+Rule
+
+  If you apply address in heap, you must return
 
 
-void print_square()
+#include&lt;iostream&gt;
+#include &lt;memory&gt;
+
+class student
 {
-	for(int i=0;i&lt;4;i++)
-	{
-		int line_head = 4*i + 1;
-		for(int j=0;j&l...
+	private:
+		int* a =new ...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">02 March 2018</a>，
+        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">08 March 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-compile-c++-oop-inheritancer.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-compile-c++-keyword-new-reload.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5848,110 +5992,25 @@ void print_square()
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-compile-c++-oop-friend.html" title="查看《C++ OOP: Friend》">C++ OOP: Friend</a></h2>
-    </header>
-
-    <section>
-      <p>
-        friend function
-
-friend class
-
-Galois
-
-  At the beginning when I learn C++, one hard part is where I should put the
-keyword, and the reason is I do...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">02 March 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-compile-c++-oop-friend.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-compile-c++-oop-constructor.html" title="查看《C++ OOP: Constructor》">C++ OOP: Constructor</a></h2>
-    </header>
-
-    <section>
-      <p>
-        Deep Copy Constructor
-Shallow Copy Constructor
-
-
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">02 March 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-compile-c++-oop-constructor.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-compile-c++-oop-constructor-copy.html" title="查看《C++ OOP: Copy Constructor》">C++ OOP: Copy Constructor</a></h2>
-    </header>
-
-    <section>
-      <p>
-        1. When to use?
-
-  Copy constructor is called when a new object is created from an existing object, as a copy of the
-existing object
-    
-      pas...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">02 March 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-compile-c++-oop-constructor-copy.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-compile-c++-oop-class.html" title="查看《C++ OOP: Class》">C++ OOP: Class</a></h2>
+      <h2><a href="/pl/pl-compile-c++-keyword-hash-define.html" title="查看《C++: #include and #define》">C++: #include and #define</a></h2>
     </header>
 
     <section>
       <p>
         
-####
+preprocessor
+The preprocessor is supposed to deal with these keywords.
 
-  why data is modified by private ? function is modified by public?
-    
-      just like a car, it has button you can push, the button is li...
+  you can treat them as a script, and preprocessor is engine to deal with ...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">02 March 2018</a>，
+        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">08 March 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-compile-c++-oop-class.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-compile-c++-keyword-hash-define.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5960,82 +6019,190 @@ existing object
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-latex-tikz-pgf-tree.html" title="查看《Tikz and pfg: Tree》">Tikz and pfg: Tree</a></h2>
-    </header>
-
-    <section>
-      <p>
-        \begin{tikzpicture}
-    \tikzstyle{level 1}=[sibling distance=12mm]
-    \tikzstyle{level 2}=[sibling distance=12mm]
-    \tikzstyle{level 3}=[siblin...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">02 March 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-latex-tikz-pgf-tree.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-script-latex-tikz-pgf-introduction.html" title="查看《Tikz and PGF: Introduction》">Tikz and PGF: Introduction</a></h2>
-    </header>
-
-    <section>
-      <p>
-        the relationship between Tikz and PGF
-
-
-  Tikz is a user-friendliness frontend of PGF library, where Tikz means “TikZ isn Kevin Zeichenprogramm.” T...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">02 March 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-latex-tikz-pgf-introduction.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-compile-c++-library-stl.html" title="查看《C++ STL: Container》">C++ STL: Container</a></h2>
+      <h2><a href="/pl/pl-compile-c++-keyword-const.html" title="查看《C++ Keyword: Const》">C++ Keyword: Const</a></h2>
     </header>
 
     <section>
       <p>
         
-Intro
-list类型在任何位置都能快速插入和删除。访问某个元素要求遍历所设计的其他元素.
+I
 
-构造函数
+  const is a fake keyword, it’s just a promise.
 
 
-  C c;           默认构造函数，拷贝空容器
-  C c1(c2);      构造c2的拷贝c1
-  C c(b, e);     构造c, 将迭代器b和e指定的范围...
+with pointer
+
+  computer read a statement backward
+    
+      const int * A: A is a pointer t...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">01 March 2018</a>，
+        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">08 March 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-compile-c++-library-stl.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-compile-c++-keyword-const.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-compile-c++-iterator.html" title="查看《C++: Iterator》">C++: Iterator</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+intro
+
+谓词
+一元谓词: 接受单一参数unary predicate
+二元谓词: 接受两个参数binary predicate
+
+算法
+简单查找算法
+
+find
+find(beg, end, val)
+return 返回一个迭代器，指向输入序列中第一个等于val的元素。
+find_if...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">08 March 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-compile-c++-iterator.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-compile-c++-io.html" title="查看《C++: IO》">C++: IO</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Stream
+
+  to access data that from outside of a program
+    
+      Inputstream: access data from outside of a program.
+      Outputstream: send da...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">08 March 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-compile-c++-io.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-compile-c++-gp-template.html" title="查看《C++ GP:  Template》">C++ GP:  Template</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+function and class template
+
+  they are convenient, but don’t use them, too difficult to debug.
+  It just use the compiler to generate code.
+
+
+#in...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">08 March 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-compile-c++-gp-template.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-compile-c++-garbage-collection.html" title="查看《C++: Garbage Collection》">C++: Garbage Collection</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Apply these general in order
+
+
+  Store data in containers
+    
+      the semantics of the fundamental abstraction is reflected in the interface
+  ...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">08 March 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-compile-c++-garbage-collection.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-compile-c++-function.html" title="查看《C++: Function》">C++: Function</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Terminology
+
+  Prototype, signature, header of a function means the following code
+
+
+void foo();
+
+
+
+  Functions are called modules or procedures.
+...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">08 March 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-compile-c++-function.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6080,7 +6247,7 @@ list类型在任何位置都能快速插入和删除。访问某个元素要求�
 
     <!-- Current Page -->
     <li class="active">
-      <span class="page_number ">第 62/95 页</span>
+      <span class="page_number ">第 62/97 页</span>
     </li>
 
     <!-- Next Page -->
@@ -6090,7 +6257,7 @@ list类型在任何位置都能快速插入和删除。访问某个元素要求�
 
     <!-- Last Page -->
     
-    <li><a href="/page95">&raquo;&raquo;</a></li>
+    <li><a href="/page97">&raquo;&raquo;</a></li>
     
   </ul>
 </section>
@@ -6144,4 +6311,8 @@ $(document).ready(function () {
   
 </body>
 </html>
+
+
+
+
 

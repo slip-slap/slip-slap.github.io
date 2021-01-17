@@ -32,9 +32,33 @@
   <!-- Scripts -->
   <script type="text/javascript" src="/assets/themes/twitter/js/jquery-1.11.1.min.js"></script>
   <!--[if lt IE 9]><script src="/assets/themes/twitter/js/html5shiv.min.js"></script><![endif]-->
-  <script type="text/javascript" async
+  <!--<script type="text/javascript" async
           src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
-  </script>
+  </script> -->
+	<script type="text/javascript">
+	window.MathJax = {
+	  tex: {
+		packages: ['base', 'ams']
+	  },
+	  loader: {
+		load: ['ui/menu', '[tex]/ams']
+	  },
+	  startup: {
+		ready() {
+		  MathJax.startup.defaultReady();
+		  const Macro = MathJax._.input.tex.Symbol.Macro;
+		  const MapHandler = MathJax._.input.tex.MapHandler.MapHandler;
+		  const Array = MathJax._.input.tex.ams.AmsMethods.default.Array;
+		  const env = new Macro('psmallmatrix', Array, [null, '(', ')', 'c', '.333em', '.2em', 'S', 1]);
+		  MapHandler.getMap('AMSmath-environment').add('psmallmatrix', env);
+		}
+	  }
+	};
+	</script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+
 </head> 
 <body>
 
@@ -124,17 +148,17 @@ $(document).ready(function() {
           <a href="/" title="查看最近发表"><i class="icon-fixed-width icon-edit"></i> 最近发表</a>
 <ul>
 
-  <li><a href="/work/work-publisher.html" title="查看《Publisher: Summary》">Publisher: Summary</a></li>
+  <li><a href="/ai/AI-convex-optimization-terminology.html" title="查看《C.O.: Terminology》">C.O.: Terminology</a></li>
 
-  <li><a href="/work/work-publisher-common-sense.html" title="查看《Publisher: Common sense》">Publisher: Common sense</a></li>
+  <li><a href="/ai/AI-convex-optimization-nomenclature.html" title="查看《C.O.: Nomenclature》">C.O.: Nomenclature</a></li>
 
-  <li><a href="/ai/AI-Adaptive-Boosting.html" title="查看《Adaptive Boosting》">Adaptive Boosting</a></li>
+  <li><a href="/ai/AI-convex-optimization-convex-function.html" title="查看《C.O.: Convex Functions》">C.O.: Convex Functions</a></li>
 
-  <li><a href="/work/work-word-neural-network.html" title="查看《Work: Neural Network》">Work: Neural Network</a></li>
+  <li><a href="/ai/AI-convex-optimization-lagrangian-duality.html" title="查看《C.O.: Lagrangian Duality》">C.O.: Lagrangian Duality</a></li>
 
-  <li><a href="/work/work-word-composite-material.html" title="查看《Word: Composite Material》">Word: Composite Material</a></li>
+  <li><a href="/ai/AI-convex-optimization-linear-programming-problem.html" title="查看《C.O.: Linear Programming》">C.O.: Linear Programming</a></li>
 
-  <li><a href="/work/work-word.html" title="查看《Work: Word》">Work: Word</a></li>
+  <li><a href="/ai/AI-convex-optimization-least-square-problem.html" title="查看《C.O.: Least squares》">C.O.: Least squares</a></li>
 
 </ul>
 
@@ -142,9 +166,52 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">946</span>
+<span title="文章总数">965</span>
 <ul>
 
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#August-2020">2020 年 08 月 (8)</a></li>
+    
+  
 
   
   
@@ -2108,6 +2175,59 @@ $(document).ready(function() {
   
   
   
+    <li><a href="/archive.html#December-2018">2018 年 12 月 (10)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
     <li><a href="/archive.html#November-2018">2018 年 11 月 (10)</a></li>
     
   
@@ -3349,7 +3469,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#March-2018">2018 年 03 月 (68)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2018">2018 年 03 月 (69)</a></li>
     
   
 
@@ -4976,7 +5101,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (217)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (228)</a></li>
 
   <li><a href="/categories.html#Algorithm-ref">Algorithm (78)</a></li>
 
@@ -4988,14 +5113,14 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#work-ref">work (20)</a></li>
 
-  <li><a href="/categories.html#AI-ref">AI (42)</a></li>
+  <li><a href="/categories.html#AI-ref">AI (50)</a></li>
 
 </ul>
 
         </section>
         <section>
           <a href="/tags.html" title="查看所有标签"><i class="icon-fixed-width icon-tags"></i> 标签云</a>
-<span title="标签总数">99</span>
+<span title="标签总数">101</span>
 <div id="tag-cloud">
 
 
@@ -5023,7 +5148,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #888;">summary</a>
+    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #777;">summary</a>
   
     
     
@@ -5058,7 +5183,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#script-ref" style="font-size: 17.5pt; color: #000;">script</a>
+    <a href="/tags.html#script-ref" style="font-size: 18pt; color: #000;">script</a>
   
     
     
@@ -5072,7 +5197,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#compile-ref" style="font-size: 14.5pt; color: #444;">compile</a>
+    <a href="/tags.html#compile-ref" style="font-size: 14pt; color: #444;">compile</a>
   
     
     
@@ -5248,6 +5373,13 @@ $(document).ready(function() {
     
     
     <a href="/tags.html#assembly-ref" style="font-size: 9.5pt; color: #888;">assembly</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#jekyll-ref" style="font-size: 9pt; color: #999;">jekyll</a>
   
     
     
@@ -5697,6 +5829,13 @@ $(document).ready(function() {
     
     <a href="/tags.html#supervised-ref" style="font-size: 9pt; color: #999;">supervised</a>
   
+    
+    
+    
+    
+    
+    <a href="/tags.html#C.O.-ref" style="font-size: 9.5pt; color: #888;">C.O.</a>
+  
 
 </div>
 
@@ -5762,33 +5901,41 @@ $(document).ready(function() {
   <article class="nested">
 
     <header>
-      <h2><a href="/algorithm/agorithm-abstract-data-type-list-operation.html" title="查看《A.D.T.: List Operation》">A.D.T.: List Operation</a></h2>
+      <h2><a href="/algorithm/agorithm-abstract-data-type-string-problem-Knuth-Morris-Pratt-matching.html" title="查看《A.D.T.P.: Knuth-Morris-Pratt String Matching》">A.D.T.P.: Knuth-Morris-Pratt String Matching</a></h2>
     </header>
 
     <section>
       <p>
         
 
-  reverseing: reverse element or reverse link.
-
-
-#include&lt;iostream&gt;
-struct node
-{
-	int key;
-	struct node* ptr_next=nullptr;
-};
-
-struct node...
+  
+    
+      String
+      a
+      b
+      a
+      b
+      c
+      a
+      b
+      c
+      a
+      b
+      a
+      b
+      a
+      b
+      d
+    ...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#June-2018" title="查看此月所有文章">08 June 2018</a>，
+        发表日期：<a href="/archive.html#June-2018" title="查看此月所有文章">14 June 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#Algorithm-ref" title="查看此类别下的所有文章">Algorithm</a>，
-        评论：<a href="/algorithm/agorithm-abstract-data-type-list-operation.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/algorithm/agorithm-abstract-data-type-string-problem-Knuth-Morris-Pratt-matching.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5797,7 +5944,131 @@ struct node...
   <article class="nested">
 
     <header>
-      <h2><a href="/algorithm/agorithm-abstract-data-type-list-implementation.html" title="查看《A.D.T.: List Implementation 2》">A.D.T.: List Implementation 2</a></h2>
+      <h2><a href="/algorithm/agorithm-abstract-data-type-string-introduction.html" title="查看《A.D.T.: String》">A.D.T.: String</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+What is string?
+String just array, everymethod you learn in array. You can apply them in string.
+
+A
+
+  basically, compuer doesn’t support characte...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#June-2018" title="查看此月所有文章">14 June 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#Algorithm-ref" title="查看此类别下的所有文章">Algorithm</a>，
+        评论：<a href="/algorithm/agorithm-abstract-data-type-string-introduction.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/algorithm/agorithm-abstract-data-type-tree-terminology.html" title="查看《A.D.T.: Tree Terminology》">A.D.T.: Tree Terminology</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Terminology
+
+  root
+  parent
+  child
+  descendents
+  siblings
+  ancestors
+  degree of nodes
+  internal nodes, external nodes
+  terminal nodes, non...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#June-2018" title="查看此月所有文章">08 June 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#Algorithm-ref" title="查看此类别下的所有文章">Algorithm</a>，
+        评论：<a href="/algorithm/agorithm-abstract-data-type-tree-terminology.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/algorithm/agorithm-abstract-data-type-tree-representation.html" title="查看《A.D.T.: Tree Representation》">A.D.T.: Tree Representation</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Represenation
+
+Array Representaion
+
+  if a Node is at index $i$
+  its left child is at $2*i$
+  its left child is at $2*i+1$
+  its parent is at $i/...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#June-2018" title="查看此月所有文章">08 June 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#Algorithm-ref" title="查看此类别下的所有文章">Algorithm</a>，
+        评论：<a href="/algorithm/agorithm-abstract-data-type-tree-representation.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/algorithm/agorithm-abstract-data-type-tree-heap.html" title="查看《A.D.T.: Heap》">A.D.T.: Heap</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Definition
+
+
+  First, Heap is complete binary tree.
+  node greater than its descendant.
+    
+      just like arranging apple in the mark, which is...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#June-2018" title="查看此月所有文章">08 June 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#Algorithm-ref" title="查看此类别下的所有文章">Algorithm</a>，
+        评论：<a href="/algorithm/agorithm-abstract-data-type-tree-heap.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/algorithm/agorithm-abstract-data-type-tree-heap-implementation.html" title="查看《A.D.T.: Heap Implementation》">A.D.T.: Heap Implementation</a></h2>
     </header>
 
     <section>
@@ -5805,80 +6076,16 @@ struct node...
         
 A
 
-#include&lt;iostream&gt;
-struct node 
-{
-	int data;
-	struct node * ptr_next=nullptr;
-};
-
-struct node* head=nullptr;
-
-struct node* insert(struct ...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#June-2018" title="查看此月所有文章">08 June 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#Algorithm-ref" title="查看此类别下的所有文章">Algorithm</a>，
-        评论：<a href="/algorithm/agorithm-abstract-data-type-list-implementation.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/algorithm/agorithm-abstract-data-type-list-doubly-linked.html" title="查看《A.D.T.: Double Linked List》">A.D.T.: Double Linked List</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Application
-
-  Phone contact list, you can scroll up and down, it’s doubly linked list.
+  we use array to implement heap data structure.
 
 
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#June-2018" title="查看此月所有文章">08 June 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#Algorithm-ref" title="查看此类别下的所有文章">Algorithm</a>，
-        评论：<a href="/algorithm/agorithm-abstract-data-type-list-doubly-linked.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/algorithm/agorithm-abstract-data-type-list-concatenate.html" title="查看《A.D.T.: List Concatenate》">A.D.T.: List Concatenate</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
 Code
-
 #include&lt;iostream&gt;
+#include&lt;cmath&gt;
 
-struct node 
+void swap(int &amp;a, int &amp;b)
 {
-	int key;
-	struct node *ptr_next_node;
-};
-
-struct node* first;
-struct node* second;
-struct node* in...
+	in...
       </p>
     </section>
 
@@ -5887,7 +6094,7 @@ struct node* in...
         发表日期：<a href="/archive.html#June-2018" title="查看此月所有文章">08 June 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#Algorithm-ref" title="查看此类别下的所有文章">Algorithm</a>，
-        评论：<a href="/algorithm/agorithm-abstract-data-type-list-concatenate.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/algorithm/agorithm-abstract-data-type-tree-heap-implementation.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5896,13 +6103,21 @@ struct node* in...
   <article class="nested">
 
     <header>
-      <h2><a href="/algorithm/agorithm-abstract-data-type-list-circular-linked.html" title="查看《A.D.T.: Circular Linked List》">A.D.T.: Circular Linked List</a></h2>
+      <h2><a href="/algorithm/agorithm-abstract-data-type-tree-binary-search.html" title="查看《A.D.T.: Binary Search Tree》">A.D.T.: Binary Search Tree</a></h2>
     </header>
 
     <section>
       <p>
         
+Complete Binary Tree
 
+  how to identify a tree is complete binary tree, you can make use of the array
+representation
+
+
+Drawback
+
+  The height of t...
       </p>
     </section>
 
@@ -5911,7 +6126,7 @@ struct node* in...
         发表日期：<a href="/archive.html#June-2018" title="查看此月所有文章">08 June 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#Algorithm-ref" title="查看此类别下的所有文章">Algorithm</a>，
-        评论：<a href="/algorithm/agorithm-abstract-data-type-list-circular-linked.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/algorithm/agorithm-abstract-data-type-tree-binary-search.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5920,54 +6135,20 @@ struct node* in...
   <article class="nested">
 
     <header>
-      <h2><a href="/algorithm/agorithm-abstract-data-type-hashing.html" title="查看《A.D.T.: Hashing With Chaining》">A.D.T.: Hashing With Chaining</a></h2>
+      <h2><a href="/algorithm/agorithm-abstract-data-type-tree-binary-search-implementation.html" title="查看《A.D.T.: Binary Search Tree Implementation》">A.D.T.: Binary Search Tree Implementation</a></h2>
     </header>
 
     <section>
       <p>
         
-Why this crap ?
-
-  we have linear search, its time complexity is $\Theta (n)$
-  we have binary search, its time complexity is $log_2^n$
-  The prob...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#June-2018" title="查看此月所有文章">08 June 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#Algorithm-ref" title="查看此类别下的所有文章">Algorithm</a>，
-        评论：<a href="/algorithm/agorithm-abstract-data-type-hashing.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/algorithm/agorithm-abstract-data-type-hash-chaining.html" title="查看《A.D.T.: Hash Chaining》">A.D.T.: Hash Chaining</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-基于数组和链表的map实现
-
-  数组用来存放哈希表
-  链表用来存放key
-
 
 #include &lt;iostream&gt;
-#include &lt;string&gt;
 
-struct node 
-{
-	int number;
-	std::string name;
-	struct...
+struct node{
+    int data;
+    struct node *leftChild=nullptr;
+    struct node *rightChild=nullptr;
+    struct node *p...
       </p>
     </section>
 
@@ -5976,7 +6157,7 @@ struct node
         发表日期：<a href="/archive.html#June-2018" title="查看此月所有文章">08 June 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#Algorithm-ref" title="查看此类别下的所有文章">Algorithm</a>，
-        评论：<a href="/algorithm/agorithm-abstract-data-type-hash-chaining.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/algorithm/agorithm-abstract-data-type-tree-binary-search-implementation.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5985,19 +6166,23 @@ struct node
   <article class="nested">
 
     <header>
-      <h2><a href="/algorithm/agorithm-abstract-data-type-btree-red-black.html" title="查看《A.D.T.: Red Black Tree》">A.D.T.: Red Black Tree</a></h2>
+      <h2><a href="/algorithm/agorithm-abstract-data-type-summary.html" title="查看《A.D.T.: summary》">A.D.T.: summary</a></h2>
     </header>
 
     <section>
       <p>
         
-Introduction
+####
+
+  Data strucutre means how to organise your data in memory.
+  ADT: Abstract Data Type
+    
+      it means data and operation.
+    
+  
 
 
-  It’s a height balanced binary search tree, similar to 2-3-4 tree.
-  Every node is either red or black.
-  Root of a tree is black
-...
+Phyc...
       </p>
     </section>
 
@@ -6006,7 +6191,7 @@ Introduction
         发表日期：<a href="/archive.html#June-2018" title="查看此月所有文章">08 June 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#Algorithm-ref" title="查看此类别下的所有文章">Algorithm</a>，
-        评论：<a href="/algorithm/agorithm-abstract-data-type-btree-red-black.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/algorithm/agorithm-abstract-data-type-summary.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6015,40 +6200,26 @@ Introduction
   <article class="nested">
 
     <header>
-      <h2><a href="/algorithm/agorithm-abstract-data-type-btree-2-3.html" title="查看《A.D.T.: 2-3 Tree》">A.D.T.: 2-3 Tree</a></h2>
+      <h2><a href="/algorithm/agorithm-abstract-data-type-stack.html" title="查看《A.D.T.: Stack》">A.D.T.: Stack</a></h2>
     </header>
 
     <section>
       <p>
         
-Introduction
-2-3 Tree is also a kind of search tree, Compared with binary search, the
-difference is it created upward, binary search tree is downw...
-      </p>
-    </section>
+####
 
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#June-2018" title="查看此月所有文章">08 June 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#Algorithm-ref" title="查看此类别下的所有文章">Algorithm</a>，
-        评论：<a href="/algorithm/agorithm-abstract-data-type-btree-2-3.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
+  Data:
+    
+      space for storing elements
+      top pointer
+    
   
-  <article class="nested">
-
-    <header>
-      <h2><a href="/algorithm/agorithm-abstract-data-type-btree-2-3-4.html" title="查看《A.D.T.: 2-3-4 Tree》">A.D.T.: 2-3-4 Tree</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-2-3-4 tree and Red-black tree
-
+  Operatons
+    
+      push(x)
+      pop()
+      isEmpty()
+      isF...
       </p>
     </section>
 
@@ -6057,7 +6228,7 @@ difference is it created upward, binary search tree is downw...
         发表日期：<a href="/archive.html#June-2018" title="查看此月所有文章">08 June 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#Algorithm-ref" title="查看此类别下的所有文章">Algorithm</a>，
-        评论：<a href="/algorithm/agorithm-abstract-data-type-btree-2-3-4.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/algorithm/agorithm-abstract-data-type-stack.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6102,7 +6273,7 @@ difference is it created upward, binary search tree is downw...
 
     <!-- Current Page -->
     <li class="active">
-      <span class="page_number ">第 51/95 页</span>
+      <span class="page_number ">第 51/97 页</span>
     </li>
 
     <!-- Next Page -->
@@ -6112,7 +6283,7 @@ difference is it created upward, binary search tree is downw...
 
     <!-- Last Page -->
     
-    <li><a href="/page95">&raquo;&raquo;</a></li>
+    <li><a href="/page97">&raquo;&raquo;</a></li>
     
   </ul>
 </section>
@@ -6166,4 +6337,8 @@ $(document).ready(function () {
   
 </body>
 </html>
+
+
+
+
 

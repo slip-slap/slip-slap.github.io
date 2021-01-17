@@ -32,9 +32,33 @@
   <!-- Scripts -->
   <script type="text/javascript" src="/assets/themes/twitter/js/jquery-1.11.1.min.js"></script>
   <!--[if lt IE 9]><script src="/assets/themes/twitter/js/html5shiv.min.js"></script><![endif]-->
-  <script type="text/javascript" async
+  <!--<script type="text/javascript" async
           src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
-  </script>
+  </script> -->
+	<script type="text/javascript">
+	window.MathJax = {
+	  tex: {
+		packages: ['base', 'ams']
+	  },
+	  loader: {
+		load: ['ui/menu', '[tex]/ams']
+	  },
+	  startup: {
+		ready() {
+		  MathJax.startup.defaultReady();
+		  const Macro = MathJax._.input.tex.Symbol.Macro;
+		  const MapHandler = MathJax._.input.tex.MapHandler.MapHandler;
+		  const Array = MathJax._.input.tex.ams.AmsMethods.default.Array;
+		  const env = new Macro('psmallmatrix', Array, [null, '(', ')', 'c', '.333em', '.2em', 'S', 1]);
+		  MapHandler.getMap('AMSmath-environment').add('psmallmatrix', env);
+		}
+	  }
+	};
+	</script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+
 </head> 
 <body>
 
@@ -124,17 +148,17 @@ $(document).ready(function() {
           <a href="/" title="查看最近发表"><i class="icon-fixed-width icon-edit"></i> 最近发表</a>
 <ul>
 
-  <li><a href="/work/work-publisher.html" title="查看《Publisher: Summary》">Publisher: Summary</a></li>
+  <li><a href="/ai/AI-convex-optimization-terminology.html" title="查看《C.O.: Terminology》">C.O.: Terminology</a></li>
 
-  <li><a href="/work/work-publisher-common-sense.html" title="查看《Publisher: Common sense》">Publisher: Common sense</a></li>
+  <li><a href="/ai/AI-convex-optimization-nomenclature.html" title="查看《C.O.: Nomenclature》">C.O.: Nomenclature</a></li>
 
-  <li><a href="/ai/AI-Adaptive-Boosting.html" title="查看《Adaptive Boosting》">Adaptive Boosting</a></li>
+  <li><a href="/ai/AI-convex-optimization-convex-function.html" title="查看《C.O.: Convex Functions》">C.O.: Convex Functions</a></li>
 
-  <li><a href="/work/work-word-neural-network.html" title="查看《Work: Neural Network》">Work: Neural Network</a></li>
+  <li><a href="/ai/AI-convex-optimization-lagrangian-duality.html" title="查看《C.O.: Lagrangian Duality》">C.O.: Lagrangian Duality</a></li>
 
-  <li><a href="/work/work-word-composite-material.html" title="查看《Word: Composite Material》">Word: Composite Material</a></li>
+  <li><a href="/ai/AI-convex-optimization-linear-programming-problem.html" title="查看《C.O.: Linear Programming》">C.O.: Linear Programming</a></li>
 
-  <li><a href="/work/work-word.html" title="查看《Work: Word》">Work: Word</a></li>
+  <li><a href="/ai/AI-convex-optimization-least-square-problem.html" title="查看《C.O.: Least squares》">C.O.: Least squares</a></li>
 
 </ul>
 
@@ -142,9 +166,52 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">946</span>
+<span title="文章总数">965</span>
 <ul>
 
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#August-2020">2020 年 08 月 (8)</a></li>
+    
+  
 
   
   
@@ -2108,6 +2175,59 @@ $(document).ready(function() {
   
   
   
+    <li><a href="/archive.html#December-2018">2018 年 12 月 (10)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
     <li><a href="/archive.html#November-2018">2018 年 11 月 (10)</a></li>
     
   
@@ -3349,7 +3469,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#March-2018">2018 年 03 月 (68)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2018">2018 年 03 月 (69)</a></li>
     
   
 
@@ -4976,7 +5101,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (217)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (228)</a></li>
 
   <li><a href="/categories.html#Algorithm-ref">Algorithm (78)</a></li>
 
@@ -4988,14 +5113,14 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#work-ref">work (20)</a></li>
 
-  <li><a href="/categories.html#AI-ref">AI (42)</a></li>
+  <li><a href="/categories.html#AI-ref">AI (50)</a></li>
 
 </ul>
 
         </section>
         <section>
           <a href="/tags.html" title="查看所有标签"><i class="icon-fixed-width icon-tags"></i> 标签云</a>
-<span title="标签总数">99</span>
+<span title="标签总数">101</span>
 <div id="tag-cloud">
 
 
@@ -5023,7 +5148,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #888;">summary</a>
+    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #777;">summary</a>
   
     
     
@@ -5058,7 +5183,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#script-ref" style="font-size: 17.5pt; color: #000;">script</a>
+    <a href="/tags.html#script-ref" style="font-size: 18pt; color: #000;">script</a>
   
     
     
@@ -5072,7 +5197,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#compile-ref" style="font-size: 14.5pt; color: #444;">compile</a>
+    <a href="/tags.html#compile-ref" style="font-size: 14pt; color: #444;">compile</a>
   
     
     
@@ -5248,6 +5373,13 @@ $(document).ready(function() {
     
     
     <a href="/tags.html#assembly-ref" style="font-size: 9.5pt; color: #888;">assembly</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#jekyll-ref" style="font-size: 9pt; color: #999;">jekyll</a>
   
     
     
@@ -5697,6 +5829,13 @@ $(document).ready(function() {
     
     <a href="/tags.html#supervised-ref" style="font-size: 9pt; color: #999;">supervised</a>
   
+    
+    
+    
+    
+    
+    <a href="/tags.html#C.O.-ref" style="font-size: 9.5pt; color: #888;">C.O.</a>
+  
 
 </div>
 
@@ -5762,55 +5901,25 @@ $(document).ready(function() {
   <article class="nested">
 
     <header>
-      <h2><a href="/cs/computer-science-microprocessor-bytes-operation.html" title="查看《Microprocessor: Bytes Operation》">Microprocessor: Bytes Operation</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-1. The Shifter
-2. The Notter
-3. The Ander
-4. The Orer
-5. The Exclusive Orer
-6. The Adder
-7. The Comparator and Zeroj
-In the adder, we had a carry ...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">08 September 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
-        评论：<a href="/cs/computer-science-microprocessor-bytes-operation.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/cs/computer-science-microprocessor-arithmetic-and-logic-unit.html" title="查看《Microprocessor: ALU》">Microprocessor: ALU</a></h2>
+      <h2><a href="/cs/computer-science-compiler-optimization-machine-independent.html" title="查看《Compiler: Machine-Independent Optimizations》">Compiler: Machine-Independent Optimizations</a></h2>
     </header>
 
     <section>
       <p>
         
 History
-Aristotle’s logic involved two facts making a third fact. Many of our computer parts, such as AND
-gates, take two bits and make a third bi...
+
+  Code Optimizations: Elimination of unnecessary instructions in object code, or the replacements of one sequence of
+  instructions by a ...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">08 September 2018</a>，
+        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">21 September 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
-        评论：<a href="/cs/computer-science-microprocessor-arithmetic-and-logic-unit.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/cs/computer-science-compiler-optimization-machine-independent.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5819,24 +5928,25 @@ gates, take two bits and make a third bi...
   <article class="nested">
 
     <header>
-      <h2><a href="/cs/computer-science-microprocessor-hardware-cuda.html" title="查看《Hardware: CUDA》">Hardware: CUDA</a></h2>
+      <h2><a href="/cs/computer-science-compiler-lexical-analysis.html" title="查看《Compiler: Lexical Analysis》">Compiler: Lexical Analysis</a></h2>
     </header>
 
     <section>
       <p>
         
+1. Why bother?
 
-  CUDA: cuda short for compute unified device architecture is a parallel
-computing and application programming interface model, It allows develop...
+  Simplicity of design is the most important consideration.  The separation of lexical and
+syntactic analysis often allows us to s...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">01 September 2018</a>，
+        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">21 September 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
-        评论：<a href="/cs/computer-science-microprocessor-hardware-cuda.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/cs/computer-science-compiler-lexical-analysis.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5845,25 +5955,25 @@ computing and application programming interface model, It allows develop...
   <article class="nested">
 
     <header>
-      <h2><a href="/cs/computer-science-microprocessor-hardware-cpu.html" title="查看《Hardware: CPU》">Hardware: CPU</a></h2>
+      <h2><a href="/cs/computer-science-compiler-code-generation.html" title="查看《Compiler: Code Generation》">Compiler: Code Generation</a></h2>
     </header>
 
     <section>
       <p>
         
-Intel
+Register Allocation
+A key problem in code generation is deciding what values to hold in what registers.
 
-  x86 is an Intel CPU architecture that originated with the 16-bit 8086
-processor in 1978. Today, the term “x86” is used generally to refer...
+  Register allocation, during which we se...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">01 September 2018</a>，
+        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">21 September 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
-        评论：<a href="/cs/computer-science-microprocessor-hardware-cpu.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/cs/computer-science-compiler-code-generation.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5872,24 +5982,25 @@ processor in 1978. Today, the term “x86” is used generally to refer...
   <article class="nested">
 
     <header>
-      <h2><a href="/algorithm/algorithm-design-principle-single-responsibility.html" title="查看《D.P.: Single Responsibility Principle》">D.P.: Single Responsibility Principle</a></h2>
+      <h2><a href="/cs/computer-science-compiler-runtime-evnriornments-garbage-collection.html" title="查看《Compiler: Garbage Collection》">Compiler: Garbage Collection</a></h2>
     </header>
 
     <section>
       <p>
         
-Background
-We don’t want “God object”, that is an object that knows about and does
-everything. This is a major anti-pattern in object-oriented pro...
+Definition
+Garbage: Data that cannot be referenced is generally known as garbage
+
+  Many high-level programming languages remove the burden of man...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#July-2018" title="查看此月所有文章">30 July 2018</a>，
+        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">20 September 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#Algorithm-ref" title="查看此类别下的所有文章">Algorithm</a>，
-        评论：<a href="/algorithm/algorithm-design-principle-single-responsibility.html#disqus_thread" title="查看此文章的评论"></a>
+        类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
+        评论：<a href="/cs/computer-science-compiler-runtime-evnriornments-garbage-collection.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5898,24 +6009,26 @@ everything. This is a major anti-pattern in object-oriented pro...
   <article class="nested">
 
     <header>
-      <h2><a href="/algorithm/algorithm-design-principle-open-closed.html" title="查看《D.P.: Open Closed Principle(OCP)》">D.P.: Open Closed Principle(OCP)</a></h2>
+      <h2><a href="/cs/computer-science-compiler-runtime-environments-stack-management.html" title="查看《Compiler: Run-Time Environments》">Compiler: Run-Time Environments</a></h2>
     </header>
 
     <section>
       <p>
         
-Background
-In most object-oriented code, different objects must deal with one another in
-some fashion. What then happens when a particular object ...
+Duty
+A compiler must accurately implement the abstractions embodied in the source-language definition.
+These abstractions typically include
+
+  the...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#July-2018" title="查看此月所有文章">29 July 2018</a>，
+        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">20 September 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#Algorithm-ref" title="查看此类别下的所有文章">Algorithm</a>，
-        评论：<a href="/algorithm/algorithm-design-principle-open-closed.html#disqus_thread" title="查看此文章的评论"></a>
+        类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
+        评论：<a href="/cs/computer-science-compiler-runtime-environments-stack-management.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5924,31 +6037,7 @@ some fashion. What then happens when a particular object ...
   <article class="nested">
 
     <header>
-      <h2><a href="/algorithm/algorithm-design-principle-liskov-substitution.html" title="查看《D.P.: Liskov Substitution Principle》">D.P.: Liskov Substitution Principle</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#July-2018" title="查看此月所有文章">28 July 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#Algorithm-ref" title="查看此类别下的所有文章">Algorithm</a>，
-        评论：<a href="/algorithm/algorithm-design-principle-liskov-substitution.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/algorithm/algorithm-design-principle-interface-segregation-principle.html" title="查看《D.P.: Interface Segregation Principle》">D.P.: Interface Segregation Principle</a></h2>
+      <h2><a href="/cs/computer-science-compiler-runtime-environments-heap-management.html" title="查看《Compiler: Heap Management》">Compiler: Heap Management</a></h2>
     </header>
 
     <section>
@@ -5960,10 +6049,10 @@ some fashion. What then happens when a particular object ...
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#July-2018" title="查看此月所有文章">27 July 2018</a>，
+        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">20 September 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#Algorithm-ref" title="查看此类别下的所有文章">Algorithm</a>，
-        评论：<a href="/algorithm/algorithm-design-principle-interface-segregation-principle.html#disqus_thread" title="查看此文章的评论"></a>
+        类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
+        评论：<a href="/cs/computer-science-compiler-runtime-environments-heap-management.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5972,26 +6061,29 @@ some fashion. What then happens when a particular object ...
   <article class="nested">
 
     <header>
-      <h2><a href="/algorithm/algorithm-design-pattern-observer.html" title="查看《D.P.: Observer》">D.P.: Observer</a></h2>
+      <h2><a href="/cs/computer-science-compiler-instance-gcc.html" title="查看《Compiler: gcc》">Compiler: gcc</a></h2>
     </header>
 
     <section>
       <p>
         
-Keywords
+1. Build, host, and target
 
-  Subject: It is considered as the keeper of information, of data or of
-business logic
-  Register/Attach: Observers register themselves ...
+  –target only make sense when building a compiler(e.g.: gcc)
+
+
+2. –prefix option
+
+  When you install software with ma...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#July-2018" title="查看此月所有文章">20 July 2018</a>，
+        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">16 September 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#Algorithm-ref" title="查看此类别下的所有文章">Algorithm</a>，
-        评论：<a href="/algorithm/algorithm-design-pattern-observer.html#disqus_thread" title="查看此文章的评论"></a>
+        类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
+        评论：<a href="/cs/computer-science-compiler-instance-gcc.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6000,24 +6092,91 @@ business logic
   <article class="nested">
 
     <header>
-      <h2><a href="/algorithm/algorithm-design-pattern-builder.html" title="查看《D.P.: Builder》">D.P.: Builder</a></h2>
+      <h2><a href="/pl/computer-science-compiler-instance-clang.html" title="查看《Compiler: clang》">Compiler: clang</a></h2>
     </header>
 
     <section>
       <p>
         
-Problem
-It is easy to fall into the trap of having a class of numberous constructors
-where each one is taking a different number of parameters. Th...
+1 LLVM Project clang
+
+  clang is the C compiler
+  Clang++ is the C++ compiler
+    
+      -std=: option picks which dialect of a particular languag...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#July-2018" title="查看此月所有文章">20 July 2018</a>，
+        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">16 September 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#Algorithm-ref" title="查看此类别下的所有文章">Algorithm</a>，
-        评论：<a href="/algorithm/algorithm-design-pattern-builder.html#disqus_thread" title="查看此文章的评论"></a>
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/computer-science-compiler-instance-clang.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/cs/computer-science-microprocessor-register.html" title="查看《Microprocessor: Register》">Microprocessor: Register</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Component
+One bit of computer memory is made of only four NAND gates.
+| a | b | c |
+|—|—|—|
+| 0 | 0 | 1 |
+| 0 | 1 | 1 |
+| 1 | 0 | 1 |
+| 1 | 1 | 0 ...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">15 September 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
+        评论：<a href="/cs/computer-science-microprocessor-register.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/cs/computer-science-microprocessor-random-access-memory.html" title="查看《Microprocessor: Random Access Memory》">Microprocessor: Random Access Memory</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Terminology
+
+  RAM: One register is used to select one of the storage locations and is called the “Memory Address
+Register” or “MAR” for short.
+
+
+
+
+
+
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">14 September 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
+        评论：<a href="/cs/computer-science-microprocessor-random-access-memory.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6062,7 +6221,7 @@ where each one is taking a different number of parameters. Th...
 
     <!-- Current Page -->
     <li class="active">
-      <span class="page_number ">第 44/95 页</span>
+      <span class="page_number ">第 44/97 页</span>
     </li>
 
     <!-- Next Page -->
@@ -6072,7 +6231,7 @@ where each one is taking a different number of parameters. Th...
 
     <!-- Last Page -->
     
-    <li><a href="/page95">&raquo;&raquo;</a></li>
+    <li><a href="/page97">&raquo;&raquo;</a></li>
     
   </ul>
 </section>
@@ -6126,4 +6285,8 @@ $(document).ready(function () {
   
 </body>
 </html>
+
+
+
+
 

@@ -21,3 +21,4 @@ tags: ["英語"]
    are not realy sure what are they talking about.
 3. you use humor as a way to keep people at a distance.
 4. I marry a lesian to make you look good.
+5. What they said publicly is different from what they said privately.

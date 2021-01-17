@@ -32,9 +32,33 @@
   <!-- Scripts -->
   <script type="text/javascript" src="/assets/themes/twitter/js/jquery-1.11.1.min.js"></script>
   <!--[if lt IE 9]><script src="/assets/themes/twitter/js/html5shiv.min.js"></script><![endif]-->
-  <script type="text/javascript" async
+  <!--<script type="text/javascript" async
           src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
-  </script>
+  </script> -->
+	<script type="text/javascript">
+	window.MathJax = {
+	  tex: {
+		packages: ['base', 'ams']
+	  },
+	  loader: {
+		load: ['ui/menu', '[tex]/ams']
+	  },
+	  startup: {
+		ready() {
+		  MathJax.startup.defaultReady();
+		  const Macro = MathJax._.input.tex.Symbol.Macro;
+		  const MapHandler = MathJax._.input.tex.MapHandler.MapHandler;
+		  const Array = MathJax._.input.tex.ams.AmsMethods.default.Array;
+		  const env = new Macro('psmallmatrix', Array, [null, '(', ')', 'c', '.333em', '.2em', 'S', 1]);
+		  MapHandler.getMap('AMSmath-environment').add('psmallmatrix', env);
+		}
+	  }
+	};
+	</script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+
 </head> 
 <body>
 
@@ -124,17 +148,17 @@ $(document).ready(function() {
           <a href="/" title="查看最近发表"><i class="icon-fixed-width icon-edit"></i> 最近发表</a>
 <ul>
 
-  <li><a href="/work/work-publisher.html" title="查看《Publisher: Summary》">Publisher: Summary</a></li>
+  <li><a href="/ai/AI-convex-optimization-terminology.html" title="查看《C.O.: Terminology》">C.O.: Terminology</a></li>
 
-  <li><a href="/work/work-publisher-common-sense.html" title="查看《Publisher: Common sense》">Publisher: Common sense</a></li>
+  <li><a href="/ai/AI-convex-optimization-nomenclature.html" title="查看《C.O.: Nomenclature》">C.O.: Nomenclature</a></li>
 
-  <li><a href="/ai/AI-Adaptive-Boosting.html" title="查看《Adaptive Boosting》">Adaptive Boosting</a></li>
+  <li><a href="/ai/AI-convex-optimization-convex-function.html" title="查看《C.O.: Convex Functions》">C.O.: Convex Functions</a></li>
 
-  <li><a href="/work/work-word-neural-network.html" title="查看《Work: Neural Network》">Work: Neural Network</a></li>
+  <li><a href="/ai/AI-convex-optimization-lagrangian-duality.html" title="查看《C.O.: Lagrangian Duality》">C.O.: Lagrangian Duality</a></li>
 
-  <li><a href="/work/work-word-composite-material.html" title="查看《Word: Composite Material》">Word: Composite Material</a></li>
+  <li><a href="/ai/AI-convex-optimization-linear-programming-problem.html" title="查看《C.O.: Linear Programming》">C.O.: Linear Programming</a></li>
 
-  <li><a href="/work/work-word.html" title="查看《Work: Word》">Work: Word</a></li>
+  <li><a href="/ai/AI-convex-optimization-least-square-problem.html" title="查看《C.O.: Least squares》">C.O.: Least squares</a></li>
 
 </ul>
 
@@ -142,9 +166,52 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">946</span>
+<span title="文章总数">965</span>
 <ul>
 
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#August-2020">2020 年 08 月 (8)</a></li>
+    
+  
 
   
   
@@ -2108,6 +2175,59 @@ $(document).ready(function() {
   
   
   
+    <li><a href="/archive.html#December-2018">2018 年 12 月 (10)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
     <li><a href="/archive.html#November-2018">2018 年 11 月 (10)</a></li>
     
   
@@ -3349,7 +3469,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#March-2018">2018 年 03 月 (68)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2018">2018 年 03 月 (69)</a></li>
     
   
 
@@ -4976,7 +5101,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (217)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (228)</a></li>
 
   <li><a href="/categories.html#Algorithm-ref">Algorithm (78)</a></li>
 
@@ -4988,14 +5113,14 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#work-ref">work (20)</a></li>
 
-  <li><a href="/categories.html#AI-ref">AI (42)</a></li>
+  <li><a href="/categories.html#AI-ref">AI (50)</a></li>
 
 </ul>
 
         </section>
         <section>
           <a href="/tags.html" title="查看所有标签"><i class="icon-fixed-width icon-tags"></i> 标签云</a>
-<span title="标签总数">99</span>
+<span title="标签总数">101</span>
 <div id="tag-cloud">
 
 
@@ -5023,7 +5148,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #888;">summary</a>
+    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #777;">summary</a>
   
     
     
@@ -5058,7 +5183,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#script-ref" style="font-size: 17.5pt; color: #000;">script</a>
+    <a href="/tags.html#script-ref" style="font-size: 18pt; color: #000;">script</a>
   
     
     
@@ -5072,7 +5197,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#compile-ref" style="font-size: 14.5pt; color: #444;">compile</a>
+    <a href="/tags.html#compile-ref" style="font-size: 14pt; color: #444;">compile</a>
   
     
     
@@ -5248,6 +5373,13 @@ $(document).ready(function() {
     
     
     <a href="/tags.html#assembly-ref" style="font-size: 9.5pt; color: #888;">assembly</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#jekyll-ref" style="font-size: 9pt; color: #999;">jekyll</a>
   
     
     
@@ -5697,6 +5829,13 @@ $(document).ready(function() {
     
     <a href="/tags.html#supervised-ref" style="font-size: 9pt; color: #999;">supervised</a>
   
+    
+    
+    
+    
+    
+    <a href="/tags.html#C.O.-ref" style="font-size: 9.5pt; color: #888;">C.O.</a>
+  
 
 </div>
 
@@ -5762,162 +5901,25 @@ $(document).ready(function() {
   <article class="nested">
 
     <header>
-      <h2><a href="/cs/computer-science-compiler-parser-ll1.html" title="查看《Compiler: Parser LL(1)》">Compiler: Parser LL(1)</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-History
-
-  A parser is a function that determines whether a pattern belongs to a language
-  LL(1):
-    
-      The first “L” in LL(1) stands for sc...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">21 September 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
-        评论：<a href="/cs/computer-science-compiler-parser-ll1.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/cs/computer-science-compiler-parser-LR.html" title="查看《Compiler: LR Parsing》">Compiler: LR Parsing</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Introduction
-The most prevalent type of bottom-up parser today is based on a concept called LR(k) parsing
-
-  The “L” is for left-to-right scanning...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">21 September 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
-        评论：<a href="/cs/computer-science-compiler-parser-LR.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/cs/computer-science-compiler-optimization-machine-independent.html" title="查看《Compiler: Machine-Independent Optimizations》">Compiler: Machine-Independent Optimizations</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-History
-
-  Code Optimizations: Elimination of unnecessary instructions in object code, or the replacements of one sequence of
-  instructions by a ...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">21 September 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
-        评论：<a href="/cs/computer-science-compiler-optimization-machine-independent.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/cs/computer-science-compiler-lexical-analysis.html" title="查看《Compiler: Lexical Analysis》">Compiler: Lexical Analysis</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-1. Why bother?
-
-  Simplicity of design is the most important consideration.  The separation of lexical and
-syntactic analysis often allows us to s...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">21 September 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
-        评论：<a href="/cs/computer-science-compiler-lexical-analysis.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/cs/computer-science-compiler-code-generation.html" title="查看《Compiler: Code Generation》">Compiler: Code Generation</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Register Allocation
-A key problem in code generation is deciding what values to hold in what registers.
-
-  Register allocation, during which we se...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">21 September 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
-        评论：<a href="/cs/computer-science-compiler-code-generation.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/cs/computer-science-compiler-runtime-evnriornments-garbage-collection.html" title="查看《Compiler: Garbage Collection》">Compiler: Garbage Collection</a></h2>
+      <h2><a href="/cs/computer-science-operation-system-process-management.html" title="查看《OS: Process Management》">OS: Process Management</a></h2>
     </header>
 
     <section>
       <p>
         
 Definition
-Garbage: Data that cannot be referenced is generally known as garbage
 
-  Many high-level programming languages remove the burden of man...
+  Process: A process can be thought of as a program in execution
+  Thread: A thread is the unit of execution with a process. A process...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">20 September 2018</a>，
+        发表日期：<a href="/archive.html#October-2018" title="查看此月所有文章">21 October 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
-        评论：<a href="/cs/computer-science-compiler-runtime-evnriornments-garbage-collection.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/cs/computer-science-operation-system-process-management.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5926,26 +5928,29 @@ Garbage: Data that cannot be referenced is generally known as garbage
   <article class="nested">
 
     <header>
-      <h2><a href="/cs/computer-science-compiler-runtime-environments-stack-management.html" title="查看《Compiler: Run-Time Environments》">Compiler: Run-Time Environments</a></h2>
+      <h2><a href="/cs/computer-science-operation-system-process-communication.html" title="查看《OS: Interprocess Communication》">OS: Interprocess Communication</a></h2>
     </header>
 
     <section>
       <p>
         
-Duty
-A compiler must accurately implement the abstractions embodied in the source-language definition.
-These abstractions typically include
+###
 
-  the...
+  Processes executing concurrently in the operating system maybe either
+independent processes or cooperating processes.
+
+
+
+  Independent proc...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">20 September 2018</a>，
+        发表日期：<a href="/archive.html#October-2018" title="查看此月所有文章">21 October 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
-        评论：<a href="/cs/computer-science-compiler-runtime-environments-stack-management.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/cs/computer-science-operation-system-process-communication.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5954,22 +5959,25 @@ These abstractions typically include
   <article class="nested">
 
     <header>
-      <h2><a href="/cs/computer-science-compiler-runtime-environments-heap-management.html" title="查看《Compiler: Heap Management》">Compiler: Heap Management</a></h2>
+      <h2><a href="/cs/computer-science-operation-system-operation.html" title="查看《OS: Computer System Operation》">OS: Computer System Operation</a></h2>
     </header>
 
     <section>
       <p>
         
+####
 
+  An Operating System(OS) is a program that manages the computer hardware
+  It also provides a basis for Apllication Programs and acts as an...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">20 September 2018</a>，
+        发表日期：<a href="/archive.html#October-2018" title="查看此月所有文章">21 October 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
-        评论：<a href="/cs/computer-science-compiler-runtime-environments-heap-management.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/cs/computer-science-operation-system-operation.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5978,29 +5986,36 @@ These abstractions typically include
   <article class="nested">
 
     <header>
-      <h2><a href="/cs/computer-science-compiler-instance-gcc.html" title="查看《Compiler: gcc》">Compiler: gcc</a></h2>
+      <h2><a href="/cs/computer-science-operation-system-kernel.html" title="查看《OS: Kernel》">OS: Kernel</a></h2>
     </header>
 
     <section>
       <p>
         
-1. Build, host, and target
+Kernel
 
-  –target only make sense when building a compiler(e.g.: gcc)
+  linux
+  Mach
+  BSD
+  XNU: kernel of Darwin
 
 
-2. –prefix option
+OS
 
-  When you install software with ma...
+  GNU/linux
+  Windows
+  Mac OS
+
+
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">16 September 2018</a>，
+        发表日期：<a href="/archive.html#October-2018" title="查看此月所有文章">21 October 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
-        评论：<a href="/cs/computer-science-compiler-instance-gcc.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/cs/computer-science-operation-system-kernel.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6009,27 +6024,186 @@ These abstractions typically include
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/computer-science-compiler-instance-clang.html" title="查看《Compiler: clang》">Compiler: clang</a></h2>
+      <h2><a href="/cs/computer-science-operation-system-directory-structure.html" title="查看《OS: Directory Hierarch》">OS: Directory Hierarch</a></h2>
     </header>
 
     <section>
       <p>
         
-1 LLVM Project clang
+proc
 
-  clang is the C compiler
-  Clang++ is the C++ compiler
+  linux提供了一种通过/proc文件系统，在运行时访问内核内部数据结构，改变内核设置的机制。
+  proc文件系统是一个伪文件系统，只存在内存中，不占用外存空间
+  /proc下有三个很重要的目录，net，scsi和sys；sys是可写的，可以通过它来访问或者修改内核参数
+...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#October-2018" title="查看此月所有文章">21 October 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
+        评论：<a href="/cs/computer-science-operation-system-directory-structure.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/cs/computer-science-operation-system-instance-macos-software-tips-and-tricks.html" title="查看《MacOS: Software Tips and Tricks》">MacOS: Software Tips and Tricks</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+VLC视频播放器
+
+
+  open-source
+  support multiplatform
+
+
+Mathpix Snipping Tool
+
+
+  translate formul
+
+
+Mac OS Safari
+
+  User Agent String is to detect In...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#October-2018" title="查看此月所有文章">15 October 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
+        评论：<a href="/cs/computer-science-operation-system-instance-macos-software-tips-and-tricks.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/cs/computer-science-operation-system-instance-macos-software-management.html" title="查看《MacOS: Software Management》">MacOS: Software Management</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+xcode-select
+
+  Manages the active developer directory for Xcode and BSD tools.
+
+
+xcode-select --install
+# Opens a user interface dialog to reques...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#October-2018" title="查看此月所有文章">15 October 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
+        评论：<a href="/cs/computer-science-operation-system-instance-macos-software-management.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/cs/computer-science-theory-of-computation-determinstic-finite-automata.html" title="查看《TOC: DFA》">TOC: DFA</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+A
+$(Q,\sigma,q_0,F,\delta)$
+
+  $Q$: set of all states
+  $\sigma$: inputs
+  $q_0$: start state/initial state
+  $F$: set of final states
+  $\delta$:...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#October-2018" title="查看此月所有文章">12 October 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
+        评论：<a href="/cs/computer-science-theory-of-computation-determinstic-finite-automata.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/cs/computer-science-theory-of-computation-nondeterminstic-finite-automata.html" title="查看《TOC: NFA》">TOC: NFA</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+$(Q,\sigma,q_0,F,\delta)$
+
+  $Q$: set of all states
+  $\sigma$: inputs
+  $q_0$: start state/initial state
+  $F$: set of final states
+  $\delta$: t...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#October-2018" title="查看此月所有文章">11 October 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
+        评论：<a href="/cs/computer-science-theory-of-computation-nondeterminstic-finite-automata.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/cs/computer-science-theory-of-computation-regurlar-language.html" title="查看《TOC: Regular Languages》">TOC: Regular Languages</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+A
+
+  A language is said to be a regular language if and only if some finite state machine recognizes
+it.
     
-      -std=: option picks which dialect of a particular languag...
+      languages which require memory...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">16 September 2018</a>，
+        发表日期：<a href="/archive.html#October-2018" title="查看此月所有文章">08 October 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/computer-science-compiler-instance-clang.html#disqus_thread" title="查看此文章的评论"></a>
+        类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
+        评论：<a href="/cs/computer-science-theory-of-computation-regurlar-language.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6074,7 +6248,7 @@ These abstractions typically include
 
     <!-- Current Page -->
     <li class="active">
-      <span class="page_number ">第 42/95 页</span>
+      <span class="page_number ">第 42/97 页</span>
     </li>
 
     <!-- Next Page -->
@@ -6084,7 +6258,7 @@ These abstractions typically include
 
     <!-- Last Page -->
     
-    <li><a href="/page95">&raquo;&raquo;</a></li>
+    <li><a href="/page97">&raquo;&raquo;</a></li>
     
   </ul>
 </section>
@@ -6138,4 +6312,8 @@ $(document).ready(function () {
   
 </body>
 </html>
+
+
+
+
 
