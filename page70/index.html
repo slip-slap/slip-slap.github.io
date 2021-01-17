@@ -32,9 +32,33 @@
   <!-- Scripts -->
   <script type="text/javascript" src="/assets/themes/twitter/js/jquery-1.11.1.min.js"></script>
   <!--[if lt IE 9]><script src="/assets/themes/twitter/js/html5shiv.min.js"></script><![endif]-->
-  <script type="text/javascript" async
+  <!--<script type="text/javascript" async
           src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
-  </script>
+  </script> -->
+	<script type="text/javascript">
+	window.MathJax = {
+	  tex: {
+		packages: ['base', 'ams']
+	  },
+	  loader: {
+		load: ['ui/menu', '[tex]/ams']
+	  },
+	  startup: {
+		ready() {
+		  MathJax.startup.defaultReady();
+		  const Macro = MathJax._.input.tex.Symbol.Macro;
+		  const MapHandler = MathJax._.input.tex.MapHandler.MapHandler;
+		  const Array = MathJax._.input.tex.ams.AmsMethods.default.Array;
+		  const env = new Macro('psmallmatrix', Array, [null, '(', ')', 'c', '.333em', '.2em', 'S', 1]);
+		  MapHandler.getMap('AMSmath-environment').add('psmallmatrix', env);
+		}
+	  }
+	};
+	</script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+
 </head> 
 <body>
 
@@ -124,17 +148,17 @@ $(document).ready(function() {
           <a href="/" title="查看最近发表"><i class="icon-fixed-width icon-edit"></i> 最近发表</a>
 <ul>
 
-  <li><a href="/work/work-publisher.html" title="查看《Publisher: Summary》">Publisher: Summary</a></li>
+  <li><a href="/ai/AI-convex-optimization-terminology.html" title="查看《C.O.: Terminology》">C.O.: Terminology</a></li>
 
-  <li><a href="/work/work-publisher-common-sense.html" title="查看《Publisher: Common sense》">Publisher: Common sense</a></li>
+  <li><a href="/ai/AI-convex-optimization-nomenclature.html" title="查看《C.O.: Nomenclature》">C.O.: Nomenclature</a></li>
 
-  <li><a href="/ai/AI-Adaptive-Boosting.html" title="查看《Adaptive Boosting》">Adaptive Boosting</a></li>
+  <li><a href="/ai/AI-convex-optimization-convex-function.html" title="查看《C.O.: Convex Functions》">C.O.: Convex Functions</a></li>
 
-  <li><a href="/work/work-word-neural-network.html" title="查看《Work: Neural Network》">Work: Neural Network</a></li>
+  <li><a href="/ai/AI-convex-optimization-lagrangian-duality.html" title="查看《C.O.: Lagrangian Duality》">C.O.: Lagrangian Duality</a></li>
 
-  <li><a href="/work/work-word-composite-material.html" title="查看《Word: Composite Material》">Word: Composite Material</a></li>
+  <li><a href="/ai/AI-convex-optimization-linear-programming-problem.html" title="查看《C.O.: Linear Programming》">C.O.: Linear Programming</a></li>
 
-  <li><a href="/work/work-word.html" title="查看《Work: Word》">Work: Word</a></li>
+  <li><a href="/ai/AI-convex-optimization-least-square-problem.html" title="查看《C.O.: Least squares》">C.O.: Least squares</a></li>
 
 </ul>
 
@@ -142,9 +166,52 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">946</span>
+<span title="文章总数">965</span>
 <ul>
 
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#August-2020">2020 年 08 月 (8)</a></li>
+    
+  
 
   
   
@@ -2108,6 +2175,59 @@ $(document).ready(function() {
   
   
   
+    <li><a href="/archive.html#December-2018">2018 年 12 月 (10)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
     <li><a href="/archive.html#November-2018">2018 年 11 月 (10)</a></li>
     
   
@@ -3349,7 +3469,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#March-2018">2018 年 03 月 (68)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2018">2018 年 03 月 (69)</a></li>
     
   
 
@@ -4976,7 +5101,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (217)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (228)</a></li>
 
   <li><a href="/categories.html#Algorithm-ref">Algorithm (78)</a></li>
 
@@ -4988,14 +5113,14 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#work-ref">work (20)</a></li>
 
-  <li><a href="/categories.html#AI-ref">AI (42)</a></li>
+  <li><a href="/categories.html#AI-ref">AI (50)</a></li>
 
 </ul>
 
         </section>
         <section>
           <a href="/tags.html" title="查看所有标签"><i class="icon-fixed-width icon-tags"></i> 标签云</a>
-<span title="标签总数">99</span>
+<span title="标签总数">101</span>
 <div id="tag-cloud">
 
 
@@ -5023,7 +5148,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #888;">summary</a>
+    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #777;">summary</a>
   
     
     
@@ -5058,7 +5183,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#script-ref" style="font-size: 17.5pt; color: #000;">script</a>
+    <a href="/tags.html#script-ref" style="font-size: 18pt; color: #000;">script</a>
   
     
     
@@ -5072,7 +5197,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#compile-ref" style="font-size: 14.5pt; color: #444;">compile</a>
+    <a href="/tags.html#compile-ref" style="font-size: 14pt; color: #444;">compile</a>
   
     
     
@@ -5248,6 +5373,13 @@ $(document).ready(function() {
     
     
     <a href="/tags.html#assembly-ref" style="font-size: 9.5pt; color: #888;">assembly</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#jekyll-ref" style="font-size: 9pt; color: #999;">jekyll</a>
   
     
     
@@ -5697,6 +5829,13 @@ $(document).ready(function() {
     
     <a href="/tags.html#supervised-ref" style="font-size: 9pt; color: #999;">supervised</a>
   
+    
+    
+    
+    
+    
+    <a href="/tags.html#C.O.-ref" style="font-size: 9.5pt; color: #888;">C.O.</a>
+  
 
 </div>
 
@@ -5762,24 +5901,25 @@ $(document).ready(function() {
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-python-tensorflow-neural-network-with-any-topology.html" title="查看《Python TF: Build Neural Network With Any Topology》">Python TF: Build Neural Network With Any Topology</a></h2>
+      <h2><a href="/pl/pl-script-python-io.html" title="查看《Python: Input and Output Stream》">Python: Input and Output Stream</a></h2>
     </header>
 
     <section>
       <p>
         
-def layer(layer_name, data, output_channels):
-    with tf.variable_scope(layer_name,reuse=tf.AUTO_REUSE):
-        w = tf.get_variable(name="weight...
+what the crap is a context manager?
+
+The main motivation behind the context manager in python is a source acquisition and release mechanism
+which ...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">19 January 2018</a>，
+        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">20 January 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-python-tensorflow-neural-network-with-any-topology.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-script-python-io.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5788,29 +5928,32 @@ def layer(layer_name, data, output_channels):
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-python-tensorflow-mimick-api.html" title="查看《Python TF: Mimicking TF API》">Python TF: Mimicking TF API</a></h2>
+      <h2><a href="/pl/pl-script-python-intro.html" title="查看《Python: Introduction》">Python: Introduction</a></h2>
     </header>
 
     <section>
       <p>
         
-Elements in a Computational Graph
+语言类型
+
+  python不允许隐士类型转换，强类型语言
+  python可以在程序运行时改变其结构，是动态语言
 
 
-  Variables
-  Placeholders
-  Constants
-  Operations
-  Graph: A graph is like a central hub that connects all t...
+文件夹中有__init__.py文件夹为python的包，java并没有这样的要求
+
+2. Line Break
+
+  you can just have argument...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">19 January 2018</a>，
+        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">20 January 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-python-tensorflow-mimick-api.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-script-python-intro.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5819,25 +5962,30 @@ Elements in a Computational Graph
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-python-tensorflow-intro.html" title="查看《Python TF: Introduction》">Python TF: Introduction</a></h2>
+      <h2><a href="/pl/pl-script-python-function.html" title="查看《Python: Function》">Python: Function</a></h2>
     </header>
 
     <section>
       <p>
         
-what is the crap of tensorflow ?
+function
+Function is the first-class citizen in python
 
-  the tensorflow defines a compute graph, and you can define operation in the graph.
-  the purpose of the comput...
+Function Calls
+
+  Pass by value
+  Pass by reference
+  Pass by Object reference
+Python is a...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">19 January 2018</a>，
+        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">20 January 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-python-tensorflow-intro.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-script-python-function.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5846,28 +5994,28 @@ what is the crap of tensorflow ?
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-python-tensorflow-connect-graph.html" title="查看《Python TF: Connect Two Graph》">Python TF: Connect Two Graph</a></h2>
+      <h2><a href="/pl/pl-script-python-exception.html" title="查看《Python: Exception》">Python: Exception</a></h2>
     </header>
 
     <section>
       <p>
-        
-import tensorflow as tf
+        with...as...
 
-def graph_add():
-    g = tf.Graph()
-    with g.as_default() as g:
-        a = tf.placeholder(tf.float32, [], name='a')
-  ...
+class Demo:
+    def __enter__(self):
+        print("enter function")
+        return "Foo"
+
+    def __exit__(self, exc_type, exc_val, ...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">19 January 2018</a>，
+        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">20 January 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-python-tensorflow-connect-graph.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-script-python-exception.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5876,26 +6024,25 @@ def graph_add():
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-python-tensorflow-concept.html" title="查看《Python TF: Concept》">Python TF: Concept</a></h2>
+      <h2><a href="/pl/pl-script-python-error-debug.html" title="查看《Python: Common Error》">Python: Common Error</a></h2>
     </header>
 
     <section>
       <p>
         
-what the crap is the rank?
+NoneType error
 
-  
-    The rank of a tensor is different is not the same as the rank of a matrix.
-the rank of a tensor is the number o...
+whenever you see an error that include ‘NoneType’ that means you have an operand
+or an object that is None when you expecting some...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">19 January 2018</a>，
+        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">20 January 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-python-tensorflow-concept.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-script-python-error-debug.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5904,24 +6051,32 @@ the rank of a tensor is the number o...
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-python-qt5-qtdesigner-code-template.html" title="查看《Python Qt: Integrated Template of QT Designer》">Python Qt: Integrated Template of QT Designer</a></h2>
+      <h2><a href="/pl/pl-script-python-data-type.html" title="查看《Python: Meta-functiion》">Python: Meta-functiion</a></h2>
     </header>
 
     <section>
       <p>
         
-signal and slot
-If you have a programming backgound, you may hear about event handling where you interact with a widget
-and a function is executed...
+None
+# None是一个空对象，没有方法和属性
+
+
+数据类型间的转换
+
+str(var)     #转化为str类型
+int(var)     #转化为int类型
+
+
+
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">18 January 2018</a>，
+        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">20 January 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-python-qt5-qtdesigner-code-template.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-script-python-data-type.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5930,30 +6085,24 @@ and a function is executed...
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-python-qt5-pyqtgraph.html" title="查看《Python Qt: Pyqtgraph》">Python Qt: Pyqtgraph</a></h2>
+      <h2><a href="/pl/pl-script-python-copy.html" title="查看《Python:  Copy》">Python:  Copy</a></h2>
     </header>
 
     <section>
       <p>
         
-what’s pyqtgraph
-pyqtgraph is born for dynamic graph, matplotlib is for static graph.
-
-demo
-
-import numpy as np
-import pyqtgraph as pg
-
-# create t...
+copy in Python
+In Python, Assignment statements do not copy objects, they create bindings
+between a target and an object.  When we use = operator ...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">18 January 2018</a>，
+        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">20 January 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-python-qt5-pyqtgraph.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-script-python-copy.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5962,30 +6111,34 @@ import pyqtgraph as pg
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-python-qt5-menu-action.html" title="查看《Python Qt: Menu Event Handling》">Python Qt: Menu Event Handling</a></h2>
+      <h2><a href="/pl/pl-script-python-container.html" title="查看《Python: Container》">Python: Container</a></h2>
     </header>
 
     <section>
       <p>
         
-Event Handling
+intro
+python里的元组,列表和字典类比c++中的顺序容器和关联容器来理解。
+c++的容器只是容器，并没有提供算法。python的容器提供了非常多的算法.
 
-  used the Code Integrated Template
-  click File-&gt;Open, pop up dialoge
+
+list
 
 
-# -*- coding: utf-8 -*-
+list.append(var)  #向容器中添加元素
 
-# Form implementation generat...
+
+tuple
+元组产生的原因: return语句只能...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">18 January 2018</a>，
+        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">20 January 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-python-qt5-menu-action.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-script-python-container.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5994,25 +6147,28 @@ Event Handling
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-python-qt5-display-image.html" title="查看《Python Qt: Picture Display》">Python Qt: Picture Display</a></h2>
+      <h2><a href="/pl/pl-script-python-collections.html" title="查看《Python: Collections and Algorithm》">Python: Collections and Algorithm</a></h2>
     </header>
 
     <section>
       <p>
         
-Display a picutre
-In nature, There is no difference between text label and picture label. 
-So, you can put a picture in a label. 
-Programming look...
+Collections
+
+what is collections module
+
+  
+    Collections in Python are containers that are used to store collections of
+data, for example, list...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">18 January 2018</a>，
+        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">20 January 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-python-qt5-display-image.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-script-python-collections.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6021,26 +6177,25 @@ Programming look...
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-python-qt5-designer.html" title="查看《Python Qt: Designer》">Python Qt: Designer</a></h2>
+      <h2><a href="/pl/pl-script-python-closure.html" title="查看《Python: Closure》">Python: Closure</a></h2>
     </header>
 
     <section>
       <p>
         
-Widget
+Why Closures?
+All the crap comes out because of the concept of non-local variable. First let’s define some concept.
 
-  TextLabel: what does label mean? According to Merriam-Webster: to put a word
-or name on something to describe or identify it.
-  Graphics...
+  nested funciton: A function...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">18 January 2018</a>，
+        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">20 January 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-python-qt5-designer.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-script-python-closure.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6085,7 +6240,7 @@ or name on something to describe or identify it.
 
     <!-- Current Page -->
     <li class="active">
-      <span class="page_number ">第 70/95 页</span>
+      <span class="page_number ">第 70/97 页</span>
     </li>
 
     <!-- Next Page -->
@@ -6095,7 +6250,7 @@ or name on something to describe or identify it.
 
     <!-- Last Page -->
     
-    <li><a href="/page95">&raquo;&raquo;</a></li>
+    <li><a href="/page97">&raquo;&raquo;</a></li>
     
   </ul>
 </section>
@@ -6149,4 +6304,8 @@ $(document).ready(function () {
   
 </body>
 </html>
+
+
+
+
 

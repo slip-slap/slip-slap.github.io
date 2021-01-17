@@ -32,9 +32,33 @@
   <!-- Scripts -->
   <script type="text/javascript" src="/assets/themes/twitter/js/jquery-1.11.1.min.js"></script>
   <!--[if lt IE 9]><script src="/assets/themes/twitter/js/html5shiv.min.js"></script><![endif]-->
-  <script type="text/javascript" async
+  <!--<script type="text/javascript" async
           src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
-  </script>
+  </script> -->
+	<script type="text/javascript">
+	window.MathJax = {
+	  tex: {
+		packages: ['base', 'ams']
+	  },
+	  loader: {
+		load: ['ui/menu', '[tex]/ams']
+	  },
+	  startup: {
+		ready() {
+		  MathJax.startup.defaultReady();
+		  const Macro = MathJax._.input.tex.Symbol.Macro;
+		  const MapHandler = MathJax._.input.tex.MapHandler.MapHandler;
+		  const Array = MathJax._.input.tex.ams.AmsMethods.default.Array;
+		  const env = new Macro('psmallmatrix', Array, [null, '(', ')', 'c', '.333em', '.2em', 'S', 1]);
+		  MapHandler.getMap('AMSmath-environment').add('psmallmatrix', env);
+		}
+	  }
+	};
+	</script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+
 </head> 
 <body>
 
@@ -124,17 +148,17 @@ $(document).ready(function() {
           <a href="/" title="查看最近发表"><i class="icon-fixed-width icon-edit"></i> 最近发表</a>
 <ul>
 
-  <li><a href="/work/work-publisher.html" title="查看《Publisher: Summary》">Publisher: Summary</a></li>
+  <li><a href="/ai/AI-convex-optimization-terminology.html" title="查看《C.O.: Terminology》">C.O.: Terminology</a></li>
 
-  <li><a href="/work/work-publisher-common-sense.html" title="查看《Publisher: Common sense》">Publisher: Common sense</a></li>
+  <li><a href="/ai/AI-convex-optimization-nomenclature.html" title="查看《C.O.: Nomenclature》">C.O.: Nomenclature</a></li>
 
-  <li><a href="/ai/AI-Adaptive-Boosting.html" title="查看《Adaptive Boosting》">Adaptive Boosting</a></li>
+  <li><a href="/ai/AI-convex-optimization-convex-function.html" title="查看《C.O.: Convex Functions》">C.O.: Convex Functions</a></li>
 
-  <li><a href="/work/work-word-neural-network.html" title="查看《Work: Neural Network》">Work: Neural Network</a></li>
+  <li><a href="/ai/AI-convex-optimization-lagrangian-duality.html" title="查看《C.O.: Lagrangian Duality》">C.O.: Lagrangian Duality</a></li>
 
-  <li><a href="/work/work-word-composite-material.html" title="查看《Word: Composite Material》">Word: Composite Material</a></li>
+  <li><a href="/ai/AI-convex-optimization-linear-programming-problem.html" title="查看《C.O.: Linear Programming》">C.O.: Linear Programming</a></li>
 
-  <li><a href="/work/work-word.html" title="查看《Work: Word》">Work: Word</a></li>
+  <li><a href="/ai/AI-convex-optimization-least-square-problem.html" title="查看《C.O.: Least squares》">C.O.: Least squares</a></li>
 
 </ul>
 
@@ -142,9 +166,52 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">946</span>
+<span title="文章总数">965</span>
 <ul>
 
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#August-2020">2020 年 08 月 (8)</a></li>
+    
+  
 
   
   
@@ -2108,6 +2175,59 @@ $(document).ready(function() {
   
   
   
+    <li><a href="/archive.html#December-2018">2018 年 12 月 (10)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
     <li><a href="/archive.html#November-2018">2018 年 11 月 (10)</a></li>
     
   
@@ -3349,7 +3469,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#March-2018">2018 年 03 月 (68)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2018">2018 年 03 月 (69)</a></li>
     
   
 
@@ -4976,7 +5101,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (217)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (228)</a></li>
 
   <li><a href="/categories.html#Algorithm-ref">Algorithm (78)</a></li>
 
@@ -4988,14 +5113,14 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#work-ref">work (20)</a></li>
 
-  <li><a href="/categories.html#AI-ref">AI (42)</a></li>
+  <li><a href="/categories.html#AI-ref">AI (50)</a></li>
 
 </ul>
 
         </section>
         <section>
           <a href="/tags.html" title="查看所有标签"><i class="icon-fixed-width icon-tags"></i> 标签云</a>
-<span title="标签总数">99</span>
+<span title="标签总数">101</span>
 <div id="tag-cloud">
 
 
@@ -5023,7 +5148,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #888;">summary</a>
+    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #777;">summary</a>
   
     
     
@@ -5058,7 +5183,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#script-ref" style="font-size: 17.5pt; color: #000;">script</a>
+    <a href="/tags.html#script-ref" style="font-size: 18pt; color: #000;">script</a>
   
     
     
@@ -5072,7 +5197,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#compile-ref" style="font-size: 14.5pt; color: #444;">compile</a>
+    <a href="/tags.html#compile-ref" style="font-size: 14pt; color: #444;">compile</a>
   
     
     
@@ -5248,6 +5373,13 @@ $(document).ready(function() {
     
     
     <a href="/tags.html#assembly-ref" style="font-size: 9.5pt; color: #888;">assembly</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#jekyll-ref" style="font-size: 9pt; color: #999;">jekyll</a>
   
     
     
@@ -5697,6 +5829,13 @@ $(document).ready(function() {
     
     <a href="/tags.html#supervised-ref" style="font-size: 9pt; color: #999;">supervised</a>
   
+    
+    
+    
+    
+    
+    <a href="/tags.html#C.O.-ref" style="font-size: 9.5pt; color: #888;">C.O.</a>
+  
 
 </div>
 
@@ -5762,34 +5901,26 @@ $(document).ready(function() {
   <article class="nested">
 
     <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-english-school-education.html" title="查看《School: Education》">School: Education</a></h2>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-english-life-compliment.html" title="查看《Relationship: Compliment》">Relationship: Compliment</a></h2>
     </header>
 
     <section>
       <p>
         
-####
 
-  frost boy
-  summar camp
-  grade school
-  elementary school
-  second year of my collage
-  preschool
-
-
-####
-
-  education affairs department:...
+  you have such a beautiful voice, it’s a pity you waste it. -Tadashi
+tokieda(正時枝)
+  she is an sophisticated woman.
+  I hate him with all my hear...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">10 March 2017</a>，
+        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">15 March 2017</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-english-school-education.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/%E8%A8%80%E8%91%89/language-english-life-compliment.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5798,33 +5929,30 @@ $(document).ready(function() {
   <article class="nested">
 
     <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-english-school-classroom.html" title="查看《School: Classroom》">School: Classroom</a></h2>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-english-life-argue.html" title="查看《Relationship: Argue》">Relationship: Argue</a></h2>
     </header>
 
     <section>
       <p>
         
-####
+Phrase
 
-  chalk
-  18 pages, front and back
-  script
-
-
-####
-
-  I want to be thorough
-
-
+  argue about
+  fuck off
+  freak out
+  call it even
+  we got in a fight
+  drive me crazy
+  shame on you: an expression used to make someon...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">10 March 2017</a>，
+        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">15 March 2017</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-english-school-classroom.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/%E8%A8%80%E8%91%89/language-english-life-argue.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5833,22 +5961,36 @@ $(document).ready(function() {
   <article class="nested">
 
     <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-english-school-bully.html" title="查看《School: Bully》">School: Bully</a></h2>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-english-city-traffic.html" title="查看《City: Traffic》">City: Traffic</a></h2>
     </header>
 
     <section>
       <p>
         
+####
 
+  bullet train
+  transport restriction
+  Five carriages
+  reserved seat
+  strap(to hang onto)
+
+
+####
+
+  bar
+  one-way
+  round-way
+  boarding...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">10 March 2017</a>，
+        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">13 March 2017</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-english-school-bully.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/%E8%A8%80%E8%91%89/language-english-city-traffic.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5857,36 +5999,37 @@ $(document).ready(function() {
   <article class="nested">
 
     <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-english-house-toilet.html" title="查看《House: Toilet》">House: Toilet</a></h2>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-english-city-street.html" title="查看《City: Street 》">City: Street </a></h2>
     </header>
 
     <section>
       <p>
         
-####
+On the steet
 
-  stool
-  closestool
-  toilet seat pad
-  hand rinse basin
-  plastic wash basin
-  faucet
-  drainage
+  manhole cover
+  sewer
+  sewage
+  arch bridge
+  wayside shrine
 
 
-####
+sidewalk
 
-  pee on the floor.
-  pee on anyo...
+  pole
+  electic pole
+  electic cable
+  light pole
+  sto...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">10 March 2017</a>，
+        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">13 March 2017</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-english-house-toilet.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/%E8%A8%80%E8%91%89/language-english-city-street.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5895,142 +6038,179 @@ $(document).ready(function() {
   <article class="nested">
 
     <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-english-house-lounge.html" title="查看《House: Lounge》">House: Lounge</a></h2>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-english-city-square.html" title="查看《City: Square》">City: Square</a></h2>
     </header>
 
     <section>
       <p>
         
-####
-
-  staircase
-  bookcase
-  crack
-  floor
-  wallpaper
-  wall light
-  showcase
-
-
-####
-
-  sled down
-
-
-####
-
-  push her down the stairs
-
-
-sentence...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">10 March 2017</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-english-house-lounge.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-english-house-livingroom.html" title="查看《House: Living Room》">House: Living Room</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Sentence
-
-  fall asleep in front of fire.
-  I got in there myself once, my roomate bet me 5 bucks that I couldn’t, then
-he stucked a board through...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">10 March 2017</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-english-house-livingroom.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-english-house-kitchen.html" title="查看《House: Kitchen》">House: Kitchen</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-####
-
-  Chopping Board
-  Rolling Pin
-  plastic wrap
-  rice cooker
-  electric pressure cooker
-  saucepan with glass lid
-  trash bags
-  sponge holde...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">10 March 2017</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-english-house-kitchen.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-english-house-garden.html" title="查看《House: Garden》">House: Garden</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-####
+Phrase
 
   fountain
-  shrub
-  leaves
-  hegde
-  shadow
-  ranch fence
+  swan statue
+  floating decoration
+
+
+Sentence
+
+  I’d like to have a swan statue installed on the fountain.
+  install column in...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">13 March 2017</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
+        评论：<a href="/%E8%A8%80%E8%91%89/language-english-city-square.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-english-city-place.html" title="查看《Life: City》">Life: City</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+####
+
+  suburb
+  market
+  native villages
+  village
+  town
+  county
+  city
+  province
+  slum
+
+
+Road
+
+  sidewalk
+  sideways
+  lane: a small road of...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">13 March 2017</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
+        评论：<a href="/%E8%A8%80%E8%91%89/language-english-city-place.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-english-city-mall.html" title="查看《City: Mall》">City: Mall</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+####
+
+  shopping mall
+  parking lot
+  parking space
+  lost and found
+
+
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">13 March 2017</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
+        评论：<a href="/%E8%A8%80%E8%91%89/language-english-city-mall.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-english-village-work.html" title="查看《Village: Work》">Village: Work</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Phrase
+
+  sprinkle fertilizer
+  wine cellar
+
+
+Sentence
+
+  All you need to do is mix it with water and apply it to the shrub
+  So peaceful, so prot...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">12 March 2017</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
+        评论：<a href="/%E8%A8%80%E8%91%89/language-english-village-work.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-english-village-parenting.html" title="查看《Village: Parenting》">Village: Parenting</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+animal
+
+  squirrel
+  parenting
+  locust
+  screech
 
 
 Phrase
 
-  in the shadow of the garden trees.
-  exotic plants
-  renovate the law...
+  single parent
+  feed the fish
+  sneak around
+
+
+Sentence
+
+  squirrel crack nuts
+  she...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">10 March 2017</a>，
+        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">12 March 2017</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-english-house-garden.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/%E8%A8%80%E8%91%89/language-english-village-parenting.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6039,7 +6219,7 @@ Phrase
   <article class="nested">
 
     <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-english-house-furniture.html" title="查看《House: Furniture》">House: Furniture</a></h2>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-english-village-life.html" title="查看《Village: life》">Village: life</a></h2>
     </header>
 
     <section>
@@ -6047,61 +6227,28 @@ Phrase
         
 ####
 
-  shoe cabinet
-  table lamp
-  floor lamp
-  bathroom scales
-  folding chair
-  tape measurer
-  soft couch
-  trash can
-  waste basket
-  stereo
-...
+  pond
+  puddle
+  overflow water
+  natural spring
+  pump filter
+  candle burn out
+  jellyfish
+
+
+Phrase
+
+  pump out: pump the water out
+  cha...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">10 March 2017</a>，
+        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">12 March 2017</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-english-house-furniture.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-english-house-family.html" title="查看《House: Family》">House: Family</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-####
-
-  hold you back and you fight back
-  laminate the picture
-
-
-####
-
-  grown up
-  birth mom
-
-
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">10 March 2017</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-english-house-family.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/%E8%A8%80%E8%91%89/language-english-village-life.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6146,7 +6293,7 @@ Phrase
 
     <!-- Current Page -->
     <li class="active">
-      <span class="page_number ">第 83/95 页</span>
+      <span class="page_number ">第 83/97 页</span>
     </li>
 
     <!-- Next Page -->
@@ -6156,7 +6303,7 @@ Phrase
 
     <!-- Last Page -->
     
-    <li><a href="/page95">&raquo;&raquo;</a></li>
+    <li><a href="/page97">&raquo;&raquo;</a></li>
     
   </ul>
 </section>
@@ -6210,4 +6357,8 @@ $(document).ready(function () {
   
 </body>
 </html>
+
+
+
+
 

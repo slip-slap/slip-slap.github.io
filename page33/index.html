@@ -32,9 +32,33 @@
   <!-- Scripts -->
   <script type="text/javascript" src="/assets/themes/twitter/js/jquery-1.11.1.min.js"></script>
   <!--[if lt IE 9]><script src="/assets/themes/twitter/js/html5shiv.min.js"></script><![endif]-->
-  <script type="text/javascript" async
+  <!--<script type="text/javascript" async
           src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
-  </script>
+  </script> -->
+	<script type="text/javascript">
+	window.MathJax = {
+	  tex: {
+		packages: ['base', 'ams']
+	  },
+	  loader: {
+		load: ['ui/menu', '[tex]/ams']
+	  },
+	  startup: {
+		ready() {
+		  MathJax.startup.defaultReady();
+		  const Macro = MathJax._.input.tex.Symbol.Macro;
+		  const MapHandler = MathJax._.input.tex.MapHandler.MapHandler;
+		  const Array = MathJax._.input.tex.ams.AmsMethods.default.Array;
+		  const env = new Macro('psmallmatrix', Array, [null, '(', ')', 'c', '.333em', '.2em', 'S', 1]);
+		  MapHandler.getMap('AMSmath-environment').add('psmallmatrix', env);
+		}
+	  }
+	};
+	</script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+
 </head> 
 <body>
 
@@ -124,17 +148,17 @@ $(document).ready(function() {
           <a href="/" title="查看最近发表"><i class="icon-fixed-width icon-edit"></i> 最近发表</a>
 <ul>
 
-  <li><a href="/work/work-publisher.html" title="查看《Publisher: Summary》">Publisher: Summary</a></li>
+  <li><a href="/ai/AI-convex-optimization-terminology.html" title="查看《C.O.: Terminology》">C.O.: Terminology</a></li>
 
-  <li><a href="/work/work-publisher-common-sense.html" title="查看《Publisher: Common sense》">Publisher: Common sense</a></li>
+  <li><a href="/ai/AI-convex-optimization-nomenclature.html" title="查看《C.O.: Nomenclature》">C.O.: Nomenclature</a></li>
 
-  <li><a href="/ai/AI-Adaptive-Boosting.html" title="查看《Adaptive Boosting》">Adaptive Boosting</a></li>
+  <li><a href="/ai/AI-convex-optimization-convex-function.html" title="查看《C.O.: Convex Functions》">C.O.: Convex Functions</a></li>
 
-  <li><a href="/work/work-word-neural-network.html" title="查看《Work: Neural Network》">Work: Neural Network</a></li>
+  <li><a href="/ai/AI-convex-optimization-lagrangian-duality.html" title="查看《C.O.: Lagrangian Duality》">C.O.: Lagrangian Duality</a></li>
 
-  <li><a href="/work/work-word-composite-material.html" title="查看《Word: Composite Material》">Word: Composite Material</a></li>
+  <li><a href="/ai/AI-convex-optimization-linear-programming-problem.html" title="查看《C.O.: Linear Programming》">C.O.: Linear Programming</a></li>
 
-  <li><a href="/work/work-word.html" title="查看《Work: Word》">Work: Word</a></li>
+  <li><a href="/ai/AI-convex-optimization-least-square-problem.html" title="查看《C.O.: Least squares》">C.O.: Least squares</a></li>
 
 </ul>
 
@@ -142,9 +166,52 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">946</span>
+<span title="文章总数">965</span>
 <ul>
 
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#August-2020">2020 年 08 月 (8)</a></li>
+    
+  
 
   
   
@@ -2108,6 +2175,59 @@ $(document).ready(function() {
   
   
   
+    <li><a href="/archive.html#December-2018">2018 年 12 月 (10)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
     <li><a href="/archive.html#November-2018">2018 年 11 月 (10)</a></li>
     
   
@@ -3349,7 +3469,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#March-2018">2018 年 03 月 (68)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2018">2018 年 03 月 (69)</a></li>
     
   
 
@@ -4976,7 +5101,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (217)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (228)</a></li>
 
   <li><a href="/categories.html#Algorithm-ref">Algorithm (78)</a></li>
 
@@ -4988,14 +5113,14 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#work-ref">work (20)</a></li>
 
-  <li><a href="/categories.html#AI-ref">AI (42)</a></li>
+  <li><a href="/categories.html#AI-ref">AI (50)</a></li>
 
 </ul>
 
         </section>
         <section>
           <a href="/tags.html" title="查看所有标签"><i class="icon-fixed-width icon-tags"></i> 标签云</a>
-<span title="标签总数">99</span>
+<span title="标签总数">101</span>
 <div id="tag-cloud">
 
 
@@ -5023,7 +5148,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #888;">summary</a>
+    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #777;">summary</a>
   
     
     
@@ -5058,7 +5183,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#script-ref" style="font-size: 17.5pt; color: #000;">script</a>
+    <a href="/tags.html#script-ref" style="font-size: 18pt; color: #000;">script</a>
   
     
     
@@ -5072,7 +5197,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#compile-ref" style="font-size: 14.5pt; color: #444;">compile</a>
+    <a href="/tags.html#compile-ref" style="font-size: 14pt; color: #444;">compile</a>
   
     
     
@@ -5248,6 +5373,13 @@ $(document).ready(function() {
     
     
     <a href="/tags.html#assembly-ref" style="font-size: 9.5pt; color: #888;">assembly</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#jekyll-ref" style="font-size: 9pt; color: #999;">jekyll</a>
   
     
     
@@ -5697,6 +5829,13 @@ $(document).ready(function() {
     
     <a href="/tags.html#supervised-ref" style="font-size: 9pt; color: #999;">supervised</a>
   
+    
+    
+    
+    
+    
+    <a href="/tags.html#C.O.-ref" style="font-size: 9.5pt; color: #888;">C.O.</a>
+  
 
 </div>
 
@@ -5762,6 +5901,228 @@ $(document).ready(function() {
   <article class="nested">
 
     <header>
+      <h2><a href="/math/math-apply-stochastic-process-queueing-theory.html" title="查看《S.P.: Queueing Theory》">S.P.: Queueing Theory</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Kendall’s Notation
+Kendall notation is the standard system used to describe and classify a queueing
+node.
+
+  Kendall proposed describing queueing ...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#March-2019" title="查看此月所有文章">23 March 2019</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
+        评论：<a href="/math/math-apply-stochastic-process-queueing-theory.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/math/math-apply-stochastic-process-renewal-process-wald-equality.html" title="查看《R.P.: Wald's Equality》">R.P.: Wald's Equality</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Motivation
+Gambling
+
+
+  defective random variable: it means there is some probability that J is going
+to be infinite
+  Indicator random variable: ...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#March-2019" title="查看此月所有文章">10 March 2019</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
+        评论：<a href="/math/math-apply-stochastic-process-renewal-process-wald-equality.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/math/math-apply-stochastic-process-renewal-process-renewal-reward-processes.html" title="查看《R.P.: Renewal Rewards》">R.P.: Renewal Rewards</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Time-average Residual Life
+\(\int_{0}^{t} y(\tau) d \tau=\frac{1}{2} \sum_{i=1}^{n(t)}
+x_{i}^{2}+\int_{\tau=s_{n(t)}}^{t} y(\tau) d \tau\)
+
+
+
+Galo...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#March-2019" title="查看此月所有文章">10 March 2019</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
+        评论：<a href="/math/math-apply-stochastic-process-renewal-process-renewal-reward-processes.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/math/math-apply-stochastic-process-renewal-process-introduction.html" title="查看《R.P.: Introduction》">R.P.: Introduction</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Motivation
+Much of this chapter will be devoted to understanding the behavior of N(t) and
+N(t)/t as t becomes large.
+
+Renewal Processes and Poisso...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#March-2019" title="查看此月所有文章">10 March 2019</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
+        评论：<a href="/math/math-apply-stochastic-process-renewal-process-introduction.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/math/math-apply-stochastic-process-martingales.html" title="查看《S.P.: Martingles》">S.P.: Martingles</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Martingales
+
+  Martingales: Let $X_0,X_1,X_2,\cdots$ be a markov chain. The chain is a
+martingle if for all $n=0,1,2,\cdots$, we have $E(X_{n+1} -...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#March-2019" title="查看此月所有文章">10 March 2019</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
+        评论：<a href="/math/math-apply-stochastic-process-martingales.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/math/math-apply-stochastic-process-summary.html" title="查看《S.P.: summary》">S.P.: summary</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Introduction
+
+  Stochastic processes which are processes that proceed randomly in time.
+  We consider sequences $X_0,X_1,X_2,\cdots$ where $X_n$ r...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#March-2019" title="查看此月所有文章">09 March 2019</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
+        评论：<a href="/math/math-apply-stochastic-process-summary.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/math/math-apply-stochastic-process-poisson-process-introduction.html" title="查看《P.P.: Introduction》">P.P.: Introduction</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Poisson Distribution
+In probability theory and statistics, Poisson distribution expresses 
+the probability of a given number of events occurring i...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#March-2019" title="查看此月所有文章">09 March 2019</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
+        评论：<a href="/math/math-apply-stochastic-process-poisson-process-introduction.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/math/math-apply-stochastic-process-poisson-process-combine-split.html" title="查看《S.P.: Combine and Split of PP》">S.P.: Combine and Split of PP</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Poisson Combining
+The sum of many small independent arrival processes tends to be close to Poisson
+even if the small processes are not.  In a sens...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#March-2019" title="查看此月所有文章">09 March 2019</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
+        评论：<a href="/math/math-apply-stochastic-process-poisson-process-combine-split.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
       <h2><a href="/math/math-apply-stochastic-process-markov-chain-random-walk.html" title="查看《M.C.: Markov Chain and Random Walk》">M.C.: Markov Chain and Random Walk</a></h2>
     </header>
 
@@ -5812,224 +6173,6 @@ has an amount of money which varies randomly with ti...
 
   </article>
   
-  <article class="nested">
-
-    <header>
-      <h2><a href="/math/math-apply-stochastic-process-markov-chain-finite-state.html" title="查看《M.C.: Finites States》">M.C.: Finites States</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Definition
-
-  Def: A state(node) j is accessible from i(i$\rightarrow$j) if a walk exists from
-i to j.
-    
-      $i\rightarrow j$ means that, sta...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2019" title="查看此月所有文章">09 March 2019</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
-        评论：<a href="/math/math-apply-stochastic-process-markov-chain-finite-state.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/math/math-apply-stochastic-process-markov-chain-countable-state.html" title="查看《M.C.: Countable State》">M.C.: Countable State</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Motivation
-Markov chains with a countably-infinite state space(more briefly,
-countable-state Markov chains) exhibit some types of behavior not pos...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2019" title="查看此月所有文章">09 March 2019</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
-        评论：<a href="/math/math-apply-stochastic-process-markov-chain-countable-state.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/math/math-apply-stochastic-process-markov-chain-apply-metropolis-hastings-sampling.html" title="查看《M.C.: Metropolis and Metropolis Hastings》">M.C.: Metropolis and Metropolis Hastings</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Metropolis Hastings Algorithm
-
-
-  definition: Metropolis Hastings algorithm is one of the sampling algorithm to sample from high dimensional
-  why...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2019" title="查看此月所有文章">09 March 2019</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
-        评论：<a href="/math/math-apply-stochastic-process-markov-chain-apply-metropolis-hastings-sampling.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/math/math-apply-stochastic-process-markov-chain-apply-gibbs-sampling.html" title="查看《M.C.: Gibbs Sampling》">M.C.: Gibbs Sampling</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Process
-Suppose we want to generate samples from the joint distribution of \(\left(Y_{1}, \ldots, Y_{k}\right) \in R^{k}\), Further suppose that w...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2019" title="查看此月所有文章">09 March 2019</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
-        评论：<a href="/math/math-apply-stochastic-process-markov-chain-apply-gibbs-sampling.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/math/math-apply-proability-and-statistics-model-check-decision-theory.html" title="查看《P.A.S.M.C.: Decision Theory》">P.A.S.M.C.: Decision Theory</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-
-  decision theory model for inference adds another ingredient to the sampling
-model-the loss function
-
-
-Framework of Decision Theory
-
-  a set of ...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2019" title="查看此月所有文章">07 March 2019</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
-        评论：<a href="/math/math-apply-proability-and-statistics-model-check-decision-theory.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/math/math-apply-graph-theory-exact-marginalization-in-trellises.html" title="查看《G.T.: Exact Marginalization in Trellises》">G.T.: Exact Marginalization in Trellises</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Motivation
-Inferences can be conducted most efficiently by message-passing algorithms,
-   which take advantage of the graphical structure of the p...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2019" title="查看此月所有文章">07 March 2019</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
-        评论：<a href="/math/math-apply-graph-theory-exact-marginalization-in-trellises.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/math/math-apply-game-theory-ordinal-payoffs.html" title="查看《Game Theory: Ordinal Payoff》">Game Theory: Ordinal Payoff</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Definition
-
-  A game-frame in strategic form is a list of four items(a quadruple) $
-\left\langle I,\left(S_{1}, S_{2}, \ldots, S_{n}\right), O, f\...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2019" title="查看此月所有文章">07 March 2019</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
-        评论：<a href="/math/math-apply-game-theory-ordinal-payoffs.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/math/math-apply-game-theory-ordinal-payoffs-nash-equilibrium.html" title="查看《Game Theory: Nash Equilibrium》">Game Theory: Nash Equilibrium</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Introduction
-Games where either the IDSDS procedure or the IDWDS leads to a unique strategy profile are not very
-common. How can one then “solve” ...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2019" title="查看此月所有文章">07 March 2019</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
-        评论：<a href="/math/math-apply-game-theory-ordinal-payoffs-nash-equilibrium.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
 
   
     
@@ -6069,7 +6212,7 @@ common. How can one then “solve” ...
 
     <!-- Current Page -->
     <li class="active">
-      <span class="page_number ">第 33/95 页</span>
+      <span class="page_number ">第 33/97 页</span>
     </li>
 
     <!-- Next Page -->
@@ -6079,7 +6222,7 @@ common. How can one then “solve” ...
 
     <!-- Last Page -->
     
-    <li><a href="/page95">&raquo;&raquo;</a></li>
+    <li><a href="/page97">&raquo;&raquo;</a></li>
     
   </ul>
 </section>
@@ -6133,4 +6276,8 @@ $(document).ready(function () {
   
 </body>
 </html>
+
+
+
+
 

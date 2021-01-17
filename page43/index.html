@@ -32,9 +32,33 @@
   <!-- Scripts -->
   <script type="text/javascript" src="/assets/themes/twitter/js/jquery-1.11.1.min.js"></script>
   <!--[if lt IE 9]><script src="/assets/themes/twitter/js/html5shiv.min.js"></script><![endif]-->
-  <script type="text/javascript" async
+  <!--<script type="text/javascript" async
           src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
-  </script>
+  </script> -->
+	<script type="text/javascript">
+	window.MathJax = {
+	  tex: {
+		packages: ['base', 'ams']
+	  },
+	  loader: {
+		load: ['ui/menu', '[tex]/ams']
+	  },
+	  startup: {
+		ready() {
+		  MathJax.startup.defaultReady();
+		  const Macro = MathJax._.input.tex.Symbol.Macro;
+		  const MapHandler = MathJax._.input.tex.MapHandler.MapHandler;
+		  const Array = MathJax._.input.tex.ams.AmsMethods.default.Array;
+		  const env = new Macro('psmallmatrix', Array, [null, '(', ')', 'c', '.333em', '.2em', 'S', 1]);
+		  MapHandler.getMap('AMSmath-environment').add('psmallmatrix', env);
+		}
+	  }
+	};
+	</script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+
 </head> 
 <body>
 
@@ -124,17 +148,17 @@ $(document).ready(function() {
           <a href="/" title="查看最近发表"><i class="icon-fixed-width icon-edit"></i> 最近发表</a>
 <ul>
 
-  <li><a href="/work/work-publisher.html" title="查看《Publisher: Summary》">Publisher: Summary</a></li>
+  <li><a href="/ai/AI-convex-optimization-terminology.html" title="查看《C.O.: Terminology》">C.O.: Terminology</a></li>
 
-  <li><a href="/work/work-publisher-common-sense.html" title="查看《Publisher: Common sense》">Publisher: Common sense</a></li>
+  <li><a href="/ai/AI-convex-optimization-nomenclature.html" title="查看《C.O.: Nomenclature》">C.O.: Nomenclature</a></li>
 
-  <li><a href="/ai/AI-Adaptive-Boosting.html" title="查看《Adaptive Boosting》">Adaptive Boosting</a></li>
+  <li><a href="/ai/AI-convex-optimization-convex-function.html" title="查看《C.O.: Convex Functions》">C.O.: Convex Functions</a></li>
 
-  <li><a href="/work/work-word-neural-network.html" title="查看《Work: Neural Network》">Work: Neural Network</a></li>
+  <li><a href="/ai/AI-convex-optimization-lagrangian-duality.html" title="查看《C.O.: Lagrangian Duality》">C.O.: Lagrangian Duality</a></li>
 
-  <li><a href="/work/work-word-composite-material.html" title="查看《Word: Composite Material》">Word: Composite Material</a></li>
+  <li><a href="/ai/AI-convex-optimization-linear-programming-problem.html" title="查看《C.O.: Linear Programming》">C.O.: Linear Programming</a></li>
 
-  <li><a href="/work/work-word.html" title="查看《Work: Word》">Work: Word</a></li>
+  <li><a href="/ai/AI-convex-optimization-least-square-problem.html" title="查看《C.O.: Least squares》">C.O.: Least squares</a></li>
 
 </ul>
 
@@ -142,9 +166,52 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">946</span>
+<span title="文章总数">965</span>
 <ul>
 
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#August-2020">2020 年 08 月 (8)</a></li>
+    
+  
 
   
   
@@ -2108,6 +2175,59 @@ $(document).ready(function() {
   
   
   
+    <li><a href="/archive.html#December-2018">2018 年 12 月 (10)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
     <li><a href="/archive.html#November-2018">2018 年 11 月 (10)</a></li>
     
   
@@ -3349,7 +3469,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#March-2018">2018 年 03 月 (68)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2018">2018 年 03 月 (69)</a></li>
     
   
 
@@ -4976,7 +5101,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (217)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (228)</a></li>
 
   <li><a href="/categories.html#Algorithm-ref">Algorithm (78)</a></li>
 
@@ -4988,14 +5113,14 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#work-ref">work (20)</a></li>
 
-  <li><a href="/categories.html#AI-ref">AI (42)</a></li>
+  <li><a href="/categories.html#AI-ref">AI (50)</a></li>
 
 </ul>
 
         </section>
         <section>
           <a href="/tags.html" title="查看所有标签"><i class="icon-fixed-width icon-tags"></i> 标签云</a>
-<span title="标签总数">99</span>
+<span title="标签总数">101</span>
 <div id="tag-cloud">
 
 
@@ -5023,7 +5148,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #888;">summary</a>
+    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #777;">summary</a>
   
     
     
@@ -5058,7 +5183,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#script-ref" style="font-size: 17.5pt; color: #000;">script</a>
+    <a href="/tags.html#script-ref" style="font-size: 18pt; color: #000;">script</a>
   
     
     
@@ -5072,7 +5197,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#compile-ref" style="font-size: 14.5pt; color: #444;">compile</a>
+    <a href="/tags.html#compile-ref" style="font-size: 14pt; color: #444;">compile</a>
   
     
     
@@ -5248,6 +5373,13 @@ $(document).ready(function() {
     
     
     <a href="/tags.html#assembly-ref" style="font-size: 9.5pt; color: #888;">assembly</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#jekyll-ref" style="font-size: 9pt; color: #999;">jekyll</a>
   
     
     
@@ -5697,6 +5829,13 @@ $(document).ready(function() {
     
     <a href="/tags.html#supervised-ref" style="font-size: 9pt; color: #999;">supervised</a>
   
+    
+    
+    
+    
+    
+    <a href="/tags.html#C.O.-ref" style="font-size: 9.5pt; color: #888;">C.O.</a>
+  
 
 </div>
 
@@ -5762,29 +5901,25 @@ $(document).ready(function() {
   <article class="nested">
 
     <header>
-      <h2><a href="/cs/computer-science-microprocessor-register.html" title="查看《Microprocessor: Register》">Microprocessor: Register</a></h2>
+      <h2><a href="/cs/computer-science-theory-of-computation-pushdown-automaton.html" title="查看《TOC: Pushdown Automaton》">TOC: Pushdown Automaton</a></h2>
     </header>
 
     <section>
       <p>
         
-Component
-One bit of computer memory is made of only four NAND gates.
-| a | b | c |
-|—|—|—|
-| 0 | 0 | 1 |
-| 0 | 1 | 1 |
-| 1 | 0 | 1 |
-| 1 | 1 | 0 ...
+Context Free Language
+A context free language is a language generated by some context free grammar.
+
+  The set of all CFL is identical to the set ...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">15 September 2018</a>，
+        发表日期：<a href="/archive.html#October-2018" title="查看此月所有文章">08 October 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
-        评论：<a href="/cs/computer-science-microprocessor-register.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/cs/computer-science-theory-of-computation-pushdown-automaton.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5793,31 +5928,34 @@ One bit of computer memory is made of only four NAND gates.
   <article class="nested">
 
     <header>
-      <h2><a href="/cs/computer-science-microprocessor-random-access-memory.html" title="查看《Microprocessor: Random Access Memory》">Microprocessor: Random Access Memory</a></h2>
+      <h2><a href="/cs/computer-science-theory-of-computation-language.html" title="查看《TOC: Language》">TOC: Language</a></h2>
     </header>
 
     <section>
       <p>
         
-Terminology
 
-  RAM: One register is used to select one of the storage locations and is called the “Memory Address
-Register” or “MAR” for short.
-
-
-
-
-
-
+  
+    
+      Grammar Type
+      Grammar Accepted
+      Language Accepted
+      Automaton
+    
+  
+  
+    
+      TYPE-0
+      Unrestricted Grammar...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">14 September 2018</a>，
+        发表日期：<a href="/archive.html#October-2018" title="查看此月所有文章">08 October 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
-        评论：<a href="/cs/computer-science-microprocessor-random-access-memory.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/cs/computer-science-theory-of-computation-language.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5826,103 +5964,30 @@ Register” or “MAR” for short.
   <article class="nested">
 
     <header>
-      <h2><a href="/cs/computer-science-microprocessor-system-bus.html" title="查看《Microprocessor: Bus》">Microprocessor: Bus</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Definition
-Bus: a bundle of eight wires that typically goes to many places
-
-  The system bus connects the various components of a VNA machine. The...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">13 September 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
-        评论：<a href="/cs/computer-science-microprocessor-system-bus.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/cs/computer-science-microprocessor-central-processing-unit.html" title="查看《Microprocessor: Central Processing Unit》">Microprocessor: Central Processing Unit</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Introduction
-Central Processing Unit(CPU) is also make ultimately of nothing but NAND gates, and it probably has
-fewer total parts than the RAM we...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">12 September 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
-        评论：<a href="/cs/computer-science-microprocessor-central-processing-unit.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/cs/computer-science-microprocessor-control-section.html" title="查看《Microprocessor: Control Section》">Microprocessor: Control Section</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Introduction
-Every computer has one special bit. All other bits in a computer come from somewhere, they are set
-on and off by other bits or switch...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">11 September 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
-        评论：<a href="/cs/computer-science-microprocessor-control-section.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/cs/computer-science-microprocessor-clock-stepper.html" title="查看《Microprocessor: Clock and Stepper》">Microprocessor: Clock and Stepper</a></h2>
+      <h2><a href="/cs/computer-science-theory-of-computation-finite-automaton.html" title="查看《TOC: Finite Automata》">TOC: Finite Automata</a></h2>
     </header>
 
     <section>
       <p>
         
 A
-This gate will just go on and off as quickly as possible. The simplified diagram shows this to be
-the one special bit in the computer that has a...
+
+  Symbol: a, b, c, 0, 1, 2, 3
+  Alphabet: $\sigma$ collection of symbols, {a,b}
+  String: sequence of symbols
+  Language: set of strings
+
+
+Fini...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">10 September 2018</a>，
+        发表日期：<a href="/archive.html#October-2018" title="查看此月所有文章">08 October 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
-        评论：<a href="/cs/computer-science-microprocessor-clock-stepper.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/cs/computer-science-theory-of-computation-finite-automaton.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5931,53 +5996,24 @@ the one special bit in the computer that has a...
   <article class="nested">
 
     <header>
-      <h2><a href="/cs/computer-science-microprocessor-peripherals.html" title="查看《Microprocessor: Peripherals》">Microprocessor: Peripherals</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Duty
-All we need for I/O is a frew wires, and a few instruction.
-
-  
-    For the wires, we are going to extend our cpu bus outside of the computer...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">08 September 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
-        评论：<a href="/cs/computer-science-microprocessor-peripherals.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/cs/computer-science-microprocessor-instruction-register.html" title="查看《Microprocessor: Instructions》">Microprocessor: Instructions</a></h2>
+      <h2><a href="/cs/computer-science-theory-of-computation-context-free-language.html" title="查看《TOC: Context Free Languages》">TOC: Context Free Languages</a></h2>
     </header>
 
     <section>
       <p>
         
 Introduction
-
-  The bits from this register will “instruct” the CPU what to do. The IR gets its input from the
-bus, and its ouput goes into the co...
+Context Free languages provide a superset of the regular languages, if you can specify a class of
+patterns with a regular expression,...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">08 September 2018</a>，
+        发表日期：<a href="/archive.html#October-2018" title="查看此月所有文章">08 October 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
-        评论：<a href="/cs/computer-science-microprocessor-instruction-register.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/cs/computer-science-theory-of-computation-context-free-language.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5986,26 +6022,110 @@ bus, and its ouput goes into the co...
   <article class="nested">
 
     <header>
-      <h2><a href="/cs/computer-science-microprocessor-input-and-output.html" title="查看《Microprocessor: Input and Output》">Microprocessor: Input and Output</a></h2>
+      <h2><a href="/cs/computer-science-compiler-workflow.html" title="查看《Compiler: Introduction》">Compiler: Introduction</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Compiler Structure
+The compiler is consists of two parts: analysis and synthesis
+
+  Analysis part: often called the front end of the compiler
+    ...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">30 September 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
+        评论：<a href="/cs/computer-science-compiler-workflow.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/cs/computer-science-compiler-terminology.html" title="查看《Compiler: Terminology》">Compiler: Terminology</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+1. Syntax and Semantics
+
+  Syntax: describes the proper form of its programs
+  Semantics: defines what its programs mean
+
+
+2. Production
+$
+\text {...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">29 September 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
+        评论：<a href="/cs/computer-science-compiler-terminology.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/cs/computer-science-compiler-syntax-directed-translator.html" title="查看《Compiler: Syntax-Directed Translator》">Compiler: Syntax-Directed Translator</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+What’s this all about?
+The analysis phase of a compiler breaks up a source program into constituent pieces and produces an
+internal representation...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">21 September 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
+        评论：<a href="/cs/computer-science-compiler-syntax-directed-translator.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/cs/computer-science-compiler-parser-predictive-parsing.html" title="查看《Compiler: Predictive Parsing》">Compiler: Predictive Parsing</a></h2>
     </header>
 
     <section>
       <p>
         
 Introduction
-All we need for I/O is a few wires, and a new instruction.
-
-  
-    For the wires, all we are going to do is to extend the CPU bus out...
+Recursive-descent parsing is a top-down method of syntax analysis in which a set of recursive
+procedures is used to process the input...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">08 September 2018</a>，
+        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">21 September 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
-        评论：<a href="/cs/computer-science-microprocessor-input-and-output.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/cs/computer-science-compiler-parser-predictive-parsing.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6014,24 +6134,54 @@ All we need for I/O is a few wires, and a new instruction.
   <article class="nested">
 
     <header>
-      <h2><a href="/cs/computer-science-microprocessor-cache-memory.html" title="查看《Microprocessor: Cache Memory》">Microprocessor: Cache Memory</a></h2>
+      <h2><a href="/cs/computer-science-compiler-parser-ll1.html" title="查看《Compiler: Parser LL(1)》">Compiler: Parser LL(1)</a></h2>
     </header>
 
     <section>
       <p>
         
-Why
-If you look at a typical program, you’ll discover that it tends to access the same memory locations repeatedly. 
-The technical names given to ...
+History
+
+  A parser is a function that determines whether a pattern belongs to a language
+  LL(1):
+    
+      The first “L” in LL(1) stands for sc...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">08 September 2018</a>，
+        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">21 September 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
-        评论：<a href="/cs/computer-science-microprocessor-cache-memory.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/cs/computer-science-compiler-parser-ll1.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/cs/computer-science-compiler-parser-LR.html" title="查看《Compiler: LR Parsing》">Compiler: LR Parsing</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Introduction
+The most prevalent type of bottom-up parser today is based on a concept called LR(k) parsing
+
+  The “L” is for left-to-right scanning...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">21 September 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
+        评论：<a href="/cs/computer-science-compiler-parser-LR.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6076,7 +6226,7 @@ The technical names given to ...
 
     <!-- Current Page -->
     <li class="active">
-      <span class="page_number ">第 43/95 页</span>
+      <span class="page_number ">第 43/97 页</span>
     </li>
 
     <!-- Next Page -->
@@ -6086,7 +6236,7 @@ The technical names given to ...
 
     <!-- Last Page -->
     
-    <li><a href="/page95">&raquo;&raquo;</a></li>
+    <li><a href="/page97">&raquo;&raquo;</a></li>
     
   </ul>
 </section>
@@ -6140,4 +6290,8 @@ $(document).ready(function () {
   
 </body>
 </html>
+
+
+
+
 

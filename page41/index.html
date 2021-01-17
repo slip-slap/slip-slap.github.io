@@ -32,9 +32,33 @@
   <!-- Scripts -->
   <script type="text/javascript" src="/assets/themes/twitter/js/jquery-1.11.1.min.js"></script>
   <!--[if lt IE 9]><script src="/assets/themes/twitter/js/html5shiv.min.js"></script><![endif]-->
-  <script type="text/javascript" async
+  <!--<script type="text/javascript" async
           src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
-  </script>
+  </script> -->
+	<script type="text/javascript">
+	window.MathJax = {
+	  tex: {
+		packages: ['base', 'ams']
+	  },
+	  loader: {
+		load: ['ui/menu', '[tex]/ams']
+	  },
+	  startup: {
+		ready() {
+		  MathJax.startup.defaultReady();
+		  const Macro = MathJax._.input.tex.Symbol.Macro;
+		  const MapHandler = MathJax._.input.tex.MapHandler.MapHandler;
+		  const Array = MathJax._.input.tex.ams.AmsMethods.default.Array;
+		  const env = new Macro('psmallmatrix', Array, [null, '(', ')', 'c', '.333em', '.2em', 'S', 1]);
+		  MapHandler.getMap('AMSmath-environment').add('psmallmatrix', env);
+		}
+	  }
+	};
+	</script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+
 </head> 
 <body>
 
@@ -124,17 +148,17 @@ $(document).ready(function() {
           <a href="/" title="查看最近发表"><i class="icon-fixed-width icon-edit"></i> 最近发表</a>
 <ul>
 
-  <li><a href="/work/work-publisher.html" title="查看《Publisher: Summary》">Publisher: Summary</a></li>
+  <li><a href="/ai/AI-convex-optimization-terminology.html" title="查看《C.O.: Terminology》">C.O.: Terminology</a></li>
 
-  <li><a href="/work/work-publisher-common-sense.html" title="查看《Publisher: Common sense》">Publisher: Common sense</a></li>
+  <li><a href="/ai/AI-convex-optimization-nomenclature.html" title="查看《C.O.: Nomenclature》">C.O.: Nomenclature</a></li>
 
-  <li><a href="/ai/AI-Adaptive-Boosting.html" title="查看《Adaptive Boosting》">Adaptive Boosting</a></li>
+  <li><a href="/ai/AI-convex-optimization-convex-function.html" title="查看《C.O.: Convex Functions》">C.O.: Convex Functions</a></li>
 
-  <li><a href="/work/work-word-neural-network.html" title="查看《Work: Neural Network》">Work: Neural Network</a></li>
+  <li><a href="/ai/AI-convex-optimization-lagrangian-duality.html" title="查看《C.O.: Lagrangian Duality》">C.O.: Lagrangian Duality</a></li>
 
-  <li><a href="/work/work-word-composite-material.html" title="查看《Word: Composite Material》">Word: Composite Material</a></li>
+  <li><a href="/ai/AI-convex-optimization-linear-programming-problem.html" title="查看《C.O.: Linear Programming》">C.O.: Linear Programming</a></li>
 
-  <li><a href="/work/work-word.html" title="查看《Work: Word》">Work: Word</a></li>
+  <li><a href="/ai/AI-convex-optimization-least-square-problem.html" title="查看《C.O.: Least squares》">C.O.: Least squares</a></li>
 
 </ul>
 
@@ -142,9 +166,52 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">946</span>
+<span title="文章总数">965</span>
 <ul>
 
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#August-2020">2020 年 08 月 (8)</a></li>
+    
+  
 
   
   
@@ -2108,6 +2175,59 @@ $(document).ready(function() {
   
   
   
+    <li><a href="/archive.html#December-2018">2018 年 12 月 (10)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
     <li><a href="/archive.html#November-2018">2018 年 11 月 (10)</a></li>
     
   
@@ -3349,7 +3469,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#March-2018">2018 年 03 月 (68)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2018">2018 年 03 月 (69)</a></li>
     
   
 
@@ -4976,7 +5101,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (217)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (228)</a></li>
 
   <li><a href="/categories.html#Algorithm-ref">Algorithm (78)</a></li>
 
@@ -4988,14 +5113,14 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#work-ref">work (20)</a></li>
 
-  <li><a href="/categories.html#AI-ref">AI (42)</a></li>
+  <li><a href="/categories.html#AI-ref">AI (50)</a></li>
 
 </ul>
 
         </section>
         <section>
           <a href="/tags.html" title="查看所有标签"><i class="icon-fixed-width icon-tags"></i> 标签云</a>
-<span title="标签总数">99</span>
+<span title="标签总数">101</span>
 <div id="tag-cloud">
 
 
@@ -5023,7 +5148,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #888;">summary</a>
+    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #777;">summary</a>
   
     
     
@@ -5058,7 +5183,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#script-ref" style="font-size: 17.5pt; color: #000;">script</a>
+    <a href="/tags.html#script-ref" style="font-size: 18pt; color: #000;">script</a>
   
     
     
@@ -5072,7 +5197,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#compile-ref" style="font-size: 14.5pt; color: #444;">compile</a>
+    <a href="/tags.html#compile-ref" style="font-size: 14pt; color: #444;">compile</a>
   
     
     
@@ -5248,6 +5373,13 @@ $(document).ready(function() {
     
     
     <a href="/tags.html#assembly-ref" style="font-size: 9.5pt; color: #888;">assembly</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#jekyll-ref" style="font-size: 9pt; color: #999;">jekyll</a>
   
     
     
@@ -5697,6 +5829,13 @@ $(document).ready(function() {
     
     <a href="/tags.html#supervised-ref" style="font-size: 9pt; color: #999;">supervised</a>
   
+    
+    
+    
+    
+    
+    <a href="/tags.html#C.O.-ref" style="font-size: 9.5pt; color: #888;">C.O.</a>
+  
 
 </div>
 
@@ -5762,28 +5901,25 @@ $(document).ready(function() {
   <article class="nested">
 
     <header>
-      <h2><a href="/cs/computer-science-theory-of-computation-nondeterminstic-finite-automata.html" title="查看《TOC: NFA》">TOC: NFA</a></h2>
+      <h2><a href="/cs/pl-assemble-UCR-standard-library.html" title="查看《Assembly: UCR Standard Library》">Assembly: UCR Standard Library</a></h2>
     </header>
 
     <section>
       <p>
         
-$(Q,\sigma,q_0,F,\delta)$
+malloc
 
-  $Q$: set of all states
-  $\sigma$: inputs
-  $q_0$: start state/initial state
-  $F$: set of final states
-  $\delta$: t...
+  The malloc routine allocates storage on the heap and returns a pointer to the block it allocates in
+the es:di registers.  Before calling...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#October-2018" title="查看此月所有文章">11 October 2018</a>，
+        发表日期：<a href="/archive.html#November-2018" title="查看此月所有文章">08 November 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
-        评论：<a href="/cs/computer-science-theory-of-computation-nondeterminstic-finite-automata.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/cs/pl-assemble-UCR-standard-library.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5792,90 +5928,147 @@ $(Q,\sigma,q_0,F,\delta)$
   <article class="nested">
 
     <header>
-      <h2><a href="/cs/computer-science-theory-of-computation-regurlar-language.html" title="查看《TOC: Regular Languages》">TOC: Regular Languages</a></h2>
+      <h2><a href="/cs/computer-science-operation-system-summary.html" title="查看《OS: Summary》">OS: Summary</a></h2>
     </header>
 
     <section>
       <p>
         
-A
+####
+隐藏文件在finder不可见
+defaults write com.apple.finder AppleShowAllFiles -bool false
 
-  A language is said to be a regular language if and only if some finite state machine recognizes
-it.
+隐藏文件在finder中可见
+defaults write com.apple.finder AppleShowAllFile...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#October-2018" title="查看此月所有文章">30 October 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
+        评论：<a href="/cs/computer-science-operation-system-summary.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/cs/computer-science-operation-system-threads.html" title="查看《OS: Threads》">OS: Threads</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Definition
+
+  A thread is a basic unit of CPU utilization. It shares with other threads
+belonging to the same process its code section, data secti...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#October-2018" title="查看此月所有文章">21 October 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
+        评论：<a href="/cs/computer-science-operation-system-threads.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/cs/computer-science-operation-system-terminology.html" title="查看《OS: Terminology》">OS: Terminology</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Buffer and Cache
+
+  Buffer means: memory or data storage that is used to compensate for the
+differences in speed between processes or devices that...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#October-2018" title="查看此月所有文章">21 October 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
+        评论：<a href="/cs/computer-science-operation-system-terminology.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/cs/computer-science-operation-system-system-programs.html" title="查看《OS: System Programs》">OS: System Programs</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+####
+
+  Program loading and execution
     
-      languages which require memory...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#October-2018" title="查看此月所有文章">08 October 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
-        评论：<a href="/cs/computer-science-theory-of-computation-regurlar-language.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/cs/computer-science-theory-of-computation-pushdown-automaton.html" title="查看《TOC: Pushdown Automaton》">TOC: Pushdown Automaton</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Context Free Language
-A context free language is a language generated by some context free grammar.
-
-  The set of all CFL is identical to the set ...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#October-2018" title="查看此月所有文章">08 October 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
-        评论：<a href="/cs/computer-science-theory-of-computation-pushdown-automaton.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/cs/computer-science-theory-of-computation-language.html" title="查看《TOC: Language》">TOC: Language</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-
-  
-    
-      Grammar Type
-      Grammar Accepted
-      Language Accepted
-      Automaton
+      absolute loaders
+      relocatable loaders
+      linkage editors
     
   
+
+
+Communications
+
+  Crea...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#October-2018" title="查看此月所有文章">21 October 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
+        评论：<a href="/cs/computer-science-operation-system-system-programs.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
   
+  <article class="nested">
+
+    <header>
+      <h2><a href="/cs/computer-science-operation-system-system-call.html" title="查看《OS: System Call》">OS: System Call</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+####
+
+  System calls provide an interface to the servies made available by an
+Operating System.
     
-      TYPE-0
-      Unrestricted Grammar...
+      A simple task like copying like copying...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#October-2018" title="查看此月所有文章">08 October 2018</a>，
+        发表日期：<a href="/archive.html#October-2018" title="查看此月所有文章">21 October 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
-        评论：<a href="/cs/computer-science-theory-of-computation-language.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/cs/computer-science-operation-system-system-call.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5884,30 +6077,23 @@ A context free language is a language generated by some context free grammar.
   <article class="nested">
 
     <header>
-      <h2><a href="/cs/computer-science-theory-of-computation-finite-automaton.html" title="查看《TOC: Finite Automata》">TOC: Finite Automata</a></h2>
+      <h2><a href="/cs/computer-science-operation-system-structure.html" title="查看《OS: Structure》">OS: Structure</a></h2>
     </header>
 
     <section>
       <p>
         
-A
-
-  Symbol: a, b, c, 0, 1, 2, 3
-  Alphabet: $\sigma$ collection of symbols, {a,b}
-  String: sequence of symbols
-  Language: set of strings
 
 
-Fini...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#October-2018" title="查看此月所有文章">08 October 2018</a>，
+        发表日期：<a href="/archive.html#October-2018" title="查看此月所有文章">21 October 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
-        评论：<a href="/cs/computer-science-theory-of-computation-finite-automaton.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/cs/computer-science-operation-system-structure.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5916,24 +6102,24 @@ Fini...
   <article class="nested">
 
     <header>
-      <h2><a href="/cs/computer-science-theory-of-computation-context-free-language.html" title="查看《TOC: Context Free Languages》">TOC: Context Free Languages</a></h2>
+      <h2><a href="/cs/computer-science-operation-system-storage-structure.html" title="查看《OS: Storeage Structure》">OS: Storeage Structure</a></h2>
     </header>
 
     <section>
       <p>
         
-Introduction
-Context Free languages provide a superset of the regular languages, if you can specify a class of
-patterns with a regular expression,...
+&lt;img src=/images/computer-science-operating-system-storage-structure.png&gt;
+
+
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#October-2018" title="查看此月所有文章">08 October 2018</a>，
+        发表日期：<a href="/archive.html#October-2018" title="查看此月所有文章">21 October 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
-        评论：<a href="/cs/computer-science-theory-of-computation-context-free-language.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/cs/computer-science-operation-system-storage-structure.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5942,26 +6128,26 @@ patterns with a regular expression,...
   <article class="nested">
 
     <header>
-      <h2><a href="/cs/computer-science-compiler-workflow.html" title="查看《Compiler: Introduction》">Compiler: Introduction</a></h2>
+      <h2><a href="/cs/computer-science-operation-system-sockets.html" title="查看《OS: Sockets》">OS: Sockets</a></h2>
     </header>
 
     <section>
       <p>
         
-Compiler Structure
-The compiler is consists of two parts: analysis and synthesis
+####
 
-  Analysis part: often called the front end of the compiler
-    ...
+  A Socket is defined as an endpoint for communication
+  A pair of process communicating over a network employ a pair of sockets-one
+ofr eac...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">30 September 2018</a>，
+        发表日期：<a href="/archive.html#October-2018" title="查看此月所有文章">21 October 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
-        评论：<a href="/cs/computer-science-compiler-workflow.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/cs/computer-science-operation-system-sockets.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5970,82 +6156,30 @@ The compiler is consists of two parts: analysis and synthesis
   <article class="nested">
 
     <header>
-      <h2><a href="/cs/computer-science-compiler-terminology.html" title="查看《Compiler: Terminology》">Compiler: Terminology</a></h2>
+      <h2><a href="/cs/computer-science-operation-system-services.html" title="查看《OS: Services》">OS: Services</a></h2>
     </header>
 
     <section>
       <p>
         
-1. Syntax and Semantics
 
-  Syntax: describes the proper form of its programs
-  Semantics: defines what its programs mean
-
-
-2. Production
-$
-\text {...
+  User Interface
+  Program Execution
+  I/O Operations
+  File System Manipulation
+  Communications
+  Error Detection
+  Resource Allocation
+  Accou...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">29 September 2018</a>，
+        发表日期：<a href="/archive.html#October-2018" title="查看此月所有文章">21 October 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
-        评论：<a href="/cs/computer-science-compiler-terminology.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/cs/computer-science-compiler-syntax-directed-translator.html" title="查看《Compiler: Syntax-Directed Translator》">Compiler: Syntax-Directed Translator</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-What’s this all about?
-The analysis phase of a compiler breaks up a source program into constituent pieces and produces an
-internal representation...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">21 September 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
-        评论：<a href="/cs/computer-science-compiler-syntax-directed-translator.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/cs/computer-science-compiler-parser-predictive-parsing.html" title="查看《Compiler: Predictive Parsing》">Compiler: Predictive Parsing</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Introduction
-Recursive-descent parsing is a top-down method of syntax analysis in which a set of recursive
-procedures is used to process the input...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">21 September 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
-        评论：<a href="/cs/computer-science-compiler-parser-predictive-parsing.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/cs/computer-science-operation-system-services.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6090,7 +6224,7 @@ procedures is used to process the input...
 
     <!-- Current Page -->
     <li class="active">
-      <span class="page_number ">第 41/95 页</span>
+      <span class="page_number ">第 41/97 页</span>
     </li>
 
     <!-- Next Page -->
@@ -6100,7 +6234,7 @@ procedures is used to process the input...
 
     <!-- Last Page -->
     
-    <li><a href="/page95">&raquo;&raquo;</a></li>
+    <li><a href="/page97">&raquo;&raquo;</a></li>
     
   </ul>
 </section>
@@ -6154,4 +6288,8 @@ $(document).ready(function () {
   
 </body>
 </html>
+
+
+
+
 

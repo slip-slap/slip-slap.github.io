@@ -32,9 +32,33 @@
   <!-- Scripts -->
   <script type="text/javascript" src="/assets/themes/twitter/js/jquery-1.11.1.min.js"></script>
   <!--[if lt IE 9]><script src="/assets/themes/twitter/js/html5shiv.min.js"></script><![endif]-->
-  <script type="text/javascript" async
+  <!--<script type="text/javascript" async
           src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
-  </script>
+  </script> -->
+	<script type="text/javascript">
+	window.MathJax = {
+	  tex: {
+		packages: ['base', 'ams']
+	  },
+	  loader: {
+		load: ['ui/menu', '[tex]/ams']
+	  },
+	  startup: {
+		ready() {
+		  MathJax.startup.defaultReady();
+		  const Macro = MathJax._.input.tex.Symbol.Macro;
+		  const MapHandler = MathJax._.input.tex.MapHandler.MapHandler;
+		  const Array = MathJax._.input.tex.ams.AmsMethods.default.Array;
+		  const env = new Macro('psmallmatrix', Array, [null, '(', ')', 'c', '.333em', '.2em', 'S', 1]);
+		  MapHandler.getMap('AMSmath-environment').add('psmallmatrix', env);
+		}
+	  }
+	};
+	</script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+
 </head> 
 <body>
 
@@ -124,17 +148,17 @@ $(document).ready(function() {
           <a href="/" title="查看最近发表"><i class="icon-fixed-width icon-edit"></i> 最近发表</a>
 <ul>
 
-  <li><a href="/work/work-publisher.html" title="查看《Publisher: Summary》">Publisher: Summary</a></li>
+  <li><a href="/ai/AI-convex-optimization-terminology.html" title="查看《C.O.: Terminology》">C.O.: Terminology</a></li>
 
-  <li><a href="/work/work-publisher-common-sense.html" title="查看《Publisher: Common sense》">Publisher: Common sense</a></li>
+  <li><a href="/ai/AI-convex-optimization-nomenclature.html" title="查看《C.O.: Nomenclature》">C.O.: Nomenclature</a></li>
 
-  <li><a href="/ai/AI-Adaptive-Boosting.html" title="查看《Adaptive Boosting》">Adaptive Boosting</a></li>
+  <li><a href="/ai/AI-convex-optimization-convex-function.html" title="查看《C.O.: Convex Functions》">C.O.: Convex Functions</a></li>
 
-  <li><a href="/work/work-word-neural-network.html" title="查看《Work: Neural Network》">Work: Neural Network</a></li>
+  <li><a href="/ai/AI-convex-optimization-lagrangian-duality.html" title="查看《C.O.: Lagrangian Duality》">C.O.: Lagrangian Duality</a></li>
 
-  <li><a href="/work/work-word-composite-material.html" title="查看《Word: Composite Material》">Word: Composite Material</a></li>
+  <li><a href="/ai/AI-convex-optimization-linear-programming-problem.html" title="查看《C.O.: Linear Programming》">C.O.: Linear Programming</a></li>
 
-  <li><a href="/work/work-word.html" title="查看《Work: Word》">Work: Word</a></li>
+  <li><a href="/ai/AI-convex-optimization-least-square-problem.html" title="查看《C.O.: Least squares》">C.O.: Least squares</a></li>
 
 </ul>
 
@@ -142,9 +166,52 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">946</span>
+<span title="文章总数">965</span>
 <ul>
 
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#August-2020">2020 年 08 月 (8)</a></li>
+    
+  
 
   
   
@@ -2108,6 +2175,59 @@ $(document).ready(function() {
   
   
   
+    <li><a href="/archive.html#December-2018">2018 年 12 月 (10)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
     <li><a href="/archive.html#November-2018">2018 年 11 月 (10)</a></li>
     
   
@@ -3349,7 +3469,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#March-2018">2018 年 03 月 (68)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2018">2018 年 03 月 (69)</a></li>
     
   
 
@@ -4976,7 +5101,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (217)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (228)</a></li>
 
   <li><a href="/categories.html#Algorithm-ref">Algorithm (78)</a></li>
 
@@ -4988,14 +5113,14 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#work-ref">work (20)</a></li>
 
-  <li><a href="/categories.html#AI-ref">AI (42)</a></li>
+  <li><a href="/categories.html#AI-ref">AI (50)</a></li>
 
 </ul>
 
         </section>
         <section>
           <a href="/tags.html" title="查看所有标签"><i class="icon-fixed-width icon-tags"></i> 标签云</a>
-<span title="标签总数">99</span>
+<span title="标签总数">101</span>
 <div id="tag-cloud">
 
 
@@ -5023,7 +5148,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #888;">summary</a>
+    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #777;">summary</a>
   
     
     
@@ -5058,7 +5183,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#script-ref" style="font-size: 17.5pt; color: #000;">script</a>
+    <a href="/tags.html#script-ref" style="font-size: 18pt; color: #000;">script</a>
   
     
     
@@ -5072,7 +5197,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#compile-ref" style="font-size: 14.5pt; color: #444;">compile</a>
+    <a href="/tags.html#compile-ref" style="font-size: 14pt; color: #444;">compile</a>
   
     
     
@@ -5248,6 +5373,13 @@ $(document).ready(function() {
     
     
     <a href="/tags.html#assembly-ref" style="font-size: 9.5pt; color: #888;">assembly</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#jekyll-ref" style="font-size: 9pt; color: #999;">jekyll</a>
   
     
     
@@ -5697,6 +5829,13 @@ $(document).ready(function() {
     
     <a href="/tags.html#supervised-ref" style="font-size: 9pt; color: #999;">supervised</a>
   
+    
+    
+    
+    
+    
+    <a href="/tags.html#C.O.-ref" style="font-size: 9.5pt; color: #888;">C.O.</a>
+  
 
 </div>
 
@@ -5762,23 +5901,30 @@ $(document).ready(function() {
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-python-sys.html" title="查看《Python: Sys》">Python: Sys</a></h2>
+      <h2><a href="/pl/pl-script-latex-error.html" title="查看《Latex: Error》">Latex: Error</a></h2>
     </header>
 
     <section>
       <p>
-        
-intro
-文档sys: this module provides access to some variables used or maintained by the interpreter and to functions that interact strongly with the ...
+        failed to arrange your figure properly
+
+  If you draw help lines in your code, don’t forgot to remove the help line, or
+help grid.
+
+
+undefine
+
+
+  t...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">20 January 2018</a>，
+        发表日期：<a href="/archive.html#February-2018" title="查看此月所有文章">22 February 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-python-sys.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-script-latex-error.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5787,29 +5933,27 @@ intro
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-python-statement.html" title="查看《Python: Statement》">Python: Statement</a></h2>
+      <h2><a href="/pl/pl-script-cmake-intro.html" title="查看《CMake: Philosophy》">CMake: Philosophy</a></h2>
     </header>
 
     <section>
       <p>
         
-layout: post
- title: “pythonIO”
- keywords: [“python”, “IO”] 
-description: “python”
- category: “python”
- tags: [“language”, “IO”]
+I
+CMake is a string-oriented language.
+CMake is a string-oriented language.
+CMake is a string-oriented language.
 
-colon: used chie...
+  After you understand this, eve...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">20 January 2018</a>，
+        发表日期：<a href="/archive.html#February-2018" title="查看此月所有文章">15 February 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-python-statement.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-script-cmake-intro.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5818,24 +5962,25 @@ colon: used chie...
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-python-principal-iterator.html" title="查看《Python: For Loop》">Python: For Loop</a></h2>
+      <h2><a href="/pl/pl-script-cmake-syntax.html" title="查看《CMake: Syntax》">CMake: Syntax</a></h2>
     </header>
 
     <section>
       <p>
-        
-what the crap of iterator protocol?
+        Syntax
 
-  Just as Javabean protocol, a JavaBean Class is  the kind of class that has a getter() and setter() method f...
+  CMakeLists files follow a simple syntax consisting of comments, commands, and
+white space
+  A command: consists of the command name, open...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">20 January 2018</a>，
+        发表日期：<a href="/archive.html#February-2018" title="查看此月所有文章">14 February 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-python-principal-iterator.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-script-cmake-syntax.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5844,35 +5989,27 @@ what the crap of iterator protocol?
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-python-pdb.html" title="查看《Python:  pdb》">Python:  pdb</a></h2>
+      <h2><a href="/pl/pl-script-cmake-buildsystem.html" title="查看《CMake: Build System》">CMake: Build System</a></h2>
     </header>
 
     <section>
       <p>
         
-initiate pdb
+####
 
-python3 -m pdb foo.py
-
-
-add breakpoint
-
-import pdb
-pdb.set_trace()
-
-
-Stepping through code
-
-One of the strongest feature of pdb is t...
+  A CMake-based buildsystem is organized as a set of high-level logical
+targets.
+  Each target corresponds to an executable or library.
+  De...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">20 January 2018</a>，
+        发表日期：<a href="/archive.html#February-2018" title="查看此月所有文章">13 February 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-python-pdb.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-script-cmake-buildsystem.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5881,31 +6018,27 @@ One of the strongest feature of pdb is t...
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-python-os.html" title="查看《Python: Os module》">Python: Os module</a></h2>
+      <h2><a href="/pl/pl-script-cmake-concept.html" title="查看《CMake: Concept》">CMake: Concept</a></h2>
     </header>
 
     <section>
       <p>
-        intro
-os: this module provides a portable way of using operating system dependent
-functionality
-功能
+        
+####
+
+  CMake’s execution begins by creating an instance of the cmake class and
+passing the command line arguments to it.
 
 
-常用功能
-import os
-# 清屏
-os.system('clear')
-# 获得当前文...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">20 January 2018</a>，
+        发表日期：<a href="/archive.html#February-2018" title="查看此月所有文章">12 February 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-python-os.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-script-cmake-concept.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5914,25 +6047,22 @@ os.system('clear')
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-python-operator-module.html" title="查看《Python: Operator》">Python: Operator</a></h2>
+      <h2><a href="/pl/pl-script-cmake-control-structures.html" title="查看《CMake: Control Structures》">CMake: Control Structures</a></h2>
     </header>
 
     <section>
       <p>
         
-method
 
-  operator.itemgetter(items): return a callable object that fetches item from its operand, using the operand’s getitem()
-  f = itemgetter(...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">20 January 2018</a>，
+        发表日期：<a href="/archive.html#February-2018" title="查看此月所有文章">08 February 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-python-operator-module.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-script-cmake-control-structures.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5941,29 +6071,23 @@ method
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-python-operator-asterisk.html" title="查看《Python: Asterisk Operator》">Python: Asterisk Operator</a></h2>
+      <h2><a href="/pl/pl-script-cmake-container.html" title="查看《CMake: Container》">CMake: Container</a></h2>
     </header>
 
     <section>
       <p>
-        
-Introduction
-Asterisk plays very important role in python
-
-packing the containers
-
-review the following code
-def demo(*args, **kwargs):
-    print(...
+        List
+The lisb subcommands APPEND INSERT FILTER REMOVE_ITEM REVERSE SORT may create new values for the
+list within the current CMake variable scope....
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">20 January 2018</a>，
+        发表日期：<a href="/archive.html#February-2018" title="查看此月所有文章">08 February 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-python-operator-asterisk.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-script-cmake-container.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5972,29 +6096,30 @@ def demo(*args, **kwargs):
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-python-openml.html" title="查看《Python: Openml》">Python: Openml</a></h2>
+      <h2><a href="/pl/pl-script-cmake-compile-features.html" title="查看《CMake: Compiler Setting》">CMake: Compiler Setting</a></h2>
     </header>
 
     <section>
       <p>
         
-what the crap of openml
+Method
 
-An automated machine learning environment.
+  Generator can specify the compiler, some generators are tied to a specific
+compiler.
+  Set  environment variable
+  cache entry
 
-import openml
 
-# obtain dataset list
-dataset_list = openml.datasets.list_data...
+CMake w...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">20 January 2018</a>，
+        发表日期：<a href="/archive.html#February-2018" title="查看此月所有文章">08 February 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-python-openml.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-script-cmake-compile-features.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6003,24 +6128,33 @@ dataset_list = openml.datasets.list_data...
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-python-module.html" title="查看《Python: Module》">Python: Module</a></h2>
+      <h2><a href="/pl/pl-script-cmake-commands-script.html" title="查看《CMake: Scripting Commands》">CMake: Scripting Commands</a></h2>
     </header>
 
     <section>
       <p>
         
-name属性
-the name attribute must be set to the fully-qualified name of the module. this
-name is used to uniquely identify the module in the import s...
+Examples
+
+  create a file named hello.txt with the following content.
+
+
+message("Hello world!")         # A message to print
+
+
+
+  run the script
+
+...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">20 January 2018</a>，
+        发表日期：<a href="/archive.html#February-2018" title="查看此月所有文章">08 February 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-python-module.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-script-cmake-commands-script.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6029,28 +6163,25 @@ name is used to uniquely identify the module in the import s...
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-python-lambda-expression.html" title="查看《Python: Lambda Expression》">Python: Lambda Expression</a></h2>
+      <h2><a href="/pl/pl-script-cmake-command-line-tool.html" title="查看《CMake: Command-Line Tools》">CMake: Command-Line Tools</a></h2>
     </header>
 
     <section>
       <p>
         
-numbers = (1, 2, 3, 4)
-result = map(lambda x: x*x, numbers)
-print(result)
+1. cmake
+2. ctest
+3. cpack
 
-# converting map object to set
-numbersSquare = set(result)
-print(number...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">20 January 2018</a>，
+        发表日期：<a href="/archive.html#February-2018" title="查看此月所有文章">08 February 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-python-lambda-expression.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-script-cmake-command-line-tool.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6095,7 +6226,7 @@ print(number...
 
     <!-- Current Page -->
     <li class="active">
-      <span class="page_number ">第 67/95 页</span>
+      <span class="page_number ">第 67/97 页</span>
     </li>
 
     <!-- Next Page -->
@@ -6105,7 +6236,7 @@ print(number...
 
     <!-- Last Page -->
     
-    <li><a href="/page95">&raquo;&raquo;</a></li>
+    <li><a href="/page97">&raquo;&raquo;</a></li>
     
   </ul>
 </section>
@@ -6159,4 +6290,8 @@ $(document).ready(function () {
   
 </body>
 </html>
+
+
+
+
 

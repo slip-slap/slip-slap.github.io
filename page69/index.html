@@ -32,9 +32,33 @@
   <!-- Scripts -->
   <script type="text/javascript" src="/assets/themes/twitter/js/jquery-1.11.1.min.js"></script>
   <!--[if lt IE 9]><script src="/assets/themes/twitter/js/html5shiv.min.js"></script><![endif]-->
-  <script type="text/javascript" async
+  <!--<script type="text/javascript" async
           src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
-  </script>
+  </script> -->
+	<script type="text/javascript">
+	window.MathJax = {
+	  tex: {
+		packages: ['base', 'ams']
+	  },
+	  loader: {
+		load: ['ui/menu', '[tex]/ams']
+	  },
+	  startup: {
+		ready() {
+		  MathJax.startup.defaultReady();
+		  const Macro = MathJax._.input.tex.Symbol.Macro;
+		  const MapHandler = MathJax._.input.tex.MapHandler.MapHandler;
+		  const Array = MathJax._.input.tex.ams.AmsMethods.default.Array;
+		  const env = new Macro('psmallmatrix', Array, [null, '(', ')', 'c', '.333em', '.2em', 'S', 1]);
+		  MapHandler.getMap('AMSmath-environment').add('psmallmatrix', env);
+		}
+	  }
+	};
+	</script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+
 </head> 
 <body>
 
@@ -124,17 +148,17 @@ $(document).ready(function() {
           <a href="/" title="查看最近发表"><i class="icon-fixed-width icon-edit"></i> 最近发表</a>
 <ul>
 
-  <li><a href="/work/work-publisher.html" title="查看《Publisher: Summary》">Publisher: Summary</a></li>
+  <li><a href="/ai/AI-convex-optimization-terminology.html" title="查看《C.O.: Terminology》">C.O.: Terminology</a></li>
 
-  <li><a href="/work/work-publisher-common-sense.html" title="查看《Publisher: Common sense》">Publisher: Common sense</a></li>
+  <li><a href="/ai/AI-convex-optimization-nomenclature.html" title="查看《C.O.: Nomenclature》">C.O.: Nomenclature</a></li>
 
-  <li><a href="/ai/AI-Adaptive-Boosting.html" title="查看《Adaptive Boosting》">Adaptive Boosting</a></li>
+  <li><a href="/ai/AI-convex-optimization-convex-function.html" title="查看《C.O.: Convex Functions》">C.O.: Convex Functions</a></li>
 
-  <li><a href="/work/work-word-neural-network.html" title="查看《Work: Neural Network》">Work: Neural Network</a></li>
+  <li><a href="/ai/AI-convex-optimization-lagrangian-duality.html" title="查看《C.O.: Lagrangian Duality》">C.O.: Lagrangian Duality</a></li>
 
-  <li><a href="/work/work-word-composite-material.html" title="查看《Word: Composite Material》">Word: Composite Material</a></li>
+  <li><a href="/ai/AI-convex-optimization-linear-programming-problem.html" title="查看《C.O.: Linear Programming》">C.O.: Linear Programming</a></li>
 
-  <li><a href="/work/work-word.html" title="查看《Work: Word》">Work: Word</a></li>
+  <li><a href="/ai/AI-convex-optimization-least-square-problem.html" title="查看《C.O.: Least squares》">C.O.: Least squares</a></li>
 
 </ul>
 
@@ -142,9 +166,52 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">946</span>
+<span title="文章总数">965</span>
 <ul>
 
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#August-2020">2020 年 08 月 (8)</a></li>
+    
+  
 
   
   
@@ -2108,6 +2175,59 @@ $(document).ready(function() {
   
   
   
+    <li><a href="/archive.html#December-2018">2018 年 12 月 (10)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
     <li><a href="/archive.html#November-2018">2018 年 11 月 (10)</a></li>
     
   
@@ -3349,7 +3469,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#March-2018">2018 年 03 月 (68)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2018">2018 年 03 月 (69)</a></li>
     
   
 
@@ -4976,7 +5101,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (217)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (228)</a></li>
 
   <li><a href="/categories.html#Algorithm-ref">Algorithm (78)</a></li>
 
@@ -4988,14 +5113,14 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#work-ref">work (20)</a></li>
 
-  <li><a href="/categories.html#AI-ref">AI (42)</a></li>
+  <li><a href="/categories.html#AI-ref">AI (50)</a></li>
 
 </ul>
 
         </section>
         <section>
           <a href="/tags.html" title="查看所有标签"><i class="icon-fixed-width icon-tags"></i> 标签云</a>
-<span title="标签总数">99</span>
+<span title="标签总数">101</span>
 <div id="tag-cloud">
 
 
@@ -5023,7 +5148,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #888;">summary</a>
+    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #777;">summary</a>
   
     
     
@@ -5058,7 +5183,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#script-ref" style="font-size: 17.5pt; color: #000;">script</a>
+    <a href="/tags.html#script-ref" style="font-size: 18pt; color: #000;">script</a>
   
     
     
@@ -5072,7 +5197,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#compile-ref" style="font-size: 14.5pt; color: #444;">compile</a>
+    <a href="/tags.html#compile-ref" style="font-size: 14pt; color: #444;">compile</a>
   
     
     
@@ -5248,6 +5373,13 @@ $(document).ready(function() {
     
     
     <a href="/tags.html#assembly-ref" style="font-size: 9.5pt; color: #888;">assembly</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#jekyll-ref" style="font-size: 9pt; color: #999;">jekyll</a>
   
     
     
@@ -5697,6 +5829,13 @@ $(document).ready(function() {
     
     <a href="/tags.html#supervised-ref" style="font-size: 9pt; color: #999;">supervised</a>
   
+    
+    
+    
+    
+    
+    <a href="/tags.html#C.O.-ref" style="font-size: 9.5pt; color: #888;">C.O.</a>
+  
 
 </div>
 
@@ -5762,16 +5901,20 @@ $(document).ready(function() {
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-python-closure.html" title="查看《Python: Closure》">Python: Closure</a></h2>
+      <h2><a href="/pl/pl-script-python-statement.html" title="查看《Python: Statement》">Python: Statement</a></h2>
     </header>
 
     <section>
       <p>
         
-Why Closures?
-All the crap comes out because of the concept of non-local variable. First let’s define some concept.
+layout: post
+ title: “pythonIO”
+ keywords: [“python”, “IO”] 
+description: “python”
+ category: “python”
+ tags: [“language”, “IO”]
 
-  nested funciton: A function...
+colon: used chie...
       </p>
     </section>
 
@@ -5780,7 +5923,7 @@ All the crap comes out because of the concept of non-local variable. First let�
         发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">20 January 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-python-closure.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-script-python-statement.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5789,21 +5932,15 @@ All the crap comes out because of the concept of non-local variable. First let�
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-python-class.html" title="查看《Python: Class》">Python: Class</a></h2>
+      <h2><a href="/pl/pl-script-python-principal-iterator.html" title="查看《Python: For Loop》">Python: For Loop</a></h2>
     </header>
 
     <section>
       <p>
         
-create
+what the crap of iterator protocol?
 
-python是有Unix shell和c的语法习惯，c是没有new关键字的，所以python也没有，创建对象直接调用构造函数。
-
-# self表示this指针
-class Test:
-    def my_print(self):
-        print(self)
-  ...
+  Just as Javabean protocol, a JavaBean Class is  the kind of class that has a getter() and setter() method f...
       </p>
     </section>
 
@@ -5812,7 +5949,7 @@ class Test:
         发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">20 January 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-python-class.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-script-python-principal-iterator.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5821,24 +5958,26 @@ class Test:
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-python-built-in-function.html" title="查看《Python: Built-in Function》">Python: Built-in Function</a></h2>
+      <h2><a href="/pl/pl-script-python-pdb.html" title="查看《Python:  pdb》">Python:  pdb</a></h2>
     </header>
 
     <section>
       <p>
         
-built-in function
-dir()
-# 作用: 显示对象或模块的方法和属性
-var = 3
-dir(var)
+initiate pdb
+
+python3 -m pdb foo.py
 
 
-zip function
+add breakpoint
+
+import pdb
+pdb.set_trace()
 
 
-  grammar: zip(*iterables)
-  function: make an iterator that aggrega...
+Stepping through code
+
+One of the strongest feature of pdb is t...
       </p>
     </section>
 
@@ -5847,7 +5986,7 @@ zip function
         发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">20 January 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-python-built-in-function.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-script-python-pdb.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5856,25 +5995,22 @@ zip function
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-python-built-in-data-structure.html" title="查看《Python: List, Dict and Tuple》">Python: List, Dict and Tuple</a></h2>
+      <h2><a href="/pl/pl-script-python-os.html" title="查看《Python: Os module》">Python: Os module</a></h2>
     </header>
 
     <section>
       <p>
-        
-dict
-
-my_dict = {'a':4,'b':5}
-for key,value in my_dict.items():
-    print(key,value)
-# print value
-a 4
-b 5
+        intro
+os: this module provides a portable way of using operating system dependent
+functionality
+功能
 
 
-common mistake about tuple
-
-If we pri...
+常用功能
+import os
+# 清屏
+os.system('clear')
+# 获得当前文...
       </p>
     </section>
 
@@ -5883,7 +6019,7 @@ If we pri...
         发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">20 January 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-python-built-in-data-structure.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-script-python-os.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5892,18 +6028,16 @@ If we pri...
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-python-argparse.html" title="查看《Python: Argparse》">Python: Argparse</a></h2>
+      <h2><a href="/pl/pl-script-python-operator-module.html" title="查看《Python: Operator》">Python: Operator</a></h2>
     </header>
 
     <section>
       <p>
         
-1. Introduction
-该module主要有两个参数分别为Positional arguments和Optional arguments
+method
 
-  positional arguments mandatory
-  optional arguments   optional
-  diffe...
+  operator.itemgetter(items): return a callable object that fetches item from its operand, using the operand’s getitem()
+  f = itemgetter(...
       </p>
     </section>
 
@@ -5912,7 +6046,7 @@ If we pri...
         发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">20 January 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-python-argparse.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-script-python-operator-module.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5921,87 +6055,29 @@ If we pri...
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-python-anaconda-jupyter.html" title="查看《Python: Juypter》">Python: Juypter</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-how to use
-
-sudo jupyter notebook --allow-root
-
-
-integrated with matplotlib
-put %matplotlib inline in the first cell of the notebook to plot
-%matp...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">20 January 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-python-anaconda-jupyter.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-script-python-PIL.html" title="查看《Python: PIL package》">Python: PIL package</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-what is PIL
-
-convert between a PIL Image and a numpy array
-
-from PIL import Image
-import numpy as np
-
-# the conversion from Image to array
-im = Im...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">20 January 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-python-PIL.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-script-python-tensorflow-tensorboard.html" title="查看《Python TF: Tensorboard》">Python TF: Tensorboard</a></h2>
+      <h2><a href="/pl/pl-script-python-operator-asterisk.html" title="查看《Python: Asterisk Operator》">Python: Asterisk Operator</a></h2>
     </header>
 
     <section>
       <p>
         
 Introduction
-TensorBoard is a visualization software that comes with any standard Tensorflow
-installation. In Google’s words: “The compuations you...
+Asterisk plays very important role in python
+
+packing the containers
+
+review the following code
+def demo(*args, **kwargs):
+    print(...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">19 January 2018</a>，
+        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">20 January 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-python-tensorflow-tensorboard.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-script-python-operator-asterisk.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6010,25 +6086,29 @@ installation. In Google’s words: “The compuations you...
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-python-tensorflow-sharing-variable.html" title="查看《Python TF: Define Variable》">Python TF: Define Variable</a></h2>
+      <h2><a href="/pl/pl-script-python-openml.html" title="查看《Python: Openml》">Python: Openml</a></h2>
     </header>
 
     <section>
       <p>
         
-variable sharing
+what the crap of openml
 
-It is a mechanism in Tensorflow that allows for sharing variables accessed in different part of the code
-without passing the ref...
+An automated machine learning environment.
+
+import openml
+
+# obtain dataset list
+dataset_list = openml.datasets.list_data...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">19 January 2018</a>，
+        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">20 January 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-python-tensorflow-sharing-variable.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-script-python-openml.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6037,26 +6117,89 @@ without passing the ref...
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-python-tensorflow-obtain-variable.html" title="查看《Python TF: Obtain Variable Value》">Python TF: Obtain Variable Value</a></h2>
+      <h2><a href="/pl/pl-script-python-module.html" title="查看《Python: Module》">Python: Module</a></h2>
     </header>
 
     <section>
       <p>
         
-introduction
-you can treat tensorflow as a blackbox, when we want to check the tensor.
-tensorflow provide some api to get the tensor
-
-check the te...
+name属性
+the name attribute must be set to the fully-qualified name of the module. this
+name is used to uniquely identify the module in the import s...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">19 January 2018</a>，
+        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">20 January 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-python-tensorflow-obtain-variable.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-script-python-module.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-script-python-lambda-expression.html" title="查看《Python: Lambda Expression》">Python: Lambda Expression</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+numbers = (1, 2, 3, 4)
+result = map(lambda x: x*x, numbers)
+print(result)
+
+# converting map object to set
+numbersSquare = set(result)
+print(number...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">20 January 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-script-python-lambda-expression.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-script-python-keyword.html" title="查看《Python: Keyword》">Python: Keyword</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+pass
+
+# 占位语句，啥都不干
+# 保证格式或是语义的完整性
+for i in range(10):
+    pass
+    print(i)
+
+
+global,local and nonlocal
+
+  global variables, a variable declared ou...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">20 January 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-script-python-keyword.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6101,7 +6244,7 @@ check the te...
 
     <!-- Current Page -->
     <li class="active">
-      <span class="page_number ">第 69/95 页</span>
+      <span class="page_number ">第 69/97 页</span>
     </li>
 
     <!-- Next Page -->
@@ -6111,7 +6254,7 @@ check the te...
 
     <!-- Last Page -->
     
-    <li><a href="/page95">&raquo;&raquo;</a></li>
+    <li><a href="/page97">&raquo;&raquo;</a></li>
     
   </ul>
 </section>
@@ -6165,4 +6308,8 @@ $(document).ready(function () {
   
 </body>
 </html>
+
+
+
+
 

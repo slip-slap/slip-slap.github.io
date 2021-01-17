@@ -32,9 +32,33 @@
   <!-- Scripts -->
   <script type="text/javascript" src="/assets/themes/twitter/js/jquery-1.11.1.min.js"></script>
   <!--[if lt IE 9]><script src="/assets/themes/twitter/js/html5shiv.min.js"></script><![endif]-->
-  <script type="text/javascript" async
+  <!--<script type="text/javascript" async
           src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
-  </script>
+  </script> -->
+	<script type="text/javascript">
+	window.MathJax = {
+	  tex: {
+		packages: ['base', 'ams']
+	  },
+	  loader: {
+		load: ['ui/menu', '[tex]/ams']
+	  },
+	  startup: {
+		ready() {
+		  MathJax.startup.defaultReady();
+		  const Macro = MathJax._.input.tex.Symbol.Macro;
+		  const MapHandler = MathJax._.input.tex.MapHandler.MapHandler;
+		  const Array = MathJax._.input.tex.ams.AmsMethods.default.Array;
+		  const env = new Macro('psmallmatrix', Array, [null, '(', ')', 'c', '.333em', '.2em', 'S', 1]);
+		  MapHandler.getMap('AMSmath-environment').add('psmallmatrix', env);
+		}
+	  }
+	};
+	</script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+
 </head> 
 <body>
 
@@ -124,17 +148,17 @@ $(document).ready(function() {
           <a href="/" title="查看最近发表"><i class="icon-fixed-width icon-edit"></i> 最近发表</a>
 <ul>
 
-  <li><a href="/work/work-publisher.html" title="查看《Publisher: Summary》">Publisher: Summary</a></li>
+  <li><a href="/ai/AI-convex-optimization-terminology.html" title="查看《C.O.: Terminology》">C.O.: Terminology</a></li>
 
-  <li><a href="/work/work-publisher-common-sense.html" title="查看《Publisher: Common sense》">Publisher: Common sense</a></li>
+  <li><a href="/ai/AI-convex-optimization-nomenclature.html" title="查看《C.O.: Nomenclature》">C.O.: Nomenclature</a></li>
 
-  <li><a href="/ai/AI-Adaptive-Boosting.html" title="查看《Adaptive Boosting》">Adaptive Boosting</a></li>
+  <li><a href="/ai/AI-convex-optimization-convex-function.html" title="查看《C.O.: Convex Functions》">C.O.: Convex Functions</a></li>
 
-  <li><a href="/work/work-word-neural-network.html" title="查看《Work: Neural Network》">Work: Neural Network</a></li>
+  <li><a href="/ai/AI-convex-optimization-lagrangian-duality.html" title="查看《C.O.: Lagrangian Duality》">C.O.: Lagrangian Duality</a></li>
 
-  <li><a href="/work/work-word-composite-material.html" title="查看《Word: Composite Material》">Word: Composite Material</a></li>
+  <li><a href="/ai/AI-convex-optimization-linear-programming-problem.html" title="查看《C.O.: Linear Programming》">C.O.: Linear Programming</a></li>
 
-  <li><a href="/work/work-word.html" title="查看《Work: Word》">Work: Word</a></li>
+  <li><a href="/ai/AI-convex-optimization-least-square-problem.html" title="查看《C.O.: Least squares》">C.O.: Least squares</a></li>
 
 </ul>
 
@@ -142,9 +166,52 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">946</span>
+<span title="文章总数">965</span>
 <ul>
 
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#August-2020">2020 年 08 月 (8)</a></li>
+    
+  
 
   
   
@@ -2108,6 +2175,59 @@ $(document).ready(function() {
   
   
   
+    <li><a href="/archive.html#December-2018">2018 年 12 月 (10)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
     <li><a href="/archive.html#November-2018">2018 年 11 月 (10)</a></li>
     
   
@@ -3349,7 +3469,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#March-2018">2018 年 03 月 (68)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2018">2018 年 03 月 (69)</a></li>
     
   
 
@@ -4976,7 +5101,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (217)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (228)</a></li>
 
   <li><a href="/categories.html#Algorithm-ref">Algorithm (78)</a></li>
 
@@ -4988,14 +5113,14 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#work-ref">work (20)</a></li>
 
-  <li><a href="/categories.html#AI-ref">AI (42)</a></li>
+  <li><a href="/categories.html#AI-ref">AI (50)</a></li>
 
 </ul>
 
         </section>
         <section>
           <a href="/tags.html" title="查看所有标签"><i class="icon-fixed-width icon-tags"></i> 标签云</a>
-<span title="标签总数">99</span>
+<span title="标签总数">101</span>
 <div id="tag-cloud">
 
 
@@ -5023,7 +5148,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #888;">summary</a>
+    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #777;">summary</a>
   
     
     
@@ -5058,7 +5183,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#script-ref" style="font-size: 17.5pt; color: #000;">script</a>
+    <a href="/tags.html#script-ref" style="font-size: 18pt; color: #000;">script</a>
   
     
     
@@ -5072,7 +5197,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#compile-ref" style="font-size: 14.5pt; color: #444;">compile</a>
+    <a href="/tags.html#compile-ref" style="font-size: 14pt; color: #444;">compile</a>
   
     
     
@@ -5248,6 +5373,13 @@ $(document).ready(function() {
     
     
     <a href="/tags.html#assembly-ref" style="font-size: 9.5pt; color: #888;">assembly</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#jekyll-ref" style="font-size: 9pt; color: #999;">jekyll</a>
   
     
     
@@ -5697,6 +5829,13 @@ $(document).ready(function() {
     
     <a href="/tags.html#supervised-ref" style="font-size: 9pt; color: #999;">supervised</a>
   
+    
+    
+    
+    
+    
+    <a href="/tags.html#C.O.-ref" style="font-size: 9.5pt; color: #888;">C.O.</a>
+  
 
 </div>
 
@@ -5762,30 +5901,26 @@ $(document).ready(function() {
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-compile-java-System.html" title="查看《Java: Array》">Java: Array</a></h2>
+      <h2><a href="/pl/pl-lazy-evaluation-haskell-functor.html" title="查看《Haskell: Functors》">Haskell: Functors</a></h2>
     </header>
 
     <section>
       <p>
         
-arraycopy
-查看源代码里面使用的是native方法，看不到底层代码，里面应该维护指针
+Background
 
-
-数组拷贝
-void foo(){
-    int[] src=new int[]{1,2,3,8,23,5,3,7,8};
-	int[] dest=new int[10];
-	System.ar...
+  
+    Haskell’s combination of purity, higher order functions, parameterized
+algebraic data types, and typeclasses allows us to imple...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">29 March 2018</a>，
+        发表日期：<a href="/archive.html#April-2018" title="查看此月所有文章">20 April 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-compile-java-System.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-lazy-evaluation-haskell-functor.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5794,26 +5929,28 @@ void foo(){
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-compile-java-string.html" title="查看《Java: String》">Java: String</a></h2>
+      <h2><a href="/pl/pl-lazy-evaluation-haskell-functor-applicative.html" title="查看《Haskell: Applicative Functor》">Haskell: Applicative Functor</a></h2>
     </header>
 
     <section>
       <p>
         
-介绍
+class (Functor f) =&gt; Applicative f where
+    pure :: a -&gt; f a
+    (&lt;*&gt;) :: f (a -&gt; b) -&gt; f a -&gt; f b
 
-  String类使用底层使用字符数组保存字符串，有final修饰，String对象是不可变的
-  StringBuilder和StringBuffer都继承自AbstractStringBuilder类，也使用字符串保留数组。
-  String中的对象是不可变的，可以理解为长了，线...
+
+
+  It starts the defini...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">20 March 2018</a>，
+        发表日期：<a href="/archive.html#April-2018" title="查看此月所有文章">20 April 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-compile-java-string.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-lazy-evaluation-haskell-functor-applicative.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5822,33 +5959,26 @@ void foo(){
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-compile-java-socket.html" title="查看《Java: Socket》">Java: Socket</a></h2>
+      <h2><a href="/pl/pl-lazy-evaluation-haskell-function.html" title="查看《Haskell: Function》">Haskell: Function</a></h2>
     </header>
 
     <section>
       <p>
         
-socket阻塞
-服务器端的阻塞有两种
+Jargon
 
-  ServerSocket的accept方法会产生阻塞
-  文件的io会产生阻塞
-
-
-
-//客户端请求
-public class Client {
-
-    public void getAsset() throws IOException, In...
+  Haskell function definition consist of the name of the function followed by
+formal parameters.
+  The body of the function follows the eq...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">20 March 2018</a>，
+        发表日期：<a href="/archive.html#April-2018" title="查看此月所有文章">20 April 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-compile-java-socket.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-lazy-evaluation-haskell-function.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5857,254 +5987,189 @@ public class Client {
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-compile-java-reflection.html" title="查看《Java: reflection》">Java: reflection</a></h2>
+      <h2><a href="/pl/pl-lazy-evaluation-haskell-datatype-algebra.html" title="查看《Haskell: Datatype Algebra》">Haskell: Datatype Algebra</a></h2>
     </header>
 
     <section>
       <p>
         
-Intro
-反射是得到类的元数据的过程
+Example
 
-
-Class对象
-
-  
-    编译后的字节码文件，即.class文件就是Class类的Class对象
-  
-  Java虚拟机类加载系统根据将对应Class对象加载到JVM中，根据类对象创建实例对象
+data List a = Nil | Cons a (List a)
 
 
 
-Class对象的加载
-
-
-Class.f...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">20 March 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-compile-java-reflection.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-compile-java-package-manager.md.html" title="查看《Java: Package Manager》">Java: Package Manager</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-简介
-官网和cmake一样，maven也用来构建项目。
-maven有个仓库的概念，怎么理解这个概念呢。顶级域名有com, org等。顶级域名具有不可重复性，因此可以用来作为包名。google,alibaba会把自己开发的一些框架贡献给开源社区。
-
-
-属性
-
-
-POM属性
-
-  {basedi...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">20 March 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-compile-java-package-manager.md.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-compile-java-io.html" title="查看《Java: IO》">Java: IO</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-intro
-
-流操作主要在java.io包下,类结构如下图
-
-
-
-
-字节流
-
-
-
-OutputStream
-
-
-
-FileOutputStream
-
-//这里的文件创建的地方要注意
-File file =new File("db.properties");
-if(!file.exists()...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">20 March 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-compile-java-io.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-compile-java-interface.html" title="查看《Java: Interface》">Java: Interface</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-特征
-
-  属性有固定的修饰符: public static final
-  函数有固定的修饰符: public abstract,函数不能有方法体。
-
-
-
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">20 March 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-compile-java-interface.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-compile-java-enum.html" title="查看《Java: Enum》">Java: Enum</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-intro
-枚举类型反编译之后也是类，该类用final关键字修饰
-
-
-产生原因
-//枚举类型的引入
-class Weekday{
-	private Weekday(){};
-	public static final Weekday MONDAY= new Weekday();
-	public...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">20 March 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-compile-java-enum.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-compile-java-copy-control.html" title="查看《Java: Copy Control》">Java: Copy Control</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-intro
-在c++中，有一章专门讲拷贝控制，java把这个问题简单化了，简化成深拷贝与浅拷贝
-
-
-浅拷贝
-
-
-问题的产生
-class Foo{
-	private int age;
-	private Date date;
-	public int getA() {
-		return age;
-...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">20 March 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-compile-java-copy-control.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-compile-java-container.html" title="查看《Java: Container》">Java: Container</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-
-  intro
-  set    
-      intro
+  Replace $\textbf{List a}$  with $\textbf{x}$, we get the equation
     
-  
-  list    
-      intro
-    
-  
-  字典容器    
-      intro
-      properties
-      map        
-          map的遍历
- ...
+      $x = 1 + a \times x...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">20 March 2018</a>，
+        发表日期：<a href="/archive.html#April-2018" title="查看此月所有文章">20 April 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-compile-java-container.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-lazy-evaluation-haskell-datatype-algebra.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-lazy-evaluation-haskell-data-types.html" title="查看《Haskell: Algebraic Data Types》">Haskell: Algebraic Data Types</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Background
+Product and coproduct are the two ways of combining types. It turns out that a
+lot of data structures in everyday programming can be bu...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#April-2018" title="查看此月所有文章">20 April 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-lazy-evaluation-haskell-data-types.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-lazy-evaluation-haskell-compiler.html" title="查看《Haskell: Compiler》">Haskell: Compiler</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#April-2018" title="查看此月所有文章">20 April 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-lazy-evaluation-haskell-compiler.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-lazy-evaluation-haskell-binding.html" title="查看《Haskell: Binding》">Haskell: Binding</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+1. Where
+2. Let
+
+
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#April-2018" title="查看此月所有文章">20 April 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-lazy-evaluation-haskell-binding.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-lazy-evaluation-haskell-input-and-output.html" title="查看《Haskell: Input and Output》">Haskell: Input and Output</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+main = do
+    putStrLn "Hello, what's your name?"
+    name &lt;- getLine
+    putStrLn ("Hey " ++ name ++ ", you rock!")
+
+
+
+  You can think of an I...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#April-2018" title="查看此月所有文章">18 April 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-lazy-evaluation-haskell-input-and-output.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-lazy-evaluation-haskell-monad.html" title="查看《Haskell: Monad》">Haskell: Monad</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#April-2018" title="查看此月所有文章">17 April 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-lazy-evaluation-haskell-monad.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-lazy-evaluation-haskell-modules.html" title="查看《Haskell: Modules》">Haskell: Modules</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Background
+
+  A haskell module is a collection of related functions,types and typeclasses
+  The Haskell standard library is split into modules, ea...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#April-2018" title="查看此月所有文章">16 April 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-lazy-evaluation-haskell-modules.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6149,7 +6214,7 @@ class Foo{
 
     <!-- Current Page -->
     <li class="active">
-      <span class="page_number ">第 57/95 页</span>
+      <span class="page_number ">第 57/97 页</span>
     </li>
 
     <!-- Next Page -->
@@ -6159,7 +6224,7 @@ class Foo{
 
     <!-- Last Page -->
     
-    <li><a href="/page95">&raquo;&raquo;</a></li>
+    <li><a href="/page97">&raquo;&raquo;</a></li>
     
   </ul>
 </section>
@@ -6213,4 +6278,8 @@ $(document).ready(function () {
   
 </body>
 </html>
+
+
+
+
 

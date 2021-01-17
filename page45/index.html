@@ -32,9 +32,33 @@
   <!-- Scripts -->
   <script type="text/javascript" src="/assets/themes/twitter/js/jquery-1.11.1.min.js"></script>
   <!--[if lt IE 9]><script src="/assets/themes/twitter/js/html5shiv.min.js"></script><![endif]-->
-  <script type="text/javascript" async
+  <!--<script type="text/javascript" async
           src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
-  </script>
+  </script> -->
+	<script type="text/javascript">
+	window.MathJax = {
+	  tex: {
+		packages: ['base', 'ams']
+	  },
+	  loader: {
+		load: ['ui/menu', '[tex]/ams']
+	  },
+	  startup: {
+		ready() {
+		  MathJax.startup.defaultReady();
+		  const Macro = MathJax._.input.tex.Symbol.Macro;
+		  const MapHandler = MathJax._.input.tex.MapHandler.MapHandler;
+		  const Array = MathJax._.input.tex.ams.AmsMethods.default.Array;
+		  const env = new Macro('psmallmatrix', Array, [null, '(', ')', 'c', '.333em', '.2em', 'S', 1]);
+		  MapHandler.getMap('AMSmath-environment').add('psmallmatrix', env);
+		}
+	  }
+	};
+	</script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+
 </head> 
 <body>
 
@@ -124,17 +148,17 @@ $(document).ready(function() {
           <a href="/" title="查看最近发表"><i class="icon-fixed-width icon-edit"></i> 最近发表</a>
 <ul>
 
-  <li><a href="/work/work-publisher.html" title="查看《Publisher: Summary》">Publisher: Summary</a></li>
+  <li><a href="/ai/AI-convex-optimization-terminology.html" title="查看《C.O.: Terminology》">C.O.: Terminology</a></li>
 
-  <li><a href="/work/work-publisher-common-sense.html" title="查看《Publisher: Common sense》">Publisher: Common sense</a></li>
+  <li><a href="/ai/AI-convex-optimization-nomenclature.html" title="查看《C.O.: Nomenclature》">C.O.: Nomenclature</a></li>
 
-  <li><a href="/ai/AI-Adaptive-Boosting.html" title="查看《Adaptive Boosting》">Adaptive Boosting</a></li>
+  <li><a href="/ai/AI-convex-optimization-convex-function.html" title="查看《C.O.: Convex Functions》">C.O.: Convex Functions</a></li>
 
-  <li><a href="/work/work-word-neural-network.html" title="查看《Work: Neural Network》">Work: Neural Network</a></li>
+  <li><a href="/ai/AI-convex-optimization-lagrangian-duality.html" title="查看《C.O.: Lagrangian Duality》">C.O.: Lagrangian Duality</a></li>
 
-  <li><a href="/work/work-word-composite-material.html" title="查看《Word: Composite Material》">Word: Composite Material</a></li>
+  <li><a href="/ai/AI-convex-optimization-linear-programming-problem.html" title="查看《C.O.: Linear Programming》">C.O.: Linear Programming</a></li>
 
-  <li><a href="/work/work-word.html" title="查看《Work: Word》">Work: Word</a></li>
+  <li><a href="/ai/AI-convex-optimization-least-square-problem.html" title="查看《C.O.: Least squares》">C.O.: Least squares</a></li>
 
 </ul>
 
@@ -142,9 +166,52 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">946</span>
+<span title="文章总数">965</span>
 <ul>
 
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#August-2020">2020 年 08 月 (8)</a></li>
+    
+  
 
   
   
@@ -2108,6 +2175,59 @@ $(document).ready(function() {
   
   
   
+    <li><a href="/archive.html#December-2018">2018 年 12 月 (10)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
     <li><a href="/archive.html#November-2018">2018 年 11 月 (10)</a></li>
     
   
@@ -3349,7 +3469,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#March-2018">2018 年 03 月 (68)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2018">2018 年 03 月 (69)</a></li>
     
   
 
@@ -4976,7 +5101,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (217)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (228)</a></li>
 
   <li><a href="/categories.html#Algorithm-ref">Algorithm (78)</a></li>
 
@@ -4988,14 +5113,14 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#work-ref">work (20)</a></li>
 
-  <li><a href="/categories.html#AI-ref">AI (42)</a></li>
+  <li><a href="/categories.html#AI-ref">AI (50)</a></li>
 
 </ul>
 
         </section>
         <section>
           <a href="/tags.html" title="查看所有标签"><i class="icon-fixed-width icon-tags"></i> 标签云</a>
-<span title="标签总数">99</span>
+<span title="标签总数">101</span>
 <div id="tag-cloud">
 
 
@@ -5023,7 +5148,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #888;">summary</a>
+    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #777;">summary</a>
   
     
     
@@ -5058,7 +5183,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#script-ref" style="font-size: 17.5pt; color: #000;">script</a>
+    <a href="/tags.html#script-ref" style="font-size: 18pt; color: #000;">script</a>
   
     
     
@@ -5072,7 +5197,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#compile-ref" style="font-size: 14.5pt; color: #444;">compile</a>
+    <a href="/tags.html#compile-ref" style="font-size: 14pt; color: #444;">compile</a>
   
     
     
@@ -5248,6 +5373,13 @@ $(document).ready(function() {
     
     
     <a href="/tags.html#assembly-ref" style="font-size: 9.5pt; color: #888;">assembly</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#jekyll-ref" style="font-size: 9pt; color: #999;">jekyll</a>
   
     
     
@@ -5697,6 +5829,13 @@ $(document).ready(function() {
     
     <a href="/tags.html#supervised-ref" style="font-size: 9pt; color: #999;">supervised</a>
   
+    
+    
+    
+    
+    
+    <a href="/tags.html#C.O.-ref" style="font-size: 9.5pt; color: #888;">C.O.</a>
+  
 
 </div>
 
@@ -5762,24 +5901,25 @@ $(document).ready(function() {
   <article class="nested">
 
     <header>
-      <h2><a href="/algorithm/algorithm-design-pattern-abstract-factory.html" title="查看《D.P.: Abstract Factory》">D.P.: Abstract Factory</a></h2>
+      <h2><a href="/cs/computer-science-microprocessor-system-bus.html" title="查看《Microprocessor: Bus》">Microprocessor: Bus</a></h2>
     </header>
 
     <section>
       <p>
         
-Classification
-Abstract Factory is classified in the creational design patterns which is all
-about class/object instantiation. More precisely, how...
+Definition
+Bus: a bundle of eight wires that typically goes to many places
+
+  The system bus connects the various components of a VNA machine. The...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#July-2018" title="查看此月所有文章">20 July 2018</a>，
+        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">13 September 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#Algorithm-ref" title="查看此类别下的所有文章">Algorithm</a>，
-        评论：<a href="/algorithm/algorithm-design-pattern-abstract-factory.html#disqus_thread" title="查看此文章的评论"></a>
+        类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
+        评论：<a href="/cs/computer-science-microprocessor-system-bus.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5788,52 +5928,24 @@ about class/object instantiation. More precisely, how...
   <article class="nested">
 
     <header>
-      <h2><a href="/algorithm/algorithm-design-pattern-decorator.html" title="查看《D.P.: Decorator》">D.P.: Decorator</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Background
-The decorator pattern is a structural pattern that lets you attach additional
-functionalities to an object dynamically. In other words,...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#July-2018" title="查看此月所有文章">19 July 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#Algorithm-ref" title="查看此类别下的所有文章">Algorithm</a>，
-        评论：<a href="/algorithm/algorithm-design-pattern-decorator.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/algorithm/algorithm-summary.html" title="查看《CS: summary》">CS: summary</a></h2>
+      <h2><a href="/cs/computer-science-microprocessor-central-processing-unit.html" title="查看《Microprocessor: Central Processing Unit》">Microprocessor: Central Processing Unit</a></h2>
     </header>
 
     <section>
       <p>
         
 Introduction
-Computer scientists are one of the most talented people in the world, they
-create everything from scratch.
-
-  At the beginning, they ...
+Central Processing Unit(CPU) is also make ultimately of nothing but NAND gates, and it probably has
+fewer total parts than the RAM we...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#July-2018" title="查看此月所有文章">15 July 2018</a>，
+        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">12 September 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#Algorithm-ref" title="查看此类别下的所有文章">Algorithm</a>，
-        评论：<a href="/algorithm/algorithm-summary.html#disqus_thread" title="查看此文章的评论"></a>
+        类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
+        评论：<a href="/cs/computer-science-microprocessor-central-processing-unit.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5842,27 +5954,50 @@ create everything from scratch.
   <article class="nested">
 
     <header>
-      <h2><a href="/algorithm/algorithm-art.html" title="查看《Algorithm is Art》">Algorithm is Art</a></h2>
+      <h2><a href="/cs/computer-science-microprocessor-control-section.html" title="查看《Microprocessor: Control Section》">Microprocessor: Control Section</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Introduction
+Every computer has one special bit. All other bits in a computer come from somewhere, they are set
+on and off by other bits or switch...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">11 September 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
+        评论：<a href="/cs/computer-science-microprocessor-control-section.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/cs/computer-science-microprocessor-clock-stepper.html" title="查看《Microprocessor: Clock and Stepper》">Microprocessor: Clock and Stepper</a></h2>
     </header>
 
     <section>
       <p>
         
 A
-The title is named as data structure and algorithm, why this ? It means in a
-program, you must have these two things.
-
-
-  data structure to desc...
+This gate will just go on and off as quickly as possible. The simplified diagram shows this to be
+the one special bit in the computer that has a...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#July-2018" title="查看此月所有文章">14 July 2018</a>，
+        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">10 September 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#Algorithm-ref" title="查看此类别下的所有文章">Algorithm</a>，
-        评论：<a href="/algorithm/algorithm-art.html#disqus_thread" title="查看此文章的评论"></a>
+        类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
+        评论：<a href="/cs/computer-science-microprocessor-clock-stepper.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5871,32 +6006,26 @@ program, you must have these two things.
   <article class="nested">
 
     <header>
-      <h2><a href="/algorithm/algorithm-analysis-time-complexity.html" title="查看《AA: Time Complexity》">AA: Time Complexity</a></h2>
+      <h2><a href="/cs/computer-science-microprocessor-peripherals.html" title="查看《Microprocessor: Peripherals》">Microprocessor: Peripherals</a></h2>
     </header>
 
     <section>
       <p>
         
-####
+Duty
+All we need for I/O is a frew wires, and a few instruction.
 
-  constant    $O(1)$
-  logrithemic $O(1)$
-  linear      $O(n)$
-  quadratic   $O(n^2)$
-  cubic       $O(n^3)$
-  exponential $O(2^n)$
-
-
-\[1&lt...
+  
+    For the wires, we are going to extend our cpu bus outside of the computer...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#July-2018" title="查看此月所有文章">13 July 2018</a>，
+        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">08 September 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#Algorithm-ref" title="查看此类别下的所有文章">Algorithm</a>，
-        评论：<a href="/algorithm/algorithm-analysis-time-complexity.html#disqus_thread" title="查看此文章的评论"></a>
+        类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
+        评论：<a href="/cs/computer-science-microprocessor-peripherals.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5905,27 +6034,25 @@ program, you must have these two things.
   <article class="nested">
 
     <header>
-      <h2><a href="/algorithm/algorithm-analysis-p-np.html" title="查看《AA: P, NP, NP-completeness》">AA: P, NP, NP-completeness</a></h2>
+      <h2><a href="/cs/computer-science-microprocessor-instruction-register.html" title="查看《Microprocessor: Instructions》">Microprocessor: Instructions</a></h2>
     </header>
 
     <section>
       <p>
         
-####
+Introduction
 
-  P stands for polynomial time
-  NP stands for nondeterministic polynomial time
-    
-      why we have this idea ? why we coined a new term ...
+  The bits from this register will “instruct” the CPU what to do. The IR gets its input from the
+bus, and its ouput goes into the co...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#July-2018" title="查看此月所有文章">12 July 2018</a>，
+        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">08 September 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#Algorithm-ref" title="查看此类别下的所有文章">Algorithm</a>，
-        评论：<a href="/algorithm/algorithm-analysis-p-np.html#disqus_thread" title="查看此文章的评论"></a>
+        类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
+        评论：<a href="/cs/computer-science-microprocessor-instruction-register.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5934,28 +6061,26 @@ program, you must have these two things.
   <article class="nested">
 
     <header>
-      <h2><a href="/algorithm/algorithm-analysis-master-theorem.html" title="查看《AA: Master Theorem》">AA: Master Theorem</a></h2>
+      <h2><a href="/cs/computer-science-microprocessor-input-and-output.html" title="查看《Microprocessor: Input and Output》">Microprocessor: Input and Output</a></h2>
     </header>
 
     <section>
       <p>
         
-$
-T(n)=a T\left(\frac{n}{b}\right)+f(n)
-$
+Introduction
+All we need for I/O is a few wires, and a new instruction.
 
-$
-\begin{array}{l}T(n)=T(n-1)+1-O(n) \ T(n)=T(n-1)+n-O\left(n^{2}\right) 
-T(n)=T(n-1)+\log n-O(n \log n...
+  
+    For the wires, all we are going to do is to extend the CPU bus out...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#July-2018" title="查看此月所有文章">11 July 2018</a>，
+        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">08 September 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#Algorithm-ref" title="查看此类别下的所有文章">Algorithm</a>，
-        评论：<a href="/algorithm/algorithm-analysis-master-theorem.html#disqus_thread" title="查看此文章的评论"></a>
+        类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
+        评论：<a href="/cs/computer-science-microprocessor-input-and-output.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5964,25 +6089,24 @@ T(n)=T(n-1)+\log n-O(n \log n...
   <article class="nested">
 
     <header>
-      <h2><a href="/algorithm/algorithm-analysis-asymptotic.html" title="查看《AA: Asymptotic》">AA: Asymptotic</a></h2>
+      <h2><a href="/cs/computer-science-microprocessor-cache-memory.html" title="查看《Microprocessor: Cache Memory》">Microprocessor: Cache Memory</a></h2>
     </header>
 
     <section>
       <p>
         
-####
-
-  Big O notation is a mathematical notation that describes the limiting
-behavior of a function when the argument towards a particular value ...
+Why
+If you look at a typical program, you’ll discover that it tends to access the same memory locations repeatedly. 
+The technical names given to ...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#July-2018" title="查看此月所有文章">10 July 2018</a>，
+        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">08 September 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#Algorithm-ref" title="查看此类别下的所有文章">Algorithm</a>，
-        评论：<a href="/algorithm/algorithm-analysis-asymptotic.html#disqus_thread" title="查看此文章的评论"></a>
+        类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
+        评论：<a href="/cs/computer-science-microprocessor-cache-memory.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5991,24 +6115,29 @@ behavior of a function when the argument towards a particular value ...
   <article class="nested">
 
     <header>
-      <h2><a href="/algorithm/algorithm-analysis-amortization.html" title="查看《AA: Amoritization》">AA: Amoritization</a></h2>
+      <h2><a href="/cs/computer-science-microprocessor-bytes-operation.html" title="查看《Microprocessor: Bytes Operation》">Microprocessor: Bytes Operation</a></h2>
     </header>
 
     <section>
       <p>
         
-#### 
-a fancy cool analysis of data structure.
-
+1. The Shifter
+2. The Notter
+3. The Ander
+4. The Orer
+5. The Exclusive Orer
+6. The Adder
+7. The Comparator and Zeroj
+In the adder, we had a carry ...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#July-2018" title="查看此月所有文章">09 July 2018</a>，
+        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">08 September 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#Algorithm-ref" title="查看此类别下的所有文章">Algorithm</a>，
-        评论：<a href="/algorithm/algorithm-analysis-amortization.html#disqus_thread" title="查看此文章的评论"></a>
+        类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
+        评论：<a href="/cs/computer-science-microprocessor-bytes-operation.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6017,29 +6146,24 @@ a fancy cool analysis of data structure.
   <article class="nested">
 
     <header>
-      <h2><a href="/algorithm/algorithm-problem-traveling-salesman.html" title="查看《A.P.: Traveling Salesman》">A.P.: Traveling Salesman</a></h2>
+      <h2><a href="/cs/computer-science-microprocessor-arithmetic-and-logic-unit.html" title="查看《Microprocessor: ALU》">Microprocessor: ALU</a></h2>
     </header>
 
     <section>
       <p>
         
-Dynamic Programming Solutiong(Top to down)
-
-\[g(i, s)=\min _{k \in S}\left\{c_{i k}+g(k, s-\{k\})\right\}\]
-
-2. Recursive Tree
-
-
-3. Recursive Tabl...
+History
+Aristotle’s logic involved two facts making a third fact. Many of our computer parts, such as AND
+gates, take two bits and make a third bi...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#July-2018" title="查看此月所有文章">08 July 2018</a>，
+        发表日期：<a href="/archive.html#September-2018" title="查看此月所有文章">08 September 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#Algorithm-ref" title="查看此类别下的所有文章">Algorithm</a>，
-        评论：<a href="/algorithm/algorithm-problem-traveling-salesman.html#disqus_thread" title="查看此文章的评论"></a>
+        类别：<a href="/categories.html#CS-ref" title="查看此类别下的所有文章">CS</a>，
+        评论：<a href="/cs/computer-science-microprocessor-arithmetic-and-logic-unit.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6084,7 +6208,7 @@ Dynamic Programming Solutiong(Top to down)
 
     <!-- Current Page -->
     <li class="active">
-      <span class="page_number ">第 45/95 页</span>
+      <span class="page_number ">第 45/97 页</span>
     </li>
 
     <!-- Next Page -->
@@ -6094,7 +6218,7 @@ Dynamic Programming Solutiong(Top to down)
 
     <!-- Last Page -->
     
-    <li><a href="/page95">&raquo;&raquo;</a></li>
+    <li><a href="/page97">&raquo;&raquo;</a></li>
     
   </ul>
 </section>
@@ -6148,4 +6272,8 @@ $(document).ready(function () {
   
 </body>
 </html>
+
+
+
+
 

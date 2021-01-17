@@ -32,9 +32,33 @@
   <!-- Scripts -->
   <script type="text/javascript" src="/assets/themes/twitter/js/jquery-1.11.1.min.js"></script>
   <!--[if lt IE 9]><script src="/assets/themes/twitter/js/html5shiv.min.js"></script><![endif]-->
-  <script type="text/javascript" async
+  <!--<script type="text/javascript" async
           src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
-  </script>
+  </script> -->
+	<script type="text/javascript">
+	window.MathJax = {
+	  tex: {
+		packages: ['base', 'ams']
+	  },
+	  loader: {
+		load: ['ui/menu', '[tex]/ams']
+	  },
+	  startup: {
+		ready() {
+		  MathJax.startup.defaultReady();
+		  const Macro = MathJax._.input.tex.Symbol.Macro;
+		  const MapHandler = MathJax._.input.tex.MapHandler.MapHandler;
+		  const Array = MathJax._.input.tex.ams.AmsMethods.default.Array;
+		  const env = new Macro('psmallmatrix', Array, [null, '(', ')', 'c', '.333em', '.2em', 'S', 1]);
+		  MapHandler.getMap('AMSmath-environment').add('psmallmatrix', env);
+		}
+	  }
+	};
+	</script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+
 </head> 
 <body>
 
@@ -124,17 +148,17 @@ $(document).ready(function() {
           <a href="/" title="查看最近发表"><i class="icon-fixed-width icon-edit"></i> 最近发表</a>
 <ul>
 
-  <li><a href="/work/work-publisher.html" title="查看《Publisher: Summary》">Publisher: Summary</a></li>
+  <li><a href="/ai/AI-convex-optimization-terminology.html" title="查看《C.O.: Terminology》">C.O.: Terminology</a></li>
 
-  <li><a href="/work/work-publisher-common-sense.html" title="查看《Publisher: Common sense》">Publisher: Common sense</a></li>
+  <li><a href="/ai/AI-convex-optimization-nomenclature.html" title="查看《C.O.: Nomenclature》">C.O.: Nomenclature</a></li>
 
-  <li><a href="/ai/AI-Adaptive-Boosting.html" title="查看《Adaptive Boosting》">Adaptive Boosting</a></li>
+  <li><a href="/ai/AI-convex-optimization-convex-function.html" title="查看《C.O.: Convex Functions》">C.O.: Convex Functions</a></li>
 
-  <li><a href="/work/work-word-neural-network.html" title="查看《Work: Neural Network》">Work: Neural Network</a></li>
+  <li><a href="/ai/AI-convex-optimization-lagrangian-duality.html" title="查看《C.O.: Lagrangian Duality》">C.O.: Lagrangian Duality</a></li>
 
-  <li><a href="/work/work-word-composite-material.html" title="查看《Word: Composite Material》">Word: Composite Material</a></li>
+  <li><a href="/ai/AI-convex-optimization-linear-programming-problem.html" title="查看《C.O.: Linear Programming》">C.O.: Linear Programming</a></li>
 
-  <li><a href="/work/work-word.html" title="查看《Work: Word》">Work: Word</a></li>
+  <li><a href="/ai/AI-convex-optimization-least-square-problem.html" title="查看《C.O.: Least squares》">C.O.: Least squares</a></li>
 
 </ul>
 
@@ -142,9 +166,52 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">946</span>
+<span title="文章总数">965</span>
 <ul>
 
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#August-2020">2020 年 08 月 (8)</a></li>
+    
+  
 
   
   
@@ -2108,6 +2175,59 @@ $(document).ready(function() {
   
   
   
+    <li><a href="/archive.html#December-2018">2018 年 12 月 (10)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
     <li><a href="/archive.html#November-2018">2018 年 11 月 (10)</a></li>
     
   
@@ -3349,7 +3469,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#March-2018">2018 年 03 月 (68)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2018">2018 年 03 月 (69)</a></li>
     
   
 
@@ -4976,7 +5101,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (217)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (228)</a></li>
 
   <li><a href="/categories.html#Algorithm-ref">Algorithm (78)</a></li>
 
@@ -4988,14 +5113,14 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#work-ref">work (20)</a></li>
 
-  <li><a href="/categories.html#AI-ref">AI (42)</a></li>
+  <li><a href="/categories.html#AI-ref">AI (50)</a></li>
 
 </ul>
 
         </section>
         <section>
           <a href="/tags.html" title="查看所有标签"><i class="icon-fixed-width icon-tags"></i> 标签云</a>
-<span title="标签总数">99</span>
+<span title="标签总数">101</span>
 <div id="tag-cloud">
 
 
@@ -5023,7 +5148,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #888;">summary</a>
+    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #777;">summary</a>
   
     
     
@@ -5058,7 +5183,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#script-ref" style="font-size: 17.5pt; color: #000;">script</a>
+    <a href="/tags.html#script-ref" style="font-size: 18pt; color: #000;">script</a>
   
     
     
@@ -5072,7 +5197,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#compile-ref" style="font-size: 14.5pt; color: #444;">compile</a>
+    <a href="/tags.html#compile-ref" style="font-size: 14pt; color: #444;">compile</a>
   
     
     
@@ -5248,6 +5373,13 @@ $(document).ready(function() {
     
     
     <a href="/tags.html#assembly-ref" style="font-size: 9.5pt; color: #888;">assembly</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#jekyll-ref" style="font-size: 9pt; color: #999;">jekyll</a>
   
     
     
@@ -5697,6 +5829,13 @@ $(document).ready(function() {
     
     <a href="/tags.html#supervised-ref" style="font-size: 9pt; color: #999;">supervised</a>
   
+    
+    
+    
+    
+    
+    <a href="/tags.html#C.O.-ref" style="font-size: 9.5pt; color: #888;">C.O.</a>
+  
 
 </div>
 
@@ -5762,29 +5901,25 @@ $(document).ready(function() {
   <article class="nested">
 
     <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-japanese-colloquial-%E3%81%A8%E3%81%A3%E3%81%A6-%E5%AF%BE%E3%81%97%E3%81%A6-%E3%81%AB%E3%81%97%E3%81%A6-%E3%81%A8%E3%81%97%E3%81%A6.html" title="查看《Colloquial: とって・対して》">Colloquial: とって・対して</a></h2>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-japanese-grammar-particle.html" title="查看《文法(ぶんぽう): particle》">文法(ぶんぽう): particle</a></h2>
     </header>
 
     <section>
       <p>
         
-1. とって
-1.1 AはBにとって: A is ~ for B
+1 も
 
-  
-    you can translate B にとって to (for B)
-  
-  
-    今、何が自分とって重要なことか考えないといけない(You have to think what is the most...
+  you can’t translate も to english words litterally, we emphasizes the amount or quantity which
+comes before and it show one’s feeling, that ...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#February-2017" title="查看此月所有文章">01 February 2017</a>，
+        发表日期：<a href="/archive.html#February-2017" title="查看此月所有文章">02 February 2017</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-japanese-colloquial-%E3%81%A8%E3%81%A3%E3%81%A6-%E5%AF%BE%E3%81%97%E3%81%A6-%E3%81%AB%E3%81%97%E3%81%A6-%E3%81%A8%E3%81%97%E3%81%A6.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/%E8%A8%80%E8%91%89/language-japanese-grammar-particle.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5793,31 +5928,34 @@ $(document).ready(function() {
   <article class="nested">
 
     <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-japanese-colloquial-%E3%81%A7%E3%82%82-%E3%81%AB%E3%81%97%E3%81%A6%E3%81%AF-%E3%81%A8%E3%81%97%E3%81%A6.html" title="查看《Colloquial: にしては・として・でも》">Colloquial: にしては・として・でも</a></h2>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-japanese-grammar-conjunction.html" title="查看《文法: conjunction》">文法: conjunction</a></h2>
     </header>
 
     <section>
       <p>
         
-1.　にしても・として
+に
 
-1.1 にしては (for considering)
-にしては: is a single word, means “for”
-
-  初めてケーキを作ったにしては、上手にできました
-
-
-1.2 として
-として: is a single word, means “as”...
+  に当たって・にあたり: when
+    
+      開会に当たって、一言ご挨拶申し上げます
+    
+  
+  に際して・に際し・に際しての: when
+    
+      帰国に際し、お世話になった人に挨拶の手紙を出した。
+    
+  
+  に先立って・に先立ち・に先立つ...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#February-2017" title="查看此月所有文章">01 February 2017</a>，
+        发表日期：<a href="/archive.html#February-2017" title="查看此月所有文章">02 February 2017</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-japanese-colloquial-%E3%81%A7%E3%82%82-%E3%81%AB%E3%81%97%E3%81%A6%E3%81%AF-%E3%81%A8%E3%81%97%E3%81%A6.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/%E8%A8%80%E8%91%89/language-japanese-grammar-conjunction.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5826,29 +5964,32 @@ $(document).ready(function() {
   <article class="nested">
 
     <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-japanese-colloquial-%E3%81%A4%E3%81%BE%E3%82%8A-%E3%81%A4%E3%82%82%E3%82%8A-%E3%82%88%E3%81%8F-%E3%81%A0%E3%81%A3%E3%81%A6-%E3%81%A0%E3%81%91.html" title="查看《Colloquial: つもり・よく・つまり》">Colloquial: つもり・よく・つまり</a></h2>
+      <h2><a href="/language-japanese-grammar-combination.html" title="查看《Language Japanese Grammar Combination》">Language Japanese Grammar Combination</a></h2>
     </header>
 
     <section>
       <p>
         
-1. つもり
+1. らしい
 
-1: going to
-Even the english translation is “I am going to”, you don’t use it for daily activities.
-
-2: not goint to
-
-  痩せるまで甘いものは何も食べないつも...
+  I heard
+    
+      あそこにいる人は男らしい: The person over there probably is a man
+    
+  
+  typical
+    
+      彼はとても男らしい: he is very man
+        ...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#February-2017" title="查看此月所有文章">01 February 2017</a>，
+        发表日期：<a href="/archive.html#February-2017" title="查看此月所有文章">02 February 2017</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-japanese-colloquial-%E3%81%A4%E3%81%BE%E3%82%8A-%E3%81%A4%E3%82%82%E3%82%8A-%E3%82%88%E3%81%8F-%E3%81%A0%E3%81%A3%E3%81%A6-%E3%81%A0%E3%81%91.html#disqus_thread" title="查看此文章的评论"></a>
+        类别：<a href="/categories.html#-ref" title="查看此类别下的所有文章"></a>，
+        评论：<a href="/language-japanese-grammar-combination.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5857,35 +5998,29 @@ Even the english translation is “I am going to”, you don’t use it for dail
   <article class="nested">
 
     <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-japanese-colloquial-%E3%81%93%E3%81%A8-%E3%82%82%E3%81%AE-%E3%81%93%E3%81%A8%E3%81%AB%E3%81%99%E3%82%8B-%E3%81%93%E3%81%A8%E3%81%AB%E3%81%AA%E3%82%8B.html" title="查看《Colloquial: もの・こと・ことになる・ことにする》">Colloquial: もの・こと・ことになる・ことにする</a></h2>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-japanese-grammar-casual.html" title="查看《文法: カジュアル》">文法: カジュアル</a></h2>
     </header>
 
     <section>
       <p>
         
-1. もの・こと
+1. 未然形(みぜんけい)+なくちゃ
 
-1. もの
-
-  ものか・もんか
+  in casual conversation
     
-      どこにこのような人がいるものか。
-    
-  
-  ものだ
-    
-      人間は死ぬものだ: man always die.
-      時の流れは早すぎものだわ。
-      薬は苦いものだ: medic...
+      未然形+なくてはいけない・ならない = 未然形＋なくちゃ
+      もういかなくちゃ
+      食べなくちゃ
+      what does 未然 mean?  It mean...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#February-2017" title="查看此月所有文章">01 February 2017</a>，
+        发表日期：<a href="/archive.html#February-2017" title="查看此月所有文章">02 February 2017</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-japanese-colloquial-%E3%81%93%E3%81%A8-%E3%82%82%E3%81%AE-%E3%81%93%E3%81%A8%E3%81%AB%E3%81%99%E3%82%8B-%E3%81%93%E3%81%A8%E3%81%AB%E3%81%AA%E3%82%8B.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/%E8%A8%80%E8%91%89/language-japanese-grammar-casual.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5894,18 +6029,29 @@ Even the english translation is “I am going to”, you don’t use it for dail
   <article class="nested">
 
     <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-japanese-colloquial-%E3%81%8B%E3%81%91%E3%82%8B-%E5%88%87%E3%82%8B-%E3%81%8D%E3%81%A3%E3%81%8B%E3%81%91.html" title="查看《Colloquial: かける・切る》">Colloquial: かける・切る</a></h2>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-japanese-word-%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3.html" title="查看《言葉: コレクション》">言葉: コレクション</a></h2>
     </header>
 
     <section>
       <p>
         
-2
-verb-ます型＋かけだ (し初めて、まだ〜終わっていない途中の状態を表す)
+ちく
 
-  この仕事はやりかけですから、そのままにして置いてください、(Since we just began since work, put
-this aside for a while)
-  何か言いかけて止める...
+  蓄積(ちくせき): accumulation
+  畜生(ちくしょう):
+  新築: new building
+  牧畜(ぼくちく): farming
+
+
+該
+
+  該(がい)当: corresponding to
+
+
+怪
+
+  怪獣(かいじゅう): monster
+  獣(けもの...
       </p>
     </section>
 
@@ -5914,7 +6060,7 @@ this aside for a while)
         发表日期：<a href="/archive.html#February-2017" title="查看此月所有文章">01 February 2017</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-japanese-colloquial-%E3%81%8B%E3%81%91%E3%82%8B-%E5%88%87%E3%82%8B-%E3%81%8D%E3%81%A3%E3%81%8B%E3%81%91.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/%E8%A8%80%E8%91%89/language-japanese-word-%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5923,22 +6069,30 @@ this aside for a while)
   <article class="nested">
 
     <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-japanese-colloquial-%E3%81%82%E3%81%9F%E3%82%8A-%E5%A4%96%E3%82%8C-%E9%80%9A%E3%82%8A-%E3%81%A6%E3%81%AF-%E3%81%A7%E3%81%AF-%E3%81%98%E3%82%83%E3%82%93.html" title="查看《Colloquial: あたり・外れ(はずれ)・通り》">Colloquial: あたり・外れ(はずれ)・通り</a></h2>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-japanese-word-verb.html" title="查看《単語: verb》">単語: verb</a></h2>
     </header>
 
     <section>
       <p>
         
-1 あたり・はずれ
+1. Type 1
 
-  あたり: you are right
-  外れ: you are not right
+
+  
     
-      あたりくじ: lucky number
-      外れくじ: a numbers that didn’t win
+      Verb
+      u-sound
+      ru-sound
+      exception
     
   
-  We often us...
+  
+    
+      Dictionary
+      買う
+      食べる
+      する    来る
+   ...
       </p>
     </section>
 
@@ -5947,7 +6101,160 @@ this aside for a while)
         发表日期：<a href="/archive.html#February-2017" title="查看此月所有文章">01 February 2017</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-japanese-colloquial-%E3%81%82%E3%81%9F%E3%82%8A-%E5%A4%96%E3%82%8C-%E9%80%9A%E3%82%8A-%E3%81%A6%E3%81%AF-%E3%81%A7%E3%81%AF-%E3%81%98%E3%82%83%E3%82%93.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/%E8%A8%80%E8%91%89/language-japanese-word-verb.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-japanese-word-suffix.html" title="查看《言葉: suffix》">言葉: suffix</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+1. normal suffix
+1.1 漬ける
+
+  塩漬け
+  勉強漬け
+
+
+1.2 ぶり・っぷり
+ぶり・っぷり describes the appearance, state, action, condition, degree or the way one does
+somethin...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#February-2017" title="查看此月所有文章">01 February 2017</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
+        评论：<a href="/%E8%A8%80%E8%91%89/language-japanese-word-suffix.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-japanese-word-saying.html" title="查看《言葉: ことわざ》">言葉: ことわざ</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+不器用: awkward
+
+  不器用だけど、あなたのことを思いながらこの鶴(つる)を折りました。
+
+
+####
+
+  一期一会(いちごいちえ)
+  自分の身は自分で守る
+  一生懸命
+
+
+1.
+
+  明日行こう
+  意味はわからないですが、何だか深い言葉ですよね
+
+
+telephone b...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#February-2017" title="查看此月所有文章">01 February 2017</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
+        评论：<a href="/%E8%A8%80%E8%91%89/language-japanese-word-saying.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-japanese-word-number.html" title="查看《数量: 比べる》">数量: 比べる</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+####
+
+  fraction
+    
+      1/3: 三分の一
+      2/5: 五分の二
+    
+  
+
+
+距離(きょり)
+520メートル離れた
+
+回数
+
+  一度, 二度, 三度
+  period + に + number + counter
+    
+      週に...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#February-2017" title="查看此月所有文章">01 February 2017</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
+        评论：<a href="/%E8%A8%80%E8%91%89/language-japanese-word-number.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-japanese-word-difference.html" title="查看《言葉: 選ぶ》">言葉: 選ぶ</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+屋敷・部屋
+
+  部屋: room
+    
+      部: its basic means part of something
+    
+  
+  屋敷: mansion
+
+
+1. 苦手・下手
+
+  苦手: means that you think you are not good at...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#February-2017" title="查看此月所有文章">01 February 2017</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
+        评论：<a href="/%E8%A8%80%E8%91%89/language-japanese-word-difference.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5992,17 +6299,17 @@ this aside for a while)
 
     <!-- Current Page -->
     <li class="active">
-      <span class="page_number ">第 95/95 页</span>
+      <span class="page_number ">第 95/97 页</span>
     </li>
 
     <!-- Next Page -->
     
-    <li class="disabled"><a href="#">&raquo;</a></li>
+    <li><a href="/page96">&raquo;</a></li>
     
 
     <!-- Last Page -->
     
-    <li class="disabled"><a href="#">&raquo;&raquo;</a></li>
+    <li><a href="/page97">&raquo;&raquo;</a></li>
     
   </ul>
 </section>
@@ -6056,4 +6363,8 @@ $(document).ready(function () {
   
 </body>
 </html>
+
+
+
+
 

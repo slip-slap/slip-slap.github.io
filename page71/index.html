@@ -32,9 +32,33 @@
   <!-- Scripts -->
   <script type="text/javascript" src="/assets/themes/twitter/js/jquery-1.11.1.min.js"></script>
   <!--[if lt IE 9]><script src="/assets/themes/twitter/js/html5shiv.min.js"></script><![endif]-->
-  <script type="text/javascript" async
+  <!--<script type="text/javascript" async
           src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
-  </script>
+  </script> -->
+	<script type="text/javascript">
+	window.MathJax = {
+	  tex: {
+		packages: ['base', 'ams']
+	  },
+	  loader: {
+		load: ['ui/menu', '[tex]/ams']
+	  },
+	  startup: {
+		ready() {
+		  MathJax.startup.defaultReady();
+		  const Macro = MathJax._.input.tex.Symbol.Macro;
+		  const MapHandler = MathJax._.input.tex.MapHandler.MapHandler;
+		  const Array = MathJax._.input.tex.ams.AmsMethods.default.Array;
+		  const env = new Macro('psmallmatrix', Array, [null, '(', ')', 'c', '.333em', '.2em', 'S', 1]);
+		  MapHandler.getMap('AMSmath-environment').add('psmallmatrix', env);
+		}
+	  }
+	};
+	</script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+
 </head> 
 <body>
 
@@ -124,17 +148,17 @@ $(document).ready(function() {
           <a href="/" title="查看最近发表"><i class="icon-fixed-width icon-edit"></i> 最近发表</a>
 <ul>
 
-  <li><a href="/work/work-publisher.html" title="查看《Publisher: Summary》">Publisher: Summary</a></li>
+  <li><a href="/ai/AI-convex-optimization-terminology.html" title="查看《C.O.: Terminology》">C.O.: Terminology</a></li>
 
-  <li><a href="/work/work-publisher-common-sense.html" title="查看《Publisher: Common sense》">Publisher: Common sense</a></li>
+  <li><a href="/ai/AI-convex-optimization-nomenclature.html" title="查看《C.O.: Nomenclature》">C.O.: Nomenclature</a></li>
 
-  <li><a href="/ai/AI-Adaptive-Boosting.html" title="查看《Adaptive Boosting》">Adaptive Boosting</a></li>
+  <li><a href="/ai/AI-convex-optimization-convex-function.html" title="查看《C.O.: Convex Functions》">C.O.: Convex Functions</a></li>
 
-  <li><a href="/work/work-word-neural-network.html" title="查看《Work: Neural Network》">Work: Neural Network</a></li>
+  <li><a href="/ai/AI-convex-optimization-lagrangian-duality.html" title="查看《C.O.: Lagrangian Duality》">C.O.: Lagrangian Duality</a></li>
 
-  <li><a href="/work/work-word-composite-material.html" title="查看《Word: Composite Material》">Word: Composite Material</a></li>
+  <li><a href="/ai/AI-convex-optimization-linear-programming-problem.html" title="查看《C.O.: Linear Programming》">C.O.: Linear Programming</a></li>
 
-  <li><a href="/work/work-word.html" title="查看《Work: Word》">Work: Word</a></li>
+  <li><a href="/ai/AI-convex-optimization-least-square-problem.html" title="查看《C.O.: Least squares》">C.O.: Least squares</a></li>
 
 </ul>
 
@@ -142,9 +166,52 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">946</span>
+<span title="文章总数">965</span>
 <ul>
 
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#August-2020">2020 年 08 月 (8)</a></li>
+    
+  
 
   
   
@@ -2108,6 +2175,59 @@ $(document).ready(function() {
   
   
   
+    <li><a href="/archive.html#December-2018">2018 年 12 月 (10)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
     <li><a href="/archive.html#November-2018">2018 年 11 月 (10)</a></li>
     
   
@@ -3349,7 +3469,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#March-2018">2018 年 03 月 (68)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2018">2018 年 03 月 (69)</a></li>
     
   
 
@@ -4976,7 +5101,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (217)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (228)</a></li>
 
   <li><a href="/categories.html#Algorithm-ref">Algorithm (78)</a></li>
 
@@ -4988,14 +5113,14 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#work-ref">work (20)</a></li>
 
-  <li><a href="/categories.html#AI-ref">AI (42)</a></li>
+  <li><a href="/categories.html#AI-ref">AI (50)</a></li>
 
 </ul>
 
         </section>
         <section>
           <a href="/tags.html" title="查看所有标签"><i class="icon-fixed-width icon-tags"></i> 标签云</a>
-<span title="标签总数">99</span>
+<span title="标签总数">101</span>
 <div id="tag-cloud">
 
 
@@ -5023,7 +5148,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #888;">summary</a>
+    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #777;">summary</a>
   
     
     
@@ -5058,7 +5183,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#script-ref" style="font-size: 17.5pt; color: #000;">script</a>
+    <a href="/tags.html#script-ref" style="font-size: 18pt; color: #000;">script</a>
   
     
     
@@ -5072,7 +5197,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#compile-ref" style="font-size: 14.5pt; color: #444;">compile</a>
+    <a href="/tags.html#compile-ref" style="font-size: 14pt; color: #444;">compile</a>
   
     
     
@@ -5248,6 +5373,13 @@ $(document).ready(function() {
     
     
     <a href="/tags.html#assembly-ref" style="font-size: 9.5pt; color: #888;">assembly</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#jekyll-ref" style="font-size: 9pt; color: #999;">jekyll</a>
   
     
     
@@ -5697,6 +5829,13 @@ $(document).ready(function() {
     
     <a href="/tags.html#supervised-ref" style="font-size: 9pt; color: #999;">supervised</a>
   
+    
+    
+    
+    
+    
+    <a href="/tags.html#C.O.-ref" style="font-size: 9.5pt; color: #888;">C.O.</a>
+  
 
 </div>
 
@@ -5762,178 +5901,30 @@ $(document).ready(function() {
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-python-package-scipy.html" title="查看《Python Package: Scipy》">Python Package: Scipy</a></h2>
+      <h2><a href="/pl/pl-script-python-class.html" title="查看《Python: Class》">Python: Class</a></h2>
     </header>
 
     <section>
       <p>
         
-statis
+create
 
+python是有Unix shell和c的语法习惯，c是没有new关键字的，所以python也没有，创建对象直接调用构造函数。
 
-  this module contains the common distribution, like uniform distribution, norm
-distribution, poisson distribution, binom distribution et...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">17 January 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-python-package-scipy.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-script-python-package-pandas.html" title="查看《Python Package: Pandas》">Python Package: Pandas</a></h2>
-    </header>
-
-    <section>
-      <p>
-        名字由来: panel data和data analysis。panel data是经济学中关于多维数据集的一个术语
-，pandas也提供了panel的数据类型。
-
-what is the difference between Series and DataFrame ?
-
-  Accordi...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">17 January 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-python-package-pandas.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-script-python-package-numpy.html" title="查看《Python Package: Numpy》">Python Package: Numpy</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-random module
-This module is consists of two components, they are 
-
-  simple random data
-  Distributions, such as uniform distribution, normal dis...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">17 January 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-python-package-numpy.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-script-python-package-matplotlib-seaborn.html" title="查看《Python Package: Matplotlib and Seaborn》">Python Package: Matplotlib and Seaborn</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-matplotlib
-
-how to plot
-The general method of use this module to generate a fig
-
-
-  obtain a Figure instance
-  obtain a AxesSubplot instance
-  use...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">17 January 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-python-package-matplotlib-seaborn.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-script-python-package-manager.html" title="查看《Python: Package Manager》">Python: Package Manager</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-1. Pip
-
-1.1 Install
-
-pip install tensorflow==1.13.2
-
-
-install package by python3
-
-python3 -m pip install matplotlib
-
-
-
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">17 January 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-python-package-manager.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-script-python-ml-sklearn.html" title="查看《Python ML: Sklearn》">Python ML: Sklearn</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Component of scikit-learn
-
-
-  Supervised learning algorithms:  LR(Linear Regression), SVM(Support Vector Machine), Decision Trees, and Bayesian
+# self表示this指针
+class Test:
+    def my_print(self):
+        print(self)
   ...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">16 January 2018</a>，
+        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">20 January 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-python-ml-sklearn.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-script-python-class.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5942,29 +5933,33 @@ Component of scikit-learn
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-python-ml-keras-model.html" title="查看《Python ML: Keras》">Python ML: Keras</a></h2>
+      <h2><a href="/pl/pl-script-python-built-in-function.html" title="查看《Python: Built-in Function》">Python: Built-in Function</a></h2>
     </header>
 
     <section>
       <p>
         
-from keras.models import load_model
-model=load_model('model.h5')
-# x is test data
-y=model.predict(x)
-print(y)
+built-in function
+dir()
+# 作用: 显示对象或模块的方法和属性
+var = 3
+dir(var)
 
 
+zip function
 
+
+  grammar: zip(*iterables)
+  function: make an iterator that aggrega...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">16 January 2018</a>，
+        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">20 January 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-python-ml-keras-model.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-script-python-built-in-function.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5973,25 +5968,34 @@ print(y)
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-python-ml-cuda.html" title="查看《Python ML: CUDNN》">Python ML: CUDNN</a></h2>
+      <h2><a href="/pl/pl-script-python-built-in-data-structure.html" title="查看《Python: List, Dict and Tuple》">Python: List, Dict and Tuple</a></h2>
     </header>
 
     <section>
       <p>
         
-concept
+dict
 
-  CUDNN: cuDNN is short for CUDA Deep Neural Network library is a
-GPU-accelerated library for deep neural networks. cuDNN provides highly...
+my_dict = {'a':4,'b':5}
+for key,value in my_dict.items():
+    print(key,value)
+# print value
+a 4
+b 5
+
+
+common mistake about tuple
+
+If we pri...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">16 January 2018</a>，
+        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">20 January 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-python-ml-cuda.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-script-python-built-in-data-structure.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6000,35 +6004,27 @@ GPU-accelerated library for deep neural networks. cuDNN provides highly...
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-shell-zsh.html" title="查看《Shell: Zsh》">Shell: Zsh</a></h2>
+      <h2><a href="/pl/pl-script-python-argparse.html" title="查看《Python: Argparse》">Python: Argparse</a></h2>
     </header>
 
     <section>
       <p>
         
-功能
-chsh是一个linux命令，用来修改设定用户的shell
+1. Introduction
+该module主要有两个参数分别为Positional arguments和Optional arguments
 
-语法
-
-  chsh -m 修改配置当前用户的shell
-
-
-插件
-
-autojump
-cd 过一次的目录，下次都可以直接跳转
-
-cd /Users/huiyaozhang/Library/Caches/IntelliJId...
+  positional arguments mandatory
+  optional arguments   optional
+  diffe...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">15 January 2018</a>，
+        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">20 January 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-shell-zsh.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-script-python-argparse.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6037,23 +6033,168 @@ cd /Users/huiyaozhang/Library/Caches/IntelliJId...
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-shell-envrionment.html" title="查看《Shell: Environment》">Shell: Environment</a></h2>
+      <h2><a href="/pl/pl-script-python-anaconda-jupyter.html" title="查看《Python: Juypter》">Python: Juypter</a></h2>
     </header>
 
     <section>
       <p>
-        Introduction
-Shell maintains a body of information during our shell session called the
-environment. Data stored in the environment is used by progr...
+        
+how to use
+
+sudo jupyter notebook --allow-root
+
+
+integrated with matplotlib
+put %matplotlib inline in the first cell of the notebook to plot
+%matp...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">14 January 2018</a>，
+        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">20 January 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-shell-envrionment.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-script-python-anaconda-jupyter.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-script-python-PIL.html" title="查看《Python: PIL package》">Python: PIL package</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+what is PIL
+
+convert between a PIL Image and a numpy array
+
+from PIL import Image
+import numpy as np
+
+# the conversion from Image to array
+im = Im...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">20 January 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-script-python-PIL.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-script-python-tensorflow-tensorboard.html" title="查看《Python TF: Tensorboard》">Python TF: Tensorboard</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Introduction
+TensorBoard is a visualization software that comes with any standard Tensorflow
+installation. In Google’s words: “The compuations you...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">19 January 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-script-python-tensorflow-tensorboard.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-script-python-tensorflow-sharing-variable.html" title="查看《Python TF: Define Variable》">Python TF: Define Variable</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+variable sharing
+
+It is a mechanism in Tensorflow that allows for sharing variables accessed in different part of the code
+without passing the ref...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">19 January 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-script-python-tensorflow-sharing-variable.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-script-python-tensorflow-obtain-variable.html" title="查看《Python TF: Obtain Variable Value》">Python TF: Obtain Variable Value</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+introduction
+you can treat tensorflow as a blackbox, when we want to check the tensor.
+tensorflow provide some api to get the tensor
+
+check the te...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">19 January 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-script-python-tensorflow-obtain-variable.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-script-python-tensorflow-neural-network-with-any-topology.html" title="查看《Python TF: Build Neural Network With Any Topology》">Python TF: Build Neural Network With Any Topology</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+def layer(layer_name, data, output_channels):
+    with tf.variable_scope(layer_name,reuse=tf.AUTO_REUSE):
+        w = tf.get_variable(name="weight...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">19 January 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-script-python-tensorflow-neural-network-with-any-topology.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6098,7 +6239,7 @@ environment. Data stored in the environment is used by progr...
 
     <!-- Current Page -->
     <li class="active">
-      <span class="page_number ">第 71/95 页</span>
+      <span class="page_number ">第 71/97 页</span>
     </li>
 
     <!-- Next Page -->
@@ -6108,7 +6249,7 @@ environment. Data stored in the environment is used by progr...
 
     <!-- Last Page -->
     
-    <li><a href="/page95">&raquo;&raquo;</a></li>
+    <li><a href="/page97">&raquo;&raquo;</a></li>
     
   </ul>
 </section>
@@ -6162,4 +6303,8 @@ $(document).ready(function () {
   
 </body>
 </html>
+
+
+
+
 

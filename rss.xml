@@ -5,10 +5,227 @@
   <description>Just Do It - </description>
   <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
   <link></link>
-  <lastBuildDate>Sun, 10 Jan 2021 18:37:50 +0900</lastBuildDate>
-  <pubDate>Sun, 10 Jan 2021 18:37:50 +0900</pubDate>
+  <lastBuildDate>Sat, 16 Jan 2021 14:54:26 +0900</lastBuildDate>
+  <pubDate>Sat, 16 Jan 2021 14:54:26 +0900</pubDate>
   <ttl>1800</ttl>
 
+
+  <item>
+    <title>C.O.: Terminology</title>
+    <description>
+&lt;h4 id=&quot;problem&quot;&gt;Problem&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;min $f_0(x)$&lt;/li&gt;
+  &lt;li&gt;subject to $f_i(x) \leq b_i$, $i=1,\cdots, m$&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;$x=(x_1, \cdots, x_n)$: optimization variables&lt;/li&gt;
+  &lt;li&gt;$f_0: R^n \rightarrow R$: objective function&lt;/li&gt;
+  &lt;li&gt;$f_0: R^n \rightarrow n, i=1,\cdots, m$: constraint functions&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;terminology&quot;&gt;Terminology&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Line segement between $x_1$ and $x_2$: all points $x = \theta x_1 + (1-\theta) x_2$ with $0 \leq \theta \leq 1$&lt;/li&gt;
+  &lt;li&gt;convex set: contains line segment between any two points in the set
+$x_1,x_2 \in C, 0\leq \theta \leq 1$:  $\theta x_1 + (1-\theta) x_2 \in C$&lt;/li&gt;
+  &lt;li&gt;convex combination of $x_1, \cdots, x_k$: any point x of the form&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$x = \theta_1 x_1 +\theta_2 x_2 + \cdots + \theta_k x_k  $ with $\theta_1+\cdots+\theta_k = 1$, $\theta_i \geq 0$&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;convex hull conv S: set of all convex combinations of points in S&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;conic (nonnegative) combination of $x_1$ and $x_2$: any point of the form
+$x = \theta_1 x_1 + \theta_2 x_2$ with $\theta_1 \geq 0, \theta_2 \geq 0$&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;convex cone: set that contains all conic combinations of points in the set.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;table&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;hyperplane: set of the form ${ x&lt;/td&gt;
+          &lt;td&gt;a^Tx = b }$, $a!= 0$&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;table&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;halfspace: set of the form ${ x&lt;/td&gt;
+          &lt;td&gt;a^Tx \leq b }$, $a!=0$&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;therom&quot;&gt;Therom&lt;/h4&gt;
+&lt;p&gt;Supporting hyperplane theorem: if C is convex, then there exists a supporting hyperplane at
+every boundary point of C.&lt;/p&gt;
+
+&lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;$f: R^n \rightarrow R$ is convex if $dom f$ is a convex set and&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$f(\theta x + (1-\theta)y) \leq \theta f(x) + (1-\theta)f(y)$&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Optimal solution: $x^*$ has smallest value of $f_0$ among all vectors that satisfy the constraints&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/ai/AI-convex-optimization-terminology.html</link>
+    <guid>/ai/AI-convex-optimization-terminology</guid>
+    <pubDate>Sun, 30 Aug 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>C.O.: Nomenclature</title>
+    <description>
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;A vector $x^*$  is called optimal, or a solution of the problem, if it has
+the smallest objective value among all vectors that satisfy the constraints&lt;/li&gt;
+  &lt;li&gt;a problem is sparse if each constraint function depends on only a small
+number of the variables&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/ai/AI-convex-optimization-nomenclature.html</link>
+    <guid>/ai/AI-convex-optimization-nomenclature</guid>
+    <pubDate>Sun, 30 Aug 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>C.O.: Convex Functions</title>
+    <description>
+&lt;h4 id=&quot;indicator-function&quot;&gt;Indicator function&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Indicator function of a convex set. Let $ C \subseteq \mathbf{R}^{n} $ be a
+convex set, and consider the function $\mathbf{I_C}$ with domain C and
+$I_C(x) = 0$ for all $x \in C$.
+    &lt;ul&gt;
+      &lt;li&gt;It’s extended-value extension is given by&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;\begin{equation}
+\tilde{I}_{C}(x)=\left{\begin{array}{ll}0 &amp;amp; x \in C \ \infty &amp;amp; x \notin
+C\end{array}\right.
+\end{equation}&lt;/p&gt;
+</description>
+    <link>/ai/AI-convex-optimization-convex-function.html</link>
+    <guid>/ai/AI-convex-optimization-convex-function</guid>
+    <pubDate>Sat, 29 Aug 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>C.O.: Lagrangian Duality</title>
+    <description>
+&lt;h4 id=&quot;problem-formulation&quot;&gt;Problem formulation&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;minimize $f_0(x)$&lt;/li&gt;
+  &lt;li&gt;subject to $f_i(x) \leq 0, i=1, \cdots, m$&lt;/li&gt;
+  &lt;li&gt;$h_i(x)=0,i=1, \cdots, p$&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;we do not assume the problem is convex&lt;/li&gt;
+  &lt;li&gt;denote the optimal value by $p^*$&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;idea&quot;&gt;Idea&lt;/h5&gt;
+&lt;p&gt;The basic idea in Lagrangian duality is to take the constraints into acount by
+augmenting the objective function with a weighted sum of the constraint functions.
+$
+L(x, \lambda, \nu)=f_{0}(x)+\sum_{i=1}^{m} \lambda_{i} f_{i}(x)+\sum_{i=1}^{p} \nu_{i} h_{i}(x)
+$&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;we refer to $\lambda_i$ as Lagrange multiplier associated with the ith
+inequality constraint  $f_i(x) \leq 0$&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    <link>/ai/AI-convex-optimization-lagrangian-duality.html</link>
+    <guid>/ai/AI-convex-optimization-lagrangian-duality</guid>
+    <pubDate>Fri, 28 Aug 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>C.O.: Linear Programming</title>
+    <description>
+&lt;h4 id=&quot;problem&quot;&gt;Problem&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;minimize  $C^Tx$
+    &lt;ul&gt;
+      &lt;li&gt;subject to $a_i^T \leq b_i, i=1,\cdots,m$&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;the objective and all constraint functions are linear&lt;/li&gt;
+  &lt;li&gt;no analytical formula for solution, reliable and efficient algorithms and
+software.
+    &lt;ul&gt;
+      &lt;li&gt;establish &lt;strong&gt;rigorous bounds&lt;/strong&gt; on the number of operations required to solve a linear program&lt;/li&gt;
+      &lt;li&gt;simplex method&lt;/li&gt;
+      &lt;li&gt;interior-point method&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/ai/AI-convex-optimization-linear-programming-problem.html</link>
+    <guid>/ai/AI-convex-optimization-linear-programming-problem</guid>
+    <pubDate>Thu, 27 Aug 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>C.O.: Least squares</title>
+    <description>
+</description>
+    <link>/ai/AI-convex-optimization-least-square-problem.html</link>
+    <guid>/ai/AI-convex-optimization-least-square-problem</guid>
+    <pubDate>Thu, 27 Aug 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>C.O.: Convex Problem</title>
+    <description>
+&lt;h4 id=&quot;gist&quot;&gt;Gist&lt;/h4&gt;
+&lt;p&gt;The challenge, and art, in using convex optimization is in recognizing and
+formulating the problem.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Once this formutlation is done, solving the problem is very simple.&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+    <link>/ai/AI-convex-optimization-convex-problem.html</link>
+    <guid>/ai/AI-convex-optimization-convex-problem</guid>
+    <pubDate>Wed, 26 Aug 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>C.O.: Summary</title>
+    <description>
+&lt;h4 id=&quot;gist&quot;&gt;gist&lt;/h4&gt;
+&lt;p&gt;In fact the great watershed in optimization isn’t between linearity and
+nonlinearity, but convexity and nonconvexity&lt;/p&gt;
+</description>
+    <link>/ai/AI-convex-optimization-summary.html</link>
+    <guid>/ai/AI-convex-optimization-summary</guid>
+    <pubDate>Sat, 01 Aug 2020 00:00:00 +0900</pubDate>
+  </item>
 
   <item>
     <title>Publisher: Summary</title>
@@ -3814,25 +4031,48 @@ Hessian Matrix&lt;/p&gt;
   <item>
     <title>R.A.: Fourier Transformation</title>
     <description>
-&lt;h4 id=&quot;a-circle-in-different-coordinate-systems&quot;&gt;a circle in different coordinate systems&lt;/h4&gt;
+&lt;h4 id=&quot;1-inspiration&quot;&gt;1. Inspiration&lt;/h4&gt;
+&lt;p&gt;a circle in different coordinate systems&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;Cartesian Coordinate System can represents a cirlce, Polar Coordinate System can represents a circle.&lt;/li&gt;
   &lt;li&gt;what’s the difference ? It’s just the same thing display in two different coordinate systems, and polar coordinate can bring calculation convience.&lt;/li&gt;
   &lt;li&gt;This relationship suits the Fourier Transformation&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;h4 id=&quot;2-transformation&quot;&gt;2. Transformation&lt;/h4&gt;
+
+\[\hat{f}(\xi)=\int_{\infty}^{\infty} f(x) e^{-2 \pi i x \xi} d x\]
+
+&lt;ul&gt;
+  &lt;li&gt;$\hat{f}$ denotes the fourier transform of $f(x)$&lt;/li&gt;
+  &lt;li&gt;$\xi$ denotes frequency&lt;/li&gt;
+  &lt;li&gt;this whole crap is written in complex language&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;After read this equation, you get more confused, how come $i$ comes in here?&lt;/li&gt;
+  &lt;li&gt;$e^{-2 \pi i \xi} = cos(-2 \pi  \xi)+ i sin(-2 \pi  \xi) $
+    &lt;ul&gt;
+      &lt;li&gt;the left-hand side is more concise&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;3-galois&quot;&gt;3. Galois&lt;/h4&gt;
 &lt;ol&gt;
   &lt;li&gt;Taylor expansion just use a special family of functions which are &lt;strong&gt;polynomial
 function&lt;/strong&gt; to represent any transcental function.&lt;/li&gt;
   &lt;li&gt;Fourier also use a special family of function which are &lt;strong&gt;sin and cos
 function&lt;/strong&gt; to represent any transcental function.&lt;/li&gt;
+  &lt;li&gt;Mathematican write formula in different language, in real number language, in
+matrix language, in complex language.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;h4 id=&quot;4-reference&quot;&gt;4. Reference&lt;/h4&gt;
 &lt;ol&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.matongxue.com/madocs/723.html&quot;&gt;Laplace Transformation&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=n2y7n6jw5d0&quot;&gt;Youtube Laplace Transformation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=7ssUImv8e4w&quot;&gt;Fourier Transformation&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </description>
     <link>/math/math-change-real-analysis-fourier-transformation.html</link>
@@ -4083,8 +4323,8 @@ $&lt;/p&gt;
 &lt;h4 id=&quot;background&quot;&gt;Background&lt;/h4&gt;
 &lt;p&gt;Recall the definition of Riemann Integral&lt;/p&gt;
 
-&lt;p&gt;(\int_{a}^{b} f(x) d x \equiv \lim &lt;em&gt;{\max \Delta x&lt;/em&gt;{k} \rightarrow 0}
-\sum_{k=1}^{n} f\left(x_{k}^{*}\right) \Delta x_{k})&lt;/p&gt;
+\[\(\int_{a}^{b} f(x) d x \equiv \lim _{\max \Delta x_{k} \rightarrow 0}
+\sum_{k=1}^{n} f\left(x_{k}^{*}\right) \Delta x_{k}\)\]
 
 &lt;ul&gt;
   &lt;li&gt;Can we just replace the variable with complex number?&lt;/li&gt;
@@ -4214,13 +4454,8 @@ $
 x=\sqrt[3]{2+11 \sqrt{-1}}+\sqrt[3]{2-11 \sqrt{-1}}
 $&lt;/p&gt;
 
-&lt;p&gt;$
-\begin{array}{l}{(2+i)^{3}=2+11 i} \ {(2-i)^{3}=2-11 i}\end{array}
-$
-&lt;br /&gt;
-$
-x=2+i+2-i=4
-$&lt;/p&gt;
+&lt;p&gt;\(\begin{array}{l}{(2+i)^{3}=2+11 i} \\ {(2-i)^{3}=2-11 i}\end{array}\)
+\(x=2+i+2-i=4\)&lt;/p&gt;
 </description>
     <link>/math/math-change-complex-analysis-complex-number.html</link>
     <guid>/math/math-change-complex-analysis-complex-number</guid>
@@ -9602,37 +9837,29 @@ is the derivative&lt;/p&gt;
     <title>L.A.: Matrices and Application(3 times 3)</title>
     <description>
 &lt;h4 id=&quot;how-to-understand-the-matrix-t&quot;&gt;How to understand the matrix T?&lt;/h4&gt;
-&lt;p&gt;$
-T=
-\left(\begin{array}{lll}{1} &amp;amp; {0} &amp;amp; {0} \ {0} &amp;amp; {1} &amp;amp; {0} \ {0} &amp;amp; {0} &amp;amp;
-{1}\end{array}\right)
-$&lt;/p&gt;
+&lt;p&gt;\(T=
+\left(\begin{array}{lll}{1} &amp;amp; {0} &amp;amp; {0} \\ {0} &amp;amp; {1} &amp;amp; {0} \\ {0} &amp;amp; {0} &amp;amp;
+{1}\end{array}\right)\)&lt;/p&gt;
 
-&lt;p&gt;$
-\left(\begin{array}{l}
-{1}  \ 
-{0}  \ 
+&lt;p&gt;\(\left(\begin{array}{l}
+{1}  \\ 
+{0}  \\ 
 {0}
 \end{array}\right) 
-=T(\vec{e_1})
-$
-$
-\left(\begin{array}{l}
-{0}  \ 
-{1}  \ 
+=T(\vec{e_1})\)
+\(\left(\begin{array}{l}
+{0}  \\ 
+{1}  \\ 
 {0}
 \end{array}\right)
-=T(\vec{e_2})
-$&lt;/p&gt;
+=T(\vec{e_2})\)&lt;/p&gt;
 
-&lt;p&gt;$
-\left(\begin{array}{l}
-{0}  \ 
-{1}  \ 
+&lt;p&gt;\(\left(\begin{array}{l}
+{0}  \\ 
+{1}  \\ 
 {0}
 \end{array}\right)
-=T(\vec{e_3})
-$&lt;/p&gt;
+=T(\vec{e_3})\)&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;we can understand this matric coloumn by coloumn.&lt;/li&gt;
   &lt;li&gt;The first coloumn which is the image of the vector $\vec{e_1}$&lt;/li&gt;
@@ -9645,15 +9872,13 @@ $&lt;/p&gt;
 
 &lt;h4 id=&quot;projection&quot;&gt;Projection&lt;/h4&gt;
 
-&lt;p&gt;$
-P(\vec{u})=
+&lt;p&gt;\(P(\vec{u})=
 \frac{1}{a \ell+b m+c n}\left(\begin{array}{ccc}{b m+c n} &amp;amp; {-b \ell}
-&amp;amp; {-c l} \ 
-{-a m} &amp;amp; {a \ell+c n} &amp;amp; {-c m} \ 
+&amp;amp; {-c l} \\ 
+{-a m} &amp;amp; {a \ell+c n} &amp;amp; {-c m} \\ 
 {-a n} &amp;amp; {-b n} &amp;amp; {a \ell+b
-m}\end{array}\right)\left(\begin{array}{l}{x} \ {y} \ {z}
-\end{array}\right)
-$ &lt;br /&gt;
+m}\end{array}\right)\left(\begin{array}{l}{x} \\ {y} \\ {z}
+\end{array}\right)\) &lt;br /&gt;
 Properties:&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;$p(\vec{v})=\vec{0}$&lt;/li&gt;
@@ -9663,45 +9888,35 @@ Properties:&lt;/p&gt;
 
 &lt;h4 id=&quot;reflection&quot;&gt;Reflection&lt;/h4&gt;
 
-&lt;p&gt;$
-=\left(\begin{array}{l}{x} \ {y} \ {z}\end{array}\right)-\frac{2}{a \ell+b m+c
-n}\left(\begin{array}{lll}{a l} &amp;amp; {b l} &amp;amp; {c l} \ {a m} &amp;amp; {b m} &amp;amp; {c m} \ {a
-n} &amp;amp; {b n} &amp;amp; {c n}\end{array}\right)\left(\begin{array}{l}{x} \ {y} &lt;br /&gt;
-{z}\end{array}\right)
-$&lt;/p&gt;
+\[=\left(\begin{array}{l}{x} \\ {y} \\ {z}\end{array}\right)-\frac{2}{a \ell+b m+c
+n}\left(\begin{array}{lll}{a l} &amp;amp; {b l} &amp;amp; {c l} \\ {a m} &amp;amp; {b m} &amp;amp; {c m} \\ {a
+n} &amp;amp; {b n} &amp;amp; {c n}\end{array}\right)\left(\begin{array}{l}{x} \\ {y} \\
+{z}\end{array}\right)\]
 
-&lt;p&gt;$
-S: \frac{1}{a \ell+b m+c n}\left(\begin{array}{ccc}{-a l+b m+c n} &amp;amp; {-2 b \ell}
-&amp;amp; {-2 c l} \ {-2 a m} &amp;amp; {a l-b m+c n} &amp;amp; {-2 c m} \ {-2 a n} &amp;amp; {-2 b n} &amp;amp; {a
-l+b m-c n}\end{array}\right)
-$&lt;/p&gt;
+\[S: \frac{1}{a \ell+b m+c n}\left(\begin{array}{ccc}{-a l+b m+c n} &amp;amp; {-2 b \ell}
+&amp;amp; {-2 c l} \\ {-2 a m} &amp;amp; {a l-b m+c n} &amp;amp; {-2 c m} \\ {-2 a n} &amp;amp; {-2 b n} &amp;amp; {a
+l+b m-c n}\end{array}\right)\]
 
 &lt;h4 id=&quot;reflection-over-a-line&quot;&gt;Reflection over a Line&lt;/h4&gt;
-&lt;p&gt;$
-=\frac{2}{a l+b m+c n}\left(\begin{array}{lll}{a l} &amp;amp; {b l} &amp;amp; {c l} \ {a m} &amp;amp;
-{b m} &amp;amp; {c m} \ {a n} &amp;amp; {b n} &amp;amp; {c
-n}\end{array}\right)\left(\begin{array}{l}{x} \ {y} &lt;br /&gt;
-{z}\end{array}\right)-\left(\begin{array}{l}{x} \ {y} \ {z}\end{array}\right)
-$&lt;/p&gt;
+&lt;p&gt;\(=\frac{2}{a l+b m+c n}\left(\begin{array}{lll}{a l} &amp;amp; {b l} &amp;amp; {c l} \\ {a m} &amp;amp;
+{b m} &amp;amp; {c m} \\ {a n} &amp;amp; {b n} &amp;amp; {c
+n}\end{array}\right)\left(\begin{array}{l}{x} \\ {y} \\
+{z}\end{array}\right)-\left(\begin{array}{l}{x} \\ {y} \\ {z}\end{array}\right)\)&lt;/p&gt;
 
 \[T: \frac{1}{a l+b m+c n}\left(\begin{array}{ccc}{a l-b m-c n} &amp;amp; {2 b l} &amp;amp; {2 c
 l} \\ {2 a m} &amp;amp; {-a b+b m-c n} &amp;amp; {2 c m} \\ {2 a n} &amp;amp; {2 b n} &amp;amp; {-a l-b m+c
 h}\end{array}\right)\]
 
 &lt;h4 id=&quot;normal-vector&quot;&gt;Normal Vector&lt;/h4&gt;
-&lt;p&gt;$
-\begin{array}{l}{P: \frac{1}{Q}\left(\begin{array}{ccc}{b^{2}+c^{2}-a b} &amp;amp; {-a
-c} \ {-a b} &amp;amp; {a^{2}+c^{2}-b c} \ {-a c} &amp;amp; {-b c} &amp;amp;
-{a^{2}+b^{2}}\end{array}\right)} \ {R:
-\frac{1}{Q}\left(\begin{array}{ccc}{a^{2}} &amp;amp; {a b} &amp;amp; {a c} \ {a b} &amp;amp; {b^{2}} &amp;amp;
-{b c} \ {a c} &amp;amp; {b c} &amp;amp; {c^{2}}\end{array}\right)}\end{array}
-$&lt;/p&gt;
+&lt;p&gt;\(\begin{array}{l}{P: \frac{1}{Q}\left(\begin{array}{ccc}{b^{2}+c^{2}-a b} &amp;amp; {-a
+c} \\ {-a b} &amp;amp; {a^{2}+c^{2}-b c} \\ {-a c} &amp;amp; {-b c} &amp;amp;
+{a^{2}+b^{2}}\end{array}\right)} \\ {R:
+\frac{1}{Q}\left(\begin{array}{ccc}{a^{2}} &amp;amp; {a b} &amp;amp; {a c} \\ {a b} &amp;amp; {b^{2}} &amp;amp;
+{b c} \\ {a c} &amp;amp; {b c} &amp;amp; {c^{2}}\end{array}\right)}\end{array}\)&lt;/p&gt;
 
-&lt;p&gt;$
-S: \frac{1}{Q}\left(\begin{array}{ccc}{-a^{2}+b^{2}+c^{2}} &amp;amp; {-2 a b} &amp;amp; {-2 a c}
-\ {-2 a b} &amp;amp; {a^{2}-b^{2}+c^{2}} &amp;amp; {-2 b c} \ {-2 a c} &amp;amp; {-2 b c} &amp;amp;
-{a^{2}+b^{2}-c^{2}}\end{array}\right)
-$&lt;/p&gt;
+\[S: \frac{1}{Q}\left(\begin{array}{ccc}{-a^{2}+b^{2}+c^{2}} &amp;amp; {-2 a b} &amp;amp; {-2 a c}
+\\ {-2 a b} &amp;amp; {a^{2}-b^{2}+c^{2}} &amp;amp; {-2 b c} \\ {-2 a c} &amp;amp; {-2 b c} &amp;amp;
+{a^{2}+b^{2}-c^{2}}\end{array}\right)\]
 
 </description>
     <link>/math/math-structure-linear-algebra-3-3-matrices-and-application.html</link>
@@ -15353,6 +15568,589 @@ causal interactions.&lt;/li&gt;
     <link>/math/math-apply-probabilistic-graphical-models-decision-theory-causality.html</link>
     <guid>/math/math-apply-probabilistic-graphical-models-decision-theory-causality</guid>
     <pubDate>Sat, 02 Feb 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>SSH</title>
+    <description>
+&lt;h4 id=&quot;介绍&quot;&gt;介绍&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;ssh是一种协议，用于计算机之间的加密登陆。&lt;/li&gt;
+  &lt;li&gt;用户从本地计算机通过ssh登陆到另外一台计算机，是安全的&lt;/li&gt;
+  &lt;li&gt;ssh只是一种协议，具体由多种实现，主要讲开源的OpenSSH实现&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;使用&quot;&gt;使用&lt;/h4&gt;
+
+&lt;h5 id=&quot;登陆&quot;&gt;登陆&lt;/h5&gt;
+&lt;p&gt;ssh的登陆和mysql的远程登陆很像，可能mysql的底层使用的就是ssh来实现远程登陆的&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# 用户名user登陆host&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ssh user@host
+&lt;span class=&quot;c&quot;&gt;# 本地用户名和远程用户名相同&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ssh host
+&lt;span class=&quot;c&quot;&gt;# ssh的默认端口为22，使用p修改端口&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ssh &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; user@host
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h5 id=&quot;登陆过程&quot;&gt;登陆过程&lt;/h5&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;主机受到用户的登陆请求，把自己的公钥发给用户&lt;/li&gt;
+  &lt;li&gt;用户使用公钥将登陆密码加密，发送给主机&lt;/li&gt;
+  &lt;li&gt;主机用私钥解密登陆密码，密码正确，同意登陆&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h5 id=&quot;免密码登陆&quot;&gt;免密码登陆&lt;/h5&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# 在a机器下生成公钥/私钥对,在用户家目录下的.ssh文件中&lt;/span&gt;
+ssh-keygen &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; rsa
+&lt;span class=&quot;c&quot;&gt;# 使用scp命令，将a机器id_rsa.pub复制到b机器的.ssh/authorized_keys文件里&lt;/span&gt;
+scp .ssh/id_rsa.pub hy@192.168.1.1:/home/hy/id_rsa.pub
+&lt;span class=&quot;c&quot;&gt;# b机器把从a机器复制的id_rsa.pub添加到.ssh/authorized_keys中&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;id_rsa.pub &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; .ssh/authorized_keys
+&lt;span class=&quot;c&quot;&gt;# 修改authorized_keys的权限为600&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;chmod &lt;/span&gt;600 .ssh/authorized_keys
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;中间人攻击&quot;&gt;中间人攻击&lt;/h4&gt;
+
+&lt;p&gt;如果攻击者在用户与远程主机之间，用伪造的公钥，获取用户的登陆密码，再用这个密码登陆主机。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h5 id=&quot;口令登陆&quot;&gt;口令登陆&lt;/h5&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;第一次登陆对方主机会出现对方的公钥指纹，用来验证host主机的真实性&lt;/li&gt;
+  &lt;li&gt;公钥指纹一般使用RSA算法生成，长达1024位，难以比较,所以使用MD5算法，变成一个128位的指纹&lt;/li&gt;
+  &lt;li&gt;远程主机的公钥被接受以后，文件会被保存在客户端的${HOME}/.ssh/known_hosts文件中。下次再链接该主机时，由于客户端已经有了服务器的公钥，跳过验证主机真实性的步骤，直接输入密码登陆&lt;/li&gt;
+  &lt;li&gt;在/etc/ssh/ssh_known_hosts文件中保存对所用用户都信赖的公钥&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/pl/pl-miscellaneous-service-ssh.html</link>
+    <guid>/pl/pl-miscellaneous-service-ssh</guid>
+    <pubDate>Sat, 08 Dec 2018 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Editor: Sed</title>
+    <description>
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;\w 数字0-9，字母a-z及A-Z，下划线 &lt;font color=&quot;red&quot;&gt;因为在编程语言中，数字的命名都是数字字母下划线&lt;/font&gt;&lt;/li&gt;
+  &lt;li&gt;\W 非\w&lt;/li&gt;
+  &lt;li&gt;. 除去换行符以外的任意字符&lt;/li&gt;
+  &lt;li&gt;[] 字符范围&lt;/li&gt;
+  &lt;li&gt;[^…] 字符范围以外&lt;/li&gt;
+  &lt;li&gt;^ 行首&lt;/li&gt;
+  &lt;li&gt;$ 行尾&lt;/li&gt;
+  &lt;li&gt;()  分组, 并记录匹配到的字符串&lt;/li&gt;
+  &lt;li&gt;\n  使用分组符(x)匹配到的字符串
+    &lt;h4 id=&quot;repeat&quot;&gt;repeat&lt;/h4&gt;
+  &lt;/li&gt;
+  &lt;li&gt;x* x+ 贪婪匹配&lt;/li&gt;
+  &lt;li&gt;x* x+? 非贪婪匹配&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;x?      出现0次或一次&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;(?:x) 仅分组&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;awk&quot;&gt;Awk&lt;/h4&gt;
+&lt;h4 id=&quot;分割符&quot;&gt;分割符&lt;/h4&gt;
+&lt;p&gt;-F field-separator(默认为空格)&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;awk&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-F&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;':'&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'{print $3}'&lt;/span&gt; /etc/passwd
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;feature&quot;&gt;feature&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;the ability to filter text in a pipeline which particularly distinguishes it from other types of editors&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;语法&quot;&gt;语法&lt;/h4&gt;
+
+&lt;p&gt;命令行格式&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;options] &lt;span class=&quot;s1&quot;&gt;'command'&lt;/span&gt; file&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;s&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# options: -e; -n; -i&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# -n: suppress automatic printing of **pattern space**&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# what's the crap, what's the pattern space ? it's every text line that the sed command take in&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# command: 行定位(正则)+sed命令&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#  行定位可以使用行号,或者正则&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# 定位一行: x; /pattern/&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# 定位几行: x,y; /pattern/,/pattern/;&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# 反向选择: x,y!&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# 间隔行: first~step&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h5 id=&quot;增删改查&quot;&gt;增删改查&lt;/h5&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;a 在指定行之后插入&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;nl &lt;/span&gt;passwd | &lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'1,3a ========================'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;i在指定行之间插入&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;nl &lt;/span&gt;passwd | &lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'1,3i ========================'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;替换指定行&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;nl &lt;/span&gt;passwd | &lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'1,3c  ========================'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h5 id=&quot;替换行内容&quot;&gt;替换行内容&lt;/h5&gt;
+
+&lt;p&gt;这是sed核心的命令&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# 在使用替换命令的时候，注意参数的设置&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;temp | &lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'slipslap'&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'s/slipslap//'&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'s/\/.*est//'&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'s/13.*//'&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# batch substitution&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# find the target&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'/category: &quot;statitics&quot;/p'&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# replace the target&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'s/category: &quot;statitics&quot;/category: &quot;math&quot;/'&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'1,9c --- \nlayout: post \ntitle: &quot;C++: Vim&quot; \nkeywords: []
+\ndescription: \ncategory: &quot;code&quot; \ntags: [&quot;c++&quot;] \n--- \n
+
+
+'&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;####&lt;/p&gt;
+
+&lt;p&gt;脚本格式&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; scripgfile file&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;s&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;版本差异&quot;&gt;版本差异&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;in practice, you can discard the BSD based command, actually I prefer GNU style command&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;For mac system, when you use -i parameter, you have to provide an extension for your backups.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;explaination based on BSD platform such as Maca &lt;br /&gt;
+i extension
+Edit files in-place, saving backups with the specified extension.  If a zero-length extension is given, no backup will be saved.  It is not recommended to give a zero-length extension when in-place editing files, as you risk corruption or partial content in situations where disk space is exhausted, etc.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;explatination based on GNU/linux platform such as Redhat &lt;br /&gt;
+-i[SUFFIX], –in-place[=SUFFIX]
+edit files in place (makes backup if SUFFIX supplied)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'jjj'&lt;/span&gt;  &lt;span class=&quot;s1&quot;&gt;'1,5d'&lt;/span&gt; 2016-08-01-python-intro.md
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;grep&quot;&gt;grep&lt;/h3&gt;
+&lt;p&gt;grep命令是一种强大的文本搜索工具，使用正则表达式搜索文本，并把匹配的行打印处理&lt;/p&gt;
+&lt;h4 id=&quot;语法-1&quot;&gt;语法&lt;/h4&gt;
+&lt;p&gt;grep [option] pattern file&lt;/p&gt;
+&lt;h4 id=&quot;参数&quot;&gt;参数&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;-c  –count    计算符合样式的列数&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;sed&quot;&gt;sed&lt;/h3&gt;
+&lt;p&gt;文本行处理，增，删，替&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;语法-2&quot;&gt;语法&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;sed [options] ‘command’ file 命令行格式&lt;/li&gt;
+  &lt;li&gt;sed -f script file 脚本格式
+    &lt;h4 id=&quot;参数-1&quot;&gt;参数&lt;/h4&gt;
+  &lt;/li&gt;
+  &lt;li&gt;-n by default, each line of input is echoed to the standard output after all of the commands have been applied to it, the suppresses this behavior&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/pl/pl-miscellaneous-sed.html</link>
+    <guid>/pl/pl-miscellaneous-sed</guid>
+    <pubDate>Sat, 08 Dec 2018 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Apple Script</title>
+    <description>
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;osascript &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'tell application &quot;System Events&quot;
+    tell application &quot;Adobe Acrobat Reader DC&quot; to activate
+    keystroke &quot;h&quot; using {command down, control down}
+    end tell'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://eastmanreference.com/complete-list-of-applescript-key-codes&quot;&gt;Complete list of AppleScript key
+codes&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/pl/pl-miscellaneous-script-applescript.html</link>
+    <guid>/pl/pl-miscellaneous-script-applescript</guid>
+    <pubDate>Sat, 08 Dec 2018 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>PL: Regular Expression</title>
+    <description>
+&lt;h4 id=&quot;1-introcuction&quot;&gt;1. Introcuction&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;The phrase regular expressions is also called regexes.&lt;/li&gt;
+  &lt;li&gt;Each character in a regular expression is either a metacharacter, having a
+special meaning, or a regular character that has a literal meaning.&lt;/li&gt;
+  &lt;li&gt;The metachacter syntax is designed specifically to represent prescribed
+targets in a concise and flexible way to direct the automation of text
+processing of a variety of input data.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;2-regex-grammar&quot;&gt;2. Regex Grammar&lt;/h4&gt;
+
+&lt;h5 id=&quot;21-range&quot;&gt;2.1 Range&lt;/h5&gt;
+&lt;p&gt;[259], [a-zA-Z,:]  grep ‘[^0-9]’ passwd&lt;/p&gt;
+
+&lt;h5 id=&quot;22-repeat&quot;&gt;2.2 Repeat&lt;/h5&gt;
+&lt;ol&gt;
+  &lt;li&gt;{n} exactly math n times&lt;/li&gt;
+  &lt;li&gt;{n,} at least match n times&lt;/li&gt;
+  &lt;li&gt;{n,m} at least match n times and at most match match m times.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;转义字符在[]内失去作用，‘[.]’ 表示匹配.,而不是匹配任意字符
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ol&gt;
+  &lt;li&gt;.点号字符表示匹配任意字符&lt;/li&gt;
+  &lt;li&gt;边界字符&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;^: ^root  匹配输入字符串的开始位置， 注意与[^]的区别
+&lt;span class=&quot;nv&quot;&gt;$:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;匹配输入字符串的结尾位置
+&lt;span class=&quot;s1&quot;&gt;'^$'&lt;/span&gt; 表示空行
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h5 id=&quot;metacharacter&quot;&gt;Metacharacter&lt;/h5&gt;
+&lt;ol&gt;
+  &lt;li&gt;\w: 匹配人体字类字符，包括下划线([A-Za-z0-9_])&lt;/li&gt;
+  &lt;li&gt;\W: 匹配任何非字类字符 ‘[^A-Za-z0-9_]’&lt;/li&gt;
+  &lt;li&gt;\b: 代表单词的分隔&lt;/li&gt;
+  &lt;li&gt;*   匹配0次或者n次&lt;/li&gt;
+  &lt;li&gt;\+ 匹配1次或者n次&lt;/li&gt;
+  &lt;li&gt;\? 匹配0次或者1次&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;example&quot;&gt;Example&lt;/h4&gt;
+
+&lt;p&gt;15到18位以X或者x或者数字结尾的身份证号&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'[1-9]\([0-9]\{13\}\|[0-9]\{16\}\)[0-9Xx]'&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;test&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;匹配密码&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'$\w\+$'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Treat regex as a language to describe string, just as we use english or
+japanese or chinese to describe our life.&lt;/li&gt;
+  &lt;li&gt;It’s a language, just get use  to &lt;strong&gt;metacharacter grammar&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Regular_expression&quot;&gt;regex wiki&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/pl/pl-miscellaneous-regular-expression.html</link>
+    <guid>/pl/pl-miscellaneous-regular-expression</guid>
+    <pubDate>Sat, 08 Dec 2018 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>PL: Type and Strategy</title>
+    <description>
+&lt;h4 id=&quot;1-outline&quot;&gt;1. Outline&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/pl-programming-and-computer-language.png&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Strong and Weak: Typing about when type information is acquired(compile time
+or runtime)&lt;/li&gt;
+  &lt;li&gt;Static and Dynamic: How stricty types are distinguished(whether the language
+tries to do an implicit conversion from stings to numbers).&lt;/li&gt;
+  &lt;li&gt;language type
+    &lt;ul&gt;
+      &lt;li&gt;machine language&lt;/li&gt;
+      &lt;li&gt;asseble language: writing operating system.&lt;/li&gt;
+      &lt;li&gt;hybrid lanuage: JVM as an interpreter&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;compiler&lt;/li&gt;
+  &lt;li&gt;intepreter&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;2-style&quot;&gt;2. Style&lt;/h4&gt;
+&lt;p&gt;Among the following method, OOP is most successful and famous.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Modular or Procedural Programming
+    &lt;ul&gt;
+      &lt;li&gt;this is in contrast with monolithic programming which means write all code in
+one function.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Object Oriented Programming&lt;/li&gt;
+  &lt;li&gt;AOP: Aspect Oriented Programming&lt;/li&gt;
+  &lt;li&gt;Structured Programming&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h5 id=&quot;21--principles-of-object-orientation&quot;&gt;2.1  Principles of object-orientation&lt;/h5&gt;
+&lt;p&gt;Just as the other industry, we want to find a way to make software, just like
+making a car.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;abstraction&lt;/li&gt;
+  &lt;li&gt;Encapsulation: Data hiding&lt;/li&gt;
+  &lt;li&gt;Inheritance&lt;/li&gt;
+  &lt;li&gt;Polymorphism&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/pl/pl-miscellaneous-programming-type-and-strategy.html</link>
+    <guid>/pl/pl-miscellaneous-programming-type-and-strategy</guid>
+    <pubDate>Sat, 08 Dec 2018 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>PL: Programming and RAM</title>
+    <description>
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;No matter what  we are playing, one thing is very important &lt;strong&gt;archtiecture&lt;/strong&gt;.
+    &lt;ul&gt;
+      &lt;li&gt;assume you are the president of Hongkong, if you want to be a member of
+international game, you have to obey the rule in the name of “CHINA HONGKONG”,
+that’s the architecture set by China, so is Taiwan.&lt;/li&gt;
+      &lt;li&gt;You are a programmer, you have to understand the architecutre of the computer.
+Know what you can do, and what you can’t.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;main-memory-architecture&quot;&gt;Main Memory Architecture&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/pl-programming-and-ram-main-memory-architecture.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;thinking&quot;&gt;Thinking&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;You are a programmer, you job is writing codes. The rest is up to computer.&lt;/li&gt;
+  &lt;li&gt;you want to get your computer work well, you have to understand it.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;steps&quot;&gt;Steps&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;in order to execute your code, your code will be loaded into the main memory.&lt;/li&gt;
+  &lt;li&gt;In order to use the main memory in full, we use two methods to allocate
+memory, the first is called stack and the second is called heap.
+    &lt;ul&gt;
+      &lt;li&gt;How to use stack, do we need to care about this, no we don’t. Compiler will do
+this job for us.&lt;/li&gt;
+      &lt;li&gt;How to use heap, do we nee to care about this, it depends.&lt;/li&gt;
+      &lt;li&gt;If you use c++, or c, you can access the main memory by pointer, so you can
+access device, such as keyboard, network, everything, so we can do system
+programming, you can develop operation system, you can develop device drivers.
+Only because we have pointers, &lt;strong&gt;You can get anywhere you want with pointers&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;If you use Java, Python. They don’t have pointers, so they are not allowed to
+access devices, you have to access them through JVM. There is no system
+programming possible for these languages.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;why-we-have-this&quot;&gt;Why we have this?&lt;/h4&gt;
+&lt;p&gt;For a new code library is just a bundle of functions and classes. &lt;br /&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;find the offical website about this package.&lt;/li&gt;
+  &lt;li&gt;There is always a very mature document comes along with this a package.&lt;/li&gt;
+  &lt;li&gt;In the document, you can find code demo about how to use this package.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;common-short&quot;&gt;Common Short&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;LHS: left-hand side&lt;/li&gt;
+  &lt;li&gt;RHS: right-hand side&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;programming-style&quot;&gt;Programming Style&lt;/h4&gt;
+
+&lt;h5 id=&quot;imperatives-style-vs-symbolic-style&quot;&gt;Imperatives-style VS Symbolic-style&lt;/h5&gt;
+&lt;ol&gt;
+  &lt;li&gt;Imperative-style programs perform computation as you run them.&lt;/li&gt;
+  &lt;li&gt;Symbolic Programs&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h5 id=&quot;deep-learning-library-and-programming-style&quot;&gt;Deep Learning Library and Programming Style&lt;/h5&gt;
+&lt;ol&gt;
+  &lt;li&gt;Symbolic style deep learning library include Tensorflow, Theano&lt;/li&gt;
+  &lt;li&gt;Imperative stype deep learning library include Torch&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;error&quot;&gt;Error&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Every programming language has its features, things are different, not every
+error goes to the same way.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h5 id=&quot;latex&quot;&gt;Latex&lt;/h5&gt;
+&lt;h5 id=&quot;script&quot;&gt;script&lt;/h5&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://mxnet.incubator.apache.org/versions/master/architecture/program_model.html&quot;&gt;Imperative-style and Symbolic-style&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://cpp.tech-academy.co.uk/memory-layout/&quot;&gt;Memory Layout&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/pl/pl-miscellaneous-progamming-and-ram.html</link>
+    <guid>/pl/pl-miscellaneous-progamming-and-ram</guid>
+    <pubDate>Sat, 08 Dec 2018 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>PL: Philosophy</title>
+    <description>
+&lt;h4 id=&quot;background&quot;&gt;Background&lt;/h4&gt;
+&lt;p&gt;The main question is: when faced with a problem, do we always have the choice
+between a declarative and imperative approaches to solving it?&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;If there is a declarative solution, can it always be translated into computer
+code?&lt;/li&gt;
+  &lt;li&gt;The answer to this question is far from obvious and, if we could find it, we
+would probably revolutinonize our understanding of universe.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;related-area&quot;&gt;Related Area&lt;/h4&gt;
+&lt;p&gt;Richard Feynman mentions this duality as an inspiration in his own work on
+quantum electrodynamics.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;There are two forms of expressing most laws of physics. One used local,or
+infinitesimal, considerations.&lt;/li&gt;
+  &lt;li&gt;We look at the state of a system around a small neighborhood, and predict how
+it will evolve within the next instant of time.&lt;/li&gt;
+  &lt;li&gt;This is usually expressed using differential equations that have to be
+integrated, or summed up. over a period of time.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The other approach is global.&lt;/p&gt;
+</description>
+    <link>/pl/pl-miscellaneous-philosophy.html</link>
+    <guid>/pl/pl-miscellaneous-philosophy</guid>
+    <pubDate>Sat, 08 Dec 2018 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>PL: Naming Convention</title>
+    <description>
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Camel Case: (someVar, someClass)&lt;/li&gt;
+  &lt;li&gt;Pascal Case:(SomeVar, SomeClass)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;h&quot;&gt;H&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;underscores and lowercase was the style perferred by Bjarne Stroustrup in
+“The C++ Programming Language”. He made a statement along the lines that
+underscores in names were to be preferred because it was more readable to an
+international community where english is not the primary language.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;pep8&quot;&gt;PEP8&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;regular_variables: Variable names should be lowercase, where necessary
+separating words by underscores&lt;/li&gt;
+  &lt;li&gt;CONSTANTS: to indicate that a variable should be treated as if it were a
+constant, names should be uppercase, where necessary separating words by
+underscores&lt;/li&gt;
+  &lt;li&gt;function_names(): Names of functions should be lowercase, where necessary
+separating words by underscores&lt;/li&gt;
+  &lt;li&gt;ClassNames: class name should capitalize the first letter of each word.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;customer_name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Alice&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;get_customer_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;a4138&quot;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;id&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+    <link>/pl/pl-miscellaneous-naming-convention.html</link>
+    <guid>/pl/pl-miscellaneous-naming-convention</guid>
+    <pubDate>Sat, 08 Dec 2018 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title> Jekyll</title>
+    <description>
+&lt;h4 id=&quot;jekyll&quot;&gt;Jekyll&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;jekyll server&lt;/li&gt;
+  &lt;li&gt;jekyll serve –host=0.0.0.0
+    &lt;ul&gt;
+      &lt;li&gt;This will make Jekyll’s HTTP server bind to all available IPs.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;mathjax&quot;&gt;Mathjax&lt;/h4&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/16608466/connect-to-a-locally-built-jekyll-server-using-mobile-devices-in-the-lan&quot;&gt;Connect to a locally build Server&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://quuxplusone.github.io/blog/2020/08/19/mathjax-v3-in-jekyll/&quot;&gt;mathjax in jekyll&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/pl/pl-miscellaneous-jekyll.html</link>
+    <guid>/pl/pl-miscellaneous-jekyll</guid>
+    <pubDate>Sat, 08 Dec 2018 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>PL: Debugging and Profiling</title>
+    <description>
+&lt;h4 id=&quot;a&quot;&gt;A&lt;/h4&gt;
+&lt;p&gt;A debugger can start some process and debug it, or attach itself to an existing
+process. It can single-step through code, set breakpoints and run to them,
+examine variable values and stack traces.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;modern debugger are complex beast, but the foundation is very simple.&lt;/li&gt;
+  &lt;li&gt;Debuggers start with only a few basic services provided by the operating
+system.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://eli.thegreenplace.net/2011/01/23/how-debuggers-work-part-1#:~:text=A%20debugger%20can%20start%20some,variable%20values%20and%20stack%20traces.&quot;&gt;How debuggers work&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/pl/pl-miscellaneous-debugging-and-profiling.html</link>
+    <guid>/pl/pl-miscellaneous-debugging-and-profiling</guid>
+    <pubDate>Sat, 08 Dec 2018 00:00:00 +0900</pubDate>
   </item>
 
   <item>
@@ -26684,6 +27482,41 @@ other program.&lt;/li&gt;
   </item>
 
   <item>
+    <title>Script: Summary</title>
+    <description>&lt;h4 id=&quot;introduction&quot;&gt;Introduction&lt;/h4&gt;
+&lt;p&gt;The spectrum of scripting languages ranges from very small and highly
+domain-specific languages to general-purpose programming languages&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;specific environments related
+    &lt;ul&gt;
+      &lt;li&gt;Bash: for Unix or Unix-like operating system&lt;/li&gt;
+      &lt;li&gt;JavasScript: for web browers&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;general purpose language: Python&lt;/li&gt;
+  &lt;li&gt;Editor language: vim&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Pointers and dynamic memory allocation are “hard-core” programming. When you
+can write programs that grab blocks of memory on the fly, link them into
+useful strucures, and clean everything at the end so there is no residue,
+you’re not just someone who can do a little coding, you’re a programmer.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Scripting_language&quot;&gt;Scripting Language&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/pl/pl-script-summary.html</link>
+    <guid>/pl/pl-script-summary</guid>
+    <pubDate>Sat, 03 Mar 2018 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
     <title>C++: Struct</title>
     <description>
 &lt;p&gt;####&lt;/p&gt;
@@ -28002,21 +28835,44 @@ not.&lt;/li&gt;
 &lt;span class=&quot;nt&quot;&gt;\end{table}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;package&quot;&gt;Package&lt;/h4&gt;
+&lt;h4 id=&quot;2-package&quot;&gt;2 Package&lt;/h4&gt;
 
-&lt;h5 id=&quot;1-siunitx-package&quot;&gt;1. siunitx package&lt;/h5&gt;
+&lt;h5 id=&quot;21-siunitx-package&quot;&gt;2.1 siunitx package&lt;/h5&gt;
 &lt;ol&gt;
   &lt;li&gt;align numbers at decimal point&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;\usepackage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;siunitx&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;% Required for alignment&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;\sisetup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;k&quot;&gt;\usepackage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;siunitx&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;% Required for alignment&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;\sisetup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
 	  round-mode          = places, &lt;span class=&quot;c&quot;&gt;% Rounds numbers&lt;/span&gt;
 	    round-precision     = 2, &lt;span class=&quot;c&quot;&gt;% to 2 places&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h5 id=&quot;makecell-package&quot;&gt;makecell package&lt;/h5&gt;
+&lt;p&gt;add line break in a table cell&lt;/p&gt;
 
-&lt;h5 id=&quot;2-multirow-package&quot;&gt;2. multirow package&lt;/h5&gt;
+&lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;nt&quot;&gt;\begin{table*}&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;\normalsize&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\caption&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;The optimum lay-ups using two distinct fiber angles under various biaxial loading cases&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\label&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;tab:two&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;distinct&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;angle&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\centering&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;\begin{tabular}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;clccc&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;\toprule&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;\textbf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Loading&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;N&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;N&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;N&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;xy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}$&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;\textbf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;(MPa m)&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;   &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;\makecell&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;\textbf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Optimum lay-up &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;\\&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;\textbf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;sequences&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;                        &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;\textbf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Laminate thickness&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;  &lt;span class=&quot;k&quot;&gt;\makecell&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;\textbf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Safety factor &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;\\&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;\textbf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;for Tsai-wu&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;\makecell&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;\textbf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Safety factor &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;\\&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;\textbf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;for  maximum stress&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;
+	 &lt;span class=&quot;k&quot;&gt;\\&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;\midrule&lt;/span&gt;
+	10/5/0        &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;33&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;29&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;39&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;25&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\bar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;39&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;      &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;     109               &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;  1.0074      &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;  1.0246  &lt;span class=&quot;k&quot;&gt;\\&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;\bottomrule&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;\end{tabular}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;\end{table*}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h5 id=&quot;22--multirow-package&quot;&gt;2.2  multirow package&lt;/h5&gt;
 &lt;ol&gt;
   &lt;li&gt;grammar: \multirow{NUMBER_OF_ROWS}{WIDTH}{CONTENT}
     &lt;ul&gt;
@@ -28042,6 +28898,8 @@ determined automatically.&lt;/li&gt;
 	&lt;span class=&quot;nt&quot;&gt;\end{center}&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;\end{table}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h5 id=&quot;23-multicol-package&quot;&gt;2.3 multicol package&lt;/h5&gt;
 
 &lt;h5 id=&quot;3-booktabs-package&quot;&gt;3. booktabs package&lt;/h5&gt;
 &lt;ol&gt;
@@ -33728,6 +34586,7 @@ prison, his lawyers have vowed to against his conviction.&lt;/li&gt;
   &lt;li&gt;local municipal goverment office&lt;/li&gt;
   &lt;li&gt;residence card&lt;/li&gt;
   &lt;li&gt;law enforcement&lt;/li&gt;
+  &lt;li&gt;He served in the treasury department&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;####&lt;/p&gt;
@@ -33807,6 +34666,11 @@ their own.&lt;/li&gt;
   <item>
     <title>Politics: Democracy</title>
     <description>
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
 &lt;p&gt;####&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;Protesters storm US Capitol Building&lt;/li&gt;
@@ -33914,6 +34778,7 @@ difference, I should get used to how they express.&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;In order to minimize person-to-person contact, you will not be able to pick
 up the payment in cash from your local city.&lt;/li&gt;
+  &lt;li&gt;People end up below the poverty line again&lt;/li&gt;
 &lt;/ol&gt;
 </description>
     <link>/%E8%A8%80%E8%91%89/language-english-economy-subsidy.html</link>
@@ -33927,13 +34792,21 @@ up the payment in cash from your local city.&lt;/li&gt;
 &lt;p&gt;####&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;future&lt;/li&gt;
+  &lt;li&gt;chairman of federal reserve&lt;/li&gt;
+  &lt;li&gt;financial deregulation&lt;/li&gt;
+  &lt;li&gt;cost many people life savings&lt;/li&gt;
+  &lt;li&gt;credit ratings agency&lt;/li&gt;
+  &lt;li&gt;oversaw the derivitaive market&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h4 id=&quot;market&quot;&gt;Market&lt;/h4&gt;
 &lt;ol&gt;
   &lt;li&gt;US oil goes negative for the first time.&lt;/li&gt;
   &lt;li&gt;Trade between China and Korea has plummetted by about 80%.&lt;/li&gt;
+  &lt;li&gt;the financial industry was tightly regulated, prohibited from speculating with depositors savings.&lt;/li&gt;
+  &lt;li&gt;the bankers could bet on anything, the bankruptcy of a company, even the weather..&lt;/li&gt;
 &lt;/ol&gt;
+
 </description>
     <link>/%E8%A8%80%E8%91%89/language-english-economy-market.html</link>
     <guid>/%E8%A8%80%E8%91%89/language-english-economy-market</guid>
@@ -33999,6 +34872,7 @@ up the payment in cash from your local city.&lt;/li&gt;
 &lt;ol&gt;
   &lt;li&gt;credit&lt;/li&gt;
   &lt;li&gt;credit my bank acount 5000 dollars&lt;/li&gt;
+  &lt;li&gt;cost my savings&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h4 id=&quot;phrase-1&quot;&gt;Phrase&lt;/h4&gt;
@@ -35292,6 +36166,7 @@ havn’t shared with you.&lt;/li&gt;
 are not realy sure what are they talking about.&lt;/li&gt;
   &lt;li&gt;you use humor as a way to keep people at a distance.&lt;/li&gt;
   &lt;li&gt;I marry a lesian to make you look good.&lt;/li&gt;
+  &lt;li&gt;What they said publicly is different from what they said privately.&lt;/li&gt;
 &lt;/ol&gt;
 </description>
     <link>/%E8%A8%80%E8%91%89/language-english-life-friends.html</link>
@@ -36776,6 +37651,7 @@ inside door.&lt;/li&gt;
   &lt;li&gt;ultrasound&lt;/li&gt;
   &lt;li&gt;unborn baby&lt;/li&gt;
   &lt;li&gt;tooth brushing&lt;/li&gt;
+  &lt;li&gt;blood had drained from her face&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;####&lt;/p&gt;
@@ -38337,6 +39213,8 @@ sometthing
   &lt;li&gt;add note under the table&lt;/li&gt;
   &lt;li&gt;get into my phone&lt;/li&gt;
   &lt;li&gt;died at the age of 85&lt;/li&gt;
+  &lt;li&gt;this is a universal problem&lt;/li&gt;
+  &lt;li&gt;How could that be&lt;/li&gt;
 &lt;/ol&gt;
 
 </description>

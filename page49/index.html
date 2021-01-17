@@ -32,9 +32,33 @@
   <!-- Scripts -->
   <script type="text/javascript" src="/assets/themes/twitter/js/jquery-1.11.1.min.js"></script>
   <!--[if lt IE 9]><script src="/assets/themes/twitter/js/html5shiv.min.js"></script><![endif]-->
-  <script type="text/javascript" async
+  <!--<script type="text/javascript" async
           src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
-  </script>
+  </script> -->
+	<script type="text/javascript">
+	window.MathJax = {
+	  tex: {
+		packages: ['base', 'ams']
+	  },
+	  loader: {
+		load: ['ui/menu', '[tex]/ams']
+	  },
+	  startup: {
+		ready() {
+		  MathJax.startup.defaultReady();
+		  const Macro = MathJax._.input.tex.Symbol.Macro;
+		  const MapHandler = MathJax._.input.tex.MapHandler.MapHandler;
+		  const Array = MathJax._.input.tex.ams.AmsMethods.default.Array;
+		  const env = new Macro('psmallmatrix', Array, [null, '(', ')', 'c', '.333em', '.2em', 'S', 1]);
+		  MapHandler.getMap('AMSmath-environment').add('psmallmatrix', env);
+		}
+	  }
+	};
+	</script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+
 </head> 
 <body>
 
@@ -124,17 +148,17 @@ $(document).ready(function() {
           <a href="/" title="查看最近发表"><i class="icon-fixed-width icon-edit"></i> 最近发表</a>
 <ul>
 
-  <li><a href="/work/work-publisher.html" title="查看《Publisher: Summary》">Publisher: Summary</a></li>
+  <li><a href="/ai/AI-convex-optimization-terminology.html" title="查看《C.O.: Terminology》">C.O.: Terminology</a></li>
 
-  <li><a href="/work/work-publisher-common-sense.html" title="查看《Publisher: Common sense》">Publisher: Common sense</a></li>
+  <li><a href="/ai/AI-convex-optimization-nomenclature.html" title="查看《C.O.: Nomenclature》">C.O.: Nomenclature</a></li>
 
-  <li><a href="/ai/AI-Adaptive-Boosting.html" title="查看《Adaptive Boosting》">Adaptive Boosting</a></li>
+  <li><a href="/ai/AI-convex-optimization-convex-function.html" title="查看《C.O.: Convex Functions》">C.O.: Convex Functions</a></li>
 
-  <li><a href="/work/work-word-neural-network.html" title="查看《Work: Neural Network》">Work: Neural Network</a></li>
+  <li><a href="/ai/AI-convex-optimization-lagrangian-duality.html" title="查看《C.O.: Lagrangian Duality》">C.O.: Lagrangian Duality</a></li>
 
-  <li><a href="/work/work-word-composite-material.html" title="查看《Word: Composite Material》">Word: Composite Material</a></li>
+  <li><a href="/ai/AI-convex-optimization-linear-programming-problem.html" title="查看《C.O.: Linear Programming》">C.O.: Linear Programming</a></li>
 
-  <li><a href="/work/work-word.html" title="查看《Work: Word》">Work: Word</a></li>
+  <li><a href="/ai/AI-convex-optimization-least-square-problem.html" title="查看《C.O.: Least squares》">C.O.: Least squares</a></li>
 
 </ul>
 
@@ -142,9 +166,52 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">946</span>
+<span title="文章总数">965</span>
 <ul>
 
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#August-2020">2020 年 08 月 (8)</a></li>
+    
+  
 
   
   
@@ -2108,6 +2175,59 @@ $(document).ready(function() {
   
   
   
+    <li><a href="/archive.html#December-2018">2018 年 12 月 (10)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
     <li><a href="/archive.html#November-2018">2018 年 11 月 (10)</a></li>
     
   
@@ -3349,7 +3469,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#March-2018">2018 年 03 月 (68)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2018">2018 年 03 月 (69)</a></li>
     
   
 
@@ -4976,7 +5101,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (217)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (228)</a></li>
 
   <li><a href="/categories.html#Algorithm-ref">Algorithm (78)</a></li>
 
@@ -4988,14 +5113,14 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#work-ref">work (20)</a></li>
 
-  <li><a href="/categories.html#AI-ref">AI (42)</a></li>
+  <li><a href="/categories.html#AI-ref">AI (50)</a></li>
 
 </ul>
 
         </section>
         <section>
           <a href="/tags.html" title="查看所有标签"><i class="icon-fixed-width icon-tags"></i> 标签云</a>
-<span title="标签总数">99</span>
+<span title="标签总数">101</span>
 <div id="tag-cloud">
 
 
@@ -5023,7 +5148,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #888;">summary</a>
+    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #777;">summary</a>
   
     
     
@@ -5058,7 +5183,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#script-ref" style="font-size: 17.5pt; color: #000;">script</a>
+    <a href="/tags.html#script-ref" style="font-size: 18pt; color: #000;">script</a>
   
     
     
@@ -5072,7 +5197,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#compile-ref" style="font-size: 14.5pt; color: #444;">compile</a>
+    <a href="/tags.html#compile-ref" style="font-size: 14pt; color: #444;">compile</a>
   
     
     
@@ -5248,6 +5373,13 @@ $(document).ready(function() {
     
     
     <a href="/tags.html#assembly-ref" style="font-size: 9.5pt; color: #888;">assembly</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#jekyll-ref" style="font-size: 9pt; color: #999;">jekyll</a>
   
     
     
@@ -5697,6 +5829,13 @@ $(document).ready(function() {
     
     <a href="/tags.html#supervised-ref" style="font-size: 9pt; color: #999;">supervised</a>
   
+    
+    
+    
+    
+    
+    <a href="/tags.html#C.O.-ref" style="font-size: 9.5pt; color: #888;">C.O.</a>
+  
 
 </div>
 
@@ -5762,272 +5901,31 @@ $(document).ready(function() {
   <article class="nested">
 
     <header>
-      <h2><a href="/algorithm/agorithm-abstract-data-type-string-problem-longest-common-subsequence.html" title="查看《A.D.T.P.: Longest Common Subsequence》">A.D.T.P.: Longest Common Subsequence</a></h2>
+      <h2><a href="/algorithm/agorithm-design-recursion-implementation.html" title="查看《A.D.: Recursion Implementation》">A.D.: Recursion Implementation</a></h2>
     </header>
 
     <section>
       <p>
         
-Problem
+1. Taylor Series
 
-  There are two strings A and B as following:
-
-
-
-  
-    
-      b
-      d
-      \0
-    
-  
-  
-    
-      0
-      1
-      2
-    
-  
-
-
-
-  
- ...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#June-2018" title="查看此月所有文章">14 June 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#Algorithm-ref" title="查看此类别下的所有文章">Algorithm</a>，
-        评论：<a href="/algorithm/agorithm-abstract-data-type-string-problem-longest-common-subsequence.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/algorithm/agorithm-abstract-data-type-string-problem-infix-postfix-prefix.html" title="查看《A.D.T.P: Infix, Prefix and Postfix》">A.D.T.P: Infix, Prefix and Postfix</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#June-2018" title="查看此月所有文章">14 June 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#Algorithm-ref" title="查看此类别下的所有文章">Algorithm</a>，
-        评论：<a href="/algorithm/agorithm-abstract-data-type-string-problem-infix-postfix-prefix.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/algorithm/agorithm-abstract-data-type-string-problem-Knuth-Morris-Pratt-matching.html" title="查看《A.D.T.P.: Knuth-Morris-Pratt String Matching》">A.D.T.P.: Knuth-Morris-Pratt String Matching</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-
-  
-    
-      String
-      a
-      b
-      a
-      b
-      c
-      a
-      b
-      c
-      a
-      b
-      a
-      b
-      a
-      b
-      d
-    ...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#June-2018" title="查看此月所有文章">14 June 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#Algorithm-ref" title="查看此类别下的所有文章">Algorithm</a>，
-        评论：<a href="/algorithm/agorithm-abstract-data-type-string-problem-Knuth-Morris-Pratt-matching.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/algorithm/agorithm-abstract-data-type-string-introduction.html" title="查看《A.D.T.: String》">A.D.T.: String</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-What is string?
-String just array, everymethod you learn in array. You can apply them in string.
-
-A
-
-  basically, compuer doesn’t support characte...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#June-2018" title="查看此月所有文章">14 June 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#Algorithm-ref" title="查看此类别下的所有文章">Algorithm</a>，
-        评论：<a href="/algorithm/agorithm-abstract-data-type-string-introduction.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/algorithm/agorithm-abstract-data-type-tree-terminology.html" title="查看《A.D.T.: Tree Terminology》">A.D.T.: Tree Terminology</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Terminology
-
-  root
-  parent
-  child
-  descendents
-  siblings
-  ancestors
-  degree of nodes
-  internal nodes, external nodes
-  terminal nodes, non...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#June-2018" title="查看此月所有文章">08 June 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#Algorithm-ref" title="查看此类别下的所有文章">Algorithm</a>，
-        评论：<a href="/algorithm/agorithm-abstract-data-type-tree-terminology.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/algorithm/agorithm-abstract-data-type-tree-representation.html" title="查看《A.D.T.: Tree Representation》">A.D.T.: Tree Representation</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Represenation
-
-Array Representaion
-
-  if a Node is at index $i$
-  its left child is at $2*i$
-  its left child is at $2*i+1$
-  its parent is at $i/...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#June-2018" title="查看此月所有文章">08 June 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#Algorithm-ref" title="查看此类别下的所有文章">Algorithm</a>，
-        评论：<a href="/algorithm/agorithm-abstract-data-type-tree-representation.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/algorithm/agorithm-abstract-data-type-tree-heap.html" title="查看《A.D.T.: Heap》">A.D.T.: Heap</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Definition
-
-
-  First, Heap is complete binary tree.
-  node greater than its descendant.
-    
-      just like arranging apple in the mark, which is...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#June-2018" title="查看此月所有文章">08 June 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#Algorithm-ref" title="查看此类别下的所有文章">Algorithm</a>，
-        评论：<a href="/algorithm/agorithm-abstract-data-type-tree-heap.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/algorithm/agorithm-abstract-data-type-tree-heap-implementation.html" title="查看《A.D.T.: Heap Implementation》">A.D.T.: Heap Implementation</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-A
-
-  we use array to implement heap data structure.
-
-
-Code
+#define _USE_MATH_DEFINES
 #include&lt;iostream&gt;
 #include&lt;cmath&gt;
 
-void swap(int &amp;a, int &amp;b)
+float power(float x, int n)
 {
-	in...
+	if(n==0){return 1;}
+	re...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#June-2018" title="查看此月所有文章">08 June 2018</a>，
+        发表日期：<a href="/archive.html#June-2018" title="查看此月所有文章">30 June 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#Algorithm-ref" title="查看此类别下的所有文章">Algorithm</a>，
-        评论：<a href="/algorithm/agorithm-abstract-data-type-tree-heap-implementation.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/algorithm/agorithm-design-recursion-implementation.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6036,30 +5934,26 @@ void swap(int &amp;a, int &amp;b)
   <article class="nested">
 
     <header>
-      <h2><a href="/algorithm/agorithm-abstract-data-type-tree-binary-search.html" title="查看《A.D.T.: Binary Search Tree》">A.D.T.: Binary Search Tree</a></h2>
+      <h2><a href="/algorithm/agorithm-design-recursion-common-mistake.html" title="查看《A.D.: Common Mistakes of Recursion Design》">A.D.: Common Mistakes of Recursion Design</a></h2>
     </header>
 
     <section>
       <p>
         
-Complete Binary Tree
+Trashed Content
+Recursive programming is a great way to show yourself that you can solve
+difficult problems.
 
-  how to identify a tree is complete binary tree, you can make use of the array
-representation
-
-
-Drawback
-
-  The height of t...
+  Write an iterative function to sol...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#June-2018" title="查看此月所有文章">08 June 2018</a>，
+        发表日期：<a href="/archive.html#June-2018" title="查看此月所有文章">30 June 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#Algorithm-ref" title="查看此类别下的所有文章">Algorithm</a>，
-        评论：<a href="/algorithm/agorithm-abstract-data-type-tree-binary-search.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/algorithm/agorithm-design-recursion-common-mistake.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6068,29 +5962,235 @@ Drawback
   <article class="nested">
 
     <header>
-      <h2><a href="/algorithm/agorithm-abstract-data-type-tree-binary-search-implementation.html" title="查看《A.D.T.: Binary Search Tree Implementation》">A.D.T.: Binary Search Tree Implementation</a></h2>
+      <h2><a href="/algorithm/agorithm-design-linear-programming.html" title="查看《A.D.: Linear Programming》">A.D.: Linear Programming</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+####
+
+  Linear programming is a general purpose optimization techique that you can
+use to solve a whole bunch of problems.
+
+
+Example
+
+  How does p...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#June-2018" title="查看此月所有文章">20 June 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#Algorithm-ref" title="查看此类别下的所有文章">Algorithm</a>，
+        评论：<a href="/algorithm/agorithm-design-linear-programming.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/algorithm/agorithm-design-greedy.html" title="查看《A.D.: Greedy》">A.D.: Greedy</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Property
+
+  optimal substructure
+  greedy choice property
+    
+      locally optimal choice lead to globally solution, most of the time, it’s not
+...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#June-2018" title="查看此月所有文章">20 June 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#Algorithm-ref" title="查看此类别下的所有文章">Algorithm</a>，
+        评论：<a href="/algorithm/agorithm-design-greedy.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/algorithm/agorithm-design-divide-and-conquer.html" title="查看《A.D.: Divide and Conquer》">A.D.: Divide and Conquer</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+####
+
+  the subproblem should be the same as the problem, otherwise, we can’t use
+divide and conquer strategy.
+    
+      this is why recursive in...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#June-2018" title="查看此月所有文章">20 June 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#Algorithm-ref" title="查看此类别下的所有文章">Algorithm</a>，
+        评论：<a href="/algorithm/agorithm-design-divide-and-conquer.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/algorithm/agorithm-design-divide-and-conquer-binary-search.html" title="查看《A.D.: Binary Search》">A.D.: Binary Search</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+binarySearch(A, n, key):
+    low  = 1
+    high = n
+    while(l&lt; h){
+        mid = (l+h)/2
+        if(key == A[mid]):
+            return mid
+   ...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#June-2018" title="查看此月所有文章">20 June 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#Algorithm-ref" title="查看此类别下的所有文章">Algorithm</a>，
+        评论：<a href="/algorithm/agorithm-design-divide-and-conquer-binary-search.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/algorithm/agorithm-design-distributed-algorithm.html" title="查看《A.D.: Distributed Algorithm》">A.D.: Distributed Algorithm</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+####
+
+  Let G=(V,E) be an n-vertex clique. Then there is no algorithm consisting of
+deterministic indistinguishable process that is guarantedd to ...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#June-2018" title="查看此月所有文章">20 June 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#Algorithm-ref" title="查看此类别下的所有文章">Algorithm</a>，
+        评论：<a href="/algorithm/agorithm-design-distributed-algorithm.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/algorithm/agorithm-design-cache-oblivious-algorithm.html" title="查看《A.D.: Cache-Oblivious Algorithms》">A.D.: Cache-Oblivious Algorithms</a></h2>
     </header>
 
     <section>
       <p>
         
 
-#include &lt;iostream&gt;
-
-struct node{
-    int data;
-    struct node *leftChild=nullptr;
-    struct node *rightChild=nullptr;
-    struct node *p...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#June-2018" title="查看此月所有文章">08 June 2018</a>，
+        发表日期：<a href="/archive.html#June-2018" title="查看此月所有文章">20 June 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#Algorithm-ref" title="查看此类别下的所有文章">Algorithm</a>，
-        评论：<a href="/algorithm/agorithm-abstract-data-type-tree-binary-search-implementation.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/algorithm/agorithm-design-cache-oblivious-algorithm.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/algorithm/agorithm-design-branch-and-bound.html" title="查看《A.D.: Bracnch and Bound》">A.D.: Bracnch and Bound</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+####
+
+Relationship with Backtracking
+
+  It also use a state space tree to solve the problem
+  but it is useful to solve optimization problem, and ...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#June-2018" title="查看此月所有文章">20 June 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#Algorithm-ref" title="查看此类别下的所有文章">Algorithm</a>，
+        评论：<a href="/algorithm/agorithm-design-branch-and-bound.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/algorithm/agorithm-design-backtracking.html" title="查看《A.D.: Backtracking 》">A.D.: Backtracking </a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+####
+
+  generate state space tree: this is the first step.
+  bounding function: optimize this function.
+
+
+
+solution
+
+Application
+
+  N Queen Proble...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#June-2018" title="查看此月所有文章">20 June 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#Algorithm-ref" title="查看此类别下的所有文章">Algorithm</a>，
+        评论：<a href="/algorithm/agorithm-design-backtracking.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6135,7 +6235,7 @@ struct node{
 
     <!-- Current Page -->
     <li class="active">
-      <span class="page_number ">第 49/95 页</span>
+      <span class="page_number ">第 49/97 页</span>
     </li>
 
     <!-- Next Page -->
@@ -6145,7 +6245,7 @@ struct node{
 
     <!-- Last Page -->
     
-    <li><a href="/page95">&raquo;&raquo;</a></li>
+    <li><a href="/page97">&raquo;&raquo;</a></li>
     
   </ul>
 </section>
@@ -6199,4 +6299,8 @@ $(document).ready(function () {
   
 </body>
 </html>
+
+
+
+
 

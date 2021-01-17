@@ -32,9 +32,33 @@
   <!-- Scripts -->
   <script type="text/javascript" src="/assets/themes/twitter/js/jquery-1.11.1.min.js"></script>
   <!--[if lt IE 9]><script src="/assets/themes/twitter/js/html5shiv.min.js"></script><![endif]-->
-  <script type="text/javascript" async
+  <!--<script type="text/javascript" async
           src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
-  </script>
+  </script> -->
+	<script type="text/javascript">
+	window.MathJax = {
+	  tex: {
+		packages: ['base', 'ams']
+	  },
+	  loader: {
+		load: ['ui/menu', '[tex]/ams']
+	  },
+	  startup: {
+		ready() {
+		  MathJax.startup.defaultReady();
+		  const Macro = MathJax._.input.tex.Symbol.Macro;
+		  const MapHandler = MathJax._.input.tex.MapHandler.MapHandler;
+		  const Array = MathJax._.input.tex.ams.AmsMethods.default.Array;
+		  const env = new Macro('psmallmatrix', Array, [null, '(', ')', 'c', '.333em', '.2em', 'S', 1]);
+		  MapHandler.getMap('AMSmath-environment').add('psmallmatrix', env);
+		}
+	  }
+	};
+	</script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+
 </head> 
 <body>
 
@@ -124,17 +148,17 @@ $(document).ready(function() {
           <a href="/" title="查看最近发表"><i class="icon-fixed-width icon-edit"></i> 最近发表</a>
 <ul>
 
-  <li><a href="/work/work-publisher.html" title="查看《Publisher: Summary》">Publisher: Summary</a></li>
+  <li><a href="/ai/AI-convex-optimization-terminology.html" title="查看《C.O.: Terminology》">C.O.: Terminology</a></li>
 
-  <li><a href="/work/work-publisher-common-sense.html" title="查看《Publisher: Common sense》">Publisher: Common sense</a></li>
+  <li><a href="/ai/AI-convex-optimization-nomenclature.html" title="查看《C.O.: Nomenclature》">C.O.: Nomenclature</a></li>
 
-  <li><a href="/ai/AI-Adaptive-Boosting.html" title="查看《Adaptive Boosting》">Adaptive Boosting</a></li>
+  <li><a href="/ai/AI-convex-optimization-convex-function.html" title="查看《C.O.: Convex Functions》">C.O.: Convex Functions</a></li>
 
-  <li><a href="/work/work-word-neural-network.html" title="查看《Work: Neural Network》">Work: Neural Network</a></li>
+  <li><a href="/ai/AI-convex-optimization-lagrangian-duality.html" title="查看《C.O.: Lagrangian Duality》">C.O.: Lagrangian Duality</a></li>
 
-  <li><a href="/work/work-word-composite-material.html" title="查看《Word: Composite Material》">Word: Composite Material</a></li>
+  <li><a href="/ai/AI-convex-optimization-linear-programming-problem.html" title="查看《C.O.: Linear Programming》">C.O.: Linear Programming</a></li>
 
-  <li><a href="/work/work-word.html" title="查看《Work: Word》">Work: Word</a></li>
+  <li><a href="/ai/AI-convex-optimization-least-square-problem.html" title="查看《C.O.: Least squares》">C.O.: Least squares</a></li>
 
 </ul>
 
@@ -142,9 +166,52 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">946</span>
+<span title="文章总数">965</span>
 <ul>
 
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#August-2020">2020 年 08 月 (8)</a></li>
+    
+  
 
   
   
@@ -2108,6 +2175,59 @@ $(document).ready(function() {
   
   
   
+    <li><a href="/archive.html#December-2018">2018 年 12 月 (10)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
     <li><a href="/archive.html#November-2018">2018 年 11 月 (10)</a></li>
     
   
@@ -3349,7 +3469,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#March-2018">2018 年 03 月 (68)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2018">2018 年 03 月 (69)</a></li>
     
   
 
@@ -4976,7 +5101,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (217)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (228)</a></li>
 
   <li><a href="/categories.html#Algorithm-ref">Algorithm (78)</a></li>
 
@@ -4988,14 +5113,14 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#work-ref">work (20)</a></li>
 
-  <li><a href="/categories.html#AI-ref">AI (42)</a></li>
+  <li><a href="/categories.html#AI-ref">AI (50)</a></li>
 
 </ul>
 
         </section>
         <section>
           <a href="/tags.html" title="查看所有标签"><i class="icon-fixed-width icon-tags"></i> 标签云</a>
-<span title="标签总数">99</span>
+<span title="标签总数">101</span>
 <div id="tag-cloud">
 
 
@@ -5023,7 +5148,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #888;">summary</a>
+    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #777;">summary</a>
   
     
     
@@ -5058,7 +5183,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#script-ref" style="font-size: 17.5pt; color: #000;">script</a>
+    <a href="/tags.html#script-ref" style="font-size: 18pt; color: #000;">script</a>
   
     
     
@@ -5072,7 +5197,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#compile-ref" style="font-size: 14.5pt; color: #444;">compile</a>
+    <a href="/tags.html#compile-ref" style="font-size: 14pt; color: #444;">compile</a>
   
     
     
@@ -5248,6 +5373,13 @@ $(document).ready(function() {
     
     
     <a href="/tags.html#assembly-ref" style="font-size: 9.5pt; color: #888;">assembly</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#jekyll-ref" style="font-size: 9pt; color: #999;">jekyll</a>
   
     
     
@@ -5697,6 +5829,13 @@ $(document).ready(function() {
     
     <a href="/tags.html#supervised-ref" style="font-size: 9pt; color: #999;">supervised</a>
   
+    
+    
+    
+    
+    
+    <a href="/tags.html#C.O.-ref" style="font-size: 9.5pt; color: #888;">C.O.</a>
+  
 
 </div>
 
@@ -5762,6 +5901,228 @@ $(document).ready(function() {
   <article class="nested">
 
     <header>
+      <h2><a href="/math/math-change-complex-analysis-conformal-mapping.html" title="查看《C.A.: Conformal Mapping》">C.A.: Conformal Mapping</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Background
+
+  f(x,y) = (u,v) where u = u(x,y) and v = v(x,y)
+  f(z) = w where z and w are complex numbers
+What’s the difference between the equati...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#December-2019" title="查看此月所有文章">05 December 2019</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
+        评论：<a href="/math/math-change-complex-analysis-conformal-mapping.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/math/math-change-complex-analysis-complex-number.html" title="查看《C.A.: Introduction》">C.A.: Introduction</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Inspiration
+
+  What would you do if I tell you, I want a half of three person?
+    
+      Maybe you can do it, but I don’t want to see it.
+    
+  ...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#December-2019" title="查看此月所有文章">05 December 2019</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
+        评论：<a href="/math/math-change-complex-analysis-complex-number.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/math/math-change-complex-analysis-complex-function.html" title="查看《C.A.: Complex Function》">C.A.: Complex Function</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+definition
+
+  complex function: a function takes a complex argument and yields a complex result,In other words, it is a function that has a suset ...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#December-2019" title="查看此月所有文章">05 December 2019</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
+        评论：<a href="/math/math-change-complex-analysis-complex-function.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/math/math-change-vector-analysis-vector.html" title="查看《V.A.: Vector》">V.A.: Vector</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+HH
+Because vector components behave contrary to the basis vectors, we say that 
+vector components are contra-variant
+
+The following is how basic a...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#December-2019" title="查看此月所有文章">01 December 2019</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
+        评论：<a href="/math/math-change-vector-analysis-vector.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/math/math-change-vector-analysis-vector-differentiation.html" title="查看《V.A.: Vector Differentiation》">V.A.: Vector Differentiation</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Definition
+
+  Partial derivatives of vectors: If $\mathbf{A}$ is a vector depending on more
+than one scalar variable, say $x,y,z$ for example, the...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#December-2019" title="查看此月所有文章">01 December 2019</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
+        评论：<a href="/math/math-change-vector-analysis-vector-differentiation.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/math/math-change-vector-analysis-summary.html" title="查看《V.A.: Summary》">V.A.: Summary</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Introduction
+If you understand tensors, you can get a lot insight in geometry; If you
+understand geometry, you can understand geometry more easily...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#December-2019" title="查看此月所有文章">01 December 2019</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
+        评论：<a href="/math/math-change-vector-analysis-summary.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/math/math-change-vector-analysis-metric-tensor.html" title="查看《V.A.: Metric Tensor》">V.A.: Metric Tensor</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Metric Tensor
+
+Metric tensor is used to measure the length of vector. Please remember the
+following picture 
+\(g_{\vec{e}_{i}}=\left[\begin{array}...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#December-2019" title="查看此月所有文章">01 December 2019</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
+        评论：<a href="/math/math-change-vector-analysis-metric-tensor.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/math/math-change-vector-analysis-kronecker-delta-function.html" title="查看《V.A.: Kronecker Delta》">V.A.: Kronecker Delta</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Definition
+\(\delta_{i j}=\left\{\begin{array}{ll}{0} &amp; {\text { if } i \neq j} \\ {1} &amp;
+{\text { if } i=j}\end{array}\right.\)
+
+Example
+T...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#December-2019" title="查看此月所有文章">01 December 2019</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
+        评论：<a href="/math/math-change-vector-analysis-kronecker-delta-function.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
       <h2><a href="/math/math-change-vector-analysis-introduction.html" title="查看《V.A.: Introduction》">V.A.: Introduction</a></h2>
     </header>
 
@@ -5813,228 +6174,6 @@ $(x,y,z)$ in a certain region of space(i.e. $\phi$ defines a...
 
   </article>
   
-  <article class="nested">
-
-    <header>
-      <h2><a href="/math/math-change-vector-analysis-dot-and-cross-product.html" title="查看《V.A.: Dot and Cross Product》">V.A.: Dot and Cross Product</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Definition
-
-  
-    $\textbf{THE DOT OR SCLALAR PRODUCT}$ of two vectors $\textbf{A}$ and
-$\textbf{B}$, denoted by $\mathbf{A} \cdot \mathbf{B}$ (r...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#December-2019" title="查看此月所有文章">01 December 2019</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
-        评论：<a href="/math/math-change-vector-analysis-dot-and-cross-product.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/math/math-change-vector-analysis-divergence-theorem.html" title="查看《V.A.: Diverence》">V.A.: Diverence</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Background
-
-  If you go to some textbook, the definition of divergence is extremely
-abstract, why this ?
-
-
-Reference
-
-  Divergence and Curl
-
-
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#December-2019" title="查看此月所有文章">01 December 2019</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
-        评论：<a href="/math/math-change-vector-analysis-divergence-theorem.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/math/math-change-vector-analysis-curvilinear-coordinates.html" title="查看《V.A.: Curvilinear Coordinates》">V.A.: Curvilinear Coordinates</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Definition
-
-  $\textbf{TRANSFORMATION OF COORDINATES}$. Let the rectangular coordinates $(x,y,z)$ of any point be expressed as functions of $u_1, ...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#December-2019" title="查看此月所有文章">01 December 2019</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
-        评论：<a href="/math/math-change-vector-analysis-curvilinear-coordinates.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/math/math-change-vector-analysis-covector.html" title="查看《V.A.: Covector》">V.A.: Covector</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Covector
-Definition: A covector(row vector) is a function that takes a vector and
-produces a scalar.
-
-  Covectors are invarient, they are purely g...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#December-2019" title="查看此月所有文章">01 December 2019</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
-        评论：<a href="/math/math-change-vector-analysis-covector.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/math/math-change-vector-analysis-calculus.html" title="查看《V.A.: Calculus》">V.A.: Calculus</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-HH
-Tensor calculus study how tensors change over space, according to the following
-tensors in the picture, if we choose a coordinate system, we ca...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#December-2019" title="查看此月所有文章">01 December 2019</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
-        评论：<a href="/math/math-change-vector-analysis-calculus.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/math/math-change-tensor-analysis-introduction.html" title="查看《V.A.: Introduction》">V.A.: Introduction</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Definition
-
-  Tensor Fields: If to each point of a region in N dimensional space
-corresponds a definite tensor, we say that a tensor field has bee...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#December-2019" title="查看此月所有文章">01 December 2019</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
-        评论：<a href="/math/math-change-tensor-analysis-introduction.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/math/math-change-functional-analysis.html" title="查看《F.A.: Calculus of Variations》">F.A.: Calculus of Variations</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Introduction
-Mathematicians are lazy, much like programmers are lazy. They want to abstract
-everything so that a statement can be made to apply to...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#December-2019" title="查看此月所有文章">01 December 2019</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
-        评论：<a href="/math/math-change-functional-analysis.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/math/math-change-functional-analysis-norm-space.html" title="查看《F.A.: Norm Space》">F.A.: Norm Space</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Norm Space
-A normed vector space is a vector space over the real or complex numbers, on which a norm is defined.
-
-  The zero vector, 0, has zero l...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#December-2019" title="查看此月所有文章">01 December 2019</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
-        评论：<a href="/math/math-change-functional-analysis-norm-space.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
 
   
     
@@ -6074,7 +6213,7 @@ A normed vector space is a vector space over the real or complex numbers, on whi
 
     <!-- Current Page -->
     <li class="active">
-      <span class="page_number ">第 13/95 页</span>
+      <span class="page_number ">第 13/97 页</span>
     </li>
 
     <!-- Next Page -->
@@ -6084,7 +6223,7 @@ A normed vector space is a vector space over the real or complex numbers, on whi
 
     <!-- Last Page -->
     
-    <li><a href="/page95">&raquo;&raquo;</a></li>
+    <li><a href="/page97">&raquo;&raquo;</a></li>
     
   </ul>
 </section>
@@ -6138,4 +6277,8 @@ $(document).ready(function () {
   
 </body>
 </html>
+
+
+
+
 

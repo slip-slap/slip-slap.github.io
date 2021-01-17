@@ -32,9 +32,33 @@
   <!-- Scripts -->
   <script type="text/javascript" src="/assets/themes/twitter/js/jquery-1.11.1.min.js"></script>
   <!--[if lt IE 9]><script src="/assets/themes/twitter/js/html5shiv.min.js"></script><![endif]-->
-  <script type="text/javascript" async
+  <!--<script type="text/javascript" async
           src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
-  </script>
+  </script> -->
+	<script type="text/javascript">
+	window.MathJax = {
+	  tex: {
+		packages: ['base', 'ams']
+	  },
+	  loader: {
+		load: ['ui/menu', '[tex]/ams']
+	  },
+	  startup: {
+		ready() {
+		  MathJax.startup.defaultReady();
+		  const Macro = MathJax._.input.tex.Symbol.Macro;
+		  const MapHandler = MathJax._.input.tex.MapHandler.MapHandler;
+		  const Array = MathJax._.input.tex.ams.AmsMethods.default.Array;
+		  const env = new Macro('psmallmatrix', Array, [null, '(', ')', 'c', '.333em', '.2em', 'S', 1]);
+		  MapHandler.getMap('AMSmath-environment').add('psmallmatrix', env);
+		}
+	  }
+	};
+	</script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+
 </head> 
 <body>
 
@@ -124,17 +148,17 @@ $(document).ready(function() {
           <a href="/" title="查看最近发表"><i class="icon-fixed-width icon-edit"></i> 最近发表</a>
 <ul>
 
-  <li><a href="/work/work-publisher.html" title="查看《Publisher: Summary》">Publisher: Summary</a></li>
+  <li><a href="/ai/AI-convex-optimization-terminology.html" title="查看《C.O.: Terminology》">C.O.: Terminology</a></li>
 
-  <li><a href="/work/work-publisher-common-sense.html" title="查看《Publisher: Common sense》">Publisher: Common sense</a></li>
+  <li><a href="/ai/AI-convex-optimization-nomenclature.html" title="查看《C.O.: Nomenclature》">C.O.: Nomenclature</a></li>
 
-  <li><a href="/ai/AI-Adaptive-Boosting.html" title="查看《Adaptive Boosting》">Adaptive Boosting</a></li>
+  <li><a href="/ai/AI-convex-optimization-convex-function.html" title="查看《C.O.: Convex Functions》">C.O.: Convex Functions</a></li>
 
-  <li><a href="/work/work-word-neural-network.html" title="查看《Work: Neural Network》">Work: Neural Network</a></li>
+  <li><a href="/ai/AI-convex-optimization-lagrangian-duality.html" title="查看《C.O.: Lagrangian Duality》">C.O.: Lagrangian Duality</a></li>
 
-  <li><a href="/work/work-word-composite-material.html" title="查看《Word: Composite Material》">Word: Composite Material</a></li>
+  <li><a href="/ai/AI-convex-optimization-linear-programming-problem.html" title="查看《C.O.: Linear Programming》">C.O.: Linear Programming</a></li>
 
-  <li><a href="/work/work-word.html" title="查看《Work: Word》">Work: Word</a></li>
+  <li><a href="/ai/AI-convex-optimization-least-square-problem.html" title="查看《C.O.: Least squares》">C.O.: Least squares</a></li>
 
 </ul>
 
@@ -142,9 +166,52 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">946</span>
+<span title="文章总数">965</span>
 <ul>
 
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#August-2020">2020 年 08 月 (8)</a></li>
+    
+  
 
   
   
@@ -2108,6 +2175,59 @@ $(document).ready(function() {
   
   
   
+    <li><a href="/archive.html#December-2018">2018 年 12 月 (10)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
     <li><a href="/archive.html#November-2018">2018 年 11 月 (10)</a></li>
     
   
@@ -3349,7 +3469,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#March-2018">2018 年 03 月 (68)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2018">2018 年 03 月 (69)</a></li>
     
   
 
@@ -4976,7 +5101,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (217)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (228)</a></li>
 
   <li><a href="/categories.html#Algorithm-ref">Algorithm (78)</a></li>
 
@@ -4988,14 +5113,14 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#work-ref">work (20)</a></li>
 
-  <li><a href="/categories.html#AI-ref">AI (42)</a></li>
+  <li><a href="/categories.html#AI-ref">AI (50)</a></li>
 
 </ul>
 
         </section>
         <section>
           <a href="/tags.html" title="查看所有标签"><i class="icon-fixed-width icon-tags"></i> 标签云</a>
-<span title="标签总数">99</span>
+<span title="标签总数">101</span>
 <div id="tag-cloud">
 
 
@@ -5023,7 +5148,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #888;">summary</a>
+    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #777;">summary</a>
   
     
     
@@ -5058,7 +5183,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#script-ref" style="font-size: 17.5pt; color: #000;">script</a>
+    <a href="/tags.html#script-ref" style="font-size: 18pt; color: #000;">script</a>
   
     
     
@@ -5072,7 +5197,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#compile-ref" style="font-size: 14.5pt; color: #444;">compile</a>
+    <a href="/tags.html#compile-ref" style="font-size: 14pt; color: #444;">compile</a>
   
     
     
@@ -5248,6 +5373,13 @@ $(document).ready(function() {
     
     
     <a href="/tags.html#assembly-ref" style="font-size: 9.5pt; color: #888;">assembly</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#jekyll-ref" style="font-size: 9pt; color: #999;">jekyll</a>
   
     
     
@@ -5697,6 +5829,13 @@ $(document).ready(function() {
     
     <a href="/tags.html#supervised-ref" style="font-size: 9pt; color: #999;">supervised</a>
   
+    
+    
+    
+    
+    
+    <a href="/tags.html#C.O.-ref" style="font-size: 9.5pt; color: #888;">C.O.</a>
+  
 
 </div>
 
@@ -5762,87 +5901,28 @@ $(document).ready(function() {
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-latex-figure.html" title="查看《Latex: Figure》">Latex: Figure</a></h2>
-    </header>
-
-    <section>
-      <p>
-        1. Basic knowledge of an Figure
-
-1.1 DPI and PPI
-
-  PPI describes the resolution in pixels of a digital image.
-  DPI describes the the amount of in...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#February-2018" title="查看此月所有文章">22 February 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-latex-figure.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-script-latex-error.html" title="查看《Latex: Error》">Latex: Error</a></h2>
-    </header>
-
-    <section>
-      <p>
-        failed to arrange your figure properly
-
-  If you draw help lines in your code, don’t forgot to remove the help line, or
-help grid.
-
-
-undefine
-
-
-  t...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#February-2018" title="查看此月所有文章">22 February 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-latex-error.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-script-cmake-intro.html" title="查看《CMake: Philosophy》">CMake: Philosophy</a></h2>
+      <h2><a href="/pl/pl-compile-c++-library-stl-structure.html" title="查看《C++ STL: Architecture》">C++ STL: Architecture</a></h2>
     </header>
 
     <section>
       <p>
         
-I
-CMake is a string-oriented language.
-CMake is a string-oriented language.
-CMake is a string-oriented language.
+Introduction
 
-  After you understand this, eve...
+  Container
+  Iterator
+  Algorithm
+
+
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#February-2018" title="查看此月所有文章">15 February 2018</a>，
+        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">01 March 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-cmake-intro.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-compile-c++-library-stl-structure.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5851,54 +5931,27 @@ CMake is a string-oriented language.
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-cmake-syntax.html" title="查看《CMake: Syntax》">CMake: Syntax</a></h2>
-    </header>
-
-    <section>
-      <p>
-        Syntax
-
-  CMakeLists files follow a simple syntax consisting of comments, commands, and
-white space
-  A command: consists of the command name, open...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#February-2018" title="查看此月所有文章">14 February 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-cmake-syntax.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-script-cmake-buildsystem.html" title="查看《CMake: Build System》">CMake: Build System</a></h2>
+      <h2><a href="/pl/pl-compile-c++-library-opencv-highgui.html" title="查看《C++ Library: OpenCV》">C++ Library: OpenCV</a></h2>
     </header>
 
     <section>
       <p>
         
-####
+reference
+VideoCapture cap(0); // open the default camera
+         if(!cap.isOpened())  // check if we succeeded
+         return -1;
 
-  A CMake-based buildsystem is organized as a set of high-level logical
-targets.
-  Each target corresponds to an executable or library.
-  De...
+         Mat...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#February-2018" title="查看此月所有文章">13 February 2018</a>，
+        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">01 March 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-cmake-buildsystem.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-compile-c++-library-opencv-highgui.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5907,27 +5960,32 @@ targets.
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-cmake-concept.html" title="查看《CMake: Concept》">CMake: Concept</a></h2>
+      <h2><a href="/pl/pl-compile-c++-library-googletest.html" title="查看《C++ Library: Googletest》">C++ Library: Googletest</a></h2>
     </header>
 
     <section>
       <p>
         
-####
+CMake configuration
 
-  CMake’s execution begins by creating an instance of the cmake class and
-passing the command line arguments to it.
+cmake_minimum_required(VERSION 3.10)
 
+project(hello_world)
 
+set(CMAKE_C_STANDARD 99)
+set(CMAKE_CXX_STANDARD 11)
+
+#GTest
+ADD_S...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#February-2018" title="查看此月所有文章">12 February 2018</a>，
+        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">01 March 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-cmake-concept.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-compile-c++-library-googletest.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5936,114 +5994,191 @@ passing the command line arguments to it.
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-cmake-control-structures.html" title="查看《CMake: Control Structures》">CMake: Control Structures</a></h2>
+      <h2><a href="/pl/pl-compile-c++-library-eigen.html" title="查看《C++ Library: Eigen》">C++ Library: Eigen</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+官方文档
+//默认是列向量
+Eigen::Vector4d a(1,2,3,4);//构造初始化
+Eigen::Vector4d b;
+b&lt;&lt;1,2,3,4;//赋值初始化
+
+
+
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">01 March 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-compile-c++-library-eigen.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-compile-c++-library-boost.html" title="查看《C++ Library: Boost》">C++ Library: Boost</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+介绍
+boost是一个可移植的，提供源代码的C++库，由于其对跨平台的强调，对标准C++的强调，与编写平台无关。大部分的boost库功能使用只需要包括相应的头文件即可，少数如正则表达式库和文件系统库需要连接库。
+
+文件系统库
+
+
+  头文件&lt;boost/filesystem.hpp&g...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">01 March 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-compile-c++-library-boost.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-script-latex-tikz-pgf-path-syntax.html" title="查看《Tikz and PGF: Syntax for Path Specification》">Tikz and PGF: Syntax for Path Specification</a></h2>
+    </header>
+
+    <section>
+      <p>
+        1. Introduction
+A path is a series of straight and curved line segments. It is specified following a \path
+command and the specification must follo...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#March-2018" title="查看此月所有文章">01 March 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-script-latex-tikz-pgf-path-syntax.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-script-latex-tikz-pgf-node.html" title="查看《Tikz and PGF: Node Mechanism 》">Tikz and PGF: Node Mechanism </a></h2>
+    </header>
+
+    <section>
+      <p>
+        Introduction
+
+  A node is a small part of a picture
+    
+      A node of shape circle will be drawn as cricle; a node of shape rectangle as a recta...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#February-2018" title="查看此月所有文章">28 February 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-script-latex-tikz-pgf-node.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-script-latex-tikz-pgf-hierarchical-structures.html" title="查看《Tikz and PGF: Hierarchical Structures》">Tikz and PGF: Hierarchical Structures</a></h2>
+    </header>
+
+    <section>
+      <p>
+        Structures
+
+  Package: on the top level you need to include the tikz package
+  Environments: In the main tex, each graphic needs to be put in a tik...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#February-2018" title="查看此月所有文章">28 February 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-script-latex-tikz-pgf-hierarchical-structures.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-script-latex-tikz-pgf-example.html" title="查看《Tikz and PGF: Example》">Tikz and PGF: Example</a></h2>
+    </header>
+
+    <section>
+      <p>
+        \begin{center}
+\begin{tikzpicture}
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=1.0cm,minimum height=0.6cm, 
+                ...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#February-2018" title="查看此月所有文章">27 February 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-script-latex-tikz-pgf-example.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-script-latex-tikz-pgf-example-2.html" title="查看《Tikz and PGF: Example 2》">Tikz and PGF: Example 2</a></h2>
     </header>
 
     <section>
       <p>
         
 
+
+\RequirePackage{fix-cm}
+\documentclass[11pt]{article}       % onecolumn (second format)
+%\smartqed  % flush right qed marks, e.g. at end of proo...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#February-2018" title="查看此月所有文章">08 February 2018</a>，
+        发表日期：<a href="/archive.html#February-2018" title="查看此月所有文章">27 February 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-cmake-control-structures.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-script-cmake-container.html" title="查看《CMake: Container》">CMake: Container</a></h2>
-    </header>
-
-    <section>
-      <p>
-        List
-The lisb subcommands APPEND INSERT FILTER REMOVE_ITEM REVERSE SORT may create new values for the
-list within the current CMake variable scope....
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#February-2018" title="查看此月所有文章">08 February 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-cmake-container.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-script-cmake-compile-features.html" title="查看《CMake: Compiler Setting》">CMake: Compiler Setting</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Method
-
-  Generator can specify the compiler, some generators are tied to a specific
-compiler.
-  Set  environment variable
-  cache entry
-
-
-CMake w...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#February-2018" title="查看此月所有文章">08 February 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-cmake-compile-features.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-script-cmake-commands-script.html" title="查看《CMake: Scripting Commands》">CMake: Scripting Commands</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Examples
-
-  create a file named hello.txt with the following content.
-
-
-message("Hello world!")         # A message to print
-
-
-
-  run the script
-
-...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#February-2018" title="查看此月所有文章">08 February 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-cmake-commands-script.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-script-latex-tikz-pgf-example-2.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6088,7 +6223,7 @@ message("Hello world!")         # A message to print
 
     <!-- Current Page -->
     <li class="active">
-      <span class="page_number ">第 65/95 页</span>
+      <span class="page_number ">第 65/97 页</span>
     </li>
 
     <!-- Next Page -->
@@ -6098,7 +6233,7 @@ message("Hello world!")         # A message to print
 
     <!-- Last Page -->
     
-    <li><a href="/page95">&raquo;&raquo;</a></li>
+    <li><a href="/page97">&raquo;&raquo;</a></li>
     
   </ul>
 </section>
@@ -6152,4 +6287,8 @@ $(document).ready(function () {
   
 </body>
 </html>
+
+
+
+
 

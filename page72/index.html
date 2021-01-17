@@ -32,9 +32,33 @@
   <!-- Scripts -->
   <script type="text/javascript" src="/assets/themes/twitter/js/jquery-1.11.1.min.js"></script>
   <!--[if lt IE 9]><script src="/assets/themes/twitter/js/html5shiv.min.js"></script><![endif]-->
-  <script type="text/javascript" async
+  <!--<script type="text/javascript" async
           src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
-  </script>
+  </script> -->
+	<script type="text/javascript">
+	window.MathJax = {
+	  tex: {
+		packages: ['base', 'ams']
+	  },
+	  loader: {
+		load: ['ui/menu', '[tex]/ams']
+	  },
+	  startup: {
+		ready() {
+		  MathJax.startup.defaultReady();
+		  const Macro = MathJax._.input.tex.Symbol.Macro;
+		  const MapHandler = MathJax._.input.tex.MapHandler.MapHandler;
+		  const Array = MathJax._.input.tex.ams.AmsMethods.default.Array;
+		  const env = new Macro('psmallmatrix', Array, [null, '(', ')', 'c', '.333em', '.2em', 'S', 1]);
+		  MapHandler.getMap('AMSmath-environment').add('psmallmatrix', env);
+		}
+	  }
+	};
+	</script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+
 </head> 
 <body>
 
@@ -124,17 +148,17 @@ $(document).ready(function() {
           <a href="/" title="查看最近发表"><i class="icon-fixed-width icon-edit"></i> 最近发表</a>
 <ul>
 
-  <li><a href="/work/work-publisher.html" title="查看《Publisher: Summary》">Publisher: Summary</a></li>
+  <li><a href="/ai/AI-convex-optimization-terminology.html" title="查看《C.O.: Terminology》">C.O.: Terminology</a></li>
 
-  <li><a href="/work/work-publisher-common-sense.html" title="查看《Publisher: Common sense》">Publisher: Common sense</a></li>
+  <li><a href="/ai/AI-convex-optimization-nomenclature.html" title="查看《C.O.: Nomenclature》">C.O.: Nomenclature</a></li>
 
-  <li><a href="/ai/AI-Adaptive-Boosting.html" title="查看《Adaptive Boosting》">Adaptive Boosting</a></li>
+  <li><a href="/ai/AI-convex-optimization-convex-function.html" title="查看《C.O.: Convex Functions》">C.O.: Convex Functions</a></li>
 
-  <li><a href="/work/work-word-neural-network.html" title="查看《Work: Neural Network》">Work: Neural Network</a></li>
+  <li><a href="/ai/AI-convex-optimization-lagrangian-duality.html" title="查看《C.O.: Lagrangian Duality》">C.O.: Lagrangian Duality</a></li>
 
-  <li><a href="/work/work-word-composite-material.html" title="查看《Word: Composite Material》">Word: Composite Material</a></li>
+  <li><a href="/ai/AI-convex-optimization-linear-programming-problem.html" title="查看《C.O.: Linear Programming》">C.O.: Linear Programming</a></li>
 
-  <li><a href="/work/work-word.html" title="查看《Work: Word》">Work: Word</a></li>
+  <li><a href="/ai/AI-convex-optimization-least-square-problem.html" title="查看《C.O.: Least squares》">C.O.: Least squares</a></li>
 
 </ul>
 
@@ -142,9 +166,52 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">946</span>
+<span title="文章总数">965</span>
 <ul>
 
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#August-2020">2020 年 08 月 (8)</a></li>
+    
+  
 
   
   
@@ -2108,6 +2175,59 @@ $(document).ready(function() {
   
   
   
+    <li><a href="/archive.html#December-2018">2018 年 12 月 (10)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
     <li><a href="/archive.html#November-2018">2018 年 11 月 (10)</a></li>
     
   
@@ -3349,7 +3469,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#March-2018">2018 年 03 月 (68)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2018">2018 年 03 月 (69)</a></li>
     
   
 
@@ -4976,7 +5101,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (217)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (228)</a></li>
 
   <li><a href="/categories.html#Algorithm-ref">Algorithm (78)</a></li>
 
@@ -4988,14 +5113,14 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#work-ref">work (20)</a></li>
 
-  <li><a href="/categories.html#AI-ref">AI (42)</a></li>
+  <li><a href="/categories.html#AI-ref">AI (50)</a></li>
 
 </ul>
 
         </section>
         <section>
           <a href="/tags.html" title="查看所有标签"><i class="icon-fixed-width icon-tags"></i> 标签云</a>
-<span title="标签总数">99</span>
+<span title="标签总数">101</span>
 <div id="tag-cloud">
 
 
@@ -5023,7 +5148,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #888;">summary</a>
+    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #777;">summary</a>
   
     
     
@@ -5058,7 +5183,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#script-ref" style="font-size: 17.5pt; color: #000;">script</a>
+    <a href="/tags.html#script-ref" style="font-size: 18pt; color: #000;">script</a>
   
     
     
@@ -5072,7 +5197,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#compile-ref" style="font-size: 14.5pt; color: #444;">compile</a>
+    <a href="/tags.html#compile-ref" style="font-size: 14pt; color: #444;">compile</a>
   
     
     
@@ -5248,6 +5373,13 @@ $(document).ready(function() {
     
     
     <a href="/tags.html#assembly-ref" style="font-size: 9.5pt; color: #888;">assembly</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#jekyll-ref" style="font-size: 9pt; color: #999;">jekyll</a>
   
     
     
@@ -5697,6 +5829,13 @@ $(document).ready(function() {
     
     <a href="/tags.html#supervised-ref" style="font-size: 9pt; color: #999;">supervised</a>
   
+    
+    
+    
+    
+    
+    <a href="/tags.html#C.O.-ref" style="font-size: 9.5pt; color: #888;">C.O.</a>
+  
 
 </div>
 
@@ -5762,27 +5901,29 @@ $(document).ready(function() {
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-shell-introduction.html" title="查看《Shell: Introduction》">Shell: Introduction</a></h2>
+      <h2><a href="/pl/pl-script-python-tensorflow-mimick-api.html" title="查看《Python TF: Mimicking TF API》">Python TF: Mimicking TF API</a></h2>
     </header>
 
     <section>
       <p>
         
-####
+Elements in a Computational Graph
 
-  A shell script is a computer program designed to be run by the Unix/Linux
-shell which could be one of the following:
-    
-      Bourne She...
+
+  Variables
+  Placeholders
+  Constants
+  Operations
+  Graph: A graph is like a central hub that connects all t...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">12 January 2018</a>，
+        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">19 January 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-shell-introduction.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-script-python-tensorflow-mimick-api.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5791,27 +5932,25 @@ shell which could be one of the following:
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-shell-quoting-mechanism.html" title="查看《Shell: Quoting Mechanisms》">Shell: Quoting Mechanisms</a></h2>
+      <h2><a href="/pl/pl-script-python-tensorflow-intro.html" title="查看《Python TF: Introduction》">Python TF: Introduction</a></h2>
     </header>
 
     <section>
       <p>
         
-1. Metacharacters
+what is the crap of tensorflow ?
 
-
-  Unix shell provides various metacharacters which have special meaning while
-using them in any shell script.
-    * ? [] ' " \...
+  the tensorflow defines a compute graph, and you can define operation in the graph.
+  the purpose of the comput...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">11 January 2018</a>，
+        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">19 January 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-shell-quoting-mechanism.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-script-python-tensorflow-intro.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5820,28 +5959,28 @@ using them in any shell script.
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-shell-variables.html" title="查看《Shell: Variables》">Shell: Variables</a></h2>
+      <h2><a href="/pl/pl-script-python-tensorflow-connect-graph.html" title="查看《Python TF: Connect Two Graph》">Python TF: Connect Two Graph</a></h2>
     </header>
 
     <section>
       <p>
         
-Intro
+import tensorflow as tf
 
-  Variable names are case-sensitive
-  their values are of type string
-    
-      reference
-      Unlike some other programming languages, t...
+def graph_add():
+    g = tf.Graph()
+    with g.as_default() as g:
+        a = tf.placeholder(tf.float32, [], name='a')
+  ...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">08 January 2018</a>，
+        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">19 January 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-shell-variables.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-script-python-tensorflow-connect-graph.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5850,28 +5989,26 @@ Intro
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-shell-tmux.html" title="查看《shell: Tmux》">shell: Tmux</a></h2>
+      <h2><a href="/pl/pl-script-python-tensorflow-concept.html" title="查看《Python TF: Concept》">Python TF: Concept</a></h2>
     </header>
 
     <section>
       <p>
         
-intro
-tmux is a terminal multiplexer，tmux使用C/S模型构建，it consists of the
-following unit:
+what the crap is the rank?
 
-  server，输入tmux命令开启一个服务器
-  session，一个服务器可以包含多个会话
-  window， ...
+  
+    The rank of a tensor is different is not the same as the rank of a matrix.
+the rank of a tensor is the number o...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">08 January 2018</a>，
+        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">19 January 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-shell-tmux.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-script-python-tensorflow-concept.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5880,90 +6017,24 @@ following unit:
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-shell-text-processing.html" title="查看《Shell: Text Processing》">Shell: Text Processing</a></h2>
-    </header>
-
-    <section>
-      <p>
-        ####
-
-  cat
-  sort
-  uniq
-  cut
-  paste
-  join
-  comm
-  diff
-  patch
-  tr
-
-
-
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">08 January 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-shell-text-processing.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-script-shell-text-device.html" title="查看《Shell: Device》">Shell: Device</a></h2>
-    </header>
-
-    <section>
-      <p>
-        du
-sudo du -h --max-depth=1 /var
-
-
-
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">08 January 2018</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-shell-text-device.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-script-shell-script.html" title="查看《Shell: Script》">Shell: Script</a></h2>
+      <h2><a href="/pl/pl-script-python-qt5-qtdesigner-code-template.html" title="查看《Python Qt: Integrated Template of QT Designer》">Python Qt: Integrated Template of QT Designer</a></h2>
     </header>
 
     <section>
       <p>
         
-Input Parameters
-
-  Unlike C++, Java, which have an entry point, we can pass actual parameters
-to formal parameters.
-  In Shell script, it design ...
+signal and slot
+If you have a programming backgound, you may hear about event handling where you interact with a widget
+and a function is executed...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">08 January 2018</a>，
+        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">18 January 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-shell-script.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-script-python-qt5-qtdesigner-code-template.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5972,25 +6043,30 @@ to formal parameters.
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-shell-scheduling.html" title="查看《Shell: Time Schedule》">Shell: Time Schedule</a></h2>
+      <h2><a href="/pl/pl-script-python-qt5-pyqtgraph.html" title="查看《Python Qt: Pyqtgraph》">Python Qt: Pyqtgraph</a></h2>
     </header>
 
     <section>
       <p>
         
-at的访问控制
+what’s pyqtgraph
+pyqtgraph is born for dynamic graph, matplotlib is for static graph.
 
-  如果系统中有/etc/at.allow文件，那么只有写入/etc/at.allow文件中的用户可以使用at命令，/etc/at.deny文件会被忽略
-  如果系统中没有/etc/at.allow文件，只有/etc/at.deny文件，那么写入/etc/at.deny文件...
+demo
+
+import numpy as np
+import pyqtgraph as pg
+
+# create t...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">08 January 2018</a>，
+        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">18 January 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-shell-scheduling.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-script-python-qt5-pyqtgraph.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5999,33 +6075,30 @@ at的访问控制
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-shell-process.html" title="查看《Shell: Process》">Shell: Process</a></h2>
+      <h2><a href="/pl/pl-script-python-qt5-menu-action.html" title="查看《Python Qt: Menu Event Handling》">Python Qt: Menu Event Handling</a></h2>
     </header>
 
     <section>
       <p>
         
-Kill
-用来终止指定的进程，终止前台的进程可以使用Ctrl+c, 终止后台的进程必须使用kill命令
+Event Handling
 
-介绍
-ps类似于命令行界面的任务管理器，查看进程状态
+  used the Code Integrated Template
+  click File-&gt;Open, pop up dialoge
 
 
-ps
-ps命令默认显示4列信息
+# -*- coding: utf-8 -*-
 
-  PID: process ID
-  PPID: parent process ID 程序的...
+# Form implementation generat...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">08 January 2018</a>，
+        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">18 January 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-shell-process.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-script-python-qt5-menu-action.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6034,26 +6107,81 @@ ps命令默认显示4列信息
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-script-shell-keyboard-tricks.html" title="查看《Shell: DIY Tricks》">Shell: DIY Tricks</a></h2>
+      <h2><a href="/pl/pl-script-python-qt5-display-image.html" title="查看《Python Qt: Picture Display》">Python Qt: Picture Display</a></h2>
     </header>
 
     <section>
       <p>
         
-Introductin
-Bash uses a library called Readline to implement command line editing.
-
-ctrl-a: move cursor to the beginning of the line
-ctrl-e: move ...
+Display a picutre
+In nature, There is no difference between text label and picture label. 
+So, you can put a picture in a label. 
+Programming look...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">08 January 2018</a>，
+        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">18 January 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-script-shell-keyboard-tricks.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-script-python-qt5-display-image.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-script-python-qt5-designer.html" title="查看《Python Qt: Designer》">Python Qt: Designer</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Widget
+
+  TextLabel: what does label mean? According to Merriam-Webster: to put a word
+or name on something to describe or identify it.
+  Graphics...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">18 January 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-script-python-qt5-designer.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-script-python-package-scipy.html" title="查看《Python Package: Scipy》">Python Package: Scipy</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+statis
+
+
+  this module contains the common distribution, like uniform distribution, norm
+distribution, poisson distribution, binom distribution et...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#January-2018" title="查看此月所有文章">17 January 2018</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-script-python-package-scipy.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6098,7 +6226,7 @@ ctrl-e: move ...
 
     <!-- Current Page -->
     <li class="active">
-      <span class="page_number ">第 72/95 页</span>
+      <span class="page_number ">第 72/97 页</span>
     </li>
 
     <!-- Next Page -->
@@ -6108,7 +6236,7 @@ ctrl-e: move ...
 
     <!-- Last Page -->
     
-    <li><a href="/page95">&raquo;&raquo;</a></li>
+    <li><a href="/page97">&raquo;&raquo;</a></li>
     
   </ul>
 </section>
@@ -6162,4 +6290,8 @@ $(document).ready(function () {
   
 </body>
 </html>
+
+
+
+
 

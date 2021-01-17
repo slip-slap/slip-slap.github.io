@@ -32,9 +32,33 @@
   <!-- Scripts -->
   <script type="text/javascript" src="/assets/themes/twitter/js/jquery-1.11.1.min.js"></script>
   <!--[if lt IE 9]><script src="/assets/themes/twitter/js/html5shiv.min.js"></script><![endif]-->
-  <script type="text/javascript" async
+  <!--<script type="text/javascript" async
           src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
-  </script>
+  </script> -->
+	<script type="text/javascript">
+	window.MathJax = {
+	  tex: {
+		packages: ['base', 'ams']
+	  },
+	  loader: {
+		load: ['ui/menu', '[tex]/ams']
+	  },
+	  startup: {
+		ready() {
+		  MathJax.startup.defaultReady();
+		  const Macro = MathJax._.input.tex.Symbol.Macro;
+		  const MapHandler = MathJax._.input.tex.MapHandler.MapHandler;
+		  const Array = MathJax._.input.tex.ams.AmsMethods.default.Array;
+		  const env = new Macro('psmallmatrix', Array, [null, '(', ')', 'c', '.333em', '.2em', 'S', 1]);
+		  MapHandler.getMap('AMSmath-environment').add('psmallmatrix', env);
+		}
+	  }
+	};
+	</script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+
 </head> 
 <body>
 
@@ -124,17 +148,17 @@ $(document).ready(function() {
           <a href="/" title="查看最近发表"><i class="icon-fixed-width icon-edit"></i> 最近发表</a>
 <ul>
 
-  <li><a href="/work/work-publisher.html" title="查看《Publisher: Summary》">Publisher: Summary</a></li>
+  <li><a href="/ai/AI-convex-optimization-terminology.html" title="查看《C.O.: Terminology》">C.O.: Terminology</a></li>
 
-  <li><a href="/work/work-publisher-common-sense.html" title="查看《Publisher: Common sense》">Publisher: Common sense</a></li>
+  <li><a href="/ai/AI-convex-optimization-nomenclature.html" title="查看《C.O.: Nomenclature》">C.O.: Nomenclature</a></li>
 
-  <li><a href="/ai/AI-Adaptive-Boosting.html" title="查看《Adaptive Boosting》">Adaptive Boosting</a></li>
+  <li><a href="/ai/AI-convex-optimization-convex-function.html" title="查看《C.O.: Convex Functions》">C.O.: Convex Functions</a></li>
 
-  <li><a href="/work/work-word-neural-network.html" title="查看《Work: Neural Network》">Work: Neural Network</a></li>
+  <li><a href="/ai/AI-convex-optimization-lagrangian-duality.html" title="查看《C.O.: Lagrangian Duality》">C.O.: Lagrangian Duality</a></li>
 
-  <li><a href="/work/work-word-composite-material.html" title="查看《Word: Composite Material》">Word: Composite Material</a></li>
+  <li><a href="/ai/AI-convex-optimization-linear-programming-problem.html" title="查看《C.O.: Linear Programming》">C.O.: Linear Programming</a></li>
 
-  <li><a href="/work/work-word.html" title="查看《Work: Word》">Work: Word</a></li>
+  <li><a href="/ai/AI-convex-optimization-least-square-problem.html" title="查看《C.O.: Least squares》">C.O.: Least squares</a></li>
 
 </ul>
 
@@ -142,9 +166,52 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">946</span>
+<span title="文章总数">965</span>
 <ul>
 
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#August-2020">2020 年 08 月 (8)</a></li>
+    
+  
 
   
   
@@ -2108,6 +2175,59 @@ $(document).ready(function() {
   
   
   
+    <li><a href="/archive.html#December-2018">2018 年 12 月 (10)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
     <li><a href="/archive.html#November-2018">2018 年 11 月 (10)</a></li>
     
   
@@ -3349,7 +3469,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#March-2018">2018 年 03 月 (68)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2018">2018 年 03 月 (69)</a></li>
     
   
 
@@ -4976,7 +5101,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (217)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (228)</a></li>
 
   <li><a href="/categories.html#Algorithm-ref">Algorithm (78)</a></li>
 
@@ -4988,14 +5113,14 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#work-ref">work (20)</a></li>
 
-  <li><a href="/categories.html#AI-ref">AI (42)</a></li>
+  <li><a href="/categories.html#AI-ref">AI (50)</a></li>
 
 </ul>
 
         </section>
         <section>
           <a href="/tags.html" title="查看所有标签"><i class="icon-fixed-width icon-tags"></i> 标签云</a>
-<span title="标签总数">99</span>
+<span title="标签总数">101</span>
 <div id="tag-cloud">
 
 
@@ -5023,7 +5148,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #888;">summary</a>
+    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #777;">summary</a>
   
     
     
@@ -5058,7 +5183,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#script-ref" style="font-size: 17.5pt; color: #000;">script</a>
+    <a href="/tags.html#script-ref" style="font-size: 18pt; color: #000;">script</a>
   
     
     
@@ -5072,7 +5197,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#compile-ref" style="font-size: 14.5pt; color: #444;">compile</a>
+    <a href="/tags.html#compile-ref" style="font-size: 14pt; color: #444;">compile</a>
   
     
     
@@ -5248,6 +5373,13 @@ $(document).ready(function() {
     
     
     <a href="/tags.html#assembly-ref" style="font-size: 9.5pt; color: #888;">assembly</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#jekyll-ref" style="font-size: 9pt; color: #999;">jekyll</a>
   
     
     
@@ -5697,6 +5829,13 @@ $(document).ready(function() {
     
     <a href="/tags.html#supervised-ref" style="font-size: 9pt; color: #999;">supervised</a>
   
+    
+    
+    
+    
+    
+    <a href="/tags.html#C.O.-ref" style="font-size: 9.5pt; color: #888;">C.O.</a>
+  
 
 </div>
 
@@ -5762,27 +5901,26 @@ $(document).ready(function() {
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-lazy-evaluation-haskell-higher-order-functions.html" title="查看《Haskell: Higher Order Functions》">Haskell: Higher Order Functions</a></h2>
+      <h2><a href="/pl/pl-tool-git-debugging.html" title="查看《Git: Debugging》">Git: Debugging</a></h2>
     </header>
 
     <section>
       <p>
         
-Background
-Higher order functions are what make symbolic manipulation of functions
-possible. They are the algebra of functions.
+bisect
+blameo
+grep
 
-Definition
-Haskel...
+
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#April-2018" title="查看此月所有文章">20 April 2018</a>，
+        发表日期：<a href="/archive.html#May-2018" title="查看此月所有文章">17 May 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-lazy-evaluation-haskell-higher-order-functions.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-tool-git-debugging.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5791,24 +5929,33 @@ Haskel...
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-lazy-evaluation-haskell-functoriality.html" title="查看《Haskell: Functoriality》">Haskell: Functoriality</a></h2>
+      <h2><a href="/pl/pl-tool-git-sharing.html" title="查看《Git: Sharing》">Git: Sharing</a></h2>
     </header>
 
     <section>
       <p>
         
-Definition
-On objects, a bifunctor maps every pair of objects, one from category $\mathbf{C}$,
-and one from category $\mathbf{D}$, to an object in...
+####
+
+fetch
+pull
+push
+remote
+submodule
+
+
+Pull and Fetch
+In the default mode, git pull is shorthand for get fetch followed by
+**git merge FETCH_HEA...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#April-2018" title="查看此月所有文章">20 April 2018</a>，
+        发表日期：<a href="/archive.html#May-2018" title="查看此月所有文章">16 May 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-lazy-evaluation-haskell-functoriality.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-tool-git-sharing.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5817,26 +5964,24 @@ and one from category $\mathbf{D}$, to an object in...
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-lazy-evaluation-haskell-functor.html" title="查看《Haskell: Functors》">Haskell: Functors</a></h2>
+      <h2><a href="/pl/pl-tool-git-github.html" title="查看《Git: Github》">Git: Github</a></h2>
     </header>
 
     <section>
       <p>
         
-Background
-
-  
-    Haskell’s combination of purity, higher order functions, parameterized
-algebraic data types, and typeclasses allows us to imple...
+What is a pull request?
+You make local code changes and then submit those changes to a remote project
+maintainer for review before those changes i...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#April-2018" title="查看此月所有文章">20 April 2018</a>，
+        发表日期：<a href="/archive.html#May-2018" title="查看此月所有文章">15 May 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-lazy-evaluation-haskell-functor.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-tool-git-github.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5845,28 +5990,35 @@ algebraic data types, and typeclasses allows us to imple...
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-lazy-evaluation-haskell-functor-applicative.html" title="查看《Haskell: Applicative Functor》">Haskell: Applicative Functor</a></h2>
+      <h2><a href="/pl/pl-tool-git-branching-merging.html" title="查看《Git:  Branching and Merging》">Git:  Branching and Merging</a></h2>
     </header>
 
     <section>
       <p>
         
-class (Functor f) =&gt; Applicative f where
-    pure :: a -&gt; f a
-    (&lt;*&gt;) :: f (a -&gt; b) -&gt; f a -&gt; f b
+mergetool
+log
+stash
+tag
 
 
+1. branch
 
-  It starts the defini...
+can only be run after the merge has resulted in conflicts.
+git merge –continue
+
+1.1 Operation
+
+  git branch  ...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#April-2018" title="查看此月所有文章">20 April 2018</a>，
+        发表日期：<a href="/archive.html#May-2018" title="查看此月所有文章">14 May 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-lazy-evaluation-haskell-functor-applicative.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-tool-git-branching-merging.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5875,26 +6027,27 @@ class (Functor f) =&gt; Applicative f where
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-lazy-evaluation-haskell-function.html" title="查看《Haskell: Function》">Haskell: Function</a></h2>
+      <h2><a href="/pl/pl-tool-git-basic-operation.html" title="查看《Git: Basic Operation》">Git: Basic Operation</a></h2>
     </header>
 
     <section>
       <p>
         
-Jargon
+1. Create a repository
 
-  Haskell function definition consist of the name of the function followed by
-formal parameters.
-  The body of the function follows the eq...
+1.1 git init
+1.2 git clone
+This command is git clone and not “checkout”. This is an important
+distinction-instead of getti...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#April-2018" title="查看此月所有文章">20 April 2018</a>，
+        发表日期：<a href="/archive.html#May-2018" title="查看此月所有文章">13 May 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-lazy-evaluation-haskell-function.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-tool-git-basic-operation.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5903,30 +6056,24 @@ formal parameters.
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-lazy-evaluation-haskell-datatype-algebra.html" title="查看《Haskell: Datatype Algebra》">Haskell: Datatype Algebra</a></h2>
+      <h2><a href="/pl/pl-tool-editor-vimscript-philosophy.html" title="查看《Editor: Vimscript Philosophy》">Editor: Vimscript Philosophy</a></h2>
     </header>
 
     <section>
       <p>
         
-Example
-
-data List a = Nil | Cons a (List a)
-
-
-
-  Replace $\textbf{List a}$  with $\textbf{x}$, we get the equation
-    
-      $x = 1 + a \times x...
+Always Stay on Normal Mode
+The phiosophy of this is that vim commands are meant to be combined, and this
+makes a lot more sense once you begin gro...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#April-2018" title="查看此月所有文章">20 April 2018</a>，
+        发表日期：<a href="/archive.html#May-2018" title="查看此月所有文章">12 May 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-lazy-evaluation-haskell-datatype-algebra.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-tool-editor-vimscript-philosophy.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5935,24 +6082,31 @@ data List a = Nil | Cons a (List a)
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-lazy-evaluation-haskell-data-types.html" title="查看《Haskell: Algebraic Data Types》">Haskell: Algebraic Data Types</a></h2>
+      <h2><a href="/pl/pl-tool-editor-format.html" title="查看《Editor: Format》">Editor: Format</a></h2>
     </header>
 
     <section>
       <p>
         
-Background
-Product and coproduct are the two ways of combining types. It turns out that a
-lot of data structures in everyday programming can be bu...
+####
+
+  To enter ^M, hold down the CTRL key then press V and M in succession.
+
+
+Reference
+
+  Remove CTRL-M characters from a file in UNIX
+
+
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#April-2018" title="查看此月所有文章">20 April 2018</a>，
+        发表日期：<a href="/archive.html#May-2018" title="查看此月所有文章">12 May 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-lazy-evaluation-haskell-data-types.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-tool-editor-format.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5961,22 +6115,28 @@ lot of data structures in everyday programming can be bu...
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-lazy-evaluation-haskell-compiler.html" title="查看《Haskell: Compiler》">Haskell: Compiler</a></h2>
+      <h2><a href="/pl/pl-tool-editor-vimscript-window-and-panel.html" title="查看《Vimscript: window and Panel》">Vimscript: window and Panel</a></h2>
     </header>
 
     <section>
       <p>
         
+1. adjust window width
 
+:nnoremap  &lt;leader&gt;+ :vertical res +10 &lt;cr&gt;
+:nnoremap  &lt;leader&gt;- :vertical res -10&lt;cr&gt;
+
+
+2. split ...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#April-2018" title="查看此月所有文章">20 April 2018</a>，
+        发表日期：<a href="/archive.html#May-2018" title="查看此月所有文章">11 May 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-lazy-evaluation-haskell-compiler.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-tool-editor-vimscript-window-and-panel.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5985,25 +6145,24 @@ lot of data structures in everyday programming can be bu...
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-lazy-evaluation-haskell-binding.html" title="查看《Haskell: Binding》">Haskell: Binding</a></h2>
+      <h2><a href="/pl/pl-tool-editor-vimscript-basic.html" title="查看《Editor: Vimscript basic》">Editor: Vimscript basic</a></h2>
     </header>
 
     <section>
       <p>
         
-1. Where
-2. Let
-
-
+1. Introduction
+This software is plugin system, so it is very flexible and diffcult to learn.
+it heavily depends on the plugin and shortcut to imp...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#April-2018" title="查看此月所有文章">20 April 2018</a>，
+        发表日期：<a href="/archive.html#May-2018" title="查看此月所有文章">11 May 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-lazy-evaluation-haskell-binding.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-tool-editor-vimscript-basic.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6012,29 +6171,34 @@ lot of data structures in everyday programming can be bu...
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-lazy-evaluation-haskell-input-and-output.html" title="查看《Haskell: Input and Output》">Haskell: Input and Output</a></h2>
+      <h2><a href="/pl/pl-tool-editor-vimscript-visual-mode.html" title="查看《Editor: Vimscript Visual Mode》">Editor: Vimscript Visual Mode</a></h2>
     </header>
 
     <section>
       <p>
         
-main = do
-    putStrLn "Hello, what's your name?"
-    name &lt;- getLine
-    putStrLn ("Hey " ++ name ++ ", you rock!")
+####
+
+  Character mode: v
+  Line mode: V
+  Block mode: &lt;c-v&gt;
+
+
+####
+
+  %: work based in visual mode
 
 
 
-  You can think of an I...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#April-2018" title="查看此月所有文章">18 April 2018</a>，
+        发表日期：<a href="/archive.html#May-2018" title="查看此月所有文章">03 May 2018</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-lazy-evaluation-haskell-input-and-output.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-tool-editor-vimscript-visual-mode.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6079,7 +6243,7 @@ main = do
 
     <!-- Current Page -->
     <li class="active">
-      <span class="page_number ">第 55/95 页</span>
+      <span class="page_number ">第 55/97 页</span>
     </li>
 
     <!-- Next Page -->
@@ -6089,7 +6253,7 @@ main = do
 
     <!-- Last Page -->
     
-    <li><a href="/page95">&raquo;&raquo;</a></li>
+    <li><a href="/page97">&raquo;&raquo;</a></li>
     
   </ul>
 </section>
@@ -6143,4 +6307,8 @@ $(document).ready(function () {
   
 </body>
 </html>
+
+
+
+
 

@@ -32,9 +32,33 @@
   <!-- Scripts -->
   <script type="text/javascript" src="/assets/themes/twitter/js/jquery-1.11.1.min.js"></script>
   <!--[if lt IE 9]><script src="/assets/themes/twitter/js/html5shiv.min.js"></script><![endif]-->
-  <script type="text/javascript" async
+  <!--<script type="text/javascript" async
           src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
-  </script>
+  </script> -->
+	<script type="text/javascript">
+	window.MathJax = {
+	  tex: {
+		packages: ['base', 'ams']
+	  },
+	  loader: {
+		load: ['ui/menu', '[tex]/ams']
+	  },
+	  startup: {
+		ready() {
+		  MathJax.startup.defaultReady();
+		  const Macro = MathJax._.input.tex.Symbol.Macro;
+		  const MapHandler = MathJax._.input.tex.MapHandler.MapHandler;
+		  const Array = MathJax._.input.tex.ams.AmsMethods.default.Array;
+		  const env = new Macro('psmallmatrix', Array, [null, '(', ')', 'c', '.333em', '.2em', 'S', 1]);
+		  MapHandler.getMap('AMSmath-environment').add('psmallmatrix', env);
+		}
+	  }
+	};
+	</script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+
 </head> 
 <body>
 
@@ -124,17 +148,17 @@ $(document).ready(function() {
           <a href="/" title="查看最近发表"><i class="icon-fixed-width icon-edit"></i> 最近发表</a>
 <ul>
 
-  <li><a href="/work/work-publisher.html" title="查看《Publisher: Summary》">Publisher: Summary</a></li>
+  <li><a href="/ai/AI-convex-optimization-terminology.html" title="查看《C.O.: Terminology》">C.O.: Terminology</a></li>
 
-  <li><a href="/work/work-publisher-common-sense.html" title="查看《Publisher: Common sense》">Publisher: Common sense</a></li>
+  <li><a href="/ai/AI-convex-optimization-nomenclature.html" title="查看《C.O.: Nomenclature》">C.O.: Nomenclature</a></li>
 
-  <li><a href="/ai/AI-Adaptive-Boosting.html" title="查看《Adaptive Boosting》">Adaptive Boosting</a></li>
+  <li><a href="/ai/AI-convex-optimization-convex-function.html" title="查看《C.O.: Convex Functions》">C.O.: Convex Functions</a></li>
 
-  <li><a href="/work/work-word-neural-network.html" title="查看《Work: Neural Network》">Work: Neural Network</a></li>
+  <li><a href="/ai/AI-convex-optimization-lagrangian-duality.html" title="查看《C.O.: Lagrangian Duality》">C.O.: Lagrangian Duality</a></li>
 
-  <li><a href="/work/work-word-composite-material.html" title="查看《Word: Composite Material》">Word: Composite Material</a></li>
+  <li><a href="/ai/AI-convex-optimization-linear-programming-problem.html" title="查看《C.O.: Linear Programming》">C.O.: Linear Programming</a></li>
 
-  <li><a href="/work/work-word.html" title="查看《Work: Word》">Work: Word</a></li>
+  <li><a href="/ai/AI-convex-optimization-least-square-problem.html" title="查看《C.O.: Least squares》">C.O.: Least squares</a></li>
 
 </ul>
 
@@ -142,9 +166,52 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">946</span>
+<span title="文章总数">965</span>
 <ul>
 
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#August-2020">2020 年 08 月 (8)</a></li>
+    
+  
 
   
   
@@ -2108,6 +2175,59 @@ $(document).ready(function() {
   
   
   
+    <li><a href="/archive.html#December-2018">2018 年 12 月 (10)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
     <li><a href="/archive.html#November-2018">2018 年 11 月 (10)</a></li>
     
   
@@ -3349,7 +3469,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#March-2018">2018 年 03 月 (68)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2018">2018 年 03 月 (69)</a></li>
     
   
 
@@ -4976,7 +5101,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (217)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (228)</a></li>
 
   <li><a href="/categories.html#Algorithm-ref">Algorithm (78)</a></li>
 
@@ -4988,14 +5113,14 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#work-ref">work (20)</a></li>
 
-  <li><a href="/categories.html#AI-ref">AI (42)</a></li>
+  <li><a href="/categories.html#AI-ref">AI (50)</a></li>
 
 </ul>
 
         </section>
         <section>
           <a href="/tags.html" title="查看所有标签"><i class="icon-fixed-width icon-tags"></i> 标签云</a>
-<span title="标签总数">99</span>
+<span title="标签总数">101</span>
 <div id="tag-cloud">
 
 
@@ -5023,7 +5148,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #888;">summary</a>
+    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #777;">summary</a>
   
     
     
@@ -5058,7 +5183,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#script-ref" style="font-size: 17.5pt; color: #000;">script</a>
+    <a href="/tags.html#script-ref" style="font-size: 18pt; color: #000;">script</a>
   
     
     
@@ -5072,7 +5197,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#compile-ref" style="font-size: 14.5pt; color: #444;">compile</a>
+    <a href="/tags.html#compile-ref" style="font-size: 14pt; color: #444;">compile</a>
   
     
     
@@ -5248,6 +5373,13 @@ $(document).ready(function() {
     
     
     <a href="/tags.html#assembly-ref" style="font-size: 9.5pt; color: #888;">assembly</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#jekyll-ref" style="font-size: 9pt; color: #999;">jekyll</a>
   
     
     
@@ -5697,6 +5829,13 @@ $(document).ready(function() {
     
     <a href="/tags.html#supervised-ref" style="font-size: 9pt; color: #999;">supervised</a>
   
+    
+    
+    
+    
+    
+    <a href="/tags.html#C.O.-ref" style="font-size: 9.5pt; color: #888;">C.O.</a>
+  
 
 </div>
 
@@ -5762,20 +5901,363 @@ $(document).ready(function() {
   <article class="nested">
 
     <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-english-oral-get-on.html" title="查看《Words: get》">Words: get</a></h2>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-english-body-personality.html" title="查看《Body: Personality》">Body: Personality</a></h2>
     </header>
 
     <section>
       <p>
         
-GET
-Get is an all-purpose word, anything can be used with get
+adjective
 
-1. Adjective
+  strict
+  generous
+  mean
+  nerd
+  sycophant
+  filial
+  belittle
 
-  Don’t get me wrong.
-  get things out, and get them dry.
-  get in th...
+
+attitude
+
+  rude
+  considerate
+  inconsiderate
+  genuinely
+  active...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">08 March 2017</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
+        评论：<a href="/%E8%A8%80%E8%91%89/language-english-body-personality.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-english-body-parts.html" title="查看《Body》">Body</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Part
+
+  lips
+  beard
+  stomach
+  memory
+  jaw
+  back
+  liver
+  lung
+  blood flow
+  bump
+  life
+  afterlife
+  knuckle-cracking
+  facial hair
+
+
+acti...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">08 March 2017</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
+        评论：<a href="/%E8%A8%80%E8%91%89/language-english-body-parts.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/language-english-body-genetics.html" title="查看《Language English Body Genetics》">Language English Body Genetics</a></h2>
+    </header>
+
+    <section>
+      <p>
+        –
+layout: post
+title: “Body: Genetics”
+keywords: [””]
+description: “”
+category: “言葉”
+tags: [“英語”]
+—
+
+####
+
+  genetric pedigree
+  phenotype
+  genoty...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">08 March 2017</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#-ref" title="查看此类别下的所有文章"></a>，
+        评论：<a href="/language-english-body-genetics.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-english-body-disease.html" title="查看《Body: Disease》">Body: Disease</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+symphtom
+
+  swell
+  inflammation
+  dehydration
+  sneeze
+  fast heartbeat
+  vomit
+  stroke
+  choke
+  kidney stone
+  rash
+
+
+Disease
+
+  Hepatitis
+  g...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">08 March 2017</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
+        评论：<a href="/%E8%A8%80%E8%91%89/language-english-body-disease.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-english-fashion-cosmetics.html" title="查看《Fashion: Cosmetics》">Fashion: Cosmetics</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+skin care
+
+  Facial Cleanser
+  Lotion
+  Cream
+  powder
+  toothbrush
+  tooth paste
+  face mask moisture
+
+
+device
+
+  razor
+  shaver, electric razor
+...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">06 March 2017</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
+        评论：<a href="/%E8%A8%80%E8%91%89/language-english-fashion-cosmetics.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-english-fashion-clothes.html" title="查看《Fashion: Clothes》">Fashion: Clothes</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Material
+
+  Regular yarn
+  top quality cashmere yarn
+  one hundred percent cotton
+
+
+Clothes
+
+  Down Jacket
+  pajama
+  swimsuit
+  cover-up
+  underp...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">06 March 2017</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
+        评论：<a href="/%E8%A8%80%E8%91%89/language-english-fashion-clothes.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-english-fashion-accessories.html" title="查看《Fashion: Accessories》">Fashion: Accessories</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+####
+
+  oversize
+  angle bracelet
+  rings
+  wallet: slot
+  purse: a woman’s bag
+  compartment
+  shoulder bag
+
+
+Phrase
+
+  carrying a bag
+
+
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">06 March 2017</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
+        评论：<a href="/%E8%A8%80%E8%91%89/language-english-fashion-accessories.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-english-grammar-summary.html" title="查看《Words: Grammar》">Words: Grammar</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+can and could
+
+  could more formal than can
+
+
+will and would
+
+  Would sometimes as past tense
+  will is never past tense.
+
+
+####
+
+
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">02 March 2017</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
+        评论：<a href="/%E8%A8%80%E8%91%89/language-english-grammar-summary.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-english-grammar-sentence.html" title="查看《Words: Sentences》">Words: Sentences</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+####
+
+  are you high?
+  are you good?
+  the future will tell.
+
+
+####
+
+  Let’s install some small fountain where the trees used to be. That would b...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">02 March 2017</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
+        评论：<a href="/%E8%A8%80%E8%91%89/language-english-grammar-sentence.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-english-word-pronounciation.html" title="查看《Words: Pronunciation》">Words: Pronunciation</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+p
+
+  export
+    
+      this is a simple word, but for the moment I just realize how to pronounce it.
+the alphabet “x” has two sounds “k” and “s”. ...
       </p>
     </section>
 
@@ -5784,339 +6266,7 @@ Get is an all-purpose word, anything can be used with get
         发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">01 March 2017</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-english-oral-get-on.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-english-a-recent.html" title="查看《Ancient: New》">Ancient: New</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Charge
-
-  Hotel charge
-  Biden leads Trump.
-  took over the premise
-  wedding reception
-  kick out
-  When the tide goes out that you learn who’s b...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">01 March 2017</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-english-a-recent.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-japanese-war-weapon.html" title="查看《戦争: 武器》">戦争: 武器</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-####
-
-  武器(ぶき):
-  地対地(ちたいち)ミサイル:　ground-to-ground guided missle
-  関東軍(かんとうぐん)
-
-
-####
-
-  爆発(ばくはつ): detonation
-
-
-
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#February-2017" title="查看此月所有文章">25 February 2017</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-japanese-war-weapon.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-japanese-war-military.html" title="查看《戦争: 軍隊》">戦争: 軍隊</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-####
-
-  全国安全週間(ぜんこくあんぜんしゅうかん): national safety week
-
-
-####
-
-  国家(こっか)
-  軍隊(ぐんたい)
-  自衛隊
-  兵士(へいし)
-
-
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#February-2017" title="查看此月所有文章">25 February 2017</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-japanese-war-military.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-japanese-war-civil.html" title="查看《戦争: 国内 》">戦争: 国内 </a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-####
-
-  civil war
-
-
-A
-
-  地位協定(ちいきょうてい): status of forces agreement
-
-
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#February-2017" title="查看此月所有文章">25 February 2017</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-japanese-war-civil.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-japanese-politics-jargon.html" title="查看《: 》">: </a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-A
-
-  民主化(みんしゅか): democratization
-  表現の自由: speech freedom
-
-
-####
-
-  非情にならなければ、ならない時もある
-  私はこんな最(みっとも)ないことしてません: みっともない: disgraceful
-  いいって言ってたんです
- ...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#February-2017" title="查看此月所有文章">23 February 2017</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-japanese-politics-jargon.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-japanese-culture-new-year.html" title="查看《記念日: 新年》">記念日: 新年</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-
-  年賀状
-  祠(ほこら): small wayside shrine, roadside shrine
-  お地蔵さま(じぞ): stone statue
-  灯籠(とうろう): hanging lantern
-
-
-経費(けいひ)と自腹(じばら)
-
-  このおもちゃ、経費で買ってくれる...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#February-2017" title="查看此月所有文章">22 February 2017</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-japanese-culture-new-year.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-japanese-culture-marriage.html" title="查看《結婚》">結婚</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-####
-
-  一妻多夫
-  事実婚
-  再婚
-  浮気
-  不倫
-  愛してる
-  縁談(えんだん): marriage proposal
-
-
-####
-
-  男殺し(おとこごろし)
-
-
-####
-
-  初めて好きになった人のことを覚えていますか。
-  妻を愛しています。
-
-
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#February-2017" title="查看此月所有文章">22 February 2017</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-japanese-culture-marriage.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-japanese-culture-festival.html" title="查看《記念日: 文化》">記念日: 文化</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-####
-
-  葵祭
-  時代祭り
-  祇園(ぎおん)祭
-  七五三(しちごさん): 753
-
-
-####
-
-  六本木(ろっぽんぎ): litaterly, it means six lumbers.
-  一本道(いっぽんみち): litterly, it means one-way
-  ...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#February-2017" title="查看此月所有文章">22 February 2017</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-japanese-culture-festival.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-japanese-judicial-law.html" title="查看《言葉: 裁判》">言葉: 裁判</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-####
-
-  被告代理人
-  裁判
-  裁判所(さいばんしよ): court
-  裁判官(かん)
-  弁護士
-  日当たり
-  世界財産登録
-  慰謝料を請求
-  建設
-  認めない
-  生み出す
-  勝負
-  勝利
-  必ず勝つ
-  負けた
-  無罪
-  手に入れる
-
-
-A
-
-  維持(...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#February-2017" title="查看此月所有文章">21 February 2017</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-japanese-judicial-law.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/%E8%A8%80%E8%91%89/language-english-word-pronounciation.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6161,7 +6311,7 @@ A
 
     <!-- Current Page -->
     <li class="active">
-      <span class="page_number ">第 87/95 页</span>
+      <span class="page_number ">第 87/97 页</span>
     </li>
 
     <!-- Next Page -->
@@ -6171,7 +6321,7 @@ A
 
     <!-- Last Page -->
     
-    <li><a href="/page95">&raquo;&raquo;</a></li>
+    <li><a href="/page97">&raquo;&raquo;</a></li>
     
   </ul>
 </section>
@@ -6225,4 +6375,8 @@ $(document).ready(function () {
   
 </body>
 </html>
+
+
+
+
 

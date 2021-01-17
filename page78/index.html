@@ -32,9 +32,33 @@
   <!-- Scripts -->
   <script type="text/javascript" src="/assets/themes/twitter/js/jquery-1.11.1.min.js"></script>
   <!--[if lt IE 9]><script src="/assets/themes/twitter/js/html5shiv.min.js"></script><![endif]-->
-  <script type="text/javascript" async
+  <!--<script type="text/javascript" async
           src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
-  </script>
+  </script> -->
+	<script type="text/javascript">
+	window.MathJax = {
+	  tex: {
+		packages: ['base', 'ams']
+	  },
+	  loader: {
+		load: ['ui/menu', '[tex]/ams']
+	  },
+	  startup: {
+		ready() {
+		  MathJax.startup.defaultReady();
+		  const Macro = MathJax._.input.tex.Symbol.Macro;
+		  const MapHandler = MathJax._.input.tex.MapHandler.MapHandler;
+		  const Array = MathJax._.input.tex.ams.AmsMethods.default.Array;
+		  const env = new Macro('psmallmatrix', Array, [null, '(', ')', 'c', '.333em', '.2em', 'S', 1]);
+		  MapHandler.getMap('AMSmath-environment').add('psmallmatrix', env);
+		}
+	  }
+	};
+	</script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+
 </head> 
 <body>
 
@@ -124,17 +148,17 @@ $(document).ready(function() {
           <a href="/" title="查看最近发表"><i class="icon-fixed-width icon-edit"></i> 最近发表</a>
 <ul>
 
-  <li><a href="/work/work-publisher.html" title="查看《Publisher: Summary》">Publisher: Summary</a></li>
+  <li><a href="/ai/AI-convex-optimization-terminology.html" title="查看《C.O.: Terminology》">C.O.: Terminology</a></li>
 
-  <li><a href="/work/work-publisher-common-sense.html" title="查看《Publisher: Common sense》">Publisher: Common sense</a></li>
+  <li><a href="/ai/AI-convex-optimization-nomenclature.html" title="查看《C.O.: Nomenclature》">C.O.: Nomenclature</a></li>
 
-  <li><a href="/ai/AI-Adaptive-Boosting.html" title="查看《Adaptive Boosting》">Adaptive Boosting</a></li>
+  <li><a href="/ai/AI-convex-optimization-convex-function.html" title="查看《C.O.: Convex Functions》">C.O.: Convex Functions</a></li>
 
-  <li><a href="/work/work-word-neural-network.html" title="查看《Work: Neural Network》">Work: Neural Network</a></li>
+  <li><a href="/ai/AI-convex-optimization-lagrangian-duality.html" title="查看《C.O.: Lagrangian Duality》">C.O.: Lagrangian Duality</a></li>
 
-  <li><a href="/work/work-word-composite-material.html" title="查看《Word: Composite Material》">Word: Composite Material</a></li>
+  <li><a href="/ai/AI-convex-optimization-linear-programming-problem.html" title="查看《C.O.: Linear Programming》">C.O.: Linear Programming</a></li>
 
-  <li><a href="/work/work-word.html" title="查看《Work: Word》">Work: Word</a></li>
+  <li><a href="/ai/AI-convex-optimization-least-square-problem.html" title="查看《C.O.: Least squares》">C.O.: Least squares</a></li>
 
 </ul>
 
@@ -142,9 +166,52 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">946</span>
+<span title="文章总数">965</span>
 <ul>
 
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#August-2020">2020 年 08 月 (8)</a></li>
+    
+  
 
   
   
@@ -2108,6 +2175,59 @@ $(document).ready(function() {
   
   
   
+    <li><a href="/archive.html#December-2018">2018 年 12 月 (10)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
     <li><a href="/archive.html#November-2018">2018 年 11 月 (10)</a></li>
     
   
@@ -3349,7 +3469,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#March-2018">2018 年 03 月 (68)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2018">2018 年 03 月 (69)</a></li>
     
   
 
@@ -4976,7 +5101,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (217)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (228)</a></li>
 
   <li><a href="/categories.html#Algorithm-ref">Algorithm (78)</a></li>
 
@@ -4988,14 +5113,14 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#work-ref">work (20)</a></li>
 
-  <li><a href="/categories.html#AI-ref">AI (42)</a></li>
+  <li><a href="/categories.html#AI-ref">AI (50)</a></li>
 
 </ul>
 
         </section>
         <section>
           <a href="/tags.html" title="查看所有标签"><i class="icon-fixed-width icon-tags"></i> 标签云</a>
-<span title="标签总数">99</span>
+<span title="标签总数">101</span>
 <div id="tag-cloud">
 
 
@@ -5023,7 +5148,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #888;">summary</a>
+    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #777;">summary</a>
   
     
     
@@ -5058,7 +5183,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#script-ref" style="font-size: 17.5pt; color: #000;">script</a>
+    <a href="/tags.html#script-ref" style="font-size: 18pt; color: #000;">script</a>
   
     
     
@@ -5072,7 +5197,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#compile-ref" style="font-size: 14.5pt; color: #444;">compile</a>
+    <a href="/tags.html#compile-ref" style="font-size: 14pt; color: #444;">compile</a>
   
     
     
@@ -5248,6 +5373,13 @@ $(document).ready(function() {
     
     
     <a href="/tags.html#assembly-ref" style="font-size: 9.5pt; color: #888;">assembly</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#jekyll-ref" style="font-size: 9pt; color: #999;">jekyll</a>
   
     
     
@@ -5697,6 +5829,13 @@ $(document).ready(function() {
     
     <a href="/tags.html#supervised-ref" style="font-size: 9pt; color: #999;">supervised</a>
   
+    
+    
+    
+    
+    
+    <a href="/tags.html#C.O.-ref" style="font-size: 9.5pt; color: #888;">C.O.</a>
+  
 
 </div>
 
@@ -5762,226 +5901,36 @@ $(document).ready(function() {
   <article class="nested">
 
     <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-english-natural-forest.html" title="查看《Earth: Forest》">Earth: Forest</a></h2>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-english-judiciary-law.html" title="查看《Judiciary: Law》">Judiciary: Law</a></h2>
     </header>
 
     <section>
       <p>
         
-####
-
-  stump
-  dry stump
-  dry trees
-
-
 Action
 
-  uproot
-  pull off
-  cut down
-
-
-sentence
-
-  you can grow mushroom on stumps
-  The root system is ...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">17 March 2017</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-english-natural-forest.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-english-natural-diaster.html" title="查看《Earth: Diseaster》">Earth: Diseaster</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-####
-
-  humanitarian relief
-  landslide
-  forestfire
-  A sudden change in wind direction
-  firefighter
-
-
-####
-
-  evacuate
-
-
-Sentence
-
-  continueou...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">17 March 2017</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-english-natural-diaster.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-english-internet.html" title="查看《Internet》">Internet</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-####
-
-  slow down the internet connection
-  fiber optic network
-  youtube premimum membership
-  background play
-  annual insurance premimum
-
-
-####...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">17 March 2017</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-english-internet.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-english-internet-search.html" title="查看《Internet: Search Engine》">Internet: Search Engine</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-####
-
-  field
-  homepage
-  background color
-  separate account
-  support page
-  default page
-  picture in picture
-
-
-####
-
-  enter
-  refine your se...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">17 March 2017</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-english-internet-search.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-english-internet-meidia.html" title="查看《Internet: Social Media》">Internet: Social Media</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-####
-
-  online celebrity
-  influencer
-  free media
-  whistleblowers
-  hunger strike
-  rebellious soul
-  independent filmmaker
-
-
-####
-
-  open an ac...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">17 March 2017</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-english-internet-meidia.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-english-game-snooker.html" title="查看《Game: Snooker》">Game: Snooker</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Terminology
-
-  frame
-  pocket
-  pool
-  rolling
-  bounce back
-  strike
-  block the pocket
-  poker table
+  sue
+  violate
+  charge
 
 
 Phrase
 
-  49 points behind
-  49 points in...
+  restraining order
+  impose new law
+  sexual assault
+  court hearing
+  rape allegation
+  sports newspa...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">17 March 2017</a>，
+        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">22 March 2017</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-english-game-snooker.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/%E8%A8%80%E8%91%89/language-english-judiciary-law.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -5990,43 +5939,33 @@ Phrase
   <article class="nested">
 
     <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-english-game-mobile.html" title="查看《Game: Mobile》">Game: Mobile</a></h2>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-english-judiciary-fraud.html" title="查看《Judiciary: Fraud》">Judiciary: Fraud</a></h2>
     </header>
 
     <section>
       <p>
         
+
+  Fraud
 ####
-
-  top lane
-  middle lane
-  bottom lane
-  buff
-  rule
-  bronze league
+  forced labour.(The door wasn’t forced to open)
+  intruder
+  in custody
 
 
-####
+1
 
-  our sides
-  report
-  team
-  teamwork
-  teammate
-
-
-####
-
-  mat...
+  Put down you weapon, you are surrounded.
+  sentence ...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">17 March 2017</a>，
+        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">22 March 2017</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-english-game-mobile.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/%E8%A8%80%E8%91%89/language-english-judiciary-fraud.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6035,35 +5974,26 @@ Phrase
   <article class="nested">
 
     <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-english-game-fight.html" title="查看《Game: Fighting》">Game: Fighting</a></h2>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-english-judiciary-crime.html" title="查看《Judiciary: Crime》">Judiciary: Crime</a></h2>
     </header>
 
     <section>
       <p>
         
-####
+Crime
 
-  totaly brutal
-  eye-gougeing
-  hook-fishing
-  contestant
-  game face
-  name tag
-
-
-####
-
-  ultimate fighting champion.
-  brazilian street-f...
+  delinquent, crime
+  He was found guilty of rape and sexual assault, and sentenced to 23 years in
+prison, his lawyers have vowed to agains...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">17 March 2017</a>，
+        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">22 March 2017</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-english-game-fight.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/%E8%A8%80%E8%91%89/language-english-judiciary-crime.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6072,35 +6002,32 @@ Phrase
   <article class="nested">
 
     <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-english-game-childhood.html" title="查看《Game: Childhood 》">Game: Childhood </a></h2>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-english-politics-goverment.html" title="查看《Politics: Goverment》">Politics: Goverment</a></h2>
     </header>
 
     <section>
       <p>
         
+Phrase
+
+  local municipal goverment office
+  residence card
+  law enforcement
+  He served in the treasury department
+
+
 ####
 
-  hiding and seek
-  playmate
-  dart board
-
-
-####
-
-  mess around: behave in a silly or playfull way, especially so as to cause
-irritation.
-
-
-...
+  deficit-financing b...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">17 March 2017</a>，
+        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">21 March 2017</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-english-game-childhood.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/%E8%A8%80%E8%91%89/language-english-politics-goverment.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6109,7 +6036,7 @@ irritation.
   <article class="nested">
 
     <header>
-      <h2><a href="/%E8%A8%80%E8%91%89/language-english-game-casino.html" title="查看《Game: Casino》">Game: Casino</a></h2>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-english-politics-election.html" title="查看《Politics: Election》">Politics: Election</a></h2>
     </header>
 
     <section>
@@ -6117,33 +6044,196 @@ irritation.
         
 ####
 
-  dice
-  slot machine
-  golden spin
-  golden spin
-
-
-8 ball poll
-
-  six pockets
-  cue
-  cue ball
-  potted cue ball
-  rail
-
-
-Toy Blast
-
-  matc...
+  pro-independence force in taiwan
+  separatist
+  public gatherings
+  department of labour
+  approval rating
+  subvert
+  subversion
+  local ...
       </p>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">17 March 2017</a>，
+        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">21 March 2017</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
-        评论：<a href="/%E8%A8%80%E8%91%89/language-english-game-casino.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/%E8%A8%80%E8%91%89/language-english-politics-election.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-english-politics-democracy.html" title="查看《Politics: Democracy》">Politics: Democracy</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+####
+
+  
+
+
+####
+
+  Protesters storm US Capitol Building
+  Addressed to a rally
+
+
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">21 March 2017</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
+        评论：<a href="/%E8%A8%80%E8%91%89/language-english-politics-democracy.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-english-politics-alliance.html" title="查看《Politics: Alliance》">Politics: Alliance</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+####
+
+  five eyes  alliance
+  journalist
+
+
+Phrase
+
+  Election fraud
+  count every vote
+  left it cut off from its neighbour and ally, China.
+
+
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">21 March 2017</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
+        评论：<a href="/%E8%A8%80%E8%91%89/language-english-politics-alliance.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-english-economy-terminology.html" title="查看《Economy 》">Economy </a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+####
+
+  down payment
+  full payment
+  installment
+  house loan
+  real estate company
+  prior relief bill
+  bailout
+  interest: the profits in good...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">20 March 2017</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
+        评论：<a href="/%E8%A8%80%E8%91%89/language-english-economy-terminology.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-english-economy-subsidy.html" title="查看《Economy: Subsidy》">Economy: Subsidy</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+####
+
+  subsidy
+  coronavirus aid
+  allowance
+
+
+####
+
+  age or income restrictions
+  save a little
+
+
+####
+
+  In order to minimize person-to-person...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">20 March 2017</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
+        评论：<a href="/%E8%A8%80%E8%91%89/language-english-economy-subsidy.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/%E8%A8%80%E8%91%89/language-english-economy-market.html" title="查看《Economy: Market》">Economy: Market</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+####
+
+  future
+  chairman of federal reserve
+  financial deregulation
+  cost many people life savings
+  credit ratings agency
+  oversaw the derivi...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">20 March 2017</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#言葉-ref" title="查看此类别下的所有文章">言葉</a>，
+        评论：<a href="/%E8%A8%80%E8%91%89/language-english-economy-market.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6188,7 +6278,7 @@ Toy Blast
 
     <!-- Current Page -->
     <li class="active">
-      <span class="page_number ">第 78/95 页</span>
+      <span class="page_number ">第 78/97 页</span>
     </li>
 
     <!-- Next Page -->
@@ -6198,7 +6288,7 @@ Toy Blast
 
     <!-- Last Page -->
     
-    <li><a href="/page95">&raquo;&raquo;</a></li>
+    <li><a href="/page97">&raquo;&raquo;</a></li>
     
   </ul>
 </section>
@@ -6252,4 +6342,8 @@ $(document).ready(function () {
   
 </body>
 </html>
+
+
+
+
 

@@ -3,13 +3,155 @@
   <title>Just Do It</title>
   <link href="/atom.xml" rel="self"/>
   <link href=""/>
-  <updated>2021-01-10T18:37:50+09:00</updated>
+  <updated>2021-01-16T14:54:26+09:00</updated>
   <id></id>
   <author>
     <name>reed</name>
     <email>zhanghy1012@gmail.com</email>
   </author>
 
+
+  <entry>
+    <title>C.O.: Terminology</title>
+    <link href="/ai/AI-convex-optimization-terminology.html"/>
+    <updated>2020-08-30T00:00:00+09:00</updated>
+    <id>/ai/AI-convex-optimization-terminology</id>
+    <content type="html">
+Problem
+
+  min $f_0(x)$
+  subject to $f_i(x) \leq b_i$, $i=1,\cdots, m$
+
+
+
+  $x=(x_1, \cdots, x_n)$: optimization variables
+  $f_0: R^n \rightarrow R$: objective function
+  $f_0: R^n \rightarrow n, i=1,\cdots, m$: constraint functions
+
+
+Terminology
+
+  Line segement between $x_1$ and $x_2$: all p...</content>
+  </entry>
+
+  <entry>
+    <title>C.O.: Nomenclature</title>
+    <link href="/ai/AI-convex-optimization-nomenclature.html"/>
+    <updated>2020-08-30T00:00:00+09:00</updated>
+    <id>/ai/AI-convex-optimization-nomenclature</id>
+    <content type="html">
+####
+
+  A vector $x^*$  is called optimal, or a solution of the problem, if it has
+the smallest objective value among all vectors that satisfy the constraints
+  a problem is sparse if each constraint function depends on only a small
+number of the variables
+
+
+</content>
+  </entry>
+
+  <entry>
+    <title>C.O.: Convex Functions</title>
+    <link href="/ai/AI-convex-optimization-convex-function.html"/>
+    <updated>2020-08-29T00:00:00+09:00</updated>
+    <id>/ai/AI-convex-optimization-convex-function</id>
+    <content type="html">
+Indicator function
+
+  Indicator function of a convex set. Let $ C \subseteq \mathbf{R}^{n} $ be a
+convex set, and consider the function $\mathbf{I_C}$ with domain C and
+$I_C(x) = 0$ for all $x \in C$.
+    
+      It’s extended-value extension is given by
+    
+  
+
+
+\begin{equation}
+\tilde{I}_{C}(x...</content>
+  </entry>
+
+  <entry>
+    <title>C.O.: Lagrangian Duality</title>
+    <link href="/ai/AI-convex-optimization-lagrangian-duality.html"/>
+    <updated>2020-08-28T00:00:00+09:00</updated>
+    <id>/ai/AI-convex-optimization-lagrangian-duality</id>
+    <content type="html">
+Problem formulation
+
+
+  minimize $f_0(x)$
+  subject to $f_i(x) \leq 0, i=1, \cdots, m$
+  $h_i(x)=0,i=1, \cdots, p$
+
+
+
+  we do not assume the problem is convex
+  denote the optimal value by $p^*$
+
+
+Idea
+The basic idea in Lagrangian duality is to take the constraints into acount by
+augmenting the ...</content>
+  </entry>
+
+  <entry>
+    <title>C.O.: Linear Programming</title>
+    <link href="/ai/AI-convex-optimization-linear-programming-problem.html"/>
+    <updated>2020-08-27T00:00:00+09:00</updated>
+    <id>/ai/AI-convex-optimization-linear-programming-problem</id>
+    <content type="html">
+Problem
+
+  minimize  $C^Tx$
+    
+      subject to $a_i^T \leq b_i, i=1,\cdots,m$
+    
+  
+  the objective and all constraint functions are linear
+  no analytical formula for solution, reliable and efficient algorithms and
+software.
+    
+      establish rigorous bounds on the number of operations ...</content>
+  </entry>
+
+  <entry>
+    <title>C.O.: Least squares</title>
+    <link href="/ai/AI-convex-optimization-least-square-problem.html"/>
+    <updated>2020-08-27T00:00:00+09:00</updated>
+    <id>/ai/AI-convex-optimization-least-square-problem</id>
+    <content type="html">
+</content>
+  </entry>
+
+  <entry>
+    <title>C.O.: Convex Problem</title>
+    <link href="/ai/AI-convex-optimization-convex-problem.html"/>
+    <updated>2020-08-26T00:00:00+09:00</updated>
+    <id>/ai/AI-convex-optimization-convex-problem</id>
+    <content type="html">
+Gist
+The challenge, and art, in using convex optimization is in recognizing and
+formulating the problem.
+
+  Once this formutlation is done, solving the problem is very simple.
+
+
+</content>
+  </entry>
+
+  <entry>
+    <title>C.O.: Summary</title>
+    <link href="/ai/AI-convex-optimization-summary.html"/>
+    <updated>2020-08-01T00:00:00+09:00</updated>
+    <id>/ai/AI-convex-optimization-summary</id>
+    <content type="html">
+gist
+In fact the great watershed in optimization isn’t between linearity and
+nonlinearity, but convexity and nonconvexity
+</content>
+  </entry>
 
   <entry>
     <title>Publisher: Summary</title>
@@ -1731,11 +1873,11 @@ $y=x^2$ just a special case of p(x,y)=0
     <updated>2019-12-10T00:00:00+09:00</updated>
     <id>/math/math-change-real-analysis-fourier-transformation</id>
     <content type="html">
+1. Inspiration
 a circle in different coordinate systems
 
   Cartesian Coordinate System can represents a cirlce, Polar Coordinate System can represents a circle.
-  what’s the difference ? It’s just the same thing display in two different coordinate systems, and polar coordinate can bring calculation convience.
-...</content>
+  what’s the difference ? It’s just the same thing display in two different coordinate systems, and polar coordinate can bring calculat...</content>
   </entry>
 
   <entry>
@@ -1871,13 +2013,13 @@ $
 Background
 Recall the definition of Riemann Integral
 
-(\int_{a}^{b} f(x) d x \equiv \lim {\max \Delta x{k} \rightarrow 0}
-\sum_{k=1}^{n} f\left(x_{k}^{*}\right) \Delta x_{k})
+\[\(\int_{a}^{b} f(x) d x \equiv \lim _{\max \Delta x_{k} \rightarrow 0}
+\sum_{k=1}^{n} f\left(x_{k}^{*}\right) \Delta x_{k}\)\]
 
 
   Can we just replace the variable with complex number?
   of course we can.
-  after the lower bound and upper bound are...</content>
+  after the lower bound and upper b...</content>
   </entry>
 
   <entry>
@@ -3991,26 +4133,21 @@ T\left(\left(\begin{array}{l}{2}
     <id>/math/math-structure-linear-algebra-3-3-matrices-and-application</id>
     <content type="html">
 How to understand the matrix T?
-$
-T=
-\left(\begin{array}{lll}{1} &amp;amp; {0} &amp;amp; {0} \ {0} &amp;amp; {1} &amp;amp; {0} \ {0} &amp;amp; {0} &amp;amp;
-{1}\end{array}\right)
-$
+\(T=
+\left(\begin{array}{lll}{1} &amp;amp; {0} &amp;amp; {0} \\ {0} &amp;amp; {1} &amp;amp; {0} \\ {0} &amp;amp; {0} &amp;amp;
+{1}\end{array}\right)\)
 
-$
-\left(\begin{array}{l}
-{1}  \ 
-{0}  \ 
+\(\left(\begin{array}{l}
+{1}  \\ 
+{0}  \\ 
 {0}
 \end{array}\right) 
-=T(\vec{e_1})
-$
-$
-\left(\begin{array}{l}
-{0}  \ 
-{1}  \ 
+=T(\vec{e_1})\)
+\(\left(\begin{array}{l}
+{0}  \\ 
+{1}  \\ 
 {0}
-\end{array}\...</content>
+\end{a...</content>
   </entry>
 
   <entry>
@@ -6059,6 +6196,220 @@ effect.
 Correlation and Causation
 
 ...</content>
+  </entry>
+
+  <entry>
+    <title>SSH</title>
+    <link href="/pl/pl-miscellaneous-service-ssh.html"/>
+    <updated>2018-12-08T00:00:00+09:00</updated>
+    <id>/pl/pl-miscellaneous-service-ssh</id>
+    <content type="html">
+介绍
+
+
+  ssh是一种协议，用于计算机之间的加密登陆。
+  用户从本地计算机通过ssh登陆到另外一台计算机，是安全的
+  ssh只是一种协议，具体由多种实现，主要讲开源的OpenSSH实现
+
+
+使用
+
+登陆
+ssh的登陆和mysql的远程登陆很像，可能mysql的底层使用的就是ssh来实现远程登陆的
+# 用户名user登陆host
+$ ssh user@host
+# 本地用户名和远程用户名相同
+$ ssh host
+# ssh的默认端口为22，使用p修改端口
+$ ssh -p user@host
+
+
+
+登陆过程
+
+
+  主机受到用户的登陆请求，把自己的公钥发给用户
+  用户使用公钥...</content>
+  </entry>
+
+  <entry>
+    <title>Editor: Sed</title>
+    <link href="/pl/pl-miscellaneous-sed.html"/>
+    <updated>2018-12-08T00:00:00+09:00</updated>
+    <id>/pl/pl-miscellaneous-sed</id>
+    <content type="html">
+####
+
+  \w 数字0-9，字母a-z及A-Z，下划线 因为在编程语言中，数字的命名都是数字字母下划线
+  \W 非\w
+  . 除去换行符以外的任意字符
+  [] 字符范围
+  [^…] 字符范围以外
+  ^ 行首
+  $ 行尾
+  ()  分组, 并记录匹配到的字符串
+  \n  使用分组符(x)匹配到的字符串
+    repeat
+  
+  x* x+ 贪婪匹配
+  x* x+? 非贪婪匹配
+  
+    x?      出现0次或一次
+  
+  (?:x) 仅分组
+
+
+Awk
+分割符
+-F field-separator(默认为空格)
+awk -F ':' '{print...</content>
+  </entry>
+
+  <entry>
+    <title>Apple Script</title>
+    <link href="/pl/pl-miscellaneous-script-applescript.html"/>
+    <updated>2018-12-08T00:00:00+09:00</updated>
+    <id>/pl/pl-miscellaneous-script-applescript</id>
+    <content type="html">
+osascript -e 'tell application &quot;System Events&quot;
+    tell application &quot;Adobe Acrobat Reader DC&quot; to activate
+    keystroke &quot;h&quot; using {command down, control down}
+    end tell'
+
+
+Reference
+
+  Complete list of AppleScript key
+codes
+
+</content>
+  </entry>
+
+  <entry>
+    <title>PL: Regular Expression</title>
+    <link href="/pl/pl-miscellaneous-regular-expression.html"/>
+    <updated>2018-12-08T00:00:00+09:00</updated>
+    <id>/pl/pl-miscellaneous-regular-expression</id>
+    <content type="html">
+1. Introcuction
+
+  The phrase regular expressions is also called regexes.
+  Each character in a regular expression is either a metacharacter, having a
+special meaning, or a regular character that has a literal meaning.
+  The metachacter syntax is designed specifically to represent prescribed
+tar...</content>
+  </entry>
+
+  <entry>
+    <title>PL: Type and Strategy</title>
+    <link href="/pl/pl-miscellaneous-programming-type-and-strategy.html"/>
+    <updated>2018-12-08T00:00:00+09:00</updated>
+    <id>/pl/pl-miscellaneous-programming-type-and-strategy</id>
+    <content type="html">
+1. Outline
+
+
+
+  Strong and Weak: Typing about when type information is acquired(compile time
+or runtime)
+  Static and Dynamic: How stricty types are distinguished(whether the language
+tries to do an implicit conversion from stings to numbers).
+  language type
+    
+      machine language
+      as...</content>
+  </entry>
+
+  <entry>
+    <title>PL: Programming and RAM</title>
+    <link href="/pl/pl-miscellaneous-progamming-and-ram.html"/>
+    <updated>2018-12-08T00:00:00+09:00</updated>
+    <id>/pl/pl-miscellaneous-progamming-and-ram</id>
+    <content type="html">
+####
+
+  No matter what  we are playing, one thing is very important archtiecture.
+    
+      assume you are the president of Hongkong, if you want to be a member of
+international game, you have to obey the rule in the name of “CHINA HONGKONG”,
+that’s the architecture set by China, so is Taiwan.
+...</content>
+  </entry>
+
+  <entry>
+    <title>PL: Philosophy</title>
+    <link href="/pl/pl-miscellaneous-philosophy.html"/>
+    <updated>2018-12-08T00:00:00+09:00</updated>
+    <id>/pl/pl-miscellaneous-philosophy</id>
+    <content type="html">
+Background
+The main question is: when faced with a problem, do we always have the choice
+between a declarative and imperative approaches to solving it?
+
+  If there is a declarative solution, can it always be translated into computer
+code?
+  The answer to this question is far from obvious and, if...</content>
+  </entry>
+
+  <entry>
+    <title>PL: Naming Convention</title>
+    <link href="/pl/pl-miscellaneous-naming-convention.html"/>
+    <updated>2018-12-08T00:00:00+09:00</updated>
+    <id>/pl/pl-miscellaneous-naming-convention</id>
+    <content type="html">
+####
+
+  Camel Case: (someVar, someClass)
+  Pascal Case:(SomeVar, SomeClass)
+
+
+H
+
+  underscores and lowercase was the style perferred by Bjarne Stroustrup in
+“The C++ Programming Language”. He made a statement along the lines that
+underscores in names were to be preferred because it was more read...</content>
+  </entry>
+
+  <entry>
+    <title> Jekyll</title>
+    <link href="/pl/pl-miscellaneous-jekyll.html"/>
+    <updated>2018-12-08T00:00:00+09:00</updated>
+    <id>/pl/pl-miscellaneous-jekyll</id>
+    <content type="html">
+Jekyll
+
+  jekyll server
+  jekyll serve –host=0.0.0.0
+    
+      This will make Jekyll’s HTTP server bind to all available IPs.
+    
+  
+
+
+Mathjax
+
+Reference
+
+  Connect to a locally build Server
+  mathjax in jekyll
+
+</content>
+  </entry>
+
+  <entry>
+    <title>PL: Debugging and Profiling</title>
+    <link href="/pl/pl-miscellaneous-debugging-and-profiling.html"/>
+    <updated>2018-12-08T00:00:00+09:00</updated>
+    <id>/pl/pl-miscellaneous-debugging-and-profiling</id>
+    <content type="html">
+A
+A debugger can start some process and debug it, or attach itself to an existing
+process. It can single-step through code, set breakpoints and run to them,
+examine variable values and stack traces.
+
+
+  modern debugger are complex beast, but the foundation is very simple.
+  Debuggers start with ...</content>
   </entry>
 
   <entry>
@@ -10839,6 +11190,24 @@ Increas...</content>
   </entry>
 
   <entry>
+    <title>Script: Summary</title>
+    <link href="/pl/pl-script-summary.html"/>
+    <updated>2018-03-03T00:00:00+09:00</updated>
+    <id>/pl/pl-script-summary</id>
+    <content type="html">Introduction
+The spectrum of scripting languages ranges from very small and highly
+domain-specific languages to general-purpose programming languages
+
+  specific environments related
+    
+      Bash: for Unix or Unix-like operating system
+      JavasScript: for web browers
+    
+  
+  general purpo...</content>
+  </entry>
+
+  <entry>
     <title>C++: Struct</title>
     <link href="/pl/pl-compile-c++-oop-struct.html"/>
     <updated>2018-03-02T00:00:00+09:00</updated>
@@ -13793,6 +14162,7 @@ Phrase
   local municipal goverment office
   residence card
   law enforcement
+  He served in the treasury department
 
 
 ####
@@ -13809,8 +14179,7 @@ Department
 
 ####
 
-  To prevent fraud, the name of the “head of household” will pre-printed on the
-...</content>
+  To prevent fraud, the name of the “head...</content>
   </entry>
 
   <entry>
@@ -13845,6 +14214,11 @@ Patriotism and Nationalism
     <updated>2017-03-21T00:00:00+09:00</updated>
     <id>/%E8%A8%80%E8%91%89/language-english-politics-democracy</id>
     <content type="html">
+####
+
+  
+
+
 ####
 
   Protesters storm US Capitol Building
@@ -13920,6 +14294,7 @@ Phrase
 
   In order to minimize person-to-person contact, you will not be able to pick
 up the payment in cash from your local city.
+  People end up below the poverty line again
 
 </content>
   </entry>
@@ -13933,14 +14308,18 @@ up the payment in cash from your local city.
 ####
 
   future
+  chairman of federal reserve
+  financial deregulation
+  cost many people life savings
+  credit ratings agency
+  oversaw the derivitaive market
 
 
 Market
 
   US oil goes negative for the first time.
   Trade between China and Korea has plummetted by about 80%.
-
-</content>
+  the financial industr...</content>
   </entry>
 
   <entry>
@@ -16146,6 +16525,7 @@ Phrase
   ultrasound
   unborn baby
   tooth brushing
+  blood had drained from her face
 
 
 ####

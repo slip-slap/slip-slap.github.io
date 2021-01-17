@@ -32,9 +32,33 @@
   <!-- Scripts -->
   <script type="text/javascript" src="/assets/themes/twitter/js/jquery-1.11.1.min.js"></script>
   <!--[if lt IE 9]><script src="/assets/themes/twitter/js/html5shiv.min.js"></script><![endif]-->
-  <script type="text/javascript" async
+  <!--<script type="text/javascript" async
           src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
-  </script>
+  </script> -->
+	<script type="text/javascript">
+	window.MathJax = {
+	  tex: {
+		packages: ['base', 'ams']
+	  },
+	  loader: {
+		load: ['ui/menu', '[tex]/ams']
+	  },
+	  startup: {
+		ready() {
+		  MathJax.startup.defaultReady();
+		  const Macro = MathJax._.input.tex.Symbol.Macro;
+		  const MapHandler = MathJax._.input.tex.MapHandler.MapHandler;
+		  const Array = MathJax._.input.tex.ams.AmsMethods.default.Array;
+		  const env = new Macro('psmallmatrix', Array, [null, '(', ')', 'c', '.333em', '.2em', 'S', 1]);
+		  MapHandler.getMap('AMSmath-environment').add('psmallmatrix', env);
+		}
+	  }
+	};
+	</script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+
 </head> 
 <body>
 
@@ -124,17 +148,17 @@ $(document).ready(function() {
           <a href="/" title="查看最近发表"><i class="icon-fixed-width icon-edit"></i> 最近发表</a>
 <ul>
 
-  <li><a href="/work/work-publisher.html" title="查看《Publisher: Summary》">Publisher: Summary</a></li>
+  <li><a href="/ai/AI-convex-optimization-terminology.html" title="查看《C.O.: Terminology》">C.O.: Terminology</a></li>
 
-  <li><a href="/work/work-publisher-common-sense.html" title="查看《Publisher: Common sense》">Publisher: Common sense</a></li>
+  <li><a href="/ai/AI-convex-optimization-nomenclature.html" title="查看《C.O.: Nomenclature》">C.O.: Nomenclature</a></li>
 
-  <li><a href="/ai/AI-Adaptive-Boosting.html" title="查看《Adaptive Boosting》">Adaptive Boosting</a></li>
+  <li><a href="/ai/AI-convex-optimization-convex-function.html" title="查看《C.O.: Convex Functions》">C.O.: Convex Functions</a></li>
 
-  <li><a href="/work/work-word-neural-network.html" title="查看《Work: Neural Network》">Work: Neural Network</a></li>
+  <li><a href="/ai/AI-convex-optimization-lagrangian-duality.html" title="查看《C.O.: Lagrangian Duality》">C.O.: Lagrangian Duality</a></li>
 
-  <li><a href="/work/work-word-composite-material.html" title="查看《Word: Composite Material》">Word: Composite Material</a></li>
+  <li><a href="/ai/AI-convex-optimization-linear-programming-problem.html" title="查看《C.O.: Linear Programming》">C.O.: Linear Programming</a></li>
 
-  <li><a href="/work/work-word.html" title="查看《Work: Word》">Work: Word</a></li>
+  <li><a href="/ai/AI-convex-optimization-least-square-problem.html" title="查看《C.O.: Least squares》">C.O.: Least squares</a></li>
 
 </ul>
 
@@ -142,9 +166,52 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">946</span>
+<span title="文章总数">965</span>
 <ul>
 
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#August-2020">2020 年 08 月 (8)</a></li>
+    
+  
 
   
   
@@ -2108,6 +2175,59 @@ $(document).ready(function() {
   
   
   
+    <li><a href="/archive.html#December-2018">2018 年 12 月 (10)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
     <li><a href="/archive.html#November-2018">2018 年 11 月 (10)</a></li>
     
   
@@ -3349,7 +3469,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#March-2018">2018 年 03 月 (68)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2018">2018 年 03 月 (69)</a></li>
     
   
 
@@ -4976,7 +5101,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (217)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (228)</a></li>
 
   <li><a href="/categories.html#Algorithm-ref">Algorithm (78)</a></li>
 
@@ -4988,14 +5113,14 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#work-ref">work (20)</a></li>
 
-  <li><a href="/categories.html#AI-ref">AI (42)</a></li>
+  <li><a href="/categories.html#AI-ref">AI (50)</a></li>
 
 </ul>
 
         </section>
         <section>
           <a href="/tags.html" title="查看所有标签"><i class="icon-fixed-width icon-tags"></i> 标签云</a>
-<span title="标签总数">99</span>
+<span title="标签总数">101</span>
 <div id="tag-cloud">
 
 
@@ -5023,7 +5148,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #888;">summary</a>
+    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #777;">summary</a>
   
     
     
@@ -5058,7 +5183,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#script-ref" style="font-size: 17.5pt; color: #000;">script</a>
+    <a href="/tags.html#script-ref" style="font-size: 18pt; color: #000;">script</a>
   
     
     
@@ -5072,7 +5197,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#compile-ref" style="font-size: 14.5pt; color: #444;">compile</a>
+    <a href="/tags.html#compile-ref" style="font-size: 14pt; color: #444;">compile</a>
   
     
     
@@ -5248,6 +5373,13 @@ $(document).ready(function() {
     
     
     <a href="/tags.html#assembly-ref" style="font-size: 9.5pt; color: #888;">assembly</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#jekyll-ref" style="font-size: 9pt; color: #999;">jekyll</a>
   
     
     
@@ -5697,6 +5829,13 @@ $(document).ready(function() {
     
     <a href="/tags.html#supervised-ref" style="font-size: 9pt; color: #999;">supervised</a>
   
+    
+    
+    
+    
+    
+    <a href="/tags.html#C.O.-ref" style="font-size: 9.5pt; color: #888;">C.O.</a>
+  
 
 </div>
 
@@ -5762,6 +5901,237 @@ $(document).ready(function() {
   <article class="nested">
 
     <header>
+      <h2><a href="/math/math-space-hyperbolic-geometry-spherical.html" title="查看《H.G.: Spherical》">H.G.: Spherical</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+History
+
+  There is no difference between astronomer and mathimatican, all mathimatican
+are insterested in astronomy, and all astronomers are math...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#October-2019" title="查看此月所有文章">15 October 2019</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
+        评论：<a href="/math/math-space-hyperbolic-geometry-spherical.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/math/math-space-hyperbolic-geometry-introduction.html" title="查看《H.G.: Introduction》">H.G.: Introduction</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+view
+
+  angle and distance are not the key point to understand geometry, with angle and distance, you 
+have no hope to understand this subject pro...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#October-2019" title="查看此月所有文章">15 October 2019</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
+        评论：<a href="/math/math-space-hyperbolic-geometry-introduction.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/math/math-space-hyperbolic-geometry-dual-perpendicularity.html" title="查看《H.G.: Dual and Perpendicularity》">H.G.: Dual and Perpendicularity</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Dual and Perpendicularity
+
+Dual
+
+  The point 
+$
+a \equiv[x: y: z]
+$
+is dual to the line $a^{\perp} \equiv (x:y:z)$
+  The line $L \equiv(l:m:n)$ is...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#October-2019" title="查看此月所有文章">15 October 2019</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
+        评论：<a href="/math/math-space-hyperbolic-geometry-dual-perpendicularity.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/math/math-space-hyperbolic-geometry-computation-with-homoegeneous-coordinate.html" title="查看《H.G.: Homogeneous Coordinate with Hyperbolic Geometry》">H.G.: Homogeneous Coordinate with Hyperbolic Geometry</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+
+
+Definition
+
+  Hyperbolic Point: A hyperbolic point is a proportion $a \equiv [x:y:z]$ of rational numbers in
+square brackets.
+  Hyperbolic Line:...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#October-2019" title="查看此月所有文章">15 October 2019</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
+        评论：<a href="/math/math-space-hyperbolic-geometry-computation-with-homoegeneous-coordinate.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/math/math-space-hyperbolic-geometry-apollonius-polarity.html" title="查看《H.G.: Polarity》">H.G.: Polarity</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+H
+Duality between Polar and Pole
+
+
+
+Theorem: Polar Independence Theorem
+The polar does not depend on the choice of lines through a.
+Theorem: Pole ...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#October-2019" title="查看此月所有文章">15 October 2019</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
+        评论：<a href="/math/math-space-hyperbolic-geometry-apollonius-polarity.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/math/math-space-differential-geometry-winding-number.html" title="查看《D.G.: Winding Number》">D.G.: Winding Number</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+HAHA
+The winding number of a closed curve in the plane around a given point is an
+integer representing the total number of times that curve travel...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#October-2019" title="查看此月所有文章">01 October 2019</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
+        评论：<a href="/math/math-space-differential-geometry-winding-number.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/math/math-space-differential-geometry-surface.html" title="查看《D.G.: Surface》">D.G.: Surface</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Introduction
+
+  View1: algebraic surfaces
+  View2: parametrized surfaces
+  It is very important to have a balanced view between these two aspects;...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#October-2019" title="查看此月所有文章">01 October 2019</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
+        评论：<a href="/math/math-space-differential-geometry-surface.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/math/math-space-differential-geometry-summary.html" title="查看《D.G.: summary》">D.G.: summary</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Question
+
+  Why it is called differential geometry?
+    
+      because for some geometry object, it can be presented in differential form
+$\frac{d...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#October-2019" title="查看此月所有文章">01 October 2019</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
+        评论：<a href="/math/math-space-differential-geometry-summary.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
       <h2><a href="/math/math-space-differential-geometry-metrical-structure.html" title="查看《D.G.: Metrical Structure》">D.G.: Metrical Structure</a></h2>
     </header>
 
@@ -5810,224 +6180,6 @@ History
 
   </article>
   
-  <article class="nested">
-
-    <header>
-      <h2><a href="/math/math-space-differential-geometry-geodesic.html" title="查看《D.G.: Geodesic and Christoffel Symbol》">D.G.: Geodesic and Christoffel Symbol</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Introduction
-Geodesic are curves where the acceleration vector is normal to the surface.
-Formula
-
-\(\frac{d^{2} \vec{R}}{d \lambda^{2}}=\left(\fra...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#October-2019" title="查看此月所有文章">01 October 2019</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
-        评论：<a href="/math/math-space-differential-geometry-geodesic.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/math/math-space-differential-geometry-gauss.html" title="查看《D.G.: Gauss》">D.G.: Gauss</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-quadratic form and homogeneous polynomials
-
-  In mathematics, a quadratic form is a polynomial with terms all of degree
-two, for example,
-\(4x^2 +...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#October-2019" title="查看此月所有文章">01 October 2019</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
-        评论：<a href="/math/math-space-differential-geometry-gauss.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/math/math-space-differential-geometry-gauss-egregium.html" title="查看《D.G: Gauss-Egregium》">D.G: Gauss-Egregium</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Definition
-Gauss introduce the idea of describing a surface S parametrically, and then
-we can think about the surface in coordinates, then we can ...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#October-2019" title="查看此月所有文章">01 October 2019</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
-        评论：<a href="/math/math-space-differential-geometry-gauss-egregium.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/math/math-space-differential-geometry-frenet-serret-equation.html" title="查看《D.G.: Frenet Serret Equation》">D.G.: Frenet Serret Equation</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Cross Product
-
-Frenet Equation
-
-Ordered set (T(s), N(s), B(s))
-The Frenet Equation is all about what happens to the derivative of all the
-three ve...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#October-2019" title="查看此月所有文章">01 October 2019</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
-        评论：<a href="/math/math-space-differential-geometry-frenet-serret-equation.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/math/math-space-differential-geometry-curve.html" title="查看《D.G.: Curve》">D.G.: Curve</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Inspiration
-
-  the primary goal in the geometric theory of curves is to measure their shapes
-in ways that do not take into account how they are pa...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#October-2019" title="查看此月所有文章">01 October 2019</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
-        评论：<a href="/math/math-space-differential-geometry-curve.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/math/math-space-differential-geometry-curvature-surface.html" title="查看《D.G.: Curvature of Surface》">D.G.: Curvature of Surface</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Principal Curvature In differential geometry, the two principal curvatures
-at a given point of a surface are the eigenvalues of the shape operator...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#October-2019" title="查看此月所有文章">01 October 2019</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
-        评论：<a href="/math/math-space-differential-geometry-curvature-surface.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/math/math-space-differential-geometry-curvature-curve.html" title="查看《D.G.: Curvature of Curve》">D.G.: Curvature of Curve</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Goal
-
-  We saw that arclenght measures how far a curve is from being stationary.
-  Our preliminary concept of curvature is that it should measure ...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#October-2019" title="查看此月所有文章">01 October 2019</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
-        评论：<a href="/math/math-space-differential-geometry-curvature-curve.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/math/math-space-differential-geometry-arclength.html" title="查看《D.G.: Arclength》">D.G.: Arclength</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Background
-
-  One way of measuring the arclength geometrically is by imaging the curve as a
-thread that can be stretched out and measured. This, h...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#October-2019" title="查看此月所有文章">01 October 2019</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
-        评论：<a href="/math/math-space-differential-geometry-arclength.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
 
   
     
@@ -6067,7 +6219,7 @@ thread that can be stretched out and measured. This, h...
 
     <!-- Current Page -->
     <li class="active">
-      <span class="page_number ">第 17/95 页</span>
+      <span class="page_number ">第 17/97 页</span>
     </li>
 
     <!-- Next Page -->
@@ -6077,7 +6229,7 @@ thread that can be stretched out and measured. This, h...
 
     <!-- Last Page -->
     
-    <li><a href="/page95">&raquo;&raquo;</a></li>
+    <li><a href="/page97">&raquo;&raquo;</a></li>
     
   </ul>
 </section>
@@ -6131,4 +6283,8 @@ $(document).ready(function () {
   
 </body>
 </html>
+
+
+
+
 
