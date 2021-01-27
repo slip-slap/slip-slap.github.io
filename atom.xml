@@ -3,7 +3,7 @@
   <title>Just Do It</title>
   <link href="/atom.xml" rel="self"/>
   <link href=""/>
-  <updated>2021-01-16T14:54:26+09:00</updated>
+  <updated>2021-01-27T21:14:20+09:00</updated>
   <id></id>
   <author>
     <name>reed</name>
@@ -1308,6 +1308,31 @@ Thoughts
   </entry>
 
   <entry>
+    <title>Math: How to Learn Math</title>
+    <link href="/math/math-how-to-learn.html"/>
+    <updated>2019-12-31T00:00:00+09:00</updated>
+    <id>/math/math-how-to-learn</id>
+    <content type="html">
+Step 1: definition
+
+  first is definition, it’s just a math object.
+    
+      group
+      trigonometry
+      probability model
+      morphism
+      tensor
+In every subject, basic definition is came up, then you study this object.
+    
+  
+
+
+Step 2: relation
+
+relations means how to compare things...</content>
+  </entry>
+
+  <entry>
     <title>Basic: summary</title>
     <link href="/math/math-basic-summary.html"/>
     <updated>2019-12-30T00:00:00+09:00</updated>
@@ -2216,11 +2241,12 @@ $
     <content type="html">
 Definition
 
-  
-    $\textbf{THE DOT OR SCLALAR PRODUCT}$ of two vectors $\textbf{A}$ and
+  \textbf{THE DOT OR SCLALAR PRODUCT} of two vectors $\textbf{A}$ and
 $\textbf{B}$, denoted by $\mathbf{A} \cdot \mathbf{B}$ (read $\textbf{A}$ dot
-$\textbf{B}$)$, is defined as the product of the magnitutes of $\textbf{A}$ and
-$\textbf{B} and the cosine of the angle $\theta$ ...</content>
+$\textbf{B}$)$,
+    
+      is defined as the product of the magnitutes of $\textbf{A}$ and
+$\textbf{B}$ and the cosine of the angle $\th...</content>
   </entry>
 
   <entry>
@@ -4834,34 +4860,196 @@ BFS stands for Breadth First Search is a vertex based techinique for finding
   </entry>
 
   <entry>
-    <title>S.P.: Delayed Renewal Process</title>
-    <link href="/math/math-apply-stochastic-process-delayed-renewal-process.html"/>
-    <updated>2019-03-30T00:00:00+09:00</updated>
-    <id>/math/math-apply-stochastic-process-delayed-renewal-process</id>
+    <title>P.A.S.M.: Introduction</title>
+    <link href="/math/math-apply-probability-and-statistics-model-introduction.html"/>
+    <updated>2019-04-29T00:00:00+09:00</updated>
+    <id>/math/math-apply-probability-and-statistics-model-introduction</id>
     <content type="html">
-C
+Outline
+Probability is the science of uncertainty. It provides precise mathematical
+rules for understanding and analyzing our own ignorance.
+The content of probability and statistics can be divided into three parts
 
-  Theorem: Assume that ${Z_n; n\geq 1}$ converges to $\alpha$ WP1 and assume
-that f(x) is areal valued function of a real variable that is continuous at
-$x=\infty$. Then $x=\alpha$. Then ${f(Z_n);n\geq 1}$ converges WP1 to
-$f(\alpha)$
-    
-      Random Variables are far more complicated thing...</content>
+  Probability and Statistics Model(P.A.S.M.)
+  Probability and Statistics Model ...</content>
   </entry>
 
   <entry>
-    <title>S.P.: Little's Theorem</title>
-    <link href="/math/math-apply-stochastic-process-little-theorem.html"/>
-    <updated>2019-03-29T00:00:00+09:00</updated>
-    <id>/math/math-apply-stochastic-process-little-theorem</id>
+    <title>P.A.S.M.: Expectation and Variance</title>
+    <link href="/math/math-apply-probability-and-statistics-model-expectation-variance.html"/>
+    <updated>2019-04-28T00:00:00+09:00</updated>
+    <id>/math/math-apply-probability-and-statistics-model-expectation-variance</id>
     <content type="html">
-Motivation
-what is N(t) at some finite value of t, N(t) is a random variable at some finite
-value of t. So you can’t evaluate it. But at least you would like to know what
-its expected value is. Even you don’t know the expected value, you would like to
-know the bound of the expected value.
+1.$E[X]=\int F_X^c(x)dx$ for arbitrary nonneg X
 
-  thi...</content>
+
+
+Poisson Distribution
+\(P(X(t)=k)=\frac{(\lambda t)^{k} e^{-\lambda t}}{k !}\)
+
+For the probability of the number of events happen equal to 0 
+\(P(X&amp;gt;t)=\frac{(\lambda t)^{0} e^{-\lambda t}}{0 !}=e^{-\lambda t}\)
+
+\[P(X&amp;lt;=t)=1-e^{-\lambda t}\...</content>
+  </entry>
+
+  <entry>
+    <title>P.A.S.M.: Function and Distribution</title>
+    <link href="/math/math-apply-probability-and-statistics-model-function-and-distribution.html"/>
+    <updated>2019-04-27T00:00:00+09:00</updated>
+    <id>/math/math-apply-probability-and-statistics-model-function-and-distribution</id>
+    <content type="html">
+beta distribution
+
+  
+    beta distribution: a family of continuous probability distributions defined on the interval [0,1]
+parametrized by two positive shape parameters, denoted by $\alpha$ and $\beta$.
+  
+  
+    In bayesian inference, the beta distribution is the conjugate prior probability di...</content>
+  </entry>
+
+  <entry>
+    <title>P.A.S.M.: Normal Distribution</title>
+    <link href="/math/math-apply-probability-and-statistics-model-normal-distribution.html"/>
+    <updated>2019-04-26T00:00:00+09:00</updated>
+    <id>/math/math-apply-probability-and-statistics-model-normal-distribution</id>
+    <content type="html">
+Normal Distribution
+Also named as Gaussian distribution.
+
+The multivariate normal distribution is:
+
+\[f_{\mathbf{X}}\left(x_{1}, \ldots, x_{k}\right)=\frac{\exp \left(-\frac{1}{2}(\mathbf{x}-\boldsymbol{\mu})^{\mathrm{T}} \mathbf{\Sigma}^{-1}(\mathbf{x}-\boldsymbol{\mu})\right)}{\sqrt{(2 \pi)^{k...</content>
+  </entry>
+
+  <entry>
+    <title>P.A.S.M.: Law of Large Number</title>
+    <link href="/math/math-apply-probability-and-statistics-model-law-of-large-number.html"/>
+    <updated>2019-04-25T00:00:00+09:00</updated>
+    <id>/math/math-apply-probability-and-statistics-model-law-of-large-number</id>
+    <content type="html">
+What is the crap of Sampling Distribution?
+
+  Suppose $X_1,X_2,\cdots,X_n$ is an identically and independently distributed
+sequence, i.e.,$X_1,X_2,\cdots,X_n$ is a sample from some distribution, and
+we are interested in the distribution of a new random variable $Y=h(X_1,X_2,\cdots,X_n)$ for
+some...</content>
+  </entry>
+
+  <entry>
+    <title>P.A.S.M.: Generating Functions and Convolutions</title>
+    <link href="/math/math-apply-probability-and-statistics-model-generating-functions-and-convolution.html"/>
+    <updated>2019-04-24T00:00:00+09:00</updated>
+    <id>/math/math-apply-probability-and-statistics-model-generating-functions-and-convolution</id>
+    <content type="html">
+Introduction
+Let X be a random variable.
+
+  The cumulative distribution function of X, defined by $F_X(x)=P(X \leq x)$,
+contains all the information about the distribution of X.
+  It turns out that there are other functions, the probability-generating
+function and the moment-generating function,...</content>
+  </entry>
+
+  <entry>
+    <title>P.A.S.M.: Fisher Information</title>
+    <link href="/math/math-apply-probability-and-statistics-model-fisher-information.html"/>
+    <updated>2019-04-23T00:00:00+09:00</updated>
+    <id>/math/math-apply-probability-and-statistics-model-fisher-information</id>
+    <content type="html">
+1. Definition
+
+  
+    For $ p(X | \theta) $, fisher information is to answer the question: How
+useful is the random variable X in determining the unkown parameter
+$\theta$
+  
+  the fisher information is a frequentist concept
+  The fisher information is a way of measuring the amount of informatio...</content>
+  </entry>
+
+  <entry>
+    <title>P.A.S.M.A.: Quantitative Response and Predictors</title>
+    <link href="/math/math-apply-probability-and-statistics-model-quantitiative-response-and-predictors.html"/>
+    <updated>2019-04-21T00:00:00+09:00</updated>
+    <id>/math/math-apply-probability-and-statistics-model-quantitiative-response-and-predictors</id>
+    <content type="html">
+</content>
+  </entry>
+
+  <entry>
+    <title>P.A.S.M.: Simulating Probability Distributions</title>
+    <link href="/math/math-apply-probability-and-statistics-model-simulating-probability-distribution.html"/>
+    <updated>2019-04-20T00:00:00+09:00</updated>
+    <id>/math/math-apply-probability-and-statistics-model-simulating-probability-distribution</id>
+    <content type="html">
+Solution
+
+  Let X be a random variable, with cululative distribution function F. Then the
+inverse cdf(or quantile function) of X is the function $F^-1$ defined by 
+$F^{-1} (t)=min{x: F(x) \geq t}$ 
+for $0&amp;lt;t&amp;lt;1$
+  Let F be any cumulative distribution function, and let $U \sim Uniform
+[0,1]$....</content>
+  </entry>
+
+  <entry>
+    <title>P.A.S.: Order Statistic</title>
+    <link href="/math/math-apply-probability-and-statistics-model-order-statistic.html"/>
+    <updated>2019-04-20T00:00:00+09:00</updated>
+    <id>/math/math-apply-probability-and-statistics-model-order-statistic</id>
+    <content type="html">
+Reference
+
+  顺序统计量
+  order statistic
+
+</content>
+  </entry>
+
+  <entry>
+    <title>P.A.S.M.: Frequentist and Bayesian</title>
+    <link href="/math/math-apply-probability-and-statistics-model-bayesian-and-frequentist.html"/>
+    <updated>2019-04-20T00:00:00+09:00</updated>
+    <id>/math/math-apply-probability-and-statistics-model-bayesian-and-frequentist</id>
+    <content type="html">
+Example
+Jo has a test for a disease, we denote Jo’s state of health by the variable a
+and the test result by b. 
+
+  a=1 Jo has the disease
+  a=0 Jo does not have the disease
+
+
+The essential difference between frequentist and bayesian statisticians is in
+
+The Bayes’s theorem:
+
+\[P(\theta | x)=\fr...</content>
+  </entry>
+
+  <entry>
+    <title>P.A.S.: Bayesian Introduction</title>
+    <link href="/math/math-apply-probability-and-statistics-bayesian-introduction.html"/>
+    <updated>2019-04-19T00:00:00+09:00</updated>
+    <id>/math/math-apply-probability-and-statistics-bayesian-introduction</id>
+    <content type="html">
+Introduction
+At the heart of the theory of inference is the concept of the statistical
+model$f_{\theta}: \theta \in \omega$ that describes the statistician’s
+uncertainty about how the observed data were produced. 
+all
+   uncertainties need to be described by probabilities, then the prescription ...</content>
+  </entry>
+
+  <entry>
+    <title>P.A.S.: Prior Distribution</title>
+    <link href="/math/math-apply-probability-and-statistics-bayesian-prior-distribution.html"/>
+    <updated>2019-04-18T00:00:00+09:00</updated>
+    <id>/math/math-apply-probability-and-statistics-bayesian-prior-distribution</id>
+    <content type="html">
+</content>
   </entry>
 
   <entry>
@@ -4914,22 +5102,6 @@ hits by the the number of darts, and you get an approximation of the area.
   </entry>
 
   <entry>
-    <title>P.A.S.M.: Simulating Probability Distributions</title>
-    <link href="/math/math-apply-probability-and-statistics-simulating-probability-distribution.html"/>
-    <updated>2019-03-29T00:00:00+09:00</updated>
-    <id>/math/math-apply-probability-and-statistics-simulating-probability-distribution</id>
-    <content type="html">
-Solution
-
-  Let X be a random variable, with cululative distribution function F. Then the
-inverse cdf(or quantile function) of X is the function $F^-1$ defined by 
-$F^{-1} (t)=min{x: F(x) \geq t}$ 
-for $0&amp;lt;t&amp;lt;1$
-  Let F be any cumulative distribution function, and let $U \sim Uniform
-[0,1]$....</content>
-  </entry>
-
-  <entry>
     <title>P.A.S.M.: Sampling Distributions</title>
     <link href="/math/math-apply-probability-and-statistics-sampling-distribution.html"/>
     <updated>2019-03-29T00:00:00+09:00</updated>
@@ -4940,72 +5112,6 @@ In many applications of probability theory, we will be faced with the following
 problem. Suppose that $X_1,X_2,\cdots,X_n$ is an identically and independently
 distributed sequence, $X_1,X_2,\cdots,X_n$ is a $sample$ from some distribution,
 and we are interested in the distribution o...</content>
-  </entry>
-
-  <entry>
-    <title>P.A.S.: Order Statistic</title>
-    <link href="/math/math-apply-probability-and-statistics-order-statistic.html"/>
-    <updated>2019-03-29T00:00:00+09:00</updated>
-    <id>/math/math-apply-probability-and-statistics-order-statistic</id>
-    <content type="html">
-Reference
-
-  顺序统计量
-  order statistic
-
-</content>
-  </entry>
-
-  <entry>
-    <title>P.A.S.M.A.: Quantitative Response and Predictors</title>
-    <link href="/math/math-apply-probability-and-statistics-model-quantitiative-response-and-predictors.html"/>
-    <updated>2019-03-29T00:00:00+09:00</updated>
-    <id>/math/math-apply-probability-and-statistics-model-quantitiative-response-and-predictors</id>
-    <content type="html">
-</content>
-  </entry>
-
-  <entry>
-    <title>P.A.S.M.: Normal Distribution</title>
-    <link href="/math/math-apply-probability-and-statistics-model-normal-distribution.html"/>
-    <updated>2019-03-29T00:00:00+09:00</updated>
-    <id>/math/math-apply-probability-and-statistics-model-normal-distribution</id>
-    <content type="html">
-Normal Distribution
-Also named as Gaussian distribution.
-
-The multivariate normal distribution is:
-
-\[f_{\mathbf{X}}\left(x_{1}, \ldots, x_{k}\right)=\frac{\exp \left(-\frac{1}{2}(\mathbf{x}-\boldsymbol{\mu})^{\mathrm{T}} \mathbf{\Sigma}^{-1}(\mathbf{x}-\boldsymbol{\mu})\right)}{\sqrt{(2 \pi)^{k...</content>
-  </entry>
-
-  <entry>
-    <title>P.A.S.M.: Law of Large Number</title>
-    <link href="/math/math-apply-probability-and-statistics-model-law-of-large-number.html"/>
-    <updated>2019-03-29T00:00:00+09:00</updated>
-    <id>/math/math-apply-probability-and-statistics-model-law-of-large-number</id>
-    <content type="html">
-What is the crap of Sampling Distribution?
-
-  Suppose $X_1,X_2,\cdots,X_n$ is an identically and independently distributed
-sequence, i.e.,$X_1,X_2,\cdots,X_n$ is a sample from some distribution, and
-we are interested in the distribution of a new random variable $Y=h(X_1,X_2,\cdots,X_n)$ for
-some...</content>
-  </entry>
-
-  <entry>
-    <title>P.A.S.M.: Introduction</title>
-    <link href="/math/math-apply-probability-and-statistics-model-introduction.html"/>
-    <updated>2019-03-29T00:00:00+09:00</updated>
-    <id>/math/math-apply-probability-and-statistics-model-introduction</id>
-    <content type="html">
-Outline
-Probability is the science of uncertainty. It provides precise mathematical
-rules for understanding and analyzing our own ignorance.
-The content of probability and statistics can be divided into three parts
-
-  Probability and Statistics Model(P.A.S.M.)
-  Probability and Statistics Model ...</content>
   </entry>
 
   <entry>
@@ -5114,108 +5220,6 @@ compared with slice sampling
   </entry>
 
   <entry>
-    <title>P.A.S.M.I.: Bayesian Inference</title>
-    <link href="/math/math-apply-probability-and-statistics-model-inference-bayesian-inference.html"/>
-    <updated>2019-03-29T00:00:00+09:00</updated>
-    <id>/math/math-apply-probability-and-statistics-model-inference-bayesian-inference</id>
-    <content type="html">
-Introduction
-At the heart of the theory of inference is the concept of the statistical
-model$f_{\theta}: \theta \in \omega$ that describes the statistician’s
-uncertainty about how the observed data were produced. 
-all
-   uncertainties need to be described by probabilities, then the prescription ...</content>
-  </entry>
-
-  <entry>
-    <title>P.A.S.M.: Generating Functions and Convolutions</title>
-    <link href="/math/math-apply-probability-and-statistics-model-generating-functions-and-convolution.html"/>
-    <updated>2019-03-29T00:00:00+09:00</updated>
-    <id>/math/math-apply-probability-and-statistics-model-generating-functions-and-convolution</id>
-    <content type="html">
-Introduction
-Let X be a random variable.
-
-  The cumulative distribution function of X, defined by $F_X(x)=P(X \leq x)$,
-contains all the information about the distribution of X.
-  It turns out that there are other functions, the probability-generating
-function and the moment-generating function,...</content>
-  </entry>
-
-  <entry>
-    <title>P.A.S.M.: Function and Distribution</title>
-    <link href="/math/math-apply-probability-and-statistics-model-function-and-distribution.html"/>
-    <updated>2019-03-29T00:00:00+09:00</updated>
-    <id>/math/math-apply-probability-and-statistics-model-function-and-distribution</id>
-    <content type="html">
-beta distribution
-
-  
-    beta distribution: a family of continuous probability distributions defined on the interval [0,1]
-parametrized by two positive shape parameters, denoted by $\alpha$ and $\beta$.
-  
-  
-    In bayesian inference, the beta distribution is the conjugate prior probability di...</content>
-  </entry>
-
-  <entry>
-    <title>P.A.S.M.: Fisher Information</title>
-    <link href="/math/math-apply-probability-and-statistics-model-fisher-information.html"/>
-    <updated>2019-03-29T00:00:00+09:00</updated>
-    <id>/math/math-apply-probability-and-statistics-model-fisher-information</id>
-    <content type="html">
-1. Definition
-
-  
-    For $ p(X | \theta) $, fisher information is to answer the question: How
-useful is the random variable X in determining the unkown parameter
-$\theta$
-  
-  the fisher information is a frequentist concept
-  The fisher information is a way of measuring the amount of informatio...</content>
-  </entry>
-
-  <entry>
-    <title>P.A.S.M.: Expectation and Variance</title>
-    <link href="/math/math-apply-probability-and-statistics-model-expectation-variance.html"/>
-    <updated>2019-03-29T00:00:00+09:00</updated>
-    <id>/math/math-apply-probability-and-statistics-model-expectation-variance</id>
-    <content type="html">
-1.$E[X]=\int F_X^c(x)dx$ for arbitrary nonneg X
-
-
-
-Poisson Distribution
-\(P(X(t)=k)=\frac{(\lambda t)^{k} e^{-\lambda t}}{k !}\)
-
-For the probability of the number of events happen equal to 0 
-\(P(X&amp;gt;t)=\frac{(\lambda t)^{0} e^{-\lambda t}}{0 !}=e^{-\lambda t}\)
-
-\[P(X&amp;lt;=t)=1-e^{-\lambda t}\...</content>
-  </entry>
-
-  <entry>
-    <title>P.A.S.M.: Frequentist and Bayesian</title>
-    <link href="/math/math-apply-probability-and-statistics-model-bayesian-and-frequentist.html"/>
-    <updated>2019-03-29T00:00:00+09:00</updated>
-    <id>/math/math-apply-probability-and-statistics-model-bayesian-and-frequentist</id>
-    <content type="html">
-Example
-Jo has a test for a disease, we denote Jo’s state of health by the variable a
-and the test result by b. 
-
-  a=1 Jo has the disease
-  a=0 Jo does not have the disease
-
-
-The essential difference between frequentist and bayesian statisticians is in
-
-The Bayes’s theorem:
-
-\[P(\theta | x)=\fr...</content>
-  </entry>
-
-  <entry>
     <title>P.A.S.M.A.: Related Variables</title>
     <link href="/math/math-apply-probability-and-statistics-model-application-related-variables.html"/>
     <updated>2019-03-29T00:00:00+09:00</updated>
@@ -5266,6 +5270,40 @@ def f_0(x):
 def f_j(x, beta):
     &quot;&quot;&quot; Intermediate distribution: interpolation between f_0 and f_n &quot;&quot;&quot;
     return f_0(x)**beta * f_0(x...</content>
+  </entry>
+
+  <entry>
+    <title>S.P.: summary</title>
+    <link href="/math/math-apply-stochastic-process-summary.html"/>
+    <updated>2019-03-28T00:00:00+09:00</updated>
+    <id>/math/math-apply-stochastic-process-summary</id>
+    <content type="html">
+Introduction
+
+  Stochastic processes which are processes that proceed randomly in time.
+  We consider sequences $X_0,X_1,X_2,\cdots$ where $X_n$ represents some random
+quantity at time n.
+How do you prevent oil spills? 
+How do you prevent nuclear plants from going off?
+How do you prevent nuclear...</content>
+  </entry>
+
+  <entry>
+    <title>P.P.: Introduction</title>
+    <link href="/math/math-apply-stochastic-process-poisson-process-introduction.html"/>
+    <updated>2019-03-27T00:00:00+09:00</updated>
+    <id>/math/math-apply-stochastic-process-poisson-process-introduction</id>
+    <content type="html">
+Poisson Distribution
+In probability theory and statistics, Poisson distribution expresses 
+the probability of a given number of events occurring in a fixed interval of
+time or space. 
+
+formula
+
+\[P(k \text { events in interval })=e^{-\lambda} \frac{\lambda^{k}}{k !}\]
+
+\(\lambda\) is a parameter...</content>
   </entry>
 
   <entry>
@@ -5343,48 +5381,45 @@ $X_1,X_2,\cdots$ are IID. Renewal processes can be specifie...</content>
     <updated>2019-03-10T00:00:00+09:00</updated>
     <id>/math/math-apply-stochastic-process-martingales</id>
     <content type="html">
-Martingales
+1 Definition
 
   Martingales: Let $X_0,X_1,X_2,\cdots$ be a markov chain. The chain is a
 martingle if for all $n=0,1,2,\cdots$, we have $E(X_{n+1} - X_n|X_n)=0$, that
 is, on average the chain’s value does not change, regardless of what the
 current value $X_n$ actually is.
     
-      a special clas...</content>
+      a special cla...</content>
   </entry>
 
   <entry>
-    <title>S.P.: summary</title>
-    <link href="/math/math-apply-stochastic-process-summary.html"/>
-    <updated>2019-03-09T00:00:00+09:00</updated>
-    <id>/math/math-apply-stochastic-process-summary</id>
+    <title>S.P.: Little's Theorem</title>
+    <link href="/math/math-apply-stochastic-process-little-theorem.html"/>
+    <updated>2019-03-10T00:00:00+09:00</updated>
+    <id>/math/math-apply-stochastic-process-little-theorem</id>
     <content type="html">
-Introduction
+Motivation
+what is N(t) at some finite value of t, N(t) is a random variable at some finite
+value of t. So you can’t evaluate it. But at least you would like to know what
+its expected value is. Even you don’t know the expected value, you would like to
+know the bound of the expected value.
 
-  Stochastic processes which are processes that proceed randomly in time.
-  We consider sequences $X_0,X_1,X_2,\cdots$ where $X_n$ represents some random
-quantity at time n.
-How do you prevent oil spills? 
-How do you prevent nuclear plants from going off?
-How do you prevent nuclear...</content>
+  thi...</content>
   </entry>
 
   <entry>
-    <title>P.P.: Introduction</title>
-    <link href="/math/math-apply-stochastic-process-poisson-process-introduction.html"/>
-    <updated>2019-03-09T00:00:00+09:00</updated>
-    <id>/math/math-apply-stochastic-process-poisson-process-introduction</id>
+    <title>S.P.: Delayed Renewal Process</title>
+    <link href="/math/math-apply-stochastic-process-delayed-renewal-process.html"/>
+    <updated>2019-03-10T00:00:00+09:00</updated>
+    <id>/math/math-apply-stochastic-process-delayed-renewal-process</id>
     <content type="html">
-Poisson Distribution
-In probability theory and statistics, Poisson distribution expresses 
-the probability of a given number of events occurring in a fixed interval of
-time or space. 
+C
 
-formula
-
-\[P(k \text { events in interval })=e^{-\lambda} \frac{\lambda^{k}}{k !}\]
-
-\(\lambda\) is a parameter...</content>
+  Theorem: Assume that ${Z_n; n\geq 1}$ converges to $\alpha$ WP1 and assume
+that f(x) is areal valued function of a real variable that is continuous at
+$x=\infty$. Then $x=\alpha$. Then ${f(Z_n);n\geq 1}$ converges WP1 to
+$f(\alpha)$
+    
+      Random Variables are far more complicated thing...</content>
   </entry>
 
   <entry>
@@ -5491,6 +5526,26 @@ Suppose we want to generate samples from the joint distribution of \(\left(Y_{1}
 generate from each of the full conditionalal distributions\(Y_{i} |
 Y_{-i}=y_{-i}\), where 
 \(Y_{-i}=\left(Y_{1}, \ldots, Y_{i-1}, Y_{i+1}, \ldo...</content>
+  </entry>
+
+  <entry>
+    <title>S.P.: Gaussian Processes</title>
+    <link href="/math/math-apply-stochastic-process-gaussian-process-introduction.html"/>
+    <updated>2019-03-08T00:00:00+09:00</updated>
+    <id>/math/math-apply-stochastic-process-gaussian-process-introduction</id>
+    <content type="html">
+1. Why
+
+  Why study linear algebra, because it’s simple, and can solve practical problems.
+  Why gaussain distribution, it’s simple.
+  Not because it’s related to the central limit therom.
+
+
+2. Example
+
+2.1 Conditional Distribution
+
+The conditional distribution of $X_1$ given known values for $X...</content>
   </entry>
 
   <entry>
@@ -5689,7 +5744,11 @@ Newton’s method is a root-finding algorithm which produces successively better
 approximations to the roots of a real-valued function.  The most basic version
 starts with a single-variable function f defined for a real variable x. 
 
-\[x_{1}=x_{0}-\frac{f\left(x_{0}\right)}{f^{\prime}\l...</content>
+
+
+
+  $tan(\theta) = \frac{f(x_0)}{x_0 - x_1}$
+  $tan(...</content>
   </entry>
 
   <entry>
@@ -5711,6 +5770,28 @@ $$...</content>
   </entry>
 
   <entry>
+    <title>I.T.: Idea</title>
+    <link href="/math/math-apply-information-theory-idea.html"/>
+    <updated>2019-03-03T00:00:00+09:00</updated>
+    <id>/math/math-apply-information-theory-idea</id>
+    <content type="html">
+Inspiration
+
+  A basic idea in information theory is that information can be treated very
+much like a physical quantity, such as mass or quantity.
+
+
+
+  units: information is measured in bits, and one bit of information allows you
+to choose between two equally probable
+
+
+Information
+
+$\textbf{Sha...</content>
+  </entry>
+
+  <entry>
     <title>Apply: Summary</title>
     <link href="/math/math-apply-summary.html"/>
     <updated>2019-03-02T00:00:00+09:00</updated>
@@ -5725,6 +5806,21 @@ Relationship Between Machine Learning and Information Theory
   Human Brain is amazing, it can memorize and do the inference, but how ? we
 want to know
   We are interested in do the inference based on known inform...</content>
+  </entry>
+
+  <entry>
+    <title>I.T.: Notation</title>
+    <link href="/math/math-apply-information-theory-notation.html"/>
+    <updated>2019-02-25T00:00:00+09:00</updated>
+    <id>/math/math-apply-information-theory-notation</id>
+    <content type="html">
+Definition
+
+  An ensemble X is a triple $(x,\mathcal{A}_X,\mathcal{P}_X)$, where the outcome x
+is the value of a random variable, which takes on one of a set of possible
+values, which takes on one of a set of possible values,
+$\mathcal{A}_X=a_1,a_2,\cdots,a_i,\cdots,a_I$, having probabilities
+$\...</content>
   </entry>
 
   <entry>
@@ -5764,21 +5860,6 @@ H x_{n}\right]\)
 are neighbours and $J_{mn}=0$ otherwise.
       H is the applied field
       We have included the f...</content>
-  </entry>
-
-  <entry>
-    <title>I.T.: Introduction</title>
-    <link href="/math/math-apply-information-theory-introduction.html"/>
-    <updated>2019-02-25T00:00:00+09:00</updated>
-    <id>/math/math-apply-information-theory-introduction</id>
-    <content type="html">
-Definition
-
-  An ensemble X is a triple $(x,\mathcal{A}_X,\mathcal{P}_X)$, where the outcome x
-is the value of a random variable, which takes on one of a set of possible
-values, which takes on one of a set of possible values,
-$\mathcal{A}_X=a_1,a_2,\cdots,a_i,\cdots,a_I$, having probabilities
-$\...</content>
   </entry>
 
   <entry>
@@ -5841,11 +5922,13 @@ distribution of y given x is a Gaussian distribution.
 
   <entry>
     <title>I.T.: Entropy</title>
-    <link href="/math/math-apply-information-theory-entropy-notation.html"/>
+    <link href="/math/math-apply-information-theory-entropy.html"/>
     <updated>2019-02-25T00:00:00+09:00</updated>
-    <id>/math/math-apply-information-theory-entropy-notation</id>
+    <id>/math/math-apply-information-theory-entropy</id>
     <content type="html">
-Shannon Entropy
+1. Entropy
+
+1.1  Definition
 
   The Shannon information content of an outcome x is defined to be: 
 $h(x)=log_2{\frac{1}{P(x)}}$
@@ -5854,7 +5937,7 @@ $h(x)=log_2{\frac{1}{P(x)}}$
 weired.
     
   
-  The entropy of an ensemble X is defined to be the average Shannon informatio...</content>
+  The entropy of an ensemble X is defined to be the average Shanno...</content>
   </entry>
 
   <entry>
@@ -5931,10 +6014,52 @@ Capacity of Channel Q:
   </entry>
 
   <entry>
-    <title>P.G.M.R.: Undirected Graphical Models</title>
-    <link href="/math/math-apply-probabilistic-graphical-models-representation-undirected-graphical-models.html"/>
-    <updated>2019-02-02T00:00:00+09:00</updated>
-    <id>/math/math-apply-probabilistic-graphical-models-representation-undirected-graphical-models</id>
+    <title>G.M.: Summary</title>
+    <link href="/math/math-apply-graphical-models-summary.html"/>
+    <updated>2019-01-20T00:00:00+09:00</updated>
+    <id>/math/math-apply-graphical-models-summary</id>
+    <content type="html">
+Idea
+
+  Model-based: what is the model that represents my problem?
+
+</content>
+  </entry>
+
+  <entry>
+    <title>G.M.L.: Overview of Learning Graphical Models</title>
+    <link href="/math/math-apply-graphical-models-overview.html"/>
+    <updated>2019-01-20T00:00:00+09:00</updated>
+    <id>/math/math-apply-graphical-models-overview</id>
+    <content type="html">
+Motivation
+
+  In some domains, the amount of knowledge required is just too large or the
+expert’s time is too valuable. In others, there are simply no experts who
+have sufficient understanding of the domain. In many domains, the properties
+of the distribution change from one application site to ...</content>
+  </entry>
+
+  <entry>
+    <title>P.G.M.: Concept and Notation</title>
+    <link href="/math/math-apply-graphical-models-notation.html"/>
+    <updated>2019-01-20T00:00:00+09:00</updated>
+    <id>/math/math-apply-graphical-models-notation</id>
+    <content type="html">
+Motivation
+Probabilistic graphical models use a graph-based representation as the basis for
+compactly encoding a complex distribution over a high-dimensional space. In this
+graphical representation:
+
+  nodes: stands for variables in our domain.
+  edges correspond to direct probabilistic interact...</content>
+  </entry>
+
+  <entry>
+    <title>G.M.R.: Undirected Graphical Models</title>
+    <link href="/math/math-apply-graphical-models-representation-undirected-graphical-models.html"/>
+    <updated>2019-01-19T00:00:00+09:00</updated>
+    <id>/math/math-apply-graphical-models-representation-undirected-graphical-models</id>
     <content type="html">
 Motivation
 Concept
@@ -5947,10 +6072,36 @@ factor and denoted $Scope[\phi]$
   </entry>
 
   <entry>
-    <title>P.G.M.R.: Template Based Representation</title>
-    <link href="/math/math-apply-probabilistic-graphical-models-representation-template-based.html"/>
-    <updated>2019-02-02T00:00:00+09:00</updated>
-    <id>/math/math-apply-probabilistic-graphical-models-representation-template-based</id>
+    <title>G.M.R.: Local Probabilistic Models</title>
+    <link href="/math/math-apply-graphical-models-representation-local-probabilistic-models.html"/>
+    <updated>2019-01-18T00:00:00+09:00</updated>
+    <id>/math/math-apply-graphical-models-representation-local-probabilistic-models</id>
+    <content type="html">
+Insight
+A CPD(conditional probability distribution) needs to speciy a conditional
+probability $P(x|pa_X)$ for every assignment of values $pa_X$ and $x$, but it
+does not have to do so by listing each such value explicityly. We should view
+CPDs not as tables listing all of the conditional probabil...</content>
+  </entry>
+
+  <entry>
+    <title>G.M.R.: Bayesian Network Representation</title>
+    <link href="/math/math-apply-graphical-models-representation-bayesian-network.html"/>
+    <updated>2019-01-17T00:00:00+09:00</updated>
+    <id>/math/math-apply-graphical-models-representation-bayesian-network</id>
+    <content type="html">
+Why we need a Bayesian Network ?
+Our goal is to present a joint distribution P over some set of random variables
+$\chi = {X_1,\cdots,X_n}$. Even in the simplest case where there variables are
+binary-valued, a joint distribution requires the specificationof $2^n-1$
+numbers, the probabilities of t...</content>
+  </entry>
+
+  <entry>
+    <title>G.M.R.: Template Based Representation</title>
+    <link href="/math/math-apply-graphical-models-representation-template-based.html"/>
+    <updated>2019-01-16T00:00:00+09:00</updated>
+    <id>/math/math-apply-graphical-models-representation-template-based</id>
     <content type="html">
 Concept
 
@@ -5961,32 +6112,19 @@ transition model $P(\mathcal{X}^{\prim...</content>
   </entry>
 
   <entry>
-    <title>P.G.M.R.: Local Probabilistic Models</title>
-    <link href="/math/math-apply-probabilistic-graphical-models-representation-local-probabilistic-models.html"/>
-    <updated>2019-02-02T00:00:00+09:00</updated>
-    <id>/math/math-apply-probabilistic-graphical-models-representation-local-probabilistic-models</id>
-    <content type="html">
-Insight
-A CPD(conditional probability distribution) needs to speciy a conditional
-probability $P(x|pa_X)$ for every assignment of values $pa_X$ and $x$, but it
-does not have to do so by listing each such value explicityly. We should view
-CPDs not as tables listing all of the conditional probabil...</content>
-  </entry>
-
-  <entry>
-    <title>P.G.M.R.: Gaussian Network Models</title>
-    <link href="/math/math-apply-probabilistic-graphical-models-representation-gaussian-network-models.html"/>
-    <updated>2019-02-02T00:00:00+09:00</updated>
-    <id>/math/math-apply-probabilistic-graphical-models-representation-gaussian-network-models</id>
+    <title>G.M.R.: Gaussian Network Models</title>
+    <link href="/math/math-apply-graphical-models-representation-gaussian-network-models.html"/>
+    <updated>2019-01-15T00:00:00+09:00</updated>
+    <id>/math/math-apply-graphical-models-representation-gaussian-network-models</id>
     <content type="html">
 </content>
   </entry>
 
   <entry>
-    <title>P.G.M.R.: Exponential Family</title>
-    <link href="/math/math-apply-probabilistic-graphical-models-representation-exponential-family.html"/>
-    <updated>2019-02-02T00:00:00+09:00</updated>
-    <id>/math/math-apply-probabilistic-graphical-models-representation-exponential-family</id>
+    <title>G.M.R.: Exponential Family</title>
+    <link href="/math/math-apply-graphical-models-representation-exponential-family.html"/>
+    <updated>2019-01-14T00:00:00+09:00</updated>
+    <id>/math/math-apply-graphical-models-representation-exponential-family</id>
     <content type="html">
 Definition
 
@@ -6000,32 +6138,67 @@ of legal parameters.
   </entry>
 
   <entry>
-    <title>P.G.M.R.: Bayesian Network Representation</title>
-    <link href="/math/math-apply-probabilistic-graphical-models-representation-bayesian-network.html"/>
-    <updated>2019-02-02T00:00:00+09:00</updated>
-    <id>/math/math-apply-probabilistic-graphical-models-representation-bayesian-network</id>
+    <title>G.M.I.: Exact Inference-Clique Trees</title>
+    <link href="/math/math-apply-graphical-models-inference-exact-inference-clique-trees.html"/>
+    <updated>2019-01-13T00:00:00+09:00</updated>
+    <id>/math/math-apply-graphical-models-inference-exact-inference-clique-trees</id>
     <content type="html">
-Why we need a Bayesian Network ?
-Our goal is to present a joint distribution P over some set of random variables
-$\chi = {X_1,\cdots,X_n}$. Even in the simplest case where there variables are
-binary-valued, a joint distribution requires the specificationof $2^n-1$
-numbers, the probabilities of t...</content>
+Concept
+
+  Cluster Graph: a data structure that provides a graphical flowchart of the
+factor-manipulation process
+    
+      a cluster: each node in the cluster graph is a cluster, which is associated
+with a subset of variables
+      the graph contains undirected edges that connect clusters whos...</content>
+  </entry>
+
+  <entry>
+    <title>G.M.L.: Structure Learning in Bayesian Networks</title>
+    <link href="/math/math-apply-graphical-models-learning-bayesian-networks.html"/>
+    <updated>2019-01-12T00:00:00+09:00</updated>
+    <id>/math/math-apply-graphical-models-learning-bayesian-networks</id>
+    <content type="html">
+Likelihood Score
+
+  Drawback:  The maximum likelihood network will exhibit a conditional
+independence only when that independence happnes to hold exactly in the
+empirical distribution.  Due to statistical noise, exact independence almost
+never occurs, and therefore, in almost all cases, the maxi...</content>
+  </entry>
+
+  <entry>
+    <title>G.M.I.: Exact Inference-Variable Elimination</title>
+    <link href="/math/math-apply-graphical-models-inference-exact-inference-variable-elimination.html"/>
+    <updated>2019-01-12T00:00:00+09:00</updated>
+    <id>/math/math-apply-graphical-models-inference-exact-inference-variable-elimination</id>
+    <content type="html">
+Concept
+
+  Factor Marginalization: Let X be a set of variables, and Y $\in X$ a
+variable. Let $\phi(X,Y)$ be a factor. We define the factor marginalization
+of Y in $\phi$, denoted by $\sum_Y \phi$, to be a factor $\psi$ over X such
+that: 
+\(\psi(\boldsymbol{X})=\sum_{Y} \phi(\boldsymbol{X}, Y)\)
+
+
+</content>
   </entry>
 
   <entry>
     <title>P.G.M.L.: Learning-Undirected Models</title>
-    <link href="/math/math-apply-probabilistic-graphical-models-learning-undirected-models.html"/>
-    <updated>2019-02-02T00:00:00+09:00</updated>
-    <id>/math/math-apply-probabilistic-graphical-models-learning-undirected-models</id>
+    <link href="/math/math-apply-graphical-models-learning-undirected-models.html"/>
+    <updated>2019-01-08T00:00:00+09:00</updated>
+    <id>/math/math-apply-graphical-models-learning-undirected-models</id>
     <content type="html">
 </content>
   </entry>
 
   <entry>
-    <title>P.G.M.L.: Learning-Partially Observed Data</title>
-    <link href="/math/math-apply-probabilistic-graphical-models-learning-partially-observed-data.html"/>
-    <updated>2019-02-02T00:00:00+09:00</updated>
-    <id>/math/math-apply-probabilistic-graphical-models-learning-partially-observed-data</id>
+    <title>G.M.L.: Learning-Partially Observed Data</title>
+    <link href="/math/math-apply-graphical-models-learning-partially-observed-data.html"/>
+    <updated>2019-01-07T00:00:00+09:00</updated>
+    <id>/math/math-apply-graphical-models-learning-partially-observed-data</id>
     <content type="html">
 Motivation
 
@@ -6044,145 +6217,10 @@ Let \(\boldsymbol{X}=\left\{X_{1}, \ldots, X_{n}\right\}\...</content>
   </entry>
 
   <entry>
-    <title>P.G.M.L.: Overview of Learning Graphical Models</title>
-    <link href="/math/math-apply-probabilistic-graphical-models-learning-overview.html"/>
-    <updated>2019-02-02T00:00:00+09:00</updated>
-    <id>/math/math-apply-probabilistic-graphical-models-learning-overview</id>
-    <content type="html">
-Motivation
-
-  In some domains, the amount of knowledge required is just too large or the
-expert’s time is too valuable. In others, there are simply no experts who
-have sufficient understanding of the domain. In many domains, the properties
-of the distribution change from one application site to ...</content>
-  </entry>
-
-  <entry>
-    <title>P.G.M.L.: Structure Learning in Bayesian Networks</title>
-    <link href="/math/math-apply-probabilistic-graphical-models-learning-bayesian-networks.html"/>
-    <updated>2019-02-02T00:00:00+09:00</updated>
-    <id>/math/math-apply-probabilistic-graphical-models-learning-bayesian-networks</id>
-    <content type="html">
-Likelihood Score
-
-  Drawback:  The maximum likelihood network will exhibit a conditional
-independence only when that independence happnes to hold exactly in the
-empirical distribution.  Due to statistical noise, exact independence almost
-never occurs, and therefore, in almost all cases, the maxi...</content>
-  </entry>
-
-  <entry>
-    <title>P.G.M.: Concept and Notation</title>
-    <link href="/math/math-apply-probabilistic-graphical-models-introduction.html"/>
-    <updated>2019-02-02T00:00:00+09:00</updated>
-    <id>/math/math-apply-probabilistic-graphical-models-introduction</id>
-    <content type="html">
-Motivation
-Probabilistic graphical models use a graph-based representation as the basis for
-compactly encoding a complex distribution over a high-dimensional space. In this
-graphical representation:
-
-  nodes: stands for variables in our domain.
-  edges correspond to direct probabilistic interact...</content>
-  </entry>
-
-  <entry>
-    <title>P.G.M.I.: Inference in Temporal Networks</title>
-    <link href="/math/math-apply-probabilistic-graphical-models-inference-in-temporal-models.html"/>
-    <updated>2019-02-02T00:00:00+09:00</updated>
-    <id>/math/math-apply-probabilistic-graphical-models-inference-in-temporal-models</id>
-    <content type="html">
-</content>
-  </entry>
-
-  <entry>
-    <title>P.G.M.I.: Inference in Hybrid Networks</title>
-    <link href="/math/math-apply-probabilistic-graphical-models-inference-in-hybrid-networks.html"/>
-    <updated>2019-02-02T00:00:00+09:00</updated>
-    <id>/math/math-apply-probabilistic-graphical-models-inference-in-hybrid-networks</id>
-    <content type="html">
-</content>
-  </entry>
-
-  <entry>
-    <title>P.G.M.I.: MAP Inference</title>
-    <link href="/math/math-apply-probabilistic-graphical-models-inference-exact-map-inference.html"/>
-    <updated>2019-02-02T00:00:00+09:00</updated>
-    <id>/math/math-apply-probabilistic-graphical-models-inference-exact-map-inference</id>
-    <content type="html">
-</content>
-  </entry>
-
-  <entry>
-    <title>P.G.M.I.: Exact Inference-Variable Elimination</title>
-    <link href="/math/math-apply-probabilistic-graphical-models-inference-exact-inference-variable-elimination.html"/>
-    <updated>2019-02-02T00:00:00+09:00</updated>
-    <id>/math/math-apply-probabilistic-graphical-models-inference-exact-inference-variable-elimination</id>
-    <content type="html">
-Concept
-
-  Factor Marginalization: Let X be a set of variables, and Y $\in X$ a
-variable. Let $\phi(X,Y)$ be a factor. We define the factor marginalization
-of Y in $\phi$, denoted by $\sum_Y \phi$, to be a factor $\psi$ over X such
-that: 
-\(\psi(\boldsymbol{X})=\sum_{Y} \phi(\boldsymbol{X}, Y)\)
-
-
-</content>
-  </entry>
-
-  <entry>
-    <title>P.G.M.I.: Exact Inference-Clique Trees</title>
-    <link href="/math/math-apply-probabilistic-graphical-models-inference-exact-inference-clique-trees.html"/>
-    <updated>2019-02-02T00:00:00+09:00</updated>
-    <id>/math/math-apply-probabilistic-graphical-models-inference-exact-inference-clique-trees</id>
-    <content type="html">
-Concept
-
-  Cluster Graph: a data structure that provides a graphical flowchart of the
-factor-manipulation process
-    
-      a cluster: each node in the cluster graph is a cluster, which is associated
-with a subset of variables
-      the graph contains undirected edges that connect clusters whos...</content>
-  </entry>
-
-  <entry>
-    <title>P.G.M.I.: Inference as Optimization</title>
-    <link href="/math/math-apply-probabilistic-graphical-models-inference-as-optimization.html"/>
-    <updated>2019-02-02T00:00:00+09:00</updated>
-    <id>/math/math-apply-probabilistic-graphical-models-inference-as-optimization</id>
-    <content type="html">
-</content>
-  </entry>
-
-  <entry>
-    <title>P.G.M.D.T.: Utilities and Decisions</title>
-    <link href="/math/math-apply-probabilistic-graphical-models-decision-theory-utilities-and-decision.html"/>
-    <updated>2019-02-02T00:00:00+09:00</updated>
-    <id>/math/math-apply-probabilistic-graphical-models-decision-theory-utilities-and-decision</id>
-    <content type="html">
-A decision-making situation D
-
-  a set of outcomes \(\mathcal{O}=\left\{o_{1}, \ldots, o_{N}\right\}\)
-  a set of possible actions that the agent can take, \(\mathcal{A}=\left\{a_{1}, \dots, a_{K}\right\}\)
-  A probabilistic outcome model \(P: \mathcal{A} \mapsto \Delta_{\mathcal{O}}\), which de...</content>
-  </entry>
-
-  <entry>
-    <title>P.G.M.D.T.: Structured Decision Problems</title>
-    <link href="/math/math-apply-probabilistic-graphical-models-decision-theory-structured-decision-problems.html"/>
-    <updated>2019-02-02T00:00:00+09:00</updated>
-    <id>/math/math-apply-probabilistic-graphical-models-decision-theory-structured-decision-problems</id>
-    <content type="html">
-</content>
-  </entry>
-
-  <entry>
-    <title>P.G.M.D.T.: Causality</title>
-    <link href="/math/math-apply-probabilistic-graphical-models-decision-theory-causality.html"/>
-    <updated>2019-02-02T00:00:00+09:00</updated>
-    <id>/math/math-apply-probabilistic-graphical-models-decision-theory-causality</id>
+    <title>G.M.D.T.: Causality</title>
+    <link href="/math/math-apply-graphical-models-decision-theory-causality.html"/>
+    <updated>2019-01-03T00:00:00+09:00</updated>
+    <id>/math/math-apply-graphical-models-decision-theory-causality</id>
     <content type="html">
 ####
 
@@ -6196,6 +6234,28 @@ effect.
 Correlation and Causation
 
 ...</content>
+  </entry>
+
+  <entry>
+    <title>G.M.D.T.: Utilities and Decisions</title>
+    <link href="/math/math-apply-graphical-models-decision-theory-utilities-and-decision.html"/>
+    <updated>2019-01-02T00:00:00+09:00</updated>
+    <id>/math/math-apply-graphical-models-decision-theory-utilities-and-decision</id>
+    <content type="html">
+A decision-making situation D
+
+  a set of outcomes \(\mathcal{O}=\left\{o_{1}, \ldots, o_{N}\right\}\)
+  a set of possible actions that the agent can take, \(\mathcal{A}=\left\{a_{1}, \dots, a_{K}\right\}\)
+  A probabilistic outcome model \(P: \mathcal{A} \mapsto \Delta_{\mathcal{O}}\), which de...</content>
+  </entry>
+
+  <entry>
+    <title>G.M.D.T.: Structured Decision Problems</title>
+    <link href="/math/math-apply-graphical-models-decision-theory-structured-decision-problems.html"/>
+    <updated>2019-01-01T00:00:00+09:00</updated>
+    <id>/math/math-apply-graphical-models-decision-theory-structured-decision-problems</id>
+    <content type="html">
+</content>
   </entry>
 
   <entry>
@@ -15519,6 +15579,7 @@ On the steet
   sewage
   arch bridge
   wayside shrine
+  railing
 
 
 sidewalk
@@ -15537,10 +15598,7 @@ house
   booth: roadside booth, roadside stands
   telephone booth
   stall
-  bakery food stall
-
-
-Differe...</content>
+  bakery food stall...</content>
   </entry>
 
   <entry>
@@ -17378,6 +17436,8 @@ sentence
 ####
 
   福祉(ふくし)
+  年金: pension, an amount of money that a company or the gouverment pays to a person who is old or sick and no longer works
+  国民年金: goverment pension
 
 </content>
   </entry>
@@ -17510,6 +17570,7 @@ sentence
 ####
 
   文字(もじ)を削除する
+  自撮り
 
 </content>
   </entry>
@@ -17539,6 +17600,22 @@ B
 
   ネットワークに接続する
 
+
+</content>
+  </entry>
+
+  <entry>
+    <title>社会科学: 試験</title>
+    <link href="/%E8%A8%80%E8%91%89/language-japanese-school-examination.html"/>
+    <updated>2017-02-17T00:00:00+09:00</updated>
+    <id>/%E8%A8%80%E8%91%89/language-japanese-school-examination</id>
+    <content type="html">
+####
+
+  合格
+  受かる
+  受験(じゅけん)
+  trial examination
 
 </content>
   </entry>
@@ -17585,11 +17662,12 @@ B
   始業式
   卒業式
   保育所
+  熊野寮(くまのりょう)
 
 
 sentence
 
-  大学院の試験を受けますから、今年は帰らないつもり...</content>
+  大学院の試験を受けま...</content>
   </entry>
 
   <entry>
@@ -17637,6 +17715,7 @@ sentence
   へたれ: incompetence, laziness
   我慢できない: I can’t stand with this
   アホ(阿保): idiot
+  島国アホ、黙て
 
 
 Level 2
@@ -17654,8 +17733,7 @@ Level 3
 
 Sentence
 
-  愚かなこと言うな: Don’t say stupid things
- ...</content>
+  愚かなこと言うな: Don’t say stupi...</content>
   </entry>
 
   <entry>
@@ -17687,6 +17765,12 @@ Sentence
       ミス東大に一目惚れで入学
     
   
+  興味ない
+  ダメなんだよね
+  時間ないかなぁ
+  LINEの交換させてもらって良い
+  やってないんだよな
+  マネしよう: copy him
 
 
 </content>
@@ -17738,6 +17822,26 @@ B
   </entry>
 
   <entry>
+    <title>Game: </title>
+    <link href="/%E8%A8%80%E8%91%89/language-japanese-game.html"/>
+    <updated>2017-02-17T00:00:00+09:00</updated>
+    <id>/%E8%A8%80%E8%91%89/language-japanese-game</id>
+    <content type="html">
+####
+
+  複数目隠し
+  世界記録
+  対決
+
+
+Sentence
+
+  コツはある
+
+</content>
+  </entry>
+
+  <entry>
     <title>言葉: Variety Show</title>
     <link href="/%E8%A8%80%E8%91%89/language-japanese-entertainment-varity-show.html"/>
     <updated>2017-02-17T00:00:00+09:00</updated>
@@ -17769,8 +17873,7 @@ B
       さんまさんのボケを無視すな
     
   
-
-</content>
+...</content>
   </entry>
 
   <entry>
@@ -17813,29 +17916,23 @@ Reference
   </entry>
 
   <entry>
-    <title>娯楽: ドラマ</title>
+    <title>娯楽: Music</title>
     <link href="/%E8%A8%80%E8%91%89/language-japanese-entertainment-music.html"/>
     <updated>2017-02-17T00:00:00+09:00</updated>
     <id>/%E8%A8%80%E8%91%89/language-japanese-entertainment-music</id>
     <content type="html">
 ####
 
-  広告
-
-
-C
-
-  アイドル歌手: idol
-  現場なんか行くことないだろ
-  音楽配信: online music distribution
-  配信証明(はいしんしょうめい): proof of delivery
+  ラブストーリーは突然に
+  紅蓮華(グレンげ)
+  my all
 
 
 ####
 
-  上から目線の同情(どうじょう)
-  神でもない、そんなことわかるはずもない
-  私より弱い男は、興味ない
+  音楽を流れます
+  声が高い
+  退廃的(たいはい)な音楽
 
 </content>
   </entry>
@@ -17882,6 +17979,34 @@ Movie
   
   東野圭吾(ひがしのけいご)
 ...</content>
+  </entry>
+
+  <entry>
+    <title>娯楽: ドラマ</title>
+    <link href="/%E8%A8%80%E8%91%89/language-japanese-entertainment-drama.html"/>
+    <updated>2017-02-17T00:00:00+09:00</updated>
+    <id>/%E8%A8%80%E8%91%89/language-japanese-entertainment-drama</id>
+    <content type="html">
+####
+
+  広告
+
+
+C
+
+  アイドル歌手: idol
+  現場なんか行くことないだろ
+  音楽配信: online music distribution
+  配信証明(はいしんしょうめい): proof of delivery
+
+
+####
+
+  上から目線の同情(どうじょう)
+  神でもない、そんなことわかるはずもない
+  私より弱い男は、興味ない
+
+</content>
   </entry>
 
   <entry>
@@ -18137,12 +18262,25 @@ diease
   転勤
   勤める
   働き
-  年金: pension, an amount of money that a company or the gouverment pays to a person who is old or sick and no longer works
-  国民年金: goverment pension
   転勤になる: job transfer
   勤務(きんむ): work
   出勤(しゅっきん)
-  欠勤(...</content>
+  欠勤(けっきん)
+
+
+####
+
+  雇う
+  稼ぐ(かせ)
+
+
+####
+
+  働きすぎですね、無理をしないほうがいいです。
+  行きにくい世の中になりました
+
+
+</content>
   </entry>
 
   <entry>
@@ -18245,6 +18383,7 @@ B
 カタカナ
 
   オフ: 仕事がオフのひ: a day off work
+  年収(ねんしゅう): annual income
 
 
 </content>
@@ -18415,6 +18554,13 @@ B
   明太:
   胡椒(こしょう): black pepper
   唐辛子(とうがらし): chili pepper
+  香辛料(こうしんりょう)
+
+
+Chinese
+
+  パクチー
+  高菜
 
 </content>
   </entry>
@@ -18456,13 +18602,11 @@ Name
   吉野家(よしのや)
   居酒屋(いざかや):
   松屋
+  長浜ラーメンみよし
+  カレー屋さん
 
 
-Reference
-
-  御馳走
-
-</content>
+R...</content>
   </entry>
 
   <entry>
@@ -18516,9 +18660,22 @@ Reference
     <updated>2017-02-08T00:00:00+09:00</updated>
     <id>/%E8%A8%80%E8%91%89/language-japanese-body</id>
     <content type="html">
+1
+
+  鼻がでかい
+  出不精(でぶしょう)
+
+
+####
+
+  不自由な人(身体障害者)
+
+
 ####
 
   彼の性格はお父さんに似ている
+  赤ジャンを抱いて(だく)
+
 
 </content>
   </entry>
@@ -18588,6 +18745,7 @@ Adult Product
 
   気遣い(づか): considerable
   調子に乗る: to get cocky, to become over-excited
+  上から目線
 
 
 ####
@@ -18619,6 +18777,7 @@ Adult Product
 ####
 
   おすすめ髪形はありますか
+  ウキを剃ってないです
 
 </content>
   </entry>
@@ -18659,6 +18818,8 @@ medicine
   最近体の調子がよくないです、あらまやいが痛くなるんです。
   どこが悪いんですか。
   頭が痛くなってきました。
+  物忘れ
+  忘れっぽい
 
 
 </content>
@@ -19006,6 +19167,47 @@ it...</content>
   </entry>
 
   <entry>
+    <title>単語: Compound verb</title>
+    <link href="/%E8%A8%80%E8%91%89/language-japanese-word-verb-compound.html"/>
+    <updated>2017-02-01T00:00:00+09:00</updated>
+    <id>/%E8%A8%80%E8%91%89/language-japanese-word-verb-compound</id>
+    <content type="html">
+1. 返る
+
+  振り返る: turn head
+  繰り返し(repeat)
+
+
+2. 気
+
+  気取る: act as
+
+
+3. 合わせ
+
+  組み合わせ
+  打ち合わせ
+  待ち合わせ: appointment
+  盛り合わせ
+
+
+4. 込む
+
+  咳き込む: to cough violently
+  飛び込む: 鴨川に飛び込む: jump into river
+
+
+5. 抜く
+
+  やり抜く、走り抜く、守り抜く、生き抜く
+    
+      when that condition continues until the end
+    
+  
+  大変仕事でも、やり抜く自信が...</content>
+  </entry>
+
+  <entry>
     <title>言葉: suffix</title>
     <link href="/%E8%A8%80%E8%91%89/language-japanese-word-suffix.html"/>
     <updated>2017-02-01T00:00:00+09:00</updated>
@@ -19059,6 +19261,19 @@ telephone bill
 請求(せいきゅう)明細(めいさい) means telephone bill. 
 Why don’t they say the bill you should pay, instead of, they say the fee we ask.
 Because, because, you ne...</content>
+  </entry>
+
+  <entry>
+    <title>言葉: Direction</title>
+    <link href="/%E8%A8%80%E8%91%89/language-japanese-word-position.html"/>
+    <updated>2017-02-01T00:00:00+09:00</updated>
+    <id>/%E8%A8%80%E8%91%89/language-japanese-word-position</id>
+    <content type="html">
+####
+
+  私に向かってくる
+
+</content>
   </entry>
 
   <entry>
@@ -19118,6 +19333,25 @@ adverb
     <updated>2017-02-01T00:00:00+09:00</updated>
     <id>/%E8%A8%80%E8%91%89/language-japanese-word-difference</id>
     <content type="html">
+遅れる・遅く
+
+たくさん・多い
+
+  多い: is used with countable nouns
+  たくさん: modify both countable and uncountable nouns
+
+
+いくら・ぐらい
+
+  いくら: 値段
+  ぐらい: 色んな程度
+    
+      いくらぐらい
+    
+  
+  いくつ:
+
+
 屋敷・部屋
 
   部屋: room
@@ -19130,9 +19364,7 @@ adverb
 
 1. 苦手・下手
 
-  苦手: means that you think you are not good at something, which does not
-necessarily mean you are really bad at it. Sometimes people who are actually
-good at something still regard themselves 苦手 a...</content>
+  苦手: means that you th...</content>
   </entry>
 
   <entry>
@@ -19177,48 +19409,6 @@ Date
     
     
 ...</content>
-  </entry>
-
-  <entry>
-    <title>単語: Compound verb</title>
-    <link href="/%E8%A8%80%E8%91%89/language-japanese-word-compound-verb.html"/>
-    <updated>2017-02-01T00:00:00+09:00</updated>
-    <id>/%E8%A8%80%E8%91%89/language-japanese-word-compound-verb</id>
-    <content type="html">
-返る
-
-  振り返る: turn head
-  繰り返し(repeat)
-
-
-気
-
-  気取る: act as
-
-
-合わせ
-
-  組み合わせ
-  打ち合わせ
-  待ち合わせ: appointment
-  盛り合わせ
-
-
-####　抜く
-
-  やり抜く、走り抜く、守り抜く、生き抜く
-    
-      when that condition continues until the end
-    
-  
-  大変仕事でも、やり抜く自信があります
-    
-      I have confidence to finish even difficult jobs.
-    
-  
-
-
-</content>
   </entry>
 
   <entry>
