@@ -31,4 +31,5 @@ tags: ["日本語"]
 
 #### カタカナ
 1. オフ: 仕事がオフのひ: a day off work
+2. 年収(ねんしゅう): annual income
 

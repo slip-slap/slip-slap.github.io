@@ -53,7 +53,6 @@ more polite. It means the company request you, just more polite.
 3. 受胎(じゅたい):
 
 
-
 #### B
 1. ほら見て、飛んでるよ
 

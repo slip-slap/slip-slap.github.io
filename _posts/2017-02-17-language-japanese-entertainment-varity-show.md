@@ -25,3 +25,11 @@ tags: ["日本語"]
 - to synchronize the timing of start at a competition.
 2. 呆け(ぼ): fool
 - さんまさんのボケを無視すな
+
+#### Sentence
+1. 自分になると結構きつい
+2. ないんですよね, なんかあるでしょう?
+3. 誰に対して驚いてんだ
+4. オサーンだなぁ
+
+

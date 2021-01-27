@@ -1,0 +1,65 @@
+I"ª
+
+<h4 id="definition">Definition</h4>
+<ol>
+  <li>A sufficient statistics function $\tau$ from assignments to $\mathcal{X}$ to
+\(\mathcal{R}^{K}\).</li>
+  <li>A parameter space that is a convex set 
+\(\Theta \subseteq \mathcal{R}^{M}\)
+of legal parameters.</li>
+  <li>A natural parameter function t from $\mathcal{R}^{M}$ to $\mathcal{R}^{K}$.</li>
+  <li>An auxiliary measure A over $\mathcal{X}$
+Each vector of parameters $\theta \in \Theta$ specifies a distribution
+$P_{\theta}$ in the family as: <br />
+\(P_{\boldsymbol{\theta}}(\xi)=\frac{1}{Z(\boldsymbol{\theta})} A(\xi) \exp
+\{\langle\mathbf{t}(\boldsymbol{\theta}), \tau(\xi)\rangle\}\) <br />
+where $&lt;t(\theta),\tau(\theta)&gt;$ is the inner product of the vectors $t(\theta)$
+and $\tau(\theta)$, and  <br />
+\(Z(\boldsymbol{\theta})=\sum_{\xi} A(\xi) \exp
+\{\langle\mathbf{t}(\boldsymbol{\theta}), \tau(\xi)\rangle\}\)</li>
+</ol>
+
+<h4 id="linear-exponential-families">Linear Exponential Families</h4>
+<p>A special class of exponential families is made up of families where the
+function t is the identity function.</p>
+
+<h4 id="entropy-of-an-exponential-model">Entropy of an Exponential Model</h4>
+<p>\(\boldsymbol{H}_{P_{\boldsymbol{\theta}}}(\mathcal{X})=\ln
+Z(\boldsymbol{\theta})-\left\langle\boldsymbol{E}_{P_{\boldsymbol{\theta}}}[\tau(\mathcal{X})],
+\mathbf{t}(\boldsymbol{\theta})\right\rangle\)</p>
+<ul>
+  <li>The entropy decomposes as a difference of two terms. The first is the
+partition function $Z(\theta)$. The seconds depends on the expected value of
+the sufficient statistics $\tau(\mathcal{X}$.</li>
+</ul>
+
+<h4 id="projection">Projection</h4>
+<ol>
+  <li>Similar to the geometric concept of projecting a point onto a hyperplane, we
+consider the problem of finding the distribution, within a given exponential
+family, that is closest to a given distribution in terms of relative entropy.</li>
+  <li>We might want to approximate P with a product of marginal distributions.
+Because the notion of relative entropy is not symmetric, we can use it to
+define two types of approximations.
+    <ul>
+      <li>I-projection: information projection of $\mathcal{P}$ onto $\mathcal{Q}$ is
+the distribution <br />
+\(Q^{I}=\arg \min _{Q \in \mathcal{Q}} D(Q \| P)\)</li>
+      <li>M-projection: moment projection of $\mathcal{P}$ onto $\mathcal{Q}$ is
+the distribution <br />
+\(Q^{M}=\arg \min _{Q \in \mathcal{Q}} D(P \| Q)\)</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="galois">Galois</h4>
+<ol>
+  <li>Mathematician are so resistant, they canâ€™t find the exact solution, but we
+can find a approximately solution.</li>
+</ol>
+
+<h4 id="reference">Reference</h4>
+<ol>
+  <li><a href="https://en.wikipedia.org/wiki/Exponential_family#Definition">Exponential family</a></li>
+</ol>
+:ET

@@ -28,6 +28,7 @@ tags: ["日本語"]
    this payment isn't required.
 4. 家賃を振り込む
 5. 公共料金を支払う: pay the utility charge
+6. どれぐらいの広さ？
 
 
 

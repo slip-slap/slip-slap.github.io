@@ -1,0 +1,90 @@
+I"'
+<h3 id="1-entropy">1. Entropy</h3>
+
+<h4 id="11--definition">1.1  Definition</h4>
+<ol>
+  <li>The Shannon information content of an outcome x is defined to be: <br />
+$h(x)=log_2{\frac{1}{P(x)}}$
+    <ul>
+      <li>If $P(x)=\frac{1}{64}$, then $h(x)=6$, how to understand this, it’s kind of
+weired.</li>
+    </ul>
+  </li>
+  <li>The entropy of an ensemble X is defined to be the average Shannon information
+content of an outcome: <br />
+\(H(X) \equiv \sum_{x \in \mathcal{A}_{X}} P(x) \log \frac{1}{P(x)}\)
+    <ul>
+      <li>$H(X) \geq 0$ with equality iff $p_i=1$ for one i</li>
+      <li>Entropy is maximized if p is uniform:
+$H(X) \leq log(|\mathcal{A}_X|)$ with equality iff $p_i=\frac{1}{|\mathcal{A}_X|}$</li>
+    </ul>
+  </li>
+</ol>
+
+<p>the Entropy(H) is a nice measure of how uncertian the events. The Shannon Entropy measures the average
+imformation that you get from one sample drawn from a given probability.It tells you how unpredictable
+that the probability distribution is. <br /></p>
+
+<p>actually, we can treat this function as a functional example, because a function to a value, namely, the function of a function</p>
+
+<h4 id="12-joint-entropy">1.2 Joint Entropy</h4>
+<p>Joint entropy of X,Y is: <br />
+\(H(X, Y)=\sum_{x y \in \mathcal{A}_X \mathcal{A}_{Y}} P(x, y) \log
+\frac{1}{P(x, y)}\)</p>
+
+<h4 id="13--relative-entropy">1.3  Relative Entropy</h4>
+<p>The relative entropy or Kullback-Leibler divergence between two probability
+distributions P(x) and Q(x) that are defined over the same alphabet
+$\mathcal{A_X}$ is <br />
+\(D_{\mathrm{KL}}(P \| Q)=\sum_{x} P(x) \log \frac{P(x)}{Q(x)}\) <br />
+Gibbs’ inequality, the <strong>most</strong> important inequality in information theory. 
+\(D_{\mathrm{KL}}(P \| Q) \geq 0\)</p>
+
+<p>Proof: Uses Jensen’s inequality with $Q(x)$ instead, we define $f(u)=u\log u$
+and let $u=\frac{P(x)}{Q(x)}$ <br />
+\(\begin{aligned} D_{\mathrm{KL}}(P \| Q) &amp;=\sum_{x} Q(x) \frac{P(x)}{Q(x)} \log
+\frac{P(x)}{Q(x)}=\sum_{x} Q(x) f\left(\frac{P(x)}{Q(x)}\right) \\ &amp; \geq
+f\left(\sum_{x} Q(x) \frac{P(x)}{Q(x)}\right)=f(1)=0 \end{aligned}\)</p>
+
+<h3 id="2-chain-rule">2 Chain rule</h3>
+
+<h4 id="21-chain-rule-for-information-content">2.1 Chain rule for information content</h4>
+<p>$log \frac{1}{P(x,y)}=log{1}{P(x)}+log{1}{P(y|x)}$ <br />
+so <br />
+$h(x,y)=h(x)+h(y|x)$
+<br /></p>
+<h4 id="22-chain-rule-for-entropy">2.2 Chain rule for entropy</h4>
+<p>The joint entropy, conditional entropy and marigal entropy are related by: <br />
+$H(X,Y)=H(X)+H(Y|X)=H(Y)+H(X|Y)$ <br />
+In words, this says that the uncertainty of X and Y is the uncertainty of X plus
+the uncertainty of Y given X.</p>
+
+<h4 id="23--mutual-information-between-x-and-y">2.3  Mutual Information Between X and Y</h4>
+<p>\(I(X ; Y) \equiv H(X)-H(X | Y)\) <br />
+It measures the average reduction in uncertainty about x that results from
+learning the value of y;</p>
+
+<h4 id="conditional-mutual-information-between-x-and-y-given-zc_k">Conditional Mutual Information Between X and Y given $z=c_k$</h4>
+<p>\(I\left(X ; Y | z=c_{k}\right)=H\left(X | z=c_{k}\right)-H\left(X | Y,
+z=c_{k}\right)\)</p>
+
+<p><img src="/images/math-apply-informtion-theory-entropy-notation-relationship-entropy.png" /></p>
+
+<h3 id="galois">Galois</h3>
+<ol>
+  <li>\(I(X ; Y) \equiv H(X)-H(X | Y)\)
+    <ul>
+      <li>I have been confused by this formula for a long time, what does this mean? why this make sense</li>
+      <li>You can treat information or entropy as physics quantity, such as mass, or volume.</li>
+      <li>what does this formula do is it measure the entropy before it flow into this
+channel which is H(X), than it measures the effect of this channel on this
+entropy, which is $H(X|Y)$. After the things get out of this channel, how much information left? which is $H(X) - H(X|Y)$</li>
+      <li>which is complete make sense</li>
+    </ul>
+  </li>
+  <li>Shannon is really clever, treat this things as a physics quantity, it’s unbelievable.</li>
+  <li>As you can see, at first, entropy is kind of intractable, it just starts with very simple idea.</li>
+  <li>I want to be a mathematician, かっこいいな</li>
+</ol>
+
+:ET

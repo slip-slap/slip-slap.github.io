@@ -4,7 +4,7 @@ title: "Topology: Polygon Represenation"
 keywords: []
 description: ""
 category: "math"
-tags: ["space","Topology"]
+tags: ["space","topology"]
 ---
 {% include JB/setup %}
 

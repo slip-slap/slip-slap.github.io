@@ -8,11 +8,26 @@ tags: ["日本語"]
 ---
 {% include JB/setup %}
 
+
+#### 遅れる・遅く
+
+
+
+####  たくさん・多い
+1. 多い: is used with countable nouns
+2. たくさん: modify both countable and uncountable nouns
+
+
+#### いくら・ぐらい
+1. いくら: 値段
+2. ぐらい: 色んな程度 
+- いくらぐらい
+3. いくつ: 
+
 #### 屋敷・部屋
 1. 部屋: room
 - 部: its basic means part of something
 2. 屋敷: mansion
-
 
 #### 1. 苦手・下手
 1. 苦手: means that you think you are not good at something, which does not

@@ -23,8 +23,6 @@ tags: ["日本語"]
 2. 転勤
 3. 勤める
 4. 働き
-5. 年金: pension, an amount of money that a company or the gouverment pays to a person who is old or sick and no longer works
-6. 国民年金: goverment pension
 7. 転勤になる: job transfer
 8. 勤務(きんむ): work
 9. 出勤(しゅっきん)
@@ -38,6 +36,7 @@ tags: ["日本語"]
 
 ####
 1. 働きすぎですね、無理をしないほうがいいです。
+2. 行きにくい世の中になりました
 
 
 

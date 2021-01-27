@@ -10,6 +10,7 @@ tags: ["日本語"]
 ####
 1. 気遣い(づか): considerable
 2. 調子に乗る: to get cocky, to become over-excited
+3. 上から目線
 
 
 ####

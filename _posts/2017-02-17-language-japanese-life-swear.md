@@ -11,6 +11,7 @@ tags: ["日本語"]
 1. へたれ: incompetence, laziness
 2. 我慢できない: I can't stand with this
 3. アホ(阿保): idiot
+4. 島国アホ、黙て
 
 
 #### Level 2
@@ -27,3 +28,4 @@ tags: ["日本語"]
 1. 愚かなこと言うな: Don't say stupid things
 2. 私の悪口を言っている: 
 3. 彼が避難んです
+4. すごい悪口

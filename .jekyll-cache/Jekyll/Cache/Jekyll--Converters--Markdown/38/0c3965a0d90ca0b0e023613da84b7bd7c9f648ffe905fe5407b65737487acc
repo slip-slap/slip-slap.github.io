@@ -1,0 +1,130 @@
+I"�
+<p>####</p>
+<ol>
+  <li>P stands for polynomial time</li>
+  <li>NP stands for nondeterministic polynomial time
+    <ul>
+      <li>why we have this idea ? why we coined a new term ? there must a reason for
+this, why we divide problem into P and NP, there must be a reason.</li>
+      <li>Suppose you are struggling to solve a problem, after many years effort, you
+still can’t nail it, but you solve part of it. we want to preserve you work,
+and in the future, people can focus on the unsolved problems. So part of this
+problem can be solved in polynomial time now, but some can’t, and we call this
+NP problem.</li>
+    </ul>
+  </li>
+  <li>NP-hard:
+    <ul>
+      <li>here we coin a new term again ? why, because we need a yardstick, assume this
+problem is NP-hard, and everyone admit it. So every problem is more difficult
+than this problem is also NP-hard.</li>
+      <li>how to compare the difficult among different ?</li>
+    </ul>
+  </li>
+  <li>NP-complete:
+    <ul>
+      <li>new term again? crap</li>
+    </ul>
+  </li>
+</ol>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>Polynomial Time</th>
+      <th> </th>
+      <th>Polynomial Time</th>
+    </tr>
+    <tr>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Linear Search</td>
+      <td>n</td>
+      <td>0/1 Knapsack</td>
+      <td>$2^n$</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Binary Search</td>
+      <td>logn</td>
+      <td>TSP</td>
+      <td>$2^n$</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Mergesort</td>
+      <td>nlogn</td>
+      <td>subset</td>
+      <td>$2^n$</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Insection</td>
+      <td> </td>
+      <td>Graph coloring</td>
+      <td>$2^n$</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Matrix multiplication</td>
+      <td>n3</td>
+      <td>Hamiltonian cycle</td>
+      <td>$2^n$</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="galois">Galois</h4>
+<ol>
+  <li>Idea 1: problems can be divided into two classes, one is that can be solved
+in polynomial time, the other is in expontial time.</li>
+  <li>Idea 2: we want to solve expontial problem in polynomial time, the method is
+not clear, only some moves are known, we can this problem can be expressed in
+a way which some moves are clear, some are not, as NP problem</li>
+  <li>Idea 3: is to compare the similarity between different problems. If we can
+convert one hard problem into another hard problem, then they are similar.
+Suppose we have a benchmark, we refer this problem as NP-hard, and problems
+can be reducted or converted as this one, also called NP-hard.</li>
+  <li>Idea 4: some NP-hard problem can be solved in NP algorithm, we call this
+problem NP-complete</li>
+</ol>
+
+<h4 id="reference">Reference</h4>
+<ol>
+  <li><a href="https://www.youtube.com/watch?v=e2cF8a5aAhE">P-NP-NP-hard-NP-complete</a></li>
+</ol>
+
+:ET

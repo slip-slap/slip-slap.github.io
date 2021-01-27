@@ -34,6 +34,8 @@ tags: ["日本語"]
 
 #### Sentence
 1. 紐(ヒモ)になりたい: man who is financially dependent on a woman
+2. 性欲優先
+
 
 
 

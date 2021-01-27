@@ -1410,3 +1410,5 @@ something disconnected, so it to be out)
 1. [まで](http://maggiesensei.com/2019/07/17/how-to-use-%E3%81%BE%E3%81%A7-made/)
 2. [次第](http://maggiesensei.com/2019/09/28/how-to-use-%e6%ac%a1%e7%ac%ac-%e3%81%97%e3%81%a0%e3%81%84-shidai/)
 3. [みたい](http://maggiesensei.com/2015/11/11/how-to-use-%E3%81%BF%E3%81%9F%E3%81%84-mitai/)
+4. [how to type in
+   Japanese](http://www.textfugu.com/season-4/social-learning/9-3/)

@@ -74,4 +74,7 @@ you can attach [目] to different counters to show order. <br />
 1. 1回目　the first time
 2. 四人目 the fourth person
 
+####
+1. 制限時間: limited time
+
 
