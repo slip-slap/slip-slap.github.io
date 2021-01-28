@@ -9,6 +9,9 @@ tags: ["日本語"]
 {% include JB/setup %}
 
 
+#### 1
+1. 偏差値(へんさち): academic grades
+
 #### 
 1. 合格
 2. 受かる

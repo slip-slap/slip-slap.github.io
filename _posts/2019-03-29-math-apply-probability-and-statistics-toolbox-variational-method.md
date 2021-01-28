@@ -4,7 +4,7 @@ title: "P.A.S.T.B.: Variational Inference"
 keywords: [] 
 description: 
 category: "math"
-tags: ["apply","P.A.S.","P.A.S.T.B."]
+tags: ["apply","P.A.S.","P.A.S.B."]
 ---
 {% include JB/setup %}
 

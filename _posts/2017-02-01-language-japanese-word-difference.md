@@ -10,6 +10,18 @@ tags: ["日本語"]
 
 
 #### 遅れる・遅く
+1. 遅れる: is a verb 
+- 彼は今日学校に遅れた
+
+2. 遅く: adjective
+- 彼はその会議に１０分遅く来た
+
+#### 別の・他の
+1. 別の: means another
+- 別の色を見せてください(if there are a few choices)
+- 他の色をめせてください(if there are many choices)
+2. 他の: means other
+
 
 
 

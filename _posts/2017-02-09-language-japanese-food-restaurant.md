@@ -29,6 +29,7 @@ tags: ["日本語"]
 the verb is 御馳走する
 1. ご馳走さま
 2. 奢(おご)る: to give someone a treat
+3. 客引きの多い場所行く
 
 #### Name
 1. 吉野家(よしのや)
@@ -38,5 +39,11 @@ the verb is 御馳走する
 5. カレー屋さん
 
 
+#### culture
+屋 refers to a shop, adding さん to it to treat it as a person that shows
+slight intimacy and respect.
+
+
 #### Reference
 1. [御馳走](http://maggiesensei.com/2009/08/31/itadakimasu-gochisou-sama/)
+2. [ラメーン屋さん](https://japanese.stackexchange.com/questions/16049/is-%E3%81%8A%E5%AF%BF%E5%8F%B8%E5%B1%8B%E3%81%95%E3%82%93-personification)

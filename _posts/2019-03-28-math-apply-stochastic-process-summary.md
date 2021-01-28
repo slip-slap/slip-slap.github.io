@@ -36,4 +36,9 @@ So a random variable, it's a function from the set of sample points to the set o
    calculus, and set theory all can be used in this subject.
 2. Gamma function is from calculus, Jacobian matrix is also from calculus. They
    all can be used to study probability and statistics.
+3. What's the difference between stochastic process and probability model?
+- In probability, you generate a sampling point one time.
+- In stochastic process, you generate a sampling path one time.
+- If you treat probability as function, because its factor is a variable.
+- the stochastic is functional, becasue its factor is a function.
 
