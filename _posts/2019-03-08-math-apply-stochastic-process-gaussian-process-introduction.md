@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "S.P.: Gaussian Processes"
+title: "G.P.: Introduction"
 keywords: []
 description: 
 category: "math"
@@ -15,9 +15,9 @@ tags: ["apply","S.P."]
 3. Not because it's related to the central limit therom.
 
 
-#### 2. Example
+#### 2. Property 
 
-#### 2.1 Conditional Distribution
+##### 2.1 Conditional Distribution
 
 The conditional distribution of $X_1$ given known values for $X_2=x_2$ is a multivariate normal with:
 
@@ -27,6 +27,11 @@ $$
 \Sigma_{11}-\Sigma_{12} \Sigma_{22}^{-1} \Sigma_{21}
 \end{array}
 $$
+
+
+
+
+
 
 
 

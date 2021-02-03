@@ -62,5 +62,6 @@ Words end with the "u" column, but the preceded by "い" sound or "え" sound
 
 
 
+
 #### Reference
 1. [見たことがない・見てない](https://japanese.stackexchange.com/questions/52896/what-is-the-difference-between-%E8%A6%8B%E3%81%A6%E3%81%AA%E3%81%84-and-%E8%A6%8B%E3%81%9F%E3%81%93%E3%81%A8%E3%81%8C%E3%81%AA%E3%81%84)

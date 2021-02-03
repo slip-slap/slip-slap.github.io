@@ -1,0 +1,39 @@
+I"
+<h4 id="1-why">1. Why</h4>
+<ol>
+  <li>Why study linear algebra, because it’s simple, and can solve practical problems.</li>
+  <li>Why gaussain distribution, it’s simple.</li>
+  <li>Not because it’s related to the central limit therom.</li>
+</ol>
+
+<h4 id="2-property">2. Property</h4>
+
+<h5 id="21-conditional-distribution">2.1 Conditional Distribution</h5>
+
+<p>The conditional distribution of $X_1$ given known values for $X_2=x_2$ is a multivariate normal with:</p>
+
+\[\begin{array}{l}
+\mu_{1}+\Sigma_{12} \Sigma_{22}^{-1}\left(\mathrm{x}_{2}-\mu_{2}\right) \\ 
+\Sigma_{11}-\Sigma_{12} \Sigma_{22}^{-1} \Sigma_{21}
+\end{array}\]
+
+<h4 id="3-sampling-process">3. Sampling process</h4>
+
+<h5 id="31-cholesky-decomposition">3.1 Cholesky decomposition</h5>
+<ol>
+  <li>Compute the Cholesky  Decomposition
+    <ul>
+      <li>In practice it maybe necessary to add a small multiple of the identity matrix
+$\epislon I$ to the covariance matrix for numerical reasons. This is because the eigenvalues 
+of the matrix $K_0$ can decay very rapidly and without this stabilization the Cholesky decomposition
+failes.</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="3-reference">3. Reference</h4>
+<ol>
+  <li><a href="https://online.stat.psu.edu/stat505/lesson/6/6.1">Gaussian Distribution</a></li>
+</ol>
+
+:ET

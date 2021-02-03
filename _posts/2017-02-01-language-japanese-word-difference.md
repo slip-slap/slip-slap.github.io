@@ -8,6 +8,12 @@ tags: ["日本語"]
 ---
 {% include JB/setup %}
 
+#### 欲しい・見たい
+1. 欲しい
+- want somebody to do something
+- 昨日早く来て欲しかった
+- おっとに野菜を食べて欲しい
+
 
 #### 遅れる・遅く
 1. 遅れる: is a verb 
@@ -21,7 +27,6 @@ tags: ["日本語"]
 - 別の色を見せてください(if there are a few choices)
 - 他の色をめせてください(if there are many choices)
 2. 他の: means other
-
 
 
 

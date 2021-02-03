@@ -166,7 +166,7 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">968</span>
+<span title="文章总数">975</span>
 <ul>
 
 
@@ -1774,7 +1774,17 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#April-2019">2019 年 04 月 (19)</a></li>
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#April-2019">2019 年 04 月 (21)</a></li>
     
   
 
@@ -1967,7 +1977,27 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#March-2019">2019 年 03 月 (38)</a></li>
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2019">2019 年 03 月 (42)</a></li>
     
   
 
@@ -3623,7 +3653,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#February-2018">2018 年 02 月 (29)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#February-2018">2018 年 02 月 (30)</a></li>
     
   
 
@@ -5122,13 +5157,13 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (228)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (229)</a></li>
 
   <li><a href="/categories.html#Algorithm-ref">Algorithm (78)</a></li>
 
   <li><a href="/categories.html#CS-ref">CS (60)</a></li>
 
-  <li><a href="/categories.html#math-ref">math (306)</a></li>
+  <li><a href="/categories.html#math-ref">math (312)</a></li>
 
   <li><a href="/categories.html#Economy-ref">Economy (2)</a></li>
 
@@ -5141,7 +5176,7 @@ $(document).ready(function() {
         </section>
         <section>
           <a href="/tags.html" title="查看所有标签"><i class="icon-fixed-width icon-tags"></i> 标签云</a>
-<span title="标签总数">107</span>
+<span title="标签总数">106</span>
 <div id="tag-cloud">
 
 
@@ -5267,7 +5302,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#haskell-ref" style="font-size: 10.5pt; color: #888;">haskell</a>
+    <a href="/tags.html#haskell-ref" style="font-size: 10pt; color: #888;">haskell</a>
   
     
     
@@ -5407,7 +5442,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#apply-ref" style="font-size: 15.5pt; color: #222;">apply</a>
+    <a href="/tags.html#apply-ref" style="font-size: 16pt; color: #222;">apply</a>
   
     
     
@@ -5498,7 +5533,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#S.P.-ref" style="font-size: 10pt; color: #888;">S.P.</a>
+    <a href="/tags.html#S.P.-ref" style="font-size: 10.5pt; color: #888;">S.P.</a>
   
     
     
@@ -5526,7 +5561,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#P.A.S.-ref" style="font-size: 10.5pt; color: #777;">P.A.S.</a>
+    <a href="/tags.html#P.A.S.-ref" style="font-size: 11pt; color: #777;">P.A.S.</a>
   
     
     
@@ -5596,7 +5631,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#discrete-ref" style="font-size: 10.5pt; color: #888;">discrete</a>
+    <a href="/tags.html#discrete-ref" style="font-size: 10pt; color: #888;">discrete</a>
   
     
     
@@ -5681,13 +5716,6 @@ $(document).ready(function() {
     
     
     <a href="/tags.html#M.T.-ref" style="font-size: 9.5pt; color: #999;">M.T.</a>
-  
-    
-    
-    
-    
-    
-    <a href="/tags.html#Topology-ref" style="font-size: 9pt; color: #999;">Topology</a>
   
     
     
@@ -5792,7 +5820,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#basic-ref" style="font-size: 10.5pt; color: #888;">basic</a>
+    <a href="/tags.html#basic-ref" style="font-size: 10pt; color: #888;">basic</a>
   
     
     
@@ -6001,6 +6029,40 @@ $(document).ready(function() {
         </div>
       </div>
       
+<h4 id="idea">Idea</h4>
+<ol>
+  <li>Why bother stochastic processes? what’s the logical purposes behind why these are done?</li>
+  <li>A practical Problem</li>
+</ol>
+
+<p><img src="/images/math-apply-stochastic-process-summary-example.png" /></p>
+
+<ul>
+  <li>These are signals collected from a sensor, because of noise, each time, we obtained different signals</li>
+  <li>The questions are</li>
+</ul>
+
+<ol>
+  <li>
+    <p>what if we want to know the averaged value at $t_1$ ? how can we calculated this?</p>
+  </li>
+  <li>If we take a vertical line to cut through at $t_1$, the result we get is a collection of random numbers.
+    <ul>
+      <li>so we can treat all the values we obtain at $t_1$ as the value of  a random variable, can we?</li>
+      <li>of course we can, so we can use the theory we developed in probability to study it’s property.</li>
+    </ul>
+  </li>
+  <li>What if we want to ask the relationship between the random variable $X_{t1}$ and $X_{t2}$?
+    <ul>
+      <li>what’s the relationship</li>
+      <li>so stochastic process can be treat as the functions of random variables.</li>
+      <li>At each time slot, we take a vertical line, we get a random variable, and all this random variables form the stochastic process.</li>
+      <li>for the very simple bernoulli process, all the random variable all the same, they have the same distribution.</li>
+      <li>but it doesn’t need to be like this.</li>
+    </ul>
+  </li>
+</ol>
+
 <h4 id="introduction">Introduction</h4>
 <ol>
   <li>Stochastic processes which are processes that proceed randomly in time.</li>
@@ -6015,14 +6077,17 @@ that’s not acceptable. <strong>I don’t want any risk, these people are fools
 these fools outnumber those of us who have studied these issues.</li>
 </ol>
 
-<h4 id="set-theory">set theory</h4>
-<ol>
-  <li>Sample space: there elements in that sample space</li>
-  <li>events:   events are subsets of the sample space.</li>
-  <li>sample space: a set in which all of the possible outcomes of a statistical experiment are represented as points –from Merriam Webster</li>
-  <li>according to the axioms, there are only sample space, events, and probability.
-So a random variable, it’s a function from the set of sample points to the set of real values.</li>
-</ol>
+<h4 id="classification">Classification</h4>
+
+<p><img src="/images/math-apply-stochastic-process-summary-classification.png" /></p>
+
+<ul>
+  <li>Just as the other math object, we are concern about it’s classification, how many classes?</li>
+  <li>From the above picture, we can see there are four classes, the time maybe discrete, and the value may be discrete</li>
+  <li>the time and the value are something that we care about.</li>
+  <li>Poisson process about counting, the value is discrete.</li>
+  <li>Markov chain about different state, the time is discrete.</li>
+</ul>
 
 <h4 id="galois">Galois</h4>
 <ol>
@@ -6068,7 +6133,7 @@ all can be used to study probability and statistics.</li>
   
      
     	<li><a href="/categories.html#math-ref">
-    		math <span>306</span>
+    		math <span>312</span>
     	</a></li>
     
   
@@ -6087,9 +6152,9 @@ all can be used to study probability and statistics.</li>
 
   
      
-    	<li><a href="/tags.html#apply-ref">apply <span>87</span></a></li>
+    	<li><a href="/tags.html#apply-ref">apply <span>93</span></a></li>
      
-    	<li><a href="/tags.html#S.P.-ref">S.P. <span>16</span></a></li>
+    	<li><a href="/tags.html#S.P.-ref">S.P. <span>20</span></a></li>
      
     	<li><a href="/tags.html#summary-ref">summary <span>23</span></a></li>
     
@@ -6104,7 +6169,7 @@ all can be used to study probability and statistics.</li>
   <div class="pagination">
     <ul>
       
-      <li class="prev"><a href="/math/math-apply-stochastic-process-poisson-process-introduction.html" title="P.P.: Introduction">&larr; 上一篇</a></li>
+      <li class="prev"><a href="/math/math-apply-stochastic-process-notation.html" title="S.P.: Notation">&larr; 上一篇</a></li>
       
       <li><a href="/archive.html">文章列表</a></li>
       

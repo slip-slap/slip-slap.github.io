@@ -16,3 +16,9 @@ tags: ["apply","S.P.","M.C."]
 
 #### definition
 Ergodic Markov Chains: A Markov Chain is ergodic if there is a positive probability to pass from any state to any other states in one step.
+
+
+
+#### Galois
+1. The role of Markov Chain in stochastic process is similar to the Newton's Law in Physics.
+2. Both of them predict the future based on the current state.

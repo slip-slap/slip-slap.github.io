@@ -8,7 +8,7 @@ tags: ["apply","P.A.S.","Bayesian"]
 ---
 {% include JB/setup %}
 
-#### Introduction
+#### 1. Introduction
 At the heart of the theory of inference is the concept of the statistical
 model$f_{\theta}: \theta \in \omega$ that describes the statistician's
 uncertainty about how the observed data were produced. 
@@ -25,11 +25,19 @@ uncertainty about how the observed data were produced.
 
 
 
-#### 2 Basic rule
-1. $$ P(x)=\sum_{y} P(x, y) $$
-2. $$ P(x, y)=P(y \mid x) P(x) $$
-3. $$ P(y \mid x)=\frac{P(x \mid y) P(y)}{P(x)} $$
-4. $$ P(x)=\sum_{y} P(x \mid y) P(y) $$
+#### 2. Basic rule
+
+$$
+P(\text { hypothesis } \mid \text { data })=\frac{P(\text { data } \mid \text { hypothesis }) P(\text { hypothesis })}{P(\text { data })}
+$$
+
+
+1. sum rule: $$ P(x)=\sum_{y} P(x, y) $$
+2. product rule: $$ P(x, y)=P(y \mid x) P(x) $$
+4. combine product rule and sum rule: $$ P(x)=\sum_{y} P(x \mid y) P(y) $$
+
+
+#### 3. Model Comparsion
 
 
 

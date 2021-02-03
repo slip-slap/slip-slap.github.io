@@ -1,0 +1,34 @@
+I"^
+<h4 id="1-sampling-process">1. Sampling process</h4>
+
+<h5 id="11-cholesky-decomposition">1.1 Cholesky decomposition</h5>
+<ol>
+  <li>Compute the Cholesky  Decomposition
+    <ul>
+      <li>In practice it maybe necessary to add a small multiple of the identity matrix
+$\epislon I$ to the covariance matrix for numerical reasons. This is because the eigenvalues 
+of the matrix $K_0$ can decay very rapidly and without this stabilization the Cholesky decomposition
+failes.</li>
+    </ul>
+  </li>
+</ol>
+
+<h5 id="12-generate-independent-samples">1.2 Generate independent samples</h5>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">n</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">u</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="n">normal</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">d</span><span class="o">*</span><span class="n">n</span><span class="p">).</span><span class="n">reshape</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h5 id="13">1.3</h5>
+<p>\(E[x]=E[m+L u]=m+L E[u]=m\)</p>
+
+<p>and</p>
+
+\[E\left[x x^{T}\right]=E\left[m m^{T}\right]+E\left[m u^{T} L^{T}\right]+E\left[L u m^{T}\right]+E\left[L u u^{T} L^{T}\right]=\left\|m^{2}\right\|+L E\left[u u^{T}\right] L^{T}=\|m\|^{2}+K\]
+
+<h4 id="reference">Reference</h4>
+<ol>
+  <li><a href="https://juanitorduz.github.io/multivariate_normal/">sampling</a></li>
+</ol>
+
+:ET
