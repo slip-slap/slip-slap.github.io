@@ -11,9 +11,9 @@
 <head>
   <meta charset="UTF-8">
 
-  <title>Just Do It - Just Do It</title>
-  
-  <meta name="description" content="一个程序员的技术博客，分享折腾的点点滴滴">
+  <title>P.M.: Joint, Marginal and  Conditional Distribution - Just Do It</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
   <meta name="author" content="reed">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -5985,352 +5985,244 @@ $(document).ready(function() {
 
 
 
+<section id="content">
+  <article class="post">
+  <!--
+  - math support
+  -->
+      <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+                tex2jax: {
+                      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+                            inlineMath: [['$','$']]
+                                }
+                                  });
+      </script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
 
-<!-- Recent Posts  -->
+    <header>
+      <h1>P.M.: Joint, Marginal and  Conditional Distribution</h1>
+    </header>
+
+    <section>
+      <div class="post-extra">
+        <div class="pull-left">
+          <span>27 April 2019</span>
+        </div>
+        <div class="pull-right">
+          
+
+
+  <span id="share">
+  <a class="wechat" target="_blank" title="分享到微信" href="http://chart.apis.google.com/chart?cht=qr&amp;chs=300x300&amp;chl=/math/math-apply-probability-model-marginal-joint-conditional-distribution.html"><i class="icon-large icon-wechat"></i></a>
+  <a class="weibo" target="_blank" title="分享到微博" href="http://service.weibo.com/share/share.php?title=P.M.: Joint, Marginal and  Conditional Distribution - Just Do It&amp;url=/math/math-apply-probability-model-marginal-joint-conditional-distribution.html&amp;type=3&amp;searchPic=1"><i class="icon-large icon-weibo"></i></a>
+  <a class="qzone" target="_blank" title="分享到 QQ 空间" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=/math/math-apply-probability-model-marginal-joint-conditional-distribution.html&amp;title=P.M.: Joint, Marginal and  Conditional Distribution - Just Do It&amp;summary=&amp;site="><i class="icon-large icon-qzone"></i></a>
+  <a class="twitter" target="_blank" title="Share to Twitter" href="https://twitter.com/intent/tweet?url=/math/math-apply-probability-model-marginal-joint-conditional-distribution.html&amp;text=P.M.: Joint, Marginal and  Conditional Distribution - Just Do It&amp;via="><i class="icon-large icon-twitter"></i></a>
+  <a class="facebook" target="_blank" title="Share to Facebook" href="http://www.facebook.com/sharer.php?u=/math/math-apply-probability-model-marginal-joint-conditional-distribution.html&amp;t=P.M.: Joint, Marginal and  Conditional Distribution - Just Do It"><i class="icon-large icon-facebook-sign"></i></a>
+  <a class="googleplus" target="_blank" title="Share to Google+" href="https://plus.google.com/share?url=/math/math-apply-probability-model-marginal-joint-conditional-distribution.html"><i class="icon-large icon-google-plus-sign"></i></a>
+</span>
+
+
+
+
+
+        </div>
+      </div>
+      
+<h4 id="1-marginal-and-joint-distributions">1. Marginal and Joint Distributions</h4>
+<ol>
+  <li>Marginal Distribution: Once we define a random variable X, we can consider
+the distribution over events that can be described using X. This distribution
+is often referred to as the marginal distribution over the random variable
+X.We denote this distribution by P(X).</li>
+  <li>Joint Distribtuion:</li>
+</ol>
+
+<h5 id="11-remark">1.1 Remark</h5>
+<p>I am kind of phobia of the word <strong>marginal distribution</strong>, I should try to
+understand this term in context of talking about **joint distribution **,just
+like the sides of a coin, like duality in geometry, and then I can understand
+this concept better.</p>
+
+<h4 id="2-conditional-probability">2 Conditional Probability</h4>
+<p>The notation $P(X|Y)$ to represent a set of conditional probability
+distributions</p>
+<ul>
+  <li>Intuitively, for each value of Y, this objects assigns a probability over
+values of X using the conditional probability.</li>
+  <li>This notation allows us to write the shorthand version of the chain rule:
+$P(X,Y)=P(X)P(Y|X)$</li>
+</ul>
+
+<h5 id="21--remark">2.1  Remark</h5>
+<p>The definition of conditional probability is based on <strong>Joint Distribution</strong></p>
+
+<h4 id="3-independence">3. Independence</h4>
+<p>We usually expect $P(\alpha|\beta)$ to be different from $P(\alpha)$. That is,
+learning that $\beta$ is true changes our probability over $\alpha$, However, in
+some situations equality can occur, so that <br />
+$P(\alpha|\beta)=P(\alpha)$. <br />
+That is, learning that $\beta$ occurs did not change our probability of $\alpha$</p>
+
+<h5 id="31-conditional-independence">3.1 Conditional Independence</h5>
+<p>Independence is a useful property, it is not often that we encounter two
+independent events. A more common situation is when two events are independent
+given an additional event.</p>
+<ol>
+  <li>Conditionally Independent:  We say that an event $\alpha$ is conditionally independent of event $\beta$
+given $\gamma$ in P, denoted</li>
+</ol>
+
+<h5 id="32-independence-and-conditional-independence">3.2 Independence and Conditional Independence</h5>
+<p>we usually expect $P(\alpha | \beta)$ to be different from P(\alpha). That is,
+learning that $\beta$ is true changes our probability over $\alpha$. However, in
+some situations equality can occur, so that $P(\alpha|\beta)=P(\alpha)$. That
+is, learing that $\beta$ occurs did not chang our probability of $\alpha$. <br /></p>
+
+<h5 id="definition-1">Definition 1:</h5>
+<p>A distribution P satisfies$(\alpha \perp \beta)$ if and only if 
+\(P(\alpha \cap \beta)=P(\alpha) P(\beta)\)</p>
+
+<h4 id="why-independence-and-conditional-independence-are-so-important-">Why Independence and Conditional Independence are so Important ?</h4>
+<ol>
+  <li>we can always write the following formula, no matter they are independent or
+not. <br />
+ $P(x,y| \mathcal{H})=P(x|y,\mathcal{H})p(y|\mathcal{H})$</li>
+  <li>if they are independent, it can be denoted in the following way <br />
+ $P(x,y| \mathcal{H})=P(x|\mathcal{H})p(y|\mathcal{H})$
+    <ul>
+      <li>Maybe because we have just two random variables,you can’t realize how
+important they are.
+        <h4 id="notation">Notation</h4>
+      </li>
+    </ul>
+  </li>
+  <li>PMF: If X has only a finite or countable number of possible sample values,
+say $x_1,x_2,\cdots$, the probability $Pr{X=x_i}$ of each sample values
+$x_i$ is called the probability mass function(PMF) at $x_i$ and denoted by
+$p_X(x_i)$; such a random variable is called discrete</li>
+  <li>Probability Density: If the distribution function $F_X(x)$ of a rv X has a
+derivative at x, the derivative is called the probability density of X at x
+and denoted by $f_X(x)$
+    <h5 id="remark">Remark</h5>
+    <p>Probability Mass function and probability density function are defined based on
+cumulative distribution function.</p>
+  </li>
+</ol>
+
+<h4 id="4-reference">4. Reference</h4>
+<ol>
+  <li><a href="https://www.matongxue.com/madocs/910/">beta 分布-马同学</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Beta_distribution">beta distribution-wikipedia</a></li>
+</ol>
+
+      
+      <footer>
+        <p>
+          本作品由 <a href="mailto:zhanghy1012@gmail.com">reed</a> 创作，采用
+          <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="查看协议详细信息" target="_blank">CC BY-NC-SA 3.0 许可协议</a>
+          进行许可。
+        </p>
+      </footer>
+      
+    </section>
+
+  </article>
+</section>
+
 <section>
-  
-  <article class="nested">
 
-    <header>
-      <h2><a href="/math/math-discrete-graph-theory-algorithm-message-passing.html" title="查看《G.T.A.: Message Passing》">G.T.A.: Message Passing</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Message-passing rule-set A
-Message-passing rule-set B
-
-Min-sum Algorithm or Viterbi Algorithm
-
-
-
-  Each node can broadcast its cost to its descend...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#May-2019" title="查看此月所有文章">18 May 2019</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
-        评论：<a href="/math/math-discrete-graph-theory-algorithm-message-passing.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/math/math-discrete-graph-theory-algorithm-deepth-first-search.html" title="查看《G.T.A.: Deepth First Search》">G.T.A.: Deepth First Search</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-DFS
-DFS stands for Depth First Search is a edge based technique. It used the Stack
-data structure, performs two stages:
-
-  first visited vertices ...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#May-2019" title="查看此月所有文章">18 May 2019</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
-        评论：<a href="/math/math-discrete-graph-theory-algorithm-deepth-first-search.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/math/math-discrete-graph-theory-algorithm-breadth-first-search.html" title="查看《G.T.A.: Breadth First Search》">G.T.A.: Breadth First Search</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-BFS
-BFS stands for Breadth First Search is a vertex based techinique for finding
-   a shortest path in graph.
-
-  It uses a Queue data structure wh...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#May-2019" title="查看此月所有文章">18 May 2019</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
-        评论：<a href="/math/math-discrete-graph-theory-algorithm-breadth-first-search.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/math/math-apply-probability-model-introduction.html" title="查看《P.M.: Introduction》">P.M.: Introduction</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Outline
-Probability is the science of uncertainty. It provides precise mathematical
-rules for understanding and analyzing our own ignorance.
-The c...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#April-2019" title="查看此月所有文章">29 April 2019</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
-        评论：<a href="/math/math-apply-probability-model-introduction.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/math/math-apply-probability-model-expectation-variance.html" title="查看《P.M.: Expectation, Variance, Moment》">P.M.: Expectation, Variance, Moment</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-1.$E[X]=\int F_X^c(x)dx$ for arbitrary nonneg X
-
-
-
-Poisson Distribution
-\(P(X(t)=k)=\frac{(\lambda t)^{k} e^{-\lambda t}}{k !}\)
-
-For the probabil...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#April-2019" title="查看此月所有文章">28 April 2019</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
-        评论：<a href="/math/math-apply-probability-model-expectation-variance.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/math/math-apply-probability-model-marginal-joint-conditional-distribution.html" title="查看《P.M.: Joint, Marginal and  Conditional Distribution》">P.M.: Joint, Marginal and  Conditional Distribution</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-1. Marginal and Joint Distributions
-
-  Marginal Distribution: Once we define a random variable X, we can consider
-the distribution over events tha...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#April-2019" title="查看此月所有文章">27 April 2019</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
-        评论：<a href="/math/math-apply-probability-model-marginal-joint-conditional-distribution.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/math/math-apply-probability-model-normal-distribution.html" title="查看《P.M.: Normal Distribution》">P.M.: Normal Distribution</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Normal Distribution
-Also named as Gaussian distribution.
-
-The multivariate normal distribution is:
-
-\[f_{\mathbf{X}}\left(x_{1}, \ldots, x_{k}\rig...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#April-2019" title="查看此月所有文章">26 April 2019</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
-        评论：<a href="/math/math-apply-probability-model-normal-distribution.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/math/math-apply-probability-model-dirichlet-distribution.html" title="查看《P.M.: Dirichlet Distribution》">P.M.: Dirichlet Distribution</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-Idea
-Dirichlet distribution is also known as multivariate beta distribution(MBD)
-
-Reference
-
-  Dirichlet Distribution
-  Dirichlet distribution
-
-
-
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#April-2019" title="查看此月所有文章">26 April 2019</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
-        评论：<a href="/math/math-apply-probability-model-dirichlet-distribution.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/math/math-apply-probability-model-beta-distribution.html" title="查看《P.M.: Beta Distribution》">P.M.: Beta Distribution</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-2. Reference
-
-  Beta Distribution
-
-
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#April-2019" title="查看此月所有文章">26 April 2019</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
-        评论：<a href="/math/math-apply-probability-model-beta-distribution.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/math/math-apply-probability-model-law-of-large-number.html" title="查看《P.M.: Law of Large Number》">P.M.: Law of Large Number</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-What is the crap of Sampling Distribution?
-
-  Suppose $X_1,X_2,\cdots,X_n$ is an identically and independently distributed
-sequence, i.e.,$X_1,X_2...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#April-2019" title="查看此月所有文章">25 April 2019</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#math-ref" title="查看此类别下的所有文章">math</a>，
-        评论：<a href="/math/math-apply-probability-model-law-of-large-number.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-
-  
+  <div class="tag-box-wrapper">
     
+    <ul class="tag-box inline">
+      <li><i class="icon-large icon-folder-open"></i></li>
+      
+      
+
+
+  
+     
+    	<li><a href="/categories.html#math-ref">
+    		math <span>312</span>
+    	</a></li>
+    
+  
+
+
+
+    </ul>
+    
+
+    
+    <ul class="tag-box inline">
+      <li><i class="icon-large icon-tags"></i></li>
+      
+      
+
+
+  
+     
+    	<li><a href="/tags.html#apply-ref">apply <span>93</span></a></li>
+     
+    	<li><a href="/tags.html#P.A.S.-ref">P.A.S. <span>24</span></a></li>
+     
+    	<li><a href="/tags.html#P.M.-ref">P.M. <span>10</span></a></li>
+    
+  
+
+
+
+    </ul>
+    
+  </div>
+
+  <div class="pagination">
+    <ul>
+      
+      <li class="prev"><a href="/math/math-apply-probability-model-normal-distribution.html" title="P.M.: Normal Distribution">&larr; 上一篇</a></li>
+      
+      <li><a href="/archive.html">文章列表</a></li>
+      
+      <li class="next"><a href="/math/math-apply-probability-model-expectation-variance.html" title="P.M.: Expectation, Variance, Moment">下一篇 &rarr;</a></li>
+      
+    </ul>
+  </div>
+
+</section>
+
+<section id="comments">
+  
+
+
+  
+<div id="disqus_thread"></div>
+
 <script type="text/javascript">
     var disqus_developer = 1;
     var disqus_shortname = 'just-do-it-1';
     
+    var disqus_identifier = 'P.M.: Joint, Marginal and  Conditional Distribution';
+    var disqus_title = 'P.M.: Joint, Marginal and  Conditional Distribution';
+    var disqus_url = '/math/math-apply-probability-model-marginal-joint-conditional-distribution.html';
     
     
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
 </script>
 
-  
+
+
+
 
 </section>
 
-<!-- Pagination Links -->
-<section class="pagination pagination-centered">
-  <ul>
-    <!-- First Page -->
-    
-    <li><a href="/index.html">&laquo;&laquo;</a></li>
-    
 
-    <!-- Previous Page -->
-    
-    <li>
-      
-      <a href="/page29">&laquo;</a>
-      
-    </li>
-    
 
-    <!-- Current Page -->
-    <li class="active">
-      <span class="page_number ">第 30/98 页</span>
-    </li>
 
-    <!-- Next Page -->
-    
-    <li><a href="/page31">&raquo;</a></li>
-    
 
-    <!-- Last Page -->
-    
-    <li><a href="/page98">&raquo;&raquo;</a></li>
-    
-  </ul>
-</section>
 
         </div>
       </div>
