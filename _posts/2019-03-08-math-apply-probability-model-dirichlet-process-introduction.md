@@ -16,3 +16,7 @@ tags: ["apply","S.P."]
    point itself is a random variable, so we call this thing $DP(\alpha, H(0))$ 
    Dirichlet Process. Because it meet the definition of a process.
 
+
+
+#### Reference
+1. [Dirichlet process](https://en.wikipedia.org/wiki/Dirichlet_process#Formal_definition)

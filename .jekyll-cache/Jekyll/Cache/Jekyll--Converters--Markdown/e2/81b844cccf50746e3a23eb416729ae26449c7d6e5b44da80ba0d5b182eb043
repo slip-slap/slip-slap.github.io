@@ -1,0 +1,170 @@
+I"u
+<h4 id="outline">Outline</h4>
+<p>Probability is the science of uncertainty. It provides precise mathematical
+rules for understanding and analyzing our own ignorance.
+The content of probability and statistics can be divided into three parts</p>
+<ol>
+  <li>Probability and Statistics Model(P.A.S.M.)</li>
+  <li>Probability and Statistics Model Inference(P.A.S.M.I.)</li>
+  <li>Probability and Statistics Model Check(P.A.S.M.C.)</li>
+</ol>
+
+<h4 id="probability-model">Probability model</h4>
+<p><strong>A probability model</strong> consists of a nonempty set called the sample space
+$\Omega$; a collection of events $\mathcal{F}$ that are subsets of $\Omega$; and a probability
+measure $\mathbf{P}$ assigning a probability between 0 and 1 to each event.</p>
+
+\[(\Omega, \mathcal{F}, \mathbf{P})\]
+
+<ol>
+  <li><strong>Sample Space</strong>: A sample space is any set that lists all possible outcomes(or, responses) of
+some unknown experiment or situation,
+ <strong>which is a set whose elements are called outcomes or sample points.</strong></li>
+  <li><strong>Probability Measure</strong>: usually written P. This probability measure must
+assign, to each event A, a probability P(A).</li>
+  <li>$A^c$: if A is any event, we write $A^c$(read “A complement”) for the event
+that A does not occur.
+\(P(A^c)=1-P(A)\)</li>
+</ol>
+
+<ul>
+  <li>The second component of a probability model is a class of events, which can be
+considered for now simply as the class of all subsets of the sample space.</li>
+</ul>
+
+<h5 id="remark">Remark</h5>
+<p>We must familiar with some terms, such as sample point, is same as outcome.</p>
+
+<h4 id="random-variable">Random Variable</h4>
+<ol>
+  <li>random variable: defined by a function that associates with each outcome in
+$\Omega$ a value.
+    <ul>
+      <li>We will usually use uppercase roman letters X,Y,Z to denote random variables,
+use a lowercase letter to refer to a value of a random variable.</li>
+      <li>We use Val(X) to denote the set of values that a random variable X can take.</li>
+      <li>For example, <strong>Grade</strong> is defined by a function $f_{Grade}$ that maps each
+person in $\Omega$ to his or her grade(say, one of A,B,or C)</li>
+      <li>The event $Grade=A$ is a shorthand for the event${\omega \in \Omega: f_{Grade}(\omega)=A}$</li>
+    </ul>
+  </li>
+  <li>random variables: 
+Complex systems are characterized by the presence of multiple interrelated
+aspects, for example, in medical diagnosis application, there are multiple
+possible diseases that the patient might have, hundreds of symptoms and
+diagostic tests. These domains can be characterized in terms of a set of random
+variables.
+    <ul>
+      <li>random variables, just a set of random variable</li>
+      <li>we can denote the random variables as $\mathcal{X}$, and each element which
+also a random variable denoted as $X_i$</li>
+    </ul>
+  </li>
+</ol>
+
+<p>Although I use this term <strong>random variable</strong> for a pretty long time, Actually, I
+have no interpretation of this crap at all.</p>
+
+<h4 id="conditional-probability">Conditional Probability</h4>
+<p>The notation $P(X|Y)$ to represent a set of conditional probability
+distributions</p>
+<ul>
+  <li>Intuitively, for each value of Y, this objects assigns a probability over
+values of X using the conditional probability.</li>
+  <li>This notation allows us to write the shorthand version of the chain rule:
+$P(X,Y)=P(X)P(Y|X)$</li>
+</ul>
+
+<h4 id="remark-1">Remark</h4>
+<p>The definition of conditional probability is based on <strong>Joint Distribution</strong></p>
+
+<h4 id="independence">Independence</h4>
+<p>We usually expect $P(\alpha|\beta)$ to be different from $P(\alpha)$. That is,
+learning that $\beta$ is true changes our probability over $\alpha$, However, in
+some situations equality can occur, so that <br />
+$P(\alpha|\beta)=P(\alpha)$. <br />
+That is, learning that $\beta$ occurs did not change our probability of $\alpha$</p>
+
+<h4 id="conditional-independence">Conditional Independence</h4>
+<p>Independence is a useful property, it is not often that we encounter two
+independent events. A more common situation is when two events are independent
+given an additional event.</p>
+<ol>
+  <li>Conditionally Independent:  We say that an event $\alpha$ is conditionally independent of event $\beta$
+given $\gamma$ in P, denoted</li>
+</ol>
+
+<h4 id="independence-and-conditional-independence">Independence and Conditional Independence</h4>
+<p>we usually expect $P(\alpha | \beta)$ to be different from P(\alpha). That is,
+learning that $\beta$ is true changes our probability over $\alpha$. However, in
+some situations equality can occur, so that $P(\alpha|\beta)=P(\alpha)$. That
+is, learing that $\beta$ occurs did not chang our probability of $\alpha$. <br /></p>
+
+<h5 id="definition-1">Definition 1:</h5>
+<p>A distribution P satisfies$(\alpha \perp \beta)$ if and only if 
+\(P(\alpha \cap \beta)=P(\alpha) P(\beta)\)</p>
+
+<h4 id="why-independence-and-conditional-independence-are-so-important-">Why Independence and Conditional Independence are so Important ?</h4>
+<ol>
+  <li>we can always write the following formula, no matter they are independent or
+not. <br />
+ $P(x,y| \mathcal{H})=P(x|y,\mathcal{H})p(y|\mathcal{H})$</li>
+  <li>if they are independent, it can be denoted in the following way <br />
+ $P(x,y| \mathcal{H})=P(x|\mathcal{H})p(y|\mathcal{H})$
+    <ul>
+      <li>Maybe because we have just two random variables,you can’t realize how
+important they are.
+        <h4 id="notation">Notation</h4>
+      </li>
+    </ul>
+  </li>
+  <li>PMF: If X has only a finite or countable number of possible sample values,
+say $x_1,x_2,\cdots$, the probability $Pr{X=x_i}$ of each sample values
+$x_i$ is called the probability mass function(PMF) at $x_i$ and denoted by
+$p_X(x_i)$; such a random variable is called discrete</li>
+  <li>Probability Density: If the distribution function $F_X(x)$ of a rv X has a
+derivative at x, the derivative is called the probability density of X at x
+and denoted by $f_X(x)$
+    <h5 id="remark-2">Remark</h5>
+    <p>Probability Mass function and probability density function are defined based on
+cumulative distribution function.</p>
+  </li>
+</ol>
+
+<h4 id="terminology">terminology</h4>
+<ol>
+  <li>statistic: a statistics or sample statistic is any quantity computed from
+values in a sample, often mean. Technically speaking, a statistic can be
+calculated by applying any mathematical function to the values found in a
+sample of data.</li>
+  <li>Marginal Likelihood: in statistics, a marginal likelihood function or
+integrated likelihood, is a likelood in which some parameter variables have
+been marginalized. In the context of Bayesian statictics, it may also be
+referred to as the evidence or model evidence.</li>
+</ol>
+
+<h4 id="galois">Galois</h4>
+<ol>
+  <li>For a new subject, if you want to master it. You must get used to with the
+basic concept and the notation, and what does they mean.</li>
+  <li>The purpose of probability theory and statistics is to study a special kind of function, random variables  why
+it is so special, because you can’t evaluate the function at some specific
+point. For example, $y=x^2$, you can evaluate the value of the function at
+every x, you get an y. but for the random variable mapping  the result of tossing a dice to a real number ${1,2,3,4,5,6}$,
+for this very special function, the meaningful thing is to calculate the
+    expectation and variance.</li>
+  <li>So random process and probabilit and statistics just the subject evaluate
+expectation and variance.</li>
+  <li>To study geometry, we introduce calculus, and now, to study probability, we
+also need to use calculus, calculus just a tool can be used in geometry and
+probability.</li>
+</ol>
+
+<h4 id="reference">reference</h4>
+<ol>
+  <li><a href="https://en.wikipedia.org/wiki/Statistic">statistic</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Cumulative_distribution_function">CDF</a></li>
+  <li><a href="https://www.probabilitycourse.com/chapter4/4_1_3_functions_continuous_var.php">CDF and PDF</a></li>
+</ol>
+
+:ET

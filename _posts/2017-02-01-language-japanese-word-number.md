@@ -22,6 +22,10 @@ tags: ["日本語"]
 1. 一度, 二度, 三度
 2. period + に + number + counter
 - 週に5回
+- 四回目
+- 第一位
+- 第四位
+- the last sound should be emphasised on
 3. 1日あたり8時間まで
 4. 連続で6時間を超える場合
 

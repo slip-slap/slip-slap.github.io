@@ -5,8 +5,8 @@
   <description>Just Do It - </description>
   <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
   <link></link>
-  <lastBuildDate>Wed, 03 Feb 2021 21:18:54 +0900</lastBuildDate>
-  <pubDate>Wed, 03 Feb 2021 21:18:54 +0900</pubDate>
+  <lastBuildDate>Fri, 05 Feb 2021 11:28:30 +0900</lastBuildDate>
+  <pubDate>Fri, 05 Feb 2021 11:28:30 +0900</pubDate>
   <ttl>1800</ttl>
 
 
@@ -11826,15 +11826,16 @@ nodes in the graph&lt;/strong&gt;&lt;/li&gt;
 rules for understanding and analyzing our own ignorance.
 The content of probability and statistics can be divided into three parts&lt;/p&gt;
 &lt;ol&gt;
-  &lt;li&gt;Probability and Statistics Model(P.A.S.M.)&lt;/li&gt;
+  &lt;li&gt;Probability Model(P.M.)&lt;/li&gt;
   &lt;li&gt;Probability and Statistics Model Inference(P.A.S.M.I.)&lt;/li&gt;
   &lt;li&gt;Probability and Statistics Model Check(P.A.S.M.C.)&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h4 id=&quot;probability-model&quot;&gt;Probability model&lt;/h4&gt;
+&lt;h4 id=&quot;1-probability-model&quot;&gt;1. Probability model&lt;/h4&gt;
 &lt;p&gt;&lt;strong&gt;A probability model&lt;/strong&gt; consists of a nonempty set called the sample space
-&lt;strong&gt;S&lt;/strong&gt;; a collection of events that are subsets of &lt;strong&gt;S&lt;/strong&gt;; and a probability
-measure &lt;strong&gt;P&lt;/strong&gt; assigning a probability between 0 and 1 to each event.&lt;/p&gt;
+$\Omega$; a collection of events $\mathcal{F}$ that are subsets of $\Omega$;
+and a probability measure $\mathbf{P}$ assigning a probability between 0 and 1
+to each event.  $ (\Omega, \mathcal{F}, \mathbf{P}) $&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;&lt;strong&gt;Sample Space&lt;/strong&gt;: A sample space is any set that lists all possible outcomes(or, responses) of
@@ -11852,10 +11853,10 @@ that A does not occur.
 considered for now simply as the class of all subsets of the sample space.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h5 id=&quot;remark&quot;&gt;Remark&lt;/h5&gt;
+&lt;h5 id=&quot;11-remark&quot;&gt;1.1 Remark&lt;/h5&gt;
 &lt;p&gt;We must familiar with some terms, such as sample point, is same as outcome.&lt;/p&gt;
 
-&lt;h4 id=&quot;random-variable&quot;&gt;Random Variable&lt;/h4&gt;
+&lt;h4 id=&quot;2-random-variable&quot;&gt;2. Random Variable&lt;/h4&gt;
 &lt;ol&gt;
   &lt;li&gt;random variable: defined by a function that associates with each outcome in
 $\Omega$ a value.
@@ -11885,86 +11886,17 @@ also a random variable denoted as $X_i$&lt;/li&gt;
 &lt;p&gt;Although I use this term &lt;strong&gt;random variable&lt;/strong&gt; for a pretty long time, Actually, I
 have no interpretation of this crap at all.&lt;/p&gt;
 
-&lt;h4 id=&quot;marginal-and-joint-distributions&quot;&gt;Marginal and Joint Distributions&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Marginal Distribution: Once we define a random variable X, we can consider
-the distribution over events that can be described using X. This distribution
-is often referred to as the marginal distribution over the random variable
-X.We denote this distribution by P(X).&lt;/li&gt;
-  &lt;li&gt;Joint Distribtuion:&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h5 id=&quot;remark-1&quot;&gt;Remark&lt;/h5&gt;
-&lt;p&gt;I am kind of phobia of the word &lt;strong&gt;marginal distribution&lt;/strong&gt;, I should try to
-understand this term in context of talking about **joint distribution **,just
-like the sides of a coin, like duality in geometry, and then I can understand
-this concept better.&lt;/p&gt;
-
-&lt;h4 id=&quot;conditional-probability&quot;&gt;Conditional Probability&lt;/h4&gt;
-&lt;p&gt;The notation $P(X|Y)$ to represent a set of conditional probability
-distributions&lt;/p&gt;
+&lt;h5 id=&quot;21-remark&quot;&gt;2.1 Remark&lt;/h5&gt;
+&lt;p&gt;As with any function, there is often confusion between the function itself,
+which is called X in the definition above, and the value $X(\omega)$ the
+function takes on for a sample point $\omega$.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;Intuitively, for each value of Y, this objects assigns a probability over
-values of X using the conditional probability.&lt;/li&gt;
-  &lt;li&gt;This notation allows us to write the shorthand version of the chain rule:
-$P(X,Y)=P(X)P(Y|X)$&lt;/li&gt;
+  &lt;li&gt;This is particularly prevalent with random variables(rv’s) since we
+intuitively associate a rv with its sample value when an experiment is performed.&lt;/li&gt;
+  &lt;li&gt;We try to control that confusion here by using $X, X(\omega), $ and $x$,
+respectively, to refer to the rv, the sample value taken for a given sample
+point $\omega$, and a generic sample value.&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h4 id=&quot;remark-2&quot;&gt;Remark&lt;/h4&gt;
-&lt;p&gt;The definition of conditional probability is based on &lt;strong&gt;Joint Distribution&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;independence&quot;&gt;Independence&lt;/h4&gt;
-&lt;p&gt;We usually expect $P(\alpha|\beta)$ to be different from $P(\alpha)$. That is,
-learning that $\beta$ is true changes our probability over $\alpha$, However, in
-some situations equality can occur, so that &lt;br /&gt;
-$P(\alpha|\beta)=P(\alpha)$. &lt;br /&gt;
-That is, learning that $\beta$ occurs did not change our probability of $\alpha$&lt;/p&gt;
-
-&lt;h4 id=&quot;conditional-independence&quot;&gt;Conditional Independence&lt;/h4&gt;
-&lt;p&gt;Independence is a useful property, it is not often that we encounter two
-independent events. A more common situation is when two events are independent
-given an additional event.&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Conditionally Independent:  We say that an event $\alpha$ is conditionally independent of event $\beta$
-given $\gamma$ in P, denoted&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;independence-and-conditional-independence&quot;&gt;Independence and Conditional Independence&lt;/h4&gt;
-&lt;p&gt;we usually expect $P(\alpha | \beta)$ to be different from P(\alpha). That is,
-learning that $\beta$ is true changes our probability over $\alpha$. However, in
-some situations equality can occur, so that $P(\alpha|\beta)=P(\alpha)$. That
-is, learing that $\beta$ occurs did not chang our probability of $\alpha$. &lt;br /&gt;&lt;/p&gt;
-
-&lt;h5 id=&quot;definition-1&quot;&gt;Definition 1:&lt;/h5&gt;
-&lt;p&gt;A distribution P satisfies$(\alpha \perp \beta)$ if and only if 
-\(P(\alpha \cap \beta)=P(\alpha) P(\beta)\)&lt;/p&gt;
-
-&lt;h4 id=&quot;why-independence-and-conditional-independence-are-so-important-&quot;&gt;Why Independence and Conditional Independence are so Important ?&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;we can always write the following formula, no matter they are independent or
-not. &lt;br /&gt;
- $P(x,y| \mathcal{H})=P(x|y,\mathcal{H})p(y|\mathcal{H})$&lt;/li&gt;
-  &lt;li&gt;if they are independent, it can be denoted in the following way &lt;br /&gt;
- $P(x,y| \mathcal{H})=P(x|\mathcal{H})p(y|\mathcal{H})$
-    &lt;ul&gt;
-      &lt;li&gt;Maybe because we have just two random variables,you can’t realize how
-important they are.
-        &lt;h4 id=&quot;notation&quot;&gt;Notation&lt;/h4&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;PMF: If X has only a finite or countable number of possible sample values,
-say $x_1,x_2,\cdots$, the probability $Pr{X=x_i}$ of each sample values
-$x_i$ is called the probability mass function(PMF) at $x_i$ and denoted by
-$p_X(x_i)$; such a random variable is called discrete&lt;/li&gt;
-  &lt;li&gt;Probability Density: If the distribution function $F_X(x)$ of a rv X has a
-derivative at x, the derivative is called the probability density of X at x
-and denoted by $f_X(x)$
-    &lt;h5 id=&quot;remark-3&quot;&gt;Remark&lt;/h5&gt;
-    &lt;p&gt;Probability Mass function and probability density function are defined based on
-cumulative distribution function.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
 
 &lt;h4 id=&quot;terminology&quot;&gt;terminology&lt;/h4&gt;
 &lt;ol&gt;
@@ -12009,7 +11941,7 @@ probability.&lt;/li&gt;
   </item>
 
   <item>
-    <title>P.M.: Expectation and Variance</title>
+    <title>P.M.: Expectation, Variance, Moment</title>
     <description>
 &lt;p&gt;1.$E[X]=\int F_X^c(x)dx$ for arbitrary nonneg X&lt;/p&gt;
 
@@ -12041,28 +11973,97 @@ x=\int_{0}^{\infty} x \cdot \lambda e^{-\lambda x} d x=\frac{1}{\lambda}
   </item>
 
   <item>
-    <title>P.M.: Function and Distribution</title>
+    <title>P.M.: Joint, Marginal and  Conditional Distribution</title>
     <description>
-&lt;h4 id=&quot;beta-distribution&quot;&gt;beta distribution&lt;/h4&gt;
+&lt;h4 id=&quot;1-marginal-and-joint-distributions&quot;&gt;1. Marginal and Joint Distributions&lt;/h4&gt;
 &lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;beta distribution: a family of continuous probability distributions defined on the interval [0,1]
-parametrized by two positive shape parameters, denoted by $\alpha$ and $\beta$.&lt;/p&gt;
+  &lt;li&gt;Marginal Distribution: Once we define a random variable X, we can consider
+the distribution over events that can be described using X. This distribution
+is often referred to as the marginal distribution over the random variable
+X.We denote this distribution by P(X).&lt;/li&gt;
+  &lt;li&gt;Joint Distribtuion:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h5 id=&quot;11-remark&quot;&gt;1.1 Remark&lt;/h5&gt;
+&lt;p&gt;I am kind of phobia of the word &lt;strong&gt;marginal distribution&lt;/strong&gt;, I should try to
+understand this term in context of talking about **joint distribution **,just
+like the sides of a coin, like duality in geometry, and then I can understand
+this concept better.&lt;/p&gt;
+
+&lt;h4 id=&quot;2-conditional-probability&quot;&gt;2 Conditional Probability&lt;/h4&gt;
+&lt;p&gt;The notation $P(X|Y)$ to represent a set of conditional probability
+distributions&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Intuitively, for each value of Y, this objects assigns a probability over
+values of X using the conditional probability.&lt;/li&gt;
+  &lt;li&gt;This notation allows us to write the shorthand version of the chain rule:
+$P(X,Y)=P(X)P(Y|X)$&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;21--remark&quot;&gt;2.1  Remark&lt;/h5&gt;
+&lt;p&gt;The definition of conditional probability is based on &lt;strong&gt;Joint Distribution&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;3-independence&quot;&gt;3. Independence&lt;/h4&gt;
+&lt;p&gt;We usually expect $P(\alpha|\beta)$ to be different from $P(\alpha)$. That is,
+learning that $\beta$ is true changes our probability over $\alpha$, However, in
+some situations equality can occur, so that &lt;br /&gt;
+$P(\alpha|\beta)=P(\alpha)$. &lt;br /&gt;
+That is, learning that $\beta$ occurs did not change our probability of $\alpha$&lt;/p&gt;
+
+&lt;h5 id=&quot;31-conditional-independence&quot;&gt;3.1 Conditional Independence&lt;/h5&gt;
+&lt;p&gt;Independence is a useful property, it is not often that we encounter two
+independent events. A more common situation is when two events are independent
+given an additional event.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Conditionally Independent:  We say that an event $\alpha$ is conditionally independent of event $\beta$
+given $\gamma$ in P, denoted&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h5 id=&quot;32-independence-and-conditional-independence&quot;&gt;3.2 Independence and Conditional Independence&lt;/h5&gt;
+&lt;p&gt;we usually expect $P(\alpha | \beta)$ to be different from P(\alpha). That is,
+learning that $\beta$ is true changes our probability over $\alpha$. However, in
+some situations equality can occur, so that $P(\alpha|\beta)=P(\alpha)$. That
+is, learing that $\beta$ occurs did not chang our probability of $\alpha$. &lt;br /&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;definition-1&quot;&gt;Definition 1:&lt;/h5&gt;
+&lt;p&gt;A distribution P satisfies$(\alpha \perp \beta)$ if and only if 
+\(P(\alpha \cap \beta)=P(\alpha) P(\beta)\)&lt;/p&gt;
+
+&lt;h4 id=&quot;why-independence-and-conditional-independence-are-so-important-&quot;&gt;Why Independence and Conditional Independence are so Important ?&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;we can always write the following formula, no matter they are independent or
+not. &lt;br /&gt;
+ $P(x,y| \mathcal{H})=P(x|y,\mathcal{H})p(y|\mathcal{H})$&lt;/li&gt;
+  &lt;li&gt;if they are independent, it can be denoted in the following way &lt;br /&gt;
+ $P(x,y| \mathcal{H})=P(x|\mathcal{H})p(y|\mathcal{H})$
+    &lt;ul&gt;
+      &lt;li&gt;Maybe because we have just two random variables,you can’t realize how
+important they are.
+        &lt;h4 id=&quot;notation&quot;&gt;Notation&lt;/h4&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;In bayesian inference, the beta distribution is the conjugate prior probability distribution of the 
-Bernoulli, binomial.&lt;/p&gt;
+  &lt;li&gt;PMF: If X has only a finite or countable number of possible sample values,
+say $x_1,x_2,\cdots$, the probability $Pr{X=x_i}$ of each sample values
+$x_i$ is called the probability mass function(PMF) at $x_i$ and denoted by
+$p_X(x_i)$; such a random variable is called discrete&lt;/li&gt;
+  &lt;li&gt;Probability Density: If the distribution function $F_X(x)$ of a rv X has a
+derivative at x, the derivative is called the probability density of X at x
+and denoted by $f_X(x)$
+    &lt;h5 id=&quot;remark&quot;&gt;Remark&lt;/h5&gt;
+    &lt;p&gt;Probability Mass function and probability density function are defined based on
+cumulative distribution function.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;h4 id=&quot;4-reference&quot;&gt;4. Reference&lt;/h4&gt;
 &lt;ol&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.matongxue.com/madocs/910/&quot;&gt;beta 分布-马同学&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Beta_distribution&quot;&gt;beta distribution-wikipedia&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </description>
-    <link>/math/math-apply-probability-model-function-and-distribution.html</link>
-    <guid>/math/math-apply-probability-model-function-and-distribution</guid>
+    <link>/math/math-apply-probability-model-marginal-joint-conditional-distribution.html</link>
+    <guid>/math/math-apply-probability-model-marginal-joint-conditional-distribution</guid>
     <pubDate>Sat, 27 Apr 2019 00:00:00 +0900</pubDate>
   </item>
 
@@ -12107,6 +12108,7 @@ distribution&lt;/a&gt;&lt;/li&gt;
 &lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
 &lt;ol&gt;
   &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Dirichlet_distribution&quot;&gt;Dirichlet Distribution&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://towardsdatascience.com/dirichlet-distribution-a82ab942a879&quot;&gt;Dirichlet distribution&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 </description>
@@ -13259,6 +13261,12 @@ P^{*}\left(x_{0}\right)-\frac{c}{2}\left(x-x_{0}\right)^{2}+\cdots\]
   &lt;/li&gt;
 &lt;/ol&gt;
 
+&lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;A stochastic process is a mathematical object usually defined as a family of random variables.
+First we have idea, than we want to be exact, we give it a definition.&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;h4 id=&quot;introduction&quot;&gt;Introduction&lt;/h4&gt;
 &lt;ol&gt;
   &lt;li&gt;Stochastic processes which are processes that proceed randomly in time.&lt;/li&gt;
@@ -13301,6 +13309,11 @@ all can be used to study probability and statistics.&lt;/li&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Stochastic_process&quot;&gt;Stochastic process&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
 </description>
     <link>/math/math-apply-stochastic-process-summary.html</link>
     <guid>/math/math-apply-stochastic-process-summary</guid>
@@ -13319,7 +13332,19 @@ all can be used to study probability and statistics.&lt;/li&gt;
 So a random variable, it’s a function from the set of sample points to the set of real values.&lt;/li&gt;
 &lt;/ol&gt;
 
-\[(\Omega, \mathcal{F}, \mathbf{P})\]
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;$X(t,\omega)$
+    &lt;ul&gt;
+      &lt;li&gt;All these things about stochastic process just about the property of this function.&lt;/li&gt;
+      &lt;li&gt;if $t$ is fixed, this item refers to a random variable at time $t$.&lt;/li&gt;
+      &lt;li&gt;if $\omega$ is fixed, this item refers to a sample function.&lt;/li&gt;
+      &lt;li&gt;Don’t treat $\omega$ as only the sample space of one random variable, it’s the set of all random variable’s sample space.&lt;/li&gt;
+      &lt;li&gt;Given a random variable, we give a sample. we give every random variable an input, which is the sample space.&lt;/li&gt;
+      &lt;li&gt;and all these samples form the sample function.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
 
 </description>
     <link>/math/math-apply-stochastic-process-notation.html</link>
@@ -14237,6 +14262,10 @@ point itself is a random variable, so we call this thing $DP(\alpha, H(0))$
 Dirichlet Process. Because it meet the definition of a process.&lt;/li&gt;
 &lt;/ol&gt;
 
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Dirichlet_process#Formal_definition&quot;&gt;Dirichlet process&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     <link>/math/math-apply-probability-model-dirichlet-process-introduction.html</link>
     <guid>/math/math-apply-probability-model-dirichlet-process-introduction</guid>
@@ -39802,6 +39831,12 @@ sometthing
 
 &lt;p&gt;####&lt;/p&gt;
 &lt;ol&gt;
+  &lt;li&gt;階段を降りる&lt;/li&gt;
+  &lt;li&gt;階段を上る(のぼる)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
   &lt;li&gt;六本木(ろっぽんぎ): litaterly, it means six lumbers.&lt;/li&gt;
   &lt;li&gt;一本道(いっぽんみち): litterly, it means one-way&lt;/li&gt;
   &lt;li&gt;寺院めぐり: hang around in the shrine&lt;/li&gt;
@@ -40367,6 +40402,7 @@ of word.&lt;/li&gt;
   &lt;li&gt;ないんですよね, なんかあるでしょう?&lt;/li&gt;
   &lt;li&gt;誰に対して驚いてんだ&lt;/li&gt;
   &lt;li&gt;オサーンだなぁ&lt;/li&gt;
+  &lt;li&gt;１つに絞る必要ない&lt;/li&gt;
 &lt;/ol&gt;
 
 </description>
@@ -40523,6 +40559,7 @@ of word.&lt;/li&gt;
   &lt;li&gt;現場なんか行くことないだろ&lt;/li&gt;
   &lt;li&gt;音楽配信: online music distribution&lt;/li&gt;
   &lt;li&gt;配信証明(はいしんしょうめい): proof of delivery&lt;/li&gt;
+  &lt;li&gt;芸能人: entertainer&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;####&lt;/p&gt;
@@ -40698,6 +40735,7 @@ of word.&lt;/li&gt;
 &lt;ol&gt;
   &lt;li&gt;定期券: 回数に関係なく決められた期間使える&lt;/li&gt;
   &lt;li&gt;回数券: 期間に関係なく決められた回数使える&lt;/li&gt;
+  &lt;li&gt;渋滞: traffic jam&lt;/li&gt;
 &lt;/ol&gt;
 
 </description>
@@ -44889,6 +44927,42 @@ Japanese&lt;/a&gt;&lt;/li&gt;
   <item>
     <title>単語: Compound verb</title>
     <description>
+&lt;h4 id=&quot;1-込むinto&quot;&gt;1. 込む(into)&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;咳き込む: to cough violently&lt;/li&gt;
+  &lt;li&gt;飛び込む: 鴨川に飛び込む: jump into river&lt;/li&gt;
+  &lt;li&gt;押し込む: 開け口を押し込んでください&lt;/li&gt;
+  &lt;li&gt;持ち込む: ペットを持ち込む禁止&lt;/li&gt;
+  &lt;li&gt;読み込む: 読み込んでいます&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;2-出すout&quot;&gt;2. 出す(out)&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;取り出す: take out&lt;/li&gt;
+  &lt;li&gt;持ち出す: bring out&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h5 id=&quot;21-out-of&quot;&gt;2.1 out of&lt;/h5&gt;
+&lt;ol&gt;
+  &lt;li&gt;ここから出ていけ&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;3-上がる上げるup-out&quot;&gt;3. 上がる・上げる(up, out)&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;立ち上がる: stand up&lt;/li&gt;
+  &lt;li&gt;裾上げ: taking a hem up&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;4-下げるdown&quot;&gt;4. 下げる(down)&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;引き下げる: pull down&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;5-過ぎるby&quot;&gt;5. 過ぎる(by)&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;通り過ぎる(pass by): 小学校を取り過ぎる&lt;/li&gt;
+&lt;/ol&gt;
+
 &lt;h4 id=&quot;1-返る&quot;&gt;1. 返る&lt;/h4&gt;
 &lt;ol&gt;
   &lt;li&gt;振り返る: turn head&lt;/li&gt;
@@ -44906,12 +44980,6 @@ Japanese&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;打ち合わせ&lt;/li&gt;
   &lt;li&gt;待ち合わせ: appointment&lt;/li&gt;
   &lt;li&gt;盛り合わせ&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;4-込む&quot;&gt;4. 込む&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;咳き込む: to cough violently&lt;/li&gt;
-  &lt;li&gt;飛び込む: 鴨川に飛び込む: jump into river&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h4 id=&quot;5-抜く&quot;&gt;5. 抜く&lt;/h4&gt;
@@ -45267,6 +45335,10 @@ telephone, I am sorry&lt;/p&gt;
   &lt;li&gt;period + に + number + counter
     &lt;ul&gt;
       &lt;li&gt;週に5回&lt;/li&gt;
+      &lt;li&gt;四回目&lt;/li&gt;
+      &lt;li&gt;第一位&lt;/li&gt;
+      &lt;li&gt;第四位&lt;/li&gt;
+      &lt;li&gt;the last sound should be emphasised on&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;1日あたり8時間まで&lt;/li&gt;
@@ -45323,6 +45395,22 @@ telephone, I am sorry&lt;/p&gt;
   <item>
     <title>言葉: 選ぶ</title>
     <description>
+&lt;h4 id=&quot;返る戻る&quot;&gt;返る・戻る&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;返る: means the place is the home ground of this object
+    &lt;ul&gt;
+      &lt;li&gt;in English, we have two ways to express this.&lt;/li&gt;
+      &lt;li&gt;return this book, doesn’t imply a direction&lt;/li&gt;
+      &lt;li&gt;go back, come back&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;戻る: implies the place is a temporal places
+    &lt;ul&gt;
+      &lt;li&gt;or used the value of something&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
 &lt;h4 id=&quot;欲しい見たい&quot;&gt;欲しい・見たい&lt;/h4&gt;
 &lt;ol&gt;
   &lt;li&gt;欲しい

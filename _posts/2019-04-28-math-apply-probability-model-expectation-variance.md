@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "P.M.: Expectation and Variance"
+title: "P.M.: Expectation, Variance, Moment"
 keywords: []
 description: 
 category: "math"

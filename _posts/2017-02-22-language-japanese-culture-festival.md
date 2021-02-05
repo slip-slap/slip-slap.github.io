@@ -15,6 +15,10 @@ tags: ["日本語"]
 4. 七五三(しちごさん): 753
 
 
+#### 
+1. 階段を降りる
+2. 階段を上る(のぼる)
+
 ####
 1. 六本木(ろっぽんぎ): litaterly, it means six lumbers. 
 2. 一本道(いっぽんみち): litterly, it means one-way

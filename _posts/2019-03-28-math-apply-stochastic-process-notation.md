@@ -15,7 +15,17 @@ tags: ["apply","S.P."]
 4. according to the axioms, there are only sample space, events, and probability.
 So a random variable, it's a function from the set of sample points to the set of real values.
 
-$$
-(\Omega, \mathcal{F}, \mathbf{P})
-$$
+
+
+
+#### 
+1. $X(t,\omega)$
+- All these things about stochastic process just about the property of this function.
+- if $t$ is fixed, this item refers to a random variable at time $t$.
+- if $\omega$ is fixed, this item refers to a sample function.
+- Don't treat $\omega$ as only the sample space of one random variable, it's the set of all random variable's sample space.
+- Given a random variable, we give a sample. we give every random variable an input, which is the sample space. 
+- and all these samples form the sample function.
+
+
 

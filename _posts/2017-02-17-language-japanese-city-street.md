@@ -35,3 +35,4 @@ tags: ["日本語"]
 1. 都市 refers to cities in the sense of metropolitan areas as opposed to rural areas
 2. 都会 is roughly the same as  都市, but sounds more colloquial and less technical.
 
+

@@ -11,7 +11,7 @@
 <head>
   <meta charset="UTF-8">
 
-  <title>P.M.: Function and Distribution - Just Do It</title>
+  <title>P.M.: Joint, Marginal and  Conditional Distribution - Just Do It</title>
   <meta name="keywords" content="">
   <meta name="description" content="">
   <meta name="author" content="reed">
@@ -6001,7 +6001,7 @@ $(document).ready(function() {
       <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
 
     <header>
-      <h1>P.M.: Function and Distribution</h1>
+      <h1>P.M.: Joint, Marginal and  Conditional Distribution</h1>
     </header>
 
     <section>
@@ -6014,12 +6014,12 @@ $(document).ready(function() {
 
 
   <span id="share">
-  <a class="wechat" target="_blank" title="分享到微信" href="http://chart.apis.google.com/chart?cht=qr&amp;chs=300x300&amp;chl=/math/math-apply-probability-model-function-and-distribution.html"><i class="icon-large icon-wechat"></i></a>
-  <a class="weibo" target="_blank" title="分享到微博" href="http://service.weibo.com/share/share.php?title=P.M.: Function and Distribution - Just Do It&amp;url=/math/math-apply-probability-model-function-and-distribution.html&amp;type=3&amp;searchPic=1"><i class="icon-large icon-weibo"></i></a>
-  <a class="qzone" target="_blank" title="分享到 QQ 空间" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=/math/math-apply-probability-model-function-and-distribution.html&amp;title=P.M.: Function and Distribution - Just Do It&amp;summary=&amp;site="><i class="icon-large icon-qzone"></i></a>
-  <a class="twitter" target="_blank" title="Share to Twitter" href="https://twitter.com/intent/tweet?url=/math/math-apply-probability-model-function-and-distribution.html&amp;text=P.M.: Function and Distribution - Just Do It&amp;via="><i class="icon-large icon-twitter"></i></a>
-  <a class="facebook" target="_blank" title="Share to Facebook" href="http://www.facebook.com/sharer.php?u=/math/math-apply-probability-model-function-and-distribution.html&amp;t=P.M.: Function and Distribution - Just Do It"><i class="icon-large icon-facebook-sign"></i></a>
-  <a class="googleplus" target="_blank" title="Share to Google+" href="https://plus.google.com/share?url=/math/math-apply-probability-model-function-and-distribution.html"><i class="icon-large icon-google-plus-sign"></i></a>
+  <a class="wechat" target="_blank" title="分享到微信" href="http://chart.apis.google.com/chart?cht=qr&amp;chs=300x300&amp;chl=/math/math-apply-probability-model-marginal-joint-conditional-distribution.html"><i class="icon-large icon-wechat"></i></a>
+  <a class="weibo" target="_blank" title="分享到微博" href="http://service.weibo.com/share/share.php?title=P.M.: Joint, Marginal and  Conditional Distribution - Just Do It&amp;url=/math/math-apply-probability-model-marginal-joint-conditional-distribution.html&amp;type=3&amp;searchPic=1"><i class="icon-large icon-weibo"></i></a>
+  <a class="qzone" target="_blank" title="分享到 QQ 空间" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=/math/math-apply-probability-model-marginal-joint-conditional-distribution.html&amp;title=P.M.: Joint, Marginal and  Conditional Distribution - Just Do It&amp;summary=&amp;site="><i class="icon-large icon-qzone"></i></a>
+  <a class="twitter" target="_blank" title="Share to Twitter" href="https://twitter.com/intent/tweet?url=/math/math-apply-probability-model-marginal-joint-conditional-distribution.html&amp;text=P.M.: Joint, Marginal and  Conditional Distribution - Just Do It&amp;via="><i class="icon-large icon-twitter"></i></a>
+  <a class="facebook" target="_blank" title="Share to Facebook" href="http://www.facebook.com/sharer.php?u=/math/math-apply-probability-model-marginal-joint-conditional-distribution.html&amp;t=P.M.: Joint, Marginal and  Conditional Distribution - Just Do It"><i class="icon-large icon-facebook-sign"></i></a>
+  <a class="googleplus" target="_blank" title="Share to Google+" href="https://plus.google.com/share?url=/math/math-apply-probability-model-marginal-joint-conditional-distribution.html"><i class="icon-large icon-google-plus-sign"></i></a>
 </span>
 
 
@@ -6029,19 +6029,88 @@ $(document).ready(function() {
         </div>
       </div>
       
-<h4 id="beta-distribution">beta distribution</h4>
+<h4 id="1-marginal-and-joint-distributions">1. Marginal and Joint Distributions</h4>
 <ol>
-  <li>
-    <p>beta distribution: a family of continuous probability distributions defined on the interval [0,1]
-parametrized by two positive shape parameters, denoted by $\alpha$ and $\beta$.</p>
+  <li>Marginal Distribution: Once we define a random variable X, we can consider
+the distribution over events that can be described using X. This distribution
+is often referred to as the marginal distribution over the random variable
+X.We denote this distribution by P(X).</li>
+  <li>Joint Distribtuion:</li>
+</ol>
+
+<h5 id="11-remark">1.1 Remark</h5>
+<p>I am kind of phobia of the word <strong>marginal distribution</strong>, I should try to
+understand this term in context of talking about **joint distribution **,just
+like the sides of a coin, like duality in geometry, and then I can understand
+this concept better.</p>
+
+<h4 id="2-conditional-probability">2 Conditional Probability</h4>
+<p>The notation $P(X|Y)$ to represent a set of conditional probability
+distributions</p>
+<ul>
+  <li>Intuitively, for each value of Y, this objects assigns a probability over
+values of X using the conditional probability.</li>
+  <li>This notation allows us to write the shorthand version of the chain rule:
+$P(X,Y)=P(X)P(Y|X)$</li>
+</ul>
+
+<h5 id="21--remark">2.1  Remark</h5>
+<p>The definition of conditional probability is based on <strong>Joint Distribution</strong></p>
+
+<h4 id="3-independence">3. Independence</h4>
+<p>We usually expect $P(\alpha|\beta)$ to be different from $P(\alpha)$. That is,
+learning that $\beta$ is true changes our probability over $\alpha$, However, in
+some situations equality can occur, so that <br />
+$P(\alpha|\beta)=P(\alpha)$. <br />
+That is, learning that $\beta$ occurs did not change our probability of $\alpha$</p>
+
+<h5 id="31-conditional-independence">3.1 Conditional Independence</h5>
+<p>Independence is a useful property, it is not often that we encounter two
+independent events. A more common situation is when two events are independent
+given an additional event.</p>
+<ol>
+  <li>Conditionally Independent:  We say that an event $\alpha$ is conditionally independent of event $\beta$
+given $\gamma$ in P, denoted</li>
+</ol>
+
+<h5 id="32-independence-and-conditional-independence">3.2 Independence and Conditional Independence</h5>
+<p>we usually expect $P(\alpha | \beta)$ to be different from P(\alpha). That is,
+learning that $\beta$ is true changes our probability over $\alpha$. However, in
+some situations equality can occur, so that $P(\alpha|\beta)=P(\alpha)$. That
+is, learing that $\beta$ occurs did not chang our probability of $\alpha$. <br /></p>
+
+<h5 id="definition-1">Definition 1:</h5>
+<p>A distribution P satisfies$(\alpha \perp \beta)$ if and only if 
+\(P(\alpha \cap \beta)=P(\alpha) P(\beta)\)</p>
+
+<h4 id="why-independence-and-conditional-independence-are-so-important-">Why Independence and Conditional Independence are so Important ?</h4>
+<ol>
+  <li>we can always write the following formula, no matter they are independent or
+not. <br />
+ $P(x,y| \mathcal{H})=P(x|y,\mathcal{H})p(y|\mathcal{H})$</li>
+  <li>if they are independent, it can be denoted in the following way <br />
+ $P(x,y| \mathcal{H})=P(x|\mathcal{H})p(y|\mathcal{H})$
+    <ul>
+      <li>Maybe because we have just two random variables,you can’t realize how
+important they are.
+        <h4 id="notation">Notation</h4>
+      </li>
+    </ul>
   </li>
-  <li>
-    <p>In bayesian inference, the beta distribution is the conjugate prior probability distribution of the 
-Bernoulli, binomial.</p>
+  <li>PMF: If X has only a finite or countable number of possible sample values,
+say $x_1,x_2,\cdots$, the probability $Pr{X=x_i}$ of each sample values
+$x_i$ is called the probability mass function(PMF) at $x_i$ and denoted by
+$p_X(x_i)$; such a random variable is called discrete</li>
+  <li>Probability Density: If the distribution function $F_X(x)$ of a rv X has a
+derivative at x, the derivative is called the probability density of X at x
+and denoted by $f_X(x)$
+    <h5 id="remark">Remark</h5>
+    <p>Probability Mass function and probability density function are defined based on
+cumulative distribution function.</p>
   </li>
 </ol>
 
-<h4 id="reference">Reference</h4>
+<h4 id="4-reference">4. Reference</h4>
 <ol>
   <li><a href="https://www.matongxue.com/madocs/910/">beta 分布-马同学</a></li>
   <li><a href="https://en.wikipedia.org/wiki/Beta_distribution">beta distribution-wikipedia</a></li>
@@ -6114,7 +6183,7 @@ Bernoulli, binomial.</p>
       
       <li><a href="/archive.html">文章列表</a></li>
       
-      <li class="next"><a href="/math/math-apply-probability-model-expectation-variance.html" title="P.M.: Expectation and Variance">下一篇 &rarr;</a></li>
+      <li class="next"><a href="/math/math-apply-probability-model-expectation-variance.html" title="P.M.: Expectation, Variance, Moment">下一篇 &rarr;</a></li>
       
     </ul>
   </div>
@@ -6132,9 +6201,9 @@ Bernoulli, binomial.</p>
     var disqus_developer = 1;
     var disqus_shortname = 'just-do-it-1';
     
-    var disqus_identifier = 'P.M.: Function and Distribution';
-    var disqus_title = 'P.M.: Function and Distribution';
-    var disqus_url = '/math/math-apply-probability-model-function-and-distribution.html';
+    var disqus_identifier = 'P.M.: Joint, Marginal and  Conditional Distribution';
+    var disqus_title = 'P.M.: Joint, Marginal and  Conditional Distribution';
+    var disqus_url = '/math/math-apply-probability-model-marginal-joint-conditional-distribution.html';
     
     
     (function() {

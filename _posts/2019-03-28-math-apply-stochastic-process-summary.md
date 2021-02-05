@@ -31,6 +31,9 @@ tags: ["apply","S.P.","summary"]
 - but it doesn't need to be like this.
 
 
+#### Definition
+- A stochastic process is a mathematical object usually defined as a family of random variables.
+First we have idea, than we want to be exact, we give it a definition.
 
 
 #### Introduction
@@ -69,4 +72,8 @@ these fools outnumber those of us who have studied these issues.
 - In stochastic process, you generate a sampling path one time.
 - If you treat probability as function, because its factor is a variable.
 - the stochastic is functional, becasue its factor is a function.
+
+
+#### Reference
+1. [Stochastic process](https://en.wikipedia.org/wiki/Stochastic_process)
 

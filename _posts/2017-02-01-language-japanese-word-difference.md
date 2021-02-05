@@ -8,6 +8,15 @@ tags: ["日本語"]
 ---
 {% include JB/setup %}
 
+#### 返る・戻る
+1. 返る: means the place is the home ground of this object
+- in English, we have two ways to express this.
+- return this book, doesn't imply a direction
+- go back, come back
+2. 戻る: implies the place is a temporal places
+- or used the value of something
+
+
 #### 欲しい・見たい
 1. 欲しい
 - want somebody to do something
