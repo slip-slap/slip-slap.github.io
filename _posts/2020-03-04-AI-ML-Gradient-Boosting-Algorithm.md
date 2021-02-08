@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "Gradient Boosting Algorithm(GBM)"
-keywords: ["GBM","Bagging","Boosting"]
-description: "introduction"
+keywords: []
+description: 
 category: "AI"
-tags: ["algorithm"]
+tags: []
 ---
 {% include JB/setup %}
 

@@ -1,0 +1,47 @@
+I"½
+<h4 id="1-problem">1. Problem</h4>
+
+<h4 id="2-model-architecture">2. Model Architecture</h4>
+<p><img src="/images/ai-dynamic-model-hmm-introduction.png" height="" width="" /></p>
+
+<ul>
+  <li>
+    <p>Discrete Transition Probability
+\(p\left(q_{t} \mid q_{1}, \ldots, q_{t-1}, y_{1}, \ldots,
+y_{t-1}\right)=p\left(q_{t} \mid q_{t-1}\right)\)</p>
+  </li>
+  <li>
+    <p>Measurer 
+\(p\left(y_{t} \mid q_{1}, \ldots, q_{t-1}, q_{t}, y_{1}, \ldots,
+y_{t-1}\right)=p\left(y_{t} \mid q_{t}\right)\)</p>
+  </li>
+</ul>
+
+<h4 id="3-model-parameters">3. Model Parameters</h4>
+<ol>
+  <li>$ \lambda={A, B, \pi} $
+    <ul>
+      <li>$\pi$ is the probability of the initial state</li>
+      <li>A is the state transition matrix</li>
+    </ul>
+  </li>
+  <li>Major operations
+    <ul>
+      <li>
+        <table>
+          <tbody>
+            <tr>
+              <td>Evaluate $p(Y</td>
+              <td>\lambda)$: it needs the backward and forward algorithm</td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+      <li>$ \lambda_{\mathrm{MLE}}=\underset{\lambda}{\arg \max } p(Y \mid \lambda) $,
+it needs EM algorithm</li>
+      <li>$ \underset{Q}{\arg \max } p(Y \mid Q, \lambda) $</li>
+    </ul>
+  </li>
+</ol>
+
+:ET
