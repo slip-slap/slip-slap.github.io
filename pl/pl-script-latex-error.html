@@ -295,6 +295,19 @@ $(document).ready(function() {
   
   
   
+    <li><a href="/archive.html#October-2020">2020 年 10 月 (2)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
 
   
   
@@ -442,17 +455,7 @@ $(document).ready(function() {
   
   
   
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-    <li><a href="/archive.html#March-2020">2020 年 03 月 (7)</a></li>
+    <li><a href="/archive.html#March-2020">2020 年 03 月 (5)</a></li>
     
   
 
@@ -763,7 +766,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#July-2019">2019 年 07 月 (8)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#July-2019">2019 年 07 月 (9)</a></li>
     
   
 
@@ -1496,12 +1504,7 @@ $(document).ready(function() {
   
   
   
-
-  
-  
-  
-  
-    <li><a href="/archive.html#December-2018">2018 年 12 月 (70)</a></li>
+    <li><a href="/archive.html#December-2018">2018 年 12 月 (69)</a></li>
     
   
 
@@ -5199,7 +5202,7 @@ $(document).ready(function() {
         </section>
         <section>
           <a href="/tags.html" title="查看所有标签"><i class="icon-fixed-width icon-tags"></i> 标签云</a>
-<span title="标签总数">105</span>
+<span title="标签总数">104</span>
 <div id="tag-cloud">
 
 
@@ -5382,13 +5385,6 @@ $(document).ready(function() {
     
     
     <a href="/tags.html#A.D.T.P.-ref" style="font-size: 9pt; color: #999;">A.D.T.P.</a>
-  
-    
-    
-    
-    
-    
-    <a href="/tags.html#Algorithm-ref" style="font-size: 9pt; color: #999;">Algorithm</a>
   
     
     
@@ -5815,7 +5811,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#Bayesian-ref" style="font-size: 9pt; color: #999;">Bayesian</a>
+    <a href="/tags.html#Bayesian-ref" style="font-size: 9.5pt; color: #999;">Bayesian</a>
   
     
     
@@ -5878,13 +5874,6 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#algorithm-ref" style="font-size: 9pt; color: #999;">algorithm</a>
-  
-    
-    
-    
-    
-    
     <a href="/tags.html#model-ref" style="font-size: 9pt; color: #999;">model</a>
   
     
@@ -5928,6 +5917,13 @@ $(document).ready(function() {
     
     
     <a href="/tags.html#D.M.-ref" style="font-size: 9pt; color: #999;">D.M.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#traditional-ref" style="font-size: 9pt; color: #999;">traditional</a>
   
     
     
@@ -6044,20 +6040,19 @@ $(document).ready(function() {
 
         </div>
       </div>
-      <h4 id="failed-to-arrange-your-figure-properly">failed to arrange your figure properly</h4>
+      <h4 id="1-failed-to-arrange-your-figure-properly">1. failed to arrange your figure properly</h4>
 <ol>
   <li>If you draw help lines in your code, don’t forgot to remove the help line, or
 help grid.</li>
 </ol>
 
-<h4 id="undefine">undefine</h4>
+<h5 id="11--undefine">1.1  undefine</h5>
 
 <ol>
   <li>tikz code can’t surrounded by frame code which a keyword from beamer.</li>
 </ol>
 
-<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-<span class="k">\documentclass</span><span class="p">{</span>beamer<span class="p">}</span>
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\documentclass</span><span class="p">{</span>beamer<span class="p">}</span>
 <span class="k">\usepackage</span><span class="p">{</span>graphicx,multicol,lipsum,caption,authblk<span class="p">}</span>
 <span class="k">\usepackage</span><span class="p">{</span>amsmath,booktabs,verbatim,tikz<span class="p">}</span>
 <span class="k">\usetikzlibrary</span><span class="p">{</span>shapes.geometric, arrows,positioning,matrix,calc<span class="p">}</span>
@@ -6104,6 +6099,21 @@ net/.style=<span class="p">{</span>
 <span class="nt">\end{document}</span>
 </code></pre></div></div>
 
+<h4 id="2-amsmath-error">2. Amsmath Error</h4>
+<ol>
+  <li>Paragraph ended before <strong>\align</strong> was complete for following code.
+    <ul>
+      <li>Empty lines are not allowed inside a display math environment</li>
+      <li><strong>align</strong> is already a math environment, so you shouldn’t use \ <strong>[</strong> \<strong>]</strong>
+inside it.</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="3-reference">3. Reference</h4>
+<ol>
+  <li><a href="https://tex.stackexchange.com/questions/203020/paragraph-ended-before-align-was-complete">Paragraph ended before \aligh was complete</a></li>
+</ol>
 
       
       <footer>
