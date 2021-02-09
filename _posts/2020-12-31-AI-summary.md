@@ -35,20 +35,20 @@ tags: ["summary"]
 
 
 
-
-
-
-####
+##### 1.2 simple and trival
 1. simple: maybe powerful, simple ideas are often most powerful.
 2. trivial: less powerful
 
-#### AI, ML and DL
+#### 2. AI, ML and DL
+
+##### 2.1 AI
 1. AI: first coined in 1956 by John McCarthy, **AI involues machings that can
 perform tasks that are characteristic of human intelligence.**, while this is
 rather general, it includes things like planning, understanding language,
 recognizing objects and sounds, learning, and problem-solving.
 
-2. ML: First coined in 1959 by Arthur Samuel, defining it as, "the ability to learn
+##### 2.2 ML
+1. ML: First coined in 1959 by Arthur Samuel, defining it as, "the ability to learn
 without using being explicitly programmed." 
 Machine Learning is simply a way of achieving AI.
 - the term "explicitly programmed", how to understand, for example, in tradional
@@ -58,13 +58,38 @@ Machine Learning is simply a way of achieving AI.
 - But with machine learning, you don't need to do like that, you just let the
   computer to find the pattern.
 
-3. DL
+
+2. ML is a model, when we talk about a model, it needs a couple of components.
+   For machine learning.
+
+<img src="{{IMAGE_PATH}}/AI-summary-model.png" height="" width="" />
+
+
+
+##### 2.3 DL
 DL: Deep learning is one of many approaches to machine learning. other
 approaches include decision tree learning, clustering, reinforcement learning,
 and Bayesian networks.
 
+#### 4. Galios
+1. AI and ML: ML is one possible route to realize AI 
+- Chess playing: traditional AI: game tree
+- Chess playing: ML for AI: 'learning from board data'
+2. ML and statistics: 
+- ML use data to compute hypothesis g that approximates target f
+- Statistics use data to make inference about an unknown process
+- statistics can be used to achieve ML
+- traditional statistics also focus on provable results with math assumptions,
+  can care less about computation.
 
-#### Reference
+3. ML and Data Mining:
+- Data Mining: use huge data to find property that is interesting.
+- if 'interesting property' same as 'hypothesis that approximate target' 
+- if 'interesting property' related to  'hypothesis that approximate target' 
+- traditional DM also focused on efficient computation in large database.
+
+
+#### 5. Reference
 1. [The Difference Between Artificial Intelligence, Machine Learning, and Deep Learning](https://medium.com/iotforall/the-difference-between-artificial-intelligence-machine-learning-and-deep-learning-3aa67bff5991)
 
 

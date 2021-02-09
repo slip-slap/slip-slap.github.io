@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Latex: Math Equation"
-keywords: ["Tikz", "PGF"]
+keywords: []
 description: 
 category: "PL"
 tags: ["latex","script"]
@@ -52,6 +52,15 @@ p(x) = 3x^6 + 14x^5y + 590x^4y^2 + 19x^3y^3\\
 	\end{cases}
 \end{align}
 ```
+##### 1.3.1 aligned by the equation
+
+```latex
+\begin{align}
+	y &= (a-x)(b+x) \\
+	  &= dx 
+\end{align}
+```
+
 #### 1.4 Split
 #### 1.5 Matrix
 1. amsmath provides command to typeset matrices with different delimiters.
@@ -88,10 +97,6 @@ a & b & c
 \end{vmatrix}
 ```
 
-
-
-
-
 #### 2. mdwmath Package 
 1.  mdwmath.sty which is used to format equations
 
@@ -122,12 +127,6 @@ graphicx offers a **\resizebox** command to adjust an equation.
 	\end{array}
 \end{equation}
 ```
-
-
-#### Reference
-1. [Adjust equation size](https://tex.stackexchange.com/questions/35554/how-can-i-auto-adjust-a-equation-to-appear-in-the-entire-page-scale-to-equatio)
-
-
 
 #### Reference
 1. [Adjust equation size](https://tex.stackexchange.com/questions/35554/how-can-i-auto-adjust-a-equation-to-appear-in-the-entire-page-scale-to-equatio)

@@ -1,18 +1,22 @@
 ---
 layout: post
-title: "Decision Tree Algorithm"
-keywords: ["Decision Tree","algorithms"]
-description: "introduction"
+title: "Traditional: Decision Tree Introduction"
+keywords: []
+description: ""
 category: "AI"
-tags: ["algorithm"]
+tags: ["traditional"]
 ---
 {% include JB/setup %}
+
+
+#### Model
+
+
 
 
 #### Basic Concept
 
 + Decision Stump: A Decision Stump is a Decision Tree model that only splits off at one level, therefore the final prediction is based on only one feature.
-
 
 
 #### Decision Tree for Classification
@@ -23,7 +27,6 @@ to classification and regression.
 1. classification: The Gini cost function is used which provides an indication of how pure the nodes are.
 where node purity refers to how mixed the training data assigned to each node is.
 2. regression: The cost function
-
 
 
 

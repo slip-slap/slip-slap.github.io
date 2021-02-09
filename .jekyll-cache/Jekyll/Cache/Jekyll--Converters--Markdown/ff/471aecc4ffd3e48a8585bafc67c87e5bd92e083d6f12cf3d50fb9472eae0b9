@@ -1,0 +1,104 @@
+I"
+<h4 id="how-to-understand-the-matrix-t">How to understand the matrix T?</h4>
+<p>\(T=
+\left(\begin{array}{lll}{1} &amp; {0} &amp; {0} \\ {0} &amp; {1} &amp; {0} \\ {0} &amp; {0} &amp;
+{1}\end{array}\right)\)</p>
+
+<p>\(\left(\begin{array}{l}
+{1}  \\ 
+{0}  \\ 
+{0}
+\end{array}\right) 
+=T(\vec{e_1})\)
+\(\left(\begin{array}{l}
+{0}  \\ 
+{1}  \\ 
+{0}
+\end{array}\right)
+=T(\vec{e_2})\)</p>
+
+<p>\(\left(\begin{array}{l}
+{0}  \\ 
+{1}  \\ 
+{0}
+\end{array}\right)
+=T(\vec{e_3})\)</p>
+<ol>
+  <li>we can understand this matric coloumn by coloumn.</li>
+  <li>The first coloumn which is the image of the vector $\vec{e_1}$</li>
+  <li>The second coloumn which is the image of the vector $\vec{e_2}$</li>
+  <li>The third coloumn which is the image of the vector $\vec{e_3}$</li>
+</ol>
+
+<h4 id="projection-and-reflection">Projection and Reflection</h4>
+<p><img src="/images/math-structure-linear-algebra-3-3-matrix.png" /></p>
+
+<h4 id="projection">Projection</h4>
+
+\[\begin{equation}
+P(\vec{u}) = 
+	\begin{pmatrix}
+	x\\
+	y\\
+	z
+	\end{pmatrix} 
+	- 
+	\frac{ax+by+cz}{al+bm+cn}
+	\begin{pmatrix}
+	l\\
+	m\\
+    n	
+	\end{pmatrix} 
+\end{equation}\]
+
+<p>\(P(\vec{u})=
+\frac{1}{a \ell+b m+c n}
+\left(
+\begin{array}{ccc}
+{ b m+c n} &amp; {-b \ell}    &amp; {-c l} \\ 
+{-a m}     &amp; {a \ell+c n} &amp; {-c m} \\ 
+{-a n}     &amp; {-b n}       &amp; {a \ell+b
+m}\end{array}\right)\left(
+\begin{array}{l}{x} \\ {y} \\ {z}
+\end{array}\right)\) <br /></p>
+
+<p>Properties:</p>
+<ol>
+  <li>$p(\vec{v})=\vec{0}$</li>
+  <li>$p(\vec{u})=\vec{u} \leftrightarrow \vec{u}$ lies on plane $\pi$</li>
+  <li>$p^2(\vec{u})=\vec{u}$ for any $\vec{u}$</li>
+</ol>
+
+<h4 id="reflection">Reflection</h4>
+
+\[=\left(\begin{array}{l}{x} \\ {y} \\ {z}\end{array}\right)-\frac{2}{a \ell+b m+c
+n}\left(\begin{array}{lll}{a l} &amp; {b l} &amp; {c l} \\ {a m} &amp; {b m} &amp; {c m} \\ {a
+n} &amp; {b n} &amp; {c n}\end{array}\right)\left(\begin{array}{l}{x} \\ {y} \\
+{z}\end{array}\right)\]
+
+\[S: \frac{1}{a \ell+b m+c n}\left(\begin{array}{ccc}{-a l+b m+c n} &amp; {-2 b \ell}
+&amp; {-2 c l} \\ {-2 a m} &amp; {a l-b m+c n} &amp; {-2 c m} \\ {-2 a n} &amp; {-2 b n} &amp; {a
+l+b m-c n}\end{array}\right)\]
+
+<h4 id="reflection-over-a-line">Reflection over a Line</h4>
+<p>\(=\frac{2}{a l+b m+c n}\left(\begin{array}{lll}{a l} &amp; {b l} &amp; {c l} \\ {a m} &amp;
+{b m} &amp; {c m} \\ {a n} &amp; {b n} &amp; {c
+n}\end{array}\right)\left(\begin{array}{l}{x} \\ {y} \\
+{z}\end{array}\right)-\left(\begin{array}{l}{x} \\ {y} \\ {z}\end{array}\right)\)</p>
+
+\[T: \frac{1}{a l+b m+c n}\left(\begin{array}{ccc}{a l-b m-c n} &amp; {2 b l} &amp; {2 c
+l} \\ {2 a m} &amp; {-a b+b m-c n} &amp; {2 c m} \\ {2 a n} &amp; {2 b n} &amp; {-a l-b m+c
+h}\end{array}\right)\]
+
+<h4 id="normal-vector">Normal Vector</h4>
+<p>\(\begin{array}{l}{P: \frac{1}{Q}\left(\begin{array}{ccc}{b^{2}+c^{2}-a b} &amp; {-a
+c} \\ {-a b} &amp; {a^{2}+c^{2}-b c} \\ {-a c} &amp; {-b c} &amp;
+{a^{2}+b^{2}}\end{array}\right)} \\ {R:
+\frac{1}{Q}\left(\begin{array}{ccc}{a^{2}} &amp; {a b} &amp; {a c} \\ {a b} &amp; {b^{2}} &amp;
+{b c} \\ {a c} &amp; {b c} &amp; {c^{2}}\end{array}\right)}\end{array}\)</p>
+
+\[S: \frac{1}{Q}\left(\begin{array}{ccc}{-a^{2}+b^{2}+c^{2}} &amp; {-2 a b} &amp; {-2 a c}
+\\ {-2 a b} &amp; {a^{2}-b^{2}+c^{2}} &amp; {-2 b c} \\ {-2 a c} &amp; {-2 b c} &amp;
+{a^{2}+b^{2}-c^{2}}\end{array}\right)\]
+
+:ET

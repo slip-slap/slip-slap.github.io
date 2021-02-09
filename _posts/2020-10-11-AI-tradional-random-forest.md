@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Random Forest"
+title: "Traditional: Random Forest"
 keywords: []
 description: 
 category: "AI"
-tags: []
+tags: ["traditional"]
 ---
 {% include JB/setup %}
 

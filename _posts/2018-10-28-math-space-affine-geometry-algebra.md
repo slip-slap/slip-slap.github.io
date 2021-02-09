@@ -29,14 +29,6 @@ A bivector can simplify the area algebraicly, allow us think area pure
 algebraicly, we want to apply algebra to geometry.
 
 
-#### Properties
-$$
-\begin{array}{l}(\lambda \vec{a}) \vee \vec{b}=\vec{a} \vee(\lambda
-\vec{b}) \equiv \lambda(\vec{a} \vee b)} \\ {(\vec{a}+\lambda \vec{b}) \vee
-\vec{b}=\vec{a} \vee \vec{b}} \\ {\vec{a} \vee(\lambda \vec{a}+\vec{b})=\vec{a}
-\vee \vec{b}}\end{array}
-$$
-
 
 #### Claim
 In the plane, every bivector is a multiple of $e_1 v e_2$ <br />
@@ -49,36 +41,6 @@ $$
 
 #### Area
 **Area is a relative concept!!!!**
-#### AA
-1. In affine geometry, there is no absolute area, it is just relative, it depends
-on your measure system.
-2. Ratios of areas are affine geometry invariants.
-
-#### Volume
-$$
-\vec{a} v \vec{b} v \vec{c}=\left(a e_{1}+b e_{2}+c e_{3}\right) v\left(d
-e_{1}+e e_{2}+f_{e}\right) v\left(g e_{1}+h e_{2}+i e_{3}\right)
-$$
-
-<br />
-$$
-\begin{aligned}=& a e i\left(e_{1} v e_{2} v e_{3}\right)+a f h\left(e_{1} v
-e_{3} v e_{2}\right)+\\ & b d i\left(e_{2} v e_{1} v e_{3}\right)+b f
-g\left(e_{2} v e_{3} v e_{1}\right)+\\ & c d h\left(e_{3} v e_{1} v
-e_{2}\right)+c e g\left(e_{3} v e_{2} v e_{1}\right) \end{aligned}
-$$
-
-<br />
-$$
-=(a e i-a f h+b f g-b d i+c d h-c e g) e_{1} v e_{2} v e_{3}
-$$
-
-<br />
-
-$$
-\begin{array}{l}{\triangle(\vec{a}, \vec{b}, \vec{c})=a e i-a f h+b f g-b d i+c
-d h-c e g} \\ {\left(e, e_{2}, e_{3}\right)}\end{array}
-$$
 
 #### Vector interpreation of linear system
 $$

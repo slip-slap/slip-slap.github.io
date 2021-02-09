@@ -44,22 +44,6 @@ considered as the study of parallel lines.
 2. Volumes
 
 
-#### what is a bivector ?
-1. In mathematics, a bivector or 2-vector is a quantity in exterior algebra or
-   geometric algebra that extends the idea of scalars and vectors.If scalar is
-   considered an order zero quanity, and a vector is an order of one quantity,
-   then a bivector can be thought of as being of order two.
-
-
-2. Vector $\vec{a}$ is a directed line segment.
-3. Bi-vector:
-$
-\vec{a} \vee \vec{b}
-$ is a directed plane segment.
-
-#### bivector application
-Torque
-
 
 
 

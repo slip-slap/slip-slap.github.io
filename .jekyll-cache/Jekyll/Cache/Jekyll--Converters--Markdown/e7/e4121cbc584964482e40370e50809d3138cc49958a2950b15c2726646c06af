@@ -1,0 +1,75 @@
+I"�<h4 id="1-failed-to-arrange-your-figure-properly">1. failed to arrange your figure properly</h4>
+<ol>
+  <li>If you draw help lines in your code, don’t forgot to remove the help line, or
+help grid.</li>
+</ol>
+
+<h5 id="11--undefine">1.1  undefine</h5>
+
+<ol>
+  <li>tikz code can’t surrounded by frame code which a keyword from beamer.</li>
+</ol>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\documentclass</span><span class="p">{</span>beamer<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>graphicx,multicol,lipsum,caption,authblk<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>amsmath,booktabs,verbatim,tikz<span class="p">}</span>
+<span class="k">\usetikzlibrary</span><span class="p">{</span>shapes.geometric, arrows,positioning,matrix,calc<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>mathptmx<span class="p">}</span>
+
+<span class="nt">\begin{document}</span>
+
+<span class="nt">\begin{frame}</span>
+<span class="nt">\begin{tikzpicture}</span>
+[
+plain/.style=<span class="p">{</span>
+  draw=none,
+  fill=none,
+  <span class="p">}</span>,
+  remember picture,
+net/.style=<span class="p">{</span>
+  matrix of nodes,
+  nodes=<span class="p">{</span>
+    draw,
+    circle,
+    inner sep=7.5pt
+    <span class="p">}</span>,
+  nodes in empty cells,
+  column sep=-10.5pt,
+  row sep=1.8cm
+  <span class="p">}</span>
+]
+<span class="c">%\draw[help lines] (-3cm,-6cm) grid (6cm,3cm);</span>
+<span class="k">\matrix</span><span class="na">[net]</span> (mat)
+<span class="p">{</span>
+              <span class="p">&amp;</span> |[plain]| <span class="p">&amp;</span>           <span class="p">&amp;</span> |[plain]|  <span class="p">&amp;</span>           <span class="p">&amp;</span> |[plain]| <span class="p">&amp;</span>           <span class="p">&amp;</span>  |[plain]|      <span class="p">&amp;</span>               <span class="k">\\</span>
+    |[plain]| <span class="p">&amp;</span>           <span class="p">&amp;</span> |[plain]| <span class="p">&amp;</span>            <span class="p">&amp;</span> |[plain]| <span class="p">&amp;</span>           <span class="p">&amp;</span> |[plain]| <span class="p">&amp;</span>                 <span class="p">&amp;</span> |[plain]|     <span class="k">\\</span> 
+    |[plain]| <span class="p">&amp;</span> |[plain]| <span class="p">&amp;</span> |[plain]| <span class="p">&amp;</span> |[plain]|  <span class="p">&amp;</span>           <span class="p">&amp;</span> |[plain]| <span class="p">&amp;</span> |[plain]| <span class="p">&amp;</span>  |[plain]|      <span class="p">&amp;</span> |[plain]|     <span class="k">\\</span> 
+  <span class="p">}</span>;
+
+  <span class="k">\node</span> at (<span class="p">$</span><span class="o">(</span><span class="nb">mat</span><span class="o">-</span><span class="m">1</span><span class="o">-</span><span class="m">1</span><span class="nb">.west</span><span class="o">)+(-</span><span class="m">16</span><span class="nb">pt,</span><span class="m">0</span><span class="o">)</span><span class="p">$</span>) <span class="p">{</span>Input: <span class="p">}</span>;
+  <span class="k">\node</span> at (<span class="p">$</span><span class="o">(</span><span class="nb">mat</span><span class="o">-</span><span class="m">2</span><span class="o">-</span><span class="m">2</span><span class="nb">.west</span><span class="o">)+(-</span><span class="m">24</span><span class="nb">pt,</span><span class="m">0</span><span class="o">)</span><span class="p">$</span>) <span class="p">{</span>Hidden:<span class="p">}</span>;
+  <span class="k">\node</span> at (<span class="p">$</span><span class="o">(</span><span class="nb">mat</span><span class="o">-</span><span class="m">3</span><span class="o">-</span><span class="m">2</span><span class="nb">.west</span><span class="o">)+(-</span><span class="m">24</span><span class="nb">pt,</span><span class="m">0</span><span class="o">)</span><span class="p">$</span>) <span class="p">{</span>Output:<span class="p">}</span>;
+
+<span class="nt">\end{tikzpicture}</span>
+
+<span class="nt">\end{frame}</span>
+
+<span class="nt">\end{document}</span>
+</code></pre></div></div>
+
+<h4 id="2-amsmath-error">2. Amsmath Error</h4>
+<ol>
+  <li>Paragraph ended before <strong>\align</strong> was complete for following code.
+    <ul>
+      <li>Empty lines are not allowed inside a display math environment</li>
+      <li><strong>align</strong> is already a math environment, so you shouldn’t use <strong>[.. ]</strong>
+inside it.</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="3-reference">3. Reference</h4>
+<ol>
+  <li><a href="https://tex.stackexchange.com/questions/203020/paragraph-ended-before-align-was-complete">Paragraph ended before \aligh was complete</a></li>
+</ol>
+:ET

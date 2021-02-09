@@ -9,10 +9,10 @@ tags: ["構造","L.A."]
 {% include JB/setup %}
 
 #### Notation
-1. $$
+1. $
 \boldsymbol{x}=\left[\begin{array}{llll}{x_{1}} & {x_{2}} & {\dots} &
 {x_{m}}\end{array}\right]^{\mathrm{T}}
-$$: to simplify writing column vectors in-line with other text, sometimes they
+$: to simplify writing column vectors in-line with other text, sometimes they
 are written as row vectors with the transpose operation applied to them.
 
 
@@ -54,6 +54,42 @@ $$
 
 Geometrically it means these three vectors span a plane in $\mathcal{A^3}$
 
+#### How to understand the matrix T?
+$$
+T=
+\left(\begin{array}{lll}{1} & {0} & {0} \\ {0} & {1} & {0} \\ {0} & {0} &
+{1}\end{array}\right)
+$$
+
+$$
+\left(\begin{array}{l}
+{1}  \\ 
+{0}  \\ 
+{0}
+\end{array}\right) 
+=T(\vec{e_1})
+$$
+$$
+\left(\begin{array}{l}
+{0}  \\ 
+{1}  \\ 
+{0}
+\end{array}\right)
+=T(\vec{e_2})
+$$
+
+$$
+\left(\begin{array}{l}
+{0}  \\ 
+{1}  \\ 
+{0}
+\end{array}\right)
+=T(\vec{e_3})
+$$
+1. we can understand this matric coloumn by coloumn.
+2. The first coloumn which is the image of the vector $\vec{e_1}$
+3. The second coloumn which is the image of the vector $\vec{e_2}$
+4. The third coloumn which is the image of the vector $\vec{e_3}$
 
 #### Galois
 1. The origin of linear algebra is affine geometry. Because of affine geometry,

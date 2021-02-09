@@ -295,6 +295,19 @@ $(document).ready(function() {
   
   
   
+    <li><a href="/archive.html#October-2020">2020 年 10 月 (2)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
 
   
   
@@ -442,17 +455,7 @@ $(document).ready(function() {
   
   
   
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-    <li><a href="/archive.html#March-2020">2020 年 03 月 (7)</a></li>
+    <li><a href="/archive.html#March-2020">2020 年 03 月 (5)</a></li>
     
   
 
@@ -763,7 +766,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#July-2019">2019 年 07 月 (8)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#July-2019">2019 年 07 月 (9)</a></li>
     
   
 
@@ -1496,12 +1504,7 @@ $(document).ready(function() {
   
   
   
-
-  
-  
-  
-  
-    <li><a href="/archive.html#December-2018">2018 年 12 月 (70)</a></li>
+    <li><a href="/archive.html#December-2018">2018 年 12 月 (69)</a></li>
     
   
 
@@ -5199,7 +5202,7 @@ $(document).ready(function() {
         </section>
         <section>
           <a href="/tags.html" title="查看所有标签"><i class="icon-fixed-width icon-tags"></i> 标签云</a>
-<span title="标签总数">105</span>
+<span title="标签总数">104</span>
 <div id="tag-cloud">
 
 
@@ -5382,13 +5385,6 @@ $(document).ready(function() {
     
     
     <a href="/tags.html#A.D.T.P.-ref" style="font-size: 9pt; color: #999;">A.D.T.P.</a>
-  
-    
-    
-    
-    
-    
-    <a href="/tags.html#Algorithm-ref" style="font-size: 9pt; color: #999;">Algorithm</a>
   
     
     
@@ -5815,7 +5811,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#Bayesian-ref" style="font-size: 9pt; color: #999;">Bayesian</a>
+    <a href="/tags.html#Bayesian-ref" style="font-size: 9.5pt; color: #999;">Bayesian</a>
   
     
     
@@ -5878,13 +5874,6 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#algorithm-ref" style="font-size: 9pt; color: #999;">algorithm</a>
-  
-    
-    
-    
-    
-    
     <a href="/tags.html#model-ref" style="font-size: 9pt; color: #999;">model</a>
   
     
@@ -5928,6 +5917,13 @@ $(document).ready(function() {
     
     
     <a href="/tags.html#D.M.-ref" style="font-size: 9pt; color: #999;">D.M.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#traditional-ref" style="font-size: 9pt; color: #999;">traditional</a>
   
     
     
@@ -6045,57 +6041,27 @@ $(document).ready(function() {
         </div>
       </div>
       
-<h4 id="how-to-understand-the-matrix-t">How to understand the matrix T?</h4>
-<p>\(T=
-\left(\begin{array}{lll}{1} &amp; {0} &amp; {0} \\ {0} &amp; {1} &amp; {0} \\ {0} &amp; {0} &amp;
-{1}\end{array}\right)\)</p>
-
-<p>\(\left(\begin{array}{l}
-{1}  \\ 
-{0}  \\ 
-{0}
-\end{array}\right) 
-=T(\vec{e_1})\)
-\(\left(\begin{array}{l}
-{0}  \\ 
-{1}  \\ 
-{0}
-\end{array}\right)
-=T(\vec{e_2})\)</p>
-
-<p>\(\left(\begin{array}{l}
-{0}  \\ 
-{1}  \\ 
-{0}
-\end{array}\right)
-=T(\vec{e_3})\)</p>
-<ol>
-  <li>we can understand this matric coloumn by coloumn.</li>
-  <li>The first coloumn which is the image of the vector $\vec{e_1}$</li>
-  <li>The second coloumn which is the image of the vector $\vec{e_2}$</li>
-  <li>The third coloumn which is the image of the vector $\vec{e_3}$</li>
-</ol>
-
 <h4 id="projection-and-reflection">Projection and Reflection</h4>
 <p><img src="/images/math-structure-linear-algebra-3-3-matrix.png" /></p>
 
-<h4 id="projection">Projection</h4>
+<h5 id="1-projection-onto-plane">1. Projection onto plane</h5>
+<p>Projection P onto plane $ax+by+cz=0$ via direction $(l,m,n)^T$</p>
 
-<p>\(P(\vec{u})=
-\frac{1}{a \ell+b m+c n}\left(\begin{array}{ccc}{b m+c n} &amp; {-b \ell}
-&amp; {-c l} \\ 
-{-a m} &amp; {a \ell+c n} &amp; {-c m} \\ 
-{-a n} &amp; {-b n} &amp; {a \ell+b
-m}\end{array}\right)\left(\begin{array}{l}{x} \\ {y} \\ {z}
-\end{array}\right)\) <br />
-Properties:</p>
+<p><img src="/images/math-structure-linear-algorithm-3-3-matrix-and-application-projection.png" height="" width="" /></p>
+
+<p>Properties:</p>
 <ol>
   <li>$p(\vec{v})=\vec{0}$</li>
   <li>$p(\vec{u})=\vec{u} \leftrightarrow \vec{u}$ lies on plane $\pi$</li>
   <li>$p^2(\vec{u})=\vec{u}$ for any $\vec{u}$</li>
 </ol>
 
-<h4 id="reflection">Reflection</h4>
+<h5 id="2-projection--onto-line">2. Projection  onto line</h5>
+<p>Projection $R$ onto line $\vec{v}:(l,m,n)$ via direction of plane $ax+by+cz=0$</p>
+
+<p><img src="/images/math-structure-linear-algorithm-3-3-matrix-and-application-projection-onto-line.png" height="" width="" /></p>
+
+<h5 id="3-reflection-across-plane">3. Reflection across plane</h5>
 
 \[=\left(\begin{array}{l}{x} \\ {y} \\ {z}\end{array}\right)-\frac{2}{a \ell+b m+c
 n}\left(\begin{array}{lll}{a l} &amp; {b l} &amp; {c l} \\ {a m} &amp; {b m} &amp; {c m} \\ {a

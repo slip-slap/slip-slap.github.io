@@ -8,63 +8,28 @@ tags: ["構造","L.A."]
 ---
 {% include JB/setup %}
 
-#### How to understand the matrix T?
-$$
-T=
-\left(\begin{array}{lll}{1} & {0} & {0} \\ {0} & {1} & {0} \\ {0} & {0} &
-{1}\end{array}\right)
-$$
-
-$$
-\left(\begin{array}{l}
-{1}  \\ 
-{0}  \\ 
-{0}
-\end{array}\right) 
-=T(\vec{e_1})
-$$
-$$
-\left(\begin{array}{l}
-{0}  \\ 
-{1}  \\ 
-{0}
-\end{array}\right)
-=T(\vec{e_2})
-$$
-
-$$
-\left(\begin{array}{l}
-{0}  \\ 
-{1}  \\ 
-{0}
-\end{array}\right)
-=T(\vec{e_3})
-$$
-1. we can understand this matric coloumn by coloumn.
-2. The first coloumn which is the image of the vector $\vec{e_1}$
-3. The second coloumn which is the image of the vector $\vec{e_2}$
-4. The third coloumn which is the image of the vector $\vec{e_3}$
 
 #### Projection and Reflection
 <img src="{{IMAGE_PATH}}/math-structure-linear-algebra-3-3-matrix.png">
 
-#### Projection 
+##### 1. Projection onto plane
+Projection P onto plane $ax+by+cz=0$ via direction $(l,m,n)^T$
 
-$$
-P(\vec{u})=
-\frac{1}{a \ell+b m+c n}\left(\begin{array}{ccc}{b m+c n} & {-b \ell}
-& {-c l} \\ 
-{-a m} & {a \ell+c n} & {-c m} \\ 
-{-a n} & {-b n} & {a \ell+b
-m}\end{array}\right)\left(\begin{array}{l}{x} \\ {y} \\ {z}
-\end{array}\right)
-$$ <br />
+<img src="{{IMAGE_PATH}}/math-structure-linear-algorithm-3-3-matrix-and-application-projection.png" height="" width="" />
+
 Properties:
 1. $p(\vec{v})=\vec{0}$
 2. $p(\vec{u})=\vec{u} \leftrightarrow \vec{u}$ lies on plane $\pi$
 3. $p^2(\vec{u})=\vec{u}$ for any $\vec{u}$
 
-#### Reflection
+##### 2. Projection  onto line
+Projection $R$ onto line $\vec{v}:(l,m,n)$ via direction of plane $ax+by+cz=0$
+
+<img src="{{IMAGE_PATH}}/math-structure-linear-algorithm-3-3-matrix-and-application-projection-onto-line.png" height="" width="" />
+
+
+##### 3. Reflection across plane 
+
 
 $$
 =\left(\begin{array}{l}{x} \\ {y} \\ {z}\end{array}\right)-\frac{2}{a \ell+b m+c

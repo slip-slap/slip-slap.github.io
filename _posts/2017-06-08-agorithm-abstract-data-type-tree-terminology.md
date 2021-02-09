@@ -4,7 +4,7 @@ title: "A.D.T.: Tree Terminology"
 keywords: []
 description: 
 category: "Algorithm"
-tags: ["Algorithm","A.D.T."]
+tags: ["A.D.T."]
 ---
 {% include JB/setup %}
 

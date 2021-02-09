@@ -7,16 +7,15 @@ category: "PL"
 tags: ["latex","script"]
 ---
 
-#### failed to arrange your figure properly
+#### 1. failed to arrange your figure properly
 1. If you draw help lines in your code, don't forgot to remove the help line, or
    help grid.
 
-#### undefine
+##### 1.1  undefine
 
 1. tikz code can't surrounded by frame code which a keyword from beamer.
 
 ```latex
-
 \documentclass{beamer}
 \usepackage{graphicx,multicol,lipsum,caption,authblk}
 \usepackage{amsmath,booktabs,verbatim,tikz}
@@ -64,3 +63,12 @@ net/.style={
 \end{document}
 ```
 
+#### 2. Amsmath Error
+1. Paragraph ended before **\align** was complete for following code.
+- Empty lines are not allowed inside a display math environment
+- **align** is already a math environment, so you shouldn't use \\ **[** \\**]**
+  inside it.
+
+
+#### 3. Reference
+1. [Paragraph ended before \aligh was complete](https://tex.stackexchange.com/questions/203020/paragraph-ended-before-align-was-complete)
