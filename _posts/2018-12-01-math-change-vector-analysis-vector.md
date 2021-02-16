@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "V.A.: Vector"
+title: "V.A.: Tensor Examples"
 keywords: [ ""]
 description: ""
 category: "math"
@@ -9,7 +9,7 @@ tags: ["change","V.A."]
 {% include JB/setup %}
 
 
-#### HH
+#### 1. Vector 
 Because vector components behave contrary to the basis vectors, we say that 
 vector components are contra-variant 
 
@@ -23,8 +23,14 @@ so using the following summation.
 <img src="{{IMAGE_PATH}}/math-change-tensor-summation1.png" height="150"
 width="300" />
 
+- The component is denoted in the superscript
+- The basis is denoted in the subscript
+- This reminds us that the components are contravariant.
 
-#### Covector
+
+
+
+#### 2. Covector
 A covector(row vector) is a function that takes a vector and produces a scalar.
 1. Covectors are invarient, covector component are not invariant.
 

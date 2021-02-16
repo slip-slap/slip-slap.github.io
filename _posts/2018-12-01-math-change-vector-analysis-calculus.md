@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "V.A.: Calculus"
+title: "V.A.: Differential form and Derivative"
 keywords: [ ""]
 description: ""
 category: "math"
@@ -15,7 +15,6 @@ components.
 <img src="{{IMAGE_PATH}}/math-change-tensor-calculus.png" >
 
 #### derivative
-
 
 $$
 \frac{\partial c_{i}}{\partial p_{j}} \frac{\partial p_{j}}{\partial
@@ -62,7 +61,10 @@ with velocity vector $\vec{v}$
 
 
 #### Galois
-when you learn more about calculus, you get a lot insight into derivative.
+1. when you learn more about calculus, you get a lot insight into derivative.
+2. derivartive is a vector.
+3. Tenosr calculus give derivative and infinitesimal a very different
+   interpretation, it want to generalize the things that we are familiar with.
 
 
 

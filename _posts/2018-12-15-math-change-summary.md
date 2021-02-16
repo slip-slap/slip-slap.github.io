@@ -43,3 +43,22 @@ $
 Addition, multiplication, subtraction, division, and take roots <br />
 J$\cdot$Gregory thinks that limit operation is also an arithmetical operation.
 
+
+#### Galois
+1. When I first use the calculus to calculate the area under a curve, I am
+   confused, because, obviously, we ignore something. 
+- Actually, here in this part, a new concept is introduced, it's called
+   **infinitesimal**.
+- This thing is not zero, if it was zero, we just call it zero.
+- This thing is a complete new math object.
+- With a new math object, like a function, we want to know how do they composite together?
+- Can we add them together?
+- Can we do the multiplication?
+
+2. Actually, math is just math object, and how to manipulate them.
+- how to compute, how to composition.
+
+
+
+
+

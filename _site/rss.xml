@@ -5,8 +5,8 @@
   <description>Just Do It - </description>
   <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
   <link></link>
-  <lastBuildDate>Tue, 09 Feb 2021 22:25:35 +0900</lastBuildDate>
-  <pubDate>Tue, 09 Feb 2021 22:25:35 +0900</pubDate>
+  <lastBuildDate>Mon, 15 Feb 2021 15:24:39 +0900</lastBuildDate>
+  <pubDate>Mon, 15 Feb 2021 15:24:39 +0900</pubDate>
   <ttl>1800</ttl>
 
 
@@ -8795,6 +8795,27 @@ with this theorem. The result is &lt;strong&gt;accurate!!!&lt;/strong&gt;&lt;/li
 &lt;p&gt;Addition, multiplication, subtraction, division, and take roots &lt;br /&gt;
 J$\cdot$Gregory thinks that limit operation is also an arithmetical operation.&lt;/p&gt;
 
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;When I first use the calculus to calculate the area under a curve, I am
+confused, because, obviously, we ignore something.
+    &lt;ul&gt;
+      &lt;li&gt;Actually, here in this part, a new concept is introduced, it’s called
+&lt;strong&gt;infinitesimal&lt;/strong&gt;.&lt;/li&gt;
+      &lt;li&gt;This thing is not zero, if it was zero, we just call it zero.&lt;/li&gt;
+      &lt;li&gt;This thing is a complete new math object.&lt;/li&gt;
+      &lt;li&gt;With a new math object, like a function, we want to know how do they composite together?&lt;/li&gt;
+      &lt;li&gt;Can we add them together?&lt;/li&gt;
+      &lt;li&gt;Can we do the multiplication?&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Actually, math is just math object, and how to manipulate them.
+    &lt;ul&gt;
+      &lt;li&gt;how to compute, how to composition.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
 </description>
     <link>/math/math-change-summary.html</link>
     <guid>/math/math-change-summary</guid>
@@ -9401,13 +9422,13 @@ many problem are unsolved.&lt;/li&gt;
   <item>
     <title>R.A.: Calculus Line</title>
     <description>
-&lt;h4 id=&quot;line-integral-of-a-scalar-field&quot;&gt;Line integral of a scalar field&lt;/h4&gt;
+&lt;h4 id=&quot;1-line-integral-of-a-scalar-field&quot;&gt;1. Line integral of a scalar field&lt;/h4&gt;
 &lt;p&gt;For some scalar field 
 $
 f: \mathbb{U} \subseteq \mathbb{R}^{n} \rightarrow \mathbb{R}
 $
-the line integral along a piecewise smooth curve $$
-c \subset \mathbb{U}
+the line integral along a piecewise smooth curve 
+$c \subset \mathbb{U} $
 $ is defined as&lt;/p&gt;
 
 &lt;p&gt;$
@@ -9417,11 +9438,26 @@ $&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/math-change-calculus-line-scalar-field.gif&quot; /&gt;&lt;/p&gt;
 
-&lt;h5 id=&quot;remark&quot;&gt;Remark&lt;/h5&gt;
-&lt;p&gt;A line integral of a scalar field is thus a line integral of a vector field
-where the vectors are always tangential to the line.&lt;/p&gt;
+&lt;h5 id=&quot;11-remark&quot;&gt;1.1 Remark&lt;/h5&gt;
+&lt;ul&gt;
+  &lt;li&gt;A line integral of a scalar field is thus a line integral of a vector field
+where the vectors are always tangential to the line.&lt;/li&gt;
+  &lt;li&gt;This above formula is from wikipedia, but other than the intimidating formula,
+you got nothing.&lt;/li&gt;
+  &lt;li&gt;The video is good&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h4 id=&quot;remark-1&quot;&gt;Remark&lt;/h4&gt;
+&lt;h4 id=&quot;2-my-version&quot;&gt;2. My version&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/math-change-real-analysis-calculus-line-image.png&quot; width=&quot;300&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;parametrize the line $l$ with parameter $t: x(t), y(t)$&lt;/li&gt;
+  &lt;li&gt;$ds = \sqrt{d^2x + d^2y }$&lt;/li&gt;
+  &lt;li&gt;$ds = \sqrt{x\prime(t)d^2t + y\prime (t)d^2t }$&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;remark&quot;&gt;Remark&lt;/h4&gt;
 &lt;p&gt;For a long time, I was so confused by the concept of field, what the crap is a
 field. All of a sudden, I understand, I was so happy, it is just a map, we call
 this a field just to generalize this phenomean.&lt;/p&gt;
@@ -9430,11 +9466,21 @@ this a field just to generalize this phenomean.&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;scalar field, vector field, in this context, the word field is counterpart of
 ring.&lt;/li&gt;
+  &lt;li&gt;Here we use a techique called parameterize the curve with a one-dimensional
+paramter.
+    &lt;ul&gt;
+      &lt;li&gt;you can see this trick in complex analysis to simulate the integral curve&lt;/li&gt;
+      &lt;li&gt;in lie group and lie algebra, we also need a parametrize integral curve to
+walk through all the matrix.&lt;/li&gt;
+      &lt;li&gt;Just as here a line through the surface.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
 &lt;ol&gt;
   &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Line_integral&quot;&gt;wikipedia line integral&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.khanacademy.org/math/multivariable-calculus/integrating-multivariable-functions/line-integrals/v/introduction-to-the-line-integral&quot;&gt;video line integral&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 </description>
@@ -9712,9 +9758,9 @@ studying complex functions.&lt;/p&gt;
   </item>
 
   <item>
-    <title>V.A.: Vector</title>
+    <title>V.A.: Tensor Examples</title>
     <description>
-&lt;h4 id=&quot;hh&quot;&gt;HH&lt;/h4&gt;
+&lt;h4 id=&quot;1-vector&quot;&gt;1. Vector&lt;/h4&gt;
 &lt;p&gt;Because vector components behave contrary to the basis vectors, we say that 
 vector components are contra-variant&lt;/p&gt;
 
@@ -9726,7 +9772,13 @@ system.
 so using the following summation.
 &lt;img src=&quot;/images/math-change-tensor-summation1.png&quot; height=&quot;150&quot; width=&quot;300&quot; /&gt;&lt;/p&gt;
 
-&lt;h4 id=&quot;covector&quot;&gt;Covector&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;The component is denoted in the superscript&lt;/li&gt;
+  &lt;li&gt;The basis is denoted in the subscript&lt;/li&gt;
+  &lt;li&gt;This reminds us that the components are contravariant.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;2-covector&quot;&gt;2. Covector&lt;/h4&gt;
 &lt;p&gt;A covector(row vector) is a function that takes a vector and produces a scalar.&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;Covectors are invarient, covector component are not invariant.&lt;/li&gt;
@@ -10099,6 +10151,44 @@ $df$, you should focus on the result of the $df$, it’s just a number.&lt;/li&g
   </item>
 
   <item>
+    <title>V.A.: General Tensor</title>
+    <description>
+&lt;h4 id=&quot;1-a-12-tensor&quot;&gt;1. A (1,2)-tensor&lt;/h4&gt;
+&lt;p&gt;\(Q=Q_{j k}^{i} \overrightarrow{e_{i}} \epsilon^{j} \epsilon^{k}\)&lt;/p&gt;
+
+&lt;h4 id=&quot;11-coordinate-transform-rules&quot;&gt;1.1 Coordinate transform rules&lt;/h4&gt;
+
+\[\begin{aligned} Q &amp;amp;=Q_{b c}^{a} \overrightarrow{e_{a}} \epsilon^{b} \epsilon^{c}
+\\
+&amp;amp;=Q_{b c}^{a}\left(B_{a}^{i} \widetilde{\vec{e}_{i}}\right)\left(F_{j}^{b}
+\widetilde{\epsilon}^{j}\right)\left(F_{k}^{c} \widetilde{\epsilon^{k}}\right)
+\end{aligned}\]
+
+&lt;h5 id=&quot;12-array-shape&quot;&gt;1.2 Array shape&lt;/h5&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/math-change-vector-analysis-general-tenosr-pic-1.png&quot; height=&quot;&quot; width=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;21-coordinate-transform-rules&quot;&gt;2.1 Coordinate transform rules&lt;/h4&gt;
+
+&lt;h4 id=&quot;2-a-20-tensor&quot;&gt;2. A (2,0)-tensor&lt;/h4&gt;
+&lt;p&gt;\(\underline{D}=D^{a b} \overrightarrow{e_{a}} \overrightarrow{e_{b}}\)&lt;/p&gt;
+
+&lt;h5 id=&quot;22-array-shape&quot;&gt;2.2 Array shape&lt;/h5&gt;
+
+\[\left[\begin{array}{l}v^{1} \\ v^{2}\end{array}\right]
+\otimes\left[\begin{array}{l}w^{1} \\ w^{2}\end{array}\right]\]
+
+\[=\left[\begin{array}{l}{\left[\begin{array}{l}v^{1} \\ v^{2}\end{array}\right]}
+&amp;amp; w^{1} \\ {\left[\begin{array}{l}v^{1} \\ v^{2}\end{array}\right]} &amp;amp;
+w^{2}\end{array}\right]\]
+
+</description>
+    <link>/math/math-change-vector-analysis-general-tensor.html</link>
+    <guid>/math/math-change-vector-analysis-general-tensor</guid>
+    <pubDate>Sat, 01 Dec 2018 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
     <title>V.A.: Diverence</title>
     <description>
 &lt;h4 id=&quot;background&quot;&gt;Background&lt;/h4&gt;
@@ -10114,6 +10204,53 @@ abstract, why this ?&lt;/li&gt;
 </description>
     <link>/math/math-change-vector-analysis-divergence-theorem.html</link>
     <guid>/math/math-change-vector-analysis-divergence-theorem</guid>
+    <pubDate>Sat, 01 Dec 2018 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>V.A.: Integration with differential forms</title>
+    <description>
+&lt;h4 id=&quot;1-idea&quot;&gt;1. Idea&lt;/h4&gt;
+&lt;p&gt;Every integral evolves:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;a path&lt;/li&gt;
+  &lt;li&gt;a covector field(differential form)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;2-example-single-variable&quot;&gt;2. Example: single variable&lt;/h4&gt;
+
+\[\int_{0}^{2}(-6 x+4) d x
+=\int_{0}^{2} \frac{d F}{d x} d x
+= \int_{0}^{2} d F\]
+
+\[\begin{array}{l}\frac{d F}{d x}=-6 x+4 \\ F(x)=-3 x^{2}+4 x+c\end{array}\]
+
+&lt;h4 id=&quot;2-example-two-variables&quot;&gt;2. Example: two variables&lt;/h4&gt;
+
+\[\int_{P} y d x+x d y\]
+
+\[\begin{array}{l}P(t), t \in[0,2] \\ \left(x=\frac{1}{2} t+1, y=\frac{3}{2}
+t-1\right)\end{array}\]
+
+\[\begin{array}{l}\int_{P} d F \quad d F=\frac{\partial F}{\partial x} d
+x+\frac{\partial F}{\partial y} d y \\ =\int_{P} \frac{\partial F}{\partial x} d
+x+\frac{\partial F}{\partial y} d y\end{array}\]
+
+\[\begin{array}{l}\frac{\partial F}{\partial x}=y \\ \frac{\partial F}{\partial
+y}=x\end{array} \quad F(x, y)=x y+c\]
+
+&lt;h4 id=&quot;3-galois&quot;&gt;3. Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Treat the integration in a different perspective.&lt;/li&gt;
+  &lt;li&gt;A path and a covector field&lt;/li&gt;
+  &lt;li&gt;Differential forms are approach to multivariable calculus that is independent
+of coordinates. Differential forms provide a unified approach to define
+integrands over curves, surfaces, solids, and higher-dimensional manifolds.&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/math/math-change-vector-analysis-differential-forms.html</link>
+    <guid>/math/math-change-vector-analysis-differential-forms</guid>
     <pubDate>Sat, 01 Dec 2018 00:00:00 +0900</pubDate>
   </item>
 
@@ -10251,7 +10388,7 @@ x_{2}}\left(f_{1}\right)+\frac{\partial}{\partial x_{3}}\left(f_{3}\right) \\
   </item>
 
   <item>
-    <title>V.A.: Calculus</title>
+    <title>V.A.: Differential form and Derivative</title>
     <description>
 &lt;h4 id=&quot;hh&quot;&gt;HH&lt;/h4&gt;
 &lt;p&gt;Tensor calculus study how tensors change over space, according to the following
@@ -10295,7 +10432,12 @@ geometrical interpretation which means the function $f$ moving through a point
 with velocity vector $\vec{v}$&lt;/p&gt;
 
 &lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
-&lt;p&gt;when you learn more about calculus, you get a lot insight into derivative.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;when you learn more about calculus, you get a lot insight into derivative.&lt;/li&gt;
+  &lt;li&gt;derivartive is a vector.&lt;/li&gt;
+  &lt;li&gt;Tenosr calculus give derivative and infinitesimal a very different
+interpretation, it want to generalize the things that we are familiar with.&lt;/li&gt;
+&lt;/ol&gt;
 
 </description>
     <link>/math/math-change-vector-analysis-calculus.html</link>
@@ -10304,8 +10446,28 @@ with velocity vector $\vec{v}$&lt;/p&gt;
   </item>
 
   <item>
-    <title>V.A.: Introduction</title>
+    <title>V.A.: Tensor</title>
     <description>
+&lt;h4 id=&quot;1-definition&quot;&gt;1. Definition&lt;/h4&gt;
+
+&lt;h5 id=&quot;11--version-one&quot;&gt;1.1  Version one&lt;/h5&gt;
+&lt;p&gt;Tensor is multi-dimensional array of numbers: such as scalar, vector, matrix.&lt;/p&gt;
+
+&lt;h5 id=&quot;12--version-two&quot;&gt;1.2  Version two&lt;/h5&gt;
+&lt;p&gt;Tensor is an object that is invariant under a change of coordinates, and has
+components tat change in a special, predictable way under a change of
+coordinates&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Like a pencil in space, it doesn’t change no matter in which coordinates.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;13--version-three&quot;&gt;1.3  Version three&lt;/h5&gt;
+&lt;p&gt;Tensor is a collection of vectors and covectors combined together using the
+tensor product.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;This is the abstract definition&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
 &lt;ol&gt;
   &lt;li&gt;Tensor Fields: If to each point of a region in N dimensional space
@@ -10315,6 +10477,20 @@ one or zero. It should be noted that a tensor or tensor field is not just the
 set of its components in one special coordinates system but all the possible
 sets under any transformation of coordinates.&lt;/li&gt;
 &lt;/ol&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Just like infinitesimal, we redefine a new math object, we give this new
+object a couple of rules.&lt;/li&gt;
+  &lt;li&gt;Speak of rules, it remind you in bayesian formula, and the other subject.
+    &lt;ul&gt;
+      &lt;li&gt;every intimidating objects are out of its basic rules.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;In the tensor calculus, we give $dx$ another interpretation, base on this
+interpretation and new rules, we redefine everything.&lt;/li&gt;
+&lt;/ol&gt;
+
 </description>
     <link>/math/math-change-tensor-analysis-introduction.html</link>
     <guid>/math/math-change-tensor-analysis-introduction</guid>
@@ -12194,13 +12370,50 @@ application of funtional analysis, another way to define distance.&lt;/strong&gt
   <item>
     <title>D.G.: Frenet Serret Equation</title>
     <description>
-&lt;h4 id=&quot;cross-product&quot;&gt;Cross Product&lt;/h4&gt;
+&lt;h4 id=&quot;1-vector-property&quot;&gt;1. Vector Property&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;$r(t) = \vec{r}(t) = (x(t),y(t),z(t))$&lt;/li&gt;
+  &lt;li&gt;$s(t) = \vec{s}(t) = (\hat{x}(t),\hat{y}(t),\hat{z}(t))$
+    &lt;ul&gt;
+      &lt;li&gt;$r(s)\cdot s(t) = x(t)\hat{x}(t) +  y(t)\hat{y}(t)+  z(t)\hat{z}(t)$&lt;/li&gt;
+      &lt;li&gt;$r(s)\times s(t) = y(t)\hat{z}(t) -  \hat{y}(t)z(t), x(t)\hat{z}(t) -  \hat{x}(t)z(t), x(t)\hat{y}(t) -  \hat{x}(t)y(t)$&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;h4 id=&quot;frenet-equation&quot;&gt;Frenet Equation&lt;/h4&gt;
+&lt;h5 id=&quot;11-lemma&quot;&gt;1.1 lemma&lt;/h5&gt;
+&lt;p&gt;\(f^{\prime}(t)=(r \cdot s)^{\prime}=r^{\prime}(t) \cdot s(t)+r(t) \cdot
+s^{\prime}(t)\)&lt;/p&gt;
+
+&lt;p&gt;{u}^{\prime}(t)=(r \times s)^{\prime}=r^{\prime}(t) s(t)+r(t) \times
+s^{\prime}(t)
+$$Frenet Equation&lt;/p&gt;
+
+&lt;h5 id=&quot;12-corollary&quot;&gt;1.2 corollary&lt;/h5&gt;
+
+&lt;p&gt;If $Q(r(t))=c$, $r(t) \cdot r(t)=c$ is constant $\forall t$, 
+then $r^\prime(t)$ is perpendicular to $r(t)$&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Proof
+$r(t)\cdot r(t) = c$
+$r^\prime (t)\cdot r(t) + r(t) \cdot r^\prime (t)= 0$&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;Ordered set (T(s), N(s), B(s))
 The Frenet Equation is all about what happens to the derivative of all the
 three vector.&lt;/p&gt;
+
+\[\left(\begin{array}{c}T^{\prime} \\ N^{\prime} \\
+B^{\prime}\end{array}\right)=\left(\begin{array}{ccc}0 &amp;amp; k &amp;amp; 0 \\ -k &amp;amp; 0 &amp;amp; T \\
+0 &amp;amp; -\tau &amp;amp; 0\end{array}\right)\left(\begin{array}{l}T \\ N \\
+B\end{array}\right)\]
+
+&lt;ul&gt;
+  &lt;li&gt;$B(s) = T(s) \times N(s)$&lt;/li&gt;
+  &lt;li&gt;$B^\prime (s) = T^\prime (s) \times N(s) + T(s) \times N^\prime(s)&lt;/li&gt;
+&lt;/ul&gt;
+
 </description>
     <link>/math/math-space-differential-geometry-frenet-serret-equation.html</link>
     <guid>/math/math-space-differential-geometry-frenet-serret-equation</guid>
@@ -15761,6 +15974,19 @@ zero.&lt;/li&gt;
   </item>
 
   <item>
+    <title>Lie Group: Summary</title>
+    <description>
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Matrix groups are simultaneously algebraic and geometric objects&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/math/math-structure-lie-theory-summary.html</link>
+    <guid>/math/math-structure-lie-theory-summary</guid>
+    <pubDate>Sun, 11 Feb 2018 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
     <title>Lie.: Representation</title>
     <description>
 &lt;h4 id=&quot;group-element-and-representation-element&quot;&gt;Group Element and Representation Element&lt;/h4&gt;
@@ -15830,7 +16056,7 @@ and Lie algebras as examples of tangent spaces.&lt;/p&gt;
   </item>
 
   <item>
-    <title>Lie: SU(2)</title>
+    <title>Lie: Special Group</title>
     <description>
 </description>
     <link>/math/math-structure-lie-group-su-2.html</link>
@@ -15901,7 +16127,21 @@ multiplication, inner product. That’s all we need for a vector space.&lt;/p&gt
 &lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
 &lt;ol&gt;
   &lt;li&gt;The relationship between Lie group and Lie Algebra, first, we have Lie group,
-and we want to study the properties of Lie group, so we call it lie algebra.&lt;/li&gt;
+and we want to study the properties of Lie group, so we call it lie algebra.
+    &lt;ul&gt;
+      &lt;li&gt;Why we have this thing? How this come out?&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What’s the original idea behind all this crap?
+    &lt;ul&gt;
+      &lt;li&gt;because we can treat a $su(3)$ as an geometry, general speaking, a manifold.&lt;/li&gt;
+      &lt;li&gt;A manifold is an object, we want to find a line through this manifold, oh my
+god, this is so abstract&lt;/li&gt;
+      &lt;li&gt;How to find the line? With this line we can connect the dots, put everything
+together.&lt;/li&gt;
+      &lt;li&gt;Mathematician use analogue, they are amazing!!! Full respect.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ol&gt;
 
 </description>
@@ -15984,6 +16224,31 @@ equation was solvable&lt;/li&gt;
 invariance group would determine whether or not the equation could be solved
 or simplified and, if so, the group’s structure would also provide the
 algorithem for constructing the solution or simplification.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Lie group is a geometry object, like a curve.
+    &lt;ul&gt;
+      &lt;li&gt;how we study a curve, we obtain it’s derivative function, if we know it’s
+derivative function, we know this curve.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Lie group is this special geometry object, and lie algebra is it’s
+derviative.&lt;/li&gt;
+  &lt;li&gt;The Lie algebra is an indispensable tool for studying a matrix group. It
+contains a surprising amount of information about the group, especially
+together with the Lie bracket operation.&lt;/li&gt;
+  &lt;li&gt;Why this name? It must mean something.
+    &lt;ul&gt;
+      &lt;li&gt;Why it’s called Lie Algebra, it’s an analogue.&lt;/li&gt;
+      &lt;li&gt;Because Lie group is an geometry object, we put something on this, we refer it
+as Lie algebra.&lt;/li&gt;
+      &lt;li&gt;
+        &lt;h2 id=&quot;just-like-vector-space-we-put-algebra-on-it-we-call-it-linear-algebra&quot;&gt;Just like vector space, we put algebra on it. we call it linear algebra.&lt;/h2&gt;
+      &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ol&gt;

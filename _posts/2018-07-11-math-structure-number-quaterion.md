@@ -42,7 +42,6 @@ algebraic way.
    with three-dimensional vector in algebraic way. the answer is quaternion.
 
 
-
 #### reference
 1. [quaternion wiki](https://en.wikipedia.org/wiki/Quaternion)
 

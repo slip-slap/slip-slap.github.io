@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Lie: SU(2)"
+title: "Lie: Special Group"
 keywords: []
 description: ""
 category: "math"

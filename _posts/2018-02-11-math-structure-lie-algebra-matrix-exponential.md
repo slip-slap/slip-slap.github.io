@@ -42,6 +42,16 @@ multiplication, inner product. That's all we need for a vector space.
 #### Galois
 1. The relationship between Lie group and Lie Algebra, first, we have Lie group,
    and we want to study the properties of Lie group, so we call it lie algebra.
+- Why we have this thing? How this come out?
+
+2. What's the original idea behind all this crap?
+- because we can treat a $su(3)$ as an geometry, general speaking, a manifold.
+- A manifold is an object, we want to find a line through this manifold, oh my
+  god, this is so abstract
+- How to find the line? With this line we can connect the dots, put everything
+  together.
+- Mathematician use analogue, they are amazing!!! Full respect.
+
 
 
 
