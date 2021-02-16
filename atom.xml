@@ -3,7 +3,7 @@
   <title>Just Do It</title>
   <link href="/atom.xml" rel="self"/>
   <link href=""/>
-  <updated>2021-02-09T22:25:35+09:00</updated>
+  <updated>2021-02-15T15:24:39+09:00</updated>
   <id></id>
   <author>
     <name>reed</name>
@@ -3770,18 +3770,18 @@ $y \in X$ which is $\epsilon-close$ to x
     <updated>2018-12-10T00:00:00+09:00</updated>
     <id>/math/math-change-real-analysis-calculus-line</id>
     <content type="html">
-Line integral of a scalar field
+1. Line integral of a scalar field
 For some scalar field 
 $
 f: \mathbb{U} \subseteq \mathbb{R}^{n} \rightarrow \mathbb{R}
 $
-the line integral along a piecewise smooth curve $$
-c \subset \mathbb{U}
+the line integral along a piecewise smooth curve 
+$c \subset \mathbb{U} $
 $ is defined as
 
 $
 \int_{\mathcal{C}} f(\mathbf{r}) d s=\int_{a}^{b}
-f(\mathbf{r}(t))\left|\mathbf{r}^...</content>
+f(\mathbf{r}(t))\left|\mathbf...</content>
   </entry>
 
   <entry>
@@ -3942,12 +3942,12 @@ numbers as a domain and the complex numbers as a codomain.
   </entry>
 
   <entry>
-    <title>V.A.: Vector</title>
+    <title>V.A.: Tensor Examples</title>
     <link href="/math/math-change-vector-analysis-vector.html"/>
     <updated>2018-12-01T00:00:00+09:00</updated>
     <id>/math/math-change-vector-analysis-vector</id>
     <content type="html">
-HH
+1. Vector
 Because vector components behave contrary to the basis vectors, we say that 
 vector components are contra-variant
 
@@ -3956,7 +3956,7 @@ system.
 
 
 Notation, in order to remind the component is contravarient to the basic,
-so using the f...</content>
+so usin...</content>
   </entry>
 
   <entry>
@@ -4062,6 +4062,23 @@ $
   </entry>
 
   <entry>
+    <title>V.A.: General Tensor</title>
+    <link href="/math/math-change-vector-analysis-general-tensor.html"/>
+    <updated>2018-12-01T00:00:00+09:00</updated>
+    <id>/math/math-change-vector-analysis-general-tensor</id>
+    <content type="html">
+1. A (1,2)-tensor
+\(Q=Q_{j k}^{i} \overrightarrow{e_{i}} \epsilon^{j} \epsilon^{k}\)
+
+1.1 Coordinate transform rules
+
+\[\begin{aligned} Q &amp;amp;=Q_{b c}^{a} \overrightarrow{e_{a}} \epsilon^{b} \epsilon^{c}
+\\
+&amp;amp;=Q_{b c}^{a}\left(B_{a}^{i} \widetilde{\vec{e}_{i}}\right)\left(F_{j}^{b}
+\widetild...</content>
+  </entry>
+
+  <entry>
     <title>V.A.: Diverence</title>
     <link href="/math/math-change-vector-analysis-divergence-theorem.html"/>
     <updated>2018-12-01T00:00:00+09:00</updated>
@@ -4078,6 +4095,30 @@ Reference
   Divergence and Curl
 
 </content>
+  </entry>
+
+  <entry>
+    <title>V.A.: Integration with differential forms</title>
+    <link href="/math/math-change-vector-analysis-differential-forms.html"/>
+    <updated>2018-12-01T00:00:00+09:00</updated>
+    <id>/math/math-change-vector-analysis-differential-forms</id>
+    <content type="html">
+1. Idea
+Every integral evolves:
+
+  a path
+  a covector field(differential form)
+
+
+2. Example: single variable
+
+\[\int_{0}^{2}(-6 x+4) d x
+=\int_{0}^{2} \frac{d F}{d x} d x
+= \int_{0}^{2} d F\]
+
+\[\begin{array}{l}\frac{d F}{d x}=-6 x+4 \\ F(x)=-3 x^{2}+4 x+c\end{array}\]
+
+2. Example: two variable...</content>
   </entry>
 
   <entry>
@@ -4119,7 +4160,7 @@ Covector Component
   </entry>
 
   <entry>
-    <title>V.A.: Calculus</title>
+    <title>V.A.: Differential form and Derivative</title>
     <link href="/math/math-change-vector-analysis-calculus.html"/>
     <updated>2018-12-01T00:00:00+09:00</updated>
     <id>/math/math-change-vector-analysis-calculus</id>
@@ -4137,17 +4178,22 @@ c_{k}}=\frac{d c_{i}}{d c_{k}}=\left\{\...</content>
   </entry>
 
   <entry>
-    <title>V.A.: Introduction</title>
+    <title>V.A.: Tensor</title>
     <link href="/math/math-change-tensor-analysis-introduction.html"/>
     <updated>2018-12-01T00:00:00+09:00</updated>
     <id>/math/math-change-tensor-analysis-introduction</id>
     <content type="html">
-Definition
+1. Definition
 
-  Tensor Fields: If to each point of a region in N dimensional space
-corresponds a definite tensor, we say that a tensor field has been defined,
-This is a vector field or a scalar field according as the tensor is of rank
-one or zero. It should be noted that a tensor or tensor field i...</content>
+1.1  Version one
+Tensor is multi-dimensional array of numbers: such as scalar, vector, matrix.
+
+1.2  Version two
+Tensor is an object that is invariant under a change of coordinates, and has
+components tat change in a special, predictable way under a change of
+coordinates
+
+  Like a...</content>
   </entry>
 
   <entry>
@@ -4784,14 +4830,13 @@ this, but he didn’t do that much. Gauss took this ...</content>
     <updated>2018-10-01T00:00:00+09:00</updated>
     <id>/math/math-space-differential-geometry-frenet-serret-equation</id>
     <content type="html">
-Cross Product
+1. Vector Property
 
-Frenet Equation
-
-Ordered set (T(s), N(s), B(s))
-The Frenet Equation is all about what happens to the derivative of all the
-three vector.
-</content>
+  $r(t) = \vec{r}(t) = (x(t),y(t),z(t))$
+  $s(t) = \vec{s}(t) = (\hat{x}(t),\hat{y}(t),\hat{z}(t))$
+    
+      $r(s)\cdot s(t) = x(t)\hat{x}(t) +  y(t)\hat{y}(t)+  z(t)\hat{z}(t)$
+      $r(s)\times s(t) = y(t)\hat{z}(t) -  \hat{y}(t)z(t), x(t)\hat{z}(t) -  \hat{x}(t)z(t), x(t...</content>
   </entry>
 
   <entry>
@@ -6171,6 +6216,19 @@ zero.
   </entry>
 
   <entry>
+    <title>Lie Group: Summary</title>
+    <link href="/math/math-structure-lie-theory-summary.html"/>
+    <updated>2018-02-11T00:00:00+09:00</updated>
+    <id>/math/math-structure-lie-theory-summary</id>
+    <content type="html">
+Galois
+
+  Matrix groups are simultaneously algebraic and geometric objects
+
+</content>
+  </entry>
+
+  <entry>
     <title>Lie.: Representation</title>
     <link href="/math/math-structure-lie-representation-introduction.html"/>
     <updated>2018-02-11T00:00:00+09:00</updated>
@@ -6200,7 +6258,7 @@ are Lie groups realized as groups of matrices
   </entry>
 
   <entry>
-    <title>Lie: SU(2)</title>
+    <title>Lie: Special Group</title>
     <link href="/math/math-structure-lie-group-su-2.html"/>
     <updated>2018-02-11T00:00:00+09:00</updated>
     <id>/math/math-structure-lie-group-su-2</id>
