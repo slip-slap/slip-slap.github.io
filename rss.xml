@@ -5,8 +5,8 @@
   <description>Just Do It - </description>
   <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
   <link></link>
-  <lastBuildDate>Mon, 15 Feb 2021 15:24:39 +0900</lastBuildDate>
-  <pubDate>Mon, 15 Feb 2021 15:24:39 +0900</pubDate>
+  <lastBuildDate>Wed, 17 Feb 2021 21:10:42 +0900</lastBuildDate>
+  <pubDate>Wed, 17 Feb 2021 21:10:42 +0900</pubDate>
   <ttl>1800</ttl>
 
 
@@ -12566,12 +12566,61 @@ Newton was the first to give the general definition that we should use.&lt;/li&g
   <item>
     <title>R.G.: Parallel Transport and Curvature</title>
     <description>
+&lt;h4 id=&quot;idea&quot;&gt;Idea&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;How do we compare vectors in curved spaces?
+    &lt;ul&gt;
+      &lt;li&gt;We can’t simply add or substract vectors between two different points in a
+jurved space because the basis vectors between two different points in a
+curved space becasue the basis vectors vary from point to point in the
+space.&lt;/li&gt;
+      &lt;li&gt;If vector addition and subtraction does not make sense in a curved space,
+then what can we do?&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;We can compare the directions of different vectors between points.
+    &lt;ul&gt;
+      &lt;li&gt;To do this, we need to parallel transport one vector to the other.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h5 id=&quot;1-in-flat-space&quot;&gt;1. In flat space&lt;/h5&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/math-space-riemann-geometry-parallel-transport-flat-space.png&quot; height=&quot;&quot; width=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;the condition $\frac{dv^{\alpha}}{d\lambda} = 0$ means that the vector $v$ is
+transported without any change to its length or direction&lt;/li&gt;
+  &lt;li&gt;In a curved space we will use this same idea but we will need to take into
+account the variation in the basis vectors as we move from point to point.&lt;/li&gt;
+  &lt;li&gt;That means we need the covariant derivative of the vector $v$&lt;/li&gt;
+&lt;/ul&gt;
+
+\[\frac{D v^{\alpha}}{D \lambda}=\frac{d v^{\alpha}}{d \lambda}+\Gamma_{v
+\beta}^{\alpha} v^{v} \frac{d x^{\beta}}{d \lambda}=0\]
+
+&lt;h5 id=&quot;12--in-curved-space&quot;&gt;1.2  In curved space&lt;/h5&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/math-space-riemann-geometry-parallel-transport-curvature.png&quot; height=&quot;&quot; width=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Notice the change in direction that has occurred during the course of its
+journey aroud the loop. This change in direction is entirely due to the
+curvature of the manifold.&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;h4 id=&quot;terminology-parallelity-of-vector-fields&quot;&gt;terminology: Parallelity of Vector Fields&lt;/h4&gt;
 &lt;p&gt;Assumed a manifold with connection $(M,\mathscr{O},\mathscr{A},\nabla)$ 
 Def: A vector field X on M is said to be parallelly transported along a smooth 
 curve $\gamma : R \rightarrow M$ if the directional deriative of the vector field
 is always zero if you go the direction of the tangent of the curve.
 \(\nabla_{v_r}X=0\)&lt;/p&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;math-space-riemann-geometry-parallel-transport-flat-space.pn://www.youtube.com/watch?v=p1tfZD2Bm0w&quot;&gt;parallel transport&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
 
 </description>
     <link>/math/math-space-riemann-geometry-parallel-transport-curvature.html</link>
