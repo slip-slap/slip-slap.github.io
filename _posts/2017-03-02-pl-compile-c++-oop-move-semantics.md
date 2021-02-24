@@ -8,6 +8,7 @@ tags: ["c++","compile"]
 ---
 
 
+```c++
 #include<iostream>
 class Student{
 	public:
@@ -35,6 +36,7 @@ int main()
 	std::cout<<"#################"<<std::endl;
 
 }
+```
 
 
 

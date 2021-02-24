@@ -21,3 +21,10 @@ tags: ["c++","compile"]
 
 #### RAII
 
+
+#### Layout
+1. Initilized data segment: all the global & static variables that were
+   initialized to a non-zero values, and all constant data, are stored here.
+2. Uninitalized data segment(BSS): All the global and static variables that were
+   either not initialized, or initialized to zero, are stored in this segment.
+

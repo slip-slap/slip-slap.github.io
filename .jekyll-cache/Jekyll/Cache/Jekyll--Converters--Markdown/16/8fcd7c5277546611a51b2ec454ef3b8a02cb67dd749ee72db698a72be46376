@@ -1,0 +1,64 @@
+I"Ã
+<h4 id="1-pointer-operation">1. Pointer Operation</h4>
+<ol>
+  <li>p++</li>
+  <li>pâ€“</li>
+  <li>p+1</li>
+</ol>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</span><span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="kt">int</span> <span class="n">a</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">9</span><span class="p">};</span>
+    <span class="kt">int</span> <span class="o">*</span><span class="n">p</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">p</span><span class="o">++&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">a</span><span class="o">+</span><span class="mi">1</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;*</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h4 id="problems-using-pointers">Problems Using Pointers</h4>
+<ol>
+  <li>uninitialized ptr.</li>
+  <li>memory leak.</li>
+  <li>dangling pointer.</li>
+</ol>
+
+<h4 id="2-void-pointer">2. Void Pointer</h4>
+<p>A void pointer is a pointer that has no associated data type with it.</p>
+<ul>
+  <li>a void pointer can hold address of any data type can be typecasted to any type.</li>
+  <li>malloc() and calloc() return void* type and this allows these functions to be used to allocate
+memory of any data type.</li>
+</ul>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="cp">#include&lt;iostream&gt;
+#include&lt;vector&gt;
+</span>
+<span class="kt">void</span> <span class="nf">print_value</span><span class="p">(</span><span class="kt">int</span> <span class="n">value</span><span class="p">){</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"print value is "</span> <span class="o">&lt;&lt;</span> <span class="n">value</span><span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">container_iterator</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&amp;</span> <span class="n">my_vector</span><span class="p">,</span> <span class="kt">void</span><span class="p">(</span><span class="o">*</span><span class="n">func</span><span class="p">)(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)){</span>
+	<span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="n">element</span><span class="o">:</span> <span class="n">my_vector</span><span class="p">){</span>
+		<span class="n">func</span><span class="p">(</span><span class="n">element</span><span class="p">);</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">a</span> <span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">};</span>
+	<span class="n">container_iterator</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">print_value</span><span class="p">);</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<h4 id="galois">Galois</h4>
+<p>I want to make function pointer void(func*) make sense.</p>
+<ul>
+  <li>integer pointer int* p</li>
+  <li>void pointer void*</li>
+  <li>void funtion pointer void(func*)(std::string a)</li>
+</ul>
+
+:ET

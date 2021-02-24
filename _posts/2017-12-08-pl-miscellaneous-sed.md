@@ -8,9 +8,7 @@ tags: ["script","editor"]
 ---
 {% include JB/setup %}
 
-
-
-####
+#### 1. Regular language
 1. \\w 数字0-9，字母a-z及A-Z，下划线 <font color="red">因为在编程语言中，数字的命名都是数字字母下划线</font>
 2. \\W 非\\w
 3. . 除去换行符以外的任意字符
@@ -20,31 +18,24 @@ tags: ["script","editor"]
 7. $ 行尾
 8. ()  分组, 并记录匹配到的字符串
 9. \n  使用分组符(x)匹配到的字符串
-#### repeat
+##### 1.1  repeat
 1. x\* x+ 贪婪匹配
 2. x\* x+? 非贪婪匹配
 3. x?      出现0次或一次
-
 10. (?:x) 仅分组
 
 
-#### Awk
+#### 2. Awk
 #### 分割符
 -F field-separator(默认为空格)
 ```shell
 awk -F ':' '{print $3}' /etc/passwd
 ```
 
-
-
 #### feature
 
 1. the ability to filter text in a pipeline which particularly distinguishes it from other types of editors
 
-
-
-
-<hr />
 
 #### 语法
 
@@ -144,3 +135,17 @@ grep \[option\] pattern file
 2. sed -f script file 脚本格式
 #### 参数
 1. -n by default, each line of input is echoed to the standard output after all of the commands have been applied to it, the suppresses this behavior
+
+
+#### print every Nth line
+
+copy every 5th line of oldfile to new file
+
+```shell
+sed -n '0~Np' oldfile > new file
+```
+
+
+#### Reference
+1. [sed Nth line print](https://unix.stackexchange.com/questions/369181/printing-every-nth-line-out-of-a-large-file-into-a-new-file/369220)
+

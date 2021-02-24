@@ -8,10 +8,30 @@ tags: ["c++","compile"]
 --- 
 {% include JB/setup %}
 
+#### 1. Definition
+An array is a series of elements of the same type placed in contiguous memory
+locations than can be individually referenced by adding an index to a unique
+identifier.
 
-#### static array
+```cpp
+#include <iostream>
+int main()
+{
+	int a[] = {1,2,3,4};
+	std::cout<<"address is : "<< a << std::endl;
+	std::cout<<"address is : "<< &a << std::endl;
+	std::cout<<"address is : "<< a+1 << std::endl;
+}
+```
 
-#### dynamic array
+a and &a are the same address.
+
+
+
+
+##### 1.1 static array
+
+##### 1.2 dynamic array
 
 ```cpp
 #include <iostream>
@@ -32,15 +52,9 @@ int main(){
 ```
 
 
-#### Increasing Array Size
-1. why array size can not increase directly?
-- Because the memory of array is contiguous. If you increase the size at the end
-  of current array. You don't know whether the following address is used by the
-  other program.
-- so the only way is create a big array.
 
 
-#### Function Parameter
+##### 1.3 Function Parameter
 
 ```cpp
 void test(int a[][5]) { }
@@ -82,8 +96,16 @@ int main()
 }
 ```
 
+1. Remark: Increasing Array Size
+- why array size can not increase directly?
+- Because the memory of array is contiguous. If you increase the size at the end
+  of current array. You don't know whether the following address is used by the
+  other program.
+- so the only way is create a big array.
 
 
+#### Reference
+1. [Array c++](http://www.cplusplus.com/doc/tutorial/arrays/)
 
 
 

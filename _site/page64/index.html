@@ -6090,20 +6090,9 @@ intro
     <section>
       <p>
         
-static array
-
-dynamic array
-
-#include &lt;iostream&gt;
-
-int main(){
-
-    // stack
-    int a[5]={1,3,5,2,0};
-    int *b;
-
-    //heap
-    b = new in...
+1. Definition
+An array is a series of elements of the same type placed in contiguous memory
+locations than can be individually referenced by addin...
       </p>
     </section>
 
@@ -6202,13 +6191,13 @@ domain-specific languages to general-purpose programming languag...
 
     <section>
       <p>
-        #include
+        #include&lt;iostream&gt;
 class Student{
 	public:
 		Student(const char*  m_name){
 			std::cout&lt;&lt;"create"&lt;&lt;std::endl;
 		}
-		Student(const Student&amp; ot...
+		Student(const...
       </p>
     </section>
 
@@ -6268,10 +6257,15 @@ void print_square()
 
 friend class
 
-Galois
+#include &lt;iostream&gt;
+#include &lt;ostream&gt;
 
-  At the beginning when I learn C++, one hard part is where I should put the
-keyword, and the reason is I do...
+class String
+{
+	public:
+		String() {}
+	String(const char* data)
+...
       </p>
     </section>
 
@@ -6294,10 +6288,12 @@ keyword, and the reason is I do...
 
     <section>
       <p>
-        Deep Copy Constructor
-Shallow Copy Constructor
-
-
+        
+  default constructor
+  move constructor
+  copy constructor
+    
+      a copy constructor is used to initilize a previous uninitilized object from...
       </p>
     </section>
 

@@ -1,5 +1,5 @@
-I"�
-<p>####</p>
+I"L
+<h4 id="1-regular-language">1. Regular language</h4>
 <ol>
   <li>\w 数字0-9，字母a-z及A-Z，下划线 <font color="red">因为在编程语言中，数字的命名都是数字字母下划线</font></li>
   <li>\W 非\w</li>
@@ -10,17 +10,15 @@
   <li>$ 行尾</li>
   <li>()  分组, 并记录匹配到的字符串</li>
   <li>\n  使用分组符(x)匹配到的字符串
-    <h4 id="repeat">repeat</h4>
+    <h5 id="11--repeat">1.1  repeat</h5>
   </li>
   <li>x* x+ 贪婪匹配</li>
   <li>x* x+? 非贪婪匹配</li>
-  <li>
-    <p>x?      出现0次或一次</p>
-  </li>
+  <li>x?      出现0次或一次</li>
   <li>(?:x) 仅分组</li>
 </ol>
 
-<h4 id="awk">Awk</h4>
+<h4 id="2-awk">2. Awk</h4>
 <h4 id="分割符">分割符</h4>
 <p>-F field-separator(默认为空格)</p>
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">awk</span> <span class="nt">-F</span> <span class="s1">':'</span> <span class="s1">'{print $3}'</span> /etc/passwd
@@ -31,8 +29,6 @@
 <ol>
   <li>the ability to filter text in a pipeline which particularly distinguishes it from other types of editors</li>
 </ol>
-
-<hr />
 
 <h4 id="语法">语法</h4>
 
@@ -140,4 +136,17 @@ edit files in place (makes backup if SUFFIX supplied)</li>
   </li>
   <li>-n by default, each line of input is echoed to the standard output after all of the commands have been applied to it, the suppresses this behavior</li>
 </ol>
+
+<h4 id="print-every-nth-line">print every Nth line</h4>
+
+<p>copy every 5th line of oldfile to new file</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sed</span> <span class="nt">-n</span> <span class="s1">'0~Np'</span> oldfile <span class="o">&gt;</span> new file
+</code></pre></div></div>
+
+<h4 id="reference">Reference</h4>
+<ol>
+  <li><a href="https://unix.stackexchange.com/questions/369181/printing-every-nth-line-out-of-a-large-file-into-a-new-file/369220">sed Nth line print</a></li>
+</ol>
+
 :ET

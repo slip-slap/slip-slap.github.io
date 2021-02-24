@@ -60,15 +60,38 @@ int main()
 
 ```
 
+####  Char* and char[]
+1. Char* and char[] are different types 
+
+```cpp
+char message[]="hello world!";
+```
+- defines an array whose memeter lives in current scope's stack space
+
+```cpp
+char* messag="hello world!"; // not allowed
+const char* messag="hello world!";
+```
+- defines a pointer that lives in current scope's stack space.
+- but that reference memory is someelse where.
+- Because the data is not stored in the current scope's stack space, it's
+  unspecified where it will be stored and should not be modified.
 
 
 
-#### Galois
+#### Function pointer
 I want to make function pointer void(func*) make sense. 
 - integer pointer int* p
 - void pointer void*
 - void funtion pointer void(func*)(std::string a)
 
 
+#### Galois
+1. Pointer just an integer, the pointer type means nothing.
+2. No big deal.
+
+#### Reference
+1. [char pointer and array](https://stackoverflow.com/questions/1335786/c-differences-between-char-pointer-and-array)
+2. [function pointer](https://www.cprogramming.com/tutorial/function-pointers.html)
 
 

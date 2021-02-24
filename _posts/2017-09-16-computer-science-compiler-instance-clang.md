@@ -52,3 +52,16 @@ clang++ -std=c++11 -fno-elide-constructors main.cpp
 #### Compilationg Process
 <img src="{{IMAGE_PATH}}/gcc-compilation-process.png">
 
+
+
+#### Galois
+1. in the preprocess stage, each include command will replaced with its
+   reference.
+2. After compilation, we will get assemble language.
+3. each assemle file will become an object file, which an assemble file is from
+   a cpp file, which means a cpp files turn into an obj file.
+- an object file is an executable file, which is binary file, but some of them
+  may symbolic, in the linker stage, replace the symbolic with real executable
+  code.
+4. the linker link all the obj file togeter forming the executable file.
+

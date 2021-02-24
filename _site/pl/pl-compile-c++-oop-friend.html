@@ -6059,6 +6059,63 @@ $(document).ready(function() {
 
 <h4 id="friend-class">friend class</h4>
 
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+#include &lt;ostream&gt;
+</span>
+<span class="k">class</span> <span class="nc">String</span>
+<span class="p">{</span>
+	<span class="nl">public:</span>
+		<span class="n">String</span><span class="p">()</span> <span class="p">{}</span>
+	<span class="n">String</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">data</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span> <span class="s">"constructor"</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;;</span>
+		<span class="n">m_Size</span> <span class="o">=</span> <span class="n">strlen</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
+		<span class="n">m_Data</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">char</span><span class="p">[</span><span class="n">m_Size</span><span class="p">];</span>
+		<span class="n">memcpy</span><span class="p">(</span><span class="n">m_Data</span><span class="p">,</span><span class="n">data</span><span class="p">,</span><span class="n">m_Size</span><span class="p">);</span>
+	<span class="p">}</span>
+
+	<span class="n">String</span><span class="p">(</span><span class="k">const</span> <span class="n">String</span><span class="o">&amp;</span> <span class="n">str</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"copy constructor"</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+		<span class="n">m_Data</span> <span class="o">=</span> <span class="n">str</span><span class="p">.</span><span class="n">m_Data</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="n">String</span><span class="o">&amp;</span> <span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="k">const</span> <span class="n">String</span> <span class="o">&amp;</span><span class="n">data</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span> <span class="s">"assignment operator"</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+		<span class="n">m_Data</span> <span class="o">=</span> <span class="n">data</span><span class="p">.</span><span class="n">m_Data</span><span class="p">;</span>
+		<span class="k">return</span> <span class="o">*</span><span class="k">this</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="k">friend</span> <span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">cout</span><span class="p">,</span> <span class="k">const</span> <span class="n">String</span> <span class="o">&amp;</span><span class="n">data</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">data</span><span class="p">.</span><span class="n">m_Data</span><span class="o">&lt;&lt;</span><span class="n">data</span><span class="p">.</span><span class="n">m_Size</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+		<span class="k">return</span> <span class="n">cout</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="nl">private:</span>
+	<span class="kt">char</span><span class="o">*</span> <span class="n">m_Data</span><span class="p">;</span>
+	<span class="kt">uint32_t</span> <span class="n">m_Size</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="n">String</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">;</span>
+	<span class="n">String</span> <span class="n">huiyao</span><span class="p">(</span><span class="s">"huiyao"</span><span class="p">);</span>
+	<span class="n">String</span> <span class="n">player2</span><span class="p">(</span><span class="n">huiyao</span><span class="p">);</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">huiyao</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">player2</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+	<span class="n">a</span><span class="o">=</span><span class="n">b</span><span class="o">=</span><span class="n">c</span><span class="o">=</span><span class="n">huiyao</span><span class="p">;</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">a</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">b</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">c</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+
+	<span class="c1">//int* test_arry ;</span>
+	<span class="c1">//test_arry= new int[20];</span>
+	<span class="c1">//std::cout&lt;&lt;"the 25th element: "&lt;&lt;test_arry[25000000]&lt;&lt;std::endl;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
 <h4 id="galois">Galois</h4>
 <ol>
   <li>At the beginning when I learn C++, one hard part is where I should put the
