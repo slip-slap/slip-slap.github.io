@@ -6096,6 +6096,22 @@ clang++ <span class="si">$(</span>pkg-config <span class="nt">--cflags</span> <s
 <h4 id="compilationg-process">Compilationg Process</h4>
 <p><img src="/images/gcc-compilation-process.png" /></p>
 
+<h4 id="galois">Galois</h4>
+<ol>
+  <li>in the preprocess stage, each include command will replaced with its
+reference.</li>
+  <li>After compilation, we will get assemble language.</li>
+  <li>each assemle file will become an object file, which an assemble file is from
+a cpp file, which means a cpp files turn into an obj file.
+    <ul>
+      <li>an object file is an executable file, which is binary file, but some of them
+may symbolic, in the linker stage, replace the symbolic with real executable
+code.</li>
+    </ul>
+  </li>
+  <li>the linker link all the obj file togeter forming the executable file.</li>
+</ol>
+
 
       
       <footer>

@@ -6110,13 +6110,46 @@ memory of any data type.</li>
 
 </code></pre></div></div>
 
-<h4 id="galois">Galois</h4>
+<h4 id="char-and-char">Char* and char[]</h4>
+<ol>
+  <li>Char* and char[] are different types</li>
+</ol>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">char</span> <span class="n">message</span><span class="p">[]</span><span class="o">=</span><span class="s">"hello world!"</span><span class="p">;</span>
+</code></pre></div></div>
+<ul>
+  <li>defines an array whose memeter lives in current scope’s stack space</li>
+</ul>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">char</span><span class="o">*</span> <span class="n">messag</span><span class="o">=</span><span class="s">"hello world!"</span><span class="p">;</span> <span class="c1">// not allowed</span>
+<span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">messag</span><span class="o">=</span><span class="s">"hello world!"</span><span class="p">;</span>
+</code></pre></div></div>
+<ul>
+  <li>defines a pointer that lives in current scope’s stack space.</li>
+  <li>but that reference memory is someelse where.</li>
+  <li>Because the data is not stored in the current scope’s stack space, it’s
+unspecified where it will be stored and should not be modified.</li>
+</ul>
+
+<h4 id="function-pointer">Function pointer</h4>
 <p>I want to make function pointer void(func*) make sense.</p>
 <ul>
   <li>integer pointer int* p</li>
   <li>void pointer void*</li>
   <li>void funtion pointer void(func*)(std::string a)</li>
 </ul>
+
+<h4 id="galois">Galois</h4>
+<ol>
+  <li>Pointer just an integer, the pointer type means nothing.</li>
+  <li>No big deal.</li>
+</ol>
+
+<h4 id="reference">Reference</h4>
+<ol>
+  <li><a href="https://stackoverflow.com/questions/1335786/c-differences-between-char-pointer-and-array">char pointer and array</a></li>
+  <li><a href="https://www.cprogramming.com/tutorial/function-pointers.html">function pointer</a></li>
+</ol>
 
 
       
