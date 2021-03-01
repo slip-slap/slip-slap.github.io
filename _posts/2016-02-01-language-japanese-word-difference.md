@@ -8,6 +8,10 @@ tags: ["日本語"]
 ---
 {% include JB/setup %}
 
+#### 良い・いい
+1. いい: used in colloquial.
+2. よい: used in formal document.
+
 #### ように・ために
 1. ように: used with nonvolitional verbs, which includes the potential form
 - 雨が降るように、祈(いの)った

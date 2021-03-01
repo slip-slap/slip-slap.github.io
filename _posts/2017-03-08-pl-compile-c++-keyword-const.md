@@ -45,5 +45,38 @@ class Entity
 ```
 
 
+```cpp
+#include <iostream>
+
+class Entity 
+{
+	public:
+	Entity(int x): m_X(x) {}
+
+	int GetX() const 
+	{
+		return m_X;
+	}
+
+	friend std::ostream& operator<<(std::ostream& o, const Entity& e)
+	{
+		o<<e.GetX();
+		return o;
+	}
+	private:
+		int m_X;
+};
+
+int main()
+{
+	Entity e(3);
+	std::cout<<e<<std::endl;
+}
+
+```
+
+
+
+
 
 

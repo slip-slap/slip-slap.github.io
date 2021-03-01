@@ -34,8 +34,6 @@ tags: []
 #### selection
 1. mating pool
 
-#### crossover
-1.   
 
 
 ####

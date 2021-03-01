@@ -6056,16 +6056,45 @@ $(document).ready(function() {
         </div>
       </div>
       
-<p>####</p>
-<ol>
-  <li>draw the state tree</li>
-  <li>the trick is how to redefine</li>
-</ol>
+<h4 id="1-backtracking">1. Backtracking</h4>
 
 \[\begin{array}{l}\cdot \sum_{i=1}^{k} \omega_{i} x_{i}+\omega_{k+1} \leqslant m
 \\ \sum_{i=1}^{k} \omega_{i} x_{1}+\sum_{i=k+1}^{n} \omega_{i}&gt; m \end{array}\]
 
 <p><img src="/images/computer-science-algorithm-problem-sum-of-subset.png" /></p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;exception&gt;
+</span>
+<span class="kt">void</span> <span class="nf">print_vector</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">vec</span><span class="p">){</span>
+	<span class="k">for</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">iterator</span> <span class="n">itr</span><span class="o">=</span><span class="n">vec</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span> <span class="n">itr</span><span class="o">!=</span><span class="n">vec</span><span class="p">.</span><span class="n">end</span><span class="p">();</span><span class="n">itr</span><span class="o">++</span><span class="p">){</span>
+		<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;*</span><span class="n">itr</span><span class="o">&lt;&lt;</span><span class="s">","</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">sumOfSubset</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">bag_int</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">subset</span><span class="p">,</span> <span class="kt">int</span> <span class="n">layer</span><span class="p">){</span>
+	<span class="k">if</span><span class="p">(</span><span class="n">layer</span> <span class="o">==</span> <span class="mi">6</span><span class="p">){</span>
+		<span class="n">print_vector</span><span class="p">(</span><span class="n">subset</span><span class="p">);</span>
+		<span class="k">return</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">2</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+		<span class="n">subset</span><span class="p">[</span><span class="n">layer</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+		<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">sub_bag</span><span class="p">(</span><span class="n">bag_int</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+		<span class="n">std</span><span class="o">::</span><span class="n">copy</span><span class="p">(</span><span class="o">++</span><span class="n">bag_int</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="n">bag_int</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="n">sub_bag</span><span class="p">.</span><span class="n">begin</span><span class="p">());</span>
+		<span class="n">sumOfSubset</span><span class="p">(</span><span class="n">sub_bag</span><span class="p">,</span><span class="n">subset</span><span class="p">,</span><span class="n">layer</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+		<span class="n">subset</span><span class="p">[</span><span class="n">layer</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">bag_int</span> <span class="p">{</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">18</span><span class="p">};</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">subset</span> <span class="p">{</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">};</span>
+	<span class="n">sumOfSubset</span><span class="p">(</span><span class="n">bag_int</span><span class="p">,</span> <span class="n">subset</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
 
 <h4 id="galois">Galois</h4>
 <ol>

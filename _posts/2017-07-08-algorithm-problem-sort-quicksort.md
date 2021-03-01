@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "A.P.: Quick Sort"
+title: "Divide and Conquer: Quick Sort"
 keywords: []
 description: ""
 category: "Algorithm"
@@ -80,5 +80,15 @@ int main()
 
 4. Here, we have three parameters. It's always the same, **repeat the routine.
    It's simple, repeat the routine**.
+
+**2021-03-01 Update**
+
+1. The idea of recursive function  is from discrete math. find the relationsip
+   between f(n) and f(n-1), if the subproblem is solved, then the whole problem
+   is solved.
+2. Delving into this calling process is meaningless, there is no need to do
+that.
+
+
 
 

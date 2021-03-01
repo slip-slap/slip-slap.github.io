@@ -1,5 +1,10 @@
-I"
-
+I"ò#
+<p>####</p>
+<ol>
+  <li>the new operator calls a function to perform the requisite memory allocation,
+you can rewrite and overwrite this function to change its behavior.</li>
+</ol>
+
 <h4 id="rule">Rule</h4>
 <ol>
   <li>If you apply address in heap, you must return</li>
@@ -85,6 +90,31 @@
 
 </code></pre></div></div>
 
+<h4 id="2-parentheses-after-the-type-name-with-new">2. Parentheses after the type name with new</h4>
+<ol>
+  <li>Sometimes the memory returned by the new operator will be initialized,
+sometimes it wonâ€™t.
+    <ul>
+      <li>in C++ 1988, there are two types of initilization: zero and default.</li>
+      <li>in C++ 2003, there are three types of initilization</li>
+    </ul>
+  </li>
+</ol>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span><span class="o">*</span> <span class="n">test</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">;</span> <span class="c1">//the value of *test could be any.</span>
+<span class="kt">int</span><span class="o">*</span> <span class="n">test</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">int</span><span class="p">();</span> <span class="c1">// *test will have zero value.</span>
+
+
+<span class="c1">// I make the test, these two things are the same;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+	<span class="kt">int</span><span class="o">*</span> <span class="n">a</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">;</span>
+	<span class="kt">int</span><span class="o">*</span> <span class="n">b</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">();</span>
+	<span class="n">std</span><span class="o">::</span> <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"a: "</span><span class="o">&lt;&lt;*</span><span class="n">a</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+	<span class="n">std</span><span class="o">::</span> <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"b: "</span><span class="o">&lt;&lt;*</span><span class="n">b</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
 <h4 id="galois">Galois</h4>
 <ol>
   <li>When keyword new is used, the return value is always <strong>address</strong>;</li>
@@ -93,5 +123,6 @@
 <h4 id="reference">reference</h4>
 <ol>
   <li><a href="https://en.cppreference.com/w/cpp/memory/new/operator_delete">cpp rererence</a></li>
+  <li><a href="https://stackoverflow.com/questions/1885849/difference-between-new-operator-and-operator-new">new operator and operator new</a></li>
 </ol>
 :ET

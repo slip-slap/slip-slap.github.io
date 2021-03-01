@@ -6056,7 +6056,7 @@ $(document).ready(function() {
         </div>
       </div>
       
-<p>####</p>
+<h4 id="idea">Idea</h4>
 <ol>
   <li>generate state space tree: this is the first step.</li>
   <li>bounding function: optimize this function.
@@ -6064,6 +6064,60 @@ $(document).ready(function() {
 </ol>
 
 <h4 id="solution">solution</h4>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</span>
+<span class="k">const</span> <span class="kt">int</span> <span class="n">basket_size</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">basket</span><span class="p">[</span><span class="n">basket_size</span><span class="p">]</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">};</span> 
+
+
+<span class="kt">void</span> <span class="nf">print_array</span><span class="p">(</span><span class="k">const</span> <span class="kt">int</span><span class="o">*</span> <span class="n">arr</span><span class="p">,</span> <span class="kt">int</span> <span class="n">size</span><span class="p">){</span>
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">size</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+		<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&lt;&lt;</span><span class="s">","</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="kt">void</span> <span class="nf">backtrack</span><span class="p">(</span><span class="kt">int</span><span class="o">*</span> <span class="n">ball</span><span class="p">,</span> <span class="kt">int</span> <span class="n">size</span><span class="p">,</span><span class="kt">int</span> <span class="n">number_of_ball</span><span class="p">){</span>
+	<span class="k">if</span><span class="p">(</span><span class="n">number_of_ball</span><span class="o">+</span><span class="mi">1</span> <span class="o">&gt;</span> <span class="n">basket_size</span><span class="p">){</span>
+		<span class="n">print_array</span><span class="p">(</span><span class="n">basket</span><span class="p">,</span> <span class="mi">4</span><span class="p">);</span>
+		<span class="k">return</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">size</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+		<span class="n">basket</span><span class="p">[</span><span class="n">number_of_ball</span><span class="p">]</span> <span class="o">=</span> <span class="n">ball</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+
+		<span class="kt">int</span> <span class="n">new_arr</span><span class="p">[</span><span class="n">size</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
+		<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">l</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">k</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">l</span><span class="o">&lt;</span><span class="n">size</span><span class="p">;</span> <span class="n">l</span><span class="o">++</span><span class="p">){</span>
+			<span class="k">if</span><span class="p">(</span><span class="n">l</span><span class="o">==</span><span class="n">i</span><span class="p">){</span><span class="k">continue</span><span class="p">;}</span>
+			<span class="n">new_arr</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">ball</span><span class="p">[</span><span class="n">l</span><span class="p">];</span>
+			<span class="n">k</span><span class="o">++</span><span class="p">;</span>
+		<span class="p">}</span>
+		<span class="c1">//print_array(new_arr, size-1);</span>
+		<span class="n">backtrack</span><span class="p">(</span><span class="n">new_arr</span><span class="p">,</span> <span class="n">size</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">number_of_ball</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+		<span class="n">basket</span><span class="p">[</span><span class="n">number_of_ball</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">copy_arrary</span><span class="p">(</span><span class="kt">int</span><span class="o">*</span> <span class="n">arr</span><span class="p">,</span> <span class="kt">int</span> <span class="n">size</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="kt">int</span> <span class="n">new_arr</span><span class="p">[</span><span class="n">size</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">k</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">size</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+		<span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="o">==</span><span class="mi">1</span><span class="p">){</span><span class="k">continue</span><span class="p">;}</span>
+		<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+		<span class="n">new_arr</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+		<span class="n">k</span><span class="o">++</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="n">print_array</span><span class="p">(</span><span class="n">new_arr</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
+<span class="p">}</span>
+
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="kt">int</span> <span class="n">arr</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">};</span>
+	<span class="n">backtrack</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <h4 id="application">Application</h4>
 <ol>
@@ -6076,7 +6130,14 @@ $(document).ready(function() {
   <li>both of them are brue force</li>
   <li>Dynamic programming is used for optimization problem, find the best optimal</li>
   <li>Backtracking is used to find all the solution</li>
+  <li>Backtracking is depth first, branch and bound is breadth first.</li>
 </ol>
+
+<h4 id="reference">Reference</h4>
+<ol>
+  <li><a href="https://www.geeksforgeeks.org/backtracking-introduction/">backtracking</a></li>
+</ol>
+
 
       
       <footer>

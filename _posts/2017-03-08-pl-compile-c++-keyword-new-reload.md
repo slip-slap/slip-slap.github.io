@@ -8,9 +8,12 @@ tags: ["c++","compile"]
 ---
 {% include JB/setup %}
 
+####
+1. the new operator calls a function to perform the requisite memory allocation,
+   you can rewrite and overwrite this function to change its behavior.
+
 #### Rule
 1. If you apply address in heap, you must return
-
 
 ```cpp
 #include<iostream>
@@ -94,11 +97,33 @@ int main()
 ```
 
 
+#### 2. Parentheses after the type name with new
+1. Sometimes the memory returned by the new operator will be initialized,
+   sometimes it won't.
+- in C++ 1988, there are two types of initilization: zero and default.
+- in C++ 2003, there are three types of initilization
+
+```cpp
+int* test = new int; //the value of *test could be any.
+int* test = new int(); // *test will have zero value.
+
+
+// I make the test, these two things are the same;
+int main(){
+	int* a = new int;
+	int* b = new int();
+	std:: cout<<"a: "<<*a<<std::endl;
+	std:: cout<<"b: "<<*b<<std::endl;
+}
+
+```
+
+
 
 #### Galois
 1. When keyword new is used, the return value is always **address**;
 
 
-
 #### reference
 1. [cpp rererence](https://en.cppreference.com/w/cpp/memory/new/operator_delete)
+2. [new operator and operator new](https://stackoverflow.com/questions/1885849/difference-between-new-operator-and-operator-new)

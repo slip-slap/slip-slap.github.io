@@ -1,0 +1,74 @@
+I"8
+<h4 id="i">I</h4>
+<ol>
+  <li>const is a fake keyword, it’s just a promise.</li>
+</ol>
+
+<h4 id="with-pointer">with pointer</h4>
+<ol>
+  <li>computer read a statement backward
+    <ul>
+      <li>const int * A: A is a pointer to an int that is constant;</li>
+      <li>int * const A: A is a const pointer to an int;</li>
+      <li>const int * const A: A is a const pointer to an const int.</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="with-class">with class</h4>
+<ol>
+  <li>the read order is still backward
+    <ul>
+      <li>the first const modify contents in curly bracket, so you can’t make a change
+in the curly bracket.</li>
+      <li>the second const modify the return value which is a char pointer. you can’t
+change the pointer.</li>
+      <li>the third const modify the content of the return pointer, you can’t change the
+content of the pointer.</li>
+    </ul>
+  </li>
+</ol>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Entity</span>
+<span class="p">{</span>
+    <span class="nl">private:</span>
+        <span class="kt">char</span> <span class="o">*</span> <span class="n">m_entity_name</span><span class="p">;</span>
+    <span class="nl">public:</span>
+        <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="k">const</span> <span class="n">get_entity_name</span><span class="p">()</span> <span class="k">const</span>
+        <span class="p">{</span>
+            <span class="o">*</span><span class="n">m_entity_name</span> <span class="o">=</span> <span class="sc">'c'</span><span class="p">;</span>
+            <span class="k">return</span> <span class="n">m_entity_name</span><span class="p">;</span>
+        <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</span>
+<span class="k">class</span> <span class="nc">Entity</span> 
+<span class="p">{</span>
+	<span class="nl">public:</span>
+	<span class="n">Entity</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span><span class="o">:</span> <span class="n">m_X</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">{}</span>
+
+	<span class="kt">int</span> <span class="n">GetX</span><span class="p">()</span> <span class="k">const</span> 
+	<span class="p">{</span>
+		<span class="k">return</span> <span class="n">m_X</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="k">friend</span> <span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">o</span><span class="p">,</span> <span class="k">const</span> <span class="n">Entity</span><span class="o">&amp;</span> <span class="n">e</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="n">o</span><span class="o">&lt;&lt;</span><span class="n">e</span><span class="p">.</span><span class="n">GetX</span><span class="p">();</span>
+		<span class="k">return</span> <span class="n">o</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="nl">private:</span>
+		<span class="kt">int</span> <span class="n">m_X</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="n">Entity</span> <span class="n">e</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">e</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+:ET
