@@ -11,7 +11,7 @@
 <head>
   <meta charset="UTF-8">
 
-  <title>文法: 異なる - Just Do It</title>
+  <title>Colloquial: もの・こと - Just Do It</title>
   <meta name="keywords" content="">
   
   <meta name="author" content="reed">
@@ -32,9 +32,33 @@
   <!-- Scripts -->
   <script type="text/javascript" src="/assets/themes/twitter/js/jquery-1.11.1.min.js"></script>
   <!--[if lt IE 9]><script src="/assets/themes/twitter/js/html5shiv.min.js"></script><![endif]-->
-  <script type="text/javascript" async
+  <!--<script type="text/javascript" async
           src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
-  </script>
+  </script> -->
+	<script type="text/javascript">
+	window.MathJax = {
+	  tex: {
+		packages: ['base', 'ams']
+	  },
+	  loader: {
+		load: ['ui/menu', '[tex]/ams']
+	  },
+	  startup: {
+		ready() {
+		  MathJax.startup.defaultReady();
+		  const Macro = MathJax._.input.tex.Symbol.Macro;
+		  const MapHandler = MathJax._.input.tex.MapHandler.MapHandler;
+		  const Array = MathJax._.input.tex.ams.AmsMethods.default.Array;
+		  const env = new Macro('psmallmatrix', Array, [null, '(', ')', 'c', '.333em', '.2em', 'S', 1]);
+		  MapHandler.getMap('AMSmath-environment').add('psmallmatrix', env);
+		}
+	  }
+	};
+	</script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+
 </head> 
 <body>
 
@@ -124,17 +148,17 @@ $(document).ready(function() {
           <a href="/" title="查看最近发表"><i class="icon-fixed-width icon-edit"></i> 最近发表</a>
 <ul>
 
-  <li><a href="/work/work-publisher.html" title="查看《Publisher: Summary》">Publisher: Summary</a></li>
+  <li><a href="/ai/AI-summary.html" title="查看《AI: summary》">AI: summary</a></li>
 
-  <li><a href="/work/work-publisher-common-sense.html" title="查看《Publisher: Common sense》">Publisher: Common sense</a></li>
+  <li><a href="/ai/AI-calssification-support-vector-machine.html" title="查看《Classification: Support Vector Machine》">Classification: Support Vector Machine</a></li>
 
-  <li><a href="/ai/AI-Adaptive-Boosting.html" title="查看《Adaptive Boosting》">Adaptive Boosting</a></li>
+  <li><a href="/ai/AI-classification-kmeans.html" title="查看《Classification: Kmeans》">Classification: Kmeans</a></li>
 
-  <li><a href="/work/work-word-neural-network.html" title="查看《Work: Neural Network》">Work: Neural Network</a></li>
+  <li><a href="/ai/AI-classification-gaussian-mixture-model.html" title="查看《Classification: Gaussian Mixture Model》">Classification: Gaussian Mixture Model</a></li>
 
-  <li><a href="/work/work-word-composite-material.html" title="查看《Word: Composite Material》">Word: Composite Material</a></li>
+  <li><a href="/ai/AI-nnd-introduction.html" title="查看《N.N.D.: summary》">N.N.D.: summary</a></li>
 
-  <li><a href="/work/work-word.html" title="查看《Work: Word》">Work: Word</a></li>
+  <li><a href="/ai/AI-nnd-adaline-network.html" title="查看《N.N.D.: ADALINE Network》">N.N.D.: ADALINE Network</a></li>
 
 </ul>
 
@@ -142,7 +166,7 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">953</span>
+<span title="文章总数">979</span>
 <ul>
 
 
@@ -155,7 +179,192 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#July-2020">2020 年 07 月 (2)</a></li>
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#December-2020">2020 年 12 月 (5)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#November-2020">2020 年 11 月 (17)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#October-2020">2020 年 10 月 (2)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#September-2020">2020 年 09 月 (3)</a></li>
+    
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#August-2020">2020 年 08 月 (1)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#July-2020">2020 年 07 月 (8)</a></li>
     
   
 
@@ -231,7 +440,22 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#May-2020">2020 年 05 月 (2)</a></li>
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2020">2020 年 03 月 (5)</a></li>
     
   
 
@@ -244,197 +468,7 @@ $(document).ready(function() {
   
   
   
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-    <li><a href="/archive.html#March-2020">2020 年 03 月 (40)</a></li>
+    <li><a href="/archive.html#February-2020">2020 年 02 月 (2)</a></li>
     
   
 
@@ -565,267 +599,7 @@ $(document).ready(function() {
   
   
   
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-    <li><a href="/archive.html#December-2019">2019 年 12 月 (69)</a></li>
+    <li><a href="/archive.html#December-2019">2019 年 12 月 (17)</a></li>
     
   
 
@@ -843,7 +617,169 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#November-2019">2019 年 11 月 (3)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#November-2019">2019 年 11 月 (4)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#September-2019">2019 年 09 月 (13)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#August-2019">2019 年 08 月 (6)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#July-2019">2019 年 07 月 (9)</a></li>
+    
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#June-2019">2019 年 06 月 (1)</a></li>
     
   
 
@@ -956,6 +892,44 @@ $(document).ready(function() {
   
   
   
+    <li><a href="/archive.html#May-2019">2019 年 05 月 (22)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
 
   
   
@@ -996,7 +970,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#October-2019">2019 年 10 月 (30)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2019">2019 年 03 月 (16)</a></li>
     
   
 
@@ -1089,100 +1068,7 @@ $(document).ready(function() {
   
   
   
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-    <li><a href="/archive.html#September-2019">2019 年 09 月 (28)</a></li>
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-    <li><a href="/archive.html#August-2019">2019 年 08 月 (8)</a></li>
+    <li><a href="/archive.html#February-2019">2019 年 02 月 (18)</a></li>
     
   
 
@@ -1270,318 +1156,7 @@ $(document).ready(function() {
   
   
   
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-    <li><a href="/archive.html#July-2019">2019 年 07 月 (52)</a></li>
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-    <li><a href="/archive.html#June-2019">2019 年 06 月 (6)</a></li>
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-    <li><a href="/archive.html#May-2019">2019 年 05 月 (20)</a></li>
+    <li><a href="/archive.html#January-2019">2019 年 01 月 (17)</a></li>
     
   
 
@@ -1864,7 +1439,110 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#March-2019">2019 年 03 月 (56)</a></li>
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#December-2018">2018 年 12 月 (71)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#November-2018">2018 年 11 月 (5)</a></li>
     
   
 
@@ -2017,193 +1695,7 @@ $(document).ready(function() {
   
   
   
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-    <li><a href="/archive.html#February-2019">2019 年 02 月 (33)</a></li>
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-    <li><a href="/archive.html#November-2018">2018 年 11 月 (10)</a></li>
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-    <li><a href="/archive.html#October-2018">2018 年 10 月 (23)</a></li>
+    <li><a href="/archive.html#October-2018">2018 年 10 月 (30)</a></li>
     
   
 
@@ -2389,6 +1881,50 @@ $(document).ready(function() {
   
   
   
+    <li><a href="/archive.html#August-2018">2018 年 08 月 (8)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#July-2018">2018 年 07 月 (6)</a></li>
+    
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#June-2018">2018 年 06 月 (1)</a></li>
+    
+  
 
   
   
@@ -2484,7 +2020,686 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#July-2018">2018 年 07 月 (27)</a></li>
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#April-2018">2018 年 04 月 (25)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2018">2018 年 03 月 (13)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#February-2018">2018 年 02 月 (9)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#January-2018">2018 年 01 月 (5)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#December-2017">2017 年 12 月 (10)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#November-2017">2017 年 11 月 (10)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#October-2017">2017 年 10 月 (23)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#September-2017">2017 年 09 月 (28)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#July-2017">2017 年 07 月 (27)</a></li>
     
   
 
@@ -2742,115 +2957,7 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#June-2018">2018 年 06 月 (51)</a></li>
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-    <li><a href="/archive.html#May-2018">2018 年 05 月 (21)</a></li>
+    <li><a href="/archive.html#June-2017">2017 年 06 月 (51)</a></li>
     
   
 
@@ -2968,12 +3075,7 @@ $(document).ready(function() {
   
   
   
-
-  
-  
-  
-  
-    <li><a href="/archive.html#April-2018">2018 年 04 月 (24)</a></li>
+    <li><a href="/archive.html#May-2017">2017 年 05 月 (23)</a></li>
     
   
 
@@ -3096,375 +3198,7 @@ $(document).ready(function() {
   
   
   
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-    <li><a href="/archive.html#March-2018">2018 年 03 月 (68)</a></li>
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-    <li><a href="/archive.html#February-2018">2018 年 02 月 (29)</a></li>
+    <li><a href="/archive.html#April-2017">2017 年 04 月 (24)</a></li>
     
   
 
@@ -3817,110 +3551,7 @@ $(document).ready(function() {
   
   
   
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-    <li><a href="/archive.html#January-2018">2018 年 01 月 (74)</a></li>
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-    <li><a href="/archive.html#December-2017">2017 年 12 月 (16)</a></li>
+    <li><a href="/archive.html#March-2017">2017 年 03 月 (70)</a></li>
     
   
 
@@ -4073,417 +3704,7 @@ $(document).ready(function() {
   
   
   
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-    <li><a href="/archive.html#March-2017">2017 年 03 月 (112)</a></li>
+    <li><a href="/archive.html#February-2017">2017 年 02 月 (30)</a></li>
     
   
 
@@ -4856,6 +4077,92 @@ $(document).ready(function() {
   
   
   
+    <li><a href="/archive.html#January-2017">2017 年 01 月 (74)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#December-2016">2016 年 12 月 (16)</a></li>
+    
+  
 
   
   
@@ -4991,7 +4298,905 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#February-2017">2017 年 02 月 (101)</a></li>
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2016">2016 年 03 月 (116)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#February-2016">2016 年 02 月 (90)</a></li>
     
   
 
@@ -5004,30 +5209,30 @@ $(document).ready(function() {
 <span title="分类总数">9</span>
 <ul>
 
-  <li><a href="/categories.html#言葉-ref">言葉 (212)</a></li>
+  <li><a href="/categories.html#言葉-ref">言葉 (205)</a></li>
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (215)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (230)</a></li>
 
   <li><a href="/categories.html#Algorithm-ref">Algorithm (78)</a></li>
 
   <li><a href="/categories.html#CS-ref">CS (60)</a></li>
 
-  <li><a href="/categories.html#math-ref">math (305)</a></li>
+  <li><a href="/categories.html#math-ref">math (324)</a></li>
 
   <li><a href="/categories.html#Economy-ref">Economy (2)</a></li>
 
-  <li><a href="/categories.html#work-ref">work (18)</a></li>
+  <li><a href="/categories.html#work-ref">work (20)</a></li>
 
-  <li><a href="/categories.html#AI-ref">AI (42)</a></li>
+  <li><a href="/categories.html#AI-ref">AI (40)</a></li>
 
 </ul>
 
         </section>
         <section>
           <a href="/tags.html" title="查看所有标签"><i class="icon-fixed-width icon-tags"></i> 标签云</a>
-<span title="标签总数">100</span>
+<span title="标签总数">104</span>
 <div id="tag-cloud">
 
 
@@ -5041,7 +5246,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#日本語-ref" style="font-size: 17pt; color: #111;">日本語</a>
+    <a href="/tags.html#日本語-ref" style="font-size: 16pt; color: #222;">日本語</a>
   
     
     
@@ -5055,14 +5260,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#china-ref" style="font-size: 9pt; color: #999;">china</a>
-  
-    
-    
-    
-    
-    
-    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #888;">summary</a>
+    <a href="/tags.html#summary-ref" style="font-size: 10.5pt; color: #777;">summary</a>
   
     
     
@@ -5139,7 +5337,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#c++-ref" style="font-size: 13.5pt; color: #555;">c++</a>
+    <a href="/tags.html#c++-ref" style="font-size: 13pt; color: #555;">c++</a>
   
     
     
@@ -5160,7 +5358,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#haskell-ref" style="font-size: 10.5pt; color: #888;">haskell</a>
+    <a href="/tags.html#haskell-ref" style="font-size: 10pt; color: #888;">haskell</a>
   
     
     
@@ -5188,7 +5386,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#git-ref" style="font-size: 9.5pt; color: #999;">git</a>
+    <a href="/tags.html#git-ref" style="font-size: 9.5pt; color: #888;">git</a>
   
     
     
@@ -5209,7 +5407,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#A.D.T.-ref" style="font-size: 12pt; color: #666;">A.D.T.</a>
+    <a href="/tags.html#A.D.T.-ref" style="font-size: 11.5pt; color: #666;">A.D.T.</a>
   
     
     
@@ -5217,13 +5415,6 @@ $(document).ready(function() {
     
     
     <a href="/tags.html#A.D.T.P.-ref" style="font-size: 9pt; color: #999;">A.D.T.P.</a>
-  
-    
-    
-    
-    
-    
-    <a href="/tags.html#Algorithm-ref" style="font-size: 9pt; color: #999;">Algorithm</a>
   
     
     
@@ -5293,161 +5484,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#apply-ref" style="font-size: 16pt; color: #222;">apply</a>
-  
-    
-    
-    
-    
-    
-    <a href="/tags.html#P.G.M.-ref" style="font-size: 10.5pt; color: #888;">P.G.M.</a>
-  
-    
-    
-    
-    
-    
-    <a href="/tags.html#P.G.M.D.T.-ref" style="font-size: 9pt; color: #999;">P.G.M.D.T.</a>
-  
-    
-    
-    
-    
-    
-    <a href="/tags.html#P.G.M.I.-ref" style="font-size: 9.5pt; color: #999;">P.G.M.I.</a>
-  
-    
-    
-    
-    
-    
-    <a href="/tags.html#P.G.M.L.-ref" style="font-size: 9pt; color: #999;">P.G.M.L.</a>
-  
-    
-    
-    
-    
-    
-    <a href="/tags.html#P.G.M.R.-ref" style="font-size: 9.5pt; color: #999;">P.G.M.R.</a>
-  
-    
-    
-    
-    
-    
-    <a href="/tags.html#I.T.-ref" style="font-size: 9.5pt; color: #888;">I.T.</a>
-  
-    
-    
-    
-    
-    
-    <a href="/tags.html#N.A.-ref" style="font-size: 9pt; color: #999;">N.A.</a>
-  
-    
-    
-    
-    
-    
-    <a href="/tags.html#Game Theory-ref" style="font-size: 9.5pt; color: #999;">Game Theory</a>
-  
-    
-    
-    
-    
-    
-    <a href="/tags.html#G.T.-ref" style="font-size: 10pt; color: #888;">G.T.</a>
-  
-    
-    
-    
-    
-    
-    <a href="/tags.html#S.P.-ref" style="font-size: 10pt; color: #888;">S.P.</a>
-  
-    
-    
-    
-    
-    
-    <a href="/tags.html#M.C.-ref" style="font-size: 9.5pt; color: #999;">M.C.</a>
-  
-    
-    
-    
-    
-    
-    <a href="/tags.html#P.P.-ref" style="font-size: 9pt; color: #999;">P.P.</a>
-  
-    
-    
-    
-    
-    
-    <a href="/tags.html#R.P.-ref" style="font-size: 9pt; color: #999;">R.P.</a>
-  
-    
-    
-    
-    
-    
-    <a href="/tags.html#P.A.S.M.A.-ref" style="font-size: 9pt; color: #999;">P.A.S.M.A.</a>
-  
-    
-    
-    
-    
-    
-    <a href="/tags.html#P.A.S.M.-ref" style="font-size: 9.5pt; color: #888;">P.A.S.M.</a>
-  
-    
-    
-    
-    
-    
-    <a href="/tags.html#P.A.S.M.I.-ref" style="font-size: 9.5pt; color: #999;">P.A.S.M.I.</a>
-  
-    
-    
-    
-    
-    
-    <a href="/tags.html#frequentist-ref" style="font-size: 9pt; color: #999;">frequentist</a>
-  
-    
-    
-    
-    
-    
-    <a href="/tags.html#P.A.S.-ref" style="font-size: 9pt; color: #999;">P.A.S.</a>
-  
-    
-    
-    
-    
-    
-    <a href="/tags.html#P.A.S.T.B.-ref" style="font-size: 9pt; color: #999;">P.A.S.T.B.</a>
-  
-    
-    
-    
-    
-    
-    <a href="/tags.html#G.T.A.-ref" style="font-size: 9pt; color: #999;">G.T.A.</a>
-  
-    
-    
-    
-    
-    
-    <a href="/tags.html#discrete-ref" style="font-size: 10.5pt; color: #888;">discrete</a>
-  
-    
-    
-    
-    
-    
-    <a href="/tags.html#CMB-ref" style="font-size: 9pt; color: #999;">CMB</a>
+    <a href="/tags.html#jekyll-ref" style="font-size: 9pt; color: #999;">jekyll</a>
   
     
     
@@ -5468,13 +5505,6 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#E.A.-ref" style="font-size: 9pt; color: #999;">E.A.</a>
-  
-    
-    
-    
-    
-    
     <a href="/tags.html#L.A.-ref" style="font-size: 10pt; color: #888;">L.A.</a>
   
     
@@ -5482,7 +5512,21 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#Lie-ref" style="font-size: 9.5pt; color: #999;">Lie</a>
+    <a href="/tags.html#Lie-ref" style="font-size: 9.5pt; color: #888;">Lie</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#A.A.-ref" style="font-size: 11pt; color: #777;">A.A.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#E.A.-ref" style="font-size: 9pt; color: #999;">E.A.</a>
   
     
     
@@ -5503,7 +5547,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#space-ref" style="font-size: 14.5pt; color: #444;">space</a>
+    <a href="/tags.html#space-ref" style="font-size: 14pt; color: #444;">space</a>
   
     
     
@@ -5517,13 +5561,6 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#A.A.-ref" style="font-size: 11pt; color: #777;">A.A.</a>
-  
-    
-    
-    
-    
-    
     <a href="/tags.html#M.T.-ref" style="font-size: 9.5pt; color: #999;">M.T.</a>
   
     
@@ -5531,14 +5568,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#Topology-ref" style="font-size: 9.5pt; color: #999;">Topology</a>
-  
-    
-    
-    
-    
-    
-    <a href="/tags.html#topology-ref" style="font-size: 9pt; color: #999;">topology</a>
+    <a href="/tags.html#topology-ref" style="font-size: 9.5pt; color: #999;">topology</a>
   
     
     
@@ -5608,6 +5638,13 @@ $(document).ready(function() {
     
     
     
+    <a href="/tags.html#apply-ref" style="font-size: 17pt; color: #111;">apply</a>
+  
+    
+    
+    
+    
+    
     <a href="/tags.html#T.A.-ref" style="font-size: 9pt; color: #999;">T.A.</a>
   
     
@@ -5636,7 +5673,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#basic-ref" style="font-size: 10.5pt; color: #888;">basic</a>
+    <a href="/tags.html#basic-ref" style="font-size: 10pt; color: #888;">basic</a>
   
     
     
@@ -5657,14 +5694,210 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#C.F.-ref" style="font-size: 9pt; color: #999;">C.F.</a>
+    <a href="/tags.html#G.M.-ref" style="font-size: 10pt; color: #888;">G.M.</a>
   
     
     
     
     
     
-    <a href="/tags.html#algorithm-ref" style="font-size: 9pt; color: #999;">algorithm</a>
+    <a href="/tags.html#P.G.M.D.T.-ref" style="font-size: 9pt; color: #999;">P.G.M.D.T.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#G.M.D.T.-ref" style="font-size: 9pt; color: #999;">G.M.D.T.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#G.M.L.-ref" style="font-size: 9pt; color: #999;">G.M.L.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#P.G.M.-ref" style="font-size: 9pt; color: #999;">P.G.M.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#P.G.M.L.-ref" style="font-size: 9pt; color: #999;">P.G.M.L.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#G.M.I.-ref" style="font-size: 9pt; color: #999;">G.M.I.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#G.M.R.-ref" style="font-size: 9.5pt; color: #999;">G.M.R.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#I.T.-ref" style="font-size: 9.5pt; color: #888;">I.T.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#C.O.-ref" style="font-size: 9.5pt; color: #888;">C.O.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#N.A.-ref" style="font-size: 9pt; color: #999;">N.A.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#Game Theory-ref" style="font-size: 9.5pt; color: #999;">Game Theory</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#G.T.-ref" style="font-size: 10pt; color: #888;">G.T.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#S.P.-ref" style="font-size: 10.5pt; color: #777;">S.P.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#M.C.-ref" style="font-size: 9.5pt; color: #999;">M.C.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#R.P.-ref" style="font-size: 9pt; color: #999;">R.P.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#P.P.-ref" style="font-size: 9pt; color: #999;">P.P.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#D.T.-ref" style="font-size: 9pt; color: #999;">D.T.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#P.A.S.-ref" style="font-size: 11pt; color: #777;">P.A.S.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#Frequentist-ref" style="font-size: 9pt; color: #999;">Frequentist</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#inference-ref" style="font-size: 9pt; color: #999;">inference</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#Bayesian-ref" style="font-size: 9.5pt; color: #999;">Bayesian</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#P.A.S.M.-ref" style="font-size: 9pt; color: #999;">P.A.S.M.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#statistics-ref" style="font-size: 9.5pt; color: #999;">statistics</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#P.A.S-ref" style="font-size: 9pt; color: #999;">P.A.S</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#P.M.-ref" style="font-size: 9.5pt; color: #888;">P.M.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#discrete-ref" style="font-size: 10pt; color: #888;">discrete</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#CMB-ref" style="font-size: 9pt; color: #999;">CMB</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#G.T.A.-ref" style="font-size: 9pt; color: #999;">G.T.A.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#C.F.-ref" style="font-size: 9pt; color: #999;">C.F.</a>
   
     
     
@@ -5678,42 +5911,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#learning-ref" style="font-size: 10.5pt; color: #777;">learning</a>
-  
-    
-    
-    
-    
-    
-    <a href="/tags.html#constraints-ref" style="font-size: 9pt; color: #999;">constraints</a>
-  
-    
-    
-    
-    
-    
     <a href="/tags.html#EM-ref" style="font-size: 9pt; color: #999;">EM</a>
-  
-    
-    
-    
-    
-    
-    <a href="/tags.html#manifold-ref" style="font-size: 9pt; color: #999;">manifold</a>
-  
-    
-    
-    
-    
-    
-    <a href="/tags.html#N.N.D.-ref" style="font-size: 10.5pt; color: #888;">N.N.D.</a>
-  
-    
-    
-    
-    
-    
-    <a href="/tags.html#Reasoning-ref" style="font-size: 9pt; color: #999;">Reasoning</a>
   
     
     
@@ -5727,14 +5925,49 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#ML-ref" style="font-size: 9pt; color: #999;">ML</a>
+    <a href="/tags.html#manifold-ref" style="font-size: 9.5pt; color: #999;">manifold</a>
   
     
     
     
     
     
-    <a href="/tags.html#supervised-ref" style="font-size: 9pt; color: #999;">supervised</a>
+    <a href="/tags.html#learning-ref" style="font-size: 9pt; color: #999;">learning</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#NLP-ref" style="font-size: 9pt; color: #999;">NLP</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#D.M.-ref" style="font-size: 9pt; color: #999;">D.M.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#traditional-ref" style="font-size: 9pt; color: #999;">traditional</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#N.N.D.-ref" style="font-size: 10.5pt; color: #888;">N.N.D.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#classification-ref" style="font-size: 9pt; color: #999;">classification</a>
   
 
 </div>
@@ -5810,13 +6043,13 @@ $(document).ready(function() {
       <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
 
     <header>
-      <h1>文法: 異なる</h1>
+      <h1>Colloquial: もの・こと</h1>
     </header>
 
     <section>
       <div class="post-extra">
         <div class="pull-left">
-          <span>01 February 2017</span>
+          <span>01 February 2016</span>
         </div>
         <div class="pull-right">
           
@@ -5824,10 +6057,10 @@ $(document).ready(function() {
 
   <span id="share">
   <a class="wechat" target="_blank" title="分享到微信" href="http://chart.apis.google.com/chart?cht=qr&amp;chs=300x300&amp;chl=/%E8%A8%80%E8%91%89/language-japanese-colloquial-%E3%81%93%E3%81%A8-%E3%82%82%E3%81%AE.html"><i class="icon-large icon-wechat"></i></a>
-  <a class="weibo" target="_blank" title="分享到微博" href="http://service.weibo.com/share/share.php?title=文法: 異なる - Just Do It&amp;url=/%E8%A8%80%E8%91%89/language-japanese-colloquial-%E3%81%93%E3%81%A8-%E3%82%82%E3%81%AE.html&amp;type=3&amp;searchPic=1"><i class="icon-large icon-weibo"></i></a>
-  <a class="qzone" target="_blank" title="分享到 QQ 空间" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=/%E8%A8%80%E8%91%89/language-japanese-colloquial-%E3%81%93%E3%81%A8-%E3%82%82%E3%81%AE.html&amp;title=文法: 異なる - Just Do It&amp;summary=&amp;site="><i class="icon-large icon-qzone"></i></a>
-  <a class="twitter" target="_blank" title="Share to Twitter" href="https://twitter.com/intent/tweet?url=/%E8%A8%80%E8%91%89/language-japanese-colloquial-%E3%81%93%E3%81%A8-%E3%82%82%E3%81%AE.html&amp;text=文法: 異なる - Just Do It&amp;via="><i class="icon-large icon-twitter"></i></a>
-  <a class="facebook" target="_blank" title="Share to Facebook" href="http://www.facebook.com/sharer.php?u=/%E8%A8%80%E8%91%89/language-japanese-colloquial-%E3%81%93%E3%81%A8-%E3%82%82%E3%81%AE.html&amp;t=文法: 異なる - Just Do It"><i class="icon-large icon-facebook-sign"></i></a>
+  <a class="weibo" target="_blank" title="分享到微博" href="http://service.weibo.com/share/share.php?title=Colloquial: もの・こと - Just Do It&amp;url=/%E8%A8%80%E8%91%89/language-japanese-colloquial-%E3%81%93%E3%81%A8-%E3%82%82%E3%81%AE.html&amp;type=3&amp;searchPic=1"><i class="icon-large icon-weibo"></i></a>
+  <a class="qzone" target="_blank" title="分享到 QQ 空间" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=/%E8%A8%80%E8%91%89/language-japanese-colloquial-%E3%81%93%E3%81%A8-%E3%82%82%E3%81%AE.html&amp;title=Colloquial: もの・こと - Just Do It&amp;summary=&amp;site="><i class="icon-large icon-qzone"></i></a>
+  <a class="twitter" target="_blank" title="Share to Twitter" href="https://twitter.com/intent/tweet?url=/%E8%A8%80%E8%91%89/language-japanese-colloquial-%E3%81%93%E3%81%A8-%E3%82%82%E3%81%AE.html&amp;text=Colloquial: もの・こと - Just Do It&amp;via="><i class="icon-large icon-twitter"></i></a>
+  <a class="facebook" target="_blank" title="Share to Facebook" href="http://www.facebook.com/sharer.php?u=/%E8%A8%80%E8%91%89/language-japanese-colloquial-%E3%81%93%E3%81%A8-%E3%82%82%E3%81%AE.html&amp;t=Colloquial: もの・こと - Just Do It"><i class="icon-large icon-facebook-sign"></i></a>
   <a class="googleplus" target="_blank" title="Share to Google+" href="https://plus.google.com/share?url=/%E8%A8%80%E8%91%89/language-japanese-colloquial-%E3%81%93%E3%81%A8-%E3%82%82%E3%81%AE.html"><i class="icon-large icon-google-plus-sign"></i></a>
 </span>
 
@@ -5928,6 +6161,60 @@ someone superior</li>
   <li>卒業できるかどうか心配でならない</li>
 </ul>
 
+<h4 id="堪たまらない">堪(たま)らない</h4>
+<ol>
+  <li>to express one’s uncontrollable emotion
+    <ul>
+      <li>会いたくて堪らない: dying to see someone</li>
+      <li>試験の結果が知りたくて堪らない: dying to know the exam result</li>
+    </ul>
+  </li>
+  <li>to describe some extreme situation or condition
+    <ul>
+      <li>寒くて堪らない: extremely cold</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="3-こと-1">3 こと　</h3>
+
+<h4 id="31-personal-pronounのこと">3.1 personal pronoun+のこと</h4>
+<p>The noun is already a noun and what is the purpose of using のこと</p>
+<ol>
+  <li>マギーが好きです</li>
+  <li>マギのことが好きです
+    <ul>
+      <li>They both mean “I love/like Maggie”,</li>
+      <li>sounds more indirect/abstract and slightly softer</li>
+      <li>“マギーのこと” which involves her personality, things she does, her beautiful appearance, her
+greatness.</li>
+    </ul>
+  </li>
+  <li>私を覚えていますか？</li>
+  <li>私のことを覚えていますか？
+Both of them means “Do you remember me?”, “私のこと” means things about me, and it implies certain
+memories of one’s experience.</li>
+</ol>
+
+<h4 id="32-time-related-word--のこと">3.2 time related word + のこと</h4>
+<p>Things about certain time/what happened in certain time</p>
+
+<ol>
+  <li>昨日のこと何も覚えていない</li>
+  <li>
+    <p>昨日何も覚えていない(wrong)</p>
+  </li>
+  <li>今までのことは水に流します(bygones be bygones)</li>
+  <li>昔のことを気にしても仕方がない</li>
+</ol>
+
+<h3 id="3-reference">3. Reference</h3>
+<ol>
+  <li><a href="http://maggiesensei.com/2017/08/22/%e3%81%93%e3%81%a8%e3%81%ab%e3%81%aa%e3%82%8b%e3%81%99%e3%82%8b-koto-ni-naru-%e3%82%88%e3%81%86%e3%81%ab%e3%81%aa%e3%82%8b%e3%81%99%e3%82%8b-you-ni-narusuru/">ことに</a></li>
+  <li><a href="http://maggiesensei.com/2019/03/04/how-to-use-noun-%e3%81%ae%e3%81%93%e3%81%a8-no-koto-%e3%81%ae%e3%81%93%e3%81%a8%e3%81%a0%e3%81%8b%e3%82%89-no-koto-dakara-%e3%81%ae%e3%81%93%e3%81%a8%e3%81%a0%e3%81%97-no-koto-dashi/">こと</a></li>
+  <li><a href="http://maggiesensei.com/2017/05/15/how-to-use-%e3%81%9f%e3%81%be%e3%82%89%e3%81%aa%e3%81%84-tamaranai/">たまらない</a></li>
+</ol>
+
 
       
       <footer>
@@ -5956,7 +6243,7 @@ someone superior</li>
   
      
     	<li><a href="/categories.html#言葉-ref">
-    		言葉 <span>212</span>
+    		言葉 <span>205</span>
     	</a></li>
     
   
@@ -5975,7 +6262,7 @@ someone superior</li>
 
   
      
-    	<li><a href="/tags.html#日本語-ref">日本語 <span>100</span></a></li>
+    	<li><a href="/tags.html#日本語-ref">日本語 <span>89</span></a></li>
     
   
 
@@ -5988,11 +6275,11 @@ someone superior</li>
   <div class="pagination">
     <ul>
       
-      <li class="prev"><a href="/%E8%A8%80%E8%91%89/language-japanese-colloquial-%E3%81%92.html" title="Colloquial: げ">&larr; 上一篇</a></li>
+      <li class="prev"><a href="/%E8%A8%80%E8%91%89/language-japanese-colloquial-%E3%81%8B%E3%81%91%E3%82%8B-%E5%88%87%E3%82%8B-%E3%81%8D%E3%81%A3%E3%81%8B%E3%81%91.html" title="Colloquial: かける・切る">&larr; 上一篇</a></li>
       
       <li><a href="/archive.html">文章列表</a></li>
       
-      <li class="next"><a href="/%E8%A8%80%E8%91%89/language-japanese-colloquial-%E3%81%93%E3%81%A8.html" title="Colloquial: こと">下一篇 &rarr;</a></li>
+      <li class="next"><a href="/%E8%A8%80%E8%91%89/language-japanese-colloquial-%E3%81%99%E3%82%8B-%E3%81%AA%E3%82%8B.html" title="Colloquial: する・なる">下一篇 &rarr;</a></li>
       
     </ul>
   </div>
@@ -6010,8 +6297,8 @@ someone superior</li>
     var disqus_developer = 1;
     var disqus_shortname = 'just-do-it-1';
     
-    var disqus_identifier = '文法: 異なる';
-    var disqus_title = '文法: 異なる';
+    var disqus_identifier = 'Colloquial: もの・こと';
+    var disqus_title = 'Colloquial: もの・こと';
     var disqus_url = '/%E8%A8%80%E8%91%89/language-japanese-colloquial-%E3%81%93%E3%81%A8-%E3%82%82%E3%81%AE.html';
     
     
@@ -6064,7 +6351,7 @@ $(document).ready(function () {
     </section>
 
     <footer id="bottom">
-      <p align="center">&copy; 2020 reed
+      <p align="center">&copy; 2021 reed
         with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
         and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
       </p>
@@ -6082,4 +6369,8 @@ $(document).ready(function () {
   
 </body>
 </html>
+
+
+
+
 

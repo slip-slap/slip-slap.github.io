@@ -5,8 +5,8 @@
   <description>Just Do It - </description>
   <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
   <link></link>
-  <lastBuildDate>Mon, 01 Mar 2021 20:55:32 +0900</lastBuildDate>
-  <pubDate>Mon, 01 Mar 2021 20:55:32 +0900</pubDate>
+  <lastBuildDate>Sun, 07 Mar 2021 13:30:53 +0900</lastBuildDate>
+  <pubDate>Sun, 07 Mar 2021 13:30:53 +0900</pubDate>
   <ttl>1800</ttl>
 
 
@@ -29637,6 +29637,58 @@ vector in C++;&lt;/li&gt;
   </item>
 
   <item>
+    <title>C++ STL: list</title>
+    <description>
+&lt;h4 id=&quot;attention&quot;&gt;Attention&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;if std::find can’t find the specified element, it will return the pointer of&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Product&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;nl&quot;&gt;public:&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;Product&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m_product_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+		&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+	&lt;span class=&quot;k&quot;&gt;friend&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ostream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;operator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ostream&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ostream&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Product&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;product&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;ostream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;id: &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;product&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m_id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;,  name: &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;product&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m_product_name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ostream&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+	&lt;span class=&quot;k&quot;&gt;friend&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;operator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Product&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;prod1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Product&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;prod2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;prod1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m_id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;prod2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+	&lt;span class=&quot;nl&quot;&gt;private:&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;m_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;m_product_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;Product&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;prod1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;001&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;にゃにゃ&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;Product&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;prod2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;002&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;トトロ&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;Product&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;prod3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;003&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;コナン&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Product&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;prod_container&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;prod_container&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;push_back&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prod1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;prod_container&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;push_back&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prod2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;prod_container&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;push_back&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prod3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+	&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Product&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;iterator&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;itr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prod_container&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;begin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;prod_container&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;prod2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;itr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/4604136/how-to-search-for-an-element-in-an-stl-list&quot;&gt;std::find&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/pl/pl-compile-c++-library-stl-list.html</link>
+    <guid>/pl/pl-compile-c++-library-stl-list</guid>
+    <pubDate>Wed, 01 Mar 2017 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
     <title>C++ Library: OpenCV</title>
     <description>
 &lt;p&gt;&lt;a href=&quot;http://docs.opencv.org/2.4/modules/highgui/doc/highgui.html&quot;&gt;reference&lt;/a&gt;&lt;/p&gt;
@@ -40839,7 +40891,7 @@ sometthing
   </item>
 
   <item>
-    <title>: </title>
+    <title>政治: 言葉</title>
     <description>
 &lt;h4 id=&quot;a&quot;&gt;A&lt;/h4&gt;
 &lt;ol&gt;
@@ -40911,7 +40963,7 @@ sometthing
   </item>
 
   <item>
-    <title>結婚</title>
+    <title>記念日: 結婚</title>
     <description>
 &lt;p&gt;####&lt;/p&gt;
 &lt;ol&gt;
@@ -41044,7 +41096,7 @@ sometthing
   </item>
 
   <item>
-    <title>経済</title>
+    <title>経済: 国</title>
     <description>
 &lt;p&gt;####&lt;/p&gt;
 &lt;ol&gt;
@@ -41124,6 +41176,11 @@ sometthing
   &lt;li&gt;生配信: live stream&lt;/li&gt;
 &lt;/ol&gt;
 
+&lt;h4 id=&quot;例文&quot;&gt;例文&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;こういうことやってるよ。&lt;/li&gt;
+  &lt;li&gt;毎日ようにしてる.&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     <link>/%E8%A8%80%E8%91%89/language-japanese-technology-web.html</link>
     <guid>/%E8%A8%80%E8%91%89/language-japanese-technology-web</guid>
@@ -41289,23 +41346,21 @@ sometthing
   </item>
 
   <item>
-    <title>旅行</title>
+    <title>ライフ: 旅行</title>
     <description>
-&lt;p&gt;####&lt;/p&gt;
+&lt;h4 id=&quot;単語&quot;&gt;単語&lt;/h4&gt;
 &lt;ol&gt;
   &lt;li&gt;目的地&lt;/li&gt;
   &lt;li&gt;ビーチパラソル: beach unbrella&lt;/li&gt;
   &lt;li&gt;ビキニ:&lt;/li&gt;
   &lt;li&gt;観光客(かんこうちゃく):&lt;/li&gt;
   &lt;li&gt;観光バース: tour bus&lt;/li&gt;
+  &lt;li&gt;開館(かいかん): open&lt;/li&gt;
+  &lt;li&gt;閉館(へいかん): close&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;####&lt;/p&gt;
 &lt;ol&gt;
-  &lt;li&gt;開館(かいかん): open&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;閉館(へいかん): close&lt;/p&gt;
-  &lt;/li&gt;
   &lt;li&gt;観光名所:&lt;/li&gt;
   &lt;li&gt;観光案内所: tourist information&lt;/li&gt;
   &lt;li&gt;歴史的建造物: historic building&lt;/li&gt;
@@ -41313,21 +41368,32 @@ sometthing
   &lt;li&gt;案内図:&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;####&lt;/p&gt;
+&lt;h4 id=&quot;例文&quot;&gt;例文&lt;/h4&gt;
 &lt;ol&gt;
   &lt;li&gt;日光浴をする(にっこうよくをする): sunbathe&lt;/li&gt;
   &lt;li&gt;日焼けローション: suntan lotion&lt;/li&gt;
   &lt;li&gt;ビーチタオル: beach towel&lt;/li&gt;
   &lt;li&gt;砂の城(すなのしろ): sand castle&lt;/li&gt;
   &lt;li&gt;水着: swimsuit&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;####&lt;/p&gt;
-&lt;ol&gt;
   &lt;li&gt;ぜひ行ってみたいです。&lt;/li&gt;
   &lt;li&gt;一度行ってみたい&lt;/li&gt;
 &lt;/ol&gt;
 
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;~てみたい・~たい
+    &lt;ul&gt;
+      &lt;li&gt;Xに行ってみあたい: implys you never been there&lt;/li&gt;
+      &lt;li&gt;the construction of てみる adds some sense of trying something new or
+different, but the details vary depending on the context.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://japanese.stackexchange.com/questions/23773/difference-between-%E3%81%A6%E3%81%BF%E3%81%9F%E3%81%84-and-%E3%81%9F%E3%81%84&quot;&gt;~てみたい・~みたい&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     <link>/%E8%A8%80%E8%91%89/language-japanese-life-travel.html</link>
     <guid>/%E8%A8%80%E8%91%89/language-japanese-life-travel</guid>
@@ -41335,13 +41401,53 @@ sometthing
   </item>
 
   <item>
-    <title>Swear</title>
+    <title>ライフ: 悪口</title>
     <description>
+&lt;h4 id=&quot;最もよく使う&quot;&gt;最もよく使う&lt;/h4&gt;
 &lt;ol&gt;
-  &lt;li&gt;へたれ: incompetence, laziness&lt;/li&gt;
   &lt;li&gt;我慢できない: I can’t stand with this&lt;/li&gt;
   &lt;li&gt;アホ(阿保): idiot&lt;/li&gt;
   &lt;li&gt;島国アホ、黙て&lt;/li&gt;
+  &lt;li&gt;バカ&lt;/li&gt;
+  &lt;li&gt;おまえアホやな(軽い口調かるいくちょう)&lt;/li&gt;
+  &lt;li&gt;ボケ: 罵るでけ&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;ごみ&quot;&gt;ごみ&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;ゴミ&lt;/li&gt;
+  &lt;li&gt;クズ&lt;/li&gt;
+  &lt;li&gt;くそ&lt;/li&gt;
+  &lt;li&gt;カス: お前カスやな&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;おい
+口調をよって、冗談だか、とうか&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;あ？&lt;/li&gt;
+  &lt;li&gt;は？
+相手に強い不快感を与える&lt;/li&gt;
+  &lt;li&gt;そうなんですか？&lt;/li&gt;
+  &lt;li&gt;そうか&lt;/li&gt;
+  &lt;li&gt;そうですか&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;ブス
+    &lt;ul&gt;
+      &lt;li&gt;写真写(うつ)りいいね&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;デブ: fatty&lt;/li&gt;
+  &lt;li&gt;ババア&lt;/li&gt;
+  &lt;li&gt;ジジイ: fucking old man&lt;/li&gt;
+  &lt;li&gt;ハゲ: boldness&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h4 id=&quot;level-2&quot;&gt;Level 2&lt;/h4&gt;
@@ -41357,12 +41463,41 @@ of word.&lt;/li&gt;
   &lt;li&gt;死ねえ&lt;/li&gt;
 &lt;/ol&gt;
 
+&lt;h4 id=&quot;useless&quot;&gt;Useless&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;へたれ: incompetence, laziness&lt;/li&gt;
+  &lt;li&gt;だらしない&lt;/li&gt;
+&lt;/ol&gt;
+
 &lt;h4 id=&quot;sentence&quot;&gt;Sentence&lt;/h4&gt;
 &lt;ol&gt;
   &lt;li&gt;愚かなこと言うな: Don’t say stupid things&lt;/li&gt;
   &lt;li&gt;私の悪口を言っている:&lt;/li&gt;
   &lt;li&gt;彼が避難んです&lt;/li&gt;
   &lt;li&gt;すごい悪口&lt;/li&gt;
+  &lt;li&gt;相手に罵りたい(ののしり)&lt;/li&gt;
+  &lt;li&gt;俺のことバカにしてんだろ&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;####
+うまくオブラートに包んで伝えて&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;うるさいね.
+    &lt;ul&gt;
+      &lt;li&gt;黙ってたらかっこいいね.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;ケチだね
+    &lt;ul&gt;
+      &lt;li&gt;合理的(ごうりてき)だね&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.reddit.com/r/LearnJapanese/comments/azig4b/difference_between_%E3%81%9D%E3%81%86%E3%81%A7%E3%81%99%E3%81%8B_%E3%81%9D%E3%81%86%E3%81%8B_and_%E3%81%9D%E3%81%86%E3%81%AA%E3%82%93%E3%81%A7%E3%81%99%E3%81%8B/&quot;&gt;そうですか&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </description>
     <link>/%E8%A8%80%E8%91%89/language-japanese-life-swear.html</link>
@@ -41371,7 +41506,7 @@ of word.&lt;/li&gt;
   </item>
 
   <item>
-    <title>Girlfriend</title>
+    <title>ライフ: Girlfriend</title>
     <description>
 &lt;p&gt;####&lt;/p&gt;
 &lt;ol&gt;
@@ -41387,6 +41522,12 @@ of word.&lt;/li&gt;
   &lt;li&gt;別れてください: let’s break up&lt;/li&gt;
   &lt;li&gt;カッコつけ: to try to look good&lt;/li&gt;
   &lt;li&gt;ダサい&lt;/li&gt;
+  &lt;li&gt;誰にフラれたん。
+    &lt;ul&gt;
+      &lt;li&gt;振る&lt;/li&gt;
+      &lt;li&gt;フラれたん&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h4 id=&quot;1&quot;&gt;1&lt;/h4&gt;
@@ -41430,7 +41571,7 @@ of word.&lt;/li&gt;
   </item>
 
   <item>
-    <title>: 友人</title>
+    <title>ライフ: 友人</title>
     <description>
 &lt;p&gt;####&lt;/p&gt;
 &lt;ol&gt;
@@ -41451,6 +41592,24 @@ of word.&lt;/li&gt;
   &lt;li&gt;友達に悩みを打ち明けて&lt;/li&gt;
   &lt;li&gt;友達に教えてもらった&lt;/li&gt;
 &lt;/ol&gt;
+
+&lt;h4 id=&quot;sentence&quot;&gt;sentence&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;京都人の遠回しな嫌味(いやみ)&lt;/li&gt;
+  &lt;li&gt;京都以外は全て田舎です。&lt;/li&gt;
+  &lt;li&gt;琵琶湖(こ)しかない&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;sentence-1&quot;&gt;Sentence&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;建前フレーズ:
+    &lt;ul&gt;
+      &lt;li&gt;相手を不快にさせないため&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;本音が隠れて&lt;/li&gt;
+&lt;/ol&gt;
+
 </description>
     <link>/%E8%A8%80%E8%91%89/language-japanese-life-friend.html</link>
     <guid>/%E8%A8%80%E8%91%89/language-japanese-life-friend</guid>
@@ -41711,6 +41870,18 @@ of word.&lt;/li&gt;
 &lt;ol&gt;
   &lt;li&gt;朝ドラマに出た後、&lt;/li&gt;
   &lt;li&gt;役名で呼ばれる&lt;/li&gt;
+  &lt;li&gt;映画が公開になります。&lt;/li&gt;
+  &lt;li&gt;実は男優というと基本的にはAV男優のこと指(さ)してしまいます。&lt;/li&gt;
+  &lt;li&gt;女優は普通に女性役者です。　&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;difference&quot;&gt;Difference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;そうですか？ 初耳時、否定意味があります。&lt;/li&gt;
+  &lt;li&gt;そうなんですか？&lt;/li&gt;
+  &lt;li&gt;勉強になりました。&lt;/li&gt;
+  &lt;li&gt;勉強ました　相手の話は価値がなかったと伝えている&lt;/li&gt;
+  &lt;li&gt;オタクっぽい: nerd&lt;/li&gt;
 &lt;/ol&gt;
 </description>
     <link>/%E8%A8%80%E8%91%89/language-japanese-entertainment-drama.html</link>
@@ -41719,7 +41890,7 @@ of word.&lt;/li&gt;
   </item>
 
   <item>
-    <title>娯楽: </title>
+    <title>娯楽: アニメ</title>
     <description>
 &lt;p&gt;####&lt;/p&gt;
 &lt;ol&gt;
@@ -42034,7 +42205,7 @@ of word.&lt;/li&gt;
   </item>
 
   <item>
-    <title>田舎: </title>
+    <title>田舎: ライブ</title>
     <description>
 &lt;ol&gt;
   &lt;li&gt;畑(はたけ): field&lt;/li&gt;
@@ -42287,7 +42458,7 @@ this payment isn’t required.&lt;/li&gt;
   </item>
 
   <item>
-    <title>House: 電気</title>
+    <title>ハウス: 電気</title>
     <description>
 &lt;p&gt;####&lt;/p&gt;
 &lt;ol&gt;
@@ -42497,6 +42668,11 @@ filling within it&lt;/li&gt;
 &lt;p&gt;屋 refers to a shop, adding さん to it to treat it as a person that shows
 slight intimacy and respect.&lt;/p&gt;
 
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;横入る人&lt;/li&gt;
+&lt;/ol&gt;
+
 &lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
 &lt;ol&gt;
   &lt;li&gt;&lt;a href=&quot;http://maggiesensei.com/2009/08/31/itadakimasu-gochisou-sama/&quot;&gt;御馳走&lt;/a&gt;&lt;/li&gt;
@@ -42547,6 +42723,8 @@ slight intimacy and respect.&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;水煮: boil in water&lt;/li&gt;
   &lt;li&gt;炒める: stir-fry&lt;/li&gt;
+  &lt;li&gt;ほうれん草(そう)の胡麻(ごま)和(あ)え&lt;/li&gt;
+  &lt;li&gt;鮭(しゃけ)の塩焼き&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h4 id=&quot;sentence&quot;&gt;Sentence&lt;/h4&gt;
@@ -42562,38 +42740,14 @@ slight intimacy and respect.&lt;/p&gt;
   </item>
 
   <item>
-    <title>体</title>
-    <description>
-&lt;h4 id=&quot;1&quot;&gt;1&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;鼻がでかい&lt;/li&gt;
-  &lt;li&gt;出不精(でぶしょう)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;####&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;不自由な人(身体障害者)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;####&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;彼の性格はお父さんに似ている&lt;/li&gt;
-  &lt;li&gt;赤ジャンを抱いて(だく)&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-    <link>/%E8%A8%80%E8%91%89/language-japanese-body.html</link>
-    <guid>/%E8%A8%80%E8%91%89/language-japanese-body</guid>
-    <pubDate>Mon, 08 Feb 2016 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
     <title>体: 運動</title>
     <description>
 &lt;p&gt;####&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;ジョギング&lt;/li&gt;
   &lt;li&gt;準備運動&lt;/li&gt;
+  &lt;li&gt;太った&lt;/li&gt;
+  &lt;li&gt;たくましくなった&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;####&lt;/p&gt;
@@ -42645,6 +42799,9 @@ slight intimacy and respect.&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;紐(ヒモ)になりたい: man who is financially dependent on a woman&lt;/li&gt;
   &lt;li&gt;性欲優先&lt;/li&gt;
+  &lt;li&gt;吉原(よしわら)&lt;/li&gt;
+  &lt;li&gt;飛田新地(とびたしんち)&lt;/li&gt;
+  &lt;li&gt;所謂本番行為(いわゆる): so called sex intercourse.&lt;/li&gt;
 &lt;/ol&gt;
 
 </description>
@@ -42657,7 +42814,7 @@ slight intimacy and respect.&lt;/p&gt;
     <title>体: 性格</title>
     <description>&lt;p&gt;####&lt;/p&gt;
 &lt;ol&gt;
-  &lt;li&gt;気遣い(づか): considerable&lt;/li&gt;
+  &lt;li&gt;気遣い(づか): considerable(気づく)&lt;/li&gt;
   &lt;li&gt;調子に乗る: to get cocky, to become over-excited&lt;/li&gt;
   &lt;li&gt;上から目線&lt;/li&gt;
 &lt;/ol&gt;
@@ -42675,6 +42832,14 @@ slight intimacy and respect.&lt;/p&gt;
   &lt;li&gt;テンション上がって&lt;/li&gt;
   &lt;li&gt;人見知り(ひとみしり): shyness&lt;/li&gt;
 &lt;/ol&gt;
+
+&lt;h4 id=&quot;sentence&quot;&gt;Sentence&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;一番思い出に残ってるものは何(なに)かある&lt;/li&gt;
+  &lt;li&gt;センスがある人。&lt;/li&gt;
+  &lt;li&gt;ダサいね、特独だね。&lt;/li&gt;
+  &lt;li&gt;曲に慰めてもらった。&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     <link>/%E8%A8%80%E8%91%89/language-japanese-body-personality.html</link>
     <guid>/%E8%A8%80%E8%91%89/language-japanese-body-personality</guid>
@@ -42682,19 +42847,25 @@ slight intimacy and respect.&lt;/p&gt;
   </item>
 
   <item>
-    <title>体</title>
+    <title>体: 髪の毛</title>
     <description>
-&lt;p&gt;####&lt;/p&gt;
+&lt;h4 id=&quot;verb&quot;&gt;Verb&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;脱ぐ: 脱いで、脱がない&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;sentence&quot;&gt;Sentence&lt;/h4&gt;
 &lt;ol&gt;
   &lt;li&gt;シャンプーは別料金です: shampoo needs extra&lt;/li&gt;
   &lt;li&gt;上着と荷物を預かってください&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;####&lt;/p&gt;
-&lt;ol&gt;
   &lt;li&gt;おすすめ髪形はありますか&lt;/li&gt;
   &lt;li&gt;ウキを剃ってないです&lt;/li&gt;
   &lt;li&gt;名前をつけてあげましょう&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.japaneseverbconjugator.com/VerbDetails.asp?txtVerb=%E8%84%B1%E3%81%90&quot;&gt;脱ぐ&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </description>
     <link>/%E8%A8%80%E8%91%89/language-japanese-body-hair.html</link>
@@ -42746,26 +42917,66 @@ slight intimacy and respect.&lt;/p&gt;
   </item>
 
   <item>
+    <title>体: カジュアル</title>
+    <description>
+&lt;h4 id=&quot;単語&quot;&gt;単語&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;鼻がでかい&lt;/li&gt;
+  &lt;li&gt;出不精(でぶしょう)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;動詞&quot;&gt;動詞&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;不自由な人(身体障害者)&lt;/li&gt;
+  &lt;li&gt;向かう
+    &lt;ul&gt;
+      &lt;li&gt;タクシーでそこに向かっています。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;地味なボケ&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;身長が伸びる&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;例文&quot;&gt;例文&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;彼の性格はお父さんに似ている&lt;/li&gt;
+  &lt;li&gt;赤ジャンを抱いて(だく)&lt;/li&gt;
+  &lt;li&gt;動き回ったりしないんですか？&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/%E8%A8%80%E8%91%89/language-japanese-body-basic.html</link>
+    <guid>/%E8%A8%80%E8%91%89/language-japanese-body-basic</guid>
+    <pubDate>Mon, 08 Feb 2016 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
     <title>体: 化粧品</title>
     <description>
-&lt;p&gt;####&lt;/p&gt;
+&lt;h4 id=&quot;基本的&quot;&gt;基本的&lt;/h4&gt;
 &lt;ol&gt;
   &lt;li&gt;化粧水&lt;/li&gt;
   &lt;li&gt;日焼け止め&lt;/li&gt;
   &lt;li&gt;洗顔料(せんがんりょう)&lt;/li&gt;
   &lt;li&gt;日焼け: suntan, sunburn&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;####&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;不細工(ぶさいく): ugly&lt;/li&gt;
-  &lt;li&gt;僕に食らい付いてくれる:&lt;/li&gt;
   &lt;li&gt;面食い(めんくい)&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;####&lt;/p&gt;
+&lt;h4 id=&quot;例文&quot;&gt;例文&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;不細工(ぶさいく): ugly&lt;/li&gt;
+  &lt;li&gt;僕に食らい付いてくれる:&lt;/li&gt;
+  &lt;li&gt;香水(こうすい)をつけている&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;単語&quot;&gt;単語&lt;/h4&gt;
 &lt;ol&gt;
   &lt;li&gt;爽やか: fresh, refreshing&lt;/li&gt;
+  &lt;li&gt;臭い、・この匂い、何の香水&lt;/li&gt;
 &lt;/ol&gt;
 </description>
     <link>/%E8%A8%80%E8%91%89/language-japanese-fashion-cosmetics.html</link>
@@ -42844,7 +43055,7 @@ slight intimacy and respect.&lt;/p&gt;
   </item>
 
   <item>
-    <title>言葉: 文法(ぶんぽう)</title>
+    <title>文法(ぶんぽう): 違う</title>
     <description>
 &lt;h4 id=&quot;恐れがある&quot;&gt;〜恐れがある&lt;/h4&gt;
 &lt;ol&gt;
@@ -43569,6 +43780,29 @@ The extension meaning of this word is understand, control.&lt;/p&gt;
   <item>
     <title>文法(ぶんぽう): particle</title>
     <description>
+&lt;h4 id=&quot;はにはでは&quot;&gt;は・には・では&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;There is no difference than then normal use of scope particle は、
+    &lt;ul&gt;
+      &lt;li&gt;except with には,では, とは,よりは、からは、までは、 and other combination, the scope of the sentence
+expands to include the particle itself.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;には＝にとっては: explain the subject and contrast
+    &lt;ul&gt;
+      &lt;li&gt;私には仕事が大変です。＝私にとっては仕事が大変です。&lt;/li&gt;
+      &lt;li&gt;ここにはありません(It maybe in the other place)&lt;/li&gt;
+      &lt;li&gt;here the にjust indicates the subject, for this object.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;か&quot;&gt;か&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;分かるか？: imply nobody know&lt;/li&gt;
+  &lt;li&gt;わかりますか？&lt;/li&gt;
+&lt;/ol&gt;
+
 &lt;h4 id=&quot;1-も&quot;&gt;1 も&lt;/h4&gt;
 &lt;ol&gt;
   &lt;li&gt;you can’t translate も to english words litterally, we emphasizes the amount or quantity which
@@ -43751,8 +43985,51 @@ the object marker, the sentence is just not finished and the verb is implied.&lt
       &lt;li&gt;今の子供が大人になるまでには、様々な研究が進んでいるだろう&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
+  &lt;li&gt;が indicates new information&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;わけがないわけはないわけではない&quot;&gt;わけがない・わけはない・わけではない&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;わけがない: it’s not impossible
+秋山はあの人のことを好きなわけがない&lt;/li&gt;
+  &lt;li&gt;わけはない: it’s not impossible, and imply something else
+    &lt;ul&gt;
+      &lt;li&gt;you prefer not to use this phrase&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;わけではない: imply something else.
+秋山はあの人のことを好きなわけではない&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;かなり結構&quot;&gt;かなり・結構&lt;/h4&gt;
+&lt;ol&gt;
   &lt;li&gt;
-    &lt;h2 id=&quot;が-indicates-new-information&quot;&gt;が indicates new information&lt;/h2&gt;
+    &lt;p&gt;李さんの日本語はかなり上手ですね&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;結構: only for positive&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;王さんの日本語は結構上手ですね&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;は: this particle emphasis content before は、
+    &lt;ul&gt;
+      &lt;li&gt;面白いはあります, this sentence implies existance of boring thing&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;に: emphasis the content before it, no intention of comparsion
+    &lt;ul&gt;
+      &lt;li&gt;潤ちゃんにしようか, get 潤ちゃん do this, no imply of comparsion&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;が: emphasis the content after が
+    &lt;ul&gt;
+      &lt;li&gt;何が好き？&lt;/li&gt;
+    &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
@@ -43760,6 +44037,7 @@ the object marker, the sentence is just not finished and the verb is implied.&lt
 &lt;ol&gt;
   &lt;li&gt;&lt;a href=&quot;http://maggiesensei.com/2019/12/18/how-to-use-%e3%80%9c%e3%81%8b%ef%bc%8f%e3%80%9c%e3%81%8b%e3%81%a9%e3%81%86%e3%81%8b-ka-ka-douka/&quot;&gt;か&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://maggiesensei.com/2013/10/08/japanese-particle-%e3%82%82mo-to-emphasize-the-number-%e3%80%8c%e4%b8%80%e2%98%85%e3%82%82%e3%80%8d/&quot;&gt;も&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://japanese.stackexchange.com/questions/1096/what-is-the-difference-between-%E3%81%AB-and-%E3%81%AB%E3%81%AF&quot;&gt;には and に&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 </description>
@@ -43917,8 +44195,39 @@ personality&lt;/li&gt;
   </item>
 
   <item>
-    <title>Language Japanese Grammar Combination</title>
+    <title>文法: 基本的</title>
     <description>
+&lt;h4 id=&quot;なんですんです&quot;&gt;なんです・んです&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;んです: is ん+です, ん is short for the normalizer の
+    &lt;ul&gt;
+      &lt;li&gt;犬です: when you want to say something&lt;/li&gt;
+      &lt;li&gt;犬だ: informal way&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;なんです
+    &lt;ul&gt;
+      &lt;li&gt;犬なんです: when someone question you and you are trying to explain yourself.&lt;/li&gt;
+      &lt;li&gt;Here な is the form of copula だ takes before a noun it’s modifying.&lt;/li&gt;
+      &lt;li&gt;this sentence can be break into three parts&lt;/li&gt;
+      &lt;li&gt;犬な＋ん＋です&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;一番大切なのは何々です。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;ハマってることはある？
+    &lt;ul&gt;
+      &lt;li&gt;ないんですよね: add the ん kind of adding something to explain&lt;/li&gt;
+      &lt;li&gt;ないです: just tell the truth.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
 &lt;h4 id=&quot;1-らしい&quot;&gt;1. らしい&lt;/h4&gt;
 &lt;ol&gt;
   &lt;li&gt;I heard
@@ -43979,9 +44288,14 @@ it until I actually see it.&lt;/li&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://japanese.stackexchange.com/questions/52284/is-%E3%81%AA%E3%82%93%E3%81%A7%E3%81%99-the-same-as-%E3%82%93%E3%81%A7%E3%81%99&quot;&gt;なんです・んです&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
 </description>
-    <link>/language-japanese-grammar-combination.html</link>
-    <guid>/language-japanese-grammar-combination</guid>
+    <link>/%E8%A8%80%E8%91%89/language-japanese-grammar-combination.html</link>
+    <guid>/%E8%A8%80%E8%91%89/language-japanese-grammar-combination</guid>
     <pubDate>Tue, 02 Feb 2016 00:00:00 +0900</pubDate>
   </item>
 
@@ -45941,7 +46255,7 @@ Japanese&lt;/a&gt;&lt;/li&gt;
   </item>
 
   <item>
-    <title>単語: verb</title>
+    <title>言葉: verb</title>
     <description>
 &lt;h4 id=&quot;1-type-1&quot;&gt;1. Type 1&lt;/h4&gt;
 
@@ -46102,6 +46416,16 @@ Japanese&lt;/a&gt;&lt;/li&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;prohibitive form is kind of like the negative form
+    &lt;ul&gt;
+      &lt;li&gt;触るな&lt;/li&gt;
+      &lt;li&gt;触りない&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
 &lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
 &lt;ol&gt;
   &lt;li&gt;&lt;a href=&quot;https://japanese.stackexchange.com/questions/52896/what-is-the-difference-between-%E8%A6%8B%E3%81%A6%E3%81%AA%E3%81%84-and-%E8%A6%8B%E3%81%9F%E3%81%93%E3%81%A8%E3%81%8C%E3%81%AA%E3%81%84&quot;&gt;見たことがない・見てない&lt;/a&gt;&lt;/li&gt;
@@ -46113,7 +46437,7 @@ Japanese&lt;/a&gt;&lt;/li&gt;
   </item>
 
   <item>
-    <title>単語: Compound verb</title>
+    <title>言葉: Compound verb</title>
     <description>
 &lt;h4 id=&quot;1-込むinto&quot;&gt;1. 込む(into)&lt;/h4&gt;
 &lt;ol&gt;
@@ -46141,7 +46465,7 @@ Japanese&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;裾上げ: taking a hem up&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h4 id=&quot;4-下げるdown&quot;&gt;4. 下げる(down)&lt;/h4&gt;
+&lt;h4 id=&quot;4-下げる下がるdown&quot;&gt;4. 下げる・下がる(down)&lt;/h4&gt;
 &lt;ol&gt;
   &lt;li&gt;引き下げる: pull down&lt;/li&gt;
 &lt;/ol&gt;
@@ -46502,7 +46826,7 @@ telephone, I am sorry&lt;/p&gt;
   </item>
 
   <item>
-    <title>数量: 比べる</title>
+    <title>言葉: 比べる</title>
     <description>
 &lt;p&gt;####&lt;/p&gt;
 &lt;ol&gt;
@@ -46583,6 +46907,98 @@ telephone, I am sorry&lt;/p&gt;
   <item>
     <title>言葉: 選ぶ</title>
     <description>
+&lt;h4 id=&quot;いっぱいたくさんたっぷり&quot;&gt;いっぱい・たくさん・たっぷり&lt;/h4&gt;
+
+&lt;h4 id=&quot;好き気に入る好このみ&quot;&gt;好き・気に入る・好(この)み&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;好き: sounds like ongoing feeling, real love.&lt;/li&gt;
+  &lt;li&gt;気に入る: when you find/hear/see something, you think it’s interesting, you
+want to try.&lt;/li&gt;
+  &lt;li&gt;好み: noun&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;いきなり急に突然&quot;&gt;いきなり・急に・突然&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;いきなり: more casual and colloquial
+    &lt;ul&gt;
+      &lt;li&gt;can be used as event that you didn’t expect and it went through an appropriate
+process.&lt;/li&gt;
+      &lt;li&gt;急に and 突然 don’t have the process meaning.&lt;/li&gt;
+      &lt;li&gt;前回好評, 本が売れちゃって、いきなりSMの話ですか。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;突然: formal&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;なくてないで&quot;&gt;なくて・ないで&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;なくて:  the first half is the reason of the second
+今日は何もやるべきことがなくて、ずっとツータイをやっている&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;ないで: there is no causa relationship between the two parts.&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;勉強しないでずっとツータイをやっている&lt;/li&gt;
+      &lt;li&gt;心配しないでいいよ&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;一回いっかい一度&quot;&gt;一回(いっかい)・一度&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;一回: just to describe the order, first, second, third
+    &lt;ul&gt;
+      &lt;li&gt;第一回オリンピック&lt;/li&gt;
+      &lt;li&gt;２０回目結婚記念日&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;一度: implies this is the last time&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;嬉しい楽しい&quot;&gt;嬉しい・楽しい&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;嬉しい:  not last.
+    &lt;ul&gt;
+      &lt;li&gt;今日はクラスで先生に褒められて、嬉しい&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;楽しい: last for a long time&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;今日の授業は実用的な表現が多くて、楽しい&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;あいている空いている&quot;&gt;あいている・空いている&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;あいている: you can make use of, it’s objective&lt;/li&gt;
+  &lt;li&gt;すいている: it is not crowed, it’s subjective&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;お腹がすいています&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;勉強する学まなぶ&quot;&gt;勉強する・学(まな)ぶ&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;勉強: study, work hard
+    &lt;ul&gt;
+      &lt;li&gt;もっと勉強する&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;学ぶ: learn 学んで
+    &lt;ul&gt;
+      &lt;li&gt;彼の考え方からは学ぶとこと多い&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;習う: learned by
+    &lt;ul&gt;
+      &lt;li&gt;日本語を秋山から習っている&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
 &lt;h4 id=&quot;良いいい&quot;&gt;良い・いい&lt;/h4&gt;
 &lt;ol&gt;
   &lt;li&gt;いい: used in colloquial.&lt;/li&gt;
@@ -46852,6 +47268,8 @@ B: 行ってらっしゃい:&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;&lt;a href=&quot;http://maggiesensei.com/2020/02/20/how-to-use-%e7%9f%a5%e3%82%8b-%ef%bc%86-%e3%82%8f%e3%81%8b%e3%82%8b-shiru-wakaru/&quot;&gt;知る・分かる&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.wasabi-jpn.com/japanese-grammar/how-to-express-aims/#4&quot;&gt;ように・ために&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://jpyokoso.com/how-to-use-ikinari-kyuni-and-totuzen-the-right-way/&quot;&gt;いきなり・急に・突然&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.italki.com/post/question-87975?hl=ja&quot;&gt;好き・気に入る&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 </description>
@@ -46861,7 +47279,7 @@ B: 行ってらっしゃい:&lt;/p&gt;
   </item>
 
   <item>
-    <title>Life: Date</title>
+    <title>単語: Date</title>
     <description>
 &lt;h4 id=&quot;date&quot;&gt;Date&lt;/h4&gt;
 
@@ -47137,7 +47555,7 @@ The basic counter for a span of time is [間] which is read as [かん]&lt;/p&gt
   </item>
 
   <item>
-    <title>Oral: </title>
+    <title>口頭: 普通</title>
     <description>
 &lt;p&gt;####&lt;/p&gt;
 &lt;ol&gt;
@@ -47474,8 +47892,36 @@ B: とんでもない、僕はしりません。&lt;/p&gt;
   &lt;li&gt;申込金は今週中にお願いします。&lt;/li&gt;
 &lt;/ol&gt;
 </description>
-    <link>/%E8%A8%80%E8%91%89/language-japanese-oral-1.html</link>
-    <guid>/%E8%A8%80%E8%91%89/language-japanese-oral-1</guid>
+    <link>/%E8%A8%80%E8%91%89/language-japanese-oral-usual.html</link>
+    <guid>/%E8%A8%80%E8%91%89/language-japanese-oral-usual</guid>
+    <pubDate>Mon, 01 Feb 2016 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>口頭: 自分紹介</title>
+    <description>
+&lt;p&gt;ども、初めまして、チョウ キヨウです, よろしくね。
+チョウと申します,よろしくお願いします。&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;チョウと呼んでください。&lt;/li&gt;
+  &lt;li&gt;どちらの方ですか?&lt;/li&gt;
+  &lt;li&gt;ご出身はどちらですか？ -中国です&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;日本人はこういう風には言いません。&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;趣味は何ですか？
+    &lt;ul&gt;
+      &lt;li&gt;映画が好きです。&lt;/li&gt;
+      &lt;li&gt;普段映画を見るのが好きです。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/%E8%A8%80%E8%91%89/language-japanese-oral-introduction.html</link>
+    <guid>/%E8%A8%80%E8%91%89/language-japanese-oral-introduction</guid>
     <pubDate>Mon, 01 Feb 2016 00:00:00 +0900</pubDate>
   </item>
 
@@ -47958,7 +48404,12 @@ company(thinking that would help company) but they reduced my salary&lt;/li&gt;
 
 &lt;h3 id=&quot;2-なんか&quot;&gt;2. なんか&lt;/h3&gt;
 &lt;ol&gt;
-  &lt;li&gt;なんか casual form of 何か=(なにか), means something/anything&lt;/li&gt;
+  &lt;li&gt;なんか casual form of 何か=(なにか), means something/anything
+    &lt;ul&gt;
+      &lt;li&gt;imply negative thing&lt;/li&gt;
+      &lt;li&gt;納豆なんか不味くて食べられない&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;ul&gt;
@@ -47992,7 +48443,11 @@ want to say “sorry” anyway.&lt;/li&gt;
 
 &lt;h4 id=&quot;21--なんて&quot;&gt;2.1  なんて&lt;/h4&gt;
 &lt;ol&gt;
-  &lt;li&gt;なんて is short for 等(など)という&lt;/li&gt;
+  &lt;li&gt;なんて is short for 等(など)という
+    &lt;ul&gt;
+      &lt;li&gt;１０か国語も話せるなんてすごい&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h3 id=&quot;3-せっかく&quot;&gt;3. せっかく&lt;/h3&gt;
@@ -48247,7 +48702,76 @@ interrogative word + でも、but it sounds a little stronger
   </item>
 
   <item>
-    <title>Colloquial: もの・こと・ことになる・ことにする</title>
+    <title>Colloquial: する・なる</title>
+    <description>
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;になる: when the change is natural
+    &lt;ul&gt;
+      &lt;li&gt;彼がリーダーになった&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;となる: when the change is unnatural, the process is difficult
+    &lt;ul&gt;
+      &lt;li&gt;彼がリーダーとなった&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;気にする気になる&quot;&gt;気にする・気になる&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;気にする: something you can control
+    &lt;ul&gt;
+      &lt;li&gt;気にするな&lt;/li&gt;
+      &lt;li&gt;彼女のことを気にする: 好きです&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;気になる: regulation, rule you need to obey.
+彼女のことが気になる: 心配の感じ&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;1-ことにするroutine&quot;&gt;1 ことにする(routine)&lt;/h3&gt;
+
+&lt;p&gt;健康のために、毎日夜十時に寝ることにしている。&lt;/p&gt;
+
+&lt;h5 id=&quot;11-ことにする&quot;&gt;1.1 ことにする&lt;/h5&gt;
+&lt;ol&gt;
+  &lt;li&gt;to decide (not) to /to pretend something happened/didn’t happen
+    &lt;ul&gt;
+      &lt;li&gt;やっぱり私も一緒に東京に行くことにした(I change my mind, I will go to Tokyo with you)&lt;/li&gt;
+      &lt;li&gt;われわれと会うことにした&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;To pretend something happened/didn’t happen
+    &lt;ul&gt;
+      &lt;li&gt;聞かなたったことにするよ。(I’ll just pretend I didn’t hear that)&lt;/li&gt;
+      &lt;li&gt;この話はなかったことにしてください(Let’s pretend it didn’t happen)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h5 id=&quot;12-ことにしている&quot;&gt;1.2 ことにしている&lt;/h5&gt;
+&lt;p&gt;To have a policy to/not to do something/to make a habit of doing something/to make a rule of doing
+something.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;たくさん食べた次の日はダイエットをすることにしている(I make a habit of going on a diet the day
+after I eat a lot)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;2-ことになるrule&quot;&gt;2 ことになる(rule)&lt;/h3&gt;
+&lt;p&gt;図書館では、携帯が使えないことになっている。&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;なる: indicate turn, for example,　秋になる&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+    <link>/%E8%A8%80%E8%91%89/language-japanese-colloquial-%E3%81%99%E3%82%8B-%E3%81%AA%E3%82%8B.html</link>
+    <guid>/%E8%A8%80%E8%91%89/language-japanese-colloquial-する-なる</guid>
+    <pubDate>Mon, 01 Feb 2016 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Colloquial: もの・こと</title>
     <description>
 &lt;h3 id=&quot;1-ものこと&quot;&gt;1. もの・こと&lt;/h3&gt;
 
@@ -48386,32 +48910,6 @@ memories of one’s experience.&lt;/li&gt;
   &lt;li&gt;昔のことを気にしても仕方がない&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3 id=&quot;4-ことにする&quot;&gt;4 ことにする&lt;/h3&gt;
-
-&lt;h4 id=&quot;41-ことにする&quot;&gt;4.1 ことにする&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;to decide (not) to /to pretend something happened/didn’t happen
-    &lt;ul&gt;
-      &lt;li&gt;やっぱり私も一緒に東京に行くことにした(I change my mind, I will go to Tokyo with you)&lt;/li&gt;
-      &lt;li&gt;われわれと会うことにした&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;To pretend something happened/didn’t happen
-    &lt;ul&gt;
-      &lt;li&gt;聞かなたったことにするよ。(I’ll just pretend I didn’t hear that)&lt;/li&gt;
-      &lt;li&gt;この話はなかったことにしてください(Let’s pretend it didn’t happen)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;42-ことにしている&quot;&gt;4.2 ことにしている&lt;/h4&gt;
-&lt;p&gt;To have a policy to/not to do something/to make a habit of doing something/to make a rule of doing
-something.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;たくさん食べた次の日はダイエットをすることにしている(I make a habit of going on a diet the day
-after I eat a lot)&lt;/li&gt;
-&lt;/ul&gt;
-
 &lt;h3 id=&quot;3-reference&quot;&gt;3. Reference&lt;/h3&gt;
 &lt;ol&gt;
   &lt;li&gt;&lt;a href=&quot;http://maggiesensei.com/2017/08/22/%e3%81%93%e3%81%a8%e3%81%ab%e3%81%aa%e3%82%8b%e3%81%99%e3%82%8b-koto-ni-naru-%e3%82%88%e3%81%86%e3%81%ab%e3%81%aa%e3%82%8b%e3%81%99%e3%82%8b-you-ni-narusuru/&quot;&gt;ことに&lt;/a&gt;&lt;/li&gt;
@@ -48420,8 +48918,8 @@ after I eat a lot)&lt;/li&gt;
 &lt;/ol&gt;
 
 </description>
-    <link>/%E8%A8%80%E8%91%89/language-japanese-colloquial-%E3%81%93%E3%81%A8-%E3%82%82%E3%81%AE-%E3%81%93%E3%81%A8%E3%81%AB%E3%81%99%E3%82%8B-%E3%81%93%E3%81%A8%E3%81%AB%E3%81%AA%E3%82%8B.html</link>
-    <guid>/%E8%A8%80%E8%91%89/language-japanese-colloquial-こと-もの-ことにする-ことになる</guid>
+    <link>/%E8%A8%80%E8%91%89/language-japanese-colloquial-%E3%81%93%E3%81%A8-%E3%82%82%E3%81%AE.html</link>
+    <guid>/%E8%A8%80%E8%91%89/language-japanese-colloquial-こと-もの</guid>
     <pubDate>Mon, 01 Feb 2016 00:00:00 +0900</pubDate>
   </item>
 
