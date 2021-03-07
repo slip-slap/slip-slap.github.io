@@ -8,8 +8,6 @@ tags: ["日本語"]
 ---
 {% include JB/setup %}
 
-
-
 1. 年賀状
 2. 祠(ほこら): small wayside shrine, roadside shrine
 3. お地蔵さま(じぞ): stone statue 

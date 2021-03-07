@@ -8,7 +8,6 @@ tags: ["日本語"]
 ---
 {% include JB/setup %}
 
-
 #### Assumption
 
 ##### 1.1 たら

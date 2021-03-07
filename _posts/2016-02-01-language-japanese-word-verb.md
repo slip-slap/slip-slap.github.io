@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "単語: verb"
+title: "言葉: verb"
 keywords: []
 description: ""
 category: "言葉"
@@ -60,6 +60,11 @@ Words end with the "u" column, but the preceded by "い" sound or "え" sound
 - the other is result state: その映画は見てない
 - 見てない is 見ていない that ommited い
 
+
+#### Galois
+1. prohibitive form is kind of like the negative form
+- 触るな
+- 触りない
 
 
 

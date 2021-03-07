@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ": "
+title: "政治: 言葉"
 keywords: []
 description: 
 category: "言葉"

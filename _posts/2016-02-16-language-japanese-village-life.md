@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "田舎: "
+title: "田舎: ライブ"
 keywords: []
 description: ""
 category: "言葉"

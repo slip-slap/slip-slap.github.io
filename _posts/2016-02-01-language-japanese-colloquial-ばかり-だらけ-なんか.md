@@ -25,6 +25,8 @@ tags: ["日本語"]
 
 ### 2. なんか
 1. なんか casual form of 何か=(なにか), means something/anything
+- imply negative thing
+- 納豆なんか不味くて食べられない
 
 - 何(なに)かお手伝いできることはありませんか？
 - 今、なんか言った？(Did you just say anything?)
@@ -50,6 +52,7 @@ tags: ["日本語"]
 
 #### 2.1  なんて
 1. なんて is short for 等(など)という
+- １０か国語も話せるなんてすごい
 
 
 ### 3. せっかく

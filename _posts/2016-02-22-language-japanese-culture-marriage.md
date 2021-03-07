@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "結婚"
+title: "記念日: 結婚"
 keywords: [""]
 description: ""
 category: "言葉"

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "娯楽: "
+title: "娯楽: アニメ"
 keywords: []
 description: ""
 category: "言葉"

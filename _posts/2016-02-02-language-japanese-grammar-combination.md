@@ -1,3 +1,34 @@
+---
+layout: post
+title: "文法: 基本的"
+keywords: []
+description: 
+category: "言葉"
+tags: ["日本語"]
+---
+{% include JB/setup %}
+
+#### なんです・んです
+1. んです: is ん+です, ん is short for the normalizer の
+- 犬です: when you want to say something
+- 犬だ: informal way
+
+2. なんです
+- 犬なんです: when someone question you and you are trying to explain yourself.
+- Here な is the form of copula だ takes before a noun it's modifying.
+- this sentence can be break into three parts
+- 犬な＋ん＋です
+
+- 一番大切なのは何々です。
+
+
+3. ハマってることはある？
+- ないんですよね: add the ん kind of adding something to explain
+- ないです: just tell the truth.
+
+
+
+
 
 #### 1. らしい
 1. I heard
@@ -33,5 +64,7 @@
 - せっかくここまできたから、彼の家によってみよう
 
 
+#### Reference
+1. [なんです・んです](https://japanese.stackexchange.com/questions/52284/is-%E3%81%AA%E3%82%93%E3%81%A7%E3%81%99-the-same-as-%E3%82%93%E3%81%A7%E3%81%99)
 
 

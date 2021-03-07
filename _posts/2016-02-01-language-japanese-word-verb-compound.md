@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "単語: Compound verb"
+title: "言葉: Compound verb"
 keywords: []
 description: ""
 category: "言葉"
@@ -27,7 +27,7 @@ tags: ["日本語"]
 1. 立ち上がる: stand up
 2. 裾上げ: taking a hem up
 
-#### 4. 下げる(down)
+#### 4. 下げる・下がる(down)
 1. 引き下げる: pull down
 
 

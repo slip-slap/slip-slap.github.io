@@ -8,6 +8,23 @@ tags: ["日本語"]
 ---
 {% include JB/setup %}
 
+####  は・には・では
+1. There is no difference than then normal use of scope particle は、
+- except with には,では, とは,よりは、からは、までは、 and other combination, the scope of the sentence
+  expands to include the particle itself.
+
+
+2. には＝にとっては: explain the subject and contrast
+- 私には仕事が大変です。＝私にとっては仕事が大変です。
+- ここにはありません(It maybe in the other place)
+- here the にjust indicates the subject, for this object.
+
+
+#### か
+1. 分かるか？: imply nobody know
+2. わかりますか？
+
+
 #### 1 も
 1. you can't translate も to english words litterally, we emphasizes the amount or quantity which
    comes before and it show one's feeling, that something is a lot/too much/too long
@@ -125,18 +142,46 @@ tags: ["日本語"]
 
 
 
+
+
 #### は and が
 
 1. は indicates contrast
 - 結果が出るまでには、長い年月が必要だろう
 - 今の子供が大人になるまでには、様々な研究が進んでいるだろう
 2. が indicates new information
--
 
+
+
+#### わけがない・わけはない・わけではない
+1. わけがない: it's not impossible
+秋山はあの人のことを好きなわけがない
+2. わけはない: it's not impossible, and imply something else
+-  you prefer not to use this phrase
+3. わけではない: imply something else.
+秋山はあの人のことを好きなわけではない
+
+
+#### かなり・結構
+1. 李さんの日本語はかなり上手ですね
+
+2. 結構: only for positive
+- 王さんの日本語は結構上手ですね
+
+
+
+#### Galois
+1. は: this particle emphasis content before は、
+- 面白いはあります, this sentence implies existance of boring thing 
+2. に: emphasis the content before it, no intention of comparsion
+- 潤ちゃんにしようか, get 潤ちゃん do this, no imply of comparsion
+3. が: emphasis the content after が
+- 何が好き？
 
 
 #### Reference
 1. [か](http://maggiesensei.com/2019/12/18/how-to-use-%e3%80%9c%e3%81%8b%ef%bc%8f%e3%80%9c%e3%81%8b%e3%81%a9%e3%81%86%e3%81%8b-ka-ka-douka/)
 2. [も](http://maggiesensei.com/2013/10/08/japanese-particle-%e3%82%82mo-to-emphasize-the-number-%e3%80%8c%e4%b8%80%e2%98%85%e3%82%82%e3%80%8d/)
+3. [には and に](https://japanese.stackexchange.com/questions/1096/what-is-the-difference-between-%E3%81%AB-and-%E3%81%AB%E3%81%AF)
 
 

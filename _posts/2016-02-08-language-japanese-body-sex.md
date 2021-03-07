@@ -35,6 +35,9 @@ tags: ["日本語"]
 #### Sentence
 1. 紐(ヒモ)になりたい: man who is financially dependent on a woman
 2. 性欲優先
+3. 吉原(よしわら)
+4. 飛田新地(とびたしんち)
+5. 所謂本番行為(いわゆる): so called sex intercourse.
 
 
 

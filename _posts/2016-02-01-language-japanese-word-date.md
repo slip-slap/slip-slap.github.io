@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Life: Date"
+title: "単語: Date"
 keywords: []
 description: ""
 category: "言葉"

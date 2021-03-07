@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "House: 電気"
+title: "ハウス: 電気"
 keywords: []
 description: ""
 category: "言葉"

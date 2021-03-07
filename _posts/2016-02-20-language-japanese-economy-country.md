@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "経済"
+title: "経済: 国"
 keywords: [""]
 description: ""
 category: "言葉"

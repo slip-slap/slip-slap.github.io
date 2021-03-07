@@ -8,6 +8,65 @@ tags: ["日本語"]
 ---
 {% include JB/setup %}
 
+
+#### いっぱい・たくさん・たっぷり
+
+
+#### 好き・気に入る・好(この)み
+1. 好き: sounds like ongoing feeling, real love.
+2. 気に入る: when you find/hear/see something, you think it's interesting, you
+   want to try.
+3. 好み: noun
+
+#### いきなり・急に・突然
+1. いきなり: more casual and colloquial
+- can be used as event that you didn't expect and it went through an appropriate
+  process.
+-  急に and 突然 don't have the process meaning.
+- 前回好評, 本が売れちゃって、いきなりSMの話ですか。
+2. 突然: formal
+
+
+
+#### なくて・ないで
+1. なくて:  the first half is the reason of the second
+今日は何もやるべきことがなくて、ずっとツータイをやっている
+
+2. ないで: there is no causa relationship between the two parts.
+- 勉強しないでずっとツータイをやっている
+- 心配しないでいいよ
+
+
+#### 一回(いっかい)・一度
+1. 一回: just to describe the order, first, second, third
+- 第一回オリンピック
+- ２０回目結婚記念日
+2. 一度: implies this is the last time
+
+#### 嬉しい・楽しい
+1. 嬉しい:  not last.
+- 今日はクラスで先生に褒められて、嬉しい
+
+2. 楽しい: last for a long time
+
+- 今日の授業は実用的な表現が多くて、楽しい
+
+#### あいている・空いている
+1. あいている: you can make use of, it's objective
+2. すいている: it is not crowed, it's subjective
+
+- お腹がすいています
+
+#### 勉強する・学(まな)ぶ
+1. 勉強: study, work hard
+- もっと勉強する
+2. 学ぶ: learn 学んで
+- 彼の考え方からは学ぶとこと多い
+3. 習う: learned by
+- 日本語を秋山から習っている
+
+
+
 #### 良い・いい
 1. いい: used in colloquial.
 2. よい: used in formal document.
@@ -190,4 +249,6 @@ B: 行ってらっしゃい:
 #### Reference
 1. [知る・分かる](http://maggiesensei.com/2020/02/20/how-to-use-%e7%9f%a5%e3%82%8b-%ef%bc%86-%e3%82%8f%e3%81%8b%e3%82%8b-shiru-wakaru/)
 2. [ように・ために](https://www.wasabi-jpn.com/japanese-grammar/how-to-express-aims/#4)
+3. [いきなり・急に・突然](http://jpyokoso.com/how-to-use-ikinari-kyuni-and-totuzen-the-right-way/)
+4. [好き・気に入る](https://www.italki.com/post/question-87975?hl=ja)
 

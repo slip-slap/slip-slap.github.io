@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Girlfriend"
+title: "ライフ: Girlfriend"
 keywords: []
 description: 
 category: "言葉"
@@ -19,7 +19,9 @@ tags: ["日本語"]
 1. 別れてください: let's break up
 2. カッコつけ: to try to look good
 3. ダサい
-
+4. 誰にフラれたん。
+-  振る
+- フラれたん
 
 #### 1
 1. 一目惚れ(ひとめぼれ): love at first sight

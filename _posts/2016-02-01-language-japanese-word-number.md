@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "数量: 比べる"
+title: "言葉: 比べる"
 keywords: []
 description: ""
 category: "言葉"

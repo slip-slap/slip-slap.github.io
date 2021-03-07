@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "言葉: 文法(ぶんぽう)"
+title: "文法(ぶんぽう): 違う"
 keywords: []
 description: 
 category: "言葉"

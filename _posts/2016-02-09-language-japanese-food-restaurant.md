@@ -43,6 +43,9 @@ the verb is 御馳走する
 屋 refers to a shop, adding さん to it to treat it as a person that shows
 slight intimacy and respect.
 
+####
+1. 横入る人
+
 
 #### Reference
 1. [御馳走](http://maggiesensei.com/2009/08/31/itadakimasu-gochisou-sama/)
