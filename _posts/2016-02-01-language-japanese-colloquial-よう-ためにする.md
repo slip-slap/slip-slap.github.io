@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Colloquial: よう・ように・ようになる・ためにする"
+title: "Colloquial: よう"
 keywords: []
 description: ""
 category: "言葉"
@@ -10,6 +10,64 @@ tags: ["日本語"]
 
 ### 1. よう
 よう: is a single word
+- 接続することが分かるのは大事なんだ。
+- 漢字は[様], この単語の基本的の意味は形だけです。
+
+
+#### 1.1 名詞
+1. 彼女は花のようだ。litteraly translate she is flower's shape.
+2. この料理は美味しいようだ。
+3. あそこは静かなようだ。
+4. 雨が降っているようだ。
+
+#### 1.2 よう+に: adjective
+it change from a noun to an adjective.
+1. 彼女は花のように美しい。
+
+#### 1.3 ように in a sentence
+It's structure is よう＋に＋する・なる
+- here the particle に is used to emphasis the objective, just like the particle
+  は、を
+
+1. ようになる(it implies gradual change, the result could be either positive or
+   negative) ようになる: is a single word, it means tot reach the point that, to
+   come to be that to become, it has come to the point, to grow, finally to be
+   able to do something
+- 最近、納豆が美味しいと思えるようになった(I have come to like natto recently)
+- とうとう運転できるようになりました。
+- 寝れるようになった。
+
+2. ようにする: try to become the what the words come before よう like.
+- you can just treat に as a noun particle to emphasis the previous content.
+- 毎日英語を勉強するようにしている
+- 東京大学に入るようにしている
+- タバコを吸わないようにしている
+
+3. ように＋してください、お願いします: hope someone else to do something
+- 明日8時会場につくように(してください)(お願いします)
+- 皆さん、忘れのもしないように(お願いします)
+
+#### 1.4 よう・ように express wish
+ように is short of ようにここからお祈(いの)りしております
+
+- 神社の
+- 両親は健康であるよう(心からお祈りいたします)
+
+#### 1.5 よう after 動詞: means method
+1. 行きようがない: no way to get there
+2. 食べたいけど食べようがない: I want to, but I don't no how
+3. しようがない(仕様が無い)
+
+
+
+
+
+
+
+
+
+
+
 
 #### 1.1 ~そうだと~ようだ
 そうだ
@@ -46,11 +104,6 @@ to be like, it looks like, to look as if, it appears to be
 - 彼は私が慌てているのを楽しんでいるように見えた(He seemed to be enjoying my being upset)
 - 無視されているように感じる(I feel like I have been ignored)
 
-### 3. ようになる(it implies gradual change, the result could be either positive or negative)
-ようになる: is a single word, it means tot reach the point that, to come to be that
-to become, it has come to the point, to grow, finally to be able to do something
-- 最近、納豆が美味しいと思えるようになった(I have come to like natto recently)
-- とうとう運転できるようになりました。
 
 ### 4. ためにする
 This word means "to have an ulterior motive"
@@ -84,4 +137,5 @@ The difference between ために and  ように, you use ために to express st
 ### 6. reference
 1. [よう](http://maggiesensei.com/2012/04/03/request-lesson-%E3%82%88%E3%81%86you/)
 2. [ために](http://maggiesensei.com/2019/09/28/how-to-use-%e3%81%9f%e3%82%81%e3%81%ab-tameni/)
+3. [zhihu-よう](https://www.zhihu.com/question/61421378)
 

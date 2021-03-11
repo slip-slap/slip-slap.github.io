@@ -65,6 +65,14 @@ Words end with the "u" column, but the preceded by "い" sound or "え" sound
 1. prohibitive form is kind of like the negative form
 - 触るな
 - 触りない
+2. 調子こいてんじゃねぇぞ.
+- じゃねぇ: it's part of the verb.
+- いいじゃない: ジャない is part of the adjective.
+- 知らんか顔してんじゃないよ: Don't act as you don't know.
+- アンケートで弱点聞いてくんじゃねえよ.
+- 面白くない: ない is part of the adjective.
+- 聞きたくない: くない is also the part of the verb.
+- **It's part of the verb**
 
 
 
