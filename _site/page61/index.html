@@ -166,7 +166,7 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">979</span>
+<span title="文章总数">982</span>
 <ul>
 
 
@@ -2957,7 +2957,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#June-2017">2017 年 06 月 (51)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#June-2017">2017 年 06 月 (52)</a></li>
     
   
 
@@ -3075,7 +3080,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#May-2017">2017 年 05 月 (23)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#May-2017">2017 年 05 月 (24)</a></li>
     
   
 
@@ -3551,7 +3561,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#March-2017">2017 年 03 月 (70)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2017">2017 年 03 月 (71)</a></li>
     
   
 
@@ -5213,9 +5228,9 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (230)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (232)</a></li>
 
-  <li><a href="/categories.html#Algorithm-ref">Algorithm (78)</a></li>
+  <li><a href="/categories.html#Algorithm-ref">Algorithm (79)</a></li>
 
   <li><a href="/categories.html#CS-ref">CS (60)</a></li>
 
@@ -6034,6 +6049,72 @@ $(document).ready(function() {
   <article class="nested">
 
     <header>
+      <h2><a href="/pl/pl-compile-java-Enumeration.html" title="查看《Java: Enumberation》">Java: Enumberation</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+作用
+Enumeration是一个接口,源码如下
+package java.util;
+
+pubic interface Enumeration&lt;E&gt;{
+	boolean hasMoreElements();
+	E nextElement();
+}
+
+
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">20 March 2017</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-compile-java-Enumeration.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-compile-java-Calendar.html" title="查看《Java: Calendar》">Java: Calendar</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Calendar
+Calendar类是一个抽象类，功能比Date类强大，实现比Date复杂
+
+
+使用
+Calendar cal=Calendar.getInstance();
+System.out.println(calendar.get(Calendar.YEAR));
+
+
+
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">20 March 2017</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-compile-java-Calendar.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
       <h2><a href="/pl/pl-compile-java-BigDecimal.html" title="查看《Java: BigDecimal》">Java: BigDecimal</a></h2>
     </header>
 
@@ -6291,79 +6372,6 @@ the missing package manager for macos, 和centos下的yumhe ubuntu下的apt-get.
 
   </article>
   
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-compile-c++-overload.html" title="查看《C++: Reload Operator》">C++: Reload Operator</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-A
-
-  operoator overload just a special function name;
-
-
-#include &lt;iostream&gt;
-
-class complex_number
-{
-
-	private:
-		int actual_part; 
-        i...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">08 March 2017</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-compile-c++-overload.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-compile-c++-overload-output-marker.html" title="查看《C++: Overload》">C++: Overload</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-#include &lt;iostream&gt;
-
-class complex_number
-{
-
-	private:
-		int actual_part; 
-        int virtual_part;
-
-    public:
-		complex_number()
-		{}
-
-	...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">08 March 2017</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-compile-c++-overload-output-marker.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
 
   
     
@@ -6403,7 +6411,7 @@ class complex_number
 
     <!-- Current Page -->
     <li class="active">
-      <span class="page_number ">第 61/98 页</span>
+      <span class="page_number ">第 61/99 页</span>
     </li>
 
     <!-- Next Page -->
@@ -6413,7 +6421,7 @@ class complex_number
 
     <!-- Last Page -->
     
-    <li><a href="/page98">&raquo;&raquo;</a></li>
+    <li><a href="/page99">&raquo;&raquo;</a></li>
     
   </ul>
 </section>

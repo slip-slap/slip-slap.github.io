@@ -9,8 +9,7 @@ tags: ["c++","compile"]
 {% include JB/setup %}
 
 #### Attention
-1. if std::find can't find the specified element, it will return the pointer of 
-
+1. if std::find can't find the specified element, it will return the last pointer.
 
 
 ```cpp
@@ -46,6 +45,18 @@ int main(){
 	std::cout<<*itr;
 }
 ```
+
+#### Error
+1. pointer being freed was not allocated.
+
+```cpp
+#include <list>
+int main(){
+	std::list<int> queue;
+	queue.pop_back();
+}
+```
+
 
 
 #### reference

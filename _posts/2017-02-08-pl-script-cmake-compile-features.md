@@ -40,7 +40,12 @@ cmake -DCMAKE_CXX_COMPILER=clang++ -DCMAKE_C_COMPILER=clang
 
 ```lcmake
 set(CMAKE_CXX_STANDARD 11)
+SET(CMAKE_CXX_FLAGS "-O0") // disable c++ optimization
+SET(CMAKE_C_FLAGS "-O0")   // disable c optimization
 ```
+
+#### Reference
+1. [cmake disable optimization](https://unix.stackexchange.com/questions/187455/how-to-compile-without-optimizations-o0-using-cmake)
 
 
 

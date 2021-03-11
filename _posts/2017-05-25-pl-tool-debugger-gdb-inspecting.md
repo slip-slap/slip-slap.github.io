@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "GDB: Inspecting"
+title: "GDB: Install"
 keywords: [] 
 description: 
 category: "PL"
@@ -15,3 +15,7 @@ tags: ["tool","gdb","debugger"]
 info locals
 ```
 
+
+
+#### Reference
+1. [GDB mac install codesign](https://dev.to/jasonelwood/setup-gdb-on-macos-in-2020-489k)

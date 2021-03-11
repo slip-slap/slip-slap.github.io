@@ -22,3 +22,8 @@ tags: ["日本語"]
 4. 趣味は何ですか？
 - 映画が好きです。
 - 普段映画を見るのが好きです。
+
+
+
+#### Reference
+1. [てん・ている](https://maggiesensei.com/2016/03/28/casual-contraction-dropping-%E3%81%84-i-%E3%81%A6%E3%82%93-ten-%E3%81%A8%E3%81%8Ftoku/)

@@ -66,5 +66,6 @@ tags: ["日本語"]
 
 #### Reference
 1. [なんです・んです](https://japanese.stackexchange.com/questions/52284/is-%E3%81%AA%E3%82%93%E3%81%A7%E3%81%99-the-same-as-%E3%82%93%E3%81%A7%E3%81%99)
+2. [何です](https://maggiesensei.com/2010/09/08/request-lesson-when-and-how-to-use-%E3%82%93n-%E3%81%AE%E3%81%A7%E3%81%99%E2%86%92%E3%82%93%E3%81%A7%E3%81%99%EF%BC%89/)
 
 

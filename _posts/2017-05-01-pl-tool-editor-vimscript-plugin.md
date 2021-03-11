@@ -84,8 +84,6 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 #### 1.7 surround vim
 
 
-1. [YouCompleteMe](https://github.com/ycm-core/YouCompleteMe)
-2. [YouCompleteMe Trouble Shooting](https://github.com/ycm-core/YouCompleteMe/wiki/Troubleshooting-steps-for-ycmd-server-SHUT-DOWN)
 3. [how to add vim NERDTree plugin](https://github.com/johnbellone/vim) 
 4. [powerline-plugin](https://github.com/powerline/powerline) 
 5. [vimtex-plugin](https://github.com/lervag/vimtex) 

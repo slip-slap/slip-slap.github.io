@@ -216,6 +216,7 @@ void foo(int arr_in, int* arr_out, int size){}
 3. [Array option](https://stackoverflow.com/questions/16137953/is-there-a-function-to-copy-an-array-in-c-c)
 4. [Passing array to a function in C](https://www.geeksforgeeks.org/how-arrays-are-passed-to-functions-in-cc/)
 5. [Return an array](https://stackoverflow.com/questions/8745260/c-return-array-from-function)
+6. [passing 2d array to a function](https://stackoverflow.com/questions/8767166/passing-a-2d-array-to-a-c-function)
 
 
 

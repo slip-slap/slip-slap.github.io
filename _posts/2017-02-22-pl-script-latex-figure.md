@@ -98,6 +98,18 @@ This package makes it easy to put subfigures in your figures. e.g., "Figure 1a a
 work, it is a good idea to load it with the tight package option to reduce the amount of white space
 around the subfigures. 
 
+##### 4.5 afterpage package
+
+Put your figure in a separate page.
+
+```latex
+\afterpage{
+	\begin{figure}
+	\end{figure}
+\clearpage
+}
+```
+
 
 
 ### 5. Reference

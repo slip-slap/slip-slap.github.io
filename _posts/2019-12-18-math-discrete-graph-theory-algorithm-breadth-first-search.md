@@ -24,6 +24,47 @@ BFS stands for Breadth First Search is a vertex based techinique for finding
 <img src="{{IMAGE_PATH}}/math-discrete-graph-theory-bfs.png">
 
 
+```cpp
+#include <iostream>
+#include <list>
+#include <vector>
+
+void b_first(int graph[8][8], int row, int column ){
+	std::list<int> node_queue;
+	std::vector<int> visited_node{0,0,0,0,0,0,0,0,0};
+	node_queue.push_back(1);
+	visited_node[1] = 1;
+	while(node_queue.size()!=0){
+		int queue_head = node_queue.front();
+		for(int i=1; i<row;i++){
+			if(graph[queue_head][i] ==1 && visited_node[i]==0){
+				node_queue.push_back(i);
+				visited_node[i] = 1;
+				std::cout<<"visit node: "<<i<<std::endl;
+			}
+		}
+		node_queue.pop_front();
+	}
+}
+
+int main(){
+	int graph[8][8]={
+			{0},{0},{0},{0},
+			{0},{0},{0},{0},
+	};
+		graph[1][2] = 1; graph[1][3] = 1; graph[1][7] = 1; 
+		graph[2][1] = 1; graph[2][3] = 1; 
+		graph[3][1] = 1; graph[3][2] = 1;   
+		graph[3][4] = 1; graph[3][5] = 1;
+		graph[4][1] = 1; graph[4][3] = 1; graph[4][5] = 1;
+		graph[5][3] = 1; graph[5][4] = 1; graph[5][6] = 1; graph[5][7] = 1;	
+		graph[6][5] = 1; graph[7][5] = 1;
+		b_first(graph,  8,  8);
+}
+
+```
+
+
 
 
 
