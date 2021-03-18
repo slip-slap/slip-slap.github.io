@@ -3,7 +3,7 @@
   <title>Just Do It</title>
   <link href="/atom.xml" rel="self"/>
   <link href=""/>
-  <updated>2021-03-11T21:35:32+09:00</updated>
+  <updated>2021-03-18T22:43:24+09:00</updated>
   <id></id>
   <author>
     <name>reed</name>
@@ -8356,12 +8356,15 @@ in G.
   </entry>
 
   <entry>
-    <title>A.D.: Bracnch and Bound</title>
+    <title>A.D.: Branch and Bound</title>
     <link href="/algorithm/agorithm-design-branch-and-bound.html"/>
     <updated>2017-06-20T00:00:00+09:00</updated>
     <id>/algorithm/agorithm-design-branch-and-bound</id>
     <content type="html">
 ####
+
+  relaxation
+
 
 Relationship with Backtracking
 
@@ -8369,7 +8372,11 @@ Relationship with Backtracking
   but it is useful to solve optimization problem, and only minimization
 problem.
 
-</content>
+
+Galois
+
+  branch and bound try to exhaustivly explore all the possibility, but it
+prunes the node that is ...</content>
   </entry>
 
   <entry>
@@ -8436,6 +8443,22 @@ bool  is_move_reasonable(int board[4][4], int row, int column)
 
 
 topological sort of subproblem de...</content>
+  </entry>
+
+  <entry>
+    <title>A.D.: Dynamic Programming - text justification</title>
+    <link href="/algorithm/agorithm-design-dynamic-programming-text-justification.html"/>
+    <updated>2017-06-15T00:00:00+09:00</updated>
+    <id>/algorithm/agorithm-design-dynamic-programming-text-justification</id>
+    <content type="html">
+Recurrence relation
+DP(i) = min{DP{j} + cost of putting words [i:j in the current line] for all j in [i+1,n]}
+
+Reference
+
+  stack overflow text justification
+
+</content>
   </entry>
 
   <entry>
@@ -11151,13 +11174,13 @@ pointed at NULL.
     <updated>2017-03-08T00:00:00+09:00</updated>
     <id>/pl/pl-compile-c++-keyword-hash-define</id>
     <content type="html">
-preprocessor
-The preprocessor is supposed to deal with these keywords.
+Background
+In the C and C++ programming languages, an #include guard, sometimes called a
+macro guard, header guard of file guard.
 
-  you can treat them as a script, and preprocessor is engine to deal with them.
-  c++ is crazy.
 
-</content>
+  Different naming conventions for the guard macro may be used by different programmers.
+  Other common forms of the above example include GRANDPARENT_INCLUDED(with...</content>
   </entry>
 
   <entry>
@@ -12307,20 +12330,14 @@ Reference
     <updated>2017-02-06T00:00:00+09:00</updated>
     <id>/pl/pl-script-cmake-system-insepction</id>
     <content type="html">
-A
+Question: search path?
+Before use this command, I get a couple of questions?
 
-# find_library
-# find_path
-# find_program
-# find_package
-
-
-find_package
-
-
-  find_package is supposed to work with Find&amp;lt;package&amp;gt;.cmake module
-  The purpose of the file is to define the search rules for the package and set
-different variables, such as &amp;lt;package&amp;gt;_FOUND, &amp;lt;package&amp;gt...</content>
+  What is the search path?
+    
+      CMake provide default search path, one of them is CMAKE_SYSTEM_PREFIX_PATH.
+      you can print this variable in the CMakelists.txt
+      you can add another path into this CMAKE_P...</content>
   </entry>
 
   <entry>
@@ -18173,6 +18190,7 @@ Sentence
   世界記録
   対決
   早口言葉
+  腕相撲
 
 
 受賞と入賞
@@ -18291,6 +18309,23 @@ Sentence
   声が高い
   退廃的(たいはい)な音楽
 
+
+####
+
+  瞑想(めいそう):
+    
+      瞑想して
+      無になりたい
+      夢を経験したい
+    
+  
+  無駄なことを考える
+    
+      休みのひ何しよう
+      なんか、なんだろう
+    
+  
+
 </content>
   </entry>
 
@@ -18385,6 +18420,8 @@ sentence
 ####
 
   Violet Evergarden
+  ツッコミ: roast, an event at which someone is honored and people tell jokes
+or funny stories about that person in a friendly way.
 
 
 ####
@@ -19095,18 +19132,25 @@ sentence
     チンコをしゃぶる
   
   チンコ
+    
+      チンチン
+    
+  
   金玉
   鼻の穴(はなのあな): nostril
   毛穴(けあな): pore
   おっぱい: breast
+    
+      胸
+    
+  
 
 
 Adult Product
 
   TENGA
   口でして
-  ドS: a person who extremely likes to tease
-  ドM: A person who extr...</content>
+  ドS: a person who ext...</content>
   </entry>
 
   <entry>
@@ -19225,6 +19269,8 @@ medicine
 
   鼻がでかい
   出不精(でぶしょう)
+  背: 高さ
+  背中: お尻から首まで
 
 
 動詞
@@ -19241,6 +19287,7 @@ medicine
 ####
 
   身長が伸びる
+  人生を振り返って
 
 
 例文
@@ -19279,6 +19326,15 @@ medicine
 
   爽やか: fresh, refreshing
   臭い、・この匂い、何の香水
+
+
+Galois
+
+  何もかけないも、美味しいです。
+  名前をつけて
+  電気をつけでください
+  気をつけてください
+  くっ付いてる: follow somebody forever, never leave.
 
 </content>
   </entry>
@@ -19401,17 +19457,18 @@ Assumption
     <updated>2016-02-02T00:00:00+09:00</updated>
     <id>/%E8%A8%80%E8%91%89/language-japanese-grammar-particle</id>
     <content type="html">
-は・には・では
+で
 
-  There is no difference than then normal use of scope particle は、
-    
-      except with には,では, とは,よりは、からは、までは、 and other combination, the scope of the sentence
-expands to include the particle itself.
-    
-  
-  には＝にとっては: explain the subject and contrast
-    
-      私には仕事が大変です。＝私にとっては仕事が...</content>
+  a single で、means then, after.
+
+
+Duration with or without で
+
+There is a case that you don’t use the particle で even if you express a period
+of time. If you express actions which take place for a while, the partilce で
+is nor generally used.
+
+  When you the particle で、it indicates that you wil...</content>
   </entry>
 
   <entry>
@@ -19465,6 +19522,31 @@ expands to include the particle itself.
     
       犬なんです: when someone question you and you are trying to explain yourself.
       Here な is the form of copula だ takes before a noun it’s modifyi...</content>
+  </entry>
+
+  <entry>
+    <title>文法(ぶんぽう): certainty</title>
+    <link href="/%E8%A8%80%E8%91%89/language-japanese-grammar-certainty.html"/>
+    <updated>2016-02-02T00:00:00+09:00</updated>
+    <id>/%E8%A8%80%E8%91%89/language-japanese-grammar-certainty</id>
+    <content type="html">
+1. かも知れない
+
+  それは面白い
+
+
+なんて〜んだろう
+
+  なんて是なんという的口语说法，本来是程度太深不知该如何表达的一种疑问说法，因为不是询问而是说自己的想法，因此最后多接[んだろう]
+なんて素晴らしいんだろう
+
+
+でしょうとだろう
+“だろう” means essentially the same thing as “でしょう” except it sounds more masculine and is used mostly by male
+
+  A: アリスはどこだ？B：寝ているだろう
+でしょう sounds like I told you
+  だから、時間がないって...</content>
   </entry>
 
   <entry>
@@ -19587,6 +19669,30 @@ expands to include the particle itself.
   </entry>
 
   <entry>
+    <title>言葉: ない</title>
+    <link href="/%E8%A8%80%E8%91%89/language-japanese-word-verb-negative.html"/>
+    <updated>2016-02-01T00:00:00+09:00</updated>
+    <id>/%E8%A8%80%E8%91%89/language-japanese-word-verb-negative</id>
+    <content type="html">
+なくて・ないで
+
+  なくて:  the first half is the reason of the second
+今日は何もやるべきことがなくて、ずっとツータイをやっている
+
+
+
+  朝、起きって、食べて、
+  コーヒーには、いつも砂糖を入れないで飲みます。
+  here the で is just the same as て、to connect a couple of verbs.
+  but here the verb is in negative form.
+  here the で is used to connect 入れない and 食べる
+
+
+
+  ないで: th...</content>
+  </entry>
+
+  <entry>
     <title>言葉: Compound verb</title>
     <link href="/%E8%A8%80%E8%91%89/language-japanese-word-verb-compound.html"/>
     <updated>2016-02-01T00:00:00+09:00</updated>
@@ -19689,6 +19795,14 @@ Because, because, you ne...</content>
 
   私に向かってくる
 
+
+####
+
+  僕には関わらないで。
+  なんでやってみようと思った
+  笑顔がすごすぎる
+  ベテランのCAさん
+
 </content>
   </entry>
 
@@ -19746,19 +19860,31 @@ Because, because, you ne...</content>
     <content type="html">
 いっぱい・たくさん・たっぷり
 
+酔っ払う・酔う
+
+  酔っ払う: お酒にしか使わない
+  酔う: お酒以外にも使える
+    
+      車や船などの乗り物に酔って
+    
+  
+
+
+大きい・大きな
+
+  大きい: 具体的なもの
+  大きな: abstract
+    
+      大きな影響
+    
+  
+
+
 好き・気に入る・好(この)み
 
   好き: sounds like ongoing feeling, real love.
   気に入る: when you find/hear/see something, you think it’s interesting, you
-want to try.
-  好み: noun
-
-
-いきなり・急に・突然
-
-  いきなり: more casual and colloquial
-    
-      can be used as event that you didn’t expect and it went thro...</content>
+...</content>
   </entry>
 
   <entry>
@@ -19880,6 +20006,8 @@ C
 ####
 
   あかん: 関西弁、いけない
+  あざっす: ありがとう、ございます。
+  あさって向く時:
 
 
 やねん
@@ -19939,6 +20067,11 @@ these sentences make sense automatically, how? by means to the ...</content>
     
       映画が好きです。
       普段映画を見るのが好きです。
+    
+  
+  どこに住んでるんか？
+    
+      ここに言えるか？
     
   
 
@@ -20253,7 +20386,12 @@ weight.)
     <updated>2016-02-01T00:00:00+09:00</updated>
     <id>/%E8%A8%80%E8%91%89/language-japanese-colloquial-かける-切る-きっかけ</id>
     <content type="html">
-2
+かける
+The most basic meaning of かける is to put on something.
+
+  何もかけないでも食べて美味しいです。
+
+
 verb-ます型＋かけだ (し初めて、まだ〜終わっていない途中の状態を表す)
 
   この仕事はやりかけですから、そのままにして置いてください、(Since we just began since work, put
@@ -20264,10 +20402,7 @@ this aside for a while)
 3. にかけては
 in respect of
 
-  noun + にかけても
-    
-      数学にかけては、彼女はクラスでいつも一番だった(She is a master in math)
-      走ることにか...</content>
+  noun ...</content>
   </entry>
 
   <entry>

@@ -11,7 +11,7 @@
 <head>
   <meta charset="UTF-8">
 
-  <title>A.D.: Bracnch and Bound - Just Do It</title>
+  <title>A.D.: Branch and Bound - Just Do It</title>
   <meta name="keywords" content="">
   <meta name="description" content="">
   <meta name="author" content="reed">
@@ -166,7 +166,7 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">983</span>
+<span title="文章总数">986</span>
 <ul>
 
 
@@ -2962,7 +2962,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#June-2017">2017 年 06 月 (52)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#June-2017">2017 年 06 月 (53)</a></li>
     
   
 
@@ -5216,7 +5221,17 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#February-2016">2016 年 02 月 (91)</a></li>
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#February-2016">2016 年 02 月 (93)</a></li>
     
   
 
@@ -5229,13 +5244,13 @@ $(document).ready(function() {
 <span title="分类总数">9</span>
 <ul>
 
-  <li><a href="/categories.html#言葉-ref">言葉 (206)</a></li>
+  <li><a href="/categories.html#言葉-ref">言葉 (208)</a></li>
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
   <li><a href="/categories.html#PL-ref">PL (232)</a></li>
 
-  <li><a href="/categories.html#Algorithm-ref">Algorithm (79)</a></li>
+  <li><a href="/categories.html#Algorithm-ref">Algorithm (80)</a></li>
 
   <li><a href="/categories.html#CS-ref">CS (60)</a></li>
 
@@ -6063,7 +6078,7 @@ $(document).ready(function() {
       <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
 
     <header>
-      <h1>A.D.: Bracnch and Bound</h1>
+      <h1>A.D.: Branch and Bound</h1>
     </header>
 
     <section>
@@ -6077,10 +6092,10 @@ $(document).ready(function() {
 
   <span id="share">
   <a class="wechat" target="_blank" title="分享到微信" href="http://chart.apis.google.com/chart?cht=qr&amp;chs=300x300&amp;chl=/algorithm/agorithm-design-branch-and-bound.html"><i class="icon-large icon-wechat"></i></a>
-  <a class="weibo" target="_blank" title="分享到微博" href="http://service.weibo.com/share/share.php?title=A.D.: Bracnch and Bound - Just Do It&amp;url=/algorithm/agorithm-design-branch-and-bound.html&amp;type=3&amp;searchPic=1"><i class="icon-large icon-weibo"></i></a>
-  <a class="qzone" target="_blank" title="分享到 QQ 空间" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=/algorithm/agorithm-design-branch-and-bound.html&amp;title=A.D.: Bracnch and Bound - Just Do It&amp;summary=&amp;site="><i class="icon-large icon-qzone"></i></a>
-  <a class="twitter" target="_blank" title="Share to Twitter" href="https://twitter.com/intent/tweet?url=/algorithm/agorithm-design-branch-and-bound.html&amp;text=A.D.: Bracnch and Bound - Just Do It&amp;via="><i class="icon-large icon-twitter"></i></a>
-  <a class="facebook" target="_blank" title="Share to Facebook" href="http://www.facebook.com/sharer.php?u=/algorithm/agorithm-design-branch-and-bound.html&amp;t=A.D.: Bracnch and Bound - Just Do It"><i class="icon-large icon-facebook-sign"></i></a>
+  <a class="weibo" target="_blank" title="分享到微博" href="http://service.weibo.com/share/share.php?title=A.D.: Branch and Bound - Just Do It&amp;url=/algorithm/agorithm-design-branch-and-bound.html&amp;type=3&amp;searchPic=1"><i class="icon-large icon-weibo"></i></a>
+  <a class="qzone" target="_blank" title="分享到 QQ 空间" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=/algorithm/agorithm-design-branch-and-bound.html&amp;title=A.D.: Branch and Bound - Just Do It&amp;summary=&amp;site="><i class="icon-large icon-qzone"></i></a>
+  <a class="twitter" target="_blank" title="Share to Twitter" href="https://twitter.com/intent/tweet?url=/algorithm/agorithm-design-branch-and-bound.html&amp;text=A.D.: Branch and Bound - Just Do It&amp;via="><i class="icon-large icon-twitter"></i></a>
+  <a class="facebook" target="_blank" title="Share to Facebook" href="http://www.facebook.com/sharer.php?u=/algorithm/agorithm-design-branch-and-bound.html&amp;t=A.D.: Branch and Bound - Just Do It"><i class="icon-large icon-facebook-sign"></i></a>
   <a class="googleplus" target="_blank" title="Share to Google+" href="https://plus.google.com/share?url=/algorithm/agorithm-design-branch-and-bound.html"><i class="icon-large icon-google-plus-sign"></i></a>
 </span>
 
@@ -6092,6 +6107,9 @@ $(document).ready(function() {
       </div>
       
 <p>####</p>
+<ol>
+  <li>relaxation</li>
+</ol>
 
 <h4 id="relationship-with-backtracking">Relationship with Backtracking</h4>
 <ol>
@@ -6099,6 +6117,22 @@ $(document).ready(function() {
   <li>but it is useful to solve optimization problem, and only minimization
 problem.</li>
 </ol>
+
+<h4 id="galois">Galois</h4>
+<ol>
+  <li>branch and bound try to exhaustivly explore all the possibility, but it
+prunes the node that is not going to be the solution.
+    <ul>
+      <li>this is called relaxation</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="reference">Reference</h4>
+<ol>
+  <li><a href="https://www.coursera.org/lecture/discrete-optimization/knapsack-5-relaxation-branch-and-bound-66OlO">coursear branch and bound</a></li>
+</ol>
+
 
       
       <footer>
@@ -6127,7 +6161,7 @@ problem.</li>
   
      
     	<li><a href="/categories.html#Algorithm-ref">
-    		Algorithm <span>79</span>
+    		Algorithm <span>80</span>
     	</a></li>
     
   
@@ -6146,7 +6180,7 @@ problem.</li>
 
   
      
-    	<li><a href="/tags.html#A.D.-ref">A.D. <span>15</span></a></li>
+    	<li><a href="/tags.html#A.D.-ref">A.D. <span>16</span></a></li>
     
   
 
@@ -6181,8 +6215,8 @@ problem.</li>
     var disqus_developer = 1;
     var disqus_shortname = 'just-do-it-1';
     
-    var disqus_identifier = 'A.D.: Bracnch and Bound';
-    var disqus_title = 'A.D.: Bracnch and Bound';
+    var disqus_identifier = 'A.D.: Branch and Bound';
+    var disqus_title = 'A.D.: Branch and Bound';
     var disqus_url = '/algorithm/agorithm-design-branch-and-bound.html';
     
     

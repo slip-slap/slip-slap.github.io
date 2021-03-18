@@ -166,7 +166,7 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">983</span>
+<span title="文章总数">986</span>
 <ul>
 
 
@@ -2962,7 +2962,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#June-2017">2017 年 06 月 (52)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#June-2017">2017 年 06 月 (53)</a></li>
     
   
 
@@ -5216,7 +5221,17 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#February-2016">2016 年 02 月 (91)</a></li>
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#February-2016">2016 年 02 月 (93)</a></li>
     
   
 
@@ -5229,13 +5244,13 @@ $(document).ready(function() {
 <span title="分类总数">9</span>
 <ul>
 
-  <li><a href="/categories.html#言葉-ref">言葉 (206)</a></li>
+  <li><a href="/categories.html#言葉-ref">言葉 (208)</a></li>
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
   <li><a href="/categories.html#PL-ref">PL (232)</a></li>
 
-  <li><a href="/categories.html#Algorithm-ref">Algorithm (79)</a></li>
+  <li><a href="/categories.html#Algorithm-ref">Algorithm (80)</a></li>
 
   <li><a href="/categories.html#CS-ref">CS (60)</a></li>
 
@@ -6123,6 +6138,62 @@ pointed at NULL.
 <span class="k">delete</span> <span class="n">ptr</span><span class="p">;</span>
 </code></pre></div></div>
 
+<h4 id="access-deleted-pointer">Access deleted pointer</h4>
+<ol>
+  <li>Deleting a pointer doesn’t zero ut any memory becasue to do so would take CPU cycles.
+and that’s not what C++ is about
+    <ul>
+      <li>What you have there is a dangling pointer.</li>
+      <li>This is a good reason why you should NULL out pointers when you have deleted
+the memory that they pointed to, that way you would get an immediate error
+if you try to dereference that pointer.</li>
+    </ul>
+  </li>
+</ol>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include&lt;iostream&gt;
+#include&lt;list&gt;
+</span>
+<span class="kt">void</span><span class="o">*</span> <span class="k">operator</span> <span class="nf">new</span><span class="p">(</span><span class="kt">size_t</span> <span class="n">size</span><span class="p">){</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"allocate new pointer "</span><span class="o">&lt;&lt;</span><span class="n">size</span><span class="o">&lt;&lt;</span><span class="s">" bytes"</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+	<span class="k">return</span> <span class="n">malloc</span><span class="p">(</span><span class="n">size</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="k">operator</span> <span class="k">delete</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">memory</span><span class="p">)</span> <span class="k">noexcept</span><span class="p">{</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"object freeing "</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+	<span class="n">free</span><span class="p">(</span><span class="n">memory</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="k">operator</span> <span class="k">delete</span><span class="p">[](</span><span class="kt">void</span><span class="o">*</span> <span class="n">memory</span><span class="p">)</span> <span class="k">noexcept</span><span class="p">{</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"object freeing "</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+	<span class="n">free</span><span class="p">(</span><span class="n">memory</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">struct</span> <span class="nc">node</span> <span class="p">{</span>
+	<span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">c</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"--------------begin-------------"</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">list</span><span class="o">&lt;</span><span class="n">node</span><span class="o">*&gt;</span> <span class="n">node_list</span><span class="p">;</span>
+	<span class="n">node</span><span class="o">*</span> <span class="n">first</span> <span class="o">=</span> <span class="k">new</span> <span class="n">node</span><span class="p">();</span>
+	<span class="n">first</span><span class="o">-&gt;</span><span class="n">a</span> <span class="o">=</span> <span class="mi">136</span><span class="p">;</span> 
+	<span class="n">node_list</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">first</span><span class="p">);</span>
+	<span class="c1">//delete first;</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"first address: "</span><span class="o">&lt;&lt;</span><span class="n">first</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+	<span class="kt">int</span><span class="o">*</span> <span class="n">a1</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">();</span>
+	<span class="kt">int</span><span class="o">*</span> <span class="n">a2</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">();</span>
+	<span class="kt">int</span><span class="o">*</span> <span class="n">a3</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">();</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;*</span><span class="n">a1</span><span class="o">+*</span><span class="n">a2</span><span class="o">+*</span><span class="n">a3</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"a= "</span><span class="o">&lt;&lt;</span><span class="n">first</span><span class="o">-&gt;</span><span class="n">a</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+	<span class="n">node</span><span class="o">*</span> <span class="n">third</span> <span class="o">=</span> <span class="k">new</span> <span class="n">node</span><span class="p">[</span><span class="mi">1000000</span><span class="p">];</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">third</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"a= "</span><span class="o">&lt;&lt;</span><span class="n">first</span><span class="o">-&gt;</span><span class="n">a</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"--------------end----------------"</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
 <h4 id="memory-allocate-and-free">Memory allocate and free</h4>
 
 <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
@@ -6163,6 +6234,7 @@ pointed at NULL.
 <h4 id="reference">Reference</h4>
 <ol>
   <li><a href="https://stackoverflow.com/questions/13223399/deleting-a-pointer-in-c">new and delete</a></li>
+  <li><a href="https://stackoverflow.com/questions/7827504/c-delete-pointer-issue-can-still-access-data">delete pointer can still access data</a></li>
 </ol>
 
 
