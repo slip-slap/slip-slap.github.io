@@ -37,6 +37,58 @@ delete ptr;
 
 
 
+#### Access deleted pointer 
+1. Deleting a pointer doesn't zero ut any memory becasue to do so would take CPU cycles.
+and that's not what C++ is about
+- What you have there is a dangling pointer.
+-  This is a good reason why you should NULL out pointers when you have deleted
+   the memory that they pointed to, that way you would get an immediate error
+   if you try to dereference that pointer.
+
+```cpp
+#include<iostream>
+#include<list>
+
+void* operator new(size_t size){
+	std::cout<<"allocate new pointer "<<size<<" bytes"<<std::endl;
+	return malloc(size);
+}
+
+void operator delete(void* memory) noexcept{
+	std::cout<<"object freeing "<<std::endl;
+	free(memory);
+}
+
+void operator delete[](void* memory) noexcept{
+	std::cout<<"object freeing "<<std::endl;
+	free(memory);
+}
+
+struct node {
+	int a = -1;
+	int b = -1;
+	int c = -1;
+};
+int main(){
+	std::cout<<"--------------begin-------------"<<std::endl;
+	std::list<node*> node_list;
+	node* first = new node();
+	first->a = 136; 
+	node_list.push_back(first);
+	//delete first;
+	std::cout<<"first address: "<<first<<std::endl;
+	int* a1 = new int();
+	int* a2 = new int();
+	int* a3 = new int();
+	std::cout<<*a1+*a2+*a3<<std::endl;
+	std::cout<<"a= "<<first->a<<std::endl;
+	node* third = new node[1000000];
+	std::cout<<third<<std::endl;
+	std::cout<<"a= "<<first->a<<std::endl;
+	std::cout<<"--------------end----------------"<<std::endl;
+}
+```
+
 
 
 #### Memory allocate and free
@@ -79,4 +131,5 @@ int main(){
 
 #### Reference
 1. [new and delete](https://stackoverflow.com/questions/13223399/deleting-a-pointer-in-c)
+2. [delete pointer can still access data](https://stackoverflow.com/questions/7827504/c-delete-pointer-issue-can-still-access-data)
 

@@ -22,8 +22,6 @@ tags: ["日本語"]
 2. 気になる: regulation, rule you need to obey.
 彼女のことが気になる: 心配の感じ
 
-
-
 ### 1 ことにする(routine)
 
 健康のために、毎日夜十時に寝ることにしている。

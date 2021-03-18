@@ -58,6 +58,71 @@ int main()
    a network connection.
 
 
+#### Example
+1. standard library use copy constructor
+- when you try to push an object into a list container, it call the object's
+  copy constructor.
+- for a container, it also allocate memory on the heap.
+- the code line.addDote(dot1) would allocate new memory, and now the new memory
+  is control by the container.
+
+
+
+
+```cpp
+#include <iostream>
+#include <string>
+#include <list>
+
+void* operator new(size_t size){
+	std::cout<<"allocate memory"<<std::endl;
+	return std::malloc(size);
+}
+
+class Dot{
+	public:
+		Dot(){
+			std::cout<<"new dot object"<<std::endl;
+		}
+		Dot(const Dot& dot){
+			std::cout<<"copy constructor"<<std::endl;
+			this->a = dot.a;
+			this->b = 1000;
+
+		}
+	int a,b;
+	~Dot(){
+		std::cout<<"destroy"<<std::endl;
+	}
+};
+
+class Line{
+	public:
+	std::list<Dot> m_line;
+	void addDot(Dot& dot){
+		m_line.push_back(dot);
+	}
+};
+
+int main(){
+	Line line;
+	{
+		Dot dot1;
+		dot1.a = 3;dot1.b = 4;
+		std::cout<<"________________"<<std::endl;
+		line.addDot(dot1);
+		std::cout<<"________________"<<std::endl;
+		std::cout<<"address: "<<&dot1<<std::endl;
+	}
+	for(std::list<Dot>::iterator itr =line.m_line.begin();itr!=line.m_line.end();itr++){
+		std::cout<<"address: "<<&itr<<std::endl;
+		std::cout<<"a= "<<(*itr).a <<", b= "<<(*itr).b<<std::endl;
+	}
+
+}
+```
+
+
 #### reference
 1. [copy constructor](https://www.geeksforgeeks.org/copy-constructor-in-cpp/)
 

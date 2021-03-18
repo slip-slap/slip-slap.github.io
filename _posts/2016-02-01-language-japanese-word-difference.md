@@ -12,6 +12,18 @@ tags: ["日本語"]
 #### いっぱい・たくさん・たっぷり
 
 
+#### 酔っ払う・酔う
+1. 酔っ払う: お酒にしか使わない
+2. 酔う: お酒以外にも使える
+- 車や船などの乗り物に酔って
+
+
+#### 大きい・大きな
+1. 大きい: 具体的なもの
+2. 大きな: abstract
+- 大きな影響
+
+
 #### 好き・気に入る・好(この)み
 1. 好き: sounds like ongoing feeling, real love.
 2. 気に入る: when you find/hear/see something, you think it's interesting, you
@@ -27,14 +39,6 @@ tags: ["日本語"]
 2. 突然: formal
 
 
-
-#### なくて・ないで
-1. なくて:  the first half is the reason of the second
-今日は何もやるべきことがなくて、ずっとツータイをやっている
-
-2. ないで: there is no causa relationship between the two parts.
-- 勉強しないでずっとツータイをやっている
-- 心配しないでいいよ
 
 
 #### 一回(いっかい)・一度
@@ -66,7 +70,6 @@ tags: ["日本語"]
 - 日本語を秋山から習っている
 
 
-
 #### 良い・いい
 1. いい: used in colloquial.
 2. よい: used in formal document.
@@ -91,7 +94,6 @@ tags: ["日本語"]
 - 昨日早く来て欲しかった
 - おっとに野菜を食べて欲しい
 
-
 #### 遅れる・遅く
 1. 遅れる: is a verb 
 - 彼は今日学校に遅れた
@@ -104,7 +106,6 @@ tags: ["日本語"]
 - 別の色を見せてください(if there are a few choices)
 - 他の色をめせてください(if there are many choices)
 2. 他の: means other
-
 
 
 ####  たくさん・多い
@@ -209,7 +210,6 @@ Example: 玉子焼き(cooked egg) 卵かけご飯(uncooked egg)
 2. 気分:  it means physical feeling
 
 
-
 #### 1. 行ってきます
 A: 行ってきます
 B: 行ってらっしゃい: 
@@ -230,7 +230,6 @@ B: 行ってらっしゃい:
 2. 座る: to sit on the floor or ground
 
 
-
 #### 6. 受ける
 1. 引き受ける: 仕事を引き受ける
 2. 受け取る: 荷物を受け取る
@@ -245,10 +244,10 @@ B: 行ってらっしゃい:
 
 
 
-
 #### Reference
 1. [知る・分かる](http://maggiesensei.com/2020/02/20/how-to-use-%e7%9f%a5%e3%82%8b-%ef%bc%86-%e3%82%8f%e3%81%8b%e3%82%8b-shiru-wakaru/)
 2. [ように・ために](https://www.wasabi-jpn.com/japanese-grammar/how-to-express-aims/#4)
 3. [いきなり・急に・突然](http://jpyokoso.com/how-to-use-ikinari-kyuni-and-totuzen-the-right-way/)
 4. [好き・気に入る](https://www.italki.com/post/question-87975?hl=ja)
+5. [ないで](https://jlptsensei.com/learn-japanese-grammar/%E3%81%AA%E3%81%84%E3%81%A7-naide-meaning/)
 

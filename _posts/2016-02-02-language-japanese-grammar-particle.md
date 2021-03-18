@@ -8,6 +8,25 @@ tags: ["日本語"]
 ---
 {% include JB/setup %}
 
+
+#### で
+1. a single で、means then, after.
+
+#### Duration with or without で
+
+There is a case that you don't use the particle で even if you express a period
+of time. If you express actions which take place for a while, the partilce で
+is nor generally used. 
+-  When you the particle で、it indicates that you will complete actions.
+- 1時間宿題をする: I will do my homework for an hour.
+- 1時間で宿題をする: I will complete my homework within an hour.
+
+1. When you express actions which take place for a moment such as "着く",
+起きる, you have to use the particle で。
+- 後5分で起きる: I will get up in five minites
+
+
+
 ####  は・には・では
 1. There is no difference than then normal use of scope particle は、
 - except with には,では, とは,よりは、からは、までは、 and other combination, the scope of the sentence
@@ -146,9 +165,10 @@ tags: ["日本語"]
 
 #### は and が
 
-1. は indicates contrast
+1. は indicates contrast, focus on the part before は
 - 結果が出るまでには、長い年月が必要だろう
 - 今の子供が大人になるまでには、様々な研究が進んでいるだろう
+- 面と向かっては, it emphasises face to face.
 2. が indicates new information
 
 
@@ -183,5 +203,6 @@ tags: ["日本語"]
 1. [か](http://maggiesensei.com/2019/12/18/how-to-use-%e3%80%9c%e3%81%8b%ef%bc%8f%e3%80%9c%e3%81%8b%e3%81%a9%e3%81%86%e3%81%8b-ka-ka-douka/)
 2. [も](http://maggiesensei.com/2013/10/08/japanese-particle-%e3%82%82mo-to-emphasize-the-number-%e3%80%8c%e4%b8%80%e2%98%85%e3%82%82%e3%80%8d/)
 3. [には and に](https://japanese.stackexchange.com/questions/1096/what-is-the-difference-between-%E3%81%AB-and-%E3%81%AB%E3%81%AF)
+4. [で](https://www.wasabi-jpn.com/japanese-grammar/particle-de-expressing-supplementary-information/)
 
 

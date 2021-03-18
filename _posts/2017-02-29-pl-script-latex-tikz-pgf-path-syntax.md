@@ -63,6 +63,20 @@ segement to be created, but it specifies the starting point of the next segment.
 (2,0) rectangle +(1.57,1) (2,0) sin +(1.57,1);
 ```
 
+##### 3.3 Horizontal and Vertical Lines
+Sometimes you want to connect two points via straight lines that are only horizontal
+and vertical.
 
+```latex
+\begin{tikzpicture}
+	\draw(0,0) node(a) [draw] {A} (1,1) node(b) [draw] {B};
+	\draw (a.north) |- (b.west);
+\end{tikzpicture}
+```
+
+
+
+#### Reference
+1. [path syntax](https://stuff.mit.edu/afs/athena/contrib/tex-contrib/beamer/pgf-1.01/doc/generic/pgf/version-for-tex4ht/en/pgfmanualse9.html)
 
 

@@ -25,3 +25,12 @@ tags: ["日本語"]
 #### 単語
 1. 爽やか: fresh, refreshing
 2. 臭い、・この匂い、何の香水
+
+
+
+#### Galois
+1. 何もかけないも、美味しいです。
+2. 名前をつけて
+3. 電気をつけでください
+4. 気をつけてください
+5. くっ付いてる: follow somebody forever, never leave.

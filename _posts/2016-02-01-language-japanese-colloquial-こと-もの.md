@@ -103,7 +103,6 @@ Things about certain time/what happened in certain time
 
 
 
-
 ### 3. Reference
 1. [ことに](http://maggiesensei.com/2017/08/22/%e3%81%93%e3%81%a8%e3%81%ab%e3%81%aa%e3%82%8b%e3%81%99%e3%82%8b-koto-ni-naru-%e3%82%88%e3%81%86%e3%81%ab%e3%81%aa%e3%82%8b%e3%81%99%e3%82%8b-you-ni-narusuru/)
 2. [こと](http://maggiesensei.com/2019/03/04/how-to-use-noun-%e3%81%ae%e3%81%93%e3%81%a8-no-koto-%e3%81%ae%e3%81%93%e3%81%a8%e3%81%a0%e3%81%8b%e3%82%89-no-koto-dakara-%e3%81%ae%e3%81%93%e3%81%a8%e3%81%a0%e3%81%97-no-koto-dashi/)

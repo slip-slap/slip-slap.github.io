@@ -1,0 +1,124 @@
+I"�+<h4 id="1-when-to-use">1. When to use?</h4>
+<ol>
+  <li>Copy constructor is called when a new object is created from an existing object, as a copy of the
+existing object
+    <ul>
+      <li>pass an object to an argument of a function need copy constructor</li>
+    </ul>
+  </li>
+  <li>Assignment operator is called when an already initialized object is assigned a new value from
+another existing object.</li>
+</ol>
+
+<h4 id="2-why-argument-to-a-copy-constructor-must-be-passed-as-a-reference">2. Why argument to a copy constructor must be passed as a reference?</h4>
+<p>A copy constructor is called when an object is passed by value. Copy constructor itself is a
+function. So if we pass an argument by value in a copy constructor, a call to copy constructor would
+be make to call copy constructor which becomes a non-terminating chain of calls. Therefore compiler
+doesn’t allow parameters to be passed by value.</p>
+
+<h4 id="3-why-argument-to-a-copy-constructor-should-be-const">3. Why argument to a copy constructor should be const?</h4>
+<ol>
+  <li>one reason for passing const reference is, we should use const in c++ wherever possible so that
+objects are not accidentally modified.</li>
+  <li>Compiler created temporary objects can not be bound to non-const references.</li>
+</ol>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include&lt;iostream&gt;
+</span><span class="k">class</span> <span class="nc">Student</span><span class="p">{</span>
+	<span class="nl">public:</span>
+		<span class="n">Student</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span>  <span class="n">m_name</span><span class="p">){</span>
+			<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"create"</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+		<span class="p">}</span>
+		<span class="n">Student</span><span class="p">(</span><span class="k">const</span> <span class="n">Student</span><span class="o">&amp;</span> <span class="n">other</span><span class="p">){</span>
+			<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"copy"</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+		<span class="p">}</span>
+		<span class="o">~</span><span class="n">Student</span><span class="p">(){</span>
+		<span class="p">}</span>
+<span class="p">};</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="c1">// the compiler will create a temporary object</span>
+	<span class="c1">// then call the copy constructor, but, a temporarty can't be passed to a non-const argument</span>
+	<span class="c1">// so we have to modify the argument to copy constructor with const keyword.</span>
+	<span class="n">Student</span> <span class="n">robert</span><span class="o">=</span><span class="n">Student</span><span class="p">(</span><span class="s">"zhang"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h4 id="4-when-is-user-defined-conpy-constructor-needed">4. When is user-defined conpy constructor needed?</h4>
+<ol>
+  <li>if we don’t define our own copy constructor, the C++ compiler creates a default copy constructor
+ for each class which does a member-wise copy between objects</li>
+  <li>The compiler created copy constructor works fine in general. We need to define our own copy
+constructor only if an object has pointers or any runtime allocaton of resource like file handle,
+a network connection.</li>
+</ol>
+
+<h4 id="example">Example</h4>
+<ol>
+  <li>standard library use copy constructor
+    <ul>
+      <li>when you try to push an object into a list container, it call the object’s
+copy constructor.</li>
+    </ul>
+  </li>
+</ol>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;list&gt;
+</span>
+<span class="kt">void</span><span class="o">*</span> <span class="k">operator</span> <span class="nf">new</span><span class="p">(</span><span class="kt">size_t</span> <span class="n">size</span><span class="p">){</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"allocate memory"</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+	<span class="k">return</span> <span class="n">std</span><span class="o">::</span><span class="n">malloc</span><span class="p">(</span><span class="n">size</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">class</span> <span class="nc">Dot</span><span class="p">{</span>
+	<span class="nl">public:</span>
+		<span class="n">Dot</span><span class="p">(){</span>
+			<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"new dot object"</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+		<span class="p">}</span>
+		<span class="n">Dot</span><span class="p">(</span><span class="k">const</span> <span class="n">Dot</span><span class="o">&amp;</span> <span class="n">dot</span><span class="p">){</span>
+			<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"copy constructor"</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+			<span class="k">this</span><span class="o">-&gt;</span><span class="n">a</span> <span class="o">=</span> <span class="n">dot</span><span class="p">.</span><span class="n">a</span><span class="p">;</span>
+			<span class="k">this</span><span class="o">-&gt;</span><span class="n">b</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">;</span>
+
+		<span class="p">}</span>
+	<span class="kt">int</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">;</span>
+	<span class="o">~</span><span class="n">Dot</span><span class="p">(){</span>
+		<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"destroy"</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">};</span>
+
+<span class="k">class</span> <span class="nc">Line</span><span class="p">{</span>
+	<span class="nl">public:</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">list</span><span class="o">&lt;</span><span class="n">Dot</span><span class="o">&gt;</span> <span class="n">m_line</span><span class="p">;</span>
+	<span class="kt">void</span> <span class="n">addDot</span><span class="p">(</span><span class="n">Dot</span><span class="o">&amp;</span> <span class="n">dot</span><span class="p">){</span>
+		<span class="n">m_line</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">dot</span><span class="p">);</span>
+	<span class="p">}</span>
+<span class="p">};</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+	<span class="n">Line</span> <span class="n">line</span><span class="p">;</span>
+	<span class="p">{</span>
+		<span class="n">Dot</span> <span class="n">dot1</span><span class="p">;</span>
+		<span class="n">dot1</span><span class="p">.</span><span class="n">a</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span><span class="n">dot1</span><span class="p">.</span><span class="n">b</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+		<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"________________"</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+		<span class="n">line</span><span class="p">.</span><span class="n">addDot</span><span class="p">(</span><span class="n">dot1</span><span class="p">);</span>
+		<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"________________"</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+		<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"address: "</span><span class="o">&lt;&lt;&amp;</span><span class="n">dot1</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="k">for</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">list</span><span class="o">&lt;</span><span class="n">Dot</span><span class="o">&gt;::</span><span class="n">iterator</span> <span class="n">itr</span> <span class="o">=</span><span class="n">line</span><span class="p">.</span><span class="n">m_line</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span><span class="n">itr</span><span class="o">!=</span><span class="n">line</span><span class="p">.</span><span class="n">m_line</span><span class="p">.</span><span class="n">end</span><span class="p">();</span><span class="n">itr</span><span class="o">++</span><span class="p">){</span>
+		<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"address: "</span><span class="o">&lt;&lt;&amp;</span><span class="n">itr</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+		<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"a= "</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="o">*</span><span class="n">itr</span><span class="p">).</span><span class="n">a</span> <span class="o">&lt;&lt;</span><span class="s">", b= "</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="o">*</span><span class="n">itr</span><span class="p">).</span><span class="n">b</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+	<span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h4 id="reference">reference</h4>
+<ol>
+  <li><a href="https://www.geeksforgeeks.org/copy-constructor-in-cpp/">copy constructor</a></li>
+</ol>
+
+:ET

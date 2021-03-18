@@ -1,0 +1,55 @@
+I"é
+<h4 id="background">Background</h4>
+<p>In the C and C++ programming languages, an #include guard, sometimes called a
+macro guard, header guard of file guard.</p>
+
+<ul>
+  <li>Different naming conventions for the guard macro may be used by different programmers.</li>
+  <li>Other common forms of the above example include <strong>GRANDPARENT_INCLUDED</strong>(with
+the appropriate time information substituted.) and names generated from a UUID</li>
+  <li>Names starting with one underscore and a captial letter or and name
+containing double underscore are reserved to the languge implementation and
+should not be used by the user.</li>
+</ul>
+
+<h4 id="preprocessor">preprocessor</h4>
+<p>The preprocessor is supposed to deal with these keywords.</p>
+<ul>
+  <li>you can treat them as a script, and preprocessor is engine to deal with them.</li>
+  <li>c++ is crazy.</li>
+</ul>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#ifndef STOCK_HEADER
+#define STOCK_HEADER 20
+</span><span class="k">class</span> <span class="nc">StockNode</span><span class="p">{</span>
+    <span class="nl">private:</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">m_date</span><span class="p">;</span>
+        <span class="kt">double</span> <span class="n">m_open_price</span><span class="p">;</span>
+        <span class="kt">double</span> <span class="n">m_high_price</span><span class="p">;</span>
+        <span class="kt">double</span> <span class="n">m_low_price</span><span class="p">;</span>
+		
+    <span class="nl">public:</span>
+        <span class="n">StockNode</span><span class="p">();</span>
+		<span class="n">StockNode</span><span class="p">(</span><span class="k">const</span> <span class="n">StockNode</span> <span class="o">&amp;</span><span class="n">node</span><span class="p">);</span>
+        <span class="kt">double</span> <span class="n">getOpenPrice</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+        <span class="kt">double</span> <span class="n">getHighPrice</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+        <span class="kt">double</span> <span class="n">getClosePrice</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+        <span class="kt">void</span> <span class="n">setOpenPrice</span><span class="p">(</span><span class="kt">double</span><span class="p">);</span>
+        <span class="kt">void</span> <span class="n">setHighPrice</span><span class="p">(</span><span class="kt">double</span><span class="p">);</span>
+        <span class="kt">void</span> <span class="n">setLowPrice</span><span class="p">(</span><span class="kt">double</span><span class="p">);</span>
+
+    <span class="k">friend</span> <span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">out</span><span class="p">,</span> <span class="k">const</span> <span class="n">StockNode</span><span class="o">&amp;</span> <span class="n">node</span><span class="p">){</span>
+            <span class="n">out</span><span class="o">&lt;&lt;</span><span class="s">"open price: "</span><span class="o">&lt;&lt;</span><span class="n">node</span><span class="p">.</span><span class="n">m_open_price</span><span class="o">&lt;&lt;</span><span class="s">", high price: "</span><span class="o">&lt;&lt;</span><span class="n">node</span><span class="p">.</span><span class="n">m_high_price</span>
+              <span class="o">&lt;&lt;</span> <span class="s">" ,low price: "</span><span class="o">&lt;&lt;</span><span class="n">node</span><span class="p">.</span><span class="n">m_low_price</span><span class="p">;</span>
+            <span class="k">return</span> <span class="n">out</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+<span class="cp">#endif
+</span>
+</code></pre></div></div>
+
+<h4 id="reference">Reference</h4>
+<ol>
+  <li><a href="https://en.wikipedia.org/wiki/Include_guard">Include Guard</a></li>
+</ol>
+:ET

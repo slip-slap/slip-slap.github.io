@@ -65,3 +65,95 @@ int main()
 	std::cout<<knapsack(3,7)<<std::endl;
 }
 ```
+
+
+#### Exponential Method
+
+```cpp
+struct node {
+	int key = -1;
+	int level = -1;
+	node* left_child = nullptr;
+	node* right_child = nullptr;
+};
+
+
+void bfs(node* root, int level){
+	if(level == 1){
+		return;
+	}
+	for(int i=0;i<2;i++){
+		node* temp = new node();
+		temp->key = i;
+		temp->level = level+1;
+		if(i==0){
+			root->left_child = temp;
+		}else{
+			root->right_child = temp;
+		}
+	}
+	bfs(root->left_child, level+1);
+	bfs(root->right_child, level+1);
+}
+
+void visit_tree(node* child){
+	if(child == nullptr){
+		return;
+	}
+	std::cout<<child->key;
+	visit_tree(child->left_child);
+	visit_tree(child->right_child);
+}
+
+int main(){
+	node* root = new node();
+	root->key = -1;
+	bfs(root,-1);
+	visit_tree(root);
+}
+```
+
+#### Dynamic Method
+
+```cpp
+
+#include <iostream>
+#include <list>
+
+const int SOLUTON_SIZE = 4;
+const int PROFITS[SOLUTON_SIZE+1]={0,1,2,5,6};	
+const int WEIGHTS[SOLUTON_SIZE+1]={0,2,3,4,5};
+const int WEIGHTS_LIMIT = 8;
+int profit_arr[5][9];
+
+void Print2DAarray(int arr[5][9], int row, int col){
+	for(int i=0; i<row; i++){
+		for (int w=0; w<col;w++){
+			std::cout<<arr[i][w]<<", ";
+		}
+		std::cout<<std::endl;
+	}
+}
+
+int main(){
+	for(int i=0;i<SOLUTON_SIZE+1; i++){
+		for(int j=0;j<WEIGHTS_LIMIT+1;j++){
+			if(i==0 || j==0){ profit_arr[i][j]=0;}
+			else if (WEIGHTS[i] < j || WEIGHTS[i] == j){
+				int profit1 =  profit_arr[i-1][j];
+				int profit2 =  PROFITS[i] + profit_arr[i-1][j - WEIGHTS[i]];
+				if(profit1>profit2){profit_arr[i][j] = profit1;}
+				else{profit_arr[i][j]=profit2;}
+			}
+			else{
+				profit_arr[i][j] = profit_arr[i-1][j];
+			}
+		}
+	}
+	Print2DAarray(profit_arr, 5, 9);
+}
+```
+
+
+
+

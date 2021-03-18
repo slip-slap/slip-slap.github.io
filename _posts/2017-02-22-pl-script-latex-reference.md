@@ -111,6 +111,14 @@ If you don't specify an order the default is nty.
 ```latex
 \usepackage[style=authoryear, sorting=ynt]{biblatex}
 ```
+Common stylename
+- numeric
+- alphabetic
+- authoryear
+- authortitle
+- verbose
+- reading
+
 
 
 #### Reference
@@ -119,6 +127,7 @@ If you don't specify an order the default is nty.
 3. [Biber](https://en.wikipedia.org/wiki/Biber_(LaTeX))
 4. [Choosing a Bibtex style](https://www.reed.edu/cis/help/LaTeX/bibtexstyles.html)
 5. [biblatex](https://www.overleaf.com/learn/latex/Articles/Getting_started_with_BibLaTeX)
+6. [biblatex bibliography styles](https://www.overleaf.com/learn/latex/biblatex_bibliography_styles)
 
 
 

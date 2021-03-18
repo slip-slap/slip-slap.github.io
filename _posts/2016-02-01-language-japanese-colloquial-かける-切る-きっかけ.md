@@ -9,7 +9,10 @@ tags: ["日本語"]
 {% include JB/setup %}
 
 
-#### 2
+#### かける
+The most basic meaning of かける is to put on something.
+- 何もかけないでも食べて美味しいです。
+
 verb-ます型＋かけだ (し初めて、まだ〜終わっていない途中の状態を表す)
 1. この仕事はやりかけですから、そのままにして置いてください、(Since we just began since work, put
    this aside for a while)
@@ -20,7 +23,6 @@ in respect of
 1. noun + にかけても
 - 数学にかけては、彼女はクラスでいつも一番だった(She is a master in math)
 - 走ることにかけては、誰にも負けないつもりだ(I am not going to defeat)
-
 
 
 #### 切る(きる)

@@ -10,6 +10,8 @@ tags: ["日本語"]
 
 ####
 1. Violet Evergarden
+1. ツッコミ: roast, an event at which someone is honored and people tell jokes
+   or funny stories about that person in a friendly way.
 
 ####
 1. ノリツッコミ:

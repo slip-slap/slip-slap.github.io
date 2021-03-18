@@ -52,3 +52,48 @@ clang: error: linker command failed with exit code 1 (use -v to see invocation)
 - Each C++ libary provides two files, the includes for compiler.
 - The library for the linker.
 - Why c++ doesn't  have a package manager, because developers don't buy this.
+
+
+#### 4. The linker search path
+
+1. In speak of searching path, the system environment variables comes into my mind.
+- such as path.
+2. The second option that comes into my mind is maybe not the linker related
+environment variable.
+
+
+```cpp
+man ld
+/* the output is:
+ld maintains a list of directories to search for a library or framework to use.
+The default library search path is /usr/lib then /usr/local/lib.  The -L option
+will add a new library search path.  The default framework search path is
+/Library/Frameworks then /System/Library/Frameworks.  (Note: previously,
+/Network/Library/Frameworks was at the end of the default path.  If you need
+that functionality, you need to explicitly add -F/Network/Library/Frameworks).
+The -F option will add a new framework search path.  The -Z option will remove
+the standard search paths.  The -syslibroot option will prepend a prefix to all
+search paths
+*/
+```
+
+Second method
+
+```shell
+ld -v 2
+/* the output is: 
+//@(#)PROGRAM:ld  PROJECT:ld64-450.3
+BUILD 23:30:59 Feb  5 2020
+configured to support archs: i386 x86_64 x86_64h armv6 armv7 armv7s armv7m armv7k arm64
+Library search paths:
+        /usr/lib
+        /usr/local/lib
+Framework search paths:
+        /Library/Frameworks/
+        /System/Library/Frameworks/
+ld: file not found: 2
+*/
+```
+
+
+

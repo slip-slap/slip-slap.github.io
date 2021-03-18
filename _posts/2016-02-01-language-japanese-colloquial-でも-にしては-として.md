@@ -8,7 +8,6 @@ tags: ["日本語"]
 ---
 {% include JB/setup %}
 
-
 ### 1.　にしても・として
 
 #### 1.1 にしては (for considering)
