@@ -18,8 +18,14 @@ tags: ["editor","script"]
 
 
 
+#### Json compilation database
+1. format
+- directory: all path specified in the command or file field must be either relative or absolute to this path.
+
+
 #### reference
 
 1. [YouCompleteMe](https://github.com/ycm-core/YouCompleteMe)
 2. [YouCompleteMe Trouble Shooting](https://github.com/ycm-core/YouCompleteMe/wiki/Troubleshooting-steps-for-ycmd-server-SHUT-DOWN)
 3. [build completeme](https://stackoverflow.com/questions/40108521/difficulty-with-python-while-installing-youcompleteme-in-vim)
+4. [JSON compilation database](https://clang.llvm.org/docs/JSONCompilationDatabase.html)

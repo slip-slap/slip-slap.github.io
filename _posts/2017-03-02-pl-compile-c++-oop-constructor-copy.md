@@ -10,8 +10,14 @@ tags: ["c++","compile"]
 
 #### 1. When to use?
 1. Copy constructor is called when a new object is created from an existing object, as a copy of the
-existing object
-- pass an object to an argument of a function need copy constructor
+existing object, it will be called in the following case.
+- pass an object to an argument of a function need copy constructor.
+- When an object of the class is returned by value.
+- When an object of class is passed to a function by vaule as an argument.
+- When an object is constructed based on another object of the same class.
+- When then compiler generates a temporary object.
+
+- 
 2. Assignment operator is called when an already initialized object is assigned a new value from
    another existing object.
 

@@ -1,0 +1,20 @@
+I"s
+<h4 id="string-literal">String literal</h4>
+<p>The string literal is stored in the read-only part of memory by most of the compilers. The C
+and C++ standards say that string literals have static storage duration, any attempt at modifying
+them gives undefined behaviour.</p>
+
+<h4 id="string-and-string-literal">string and string literal</h4>
+<ol>
+  <li>the c_str() function returns the value of string class.
+    <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+#include &lt;string&gt;
+</span><span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+ <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">name</span><span class="o">=</span><span class="s">"liam"</span><span class="p">;</span>
+ <span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">name</span><span class="p">.</span><span class="n">c_str</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+:ET

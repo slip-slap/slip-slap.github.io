@@ -1,14 +1,25 @@
-I"Ñ+<h4 id="1-when-to-use">1. When to use?</h4>
+I".<h4 id="1-when-to-use">1. When to use?</h4>
 <ol>
   <li>Copy constructor is called when a new object is created from an existing object, as a copy of the
-existing object
+existing object, it will be called in the following case.
     <ul>
-      <li>pass an object to an argument of a function need copy constructor</li>
+      <li>pass an object to an argument of a function need copy constructor.</li>
+      <li>When an object of the class is returned by value.</li>
+      <li>When an object of class is passed to a function by vaule as an argument.</li>
+      <li>When an object is constructed based on another object of the same class.</li>
+      <li>When then compiler generates a temporary object.</li>
     </ul>
   </li>
-  <li>Assignment operator is called when an already initialized object is assigned a new value from
-another existing object.</li>
 </ol>
+
+<ul>
+  <li>
+    <ol>
+      <li>Assignment operator is called when an already initialized object is assigned a new value from
+another existing object.</li>
+    </ol>
+  </li>
+</ul>
 
 <h4 id="2-why-argument-to-a-copy-constructor-must-be-passed-as-a-reference">2. Why argument to a copy constructor must be passed as a reference?</h4>
 <p>A copy constructor is called when an object is passed by value. Copy constructor itself is a
@@ -60,6 +71,9 @@ a network connection.</li>
     <ul>
       <li>when you try to push an object into a list container, it call the objectâ€™s
 copy constructor.</li>
+      <li>for a container, it also allocate memory on the heap.</li>
+      <li>the code line.addDote(dot1) would allocate new memory, and now the new memory
+is control by the container.</li>
     </ul>
   </li>
 </ol>

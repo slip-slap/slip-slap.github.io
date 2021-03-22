@@ -8,7 +8,7 @@ tags: ["cmake","script"]
 --- 
 {% include JB/setup %}
 
-#### I
+#### 1. What is cmake?
 CMake is a string-oriented language.
 CMake is a string-oriented language.
 CMake is a string-oriented language.
@@ -46,6 +46,12 @@ CMake is a string-oriented language.
    actually will be translated into corresponding make language, such as
    compile, link etc.
 
+#### Galois
+1. At first, I think cmake is easy, I don't take it as a programming language.
+2. Second, I take cmake too complicate.
+3. Finaly, cmake is just a programming language, it follows most programming language patterns.
+- you define a variable in another cmake script, you load it, then you can use this veriable.
+- you define a function, also know as, a command, you load it, then you can call it.
 
 
 #### Reference

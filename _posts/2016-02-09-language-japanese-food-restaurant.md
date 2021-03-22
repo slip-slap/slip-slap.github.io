@@ -47,6 +47,13 @@ slight intimacy and respect.
 1. 横入る人
 
 
+#### Difference
+1. 頼む: to ask something
+2. 注文する: to ask someone to do it as well, but it sounds bossy.
+
+
+
+
 #### Reference
 1. [御馳走](http://maggiesensei.com/2009/08/31/itadakimasu-gochisou-sama/)
 2. [ラメーン屋さん](https://japanese.stackexchange.com/questions/16049/is-%E3%81%8A%E5%AF%BF%E5%8F%B8%E5%B1%8B%E3%81%95%E3%82%93-personification)

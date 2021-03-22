@@ -1,0 +1,92 @@
+I"�
+<p><a href="https://cmake.org/cmake/help/v3.0/module/FindPkgConfig.html">官方文档</a>看完直接想吐。<br />
+上代码</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>find_package(PkgConfig REQUIRED)
+#pkg_check_modules(FOO,OPENCV) 这是错误写法，中间没有逗号，而且有空格
+pkg_check_modules(FOO OPENCV)
+include_directories(${FOO_INCLUDE_DIRS})
+target_link_libraries(untitled ${FOO_LIBRARIES})
+</code></pre></div></div>
+
+<h4 id="what-is-module">What is module?</h4>
+<p>The shortest answer is code reuse.</p>
+<ul>
+  <li>cmake is programming language.</li>
+  <li>code reuse just a common technique for programming.</li>
+</ul>
+
+<h4 id="1-find-module">1. Find module</h4>
+<ol>
+  <li>A module’s location can be specified using the full path to the module file</li>
+  <li>cmake would look for modules in the directories specified by the CMAKE_MODULE_PATH</li>
+  <li>if it can’t find it there, it will look in the module subdirectory in the cmake.</li>
+</ol>
+
+<h4 id="2-what-is-pkgconfig">2. What is pkgconfig</h4>
+<p>pkg-config program is used to retrieve information about installed libaries in the system. 
+It is typically used to compile and link against one or more libraries.</p>
+
+<ul>
+  <li>if you go to /usr/local/lib folder, many file with an extension end with .pc,
+it stores the header file position and linked libraries position.</li>
+  <li>CMake use this pkgconfig program to find the header file and library file.</li>
+</ul>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="n">PKG_CONFIG_PATH</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">pkgconfig</span>
+</code></pre></div></div>
+
+<h4 id="define-a-cmake-module">Define a cmake module</h4>
+<ol>
+  <li>If you go to cmake installation location, you will find a file named FindPkgConfig.cmake
+    <ul>
+      <li>in this folder, it defines two new commands</li>
+      <li>pkg_check_modules and pkg_search_module
+```cmake
+#[========================================[.rst:
+FindPkgConfig
+————-</li>
+    </ul>
+  </li>
+</ol>
+
+<p>A <code class="language-plaintext highlighter-rouge">pkg-config</code> module for CMake.</p>
+
+<p>Finds the <code class="language-plaintext highlighter-rouge">pkg-config</code> executable and adds the :command:<code class="language-plaintext highlighter-rouge">pkg_get_variable</code>,
+:command:<code class="language-plaintext highlighter-rouge">pkg_check_modules</code> and :command:<code class="language-plaintext highlighter-rouge">pkg_search_module</code> commands. The
+following variables will also be set:</p>
+
+<p><code class="language-plaintext highlighter-rouge">PKG_CONFIG_FOUND</code>
+  if pkg-config executable was found
+<code class="language-plaintext highlighter-rouge">PKG_CONFIG_EXECUTABLE</code>
+  pathname of the pkg-config program
+<code class="language-plaintext highlighter-rouge">PKG_CONFIG_VERSION_STRING</code>
+  version of pkg-config (since CMake 2.8.8)</p>
+
+<p>#]========================================]</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+
+##### Example
+1. root CMakeLists.txt file
+
+```cmake
+list(APPEND CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake_modules/")
+find_package(foo REQUIRED)
+</code></pre></div></div>
+
+<ol>
+  <li>FindFoo.cmake file in cmak_modules
+    <div class="language-cmake highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># the `pkg_check_modules` function is created with this call</span>
+<span class="nb">find_package</span><span class="p">(</span>PkgConfig REQUIRED<span class="p">)</span>
+<span class="nb">message</span><span class="p">(</span><span class="s2">"pkgconfig found: "</span> <span class="si">${</span><span class="nv">PKG_CONFIG_FOUND</span><span class="si">}</span><span class="p">)</span>
+<span class="nb">message</span><span class="p">(</span><span class="s2">"pkgconfig version: "</span> <span class="si">${</span><span class="nv">PKG_CONFIG_VERSION_STRING</span><span class="si">}</span><span class="p">)</span>
+<span class="nf">pkg_check_modules</span><span class="p">(</span>Opencv4 REQUIRED Opencv4<span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h4 id="reference">Reference</h4>
+<ol>
+  <li><a href="https://askubuntu.com/questions/210210/pkg-config-path-environment-variable">pkgconfig</a></li>
+</ol>
+:ET

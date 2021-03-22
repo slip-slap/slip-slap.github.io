@@ -3,7 +3,7 @@
   <title>Just Do It</title>
   <link href="/atom.xml" rel="self"/>
   <link href=""/>
-  <updated>2021-03-18T22:43:24+09:00</updated>
+  <updated>2021-03-22T11:47:35+09:00</updated>
   <id></id>
   <author>
     <name>reed</name>
@@ -10784,6 +10784,22 @@ A
   </entry>
 
   <entry>
+    <title>C++ Type: String literal</title>
+    <link href="/pl/pl-compile-c++-type-string-literal.html"/>
+    <updated>2017-03-08T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-type-string-literal</id>
+    <content type="html">
+String literal
+The string literal is stored in the read-only part of memory by most of the compilers. The C
+and C++ standards say that string literals have static storage duration, any attempt at modifying
+them gives undefined behaviour.
+
+string and string literal
+
+  the c_str() function returns...</content>
+  </entry>
+
+  <entry>
     <title>C++: Memory Management</title>
     <link href="/pl/pl-compile-c++-resource-management.html"/>
     <updated>2017-03-08T00:00:00+09:00</updated>
@@ -11653,12 +11669,10 @@ A aa=a //copy constructor;
     <content type="html">1. When to use?
 
   Copy constructor is called when a new object is created from an existing object, as a copy of the
-existing object
+existing object, it will be called in the following case.
     
-      pass an object to an argument of a function need copy constructor
-    
-  
-  Assignment operator is called when an already initialized object is assigned ...</content>
+      pass an object to an argument of a function need copy constructor.
+      When an object of the class is returne...</content>
   </entry>
 
   <entry>
@@ -11774,7 +11788,14 @@ Introduction
   Iterator
   Algorithm
 
-</content>
+
+Introduction
+
+  std::vector manages its own memory. That means that, when the destructor of
+a vector is invoked the memory held by the vector is released.
+    
+      std::vector also invokes an object’s destructor when it is removed
+through(thro...</content>
   </entry>
 
   <entry>
@@ -12176,7 +12197,7 @@ help grid.
     <updated>2017-02-15T00:00:00+09:00</updated>
     <id>/pl/pl-script-cmake-intro</id>
     <content type="html">
-I
+1. What is cmake?
 CMake is a string-oriented language.
 CMake is a string-oriented language.
 CMake is a string-oriented language.
@@ -12187,7 +12208,7 @@ CMake is a string-oriented language.
 Organization
 
   CMake input files are written in the “CMake Language” in source files named
-CMakeLists.txt or ending in ...</content>
+CMakeLists.t...</content>
   </entry>
 
   <entry>
@@ -12342,9 +12363,9 @@ Before use this command, I get a couple of questions?
 
   <entry>
     <title>CMake: Modules</title>
-    <link href="/pl/pl-script-cmake-pkg-check-modules.html"/>
+    <link href="/pl/pl-script-cmake-module.html"/>
     <updated>2017-02-05T00:00:00+09:00</updated>
-    <id>/pl/pl-script-cmake-pkg-check-modules</id>
+    <id>/pl/pl-script-cmake-module</id>
     <content type="html">
 官方文档看完直接想吐。
 上代码
@@ -12355,7 +12376,10 @@ include_directories(${FOO_INCLUDE_DIRS})
 target_link_libraries(untitled ${FOO_LIBRARIES})
 
 
-</content>
+What is module?
+The shortest answer is code reuse.
+
+  cmake is programming...</content>
   </entry>
 
   <entry>
@@ -13556,7 +13580,7 @@ using them in any shell script.
     <updated>2017-01-08T00:00:00+09:00</updated>
     <id>/pl/pl-script-shell-variables</id>
     <content type="html">
-Intro
+1. Intro
 
   Variable names are case-sensitive
   their values are of type string
@@ -13568,9 +13592,9 @@ type of data assigned to a variable; it treats them all as strings.
   
 
 
-Example
+1.1 Example
 
-a=z					# assign the string &quot;z...</content>
+a=z					# assign the st...</content>
   </entry>
 
   <entry>
@@ -18209,6 +18233,11 @@ Sentence
   コツはある
   カルタをやりたい
 
+
+####
+
+  甲子園(こうしえん)
+
 </content>
   </entry>
 
@@ -20014,10 +20043,13 @@ C
 
   誰やねん: who the fuck are you?
   何の質問やねん: what the fuck are you asking
-  どこがやねん: where is the damn place
-
-
-</content>
+  
+    どこがやねん: where is the damn place
+  
+  なんでやねん
+    
+      litterallly means why is that?
+      なんで ...</content>
   </entry>
 
   <entry>

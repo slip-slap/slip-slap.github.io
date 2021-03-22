@@ -1,0 +1,67 @@
+I"�	
+<h4 id="1-what-is-cmake">1. What is cmake?</h4>
+<p>CMake is a string-oriented language.
+CMake is a string-oriented language.
+CMake is a string-oriented language.</p>
+<ul>
+  <li>After you understand this, everything will be very clear.</li>
+</ul>
+
+<h4 id="organization">Organization</h4>
+<ol>
+  <li>CMake input files are written in the “CMake Language” in source files named
+<strong>CMakeLists.txt</strong> or ending in a <strong>.cmake</strong> file name extension. CMake
+Language source files in a project are organized into:
+    <ul>
+      <li>Directories</li>
+      <li>Scripts</li>
+      <li>Modules</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="cmake">CMake</h4>
+<ol>
+  <li>You must treat Cmake as a programming language with <strong>special syntax</strong>, how
+to treat cmake as a programming language, things you need keep in mind
+    <ul>
+      <li>treat every statement with parenthesis as a function, figure out the function
+mean and related parameters</li>
+      <li>it’s a special language, because it has predefined variable, you need pay
+attention.</li>
+    </ul>
+  </li>
+  <li>Compared with maven, all the required library is in local, it doesn’t have
+default catagory structure.</li>
+  <li>Both of them need configuration file, maven need “pom.xml”, cmake needs
+“CMakeLists.txt”</li>
+</ol>
+
+<h4 id="with-make">With Make</h4>
+<ol>
+  <li>Make is designed to debug c language, but it’s not easy to use.</li>
+  <li>So cmake comes out, the code you write in CMakeLists.txt would be translated
+to Makefile.</li>
+  <li>for example <strong>add_executable(Tutorial tutorial.cxx)</strong> in CMakeLists,
+actually will be translated into corresponding make language, such as
+compile, link etc.</li>
+</ol>
+
+<h4 id="galois">Galois</h4>
+<ol>
+  <li>At first, I think cmake is easy, I don’t take it as a programming language.</li>
+  <li>Second, I take cmake too complicate.</li>
+  <li>Finaly, cmake is just a programming language, it follows most programming language patterns.
+    <ul>
+      <li>you define a variable in another cmake script, you load it, then you can use this veriable.</li>
+      <li>you define a function, also know as, a command, you load it, then you can call it.</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="reference">Reference</h4>
+<ol>
+  <li><a href="https://cmake.org/cmake/help/latest/guide/tutorial/index.html">document</a></li>
+  <li><a href="https://gitlab.kitware.com/cmake/community/-/wikis/doc/cmake/Useful-Variables">Cmake Variable</a></li>
+</ol>
+:ET

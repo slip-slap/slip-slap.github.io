@@ -11,7 +11,7 @@
 <head>
   <meta charset="UTF-8">
 
-  <title>CMake: Modules - Just Do It</title>
+  <title>C++ Type: String literal - Just Do It</title>
   <meta name="keywords" content="">
   
   <meta name="author" content="reed">
@@ -166,7 +166,7 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">986</span>
+<span title="文章总数">987</span>
 <ul>
 
 
@@ -3571,7 +3571,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#March-2017">2017 年 03 月 (71)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2017">2017 年 03 月 (72)</a></li>
     
   
 
@@ -5248,7 +5253,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (232)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (233)</a></li>
 
   <li><a href="/categories.html#Algorithm-ref">Algorithm (80)</a></li>
 
@@ -5372,7 +5377,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#c++-ref" style="font-size: 13pt; color: #555;">c++</a>
+    <a href="/tags.html#c++-ref" style="font-size: 13.5pt; color: #555;">c++</a>
   
     
     
@@ -6078,25 +6083,25 @@ $(document).ready(function() {
       <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
 
     <header>
-      <h1>CMake: Modules</h1>
+      <h1>C++ Type: String literal</h1>
     </header>
 
     <section>
       <div class="post-extra">
         <div class="pull-left">
-          <span>05 February 2017</span>
+          <span>08 March 2017</span>
         </div>
         <div class="pull-right">
           
 
 
   <span id="share">
-  <a class="wechat" target="_blank" title="分享到微信" href="http://chart.apis.google.com/chart?cht=qr&amp;chs=300x300&amp;chl=/pl/pl-script-cmake-pkg-check-modules.html"><i class="icon-large icon-wechat"></i></a>
-  <a class="weibo" target="_blank" title="分享到微博" href="http://service.weibo.com/share/share.php?title=CMake: Modules - Just Do It&amp;url=/pl/pl-script-cmake-pkg-check-modules.html&amp;type=3&amp;searchPic=1"><i class="icon-large icon-weibo"></i></a>
-  <a class="qzone" target="_blank" title="分享到 QQ 空间" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=/pl/pl-script-cmake-pkg-check-modules.html&amp;title=CMake: Modules - Just Do It&amp;summary=&amp;site="><i class="icon-large icon-qzone"></i></a>
-  <a class="twitter" target="_blank" title="Share to Twitter" href="https://twitter.com/intent/tweet?url=/pl/pl-script-cmake-pkg-check-modules.html&amp;text=CMake: Modules - Just Do It&amp;via="><i class="icon-large icon-twitter"></i></a>
-  <a class="facebook" target="_blank" title="Share to Facebook" href="http://www.facebook.com/sharer.php?u=/pl/pl-script-cmake-pkg-check-modules.html&amp;t=CMake: Modules - Just Do It"><i class="icon-large icon-facebook-sign"></i></a>
-  <a class="googleplus" target="_blank" title="Share to Google+" href="https://plus.google.com/share?url=/pl/pl-script-cmake-pkg-check-modules.html"><i class="icon-large icon-google-plus-sign"></i></a>
+  <a class="wechat" target="_blank" title="分享到微信" href="http://chart.apis.google.com/chart?cht=qr&amp;chs=300x300&amp;chl=/pl/pl-compile-c++-type-string-literal.html"><i class="icon-large icon-wechat"></i></a>
+  <a class="weibo" target="_blank" title="分享到微博" href="http://service.weibo.com/share/share.php?title=C++ Type: String literal - Just Do It&amp;url=/pl/pl-compile-c++-type-string-literal.html&amp;type=3&amp;searchPic=1"><i class="icon-large icon-weibo"></i></a>
+  <a class="qzone" target="_blank" title="分享到 QQ 空间" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=/pl/pl-compile-c++-type-string-literal.html&amp;title=C++ Type: String literal - Just Do It&amp;summary=&amp;site="><i class="icon-large icon-qzone"></i></a>
+  <a class="twitter" target="_blank" title="Share to Twitter" href="https://twitter.com/intent/tweet?url=/pl/pl-compile-c++-type-string-literal.html&amp;text=C++ Type: String literal - Just Do It&amp;via="><i class="icon-large icon-twitter"></i></a>
+  <a class="facebook" target="_blank" title="Share to Facebook" href="http://www.facebook.com/sharer.php?u=/pl/pl-compile-c++-type-string-literal.html&amp;t=C++ Type: String literal - Just Do It"><i class="icon-large icon-facebook-sign"></i></a>
+  <a class="googleplus" target="_blank" title="Share to Google+" href="https://plus.google.com/share?url=/pl/pl-compile-c++-type-string-literal.html"><i class="icon-large icon-google-plus-sign"></i></a>
 </span>
 
 
@@ -6106,14 +6111,28 @@ $(document).ready(function() {
         </div>
       </div>
       
-<p><a href="https://cmake.org/cmake/help/v3.0/module/FindPkgConfig.html">官方文档</a>看完直接想吐。<br />
-上代码</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>find_package(PkgConfig REQUIRED)
-#pkg_check_modules(FOO,OPENCV) 这是错误写法，中间没有逗号，而且有空格
-pkg_check_modules(FOO OPENCV)
-include_directories(${FOO_INCLUDE_DIRS})
-target_link_libraries(untitled ${FOO_LIBRARIES})
-</code></pre></div></div>
+<h4 id="string-literal">String literal</h4>
+<p>The string literal is stored in the read-only part of memory by most of the compilers. The C
+and C++ standards say that string literals have static storage duration, any attempt at modifying
+them gives undefined behaviour.</p>
+
+<h4 id="string-and-string-literal">string and string literal</h4>
+<ol>
+  <li>the c_str() function returns the value of string class.
+    <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+#include &lt;string&gt;
+</span><span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+ <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">name</span><span class="o">=</span><span class="s">"liam"</span><span class="p">;</span>
+ <span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">name</span><span class="p">.</span><span class="n">c_str</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h4 id="reference">Reference</h4>
+<ol>
+  <li><a href="https://www.geeksforgeeks.org/whats-difference-between-char-s-and-char-s-in-c/">char array and char pointer</a></li>
+</ol>
 
 
       
@@ -6143,7 +6162,7 @@ target_link_libraries(untitled ${FOO_LIBRARIES})
   
      
     	<li><a href="/categories.html#PL-ref">
-    		PL <span>232</span>
+    		PL <span>233</span>
     	</a></li>
     
   
@@ -6162,9 +6181,9 @@ target_link_libraries(untitled ${FOO_LIBRARIES})
 
   
      
-    	<li><a href="/tags.html#cmake-ref">cmake <span>11</span></a></li>
+    	<li><a href="/tags.html#c++-ref">c++ <span>57</span></a></li>
      
-    	<li><a href="/tags.html#script-ref">script <span>118</span></a></li>
+    	<li><a href="/tags.html#compile-ref">compile <span>71</span></a></li>
     
   
 
@@ -6177,11 +6196,11 @@ target_link_libraries(untitled ${FOO_LIBRARIES})
   <div class="pagination">
     <ul>
       
-      <li class="prev"><a href="/pl/pl-script-make-rule.html" title="Make: Rules">&larr; 上一篇</a></li>
+      <li class="prev"><a href="/pl/pl-compile-c++-resource-management.html" title="C++: Memory Management">&larr; 上一篇</a></li>
       
       <li><a href="/archive.html">文章列表</a></li>
       
-      <li class="next"><a href="/pl/pl-script-cmake-system-insepction.html" title="CMake: System Inspection">下一篇 &rarr;</a></li>
+      <li class="next"><a href="/pl/pl-compile-c++-version-c++11-smart-pointer.html" title="C++ 11: Smart Pointer">下一篇 &rarr;</a></li>
       
     </ul>
   </div>
@@ -6199,9 +6218,9 @@ target_link_libraries(untitled ${FOO_LIBRARIES})
     var disqus_developer = 1;
     var disqus_shortname = 'just-do-it-1';
     
-    var disqus_identifier = 'CMake: Modules';
-    var disqus_title = 'CMake: Modules';
-    var disqus_url = '/pl/pl-script-cmake-pkg-check-modules.html';
+    var disqus_identifier = 'C++ Type: String literal';
+    var disqus_title = 'C++ Type: String literal';
+    var disqus_url = '/pl/pl-compile-c++-type-string-literal.html';
     
     
     (function() {

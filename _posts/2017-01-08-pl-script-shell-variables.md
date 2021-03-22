@@ -9,7 +9,7 @@ tags: ["shell","script"]
 {% include JB/setup %}
 
 
-#### Intro
+#### 1. Intro
 1. Variable names are case-sensitive
 2. their values are of type string
 - reference
@@ -17,7 +17,7 @@ tags: ["shell","script"]
   type of data assigned to a variable; it treats them all as strings.
 
 
-#### Example
+##### 1.1 Example
 
 ```shell
 a=z					# assign the string "z" to variable a.
@@ -26,7 +26,7 @@ d=$(ls -l foo.txt)  # results of a command
 ```
 
 
-#### Example
+##### 1.2 Example
 
 ```shell
 filename="myfile"
@@ -45,3 +45,16 @@ part of variable name.
 "${variable_name}/directory"
 ```
 
+#### 2. Environment variables
+
+1. Every installed program maybe registered or need some system environment variables.
+-  for example, the pkgconfig need **PKG\_CONFIG\_PATH** infromation
+
+```shell
+" check all the environment variables in this machine
+env
+```
+
+
+#### Reference
+1. [system environment variables](https://linuxize.com/post/how-to-set-and-list-environment-variables-in-linux/)

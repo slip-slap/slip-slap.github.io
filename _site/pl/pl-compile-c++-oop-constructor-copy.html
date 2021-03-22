@@ -166,7 +166,7 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">986</span>
+<span title="文章总数">987</span>
 <ul>
 
 
@@ -3571,7 +3571,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#March-2017">2017 年 03 月 (71)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2017">2017 年 03 月 (72)</a></li>
     
   
 
@@ -5248,7 +5253,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (232)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (233)</a></li>
 
   <li><a href="/categories.html#Algorithm-ref">Algorithm (80)</a></li>
 
@@ -5372,7 +5377,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#c++-ref" style="font-size: 13pt; color: #555;">c++</a>
+    <a href="/tags.html#c++-ref" style="font-size: 13.5pt; color: #555;">c++</a>
   
     
     
@@ -6108,14 +6113,25 @@ $(document).ready(function() {
       <h4 id="1-when-to-use">1. When to use?</h4>
 <ol>
   <li>Copy constructor is called when a new object is created from an existing object, as a copy of the
-existing object
+existing object, it will be called in the following case.
     <ul>
-      <li>pass an object to an argument of a function need copy constructor</li>
+      <li>pass an object to an argument of a function need copy constructor.</li>
+      <li>When an object of the class is returned by value.</li>
+      <li>When an object of class is passed to a function by vaule as an argument.</li>
+      <li>When an object is constructed based on another object of the same class.</li>
+      <li>When then compiler generates a temporary object.</li>
     </ul>
   </li>
-  <li>Assignment operator is called when an already initialized object is assigned a new value from
-another existing object.</li>
 </ol>
+
+<ul>
+  <li>
+    <ol>
+      <li>Assignment operator is called when an already initialized object is assigned a new value from
+another existing object.</li>
+    </ol>
+  </li>
+</ul>
 
 <h4 id="2-why-argument-to-a-copy-constructor-must-be-passed-as-a-reference">2. Why argument to a copy constructor must be passed as a reference?</h4>
 <p>A copy constructor is called when an object is passed by value. Copy constructor itself is a
@@ -6259,7 +6275,7 @@ is control by the container.</li>
   
      
     	<li><a href="/categories.html#PL-ref">
-    		PL <span>232</span>
+    		PL <span>233</span>
     	</a></li>
     
   
@@ -6278,9 +6294,9 @@ is control by the container.</li>
 
   
      
-    	<li><a href="/tags.html#c++-ref">c++ <span>56</span></a></li>
+    	<li><a href="/tags.html#c++-ref">c++ <span>57</span></a></li>
      
-    	<li><a href="/tags.html#compile-ref">compile <span>70</span></a></li>
+    	<li><a href="/tags.html#compile-ref">compile <span>71</span></a></li>
     
   
 
