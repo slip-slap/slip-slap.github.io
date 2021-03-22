@@ -166,7 +166,7 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">986</span>
+<span title="文章总数">987</span>
 <ul>
 
 
@@ -3571,7 +3571,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#March-2017">2017 年 03 月 (71)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2017">2017 年 03 月 (72)</a></li>
     
   
 
@@ -5248,7 +5253,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (232)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (233)</a></li>
 
   <li><a href="/categories.html#Algorithm-ref">Algorithm (80)</a></li>
 
@@ -5372,7 +5377,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#c++-ref" style="font-size: 13pt; color: #555;">c++</a>
+    <a href="/tags.html#c++-ref" style="font-size: 13.5pt; color: #555;">c++</a>
   
     
     
@@ -6113,6 +6118,39 @@ $(document).ready(function() {
   <li>Algorithm</li>
 </ol>
 
+<h4 id="introduction-1">Introduction</h4>
+<ol>
+  <li>std::vector manages its own memory. That means that, when the destructor of
+a vector is invoked the memory held by the vector is released.
+    <ul>
+      <li>std::vector also invokes an object’s destructor when it is removed
+through(through erase, pop_back, clear or the vector’s destructor)</li>
+    </ul>
+  </li>
+  <li>What does this command do?
+    <ul>
+      <li>you add a copy of foo(created using foo’s copy constructor) to the vector.
+foo will be destroyed when it goes out of scope, and the copy will be
+destroyed when it is removed from the vector.</li>
+      <li>That’s an important point: std::vector only stores copies of an object, which
+means the object must have a meaning full copy constructor.</li>
+      <li>If you have a vector of pointers, then the pointer itself will be copied, and
+not what it points to.</li>
+      <li>This behavior is the same for every standard container(like list or map)</li>
+    </ul>
+  </li>
+</ol>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Foo</span> <span class="n">foo</span><span class="p">;</span>
+<span class="n">m_foo_vector</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">foo</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h4 id="reference">Reference</h4>
+<ol>
+  <li><a href="https://stackoverflow.com/questions/7382090/c-vector-push-back">container behaviour</a></li>
+</ol>
+
+
       
       <footer>
         <p>
@@ -6140,7 +6178,7 @@ $(document).ready(function() {
   
      
     	<li><a href="/categories.html#PL-ref">
-    		PL <span>232</span>
+    		PL <span>233</span>
     	</a></li>
     
   
@@ -6159,9 +6197,9 @@ $(document).ready(function() {
 
   
      
-    	<li><a href="/tags.html#c++-ref">c++ <span>56</span></a></li>
+    	<li><a href="/tags.html#c++-ref">c++ <span>57</span></a></li>
      
-    	<li><a href="/tags.html#compile-ref">compile <span>70</span></a></li>
+    	<li><a href="/tags.html#compile-ref">compile <span>71</span></a></li>
     
   
 
