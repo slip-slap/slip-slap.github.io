@@ -166,7 +166,7 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">987</span>
+<span title="文章总数">991</span>
 <ul>
 
 
@@ -3576,7 +3576,17 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#March-2017">2017 年 03 月 (72)</a></li>
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2017">2017 年 03 月 (74)</a></li>
     
   
 
@@ -3729,7 +3739,17 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#February-2017">2017 年 02 月 (30)</a></li>
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#February-2017">2017 年 02 月 (32)</a></li>
     
   
 
@@ -5253,7 +5273,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (233)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (237)</a></li>
 
   <li><a href="/categories.html#Algorithm-ref">Algorithm (80)</a></li>
 
@@ -5293,7 +5313,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#英語-ref" style="font-size: 18pt; color: #000;">英語</a>
+    <a href="/tags.html#英語-ref" style="font-size: 17.5pt; color: #000;">英語</a>
   
     
     
@@ -5531,7 +5551,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#構造-ref" style="font-size: 13.5pt; color: #444;">構造</a>
+    <a href="/tags.html#構造-ref" style="font-size: 13.5pt; color: #555;">構造</a>
   
     
     
@@ -5678,7 +5698,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#apply-ref" style="font-size: 17pt; color: #111;">apply</a>
+    <a href="/tags.html#apply-ref" style="font-size: 16.5pt; color: #111;">apply</a>
   
     
     
@@ -6122,6 +6142,88 @@ it’s public.</li>
   </li>
 </ol>
 
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;algorithm&gt; // std::copy
+#include &lt;cstddef&gt; // std::size_t
+#include &lt;iostream&gt;
+</span><span class="k">class</span> <span class="nc">String</span><span class="p">{</span>
+	<span class="nl">public:</span>
+		<span class="n">String</span><span class="p">(</span><span class="kt">char</span><span class="o">*</span> <span class="n">char_arr</span><span class="p">);</span>
+		<span class="n">String</span><span class="p">(</span><span class="k">const</span> <span class="n">String</span><span class="o">&amp;</span> <span class="n">other</span><span class="p">);</span>
+		<span class="n">String</span><span class="p">(</span><span class="n">String</span><span class="o">&amp;&amp;</span> <span class="n">other</span><span class="p">);</span>
+
+		<span class="o">~</span><span class="n">String</span><span class="p">();</span>
+
+		<span class="c1">// it is a member function</span>
+		<span class="n">String</span><span class="o">&amp;</span> <span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="n">String</span> <span class="n">other</span><span class="p">);</span>
+		<span class="n">String</span><span class="o">&amp;</span> <span class="k">operator</span><span class="o">+</span><span class="p">(</span><span class="k">const</span> <span class="n">String</span><span class="o">&amp;</span> <span class="n">other</span><span class="p">);</span>
+
+		<span class="k">friend</span> <span class="kt">void</span> <span class="n">swap</span><span class="p">(</span><span class="n">String</span><span class="o">&amp;</span> <span class="n">fst</span><span class="p">,</span> <span class="n">String</span><span class="o">&amp;</span> <span class="n">sec</span><span class="p">);</span>
+		<span class="k">friend</span> <span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">out</span><span class="p">,</span> <span class="n">String</span><span class="o">&amp;</span> <span class="n">other</span><span class="p">);</span>
+
+	<span class="nl">private:</span>
+		<span class="n">std</span><span class="o">::</span><span class="kt">size_t</span> <span class="n">m_Size</span><span class="p">;</span>
+		<span class="kt">char</span><span class="o">*</span> <span class="n">m_Array</span><span class="p">;</span>
+
+<span class="p">};</span>
+
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+	<span class="kt">char</span><span class="o">*</span> <span class="n">liam</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">char</span><span class="p">[</span><span class="mi">5</span><span class="p">];</span>
+	<span class="kt">char</span><span class="o">*</span> <span class="n">joana</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">char</span><span class="p">[</span><span class="mi">6</span><span class="p">];</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">memcpy</span><span class="p">(</span><span class="n">liam</span><span class="p">,</span><span class="s">"liam"</span><span class="p">,</span><span class="mi">4</span><span class="p">);</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">memcpy</span><span class="p">(</span><span class="n">joana</span><span class="p">,</span><span class="s">"joana"</span><span class="p">,</span><span class="mi">5</span><span class="p">);</span>
+	<span class="c1">//for(int i=0;i&lt;5;i++){std::cout&lt;&lt;liam[i];}</span>
+	<span class="n">String</span> <span class="n">name1</span><span class="p">(</span><span class="n">liam</span><span class="p">);</span>
+	<span class="n">String</span> <span class="n">name2</span><span class="p">(</span><span class="n">joana</span><span class="p">);</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">name1</span><span class="o">+</span><span class="n">name2</span><span class="p">;</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">String</span><span class="o">::</span><span class="n">String</span><span class="p">(</span><span class="kt">char</span><span class="o">*</span> <span class="n">char_arr</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="n">m_Size</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">strlen</span><span class="p">(</span><span class="n">char_arr</span><span class="p">)</span> <span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+	<span class="n">m_Array</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">char</span><span class="p">[</span><span class="n">m_Size</span><span class="p">];</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">memcpy</span><span class="p">(</span><span class="n">m_Array</span><span class="p">,</span> <span class="n">char_arr</span><span class="p">,</span> <span class="n">m_Size</span><span class="p">);</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"construstor"</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="n">String</span><span class="o">::</span><span class="n">String</span><span class="p">(</span><span class="k">const</span> <span class="n">String</span><span class="o">&amp;</span> <span class="n">other</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="n">m_Array</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">char</span><span class="p">[</span><span class="n">other</span><span class="p">.</span><span class="n">m_Size</span><span class="p">];</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"copy construstor"</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">copy</span><span class="p">(</span><span class="n">other</span><span class="p">.</span><span class="n">m_Array</span><span class="p">,</span> <span class="n">other</span><span class="p">.</span><span class="n">m_Array</span><span class="o">+</span><span class="n">m_Size</span><span class="p">,</span> <span class="n">m_Array</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="n">String</span><span class="o">::</span><span class="n">String</span><span class="p">(</span><span class="n">String</span><span class="o">&amp;&amp;</span> <span class="n">other</span><span class="p">){</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"move semantics"</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">String</span><span class="o">::~</span><span class="n">String</span><span class="p">(){</span>
+			<span class="k">delete</span><span class="p">[]</span> <span class="n">m_Array</span><span class="p">;</span>
+		<span class="p">}</span>
+<span class="n">String</span><span class="o">&amp;</span> <span class="n">String</span><span class="o">::</span><span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="n">String</span> <span class="n">other</span><span class="p">){</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"assignment operator"</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+	<span class="n">swap</span><span class="p">(</span><span class="o">*</span><span class="k">this</span><span class="p">,</span> <span class="n">other</span><span class="p">);</span>
+	<span class="k">return</span> <span class="o">*</span><span class="k">this</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">String</span><span class="o">&amp;</span> <span class="n">String</span><span class="o">::</span><span class="k">operator</span><span class="o">+</span><span class="p">(</span><span class="k">const</span> <span class="n">String</span><span class="o">&amp;</span> <span class="n">other</span><span class="p">){</span>
+	<span class="n">m_Size</span><span class="o">=</span> <span class="n">other</span><span class="p">.</span><span class="n">m_Size</span> <span class="o">+</span> <span class="n">m_Size</span><span class="p">;</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">copy</span><span class="p">(</span><span class="n">other</span><span class="p">.</span><span class="n">m_Array</span><span class="p">,</span> <span class="n">other</span><span class="p">.</span><span class="n">m_Array</span><span class="o">+</span><span class="n">other</span><span class="p">.</span><span class="n">m_Size</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">m_Array</span><span class="o">+</span><span class="mi">4</span><span class="p">);</span>
+	<span class="k">return</span> <span class="o">*</span><span class="k">this</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">out</span><span class="p">,</span> <span class="n">String</span><span class="o">&amp;</span> <span class="n">other</span><span class="p">){</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">other</span><span class="p">.</span><span class="n">m_Array</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+	<span class="k">return</span> <span class="n">out</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">swap</span><span class="p">(</span><span class="n">String</span><span class="o">&amp;</span> <span class="n">fst</span><span class="p">,</span> <span class="n">String</span><span class="o">&amp;</span> <span class="n">sec</span><span class="p">){</span>
+		<span class="n">std</span><span class="o">::</span><span class="n">swap</span><span class="p">(</span><span class="n">fst</span><span class="p">.</span><span class="n">m_Size</span><span class="p">,</span> <span class="n">sec</span><span class="p">.</span><span class="n">m_Size</span><span class="p">);</span>
+		<span class="n">std</span><span class="o">::</span><span class="n">swap</span><span class="p">(</span><span class="n">fst</span><span class="p">.</span><span class="n">m_Array</span><span class="p">,</span> <span class="n">sec</span><span class="p">.</span><span class="n">m_Array</span><span class="p">);</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
 <h4 id="galois">Galois</h4>
 <ol>
   <li>Static class members are treated almost exactly like global variables/functions. Because they are
@@ -6135,6 +6237,12 @@ have its own unique value for every member variable.</li>
   <li>Class member functions only exist once in a code segment in memory. At a low level, they are just
 like normal global functions but they receive a pointer to this. With Visual studio on x86, it’s
 via ecx register using thiscall calling convention.</li>
+</ol>
+
+<h4 id="reference">Reference</h4>
+<ol>
+  <li><a href="https://stackoverflow.com/questions/3106110/what-is-move-semantics#:~:text=Move%20semantics%20is%20about%20transferring,code%20uses%20the%20value%20again.">Move semantics</a></li>
+  <li><a href="https://stackoverflow.com/questions/3279543/what-is-the-copy-and-swap-idiom">copy and swap idiom</a></li>
 </ol>
 
 
@@ -6165,7 +6273,7 @@ via ecx register using thiscall calling convention.</li>
   
      
     	<li><a href="/categories.html#PL-ref">
-    		PL <span>233</span>
+    		PL <span>237</span>
     	</a></li>
     
   
@@ -6184,9 +6292,9 @@ via ecx register using thiscall calling convention.</li>
 
   
      
-    	<li><a href="/tags.html#c++-ref">c++ <span>57</span></a></li>
+    	<li><a href="/tags.html#c++-ref">c++ <span>59</span></a></li>
      
-    	<li><a href="/tags.html#compile-ref">compile <span>71</span></a></li>
+    	<li><a href="/tags.html#compile-ref">compile <span>73</span></a></li>
     
   
 
@@ -6199,7 +6307,7 @@ via ecx register using thiscall calling convention.</li>
   <div class="pagination">
     <ul>
       
-      <li class="prev"><a href="/pl/pl-script-latex-tikz-pgf-tree.html" title="Tikz and pfg: Tree">&larr; 上一篇</a></li>
+      <li class="prev"><a href="/pl/pl-compile-c++-oop-assignment-operator.html" title="C++ OOP: Assignment Operator">&larr; 上一篇</a></li>
       
       <li><a href="/archive.html">文章列表</a></li>
       
