@@ -3,7 +3,7 @@
   <title>Just Do It</title>
   <link href="/atom.xml" rel="self"/>
   <link href=""/>
-  <updated>2021-03-22T11:47:35+09:00</updated>
+  <updated>2021-03-27T00:19:20+09:00</updated>
   <id></id>
   <author>
     <name>reed</name>
@@ -7029,22 +7029,21 @@ OS
     <updated>2017-10-21T00:00:00+09:00</updated>
     <id>/cs/computer-science-operation-system-directory-structure</id>
     <content type="html">
-proc
+1. proc
 
   linux提供了一种通过/proc文件系统，在运行时访问内核内部数据结构，改变内核设置的机制。
   proc文件系统是一个伪文件系统，只存在内存中，不占用外存空间
   /proc下有三个很重要的目录，net，scsi和sys；sys是可写的，可以通过它来访问或者修改内核参数
 
 
-常用设置
+1.1 常用设置
 # 关闭icmp协议
 sysctl -w net.ipv4.icmp_echo_ignore_all=1
 
 
-Galois
+2. /opt and /usr/local
 
-  The directory structure of an operating system must have hierarch
-property, be...</content>
+  In the old days, the /opt directory is used for UNIX ve...</content>
   </entry>
 
   <entry>
@@ -11208,17 +11207,11 @@ macro guard, header guard of file guard.
 I
 
   const is a fake keyword, it’s just a promise.
-
-
-with pointer
-
-  computer read a statement backward
     
-      const int * A: A is a pointer to an int that is constant;
-      int * const A: A is a const pointer to an int;
-      const int * const A: A is a const pointer to an const int.
-    
-...</content>
+      the qualifier const can be applied to the declaration of any variable to specify that its
+value will not be changed.
+      const keyword applies to whatever is immediately to its left.
+      if there is nothing to its left, it applies...</content>
   </entry>
 
   <entry>
@@ -11692,9 +11685,30 @@ it’s public.
   
 
 
+#include &amp;lt;algorithm&amp;gt; // ...</content>
+  </entry>
+
+  <entry>
+    <title>C++ OOP: Assignment Operator</title>
+    <link href="/pl/pl-compile-c++-oop-assignment-operator.html"/>
+    <updated>2017-03-02T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-oop-assignment-operator</id>
+    <content type="html">1.
+
+  the assignment operator has to be a member function
+
+
+
+  why? Because the default operator= provided by the compiler would always take precedence
+  your friend operator= would never be called.
+
+
 Galois
 
-  Static class members...</content>
+  why assignment has to be member function
+
+
+</content>
   </entry>
 
   <entry>
@@ -11728,6 +11742,24 @@ your life eazier by providing a easy-to-learn and easy-to-use syntax for describ
 
 
 You c...</content>
+  </entry>
+
+  <entry>
+    <title>C++:  Library</title>
+    <link href="/pl/pl-compile-c++-library.html"/>
+    <updated>2017-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-library</id>
+    <content type="html">
+1.  .a extension and .dylib extension
+
+  .a extension means a static library.
+    
+      Static libraries allow application to load code into its address space at compile time.
+      This results in a larger size in disk and slower launch times.
+    
+  
+  .dylib extension means dynamic library
+ ...</content>
   </entry>
 
   <entry>
@@ -12249,6 +12281,23 @@ determine the build order and the rules for regeneraton to change
   </entry>
 
   <entry>
+    <title>CMake: Difference</title>
+    <link href="/pl/pl-script-cmake-difference.html"/>
+    <updated>2017-02-12T00:00:00+09:00</updated>
+    <id>/pl/pl-script-cmake-difference</id>
+    <content type="html">
+1. include_directories and target_include_directories
+
+  
+    include_directories(x/y): affects directory scope. All targets in this
+CMakeList, as well as those in all subdirectores add after the point of its
+call, will have the path x/y added to their include path.
+  
+  
+    target_include_dire...</content>
+  </entry>
+
+  <entry>
     <title>CMake: Concept</title>
     <link href="/pl/pl-script-cmake-concept.html"/>
     <updated>2017-02-12T00:00:00+09:00</updated>
@@ -12380,6 +12429,22 @@ What is module?
 The shortest answer is code reuse.
 
   cmake is programming...</content>
+  </entry>
+
+  <entry>
+    <title>CMake: Modern CMake</title>
+    <link href="/pl/pl-script-cmake-modern.html"/>
+    <updated>2017-02-05T00:00:00+09:00</updated>
+    <id>/pl/pl-script-cmake-modern</id>
+    <content type="html">
+1 What’s the difference?
+
+  the old cmake command is directory oriented.
+  the modern cmake is target oriented.
+    
+      Modern cmake = targets + properties
+      Setting properties: include directories, preprocessor, compilation and linking flags
+      Using(linking with) libraries behaves li...</content>
   </entry>
 
   <entry>

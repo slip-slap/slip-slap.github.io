@@ -11,6 +11,10 @@ tags: ["c++","compile"]
 
 #### I
 1. const is a fake keyword, it's just a promise.
+- the qualifier const can be applied to the declaration of any variable to specify that its
+value will not be changed.
+- const keyword applies to whatever is immediately to its left.
+- if there is nothing to its left, it applies to whatever is immediately to its right.
 
 #### with pointer
 1. computer read a statement backward
@@ -75,6 +79,9 @@ int main()
 
 ```
 
+
+#### Reference
+1. [difference between const char](https://www.geeksforgeeks.org/difference-const-char-p-char-const-p-const-char-const-p/)
 
 
 
