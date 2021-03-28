@@ -16,7 +16,12 @@ tags: ["c++","compile"]
 2. .dylib extension means dynamic library
 - Dynamic libraries allow an application to load code into its address space at runtime.
 
+#### 2. What is package relocatablility 
+1. package can be used across the filesystem without changes to itself or environment
+2. A file needs to know where it is, and the relative path from that to what it needs.
 
 
 #### Reference
 1. [static library and dynamic library](https://stackoverflow.com/questions/40841670/what-is-the-difference-between-dylib-and-a-lib-in-ios)
+2. [library relocatablility](https://indico.cern.ch/event/848215/contributions/3591953/attachments/1923018/3181752/HSFPackagingRelocation.pdf)
+3. [library relocatablility github](https://github.com/drbenmorgan/Resourceful)

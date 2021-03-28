@@ -1,0 +1,35 @@
+I"œ<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include&lt;iostream&gt;
+</span><span class="k">class</span> <span class="nc">Student</span><span class="p">{</span>
+	<span class="nl">public:</span>
+		<span class="n">Student</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span>  <span class="n">m_name</span><span class="p">){</span>
+			<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"create"</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+		<span class="p">}</span>
+		<span class="n">Student</span><span class="p">(</span><span class="k">const</span> <span class="n">Student</span><span class="o">&amp;</span> <span class="n">other</span><span class="p">){</span>
+			<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"copy"</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+		<span class="p">}</span>
+
+		<span class="n">Student</span><span class="p">(</span><span class="n">Student</span><span class="o">&amp;&amp;</span> <span class="n">other</span><span class="p">){</span>
+			<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"move"</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+		<span class="p">}</span>
+		<span class="o">~</span><span class="n">Student</span><span class="p">(){</span>
+		<span class="p">}</span>
+<span class="p">};</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="n">Student</span> <span class="n">jenifer</span><span class="p">(</span><span class="s">"noone"</span><span class="p">);</span>
+	<span class="c1">// call copy constructor, because jenifer is a left value</span>
+	<span class="n">Student</span>  <span class="n">william</span> <span class="o">=</span> <span class="n">jenifer</span><span class="p">;</span>
+	<span class="c1">// call move constructor, because Student("zhang") is a right value</span>
+	<span class="n">Student</span> <span class="n">robert</span><span class="p">(</span><span class="n">Student</span><span class="p">(</span><span class="s">"zhang"</span><span class="p">));</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"#################"</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h4 id="reference">Reference</h4>
+<ol>
+  <li><a href="https://stackoverflow.com/questions/3106110/what-is-move-semantics#:~:text=Move%20semantics%20is%20about%20transferring,code%20uses%20the%20value%20again.">What is move semantics</a></li>
+</ol>
+
+:ET

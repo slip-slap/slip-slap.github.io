@@ -28,3 +28,7 @@ tags: ["c++","compile"]
 2. Uninitalized data segment(BSS): All the global and static variables that were
    either not initialized, or initialized to zero, are stored in this segment.
 
+
+#### Reference
+1. [ISO CPP memory management](https://isocpp.org/wiki/faq/freestore-mgmt)
+

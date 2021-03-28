@@ -1,0 +1,33 @@
+I"�
+<h4 id="h">H</h4>
+<ol>
+  <li>A resource is something that must be acquired and later released
+    <ul>
+      <li>Explicitly or implicitly</li>
+      <li>Resource mangagement should not be manual, <strong>we don’t want leaks</strong></li>
+    </ul>
+  </li>
+  <li>A resource should have an owner
+    <ul>
+      <li>usually a “handle” “handle” should present a well-defined and useful
+abstraction.</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="raii">RAII</h4>
+
+<h4 id="layout">Layout</h4>
+<ol>
+  <li>Initilized data segment: all the global &amp; static variables that were
+initialized to a non-zero values, and all constant data, are stored here.</li>
+  <li>Uninitalized data segment(BSS): All the global and static variables that were
+either not initialized, or initialized to zero, are stored in this segment.</li>
+</ol>
+
+<h4 id="reference">Reference</h4>
+<ol>
+  <li><a href="https://isocpp.org/wiki/faq/freestore-mgmt">ISO CPP memory management</a></li>
+</ol>
+
+:ET

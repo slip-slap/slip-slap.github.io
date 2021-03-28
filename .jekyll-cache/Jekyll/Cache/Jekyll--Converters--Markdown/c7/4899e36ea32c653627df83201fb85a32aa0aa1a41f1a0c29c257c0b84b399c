@@ -1,0 +1,99 @@
+I"
+<h4 id="1-whats-the-difference">1 What’s the difference?</h4>
+<ol>
+  <li>the old cmake command is directory oriented.</li>
+  <li>the modern cmake is target oriented.
+    <ul>
+      <li>Modern cmake = targets + properties</li>
+      <li>Setting properties: include directories, preprocessor, compilation and linking flags</li>
+      <li>Using(linking with) libraries behaves like inheritance</li>
+    </ul>
+  </li>
+</ol>
+
+<h5 id="11--commands-comparsion">1.1  Commands comparsion</h5>
+<ol>
+  <li>include_directories(&lt;include_path&gt;)
+    <ul>
+      <li>target_include_directories(&lt;target&gt; [VISIBILITY] &lt;include_path&gt;)</li>
+    </ul>
+  </li>
+  <li>add_definitions(&lt;preprocessor_flags&gt;)
+    <ul>
+      <li>_compile_definitions (&lt;target&gt; [VISIBILITY] &lt;preprocessor_flags&gt;)</li>
+    </ul>
+  </li>
+  <li>set(CMAKE_CXX_FLAGS &lt;compilation_flags&gt;)
+    <ul>
+      <li>target_compiler_options (&lt;target&gt; [VISIBILITY] &lt;compilation_flags&gt;)</li>
+    </ul>
+  </li>
+  <li>set(CMAKE_LINKER_FLAGS &lt;linker_flags&gt;)
+    <ul>
+      <li>target_linker_options (&lt;target&gt; [VISIBILITY] &lt;linker_flags&gt;)</li>
+    </ul>
+  </li>
+</ol>
+
+<h5 id="12-include_directories-and-target_include_directories">1.2 include_directories and target_include_directories</h5>
+<ol>
+  <li>
+    <p>include_directories(x/y): affects directory scope. All targets in this
+CMakeList, as well as those in all subdirectores add after the point of its
+call, will have the path x/y added to their include path.</p>
+  </li>
+  <li>
+    <p>target_include_directories(target_name x/y): adds x/y to the include path for target.</p>
+  </li>
+</ol>
+
+<ul>
+  <li>You want the former one if all of your targets use the include directories in question. You want the 
+latter one if the path is specific to a target.</li>
+  <li>if you want finer control of the path’s visibility. The latter comes from the
+fact that target_include_directores() support the PRIVATE, PUBLIC, and INTERFACE qualifiers.</li>
+</ul>
+
+<h4 id="2-targets-and-properties">2 Targets and Properties</h4>
+<p>Modern CMake is all about targets and properties.</p>
+<ul>
+  <li>An executable is a target, A library is a target</li>
+  <li>Targets have properties. Properties of a target are the source files it’s
+build from, the compiler options it requires, the libraries it links against.</li>
+</ul>
+
+<h4 id="21-properties">2.1 Properties</h4>
+<p>Target properties are defined in one of two scopes: INTERFACE and PRIVATE.</p>
+<ul>
+  <li>Private properties are used internally to build the target</li>
+  <li>Interface properties are used externall by users of the target</li>
+  <li>The word <strong>build</strong> here is very vividly,</li>
+</ul>
+
+<h4 id="example">Example</h4>
+<ol>
+  <li>The following grammar complete treat the target JSONUtils as a class, with
+PUBLIC, PRIVATE qualifiers.</li>
+</ol>
+
+<div class="language-cmake highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">target_include_directories</span><span class="p">(</span>JSONUtils
+	PUBLIC
+		$&lt;INSTALL_INTERFACE:include&gt;
+		$&lt;BUILD_INTERFACE:<span class="si">${</span><span class="nv">CMAKE_CURRENT_SOURCE_DIR</span><span class="si">}</span>/include&gt;$
+	PRIVATE
+		<span class="si">${</span><span class="nv">CMAKE_CURRENT_SOURCE_DIR</span><span class="si">}</span>/src
+<span class="p">)</span>
+
+	
+</code></pre></div></div>
+
+<h4 id="reference">Reference</h4>
+<ol>
+  <li><a href="https://levelup.gitconnected.com/simple-modern-cmake-tutorial-b0c1c362cd2c">Simple modern cmake</a></li>
+  <li><a href="https://pabloariasal.github.io/2018/02/19/its-time-to-do-cmake-right/">It’s time to do cmake right</a></li>
+  <li><a href="https://kubasejdak.com/modern-cmake-is-like-inheritance">Modern cmake is like inheritance</a></li>
+  <li><a href="http://mariobadr.com/creating-a-header-only-library-with-cmake.html">Header only cmake</a></li>
+  <li><a href="https://stackoverflow.com/questions/31969547/what-is-the-difference-between-include-directories-and-target-include-directorie">include directories and target include directories</a></li>
+</ol>
+
+:ET

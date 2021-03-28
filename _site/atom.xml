@@ -3,7 +3,7 @@
   <title>Just Do It</title>
   <link href="/atom.xml" rel="self"/>
   <link href=""/>
-  <updated>2021-03-27T00:19:20+09:00</updated>
+  <updated>2021-03-28T12:55:31+09:00</updated>
   <id></id>
   <author>
     <name>reed</name>
@@ -12224,10 +12224,10 @@ help grid.
   </entry>
 
   <entry>
-    <title>CMake: Philosophy</title>
-    <link href="/pl/pl-script-cmake-intro.html"/>
+    <title>CMake: language</title>
+    <link href="/pl/pl-script-cmake-language.html"/>
     <updated>2017-02-15T00:00:00+09:00</updated>
-    <id>/pl/pl-script-cmake-intro</id>
+    <id>/pl/pl-script-cmake-language</id>
     <content type="html">
 1. What is cmake?
 CMake is a string-oriented language.
@@ -12263,67 +12263,9 @@ Variable
   </entry>
 
   <entry>
-    <title>CMake: Build System</title>
-    <link href="/pl/pl-script-cmake-buildsystem.html"/>
-    <updated>2017-02-13T00:00:00+09:00</updated>
-    <id>/pl/pl-script-cmake-buildsystem</id>
-    <content type="html">
-####
-
-  A CMake-based buildsystem is organized as a set of high-level logical
-targets.
-  Each target corresponds to an executable or library.
-  Dependencies between the targets are expressed in the buildsystem to
-determine the build order and the rules for regeneraton to change
-
-
-</content>
-  </entry>
-
-  <entry>
-    <title>CMake: Difference</title>
-    <link href="/pl/pl-script-cmake-difference.html"/>
-    <updated>2017-02-12T00:00:00+09:00</updated>
-    <id>/pl/pl-script-cmake-difference</id>
-    <content type="html">
-1. include_directories and target_include_directories
-
-  
-    include_directories(x/y): affects directory scope. All targets in this
-CMakeList, as well as those in all subdirectores add after the point of its
-call, will have the path x/y added to their include path.
-  
-  
-    target_include_dire...</content>
-  </entry>
-
-  <entry>
-    <title>CMake: Concept</title>
-    <link href="/pl/pl-script-cmake-concept.html"/>
-    <updated>2017-02-12T00:00:00+09:00</updated>
-    <id>/pl/pl-script-cmake-concept</id>
-    <content type="html">
-####
-
-  CMake’s execution begins by creating an instance of the cmake class and
-passing the command line arguments to it.
-
-</content>
-  </entry>
-
-  <entry>
-    <title>CMake: Control Structures</title>
-    <link href="/pl/pl-script-cmake-control-structures.html"/>
-    <updated>2017-02-08T00:00:00+09:00</updated>
-    <id>/pl/pl-script-cmake-control-structures</id>
-    <content type="html">
-</content>
-  </entry>
-
-  <entry>
     <title>CMake: Container</title>
     <link href="/pl/pl-script-cmake-container.html"/>
-    <updated>2017-02-08T00:00:00+09:00</updated>
+    <updated>2017-02-13T00:00:00+09:00</updated>
     <id>/pl/pl-script-cmake-container</id>
     <content type="html">List
 The lisb subcommands APPEND INSERT FILTER REMOVE_ITEM REVERSE SORT may create new values for the
@@ -12334,30 +12276,10 @@ a list with a;b;c;d;e;, and set set(var “a b c d e”) cr...</content>
   </entry>
 
   <entry>
-    <title>CMake: Compiler Setting</title>
-    <link href="/pl/pl-script-cmake-compile-features.html"/>
-    <updated>2017-02-08T00:00:00+09:00</updated>
-    <id>/pl/pl-script-cmake-compile-features</id>
-    <content type="html">
-Method
-
-  Generator can specify the compiler, some generators are tied to a specific
-compiler.
-  Set  environment variable
-  cache entry
-
-
-CMake will try a list of usual compilers until it finds a working compiler, the
-list can be found in the files
-
-/usr/local/Cellar/cmake/3.17.3/share/cmake/Mo...</content>
-  </entry>
-
-  <entry>
-    <title>CMake: Scripting Commands</title>
-    <link href="/pl/pl-script-cmake-commands-script.html"/>
-    <updated>2017-02-08T00:00:00+09:00</updated>
-    <id>/pl/pl-script-cmake-commands-script</id>
+    <title>CMake: Script</title>
+    <link href="/pl/pl-script-cmake-script.html"/>
+    <updated>2017-02-12T00:00:00+09:00</updated>
+    <id>/pl/pl-script-cmake-script</id>
     <content type="html">
 Examples
 
@@ -12374,46 +12296,17 @@ message(&quot;Hello world!&quot;)         # A message to print
 cmake -P hello.txt
 
 
-Reference
+add_subdirectory() vs include()
+The reason I have this question is I have no idea about the three components in cmake
 
-  CMake Scripting Language
-
-
-</content>
-  </entry>
-
-  <entry>
-    <title>CMake: Command-Line Tools</title>
-    <link href="/pl/pl-script-cmake-command-line-tool.html"/>
-    <updated>2017-02-08T00:00:00+09:00</updated>
-    <id>/pl/pl-script-cmake-command-line-tool</id>
-    <content type="html">
-1. cmake
-2. ctest
-3. cpack
-</content>
-  </entry>
-
-  <entry>
-    <title>CMake: System Inspection</title>
-    <link href="/pl/pl-script-cmake-system-insepction.html"/>
-    <updated>2017-02-06T00:00:00+09:00</updated>
-    <id>/pl/pl-script-cmake-system-insepction</id>
-    <content type="html">
-Question: search path?
-Before use this command, I get a couple of questions?
-
-  What is the search path?
-    
-      CMake provide default search path, one of them is CMAKE_SYSTEM_PREFIX_PATH.
-      you can print this variable in the CMakelists.txt
-      you can add another path into this CMAKE_P...</content>
+  script
+...</content>
   </entry>
 
   <entry>
     <title>CMake: Modules</title>
     <link href="/pl/pl-script-cmake-module.html"/>
-    <updated>2017-02-05T00:00:00+09:00</updated>
+    <updated>2017-02-12T00:00:00+09:00</updated>
     <id>/pl/pl-script-cmake-module</id>
     <content type="html">
 官方文档看完直接想吐。
@@ -12432,19 +12325,101 @@ The shortest answer is code reuse.
   </entry>
 
   <entry>
-    <title>CMake: Modern CMake</title>
-    <link href="/pl/pl-script-cmake-modern.html"/>
-    <updated>2017-02-05T00:00:00+09:00</updated>
-    <id>/pl/pl-script-cmake-modern</id>
+    <title>CMake: System Inspection</title>
+    <link href="/pl/pl-script-cmake-system-insepction.html"/>
+    <updated>2017-02-10T00:00:00+09:00</updated>
+    <id>/pl/pl-script-cmake-system-insepction</id>
     <content type="html">
-1 What’s the difference?
+Question: search path?
+Before use this command, I get a couple of questions?
+
+  What is the search path?
+    
+      CMake provide default search path, one of them is CMAKE_SYSTEM_PREFIX_PATH.
+      you can print this variable in the CMakelists.txt
+      you can add another path into this CMAKE_P...</content>
+  </entry>
+
+  <entry>
+    <title>CMake: Library setting</title>
+    <link href="/pl/pl-script-cmake-library-setting.html"/>
+    <updated>2017-02-09T00:00:00+09:00</updated>
+    <id>/pl/pl-script-cmake-library-setting</id>
+    <content type="html">1. Object-oriented Code
+
+  Create an object
+
+
+add_library(libA src/A.cpp)
+
+
+
+  member function: call member function to set object property
+    
+      act like Object-oriented programming paradigm to set the data(include path) to the object.
+      Just like a normal Setter function.
+    
+  
+
+
+tar...</content>
+  </entry>
+
+  <entry>
+    <title>CMake: Compiler Setting</title>
+    <link href="/pl/pl-script-cmake-compile-setting.html"/>
+    <updated>2017-02-08T00:00:00+09:00</updated>
+    <id>/pl/pl-script-cmake-compile-setting</id>
+    <content type="html">
+Method
+
+  Generator can specify the compiler, some generators are tied to a specific
+compiler.
+  Set  environment variable
+  cache entry
+
+
+CMake will try a list of usual compilers until it finds a working compiler, the
+list can be found in the files
+
+/usr/local/Cellar/cmake/3.17.3/share/cmake/Mo...</content>
+  </entry>
+
+  <entry>
+    <title>CMake: Modern Style</title>
+    <link href="/pl/pl-script-cmake-modern-style.html"/>
+    <updated>2017-02-07T00:00:00+09:00</updated>
+    <id>/pl/pl-script-cmake-modern-style</id>
+    <content type="html">
+1 What’s the previous style?
 
   the old cmake command is directory oriented.
   the modern cmake is target oriented.
     
       Modern cmake = targets + properties
       Setting properties: include directories, preprocessor, compilation and linking flags
-      Using(linking with) libraries behaves li...</content>
+      Using(linking with) libraries behave...</content>
+  </entry>
+
+  <entry>
+    <title>CMake: Source Code</title>
+    <link href="/pl/pl-script-cmake-source-code.html"/>
+    <updated>2017-02-05T00:00:00+09:00</updated>
+    <id>/pl/pl-script-cmake-source-code</id>
+    <content type="html">The entry
+
+  The entry point to cmake is under the cmakemain.cxx
+
+
+int main(int ac, char const* const* av)
+{
+  cmSystemTools::EnsureStdPipes();
+
+  // Replace streambuf so we can output Unicode to console
+  auto consoleBuf = cm::make_unique&amp;lt;cmConsoleBuf&amp;gt;();
+  consoleBuf-&amp;gt;SetUTF8Pipes();
+
+...</content>
   </entry>
 
   <entry>

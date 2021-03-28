@@ -1,6 +1,6 @@
 --- 
 layout: post 
-title: "CMake: Philosophy" 
+title: "CMake: language" 
 keywords: [] 
 description: 
 category: "PL"
@@ -55,5 +55,8 @@ CMake is a string-oriented language.
 
 
 #### Reference
+1. [cmake language](https://cmake.org/cmake/help/latest/manual/cmake-language.7.html)
 1. [document](https://cmake.org/cmake/help/latest/guide/tutorial/index.html)
 2. [Cmake Variable](https://gitlab.kitware.com/cmake/community/-/wikis/doc/cmake/Useful-Variables)
+3. [cmake commands summary](https://cmake.org/cmake/help/latest/manual/cmake-commands.7.html#scripting-commands)
+

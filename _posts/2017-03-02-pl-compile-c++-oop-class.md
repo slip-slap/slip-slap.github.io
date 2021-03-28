@@ -115,5 +115,6 @@ void swap(String& fst, String& sec){
 #### Reference
 1. [Move semantics](https://stackoverflow.com/questions/3106110/what-is-move-semantics#:~:text=Move%20semantics%20is%20about%20transferring,code%20uses%20the%20value%20again.)
 2. [copy and swap idiom](https://stackoverflow.com/questions/3279543/what-is-the-copy-and-swap-idiom)
+3. [friend keyword](https://www.programiz.com/cpp-programming/friend-function-class)
 
 
