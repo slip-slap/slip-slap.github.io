@@ -5,8 +5,8 @@
   <description>Just Do It - </description>
   <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
   <link></link>
-  <lastBuildDate>Sun, 28 Mar 2021 12:55:31 +0900</lastBuildDate>
-  <pubDate>Sun, 28 Mar 2021 12:55:31 +0900</pubDate>
+  <lastBuildDate>Fri, 02 Apr 2021 16:55:28 +0900</lastBuildDate>
+  <pubDate>Fri, 02 Apr 2021 16:55:28 +0900</pubDate>
   <ttl>1800</ttl>
 
 
@@ -30856,47 +30856,48 @@ not filled or otherwise used”&lt;/p&gt;
   </item>
 
   <item>
-    <title>Tikz and PGF: Example</title>
-    <description>&lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;\begin{center}&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;\begin{tikzpicture}&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;\tikzstyle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;startstop&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; = [rectangle, rounded corners, minimum width=1.0cm,minimum height=0.6cm, 
-                        text centered, draw=black]
-&lt;span class=&quot;k&quot;&gt;\tikzstyle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;io&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=2cm, 
-                 minimum height=0.6cm, text centered, draw=black]
-&lt;span class=&quot;k&quot;&gt;\tikzstyle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;process&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; = [rectangle, minimum width=3.1cm, minimum height=0.6cm, text centered, draw=black]
-&lt;span class=&quot;k&quot;&gt;\tikzstyle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;decision&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; = [diamond,minimum width=3cm, minimum height=1.2cm, draw=black]
-&lt;span class=&quot;k&quot;&gt;\node&lt;/span&gt; (population) [process] &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Initialize Population&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;;
-&lt;span class=&quot;k&quot;&gt;\node&lt;/span&gt; (fitness) [process, below of=population] &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Fitness&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;;
-&lt;span class=&quot;k&quot;&gt;\node&lt;/span&gt; (decision) [decision] at (&lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;fitness.south&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)+(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cm&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;) &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt; node at (decision.base) &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Converge&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;;
-&lt;span class=&quot;k&quot;&gt;\node&lt;/span&gt; (share-fitness) at (&lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;decision.south&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)+(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cm&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;) [process] &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Share Fitness&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;;
-&lt;span class=&quot;k&quot;&gt;\node&lt;/span&gt; (selection) [process,below of=share-fitness] &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Selection&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;;
-&lt;span class=&quot;k&quot;&gt;\node&lt;/span&gt; (crossover) [process,below of=selection]  &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Crossover&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;;
-&lt;span class=&quot;k&quot;&gt;\node&lt;/span&gt; (mutation) [process,below of=crossover]   &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Mutation&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;;
-&lt;span class=&quot;k&quot;&gt;\node&lt;/span&gt; (end) [startstop] at (&lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;decision.east&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)+(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cm,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;)  &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;End&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;;
-&lt;span class=&quot;k&quot;&gt;\draw&lt;/span&gt; [-&amp;gt;] (population) -- (fitness);
-&lt;span class=&quot;k&quot;&gt;\draw&lt;/span&gt; [-&amp;gt;] (fitness) -- (decision);
-&lt;span class=&quot;k&quot;&gt;\draw&lt;/span&gt; [-&amp;gt;] (decision) -- (share-fitness) node[auto=left,pos=0.5]&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;N&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;;
-&lt;span class=&quot;k&quot;&gt;\draw&lt;/span&gt; [-&amp;gt;] (share-fitness.south) -- (selection.north) ;
-&lt;span class=&quot;k&quot;&gt;\draw&lt;/span&gt; [-&amp;gt;] (selection.south) -- (crossover.north);
-&lt;span class=&quot;k&quot;&gt;\draw&lt;/span&gt; [-&amp;gt;] (crossover.south) -- (mutation.north);
-&lt;span class=&quot;k&quot;&gt;\draw&lt;/span&gt; [-&amp;gt;] (decision.east) -- (end.west) node[auto=left,pos=0.5]&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Y&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;;
+    <title>Tikz and PGF: Scale a tikzpicture</title>
+    <description>&lt;h4 id=&quot;1-scale-a-tikzpicture&quot;&gt;1. Scale a tikzpicture&lt;/h4&gt;
 
-&lt;span class=&quot;c&quot;&gt;% draw intersection&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;\draw&lt;/span&gt; [white] (fitness.west) -- ++(-0.5cm,0) coordinate (A);
-&lt;span class=&quot;k&quot;&gt;\draw&lt;/span&gt; [white] (mutation.west) -- ++(-0.3cm,0) coordinate (B)-- ++(0,6cm) coordinate (C) ; 
-&lt;span class=&quot;k&quot;&gt;\draw&lt;/span&gt; (mutation.west) -- ++(-0.3cm,0) -- (intersection cs: first line=&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;(fitness.west)--(A)&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;, 
-      second line=&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;(B)--(C)&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;) coordinate (D);
-&lt;span class=&quot;k&quot;&gt;\draw&lt;/span&gt; (B) -- (D) node[auto=left,pos=0.8,rotate=90] &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Next Generation&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; ;
-&lt;span class=&quot;k&quot;&gt;\draw&lt;/span&gt; [&amp;lt;-] (fitness.west) -- (D);
+&lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;\begin{tikzpicture}&lt;/span&gt;[thick, scale=0.6]
+	&lt;span class=&quot;k&quot;&gt;\draw&lt;/span&gt; [dashed] (1,12) -- (11, 12);
+	&lt;span class=&quot;k&quot;&gt;\node&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;[above]&lt;/span&gt; at (4,11) &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;1&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;;
 &lt;span class=&quot;nt&quot;&gt;\end{tikzpicture}&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;\captionof&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;figure&lt;span class=&quot;p&quot;&gt;}{&lt;/span&gt;GA Procedure Diagram&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;\label&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;plot:GA&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;\end{center}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
+&lt;h5 id=&quot;11-attention&quot;&gt;1.1 Attention&lt;/h5&gt;
+&lt;p&gt;There are a few things that scaling doesn’t affect;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;The most noticeable are nodes sizes and line width&lt;/li&gt;
+  &lt;li&gt;In a simple picture, it isn’t hard to adjust the line width accordingly but the nodes can be difficult.&lt;/li&gt;
+  &lt;li&gt;It is possible to force a node to be scaled: put the scale option directly in the node’s attributes.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;\node&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;[above, scale=0.6]&lt;/span&gt; at(4,11) &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;true&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;This is annoying to put on every node&lt;/li&gt;
+  &lt;li&gt;we have the &lt;strong&gt;every node&lt;/strong&gt; option&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;\begin{tikzpicture}&lt;/span&gt;[thick, scale=0.6, every node/.style=&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;scale=0.6&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h5 id=&quot;12-global-scale-key&quot;&gt;1.2 global scale key&lt;/h5&gt;
+
+&lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;\tikzset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;global scale/.style&lt;span class=&quot;p&quot;&gt;}{&lt;/span&gt;
+		scale=#1, 
+		every node/.style=&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;scale=#1&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://tex.stackexchange.com/questions/26846/how-to-scale-a-tikzpicture-including-texts&quot;&gt;Tikz scale&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
 </description>
-    <link>/pl/pl-script-latex-tikz-pgf-example.html</link>
-    <guid>/pl/pl-script-latex-tikz-pgf-example</guid>
+    <link>/pl/pl-script-latex-tikz-pgf-scale.html</link>
+    <guid>/pl/pl-script-latex-tikz-pgf-scale</guid>
     <pubDate>Mon, 27 Feb 2017 00:00:00 +0900</pubDate>
   </item>
 
@@ -31059,6 +31060,45 @@ my data my data&lt;span class=&quot;k&quot;&gt;\cite&lt;/span&gt;&lt;span class=
 &lt;span class=&quot;nt&quot;&gt;\end{document}&lt;/span&gt;
 
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;second&quot;&gt;Second&lt;/h4&gt;
+
+&lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;\begin{center}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;\begin{tikzpicture}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\tikzstyle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;startstop&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; = [rectangle, rounded corners, minimum width=1.0cm,minimum height=0.6cm, 
+                        text centered, draw=black]
+&lt;span class=&quot;k&quot;&gt;\tikzstyle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;io&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=2cm, 
+                 minimum height=0.6cm, text centered, draw=black]
+&lt;span class=&quot;k&quot;&gt;\tikzstyle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;process&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; = [rectangle, minimum width=3.1cm, minimum height=0.6cm, text centered, draw=black]
+&lt;span class=&quot;k&quot;&gt;\tikzstyle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;decision&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; = [diamond,minimum width=3cm, minimum height=1.2cm, draw=black]
+&lt;span class=&quot;k&quot;&gt;\node&lt;/span&gt; (population) [process] &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Initialize Population&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;;
+&lt;span class=&quot;k&quot;&gt;\node&lt;/span&gt; (fitness) [process, below of=population] &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Fitness&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;;
+&lt;span class=&quot;k&quot;&gt;\node&lt;/span&gt; (decision) [decision] at (&lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;fitness.south&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)+(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cm&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;) &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt; node at (decision.base) &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Converge&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;;
+&lt;span class=&quot;k&quot;&gt;\node&lt;/span&gt; (share-fitness) at (&lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;decision.south&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)+(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cm&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;) [process] &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Share Fitness&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;;
+&lt;span class=&quot;k&quot;&gt;\node&lt;/span&gt; (selection) [process,below of=share-fitness] &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Selection&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;;
+&lt;span class=&quot;k&quot;&gt;\node&lt;/span&gt; (crossover) [process,below of=selection]  &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Crossover&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;;
+&lt;span class=&quot;k&quot;&gt;\node&lt;/span&gt; (mutation) [process,below of=crossover]   &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Mutation&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;;
+&lt;span class=&quot;k&quot;&gt;\node&lt;/span&gt; (end) [startstop] at (&lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;decision.east&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)+(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cm,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;)  &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;End&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;;
+&lt;span class=&quot;k&quot;&gt;\draw&lt;/span&gt; [-&amp;gt;] (population) -- (fitness);
+&lt;span class=&quot;k&quot;&gt;\draw&lt;/span&gt; [-&amp;gt;] (fitness) -- (decision);
+&lt;span class=&quot;k&quot;&gt;\draw&lt;/span&gt; [-&amp;gt;] (decision) -- (share-fitness) node[auto=left,pos=0.5]&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;N&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;;
+&lt;span class=&quot;k&quot;&gt;\draw&lt;/span&gt; [-&amp;gt;] (share-fitness.south) -- (selection.north) ;
+&lt;span class=&quot;k&quot;&gt;\draw&lt;/span&gt; [-&amp;gt;] (selection.south) -- (crossover.north);
+&lt;span class=&quot;k&quot;&gt;\draw&lt;/span&gt; [-&amp;gt;] (crossover.south) -- (mutation.north);
+&lt;span class=&quot;k&quot;&gt;\draw&lt;/span&gt; [-&amp;gt;] (decision.east) -- (end.west) node[auto=left,pos=0.5]&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Y&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;;
+
+&lt;span class=&quot;c&quot;&gt;% draw intersection&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\draw&lt;/span&gt; [white] (fitness.west) -- ++(-0.5cm,0) coordinate (A);
+&lt;span class=&quot;k&quot;&gt;\draw&lt;/span&gt; [white] (mutation.west) -- ++(-0.3cm,0) coordinate (B)-- ++(0,6cm) coordinate (C) ; 
+&lt;span class=&quot;k&quot;&gt;\draw&lt;/span&gt; (mutation.west) -- ++(-0.3cm,0) -- (intersection cs: first line=&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;(fitness.west)--(A)&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;, 
+      second line=&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;(B)--(C)&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;) coordinate (D);
+&lt;span class=&quot;k&quot;&gt;\draw&lt;/span&gt; (B) -- (D) node[auto=left,pos=0.8,rotate=90] &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Next Generation&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; ;
+&lt;span class=&quot;k&quot;&gt;\draw&lt;/span&gt; [&amp;lt;-] (fitness.west) -- (D);
+&lt;span class=&quot;nt&quot;&gt;\end{tikzpicture}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\captionof&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;figure&lt;span class=&quot;p&quot;&gt;}{&lt;/span&gt;GA Procedure Diagram&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\label&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;plot:GA&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;\end{center}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 </description>
@@ -31392,6 +31432,7 @@ in the body of the table.&lt;/li&gt;
 &lt;span class=&quot;k&quot;&gt;\caption&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Comparison with the results of DSA&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;\label&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;tab:comparision&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;\centering&lt;/span&gt;
+	&lt;span class=&quot;c&quot;&gt;%\resizebox{.9\textwidth}{!}{&lt;/span&gt;
 	&lt;span class=&quot;k&quot;&gt;\resizebox&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;10cm&lt;span class=&quot;p&quot;&gt;}{&lt;/span&gt;!&lt;span class=&quot;p&quot;&gt;}{&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;\begin{tabular}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;c|cccc|lccc&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 	&lt;span class=&quot;k&quot;&gt;\toprule&lt;/span&gt;
@@ -31400,14 +31441,29 @@ in the body of the table.&lt;/li&gt;
 	 &lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;N&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;N&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;N&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;xy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}$&lt;/span&gt;   &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; Optimum lay-up			        &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; laminate  &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; TW &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; MS   &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; Optimum lay-up &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; laminate  &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; TW &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; MS &lt;span class=&quot;k&quot;&gt;\\&lt;/span&gt;
 	  (MPa m)	            &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; sequences					        &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; thickness &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;    &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;      &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; sequences	     &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; thickness &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;    &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;\\&lt;/span&gt;
 	&lt;span class=&quot;k&quot;&gt;\midrule&lt;/span&gt;
-	  10/5/0                 &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;37&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;27&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;37&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;27&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;  108      &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;  1.0068  &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;  1.0277 &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;33&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;29&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;39&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;25&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\bar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;39&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;     109      &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;  1.0074      &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;  1.0246  &lt;span class=&quot;k&quot;&gt;\\&lt;/span&gt;
-	  20/5/0                 &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;31&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;23&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;31&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;23&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;  92       &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;  1.0208  &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;  1.1985 &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;33&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;22&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;31&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;24&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;                      &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;     92      &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;  1.0055       &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;  1.2065    &lt;span class=&quot;k&quot;&gt;\\&lt;/span&gt;
-	  40/5/0                 &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;26&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;26&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;  80       &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;  1.0190  &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;  1.5381 &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;29&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;18&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;21&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;23&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\bar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;21&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;     83      &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;  1.0034       &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;  1.7350   &lt;span class=&quot;k&quot;&gt;\\&lt;/span&gt;
 	  80/5/0                 &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;21&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;25&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;19&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;28&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;  106      &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;  1.0113  &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;  1.2213 &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;27&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;21&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;25&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\bar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;25&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;             &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;     105      &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;  1.0029      &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;  1.2063    &lt;span class=&quot;k&quot;&gt;\\&lt;/span&gt;
 	  120/5/0                &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;17&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;35&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;17&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;35&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;  140      &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;  1.0030  &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;  1.0950 &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;18&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;34&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;17&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;36&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;                     &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;     140      &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;  1.0000      &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;  1.0898     &lt;span class=&quot;k&quot;&gt;\\&lt;/span&gt;
 	&lt;span class=&quot;k&quot;&gt;\bottomrule&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;\end{tabular}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;\end{table}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h5 id=&quot;9-adjustbox&quot;&gt;9. adjustbox&lt;/h5&gt;
+&lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;\begin{table}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\centering&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\caption&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Different Activation Functions&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;\begin{adjustbox}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;width=1&lt;span class=&quot;k&quot;&gt;\textwidth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\label&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;tab:transfer&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;function&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;\begin{tabular}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;lllc&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+			&lt;span class=&quot;k&quot;&gt;\toprule&lt;/span&gt;
+			Type &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; Description  &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; Formula &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; Range  &lt;span class=&quot;k&quot;&gt;\\&lt;/span&gt;
+			&lt;span class=&quot;k&quot;&gt;\midrule&lt;/span&gt;
+			Linear   &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; The output is proportional to the input &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;                  &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\infty&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\infty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;\\&lt;/span&gt;
+			Softplus &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; A family of S-shaped functions          &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt; ln&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;         &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\infty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;\\&lt;/span&gt;
+			&lt;span class=&quot;k&quot;&gt;\bottomrule&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;\end{tabular}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;\end{adjustbox}&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;\end{table}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -31794,6 +31850,14 @@ page&lt;/li&gt;
 
 &lt;h3 id=&quot;3-basic-use&quot;&gt;3. Basic Use&lt;/h3&gt;
 
+&lt;h4 id=&quot;31-scale-a-figure&quot;&gt;3.1 Scale a figure&lt;/h4&gt;
+
+&lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;\begin{figure}&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;\centering&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;\includegraphics&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;[width=0.9\textwidth]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;./a0&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;figure&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;ann&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;for&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;clt&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;architecture.png&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;\end{figure}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
 &lt;h5 id=&quot;32-mutiple-imagessubfigures&quot;&gt;3.2 Mutiple images/subfigures&lt;/h5&gt;
 
 &lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;\begin{figure}&lt;/span&gt;[h!]
@@ -31992,6 +32056,90 @@ inside it.&lt;/li&gt;
     <link>/pl/pl-script-latex-document-structure.html</link>
     <guid>/pl/pl-script-latex-document-structure</guid>
     <pubDate>Tue, 21 Feb 2017 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Tex: Concept</title>
+    <description>&lt;h4 id=&quot;1-active-character&quot;&gt;1. Active character&lt;/h4&gt;
+&lt;p&gt;An active character is a character that has a definition, e.g., a macro definition, associated with it.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;An active character is a special kind of control sequence&lt;/li&gt;
+  &lt;li&gt;If Tex encounters an active character that does not have an associated definition,
+it will complain about an undefined control sequence.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;2-alignment&quot;&gt;2. alignment&lt;/h4&gt;
+&lt;p&gt;An alignment is a construct for aligning material, such as a table, in columns
+or rows. To form an alignment you need to:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;describe the layout of the columns or rows&lt;/li&gt;
+  &lt;li&gt;tell Tex what material goes into the columns or rows&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;3-argument&quot;&gt;3. argument&lt;/h5&gt;
+&lt;p&gt;An argument contains text that is passed to a command.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;The arguments of a command complete the description of what the command is supposed to do.&lt;/li&gt;
+  &lt;li&gt;The command can either be a primitive command or a macro.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;4-glue&quot;&gt;4. Glue&lt;/h4&gt;
+&lt;p&gt;A space or its equivalent between two words in your input doesn’t simply turn
+into a space character in your output.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;A few of these input spaces turn into ends of lines in the output, since input lines generally
+don’t correspoind to output lines.&lt;/li&gt;
+  &lt;li&gt;The others turn into spaces of variable width called “glue”, which has a
+natural size, can be stretch or shrink.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;4-box&quot;&gt;4. box&lt;/h4&gt;
+&lt;p&gt;A box is a rectangle of material to be typeset.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;A single character is a box by itself, and an entire page is also a box.&lt;/li&gt;
+  &lt;li&gt;Tex forms a page as a nest of boxes with boxes with boxes.&lt;/li&gt;
+  &lt;li&gt;The outermost box is the page itself&lt;/li&gt;
+  &lt;li&gt;The inntermost boxes are mostly single characters&lt;/li&gt;
+  &lt;li&gt;Single lines are boxes that are somewhere in the middle.&lt;/li&gt;
+  &lt;li&gt;A line is a box containing a sequence of character boxes, and a page is a box containing a sequence of line boxes.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;5-category-code&quot;&gt;5. category code&lt;/h4&gt;
+&lt;p&gt;The category code of a character determines that character’s role in Tex&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;For instance, Tex assigns a certain role to letters, another to space characters.&lt;/li&gt;
+  &lt;li&gt;Tex attaches a code to each character that it reads. When Tex reads the
+letter ‘r’, for example, it ordinarily attaches the category code 11 to it.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;6-groups&quot;&gt;6. Groups&lt;/h4&gt;
+&lt;p&gt;A group consists of material enclosed in matching left and right braces({ and })&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;By placing a command within a group, you can limit its effects to the material within the group.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;3-anatomy-of-tex&quot;&gt;3. Anatomy of Tex&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Using its “eyes”, Tex reads characters from input files and passes them to
+its mouth. Since an input file can contain \input commands.&lt;/li&gt;
+  &lt;li&gt;Using its mouth, Tex assembles the characters into tokens and passes them to its gullet.&lt;/li&gt;
+  &lt;li&gt;Using gullet, Tex expands any macros, conditionals, and similar constructs
+that it finds and passes the resulting sequence of tokens to Tex’s stomach.&lt;/li&gt;
+  &lt;li&gt;Using stomach&lt;/li&gt;
+  &lt;li&gt;Using its intestines, Tex transforms the pages produced by its stomach into a
+form intended for processing by other programs, it then sends the transformed
+output to the .dvi file.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Tex is a programming language.&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/pl/pl-script-tex-concept.html</link>
+    <guid>/pl/pl-script-tex-concept</guid>
+    <pubDate>Sun, 19 Feb 2017 00:00:00 +0900</pubDate>
   </item>
 
   <item>

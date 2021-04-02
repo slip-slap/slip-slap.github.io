@@ -1,0 +1,77 @@
+I".<h4 id="1-active-character">1. Active character</h4>
+<p>An active character is a character that has a definition, e.g., a macro definition, associated with it.</p>
+<ul>
+  <li>An active character is a special kind of control sequence</li>
+  <li>If Tex encounters an active character that does not have an associated definition,
+it will complain about an undefined control sequence.</li>
+</ul>
+
+<h4 id="2-alignment">2. alignment</h4>
+<p>An alignment is a construct for aligning material, such as a table, in columns
+or rows. To form an alignment you need to:</p>
+<ul>
+  <li>describe the layout of the columns or rows</li>
+  <li>tell Tex what material goes into the columns or rows</li>
+</ul>
+
+<h5 id="3-argument">3. argument</h5>
+<p>An argument contains text that is passed to a command.</p>
+<ul>
+  <li>The arguments of a command complete the description of what the command is supposed to do.</li>
+  <li>The command can either be a primitive command or a macro.</li>
+</ul>
+
+<h4 id="4-glue">4. Glue</h4>
+<p>A space or its equivalent between two words in your input doesn’t simply turn
+into a space character in your output.</p>
+<ul>
+  <li>A few of these input spaces turn into ends of lines in the output, since input lines generally
+don’t correspoind to output lines.</li>
+  <li>The others turn into spaces of variable width called “glue”, which has a
+natural size, can be stretch or shrink.</li>
+</ul>
+
+<h4 id="4-box">4. box</h4>
+<p>A box is a rectangle of material to be typeset.</p>
+<ul>
+  <li>A single character is a box by itself, and an entire page is also a box.</li>
+  <li>Tex forms a page as a nest of boxes with boxes with boxes.</li>
+  <li>The outermost box is the page itself</li>
+  <li>The inntermost boxes are mostly single characters</li>
+  <li>Single lines are boxes that are somewhere in the middle.</li>
+  <li>A line is a box containing a sequence of character boxes, and a page is a box containing a sequence of line boxes.</li>
+</ul>
+
+<h4 id="5-category-code">5. category code</h4>
+<p>The category code of a character determines that character’s role in Tex</p>
+<ul>
+  <li>For instance, Tex assigns a certain role to letters, another to space characters.</li>
+  <li>Tex attaches a code to each character that it reads. When Tex reads the
+letter ‘r’, for example, it ordinarily attaches the category code 11 to it.</li>
+</ul>
+
+<h4 id="6-groups">6. Groups</h4>
+<p>A group consists of material enclosed in matching left and right braces({ and })</p>
+<ul>
+  <li>By placing a command within a group, you can limit its effects to the material within the group.</li>
+</ul>
+
+<h4 id="3-anatomy-of-tex">3. Anatomy of Tex</h4>
+<ul>
+  <li>Using its “eyes”, Tex reads characters from input files and passes them to
+its mouth. Since an input file can contain \input commands.</li>
+  <li>Using its mouth, Tex assembles the characters into tokens and passes them to its gullet.</li>
+  <li>Using gullet, Tex expands any macros, conditionals, and similar constructs
+that it finds and passes the resulting sequence of tokens to Tex’s stomach.</li>
+  <li>Using stomach</li>
+  <li>Using its intestines, Tex transforms the pages produced by its stomach into a
+form intended for processing by other programs, it then sends the transformed
+output to the .dvi file.</li>
+</ul>
+
+<h4 id="galois">Galois</h4>
+<ol>
+  <li>Tex is a programming language.</li>
+</ol>
+
+:ET

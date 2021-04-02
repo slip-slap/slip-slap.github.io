@@ -47,6 +47,15 @@ define new custom floats as well.
 
 ### 3. Basic Use
 
+#### 3.1 Scale a figure
+
+```latex
+\begin{figure}
+	\centering
+	\includegraphics[width=0.9\textwidth]{./a0_figure_ann_for_clt_architecture.png}
+\end{figure}
+```
+
 ##### 3.2 Mutiple images/subfigures 
 
 ```latex
