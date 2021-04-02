@@ -3,7 +3,7 @@
   <title>Just Do It</title>
   <link href="/atom.xml" rel="self"/>
   <link href=""/>
-  <updated>2021-03-28T12:55:31+09:00</updated>
+  <updated>2021-04-02T16:55:28+09:00</updated>
   <id></id>
   <author>
     <name>reed</name>
@@ -11983,16 +11983,23 @@ command and the specification must follow a special syntax.
   </entry>
 
   <entry>
-    <title>Tikz and PGF: Example</title>
-    <link href="/pl/pl-script-latex-tikz-pgf-example.html"/>
+    <title>Tikz and PGF: Scale a tikzpicture</title>
+    <link href="/pl/pl-script-latex-tikz-pgf-scale.html"/>
     <updated>2017-02-27T00:00:00+09:00</updated>
-    <id>/pl/pl-script-latex-tikz-pgf-example</id>
-    <content type="html">\begin{center}
-\begin{tikzpicture}
-\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=1.0cm,minimum height=0.6cm, 
-                        text centered, draw=black]
-\tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=2cm, 
-              ...</content>
+    <id>/pl/pl-script-latex-tikz-pgf-scale</id>
+    <content type="html">1. Scale a tikzpicture
+
+\begin{tikzpicture}[thick, scale=0.6]
+	\draw [dashed] (1,12) -- (11, 12);
+	\node[above] at (4,11) {1};
+\end{tikzpicture}
+
+
+1.1 Attention
+There are a few things that scaling doesn’t affect;
+
+  The most noticeable are nodes sizes and line width
+  In a simple picture, it isn’...</content>
   </entry>
 
   <entry>
@@ -12221,6 +12228,19 @@ help grid.
 \renewcommand{\footrulewidth}{0.0pt}
 
 \newenv...</content>
+  </entry>
+
+  <entry>
+    <title>Tex: Concept</title>
+    <link href="/pl/pl-script-tex-concept.html"/>
+    <updated>2017-02-19T00:00:00+09:00</updated>
+    <id>/pl/pl-script-tex-concept</id>
+    <content type="html">1. Active character
+An active character is a character that has a definition, e.g., a macro definition, associated with it.
+
+  An active character is a special kind of control sequence
+  If Tex encounters an active character that does not have an associated definition,
+it will complain about an u...</content>
   </entry>
 
   <entry>

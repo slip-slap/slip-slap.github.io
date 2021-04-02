@@ -166,7 +166,7 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">988</span>
+<span title="文章总数">989</span>
 <ul>
 
 
@@ -3734,7 +3734,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#February-2017">2017 年 02 月 (29)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#February-2017">2017 年 02 月 (30)</a></li>
     
   
 
@@ -5258,7 +5263,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (234)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (235)</a></li>
 
   <li><a href="/categories.html#Algorithm-ref">Algorithm (80)</a></li>
 
@@ -5382,7 +5387,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#c++-ref" style="font-size: 13.5pt; color: #444;">c++</a>
+    <a href="/tags.html#c++-ref" style="font-size: 13.5pt; color: #555;">c++</a>
   
     
     
@@ -6274,6 +6279,45 @@ my data my data<span class="k">\cite</span><span class="p">{</span>daniel2013pri
 
 </code></pre></div></div>
 
+<h4 id="second">Second</h4>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{center}</span>
+<span class="nt">\begin{tikzpicture}</span>
+<span class="k">\tikzstyle</span><span class="p">{</span>startstop<span class="p">}</span> = [rectangle, rounded corners, minimum width=1.0cm,minimum height=0.6cm, 
+                        text centered, draw=black]
+<span class="k">\tikzstyle</span><span class="p">{</span>io<span class="p">}</span> = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=2cm, 
+                 minimum height=0.6cm, text centered, draw=black]
+<span class="k">\tikzstyle</span><span class="p">{</span>process<span class="p">}</span> = [rectangle, minimum width=3.1cm, minimum height=0.6cm, text centered, draw=black]
+<span class="k">\tikzstyle</span><span class="p">{</span>decision<span class="p">}</span> = [diamond,minimum width=3cm, minimum height=1.2cm, draw=black]
+<span class="k">\node</span> (population) [process] <span class="p">{</span>Initialize Population<span class="p">}</span>;
+<span class="k">\node</span> (fitness) [process, below of=population] <span class="p">{</span>Fitness<span class="p">}</span>;
+<span class="k">\node</span> (decision) [decision] at (<span class="p">$</span><span class="o">(</span><span class="nb">fitness.south</span><span class="o">)+(</span><span class="m">0</span><span class="nb">,</span><span class="o">-</span><span class="m">1</span><span class="nb">.</span><span class="m">0</span><span class="nb">cm</span><span class="o">)</span><span class="p">$</span>) <span class="p">{}</span> node at (decision.base) <span class="p">{</span>Converge<span class="p">}</span>;
+<span class="k">\node</span> (share-fitness) at (<span class="p">$</span><span class="o">(</span><span class="nb">decision.south</span><span class="o">)+(</span><span class="m">0</span><span class="nb">,</span><span class="o">-</span><span class="m">0</span><span class="nb">.</span><span class="m">8</span><span class="nb">cm</span><span class="o">)</span><span class="p">$</span>) [process] <span class="p">{</span>Share Fitness<span class="p">}</span>;
+<span class="k">\node</span> (selection) [process,below of=share-fitness] <span class="p">{</span>Selection<span class="p">}</span>;
+<span class="k">\node</span> (crossover) [process,below of=selection]  <span class="p">{</span>Crossover<span class="p">}</span>;
+<span class="k">\node</span> (mutation) [process,below of=crossover]   <span class="p">{</span>Mutation<span class="p">}</span>;
+<span class="k">\node</span> (end) [startstop] at (<span class="p">$</span><span class="o">(</span><span class="nb">decision.east</span><span class="o">)+(</span><span class="m">1</span><span class="nb">.</span><span class="m">1</span><span class="nb">cm,</span><span class="m">0</span><span class="o">)</span><span class="p">$</span>)  <span class="p">{</span>End<span class="p">}</span>;
+<span class="k">\draw</span> [-&gt;] (population) -- (fitness);
+<span class="k">\draw</span> [-&gt;] (fitness) -- (decision);
+<span class="k">\draw</span> [-&gt;] (decision) -- (share-fitness) node[auto=left,pos=0.5]<span class="p">{</span>N<span class="p">}</span>;
+<span class="k">\draw</span> [-&gt;] (share-fitness.south) -- (selection.north) ;
+<span class="k">\draw</span> [-&gt;] (selection.south) -- (crossover.north);
+<span class="k">\draw</span> [-&gt;] (crossover.south) -- (mutation.north);
+<span class="k">\draw</span> [-&gt;] (decision.east) -- (end.west) node[auto=left,pos=0.5]<span class="p">{</span>Y<span class="p">}</span>;
+
+<span class="c">% draw intersection</span>
+<span class="k">\draw</span> [white] (fitness.west) -- ++(-0.5cm,0) coordinate (A);
+<span class="k">\draw</span> [white] (mutation.west) -- ++(-0.3cm,0) coordinate (B)-- ++(0,6cm) coordinate (C) ; 
+<span class="k">\draw</span> (mutation.west) -- ++(-0.3cm,0) -- (intersection cs: first line=<span class="p">{</span>(fitness.west)--(A)<span class="p">}</span>, 
+      second line=<span class="p">{</span>(B)--(C)<span class="p">}</span>) coordinate (D);
+<span class="k">\draw</span> (B) -- (D) node[auto=left,pos=0.8,rotate=90] <span class="p">{</span>Next Generation<span class="p">}</span> ;
+<span class="k">\draw</span> [&lt;-] (fitness.west) -- (D);
+<span class="nt">\end{tikzpicture}</span>
+<span class="k">\captionof</span><span class="p">{</span>figure<span class="p">}{</span>GA Procedure Diagram<span class="p">}</span>
+<span class="k">\label</span><span class="p">{</span>plot:GA<span class="p">}</span>
+<span class="nt">\end{center}</span>
+</code></pre></div></div>
+
 
       
       <footer>
@@ -6302,7 +6346,7 @@ my data my data<span class="k">\cite</span><span class="p">{</span>daniel2013pri
   
      
     	<li><a href="/categories.html#PL-ref">
-    		PL <span>234</span>
+    		PL <span>235</span>
     	</a></li>
     
   
@@ -6321,9 +6365,9 @@ my data my data<span class="k">\cite</span><span class="p">{</span>daniel2013pri
 
   
      
-    	<li><a href="/tags.html#latex-ref">latex <span>19</span></a></li>
+    	<li><a href="/tags.html#latex-ref">latex <span>20</span></a></li>
      
-    	<li><a href="/tags.html#script-ref">script <span>117</span></a></li>
+    	<li><a href="/tags.html#script-ref">script <span>118</span></a></li>
     
   
 
@@ -6340,7 +6384,7 @@ my data my data<span class="k">\cite</span><span class="p">{</span>daniel2013pri
       
       <li><a href="/archive.html">文章列表</a></li>
       
-      <li class="next"><a href="/pl/pl-script-latex-tikz-pgf-example.html" title="Tikz and PGF: Example">下一篇 &rarr;</a></li>
+      <li class="next"><a href="/pl/pl-script-latex-tikz-pgf-scale.html" title="Tikz and PGF: Scale a tikzpicture">下一篇 &rarr;</a></li>
       
     </ul>
   </div>
