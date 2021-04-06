@@ -1,4 +1,22 @@
-I"ª<h4 id="1-active-character">1. Active character</h4>
+I"§<h4 id="1-commands">1. commands</h4>
+
+<ol>
+  <li>Commands for composing paragraphs: deal with characters, words, lines, and entire paragraphs.</li>
+  <li>Commands for composing pages: deal with pages, their components, and the output routine.</li>
+  <li>Commands for horizontal and vertical modes: These commands provide boxes, spaces, rules, leaders, and alignments.</li>
+  <li>Commands for composing math formulas: provide capabilities for constructing math formulas.</li>
+</ol>
+
+<h4 id="2-control-sequence">2. Control sequence</h4>
+<ol>
+  <li>A control word consists of a backslash followed by one or more letters
+    <ul>
+      <li>The first character that isnâ€™t a letter marks the end of the control word.</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="1-active-character">1. Active character</h4>
 <p>An active character is a character that has a definition, e.g., a macro definition, associated with it.</p>
 <ul>
   <li>An active character is a special kind of control sequence</li>
@@ -12,6 +30,7 @@ or rows. To form an alignment you need to:</p>
 <ul>
   <li>describe the layout of the columns or rows</li>
   <li>tell Tex what material goes into the columns or rows</li>
+  <li>To skip down two inches, you would type â€˜\vskip 2inâ€™, where 2in is the argument of \vskip.</li>
 </ul>
 
 <h5 id="3-argument">3. argument</h5>
@@ -27,6 +46,12 @@ or rows. To form an alignment you need to:</p>
   <li>Glue gives Tex the flexibility that it needs in order to produce handsome documents</li>
   <li>Horizontal glue: occurs within horizontal lists</li>
   <li>Vertical glue: occurs within vertical lists.</li>
+</ul>
+
+<h5 id="41-muglue">4.1 muglue</h5>
+<p>Muglue is a kind of glue that you can use only in math formulas.</p>
+<ul>
+  <li>It is measured in mu(mathematical units).</li>
 </ul>
 
 <h4 id="4-box">4. box</h4>

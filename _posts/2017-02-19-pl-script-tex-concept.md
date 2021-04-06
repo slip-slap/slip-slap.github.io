@@ -7,6 +7,17 @@ category: "PL"
 tags: ["latex","script"]
 ---
 
+#### 1. commands
+
+1. Commands for composing paragraphs: deal with characters, words, lines, and entire paragraphs.
+2. Commands for composing pages: deal with pages, their components, and the output routine.
+3. Commands for horizontal and vertical modes: These commands provide boxes, spaces, rules, leaders, and alignments.
+4. Commands for composing math formulas: provide capabilities for constructing math formulas.
+
+#### 2. Control sequence
+1. A control word consists of a backslash followed by one or more letters
+- The first character that isn't a letter marks the end of the control word.
+
 #### 1. Active character
 An active character is a character that has a definition, e.g., a macro definition, associated with it.
 - An active character is a special kind of control sequence
@@ -18,6 +29,8 @@ An alignment is a construct for aligning material, such as a table, in columns
 or rows. To form an alignment you need to:
 - describe the layout of the columns or rows
 - tell Tex what material goes into the columns or rows
+- To skip down two inches, you would type '\vskip 2in', where 2in is the argument of \vskip.
+
 
 ##### 3. argument
 An argument contains text that is passed to a command.
@@ -30,6 +43,10 @@ Glue is blank space that can stretch or shrink.
 - Horizontal glue: occurs within horizontal lists
 - Vertical glue: occurs within vertical lists.
 
+##### 4.1 muglue
+Muglue is a kind of glue that you can use only in math formulas.
+- It is measured in mu(mathematical units).
+
 
 #### 4. box
 A box is a rectangle of material to be typeset.
@@ -40,11 +57,6 @@ A box is a rectangle of material to be typeset.
 - Single lines are boxes that are somewhere in the middle.
 - A line is a box containing a sequence of character boxes, and a page is a box containing a sequence of line boxes.
 
-#### 5. category code
-The category code of a character determines that character's role in Tex
-- For instance, Tex assigns a certain role to letters, another to space characters.
-- Tex attaches a code to each character that it reads. When Tex reads the
-  letter 'r', for example, it ordinarily attaches the category code 11 to it.
 
 #### 6. Groups
 A group consists of material enclosed in matching left and right braces({ and })
