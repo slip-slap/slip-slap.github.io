@@ -22,6 +22,28 @@ that you should keep in mind, save the extension!
 \includegraphics[scale=1]{experiment_figure}
 ```
 
+#### 1.3 SVG
+1. convert an file with svg extension to file with pdf extension, the following command will generate two files:
+- a tex file which is the tex code
+- a pdf file which is the image
+
+```shell
+inkscape -D -z post_train.svg -o post_train.pdf --export-latex
+```
+
+2. integrated this file into pdf
+
+```tex
+\usepackage{graphicx,import}
+
+\begin{figure}
+	\centering
+	\def\svgwidth{\columnwidth}
+	\import{fig/}{pre_train.pdf_tex}
+	\label{fig:train-process}
+\end{figure}
+```
+
 
 
 ### 2. Positioning
@@ -128,4 +150,5 @@ Put your figure in a separate page.
 4. [eps format file within
    latex](https://tex.stackexchange.com/questions/182467/including-eps-figure-in-pdflatex)
 5. [scale an figure](https://tex.stackexchange.com/questions/98134/is-it-possible-to-scale-an-entire-beginfigure)
+6. [How to include SVG diagrams in Latex](https://tex.stackexchange.com/questions/2099/how-to-include-svg-diagrams-in-latex)
 

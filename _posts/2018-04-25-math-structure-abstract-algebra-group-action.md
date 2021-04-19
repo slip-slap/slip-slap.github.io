@@ -8,6 +8,9 @@ tags: ["構造","A.A."]
 ---
 {% include JB/setup %}
 
+#### Motivation
+1. group composition is just set permutation, we want to formalize this idea of set permutation  
+
 
 #### Group Action
 1. Let $(G,\*)$ be a group and S a set. By a group action of $(G, \*)$ on S we
@@ -46,11 +49,6 @@ $
 
 
 
-
-
-
-
-
 #### Definition
 Let G be a group acting on a set X.
 1. Fixed Point: A fixed point of an element  $g \in G$ is an element  $x \in X$ such that $g\cdot
@@ -66,4 +64,9 @@ x = x$
    there is an element $g \in G$ such that $g \cdot x = y$
 2. The action is faithful is the intersection of the stabilizers $G_x$ for $x
    \in X$ consists only of the trivial element $e_G$.
+
+
+
+#### Galois
+1. Here the element in group G is a map, it is not a single element.
 

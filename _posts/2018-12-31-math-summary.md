@@ -21,6 +21,17 @@ We copy concept from one subject to another, and hope it may work.
 2. What is math object, it's depends on how you define it.
 - Galois thought group is an math object.
 - Complex number maybe an object.
+3. Function, this monster can be found in any math field, maybe in different
+   forms, it is the essential concept of math. Why this thing is so important?
+- Because it means our understanding of the world.
+- How one thing affects another thing, can this be quantatiliative? in essence, it is a function.
+- "one thing" actually is the math object we define in every math subject, set theory, category thory, topology.
+- a math object corresponding to our understanding of something in reality, this thing may exist, or not.
+- A function is used to connect the world, that's why function is so important.
+- As a human being, the way we learn the world is by composition. Math object
+  defines every single individual, function provides a way to composite them.
+- We study the same object by isomorphism, to decide whether two objects are the same.
+- in fuzzy logic, it has another name, called relation.
 
 
 #### 1. History

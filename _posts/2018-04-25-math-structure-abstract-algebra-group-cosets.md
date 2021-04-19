@@ -8,6 +8,13 @@ tags: ["構造","A.A."]
 ---
 {% include JB/setup %}
 
+#### Motivation
+Given a group, we want to create an relation beween group element, we want to
+find equivlance.
+
+- In linear algebra, we have subspace of vector space. this is analogus concept in group theory.
+
+
 
 #### Definition
 Let G be a group and H a subgroup of G. Define a $\textbf{left coset}$ of H with

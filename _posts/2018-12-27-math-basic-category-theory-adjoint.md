@@ -32,5 +32,10 @@ $ F: \mathscr{A} \rightarrow \mathscr{B} $ and $ G: \mathscr{B} \rightarrow
 - G is said to right adjoint to F.
 
 
+#### Galois
+1. The only way we try to describe an object is by the relation with other object.
+2. Man is the ensumble of the social relationship. 
+3. When try to define a math object, we can explain an math object by this way.
+
 
 

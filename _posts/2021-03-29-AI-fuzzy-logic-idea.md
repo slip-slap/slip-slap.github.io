@@ -31,6 +31,18 @@ This is by no means the case.
 - Probability applies to any event in the real world.
 Thus, in the real world we have both,probability and fuzziness.
 
+1. fuzziness describes the lack of distinction of an event
+2. chances describes the uncertainty in the occurrence of the event.
+
+##### Example
+Suppose you are seateed at a table on which rest two glasses of liquid. 
+1. The liquid in the first glass is described to you as having a 95% chance of
+   being healthfule and good.
+2. The liquid in the second glass is described as having a 0.95 membership in
+   the class of "healthful and good" liquids.
+-  Which glass would you select, keeping in mind that the first glass has a 5%
+   chance of being filled with nonhealthful liquids, including poisons.(Bezdek,1993)
+
 
 #### Galois
 1. When I was in elementry school, my math teacher said, how to define a man is

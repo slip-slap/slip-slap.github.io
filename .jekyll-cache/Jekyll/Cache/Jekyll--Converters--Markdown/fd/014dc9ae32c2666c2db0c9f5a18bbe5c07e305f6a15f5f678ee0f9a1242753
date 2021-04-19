@@ -1,0 +1,96 @@
+I"�
+<h3 id="operation-on-fuzzy-set">Operation on fuzzy set</h3>
+<h4 id="basic">Basic</h4>
+<ol>
+  <li>Complement: \(\bar{A} \bar A^{c}\)
+    <ul>
+      <li>$\mu_{\bar{A}}(x)$</li>
+    </ul>
+  </li>
+  <li>Union: \(\bar{C}=\bar{A} \cup \bar{B}\)</li>
+  <li>Intersection: \(\bar{c}=\bar{A} \cap \bar{B}\)</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Difference: $B_1</td>
+          <td>B_2 = B_1 \cap \bar{B_2}$</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ol>
+
+<h4 id="advanced">Advanced</h4>
+<ol>
+  <li>Algebraic Sum:      $\mu_{A+B} (x)= \mu_A(x) + \mu_B(x) -\mu_A(x) \times  \mu_B(x)$</li>
+  <li>Algrebraic product: $\mu_{A \times B} = \mu_A(x) \times \mu_B(x)$</li>
+  <li>Bounded sum: $min [1, (\mu_A + \mu_B)]$</li>
+  <li>Bounded difference: $max [1, (\mu_A - \mu_B)]$</li>
+</ol>
+
+<h3 id="operation-on-relations">Operation on relations</h3>
+<p>The operation executed on two compatible binary relation to get a single binary relation is called composition.</p>
+<ul>
+  <li>Let R be a relation that relates, or maps, element from set X to set Y</li>
+  <li>Let S be a relation that relates, or maps, element from set Y to set Z</li>
+  <li>A relation T, can be formed that relates the same elements in set X that contains to the same element in set Z that S contains</li>
+  <li>Such a relation is known as composition</li>
+</ul>
+
+<ol>
+  <li>Max-min composition</li>
+  <li>Max-product composition</li>
+</ol>
+
+<h4 id="linguistic-variable">Linguistic variable</h4>
+
+<h4 id="fuzzy-relations">Fuzzy Relations</h4>
+<p>We start with crisp(non-fuzzy) relations and then generalize to fuzzy relations.</p>
+<ul>
+  <li>If X and Y are two sets, then $X \times Y$ is the set of all ordered pairs
+$(x,y)$ for $x \in X$ and $y \in Y$.</li>
+  <li>A crisp relation R between X and Y is a subset of $X \times Y$. So $R \cap X \times Y$</li>
+  <li>$R(x,y)=1$ if and only if $x,y \in R$, That is, $R(x,y)=1$  if $(x,y)$  is in
+R and $R(x,y)=0$ for $(x,y)$ not in R.</li>
+  <li>$R(x,y)=1$ means that x and y are related(associated) through relation R.</li>
+</ul>
+
+<h4 id="type-of-fuzzy-set">Type of fuzzy set</h4>
+<ol>
+  <li>The value of membership degree might include uncertainty. If the value of
+membership function is given by a fuzzy set, it is a type-2 fuzzy set.
+    <ul>
+      <li>Type-2 fuzzy sets allow us to handle linguistic uncertainties, which can be
+expressed as: “words can mean different things to different people.”</li>
+    </ul>
+  </li>
+  <li>This concept can be extended up to Type-n fuzzy set.</li>
+</ol>
+
+<h4 id="fuzzy-rule">Fuzzy rule</h4>
+<p>A fuzzy rule can be represented by a fuzzy relation $R= A \rightarrow B$</p>
+<ul>
+  <li>R can be viewed as a fuzzy set with a two dimensional membership function</li>
+</ul>
+
+<ol>
+  <li>Example, If temperature is high, then humidity is fairly high
+    <ul>
+      <li>It is a fuzzy rule and a fuzzy relation</li>
+      <li>To determine the membership function of the rule, Let T and H be univers of
+discourse of temperature and humidity, respectively, and let us define
+variables $t \in T$ and $h \in H$</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="defuzzification">Defuzzification</h4>
+<ul>
+  <li>In many practical applications, a control command is given as a crisp value.</li>
+  <li>A process to get a non-fuzzy control action that best represents the
+possibility distribution of an inferred fuzzy control action.</li>
+  <li>No systematic procedure for choosing a good defuzzification strategy.</li>
+</ul>
+
+:ET

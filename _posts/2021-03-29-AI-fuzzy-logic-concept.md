@@ -17,9 +17,21 @@ $M(A)= \sum_{x\in X}{m_A(x)}$
 - An element that hardly belongs to the set (very small value of the membership
   function) contributes little to the cardinality of the set.
 
+2. Relative cardinality:
+3. Fuzzy cardinality:
+
+
+
+
 2. Intersection: given two fuzzy sets A and B, the membership function of the intersection is defined as
 $m_c(x)= min{m_A{x},m_B(x)},x \in X$
 
+- logical and: min operator
+
 3. Union: given two fuzzy sets A and B, the membership function of the union is defined as
 $m_c(x)= max{m_A{x},m_B(x)},x \in X$
+
+- logical or: maximum operator
+
+
 

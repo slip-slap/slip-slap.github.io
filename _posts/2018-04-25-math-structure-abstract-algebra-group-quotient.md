@@ -8,6 +8,14 @@ tags: ["構造","A.A."]
 ---
 {% include JB/setup %}
 
+#### Motivation
+1. What's reason behind the name "quotient group"? It must mean something.
+2. The reason is equivalence class, after this operation, we get equivalence class.
+3. How many equivalence class are there? That's the quotient.
+4. This is why the name make sense.
+
+
+
 
 #### Background
 If H is a subgroup of a group G, then right cosets are not always the same as
