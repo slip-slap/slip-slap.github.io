@@ -5,8 +5,8 @@
   <description>Just Do It - </description>
   <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
   <link></link>
-  <lastBuildDate>Tue, 06 Apr 2021 16:03:50 +0900</lastBuildDate>
-  <pubDate>Tue, 06 Apr 2021 16:03:50 +0900</pubDate>
+  <lastBuildDate>Mon, 19 Apr 2021 10:17:14 +0900</lastBuildDate>
+  <pubDate>Mon, 19 Apr 2021 10:17:14 +0900</pubDate>
   <ttl>1800</ttl>
 
 
@@ -38,6 +38,25 @@ of apples.&lt;/li&gt;
 Thus, in the real world we have both,probability and fuzziness.&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;ol&gt;
+  &lt;li&gt;fuzziness describes the lack of distinction of an event&lt;/li&gt;
+  &lt;li&gt;chances describes the uncertainty in the occurrence of the event.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h5 id=&quot;example&quot;&gt;Example&lt;/h5&gt;
+&lt;p&gt;Suppose you are seateed at a table on which rest two glasses of liquid.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;The liquid in the first glass is described to you as having a 95% chance of
+being healthfule and good.&lt;/li&gt;
+  &lt;li&gt;The liquid in the second glass is described as having a 0.95 membership in
+the class of “healthful and good” liquids.
+    &lt;ul&gt;
+      &lt;li&gt;Which glass would you select, keeping in mind that the first glass has a 5%
+chance of being filled with nonhealthful liquids, including poisons.(Bezdek,1993)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
 &lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
 &lt;ol&gt;
   &lt;li&gt;When I was in elementry school, my math teacher said, how to define a man is
@@ -68,20 +87,134 @@ function) contributes little to the cardinality of the set.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;ol&gt;
+  &lt;li&gt;Relative cardinality:&lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Intersection: given two fuzzy sets A and B, the membership function of the intersection is defined as
-$m_c(x)= min{m_A{x},m_B(x)},x \in X$&lt;/p&gt;
+    &lt;p&gt;Fuzzy cardinality:&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Union: given two fuzzy sets A and B, the membership function of the union is defined as
-$m_c(x)= max{m_A{x},m_B(x)},x \in X$&lt;/p&gt;
-  &lt;/li&gt;
+  &lt;li&gt;Intersection: given two fuzzy sets A and B, the membership function of the intersection is defined as
+$m_c(x)= min{m_A{x},m_B(x)},x \in X$&lt;/li&gt;
 &lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;logical and: min operator&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Union: given two fuzzy sets A and B, the membership function of the union is defined as
+$m_c(x)= max{m_A{x},m_B(x)},x \in X$&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;logical or: maximum operator&lt;/li&gt;
+&lt;/ul&gt;
 
 </description>
     <link>/ai/AI-fuzzy-logic-concept.html</link>
     <guid>/ai/AI-fuzzy-logic-concept</guid>
     <pubDate>Mon, 29 Mar 2021 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>FL: Operations</title>
+    <description>
+&lt;h3 id=&quot;operation-on-fuzzy-set&quot;&gt;Operation on fuzzy set&lt;/h3&gt;
+&lt;h4 id=&quot;basic&quot;&gt;Basic&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Complement: \(\bar{A} \bar A^{c}\)
+    &lt;ul&gt;
+      &lt;li&gt;$\mu_{\bar{A}}(x)$&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Union: \(\bar{C}=\bar{A} \cup \bar{B}\)&lt;/li&gt;
+  &lt;li&gt;Intersection: \(\bar{c}=\bar{A} \cap \bar{B}\)&lt;/li&gt;
+  &lt;li&gt;
+    &lt;table&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Difference: $B_1&lt;/td&gt;
+          &lt;td&gt;B_2 = B_1 \cap \bar{B_2}$&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;advanced&quot;&gt;Advanced&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Algebraic Sum:      $\mu_{A+B} (x)= \mu_A(x) + \mu_B(x) -\mu_A(x) \times  \mu_B(x)$&lt;/li&gt;
+  &lt;li&gt;Algrebraic product: $\mu_{A \times B} = \mu_A(x) \times \mu_B(x)$&lt;/li&gt;
+  &lt;li&gt;Bounded sum: $min [1, (\mu_A + \mu_B)]$&lt;/li&gt;
+  &lt;li&gt;Bounded difference: $max [1, (\mu_A - \mu_B)]$&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;operation-on-relations&quot;&gt;Operation on relations&lt;/h3&gt;
+&lt;p&gt;The operation executed on two compatible binary relation to get a single binary relation is called composition.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Let R be a relation that relates, or maps, element from set X to set Y&lt;/li&gt;
+  &lt;li&gt;Let S be a relation that relates, or maps, element from set Y to set Z&lt;/li&gt;
+  &lt;li&gt;A relation T, can be formed that relates the same elements in set X that contains to the same element in set Z that S contains&lt;/li&gt;
+  &lt;li&gt;Such a relation is known as composition&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Max-min composition&lt;/li&gt;
+  &lt;li&gt;Max-product composition&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;linguistic-variable&quot;&gt;Linguistic variable&lt;/h4&gt;
+
+&lt;h4 id=&quot;fuzzy-relations&quot;&gt;Fuzzy Relations&lt;/h4&gt;
+&lt;p&gt;We start with crisp(non-fuzzy) relations and then generalize to fuzzy relations.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;If X and Y are two sets, then $X \times Y$ is the set of all ordered pairs
+$(x,y)$ for $x \in X$ and $y \in Y$.&lt;/li&gt;
+  &lt;li&gt;A crisp relation R between X and Y is a subset of $X \times Y$. So $R \cap X \times Y$&lt;/li&gt;
+  &lt;li&gt;$R(x,y)=1$ if and only if $x,y \in R$, That is, $R(x,y)=1$  if $(x,y)$  is in
+R and $R(x,y)=0$ for $(x,y)$ not in R.&lt;/li&gt;
+  &lt;li&gt;$R(x,y)=1$ means that x and y are related(associated) through relation R.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;type-of-fuzzy-set&quot;&gt;Type of fuzzy set&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;The value of membership degree might include uncertainty. If the value of
+membership function is given by a fuzzy set, it is a type-2 fuzzy set.
+    &lt;ul&gt;
+      &lt;li&gt;Type-2 fuzzy sets allow us to handle linguistic uncertainties, which can be
+expressed as: “words can mean different things to different people.”&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;This concept can be extended up to Type-n fuzzy set.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;fuzzy-rule&quot;&gt;Fuzzy rule&lt;/h4&gt;
+&lt;p&gt;A fuzzy rule can be represented by a fuzzy relation $R= A \rightarrow B$&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;R can be viewed as a fuzzy set with a two dimensional membership function&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Example, If temperature is high, then humidity is fairly high
+    &lt;ul&gt;
+      &lt;li&gt;It is a fuzzy rule and a fuzzy relation&lt;/li&gt;
+      &lt;li&gt;To determine the membership function of the rule, Let T and H be univers of
+discourse of temperature and humidity, respectively, and let us define
+variables $t \in T$ and $h \in H$&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;defuzzification&quot;&gt;Defuzzification&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;In many practical applications, a control command is given as a crisp value.&lt;/li&gt;
+  &lt;li&gt;A process to get a non-fuzzy control action that best represents the
+possibility distribution of an inferred fuzzy control action.&lt;/li&gt;
+  &lt;li&gt;No systematic procedure for choosing a good defuzzification strategy.&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+    <link>/ai/AI-fuzzy-logic-operation.html</link>
+    <guid>/ai/AI-fuzzy-logic-operation</guid>
+    <pubDate>Sun, 28 Mar 2021 00:00:00 +0900</pubDate>
   </item>
 
   <item>
@@ -8023,6 +8156,20 @@ distribution over outcomes given that the action was taken.&lt;/li&gt;
       &lt;li&gt;Complex number maybe an object.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
+  &lt;li&gt;Function, this monster can be found in any math field, maybe in different
+forms, it is the essential concept of math. Why this thing is so important?
+    &lt;ul&gt;
+      &lt;li&gt;Because it means our understanding of the world.&lt;/li&gt;
+      &lt;li&gt;How one thing affects another thing, can this be quantatiliative? in essence, it is a function.&lt;/li&gt;
+      &lt;li&gt;“one thing” actually is the math object we define in every math subject, set theory, category thory, topology.&lt;/li&gt;
+      &lt;li&gt;a math object corresponding to our understanding of something in reality, this thing may exist, or not.&lt;/li&gt;
+      &lt;li&gt;A function is used to connect the world, that’s why function is so important.&lt;/li&gt;
+      &lt;li&gt;As a human being, the way we learn the world is by composition. Math object
+defines every single individual, function provides a way to composite them.&lt;/li&gt;
+      &lt;li&gt;We study the same object by isomorphism, to decide whether two objects are the same.&lt;/li&gt;
+      &lt;li&gt;in fuzzy logic, it has another name, called relation.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h4 id=&quot;1-history&quot;&gt;1. History&lt;/h4&gt;
@@ -8855,6 +9002,13 @@ patterns in the mathematical landscape.&lt;/li&gt;
   &lt;li&gt;F is said to be left adjoint to G.&lt;/li&gt;
   &lt;li&gt;G is said to right adjoint to F.&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;The only way we try to describe an object is by the relation with other object.&lt;/li&gt;
+  &lt;li&gt;Man is the ensumble of the social relationship.&lt;/li&gt;
+  &lt;li&gt;When try to define a math object, we can explain an math object by this way.&lt;/li&gt;
+&lt;/ol&gt;
 
 </description>
     <link>/math/math-basic-category-theory-adjoint.html</link>
@@ -14775,6 +14929,30 @@ mapping.&lt;/li&gt;
   </item>
 
   <item>
+    <title>A.A.: Symmetric Groups</title>
+    <description>
+&lt;h4 id=&quot;notation&quot;&gt;Notation&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;$S_n$: Group of permutations on a set with n elements.
+    &lt;ul&gt;
+      &lt;li&gt;$S_3$: group of puermutations on a set with 3 elements, and it has $3!$ elements&lt;/li&gt;
+      &lt;li&gt;$S_4$: permutations of ${1,2,3,4}$, and it has $4!$ elements&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;what-good-will-this-do-me&quot;&gt;What good will this do me?&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Every finite group is a subgroup of symmetric group.&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/math/math-structure-abstract-algebra-group-symmetric-group.html</link>
+    <guid>/math/math-structure-abstract-algebra-group-symmetric-group</guid>
+    <pubDate>Wed, 25 Apr 2018 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
     <title>A.A.: Sylow Theorem</title>
     <description>
 &lt;h4 id=&quot;background&quot;&gt;Background&lt;/h4&gt;
@@ -14810,6 +14988,78 @@ expect that we will ever know all groups;&lt;/li&gt;
 groups in special cases.&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;h4 id=&quot;morphism&quot;&gt;Morphism&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Homomorphism
+    &lt;ul&gt;
+      &lt;li&gt;In algebra, a structure-preserving map between two algebraic structures of the same type, such as groups, rings, or vector spaces&lt;/li&gt;
+      &lt;li&gt;A field homomorphism is a map from one field to another one which is additive, multiplicative, zero-preserving, and unti-preserving.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Isomorphism
+    &lt;ul&gt;
+      &lt;li&gt;A bijection f such that both f and its inverse $f^-1$ are homomorphisms, that is, structure-preserving mappings.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Endomorphism
+A homomorphism that maps a system to itself&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;relation&quot;&gt;relation&lt;/h4&gt;
+
+&lt;h4 id=&quot;equality-relation&quot;&gt;Equality relation&lt;/h4&gt;
+&lt;p&gt;Let R be the relation on Z defined as follows: for all $a,b \in Z$, $a R b$ if
+and only if $a=b$, this equality relation on Z has the following properties.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;For each $a \in Z$, a=b and so $a R a$&lt;/li&gt;
+  &lt;li&gt;For all $a, b \in Z$, if $a=b$, then $b=a$. That is, if $a R b$, then $b R a$&lt;/li&gt;
+  &lt;li&gt;For all $a, b, c \in Z$, if $a=b$ and $b=c$, then $a=c$, that is, if $a R b$ and $b R c$, then $a R c$&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;equivalence-relations&quot;&gt;Equivalence relations&lt;/h4&gt;
+&lt;p&gt;Let A be nonempty set and let R be a relation on A.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;The relation R is reflexive on A provided that for each $x \in A$, $x R x$ or, equivalently, $(x,x) \in R$
+    &lt;ul&gt;
+      &lt;li&gt;This means that if a reflexive relation is represented on a digraph, there would have to be a loop at each vertex&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/math-structure-abstract-algebra-group-structure-reflexive.png&quot; height=&quot;&quot; width=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The relation R is symmetric provided that for every $x, y \in A$, if $x R
+y$, then $y R x$, for every $x, y \in A$, then $(y,x) \in R$
+    &lt;ul&gt;
+      &lt;li&gt;This means that if a symmetric relation is represented on a digraph, then
+anytime there is a directed edge from one vertex to a second vertex, there
+would be a directed edge from the second vertex to the first vertex.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/math-structure-abstract-algebra-group-structure-symmetry.png&quot; height=&quot;&quot; width=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The relation R is transitive provided that for every $x,y, z \in A$, if $x R
+y$ and $y R z$, then $x R z$, or equivalently, for every $x,y,z \in A$, if
+$(x,y) \in R$ and $(y,z) \in R$, then $(x,z) \in R$
+    &lt;ul&gt;
+      &lt;li&gt;If a transitive relation is represented by a digraph, then anytime there is a
+directed edge from a vertex x to a vertex y, and a directed edge from y to a
+vertex y to a vertex z, there would be a directed edge from x to z.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/math-structure-abstract-algebra-group-structure-transitive.png&quot; height=&quot;&quot; width=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://math.libretexts.org/Bookshelves/Mathematical_Logic_and_Proof/Book%3A_Mathematical_Reasoning__Writing_and_Proof_(Sundstrom)/7%3A_Equivalence_Relations/7.2%3A_Equivalence_Relations&quot;&gt;equivalence relation&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
 </description>
     <link>/math/math-structure-abstract-algebra-group-struct.html</link>
     <guid>/math/math-structure-abstract-algebra-group-struct</guid>
@@ -14837,6 +15087,14 @@ groups in special cases.&lt;/li&gt;
   <item>
     <title>A.A.: Subgroup and Factor Group</title>
     <description>
+&lt;h4 id=&quot;motivation&quot;&gt;Motivation&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;What’s reason behind the name “quotient group”? It must mean something.&lt;/li&gt;
+  &lt;li&gt;The reason is equivalence class, after this operation, we get equivalence class.&lt;/li&gt;
+  &lt;li&gt;How many equivalence class are there? That’s the quotient.&lt;/li&gt;
+  &lt;li&gt;This is why the name make sense.&lt;/li&gt;
+&lt;/ol&gt;
+
 &lt;h4 id=&quot;background&quot;&gt;Background&lt;/h4&gt;
 &lt;p&gt;If H is a subgroup of a group G, then right cosets are not always the same as
 left cosets; that is, it is not always the case that $gH=Hg$ for all $g \in G$.
@@ -14926,6 +15184,11 @@ $&lt;/p&gt;
   <item>
     <title>A.A.: Permuation Group</title>
     <description>
+&lt;h4 id=&quot;motivation&quot;&gt;Motivation&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;group composition is just set permutation.&lt;/li&gt;
+&lt;/ol&gt;
+
 &lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
 &lt;ol&gt;
   &lt;li&gt;Transpostions: the simplest permutation is a cycle of length 2, such cycles
@@ -14938,6 +15201,9 @@ transpositions, then any other product of transpositions equaling $\sigma$ must
 also contain an even number of transpositions, then any other product of
 transpotitions equaling $\sigma$ must also contain an odd number of
 transpositions.&lt;/p&gt;
+
+&lt;h4 id=&quot;representation&quot;&gt;Representation&lt;/h4&gt;
+&lt;p&gt;How to represent a set permutation? it’s not eazy.&lt;/p&gt;
 
 </description>
     <link>/math/math-structure-abstract-algebra-group-permutation.html</link>
@@ -15006,8 +15272,25 @@ it means group classification.&lt;/li&gt;
   </item>
 
   <item>
+    <title>A.A.: Cyclic Groups</title>
+    <description>
+</description>
+    <link>/math/math-structure-abstract-algebra-group-cyclic-group.html</link>
+    <guid>/math/math-structure-abstract-algebra-group-cyclic-group</guid>
+    <pubDate>Wed, 25 Apr 2018 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
     <title>A.A.: Cosets</title>
     <description>
+&lt;h4 id=&quot;motivation&quot;&gt;Motivation&lt;/h4&gt;
+&lt;p&gt;Given a group, we want to create an relation beween group element, we want to
+find equivlance.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;In linear algebra, we have subspace of vector space. this is analogus concept in group theory.&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
 &lt;p&gt;Let G be a group and H a subgroup of G. Define a $\textbf{left coset}$ of H with
 representative  $g \in G$ to be the set
@@ -15068,6 +15351,11 @@ n $\textbf{letters}$.&lt;/p&gt;
   <item>
     <title>A.A.: Group Action</title>
     <description>
+&lt;h4 id=&quot;motivation&quot;&gt;Motivation&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;group composition is just set permutation, we want to formalize this idea of set permutation&lt;/li&gt;
+&lt;/ol&gt;
+
 &lt;h4 id=&quot;group-action&quot;&gt;Group Action&lt;/h4&gt;
 &lt;ol&gt;
   &lt;li&gt;Let $(G,*)$ be a group and S a set. By a group action of $(G, *)$ on S we
@@ -15128,6 +15416,11 @@ $g \cdot x =y$ for some $g \in G$.&lt;/li&gt;
 there is an element $g \in G$ such that $g \cdot x = y$&lt;/li&gt;
   &lt;li&gt;The action is faithful is the intersection of the stabilizers $G_x$ for $x
 \in X$ consists only of the trivial element $e_G$.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Here the element in group G is a map, it is not a single element.&lt;/li&gt;
 &lt;/ol&gt;
 
 </description>
@@ -31954,6 +32247,33 @@ that you should keep in mind, save the extension!&lt;/p&gt;
 &lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;\includegraphics&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;[scale=1]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;experiment&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;figure&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
+&lt;h4 id=&quot;13-svg&quot;&gt;1.3 SVG&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;convert an file with svg extension to file with pdf extension, the following command will generate two files:
+    &lt;ul&gt;
+      &lt;li&gt;a tex file which is the tex code&lt;/li&gt;
+      &lt;li&gt;a pdf file which is the image&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;inkscape &lt;span class=&quot;nt&quot;&gt;-D&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-z&lt;/span&gt; post_train.svg &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; post_train.pdf &lt;span class=&quot;nt&quot;&gt;--export-latex&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;integrated this file into pdf&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-tex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;\usepackage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;graphicx,import&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;\begin{figure}&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;\centering&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;\def\svgwidth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;\columnwidth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;\import&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;fig/&lt;span class=&quot;p&quot;&gt;}{&lt;/span&gt;pre&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;train.pdf&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;tex&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;\label&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;fig:train-process&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;\end{figure}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
 &lt;h3 id=&quot;2-positioning&quot;&gt;2. Positioning&lt;/h3&gt;
 
 &lt;h5 id=&quot;21-requirement&quot;&gt;2.1 requirement&lt;/h5&gt;
@@ -32060,6 +32380,7 @@ around the subfigures.&lt;/p&gt;
   &lt;li&gt;&lt;a href=&quot;https://tex.stackexchange.com/questions/182467/including-eps-figure-in-pdflatex&quot;&gt;eps format file within
 latex&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://tex.stackexchange.com/questions/98134/is-it-possible-to-scale-an-entire-beginfigure&quot;&gt;scale an figure&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://tex.stackexchange.com/questions/2099/how-to-include-svg-diagrams-in-latex&quot;&gt;How to include SVG diagrams in Latex&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 </description>

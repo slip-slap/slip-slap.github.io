@@ -3,7 +3,7 @@
   <title>Just Do It</title>
   <link href="/atom.xml" rel="self"/>
   <link href=""/>
-  <updated>2021-04-06T16:03:50+09:00</updated>
+  <updated>2021-04-19T10:17:14+09:00</updated>
   <id></id>
   <author>
     <name>reed</name>
@@ -39,6 +39,32 @@ $M(A)= \sum_{x\in X}{m_A(x)}$
 
   The intuition behind this formula is that the contribution of an element to
 the cardinality should be wei...</content>
+  </entry>
+
+  <entry>
+    <title>FL: Operations</title>
+    <link href="/ai/AI-fuzzy-logic-operation.html"/>
+    <updated>2021-03-28T00:00:00+09:00</updated>
+    <id>/ai/AI-fuzzy-logic-operation</id>
+    <content type="html">
+Operation on fuzzy set
+Basic
+
+  Complement: \(\bar{A} \bar A^{c}\)
+    
+      $\mu_{\bar{A}}(x)$
+    
+  
+  Union: \(\bar{C}=\bar{A} \cup \bar{B}\)
+  Intersection: \(\bar{c}=\bar{A} \cap \bar{B}\)
+  
+    
+      
+        
+          Difference: $B_1
+          B_2 = B_1 \cap \bar{B_2}$
+        
+    ...</content>
   </entry>
 
   <entry>
@@ -5751,6 +5777,27 @@ group: set of elements
   </entry>
 
   <entry>
+    <title>A.A.: Symmetric Groups</title>
+    <link href="/math/math-structure-abstract-algebra-group-symmetric-group.html"/>
+    <updated>2018-04-25T00:00:00+09:00</updated>
+    <id>/math/math-structure-abstract-algebra-group-symmetric-group</id>
+    <content type="html">
+Notation
+
+  $S_n$: Group of permutations on a set with n elements.
+    
+      $S_3$: group of puermutations on a set with 3 elements, and it has $3!$ elements
+      $S_4$: permutations of ${1,2,3,4}$, and it has $4!$ elements
+    
+  
+
+
+What good will this do me?
+
+  Every finite group is a subgro...</content>
+  </entry>
+
+  <entry>
     <title>A.A.: Sylow Theorem</title>
     <link href="/math/math-structure-abstract-algebra-group-sylow-theorem.html"/>
     <updated>2018-04-25T00:00:00+09:00</updated>
@@ -5807,11 +5854,16 @@ isomorphic to $\m...</content>
     <updated>2018-04-25T00:00:00+09:00</updated>
     <id>/math/math-structure-abstract-algebra-group-quotient</id>
     <content type="html">
+Motivation
+
+  What’s reason behind the name “quotient group”? It must mean something.
+  The reason is equivalence class, after this operation, we get equivalence class.
+  How many equivalence class are there? That’s the quotient.
+  This is why the name make sense.
+
+
 Background
-If H is a subgroup of a group G, then right cosets are not always the same as
-left cosets; that is, it is not always the case that $gH=Hg$ for all $g \in G$.
-The subgroups for which this property holds play a critical role in group
-theory. They allow for the construction of a new clas...</content>
+If H is a subgroup...</content>
   </entry>
 
   <entry>
@@ -5862,6 +5914,11 @@ of relations among those generators. We can say G ha...</content>
     <updated>2018-04-25T00:00:00+09:00</updated>
     <id>/math/math-structure-abstract-algebra-group-permutation</id>
     <content type="html">
+Motivation
+
+  group composition is just set permutation.
+
+
 Definition
 
   Transpostions: the simplest permutation is a cycle of length 2, such cycles
@@ -5870,8 +5927,7 @@ are called transpositions.
 
 Theorem
 If a permutation $\sigma$ can be expressed as the product of an even number of
-transpositions, then any other product of transpositions equaling $\sigma$ must
-also conta...</content>
+transpositions, then any other ...</content>
   </entry>
 
   <entry>
@@ -5898,25 +5954,30 @@ maps between vector spaces are more interesting than the spaces themselves.
   </entry>
 
   <entry>
+    <title>A.A.: Cyclic Groups</title>
+    <link href="/math/math-structure-abstract-algebra-group-cyclic-group.html"/>
+    <updated>2018-04-25T00:00:00+09:00</updated>
+    <id>/math/math-structure-abstract-algebra-group-cyclic-group</id>
+    <content type="html">
+</content>
+  </entry>
+
+  <entry>
     <title>A.A.: Cosets</title>
     <link href="/math/math-structure-abstract-algebra-group-cosets.html"/>
     <updated>2018-04-25T00:00:00+09:00</updated>
     <id>/math/math-structure-abstract-algebra-group-cosets</id>
     <content type="html">
+Motivation
+Given a group, we want to create an relation beween group element, we want to
+find equivlance.
+
+
+  In linear algebra, we have subspace of vector space. this is analogus concept in group theory.
+
+
 Definition
-Let G be a group and H a subgroup of G. Define a $\textbf{left coset}$ of H with
-representative  $g \in G$ to be the set
-$
-g H={g h: h \in H}
-$
-
-$\textbf{Right cosets}$ can defined similarly by
-$
-H g={h g: h \in H}
-$
-
-
-  If left and right cosets coincide or if it is clear from the con...</content>
+Let G be a group and H a subgroup of G. Define a $\textbf{left coset}$ of H wi...</content>
   </entry>
 
   <entry>
@@ -5953,6 +6014,11 @@ Theorem
     <updated>2018-04-25T00:00:00+09:00</updated>
     <id>/math/math-structure-abstract-algebra-group-action</id>
     <content type="html">
+Motivation
+
+  group composition is just set permutation, we want to formalize this idea of set permutation
+
+
 Group Action
 
   Let $(G,*)$ be a group and S a set. By a group action of $(G, *)$ on S we
@@ -5962,14 +6028,7 @@ mean a map:
 $\mu: G \times S \rightarrow S$
 such that
 
-  $\forall x,y\in G$, $s\in S$, $\mu (x*y,s)=\mu(x,\mu(y,s))$
-  $\mu(e,s)=s$
-
-
-Remark
-
-  
-    Notice that there is a natural action of $ \Sigma(S) $ ...</content>
+  $\forall x,y\in G$, $s\in S$, $\mu (x*...</content>
   </entry>
 
   <entry>
