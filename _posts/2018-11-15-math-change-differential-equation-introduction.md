@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Differential Equation: Introduction"
+title: "ODE: Introduction"
 keywords: [ "PDE"]
 description: ""
 category: "math"

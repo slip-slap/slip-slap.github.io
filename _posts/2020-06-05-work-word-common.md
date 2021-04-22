@@ -27,4 +27,16 @@ tags: []
 2. yield: to give in return for labor expended, as payment or interest on what is expected.
 - the land yields grapes and tomatoo
 
+#### study and research
+1. The noun "study" refers to a single paper or object. You can replace "paper"
+   with "study" almost in every cases(not the other way around).
+2. The noun "research" means more like a whole body of research including many individual studies.
+- The research field, the lifetime achievement of a scientist or research team.
+
+
+
+#### Reference
+1. [research and study](https://www.letpub.com/author_education_Research_vs_study#:~:text=The%20noun%20%22study%22%20refers%20to,The%20research%20of%20a%20field.)
+
+
 

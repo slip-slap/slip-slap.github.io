@@ -44,6 +44,10 @@ $
    solution, instead of analytical solution
 2. Because all the possible analytical solution has been find, but with computer
    software, we can find any numberical solution.
+3. Lie observed that virtually all the classical methods for solving ordinary
+   differential equations(separable, homogeneous, exact, etc.) are instances of
+   a general method for integrating ordinary differential equations that admit 
+   a symmetry group.
 
 
 
