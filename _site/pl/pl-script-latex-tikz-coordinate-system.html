@@ -11,9 +11,9 @@
 <head>
   <meta charset="UTF-8">
 
-  <title>C++: Reload Operator - Just Do It</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="c++">
+  <title>Tikz: The Coordinate System - Just Do It</title>
+  <meta name="keywords" content="Tikz">
+  <meta name="description" content="">
   <meta name="author" content="reed">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -6138,25 +6138,25 @@ $(document).ready(function() {
       <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
 
     <header>
-      <h1>C++: Reload Operator</h1>
+      <h1>Tikz: The Coordinate System</h1>
     </header>
 
     <section>
       <div class="post-extra">
         <div class="pull-left">
-          <span>08 March 2017</span>
+          <span>24 February 2017</span>
         </div>
         <div class="pull-right">
           
 
 
   <span id="share">
-  <a class="wechat" target="_blank" title="分享到微信" href="http://chart.apis.google.com/chart?cht=qr&amp;chs=300x300&amp;chl=/pl/pl-compile-c++-load-operator.html"><i class="icon-large icon-wechat"></i></a>
-  <a class="weibo" target="_blank" title="分享到微博" href="http://service.weibo.com/share/share.php?title=C++: Reload Operator - Just Do It&amp;url=/pl/pl-compile-c++-load-operator.html&amp;type=3&amp;searchPic=1"><i class="icon-large icon-weibo"></i></a>
-  <a class="qzone" target="_blank" title="分享到 QQ 空间" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=/pl/pl-compile-c++-load-operator.html&amp;title=C++: Reload Operator - Just Do It&amp;summary=c++&amp;site="><i class="icon-large icon-qzone"></i></a>
-  <a class="twitter" target="_blank" title="Share to Twitter" href="https://twitter.com/intent/tweet?url=/pl/pl-compile-c++-load-operator.html&amp;text=C++: Reload Operator - Just Do It&amp;via="><i class="icon-large icon-twitter"></i></a>
-  <a class="facebook" target="_blank" title="Share to Facebook" href="http://www.facebook.com/sharer.php?u=/pl/pl-compile-c++-load-operator.html&amp;t=C++: Reload Operator - Just Do It"><i class="icon-large icon-facebook-sign"></i></a>
-  <a class="googleplus" target="_blank" title="Share to Google+" href="https://plus.google.com/share?url=/pl/pl-compile-c++-load-operator.html"><i class="icon-large icon-google-plus-sign"></i></a>
+  <a class="wechat" target="_blank" title="分享到微信" href="http://chart.apis.google.com/chart?cht=qr&amp;chs=300x300&amp;chl=/pl/pl-script-latex-tikz-coordinate-system.html"><i class="icon-large icon-wechat"></i></a>
+  <a class="weibo" target="_blank" title="分享到微博" href="http://service.weibo.com/share/share.php?title=Tikz: The Coordinate System - Just Do It&amp;url=/pl/pl-script-latex-tikz-coordinate-system.html&amp;type=3&amp;searchPic=1"><i class="icon-large icon-weibo"></i></a>
+  <a class="qzone" target="_blank" title="分享到 QQ 空间" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=/pl/pl-script-latex-tikz-coordinate-system.html&amp;title=Tikz: The Coordinate System - Just Do It&amp;summary=&amp;site="><i class="icon-large icon-qzone"></i></a>
+  <a class="twitter" target="_blank" title="Share to Twitter" href="https://twitter.com/intent/tweet?url=/pl/pl-script-latex-tikz-coordinate-system.html&amp;text=Tikz: The Coordinate System - Just Do It&amp;via="><i class="icon-large icon-twitter"></i></a>
+  <a class="facebook" target="_blank" title="Share to Facebook" href="http://www.facebook.com/sharer.php?u=/pl/pl-script-latex-tikz-coordinate-system.html&amp;t=Tikz: The Coordinate System - Just Do It"><i class="icon-large icon-facebook-sign"></i></a>
+  <a class="googleplus" target="_blank" title="Share to Google+" href="https://plus.google.com/share?url=/pl/pl-script-latex-tikz-coordinate-system.html"><i class="icon-large icon-google-plus-sign"></i></a>
 </span>
 
 
@@ -6165,37 +6165,70 @@ $(document).ready(function() {
 
         </div>
       </div>
-      
-<p>重载的运算符不过是有特殊名字的函数</p>
-<h4>重载下标运算符</h4>
+      <h4 id="1-coordinate-system-canvas">1. Coordinate system canvas</h4>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[]   下标操作符必须是成员函数
-</code></pre></div></div>
-
-<h4>重载输出运算符</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;&lt;     不能是成员函数
-</code></pre></div></div>
-
-<h4>重载输入运算符</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;
-参数1: 读取流的引用;
-参数2: 非常量对象的引用;
-std::istream &amp;operator&gt;&gt;(std::istream &amp;is,Worker &amp;worker){
-	    is&gt;&gt;worker.age&gt;&gt;worker.name;
-	    return is;
-}
-//call
-    Worker worker;
-    std::cout&lt;&lt;worker;
-    std::cin&gt;&gt;worker;
-    std::cout&lt;&lt;worker;
-</code></pre></div></div>
-
-<h4 id="reference">Reference</h4>
 <ol>
-  <li><a href="https://en.cppreference.com/w/cpp/language/operators">Operator overloading</a></li>
+  <li>x = <dimension> Distance by which the coordinate is to the right of the origin</dimension></li>
+  <li>y = <dimension> Distance by which the coordinate is above the origin.</dimension></li>
+  <li>To specify a coordinate in the coordiante system implicitly, you use two dimensions that are seperated by a comma as in (0cm, 3pt)</li>
+</ol>
+
+<div class="language-tex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{tikzpicture}</span>
+    <span class="k">\draw</span><span class="na">[style=help lines]</span> (0,0) grid (3,2);
+    <span class="k">\fill</span> (canvas cs:x=1cm, y=1.5cm) circle (2pt);
+    <span class="k">\fill</span> (canvas cs:x=2cm, y=3cm+2pt) circle (2pt);
+<span class="nt">\end{tikzpicture}</span>
+</code></pre></div></div>
+
+<h4 id="2-coordinate-system-canvas-polar">2. Coordinate system canvas polar</h4>
+
+<ol>
+  <li>angle=<degrees> The angle of the coordinate. The angle range is from -360 to 720</degrees></li>
+  <li>radius=<dimension> The distance from the origin</dimension></li>
+  <li>The implicit form for canvas polar coordinates is the following: you specify the angle and the distance separated by a colon as in (30:1cm)</li>
+</ol>
+
+<div class="language-tex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{tikzpicture}</span>
+    <span class="k">\draw</span> (0,0) -- (canvas polar cs:angle=30,radius=1cm) -- (90:2cm);
+<span class="nt">\end{tikzpicture}</span>
+</code></pre></div></div>
+
+<h4 id="3-barycentric-systems">3. Barycentric Systems</h4>
+
+<p>In the barycentric coordinate system a point is expressed as the linear combinarion of multiple vectors.</p>
+
+<div class="language-tex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{tikzpicture}</span>
+    <span class="k">\coordinate</span> (content) at (90:3cm);
+    <span class="k">\coordinate</span> (structure) at (210:3cm);
+    <span class="k">\coordinate</span> (form) at (-30:3cm);
+
+    <span class="k">\draw</span> [thick,gray] (content.south) -- (structure.north east) -- (form.north west) -- cycle;
+
+    <span class="k">\node</span> at (barycentric cs:content=0.5,structure=0.1,form=1) <span class="p">{</span>PostScript<span class="p">}</span>;
+
+<span class="nt">\end{tikzpicture}</span>
+</code></pre></div></div>
+
+<h4 id="4-coordinate-system-node">4. Coordinate system node</h4>
+
+<ol>
+  <li>name=<node name=""> specifies the node in which you want to specify a coordinate.</node></li>
+  <li>anchor=<anchor> specifies an anchor of the node.</anchor></li>
+</ol>
+
+<div class="language-tex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{tikzpicture}</span>
+    <span class="k">\node</span> (shape) at (0,2) [draw] <span class="p">{</span>class shape<span class="p">}</span>;
+    <span class="k">\node</span> (rect) at (-2,0) [draw] <span class="p">{</span>class Rectangle<span class="p">}</span>;
+    <span class="k">\node</span> (circle) at (2,0) [draw] <span class="p">{</span>class Circle<span class="p">}</span>;
+    <span class="k">\node</span> (ellipse) at (6,0) [draw] <span class="p">{</span>class Ellipse<span class="p">}</span>;
+    <span class="k">\draw</span> (node cs:name=rect,anchor=north) |- (0,1) -| (node cs:name=shape,anchor=south);
+<span class="nt">\end{tikzpicture}</span>
+</code></pre></div></div>
+
+<h4 id="relative-and-incremental-coordinates">Relative and Incremental Coordinates</h4>
+<ol>
+  <li>use a single <strong>+</strong>, this specifies a relative coordinate, but it does not undate the current point for subsequent usages of relative coordinates</li>
+  <li>use <strong>++</strong></li>
 </ol>
 
 
@@ -6245,9 +6278,9 @@ std::istream &amp;operator&gt;&gt;(std::istream &amp;is,Worker &amp;worker){
 
   
      
-    	<li><a href="/tags.html#c++-ref">c++ <span>59</span></a></li>
+    	<li><a href="/tags.html#latex-ref">latex <span>22</span></a></li>
      
-    	<li><a href="/tags.html#compile-ref">compile <span>73</span></a></li>
+    	<li><a href="/tags.html#script-ref">script <span>120</span></a></li>
     
   
 
@@ -6260,11 +6293,11 @@ std::istream &amp;operator&gt;&gt;(std::istream &amp;is,Worker &amp;worker){
   <div class="pagination">
     <ul>
       
-      <li class="prev"><a href="/pl/pl-compile-c++-linker.html" title="C++: Linker">&larr; 上一篇</a></li>
+      <li class="prev"><a href="/pl/pl-script-latex-introduction.html" title="Latex: Introduction">&larr; 上一篇</a></li>
       
       <li><a href="/archive.html">文章列表</a></li>
       
-      <li class="next"><a href="/pl/pl-compile-c++-lvalue-and-rvalue.html" title="C++: Lvalues and Rvalues">下一篇 &rarr;</a></li>
+      <li class="next"><a href="/pl/pl-script-latex-tikz-matrix.html" title="Tikz and PGF: Matrix">下一篇 &rarr;</a></li>
       
     </ul>
   </div>
@@ -6282,9 +6315,9 @@ std::istream &amp;operator&gt;&gt;(std::istream &amp;is,Worker &amp;worker){
     var disqus_developer = 1;
     var disqus_shortname = 'just-do-it-1';
     
-    var disqus_identifier = 'C++: Reload Operator';
-    var disqus_title = 'C++: Reload Operator';
-    var disqus_url = '/pl/pl-compile-c++-load-operator.html';
+    var disqus_identifier = 'Tikz: The Coordinate System';
+    var disqus_title = 'Tikz: The Coordinate System';
+    var disqus_url = '/pl/pl-script-latex-tikz-coordinate-system.html';
     
     
     (function() {

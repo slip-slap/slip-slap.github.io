@@ -44,6 +44,19 @@ inkscape -D -z post_train.svg -o post_train.pdf --export-latex
 \end{figure}
 ```
 
+3. Open the generated file with pdf\_tex extension, and it's just a normal latex file. You can edit this file.
+- In the preamble of this file, it provides information about how to use it. 
+
+```latex
+%% Creator: Inkscape 1.0.2 (e86c8708, 2021-01-15), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'post_train.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%  instead of
+%% To scale the image, write
+```
+
 
 
 ### 2. Positioning

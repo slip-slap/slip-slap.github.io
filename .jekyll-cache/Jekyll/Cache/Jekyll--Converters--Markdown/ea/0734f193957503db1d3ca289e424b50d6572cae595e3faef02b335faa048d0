@@ -1,0 +1,188 @@
+I"p&<h3 id="1-basic-knowledge-of-an-figure">1. Basic knowledge of an Figure</h3>
+
+<h4 id="11-dpi-and-ppi">1.1 DPI and PPI</h4>
+<ol>
+  <li>PPI describes the resolution in pixels of a digital image.</li>
+  <li>DPI describes the the amount of ink dots on a printed image.</li>
+</ol>
+
+<h4 id="12-eps-file">1.2 EPS file</h4>
+<p>A file ends with eps extension, you can make it as large as a billboard you see on the side of the highway.
+If you want to include an eps file in your document, just treat as an image. There is one thing
+that you should keep in mind, save the extension!</p>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\includegraphics</span><span class="na">[scale=1]</span><span class="p">{</span>experiment<span class="p">_</span>figure<span class="p">}</span>
+</code></pre></div></div>
+
+<h4 id="13-svg">1.3 SVG</h4>
+<ol>
+  <li>convert an file with svg extension to file with pdf extension, the following command will generate two files:
+    <ul>
+      <li>a tex file which is the tex code</li>
+      <li>a pdf file which is the image</li>
+    </ul>
+  </li>
+</ol>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>inkscape <span class="nt">-D</span> <span class="nt">-z</span> post_train.svg <span class="nt">-o</span> post_train.pdf <span class="nt">--export-latex</span>
+</code></pre></div></div>
+
+<ol>
+  <li>integrated this file into pdf</li>
+</ol>
+
+<div class="language-tex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\usepackage</span><span class="p">{</span>graphicx,import<span class="p">}</span>
+
+<span class="nt">\begin{figure}</span>
+	<span class="k">\centering</span>
+	<span class="k">\def\svgwidth</span><span class="p">{</span><span class="k">\columnwidth</span><span class="p">}</span>
+	<span class="k">\import</span><span class="p">{</span>fig/<span class="p">}{</span>pre<span class="p">_</span>train.pdf<span class="p">_</span>tex<span class="p">}</span>
+	<span class="k">\label</span><span class="p">{</span>fig:train-process<span class="p">}</span>
+<span class="nt">\end{figure}</span>
+</code></pre></div></div>
+
+<ol>
+  <li>Open the generated file with pdf_tex extension, and it’s just a normal latex file. You can edit this file.
+    <ul>
+      <li>In the preamble of this file, it provides information about how to use it.</li>
+    </ul>
+  </li>
+</ol>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">%% Creator: Inkscape 1.0.2 (e86c8708, 2021-01-15), www.inkscape.org</span>
+<span class="c">%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010</span>
+<span class="c">%% Accompanies image file 'post_train.pdf' (pdf, eps, ps)</span>
+<span class="c">%%</span>
+<span class="c">%% To include the image in your LaTeX document, write</span>
+<span class="c">%%   \input{&lt;filename&gt;.pdf_tex}</span>
+<span class="c">%%  instead of</span>
+<span class="c">%%   \includegraphics{&lt;filename&gt;.pdf}</span>
+<span class="c">%% To scale the image, write</span>
+<span class="c">%%   \def\svgwidth{&lt;desired width&gt;}</span>
+<span class="c">%%   \input{&lt;filename&gt;.pdf_tex}</span>
+<span class="c">%%</span>
+<span class="c">%% Images with a different path to the parent latex file can</span>
+<span class="c">%% be accessed with the `import' package (which may need to be</span>
+<span class="c">%% installed) using</span>
+<span class="c">%%   \usepackage{import}</span>
+<span class="c">%% in the preamble, and then including the image with</span>
+<span class="c">%%   \import{&lt;path to file&gt;}{&lt;filename&gt;.pdf_tex}</span>
+<span class="c">%% Alternatively, one can specify</span>
+<span class="c">%%   \graphicspath</span>
+<span class="c">%% </span>
+<span class="c">%% For more information, please see info/svg-inkscape on CTAN:</span>
+<span class="c">%%   http://tug.ctan.org/tex-archive/info/svg-inkscape</span>
+<span class="c">%%</span>
+
+</code></pre></div></div>
+
+<h3 id="2-positioning">2. Positioning</h3>
+
+<h5 id="21-requirement">2.1 requirement</h5>
+<ol>
+  <li>The contents of this object, i.e., the image, cannot be broken over a page.</li>
+  <li>We should be able to specify the position of this object in the document</li>
+  <li>We should be able to add a caption to this object</li>
+  <li>We should be able to add a reference to this object, so that it can be cross-referenced
+elsewhere in the document</li>
+</ol>
+
+<h5 id="22-floats">2.2 Floats</h5>
+<p>In latex, floats are used to contain things that must be placed inside a single page, i,e, they
+cannot be broken over multiple pages. floats can be used to contain tables and figures, but we can
+define new custom floats as well.</p>
+<ol>
+  <li>The entity contained in a float is placed in a single page. If the entity(an image, for example)
+can not be contained in the space left in the current page, it is placed at the top of the next
+page</li>
+  <li>Floats can be positioned whereever we specify - top, middle, bottom, left, right</li>
+  <li>They can have a caption describing them.</li>
+  <li>They are numbered(so we can references to them)</li>
+</ol>
+
+<h3 id="3-basic-use">3. Basic Use</h3>
+
+<h4 id="31-scale-a-figure">3.1 Scale a figure</h4>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{figure}</span>
+	<span class="k">\centering</span>
+	<span class="k">\includegraphics</span><span class="na">[width=0.9\textwidth]</span><span class="p">{</span>./a0<span class="p">_</span>figure<span class="p">_</span>ann<span class="p">_</span>for<span class="p">_</span>clt<span class="p">_</span>architecture.png<span class="p">}</span>
+<span class="nt">\end{figure}</span>
+</code></pre></div></div>
+
+<h5 id="32-mutiple-imagessubfigures">3.2 Mutiple images/subfigures</h5>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{figure}</span>[h!]
+<span class="k">\centering</span>
+	<span class="nt">\begin{subfigure}</span>[b]<span class="p">{</span>0.4<span class="k">\linewidth</span><span class="p">}</span>
+		<span class="k">\includegraphics</span><span class="na">[width=\linewidth{path_to.jpg}]</span>
+	<span class="nt">\end{subfigure}</span>
+	<span class="nt">\begin{subfigure}</span>[b]<span class="p">{</span>0.6<span class="k">\linewidth</span><span class="p">}</span>
+		<span class="k">\includegraphics</span><span class="na">[width=\linewidth{path_to.jpg}]</span>
+	<span class="nt">\end{subfigure}</span>
+	<span class="k">\caption</span><span class="p">{}</span>
+	<span class="k">\label</span><span class="p">{</span>fig:image<span class="p">_</span>xx<span class="p">}</span>
+<span class="nt">\end{figure}</span>
+</code></pre></div></div>
+
+<h3 id="4-package">4 Package</h3>
+
+<h4 id="41-graphicx-package">4.1 graphicx package</h4>
+<p>graphicx package takes care of the numbering and positioning of the image within the document.</p>
+<ol>
+  <li>\linewidth: the picture will be scaled to fit the width of the document, as a result, smaller
+pictures are upscaled and larger pictures dowscaled respectively..</li>
+  <li>
+    <p>the location in the document</p>
+    <ul>
+      <li>h(here): same location</li>
+      <li>t(top): top of page</li>
+      <li>b(bottom): bottom of page</li>
+      <li>p(page): on an extra page</li>
+      <li>!(override): will force the specified location</li>
+    </ul>
+  </li>
+</ol>
+
+<h5 id="411-resizebox">4.1.1: \resizebox</h5>
+<p>scale figure or equation</p>
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{figure}</span>
+	<span class="k">\resizebox</span><span class="p">{</span>.9<span class="k">\linewidth</span><span class="p">}{</span>!<span class="p">}{</span><span class="k">\input</span><span class="p">{</span>plot.tex<span class="p">}}</span>
+<span class="nt">\end{figure}</span>
+</code></pre></div></div>
+
+<h5 id="42-float-package">4.2 float package</h5>
+<p>It allows to set the option to [H], which is even stricter than <a href="adding [h!] behind the figure environment \begin tag will force the figure to be shown at">h!</a></p>
+
+<h5 id="43-subcaption-package">4.3 subcaption package</h5>
+<p>This package provides <strong>subfigure</strong> environment;</p>
+
+<h5 id="44-subfigure-package">4.4 subfigure package</h5>
+
+<p>This package makes it easy to put subfigures in your figures. e.g., “Figure 1a and 1b”. For IEEE
+work, it is a good idea to load it with the tight package option to reduce the amount of white space
+around the subfigures.</p>
+
+<h5 id="45-afterpage-package">4.5 afterpage package</h5>
+
+<p>Put your figure in a separate page.</p>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\afterpage</span><span class="p">{</span>
+	<span class="nt">\begin{figure}</span>
+	<span class="nt">\end{figure}</span>
+<span class="k">\clearpage</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="5-reference">5. Reference</h3>
+<ol>
+  <li><a href="https://en.99designs.jp/blog/tips/ppi-vs-dpi-whats-the-difference/">DPI and PPI</a></li>
+  <li><a href="https://www.latex-tutorial.com/tutorials/figures/">figure in latex</a></li>
+  <li><a href="https://www.overleaf.com/learn/latex/Positioning_of_Figures">Positioning of Figures</a></li>
+  <li><a href="https://tex.stackexchange.com/questions/182467/including-eps-figure-in-pdflatex">eps format file within
+latex</a></li>
+  <li><a href="https://tex.stackexchange.com/questions/98134/is-it-possible-to-scale-an-entire-beginfigure">scale an figure</a></li>
+  <li><a href="https://tex.stackexchange.com/questions/2099/how-to-include-svg-diagrams-in-latex">How to include SVG diagrams in Latex</a></li>
+</ol>
+
+:ET

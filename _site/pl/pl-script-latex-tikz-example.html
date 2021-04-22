@@ -11,9 +11,9 @@
 <head>
   <meta charset="UTF-8">
 
-  <title>C++: Reload Operator - Just Do It</title>
+  <title>Tikz: Example - Just Do It</title>
   <meta name="keywords" content="">
-  <meta name="description" content="c++">
+  <meta name="description" content="">
   <meta name="author" content="reed">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -6138,25 +6138,25 @@ $(document).ready(function() {
       <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
 
     <header>
-      <h1>C++: Reload Operator</h1>
+      <h1>Tikz: Example</h1>
     </header>
 
     <section>
       <div class="post-extra">
         <div class="pull-left">
-          <span>08 March 2017</span>
+          <span>27 February 2017</span>
         </div>
         <div class="pull-right">
           
 
 
   <span id="share">
-  <a class="wechat" target="_blank" title="分享到微信" href="http://chart.apis.google.com/chart?cht=qr&amp;chs=300x300&amp;chl=/pl/pl-compile-c++-load-operator.html"><i class="icon-large icon-wechat"></i></a>
-  <a class="weibo" target="_blank" title="分享到微博" href="http://service.weibo.com/share/share.php?title=C++: Reload Operator - Just Do It&amp;url=/pl/pl-compile-c++-load-operator.html&amp;type=3&amp;searchPic=1"><i class="icon-large icon-weibo"></i></a>
-  <a class="qzone" target="_blank" title="分享到 QQ 空间" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=/pl/pl-compile-c++-load-operator.html&amp;title=C++: Reload Operator - Just Do It&amp;summary=c++&amp;site="><i class="icon-large icon-qzone"></i></a>
-  <a class="twitter" target="_blank" title="Share to Twitter" href="https://twitter.com/intent/tweet?url=/pl/pl-compile-c++-load-operator.html&amp;text=C++: Reload Operator - Just Do It&amp;via="><i class="icon-large icon-twitter"></i></a>
-  <a class="facebook" target="_blank" title="Share to Facebook" href="http://www.facebook.com/sharer.php?u=/pl/pl-compile-c++-load-operator.html&amp;t=C++: Reload Operator - Just Do It"><i class="icon-large icon-facebook-sign"></i></a>
-  <a class="googleplus" target="_blank" title="Share to Google+" href="https://plus.google.com/share?url=/pl/pl-compile-c++-load-operator.html"><i class="icon-large icon-google-plus-sign"></i></a>
+  <a class="wechat" target="_blank" title="分享到微信" href="http://chart.apis.google.com/chart?cht=qr&amp;chs=300x300&amp;chl=/pl/pl-script-latex-tikz-example.html"><i class="icon-large icon-wechat"></i></a>
+  <a class="weibo" target="_blank" title="分享到微博" href="http://service.weibo.com/share/share.php?title=Tikz: Example - Just Do It&amp;url=/pl/pl-script-latex-tikz-example.html&amp;type=3&amp;searchPic=1"><i class="icon-large icon-weibo"></i></a>
+  <a class="qzone" target="_blank" title="分享到 QQ 空间" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=/pl/pl-script-latex-tikz-example.html&amp;title=Tikz: Example - Just Do It&amp;summary=&amp;site="><i class="icon-large icon-qzone"></i></a>
+  <a class="twitter" target="_blank" title="Share to Twitter" href="https://twitter.com/intent/tweet?url=/pl/pl-script-latex-tikz-example.html&amp;text=Tikz: Example - Just Do It&amp;via="><i class="icon-large icon-twitter"></i></a>
+  <a class="facebook" target="_blank" title="Share to Facebook" href="http://www.facebook.com/sharer.php?u=/pl/pl-script-latex-tikz-example.html&amp;t=Tikz: Example - Just Do It"><i class="icon-large icon-facebook-sign"></i></a>
+  <a class="googleplus" target="_blank" title="Share to Google+" href="https://plus.google.com/share?url=/pl/pl-script-latex-tikz-example.html"><i class="icon-large icon-google-plus-sign"></i></a>
 </span>
 
 
@@ -6166,37 +6166,202 @@ $(document).ready(function() {
         </div>
       </div>
       
-<p>重载的运算符不过是有特殊名字的函数</p>
-<h4>重载下标运算符</h4>
+<p><img src="/images/Latex-diagram.jpg" height="" width="" /></p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[]   下标操作符必须是成员函数
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\RequirePackage</span><span class="p">{</span>fix-cm<span class="p">}</span>
+<span class="k">\documentclass</span><span class="na">[11pt]</span><span class="p">{</span>article<span class="p">}</span>       <span class="c">% onecolumn (second format)</span>
+<span class="c">%\smartqed  % flush right qed marks, e.g. at end of proof</span>
+<span class="k">\usepackage</span><span class="p">{</span>graphicx,multicol,lipsum,caption,authblk<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>amsmath,booktabs,verbatim,tikz<span class="p">}</span>
+<span class="k">\usetikzlibrary</span><span class="p">{</span>shapes.geometric, arrows,positioning,matrix,calc<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>mathptmx<span class="p">}</span>
+<span class="nt">\begin{document}</span>
+
+
+<span class="nt">\begin{tikzpicture}</span>
+[
+plain/.style=<span class="p">{</span>
+  draw=none,
+  fill=none,
+  <span class="p">}</span>,
+  remember picture,
+net/.style=<span class="p">{</span>
+  matrix of nodes,
+  nodes=<span class="p">{</span>
+    draw,
+    circle,
+    inner sep=7.5pt
+    <span class="p">}</span>,
+  nodes in empty cells,
+  column sep=-10.5pt,
+  row sep=1.8cm
+  <span class="p">}</span>
+]
+<span class="c">%\draw[help lines] (-3cm,-6cm) grid (6cm,3cm);</span>
+<span class="k">\matrix</span><span class="na">[net]</span> (mat)
+<span class="p">{</span>
+              <span class="p">&amp;</span> |[plain]| <span class="p">&amp;</span>           <span class="p">&amp;</span> |[plain]|  <span class="p">&amp;</span>           <span class="p">&amp;</span> |[plain]| <span class="p">&amp;</span>           <span class="p">&amp;</span>  |[plain]|      <span class="p">&amp;</span>               <span class="k">\\</span>
+    |[plain]| <span class="p">&amp;</span>           <span class="p">&amp;</span> |[plain]| <span class="p">&amp;</span>            <span class="p">&amp;</span> |[plain]| <span class="p">&amp;</span>           <span class="p">&amp;</span> |[plain]| <span class="p">&amp;</span>                 <span class="p">&amp;</span> |[plain]|     <span class="k">\\</span> 
+    |[plain]| <span class="p">&amp;</span> |[plain]| <span class="p">&amp;</span> |[plain]| <span class="p">&amp;</span> |[plain]|  <span class="p">&amp;</span>           <span class="p">&amp;</span> |[plain]| <span class="p">&amp;</span> |[plain]| <span class="p">&amp;</span>  |[plain]|      <span class="p">&amp;</span> |[plain]|     <span class="k">\\</span> 
+  <span class="p">}</span>;
+
+  <span class="k">\node</span> at (<span class="p">$</span><span class="o">(</span><span class="nb">mat</span><span class="o">-</span><span class="m">1</span><span class="o">-</span><span class="m">1</span><span class="nb">.west</span><span class="o">)+(-</span><span class="m">16</span><span class="nb">pt,</span><span class="m">0</span><span class="o">)</span><span class="p">$</span>) <span class="p">{</span>Input: <span class="p">}</span>;
+  <span class="k">\node</span> at (<span class="p">$</span><span class="o">(</span><span class="nb">mat</span><span class="o">-</span><span class="m">2</span><span class="o">-</span><span class="m">2</span><span class="nb">.west</span><span class="o">)+(-</span><span class="m">24</span><span class="nb">pt,</span><span class="m">0</span><span class="o">)</span><span class="p">$</span>) <span class="p">{</span>Hidden:<span class="p">}</span>;
+  <span class="k">\node</span> at (<span class="p">$</span><span class="o">(</span><span class="nb">mat</span><span class="o">-</span><span class="m">3</span><span class="o">-</span><span class="m">2</span><span class="nb">.west</span><span class="o">)+(-</span><span class="m">24</span><span class="nb">pt,</span><span class="m">0</span><span class="o">)</span><span class="p">$</span>) <span class="p">{</span>Output:<span class="p">}</span>;
+  <span class="k">\node</span> at (mat-1-1.base) <span class="p">{$</span><span class="nb">a</span><span class="p">_</span><span class="m">1</span><span class="p">$}</span>;
+  <span class="k">\node</span> at (mat-1-3.base) <span class="p">{$</span><span class="nb">a</span><span class="p">_</span><span class="m">2</span><span class="p">$}</span>;
+  <span class="k">\node</span> at (mat-1-5.base) <span class="p">{</span>...<span class="p">}</span>;
+  <span class="k">\node</span> at (mat-1-7.base) <span class="p">{$</span><span class="nb">a</span><span class="p">_{</span><span class="nb">n</span><span class="o">-</span><span class="m">1</span><span class="p">}$}</span>;
+  <span class="k">\node</span> at (mat-1-9.base) <span class="p">{$</span><span class="nb">a</span><span class="p">_{</span><span class="nb">n</span><span class="p">}$}</span>;
+  <span class="k">\node</span> at (mat-2-2.base) <span class="p">{$</span><span class="nb">b</span><span class="p">_</span><span class="m">1</span><span class="p">$}</span>;
+  <span class="k">\node</span> at (mat-2-4.base) <span class="p">{$</span><span class="nb">b</span><span class="p">_</span><span class="m">2</span><span class="p">$}</span>;
+  <span class="k">\node</span> at (mat-2-6.base) <span class="p">{$</span><span class="nb">...</span><span class="p">$}</span>;
+  <span class="k">\node</span> at (mat-2-8.base) <span class="p">{$</span><span class="nb">b</span><span class="p">_{</span><span class="nb">m</span><span class="p">}$}</span>;
+  <span class="k">\node</span> at (mat-3-5.base) <span class="p">{$</span><span class="nb">o</span><span class="p">$}</span>;
+
+ <span class="k">\foreach</span> <span class="k">\a</span> in <span class="p">{</span>1,3,5,7,9<span class="p">}{</span>
+    <span class="k">\foreach</span> <span class="k">\b</span> in <span class="p">{</span>2,4,6,8<span class="p">}{</span>
+        <span class="k">\draw</span><span class="na">[-&gt;]</span> (mat-1-<span class="k">\a</span>.south) -- (mat-2-<span class="k">\b</span>.north);
+     <span class="p">}</span>
+ <span class="k">\foreach</span> <span class="k">\c</span> in <span class="p">{</span>2,4,6,8<span class="p">}</span>
+ <span class="k">\draw</span><span class="na">[-&gt;]</span> (mat-2-<span class="k">\c</span>.south) -- (mat-3-5.north);
+  <span class="p">}</span>
+  
+  <span class="c">% write text</span>
+  <span class="k">\draw</span><span class="na">[&lt;-]</span> (mat-1-3.north) -- +(0,0.8cm) node[pos=0.5,auto=left] <span class="p">{</span>Training Data<span class="p">}</span> ;
+  <span class="k">\coordinate</span> (shift) at (4.5,2.6);
+  <span class="nt">\begin{scope}</span>[shift=(shift)]
+    <span class="k">\tikzstyle</span><span class="p">{</span>startstop<span class="p">}</span> = [rectangle, rounded corners, minimum width=1.0cm,minimum height=0.6cm, text centered, draw=black]
+    <span class="k">\tikzstyle</span><span class="p">{</span>io<span class="p">}</span> = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=2cm, minimum height=0.6cm, text centered, draw=black]
+    <span class="k">\tikzstyle</span><span class="p">{</span>process<span class="p">}</span> = [rectangle, minimum width=2cm, minimum height=0.6cm, text centered, draw=black]
+    <span class="k">\tikzstyle</span><span class="p">{</span>decision<span class="p">}</span> = [diamond,minimum width=2cm, minimum height=1.2cm, draw=black]
+    <span class="k">\node</span> (fitness) [process] <span class="p">{</span>Fitness<span class="p">}</span>;
+    <span class="k">\node</span><span class="na">[yshift=-0.5cm]</span> (decision) [decision, below of=fitness] <span class="p">{}</span> node at (decision.base) <span class="p">{</span>Converge<span class="p">}</span>;
+    <span class="k">\node</span><span class="na">[yshift=-0.5cm]</span> (selection) [process, below of=decision] <span class="p">{</span>Selection<span class="p">}</span>;
+    <span class="k">\node</span> (crossover) [process] at (<span class="p">$</span><span class="o">(</span><span class="nb">selection.south</span><span class="o">)+(</span><span class="m">0</span><span class="nb">,</span><span class="o">-</span><span class="m">0</span><span class="nb">.</span><span class="m">8</span><span class="nb">cm</span><span class="o">)</span><span class="p">$</span>) <span class="p">{</span>Crossover<span class="p">}</span>;
+    <span class="k">\node</span> (mutation) [process] at (<span class="p">$</span><span class="o">(</span><span class="nb">crossover.south</span><span class="o">)+(</span><span class="m">0</span><span class="nb">,</span><span class="o">-</span><span class="m">0</span><span class="nb">.</span><span class="m">8</span><span class="nb">cm</span><span class="o">)</span><span class="p">$</span>)  <span class="p">{</span>Mutation<span class="p">}</span>;
+    <span class="k">\node</span> (end) [startstop] at (<span class="p">$</span><span class="o">(</span><span class="nb">selection.west</span><span class="o">)+(-</span><span class="m">0</span><span class="nb">.</span><span class="m">8</span><span class="nb">cm,</span><span class="m">0</span><span class="nb">cm</span><span class="o">)</span><span class="p">$</span>) <span class="p">{</span>End<span class="p">}</span>;
+
+    <span class="k">\draw</span> [-&gt;] (fitness) -- (decision);
+    <span class="k">\draw</span> [-&gt;] (decision.south) -- (selection.north) node[auto=left,pos=0.5]<span class="p">{</span>N<span class="p">}</span>;
+    <span class="k">\draw</span> [-&gt;] (selection.south) -- (crossover.north);
+    <span class="k">\draw</span> [-&gt;] (crossover.south) -- (mutation.north);
+
+    <span class="c">% draw intersection</span>
+    <span class="k">\draw</span> [white] (decision.west) -- ++(-1.5cm,0) coordinate (A);
+    <span class="k">\draw</span> [white] (end.north) -- ++(0,3cm) coordinate (B);
+    <span class="k">\draw</span><span class="na">[&lt;-]</span> (end.north) -- (intersection cs: first line=<span class="p">{</span>(decision.west)--(A)<span class="p">}</span>, second line=<span class="p">{</span>(end.north)--(B)<span class="p">}</span>) node[pos=0.5,auto=left] <span class="p">{</span>Y<span class="p">}</span> coordinate (C);
+    <span class="k">\draw</span> (decision.west) -- (C);
+    <span class="c">% draw intersection</span>
+    <span class="k">\draw</span><span class="na">[white]</span> (mat-3-5.east) -- ++(1.7cm,0) coordinate (D) -- ++(0,6cm) coordinate (E);
+    <span class="k">\draw</span><span class="na">[white]</span> (fitness.west) -- ++(-2cm,0) coordinate (F);
+    <span class="k">\draw</span> (mat-3-5.east) -- ++(1.7cm,0) -- (intersection cs: first line=<span class="p">{</span>(fitness.west)--(F)<span class="p">}</span>, second line=<span class="p">{</span>(D)--(E)<span class="p">}</span>);
+    <span class="k">\draw</span><span class="na">[&lt;-]</span> (fitness.west) -- (intersection cs: first line=<span class="p">{</span>(fitness.west)--(F)<span class="p">}</span>, second line=<span class="p">{</span>(D)--(E)<span class="p">}</span>);
+    <span class="c">% draw intersection</span>
+    <span class="k">\draw</span><span class="na">[white]</span> (mutation.east) -- ++(0.2cm,0) -- ++(0,6cm) coordinate (G) -- ++(-6cm,0) coordinate (H);
+    <span class="k">\draw</span><span class="na">[white]</span> (mat-1-7.north) coordinate (I) -- ++(0,1cm) coordinate (J);
+    <span class="k">\draw</span> (mutation.east) -- ++(0.2cm,0) -- ++(0,6cm) -- (intersection cs: first line=<span class="p">{</span>(G)--(H)<span class="p">}</span>, second line=<span class="p">{</span>(I)-- (J)<span class="p">}</span>) coordinate (L);
+    <span class="k">\draw</span> (G) -- (L) node[pos=0.5,auto=right] <span class="p">{</span>Parameters of Next Generation<span class="p">}</span>;
+    <span class="k">\draw</span><span class="na">[&lt;-]</span> (mat-1-7.north) -- (L);
+  <span class="nt">\end{scope}</span>
+<span class="nt">\end{tikzpicture}</span>
+
+
+<span class="nt">\begin{tikzpicture}</span>
+    <span class="c">% draw the diagram of Adaboost algorithm </span>
+    <span class="k">\tikzstyle</span><span class="p">{</span>vote<span class="p">}</span> = [rectangle, minimum width=1.7cm, minimum height=0.9cm, draw=black]
+    <span class="k">\tikzstyle</span><span class="p">{</span>neural<span class="p">}</span> = [rectangle, minimum width=1cm, minimum height=0.8cm, draw=black]
+    <span class="k">\tikzstyle</span><span class="p">{</span>distribution<span class="p">}</span> = [rectangle, minimum width=0.5cm, minimum height=5cm, draw=black]
+    <span class="k">\draw</span> (-1.2,-0.8cm) rectangle  (1cm,-0.2cm) node[pos=0.5] <span class="p">{</span>Train Data<span class="p">}</span>;
+    <span class="k">\node</span><span class="na">[distribution]</span> (dist) at (2.0cm,-0.5cm) <span class="p">{}</span> node[rotate=90] at (dist.base) <span class="p">{</span>Distribution<span class="p">}</span>;
+    <span class="k">\node</span><span class="na">[neural]</span> (neural1) at (3.5,1.6) <span class="p">{}</span> node at (neural1.base) <span class="p">{</span>N.N.<span class="p">}</span>;
+    <span class="k">\node</span><span class="na">[neural,yshift=-1.4cm]</span> (neural2) at (3.5,1.6) <span class="p">{}</span> node at (neural2.base) <span class="p">{</span>N.N.<span class="p">}</span>;
+    <span class="k">\node</span><span class="na">[neural,yshift=-2.8cm]</span> (neural3) at (3.5,1.6) <span class="p">{}</span> node at (neural3.base) <span class="p">{</span>...<span class="p">}</span>;
+    <span class="k">\node</span><span class="na">[neural,yshift=-4.2cm]</span> (neural4) at (3.5,1.6) <span class="p">{}</span> node at (neural4.base) <span class="p">{</span>N.N.<span class="p">}</span>;
+    <span class="k">\node</span><span class="na">[vote]</span> (vote) at (6cm,-0.5cm) <span class="p">{}</span> node at (vote.base) [align=center] <span class="p">{</span>Final <span class="k">\\</span> Prediction<span class="p">}</span>;
+    
+
+
+    <span class="k">\draw</span><span class="na">[-&gt;]</span> (neural1.east) -- (vote.west) node[pos=0.5,swap] <span class="p">{$</span><span class="nv">\sigma</span><span class="p">_{</span><span class="m">1</span><span class="p">}$}</span>;
+    <span class="k">\draw</span><span class="na">[-&gt;]</span> (neural2.east) -- (vote.west) node[pos=0.5,swap] <span class="p">{$</span><span class="nv">\sigma</span><span class="p">_{</span><span class="m">2</span><span class="p">}$}</span>;
+    <span class="k">\draw</span><span class="na">[-&gt;]</span> (neural3.east) -- (vote.west) node[pos=0.5,swap] <span class="p">{$</span><span class="nv">\sigma</span><span class="p">$}</span>;
+    <span class="k">\draw</span><span class="na">[-&gt;]</span> (neural4.east) -- (vote.west) node[pos=0.5,swap] <span class="p">{$</span><span class="nv">\sigma</span><span class="p">_{</span><span class="nb">n</span><span class="p">}$}</span>;
+    <span class="k">\draw</span><span class="na">[-&gt;]</span> (2.25cm,1.6cm) -- (neural1.west);
+    <span class="k">\draw</span><span class="na">[-&gt;]</span> (2.25cm,0.2cm) -- (neural2.west);
+    <span class="k">\draw</span><span class="na">[-&gt;]</span> (2.25cm,-1.2cm) -- (neural3.west);
+    <span class="k">\draw</span><span class="na">[-&gt;]</span> (2.25cm,-2.6cm) -- (neural4.west);
+    <span class="k">\draw</span><span class="na">[-&gt;]</span> (1cm,-0.5cm) -- (dist.west);
+
+<span class="nt">\end{tikzpicture}</span>
+
+<span class="c">% cite relevant paper</span>
+my data my data<span class="k">\cite</span><span class="p">{</span>liu2015comparison<span class="p">}</span>
+my data my data<span class="k">\cite</span><span class="p">{</span>arabasadi2017computer<span class="p">}</span>
+my data my data<span class="k">\cite</span><span class="p">{</span>gurdal1999design<span class="p">}</span>
+my data my data<span class="k">\cite</span><span class="p">{</span>daniel2013principles<span class="p">}</span>
+
+<span class="c">%\begin{tikzpicture}</span>
+<span class="c">%    \node (shape) at (0,2) [draw] {class shape};</span>
+<span class="c">%    \node (rect) at (-2,0) [draw] {class Rectangle};</span>
+<span class="c">%    \node (circle) at (2,0) [draw] {class Circle};</span>
+<span class="c">%    \node (ellipse) at (6,0) [draw] {class Ellipse};</span>
+<span class="c">%    \draw (node cs:name=rect,anchor=north) |- (0,1) -| (node cs:name=shape,anchor=south);</span>
+<span class="c">%\end{tikzpicture}</span>
+
+<span class="k">\clearpage</span>
+<span class="c">% load the picture</span>
+<span class="c">%\begin{center}</span>
+<span class="c">% \includegraphics[width=\linewidth]{2.jpeg}</span>
+<span class="c">% \includegraphics[width=\linewidth]{1.jpeg}</span>
+<span class="c">%\end{center}</span>
+
+
+<span class="c">% set the citation format, and load citation-database.bib file</span>
+<span class="k">\bibliographystyle</span><span class="p">{</span>plain<span class="p">}</span>
+<span class="k">\bibliography</span><span class="p">{</span>citation-database<span class="p">}</span>
+<span class="nt">\end{document}</span>
+
+
 </code></pre></div></div>
 
-<h4>重载输出运算符</h4>
+<h4 id="second">Second</h4>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;&lt;     不能是成员函数
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{center}</span>
+<span class="nt">\begin{tikzpicture}</span>
+<span class="k">\tikzstyle</span><span class="p">{</span>startstop<span class="p">}</span> = [rectangle, rounded corners, minimum width=1.0cm,minimum height=0.6cm, 
+                        text centered, draw=black]
+<span class="k">\tikzstyle</span><span class="p">{</span>io<span class="p">}</span> = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=2cm, 
+                 minimum height=0.6cm, text centered, draw=black]
+<span class="k">\tikzstyle</span><span class="p">{</span>process<span class="p">}</span> = [rectangle, minimum width=3.1cm, minimum height=0.6cm, text centered, draw=black]
+<span class="k">\tikzstyle</span><span class="p">{</span>decision<span class="p">}</span> = [diamond,minimum width=3cm, minimum height=1.2cm, draw=black]
+<span class="k">\node</span> (population) [process] <span class="p">{</span>Initialize Population<span class="p">}</span>;
+<span class="k">\node</span> (fitness) [process, below of=population] <span class="p">{</span>Fitness<span class="p">}</span>;
+<span class="k">\node</span> (decision) [decision] at (<span class="p">$</span><span class="o">(</span><span class="nb">fitness.south</span><span class="o">)+(</span><span class="m">0</span><span class="nb">,</span><span class="o">-</span><span class="m">1</span><span class="nb">.</span><span class="m">0</span><span class="nb">cm</span><span class="o">)</span><span class="p">$</span>) <span class="p">{}</span> node at (decision.base) <span class="p">{</span>Converge<span class="p">}</span>;
+<span class="k">\node</span> (share-fitness) at (<span class="p">$</span><span class="o">(</span><span class="nb">decision.south</span><span class="o">)+(</span><span class="m">0</span><span class="nb">,</span><span class="o">-</span><span class="m">0</span><span class="nb">.</span><span class="m">8</span><span class="nb">cm</span><span class="o">)</span><span class="p">$</span>) [process] <span class="p">{</span>Share Fitness<span class="p">}</span>;
+<span class="k">\node</span> (selection) [process,below of=share-fitness] <span class="p">{</span>Selection<span class="p">}</span>;
+<span class="k">\node</span> (crossover) [process,below of=selection]  <span class="p">{</span>Crossover<span class="p">}</span>;
+<span class="k">\node</span> (mutation) [process,below of=crossover]   <span class="p">{</span>Mutation<span class="p">}</span>;
+<span class="k">\node</span> (end) [startstop] at (<span class="p">$</span><span class="o">(</span><span class="nb">decision.east</span><span class="o">)+(</span><span class="m">1</span><span class="nb">.</span><span class="m">1</span><span class="nb">cm,</span><span class="m">0</span><span class="o">)</span><span class="p">$</span>)  <span class="p">{</span>End<span class="p">}</span>;
+<span class="k">\draw</span> [-&gt;] (population) -- (fitness);
+<span class="k">\draw</span> [-&gt;] (fitness) -- (decision);
+<span class="k">\draw</span> [-&gt;] (decision) -- (share-fitness) node[auto=left,pos=0.5]<span class="p">{</span>N<span class="p">}</span>;
+<span class="k">\draw</span> [-&gt;] (share-fitness.south) -- (selection.north) ;
+<span class="k">\draw</span> [-&gt;] (selection.south) -- (crossover.north);
+<span class="k">\draw</span> [-&gt;] (crossover.south) -- (mutation.north);
+<span class="k">\draw</span> [-&gt;] (decision.east) -- (end.west) node[auto=left,pos=0.5]<span class="p">{</span>Y<span class="p">}</span>;
+
+<span class="c">% draw intersection</span>
+<span class="k">\draw</span> [white] (fitness.west) -- ++(-0.5cm,0) coordinate (A);
+<span class="k">\draw</span> [white] (mutation.west) -- ++(-0.3cm,0) coordinate (B)-- ++(0,6cm) coordinate (C) ; 
+<span class="k">\draw</span> (mutation.west) -- ++(-0.3cm,0) -- (intersection cs: first line=<span class="p">{</span>(fitness.west)--(A)<span class="p">}</span>, 
+      second line=<span class="p">{</span>(B)--(C)<span class="p">}</span>) coordinate (D);
+<span class="k">\draw</span> (B) -- (D) node[auto=left,pos=0.8,rotate=90] <span class="p">{</span>Next Generation<span class="p">}</span> ;
+<span class="k">\draw</span> [&lt;-] (fitness.west) -- (D);
+<span class="nt">\end{tikzpicture}</span>
+<span class="k">\captionof</span><span class="p">{</span>figure<span class="p">}{</span>GA Procedure Diagram<span class="p">}</span>
+<span class="k">\label</span><span class="p">{</span>plot:GA<span class="p">}</span>
+<span class="nt">\end{center}</span>
 </code></pre></div></div>
-
-<h4>重载输入运算符</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;
-参数1: 读取流的引用;
-参数2: 非常量对象的引用;
-std::istream &amp;operator&gt;&gt;(std::istream &amp;is,Worker &amp;worker){
-	    is&gt;&gt;worker.age&gt;&gt;worker.name;
-	    return is;
-}
-//call
-    Worker worker;
-    std::cout&lt;&lt;worker;
-    std::cin&gt;&gt;worker;
-    std::cout&lt;&lt;worker;
-</code></pre></div></div>
-
-<h4 id="reference">Reference</h4>
-<ol>
-  <li><a href="https://en.cppreference.com/w/cpp/language/operators">Operator overloading</a></li>
-</ol>
 
 
       
@@ -6245,9 +6410,9 @@ std::istream &amp;operator&gt;&gt;(std::istream &amp;is,Worker &amp;worker){
 
   
      
-    	<li><a href="/tags.html#c++-ref">c++ <span>59</span></a></li>
+    	<li><a href="/tags.html#latex-ref">latex <span>22</span></a></li>
      
-    	<li><a href="/tags.html#compile-ref">compile <span>73</span></a></li>
+    	<li><a href="/tags.html#script-ref">script <span>120</span></a></li>
     
   
 
@@ -6260,11 +6425,11 @@ std::istream &amp;operator&gt;&gt;(std::istream &amp;is,Worker &amp;worker){
   <div class="pagination">
     <ul>
       
-      <li class="prev"><a href="/pl/pl-compile-c++-linker.html" title="C++: Linker">&larr; 上一篇</a></li>
+      <li class="prev"><a href="/pl/pl-script-latex-tikz-matrix.html" title="Tikz and PGF: Matrix">&larr; 上一篇</a></li>
       
       <li><a href="/archive.html">文章列表</a></li>
       
-      <li class="next"><a href="/pl/pl-compile-c++-lvalue-and-rvalue.html" title="C++: Lvalues and Rvalues">下一篇 &rarr;</a></li>
+      <li class="next"><a href="/pl/pl-script-latex-tikz-scale.html" title="Tikz: Scale">下一篇 &rarr;</a></li>
       
     </ul>
   </div>
@@ -6282,9 +6447,9 @@ std::istream &amp;operator&gt;&gt;(std::istream &amp;is,Worker &amp;worker){
     var disqus_developer = 1;
     var disqus_shortname = 'just-do-it-1';
     
-    var disqus_identifier = 'C++: Reload Operator';
-    var disqus_title = 'C++: Reload Operator';
-    var disqus_url = '/pl/pl-compile-c++-load-operator.html';
+    var disqus_identifier = 'Tikz: Example';
+    var disqus_title = 'Tikz: Example';
+    var disqus_url = '/pl/pl-script-latex-tikz-example.html';
     
     
     (function() {

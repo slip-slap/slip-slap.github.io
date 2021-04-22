@@ -8,6 +8,10 @@ tags: ["summary"]
 ---
 {% include JB/setup %}
 
+#### Remark
+1. Both japanese and english have variation of verbs, appearing in different forms, which is complete different from chinese.
+- I have been looking for something to learn.
+- 何を探しているんですか？
 
 #### Chinese
 I am a native Chinese speaker, but I don't think I master this language at all.

@@ -40,3 +40,7 @@ std::istream &operator>>(std::istream &is,Worker &worker){
     std::cin>>worker;
     std::cout<<worker;
 ```
+
+#### Reference
+1. [Operator overloading](https://en.cppreference.com/w/cpp/language/operators)
+

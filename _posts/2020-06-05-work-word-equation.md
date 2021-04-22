@@ -26,3 +26,10 @@ where d and f are in units of MPa.
 
 #### Template 3
 Newton's second law of motion, ma=f, is maybe one of the first differential equations written.
+
+
+
+#### Percent and Percentage
+
+1. percent is always associated with a specific number. 
+2. percentage is to refer to a general relationship rather than a specific number.

@@ -33,6 +33,17 @@ tags: []
 2. The noun "research" means more like a whole body of research including many individual studies.
 - The research field, the lifetime achievement of a scientist or research team.
 
+#### in respect to
+1. You use with respect to say what something relates to .
+
+#### case and situation
+1. As a noun, "situation" is the way in which something is poisition and its surroundings.
+2. While case is an event.
+
+#### indicate and denote
+1. Both can mean the same thing(a sign of something)
+2. However, indicate can mean show or point out.
+
 
 
 #### Reference
