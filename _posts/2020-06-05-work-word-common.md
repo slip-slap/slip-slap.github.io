@@ -44,10 +44,17 @@ tags: []
 1. Both can mean the same thing(a sign of something)
 2. However, indicate can mean show or point out.
 
+#### Difference and distinguish
+1. When used as verbs, difference means to distinguish or differentiate,
+   whereas distinguish means to recognize something as different from others.
+
+
+
 
 
 #### Reference
 1. [research and study](https://www.letpub.com/author_education_Research_vs_study#:~:text=The%20noun%20%22study%22%20refers%20to,The%20research%20of%20a%20field.)
+2. [distinguish and difference](https://diffsense.com/diff/difference/distinguish#:~:text=The%20difference%20between%20Difference%20and,others%20based%20on%20its%20characteristics.)
 
 
 
