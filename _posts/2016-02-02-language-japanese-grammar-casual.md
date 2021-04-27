@@ -25,5 +25,16 @@ tags: ["日本語"]
   this for a long time.")
 
 
+#### 2. んだ(のだ)
+のだ is formal and preferred in writing while んだ is a casual and preferred in speaking.
 
+
+##### 2.1 Reason
+1. 車は買わない、高いんです.
+
+##### 2.2 Interpretation
+
+
+#### Reference
+1. [んだ](https://www.wasabi-jpn.com/japanese-grammar/explanatory-noda/)
 

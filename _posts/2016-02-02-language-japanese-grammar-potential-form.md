@@ -27,7 +27,5 @@ tags: ["日本語"]
 1. more objective
 
 
-
-
 ####
 1. 使えない

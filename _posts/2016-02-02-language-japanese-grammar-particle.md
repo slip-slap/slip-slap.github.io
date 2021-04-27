@@ -174,8 +174,10 @@ is nor generally used.
 
 
 #### わけがない・わけはない・わけではない
-1. わけがない: it's not impossible
-秋山はあの人のことを好きなわけがない
+1. わけがない: it's impossible
+- 秋山はあの人のことを好きなわけがない.
+- 彼はお金がないですから、家を買えるわけがない: he is poor, there is no way he can buy a house.
+
 2. わけはない: it's not impossible, and imply something else
 -  you prefer not to use this phrase
 3. わけではない: imply something else.

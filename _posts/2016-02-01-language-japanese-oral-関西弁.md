@@ -9,6 +9,12 @@ tags: ["日本語"]
 {% include JB/setup %}
 
 
+#### 何してんの？
+It can be replaced with る。
+- It's a little bit easizer to pronounce "してんの" than "してるの？"
+- That's the only difference.
+
+
 #### 
 1.  わかんない
 - わからない
@@ -57,19 +63,14 @@ tags: ["日本語"]
   positive sense.
 
 
-#### Reference
-1. [ヤバイ](https://bondlingo.tv/blog/yabai%E3%82%84%E3%81%B0%E3%81%84-a-common-japanese-phrase-to-show-how-cool-you-are/)
-
-
-
-
-
-
-#### Reference
-1. [なんでやねん](https://japanese.stackexchange.com/questions/44186/usage-of-%E3%81%AA%E3%82%93%E3%81%A7%E3%82%84%E3%81%AD%E3%82%93)
-2. [だよね](https://japanese.stackexchange.com/questions/12248/what-does-%E3%81%A0%E3%82%88%E3%81%AA%E3%83%BC-mean)
 
 
 ####
 1. なんなんだよ　マジで
 
+
+#### Reference
+1. [ヤバイ](https://bondlingo.tv/blog/yabai%E3%82%84%E3%81%B0%E3%81%84-a-common-japanese-phrase-to-show-how-cool-you-are/)
+2. [なんでやねん](https://japanese.stackexchange.com/questions/44186/usage-of-%E3%81%AA%E3%82%93%E3%81%A7%E3%82%84%E3%81%AD%E3%82%93)
+3. [だよね](https://japanese.stackexchange.com/questions/12248/what-does-%E3%81%A0%E3%82%88%E3%81%AA%E3%83%BC-mean)
+4. [してんの](https://hinative.com/ja/questions/848277)
