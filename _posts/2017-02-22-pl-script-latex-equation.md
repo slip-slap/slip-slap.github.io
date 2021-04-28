@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Latex: Math Equation"
+title: "Latex: Equation"
 keywords: []
 description: 
 category: "PL"
@@ -35,10 +35,12 @@ e^{\pi i} + 1 = 0
 3. The second part will be aligned to the right
 
 ```latex
-\begin{multline}
-p(x) = 3x^6 + 14x^5y + 590x^4y^2 + 19x^3y^3\\ 
-- 12x^2y^4 - 12xy^5 + 2y^6 - a^3b^3
-\end{multline}
+\begin{equation}
+	\begin{array}{ll}
+		p(x)  = & 3x^6 + 14x^5y + 590x^4y^2 + 19x^3y^3  \\
+			    & - 12x^2y^4 - 12xy^5 + 2y^6 - a^3b^3
+	\end{array}
+\end{equation]
 ```
 
 #### 1.3 Piecewise function
@@ -51,6 +53,16 @@ p(x) = 3x^6 + 14x^5y + 590x^4y^2 + 19x^3y^3\\
 		x-5, & x<0
 	\end{cases}
 \end{align}
+
+\begin{equation}
+	f(x) = 
+	\left \{ 
+		\begin{array}{ll}
+			x+5, & x>0 \\
+			x-5, & x<0
+		\end{array}
+	\right .
+\end{equation}
 ```
 ##### 1.3.1 aligned by the equation
 
@@ -128,7 +140,31 @@ graphicx offers a **\resizebox** command to adjust an equation.
 \end{equation}
 ```
 
+#### Galois
+Above tutorial involves many commands, it is difficult to remember all. the
+reason is that I haven't get the essence.  You can write any equation with this
+following template, the above commands just provide a quick to implement the
+essence.
+
+```latex
+\begin{equation}
+\left( \begin{array}{c}
+			1 \\
+			0 \\
+		\end{array}
+\right)
+\end{equation}
+```
+
+1. What do the left and right do here?
+- Make matching parentheses, braches, or other delimiters. Latex makes the
+delimiters tall enough to just cover the size of the formula that they enclose.
+
+2. You can notice how similar this command and the table command.
+
+
 #### Reference
 1. [Adjust equation size](https://tex.stackexchange.com/questions/35554/how-can-i-auto-adjust-a-equation-to-appear-in-the-entire-page-scale-to-equatio)
 2. [Piecewise function](https://tex.stackexchange.com/questions/246321/how-do-i-align-piecewise-functions/246323)
+3. [left and right](https://latexref.xyz/_005cleft-_0026-_005cright.html)
 
