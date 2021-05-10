@@ -122,6 +122,11 @@ graphicx package takes care of the numbering and positioning of the image within
 - p(page): on an extra page
 - !(override): will force the specified location
 
+##### 4.1.1 package clash
+The tikz package will load the graphicx automatically, so you can't load it again.
+Trying to loading it with different options will cause "option clash".
+
+
 ##### 4.1.1: \resizebox
 scale figure or equation
 ```latex
@@ -164,4 +169,5 @@ Put your figure in a separate page.
    latex](https://tex.stackexchange.com/questions/182467/including-eps-figure-in-pdflatex)
 5. [scale an figure](https://tex.stackexchange.com/questions/98134/is-it-possible-to-scale-an-entire-beginfigure)
 6. [How to include SVG diagrams in Latex](https://tex.stackexchange.com/questions/2099/how-to-include-svg-diagrams-in-latex)
+7. [option clash](https://tex.stackexchange.com/questions/82153/option-clash-when-using-graphicx-and-tikz-packages)
 

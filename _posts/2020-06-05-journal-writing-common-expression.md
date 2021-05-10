@@ -27,6 +27,22 @@ tags: []
 1. due to used to modify nouns and pronouns, due to is an adjective
 2. because of used to modify verb,   because is an adverb
 
+#### organizations and institutions
+1. An organization is defined as "groups of individuals bound by some common purpose to achieve objectives"
+2. An institution is "any form of constraint that human devise to shape human interaction"
+- He uses a sports metaphor for the distinction between these two definitions;
+  organizations are the "player of the game" and institutions are the "rules of
+  the game."
+
+#### policy, process and procedure
+1. policy: a course or principle of action adopted or proposed by an organisation or individual.
+- we see policy as being the rules and expectations around a particular thing.
+2. process: a series of actions or steps taken in order to achieve a particular end.
+3. procedure: an established or official way of doing something.
+- the detailed instructions of steps
+
+
+
 
 #### Word
 1. however, hence: you need to put a comma after however.

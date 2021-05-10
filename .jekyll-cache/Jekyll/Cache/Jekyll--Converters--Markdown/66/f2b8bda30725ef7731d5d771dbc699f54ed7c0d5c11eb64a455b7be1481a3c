@@ -1,0 +1,164 @@
+I"�$<h4 id="1-introduction">1. Introduction</h4>
+<p>bibtex is one of the additions of tex to manage the bibliography of a paper, so is biber.</p>
+<ul>
+  <li>
+    <p><strong>bibtex</strong> and <strong>biber</strong> are external programs that process bibliography
+information and act as the interface between you .bib file and your Latex
+document.</p>
+  </li>
+  <li>
+    <p>Natbib and biblatex are latex packages that format citations and
+bibliographies: natbib works only with <strong>bibtex</strong>; while biblatex works with both bibtex and biber.</p>
+  </li>
+</ul>
+
+<h4 id="2-with-bibtex-as-the-engine">2. With Bibtex as the engine</h4>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{document}</span>
+
+<span class="k">\section</span><span class="p">{</span>First section<span class="p">}</span>
+
+This document is an example of <span class="k">\texttt</span><span class="p">{</span>thebibliography<span class="p">}</span> environment using 
+in bibliography management. Three items are cited: <span class="k">\textit</span><span class="p">{</span>The <span class="k">\LaTeX\ </span>Companion<span class="p">}</span> 
+book <span class="k">\cite</span><span class="p">{</span>latexcompanion<span class="p">}</span>, the Einstein journal paper <span class="k">\cite</span><span class="p">{</span>einstein<span class="p">}</span>, and the 
+Donald Knuth's website <span class="k">\cite</span><span class="p">{</span>knuthwebsite<span class="p">}</span>. The <span class="k">\LaTeX\ </span>related items are
+<span class="k">\cite</span><span class="p">{</span>latexcompanion,knuthwebsite<span class="p">}</span>. 
+
+<span class="k">\medskip</span>
+
+<span class="nt">\begin{thebibliography}</span><span class="p">{</span>9<span class="p">}</span>
+<span class="k">\bibitem</span><span class="p">{</span>latexcompanion<span class="p">}</span> 
+Michel Goossens, Frank Mittelbach, and Alexander Samarin. 
+<span class="k">\textit</span><span class="p">{</span>The <span class="k">\LaTeX\ </span>Companion<span class="p">}</span>. 
+Addison-Wesley, Reading, Massachusetts, 1993.
+
+<span class="k">\bibitem</span><span class="p">{</span>einstein<span class="p">}</span> 
+Albert Einstein. 
+<span class="k">\textit</span><span class="p">{</span>Zur Elektrodynamik bewegter K<span class="p">{</span><span class="k">\"</span>o<span class="p">}</span>rper<span class="p">}</span>. (German) 
+[<span class="k">\textit</span><span class="p">{</span>On the electrodynamics of moving bodies<span class="p">}</span>]. 
+Annalen der Physik, 322(10):891–921, 1905.
+
+<span class="k">\bibitem</span><span class="p">{</span>knuthwebsite<span class="p">}</span> 
+Knuth: Computers and Typesetting,
+<span class="k">\\\texttt</span><span class="p">{</span>http://www-cs-faculty.stanford.edu/<span class="k">\~</span><span class="p">{}</span>uno/abcde.html<span class="p">}</span>
+<span class="nt">\end{thebibliography}</span>
+
+<span class="nt">\end{document}</span>
+
+</code></pre></div></div>
+
+<h5 id="core-module">Core module</h5>
+
+<p><strong>step 1</strong>: prepare the dataset <br /></p>
+<ol>
+  <li>prepare the bibliography file with extension “bib”, such as <strong>citation-database.bib</strong>.</li>
+</ol>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@article<span class="p">{</span>liu2015comparison,
+  title=<span class="p">{</span>Comparison of four Adaboost algorithm based artificial neural networks in wind speed predictions<span class="p">}</span>,
+  author=<span class="p">{</span>Liu, Hui and Tian, Hong-qi and Li, Yan-fei and Zhang, Lei<span class="p">}</span>,
+  journal=<span class="p">{</span>Energy Conversion and Management<span class="p">}</span>,
+  volume=<span class="p">{</span>92<span class="p">}</span>,
+  pages=<span class="p">{</span>67--81<span class="p">}</span>,
+  year=<span class="p">{</span>2015<span class="p">}</span>,
+  publisher=<span class="p">{</span>Elsevier<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><strong>step 2</strong>: include the <strong>citation-database.bib</strong> file, without the extension</p>
+<ol>
+  <li>To choose a Bibtex bibliographic style file with extension .bst. In the following example, the
+file is <strong>plain.bst</strong></li>
+</ol>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\bibliographystyle</span><span class="p">{</span>plain<span class="p">}</span>
+<span class="k">\bibliography</span><span class="p">{</span>citation-database<span class="p">}</span>
+<span class="nt">\end{document}</span>
+</code></pre></div></div>
+
+<p><strong>step 3</strong>: to insert a citation where label is the label of a bibliography entry in a .bib file.</p>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code>According to the paper<span class="k">\cite</span><span class="p">{</span>liu2015comparison<span class="p">}</span>
+</code></pre></div></div>
+
+<h4 id="how-to-use-a-specific-style">How to use a specific style</h4>
+<ol>
+  <li>You will need to typeset your document four times, first LaTex, BibTex, Latex, and then Latex
+again.
+    <ul>
+      <li>Your bibliography will now appear in the style of your choice and your citations will be correctly
+formatted.</li>
+      <li>If question marks appear where citations should, that means you need to Latex your document once
+more.</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="3-the-package-providing-reference-style">3. The package providing reference style</h4>
+<ul>
+  <li>Both <strong>Natbib</strong> and <strong>biblatex</strong> packages provides styles to typeset citation and reference.</li>
+  <li>Specify an engine, which is bibtex or biber, with natbib package you can only
+use the bibtex engine, with biblatex package, you have both.</li>
+</ul>
+
+<h4 id="1-natbib-package">1. Natbib Package</h4>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">%in the preamble</span>
+<span class="c">%--------------------------------</span>
+<span class="k">\usepackage</span><span class="p">{</span>natbib<span class="p">}</span>
+<span class="k">\bibliographystyle</span><span class="p">{</span>stylename<span class="p">}</span> <span class="c">%dinat, humannat, plainnat</span>
+<span class="c">%--------------------------------</span>
+<span class="k">\bibliography</span><span class="p">{</span>bibfile<span class="p">}</span> <span class="c">% where the bibliography will be printed</span>
+</code></pre></div></div>
+<h4 id="2-biblatex-package">2. biblatex Package</h4>
+
+<ol>
+  <li>in the preamble you need to use the following code:
+    <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\usepackage</span><span class="p">{</span>biblatex<span class="p">}</span> <span class="c">% loads up the biblatex package</span>
+<span class="k">\addbibresource</span><span class="p">{}</span>     <span class="c">% specify which bib files you want to use. simply enter the file name with</span>
+extension 
+</code></pre></div>    </div>
+  </li>
+  <li>if you want to declare one style for citations and a different style for the bibliography, you use
+the words citestyle and bibstyle.
+    <ul>
+      <li>in the body of the document instead of using a \bibliography command to construct bibliography,</li>
+      <li>you use the \printbibliography command</li>
+    </ul>
+  </li>
+</ol>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\usepackage</span><span class="na">[citestyle=alphabetic, bibstyle=authortitle]</span><span class="p">{</span>biblatex<span class="p">}</span>
+</code></pre></div></div>
+
+<ol>
+  <li>Another argument you can give the \usepackage command is the sorting option. Here’s a list of
+some of different sorting options available:
+    <ul>
+      <li>nty - sorts entries by name, title, year;</li>
+      <li>nyt - sorts entries by name, year, title;</li>
+      <li>nyvt - sorts entries by name, year, volume, title;</li>
+      <li>none - no sorting. Entries appear in the order they appear in the text.</li>
+    </ul>
+  </li>
+</ol>
+
+<p>If you don’t specify an order the default is nty.</p>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\usepackage</span><span class="na">[style=authoryear, sorting=ynt]</span><span class="p">{</span>biblatex<span class="p">}</span>
+</code></pre></div></div>
+
+<h4 id="4-work-with-latex-template-provided-by-a-journal">4. Work with latex template provided by a Journal</h4>
+<p>You can get a latex template from a journal, within the template folder you can
+find a bibliography style file. In this case, you can use it format your
+reference, and the engine is bibtex.</p>
+
+<h4 id="reference">Reference</h4>
+<ol>
+  <li><a href="https://en.wikipedia.org/wiki/Biber_(LaTeX)">Biber</a></li>
+  <li><a href="https://www.overleaf.com/learn/latex/Articles/Getting_started_with_BibLaTeX">biblatex package</a></li>
+  <li><a href="https://www.overleaf.com/learn/latex/Natbib_bibliography_styles">Natbib Package</a></li>
+  <li><a href="https://www.overleaf.com/learn/latex/biblatex_bibliography_styles">biblatex bibliography styles</a></li>
+</ol>
+
+:ET

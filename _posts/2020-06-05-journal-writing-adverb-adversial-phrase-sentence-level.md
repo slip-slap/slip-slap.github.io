@@ -51,7 +51,8 @@ the rest of the sentence when the phrase or clause comes first.
 The use of commas after prepositional phrases isn't always straightforward. We
 use a comma after some prepositional phrases at the beginning of a sentence but
 not after others.
-- Use a comma after prepositional phrases of five or more words, use a comma to eliminate confusion.
+- Use a comma after prepositional phrases of five or more words, use a comma to
+  eliminate confusion.
 
 
 
@@ -68,10 +69,6 @@ Conjunctive adverbs are one more type of adverb that can function as sentence ad
 2. Conjunctive adverbs can also come at the beginning of a sentence, connecting
    not two independent clauses in one sentence.
 - Pat lost the instruction. Moreover, no one knew how to operate the danged machine.
-
-
-
-
 
 #### Reference
 1. [Adverb and comma](https://theeditorsblog.net/2016/02/21/a-tale-of-adverbs-and-the-comma/#:~:text=In%20short%2C%20we%20usually%20don,the%20rest%20of%20a%20sentence.)

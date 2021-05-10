@@ -8,12 +8,15 @@ tags: ["日本語"]
 ---
 {% include JB/setup %}
 
+#### てて
+In general I see the ~ててform when as a conversational present progressive imperative.
+1. 食べていて: 食べてて
+2. 飲んでいて: 飲んでて
 
 #### 何してんの？
 It can be replaced with る。
 - It's a little bit easizer to pronounce "してんの" than "してるの？"
 - That's the only difference.
-
 
 #### 
 1.  わかんない
@@ -62,9 +65,6 @@ It can be replaced with る。
 - Young peole use the word not only in a negative sentence but also in a
   positive sense.
 
-
-
-
 ####
 1. なんなんだよ　マジで
 
@@ -74,3 +74,4 @@ It can be replaced with る。
 2. [なんでやねん](https://japanese.stackexchange.com/questions/44186/usage-of-%E3%81%AA%E3%82%93%E3%81%A7%E3%82%84%E3%81%AD%E3%82%93)
 3. [だよね](https://japanese.stackexchange.com/questions/12248/what-does-%E3%81%A0%E3%82%88%E3%81%AA%E3%83%BC-mean)
 4. [してんの](https://hinative.com/ja/questions/848277)
+5. [〜てて](https://community.bunpro.jp/t/form-followed-by/12701)

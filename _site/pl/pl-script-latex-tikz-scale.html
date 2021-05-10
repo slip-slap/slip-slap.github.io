@@ -166,7 +166,7 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">1015</span>
+<span title="文章总数">1020</span>
 <ul>
 
 
@@ -535,7 +535,22 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#June-2020">2020 年 06 月 (30)</a></li>
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#June-2020">2020 年 06 月 (33)</a></li>
     
   
 
@@ -3872,7 +3887,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#February-2017">2017 年 02 月 (32)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#February-2017">2017 年 02 月 (33)</a></li>
     
   
 
@@ -5379,7 +5399,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#February-2016">2016 年 02 月 (93)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#February-2016">2016 年 02 月 (94)</a></li>
     
   
 
@@ -5392,11 +5417,11 @@ $(document).ready(function() {
 <span title="分类总数">9</span>
 <ul>
 
-  <li><a href="/categories.html#言葉-ref">言葉 (208)</a></li>
+  <li><a href="/categories.html#言葉-ref">言葉 (209)</a></li>
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (238)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (239)</a></li>
 
   <li><a href="/categories.html#Algorithm-ref">Algorithm (80)</a></li>
 
@@ -5406,7 +5431,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#Economy-ref">Economy (2)</a></li>
 
-  <li><a href="/categories.html#work-ref">work (38)</a></li>
+  <li><a href="/categories.html#work-ref">work (41)</a></li>
 
   <li><a href="/categories.html#AI-ref">AI (43)</a></li>
 
@@ -6261,7 +6286,10 @@ $(document).ready(function() {
         </div>
       </div>
       <h4 id="motivation">Motivation</h4>
-<p>We need to scale figure to fit the page width.</p>
+<ol>
+  <li>There is nothing special with an image, for latex, an image is just normal text of big size.
+We need to scale figure to fit the page width.</li>
+</ol>
 
 <h4 id="1-scale-a-tikzpicture">1. Scale a tikzpicture</h4>
 
@@ -6297,9 +6325,90 @@ $(document).ready(function() {
 	<span class="p">}</span>
 </code></pre></div></div>
 
+<h4 id="example">Example</h4>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{tikzpicture}</span>
+[ p/.style=<span class="p">{</span> draw=none, fill=none, <span class="p">}</span>, remember picture, 
+  net/.style=<span class="p">{</span> matrix of nodes, nodes=<span class="p">{</span> draw, circle, inner sep=7.5pt <span class="p">}</span>,
+  nodes in empty cells,
+  column sep=-10.5pt,
+  row sep=0.8cm
+  <span class="p">}</span>
+]
+	<span class="k">\useasboundingbox</span> (-1.5,-1.1) rectangle (1.5,2);
+	<span class="k">\scope</span><span class="na">[transform canvas={scale=0.6}]</span>
+		<span class="c">%\draw[help lines] (-3cm,-6cm) grid (6cm,3cm);</span>
+		<span class="k">\matrix</span><span class="na">[net]</span> (mat)
+		<span class="p">{</span>
+			  <span class="p">&amp;</span> |[p]| <span class="p">&amp;</span>  <span class="p">&amp;</span> |[p]| <span class="p">&amp;</span>  <span class="p">&amp;</span> |[p]| <span class="p">&amp;</span>  <span class="p">&amp;</span> |[p]| <span class="p">&amp;</span>  <span class="p">&amp;</span> |[p]| <span class="p">&amp;</span>  <span class="p">&amp;</span> |[p]| <span class="p">&amp;</span>  <span class="p">&amp;</span> |[p]| <span class="p">&amp;</span>  <span class="p">&amp;</span> |[p]| <span class="p">&amp;</span>  <span class="p">&amp;</span>
+				|[p]| <span class="p">&amp;</span>  <span class="p">&amp;</span> |[p]| <span class="p">&amp;</span>  <span class="p">&amp;</span> |[p]| <span class="p">&amp;</span>  <span class="p">&amp;</span> |[p]| <span class="p">&amp;</span>  <span class="p">&amp;</span> |[p]| <span class="p">&amp;</span>  <span class="p">&amp;</span> |[p]| <span class="p">&amp;</span>  <span class="p">&amp;</span> |[p]| <span class="p">&amp;</span>  <span class="p">&amp;</span> |[p]|    <span class="k">\\</span>
+		 |[p]| <span class="p">&amp;</span> |[p]| <span class="p">&amp;</span> |[p]|   <span class="p">&amp;</span> |[p]|  <span class="p">&amp;</span>  |[p]| <span class="p">&amp;</span>  |[p]| <span class="p">&amp;</span> |[p]| <span class="p">&amp;</span>|[p]|  <span class="p">&amp;</span>   <span class="p">&amp;</span> |[p]| <span class="p">&amp;</span>      <span class="p">&amp;</span> |[p]| <span class="p">&amp;</span>  <span class="p">&amp;</span>  |[p]| <span class="p">&amp;</span>  <span class="p">&amp;</span>
+		 |[p]| <span class="p">&amp;</span>       <span class="p">&amp;</span> |[p]| <span class="p">&amp;</span>   <span class="p">&amp;</span> |[p]|   <span class="p">&amp;</span>  <span class="p">&amp;</span> |[p]| <span class="p">&amp;</span>       <span class="p">&amp;</span>|[p]| <span class="p">&amp;</span> |[p]| <span class="p">&amp;</span> |[p]| <span class="p">&amp;</span> |[p]|
+			   <span class="p">&amp;</span> |[p]| <span class="p">&amp;</span>  |[p]|   <span class="p">&amp;</span>  |[p]| <span class="p">&amp;</span>  |[p]| <span class="p">&amp;</span> |[p]| <span class="p">&amp;</span> |[p]|  <span class="k">\\</span> 
+		 |[p]| <span class="p">&amp;</span>  |[p]| <span class="p">&amp;</span> |[p]|  <span class="p">&amp;</span>  |[p]| <span class="p">&amp;</span> |[p]|  <span class="p">&amp;</span>  |[p]| <span class="p">&amp;</span>  |[p]| <span class="p">&amp;</span>  |[p]| <span class="p">&amp;</span> |[p]| <span class="p">&amp;</span> |[p]| <span class="p">&amp;</span> |[p]| <span class="p">&amp;</span>       <span class="p">&amp;</span> |[p]|
+			   <span class="p">&amp;</span>  |[p]| <span class="p">&amp;</span> |[p]|  <span class="p">&amp;</span>  |[p]| <span class="p">&amp;</span>        <span class="p">&amp;</span>  |[p]| <span class="p">&amp;</span>  |[p]| <span class="p">&amp;</span>  |[p]| <span class="p">&amp;</span> |[p]| <span class="p">&amp;</span> |[p]| <span class="p">&amp;</span> |[p]| <span class="p">&amp;</span> |[p]| <span class="p">&amp;</span>     |[p]|
+			   <span class="p">&amp;</span>  |[p]| <span class="p">&amp;</span> |[p]|  <span class="p">&amp;</span>  |[p]| <span class="p">&amp;</span> |[p]|  <span class="p">&amp;</span>  |[p]| <span class="p">&amp;</span>  |[p]| <span class="p">&amp;</span>  |[p]| <span class="k">\\</span> 
+		  <span class="p">}</span>;
+		  <span class="k">\node</span> at (mat-1-1.base)   <span class="p">{$</span><span class="nb">i</span><span class="p">_</span><span class="m">1</span><span class="p">$}</span>;    <span class="k">\node</span> at (mat-1-3.base)   <span class="p">{$</span><span class="nb">i</span><span class="p">_</span><span class="m">2</span><span class="p">$}</span>; 
+		  <span class="k">\node</span> at (mat-1-5.base)   <span class="p">{$</span><span class="nb">i</span><span class="p">_</span><span class="m">3</span><span class="p">$}</span>;    <span class="k">\node</span> at (mat-1-7.base)   <span class="p">{$</span><span class="nb">i</span><span class="p">_</span><span class="m">4</span><span class="p">$}</span>; 
+		  <span class="k">\node</span> at (mat-1-9.base)   <span class="p">{$</span><span class="nb">i</span><span class="p">_</span><span class="m">5</span><span class="p">$}</span>;    <span class="k">\node</span> at (mat-1-11.base)  <span class="p">{$</span><span class="nb">i</span><span class="p">_</span><span class="m">6</span><span class="p">$}</span>; 
+		  <span class="k">\node</span> at (mat-1-13.base)  <span class="p">{$</span><span class="nb">i</span><span class="p">_</span><span class="m">7</span><span class="p">$}</span>;    <span class="k">\node</span> at (mat-1-15.base)  <span class="p">{$</span><span class="nb">i</span><span class="p">_</span><span class="m">8</span><span class="p">$}</span>; 
+		  <span class="k">\node</span> at (mat-1-17.base)  <span class="p">{$</span><span class="nb">i</span><span class="p">_</span><span class="m">9</span><span class="p">$}</span>;    <span class="k">\node</span> at (mat-1-17.base)  <span class="p">{$</span><span class="nb">i</span><span class="p">_</span><span class="m">9</span><span class="p">$}</span>;
+		  <span class="k">\node</span> at (mat-1-19.base)  <span class="p">{$</span><span class="nb">i</span><span class="p">_{</span><span class="m">10</span><span class="p">}$}</span>; <span class="k">\node</span> at (mat-1-21.base)  <span class="p">{$</span><span class="nb">i</span><span class="p">_{</span><span class="m">11</span><span class="p">}$}</span>;
+		  <span class="k">\node</span> at (mat-1-23.base)  <span class="p">{$</span><span class="nb">i</span><span class="p">_{</span><span class="m">12</span><span class="p">}$}</span>; <span class="k">\node</span> at (mat-1-25.base)  <span class="p">{$</span><span class="nb">i</span><span class="p">_{</span><span class="m">13</span><span class="p">}$}</span>;
+		  <span class="k">\node</span> at (mat-1-27.base)  <span class="p">{$</span><span class="nb">i</span><span class="p">_{</span><span class="m">14</span><span class="p">}$}</span>; <span class="k">\node</span> at (mat-1-29.base)  <span class="p">{$</span><span class="nb">i</span><span class="p">_{</span><span class="m">15</span><span class="p">}$}</span>;
+		  <span class="k">\node</span> at (mat-1-31.base)  <span class="p">{$</span><span class="nb">i</span><span class="p">_{</span><span class="m">16</span><span class="p">}$}</span>;
+
+		  <span class="k">\node</span> at (mat-2-9.base)  <span class="p">{$</span><span class="nb">h</span><span class="p">_</span><span class="m">1</span><span class="p">$}</span>;
+		  <span class="k">\node</span> at (mat-2-11.base) <span class="p">{$</span><span class="nb">h</span><span class="p">_</span><span class="m">2</span><span class="p">$}</span>;
+		  <span class="k">\node</span> at (mat-2-13.base) <span class="p">{$</span><span class="nb">h</span><span class="p">_</span><span class="m">3</span><span class="p">$}</span>;
+		  <span class="k">\node</span> at (mat-2-15.base) <span class="p">{$</span><span class="nb">h</span><span class="p">_</span><span class="m">4</span><span class="p">$}</span>;
+		  <span class="k">\node</span> at (mat-2-17.base) <span class="p">{$</span><span class="nb">h</span><span class="p">_</span><span class="m">5</span><span class="p">$}</span>;
+		  <span class="k">\node</span> at (mat-2-19.base) <span class="p">{$</span><span class="nb">h</span><span class="p">_</span><span class="m">6</span><span class="p">$}</span>;
+		  <span class="k">\node</span> at (mat-2-21.base) <span class="p">{$</span><span class="nb">h</span><span class="p">_</span><span class="m">7</span><span class="p">$}</span>;
+		  <span class="k">\node</span> at (mat-2-23.base) <span class="p">{$</span><span class="nb">h</span><span class="p">_</span><span class="m">8</span><span class="p">$}</span>;
+
+		 <span class="k">\foreach</span> <span class="k">\a</span> in <span class="p">{</span>1,3,5,7,9,11,31<span class="p">}{</span>
+				<span class="k">\draw</span><span class="na">[-&gt;,dotted]</span> (mat-1-<span class="k">\a</span>.south) -- (mat-2-9.north);
+			 <span class="p">}</span>
+		 <span class="k">\foreach</span> <span class="k">\a</span> in <span class="p">{</span>5,7,11,13,19,25,27<span class="p">}{</span>
+				<span class="k">\draw</span><span class="na">[-&gt;,dotted]</span> (mat-1-<span class="k">\a</span>.south) -- (mat-2-11.north);
+			 <span class="p">}</span>
+		 <span class="k">\foreach</span> <span class="k">\a</span> in <span class="p">{</span>27,29,31<span class="p">}{</span>
+				<span class="k">\draw</span><span class="na">[-&gt;,dashed]</span> (mat-1-<span class="k">\a</span>.south) -- (mat-2-13.north);
+			 <span class="p">}</span>
+		 <span class="k">\foreach</span> <span class="k">\a</span> in <span class="p">{</span>11,19,27,31<span class="p">}{</span>
+				<span class="k">\draw</span><span class="na">[-&gt;,dashed]</span> (mat-1-<span class="k">\a</span>.south) -- (mat-2-15.north);
+			 <span class="p">}</span>
+		 <span class="k">\foreach</span> <span class="k">\a</span> in <span class="p">{</span>15,19,23<span class="p">}{</span>
+				<span class="k">\draw</span><span class="na">[-&gt;,dashed]</span> (mat-1-<span class="k">\a</span>.south) -- (mat-2-17.north);
+			 <span class="p">}</span>
+		 <span class="k">\foreach</span> <span class="k">\a</span> in <span class="p">{</span>3,5,7<span class="p">}{</span>
+				<span class="k">\draw</span><span class="na">[-&gt;,dashed]</span> (mat-1-<span class="k">\a</span>.south) -- (mat-2-19.north);
+			 <span class="p">}</span>
+		 <span class="k">\foreach</span> <span class="k">\a</span> in <span class="p">{</span>17,19,21,23<span class="p">}{</span>
+				<span class="k">\draw</span><span class="na">[-&gt;,dashed]</span> (mat-1-<span class="k">\a</span>.south) -- (mat-2-21.north);
+			 <span class="p">}</span>
+		 <span class="k">\foreach</span> <span class="k">\a</span> in <span class="p">{</span>21,23,25,27,29<span class="p">}{</span>
+				<span class="k">\draw</span><span class="na">[-&gt;,dashed]</span> (mat-1-<span class="k">\a</span>.south) -- (mat-2-23.north);
+			 <span class="p">}</span>
+
+		 <span class="k">\foreach</span> <span class="k">\c</span> in <span class="p">{</span>9,11,13,15,17,19,21,23<span class="p">}{</span>
+			<span class="k">\foreach</span> <span class="k">\d</span> in <span class="p">{</span>12,17<span class="p">}{</span>
+				<span class="k">\draw</span><span class="na">[-&gt;]</span> (mat-2-<span class="k">\c</span>.south) -- (mat-3-<span class="k">\d</span>.north);
+			<span class="p">}</span>
+		 <span class="p">}</span>
+	<span class="k">\endscope</span>
+<span class="nt">\end{tikzpicture}</span>
+
+
+
+</code></pre></div></div>
+
 <h4 id="reference">Reference</h4>
 <ol>
   <li><a href="https://tex.stackexchange.com/questions/26846/how-to-scale-a-tikzpicture-including-texts">Tikz scale</a></li>
+  <li><a href="https://tex.stackexchange.com/questions/108380/why-does-transform-canvas-change-where-the-caption-is">canvas and the caption</a></li>
 </ol>
 
       
@@ -6329,7 +6438,7 @@ $(document).ready(function() {
   
      
     	<li><a href="/categories.html#PL-ref">
-    		PL <span>238</span>
+    		PL <span>239</span>
     	</a></li>
     
   
@@ -6348,9 +6457,9 @@ $(document).ready(function() {
 
   
      
-    	<li><a href="/tags.html#latex-ref">latex <span>22</span></a></li>
+    	<li><a href="/tags.html#latex-ref">latex <span>23</span></a></li>
      
-    	<li><a href="/tags.html#script-ref">script <span>120</span></a></li>
+    	<li><a href="/tags.html#script-ref">script <span>121</span></a></li>
     
   
 

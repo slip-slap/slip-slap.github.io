@@ -8,6 +8,14 @@ tags: ["summary"]
 ---
 {% include JB/setup %}
 
+
+#### Thoughs(20210504) 
+What is math? - it is a representation.
+- Neural network is a represenation based on functions that how human process information.
+- Probability model is a diagrammatic representations of probability distributions.
+
+
+
 #### Galois
 We copy concept from one subject to another, and hope it may work.
 1. complement, in probability, in combinatorics

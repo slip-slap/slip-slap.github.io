@@ -37,6 +37,10 @@ This is used when you want to specify something mentioned previously.
    forward genetics and reverse genetics.
 
 
+#### Others
+1. simply add an 's' to an abbreviation to make it plural.
+
+
 #### Reference
 1. [e.g. and i.e.](https://www.aje.com/arc/editing-tip-using-eg-and-ie/)
 

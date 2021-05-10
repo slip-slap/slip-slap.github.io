@@ -8,6 +8,55 @@ tags: ["日本語"]
 ---
 {% include JB/setup %}
 
+#### Sentence structure
+A structure of a japanese sentence is like this:
+phrase + で, phrase + が, phrase + は, phrase + に + verb.
+- the verb always comes  at the end of a sentence, if you want to differentiate
+  sentence component, such as subject, object, you have to give it a delimiter,
+  which is a particle i.e. が、は、に.
+- Here, we try to use a formula to represent a sentence, but it is not true.
+  People just keep adding new things to a language, which makes it get more
+  more difficult. 
+
+
+
+
+#### は and が
+
+##### 1. with nonessence 
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+1. は indicates contrast, focus on the part before は
+- 結果が出るまでには、長い年月が必要だろう
+- 今の子供が大人になるまでには、様々な研究が進んでいるだろう
+- 面と向かっては, it emphasises face to face.
+2. が indicates new information
+1. は: this particle emphasis content before は、
+- 面白いはあります, this sentence implies existance of boring thing 
+2. に: emphasis the content before it, no intention of comparsion
+- 潤ちゃんにしようか, get 潤ちゃん do this, no imply of comparsion
+3. が: emphasis the content after が
+- 何が好き？
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+The content is enclosed by the delimiter, which is how I try to learn this before. However, this is not the essense..
+
+##### 1. The essence
+At the begginning of Japanese, These is only the one particle "が", without
+"は". However, this is short to express more complicate idea, so people create
+"は" to add new flavor to a sentence.
+
+
+
+#### わけがない・わけはない・わけではない
+1. わけがない: it's impossible
+- 秋山はあの人のことを好きなわけがない.
+- 彼はお金がないですから、家を買えるわけがない: he is poor, there is no way he can buy a house.
+
+2. わけはない: it's not impossible, and imply something else
+-  you prefer not to use this phrase
+3. わけではない: imply something else.
+秋山はあの人のことを好きなわけではない
+
 
 #### で
 1. a single で、means then, after.
@@ -111,35 +160,42 @@ is nor generally used.
 
 
 #### 5 に
+The essence of に is attaching the some properties of the verb to what precedes
+に, this properties can be like time, place.
+
+- この件、君にだけ話しますよ
+- 辞書をかばんの中に入れました
+- そこに荷物をおいてください
+- 私は来月は東京に行くつもりなんですけど、あなたは？
+- 日本円をドルに両替したいです
+- 卒業したら、先生になりたいです
+- あの子の性格はお母さんに似ています
+- この花は二年に一度咲きます
+
 1. time
 - 次の電車は何時に出ますか
 - 東京オリンピックは２０２０年に開催されます
+- 毎日7に起きる
 
-2. adjoint point
-- 辞書をかばんの中に入れました
-- そこに荷物をおいてください
+2. used with ある,  いる、住んでいる
+- 本は机の上にある.
+- 先生はまだ教室にいる.
 
-3. the target of action
-- この件、君にだけ話しますよ
+3. with あう and 渡す
+- あなたに会いたかった
+- この本を先生に渡してください。
 
-4. destination
-- 日本に留学したいです
-- 私は来月は東京に行くつもりなんですけど、あなたは？
-
-5. frequency
-- この花は二年に一度咲きます
-
-6. result
-- 日本円をドルに両替したいです
-- 卒業したら、先生になりたいです
-
-
-7. comparison benchmark
-- あの子の性格はお母さんに似ています
-
-8. given example
+4. given example
 - 駅前に新しくできたお店に行ってみたんですが、うどんにそばにラーメン、麺類が豊富でしたよ
+- ピカピカに光ってる、星が綺麗だ
 
+5. には...が: I will do something, but
+- 行くには行くが、もうちょっと待ってください: I will go, but wait a moment.
+- いいにはいいが、ちょっと高い: It's good, but expensive.
+
+6. repeat one action
+- 待ちに待った、この日がついに来た。waiting for a long time, it finally comes.
+- 走りに走って、やっと電車に間に合った。keep running, finall catch the train.
 
 
 #### を
@@ -162,28 +218,6 @@ is nor generally used.
 
 
 
-
-#### は and が
-
-1. は indicates contrast, focus on the part before は
-- 結果が出るまでには、長い年月が必要だろう
-- 今の子供が大人になるまでには、様々な研究が進んでいるだろう
-- 面と向かっては, it emphasises face to face.
-2. が indicates new information
-
-
-
-#### わけがない・わけはない・わけではない
-1. わけがない: it's impossible
-- 秋山はあの人のことを好きなわけがない.
-- 彼はお金がないですから、家を買えるわけがない: he is poor, there is no way he can buy a house.
-
-2. わけはない: it's not impossible, and imply something else
--  you prefer not to use this phrase
-3. わけではない: imply something else.
-秋山はあの人のことを好きなわけではない
-
-
 #### かなり・結構
 1. 李さんの日本語はかなり上手ですね
 
@@ -193,13 +227,7 @@ is nor generally used.
 
 
 #### Galois
-1. は: this particle emphasis content before は、
-- 面白いはあります, this sentence implies existance of boring thing 
-2. に: emphasis the content before it, no intention of comparsion
-- 潤ちゃんにしようか, get 潤ちゃん do this, no imply of comparsion
-3. が: emphasis the content after が
-- 何が好き？
-
+1. learning from its history is the best way to know it, understand it, get it..
 
 #### Reference
 1. [か](http://maggiesensei.com/2019/12/18/how-to-use-%e3%80%9c%e3%81%8b%ef%bc%8f%e3%80%9c%e3%81%8b%e3%81%a9%e3%81%86%e3%81%8b-ka-ka-douka/)
