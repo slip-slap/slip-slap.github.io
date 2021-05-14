@@ -166,7 +166,7 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">1020</span>
+<span title="文章总数">1030</span>
 <ul>
 
 
@@ -550,7 +550,42 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#June-2020">2020 年 06 月 (33)</a></li>
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#June-2020">2020 年 06 月 (40)</a></li>
     
   
 
@@ -1637,7 +1672,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#December-2018">2018 年 12 月 (71)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#December-2018">2018 年 12 月 (72)</a></li>
     
   
 
@@ -2380,7 +2420,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#December-2017">2017 年 12 月 (10)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#December-2017">2017 年 12 月 (11)</a></li>
     
   
 
@@ -4931,7 +4976,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#March-2016">2016 年 03 月 (116)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2016">2016 年 03 月 (117)</a></li>
     
   
 
@@ -5413,25 +5463,25 @@ $(document).ready(function() {
         </section>
         -->
         <section>
-          <a href="/categories.html" title="查看所有分类"><i class="icon-fixed-width icon-folder-open"></i> 文章分类</a>
+          <a href="/categories.html" title="查看所有分类"><i class="icon-fixed-width icon-folder-open"></i> Outline</a>
 <span title="分类总数">9</span>
 <ul>
 
-  <li><a href="/categories.html#言葉-ref">言葉 (209)</a></li>
+  <li><a href="/categories.html#言葉-ref">言葉 (210)</a></li>
 
   <li><a href="/categories.html#life-ref">life (16)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (239)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (240)</a></li>
 
   <li><a href="/categories.html#Algorithm-ref">Algorithm (80)</a></li>
 
   <li><a href="/categories.html#CS-ref">CS (60)</a></li>
 
-  <li><a href="/categories.html#math-ref">math (326)</a></li>
+  <li><a href="/categories.html#math-ref">math (327)</a></li>
 
   <li><a href="/categories.html#Economy-ref">Economy (2)</a></li>
 
-  <li><a href="/categories.html#work-ref">work (41)</a></li>
+  <li><a href="/categories.html#work-ref">work (48)</a></li>
 
   <li><a href="/categories.html#AI-ref">AI (43)</a></li>
 
@@ -5439,8 +5489,8 @@ $(document).ready(function() {
 
         </section>
         <section>
-          <a href="/tags.html" title="查看所有标签"><i class="icon-fixed-width icon-tags"></i> 标签云</a>
-<span title="标签总数">105</span>
+          <a href="/tags.html" title="查看所有标签"><i class="icon-fixed-width icon-tags"></i> Tags</a>
+<span title="标签总数">106</span>
 <div id="tag-cloud">
 
 
@@ -5699,6 +5749,13 @@ $(document).ready(function() {
     
     
     
+    <a href="/tags.html#ruby-ref" style="font-size: 9pt; color: #999;">ruby</a>
+  
+    
+    
+    
+    
+    
     <a href="/tags.html#構造-ref" style="font-size: 13.5pt; color: #555;">構造</a>
   
     
@@ -5881,7 +5938,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#basic-ref" style="font-size: 10pt; color: #888;">basic</a>
+    <a href="/tags.html#basic-ref" style="font-size: 10.5pt; color: #888;">basic</a>
   
     
     
@@ -6249,6 +6306,286 @@ $(document).ready(function() {
   <article class="nested">
 
     <header>
+      <h2><a href="/pl/pl-tool-git-patching.html" title="查看《Git: Patching》">Git: Patching</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+shell
+
+apply
+cherry-pick
+diff
+rebase
+revert
+
+
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#May-2017" title="查看此月所有文章">18 May 2017</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-tool-git-patching.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-tool-git-internals.html" title="查看《Git: Internals》">Git: Internals</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+type blob=array&lt;byte&gt;
+type tree=map&lt;string, tree|blob&gt;&gt;
+type commits={
+parents = array&lt;commit&gt;
+author = string&lt;&gt;
+messag...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#May-2017" title="查看此月所有文章">18 May 2017</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-tool-git-internals.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-tool-git-ignore.html" title="查看《Git: Ignore》">Git: Ignore</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Incentive?
+
+  specifies intentionally untracked files to ignore.
+    
+      File are already tracked by Git are not affected.
+    
+  
+
+
+Pattern
+
+ ...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#May-2017" title="查看此月所有文章">18 May 2017</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-tool-git-ignore.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-tool-git-configuration.html" title="查看《Git: Configuration and Internals》">Git: Configuration and Internals</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Just as other programs, the git configuration can be divided into three level.
+
+1. Configuration File
+1.1 System level
+
+  a file named /etc/config...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#May-2017" title="查看此月所有文章">18 May 2017</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-tool-git-configuration.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-tool-git-debugging.html" title="查看《Git: Debugging》">Git: Debugging</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+bisect
+blameo
+grep
+
+
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#May-2017" title="查看此月所有文章">17 May 2017</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-tool-git-debugging.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-tool-git-sharing.html" title="查看《Git: Sharing》">Git: Sharing</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+####
+
+fetch
+pull
+push
+remote
+submodule
+
+
+Pull and Fetch
+In the default mode, git pull is shorthand for get fetch followed by
+**git merge FETCH_HEA...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#May-2017" title="查看此月所有文章">16 May 2017</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-tool-git-sharing.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-tool-git-github.html" title="查看《Git: Github》">Git: Github</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+What is a pull request?
+You make local code changes and then submit those changes to a remote project
+maintainer for review before those changes i...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#May-2017" title="查看此月所有文章">15 May 2017</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-tool-git-github.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-tool-git-branching-merging.html" title="查看《Git:  Branching and Merging》">Git:  Branching and Merging</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+mergetool
+log
+stash
+tag
+
+
+1. branch
+
+can only be run after the merge has resulted in conflicts.
+git merge –continue
+
+1.1 Operation
+
+  git branch  ...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#May-2017" title="查看此月所有文章">14 May 2017</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-tool-git-branching-merging.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-tool-git-basic-operation.html" title="查看《Git: Basic Operation》">Git: Basic Operation</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+1. Create a repository
+
+1.1 git init
+1.2 git clone
+This command is git clone and not “checkout”. This is an important
+distinction-instead of getti...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#May-2017" title="查看此月所有文章">13 May 2017</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-tool-git-basic-operation.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
       <h2><a href="/pl/pl-tool-editor-vimscript-philosophy.html" title="查看《Editor: Vimscript Philosophy》">Editor: Vimscript Philosophy</a></h2>
     </header>
 
@@ -6267,276 +6604,6 @@ makes a lot more sense once you begin gro...
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
         评论：<a href="/pl/pl-tool-editor-vimscript-philosophy.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-tool-editor-format.html" title="查看《Editor: Format》">Editor: Format</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-####
-
-  To enter ^M, hold down the CTRL key then press V and M in succession.
-
-
-Reference
-
-  Remove CTRL-M characters from a file in UNIX
-
-
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#May-2017" title="查看此月所有文章">12 May 2017</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-tool-editor-format.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-tool-editor-vimscript-window-and-panel.html" title="查看《Vimscript: window and Panel》">Vimscript: window and Panel</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-1. adjust window width
-
-:nnoremap  &lt;leader&gt;+ :vertical res +10 &lt;cr&gt;
-:nnoremap  &lt;leader&gt;- :vertical res -10&lt;cr&gt;
-
-
-2. split ...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#May-2017" title="查看此月所有文章">11 May 2017</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-tool-editor-vimscript-window-and-panel.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-tool-editor-vimscript-basic.html" title="查看《Editor: Vimscript basic》">Editor: Vimscript basic</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-1. Introduction
-This software is plugin system, so it is very flexible and diffcult to learn.
-it heavily depends on the plugin and shortcut to imp...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#May-2017" title="查看此月所有文章">11 May 2017</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-tool-editor-vimscript-basic.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-tool-editor-vimscript-visual-mode.html" title="查看《Editor: Vimscript Visual Mode》">Editor: Vimscript Visual Mode</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-####
-
-  Character mode: v
-  Line mode: V
-  Block mode: &lt;c-v&gt;
-
-
-####
-
-  %: work based in visual mode
-
-
-
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#May-2017" title="查看此月所有文章">03 May 2017</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-tool-editor-vimscript-visual-mode.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-tool-editor-vimscript-normal-mode.html" title="查看《Editor: Vimscript Normal Mode》">Editor: Vimscript Normal Mode</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-1. Introduction
-Why this is called normal mode ? Because this is the most important mode. Just
-be always on this mode.
-
-2.1 Navigation
-
-  w: jump ...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#May-2017" title="查看此月所有文章">02 May 2017</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-tool-editor-vimscript-normal-mode.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-tool-editor-vimscript-plugin.html" title="查看《Editor: Vimscript Plugin》">Editor: Vimscript Plugin</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-1. Plugin
-
-  For every plugin, you can refer to the instruction about how to use them.
-  and in the vimrc file to setting.
-
-
-1.1 vundle-plugin
-
-  ...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#May-2017" title="查看此月所有文章">01 May 2017</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-tool-editor-vimscript-plugin.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-tool-editor-vimscript-plugin-youcompleteme.html" title="查看《Editor: youcompleteme》">Editor: youcompleteme</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-####
-
-  Try running YCM’s install script by specifying which python executable should
-run it explicitly:
-    
-      /usr/to/python ./install.py –c...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#May-2017" title="查看此月所有文章">01 May 2017</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-tool-editor-vimscript-plugin-youcompleteme.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-tool-editor-vimscript-plugin-vimtex.html" title="查看《Editor: Vimtex》">Editor: Vimtex</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-####
-
-  The default compiler backend relies on latexmk, which is a perl script for running Latex the
-correct number of times to resolve cross refe...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#May-2017" title="查看此月所有文章">01 May 2017</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-tool-editor-vimscript-plugin-vimtex.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-lazy-evaluation-haskell-summary.html" title="查看《Haskell: summary》">Haskell: summary</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-A
-
-  Category theory deals with structure - rather than dealing with particulars.
-It deals with the kind of structure that makes programs composab...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#April-2017" title="查看此月所有文章">30 April 2017</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-lazy-evaluation-haskell-summary.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6581,7 +6648,7 @@ It deals with the kind of structure that makes programs composab...
 
     <!-- Current Page -->
     <li class="active">
-      <span class="page_number ">第 59/102 页</span>
+      <span class="page_number ">The 59/103 page</span>
     </li>
 
     <!-- Next Page -->
@@ -6591,7 +6658,7 @@ It deals with the kind of structure that makes programs composab...
 
     <!-- Last Page -->
     
-    <li><a href="/page102">&raquo;&raquo;</a></li>
+    <li><a href="/page103">&raquo;&raquo;</a></li>
     
   </ul>
 </section>
