@@ -1,52 +1,16 @@
----
-layout: post
-title: "Python Qt: Picture Display"
-keywords: [] 
-description: 
-category: "PL"
-tags: ["python","script"]
----
-{% include JB/setup %}
-
 #### Display a picutre
 In nature, There is no difference between text label and picture label. <br />
 So, you can put a picture in a label. <br />
 Programming look into the essence of the world.
 
-
-```python
-import sys
-from PyQt5.QtWidgets import QApplication, QWidget, QLabel
-from PyQt5.QtGui import QIcon, QPixmap
-import matplotlib.pyplot as plt
-
-
-class App(QWidget):
-
-    def __init__(self):
-        super().__init__()
-        self.title = 'PyQt5 image - pythonspot.com'
-        self.left = 10
-        self.top = 10
-        self.width = 640
-        self.height = 480
-        self.initUI()
-
-    def initUI(self):
-        self.setWindowTitle(self.title)
-        self.setGeometry(self.left, self.top, self.width, self.height)
-
-        # Create widget
-        label = QLabel(self)
-        pixmap = QPixmap('df.png')
-        label.setPixmap(pixmap)
-        self.resize(pixmap.width(),pixmap.height())
-        self.show()
+#### Widget
+1. TextLabel: what does label mean? According to Merriam-Webster: to put a word
+   or name on something to describe or identify it.
+2. Graphics View: what does view mean? According to Merriam-Webster: it is a
+   picture of a place So Graphics View jus a place to put picture.  So Tree
+   view, List view, Table view, and column view just place to put tree, list,
+   table and column.
+3. frame: what does frame mean ? According to Merriam-Webster: an arrangement of
+   parts that support and form the basic shape of something.
 
 
-if __name__ == '__main__':
-    app = QApplication(sys.argv)
-    ex = App()
-    sys.exit(app.exec_())
-
-```

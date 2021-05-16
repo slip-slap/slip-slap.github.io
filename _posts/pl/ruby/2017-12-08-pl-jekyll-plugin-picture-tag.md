@@ -17,8 +17,10 @@ tags: ["jekyll","script"]
 #### Galois
 What's the nature of a plugin?  It is used to extend functionality of
 something.
-- Plugins of vim are to extend vim's functionality.
-- Plugins of jekyll are to extend jekyll's ability.
+- Plugins of vim, extending vim's functionality, are the corresponding command
+  you can execute at the bottom of vim in the command mode.
+- Plugins of jekyll, extending jekyll's ability, are the corresponding tags in
+  the template file, page file, etc.
 
 
 #### Reference

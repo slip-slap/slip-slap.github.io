@@ -3,7 +3,7 @@
   <title>Just Do It</title>
   <link href="/atom.xml" rel="self"/>
   <link href=""/>
-  <updated>2021-05-14T12:53:56+09:00</updated>
+  <updated>2021-05-16T14:32:42+09:00</updated>
   <id></id>
   <author>
     <name>reed</name>
@@ -2025,18 +2025,16 @@ falling powers.
   </entry>
 
   <entry>
-    <title>P.A.S.: Related Variables</title>
-    <link href="/math/math-apply-probability-model-related-variables.html"/>
-    <updated>2019-09-29T00:00:00+09:00</updated>
-    <id>/math/math-apply-probability-model-related-variables</id>
+    <title>P.M.: History</title>
+    <link href="/math/math-apply-probability-model-history.html"/>
+    <updated>2019-09-30T00:00:00+09:00</updated>
+    <id>/math/math-apply-probability-model-history</id>
     <content type="html">
-Definition
+The Watershed
 
-  Related Variables: Variables X and Y are related variables if there is any change in
-the conditional distribution of Y, given X=x, as x changes
-  Unrelated: We say that variables X and Y are unrelated if they are
-independent.
-  Response Variable and Predictor Variable: we think of ...</content>
+  In 1933,
+
+</content>
   </entry>
 
   <entry>
@@ -2045,13 +2043,13 @@ independent.
     <updated>2019-09-29T00:00:00+09:00</updated>
     <id>/math/math-apply-probability-model-introduction</id>
     <content type="html">
-Outline
-Probability is the science of uncertainty. It provides precise mathematical
-rules for understanding and analyzing our own ignorance.
-The content of probability and statistics can be divided into three parts
+Sample space
 
-  Probability Model(P.M.)
-  Probability and Statistics Model Inference(P.A.S.M.I...</content>
+  Definition: A sample space is any set that lists all possible outcomes(or, responses) of
+some unknown experiment or situation.
+    
+      The outcomes refer to the distinct experiments outcomes.
+      Once an experiment is well-defined, The collection of all outcomes is called th...</content>
   </entry>
 
   <entry>
@@ -2161,6 +2159,21 @@ Let X be a random variable.
 contains all the information about the distribution of X.
   It turns out that there are other functions, the probability-generating
 function and the moment-generating function,...</content>
+  </entry>
+
+  <entry>
+    <title>P.A.S.: Related Variables</title>
+    <link href="/math/math-apply-probability-model-related-variables.html"/>
+    <updated>2019-09-21T00:00:00+09:00</updated>
+    <id>/math/math-apply-probability-model-related-variables</id>
+    <content type="html">
+Definition
+
+  Related Variables: Variables X and Y are related variables if there is any change in
+the conditional distribution of Y, given X=x, as x changes
+  Unrelated: We say that variables X and Y are unrelated if they are
+independent.
+  Response Variable and Predictor Variable: we think of ...</content>
   </entry>
 
   <entry>
@@ -2359,12 +2372,18 @@ all
   </entry>
 
   <entry>
-    <title>Bayesian: Prior Distribution</title>
-    <link href="/math/math-apply-inference-bayesian-prior-distribution.html"/>
+    <title>Bayesian: Prior belief</title>
+    <link href="/math/math-apply-inference-bayesian-prior-belief.html"/>
     <updated>2019-07-30T00:00:00+09:00</updated>
-    <id>/math/math-apply-inference-bayesian-prior-distribution</id>
+    <id>/math/math-apply-inference-bayesian-prior-belief</id>
     <content type="html">
-</content>
+About prior belief
+Bayes theorem entails previous belief about the parameters of a distribution,
+then the prior belief is came up. We use prior distribution as an implementation
+tool for our prior belief, where prior belief is the core concept, and prior
+distribution is a representation.
+
+Exampl...</content>
   </entry>
 
   <entry>
@@ -3034,23 +3053,6 @@ nonlinearity, but convexity and nonconvexity
   </entry>
 
   <entry>
-    <title>Apply: Summary</title>
-    <link href="/math/math-apply-summary.html"/>
-    <updated>2019-03-02T00:00:00+09:00</updated>
-    <id>/math/math-apply-summary</id>
-    <content type="html">
-
-  probability and statistics, random process, information theory, graph theory.
-
-
-Relationship Between Machine Learning and Information Theory
-
-  Human Brain is amazing, it can memorize and do the inference, but how ? we
-want to know
-  We are interested in do the inference based on known inform...</content>
-  </entry>
-
-  <entry>
     <title>C.O.: Terminology</title>
     <link href="/math/math-appy-convex-optimization-terminology.html"/>
     <updated>2019-03-02T00:00:00+09:00</updated>
@@ -3088,6 +3090,23 @@ number of the variables
 
 
 </content>
+  </entry>
+
+  <entry>
+    <title>Apply: Summary</title>
+    <link href="/math/math-apply-summary.html"/>
+    <updated>2019-03-02T00:00:00+09:00</updated>
+    <id>/math/math-apply-summary</id>
+    <content type="html">
+
+  probability and statistics, random process, information theory, graph theory.
+
+
+Relationship Between Machine Learning and Information Theory
+
+  Human Brain is amazing, it can memorize and do the inference, but how ? we
+want to know
+  We are interested in do the inference based on known inform...</content>
   </entry>
 
   <entry>
@@ -3417,6 +3436,7 @@ Idea
 
   Model-based: what is the model that represents my problem?
 
+
 </content>
   </entry>
 
@@ -3533,9 +3553,9 @@ of legal parameters.
 
   <entry>
     <title>G.M.I.: Exact Inference-Clique Trees</title>
-    <link href="/math/math-apply-graphical-models-inference-exact-inference-clique-trees.html"/>
+    <link href="/math/math-apply-inference-exact-inference-clique-trees.html"/>
     <updated>2019-01-13T00:00:00+09:00</updated>
-    <id>/math/math-apply-graphical-models-inference-exact-inference-clique-trees</id>
+    <id>/math/math-apply-inference-exact-inference-clique-trees</id>
     <content type="html">
 Concept
 
@@ -3545,6 +3565,24 @@ factor-manipulation process
       a cluster: each node in the cluster graph is a cluster, which is associated
 with a subset of variables
       the graph contains undirected edges that connect clusters whos...</content>
+  </entry>
+
+  <entry>
+    <title>G.M.I.: Exact Inference-Variable Elimination</title>
+    <link href="/math/math-apply-inference-exact-inference-variable-elimination.html"/>
+    <updated>2019-01-12T00:00:00+09:00</updated>
+    <id>/math/math-apply-inference-exact-inference-variable-elimination</id>
+    <content type="html">
+Concept
+
+  Factor Marginalization: Let X be a set of variables, and Y $\in X$ a
+variable. Let $\phi(X,Y)$ be a factor. We define the factor marginalization
+of Y in $\phi$, denoted by $\sum_Y \phi$, to be a factor $\psi$ over X such
+that: 
+\(\psi(\boldsymbol{X})=\sum_{Y} \phi(\boldsymbol{X}, Y)\)
+
+
+</content>
   </entry>
 
   <entry>
@@ -3559,24 +3597,6 @@ Likelihood Score
 independence only when that independence happnes to hold exactly in the
 empirical distribution.  Due to statistical noise, exact independence almost
 never occurs, and therefore, in almost all cases, the maxi...</content>
-  </entry>
-
-  <entry>
-    <title>G.M.I.: Exact Inference-Variable Elimination</title>
-    <link href="/math/math-apply-graphical-models-inference-exact-inference-variable-elimination.html"/>
-    <updated>2019-01-12T00:00:00+09:00</updated>
-    <id>/math/math-apply-graphical-models-inference-exact-inference-variable-elimination</id>
-    <content type="html">
-Concept
-
-  Factor Marginalization: Let X be a set of variables, and Y $\in X$ a
-variable. Let $\phi(X,Y)$ be a factor. We define the factor marginalization
-of Y in $\phi$, denoted by $\sum_Y \phi$, to be a factor $\psi$ over X such
-that: 
-\(\psi(\boldsymbol{X})=\sum_{Y} \phi(\boldsymbol{X}, Y)\)
-
-
-</content>
   </entry>
 
   <entry>
@@ -7025,6 +7045,20 @@ detailed investigation
   </entry>
 
   <entry>
+    <title> Jekyll: Terminology</title>
+    <link href="/pl/pl-jekyll-terminology.html"/>
+    <updated>2017-12-08T00:00:00+09:00</updated>
+    <id>/pl/pl-jekyll-terminology</id>
+    <content type="html">
+Pages and posts
+Pages and posts are just two types of written content that’s styled differently.
+
+  Pages are content(like an “About” page) that isn’t organized or displayed
+chronologically, but might be included in your website’s main menu.
+  Posts are meant to be used for content best organize...</content>
+  </entry>
+
+  <entry>
     <title> Plugin: Jekyll picture tag</title>
     <link href="/pl/pl-jekyll-summary.html"/>
     <updated>2017-12-08T00:00:00+09:00</updated>
@@ -7035,6 +7069,26 @@ How jekyll render the posts, templates, etc., is like the placement process of
 Russian doll: put a smaller case into a bigger case.
 
 </content>
+  </entry>
+
+  <entry>
+    <title> Jekyll: Rendering Hooks</title>
+    <link href="/pl/pl-jekyll-rendering-hooks.html"/>
+    <updated>2017-12-08T00:00:00+09:00</updated>
+    <id>/pl/pl-jekyll-rendering-hooks</id>
+    <content type="html">
+Purposed
+Using hooks, you plugin can exercise fine-grained control over various aspects
+of the build process.
+
+  If your plugin defines any hooks, Jekyll will call them at pre-defined points.
+
+
+Method
+
+  Hooks are registered to an owner and an event name. to register one
+    
+      You call Jeky...</content>
   </entry>
 
   <entry>
@@ -7057,8 +7111,27 @@ Galois
 What’s the nature of a plugin?  It is used to extend functionality of
 something.
 
-  Plugins of vim are to extend vim’s functionality.
-  Plugins of jekyl...</content>
+  Plugins of vim, extending vim’s functionality, are the corresponding...</content>
+  </entry>
+
+  <entry>
+    <title> Jekyll: Github Pages</title>
+    <link href="/pl/pl-jekyll-github-pages.html"/>
+    <updated>2017-12-08T00:00:00+09:00</updated>
+    <id>/pl/pl-jekyll-github-pages</id>
+    <content type="html">
+What is Github Pages?
+Crap !!! a new terminology comes out.
+
+  In nature, $Github Pages$ is just a place, hosting a website file.
+  It’s just a place.
+
+
+Reference
+
+  Building a static website with Jekyll and github pages
+
+</content>
   </entry>
 
   <entry>
@@ -14061,35 +14134,28 @@ from PyQt5 i...</content>
   </entry>
 
   <entry>
-    <title>Python Qt: Picture Display</title>
-    <link href="/pl/pl-script-python-qt5-display-image.html"/>
+    <title>Pl Script Python Qt5 Display Image</title>
+    <link href="/pl-script-python-qt5-display-image.html"/>
     <updated>2017-01-18T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-qt5-display-image</id>
-    <content type="html">
-Display a picutre
+    <id>/pl-script-python-qt5-display-image</id>
+    <content type="html">Display a picutre
 In nature, There is no difference between text label and picture label. 
 So, you can put a picture in a label. 
 Programming look into the essence of the world.
 
-import sys
-from PyQt5.QtWidgets import QApplication, QWidget, QLabel
-from PyQt5.QtGui import QIcon, QPixmap
-import ma...</content>
-  </entry>
-
-  <entry>
-    <title>Python Qt: Designer</title>
-    <link href="/pl/pl-script-python-qt5-designer.html"/>
-    <updated>2017-01-18T00:00:00+09:00</updated>
-    <id>/pl/pl-script-python-qt5-designer</id>
-    <content type="html">
 Widget
 
   TextLabel: what does label mean? According to Merriam-Webster: to put a word
-or name on something to describe or identify it.
-  Graphics View: what does view mean? According to Merriam-Webster: it is a
-picture of a place So Graphics View jus a place to put picture.  So Tree
-view, List ...</content>
+or name on something to describ...</content>
+  </entry>
+
+  <entry>
+    <title>Pl Script Python Qt5 Designer</title>
+    <link href="/pl-script-python-qt5-designer.html"/>
+    <updated>2017-01-18T00:00:00+09:00</updated>
+    <id>/pl-script-python-qt5-designer</id>
+    <content type="html">
+</content>
   </entry>
 
   <entry>
@@ -15589,287 +15655,106 @@ Name
   </entry>
 
   <entry>
-    <title>Smartphone: Hardware</title>
-    <link href="/%E8%A8%80%E8%91%89/language-english-phone-hardware.html"/>
+    <title>Ancient: Warrior</title>
+    <link href="/%E8%A8%80%E8%91%89/language-english-ancient-warrior.html"/>
     <updated>2016-03-17T00:00:00+09:00</updated>
-    <id>/%E8%A8%80%E8%91%89/language-english-phone-hardware</id>
+    <id>/%E8%A8%80%E8%91%89/language-english-ancient-warrior</id>
     <content type="html">
 ####
 
-  flagship phone
-  telephone card
-  battery
-  case
+  master
+  basic moves
+  laughing in the wind
+  swordman
+  battilefield
+  guards
+  armor
+  martial(relating to war or soldiers) art
 
 
-####
-
-  Waterproof
-
-
-####
-
-  fully charged.
-  20 percent battery.
-
-</content>
-  </entry>
-
-  <entry>
-    <title>Phone: Call</title>
-    <link href="/%E8%A8%80%E8%91%89/language-english-phone-call.html"/>
-    <updated>2016-03-17T00:00:00+09:00</updated>
-    <id>/%E8%A8%80%E8%91%89/language-english-phone-call</id>
-    <content type="html">
 phrase
 
-  hang up.
-  hang on
-  call again
-  put joe on the phone
-  answer the phone
-  left me a message
-  pay phone
-  International Operator
-  local call
-
-
-On
-
-  I’m on it
-  move on
-  some people is on it
-  I will call back later
-  return my call
-  Did the call go through
-
-
-</content>
-  </entry>
-
-  <entry>
-    <title>Earth: Weather</title>
-    <link href="/%E8%A8%80%E8%91%89/language-english-natural-weather.html"/>
-    <updated>2016-03-17T00:00:00+09:00</updated>
-    <id>/%E8%A8%80%E8%91%89/language-english-natural-weather</id>
-    <content type="html">
-####
-
-  a little chilly: a little cold
-  It’s freezing
-  It’s drizzling: a light rain
-  artificial rain/neural network
-
-
-####
-
-  storm out: leave the room quickly and angrily
-  under the weather: sick
-    
-      How are you feeling today
-      I am a little under the weather
-    
-  
-  weather th...</content>
-  </entry>
-
-  <entry>
-    <title>Earth: Geography</title>
-    <link href="/%E8%A8%80%E8%91%89/language-english-natural-geography.html"/>
-    <updated>2016-03-17T00:00:00+09:00</updated>
-    <id>/%E8%A8%80%E8%91%89/language-english-natural-geography</id>
-    <content type="html">
-####
-
-  globe
-
-
-African
-
-  Gabon
-  Madagascar
-
-
-Middles East
-
-  Mediterranean
-
-
-East Asian
-
-  Singapore
-  Malaysia
-  Singapore Strait
-
-
-Europe
-
-  Iberian Peninsula
-    
-      Spain
-      Portugal
-    
-  
-
-
-####
-
-  hill
-  mountain
-  valley
-
-
-Sentence
-
-  I’ll look it up in the encyclopedia.
-
-
-</content>
-  </entry>
-
-  <entry>
-    <title>Earth: Forest</title>
-    <link href="/%E8%A8%80%E8%91%89/language-english-natural-forest.html"/>
-    <updated>2016-03-17T00:00:00+09:00</updated>
-    <id>/%E8%A8%80%E8%91%89/language-english-natural-forest</id>
-    <content type="html">
-####
-
-  stump
-  dry stump
-  dry trees
-
-
-Action
-
-  uproot
-  pull off
-  cut down
+  1 on 1
+  sword fight
+  mortal enemy
+  escourt the princess
 
 
 sentence
 
-  you can grow mushroom on stumps
-  The root system is pretty solid, it’ll take me a little while to pull them
-all.
-  I’ll pull them out no matter how deep their roots go.
-
-</content>
+  the law of gravity doesn’t apply in ancient China
+  disguised himself as ...</content>
   </entry>
 
   <entry>
-    <title>Earth: Diseaster</title>
-    <link href="/%E8%A8%80%E8%91%89/language-english-natural-diaster.html"/>
+    <title>Ancient: Royal Family</title>
+    <link href="/%E8%A8%80%E8%91%89/language-english-ancient-royal-family.html"/>
     <updated>2016-03-17T00:00:00+09:00</updated>
-    <id>/%E8%A8%80%E8%91%89/language-english-natural-diaster</id>
+    <id>/%E8%A8%80%E8%91%89/language-english-ancient-royal-family</id>
     <content type="html">
 ####
 
-  humanitarian relief
-  landslide
-  forestfire
-  A sudden change in wind direction
-  firefighter
+  security protection
+  body guard
+  butler
+  concubine
+  golden crown
+  majesty
+  clan
 
 
-####
+Action
 
-  evacuate
+  betray
+  swear
+  killer
 
 
 Sentence
 
-  continueous fainfall trigger a landslide
+  take the throne
+  inherit the throne
+  proved him in the battle
+  his wife unharmed and confined to death
+  overthrow his father
+  bend an iron bar
+  re...</content>
+  </entry>
 
+  <entry>
+    <title>Culture: China</title>
+    <link href="/%E8%A8%80%E8%91%89/language-english-ancient-culture.html"/>
+    <updated>2016-03-17T00:00:00+09:00</updated>
+    <id>/%E8%A8%80%E8%91%89/language-english-ancient-culture</id>
+    <content type="html">
+####
+
+  Lion Dance
+  Folding Fan
+
+
+####
+
+  Fengshui: Asian science, keep the balance of the house
 
 </content>
   </entry>
 
   <entry>
-    <title>Internet</title>
-    <link href="/%E8%A8%80%E8%91%89/language-english-internet.html"/>
+    <title>Ancient: Craftsman</title>
+    <link href="/%E8%A8%80%E8%91%89/language-english-ancient-craftsman.html"/>
     <updated>2016-03-17T00:00:00+09:00</updated>
-    <id>/%E8%A8%80%E8%91%89/language-english-internet</id>
+    <id>/%E8%A8%80%E8%91%89/language-english-ancient-craftsman</id>
     <content type="html">
 ####
 
-  slow down the internet connection
-  fiber optic network
-  youtube premimum membership
-  background play
-  annual insurance premimum
+  pass down
+  handicraft
 
 
 ####
 
-  get logged out
-
-
-</content>
-  </entry>
-
-  <entry>
-    <title>Internet: Search Engine</title>
-    <link href="/%E8%A8%80%E8%91%89/language-english-internet-search.html"/>
-    <updated>2016-03-17T00:00:00+09:00</updated>
-    <id>/%E8%A8%80%E8%91%89/language-english-internet-search</id>
-    <content type="html">
-####
-
-  field
-  homepage
-  background color
-  separate account
-  support page
-  default page
-  picture in picture
-
-
-####
-
-  enter
-  refine your search
-  narrow down the results
-  activation code:
-  sign out
-
-
-####
-
-  Do you enter the correct mobile number?
-
-</content>
-  </entry>
-
-  <entry>
-    <title>Internet: Social Media</title>
-    <link href="/%E8%A8%80%E8%91%89/language-english-internet-meidia.html"/>
-    <updated>2016-03-17T00:00:00+09:00</updated>
-    <id>/%E8%A8%80%E8%91%89/language-english-internet-meidia</id>
-    <content type="html">
-####
-
-  online celebrity
-  influencer
-  free media
-  whistleblowers
-  hunger strike
-  rebellious soul
-  independent filmmaker
-
-
-####
-
-  open an account
-  cover coronavirus outbreak
-  pick quarrel and provoking trouble
-
-
-Sentence
-
-  help us trend the hashtag
-  take to the twitter
-
+  A secret cleaning method passed down from generation to generation
 
 </content>
   </entry>
@@ -16193,6 +16078,292 @@ It’...</content>
   </entry>
 
   <entry>
+    <title>Smartphone: Hardware</title>
+    <link href="/%E8%A8%80%E8%91%89/language-english-phone-hardware.html"/>
+    <updated>2016-03-17T00:00:00+09:00</updated>
+    <id>/%E8%A8%80%E8%91%89/language-english-phone-hardware</id>
+    <content type="html">
+####
+
+  flagship phone
+  telephone card
+  battery
+  case
+
+
+####
+
+  Waterproof
+
+
+####
+
+  fully charged.
+  20 percent battery.
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Phone: Call</title>
+    <link href="/%E8%A8%80%E8%91%89/language-english-phone-call.html"/>
+    <updated>2016-03-17T00:00:00+09:00</updated>
+    <id>/%E8%A8%80%E8%91%89/language-english-phone-call</id>
+    <content type="html">
+phrase
+
+  hang up.
+  hang on
+  call again
+  put joe on the phone
+  answer the phone
+  left me a message
+  pay phone
+  International Operator
+  local call
+
+
+On
+
+  I’m on it
+  move on
+  some people is on it
+  I will call back later
+  return my call
+  Did the call go through
+
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Earth: Weather</title>
+    <link href="/%E8%A8%80%E8%91%89/language-english-natural-weather.html"/>
+    <updated>2016-03-17T00:00:00+09:00</updated>
+    <id>/%E8%A8%80%E8%91%89/language-english-natural-weather</id>
+    <content type="html">
+####
+
+  a little chilly: a little cold
+  It’s freezing
+  It’s drizzling: a light rain
+  artificial rain/neural network
+
+
+####
+
+  storm out: leave the room quickly and angrily
+  under the weather: sick
+    
+      How are you feeling today
+      I am a little under the weather
+    
+  
+  weather th...</content>
+  </entry>
+
+  <entry>
+    <title>Earth: Geography</title>
+    <link href="/%E8%A8%80%E8%91%89/language-english-natural-geography.html"/>
+    <updated>2016-03-17T00:00:00+09:00</updated>
+    <id>/%E8%A8%80%E8%91%89/language-english-natural-geography</id>
+    <content type="html">
+####
+
+  globe
+
+
+African
+
+  Gabon
+  Madagascar
+
+
+Middles East
+
+  Mediterranean
+
+
+East Asian
+
+  Singapore
+  Malaysia
+  Singapore Strait
+
+
+Europe
+
+  Iberian Peninsula
+    
+      Spain
+      Portugal
+    
+  
+
+
+####
+
+  hill
+  mountain
+  valley
+
+
+Sentence
+
+  I’ll look it up in the encyclopedia.
+
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Earth: Forest</title>
+    <link href="/%E8%A8%80%E8%91%89/language-english-natural-forest.html"/>
+    <updated>2016-03-17T00:00:00+09:00</updated>
+    <id>/%E8%A8%80%E8%91%89/language-english-natural-forest</id>
+    <content type="html">
+####
+
+  stump
+  dry stump
+  dry trees
+
+
+Action
+
+  uproot
+  pull off
+  cut down
+
+
+sentence
+
+  you can grow mushroom on stumps
+  The root system is pretty solid, it’ll take me a little while to pull them
+all.
+  I’ll pull them out no matter how deep their roots go.
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Earth: Diseaster</title>
+    <link href="/%E8%A8%80%E8%91%89/language-english-natural-diaster.html"/>
+    <updated>2016-03-17T00:00:00+09:00</updated>
+    <id>/%E8%A8%80%E8%91%89/language-english-natural-diaster</id>
+    <content type="html">
+####
+
+  humanitarian relief
+  landslide
+  forestfire
+  A sudden change in wind direction
+  firefighter
+
+
+####
+
+  evacuate
+
+
+Sentence
+
+  continueous fainfall trigger a landslide
+
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Internet</title>
+    <link href="/%E8%A8%80%E8%91%89/language-english-internet.html"/>
+    <updated>2016-03-17T00:00:00+09:00</updated>
+    <id>/%E8%A8%80%E8%91%89/language-english-internet</id>
+    <content type="html">
+####
+
+  slow down the internet connection
+  fiber optic network
+  youtube premimum membership
+  background play
+  annual insurance premimum
+
+
+####
+
+  get logged out
+
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Internet: Search Engine</title>
+    <link href="/%E8%A8%80%E8%91%89/language-english-internet-search.html"/>
+    <updated>2016-03-17T00:00:00+09:00</updated>
+    <id>/%E8%A8%80%E8%91%89/language-english-internet-search</id>
+    <content type="html">
+####
+
+  field
+  homepage
+  background color
+  separate account
+  support page
+  default page
+  picture in picture
+
+
+####
+
+  enter
+  refine your search
+  narrow down the results
+  activation code:
+  sign out
+
+
+####
+
+  Do you enter the correct mobile number?
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Internet: Social Media</title>
+    <link href="/%E8%A8%80%E8%91%89/language-english-internet-meidia.html"/>
+    <updated>2016-03-17T00:00:00+09:00</updated>
+    <id>/%E8%A8%80%E8%91%89/language-english-internet-meidia</id>
+    <content type="html">
+####
+
+  online celebrity
+  influencer
+  free media
+  whistleblowers
+  hunger strike
+  rebellious soul
+  independent filmmaker
+
+
+####
+
+  open an account
+  cover coronavirus outbreak
+  pick quarrel and provoking trouble
+
+
+Sentence
+
+  help us trend the hashtag
+  take to the twitter
+
+
+</content>
+  </entry>
+
+  <entry>
     <title>Anniversary: Marriage</title>
     <link href="/%E8%A8%80%E8%91%89/language-english-anniversary-marriage.html"/>
     <updated>2016-03-17T00:00:00+09:00</updated>
@@ -16249,111 +16420,6 @@ with you. burn items, such as joss stick and paper offerings to...</content>
     <updated>2016-03-17T00:00:00+09:00</updated>
     <id>/%E8%A8%80%E8%91%89/language-english-anniversary-dog</id>
     <content type="html">
-</content>
-  </entry>
-
-  <entry>
-    <title>Ancient: Warrior</title>
-    <link href="/%E8%A8%80%E8%91%89/language-english-ancient-warrior.html"/>
-    <updated>2016-03-17T00:00:00+09:00</updated>
-    <id>/%E8%A8%80%E8%91%89/language-english-ancient-warrior</id>
-    <content type="html">
-####
-
-  master
-  basic moves
-  laughing in the wind
-  swordman
-  battilefield
-  guards
-  armor
-  martial(relating to war or soldiers) art
-
-
-phrase
-
-  1 on 1
-  sword fight
-  mortal enemy
-  escourt the princess
-
-
-sentence
-
-  the law of gravity doesn’t apply in ancient China
-  disguised himself as ...</content>
-  </entry>
-
-  <entry>
-    <title>Ancient: Royal Family</title>
-    <link href="/%E8%A8%80%E8%91%89/language-english-ancient-royal-family.html"/>
-    <updated>2016-03-17T00:00:00+09:00</updated>
-    <id>/%E8%A8%80%E8%91%89/language-english-ancient-royal-family</id>
-    <content type="html">
-####
-
-  security protection
-  body guard
-  butler
-  concubine
-  golden crown
-  majesty
-  clan
-
-
-Action
-
-  betray
-  swear
-  killer
-
-
-Sentence
-
-  take the throne
-  inherit the throne
-  proved him in the battle
-  his wife unharmed and confined to death
-  overthrow his father
-  bend an iron bar
-  re...</content>
-  </entry>
-
-  <entry>
-    <title>Culture: China</title>
-    <link href="/%E8%A8%80%E8%91%89/language-english-ancient-culture.html"/>
-    <updated>2016-03-17T00:00:00+09:00</updated>
-    <id>/%E8%A8%80%E8%91%89/language-english-ancient-culture</id>
-    <content type="html">
-####
-
-  Lion Dance
-  Folding Fan
-
-
-####
-
-  Fengshui: Asian science, keep the balance of the house
-
-</content>
-  </entry>
-
-  <entry>
-    <title>Ancient: Craftsman</title>
-    <link href="/%E8%A8%80%E8%91%89/language-english-ancient-craftsman.html"/>
-    <updated>2016-03-17T00:00:00+09:00</updated>
-    <id>/%E8%A8%80%E8%91%89/language-english-ancient-craftsman</id>
-    <content type="html">
-####
-
-  pass down
-  handicraft
-
-
-####
-
-  A secret cleaning method passed down from generation to generation
-
 </content>
   </entry>
 
@@ -16768,6 +16834,37 @@ perpendicular to street
   </entry>
 
   <entry>
+    <title>Village: life</title>
+    <link href="/%E8%A8%80%E8%91%89/language-english-village-life.html"/>
+    <updated>2016-03-12T00:00:00+09:00</updated>
+    <id>/%E8%A8%80%E8%91%89/language-english-village-life</id>
+    <content type="html">
+####
+
+  pond
+  puddle
+  overflow water
+  natural spring
+  pump filter
+  candle burn out
+  jellyfish
+
+
+Phrase
+
+  pump out: pump the water out
+  chase rabbit
+
+
+Sentence
+
+  Why can’t we have a pond here?
+  bond and connection
+  get stung by a jellyfish
+  we don’t pump the extra water out, our garde...</content>
+  </entry>
+
+  <entry>
     <title>Village: Work</title>
     <link href="/%E8%A8%80%E8%91%89/language-english-village-work.html"/>
     <updated>2016-03-12T00:00:00+09:00</updated>
@@ -16816,37 +16913,6 @@ Sentence
 
 
 </content>
-  </entry>
-
-  <entry>
-    <title>Village: life</title>
-    <link href="/%E8%A8%80%E8%91%89/language-english-village-life.html"/>
-    <updated>2016-03-12T00:00:00+09:00</updated>
-    <id>/%E8%A8%80%E8%91%89/language-english-village-life</id>
-    <content type="html">
-####
-
-  pond
-  puddle
-  overflow water
-  natural spring
-  pump filter
-  candle burn out
-  jellyfish
-
-
-Phrase
-
-  pump out: pump the water out
-  chase rabbit
-
-
-Sentence
-
-  Why can’t we have a pond here?
-  bond and connection
-  get stung by a jellyfish
-  we don’t pump the extra water out, our garde...</content>
   </entry>
 
   <entry>
@@ -17074,70 +17140,6 @@ Sentence
   He was tailed.
   turn back on my staff(leave them, ignore them)
 
-</content>
-  </entry>
-
-  <entry>
-    <title>School: Education</title>
-    <link href="/%E8%A8%80%E8%91%89/language-english-school-education.html"/>
-    <updated>2016-03-10T00:00:00+09:00</updated>
-    <id>/%E8%A8%80%E8%91%89/language-english-school-education</id>
-    <content type="html">
-####
-
-  frost boy
-  summar camp
-  grade school
-  elementary school
-  second year of my collage
-  preschool
-
-
-####
-
-  education affairs department: at the counter of education affairs department.
-
-
-####
-
-  do you take this class?
-
-
-Action
-
-  bring up
-  educate
-  sign up
-  educate my nephew
-  juni...</content>
-  </entry>
-
-  <entry>
-    <title>School: Classroom</title>
-    <link href="/%E8%A8%80%E8%91%89/language-english-school-classroom.html"/>
-    <updated>2016-03-10T00:00:00+09:00</updated>
-    <id>/%E8%A8%80%E8%91%89/language-english-school-classroom</id>
-    <content type="html">
-####
-
-  chalk
-  18 pages, front and back
-  script
-
-
-####
-
-  I want to be thorough
-
-</content>
-  </entry>
-
-  <entry>
-    <title>School: Bully</title>
-    <link href="/%E8%A8%80%E8%91%89/language-english-school-bully.html"/>
-    <updated>2016-03-10T00:00:00+09:00</updated>
-    <id>/%E8%A8%80%E8%91%89/language-english-school-bully</id>
-    <content type="html">
 </content>
   </entry>
 
@@ -17432,6 +17434,70 @@ object
   It was build out of super-strong stone that can withstand a falling tree.
   crush the ledge of the fountain
 
+</content>
+  </entry>
+
+  <entry>
+    <title>School: Education</title>
+    <link href="/%E8%A8%80%E8%91%89/language-english-school-education.html"/>
+    <updated>2016-03-10T00:00:00+09:00</updated>
+    <id>/%E8%A8%80%E8%91%89/language-english-school-education</id>
+    <content type="html">
+####
+
+  frost boy
+  summar camp
+  grade school
+  elementary school
+  second year of my collage
+  preschool
+
+
+####
+
+  education affairs department: at the counter of education affairs department.
+
+
+####
+
+  do you take this class?
+
+
+Action
+
+  bring up
+  educate
+  sign up
+  educate my nephew
+  juni...</content>
+  </entry>
+
+  <entry>
+    <title>School: Classroom</title>
+    <link href="/%E8%A8%80%E8%91%89/language-english-school-classroom.html"/>
+    <updated>2016-03-10T00:00:00+09:00</updated>
+    <id>/%E8%A8%80%E8%91%89/language-english-school-classroom</id>
+    <content type="html">
+####
+
+  chalk
+  18 pages, front and back
+  script
+
+
+####
+
+  I want to be thorough
+
+</content>
+  </entry>
+
+  <entry>
+    <title>School: Bully</title>
+    <link href="/%E8%A8%80%E8%91%89/language-english-school-bully.html"/>
+    <updated>2016-03-10T00:00:00+09:00</updated>
+    <id>/%E8%A8%80%E8%91%89/language-english-school-bully</id>
+    <content type="html">
 </content>
   </entry>
 
@@ -18092,6 +18158,36 @@ Date
   American companyies needs to work together to meet the needs during this
 time.
   American overtakes ...</content>
+  </entry>
+
+  <entry>
+    <title>Word: Comparsion Part II</title>
+    <link href="/%E8%A8%80%E8%91%89/language-english-word-comparsion-part2.html"/>
+    <updated>2016-03-01T00:00:00+09:00</updated>
+    <id>/%E8%A8%80%E8%91%89/language-english-word-comparsion-part2</id>
+    <content type="html">Numeric vs. Numerical
+The word numeric generally refes to or has to do with numers; on the other
+hand, ther word numerical generally indicates a usage of numbers. It seems
+they are interchangable in practice.
+
+Trending right now: numeric value, numeric problems, numerical analysis.
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Word: Comparsion</title>
+    <link href="/%E8%A8%80%E8%91%89/language-english-word-comparsion-part1.html"/>
+    <updated>2016-03-01T00:00:00+09:00</updated>
+    <id>/%E8%A8%80%E8%91%89/language-english-word-comparsion-part1</id>
+    <content type="html">
+1. Necessary and Required
+Required is used in the context of arbitrary rules and regulations, that is,
+when there is some requirement by law or convention that must be must be met in
+order for something to happen.
+
+Example. A password is required by law when a person is travelling from one
+count...</content>
   </entry>
 
   <entry>
