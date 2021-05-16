@@ -5,8 +5,8 @@
   <description>Just Do It - </description>
   <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
   <link></link>
-  <lastBuildDate>Fri, 14 May 2021 12:53:56 +0900</lastBuildDate>
-  <pubDate>Fri, 14 May 2021 12:53:56 +0900</pubDate>
+  <lastBuildDate>Sun, 16 May 2021 14:32:42 +0900</lastBuildDate>
+  <pubDate>Sun, 16 May 2021 14:32:42 +0900</pubDate>
   <ttl>1800</ttl>
 
 
@@ -5141,64 +5141,38 @@ falling powers.&lt;/li&gt;
   </item>
 
   <item>
-    <title>P.A.S.: Related Variables</title>
+    <title>P.M.: History</title>
     <description>
-&lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
+&lt;h4 id=&quot;the-watershed&quot;&gt;The Watershed&lt;/h4&gt;
 &lt;ol&gt;
-  &lt;li&gt;Related Variables: Variables X and Y are related variables if there is any change in
-the conditional distribution of Y, given X=x, as x changes&lt;/li&gt;
-  &lt;li&gt;Unrelated: We say that variables X and Y are unrelated if they are
-independent.&lt;/li&gt;
-  &lt;li&gt;Response Variable and Predictor Variable: we think of Y as a dependent
-variable(depending on X) and of X as an independent variable(free to vary).
-Our goal, then, is to predict the values of Y given the value of X. In this
-situation, we call Y the response variable and X the predictor variable.&lt;/li&gt;
-  &lt;li&gt;Confounding Variables:&lt;/li&gt;
+  &lt;li&gt;In 1933,&lt;/li&gt;
 &lt;/ol&gt;
-
 </description>
-    <link>/math/math-apply-probability-model-related-variables.html</link>
-    <guid>/math/math-apply-probability-model-related-variables</guid>
-    <pubDate>Sun, 29 Sep 2019 00:00:00 +0900</pubDate>
+    <link>/math/math-apply-probability-model-history.html</link>
+    <guid>/math/math-apply-probability-model-history</guid>
+    <pubDate>Mon, 30 Sep 2019 00:00:00 +0900</pubDate>
   </item>
 
   <item>
     <title>P.M.: Introduction</title>
     <description>
-&lt;h4 id=&quot;outline&quot;&gt;Outline&lt;/h4&gt;
-&lt;p&gt;Probability is the science of uncertainty. It provides precise mathematical
-rules for understanding and analyzing our own ignorance.
-The content of probability and statistics can be divided into three parts&lt;/p&gt;
+&lt;h4 id=&quot;sample-space&quot;&gt;Sample space&lt;/h4&gt;
 &lt;ol&gt;
-  &lt;li&gt;Probability Model(P.M.)&lt;/li&gt;
-  &lt;li&gt;Probability and Statistics Model Inference(P.A.S.M.I.)&lt;/li&gt;
-  &lt;li&gt;Probability and Statistics Model Check(P.A.S.M.C.)&lt;/li&gt;
+  &lt;li&gt;Definition: A sample space is any set that lists all possible outcomes(or, responses) of
+some unknown experiment or situation.
+    &lt;ul&gt;
+      &lt;li&gt;The &lt;em&gt;outcomes&lt;/em&gt; refer to the distinct experiments outcomes.&lt;/li&gt;
+      &lt;li&gt;Once an experiment is well-defined, The collection of all outcomes is called the &lt;strong&gt;Sample space&lt;/strong&gt;.&lt;/li&gt;
+      &lt;li&gt;We note a sample space with $\Omega$.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Event Definition: In the case of a finite sample space, every subset of the
+sample space is called an event.
+    &lt;ul&gt;
+      &lt;li&gt;A subset containint exactly one element is called an elementary event.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ol&gt;
-
-&lt;h4 id=&quot;1-probability-model&quot;&gt;1. Probability model&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;A probability model&lt;/strong&gt; consists of a nonempty set called the sample space
-$\Omega$; a collection of events $\mathcal{F}$ that are subsets of $\Omega$;
-and a probability measure $\mathbf{P}$ assigning a probability between 0 and 1
-to each event.  $ (\Omega, \mathcal{F}, \mathbf{P}) $&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;strong&gt;Sample Space&lt;/strong&gt;: A sample space is any set that lists all possible outcomes(or, responses) of
-some unknown experiment or situation,
- &lt;strong&gt;which is a set whose elements are called outcomes or sample points.&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Probability Measure&lt;/strong&gt;: usually written P. This probability measure must
-assign, to each event A, a probability P(A).&lt;/li&gt;
-  &lt;li&gt;$A^c$: if A is any event, we write $A^c$(read “A complement”) for the event
-that A does not occur.
-\(P(A^c)=1-P(A)\)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;The second component of a probability model is a class of events, which can be
-considered for now simply as the class of all subsets of the sample space.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h5 id=&quot;11-remark&quot;&gt;1.1 Remark&lt;/h5&gt;
-&lt;p&gt;We must familiar with some terms, such as sample point, is same as outcome.&lt;/p&gt;
 
 &lt;h4 id=&quot;2-random-variable&quot;&gt;2. Random Variable&lt;/h4&gt;
 &lt;ol&gt;
@@ -5213,22 +5187,32 @@ person in $\Omega$ to his or her grade(say, one of A,B,or C)&lt;/li&gt;
       &lt;li&gt;The event $Grade=A$ is a shorthand for the event${\omega \in \Omega: f_{Grade}(\omega)=A}$&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;random variables: 
-Complex systems are characterized by the presence of multiple interrelated
-aspects, for example, in medical diagnosis application, there are multiple
-possible diseases that the patient might have, hundreds of symptoms and
-diagostic tests. These domains can be characterized in terms of a set of random
-variables.
-    &lt;ul&gt;
-      &lt;li&gt;random variables, just a set of random variable&lt;/li&gt;
-      &lt;li&gt;we can denote the random variables as $\mathcal{X}$, and each element which
-also a random variable denoted as $X_i$&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;Although I use this term &lt;strong&gt;random variable&lt;/strong&gt; for a pretty long time, Actually, I
 have no interpretation of this crap at all.&lt;/p&gt;
+
+&lt;h4 id=&quot;1-probability-model&quot;&gt;1. Probability model&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;A probability model&lt;/strong&gt; consists of a nonempty set called the sample space
+$\Omega$; a collection of events $\mathcal{F}$ that are subsets of $\Omega$;
+and a probability measure $\mathbf{P}$ assigning a probability between 0 and 1
+to each event.  $ (\Omega, \mathcal{F}, \mathbf{P}) $&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Probability Measure&lt;/strong&gt;: usually written P. This probability measure must
+assign, to each event A, a probability P(A).&lt;/li&gt;
+  &lt;li&gt;$A^c$: if A is any event, we write $A^c$(read “A complement”) for the event
+that A does not occur.
+\(P(A^c)=1-P(A)\)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The second component of a probability model is a class of events, which can be
+considered for now simply as the class of all subsets of the sample space.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;11-remark&quot;&gt;1.1 Remark&lt;/h5&gt;
+&lt;p&gt;We must familiar with some terms, such as sample point, is same as outcome.&lt;/p&gt;
 
 &lt;h5 id=&quot;21-remark&quot;&gt;2.1 Remark&lt;/h5&gt;
 &lt;p&gt;As with any function, there is often confusion between the function itself,
@@ -5672,6 +5656,28 @@ for $s \in R^1$&lt;/li&gt;
     <link>/math/math-apply-probability-model-generating-functions-and-convolution.html</link>
     <guid>/math/math-apply-probability-model-generating-functions-and-convolution</guid>
     <pubDate>Tue, 24 Sep 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>P.A.S.: Related Variables</title>
+    <description>
+&lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Related Variables: Variables X and Y are related variables if there is any change in
+the conditional distribution of Y, given X=x, as x changes&lt;/li&gt;
+  &lt;li&gt;Unrelated: We say that variables X and Y are unrelated if they are
+independent.&lt;/li&gt;
+  &lt;li&gt;Response Variable and Predictor Variable: we think of Y as a dependent
+variable(depending on X) and of X as an independent variable(free to vary).
+Our goal, then, is to predict the values of Y given the value of X. In this
+situation, we call Y the response variable and X the predictor variable.&lt;/li&gt;
+  &lt;li&gt;Confounding Variables:&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/math/math-apply-probability-model-related-variables.html</link>
+    <guid>/math/math-apply-probability-model-related-variables</guid>
+    <pubDate>Sat, 21 Sep 2019 00:00:00 +0900</pubDate>
   </item>
 
   <item>
@@ -6252,7 +6258,12 @@ the prior and posterior densities.&lt;/li&gt;
   &lt;li&gt;combine product rule and sum rule: \(P(x)=\sum_{y} P(x \mid y) P(y)\)&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h4 id=&quot;3-model-comparsion&quot;&gt;3. Model Comparsion&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;the $P(\text { data } \mid \text { hypothesis })$ above is refered as
+likelihood, not probability, since the $data$ here is observation.&lt;/li&gt;
+  &lt;li&gt;The sum of $P(\text { data } \mid \text { hypothesis })$ over the hypotheses
+maybe not equal to 1. Therefore we can’t refer to this entry as probability.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
 &lt;ol&gt;
@@ -6268,11 +6279,38 @@ that’s bayesian inference.&lt;/li&gt;
   </item>
 
   <item>
-    <title>Bayesian: Prior Distribution</title>
+    <title>Bayesian: Prior belief</title>
     <description>
+&lt;h4 id=&quot;about-prior-belief&quot;&gt;About prior belief&lt;/h4&gt;
+&lt;p&gt;Bayes theorem entails previous belief about the parameters of a distribution,
+then the prior belief is came up. We use prior distribution as an implementation
+tool for our prior belief, where &lt;em&gt;prior belief&lt;/em&gt; is the core concept, and prior
+distribution is a representation.&lt;/p&gt;
+
+&lt;h4 id=&quot;examples&quot;&gt;Examples&lt;/h4&gt;
+
+&lt;h5 id=&quot;1-prior-belief-with-bernoulli-distribution&quot;&gt;1. Prior belief with bernoulli distribution&lt;/h5&gt;
+&lt;p&gt;The range of the parameter of a bernoulli distribution is from 0 to 1, so the
+corresponding prior distribution, representing the prior belief, should has the
+same domain. We find that beta function can satisfiy this constraint.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;The parameters of beta function are called hyperparameters.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;2-prior-belief-with-gaussian-distribution&quot;&gt;2. Prior belief with gaussian distribution&lt;/h5&gt;
+&lt;p&gt;The prior distribution of a gaussian distribution is still a gaussian
+distribution.&lt;/p&gt;
+
+&lt;h4 id=&quot;referene&quot;&gt;Referene&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Conjugate_prior#:~:text=This%20means%20that%20the%20Gaussian,likelihood%20that%20is%20also%20Gaussian.&amp;amp;text=From%20Bayes'%20theorem%2C%20the%20posterior,the%20probability%20of%20the%20data&quot;&gt;conjugate
+prior&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Prior_probability&quot;&gt;prior probability&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
 </description>
-    <link>/math/math-apply-inference-bayesian-prior-distribution.html</link>
-    <guid>/math/math-apply-inference-bayesian-prior-distribution</guid>
+    <link>/math/math-apply-inference-bayesian-prior-belief.html</link>
+    <guid>/math/math-apply-inference-bayesian-prior-belief</guid>
     <pubDate>Tue, 30 Jul 2019 00:00:00 +0900</pubDate>
   </item>
 
@@ -8116,28 +8154,6 @@ nonlinearity, but convexity and nonconvexity&lt;/p&gt;
   </item>
 
   <item>
-    <title>Apply: Summary</title>
-    <description>
-&lt;ol&gt;
-  &lt;li&gt;probability and statistics, random process, information theory, graph theory.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;relationship-between-machine-learning-and-information-theory&quot;&gt;Relationship Between Machine Learning and Information Theory&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Human Brain is amazing, it can memorize and do the inference, but how ? we
-want to know&lt;/li&gt;
-  &lt;li&gt;We are interested in do the inference based on known information, that’s the
-job of machine learning. &lt;strong&gt;one problem&lt;/strong&gt; is how the data should be feed into
-neural network, in what kind? That’s the job of information theory.&lt;/li&gt;
-  &lt;li&gt;Brains are the ultimate compression and communication systems.&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    <link>/math/math-apply-summary.html</link>
-    <guid>/math/math-apply-summary</guid>
-    <pubDate>Sat, 02 Mar 2019 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
     <title>C.O.: Terminology</title>
     <description>
 &lt;h4 id=&quot;problem&quot;&gt;Problem&lt;/h4&gt;
@@ -8230,6 +8246,28 @@ number of the variables&lt;/li&gt;
 </description>
     <link>/math/math-appy-convex-optimization-nomenclature.html</link>
     <guid>/math/math-appy-convex-optimization-nomenclature</guid>
+    <pubDate>Sat, 02 Mar 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Apply: Summary</title>
+    <description>
+&lt;ol&gt;
+  &lt;li&gt;probability and statistics, random process, information theory, graph theory.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;relationship-between-machine-learning-and-information-theory&quot;&gt;Relationship Between Machine Learning and Information Theory&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Human Brain is amazing, it can memorize and do the inference, but how ? we
+want to know&lt;/li&gt;
+  &lt;li&gt;We are interested in do the inference based on known information, that’s the
+job of machine learning. &lt;strong&gt;one problem&lt;/strong&gt; is how the data should be feed into
+neural network, in what kind? That’s the job of information theory.&lt;/li&gt;
+  &lt;li&gt;Brains are the ultimate compression and communication systems.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/math/math-apply-summary.html</link>
+    <guid>/math/math-apply-summary</guid>
     <pubDate>Sat, 02 Mar 2019 00:00:00 +0900</pubDate>
   </item>
 
@@ -8968,6 +9006,7 @@ error is $\leq \epsilon$&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;Model-based: what is the model that represents my problem?&lt;/li&gt;
 &lt;/ol&gt;
+
 </description>
     <link>/math/math-apply-graphical-models-summary.html</link>
     <guid>/math/math-apply-graphical-models-summary</guid>
@@ -9038,6 +9077,18 @@ observed. If the set Z is empty, then instead of writing
       &lt;li&gt;Val(X)=\(\{false,true\}\)&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
+  &lt;li&gt;random variables: 
+Complex systems are characterized by the presence of multiple interrelated
+aspects, for example, in medical diagnosis application, there are multiple
+possible diseases that the patient might have, hundreds of symptoms and
+diagostic tests. These domains can be characterized in terms of a set of random
+variables.
+    &lt;ul&gt;
+      &lt;li&gt;random variables, just a set of random variable&lt;/li&gt;
+      &lt;li&gt;we can denote the random variables as $\mathcal{X}$, and each element which
+also a random variable denoted as $X_i$&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
@@ -9049,8 +9100,6 @@ this is the group theory.&lt;/li&gt;
 you want to master this subject, you have to know the most simple pattern in
 this subject, Such as I-Map, I-projection and M-projection.&lt;/li&gt;
 &lt;/ol&gt;
-
-&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
 
 </description>
     <link>/math/math-apply-graphical-models-notation.html</link>
@@ -9335,9 +9384,27 @@ some nonempty intersection.&lt;/li&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 </description>
-    <link>/math/math-apply-graphical-models-inference-exact-inference-clique-trees.html</link>
-    <guid>/math/math-apply-graphical-models-inference-exact-inference-clique-trees</guid>
+    <link>/math/math-apply-inference-exact-inference-clique-trees.html</link>
+    <guid>/math/math-apply-inference-exact-inference-clique-trees</guid>
     <pubDate>Sun, 13 Jan 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>G.M.I.: Exact Inference-Variable Elimination</title>
+    <description>
+&lt;h4 id=&quot;concept&quot;&gt;Concept&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Factor Marginalization: Let X be a set of variables, and Y $\in X$ a
+variable. Let $\phi(X,Y)$ be a factor. We define the factor marginalization
+of Y in $\phi$, denoted by $\sum_Y \phi$, to be a factor $\psi$ over X such
+that: &lt;br /&gt;
+\(\psi(\boldsymbol{X})=\sum_{Y} \phi(\boldsymbol{X}, Y)\)&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/math/math-apply-inference-exact-inference-variable-elimination.html</link>
+    <guid>/math/math-apply-inference-exact-inference-variable-elimination</guid>
+    <pubDate>Sat, 12 Jan 2019 00:00:00 +0900</pubDate>
   </item>
 
   <item>
@@ -9366,24 +9433,6 @@ distribution in our training set.&lt;/li&gt;
 </description>
     <link>/math/math-apply-graphical-models-learning-bayesian-networks.html</link>
     <guid>/math/math-apply-graphical-models-learning-bayesian-networks</guid>
-    <pubDate>Sat, 12 Jan 2019 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>G.M.I.: Exact Inference-Variable Elimination</title>
-    <description>
-&lt;h4 id=&quot;concept&quot;&gt;Concept&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Factor Marginalization: Let X be a set of variables, and Y $\in X$ a
-variable. Let $\phi(X,Y)$ be a factor. We define the factor marginalization
-of Y in $\phi$, denoted by $\sum_Y \phi$, to be a factor $\psi$ over X such
-that: &lt;br /&gt;
-\(\psi(\boldsymbol{X})=\sum_{Y} \phi(\boldsymbol{X}, Y)\)&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-    <link>/math/math-apply-graphical-models-inference-exact-inference-variable-elimination.html</link>
-    <guid>/math/math-apply-graphical-models-inference-exact-inference-variable-elimination</guid>
     <pubDate>Sat, 12 Jan 2019 00:00:00 +0900</pubDate>
   </item>
 
@@ -18391,6 +18440,32 @@ on)&lt;/li&gt;
   </item>
 
   <item>
+    <title> Jekyll: Terminology</title>
+    <description>
+&lt;h4 id=&quot;pages-and-posts&quot;&gt;Pages and posts&lt;/h4&gt;
+&lt;p&gt;Pages and posts are just two types of written content that’s styled differently.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Pages are content(like an “About” page) that isn’t organized or displayed
+chronologically, but might be included in your website’s main menu.&lt;/li&gt;
+  &lt;li&gt;Posts are meant to be used for content best organized by publication date.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The URLs for pages and posts are also different by default.
+    &lt;ul&gt;
+      &lt;li&gt;Page URLs look like &lt;em&gt;MySite.com/about/&lt;/em&gt;, while post URLs look like
+&lt;em&gt;MySite.com/2016/02/29/my-post-title.html.&lt;/em&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/pl/pl-jekyll-terminology.html</link>
+    <guid>/pl/pl-jekyll-terminology</guid>
+    <pubDate>Fri, 08 Dec 2017 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
     <title> Plugin: Jekyll picture tag</title>
     <description>
 &lt;h4 id=&quot;the-essence&quot;&gt;The essence&lt;/h4&gt;
@@ -18400,6 +18475,43 @@ Russian doll: put a smaller case into a bigger case.&lt;/p&gt;
 </description>
     <link>/pl/pl-jekyll-summary.html</link>
     <guid>/pl/pl-jekyll-summary</guid>
+    <pubDate>Fri, 08 Dec 2017 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title> Jekyll: Rendering Hooks</title>
+    <description>
+&lt;h4 id=&quot;purposed&quot;&gt;Purposed&lt;/h4&gt;
+&lt;p&gt;Using hooks, you plugin can exercise fine-grained control over various aspects
+of the build process.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;If your plugin defines any hooks, Jekyll will call them at pre-defined points.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;method&quot;&gt;Method&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Hooks are registered to an owner and an event name. to register one
+    &lt;ul&gt;
+      &lt;li&gt;You call &lt;em&gt;Jekyll::Hooks.register&lt;/em&gt;, and pass the hook owner, event name, and
+code to call whenever the hookis triggered.&lt;/li&gt;
+      &lt;li&gt;For example, if you want to execute some custom functionality every time Jekyll renders a page, you could register a hook like this:&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;no&quot;&gt;Jekyll&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:Hooks&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;register&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:pages&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:post_render&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+	&lt;span class=&quot;c1&quot;&gt;# code to call after Jekyll renders a page&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;2017-12-08-pl-jekyll-summary.md&quot;&gt;official website of Jekyll&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://jekyllrb.com/docs/plugins/hooks/&quot;&gt;Hooks in Jekyll&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/pl/pl-jekyll-rendering-hooks.html</link>
+    <guid>/pl/pl-jekyll-rendering-hooks</guid>
     <pubDate>Fri, 08 Dec 2017 00:00:00 +0900</pubDate>
   </item>
 
@@ -18420,8 +18532,10 @@ Russian doll: put a smaller case into a bigger case.&lt;/p&gt;
 &lt;p&gt;What’s the nature of a plugin?  It is used to extend functionality of
 something.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;Plugins of vim are to extend vim’s functionality.&lt;/li&gt;
-  &lt;li&gt;Plugins of jekyll are to extend jekyll’s ability.&lt;/li&gt;
+  &lt;li&gt;Plugins of vim, extending vim’s functionality, are the corresponding command
+you can execute at the bottom of vim in the command mode.&lt;/li&gt;
+  &lt;li&gt;Plugins of jekyll, extending jekyll’s ability, are the corresponding tags in
+the template file, page file, etc.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
@@ -18437,6 +18551,26 @@ something.&lt;/p&gt;
 </description>
     <link>/pl/pl-jekyll-plugin-picture-tag.html</link>
     <guid>/pl/pl-jekyll-plugin-picture-tag</guid>
+    <pubDate>Fri, 08 Dec 2017 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title> Jekyll: Github Pages</title>
+    <description>
+&lt;h4 id=&quot;what-is-github-pages&quot;&gt;What is Github Pages?&lt;/h4&gt;
+&lt;p&gt;Crap !!! a new terminology comes out.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;In nature, $Github Pages$ is just a place, hosting a website file.&lt;/li&gt;
+  &lt;li&gt;It’s just a place.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://programminghistorian.org/en/lessons/building-static-sites-with-jekyll-github-pages&quot;&gt;Building a static website with Jekyll and github pages&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/pl/pl-jekyll-github-pages.html</link>
+    <guid>/pl/pl-jekyll-github-pages</guid>
     <pubDate>Fri, 08 Dec 2017 00:00:00 +0900</pubDate>
   </item>
 
@@ -37357,57 +37491,12 @@ and Graphics.&lt;/li&gt;
   </item>
 
   <item>
-    <title>Python Qt: Picture Display</title>
-    <description>
-&lt;h4 id=&quot;display-a-picutre&quot;&gt;Display a picutre&lt;/h4&gt;
+    <title>Pl Script Python Qt5 Display Image</title>
+    <description>&lt;h4 id=&quot;display-a-picutre&quot;&gt;Display a picutre&lt;/h4&gt;
 &lt;p&gt;In nature, There is no difference between text label and picture label. &lt;br /&gt;
 So, you can put a picture in a label. &lt;br /&gt;
 Programming look into the essence of the world.&lt;/p&gt;
 
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sys&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;PyQt5.QtWidgets&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;QApplication&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;QWidget&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;QLabel&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;PyQt5.QtGui&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;QIcon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;QPixmap&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;
-
-
-&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;App&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;QWidget&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;__init__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-        &lt;span class=&quot;nb&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;__init__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-        &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'PyQt5 image - pythonspot.com'&lt;/span&gt;
-        &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;left&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
-        &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;top&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
-        &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;width&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;640&lt;/span&gt;
-        &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;height&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;480&lt;/span&gt;
-        &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;initUI&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initUI&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-        &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;setWindowTitle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;setGeometry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-        &lt;span class=&quot;c1&quot;&gt;# Create widget
-&lt;/span&gt;        &lt;span class=&quot;n&quot;&gt;label&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;QLabel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;pixmap&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;QPixmap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'df.png'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;setPixmap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pixmap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;resize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pixmap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pixmap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
-        &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-
-
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__name__&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'__main__'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;app&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;QApplication&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;App&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;exit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;exec_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-</description>
-    <link>/pl/pl-script-python-qt5-display-image.html</link>
-    <guid>/pl/pl-script-python-qt5-display-image</guid>
-    <pubDate>Wed, 18 Jan 2017 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>Python Qt: Designer</title>
-    <description>
 &lt;h4 id=&quot;widget&quot;&gt;Widget&lt;/h4&gt;
 &lt;ol&gt;
   &lt;li&gt;TextLabel: what does label mean? According to Merriam-Webster: to put a word
@@ -37421,8 +37510,17 @@ parts that support and form the basic shape of something.&lt;/li&gt;
 &lt;/ol&gt;
 
 </description>
-    <link>/pl/pl-script-python-qt5-designer.html</link>
-    <guid>/pl/pl-script-python-qt5-designer</guid>
+    <link>/pl-script-python-qt5-display-image.html</link>
+    <guid>/pl-script-python-qt5-display-image</guid>
+    <pubDate>Wed, 18 Jan 2017 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Pl Script Python Qt5 Designer</title>
+    <description>
+</description>
+    <link>/pl-script-python-qt5-designer.html</link>
+    <guid>/pl-script-python-qt5-designer</guid>
     <pubDate>Wed, 18 Jan 2017 00:00:00 +0900</pubDate>
   </item>
 
@@ -40486,6 +40584,510 @@ is not paid in full.(at a much higher rate than most form of debt)&lt;/li&gt;
   </item>
 
   <item>
+    <title>Ancient: Warrior</title>
+    <description>
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;master&lt;/li&gt;
+  &lt;li&gt;basic moves&lt;/li&gt;
+  &lt;li&gt;laughing in the wind&lt;/li&gt;
+  &lt;li&gt;swordman&lt;/li&gt;
+  &lt;li&gt;battilefield&lt;/li&gt;
+  &lt;li&gt;guards&lt;/li&gt;
+  &lt;li&gt;armor&lt;/li&gt;
+  &lt;li&gt;martial(relating to war or soldiers) art&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;phrase&quot;&gt;phrase&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;1 on 1&lt;/li&gt;
+  &lt;li&gt;sword fight&lt;/li&gt;
+  &lt;li&gt;mortal enemy&lt;/li&gt;
+  &lt;li&gt;escourt the princess&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;sentence&quot;&gt;sentence&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;the law of gravity doesn’t apply in ancient China&lt;/li&gt;
+  &lt;li&gt;disguised himself as a helpless old man.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/%E8%A8%80%E8%91%89/language-english-ancient-warrior.html</link>
+    <guid>/%E8%A8%80%E8%91%89/language-english-ancient-warrior</guid>
+    <pubDate>Thu, 17 Mar 2016 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Ancient: Royal Family</title>
+    <description>
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;security protection&lt;/li&gt;
+  &lt;li&gt;body guard&lt;/li&gt;
+  &lt;li&gt;butler&lt;/li&gt;
+  &lt;li&gt;concubine&lt;/li&gt;
+  &lt;li&gt;golden crown&lt;/li&gt;
+  &lt;li&gt;majesty&lt;/li&gt;
+  &lt;li&gt;clan&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;action&quot;&gt;Action&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;betray&lt;/li&gt;
+  &lt;li&gt;swear&lt;/li&gt;
+  &lt;li&gt;killer&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;sentence&quot;&gt;Sentence&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;take the throne&lt;/li&gt;
+  &lt;li&gt;inherit the throne&lt;/li&gt;
+  &lt;li&gt;proved him in the battle&lt;/li&gt;
+  &lt;li&gt;his wife unharmed and confined to death&lt;/li&gt;
+  &lt;li&gt;overthrow his father&lt;/li&gt;
+  &lt;li&gt;bend an iron bar&lt;/li&gt;
+  &lt;li&gt;remove his from power&lt;/li&gt;
+  &lt;li&gt;Sometimes I try to understand a person’s motives, I play a game, I assume the
+worst, what’s the worst reason you turn me against my sister?&lt;/li&gt;
+  &lt;li&gt;what does your lord expect for me?&lt;/li&gt;
+  &lt;li&gt;bend his knee&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/%E8%A8%80%E8%91%89/language-english-ancient-royal-family.html</link>
+    <guid>/%E8%A8%80%E8%91%89/language-english-ancient-royal-family</guid>
+    <pubDate>Thu, 17 Mar 2016 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Culture: China</title>
+    <description>
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Lion Dance&lt;/li&gt;
+  &lt;li&gt;Folding Fan&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Fengshui: Asian science, keep the balance of the house&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/%E8%A8%80%E8%91%89/language-english-ancient-culture.html</link>
+    <guid>/%E8%A8%80%E8%91%89/language-english-ancient-culture</guid>
+    <pubDate>Thu, 17 Mar 2016 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Ancient: Craftsman</title>
+    <description>
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;pass down&lt;/li&gt;
+  &lt;li&gt;handicraft&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;A secret cleaning method passed down from generation to generation&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/%E8%A8%80%E8%91%89/language-english-ancient-craftsman.html</link>
+    <guid>/%E8%A8%80%E8%91%89/language-english-ancient-craftsman</guid>
+    <pubDate>Thu, 17 Mar 2016 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Game: Snooker</title>
+    <description>
+&lt;h4 id=&quot;terminology&quot;&gt;Terminology&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;frame&lt;/li&gt;
+  &lt;li&gt;pocket&lt;/li&gt;
+  &lt;li&gt;pool&lt;/li&gt;
+  &lt;li&gt;rolling&lt;/li&gt;
+  &lt;li&gt;bounce back&lt;/li&gt;
+  &lt;li&gt;strike&lt;/li&gt;
+  &lt;li&gt;block the pocket&lt;/li&gt;
+  &lt;li&gt;poker table&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;phrase&quot;&gt;Phrase&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;49 points behind&lt;/li&gt;
+  &lt;li&gt;49 points in front&lt;/li&gt;
+  &lt;li&gt;big frame&lt;/li&gt;
+  &lt;li&gt;key move&lt;/li&gt;
+  &lt;li&gt;semi-final&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;sentence&quot;&gt;Sentence&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Ronnie O’Sullivan is falling out of love with snooker.&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/%E8%A8%80%E8%91%89/language-english-game-snooker.html</link>
+    <guid>/%E8%A8%80%E8%91%89/language-english-game-snooker</guid>
+    <pubDate>Thu, 17 Mar 2016 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Game: Mobile</title>
+    <description>
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;top lane&lt;/li&gt;
+  &lt;li&gt;middle lane&lt;/li&gt;
+  &lt;li&gt;bottom lane&lt;/li&gt;
+  &lt;li&gt;buff&lt;/li&gt;
+  &lt;li&gt;rule&lt;/li&gt;
+  &lt;li&gt;bronze league&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;our sides&lt;/li&gt;
+  &lt;li&gt;report&lt;/li&gt;
+  &lt;li&gt;team&lt;/li&gt;
+  &lt;li&gt;teamwork&lt;/li&gt;
+  &lt;li&gt;teammate&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;match: a contest in which two or more persons compete&lt;/li&gt;
+  &lt;li&gt;contest&lt;/li&gt;
+  &lt;li&gt;tournament: consists of multiple matches&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;rank mode&lt;/li&gt;
+  &lt;li&gt;classic mode&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;you were promoted to the next higher league, keep participating in
+competitions to get more rewards.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/%E8%A8%80%E8%91%89/language-english-game-mobile.html</link>
+    <guid>/%E8%A8%80%E8%91%89/language-english-game-mobile</guid>
+    <pubDate>Thu, 17 Mar 2016 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Game: Fighting</title>
+    <description>
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;totaly brutal&lt;/li&gt;
+  &lt;li&gt;eye-gougeing&lt;/li&gt;
+  &lt;li&gt;hook-fishing&lt;/li&gt;
+  &lt;li&gt;contestant&lt;/li&gt;
+  &lt;li&gt;game face&lt;/li&gt;
+  &lt;li&gt;name tag&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;ultimate fighting champion.&lt;/li&gt;
+  &lt;li&gt;brazilian street-fighting.&lt;/li&gt;
+  &lt;li&gt;close my eyes and smell the blood.&lt;/li&gt;
+  &lt;li&gt;face off against a member of the other team.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;red team leading by two.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/%E8%A8%80%E8%91%89/language-english-game-fight.html</link>
+    <guid>/%E8%A8%80%E8%91%89/language-english-game-fight</guid>
+    <pubDate>Thu, 17 Mar 2016 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Game: Childhood </title>
+    <description>
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;hiding and seek&lt;/li&gt;
+  &lt;li&gt;playmate&lt;/li&gt;
+  &lt;li&gt;dart board&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;mess around: behave in a silly or playfull way, especially so as to cause
+irritation.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;doesn’t count&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/%E8%A8%80%E8%91%89/language-english-game-childhood.html</link>
+    <guid>/%E8%A8%80%E8%91%89/language-english-game-childhood</guid>
+    <pubDate>Thu, 17 Mar 2016 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Game: Casino</title>
+    <description>
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;dice&lt;/li&gt;
+  &lt;li&gt;slot machine&lt;/li&gt;
+  &lt;li&gt;golden spin&lt;/li&gt;
+  &lt;li&gt;golden spin&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;8-ball-poll&quot;&gt;8 ball poll&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;six pockets&lt;/li&gt;
+  &lt;li&gt;cue&lt;/li&gt;
+  &lt;li&gt;cue ball&lt;/li&gt;
+  &lt;li&gt;potted cue ball&lt;/li&gt;
+  &lt;li&gt;rail&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;toy-blast&quot;&gt;Toy Blast&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;match&lt;/li&gt;
+  &lt;li&gt;nice move&lt;/li&gt;
+  &lt;li&gt;claim&lt;/li&gt;
+  &lt;li&gt;booster&lt;/li&gt;
+  &lt;li&gt;time to next life&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;action&quot;&gt;action&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;claim prize&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;terminology&quot;&gt;Terminology&lt;/h4&gt;
+&lt;p&gt;poll: a game played on an English billiard table in which each players stakes a
+sum and the winner takes all&lt;/p&gt;
+
+&lt;h4 id=&quot;sentence&quot;&gt;Sentence&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;roll a six in three goes.&lt;/li&gt;
+  &lt;li&gt;you competitors don’t stand a chance against you.&lt;/li&gt;
+  &lt;li&gt;I bet you are a: (to bet means to gamble, to risk money based on the outcome of a game like
+poker.)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;bet&quot;&gt;bet&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;If you were going to bet on an upcoming basketball game between two teams.&lt;/li&gt;
+  &lt;li&gt;Bet fives dollars on the red team.&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/%E8%A8%80%E8%91%89/language-english-game-casino.html</link>
+    <guid>/%E8%A8%80%E8%91%89/language-english-game-casino</guid>
+    <pubDate>Thu, 17 Mar 2016 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Entertainment: Show</title>
+    <description>
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Miss American Pageant&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/%E8%A8%80%E8%91%89/language-english-entertainment-show.html</link>
+    <guid>/%E8%A8%80%E8%91%89/language-english-entertainment-show</guid>
+    <pubDate>Thu, 17 Mar 2016 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Entertainment: Reward</title>
+    <description>
+&lt;h4 id=&quot;phrase&quot;&gt;Phrase&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;golden statue&lt;/li&gt;
+  &lt;li&gt;golden raspberry award
+    &lt;h4 id=&quot;phrase-1&quot;&gt;Phrase&lt;/h4&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Make a speech&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/%E8%A8%80%E8%91%89/language-english-entertainment-reward.html</link>
+    <guid>/%E8%A8%80%E8%91%89/language-english-entertainment-reward</guid>
+    <pubDate>Thu, 17 Mar 2016 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Entertainment: Music</title>
+    <description>
+&lt;h4 id=&quot;soundtrack&quot;&gt;Soundtrack&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Freedom-(Django Unchain)&lt;/li&gt;
+  &lt;li&gt;Nightcall-(Drive)&lt;/li&gt;
+  &lt;li&gt;Red Right Hand-(Peaky Blinders)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;1-terminology&quot;&gt;1. Terminology&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;audio book&lt;/li&gt;
+  &lt;li&gt;voice acting&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/%E8%A8%80%E8%91%89/language-english-entertainment-music.html</link>
+    <guid>/%E8%A8%80%E8%91%89/language-english-entertainment-music</guid>
+    <pubDate>Thu, 17 Mar 2016 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Entertainment: Movies</title>
+    <description>
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;blind shaft&lt;/li&gt;
+  &lt;li&gt;Farewell my concubine&lt;/li&gt;
+  &lt;li&gt;Devils on the doorstep&lt;/li&gt;
+  &lt;li&gt;infernal affairs&lt;/li&gt;
+  &lt;li&gt;In the mood for love&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Leon: The professional(French)&lt;/li&gt;
+  &lt;li&gt;Parasite(south Korea)&lt;/li&gt;
+  &lt;li&gt;Once upon a time in America&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;director&quot;&gt;Director&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Quentin Tarantino
+    &lt;ul&gt;
+      &lt;li&gt;Reservoir Dogs&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;south-korea&quot;&gt;South Korea&lt;/h4&gt;
+
+&lt;h5 id=&quot;drama&quot;&gt;Drama&lt;/h5&gt;
+&lt;ol&gt;
+  &lt;li&gt;Reply 1988&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h5 id=&quot;movies&quot;&gt;Movies&lt;/h5&gt;
+&lt;ol&gt;
+  &lt;li&gt;New World&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;moment cut&lt;/li&gt;
+  &lt;li&gt;subtitle&lt;/li&gt;
+  &lt;li&gt;line: the words an actor supposed to say&lt;/li&gt;
+  &lt;li&gt;hilarious bloopers&lt;/li&gt;
+  &lt;li&gt;film poster&lt;/li&gt;
+  &lt;li&gt;tube case&lt;/li&gt;
+  &lt;li&gt;crew&lt;/li&gt;
+  &lt;li&gt;sitcom&lt;/li&gt;
+  &lt;li&gt;episode&lt;/li&gt;
+  &lt;li&gt;sound track&lt;/li&gt;
+  &lt;li&gt;trailer&lt;/li&gt;
+  &lt;li&gt;character&lt;/li&gt;
+  &lt;li&gt;celebrity&lt;/li&gt;
+  &lt;li&gt;monologue&lt;/li&gt;
+  &lt;li&gt;cast&lt;/li&gt;
+  &lt;li&gt;crew&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;improvise&lt;/li&gt;
+  &lt;li&gt;unplaned&lt;/li&gt;
+  &lt;li&gt;shot and reshot the scene&lt;/li&gt;
+  &lt;li&gt;best movie counting down&lt;/li&gt;
+  &lt;li&gt;hold the breath&lt;/li&gt;
+  &lt;li&gt;evil character&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;sentence&quot;&gt;sentence&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;This movie about butler is based on a true story.&lt;/li&gt;
+  &lt;li&gt;turn the excruciating pain into performance&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/%E8%A8%80%E8%91%89/language-english-entertainment-movies.html</link>
+    <guid>/%E8%A8%80%E8%91%89/language-english-entertainment-movies</guid>
+    <pubDate>Thu, 17 Mar 2016 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Entertainment: Drama</title>
+    <description>
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;special edition&lt;/li&gt;
+  &lt;li&gt;entertain&lt;/li&gt;
+  &lt;li&gt;show&lt;/li&gt;
+  &lt;li&gt;travel show&lt;/li&gt;
+  &lt;li&gt;understudy&lt;/li&gt;
+  &lt;li&gt;improvisational: performance with preparation&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;action&quot;&gt;action&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;release&lt;/li&gt;
+  &lt;li&gt;promote&lt;/li&gt;
+  &lt;li&gt;performan&lt;/li&gt;
+  &lt;li&gt;rehearsal&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;phrase&quot;&gt;Phrase&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;soap opera&lt;/li&gt;
+  &lt;li&gt;soap opera acting&lt;/li&gt;
+  &lt;li&gt;tone deaf&lt;/li&gt;
+  &lt;li&gt;spoiler alert&lt;/li&gt;
+  &lt;li&gt;entertainer&lt;/li&gt;
+  &lt;li&gt;textbook acting&lt;/li&gt;
+  &lt;li&gt;subtitle&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;####
+It’s on.&lt;/p&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Television program, you can add anything before the word “show”, the listener
+will get it, it’s some kind of show, such as, talk show, travel show.&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/%E8%A8%80%E8%91%89/language-english-entertainment-drama.html</link>
+    <guid>/%E8%A8%80%E8%91%89/language-english-entertainment-drama</guid>
+    <pubDate>Thu, 17 Mar 2016 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Entertainment: Amusement Park</title>
+    <description>
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;roller coaster&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/%E8%A8%80%E8%91%89/language-english-entertainment-amusement-park.html</link>
+    <guid>/%E8%A8%80%E8%91%89/language-english-entertainment-amusement-park</guid>
+    <pubDate>Thu, 17 Mar 2016 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
     <title>Smartphone: Hardware</title>
     <description>
 &lt;p&gt;####&lt;/p&gt;
@@ -40813,390 +41415,6 @@ all.&lt;/li&gt;
   </item>
 
   <item>
-    <title>Game: Snooker</title>
-    <description>
-&lt;h4 id=&quot;terminology&quot;&gt;Terminology&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;frame&lt;/li&gt;
-  &lt;li&gt;pocket&lt;/li&gt;
-  &lt;li&gt;pool&lt;/li&gt;
-  &lt;li&gt;rolling&lt;/li&gt;
-  &lt;li&gt;bounce back&lt;/li&gt;
-  &lt;li&gt;strike&lt;/li&gt;
-  &lt;li&gt;block the pocket&lt;/li&gt;
-  &lt;li&gt;poker table&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;phrase&quot;&gt;Phrase&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;49 points behind&lt;/li&gt;
-  &lt;li&gt;49 points in front&lt;/li&gt;
-  &lt;li&gt;big frame&lt;/li&gt;
-  &lt;li&gt;key move&lt;/li&gt;
-  &lt;li&gt;semi-final&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;sentence&quot;&gt;Sentence&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Ronnie O’Sullivan is falling out of love with snooker.&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-    <link>/%E8%A8%80%E8%91%89/language-english-game-snooker.html</link>
-    <guid>/%E8%A8%80%E8%91%89/language-english-game-snooker</guid>
-    <pubDate>Thu, 17 Mar 2016 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>Game: Mobile</title>
-    <description>
-&lt;p&gt;####&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;top lane&lt;/li&gt;
-  &lt;li&gt;middle lane&lt;/li&gt;
-  &lt;li&gt;bottom lane&lt;/li&gt;
-  &lt;li&gt;buff&lt;/li&gt;
-  &lt;li&gt;rule&lt;/li&gt;
-  &lt;li&gt;bronze league&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;####&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;our sides&lt;/li&gt;
-  &lt;li&gt;report&lt;/li&gt;
-  &lt;li&gt;team&lt;/li&gt;
-  &lt;li&gt;teamwork&lt;/li&gt;
-  &lt;li&gt;teammate&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;####&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;match: a contest in which two or more persons compete&lt;/li&gt;
-  &lt;li&gt;contest&lt;/li&gt;
-  &lt;li&gt;tournament: consists of multiple matches&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;####&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;rank mode&lt;/li&gt;
-  &lt;li&gt;classic mode&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;####&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;you were promoted to the next higher league, keep participating in
-competitions to get more rewards.&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    <link>/%E8%A8%80%E8%91%89/language-english-game-mobile.html</link>
-    <guid>/%E8%A8%80%E8%91%89/language-english-game-mobile</guid>
-    <pubDate>Thu, 17 Mar 2016 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>Game: Fighting</title>
-    <description>
-&lt;p&gt;####&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;totaly brutal&lt;/li&gt;
-  &lt;li&gt;eye-gougeing&lt;/li&gt;
-  &lt;li&gt;hook-fishing&lt;/li&gt;
-  &lt;li&gt;contestant&lt;/li&gt;
-  &lt;li&gt;game face&lt;/li&gt;
-  &lt;li&gt;name tag&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;####&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;ultimate fighting champion.&lt;/li&gt;
-  &lt;li&gt;brazilian street-fighting.&lt;/li&gt;
-  &lt;li&gt;close my eyes and smell the blood.&lt;/li&gt;
-  &lt;li&gt;face off against a member of the other team.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;####&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;red team leading by two.&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    <link>/%E8%A8%80%E8%91%89/language-english-game-fight.html</link>
-    <guid>/%E8%A8%80%E8%91%89/language-english-game-fight</guid>
-    <pubDate>Thu, 17 Mar 2016 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>Game: Childhood </title>
-    <description>
-&lt;p&gt;####&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;hiding and seek&lt;/li&gt;
-  &lt;li&gt;playmate&lt;/li&gt;
-  &lt;li&gt;dart board&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;####&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;mess around: behave in a silly or playfull way, especially so as to cause
-irritation.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;####&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;doesn’t count&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-    <link>/%E8%A8%80%E8%91%89/language-english-game-childhood.html</link>
-    <guid>/%E8%A8%80%E8%91%89/language-english-game-childhood</guid>
-    <pubDate>Thu, 17 Mar 2016 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>Game: Casino</title>
-    <description>
-&lt;p&gt;####&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;dice&lt;/li&gt;
-  &lt;li&gt;slot machine&lt;/li&gt;
-  &lt;li&gt;golden spin&lt;/li&gt;
-  &lt;li&gt;golden spin&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;8-ball-poll&quot;&gt;8 ball poll&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;six pockets&lt;/li&gt;
-  &lt;li&gt;cue&lt;/li&gt;
-  &lt;li&gt;cue ball&lt;/li&gt;
-  &lt;li&gt;potted cue ball&lt;/li&gt;
-  &lt;li&gt;rail&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;toy-blast&quot;&gt;Toy Blast&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;match&lt;/li&gt;
-  &lt;li&gt;nice move&lt;/li&gt;
-  &lt;li&gt;claim&lt;/li&gt;
-  &lt;li&gt;booster&lt;/li&gt;
-  &lt;li&gt;time to next life&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;action&quot;&gt;action&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;claim prize&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;terminology&quot;&gt;Terminology&lt;/h4&gt;
-&lt;p&gt;poll: a game played on an English billiard table in which each players stakes a
-sum and the winner takes all&lt;/p&gt;
-
-&lt;h4 id=&quot;sentence&quot;&gt;Sentence&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;roll a six in three goes.&lt;/li&gt;
-  &lt;li&gt;you competitors don’t stand a chance against you.&lt;/li&gt;
-  &lt;li&gt;I bet you are a: (to bet means to gamble, to risk money based on the outcome of a game like
-poker.)&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-    <link>/%E8%A8%80%E8%91%89/language-english-game-casino.html</link>
-    <guid>/%E8%A8%80%E8%91%89/language-english-game-casino</guid>
-    <pubDate>Thu, 17 Mar 2016 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>Entertainment: Show</title>
-    <description>
-&lt;p&gt;####&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Miss American Pageant&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    <link>/%E8%A8%80%E8%91%89/language-english-entertainment-show.html</link>
-    <guid>/%E8%A8%80%E8%91%89/language-english-entertainment-show</guid>
-    <pubDate>Thu, 17 Mar 2016 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>Entertainment: Reward</title>
-    <description>
-&lt;h4 id=&quot;phrase&quot;&gt;Phrase&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;golden statue&lt;/li&gt;
-  &lt;li&gt;golden raspberry award
-    &lt;h4 id=&quot;phrase-1&quot;&gt;Phrase&lt;/h4&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Make a speech&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    <link>/%E8%A8%80%E8%91%89/language-english-entertainment-reward.html</link>
-    <guid>/%E8%A8%80%E8%91%89/language-english-entertainment-reward</guid>
-    <pubDate>Thu, 17 Mar 2016 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>Entertainment: Music</title>
-    <description>
-&lt;h4 id=&quot;soundtrack&quot;&gt;Soundtrack&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Freedom-(Django Unchain)&lt;/li&gt;
-  &lt;li&gt;Nightcall-(Drive)&lt;/li&gt;
-  &lt;li&gt;Red Right Hand-(Peaky Blinders)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;1-terminology&quot;&gt;1. Terminology&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;audio book&lt;/li&gt;
-  &lt;li&gt;voice acting&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    <link>/%E8%A8%80%E8%91%89/language-english-entertainment-music.html</link>
-    <guid>/%E8%A8%80%E8%91%89/language-english-entertainment-music</guid>
-    <pubDate>Thu, 17 Mar 2016 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>Entertainment: Movies</title>
-    <description>
-&lt;p&gt;####&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;blind shaft&lt;/li&gt;
-  &lt;li&gt;Farewell my concubine&lt;/li&gt;
-  &lt;li&gt;Devils on the doorstep&lt;/li&gt;
-  &lt;li&gt;infernal affairs&lt;/li&gt;
-  &lt;li&gt;In the mood for love&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;####&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Leon: The professional(French)&lt;/li&gt;
-  &lt;li&gt;Parasite(south Korea)&lt;/li&gt;
-  &lt;li&gt;Once upon a time in America&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;director&quot;&gt;Director&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Quentin Tarantino
-    &lt;ul&gt;
-      &lt;li&gt;Reservoir Dogs&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;south-korea&quot;&gt;South Korea&lt;/h4&gt;
-
-&lt;h5 id=&quot;drama&quot;&gt;Drama&lt;/h5&gt;
-&lt;ol&gt;
-  &lt;li&gt;Reply 1988&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h5 id=&quot;movies&quot;&gt;Movies&lt;/h5&gt;
-&lt;ol&gt;
-  &lt;li&gt;New World&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;####&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;moment cut&lt;/li&gt;
-  &lt;li&gt;subtitle&lt;/li&gt;
-  &lt;li&gt;line: the words an actor supposed to say&lt;/li&gt;
-  &lt;li&gt;hilarious bloopers&lt;/li&gt;
-  &lt;li&gt;film poster&lt;/li&gt;
-  &lt;li&gt;tube case&lt;/li&gt;
-  &lt;li&gt;crew&lt;/li&gt;
-  &lt;li&gt;sitcom&lt;/li&gt;
-  &lt;li&gt;episode&lt;/li&gt;
-  &lt;li&gt;sound track&lt;/li&gt;
-  &lt;li&gt;trailer&lt;/li&gt;
-  &lt;li&gt;character&lt;/li&gt;
-  &lt;li&gt;celebrity&lt;/li&gt;
-  &lt;li&gt;monologue&lt;/li&gt;
-  &lt;li&gt;cast&lt;/li&gt;
-  &lt;li&gt;crew&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;####&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;improvise&lt;/li&gt;
-  &lt;li&gt;unplaned&lt;/li&gt;
-  &lt;li&gt;shot and reshot the scene&lt;/li&gt;
-  &lt;li&gt;best movie counting down&lt;/li&gt;
-  &lt;li&gt;hold the breath&lt;/li&gt;
-  &lt;li&gt;evil character&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;sentence&quot;&gt;sentence&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;This movie about butler is based on a true story.&lt;/li&gt;
-  &lt;li&gt;turn the excruciating pain into performance&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-    <link>/%E8%A8%80%E8%91%89/language-english-entertainment-movies.html</link>
-    <guid>/%E8%A8%80%E8%91%89/language-english-entertainment-movies</guid>
-    <pubDate>Thu, 17 Mar 2016 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>Entertainment: Drama</title>
-    <description>
-&lt;p&gt;####&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;special edition&lt;/li&gt;
-  &lt;li&gt;entertain&lt;/li&gt;
-  &lt;li&gt;show&lt;/li&gt;
-  &lt;li&gt;travel show&lt;/li&gt;
-  &lt;li&gt;understudy&lt;/li&gt;
-  &lt;li&gt;improvisational: performance with preparation&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;action&quot;&gt;action&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;release&lt;/li&gt;
-  &lt;li&gt;promote&lt;/li&gt;
-  &lt;li&gt;performan&lt;/li&gt;
-  &lt;li&gt;rehearsal&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;phrase&quot;&gt;Phrase&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;soap opera&lt;/li&gt;
-  &lt;li&gt;soap opera acting&lt;/li&gt;
-  &lt;li&gt;tone deaf&lt;/li&gt;
-  &lt;li&gt;spoiler alert&lt;/li&gt;
-  &lt;li&gt;entertainer&lt;/li&gt;
-  &lt;li&gt;textbook acting&lt;/li&gt;
-  &lt;li&gt;subtitle&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;####
-It’s on.&lt;/p&gt;
-
-&lt;h4 id=&quot;galois&quot;&gt;galois&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Television program, you can add anything before the word “show”, the listener
-will get it, it’s some kind of show, such as, talk show, travel show.&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-    <link>/%E8%A8%80%E8%91%89/language-english-entertainment-drama.html</link>
-    <guid>/%E8%A8%80%E8%91%89/language-english-entertainment-drama</guid>
-    <pubDate>Thu, 17 Mar 2016 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>Entertainment: Amusement Park</title>
-    <description>
-&lt;p&gt;####&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;roller coaster&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    <link>/%E8%A8%80%E8%91%89/language-english-entertainment-amusement-park.html</link>
-    <guid>/%E8%A8%80%E8%91%89/language-english-entertainment-amusement-park</guid>
-    <pubDate>Thu, 17 Mar 2016 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
     <title>Anniversary: Marriage</title>
     <description>
 &lt;p&gt;####&lt;/p&gt;
@@ -41290,120 +41508,6 @@ dead and transmit money and other goods to loved ones in the afterlife.&lt;/li&g
 </description>
     <link>/%E8%A8%80%E8%91%89/language-english-anniversary-dog.html</link>
     <guid>/%E8%A8%80%E8%91%89/language-english-anniversary-dog</guid>
-    <pubDate>Thu, 17 Mar 2016 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>Ancient: Warrior</title>
-    <description>
-&lt;p&gt;####&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;master&lt;/li&gt;
-  &lt;li&gt;basic moves&lt;/li&gt;
-  &lt;li&gt;laughing in the wind&lt;/li&gt;
-  &lt;li&gt;swordman&lt;/li&gt;
-  &lt;li&gt;battilefield&lt;/li&gt;
-  &lt;li&gt;guards&lt;/li&gt;
-  &lt;li&gt;armor&lt;/li&gt;
-  &lt;li&gt;martial(relating to war or soldiers) art&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;phrase&quot;&gt;phrase&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;1 on 1&lt;/li&gt;
-  &lt;li&gt;sword fight&lt;/li&gt;
-  &lt;li&gt;mortal enemy&lt;/li&gt;
-  &lt;li&gt;escourt the princess&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;sentence&quot;&gt;sentence&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;the law of gravity doesn’t apply in ancient China&lt;/li&gt;
-  &lt;li&gt;disguised himself as a helpless old man.&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    <link>/%E8%A8%80%E8%91%89/language-english-ancient-warrior.html</link>
-    <guid>/%E8%A8%80%E8%91%89/language-english-ancient-warrior</guid>
-    <pubDate>Thu, 17 Mar 2016 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>Ancient: Royal Family</title>
-    <description>
-&lt;p&gt;####&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;security protection&lt;/li&gt;
-  &lt;li&gt;body guard&lt;/li&gt;
-  &lt;li&gt;butler&lt;/li&gt;
-  &lt;li&gt;concubine&lt;/li&gt;
-  &lt;li&gt;golden crown&lt;/li&gt;
-  &lt;li&gt;majesty&lt;/li&gt;
-  &lt;li&gt;clan&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;action&quot;&gt;Action&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;betray&lt;/li&gt;
-  &lt;li&gt;swear&lt;/li&gt;
-  &lt;li&gt;killer&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;sentence&quot;&gt;Sentence&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;take the throne&lt;/li&gt;
-  &lt;li&gt;inherit the throne&lt;/li&gt;
-  &lt;li&gt;proved him in the battle&lt;/li&gt;
-  &lt;li&gt;his wife unharmed and confined to death&lt;/li&gt;
-  &lt;li&gt;overthrow his father&lt;/li&gt;
-  &lt;li&gt;bend an iron bar&lt;/li&gt;
-  &lt;li&gt;remove his from power&lt;/li&gt;
-  &lt;li&gt;Sometimes I try to understand a person’s motives, I play a game, I assume the
-worst, what’s the worst reason you turn me against my sister?&lt;/li&gt;
-  &lt;li&gt;what does your lord expect for me?&lt;/li&gt;
-  &lt;li&gt;bend his knee&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-    <link>/%E8%A8%80%E8%91%89/language-english-ancient-royal-family.html</link>
-    <guid>/%E8%A8%80%E8%91%89/language-english-ancient-royal-family</guid>
-    <pubDate>Thu, 17 Mar 2016 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>Culture: China</title>
-    <description>
-&lt;p&gt;####&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Lion Dance&lt;/li&gt;
-  &lt;li&gt;Folding Fan&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;####&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Fengshui: Asian science, keep the balance of the house&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    <link>/%E8%A8%80%E8%91%89/language-english-ancient-culture.html</link>
-    <guid>/%E8%A8%80%E8%91%89/language-english-ancient-culture</guid>
-    <pubDate>Thu, 17 Mar 2016 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>Ancient: Craftsman</title>
-    <description>
-&lt;p&gt;####&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;pass down&lt;/li&gt;
-  &lt;li&gt;handicraft&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;####&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;A secret cleaning method passed down from generation to generation&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    <link>/%E8%A8%80%E8%91%89/language-english-ancient-craftsman.html</link>
-    <guid>/%E8%A8%80%E8%91%89/language-english-ancient-craftsman</guid>
     <pubDate>Thu, 17 Mar 2016 00:00:00 +0900</pubDate>
   </item>
 
@@ -42032,6 +42136,40 @@ avenues.&lt;/li&gt;
   </item>
 
   <item>
+    <title>Village: life</title>
+    <description>
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;pond&lt;/li&gt;
+  &lt;li&gt;puddle&lt;/li&gt;
+  &lt;li&gt;overflow water&lt;/li&gt;
+  &lt;li&gt;natural spring&lt;/li&gt;
+  &lt;li&gt;pump filter&lt;/li&gt;
+  &lt;li&gt;candle burn out&lt;/li&gt;
+  &lt;li&gt;jellyfish&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;phrase&quot;&gt;Phrase&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;pump out: pump the water out&lt;/li&gt;
+  &lt;li&gt;chase rabbit&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;sentence&quot;&gt;Sentence&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Why can’t we have a pond here?&lt;/li&gt;
+  &lt;li&gt;bond and connection&lt;/li&gt;
+  &lt;li&gt;get stung by a jellyfish&lt;/li&gt;
+  &lt;li&gt;we don’t pump the extra water out, our garden will turn into a swamp.&lt;/li&gt;
+  &lt;li&gt;can you fill this bucket up with water? I need to clean the floor&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/%E8%A8%80%E8%91%89/language-english-village-life.html</link>
+    <guid>/%E8%A8%80%E8%91%89/language-english-village-life</guid>
+    <pubDate>Sat, 12 Mar 2016 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
     <title>Village: Work</title>
     <description>
 &lt;h4 id=&quot;phrase&quot;&gt;Phrase&lt;/h4&gt;
@@ -42079,40 +42217,6 @@ avenues.&lt;/li&gt;
 </description>
     <link>/%E8%A8%80%E8%91%89/language-english-village-parenting.html</link>
     <guid>/%E8%A8%80%E8%91%89/language-english-village-parenting</guid>
-    <pubDate>Sat, 12 Mar 2016 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>Village: life</title>
-    <description>
-&lt;p&gt;####&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;pond&lt;/li&gt;
-  &lt;li&gt;puddle&lt;/li&gt;
-  &lt;li&gt;overflow water&lt;/li&gt;
-  &lt;li&gt;natural spring&lt;/li&gt;
-  &lt;li&gt;pump filter&lt;/li&gt;
-  &lt;li&gt;candle burn out&lt;/li&gt;
-  &lt;li&gt;jellyfish&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;phrase&quot;&gt;Phrase&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;pump out: pump the water out&lt;/li&gt;
-  &lt;li&gt;chase rabbit&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;sentence&quot;&gt;Sentence&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Why can’t we have a pond here?&lt;/li&gt;
-  &lt;li&gt;bond and connection&lt;/li&gt;
-  &lt;li&gt;get stung by a jellyfish&lt;/li&gt;
-  &lt;li&gt;we don’t pump the extra water out, our garden will turn into a swamp.&lt;/li&gt;
-  &lt;li&gt;can you fill this bucket up with water? I need to clean the floor&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    <link>/%E8%A8%80%E8%91%89/language-english-village-life.html</link>
-    <guid>/%E8%A8%80%E8%91%89/language-english-village-life</guid>
     <pubDate>Sat, 12 Mar 2016 00:00:00 +0900</pubDate>
   </item>
 
@@ -42424,74 +42528,6 @@ subject.
     <link>/%E8%A8%80%E8%91%89/language-english-job-agent.html</link>
     <guid>/%E8%A8%80%E8%91%89/language-english-job-agent</guid>
     <pubDate>Fri, 11 Mar 2016 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>School: Education</title>
-    <description>
-&lt;p&gt;####&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;frost boy&lt;/li&gt;
-  &lt;li&gt;summar camp&lt;/li&gt;
-  &lt;li&gt;grade school&lt;/li&gt;
-  &lt;li&gt;elementary school&lt;/li&gt;
-  &lt;li&gt;second year of my collage&lt;/li&gt;
-  &lt;li&gt;preschool&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;####&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;education affairs department: at the counter of education affairs department.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;####&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;do you take this class?&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;action&quot;&gt;Action&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;bring up&lt;/li&gt;
-  &lt;li&gt;educate&lt;/li&gt;
-  &lt;li&gt;sign up&lt;/li&gt;
-  &lt;li&gt;educate my nephew&lt;/li&gt;
-  &lt;li&gt;junior&lt;/li&gt;
-  &lt;li&gt;senior&lt;/li&gt;
-  &lt;li&gt;upperclassman&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    <link>/%E8%A8%80%E8%91%89/language-english-school-education.html</link>
-    <guid>/%E8%A8%80%E8%91%89/language-english-school-education</guid>
-    <pubDate>Thu, 10 Mar 2016 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>School: Classroom</title>
-    <description>
-&lt;p&gt;####&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;chalk&lt;/li&gt;
-  &lt;li&gt;18 pages, front and back&lt;/li&gt;
-  &lt;li&gt;script&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;####&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;I want to be thorough&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    <link>/%E8%A8%80%E8%91%89/language-english-school-classroom.html</link>
-    <guid>/%E8%A8%80%E8%91%89/language-english-school-classroom</guid>
-    <pubDate>Thu, 10 Mar 2016 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>School: Bully</title>
-    <description>
-</description>
-    <link>/%E8%A8%80%E8%91%89/language-english-school-bully.html</link>
-    <guid>/%E8%A8%80%E8%91%89/language-english-school-bully</guid>
-    <pubDate>Thu, 10 Mar 2016 00:00:00 +0900</pubDate>
   </item>
 
   <item>
@@ -42867,6 +42903,74 @@ inside door.&lt;/li&gt;
 </description>
     <link>/%E8%A8%80%E8%91%89/language-english-house-architecture.html</link>
     <guid>/%E8%A8%80%E8%91%89/language-english-house-architecture</guid>
+    <pubDate>Thu, 10 Mar 2016 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>School: Education</title>
+    <description>
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;frost boy&lt;/li&gt;
+  &lt;li&gt;summar camp&lt;/li&gt;
+  &lt;li&gt;grade school&lt;/li&gt;
+  &lt;li&gt;elementary school&lt;/li&gt;
+  &lt;li&gt;second year of my collage&lt;/li&gt;
+  &lt;li&gt;preschool&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;education affairs department: at the counter of education affairs department.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;do you take this class?&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;action&quot;&gt;Action&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;bring up&lt;/li&gt;
+  &lt;li&gt;educate&lt;/li&gt;
+  &lt;li&gt;sign up&lt;/li&gt;
+  &lt;li&gt;educate my nephew&lt;/li&gt;
+  &lt;li&gt;junior&lt;/li&gt;
+  &lt;li&gt;senior&lt;/li&gt;
+  &lt;li&gt;upperclassman&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/%E8%A8%80%E8%91%89/language-english-school-education.html</link>
+    <guid>/%E8%A8%80%E8%91%89/language-english-school-education</guid>
+    <pubDate>Thu, 10 Mar 2016 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>School: Classroom</title>
+    <description>
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;chalk&lt;/li&gt;
+  &lt;li&gt;18 pages, front and back&lt;/li&gt;
+  &lt;li&gt;script&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;I want to be thorough&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/%E8%A8%80%E8%91%89/language-english-school-classroom.html</link>
+    <guid>/%E8%A8%80%E8%91%89/language-english-school-classroom</guid>
+    <pubDate>Thu, 10 Mar 2016 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>School: Bully</title>
+    <description>
+</description>
+    <link>/%E8%A8%80%E8%91%89/language-english-school-bully.html</link>
+    <guid>/%E8%A8%80%E8%91%89/language-english-school-bully</guid>
     <pubDate>Thu, 10 Mar 2016 00:00:00 +0900</pubDate>
   </item>
 
@@ -43952,6 +44056,76 @@ them frequently.&lt;/li&gt;
 </description>
     <link>/%E8%A8%80%E8%91%89/language-english-word-miscellaneous.html</link>
     <guid>/%E8%A8%80%E8%91%89/language-english-word-miscellaneous</guid>
+    <pubDate>Tue, 01 Mar 2016 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Word: Comparsion Part II</title>
+    <description>&lt;h4 id=&quot;numeric-vs-numerical&quot;&gt;Numeric vs. Numerical&lt;/h4&gt;
+&lt;p&gt;The word &lt;em&gt;numeric&lt;/em&gt; generally refes to or has to do with numers; on the other
+hand, ther word &lt;em&gt;numerical&lt;/em&gt; generally indicates a usage of numbers. It seems
+they are interchangable in practice.&lt;/p&gt;
+
+&lt;p&gt;Trending right now: numeric value, numeric problems, numerical analysis.&lt;/p&gt;
+
+</description>
+    <link>/%E8%A8%80%E8%91%89/language-english-word-comparsion-part2.html</link>
+    <guid>/%E8%A8%80%E8%91%89/language-english-word-comparsion-part2</guid>
+    <pubDate>Tue, 01 Mar 2016 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Word: Comparsion</title>
+    <description>
+&lt;h4 id=&quot;1-necessary-and-required&quot;&gt;1. Necessary and Required&lt;/h4&gt;
+&lt;p&gt;Required is used in the context of arbitrary rules and regulations, that is,
+when there is some requirement by law or convention that must be must be met in
+order for something to happen.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Example.&lt;/strong&gt; A password is required by law when a person is travelling from one
+country to another, and drivers are required to carry their driver’s license
+with them when they are driving.&lt;/p&gt;
+
+&lt;p&gt;Necessary is used when we want to say that something is needed logically or as
+a practical matter and &lt;strong&gt;without it some desired result cannot be obtained.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Example.&lt;/strong&gt; some form of electricity is necessary for the operation of
+electrical devices, and it is necessary for a person to have reached puberty for
+him or her to be able to be a biological parent.&lt;/p&gt;
+
+&lt;h4 id=&quot;2-need-vs-entail&quot;&gt;2. Need vs. Entail&lt;/h4&gt;
+&lt;p&gt;As verbs the difference between need and entail is that need is to be nessary
+while entail is to imply or require.&lt;/p&gt;
+
+&lt;h4 id=&quot;3-stage-period-and-phase&quot;&gt;3. Stage, period and phase&lt;/h4&gt;
+&lt;p&gt;According to the wikipedia, the definition is as the following: 1) Period - A
+length or portion of time;  2) Stage - A point, period, or step in a process or
+development; 3) Phase - A distinct period or stage in a process of change or
+forming part of something’s development.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Difference.&lt;/strong&gt; The difference is that &lt;em&gt;stage&lt;/em&gt; refers to a particular level that
+you are at, &lt;em&gt;period&lt;/em&gt; is more like a span of time, and &lt;em&gt;phase&lt;/em&gt; is like a state of
+transition.&lt;/p&gt;
+
+&lt;h4 id=&quot;4-classic-vs-classical&quot;&gt;4. Classic vs. Classical&lt;/h4&gt;
+
+&lt;p&gt;The word &lt;em&gt;classic&lt;/em&gt; is most commonly used as an adjective meaning “judged over a
+period of time to be of the highest quality and outstanding of its kind.”” On
+the other hand, the term &lt;em&gt;classical&lt;/em&gt; is used as an adjective meaning “of or
+relating to the ancient Greek and Roman world and expecially to literature, art,
+or ideals.”&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Difference.&lt;/strong&gt; The word &lt;em&gt;classic&lt;/em&gt; emphasis its quality; on the other hand,
+classic emphasis the order.&lt;/p&gt;
+
+&lt;h4 id=&quot;10-reference&quot;&gt;10. Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.quora.com/What-is-the-difference-between-required-and-necessary#:~:text=*%E2%80%9DNecessary%E2%80%9D%3A%20Something%20that,Asking%20someone%20to%20do%20something.&quot;&gt;Required and necessary&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/%E8%A8%80%E8%91%89/language-english-word-comparsion-part1.html</link>
+    <guid>/%E8%A8%80%E8%91%89/language-english-word-comparsion-part1</guid>
     <pubDate>Tue, 01 Mar 2016 00:00:00 +0900</pubDate>
   </item>
 
