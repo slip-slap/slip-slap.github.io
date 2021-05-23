@@ -55,10 +55,26 @@ or ideals."
 classic emphasis the order.
 
 
+#### Process vs. Procedure
+
+In the 2005 edition of ISO 9000, the difference between process and procedure
+was defined as:
+- *A process* is a set of interrelated or interaction activities which transform
+  inputs into outputs.
+- *A procedure* is specified way to carry out an activity or a process.
+
+The difference is that a process is about what to do and a procedure is about
+how we do something. But we is the difference between *how* and *what*? So this
+is definition is not clear? So we use the following method:
+- A process as being something that has inputs, outputs and activities and can be
+represented as a diagram.
+- The procedure then becomes a description of how the activity is carried out;
+  generally in text form.
 
 
-#### 10. Reference
-1. [Required and necessary](https://www.quora.com/What-is-the-difference-between-required-and-necessary#:~:text=*%E2%80%9DNecessary%E2%80%9D%3A%20Something%20that,Asking%20someone%20to%20do%20something.)
+#### Reference
+1. [Process and procedure](https://blog.triaster.co.uk/blog/procedure-vs-process-what-is-the-difference)
+2. [Required and necessary](https://www.quora.com/What-is-the-difference-between-required-and-necessary#:~:text=*%E2%80%9DNecessary%E2%80%9D%3A%20Something%20that,Asking%20someone%20to%20do%20something.)
 
 
 

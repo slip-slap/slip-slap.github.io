@@ -20,3 +20,8 @@ tags: ["英語"]
 9. Iberian
 1. preamble
 2. Athens
+3. Jerusalem
+4. mediterranean
+5. crusades
+6. opposite
+7. nice

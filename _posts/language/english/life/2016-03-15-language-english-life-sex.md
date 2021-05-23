@@ -10,3 +10,6 @@ tags: ["英語"]
 
 ####
 1. finish off
+2. put the kids down to the bed
+3. step away from the pen
+

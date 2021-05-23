@@ -8,6 +8,28 @@ tags: ["summary"]
 ---
 {% include JB/setup %}
 
+#### Pronounciation 
+Pronounciation methods of these three lanuage are complete different, which
+lead to the difference in our ears to recognizing sound. In Chinese, whether the
+sound made from the vocal cord or not doesn't change the word it represents.
+However, in Japan the case is complete different, they are two different words,
+such as *ただいま*. In Japanse, the stop sound, such as *ちょっと*, and long
+sound *習慣* means different words, that's how Japanese recognize the sound. In
+American, the combination of vowel sound and Non-vowel sound comes are used to
+represent words, where vowel sound is very important, and vowel sound can be
+divided into longer vowel sound and short vowel sound. 
+
+Corresponding to the pronounciation method, people's ear are different among
+these three region. To learn a new language, you need train you ear to be able
+to recognize the sounds which are different for the people whose mother language
+is it, since the sound maybe feel the same for a newer, maybe complete different
+for a local.
+
+
+
+
+
+
 #### Remark
 1. Both japanese and english have variation of verbs, appearing in different forms, which is complete different from chinese.
 - I have been looking for something to learn.

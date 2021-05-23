@@ -30,4 +30,5 @@ tags: ["英語"]
 9. sale: put up for
 
 1. crazy: these are bananas
+2. I also want to note that.
 
