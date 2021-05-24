@@ -46,6 +46,9 @@ independent events. A more common situation is when two events are independent
 given an additional event.
 1. Conditionally Independent:  We say that an event $\alpha$ is conditionally independent of event $\beta$
    given $\gamma$ in P, denoted 
+2. The initial intuition for conditional probability comes from considering
+   probabilities that are ratios. In the case of ratios, **P(E|F)**, as defined
+   above, is the fraction of items in **F** that are also in **E**.
 
 
 ##### 3.2 Independence and Conditional Independence

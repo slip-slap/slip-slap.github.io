@@ -28,7 +28,6 @@ three methods as follows:
 
 
 
-
 #### Reference
 1. [Bertrand paradox](https://en.wikipedia.org/wiki/Bertrand_paradox_(probability))
 

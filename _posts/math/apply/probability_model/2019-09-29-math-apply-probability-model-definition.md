@@ -9,16 +9,26 @@ tags: ["apply","P.A.S.","P.M."]
 {% include JB/setup %}
 
 
-#### Sample space
-1. Definition: A sample space is any set that lists all possible outcomes(or, responses) of
+#### 1 Probability space
+First we define two concept: *sample space* and *event*.
+
+##### 1.1 Sample space
+A sample space is any set that lists all possible outcomes(or, responses) of
 some unknown experiment or situation.
 - The *outcomes* refer to the distinct experiments outcomes.
 - Once an experiment is well-defined, The collection of all outcomes is called the **Sample space**.
 - We note a sample space with $\Omega$.
 
-2. Event Definition: In the case of a finite sample space, every subset of the
-   sample space is called an event.
-- A subset containint exactly one element is called an elementary event.
+##### 1.2 Event
+In the case of a finite sample space, every subset of the sample space is called
+an event. A subset containint exactly one element is called an elementary
+event.
+
+
+
+
+
+
 
 
 #### 2. Random Variable
@@ -54,7 +64,6 @@ to each event.  $ (\Omega, \mathcal{F}, \mathbf{P}) $
 
 ##### 1.1 Remark
 We must familiar with some terms, such as sample point, is same as outcome.
-
 
 
 ##### 2.1 Remark
