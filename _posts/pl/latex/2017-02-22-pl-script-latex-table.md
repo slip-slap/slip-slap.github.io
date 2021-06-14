@@ -211,7 +211,6 @@ Add notes under the table
 \end{table}
 ```
 
-
 #### Reference
 1. [tables](https://www.latex-tutorial.com/tutorials/tables/)
 2. [Threeparttable](http://texdoc.net/texmf-dist/doc/latex/threeparttable/threeparttable.pdf)

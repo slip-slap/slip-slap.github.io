@@ -77,4 +77,5 @@ Get is an all-purpose word, anything can be used with get
 3. who is pulling the strings?
 4. That's a big boy
 5. Come here, good girl.
+6. Once you get them on, you can get them off.
 

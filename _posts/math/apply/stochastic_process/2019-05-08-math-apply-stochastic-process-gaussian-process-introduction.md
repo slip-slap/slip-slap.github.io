@@ -36,10 +36,6 @@ $$
 
 
 
-
-
-
-
 #### 3. Reference
 1. [Gaussian Distribution](https://online.stat.psu.edu/stat505/lesson/6/6.1)
 

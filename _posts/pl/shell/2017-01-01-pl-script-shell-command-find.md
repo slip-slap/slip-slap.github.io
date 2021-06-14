@@ -30,3 +30,14 @@ find "test" -exec grep -in  "^[0-9]\{3\}-[0-9]\{4\}" test \;
 ```shell
 brew install findutils
 ```
+
+
+#### Remark
+I am confused to remember these long commands for a long time, since I am unable
+to analyze english grammar. Actually, the rule is pretty simple, *find path*
+command tell us where to find, which is the most important thing in this
+command, you should *find in somewhere*. Furthermore, we want to specify
+something we want, such as file name, file type etc., and they are treat as the
+parameters.
+
+

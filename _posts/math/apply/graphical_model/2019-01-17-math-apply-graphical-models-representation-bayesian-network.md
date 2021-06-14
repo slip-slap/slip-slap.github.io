@@ -8,7 +8,7 @@ tags: ["apply","G.M.","G.M.R."]
 ---
 {% include JB/setup %}
 
-#### Why we need a Bayesian Network ?
+#### Why bother?
 Our goal is to present a joint distribution P over some set of random variables
 $\chi = {X_1,\cdots,X_n}$. Even in the simplest case where there variables are
 binary-valued, a joint distribution requires the specificationof $2^n-1$
@@ -25,6 +25,33 @@ values$x_1,\cdots,x_n$. For all the smallest n:
    ridiculously large amounts of data to estimate this many parameters robustly.
 
 
+#### Definition
+Suppose we have a joint probability distribution P of the random variables in
+some set V and a DAG $ \mathbb{G}=(\mathrm{V}, \mathrm{E}) $. We say that
+$(\mathbb{G},P)$ satisfies the Markov Condition if for each variable $X \in V$,
+$\{X\}$ is conditionally independent of the set of all its nondescendents given
+the set of all its parents. If we denote the sets of parents and nondescendents
+of $X$ by $PA_X$ and $ND_X$ respectively, then
+$$
+I_{P}\left(\{X\}, \mathrm{ND}_{X} \mid \mathrm{PA}_{X}\right)
+$$.
+
+- When $(\mathbb{G},P)$ satisfies the Markov condition, we say $\mathbb{G}$ and
+  $P$ satisfy the Markov condition with each other.
+
+
+
+#### Property
+
+##### Faithfulness
+In general, we say $(\mathbb{G},P)$ satisfies the faithfulness condition if $(\mathbb{G},P)$
+satisfies the Markov condition and the only conditional independencies in P are
+those entailed by the Markov condition.
+
+
+
+
+
 #### Bayesian Network
 The core of the Bayesian network representation is a directed acyclic graph(DAG)
 $\mathcal{G}$, whose nodes are the random variables in our domain and whose
@@ -34,11 +61,6 @@ graph $\mathcal{G}$ can be viewed in two very different ways:
   distribution compactly in a factorized way.
 - As a compact representation for a set of conditional independence assumptions
   about a distribution.
-
-<img
-src="{{IMAGE_PATH}}/math-apply-probabilistic-graphical-models-bayesian-network-representation-example.png">
-
-1. $P(g^1|i^1,d^1,l^1)=\frac{P(l^1 | g^1,i^1,d^1)P(g^1|i^1,d^1)}{P(l^1 | g^1,i^1,d^1)P(g^1|i^1,d^1)+P(l^1 | g^1,i^1,d^1)P(g^1|i^1,d^1)+P(l^1 | g^1,i^1,d^1)P(g^1|i^1,d^1)}=0.712$
 
 1. Bayesian network structure $\mathcal{G}$:  is a directed acyclic graph whose
 nodes represent random variables $X_1,\cdots,X_n$. Let $Pa_{X_i}^{\mathcal{G}}$

@@ -1,0 +1,29 @@
+I"õ
+<h4 id="scheme">Scheme</h4>
+<ol>
+  <li>How does it relate to probability distribution.</li>
+  <li>How to recognize this equivalence.</li>
+</ol>
+
+<h4 id="definition">Definition</h4>
+<p>Let $ \mathbb{G}<em>{1}=\left(\mathrm{V}, \mathrm{E}</em>{1}\right) $ and $
+\mathbb{G}<em>{1}=\left(\mathrm{V}, \mathrm{E}</em>{2}\right) $ be two DAGs containing
+the same set of variables V. Then $\mathbb{G_1}$ and $\mathbb{G_2}$ are called
+Markov equivalent if for every three mutually disjoint subsets $A,B,C \subseteq
+V$, $A$ and $B$ are d-separated by $C$ in $\mathbb{G}_1$ if and only if A and B
+are d-separated by $C$ in $\mathbb{G}_2$.</p>
+
+<h5 id="criterion">Criterion</h5>
+<p>Two DAGs $\mathbb{G}_1$ and $\mathbb{G}_2$ are Markov equivalent if and only if
+they have the same links(edges without regard for direction) and the same set of
+uncoupled head-to-head meetings.</p>
+
+<h4 id="dag-pattern">DAG pattern</h4>
+<p>Let gp be a DAG pattern whose nodes are the elements of $V$, and A, B, and C be
+mutually disjoint subsets of V. We say A and B are d-separated by C in gp if A
+and B are d-separated by C in any DAG G in the Markov equivalence class
+represnted by gp.</p>
+
+<p><img src="/images/graphical_model/markov-equivalence-and-DAG-pattern.png" height="" width="" /></p>
+
+:ET

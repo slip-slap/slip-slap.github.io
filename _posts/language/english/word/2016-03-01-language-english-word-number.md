@@ -40,3 +40,8 @@ tags: ["英語"]
 2. He is five years younger than me. 
 3. leads by 10 point
 4. exceeds the threshold
+
+
+#### Sentence
+Many questionnaires ask people to respond on 1 to 5 scale with 1 representing
+the strongly agree, 2 representing agree, etc.

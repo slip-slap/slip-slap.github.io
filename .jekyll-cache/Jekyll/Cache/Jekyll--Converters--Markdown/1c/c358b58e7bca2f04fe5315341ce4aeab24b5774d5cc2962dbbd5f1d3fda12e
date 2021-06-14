@@ -1,0 +1,32 @@
+I"�
+<h4 id="grammar">grammar</h4>
+
+<p>find [参数]</p>
+
+<p>the following is some examle:</p>
+
+<ol>
+  <li>find . 列出当前目录及子目录下所有文件和文件夹</li>
+  <li>find / -cmin -15 查找最近15分钟更新的文件</li>
+  <li>-exec</li>
+</ol>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># -exec参数必须以\; 结尾</span>
+<span class="c"># 查找当前目录下文件名为test的文件，并找到满足"xxx-xxxx-xxxx"规律所在行内容</span>
+find <span class="s2">"test"</span> <span class="nt">-exec</span> <span class="nb">grep</span> <span class="nt">-in</span>  <span class="s2">"^[0-9]</span><span class="se">\{</span><span class="s2">3</span><span class="se">\}</span><span class="s2">-[0-9]</span><span class="se">\{</span><span class="s2">4</span><span class="se">\}</span><span class="s2">"</span> <span class="nb">test</span> <span class="se">\;</span>
+</code></pre></div></div>
+
+<h4 id="replace-the-command-with-gnu-version">replace the command with GNU version</h4>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew <span class="nb">install </span>findutils
+</code></pre></div></div>
+
+<h4 id="remark">Remark</h4>
+<p>I am confused to remember these long commands for a long time, since I am unable
+to analyze english grammar. Actually, the rule is pretty simple, <em>find path</em>
+command tell us where to find, which is the most important thing in this
+command, you should <em>find in somewhere</em>. Furthermore, we want to specify
+something we want, such as file name, file type etc., and they are treat as the
+parameters.</p>
+
+:ET

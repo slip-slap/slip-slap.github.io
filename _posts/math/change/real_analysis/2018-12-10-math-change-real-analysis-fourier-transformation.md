@@ -50,3 +50,4 @@ $$
 1. [Laplace Transformation](https://www.matongxue.com/madocs/723.html)
 2. [Youtube Laplace Transformation](https://www.youtube.com/watch?v=n2y7n6jw5d0)
 3. [Fourier Transformation](https://www.youtube.com/watch?v=7ssUImv8e4w)
+4. [fourier tutorital](https://betterexplained.com/articles/an-interactive-guide-to-the-fourier-transform/)
