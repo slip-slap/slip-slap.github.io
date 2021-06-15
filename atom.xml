@@ -3,7 +3,7 @@
   <title>Just Do It</title>
   <link href="/atom.xml" rel="self"/>
   <link href=""/>
-  <updated>2021-06-14T16:21:10+09:00</updated>
+  <updated>2021-06-15T18:30:33+09:00</updated>
   <id></id>
   <author>
     <name>reed</name>
@@ -2390,9 +2390,9 @@ The Bayes’s theorem:
 
   <entry>
     <title>D.P.: Introduction</title>
-    <link href="/math/math-apply-probability-model-dirichlet-process-introduction.html"/>
+    <link href="/math/math-apply-stochastic-process-dirichlet-process-introduction.html"/>
     <updated>2019-09-08T00:00:00+09:00</updated>
-    <id>/math/math-apply-probability-model-dirichlet-process-introduction</id>
+    <id>/math/math-apply-stochastic-process-dirichlet-process-introduction</id>
     <content type="html">
 Galois
 
@@ -2890,18 +2890,19 @@ formula
   </entry>
 
   <entry>
-    <title>P.P.: Combine and Split</title>
-    <link href="/math/math-apply-stochastic-process-poisson-process-combine-split.html"/>
+    <title>P.P.: Definition</title>
+    <link href="/math/math-apply-stochastic-process-poisson-process-definition.html"/>
     <updated>2019-05-28T00:00:00+09:00</updated>
-    <id>/math/math-apply-stochastic-process-poisson-process-combine-split</id>
+    <id>/math/math-apply-stochastic-process-poisson-process-definition</id>
     <content type="html">
-Poisson Combining
-The sum of many small independent arrival processes tends to be close to Poisson
-even if the small processes are not.  In a sense, the independence between the
-processes overcomes the dependence between successive arrivals in each process.
+Counting Process: A stochastic process ${N(t), t \geq 0}$ is said to be a
+counting process if $N(t)$ represents the total number of ‘events’ that have
+occurred up to time $t$. Hence, a counting process $N(t)$ must satisfy
 
-Splitting a Poisson process
-Each arri...</content>
+
+  $N(t) \geq 0$
+  $N(t)$ is integer valued
+  if $s \leq t$, then $N(s) \...</content>
   </entry>
 
   <entry>
@@ -3087,6 +3088,31 @@ The conditional distribution of $X_1$ given known values for $...</content>
   </entry>
 
   <entry>
+    <title>W.P.: Ito's Calculus</title>
+    <link href="/math/math-apply-stochastic-process-wiener-process-ito-calculus.html"/>
+    <updated>2019-05-01T00:00:00+09:00</updated>
+    <id>/math/math-apply-stochastic-process-wiener-process-ito-calculus</id>
+    <content type="html">
+</content>
+  </entry>
+
+  <entry>
+    <title>W.P.: Introduction</title>
+    <link href="/math/math-apply-stochastic-process-wiener-process-introduction.html"/>
+    <updated>2019-05-01T00:00:00+09:00</updated>
+    <id>/math/math-apply-stochastic-process-wiener-process-introduction</id>
+    <content type="html">
+Properties
+
+  $W_0 = 0$
+  $W$ has indendent increments: for every $t&amp;gt;0$, the future $W_{t+u} - W_{t}$,
+are independent of the past values $W_s$.
+  $W$ has Gaussian increments: $W_{t+u} - W_t$ is normally distributed with
+mean 0 and variance $u$, $ W_{t+u}-W_{t} \sim \mathcal{N}(0, u) $
+  $W$ ...</content>
+  </entry>
+
+  <entry>
     <title>S.P.: Queueing Theory</title>
     <link href="/math/math-apply-stochastic-process-queueing-theory.html"/>
     <updated>2019-05-01T00:00:00+09:00</updated>
@@ -3132,31 +3158,6 @@ its expected value is. Even you don’t know the expected value, you would like 
 know the bound of the expected value.
 
   thi...</content>
-  </entry>
-
-  <entry>
-    <title>W.P.: Ito's Calculus</title>
-    <link href="/math/math-apply-stochastic-process-wiener-process-ito-calculus.html"/>
-    <updated>2019-05-01T00:00:00+09:00</updated>
-    <id>/math/math-apply-stochastic-process-wiener-process-ito-calculus</id>
-    <content type="html">
-</content>
-  </entry>
-
-  <entry>
-    <title>W.P.: Introduction</title>
-    <link href="/math/math-apply-stochastic-process-wiener-process-introduction.html"/>
-    <updated>2019-05-01T00:00:00+09:00</updated>
-    <id>/math/math-apply-stochastic-process-wiener-process-introduction</id>
-    <content type="html">
-Properties
-
-  $W_0 = 0$
-  $W$ has indendent increments: for every $t&amp;gt;0$, the future $W_{t+u} - W_{t}$,
-are independent of the past values $W_s$.
-  $W$ has Gaussian increments: $W_{t+u} - W_t$ is normally distributed with
-mean 0 and variance $u$, $ W_{t+u}-W_{t} \sim \mathcal{N}(0, u) $
-  $W$ ...</content>
   </entry>
 
   <entry>

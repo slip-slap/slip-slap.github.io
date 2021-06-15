@@ -5,8 +5,8 @@
   <description>Just Do It - </description>
   <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
   <link></link>
-  <lastBuildDate>Mon, 14 Jun 2021 16:21:10 +0900</lastBuildDate>
-  <pubDate>Mon, 14 Jun 2021 16:21:10 +0900</pubDate>
+  <lastBuildDate>Tue, 15 Jun 2021 18:30:33 +0900</lastBuildDate>
+  <pubDate>Tue, 15 Jun 2021 18:30:33 +0900</pubDate>
   <ttl>1800</ttl>
 
 
@@ -6041,13 +6041,64 @@ point itself is a random variable, so we call this thing $DP(\alpha, H(0))$
 Dirichlet Process. Because it meet the definition of a process.&lt;/li&gt;
 &lt;/ol&gt;
 
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;collections&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;scipy.stats&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;norm&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;simulation_dirichilet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;alpha&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sampling_number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    
+    &lt;span class=&quot;c1&quot;&gt;# initial interval [1]
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;initial_interval&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;first_sample&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;norm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rvs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;corresponding_distinct_sample&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;first_sample&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;sample&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;first_sample&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sampling_number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;#generate random number x ~ U[0,1]
+&lt;/span&gt;        &lt;span class=&quot;n&quot;&gt;uniform_sample&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;uniform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;initial_interval&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)):&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;uniform_sample&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;initial_interval&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;dirichilet_sample&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;norm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rvs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;sample&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dirichilet_sample&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dirichilet_sample&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;corresponding_distinct_sample&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+                   &lt;span class=&quot;n&quot;&gt;corresponding_distinct_sample&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dirichilet_sample&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
+                &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;uniform_sample&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;initial_interval&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt; \
+                                          &lt;span class=&quot;n&quot;&gt;uniform_sample&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;initial_interval&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;sample&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;corresponding_distinct_sample&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;initial_interval&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;update_interval&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;corresponding_distinct_sample&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sample&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;alpha&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sample&lt;/span&gt;
+        
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;update_interval&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;corresponding_distinct_sample&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sample&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;alpha&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sample&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;incorrect input&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; 
+    &lt;span class=&quot;n&quot;&gt;interval&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;first_interval&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;divide&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;alpha&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;alpha&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sample&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;interval&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;first_interval&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;corresponding_distinct_sample&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)):&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;number_of_sample&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sample&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;corresponding_distinct_sample&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; 
+        &lt;span class=&quot;n&quot;&gt;temp_interval&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;divide&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;number_of_sample&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;alpha&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sample&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;interval&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;temp_interval&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;interval&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;interval&lt;/span&gt;
+        
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__name__&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;__main__&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;simulation_dirichilet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;collections&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Counter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
 &lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
 &lt;ol&gt;
   &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Dirichlet_process#Formal_definition&quot;&gt;Dirichlet process&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </description>
-    <link>/math/math-apply-probability-model-dirichlet-process-introduction.html</link>
-    <guid>/math/math-apply-probability-model-dirichlet-process-introduction</guid>
+    <link>/math/math-apply-stochastic-process-dirichlet-process-introduction.html</link>
+    <guid>/math/math-apply-stochastic-process-dirichlet-process-introduction</guid>
     <pubDate>Sun, 08 Sep 2019 00:00:00 +0900</pubDate>
   </item>
 
@@ -7603,8 +7654,23 @@ of Calculus, to deal with probability problem.&lt;/li&gt;
   </item>
 
   <item>
-    <title>P.P.: Combine and Split</title>
+    <title>P.P.: Definition</title>
     <description>
+&lt;p&gt;&lt;strong&gt;Counting Process:&lt;/strong&gt; A stochastic process ${N(t), t \geq 0}$ is said to be a
+counting process if $N(t)$ represents the total number of ‘events’ that have
+occurred up to time $t$. Hence, a counting process $N(t)$ must satisfy&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;$N(t) \geq 0$&lt;/li&gt;
+  &lt;li&gt;$N(t)$ is integer valued&lt;/li&gt;
+  &lt;li&gt;if $s \leq t$, then $N(s) \leq N(t)$&lt;/li&gt;
+  &lt;li&gt;For $s &amp;lt; t$, $N(t) - N(s)$ equals the number of events that have occurred in
+the interval $(s,t]$&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;A counting process is said to possess independent increments if the numbers of
+events that occur in disjoint time intervals are independent.&lt;/p&gt;
+
 &lt;h4 id=&quot;poisson-combining&quot;&gt;Poisson Combining&lt;/h4&gt;
 &lt;p&gt;The sum of many small independent arrival processes tends to be close to Poisson
 even if the small processes are not.  In a sense, the independence between the
@@ -7616,8 +7682,8 @@ goes to \({N_2(t);t&amp;gt;0}\).  View the switch as a Bernoulli process indepen
 \({N(t);t&amp;gt;0}\). A \(p\) biased coin is flipped independently at each arrival&lt;/p&gt;
 
 </description>
-    <link>/math/math-apply-stochastic-process-poisson-process-combine-split.html</link>
-    <guid>/math/math-apply-stochastic-process-poisson-process-combine-split</guid>
+    <link>/math/math-apply-stochastic-process-poisson-process-definition.html</link>
+    <guid>/math/math-apply-stochastic-process-poisson-process-definition</guid>
     <pubDate>Tue, 28 May 2019 00:00:00 +0900</pubDate>
   </item>
 
@@ -8122,6 +8188,34 @@ failes.&lt;/li&gt;
   </item>
 
   <item>
+    <title>W.P.: Ito's Calculus</title>
+    <description>
+</description>
+    <link>/math/math-apply-stochastic-process-wiener-process-ito-calculus.html</link>
+    <guid>/math/math-apply-stochastic-process-wiener-process-ito-calculus</guid>
+    <pubDate>Wed, 01 May 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>W.P.: Introduction</title>
+    <description>
+&lt;h4 id=&quot;properties&quot;&gt;Properties&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;$W_0 = 0$&lt;/li&gt;
+  &lt;li&gt;$W$ has indendent increments: for every $t&amp;gt;0$, the future $W_{t+u} - W_{t}$,
+are independent of the past values $W_s$.&lt;/li&gt;
+  &lt;li&gt;$W$ has Gaussian increments: $W_{t+u} - W_t$ is normally distributed with
+mean 0 and variance $u$, $ W_{t+u}-W_{t} \sim \mathcal{N}(0, u) $&lt;/li&gt;
+  &lt;li&gt;$W$ has continuous paths: $W_t$ is continuous in t&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/math/math-apply-stochastic-process-wiener-process-introduction.html</link>
+    <guid>/math/math-apply-stochastic-process-wiener-process-introduction</guid>
+    <pubDate>Wed, 01 May 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
     <title>S.P.: Queueing Theory</title>
     <description>
 &lt;h4 id=&quot;kendalls-notation&quot;&gt;Kendall’s Notation&lt;/h4&gt;
@@ -8247,34 +8341,6 @@ After that, I begin to try find an upper bound.&lt;/li&gt;
 </description>
     <link>/math/math-apply-stochastic-process-little-theorem.html</link>
     <guid>/math/math-apply-stochastic-process-little-theorem</guid>
-    <pubDate>Wed, 01 May 2019 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>W.P.: Ito's Calculus</title>
-    <description>
-</description>
-    <link>/math/math-apply-stochastic-process-wiener-process-ito-calculus.html</link>
-    <guid>/math/math-apply-stochastic-process-wiener-process-ito-calculus</guid>
-    <pubDate>Wed, 01 May 2019 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>W.P.: Introduction</title>
-    <description>
-&lt;h4 id=&quot;properties&quot;&gt;Properties&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;$W_0 = 0$&lt;/li&gt;
-  &lt;li&gt;$W$ has indendent increments: for every $t&amp;gt;0$, the future $W_{t+u} - W_{t}$,
-are independent of the past values $W_s$.&lt;/li&gt;
-  &lt;li&gt;$W$ has Gaussian increments: $W_{t+u} - W_t$ is normally distributed with
-mean 0 and variance $u$, $ W_{t+u}-W_{t} \sim \mathcal{N}(0, u) $&lt;/li&gt;
-  &lt;li&gt;$W$ has continuous paths: $W_t$ is continuous in t&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-    <link>/math/math-apply-stochastic-process-wiener-process-introduction.html</link>
-    <guid>/math/math-apply-stochastic-process-wiener-process-introduction</guid>
     <pubDate>Wed, 01 May 2019 00:00:00 +0900</pubDate>
   </item>
 
@@ -43485,9 +43551,11 @@ junior school.&lt;/li&gt;
     &lt;p&gt;sale: put up for&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;crazy: these are bananas&lt;/li&gt;
-  &lt;li&gt;I also want to note that.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;I also want to note that.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;keep your voice down&lt;/li&gt;
 &lt;/ol&gt;
-
 </description>
     <link>/%E8%A8%80%E8%91%89/language-english-oral-expression.html</link>
     <guid>/%E8%A8%80%E8%91%89/language-english-oral-expression</guid>
@@ -45206,11 +45274,24 @@ it tells you if a students passed or failed a class or course.&lt;/p&gt;
 &lt;p&gt;Perspective: focuses on how this narrator perceives what’s happening within the
 story.&lt;/p&gt;
 
+&lt;h4 id=&quot;examine-and-check&quot;&gt;Examine and check&lt;/h4&gt;
+&lt;p&gt;They are not interchangeable. Checking something is often done less carefully
+than examining that same thing.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;You would tell your mother to “check” to mail to get letters, but you
+wouldn’t tell her to “examine” it, because then she would just be standing
+outside the mailbox, staring at it.&lt;/li&gt;
+  &lt;li&gt;You would, however, ask the doctor to “examine” you if you are sick with
+something, because it doesn’t make sense grammaticall to ask your doctor to
+“check” you&lt;/li&gt;
+&lt;/ol&gt;
+
 &lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
 &lt;ol&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.differencebetween.com/difference-between-features-and-vs-characteristics/&quot;&gt;Feature and characteristics&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.quora.com/What-are-the-differences-between-a-score-a-grade-a-mark-and-a-point&quot;&gt;Grade and score&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.onlineexambuilder.com/knowledge-center/exam-knowledge-center/difference-between-test-and-examination/item10235&quot;&gt;Test and exam&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.italki.com/post/question-212877?hl=en&quot;&gt;examine and check&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </description>
     <link>/%E8%A8%80%E8%91%89/language-english-word-comparsion-part4.html</link>
