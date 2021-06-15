@@ -11,9 +11,9 @@
 <head>
   <meta charset="UTF-8">
 
-  <title>D.P.: Introduction - Just Do It</title>
+  <title>P.P.: Definition - Just Do It</title>
   <meta name="keywords" content="">
-  
+  <meta name="description" content="">
   <meta name="author" content="reed">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -6585,25 +6585,25 @@ $(document).ready(function() {
       <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
 
     <header>
-      <h1>D.P.: Introduction</h1>
+      <h1>P.P.: Definition</h1>
     </header>
 
     <section>
       <div class="post-extra">
         <div class="pull-left">
-          <span>08 September 2019</span>
+          <span>28 May 2019</span>
         </div>
         <div class="pull-right">
           
 
 
   <span id="share">
-  <a class="wechat" target="_blank" title="分享到微信" href="http://chart.apis.google.com/chart?cht=qr&amp;chs=300x300&amp;chl=/math/math-apply-probability-model-dirichlet-process-introduction.html"><i class="icon-large icon-wechat"></i></a>
-  <a class="weibo" target="_blank" title="分享到微博" href="http://service.weibo.com/share/share.php?title=D.P.: Introduction - Just Do It&amp;url=/math/math-apply-probability-model-dirichlet-process-introduction.html&amp;type=3&amp;searchPic=1"><i class="icon-large icon-weibo"></i></a>
-  <a class="qzone" target="_blank" title="分享到 QQ 空间" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=/math/math-apply-probability-model-dirichlet-process-introduction.html&amp;title=D.P.: Introduction - Just Do It&amp;summary=&amp;site="><i class="icon-large icon-qzone"></i></a>
-  <a class="twitter" target="_blank" title="Share to Twitter" href="https://twitter.com/intent/tweet?url=/math/math-apply-probability-model-dirichlet-process-introduction.html&amp;text=D.P.: Introduction - Just Do It&amp;via="><i class="icon-large icon-twitter"></i></a>
-  <a class="facebook" target="_blank" title="Share to Facebook" href="http://www.facebook.com/sharer.php?u=/math/math-apply-probability-model-dirichlet-process-introduction.html&amp;t=D.P.: Introduction - Just Do It"><i class="icon-large icon-facebook-sign"></i></a>
-  <a class="googleplus" target="_blank" title="Share to Google+" href="https://plus.google.com/share?url=/math/math-apply-probability-model-dirichlet-process-introduction.html"><i class="icon-large icon-google-plus-sign"></i></a>
+  <a class="wechat" target="_blank" title="分享到微信" href="http://chart.apis.google.com/chart?cht=qr&amp;chs=300x300&amp;chl=/math/math-apply-stochastic-process-poisson-process-definition.html"><i class="icon-large icon-wechat"></i></a>
+  <a class="weibo" target="_blank" title="分享到微博" href="http://service.weibo.com/share/share.php?title=P.P.: Definition - Just Do It&amp;url=/math/math-apply-stochastic-process-poisson-process-definition.html&amp;type=3&amp;searchPic=1"><i class="icon-large icon-weibo"></i></a>
+  <a class="qzone" target="_blank" title="分享到 QQ 空间" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=/math/math-apply-stochastic-process-poisson-process-definition.html&amp;title=P.P.: Definition - Just Do It&amp;summary=&amp;site="><i class="icon-large icon-qzone"></i></a>
+  <a class="twitter" target="_blank" title="Share to Twitter" href="https://twitter.com/intent/tweet?url=/math/math-apply-stochastic-process-poisson-process-definition.html&amp;text=P.P.: Definition - Just Do It&amp;via="><i class="icon-large icon-twitter"></i></a>
+  <a class="facebook" target="_blank" title="Share to Facebook" href="http://www.facebook.com/sharer.php?u=/math/math-apply-stochastic-process-poisson-process-definition.html&amp;t=P.P.: Definition - Just Do It"><i class="icon-large icon-facebook-sign"></i></a>
+  <a class="googleplus" target="_blank" title="Share to Google+" href="https://plus.google.com/share?url=/math/math-apply-stochastic-process-poisson-process-definition.html"><i class="icon-large icon-google-plus-sign"></i></a>
 </span>
 
 
@@ -6613,19 +6613,31 @@ $(document).ready(function() {
         </div>
       </div>
       
-<h4 id="galois">Galois</h4>
+<p><strong>Counting Process:</strong> A stochastic process ${N(t), t \geq 0}$ is said to be a
+counting process if $N(t)$ represents the total number of ‘events’ that have
+occurred up to time $t$. Hence, a counting process $N(t)$ must satisfy</p>
+
 <ol>
-  <li>Stochastic Process is a collection of random variables indexed by time, this
-is the formal definition of stochastic process</li>
-  <li>Given the $DP(\alpha, H(0))$, a point is generate from this thing, and this
-point itself is a random variable, so we call this thing $DP(\alpha, H(0))$ 
-Dirichlet Process. Because it meet the definition of a process.</li>
+  <li>$N(t) \geq 0$</li>
+  <li>$N(t)$ is integer valued</li>
+  <li>if $s \leq t$, then $N(s) \leq N(t)$</li>
+  <li>For $s &lt; t$, $N(t) - N(s)$ equals the number of events that have occurred in
+the interval $(s,t]$</li>
 </ol>
 
-<h4 id="reference">Reference</h4>
-<ol>
-  <li><a href="https://en.wikipedia.org/wiki/Dirichlet_process#Formal_definition">Dirichlet process</a></li>
-</ol>
+<p>A counting process is said to possess independent increments if the numbers of
+events that occur in disjoint time intervals are independent.</p>
+
+<h4 id="poisson-combining">Poisson Combining</h4>
+<p>The sum of many small independent arrival processes tends to be close to Poisson
+even if the small processes are not.  In a sense, the independence between the
+processes overcomes the dependence between successive arrivals in each process.</p>
+
+<h4 id="splitting-a-poisson-process">Splitting a Poisson process</h4>
+<p>Each arrival is switched to \({N_1(t);t&gt;0}\) with probabiity \(p\) and otherwise
+goes to \({N_2(t);t&gt;0}\).  View the switch as a Bernoulli process independent of
+\({N(t);t&gt;0}\). A \(p\) biased coin is flipped independently at each arrival</p>
+
 
       
       <footer>
@@ -6688,11 +6700,11 @@ Dirichlet Process. Because it meet the definition of a process.</li>
   <div class="pagination">
     <ul>
       
-      <li class="prev"><a href="/math/math-apply-statistics-summary.html" title="Statistics: summary">&larr; 上一篇</a></li>
+      <li class="prev"><a href="/math/math-apply-stochastic-process-renewal-process-introduction.html" title="R.P.: Introduction">&larr; 上一篇</a></li>
       
       <li><a href="/archive.html">文章列表</a></li>
       
-      <li class="next"><a href="/math/math-apply-probability-model-bayesian-and-frequentist.html" title="P.A.S.M.: Frequentist and Bayesian">下一篇 &rarr;</a></li>
+      <li class="next"><a href="/math/math-apply-stochastic-process-poisson-process-introduction.html" title="P.P.: Introduction">下一篇 &rarr;</a></li>
       
     </ul>
   </div>
@@ -6710,9 +6722,9 @@ Dirichlet Process. Because it meet the definition of a process.</li>
     var disqus_developer = 1;
     var disqus_shortname = 'just-do-it-1';
     
-    var disqus_identifier = 'D.P.: Introduction';
-    var disqus_title = 'D.P.: Introduction';
-    var disqus_url = '/math/math-apply-probability-model-dirichlet-process-introduction.html';
+    var disqus_identifier = 'P.P.: Definition';
+    var disqus_title = 'P.P.: Definition';
+    var disqus_url = '/math/math-apply-stochastic-process-poisson-process-definition.html';
     
     
     (function() {

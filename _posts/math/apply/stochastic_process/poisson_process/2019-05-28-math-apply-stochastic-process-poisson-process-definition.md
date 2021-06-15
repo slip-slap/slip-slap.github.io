@@ -1,12 +1,30 @@
 ---
 layout: post
-title: "P.P.: Combine and Split"
+title: "P.P.: Definition"
 keywords: [] 
 description: ""
 category: "math"
 tags: ["apply","S.P."]
 ---
 {% include JB/setup %}
+
+**Counting Process:** A stochastic process ${N(t), t \geq 0}$ is said to be a
+counting process if $N(t)$ represents the total number of 'events' that have
+occurred up to time $t$. Hence, a counting process $N(t)$ must satisfy
+
+1. $N(t) \geq 0$
+2. $N(t)$ is integer valued
+3. if $s \leq t$, then $N(s) \leq N(t)$
+4. For $s < t$, $N(t) - N(s)$ equals the number of events that have occurred in
+   the interval $(s,t]$
+
+A counting process is said to possess independent increments if the numbers of
+events that occur in disjoint time intervals are independent.
+
+
+
+
+
 
 #### Poisson Combining
 The sum of many small independent arrival processes tends to be close to Poisson
