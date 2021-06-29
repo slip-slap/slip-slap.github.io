@@ -3,7 +3,7 @@
   <title>Just Do It</title>
   <link href="/atom.xml" rel="self"/>
   <link href=""/>
-  <updated>2021-06-15T18:30:33+09:00</updated>
+  <updated>2021-06-30T08:27:46+09:00</updated>
   <id></id>
   <author>
     <name>reed</name>
@@ -250,7 +250,14 @@ Alternative
   Newton’s Method
 
 
-</content>
+Simple Backpropagation
+#include &amp;lt;iostream&amp;gt;
+#include &amp;lt;vector&amp;gt;
+#include &amp;lt;cmath&amp;gt;
+
+
+float linear_function(float input, float para, float bias){
+	return in...</content>
   </entry>
 
   <entry>
@@ -1436,28 +1443,6 @@ Conclusion
   </entry>
 
   <entry>
-    <title>Work Journal</title>
-    <link href="/work-journal.html"/>
-    <updated>2020-06-03T00:00:00+09:00</updated>
-    <id>/work-journal</id>
-    <content type="html">
-neural network
-
-  IEEE Transactions on Neural Networks and Learning Systems
-    
-      It covers the theory, design, and applications of neural networks and related
-learning systems.
-    
-  
-
-
-top conference
-International Conference on Learning Representations(ICLR)
-
-  Very Deep Convolutional Ne...</content>
-  </entry>
-
-  <entry>
     <title>Work: Journal Template</title>
     <link href="/work/work-journal-template.html"/>
     <updated>2020-06-03T00:00:00+09:00</updated>
@@ -1470,6 +1455,42 @@ section 3 describes…, and in the Conclusion section we discuss the results.
 2. Conclusion
 Selection is such a critical piece of the GA puzzle that better understanding at its foundation can
 only help advance the state of gen...</content>
+  </entry>
+
+  <entry>
+    <title>Work: academic database</title>
+    <link href="/work/work-journal-database.html"/>
+    <updated>2020-06-03T00:00:00+09:00</updated>
+    <id>/work/work-journal-database</id>
+    <content type="html">
+1. comprehensive research tools
+
+
+  Google Scholar
+  Microsoft Academic Search
+  Core
+    
+      Links to full text(all articles in CORE are open access)
+    
+  
+
+
+2. special tools
+
+
+  Pubmed
+
+
+tool
+
+  scopus
+
+
+Galois
+
+  How to find what you can study?
+    
+      Go to the journal in which you w...</content>
   </entry>
 
   <entry>
@@ -2644,6 +2665,18 @@ Idea
   </entry>
 
   <entry>
+    <title>Statistics theory: regression</title>
+    <link href="/math/math-apply-statistical-theory-regression.html"/>
+    <updated>2019-07-31T00:00:00+09:00</updated>
+    <id>/math/math-apply-statistical-theory-regression</id>
+    <content type="html">
+Regression line: it is a straight line that describes how a response
+variable $y$ changes as an explanatory variable $x$ changes.
+
+</content>
+  </entry>
+
+  <entry>
     <title>Statistics theory: order statistics</title>
     <link href="/math/math-apply-statistical-theory-order-statistics.html"/>
     <updated>2019-07-31T00:00:00+09:00</updated>
@@ -2668,6 +2701,20 @@ A quantitative variable: takes numerical values for which arithmetic
 operations such as adding and averaging make sense.
 
 </content>
+  </entry>
+
+  <entry>
+    <title>Statistics theory: correlation</title>
+    <link href="/math/math-apply-statistical-theory-correlation.html"/>
+    <updated>2019-07-31T00:00:00+09:00</updated>
+    <id>/math/math-apply-statistical-theory-correlation</id>
+    <content type="html">
+Definition: The correlation measures the direction and strength of the
+linear relationship between two quantitative variables. Correlation is usually
+writen as $r$.
+
+Suppose that we have data on variables $x$ and $y$ for $n$ individuals. The
+means and standard deviations of the two variables are...</content>
   </entry>
 
   <entry>
@@ -2863,12 +2910,27 @@ Idea
     <updated>2019-05-30T00:00:00+09:00</updated>
     <id>/math/math-apply-stochastic-process-notation</id>
     <content type="html">
-set theory
+####
 
-  Sample space: there elements in that sample space
-  events:   events are subsets of the sample space.
-  sample space: a set in which all of the possible outcomes of a statistical experiment are represented as points –from Merriam Webster
-  according to the axioms, there are only sa...</content>
+  $X(t,\omega)$
+    
+      All these things about stochastic process just about the property of this function.
+      if $t$ is fixed, this item refers to a random variable at time $t$.
+      if $\omega$ is fixed, this item refers to a sample function.
+      Don’t treat $\omega$ as only the...</content>
+  </entry>
+
+  <entry>
+    <title>S.P.: Motivation</title>
+    <link href="/math/math-apply-stochastic-process-motivation.html"/>
+    <updated>2019-05-30T00:00:00+09:00</updated>
+    <id>/math/math-apply-stochastic-process-motivation</id>
+    <content type="html">
+Relationship with probability theory
+Stochastic process are primarily concerned with how events happen as respect to
+time, which is a complete new point of view to events.  In most cases, the
+reason stochastic process is closely connected to probabiliy just because
+single event is associated wit...</content>
   </entry>
 
   <entry>
@@ -2928,16 +2990,13 @@ $X_1,X_2,\cdots$ are IID. Renewal processes can be specifie...</content>
     <updated>2019-05-25T00:00:00+09:00</updated>
     <id>/math/math-apply-stochastic-process-renewal-process-renewal-reward-processes</id>
     <content type="html">
-Time-average Residual Life
-\(\int_{0}^{t} y(\tau) d \tau=\frac{1}{2} \sum_{i=1}^{n(t)}
-x_{i}^{2}+\int_{\tau=s_{n(t)}}^{t} y(\tau) d \tau\)
+Motivation
+There are many situations in which, along with a renewal process ${N(t); t &amp;gt;
+0}$, there is another randomly varying functions of time, called a reward
+function ${R(t); t&amp;gt;0}$.
 
-
-
-Galois
-Professor said: “I think after many years finally I understand it, I hope I can make it easy for
-you to understand it.” so modest !!!
-</content>
+  $R(t)$ models a rate at which the process is accumulating a reward.
+  We shall illustrate many exampl...</content>
   </entry>
 
   <entry>
@@ -2989,6 +3048,21 @@ some vertex V is independent of where you started
 
 definition
 Ergodic Markov Chains: A Markov Chain is ergodic if there is a positive probability to p...</content>
+  </entry>
+
+  <entry>
+    <title>M.C.: Properties</title>
+    <link href="/math/math-apply-stochastic-process-markov-chain-properties.html"/>
+    <updated>2019-05-20T00:00:00+09:00</updated>
+    <id>/math/math-apply-stochastic-process-markov-chain-properties</id>
+    <content type="html">
+Irreducible: A Markov chain is irreducible if it is possible for the chain
+to move from any state to any other state. Equivalently, the Markov chian is
+irreducible if for any $i,j \in S$, there is a positive integer $n$ with
+$P_i(X_n = j) &amp;gt; 0$.
+
+
+  A Markov chain is irreducible if its associa...</content>
   </entry>
 
   <entry>
@@ -3113,20 +3187,33 @@ mean 0 and variance $u$, $ W_{t+u}-W_{t} \sim \mathcal{N}(0, u) $
   </entry>
 
   <entry>
-    <title>S.P.: Queueing Theory</title>
-    <link href="/math/math-apply-stochastic-process-queueing-theory.html"/>
+    <title>S.P.: random walk</title>
+    <link href="/math/math-apply-stochastic-process-random-walk.html"/>
     <updated>2019-05-01T00:00:00+09:00</updated>
-    <id>/math/math-apply-stochastic-process-queueing-theory</id>
+    <id>/math/math-apply-stochastic-process-random-walk</id>
     <content type="html">
-Kendall’s Notation
-Kendall notation is the standard system used to describe and classify a queueing
-node.
+Theorem: Let ${X_n}$ be simple random walk as before, and let $n$ be a
+positive integer. If K is an integer such that $-n \leq k \leq n$ and $n+k$ is
+even, then
+\(P\left(X_{n}=a+k\right)=\left(\begin{array}{c}n \\
+\frac{n+k}{2}\end{array}\right) p^{(n+k) / 2} q^{(n-k) / 2}\)
 
-  Kendall proposed describing queueing models using three factors A/S/c in
-1953,It has been extended to A/D/c/K/N/D
-    
-      A denotes the time between arrivals to the queue
-      S the s...</content>
+For all other value...</content>
+  </entry>
+
+  <entry>
+    <title>S.P.: Little's Theorem</title>
+    <link href="/math/math-apply-stochastic-process-little-theorem.html"/>
+    <updated>2019-05-01T00:00:00+09:00</updated>
+    <id>/math/math-apply-stochastic-process-little-theorem</id>
+    <content type="html">
+Motivation
+what is N(t) at some finite value of t, N(t) is a random variable at some finite
+value of t. So you can’t evaluate it. But at least you would like to know what
+its expected value is. Even you don’t know the expected value, you would like to
+know the bound of the expected value.
+
+  thi...</content>
   </entry>
 
   <entry>
@@ -3143,21 +3230,6 @@ is, on average the chain’s value does not change, regardless of what the
 current value $X_n$ actually is.
     
       a special cla...</content>
-  </entry>
-
-  <entry>
-    <title>S.P.: Little's Theorem</title>
-    <link href="/math/math-apply-stochastic-process-little-theorem.html"/>
-    <updated>2019-05-01T00:00:00+09:00</updated>
-    <id>/math/math-apply-stochastic-process-little-theorem</id>
-    <content type="html">
-Motivation
-what is N(t) at some finite value of t, N(t) is a random variable at some finite
-value of t. So you can’t evaluate it. But at least you would like to know what
-its expected value is. Even you don’t know the expected value, you would like to
-know the bound of the expected value.
-
-  thi...</content>
   </entry>
 
   <entry>
@@ -4941,6 +5013,20 @@ definition
   complex function: a function takes a complex argument and yields a complex result,In other words, it is a function that has a suset of the complex.
 numbers as a domain and the complex numbers as a codomain.
   The derivative of complex function is different from the derivative of re...</content>
+  </entry>
+
+  <entry>
+    <title>C.A.: Euler's Identity</title>
+    <link href="/math/math-change-complex-analysis-complex-euler-identiy.html"/>
+    <updated>2018-12-05T00:00:00+09:00</updated>
+    <id>/math/math-change-complex-analysis-complex-euler-identiy</id>
+    <content type="html">
+Question: why $e^i\theta = cos\theta + isin\theta$?
+
+Proof in the algebraic way
+\(\begin{aligned} \sin x &amp;amp;=\sum_{n=0}^{\infty} \frac{(-1)^{n}}{(2 n+1) !} x^{2
+n+1}=x-\frac{x^{3}}{3 !}+\frac{x^{5}}{5 !}-\cdots \\ \cos x
+&amp;amp;=\sum_{n=0}^{\infty} \frac{(-1)^{n}}{(2 n) !} x^{2 n}=1-\frac{x^{2}}...</content>
   </entry>
 
   <entry>
@@ -10522,6 +10608,25 @@ struct node * rr_rotati...</content>
   </entry>
 
   <entry>
+    <title>Git:  Philosophy Behind the Scene</title>
+    <link href="/pl/pl-tool-git-philosophy.html"/>
+    <updated>2017-05-30T00:00:00+09:00</updated>
+    <id>/pl/pl-tool-git-philosophy</id>
+    <content type="html">
+1. What is version control?
+
+  Records changes to a file or set of files over time
+  Revert selected files back to a previous state, revert the entire projected
+back to a previous state.
+
+
+1. What is the problem ?
+
+  assume you are a coder,  and work on a project. Accasionaly you revise you
+code...</content>
+  </entry>
+
+  <entry>
     <title>Debugger: Principle</title>
     <link href="/pl/pl-tool-debugger-summary.html"/>
     <updated>2017-05-30T00:00:00+09:00</updated>
@@ -10532,6 +10637,62 @@ Reference
   gdb reference
 
 </content>
+  </entry>
+
+  <entry>
+    <title>Git: Internals</title>
+    <link href="/pl/pl-tool-git-internals.html"/>
+    <updated>2017-05-29T00:00:00+09:00</updated>
+    <id>/pl/pl-tool-git-internals</id>
+    <content type="html">
+type blob=array&amp;lt;byte&amp;gt;
+type tree=map&amp;lt;string, tree|blob&amp;gt;&amp;gt;
+type commits={
+parents = array&amp;lt;commit&amp;gt;
+author = string&amp;lt;&amp;gt;
+message = string&amp;lt;&amp;gt;
+snapshot = tree
+}
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Git: Configuration and Internals</title>
+    <link href="/pl/pl-tool-git-configuration.html"/>
+    <updated>2017-05-29T00:00:00+09:00</updated>
+    <id>/pl/pl-tool-git-configuration</id>
+    <content type="html">
+Just as other programs, the git configuration can be divided into three level.
+
+1. Configuration File
+1.1 System level
+
+  a file named /etc/config: a file contain values applied to every use in this
+ system
+  pass –system to git config, it reads and writes from this file
+
+
+git config --system
+
+1...</content>
+  </entry>
+
+  <entry>
+    <title>Git: Basic Operation</title>
+    <link href="/pl/pl-tool-git-basic-operation.html"/>
+    <updated>2017-05-29T00:00:00+09:00</updated>
+    <id>/pl/pl-tool-git-basic-operation</id>
+    <content type="html">
+1. Create a repository
+
+1.1 git init
+1.2 git clone
+This command is git clone and not “checkout”. This is an important
+distinction-instead of getting just a working copy, Git receives a full copy of
+nearly all data that the server has.
+
+  Every version of every file for the history of the project...</content>
   </entry>
 
   <entry>
@@ -10623,25 +10784,6 @@ Reference
   </entry>
 
   <entry>
-    <title>Git:  Philosophy Behind the Scene</title>
-    <link href="/pl/pl-tool-git-philosophy.html"/>
-    <updated>2017-05-19T00:00:00+09:00</updated>
-    <id>/pl/pl-tool-git-philosophy</id>
-    <content type="html">
-1. What is version control?
-
-  Records changes to a file or set of files over time
-  Revert selected files back to a previous state, revert the entire projected
-back to a previous state.
-
-
-1. What is the problem ?
-
-  assume you are a coder,  and work on a project. Accasionaly you revise you
-code...</content>
-  </entry>
-
-  <entry>
     <title>Git: Patching</title>
     <link href="/pl/pl-tool-git-patching.html"/>
     <updated>2017-05-18T00:00:00+09:00</updated>
@@ -10654,24 +10796,6 @@ cherry-pick
 diff
 rebase
 revert
-
-</content>
-  </entry>
-
-  <entry>
-    <title>Git: Internals</title>
-    <link href="/pl/pl-tool-git-internals.html"/>
-    <updated>2017-05-18T00:00:00+09:00</updated>
-    <id>/pl/pl-tool-git-internals</id>
-    <content type="html">
-type blob=array&amp;lt;byte&amp;gt;
-type tree=map&amp;lt;string, tree|blob&amp;gt;&amp;gt;
-type commits={
-parents = array&amp;lt;commit&amp;gt;
-author = string&amp;lt;&amp;gt;
-message = string&amp;lt;&amp;gt;
-snapshot = tree
-}
 
 </content>
   </entry>
@@ -10700,27 +10824,6 @@ Pattern
 Reference
 
   git ignor...</content>
-  </entry>
-
-  <entry>
-    <title>Git: Configuration and Internals</title>
-    <link href="/pl/pl-tool-git-configuration.html"/>
-    <updated>2017-05-18T00:00:00+09:00</updated>
-    <id>/pl/pl-tool-git-configuration</id>
-    <content type="html">
-Just as other programs, the git configuration can be divided into three level.
-
-1. Configuration File
-1.1 System level
-
-  a file named /etc/config: a file contain values applied to every use in this
- system
-  pass –system to git config, it reads and writes from this file
-
-
-git config --system
-
-1...</content>
   </entry>
 
   <entry>
@@ -10762,22 +10865,6 @@ meta-data info from the original(yet doesn’t do any file trans...</content>
   </entry>
 
   <entry>
-    <title>Git: Github</title>
-    <link href="/pl/pl-tool-git-github.html"/>
-    <updated>2017-05-15T00:00:00+09:00</updated>
-    <id>/pl/pl-tool-git-github</id>
-    <content type="html">
-What is a pull request?
-You make local code changes and then submit those changes to a remote project
-maintainer for review before those changes implemented, or merged.
-
-This is called a pull request; you are requesting that someone reviews and
-approves your changes before then become final.
-
-Ho...</content>
-  </entry>
-
-  <entry>
     <title>Git:  Branching and Merging</title>
     <link href="/pl/pl-tool-git-branching-merging.html"/>
     <updated>2017-05-14T00:00:00+09:00</updated>
@@ -10804,23 +10891,6 @@ git merge –continue
 
 2.1 git merge
 Instead of just moving the branch pointer forward, ...</content>
-  </entry>
-
-  <entry>
-    <title>Git: Basic Operation</title>
-    <link href="/pl/pl-tool-git-basic-operation.html"/>
-    <updated>2017-05-13T00:00:00+09:00</updated>
-    <id>/pl/pl-tool-git-basic-operation</id>
-    <content type="html">
-1. Create a repository
-
-1.1 git init
-1.2 git clone
-This command is git clone and not “checkout”. This is an important
-distinction-instead of getting just a working copy, Git receives a full copy of
-nearly all data that the server has.
-
-  Every version of every file for the history of the project...</content>
   </entry>
 
   <entry>
@@ -10892,6 +10962,22 @@ it heavily depends on the plugin and shortcut to improve the efficient.
   set relativenumber!
   set cursorline
   syntax off  I spend a lot of time to fix this simple question, cr...</content>
+  </entry>
+
+  <entry>
+    <title>Git: Github</title>
+    <link href="/pl/pl-tool-git-github.html"/>
+    <updated>2017-05-05T00:00:00+09:00</updated>
+    <id>/pl/pl-tool-git-github</id>
+    <content type="html">
+What is a pull request?
+You make local code changes and then submit those changes to a remote project
+maintainer for review before those changes implemented, or merged.
+
+This is called a pull request; you are requesting that someone reviews and
+approves your changes before then become final.
+
+Ho...</content>
   </entry>
 
   <entry>
@@ -11949,10 +12035,47 @@ A
   </entry>
 
   <entry>
-    <title>C++ Type: String literal</title>
-    <link href="/pl/pl-compile-c++-type-string-literal.html"/>
+    <title>C++: Variable assignment and initialization</title>
+    <link href="/pl/pl-compile-c++-variable-assignment-and-initialization.html"/>
     <updated>2017-03-08T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-type-string-literal</id>
+    <id>/pl/pl-compile-c++-variable-assignment-and-initialization</id>
+    <content type="html">
+Definition: Variable Assignment
+After a variable has been defined, you can give it a value(in a separate
+statement) using the = operator. This process is copy assignment for
+short.
+
+int width;
+width = 5;
+
+
+
+  The downside of assignment is that it requires at least two statements: one
+to define t...</content>
+  </entry>
+
+  <entry>
+    <title>C++ Keyword: typedef</title>
+    <link href="/pl/pl-compile-c++-typedef.html"/>
+    <updated>2017-03-08T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-typedef</id>
+    <content type="html">
+Definition: Typedef(which is short for “type definition”) is a keyword that
+creates an alias for an existing data type. To create such an alias, we use the
+typedef keyword.
+
+typedef double distance_t; // define distance_t as an alias for type double;
+
+
+
+  By convention, typedef names typically u...</content>
+  </entry>
+
+  <entry>
+    <title>C++ Type: String literal</title>
+    <link href="/pl/pl-compile-c++-string-literal.html"/>
+    <updated>2017-03-08T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-string-literal</id>
     <content type="html">
 String literal
 The string literal is stored in the read-only part of memory by most of the compilers. The C
@@ -11962,6 +12085,56 @@ them gives undefined behaviour.
 string and string literal
 
   the c_str() function returns...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Pointer</title>
+    <link href="/pl/pl-compile-c++-pointer.html"/>
+    <updated>2017-03-08T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-pointer</id>
+    <content type="html">
+1. Pointer Operation
+
+  p++
+  p–
+  p+1
+
+
+#include &amp;lt;iostream&amp;gt;
+int main(){
+    int a[5]={1,2,2,1,9};
+    int *p = a;
+    std::cout&amp;lt;&amp;lt;p++&amp;lt;&amp;lt;std::endl;
+    std::cout&amp;lt;&amp;lt;a+1&amp;lt;&amp;lt;std::endl;
+    std::cout&amp;lt;&amp;lt;*(a+1)&amp;lt;&amp;lt;std::endl;
+}
+
+
+Problems Using Pointers
+
+  uninitialize...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Data Type</title>
+    <link href="/pl/pl-compile-c++-data-type.html"/>
+    <updated>2017-03-08T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-data-type</id>
+    <content type="html">
+Definition: Void is the easiest of the data types to explain. Basically,
+void means “no type”. Consequentially, variables can not be defined with a type
+of void.
+
+void value; //won't work, variables can't be defined with a void type
+
+
+
+  The function of void is the similar to zero.
+
+
+const和指针
+
+c...</content>
   </entry>
 
   <entry>
@@ -12018,34 +12191,6 @@ int main()
 1. Left reference
 
   reference ...</content>
-  </entry>
-
-  <entry>
-    <title>C++: Pointer</title>
-    <link href="/pl/pl-compile-c++-pointer.html"/>
-    <updated>2017-03-08T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-pointer</id>
-    <content type="html">
-1. Pointer Operation
-
-  p++
-  p–
-  p+1
-
-
-#include &amp;lt;iostream&amp;gt;
-int main(){
-    int a[5]={1,2,2,1,9};
-    int *p = a;
-    std::cout&amp;lt;&amp;lt;p++&amp;lt;&amp;lt;std::endl;
-    std::cout&amp;lt;&amp;lt;a+1&amp;lt;&amp;lt;std::endl;
-    std::cout&amp;lt;&amp;lt;*(a+1)&amp;lt;&amp;lt;std::endl;
-}
-
-
-Problems Using Pointers
-
-  uninitialize...</content>
   </entry>
 
   <entry>
@@ -12262,20 +12407,6 @@ Animal dog = 3         //报错，无法使用explicit Animal构造器
 
 
 class...</content>
-  </entry>
-
-  <entry>
-    <title>C++ Keyword: typedef</title>
-    <link href="/pl/pl-compile-c++-keyword-typedef.html"/>
-    <updated>2017-03-08T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-keyword-typedef</id>
-    <content type="html">
-Why bother?
-one purpose of having types is to make sure that variables are always used in the way that they were
-intended to be used.
-
-  typedefs provide a level of abstraction away from the actual types being used, allowing you, the
-programmer, to focus on the concept of just what a variable sh...</content>
   </entry>
 
   <entry>
@@ -12629,31 +12760,6 @@ echo &quot;hello&quot;
   </entry>
 
   <entry>
-    <title>C++: Data Type</title>
-    <link href="/pl/pl-compile-c++-data-type.html"/>
-    <updated>2017-03-08T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-data-type</id>
-    <content type="html">
-intro
-
-数据的初始化分为两种:  
-直接初始化: 使用assignment operator
-复制初始化: 使用(),将初始化值放在圆括号内。
-对于类类型对象，直接初始化直接调用与实参匹配的构造函数。复制初始化
-调用复制构造函数，然后使用复制构造函数将临时对象复制到正在创建的对象。
-1 引用数据类型是一种复合类型，通过在变量名前添加&amp;amp;来定义。
-
-void*
-
-void* 一种特殊的指针类型，用于存放任意对象的地址。
-
-const和指针
-
-const double pi =3.14;  //pi 是常量，值不能改变
-double *ptr = &amp;amp;pi;      /...</content>
-  </entry>
-
-  <entry>
     <title>C++: Array</title>
     <link href="/pl/pl-compile-c++-array.html"/>
     <updated>2017-03-08T00:00:00+09:00</updated>
@@ -12928,24 +13034,6 @@ command and the specification must follow a special syntax.
   </entry>
 
   <entry>
-    <title>C++:  Library</title>
-    <link href="/pl/pl-compile-c++-library.html"/>
-    <updated>2017-03-01T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-library</id>
-    <content type="html">
-1.  .a extension and .dylib extension
-
-  .a extension means a static library.
-    
-      Static libraries allow application to load code into its address space at compile time.
-      This results in a larger size in disk and slower launch times.
-    
-  
-  .dylib extension means dynamic library
- ...</content>
-  </entry>
-
-  <entry>
     <title>C++ STL: Container</title>
     <link href="/pl/pl-compile-c++-library-stl.html"/>
     <updated>2017-03-01T00:00:00+09:00</updated>
@@ -13096,9 +13184,6 @@ b&amp;lt;&amp;lt;1,2,3,4;//赋值初始化
     <updated>2017-03-01T00:00:00+09:00</updated>
     <id>/pl/pl-compile-c++-library-boost</id>
     <content type="html">
-介绍
-boost是一个可移植的，提供源代码的C++库，由于其对跨平台的强调，对标准C++的强调，与编写平台无关。大部分的boost库功能使用只需要包括相应的头文件即可，少数如正则表达式库和文件系统库需要连接库。
-
 文件系统库
 
 
@@ -13108,7 +13193,57 @@ boost是一个可移植的，提供源代码的C++库，由于其对跨平台的
 
 path类
 path类是最重要的类，相当于opencv的Mat类
-//如果下面有googl...</content>
+//如果下面有googletest目录，可以直接进行拼接
+boost::filesystem::path full_path=boost::filesystem::current_path()/&quot;googletest&quot;;
+
+
+获得当前文件...</content>
+  </entry>
+
+  <entry>
+    <title>C++ Boost: Structure</title>
+    <link href="/pl/pl-compile-c++-library-boost-structure.html"/>
+    <updated>2017-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-library-boost-structure</id>
+    <content type="html">
+
+  Boost.Chrono
+  Boost.Context
+  Boost.FileSystem
+  Boost.GraphParallel
+  Boost.IOStreams
+  Boost.Locale
+  Boost.MPI
+  Boost.ProgramOptions
+  Boost.Python
+  Boost.Regex
+  Boost.Serialization
+  Boost.Signals
+  Boost.System
+  Boost.Thread
+  Boost.Timer
+  Boost.Wave
+
+
+A few libraries have optional...</content>
+  </entry>
+
+  <entry>
+    <title>C++:  Library</title>
+    <link href="/pl/pl-compile-c++-library-summary.html"/>
+    <updated>2017-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-library-summary</id>
+    <content type="html">
+1.  .a extension and .dylib extension
+
+  .a extension means a static library.
+    
+      Static libraries allow application to load code into its address space at compile time.
+      This results in a larger size in disk and slower launch times.
+    
+  
+  .dylib extension means dynamic library
+ ...</content>
   </entry>
 
   <entry>
@@ -17459,6 +17594,12 @@ Sentence
 
   All you need to do is mix it with water and apply it to the shrub
   So peaceful, so protected from this crazy world.
+
+
+Phrase
+
+  Walk the dog.
+  Walk you through all the steps programs.
 
 </content>
   </entry>
