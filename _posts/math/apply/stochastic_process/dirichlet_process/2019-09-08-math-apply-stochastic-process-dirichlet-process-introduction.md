@@ -70,6 +70,5 @@ if __name__ == "__main__":
 ```
 
 
-
 #### Reference
 1. [Dirichlet process](https://en.wikipedia.org/wiki/Dirichlet_process#Formal_definition)

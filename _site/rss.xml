@@ -5,8 +5,8 @@
   <description>Just Do It - </description>
   <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
   <link></link>
-  <lastBuildDate>Tue, 15 Jun 2021 18:30:33 +0900</lastBuildDate>
-  <pubDate>Tue, 15 Jun 2021 18:30:33 +0900</pubDate>
+  <lastBuildDate>Wed, 30 Jun 2021 08:27:46 +0900</lastBuildDate>
+  <pubDate>Wed, 30 Jun 2021 08:27:46 +0900</pubDate>
   <ttl>1800</ttl>
 
 
@@ -706,6 +706,82 @@ then input vector and the rows of the weight matrix.&lt;/li&gt;
   &lt;li&gt;Newton’s Method&lt;/li&gt;
 &lt;/ol&gt;
 
+&lt;h4 id=&quot;simple-backpropagation&quot;&gt;Simple Backpropagation&lt;/h4&gt;
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;iostream&amp;gt;
+#include &amp;lt;vector&amp;gt;
+#include &amp;lt;cmath&amp;gt;
+&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;linear_function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;para&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bias&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;para&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bias&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;linear_function_derivative_para&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;linear_function_derivative_bias&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sigmoid_active_function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;exp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sigmoid_derivative&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sigmoid_active_function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sigmoid_active_function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;square_derivative&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+	&lt;span class=&quot;c1&quot;&gt;// f(x) = (x - constant)^2&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;	
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;evaluate_neural_network&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;para&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bias&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sigmoid_active_function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;linear_function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;para&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bias&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tuple&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;calculate_gradient&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;para&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bias&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+	&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;actual_input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+	&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;actual_output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.00033&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.9999665&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+	&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gradient_weight&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gradient_bias&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+		&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;prediction&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;evaluate_neural_network&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;actual_input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;para&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bias&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gradient1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;square_derivative&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prediction&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;actual_output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt; 
+
+		&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;linear_output&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;linear_function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;actual_input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;para&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bias&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gradient2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sigmoid_derivative&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;linear_output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+		&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gradient3_weight&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;linear_function_derivative_para&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;actual_input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+		&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gradient3_bias&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;linear_function_derivative_bias&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+		&lt;span class=&quot;n&quot;&gt;gradient_weight&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gradient_weight&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gradient1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gradient2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gradient3_weight&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;gradient_bias&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gradient_bias&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gradient1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gradient2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gradient3_bias&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;make_tuple&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gradient_weight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gradient_bias&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;train_neural_network&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+	&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;para&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bias&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;learning_rate&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+	&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tuple&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gradient&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;calculate_gradient&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;para&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bias&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;para&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;para&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;learning_rate&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gradient&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;bias&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bias&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;learning_rate&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gradient&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;c1&quot;&gt;//float prediction1 = evaluate_neural_network(-1,para, bias);&lt;/span&gt;
+		&lt;span class=&quot;c1&quot;&gt;//float prediction2 = evaluate_neural_network(0,para, bias);&lt;/span&gt;
+		&lt;span class=&quot;c1&quot;&gt;//float prediction3 = evaluate_neural_network(1,para, bias);&lt;/span&gt;
+		&lt;span class=&quot;c1&quot;&gt;//std::cout&amp;lt;&amp;lt;&quot;prediction: 1 &quot;&amp;lt;&amp;lt; prediction1&amp;lt;&amp;lt;std::endl;&lt;/span&gt;
+		&lt;span class=&quot;c1&quot;&gt;//std::cout&amp;lt;&amp;lt;&quot;prediction: 0 &quot;&amp;lt;&amp;lt; prediction2&amp;lt;&amp;lt;std::endl;&lt;/span&gt;
+		&lt;span class=&quot;c1&quot;&gt;//std::cout&amp;lt;&amp;lt;&quot;prediction: -1 &quot;&amp;lt;&amp;lt; prediction3&amp;lt;&amp;lt;std::endl;&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;	&lt;span class=&quot;s&quot;&gt;&quot;weight: &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;para&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot; bias: &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bias&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
     <link>/ai/AI-nnd-backpropagation-variation.html</link>
     <guid>/ai/AI-nnd-backpropagation-variation</guid>
@@ -2848,6 +2924,12 @@ dissemination. (incorrect if all three areas are equally important and none
 is to be emphasized.)&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;h4 id=&quot;method-and-methodology&quot;&gt;Method and methodology&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Method is a simply a research tool, component of research.&lt;/li&gt;
+  &lt;li&gt;Methodology is the justification for using a particular research method.&lt;/li&gt;
+&lt;/ol&gt;
+
 &lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
 &lt;ol&gt;
   &lt;li&gt;&lt;a href=&quot;https://site.uit.no/english/grammar/aswellas/#:~:text=As%20well%20as%20is%20not%20a%20synonym%20for%20and&amp;amp;text=While%20and%20simply%20conjoins%20two,than%20the%20expression%20following%20it.&quot;&gt;as well as and and&lt;/a&gt;&lt;/li&gt;
@@ -3518,8 +3600,58 @@ maybe he just not interested in interesting things.&lt;/li&gt;
   </item>
 
   <item>
-    <title>Work Journal</title>
-    <description>&lt;hr /&gt;
+    <title>Work: Journal Template</title>
+    <description>
+&lt;h4 id=&quot;1&quot;&gt;1.&lt;/h4&gt;
+&lt;p&gt;The rest of the paper is organized as follows, Section 2 explains…,
+section 3 describes…, and in the Conclusion section we discuss the results.&lt;/p&gt;
+
+&lt;h4 id=&quot;2-conclusion&quot;&gt;2. Conclusion&lt;/h4&gt;
+&lt;p&gt;Selection is such a critical piece of the GA puzzle that better understanding at its foundation can
+only help advance the state of genetic algorithm art.&lt;/p&gt;
+</description>
+    <link>/work/work-journal-template.html</link>
+    <guid>/work/work-journal-template</guid>
+    <pubDate>Wed, 03 Jun 2020 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Work: academic database</title>
+    <description>
+&lt;h4 id=&quot;1-comprehensive-research-tools&quot;&gt;1. comprehensive research tools&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Google Scholar&lt;/li&gt;
+  &lt;li&gt;Microsoft Academic Search&lt;/li&gt;
+  &lt;li&gt;Core
+    &lt;ul&gt;
+      &lt;li&gt;Links to full text(all articles in CORE are open access)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;2-special-tools&quot;&gt;2. special tools&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Pubmed&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;tool&quot;&gt;tool&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;scopus&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;How to find what you can study?
+    &lt;ul&gt;
+      &lt;li&gt;Go to the journal in which you want to published your journal.&lt;/li&gt;
+      &lt;li&gt;Entry the keyword you know well and search all the papers related to that
+journal.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
 &lt;h4 id=&quot;neural-network&quot;&gt;neural network&lt;/h4&gt;
 &lt;ol&gt;
   &lt;li&gt;IEEE Transactions on Neural Networks and Learning Systems
@@ -3550,24 +3682,8 @@ learning systems.&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/IEEE_Transactions_on_Neural_Networks_and_Learning_Systems&quot;&gt;IEEE Transactions on Neural Networks and Learning System&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </description>
-    <link>/work-journal.html</link>
-    <guid>/work-journal</guid>
-    <pubDate>Wed, 03 Jun 2020 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>Work: Journal Template</title>
-    <description>
-&lt;h4 id=&quot;1&quot;&gt;1.&lt;/h4&gt;
-&lt;p&gt;The rest of the paper is organized as follows, Section 2 explains…,
-section 3 describes…, and in the Conclusion section we discuss the results.&lt;/p&gt;
-
-&lt;h4 id=&quot;2-conclusion&quot;&gt;2. Conclusion&lt;/h4&gt;
-&lt;p&gt;Selection is such a critical piece of the GA puzzle that better understanding at its foundation can
-only help advance the state of genetic algorithm art.&lt;/p&gt;
-</description>
-    <link>/work/work-journal-template.html</link>
-    <guid>/work/work-journal-template</guid>
+    <link>/work/work-journal-database.html</link>
+    <guid>/work/work-journal-database</guid>
     <pubDate>Wed, 03 Jun 2020 00:00:00 +0900</pubDate>
   </item>
 
@@ -5319,6 +5435,21 @@ more abstract, insightful, and concise. And relative frequnecy and degree of
 belief are two implemenation of this definition from two different respective.&lt;br /&gt;
 It needs insight to come up with something fundamental, which makes you a great
 mathematician.&lt;/p&gt;
+
+&lt;h4 id=&quot;probability-theory-vs-statistical-model&quot;&gt;Probability theory vs statistical model&lt;/h4&gt;
+&lt;p&gt;Probabiliy theory is primarily concerned with calculating various quantities
+assosiated with a probabiliy model. This requires that we know what the correct
+probability model is.&lt;/p&gt;
+
+&lt;p&gt;In application, this is often not the case, and the best we can say is that the
+correct probability measure to use in a set of possible probabiliy measures. We
+refer to this collection as the statistical model.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;So, in a sense, our uncertainty has increased; not only do we have the
+uncertainty associated with an outcome or response as described by a
+probability measure, but now we are also uncertain about what the probability
+measure is.&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     <link>/math/math-apply-probability-model-history.html</link>
     <guid>/math/math-apply-probability-model-history</guid>
@@ -6129,20 +6260,10 @@ known: MCMC&lt;/li&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h4 id=&quot;probability-theory-vs-statistical-model&quot;&gt;Probability theory vs statistical model&lt;/h4&gt;
-&lt;p&gt;Probabiliy theory is primarily concerned with calculating various quantities
-assosiated with a probabiliy model. This requires that we know what the correct
-probability model is.&lt;/p&gt;
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;p&gt;For many(in fact, most!) probability distributions, there is no simple, direct
+way to simulate(on a computer) random variables having such a distribution.&lt;/p&gt;
 
-&lt;p&gt;In application, this is often not the case, and the best we can say is that the
-correct probability measure to use in a set of possible probabiliy measures. We
-refer to this collection as the statistical model.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;So, in a sense, our uncertainty has increased; not only do we have the
-uncertainty associated with an outcome or response as described by a
-probability measure, but now we are also uncertain about what the probability
-measure is.&lt;/li&gt;
-&lt;/ul&gt;
 </description>
     <link>/math/math-apply-statistics-summary.html</link>
     <guid>/math/math-apply-statistics-summary</guid>
@@ -6856,6 +6977,18 @@ calulate the statistics in the parameter space.&lt;/strong&gt;&lt;/li&gt;
   </item>
 
   <item>
+    <title>Statistics theory: regression</title>
+    <description>
+&lt;p&gt;&lt;strong&gt;Regression line:&lt;/strong&gt; it is a straight line that describes how a response
+variable $y$ changes as an explanatory variable $x$ changes.&lt;/p&gt;
+
+</description>
+    <link>/math/math-apply-statistical-theory-regression.html</link>
+    <guid>/math/math-apply-statistical-theory-regression</guid>
+    <pubDate>Wed, 31 Jul 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
     <title>Statistics theory: order statistics</title>
     <description>
 &lt;p&gt;&lt;strong&gt;Order Statistics&lt;/strong&gt;: Suppose now that $(X_1,\cdots, X_n)$ is a sample. In many
@@ -6901,6 +7034,27 @@ operations such as adding and averaging make sense.&lt;/p&gt;
 </description>
     <link>/math/math-apply-statistical-theory-definition.html</link>
     <guid>/math/math-apply-statistical-theory-definition</guid>
+    <pubDate>Wed, 31 Jul 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Statistics theory: correlation</title>
+    <description>
+&lt;p&gt;&lt;strong&gt;Definition:&lt;/strong&gt; The correlation measures the direction and strength of the
+linear relationship between two quantitative variables. Correlation is usually
+writen as $r$.&lt;/p&gt;
+
+&lt;p&gt;Suppose that we have data on variables $x$ and $y$ for $n$ individuals. The
+means and standard deviations of the two variables are $\bar{x}$ and $s_x$ for
+the x-values, and $\bar{y}$ and $s_y$ for the y-values. The correlation $r$
+between x and y is&lt;/p&gt;
+
+\[r=\frac{1}{n-1}
+\sum\left(\frac{x_{i}-\bar{x}}{s_{x}}\right)\left(\frac{y_{i}-\bar{y}}{s_{y}}\right)\]
+
+</description>
+    <link>/math/math-apply-statistical-theory-correlation.html</link>
+    <guid>/math/math-apply-statistical-theory-correlation</guid>
     <pubDate>Wed, 31 Jul 2019 00:00:00 +0900</pubDate>
   </item>
 
@@ -7530,15 +7684,6 @@ all can be used to study probability and statistics.&lt;/li&gt;
   <item>
     <title>S.P.: Notation</title>
     <description>
-&lt;h4 id=&quot;set-theory&quot;&gt;set theory&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Sample space: there elements in that sample space&lt;/li&gt;
-  &lt;li&gt;events:   events are subsets of the sample space.&lt;/li&gt;
-  &lt;li&gt;sample space: a set in which all of the possible outcomes of a statistical experiment are represented as points –from Merriam Webster&lt;/li&gt;
-  &lt;li&gt;according to the axioms, there are only sample space, events, and probability.
-So a random variable, it’s a function from the set of sample points to the set of real values.&lt;/li&gt;
-&lt;/ol&gt;
-
 &lt;p&gt;####&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;$X(t,\omega)$
@@ -7556,6 +7701,72 @@ So a random variable, it’s a function from the set of sample points to the set
 </description>
     <link>/math/math-apply-stochastic-process-notation.html</link>
     <guid>/math/math-apply-stochastic-process-notation</guid>
+    <pubDate>Thu, 30 May 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>S.P.: Motivation</title>
+    <description>
+&lt;h4 id=&quot;relationship-with-probability-theory&quot;&gt;Relationship with probability theory&lt;/h4&gt;
+&lt;p&gt;Stochastic process are primarily concerned with how events happen as respect to
+time, which is a complete new point of view to events.  In most cases, the
+reason stochastic process is closely connected to probabiliy just because
+single event is associated with probability theory. The classical stochastic
+process are as follows:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Poisson process: it is a counting process. counting the events is the purpose
+of poisson process, and poisson distribution just happens to related to this.&lt;/li&gt;
+  &lt;li&gt;Renewal process: counting a process in which the interarrival are
+independent.&lt;/li&gt;
+  &lt;li&gt;Markov process: we also only care about counting.&lt;/li&gt;
+  &lt;li&gt;Martingales: It is also about counting, and the expected sum of the
+counting is zero.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;General speaking, stochastic process is about counting, and human being just
+study some special counting process.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Formal Definition:&lt;/strong&gt;  Let $X_0, X_1, X_2,\cdots$ be a sequence, where $X_n$
+represents some random quantity at time $n$. In general, the value $X_n$ at time
+$n$ might depend on the quantity $X_{n-1}$ at time $n-1$, or even the values
+$X_m$ for other times $m&amp;lt;n$. We refer to this sequence as stochastic process.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The sequence is what we care about.
+    &lt;ul&gt;
+      &lt;li&gt;It maybe samples from a distribution, but it is just a subclass of the
+sequence family. Like the poisson process is counting the total number, which
+is not from any known distribution by now.&lt;/li&gt;
+      &lt;li&gt;As a sequence, what we care is the impact of history data on the future data.
+Why dirichlet process is a stochastic process, just because it is a sequence,
+the future data is determined by the past data.&lt;/li&gt;
+      &lt;li&gt;Markov chain is subclass of the sequence family, the current data is only
+influenced by the last one.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;General speaking, we care about sequence.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Insight is important for every subject in math, such as the invariant in geometry,
+group operation in algebra, etc.&lt;/li&gt;
+  &lt;li&gt;For stochastic process, the study object is the sequence. This sequence could
+be generate from a special distribution. It’s fine, however, we want to study
+more general situation, in which each entry is a random variable, and these
+random variable could be identical, or they are not.&lt;/li&gt;
+  &lt;li&gt;We want to know the essence of a sequence of random variables. We want to
+know the future according to its history.&lt;/li&gt;
+  &lt;li&gt;What does Markov chain mean? Makov simply means memoryless, and Markov chain
+is a special family of these sequences.&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/math/math-apply-stochastic-process-motivation.html</link>
+    <guid>/math/math-apply-stochastic-process-motivation</guid>
     <pubDate>Thu, 30 May 2019 00:00:00 +0900</pubDate>
   </item>
 
@@ -7760,6 +7971,19 @@ if it exists,is the time-average renewal rate over $(0,\infty)$ for the
   <item>
     <title>R.P.: Renewal Rewards</title>
     <description>
+&lt;h4 id=&quot;motivation&quot;&gt;Motivation&lt;/h4&gt;
+&lt;p&gt;There are many situations in which, along with a renewal process ${N(t); t &amp;gt;
+0}$, there is another randomly varying functions of time, called a reward
+function ${R(t); t&amp;gt;0}$.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;$R(t)$ models a rate at which the process is accumulating a reward.&lt;/li&gt;
+  &lt;li&gt;We shall illustrate many examples of such processes and see that a “reward”
+could also be a cost or any randomly varying quantity of interest.&lt;/li&gt;
+  &lt;li&gt;The important restriction on these reward functions is that $R(t)$ at a given
+t depends only on the location of t within the inter-renewal interval
+containing t and perhaps other random variables local to that interval.&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;h4 id=&quot;time-average-residual-life&quot;&gt;Time-average Residual Life&lt;/h4&gt;
 &lt;p&gt;\(\int_{0}^{t} y(\tau) d \tau=\frac{1}{2} \sum_{i=1}^{n(t)}
 x_{i}^{2}+\int_{\tau=s_{n(t)}}^{t} y(\tau) d \tau\)&lt;/p&gt;
@@ -7886,6 +8110,35 @@ some vertex &lt;em&gt;V&lt;/em&gt; is independent of where you started&lt;/li&gt
 </description>
     <link>/math/math-apply-stochastic-process-markov-chain-random-walk.html</link>
     <guid>/math/math-apply-stochastic-process-markov-chain-random-walk</guid>
+    <pubDate>Mon, 20 May 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>M.C.: Properties</title>
+    <description>
+&lt;p&gt;&lt;strong&gt;Irreducible:&lt;/strong&gt; A Markov chain is &lt;em&gt;irreducible&lt;/em&gt; if it is possible for the chain
+to move from any state to any other state. Equivalently, the Markov chian is
+irreducible if for any $i,j \in S$, there is a positive integer $n$ with
+$P_i(X_n = j) &amp;gt; 0$.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A Markov chain is irreducible if its associated transition matrix has 0 entry.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Aperiodic:&lt;/strong&gt; A Markov chian is aperiodic if the period of each state is equal
+to 1.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Theorem:&lt;/strong&gt; If a Markov chian has $p_{ij} &amp;gt; 0$ for all $i,j \in S$, then the
+chain is irreducible and aperiodic&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Theorem:&lt;/strong&gt; Suppose a Markov chain is irreducilbe and aperiodic and has a
+stationary distributon ${\pi_i}$. Then regardless of the initial distribution
+${\mu_i}$, we have $ \lim &lt;em&gt;{n \rightarrow \infty}
+P\left(X&lt;/em&gt;{n}=i\right)=\pi_{i} $ for all states $i$.&lt;/p&gt;
+
+</description>
+    <link>/math/math-apply-stochastic-process-markov-chain-properties.html</link>
+    <guid>/math/math-apply-stochastic-process-markov-chain-properties</guid>
     <pubDate>Mon, 20 May 2019 00:00:00 +0900</pubDate>
   </item>
 
@@ -8216,59 +8469,18 @@ mean 0 and variance $u$, $ W_{t+u}-W_{t} \sim \mathcal{N}(0, u) $&lt;/li&gt;
   </item>
 
   <item>
-    <title>S.P.: Queueing Theory</title>
+    <title>S.P.: random walk</title>
     <description>
-&lt;h4 id=&quot;kendalls-notation&quot;&gt;Kendall’s Notation&lt;/h4&gt;
-&lt;p&gt;Kendall notation is the standard system used to describe and classify a queueing
-node.&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Kendall proposed describing queueing models using three factors &lt;strong&gt;A/S/c&lt;/strong&gt; in
-1953,It has been extended to &lt;strong&gt;A/D/c/K/N/D&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;A denotes the time between arrivals to the queue&lt;/li&gt;
-      &lt;li&gt;S the service time distribution&lt;/li&gt;
-      &lt;li&gt;C the number of service channels open at the node.&lt;/li&gt;
-      &lt;li&gt;K the capacity of the queue&lt;/li&gt;
-      &lt;li&gt;N is the size of population of jobs to be served&lt;/li&gt;
-      &lt;li&gt;D is the queueing discipline&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Theorem:&lt;/strong&gt; Let ${X_n}$ be simple random walk as before, and let $n$ be a
+positive integer. If K is an integer such that $-n \leq k \leq n$ and $n+k$ is
+even, then
+\(P\left(X_{n}=a+k\right)=\left(\begin{array}{c}n \\
+\frac{n+k}{2}\end{array}\right) p^{(n+k) / 2} q^{(n-k) / 2}\)&lt;/p&gt;
+
+&lt;p&gt;For all other values of $k$, we have $P(X_n=a+k)=0$. Furthmore, $E(X_n)=a+n(2p-1)$&lt;/p&gt;
 </description>
-    <link>/math/math-apply-stochastic-process-queueing-theory.html</link>
-    <guid>/math/math-apply-stochastic-process-queueing-theory</guid>
-    <pubDate>Wed, 01 May 2019 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>S.P.: Martingles</title>
-    <description>
-&lt;h4 id=&quot;1-definition&quot;&gt;1 Definition&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Martingales: Let $X_0,X_1,X_2,\cdots$ be a markov chain. The chain is a
-martingle if for all $n=0,1,2,\cdots$, we have $E(X_{n+1} - X_n|X_n)=0$, that
-is, on average the chain’s value does not change, regardless of what the
-current value $X_n$ actually is.
-    &lt;ul&gt;
-      &lt;li&gt;a special class of stochastic processes, they are characterized
-by “staying the same on average”&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h5 id=&quot;11-example&quot;&gt;1.1 Example&lt;/h5&gt;
-&lt;p&gt;Let {$X_n$} be simple random walk with $p=1/2$, then $X_{n+1}-X_n$ is equal to
-either 1 or -1, with probability 1/2 each. Hence, &lt;br /&gt;
-$E(X_{n+1}-X_n|X_n)=(1)(1/2)+(-1)(1/2)=0$ &lt;br /&gt;
-So {$X_n$} stays the same on average and is a maringale.&lt;/p&gt;
-
-&lt;h4 id=&quot;2-galois&quot;&gt;2 Galois&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Simply put, Maritingales is a fair game.&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    <link>/math/math-apply-stochastic-process-martingales.html</link>
-    <guid>/math/math-apply-stochastic-process-martingales</guid>
+    <link>/math/math-apply-stochastic-process-random-walk.html</link>
+    <guid>/math/math-apply-stochastic-process-random-walk</guid>
     <pubDate>Wed, 01 May 2019 00:00:00 +0900</pubDate>
   </item>
 
@@ -8341,6 +8553,38 @@ After that, I begin to try find an upper bound.&lt;/li&gt;
 </description>
     <link>/math/math-apply-stochastic-process-little-theorem.html</link>
     <guid>/math/math-apply-stochastic-process-little-theorem</guid>
+    <pubDate>Wed, 01 May 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>S.P.: Martingles</title>
+    <description>
+&lt;h4 id=&quot;1-definition&quot;&gt;1 Definition&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Martingales: Let $X_0,X_1,X_2,\cdots$ be a markov chain. The chain is a
+martingle if for all $n=0,1,2,\cdots$, we have $E(X_{n+1} - X_n|X_n)=0$, that
+is, on average the chain’s value does not change, regardless of what the
+current value $X_n$ actually is.
+    &lt;ul&gt;
+      &lt;li&gt;a special class of stochastic processes, they are characterized
+by “staying the same on average”&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h5 id=&quot;11-example&quot;&gt;1.1 Example&lt;/h5&gt;
+&lt;p&gt;Let {$X_n$} be simple random walk with $p=1/2$, then $X_{n+1}-X_n$ is equal to
+either 1 or -1, with probability 1/2 each. Hence, &lt;br /&gt;
+$E(X_{n+1}-X_n|X_n)=(1)(1/2)+(-1)(1/2)=0$ &lt;br /&gt;
+So {$X_n$} stays the same on average and is a maringale.&lt;/p&gt;
+
+&lt;h4 id=&quot;2-galois&quot;&gt;2 Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Simply put, Maritingales is a fair game.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/math/math-apply-stochastic-process-martingales.html</link>
+    <guid>/math/math-apply-stochastic-process-martingales</guid>
     <pubDate>Wed, 01 May 2019 00:00:00 +0900</pubDate>
   </item>
 
@@ -12295,6 +12539,47 @@ studying complex functions.&lt;/p&gt;
 </description>
     <link>/math/math-change-complex-analysis-complex-function.html</link>
     <guid>/math/math-change-complex-analysis-complex-function</guid>
+    <pubDate>Wed, 05 Dec 2018 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>C.A.: Euler's Identity</title>
+    <description>
+&lt;p&gt;&lt;strong&gt;Question:&lt;/strong&gt; why $e^i\theta = cos\theta + isin\theta$?&lt;/p&gt;
+
+&lt;h4 id=&quot;proof-in-the-algebraic-way&quot;&gt;Proof in the algebraic way&lt;/h4&gt;
+&lt;p&gt;\(\begin{aligned} \sin x &amp;amp;=\sum_{n=0}^{\infty} \frac{(-1)^{n}}{(2 n+1) !} x^{2
+n+1}=x-\frac{x^{3}}{3 !}+\frac{x^{5}}{5 !}-\cdots \\ \cos x
+&amp;amp;=\sum_{n=0}^{\infty} \frac{(-1)^{n}}{(2 n) !} x^{2 n}=1-\frac{x^{2}}{2
+!}+\frac{x^{4}}{4 !}-\cdots \\ e^{z} &amp;amp;=\sum_{n=0}^{\infty} \frac{z^{n}}{n
+!}=1+z+\frac{z^{2}}{2 !}+\frac{z^{3}}{3 !}+\cdots \end{aligned}\)&lt;/p&gt;
+
+\[\begin{aligned} e^{i x} &amp;amp;=\sum_{n=0}^{\infty} \frac{(i x)^{n}}{n !}=1+i
+x+\frac{(i x)^{2}}{2 !}+\frac{(i x)^{3}}{3 !}+\cdots \\ &amp;amp;=1+i x-\frac{x^{2}}{2
+!}-i \frac{x^{3}}{3 !}+\frac{x^{4}}{4 !}+i \frac{x^{5}}{5 !}-\cdots \\
+&amp;amp;=1-\frac{x^{2}}{2 !}+\frac{x^{4}}{4 !}+\cdots+i\left(x-\frac{x^{3}}{3
+!}+\frac{x^{5}}{5 !}-\cdots\right) \\ &amp;amp;=\cos x+i \sin x \end{aligned}\]
+
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;p&gt;A exponential function makes sense for human if and only if the power is
+integer, maybe rational. But what if the power is an imagenary number, or a
+matrix? Does it still make sense?&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;We find something we can not understand, is it still useful?&lt;/li&gt;
+  &lt;li&gt;“In mathematics, you don’t need understand them, you use them”, one
+mathematican said, I can’t remember who he is.&lt;/li&gt;
+  &lt;li&gt;You can discovery the truth via different methods.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Euler%27s_formula&quot;&gt;Euler’s formula&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Euler's_identity&quot;&gt;Euler’s identity&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.reddit.com/r/math/comments/3536wr/what_is_the_proof_of_ix_lncosxisinx_without/&quot;&gt;Euler’s formula proof without euler’s equation&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/math/math-change-complex-analysis-complex-euler-identiy.html</link>
+    <guid>/math/math-change-complex-analysis-complex-euler-identiy</guid>
     <pubDate>Wed, 05 Dec 2018 00:00:00 +0900</pubDate>
   </item>
 
@@ -26459,6 +26744,139 @@ number of pointer changs, O(1)&lt;/li&gt;
   </item>
 
   <item>
+    <title>Git:  Philosophy Behind the Scene</title>
+    <description>
+&lt;h4 id=&quot;1-what-is-version-control&quot;&gt;1. What is version control?&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Records changes to a file or set of files over time&lt;/li&gt;
+  &lt;li&gt;Revert selected files back to a previous state, revert the entire projected
+back to a previous state.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;1-what-is-the-problem-&quot;&gt;1. What is the problem ?&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;assume you are a coder,  and work on a project. Accasionaly you revise you
+code, some days later, you want get things back to where they were.
+    &lt;ul&gt;
+      &lt;li&gt;one solution is every time you change your code, you make a copy, but as time
+goes on, this is a nightmare. Based on the timeline, we packed the code we get
+anywhere we want.&lt;/li&gt;
+      &lt;li&gt;the second solution is git, and git is an artifact.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;2-the-philosphy&quot;&gt;2. The Philosphy&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;if you check the code in your project carefully, your file can be divided
+into two classes, &lt;strong&gt;folder and text&lt;/strong&gt;.
+    &lt;ul&gt;
+      &lt;li&gt;In git, both the &lt;strong&gt;folder and text&lt;/strong&gt; ,separately, are abstracted as &lt;strong&gt;tree 
+and blob&lt;/strong&gt;, we call them objects in general.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;we are not satisfied with the timeline, we use a more complicated structure
+which is called &lt;strong&gt;graph&lt;/strong&gt; to track all the change, each point in a timeline
+is a snapshot of the project. We have a fancy terminology for snapshot, which
+is called &lt;strong&gt;commits&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;how to connect these &lt;strong&gt;graph&lt;/strong&gt;, and what’s the direction of the two node ? The
+solution is pointer, and the direction is from descendant to ancestor.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;what’s the name of each node ? How to identify them ?
+    &lt;ul&gt;
+      &lt;li&gt;It use hash function, but it’s not readable, so we create a reference to them,
+you can it branch.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;3-layout&quot;&gt;3. Layout&lt;/h4&gt;
+
+&lt;p&gt;&lt;img align=&quot;left&quot; src=&quot;/images/os-software-git-philosophy-layout.png&quot; /&gt; &lt;br /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;I was confused by the term “checkout” for a long time, what does checkout 
+exactly do is bringing files stored in Repository to working directory.&lt;/li&gt;
+  &lt;li&gt;The working tree is a single checkout of one version of the project, these
+files are pulled out of the compressed database in the Git directory and
+placed on disk for you to use or modify.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The staging area is a file, generally contained in your Git directory, that
+stores information about what will go into your next commit.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;The git directory is where Git stores the metadata and object database for
+your project. This is the most important part of Git, and it is what is copied
+when you clone a repository from another computer.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;3-example&quot;&gt;3. Example&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;git init: create .git file，
+    &lt;ul&gt;
+      &lt;li&gt;you can found objects and refs folder, this is the main file where git can
+track all the changes&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;mkdir &lt;/span&gt;my_git
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;_my_git
+git init
+&lt;span class=&quot;nb&quot;&gt;ls&lt;/span&gt; .git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;git log: to check commit information&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;hello world&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; my.py
+git add my.py
+git commit &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;x&quot;&lt;/span&gt; 
+git log
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img align=&quot;left&quot; src=&quot;/images/os-software-git-philosophy-first-coomit.png&quot; /&gt; &lt;br /&gt;
+&lt;br /&gt; &lt;br /&gt; &lt;br /&gt; &lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;dog&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; my.py
+git add my.py
+git commit &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;x&quot;&lt;/span&gt; 
+git log
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img align=&quot;left&quot; src=&quot;/images/os-software-git-philosophy-second-coomit.png&quot; /&gt; &lt;br /&gt;
+&lt;br /&gt; &lt;br /&gt; &lt;br /&gt; &lt;br /&gt; &lt;br /&gt; &lt;br /&gt; &lt;br /&gt; 
+&lt;br /&gt; &lt;br /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;git checkout &lt;hash-value&gt;: jump to previous state&lt;/hash-value&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# check current file content&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;my.py
+&lt;span class=&quot;c&quot;&gt;# hello world&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# dog&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# we get back to previous status, where hash value is&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# ad62409737e3e7160fa66b8ae62723b8c1beee96&lt;/span&gt;
+git checkout ad62409
+&lt;span class=&quot;c&quot;&gt;# now cat the my.py again, the content is&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# hello world&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;git diff 查看工作区和版本库的差别&lt;/li&gt;
+  &lt;li&gt;git reflog 记录你的每一次命令&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+    <link>/pl/pl-tool-git-philosophy.html</link>
+    <guid>/pl/pl-tool-git-philosophy</guid>
+    <pubDate>Tue, 30 May 2017 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
     <title>Debugger: Principle</title>
     <description>
 &lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
@@ -26469,6 +26887,197 @@ number of pointer changs, O(1)&lt;/li&gt;
     <link>/pl/pl-tool-debugger-summary.html</link>
     <guid>/pl/pl-tool-debugger-summary</guid>
     <pubDate>Tue, 30 May 2017 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Git: Internals</title>
+    <description>
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;blob&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tree&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tree&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;blob&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;commits&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;parents&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;commit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;author&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;snapshot&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tree&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+    <link>/pl/pl-tool-git-internals.html</link>
+    <guid>/pl/pl-tool-git-internals</guid>
+    <pubDate>Mon, 29 May 2017 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Git: Configuration and Internals</title>
+    <description>
+&lt;p&gt;Just as other programs, the git configuration can be divided into three level.&lt;/p&gt;
+
+&lt;h3 id=&quot;1-configuration-file&quot;&gt;1. Configuration File&lt;/h3&gt;
+&lt;h4 id=&quot;11-system-level&quot;&gt;1.1 System level&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;a file named /etc/config: a file contain values applied to every use in this
+ system&lt;/li&gt;
+  &lt;li&gt;pass –system to git config, it reads and writes from this file&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git config &lt;span class=&quot;nt&quot;&gt;--system&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h4 id=&quot;12-global-level&quot;&gt;1.2 Global level&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;a file named ~/.gitconfig: values specifically to you.&lt;/li&gt;
+  &lt;li&gt;you can make Git read and writes by passing –global option to git config.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git config &lt;span class=&quot;nt&quot;&gt;--global&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;13-project-level&quot;&gt;1.3 Project level&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;a file named config, located in the git directory(.git/config): a file
+specific to that single repository..&lt;/li&gt;
+  &lt;li&gt;read from and write to this file with –local option&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git config &lt;span class=&quot;nt&quot;&gt;--local&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;2-set&quot;&gt;2. set&lt;/h3&gt;
+&lt;h4 id=&quot;21-your-identity&quot;&gt;2.1 Your Identity&lt;/h4&gt;
+&lt;p&gt;Git commit uses this information&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git config &lt;span class=&quot;nt&quot;&gt;--global&lt;/span&gt; user.name &lt;span class=&quot;s2&quot;&gt;&quot;Huiyao&quot;&lt;/span&gt;
+git config &lt;span class=&quot;nt&quot;&gt;--global&lt;/span&gt; user.email zhang@123.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;22-your-editor&quot;&gt;2.2 Your Editor&lt;/h4&gt;
+&lt;p&gt;You can configure the default text editor that will be used when Git needs you
+to type in a message. If not configured, Git uses your system’s default editor.&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git config &lt;span class=&quot;nt&quot;&gt;--global&lt;/span&gt; core.editor vim
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;3-display&quot;&gt;3. display&lt;/h3&gt;
+&lt;p&gt;Git might read the same configuration variable from more than one file, it’s
+possible that you have an unexpected value for one of these values and you don’t
+know why. In cases like that, you can query Git as to the origin for that value.&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git config &lt;span class=&quot;nt&quot;&gt;--list&lt;/span&gt;
+git config &lt;span class=&quot;nt&quot;&gt;--show-origin&lt;/span&gt; rerere.autoUpdate
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+</description>
+    <link>/pl/pl-tool-git-configuration.html</link>
+    <guid>/pl/pl-tool-git-configuration</guid>
+    <pubDate>Mon, 29 May 2017 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Git: Basic Operation</title>
+    <description>
+&lt;h4 id=&quot;1-create-a-repository&quot;&gt;1. Create a repository&lt;/h4&gt;
+
+&lt;h5 id=&quot;11-git-init&quot;&gt;1.1 git init&lt;/h5&gt;
+&lt;h5 id=&quot;12-git-clone&quot;&gt;1.2 git clone&lt;/h5&gt;
+&lt;p&gt;This command is git clone and not “checkout”. This is an important
+distinction-instead of getting just a working copy, Git receives a full copy of
+nearly all data that the server has.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Every version of every file for the history of the project is pulled down by
+default when you run git clone&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;13-lifecycle-of-the-status-of-your-files&quot;&gt;1.3 Lifecycle of the status of your files&lt;/h4&gt;
+&lt;p&gt;checking the status of your files&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git status
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img align=&quot;left&quot; src=&quot;/images/os-software-git-basic-file-lifecycle.png&quot; /&gt; &lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;14-tracking-new-files&quot;&gt;1.4 tracking new files&lt;/h4&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git add new-file
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;15-ignoring-files&quot;&gt;1.5 Ignoring Files&lt;/h4&gt;
+&lt;p&gt;Often, you’ll have a class of files that you don’t want Git to automatically add
+or even show you as being untracked.&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cat&lt;/span&gt; .gitignore
+&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.[oa]
+&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;~
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;the first line tells Git to ignore any files ending in “.o” or “.a”&lt;/li&gt;
+  &lt;li&gt;the second line tells git to ignore all files whose names end with a tilde(~)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;16-git-diff&quot;&gt;1.6 git diff&lt;/h4&gt;
+&lt;p&gt;The git status is too vague for you, you want to know exactly what you changed,
+not just which files were changed. you can use git diff.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;git diff shows you the exact lines added and removed-the patch&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;2-undoing-things&quot;&gt;2. Undoing Things&lt;/h3&gt;
+
+&lt;h4 id=&quot;21-undoing-of-a-commit&quot;&gt;2.1 Undoing of a commit&lt;/h4&gt;
+&lt;p&gt;One of the common undos takes place when you commit too early and possibly
+forget to add some files, or you mess up your commit message. If you want to
+redo that commit, make the additional changes you forgot, stage them, and commit
+again using the –amend option&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;When you’re amending your last commit, you’re not so much fixing it as
+replacing it entirely with a new, improved commit that pushes the old commit
+out of the way and puts the new commit in its place.&lt;/li&gt;
+  &lt;li&gt;Effectivelly, it’s as if the previous commit never happened, and it won’t show
+up in your repository history.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git commit &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Initial commit'&lt;/span&gt;
+git add forgotten_file
+git commit &lt;span class=&quot;nt&quot;&gt;--amend&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;22-unstaging-a-staged-file&quot;&gt;2.2 Unstaging a staged file&lt;/h4&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;nots
+restore
+reset
+&lt;span class=&quot;nb&quot;&gt;rm
+mv&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;detached-head&quot;&gt;Detached Head&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Detached head means you are no longer on a branch, you have checked out a
+single commit in the history
+    &lt;ul&gt;
+      &lt;li&gt;why we have this, what’s the advantage?&lt;/li&gt;
+      &lt;li&gt;If you want to delete you changes associated with the detached Head, &lt;strong&gt;you
+only need to checkout the branch you were on&lt;/strong&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;br /&gt;  &lt;br /&gt;
+&lt;img align=&quot;left&quot; src=&quot;/images/os-software-git-basic-detach-head-before-switch.png&quot; /&gt; &lt;br /&gt;
+&lt;br /&gt; &lt;br /&gt; &lt;br /&gt; &lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git switch liam
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img align=&quot;left&quot; src=&quot;/images/os-software-git-basic-detach-head-after-switch.png&quot; /&gt; &lt;br /&gt;
+&lt;br /&gt; &lt;br /&gt; &lt;br /&gt; &lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/2529441/how-to-read-the-output-from-git-diff&quot;&gt;How to read the outputs of git diff&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/pl/pl-tool-git-basic-operation.html</link>
+    <guid>/pl/pl-tool-git-basic-operation</guid>
+    <pubDate>Mon, 29 May 2017 00:00:00 +0900</pubDate>
   </item>
 
   <item>
@@ -26609,139 +27218,6 @@ program.&lt;/li&gt;
   </item>
 
   <item>
-    <title>Git:  Philosophy Behind the Scene</title>
-    <description>
-&lt;h4 id=&quot;1-what-is-version-control&quot;&gt;1. What is version control?&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Records changes to a file or set of files over time&lt;/li&gt;
-  &lt;li&gt;Revert selected files back to a previous state, revert the entire projected
-back to a previous state.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;1-what-is-the-problem-&quot;&gt;1. What is the problem ?&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;assume you are a coder,  and work on a project. Accasionaly you revise you
-code, some days later, you want get things back to where they were.
-    &lt;ul&gt;
-      &lt;li&gt;one solution is every time you change your code, you make a copy, but as time
-goes on, this is a nightmare. Based on the timeline, we packed the code we get
-anywhere we want.&lt;/li&gt;
-      &lt;li&gt;the second solution is git, and git is an artifact.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;2-the-philosphy&quot;&gt;2. The Philosphy&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;if you check the code in your project carefully, your file can be divided
-into two classes, &lt;strong&gt;folder and text&lt;/strong&gt;.
-    &lt;ul&gt;
-      &lt;li&gt;In git, both the &lt;strong&gt;folder and text&lt;/strong&gt; ,separately, are abstracted as &lt;strong&gt;tree 
-and blob&lt;/strong&gt;, we call them objects in general.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;we are not satisfied with the timeline, we use a more complicated structure
-which is called &lt;strong&gt;graph&lt;/strong&gt; to track all the change, each point in a timeline
-is a snapshot of the project. We have a fancy terminology for snapshot, which
-is called &lt;strong&gt;commits&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;how to connect these &lt;strong&gt;graph&lt;/strong&gt;, and what’s the direction of the two node ? The
-solution is pointer, and the direction is from descendant to ancestor.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;what’s the name of each node ? How to identify them ?
-    &lt;ul&gt;
-      &lt;li&gt;It use hash function, but it’s not readable, so we create a reference to them,
-you can it branch.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;3-layout&quot;&gt;3. Layout&lt;/h4&gt;
-
-&lt;p&gt;&lt;img align=&quot;left&quot; src=&quot;/images/os-software-git-philosophy-layout.png&quot; /&gt; &lt;br /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;I was confused by the term “checkout” for a long time, what does checkout 
-exactly do is bringing files stored in Repository to working directory.&lt;/li&gt;
-  &lt;li&gt;The working tree is a single checkout of one version of the project, these
-files are pulled out of the compressed database in the Git directory and
-placed on disk for you to use or modify.&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;The staging area is a file, generally contained in your Git directory, that
-stores information about what will go into your next commit.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;The git directory is where Git stores the metadata and object database for
-your project. This is the most important part of Git, and it is what is copied
-when you clone a repository from another computer.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;3-example&quot;&gt;3. Example&lt;/h4&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;git init: create .git file，
-    &lt;ul&gt;
-      &lt;li&gt;you can found objects and refs folder, this is the main file where git can
-track all the changes&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;mkdir &lt;/span&gt;my_git
-&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;_my_git
-git init
-&lt;span class=&quot;nb&quot;&gt;ls&lt;/span&gt; .git
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;git log: to check commit information&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;hello world&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; my.py
-git add my.py
-git commit &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;x&quot;&lt;/span&gt; 
-git log
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img align=&quot;left&quot; src=&quot;/images/os-software-git-philosophy-first-coomit.png&quot; /&gt; &lt;br /&gt;
-&lt;br /&gt; &lt;br /&gt; &lt;br /&gt; &lt;br /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;dog&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; my.py
-git add my.py
-git commit &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;x&quot;&lt;/span&gt; 
-git log
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img align=&quot;left&quot; src=&quot;/images/os-software-git-philosophy-second-coomit.png&quot; /&gt; &lt;br /&gt;
-&lt;br /&gt; &lt;br /&gt; &lt;br /&gt; &lt;br /&gt; &lt;br /&gt; &lt;br /&gt; &lt;br /&gt; 
-&lt;br /&gt; &lt;br /&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;git checkout &lt;hash-value&gt;: jump to previous state&lt;/hash-value&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# check current file content&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;my.py
-&lt;span class=&quot;c&quot;&gt;# hello world&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# dog&lt;/span&gt;
-
-&lt;span class=&quot;c&quot;&gt;# we get back to previous status, where hash value is&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# ad62409737e3e7160fa66b8ae62723b8c1beee96&lt;/span&gt;
-git checkout ad62409
-&lt;span class=&quot;c&quot;&gt;# now cat the my.py again, the content is&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# hello world&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;git diff 查看工作区和版本库的差别&lt;/li&gt;
-  &lt;li&gt;git reflog 记录你的每一次命令&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-    <link>/pl/pl-tool-git-philosophy.html</link>
-    <guid>/pl/pl-tool-git-philosophy</guid>
-    <pubDate>Fri, 19 May 2017 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
     <title>Git: Patching</title>
     <description>
 &lt;h4 id=&quot;shell&quot;&gt;shell&lt;/h4&gt;
@@ -26755,24 +27231,6 @@ revert
 </description>
     <link>/pl/pl-tool-git-patching.html</link>
     <guid>/pl/pl-tool-git-patching</guid>
-    <pubDate>Thu, 18 May 2017 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>Git: Internals</title>
-    <description>
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;blob&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tree&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tree&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;blob&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;commits&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;parents&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;commit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;author&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;snapshot&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tree&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-</description>
-    <link>/pl/pl-tool-git-internals.html</link>
-    <guid>/pl/pl-tool-git-internals</guid>
     <pubDate>Thu, 18 May 2017 00:00:00 +0900</pubDate>
   </item>
 
@@ -26802,71 +27260,6 @@ revert
 </description>
     <link>/pl/pl-tool-git-ignore.html</link>
     <guid>/pl/pl-tool-git-ignore</guid>
-    <pubDate>Thu, 18 May 2017 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>Git: Configuration and Internals</title>
-    <description>
-&lt;p&gt;Just as other programs, the git configuration can be divided into three level.&lt;/p&gt;
-
-&lt;h3 id=&quot;1-configuration-file&quot;&gt;1. Configuration File&lt;/h3&gt;
-&lt;h4 id=&quot;11-system-level&quot;&gt;1.1 System level&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;a file named /etc/config: a file contain values applied to every use in this
- system&lt;/li&gt;
-  &lt;li&gt;pass –system to git config, it reads and writes from this file&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git config &lt;span class=&quot;nt&quot;&gt;--system&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h4 id=&quot;12-global-level&quot;&gt;1.2 Global level&lt;/h4&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;a file named ~/.gitconfig: values specifically to you.&lt;/li&gt;
-  &lt;li&gt;you can make Git read and writes by passing –global option to git config.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git config &lt;span class=&quot;nt&quot;&gt;--global&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;13-project-level&quot;&gt;1.3 Project level&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;a file named config, located in the git directory(.git/config): a file
-specific to that single repository..&lt;/li&gt;
-  &lt;li&gt;read from and write to this file with –local option&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git config &lt;span class=&quot;nt&quot;&gt;--local&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;2-set&quot;&gt;2. set&lt;/h3&gt;
-&lt;h4 id=&quot;21-your-identity&quot;&gt;2.1 Your Identity&lt;/h4&gt;
-&lt;p&gt;Git commit uses this information&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git config &lt;span class=&quot;nt&quot;&gt;--global&lt;/span&gt; user.name &lt;span class=&quot;s2&quot;&gt;&quot;Huiyao&quot;&lt;/span&gt;
-git config &lt;span class=&quot;nt&quot;&gt;--global&lt;/span&gt; user.email zhang@123.com
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;22-your-editor&quot;&gt;2.2 Your Editor&lt;/h4&gt;
-&lt;p&gt;You can configure the default text editor that will be used when Git needs you
-to type in a message. If not configured, Git uses your system’s default editor.&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git config &lt;span class=&quot;nt&quot;&gt;--global&lt;/span&gt; core.editor vim
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;3-display&quot;&gt;3. display&lt;/h3&gt;
-&lt;p&gt;Git might read the same configuration variable from more than one file, it’s
-possible that you have an unexpected value for one of these values and you don’t
-know why. In cases like that, you can query Git as to the origin for that value.&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git config &lt;span class=&quot;nt&quot;&gt;--list&lt;/span&gt;
-git config &lt;span class=&quot;nt&quot;&gt;--show-origin&lt;/span&gt; rerere.autoUpdate
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-</description>
-    <link>/pl/pl-tool-git-configuration.html</link>
-    <guid>/pl/pl-tool-git-configuration</guid>
     <pubDate>Thu, 18 May 2017 00:00:00 +0900</pubDate>
   </item>
 
@@ -26920,37 +27313,6 @@ reomote repository.&lt;/p&gt;
     <link>/pl/pl-tool-git-sharing.html</link>
     <guid>/pl/pl-tool-git-sharing</guid>
     <pubDate>Tue, 16 May 2017 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>Git: Github</title>
-    <description>
-&lt;h4 id=&quot;what-is-a-pull-request&quot;&gt;What is a pull request?&lt;/h4&gt;
-&lt;p&gt;You make local code changes and then submit those changes to a remote project
-maintainer for review before those changes implemented, or merged.&lt;/p&gt;
-
-&lt;p&gt;This is called a pull request; you are requesting that someone reviews and
-approves your changes before then become final.&lt;/p&gt;
-
-&lt;h4 id=&quot;how-to-do-this&quot;&gt;How to do this?&lt;/h4&gt;
-&lt;p&gt;After forking the repository on the remote hosting service and cloning it to
-your local machine, you can start working on making changes to the code.&lt;/p&gt;
-
-&lt;p&gt;After you’re happy with the changes, you can push the work up to your fork and
-open a full request that will signal the main repo. This pull request asks the
-maintainer to review your work, provide comments, request edits.&lt;/p&gt;
-
-&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://blog.axosoft.com/learning-git-pull-request/&quot;&gt;What is a pull request&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.github.com/en/free-pro-team@latest/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line&quot;&gt;adding an existing project to
-github&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-    <link>/pl/pl-tool-git-github.html</link>
-    <guid>/pl/pl-tool-git-github</guid>
-    <pubDate>Mon, 15 May 2017 00:00:00 +0900</pubDate>
   </item>
 
   <item>
@@ -27035,114 +27397,6 @@ move the tip of the branch forward.&lt;/li&gt;
     <link>/pl/pl-tool-git-branching-merging.html</link>
     <guid>/pl/pl-tool-git-branching-merging</guid>
     <pubDate>Sun, 14 May 2017 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>Git: Basic Operation</title>
-    <description>
-&lt;h4 id=&quot;1-create-a-repository&quot;&gt;1. Create a repository&lt;/h4&gt;
-
-&lt;h5 id=&quot;11-git-init&quot;&gt;1.1 git init&lt;/h5&gt;
-&lt;h5 id=&quot;12-git-clone&quot;&gt;1.2 git clone&lt;/h5&gt;
-&lt;p&gt;This command is git clone and not “checkout”. This is an important
-distinction-instead of getting just a working copy, Git receives a full copy of
-nearly all data that the server has.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Every version of every file for the history of the project is pulled down by
-default when you run git clone&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;13-lifecycle-of-the-status-of-your-files&quot;&gt;1.3 Lifecycle of the status of your files&lt;/h4&gt;
-&lt;p&gt;checking the status of your files&lt;/p&gt;
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git status
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img align=&quot;left&quot; src=&quot;/images/os-software-git-basic-file-lifecycle.png&quot; /&gt; &lt;br /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;14-tracking-new-files&quot;&gt;1.4 tracking new files&lt;/h4&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git add new-file
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;15-ignoring-files&quot;&gt;1.5 Ignoring Files&lt;/h4&gt;
-&lt;p&gt;Often, you’ll have a class of files that you don’t want Git to automatically add
-or even show you as being untracked.&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cat&lt;/span&gt; .gitignore
-&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.[oa]
-&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;~
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;ul&gt;
-  &lt;li&gt;the first line tells Git to ignore any files ending in “.o” or “.a”&lt;/li&gt;
-  &lt;li&gt;the second line tells git to ignore all files whose names end with a tilde(~)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;16-git-diff&quot;&gt;1.6 git diff&lt;/h4&gt;
-&lt;p&gt;The git status is too vague for you, you want to know exactly what you changed,
-not just which files were changed. you can use git diff.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;git diff shows you the exact lines added and removed-the patch&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;2-undoing-things&quot;&gt;2. Undoing Things&lt;/h3&gt;
-
-&lt;h4 id=&quot;21-undoing-of-a-commit&quot;&gt;2.1 Undoing of a commit&lt;/h4&gt;
-&lt;p&gt;One of the common undos takes place when you commit too early and possibly
-forget to add some files, or you mess up your commit message. If you want to
-redo that commit, make the additional changes you forgot, stage them, and commit
-again using the –amend option&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;When you’re amending your last commit, you’re not so much fixing it as
-replacing it entirely with a new, improved commit that pushes the old commit
-out of the way and puts the new commit in its place.&lt;/li&gt;
-  &lt;li&gt;Effectivelly, it’s as if the previous commit never happened, and it won’t show
-up in your repository history.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git commit &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Initial commit'&lt;/span&gt;
-git add forgotten_file
-git commit &lt;span class=&quot;nt&quot;&gt;--amend&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;22-unstaging-a-staged-file&quot;&gt;2.2 Unstaging a staged file&lt;/h4&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;nots
-restore
-reset
-&lt;span class=&quot;nb&quot;&gt;rm
-mv&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;detached-head&quot;&gt;Detached Head&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Detached head means you are no longer on a branch, you have checked out a
-single commit in the history
-    &lt;ul&gt;
-      &lt;li&gt;why we have this, what’s the advantage?&lt;/li&gt;
-      &lt;li&gt;If you want to delete you changes associated with the detached Head, &lt;strong&gt;you
-only need to checkout the branch you were on&lt;/strong&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;br /&gt;  &lt;br /&gt;
-&lt;img align=&quot;left&quot; src=&quot;/images/os-software-git-basic-detach-head-before-switch.png&quot; /&gt; &lt;br /&gt;
-&lt;br /&gt; &lt;br /&gt; &lt;br /&gt; &lt;br /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git switch liam
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img align=&quot;left&quot; src=&quot;/images/os-software-git-basic-detach-head-after-switch.png&quot; /&gt; &lt;br /&gt;
-&lt;br /&gt; &lt;br /&gt; &lt;br /&gt; &lt;br /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/2529441/how-to-read-the-output-from-git-diff&quot;&gt;How to read the outputs of git diff&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    <link>/pl/pl-tool-git-basic-operation.html</link>
-    <guid>/pl/pl-tool-git-basic-operation</guid>
-    <pubDate>Sat, 13 May 2017 00:00:00 +0900</pubDate>
   </item>
 
   <item>
@@ -27386,6 +27640,37 @@ your operation&lt;/li&gt;
     <link>/pl/pl-tool-editor-vimscript-basic.html</link>
     <guid>/pl/pl-tool-editor-vimscript-basic</guid>
     <pubDate>Thu, 11 May 2017 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Git: Github</title>
+    <description>
+&lt;h4 id=&quot;what-is-a-pull-request&quot;&gt;What is a pull request?&lt;/h4&gt;
+&lt;p&gt;You make local code changes and then submit those changes to a remote project
+maintainer for review before those changes implemented, or merged.&lt;/p&gt;
+
+&lt;p&gt;This is called a pull request; you are requesting that someone reviews and
+approves your changes before then become final.&lt;/p&gt;
+
+&lt;h4 id=&quot;how-to-do-this&quot;&gt;How to do this?&lt;/h4&gt;
+&lt;p&gt;After forking the repository on the remote hosting service and cloning it to
+your local machine, you can start working on making changes to the code.&lt;/p&gt;
+
+&lt;p&gt;After you’re happy with the changes, you can push the work up to your fork and
+open a full request that will signal the main repo. This pull request asks the
+maintainer to review your work, provide comments, request edits.&lt;/p&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.axosoft.com/learning-git-pull-request/&quot;&gt;What is a pull request&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.github.com/en/free-pro-team@latest/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line&quot;&gt;adding an existing project to
+github&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/pl/pl-tool-git-github.html</link>
+    <guid>/pl/pl-tool-git-github</guid>
+    <pubDate>Fri, 05 May 2017 00:00:00 +0900</pubDate>
   </item>
 
   <item>
@@ -30046,6 +30331,102 @@ class.&lt;/li&gt;
   </item>
 
   <item>
+    <title>C++: Variable assignment and initialization</title>
+    <description>
+&lt;h4 id=&quot;definition-variable-assignment&quot;&gt;Definition: Variable Assignment&lt;/h4&gt;
+&lt;p&gt;After a variable has been defined, you can give it a value(in a separate
+statement) using the &lt;strong&gt;=&lt;/strong&gt; operator. This process is &lt;strong&gt;copy assignment&lt;/strong&gt; for
+short.&lt;/p&gt;
+
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;width&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The downside of assignment is that it requires at least two statements: one
+to define the variable, and one to assign the value.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;definition-initialization&quot;&gt;Definition: Initialization&lt;/h4&gt;
+&lt;p&gt;When a variable is defined, you can also provide an initial value for the
+variable at the same time. This is called initialization.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;The value used to initialize a variable is called an initializer.&lt;/li&gt;
+  &lt;li&gt;Initialization in C++ is surprisingly complex.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// no initializer;&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// initializer after equals sign.&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// initializer in parenthesis&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// initializer in braces.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.learncpp.com/cpp-tutorial/variable-assignment-and-initialization/&quot;&gt;Variable assignment and initialization&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/pl/pl-compile-c++-variable-assignment-and-initialization.html</link>
+    <guid>/pl/pl-compile-c++-variable-assignment-and-initialization</guid>
+    <pubDate>Wed, 08 Mar 2017 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>C++ Keyword: typedef</title>
+    <description>
+&lt;p&gt;&lt;strong&gt;Definition:&lt;/strong&gt; Typedef(which is short for “type definition”) is a keyword that
+creates an alias for an existing data type. To create such an alias, we use the
+&lt;em&gt;typedef&lt;/em&gt; keyword.&lt;/p&gt;
+
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;typedef&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;distance_t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// define distance_t as an alias for type double;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;By convention, typedef names typically use a “_t” suffix. This both
+indicates that the name is a typedef. and helps prvent from naming collisions
+with other types of identifiers.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;scope&quot;&gt;Scope&lt;/h4&gt;
+&lt;p&gt;Scope if a property of an identifier, typedef identifiers follow the same
+scoping rules as variable identifiers: a typedef defined inside a block has
+block scope and is usable only within that block. whereas a typedef defined in
+the global namespace has file scope and is usable to the end of the file.&lt;/p&gt;
+
+&lt;h4 id=&quot;why-bother&quot;&gt;Why bother?&lt;/h4&gt;
+&lt;p&gt;one purpose of having types is to make sure that variables are always used in the way that they were
+intended to be used.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;typedefs provide a level of abstraction away from the actual types being used, allowing you, the
+programmer, to focus on the concept of just what a variable should mean.&lt;/li&gt;
+  &lt;li&gt;This makes it easier to write clean code, but it also makes if far easier to modify your code&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;typedef&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ScoreByName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;program-once&quot;&gt;program once&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;it is header guard, this file will be included only once.&lt;/li&gt;
+  &lt;li&gt;try to avoid double including
+    &lt;ul&gt;
+      &lt;li&gt;header guard are little piece of codes protect the contents of a header from being copied more
+than once.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cprogramming.com/tutorial/typedef.html&quot;&gt;typedef&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/pl/pl-compile-c++-typedef.html</link>
+    <guid>/pl/pl-compile-c++-typedef</guid>
+    <pubDate>Wed, 08 Mar 2017 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
     <title>C++ Type: String literal</title>
     <description>
 &lt;h4 id=&quot;string-literal&quot;&gt;String literal&lt;/h4&gt;
@@ -30072,97 +30453,8 @@ them gives undefined behaviour.&lt;/p&gt;
 &lt;/ol&gt;
 
 </description>
-    <link>/pl/pl-compile-c++-type-string-literal.html</link>
-    <guid>/pl/pl-compile-c++-type-string-literal</guid>
-    <pubDate>Wed, 08 Mar 2017 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>C++: Memory Management</title>
-    <description>
-&lt;h4 id=&quot;h&quot;&gt;H&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;A resource is something that must be acquired and later released
-    &lt;ul&gt;
-      &lt;li&gt;Explicitly or implicitly&lt;/li&gt;
-      &lt;li&gt;Resource mangagement should not be manual, &lt;strong&gt;we don’t want leaks&lt;/strong&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;A resource should have an owner
-    &lt;ul&gt;
-      &lt;li&gt;usually a “handle” “handle” should present a well-defined and useful
-abstraction.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;raii&quot;&gt;RAII&lt;/h4&gt;
-
-&lt;h4 id=&quot;layout&quot;&gt;Layout&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Initilized data segment: all the global &amp;amp; static variables that were
-initialized to a non-zero values, and all constant data, are stored here.&lt;/li&gt;
-  &lt;li&gt;Uninitalized data segment(BSS): All the global and static variables that were
-either not initialized, or initialized to zero, are stored in this segment.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://isocpp.org/wiki/faq/freestore-mgmt&quot;&gt;ISO CPP memory management&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-    <link>/pl/pl-compile-c++-resource-management.html</link>
-    <guid>/pl/pl-compile-c++-resource-management</guid>
-    <pubDate>Wed, 08 Mar 2017 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>C++: Reference</title>
-    <description>
-&lt;p&gt;####&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;reference must be initilized.&lt;/li&gt;
-  &lt;li&gt;can only be refered to one value.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// illegal&lt;/span&gt;
-
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;increment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;increment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;increment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;increment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;1-left-reference&quot;&gt;1. Left reference&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;reference is used to diffence two situation copy and reference during
-function call&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;2-right-reference&quot;&gt;2. Right reference&lt;/h4&gt;
-
-&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;I just stay in Python, Java too long time, forget the original appearance of
-the world.&lt;/li&gt;
-  &lt;li&gt;Reference just make use of the hardware.&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    <link>/pl/pl-compile-c++-reference.html</link>
-    <guid>/pl/pl-compile-c++-reference</guid>
+    <link>/pl/pl-compile-c++-string-literal.html</link>
+    <guid>/pl/pl-compile-c++-string-literal</guid>
     <pubDate>Wed, 08 Mar 2017 00:00:00 +0900</pubDate>
   </item>
 
@@ -30267,6 +30559,136 @@ unspecified where it will be stored and should not be modified.&lt;/li&gt;
 </description>
     <link>/pl/pl-compile-c++-pointer.html</link>
     <guid>/pl/pl-compile-c++-pointer</guid>
+    <pubDate>Wed, 08 Mar 2017 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>C++: Data Type</title>
+    <description>
+&lt;p&gt;&lt;strong&gt;Definition:&lt;/strong&gt; Void is the easiest of the data types to explain. Basically,
+void means “no type”. Consequentially, variables can not be defined with a type
+of void.&lt;/p&gt;
+
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//won't work, variables can't be defined with a void type&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The function of void is the similar to zero.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;const和指针&quot;&gt;const和指针&lt;/h4&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;const double pi =3.14;  //pi 是常量，值不能改变
+double *ptr = &amp;amp;pi;      //错误: ptr是一个普通指针
+//但是却可以使用const指针指向非const对象
+double deta = 0.0;
+const double *ptr = &amp;amp;deta;
+//为什么呢？const指针的含义是不可以通过指针改变所指向对象的值，至于指向的
+//对象是不是const对象，它是不care的
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h5 id=&quot;reference-to-const&quot;&gt;reference to const&lt;/h5&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; const int ci = 1024;
+ int &amp;amp;r1 = ci;
+// 允许将一个const int&amp;amp; 绑定到一个普通的int对象上
+int i =42;
+const int &amp;amp;r2 = i;
+//为什么呢？指导思想和指针是一样的。const的引用的含义是不可以通过引用改变
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+</description>
+    <link>/pl/pl-compile-c++-data-type.html</link>
+    <guid>/pl/pl-compile-c++-data-type</guid>
+    <pubDate>Wed, 08 Mar 2017 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>C++: Memory Management</title>
+    <description>
+&lt;h4 id=&quot;h&quot;&gt;H&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;A resource is something that must be acquired and later released
+    &lt;ul&gt;
+      &lt;li&gt;Explicitly or implicitly&lt;/li&gt;
+      &lt;li&gt;Resource mangagement should not be manual, &lt;strong&gt;we don’t want leaks&lt;/strong&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;A resource should have an owner
+    &lt;ul&gt;
+      &lt;li&gt;usually a “handle” “handle” should present a well-defined and useful
+abstraction.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;raii&quot;&gt;RAII&lt;/h4&gt;
+
+&lt;h4 id=&quot;layout&quot;&gt;Layout&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Initilized data segment: all the global &amp;amp; static variables that were
+initialized to a non-zero values, and all constant data, are stored here.&lt;/li&gt;
+  &lt;li&gt;Uninitalized data segment(BSS): All the global and static variables that were
+either not initialized, or initialized to zero, are stored in this segment.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://isocpp.org/wiki/faq/freestore-mgmt&quot;&gt;ISO CPP memory management&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/pl/pl-compile-c++-resource-management.html</link>
+    <guid>/pl/pl-compile-c++-resource-management</guid>
+    <pubDate>Wed, 08 Mar 2017 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>C++: Reference</title>
+    <description>
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;reference must be initilized.&lt;/li&gt;
+  &lt;li&gt;can only be refered to one value.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// illegal&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;increment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;increment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;increment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;increment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;1-left-reference&quot;&gt;1. Left reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;reference is used to diffence two situation copy and reference during
+function call&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;2-right-reference&quot;&gt;2. Right reference&lt;/h4&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;I just stay in Python, Java too long time, forget the original appearance of
+the world.&lt;/li&gt;
+  &lt;li&gt;Reference just make use of the hardware.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/pl/pl-compile-c++-reference.html</link>
+    <guid>/pl/pl-compile-c++-reference</guid>
     <pubDate>Wed, 08 Mar 2017 00:00:00 +0900</pubDate>
   </item>
 
@@ -30736,42 +31158,6 @@ printf(&quot;%d&quot;, a);//a等于-1,说明我的机器把char当作signed char
 </description>
     <link>/pl/pl-compile-c++-keyword.html</link>
     <guid>/pl/pl-compile-c++-keyword</guid>
-    <pubDate>Wed, 08 Mar 2017 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>C++ Keyword: typedef</title>
-    <description>
-&lt;h4 id=&quot;why-bother&quot;&gt;Why bother?&lt;/h4&gt;
-&lt;p&gt;one purpose of having types is to make sure that variables are always used in the way that they were
-intended to be used.&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;typedefs provide a level of abstraction away from the actual types being used, allowing you, the
-programmer, to focus on the concept of just what a variable should mean.&lt;/li&gt;
-  &lt;li&gt;This makes it easier to write clean code, but it also makes if far easier to modify your code&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;typedef&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ScoreByName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;program-once&quot;&gt;program once&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;it is header guard, this file will be included only once.&lt;/li&gt;
-  &lt;li&gt;try to avoid double including
-    &lt;ul&gt;
-      &lt;li&gt;header guard are little piece of codes protect the contents of a header from being copied more
-than once.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;reference&quot;&gt;reference&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.cprogramming.com/tutorial/typedef.html&quot;&gt;typedef&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    <link>/pl/pl-compile-c++-keyword-typedef.html</link>
-    <guid>/pl/pl-compile-c++-keyword-typedef</guid>
     <pubDate>Wed, 08 Mar 2017 00:00:00 +0900</pubDate>
   </item>
 
@@ -32065,49 +32451,6 @@ cast-name是static, dynamic, const, reinterpret中的一种&lt;/type&gt;&lt;/p&g
   </item>
 
   <item>
-    <title>C++: Data Type</title>
-    <description>
-&lt;h3 id=&quot;intro&quot;&gt;intro&lt;/h3&gt;
-
-&lt;p&gt;数据的初始化分为两种: &lt;br /&gt; 
-直接初始化: 使用assignment operator&lt;br /&gt;&lt;br /&gt;
-复制初始化: 使用(),将初始化值放在圆括号内。&lt;br /&gt;&lt;br /&gt;
-对于类类型对象，直接初始化直接调用与实参匹配的构造函数。复制初始化
-调用复制构造函数，然后使用复制构造函数将临时对象复制到正在创建的对象。
-1 引用数据类型是一种复合类型，通过在变量名前添加&amp;amp;来定义。&lt;/p&gt;
-
-&lt;h4 id=&quot;void&quot;&gt;void*&lt;/h4&gt;
-
-&lt;p&gt;void* 一种特殊的指针类型，用于存放任意对象的地址。&lt;/p&gt;
-
-&lt;h4 id=&quot;const和指针&quot;&gt;const和指针&lt;/h4&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;const double pi =3.14;  //pi 是常量，值不能改变
-double *ptr = &amp;amp;pi;      //错误: ptr是一个普通指针
-//但是却可以使用const指针指向非const对象
-double deta = 0.0;
-const double *ptr = &amp;amp;deta;
-//为什么呢？const指针的含义是不可以通过指针改变所指向对象的值，至于指向的
-//对象是不是const对象，它是不care的
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h5 id=&quot;reference-to-const&quot;&gt;reference to const&lt;/h5&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; const int ci = 1024;
- int &amp;amp;r1 = ci;
-// 允许将一个const int&amp;amp; 绑定到一个普通的int对象上
-int i =42;
-const int &amp;amp;r2 = i;
-//为什么呢？指导思想和指针是一样的。const的引用的含义是不可以通过引用改变
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-</description>
-    <link>/pl/pl-compile-c++-data-type.html</link>
-    <guid>/pl/pl-compile-c++-data-type</guid>
-    <pubDate>Wed, 08 Mar 2017 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
     <title>C++: Array</title>
     <description>
 &lt;h4 id=&quot;1-definition&quot;&gt;1. Definition&lt;/h4&gt;
@@ -33320,42 +33663,6 @@ and vertical.&lt;/p&gt;
   </item>
 
   <item>
-    <title>C++:  Library</title>
-    <description>
-&lt;h4 id=&quot;1--a-extension-and-dylib-extension&quot;&gt;1.  .a extension and .dylib extension&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;.a extension means a static library.
-    &lt;ul&gt;
-      &lt;li&gt;Static libraries allow application to load code into its address space at compile time.&lt;/li&gt;
-      &lt;li&gt;This results in a larger size in disk and slower launch times.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;.dylib extension means dynamic library
-    &lt;ul&gt;
-      &lt;li&gt;Dynamic libraries allow an application to load code into its address space at runtime.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;2-what-is-package-relocatablility&quot;&gt;2. What is package relocatablility&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;package can be used across the filesystem without changes to itself or environment&lt;/li&gt;
-  &lt;li&gt;A file needs to know where it is, and the relative path from that to what it needs.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/40841670/what-is-the-difference-between-dylib-and-a-lib-in-ios&quot;&gt;static library and dynamic library&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://indico.cern.ch/event/848215/contributions/3591953/attachments/1923018/3181752/HSFPackagingRelocation.pdf&quot;&gt;library relocatablility&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/drbenmorgan/Resourceful&quot;&gt;library relocatablility github&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    <link>/pl/pl-compile-c++-library.html</link>
-    <guid>/pl/pl-compile-c++-library</guid>
-    <pubDate>Wed, 01 Mar 2017 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
     <title>C++ STL: Container</title>
     <description>
 &lt;h3 id=&quot;intro&quot;&gt;Intro&lt;/h3&gt;
@@ -33682,9 +33989,6 @@ b&amp;lt;&amp;lt;1,2,3,4;//赋值初始化
   <item>
     <title>C++ Library: Boost</title>
     <description>
-&lt;h3 id=&quot;介绍&quot;&gt;介绍&lt;/h3&gt;
-&lt;p&gt;boost是一个可移植的，提供源代码的C++库，由于其对跨平台的强调，对标准C++的强调，与编写平台无关。大部分的boost库功能使用只需要包括相应的头文件即可，少数如正则表达式库和文件系统库需要连接库。&lt;/p&gt;
-
 &lt;h3 id=&quot;文件系统库&quot;&gt;文件系统库&lt;/h3&gt;
 
 &lt;ul&gt;
@@ -33733,6 +34037,81 @@ target_link_libraries&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;demo &lt;span
 </description>
     <link>/pl/pl-compile-c++-library-boost.html</link>
     <guid>/pl/pl-compile-c++-library-boost</guid>
+    <pubDate>Wed, 01 Mar 2017 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>C++ Boost: Structure</title>
+    <description>
+&lt;ol&gt;
+  &lt;li&gt;Boost.Chrono&lt;/li&gt;
+  &lt;li&gt;Boost.Context&lt;/li&gt;
+  &lt;li&gt;Boost.FileSystem&lt;/li&gt;
+  &lt;li&gt;Boost.GraphParallel&lt;/li&gt;
+  &lt;li&gt;Boost.IOStreams&lt;/li&gt;
+  &lt;li&gt;Boost.Locale&lt;/li&gt;
+  &lt;li&gt;Boost.MPI&lt;/li&gt;
+  &lt;li&gt;Boost.ProgramOptions&lt;/li&gt;
+  &lt;li&gt;Boost.Python&lt;/li&gt;
+  &lt;li&gt;Boost.Regex&lt;/li&gt;
+  &lt;li&gt;Boost.Serialization&lt;/li&gt;
+  &lt;li&gt;Boost.Signals&lt;/li&gt;
+  &lt;li&gt;Boost.System&lt;/li&gt;
+  &lt;li&gt;Boost.Thread&lt;/li&gt;
+  &lt;li&gt;Boost.Timer&lt;/li&gt;
+  &lt;li&gt;Boost.Wave&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;A few libraries have optional separately-compiled binaries:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Boost.DateTime&lt;/li&gt;
+  &lt;li&gt;Boost.Graph&lt;/li&gt;
+  &lt;li&gt;Boost.Math&lt;/li&gt;
+  &lt;li&gt;Boost.Random&lt;/li&gt;
+  &lt;li&gt;Boost.Test&lt;/li&gt;
+  &lt;li&gt;Boost.Exception&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/pl/pl-compile-c++-library-boost-structure.html</link>
+    <guid>/pl/pl-compile-c++-library-boost-structure</guid>
+    <pubDate>Wed, 01 Mar 2017 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>C++:  Library</title>
+    <description>
+&lt;h4 id=&quot;1--a-extension-and-dylib-extension&quot;&gt;1.  .a extension and .dylib extension&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;.a extension means a static library.
+    &lt;ul&gt;
+      &lt;li&gt;Static libraries allow application to load code into its address space at compile time.&lt;/li&gt;
+      &lt;li&gt;This results in a larger size in disk and slower launch times.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;.dylib extension means dynamic library
+    &lt;ul&gt;
+      &lt;li&gt;Dynamic libraries allow an application to load code into its address space at runtime.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;2-what-is-package-relocatablility&quot;&gt;2. What is package relocatablility&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;package can be used across the filesystem without changes to itself or environment&lt;/li&gt;
+  &lt;li&gt;A file needs to know where it is, and the relative path from that to what it needs.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/40841670/what-is-the-difference-between-dylib-and-a-lib-in-ios&quot;&gt;static library and dynamic library&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://indico.cern.ch/event/848215/contributions/3591953/attachments/1923018/3181752/HSFPackagingRelocation.pdf&quot;&gt;library relocatablility&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/drbenmorgan/Resourceful&quot;&gt;library relocatablility github&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/pl/pl-compile-c++-library-summary.html</link>
+    <guid>/pl/pl-compile-c++-library-summary</guid>
     <pubDate>Wed, 01 Mar 2017 00:00:00 +0900</pubDate>
   </item>
 
@@ -41714,6 +42093,8 @@ is not paid in full.(at a much higher rate than most form of debt)&lt;/li&gt;
   &lt;li&gt;Multinomial&lt;/li&gt;
   &lt;li&gt;tenure&lt;/li&gt;
   &lt;li&gt;numerical&lt;/li&gt;
+  &lt;li&gt;synonym&lt;/li&gt;
+  &lt;li&gt;acronym&lt;/li&gt;
 &lt;/ol&gt;
 
 </description>
@@ -43233,6 +43614,12 @@ avenues.&lt;/li&gt;
 &lt;ol&gt;
   &lt;li&gt;All you need to do is mix it with water and apply it to the shrub&lt;/li&gt;
   &lt;li&gt;So peaceful, so protected from this crazy world.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;phrase-1&quot;&gt;Phrase&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Walk the dog.&lt;/li&gt;
+  &lt;li&gt;Walk you through all the steps programs.&lt;/li&gt;
 &lt;/ol&gt;
 </description>
     <link>/%E8%A8%80%E8%91%89/language-english-village-work.html</link>
@@ -45284,6 +45671,18 @@ outside the mailbox, staring at it.&lt;/li&gt;
   &lt;li&gt;You would, however, ask the doctor to “examine” you if you are sick with
 something, because it doesn’t make sense grammaticall to ask your doctor to
 “check” you&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;solve-vs-resolve&quot;&gt;Solve vs resolve&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;to solve: to find an answer to a problem&lt;/li&gt;
+  &lt;li&gt;to resolve: to bring an end to the problem&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;index-and-rank&quot;&gt;Index and rank&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;index is an alphabetical listing of items and their location while rank is a
+row of peopleor things organized in a grid pattern.&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;

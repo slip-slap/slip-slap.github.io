@@ -45,6 +45,16 @@ than examining that same thing.
    something, because it doesn't make sense grammaticall to ask your doctor to
    "check" you
 
+#### Solve vs resolve
+1. to solve: to find an answer to a problem
+2. to resolve: to bring an end to the problem
+
+
+#### Index and rank
+1. index is an alphabetical listing of items and their location while rank is a
+   row of peopleor things organized in a grid pattern.
+
+
 #### Reference
 1. [Feature and characteristics](https://www.differencebetween.com/difference-between-features-and-vs-characteristics/)
 2. [Grade and score](https://www.quora.com/What-are-the-differences-between-a-score-a-grade-a-mark-and-a-point)

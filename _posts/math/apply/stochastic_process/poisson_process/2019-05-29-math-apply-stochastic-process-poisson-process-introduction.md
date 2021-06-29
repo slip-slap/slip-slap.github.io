@@ -87,6 +87,10 @@ observed by time t is 1.
    of Calculus, to deal with probability problem.
 
 
+
+
+
+
 #### Reference
 1. [poisson distribution and poisson process](https://towardsdatascience.com/the-poisson-distribution-and-poisson-process-explained-4e2cb17d459)
 2. [poisson process](https://www.probabilitycourse.com/chapter11/11_1_2_basic_concepts_of_the_poisson_process.php)

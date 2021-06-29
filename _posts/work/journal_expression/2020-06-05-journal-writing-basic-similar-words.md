@@ -43,6 +43,12 @@ It is therefore wrong to use as well as simply in order to avoid a repetition of
   is to be emphasized.)
 
 
+#### Method and methodology
+1. Method is a simply a research tool, component of research.
+2. Methodology is the justification for using a particular research method.
+
+
+
 
 #### Reference
 1. [as well as and and](https://site.uit.no/english/grammar/aswellas/#:~:text=As%20well%20as%20is%20not%20a%20synonym%20for%20and&text=While%20and%20simply%20conjoins%20two,than%20the%20expression%20following%20it.)

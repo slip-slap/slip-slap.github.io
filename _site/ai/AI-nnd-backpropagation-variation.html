@@ -166,7 +166,7 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">1084</span>
+<span title="文章总数">1091</span>
 <ul>
 
 
@@ -1044,7 +1044,17 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#July-2019">2019 年 07 月 (11)</a></li>
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#July-2019">2019 年 07 月 (13)</a></li>
     
   
 
@@ -1155,7 +1165,17 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#May-2019">2019 年 05 月 (20)</a></li>
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#May-2019">2019 年 05 月 (22)</a></li>
     
   
 
@@ -1822,7 +1842,12 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#December-2018">2018 年 12 月 (74)</a></li>
+
+  
+  
+  
+  
+    <li><a href="/archive.html#December-2018">2018 年 12 月 (75)</a></li>
     
   
 
@@ -3934,7 +3959,17 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#March-2017">2017 年 03 月 (74)</a></li>
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2017">2017 年 03 月 (76)</a></li>
     
   
 
@@ -5741,17 +5776,17 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#life-ref">life (15)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (244)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (246)</a></li>
 
   <li><a href="/categories.html#Algorithm-ref">Algorithm (80)</a></li>
 
   <li><a href="/categories.html#CS-ref">CS (60)</a></li>
 
-  <li><a href="/categories.html#math-ref">math (350)</a></li>
+  <li><a href="/categories.html#math-ref">math (355)</a></li>
 
   <li><a href="/categories.html#Economy-ref">Economy (2)</a></li>
 
-  <li><a href="/categories.html#work-ref">work (54)</a></li>
+  <li><a href="/categories.html#work-ref">work (55)</a></li>
 
   <li><a href="/categories.html#AI-ref">AI (43)</a></li>
 
@@ -6173,7 +6208,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#apply-ref" style="font-size: 17.5pt; color: #111;">apply</a>
+    <a href="/tags.html#apply-ref" style="font-size: 17.5pt; color: #000;">apply</a>
   
     
     
@@ -6320,14 +6355,14 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#S.P.-ref" style="font-size: 10.5pt; color: #888;">S.P.</a>
+    <a href="/tags.html#S.P.-ref" style="font-size: 10.5pt; color: #777;">S.P.</a>
   
     
     
     
     
     
-    <a href="/tags.html#M.C.-ref" style="font-size: 9pt; color: #999;">M.C.</a>
+    <a href="/tags.html#M.C.-ref" style="font-size: 9.5pt; color: #999;">M.C.</a>
   
     
     
@@ -6624,6 +6659,82 @@ $(document).ready(function() {
   <li>Newton’s Method</li>
 </ol>
 
+<h4 id="simple-backpropagation">Simple Backpropagation</h4>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;cmath&gt;
+</span>
+
+<span class="kt">float</span> <span class="nf">linear_function</span><span class="p">(</span><span class="kt">float</span> <span class="n">input</span><span class="p">,</span> <span class="kt">float</span> <span class="n">para</span><span class="p">,</span> <span class="kt">float</span> <span class="n">bias</span><span class="p">){</span>
+	<span class="k">return</span> <span class="n">input</span><span class="o">*</span><span class="n">para</span> <span class="o">+</span> <span class="n">bias</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">float</span> <span class="nf">linear_function_derivative_para</span><span class="p">(</span><span class="kt">float</span> <span class="n">input</span><span class="p">){</span>
+	<span class="k">return</span> <span class="n">input</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">float</span> <span class="nf">linear_function_derivative_bias</span><span class="p">(){</span>
+	<span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">float</span> <span class="nf">sigmoid_active_function</span><span class="p">(</span><span class="kt">float</span> <span class="n">input</span><span class="p">){</span>
+	<span class="k">return</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span> <span class="n">std</span><span class="o">::</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">input</span> <span class="p">)</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">float</span> <span class="nf">sigmoid_derivative</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">){</span>
+	<span class="k">return</span> <span class="n">sigmoid_active_function</span><span class="p">(</span><span class="n">x</span> <span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">sigmoid_active_function</span><span class="p">(</span><span class="n">x</span><span class="p">));</span>
+<span class="p">}</span>
+
+<span class="kt">float</span> <span class="nf">square_derivative</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">,</span> <span class="kt">float</span> <span class="n">output</span><span class="p">){</span>
+	<span class="c1">// f(x) = (x - constant)^2</span>
+	<span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">output</span><span class="p">);</span>	
+<span class="p">}</span>
+
+<span class="kt">float</span> <span class="nf">evaluate_neural_network</span><span class="p">(</span><span class="kt">float</span> <span class="n">input</span><span class="p">,</span> <span class="kt">float</span> <span class="n">para</span><span class="p">,</span> <span class="kt">float</span> <span class="n">bias</span><span class="p">){</span>
+	<span class="k">return</span> <span class="n">sigmoid_active_function</span><span class="p">(</span><span class="n">linear_function</span><span class="p">(</span><span class="n">input</span><span class="p">,</span> <span class="n">para</span><span class="p">,</span> <span class="n">bias</span><span class="p">));</span>
+<span class="p">}</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="kt">float</span><span class="p">,</span> <span class="kt">float</span><span class="o">&gt;</span> <span class="n">calculate_gradient</span><span class="p">(</span><span class="kt">float</span> <span class="n">para</span><span class="p">,</span> <span class="kt">float</span> <span class="n">bias</span><span class="p">){</span>
+	<span class="kt">float</span> <span class="n">actual_input</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">};</span>
+	<span class="kt">float</span> <span class="n">actual_output</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mf">0.00033</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.9999665</span><span class="p">};</span>
+	<span class="kt">float</span> <span class="n">gradient_weight</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="kt">float</span> <span class="n">gradient_bias</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span> <span class="mi">3</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+		<span class="kt">float</span> <span class="n">prediction</span> <span class="o">=</span> <span class="n">evaluate_neural_network</span><span class="p">(</span><span class="n">actual_input</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">para</span><span class="p">,</span> <span class="n">bias</span><span class="p">);</span>
+		<span class="kt">float</span> <span class="n">gradient1</span> <span class="o">=</span> <span class="n">square_derivative</span><span class="p">(</span><span class="n">prediction</span><span class="p">,</span> <span class="n">actual_output</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span> 
+
+		<span class="kt">float</span> <span class="n">linear_output</span> <span class="o">=</span> <span class="n">linear_function</span><span class="p">(</span><span class="n">actual_input</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">para</span><span class="p">,</span> <span class="n">bias</span><span class="p">);</span>
+		<span class="kt">float</span> <span class="n">gradient2</span> <span class="o">=</span> <span class="n">sigmoid_derivative</span><span class="p">(</span><span class="n">linear_output</span><span class="p">);</span>
+
+		<span class="kt">float</span> <span class="n">gradient3_weight</span> <span class="o">=</span> <span class="n">linear_function_derivative_para</span><span class="p">(</span><span class="n">actual_input</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+		<span class="kt">float</span> <span class="n">gradient3_bias</span>  <span class="o">=</span> <span class="n">linear_function_derivative_bias</span><span class="p">();</span>
+
+		<span class="n">gradient_weight</span> <span class="o">=</span> <span class="n">gradient_weight</span> <span class="o">+</span> <span class="n">gradient1</span> <span class="o">*</span> <span class="n">gradient2</span> <span class="o">*</span> <span class="n">gradient3_weight</span><span class="p">;</span>
+		<span class="n">gradient_bias</span> <span class="o">=</span> <span class="n">gradient_bias</span> <span class="o">+</span> <span class="n">gradient1</span> <span class="o">*</span> <span class="n">gradient2</span> <span class="o">*</span> <span class="n">gradient3_bias</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="k">return</span> <span class="n">std</span><span class="o">::</span><span class="n">make_tuple</span><span class="p">(</span><span class="n">gradient_weight</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span> <span class="n">gradient_bias</span><span class="o">/</span><span class="mi">3</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">train_neural_network</span><span class="p">(){</span>
+	<span class="kt">float</span> <span class="n">para</span> <span class="o">=</span> <span class="o">-</span><span class="mi">3</span><span class="p">;</span>
+	<span class="kt">float</span> <span class="n">bias</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
+	<span class="kt">float</span> <span class="n">learning_rate</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span> <span class="mi">100000</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+		<span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="kt">float</span><span class="p">,</span> <span class="kt">float</span><span class="o">&gt;</span> <span class="n">gradient</span> <span class="o">=</span> <span class="n">calculate_gradient</span><span class="p">(</span><span class="n">para</span><span class="p">,</span> <span class="n">bias</span><span class="p">);</span>
+		<span class="n">para</span> <span class="o">=</span> <span class="n">para</span> <span class="o">-</span> <span class="n">learning_rate</span> <span class="o">*</span> <span class="n">std</span><span class="o">::</span><span class="n">get</span><span class="o">&lt;</span><span class="mi">0</span><span class="o">&gt;</span><span class="p">(</span><span class="n">gradient</span><span class="p">);</span>
+		<span class="n">bias</span> <span class="o">=</span> <span class="n">bias</span> <span class="o">-</span> <span class="n">learning_rate</span> <span class="o">*</span> <span class="n">std</span><span class="o">::</span><span class="n">get</span><span class="o">&lt;</span><span class="mi">1</span><span class="o">&gt;</span><span class="p">(</span><span class="n">gradient</span><span class="p">);</span>
+		<span class="c1">//float prediction1 = evaluate_neural_network(-1,para, bias);</span>
+		<span class="c1">//float prediction2 = evaluate_neural_network(0,para, bias);</span>
+		<span class="c1">//float prediction3 = evaluate_neural_network(1,para, bias);</span>
+		<span class="c1">//std::cout&lt;&lt;"prediction: 1 "&lt;&lt; prediction1&lt;&lt;std::endl;</span>
+		<span class="c1">//std::cout&lt;&lt;"prediction: 0 "&lt;&lt; prediction2&lt;&lt;std::endl;</span>
+		<span class="c1">//std::cout&lt;&lt;"prediction: -1 "&lt;&lt; prediction3&lt;&lt;std::endl;</span>
+		<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span>	<span class="s">"weight: "</span><span class="o">&lt;&lt;</span><span class="n">para</span><span class="o">&lt;&lt;</span><span class="s">" bias: "</span><span class="o">&lt;&lt;</span><span class="n">bias</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
 
       
       <footer>

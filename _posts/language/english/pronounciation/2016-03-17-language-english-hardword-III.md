@@ -48,4 +48,7 @@ tags: ["英語"]
 1. Multinomial
 2. tenure
 3. numerical
+4. synonym
+5. acronym
+
 

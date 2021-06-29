@@ -28,3 +28,17 @@ more abstract, insightful, and concise. And relative frequnecy and degree of
 belief are two implemenation of this definition from two different respective.  
 It needs insight to come up with something fundamental, which makes you a great
 mathematician.
+
+
+#### Probability theory vs statistical model
+Probabiliy theory is primarily concerned with calculating various quantities
+assosiated with a probabiliy model. This requires that we know what the correct
+probability model is.
+
+In application, this is often not the case, and the best we can say is that the
+correct probability measure to use in a set of possible probabiliy measures. We
+refer to this collection as the statistical model.
+- So, in a sense, our uncertainty has increased; not only do we have the
+  uncertainty associated with an outcome or response as described by a
+  probability measure, but now we are also uncertain about what the probability
+  measure is.
