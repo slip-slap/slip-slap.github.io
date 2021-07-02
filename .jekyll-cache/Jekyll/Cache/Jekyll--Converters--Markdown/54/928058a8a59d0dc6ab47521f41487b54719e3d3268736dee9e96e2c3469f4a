@@ -1,0 +1,34 @@
+I"s
+<h4 id="core">Core</h4>
+<p><em>git fetch</em> and <em>git merge</em> are all just operations related to commits.</p>
+
+<p><strong>Git fetch</strong> without arguments will update all the remote-tracking branches.
+execute <em>git log</em> command, the result is as follows:</p>
+
+<p><img align="left" src="/images/git/git-fetch-command.png" /></p>
+
+<p><strong>Git pull</strong> without arguments will in addition merge the remote master branch
+into the current branch.</p>
+
+<h4 id="pull-and-fetch">Pull and Fetch</h4>
+<p>In the default mode, <strong>git pull</strong> is shorthand for <strong>get fetch</strong> followed by
+**git merge FETCH_HEAD **</p>
+
+<ol>
+  <li>
+    <p>git fetch: is the command that tells you local git to retrieve the latest
+meta-data info from the original(yet doesn’t do any file transferring.) It’s
+more like just checking to see if there are nay changes available.</p>
+  </li>
+  <li>
+    <p>git pull: on the other hand does that and brings those changes from the
+reomote repository.</p>
+  </li>
+</ol>
+
+<h4 id="reference">Reference</h4>
+<ol>
+  <li><a href="https://stackoverflow.com/questions/292357/what-is-the-difference-between-git-pull-and-git-fetch">fetch and pull 1</a></li>
+  <li><a href="https://www.freecodecamp.org/news/git-fetch-vs-pull/#:~:text=git%20fetch%20is%20the%20command,changes%20from%20the%20remote%20repository.">fetch and pull 2</a></li>
+</ol>
+:ET
