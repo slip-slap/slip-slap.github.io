@@ -3,7 +3,7 @@
   <title>Just Do It</title>
   <link href="/atom.xml" rel="self"/>
   <link href=""/>
-  <updated>2021-07-01T12:06:04+09:00</updated>
+  <updated>2021-07-02T12:17:22+09:00</updated>
   <id></id>
   <author>
     <name>reed</name>
@@ -10622,9 +10622,9 @@ struct node * rr_rotati...</content>
 
   <entry>
     <title>Git:  Philosophy Behind the Scene</title>
-    <link href="/pl/pl-tool-git-philosophy.html"/>
+    <link href="/os/pl-tool-git-philosophy.html"/>
     <updated>2017-05-30T00:00:00+09:00</updated>
-    <id>/pl/pl-tool-git-philosophy</id>
+    <id>/os/pl-tool-git-philosophy</id>
     <content type="html">
 1. What is version control?
 
@@ -10653,27 +10653,46 @@ Reference
   </entry>
 
   <entry>
-    <title>Git: Basic Operation</title>
-    <link href="/pl/pl-tool-git-local.html"/>
+    <title>Git: The three trees</title>
+    <link href="/os/pl-tool-git-three-trees.html"/>
     <updated>2017-05-29T00:00:00+09:00</updated>
-    <id>/pl/pl-tool-git-local</id>
+    <id>/os/pl-tool-git-three-trees</id>
     <content type="html">
-1. Create a repository
+Model
+Git is all about the three trees: working directory, index, and HEAD, and all
+the operations is for them.
 
-1.1 git init
+
+
+1.3 git status
+Comparing these trees, and show their difference.
+
+1.4 git add
+Tracking new files, it essentially add this file to index tree.
+
 1.2 git clone
-This command is git clone and not “checkout”. This is an important
-distinction-instead of getting just a working copy, Git receives a full copy of
-nearly all data that the server has.
+This command is git clon...</content>
+  </entry>
 
-  Every version of every file for the history of the project...</content>
+  <entry>
+    <title>Git: stash</title>
+    <link href="/os/pl-tool-git-stash.html"/>
+    <updated>2017-05-29T00:00:00+09:00</updated>
+    <id>/os/pl-tool-git-stash</id>
+    <content type="html">
+This command saves your local modifications away and reverts the working
+directory to match the HEAD commit
+
+Example
+
+</content>
   </entry>
 
   <entry>
     <title>Git: Configuration and Internals</title>
-    <link href="/pl/pl-tool-git-configuration.html"/>
+    <link href="/os/pl-tool-git-configuration.html"/>
     <updated>2017-05-29T00:00:00+09:00</updated>
-    <id>/pl/pl-tool-git-configuration</id>
+    <id>/os/pl-tool-git-configuration</id>
     <content type="html">
 Just as other programs, the git configuration can be divided into three level.
 
@@ -10780,9 +10799,9 @@ Reference
 
   <entry>
     <title>Git: Ignore</title>
-    <link href="/pl/pl-tool-git-ignore.html"/>
+    <link href="/os/pl-tool-git-ignore.html"/>
     <updated>2017-05-18T00:00:00+09:00</updated>
-    <id>/pl/pl-tool-git-ignore</id>
+    <id>/os/pl-tool-git-ignore</id>
     <content type="html">
 Incentive?
 
@@ -10805,35 +10824,25 @@ Reference
   </entry>
 
   <entry>
-    <title>Git: Sharing</title>
-    <link href="/pl/pl-tool-git-remote.html"/>
-    <updated>2017-05-16T00:00:00+09:00</updated>
-    <id>/pl/pl-tool-git-remote</id>
+    <title>Git:  Rewriting commit</title>
+    <link href="/os/pl-tool-git-commit-rewriting.html"/>
+    <updated>2017-05-14T00:00:00+09:00</updated>
+    <id>/os/pl-tool-git-commit-rewriting</id>
     <content type="html">
-####
+2.1 Undoing of a commit
+One of the common undos takes place when you commit too early and possibly
+forget to add some files, or you mess up your commit message. If you want to
+redo that commit, make the additional changes you forgot, stage them, and commit
+again using the –amend option
 
-fetch
-pull
-push
-remote
-submodule
-
-
-Pull and Fetch
-In the default mode, git pull is shorthand for get fetch followed by
-**git merge FETCH_HEAD **
-
-
-  
-    git fetch: is the command that tells you local git to retrieve the latest
-meta-data info from the original(yet doesn’t do any file trans...</content>
+  When y...</content>
   </entry>
 
   <entry>
-    <title>Git:  Branching and Merging</title>
-    <link href="/pl/pl-tool-git-branch.html"/>
+    <title>Git:  alias of commit</title>
+    <link href="/os/pl-tool-git-commit-alias.html"/>
     <updated>2017-05-14T00:00:00+09:00</updated>
-    <id>/pl/pl-tool-git-branch</id>
+    <id>/os/pl-tool-git-commit-alias</id>
     <content type="html">
 Terminology: detached head:
 If you check the commit log, you will find something called “HEAD”.
@@ -10841,6 +10850,37 @@ If you check the commit log, you will find something called “HEAD”.
   This HEAD is a pointer which points to a commit.
   You can change any commit it points to in the history, but you can’t
 make a commit if this commit does at the end of a branch, and we refer to thi...</content>
+  </entry>
+
+  <entry>
+    <title>Git: advanced commit-rebase</title>
+    <link href="/os/pl-tool-git-advanced-commit-rebase.html"/>
+    <updated>2017-05-14T00:00:00+09:00</updated>
+    <id>/os/pl-tool-git-advanced-commit-rebase</id>
+    <content type="html">
+Why bother?
+What git rebase does is modify the record of commit history. In nature, it
+modify the commits.
+
+ 
+
+
+2.2 git  rebase
+This operation works by going to the common ancestor of the two branches(the one
+you’re on and the one you’re rebasing onto), getting the diff introduced by each
+commit...</content>
+  </entry>
+
+  <entry>
+    <title>Git: Advanced commit</title>
+    <link href="/os/pl-tool-git-advanced-commit-fast-forward.html"/>
+    <updated>2017-05-14T00:00:00+09:00</updated>
+    <id>/os/pl-tool-git-advanced-commit-fast-forward</id>
+    <content type="html">
+Fast forward commit vs. standard commit
+
+
+</content>
   </entry>
 
   <entry>
@@ -10915,14 +10955,42 @@ it heavily depends on the plugin and shortcut to improve the efficient.
   </entry>
 
   <entry>
-    <title>Git: Debugging</title>
-    <link href="/pl/pl-tool-git-debugging.html"/>
-    <updated>2017-05-10T00:00:00+09:00</updated>
-    <id>/pl/pl-tool-git-debugging</id>
+    <title>Git: transfer commit pull push fetch</title>
+    <link href="/os/pl-tool-git-transfer-commit-fetch-pull-push.html"/>
+    <updated>2017-05-11T00:00:00+09:00</updated>
+    <id>/os/pl-tool-git-transfer-commit-fetch-pull-push</id>
     <content type="html">
-bisect
-blameo
-grep
+Core
+git fetch and git merge are all just operations related to commits.
+
+Git fetch without arguments will update all the remote-tracking branches.
+execute git log command after git fetch, the result is as follows:
+
+
+
+Git pull without arguments will in addition merge the remote master branch
+int...</content>
+  </entry>
+
+  <entry>
+    <title>Git: bisect</title>
+    <link href="/os/pl-tool-git-bisect.html"/>
+    <updated>2017-05-10T00:00:00+09:00</updated>
+    <id>/os/pl-tool-git-bisect</id>
+    <content type="html">
+This command uses a binary search algorithm to find which commit in your
+project’s history introduced a bug.
+
+Galois
+
+  It looks intimidating, you find it is simple if you use it.
+  Actually this command just make use of commits to check your code.
+
+
+Reference
+
+  git bisect
+
 
 </content>
   </entry>
