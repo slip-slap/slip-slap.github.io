@@ -166,7 +166,7 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">1096</span>
+<span title="文章总数">1097</span>
 <ul>
 
 
@@ -3488,7 +3488,22 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#May-2017">2017 年 05 月 (29)</a></li>
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#May-2017">2017 年 05 月 (32)</a></li>
     
   
 
@@ -3984,17 +3999,7 @@ $(document).ready(function() {
   
   
   
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-    <li><a href="/archive.html#March-2017">2017 年 03 月 (76)</a></li>
+    <li><a href="/archive.html#March-2017">2017 年 03 月 (74)</a></li>
     
   
 
@@ -5801,9 +5806,9 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#life-ref">life (15)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (239)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (238)</a></li>
 
-  <li><a href="/categories.html#OS-ref">OS (12)</a></li>
+  <li><a href="/categories.html#OS-ref">OS (14)</a></li>
 
   <li><a href="/categories.html#Algorithm-ref">Algorithm (80)</a></li>
 
@@ -5983,7 +5988,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#toolkit-ref" style="font-size: 9.5pt; color: #888;">toolkit</a>
+    <a href="/tags.html#toolkit-ref" style="font-size: 10pt; color: #888;">toolkit</a>
   
     
     
@@ -6645,14 +6650,21 @@ $(document).ready(function() {
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-compile-c++-data-type.html" title="查看《C++: Data Type》">C++: Data Type</a></h2>
+      <h2><a href="/pl/pl-compile-c++-function-like-macro.html" title="查看《C++: Function-like Macros》">C++: Function-like Macros</a></h2>
     </header>
 
     <section>
       <p>
         
-Definition: Void is the easiest of the data types to explain. Basically,
-void means “no type”. Consequentially, variables can not be defined with ...
+#define PRINT(A) std::cout&lt;&lt;"this is output: "&lt;&lt;#A&lt;&lt;std::endl
+PRINT("hello");
+
+
+Reference
+
+  Function-like macros
+
+
       </p>
     </section>
 
@@ -6661,7 +6673,7 @@ void means “no type”. Consequentially, variables can not be defined with ...
         发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">08 March 2017</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-compile-c++-data-type.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-compile-c++-function-like-macro.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6699,23 +6711,18 @@ H
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-compile-c++-reference.html" title="查看《C++: Reference》">C++: Reference</a></h2>
+      <h2><a href="/pl/pl-compile-c++-keyword-new-memory-layout.html" title="查看《C++ Keyword: Memory Allocate and Free》">C++ Keyword: Memory Allocate and Free</a></h2>
     </header>
 
     <section>
       <p>
         
-####
-
-  reference must be initilized.
-  can only be refered to one value.
+Trick
 
 
-int &amp;b name; // illegal
-
-void increment(int&amp; number)
-{
-	number...
+  define
+    int var=8; //not dynamically allocated, you can't delete on it
+int *ptr = new int; // dynamically allocated, you can call del...
       </p>
     </section>
 
@@ -6724,7 +6731,7 @@ void increment(int&amp; number)
         发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">08 March 2017</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-compile-c++-reference.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-compile-c++-keyword-new-memory-layout.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6733,17 +6740,19 @@ void increment(int&amp; number)
   <article class="nested">
 
     <header>
-      <h2><a href="/pl/pl-compile-c++-package-manager.html" title="查看《C++: Package Manager》">C++: Package Manager</a></h2>
+      <h2><a href="/pl/pl-compile-c++-garbage-collection.html" title="查看《C++: Garbage Collection》">C++: Garbage Collection</a></h2>
     </header>
 
     <section>
       <p>
         
-Introduction
-Here is the list conan, cpm, dds, pacm, hunter, vcpkg
+Apply these general in order
 
-1.1 Brew
-the missing package manager for macos, 和centos下的yumhe ubuntu下的apt-get...
+
+  Store data in containers
+    
+      the semantics of the fundamental abstraction is reflected in the interface
+  ...
       </p>
     </section>
 
@@ -6752,7 +6761,91 @@ the missing package manager for macos, 和centos下的yumhe ubuntu下的apt-get.
         发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">08 March 2017</a>，
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-compile-c++-package-manager.html#disqus_thread" title="查看此文章的评论"></a>
+        评论：<a href="/pl/pl-compile-c++-garbage-collection.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-compile-c++-linker.html" title="查看《C++: Linker》">C++: Linker</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+1. Definition
+A linker is a computer program that takes one or more object files generated by
+a compiler and combines them into one, executable pr...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">08 March 2017</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-compile-c++-linker.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-compile-c++-algorithm.html" title="查看《C++: Algorithm》">C++: Algorithm</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+find
+find(beg, end, val)
+return 返回一个迭代器，指向输入序列中第一个等于val的元素。
+find_if(beg, end, unaryPred)
+return 返回一个迭代器， 指向第一个满足unaryPred的元素 
+parameter 因为谓词的参数为容器...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">08 March 2017</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-compile-c++-algorithm.html#disqus_thread" title="查看此文章的评论"></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/pl/pl-compile-c++-io.html" title="查看《C++: IO》">C++: IO</a></h2>
+    </header>
+
+    <section>
+      <p>
+        
+Stream
+
+  to access data that from outside of a program
+    
+      Inputstream: access data from outside of a program.
+      Outputstream: send da...
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">08 March 2017</a>，
+        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
+        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
+        评论：<a href="/pl/pl-compile-c++-io.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
@@ -6858,105 +6951,6 @@ bit operator
         作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
         类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
         评论：<a href="/pl/pl-compile-c++-operator.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-compile-c++-macro.html" title="查看《C++: Macro》">C++: Macro</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-#define PRINT(A) std::cout&lt;&lt;"this is output: "&lt;&lt;#A&lt;&lt;std::endl
-PRINT("hello");
-
-
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">08 March 2017</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-compile-c++-macro.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-compile-c++-lvalue-and-rvalue.html" title="查看《C++: Lvalues and Rvalues》">C++: Lvalues and Rvalues</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-####
-
-  2.rvalue: a temporary value
-
-
-###
-
-  you can’t take an lvalue reference form an rvalue.
-  you can take an lvalue reference form an lvalue....
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">08 March 2017</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-compile-c++-lvalue-and-rvalue.html#disqus_thread" title="查看此文章的评论"></a>
-      </p>
-    </footer>
-
-  </article>
-  
-  <article class="nested">
-
-    <header>
-      <h2><a href="/pl/pl-compile-c++-load-operator.html" title="查看《C++: Reload Operator》">C++: Reload Operator</a></h2>
-    </header>
-
-    <section>
-      <p>
-        
-重载的运算符不过是有特殊名字的函数
-重载下标运算符
-
-[]   下标操作符必须是成员函数
-
-
-重载输出运算符
-
-&lt;&lt;     不能是成员函数
-
-
-重载输入运算符
-
-&gt;&gt;
-参数1: 读取流的引用;
-参数2: 非常量对象的引用;
-std::istream &amp;ope...
-      </p>
-    </section>
-
-    <footer>
-      <p>
-        发表日期：<a href="/archive.html#March-2017" title="查看此月所有文章">08 March 2017</a>，
-        作者：<a href="mailto:zhanghy1012@gmail.com" title="向作者发送邮件">reed</a>，
-        类别：<a href="/categories.html#PL-ref" title="查看此类别下的所有文章">PL</a>，
-        评论：<a href="/pl/pl-compile-c++-load-operator.html#disqus_thread" title="查看此文章的评论"></a>
       </p>
     </footer>
 
