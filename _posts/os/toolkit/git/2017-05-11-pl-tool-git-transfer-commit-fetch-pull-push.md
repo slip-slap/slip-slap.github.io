@@ -9,6 +9,16 @@ tags: ["toolkit","git"]
 {% include JB/setup %}
 
 
+
+#### The output of git pull
+
+
+
+<img align="left" src="{{IMAGE_PATH}}/git/git-transfer-commit-pull-output.png" /> 
+
+
+
+
 #### Core
 *git fetch* and *git merge* are all just operations related to commits.
 
@@ -63,3 +73,4 @@ requirement for fast forward merge, it fails.
 #### Reference
 1. [fetch and pull 1](https://stackoverflow.com/questions/292357/what-is-the-difference-between-git-pull-and-git-fetch)
 2. [fetch and pull 2](https://www.freecodecamp.org/news/git-fetch-vs-pull/#:~:text=git%20fetch%20is%20the%20command,changes%20from%20the%20remote%20repository.) 
+3. [output of git pull](https://stackoverflow.com/questions/3340051/what-does-the-output-of-git-pull-actually-mean#:~:text=It%20finds%20all%20the%20objects,git%20book%20for%20more%20information.)

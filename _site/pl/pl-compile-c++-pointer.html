@@ -166,7 +166,7 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">1096</span>
+<span title="文章总数">1097</span>
 <ul>
 
 
@@ -3488,7 +3488,22 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#May-2017">2017 年 05 月 (29)</a></li>
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#May-2017">2017 年 05 月 (32)</a></li>
     
   
 
@@ -3984,17 +3999,7 @@ $(document).ready(function() {
   
   
   
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-    <li><a href="/archive.html#March-2017">2017 年 03 月 (76)</a></li>
+    <li><a href="/archive.html#March-2017">2017 年 03 月 (74)</a></li>
     
   
 
@@ -5801,9 +5806,9 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#life-ref">life (15)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (239)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (238)</a></li>
 
-  <li><a href="/categories.html#OS-ref">OS (12)</a></li>
+  <li><a href="/categories.html#OS-ref">OS (14)</a></li>
 
   <li><a href="/categories.html#Algorithm-ref">Algorithm (80)</a></li>
 
@@ -5983,7 +5988,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#toolkit-ref" style="font-size: 9.5pt; color: #888;">toolkit</a>
+    <a href="/tags.html#toolkit-ref" style="font-size: 10pt; color: #888;">toolkit</a>
   
     
     
@@ -6682,6 +6687,22 @@ $(document).ready(function() {
         </div>
       </div>
       
+<h4 id="pointer">Pointer</h4>
+<p>Pointer is just an allocated  address of an object, and it has  lifecycle:
+uninitialized pointer, dangling pointer.</p>
+
+<ul>
+  <li>uninitialized pointer is just as the name suggests which means the operation
+system hasn’t allocate an address to it.</li>
+  <li>Dangling pointer are pointers that do not point to a valid object of the
+appropriate type. Dangling pointers arise during object destruction, when an
+object that has an incoming reference is deleted or deallocated, without
+modifying the value of the pointer, so that the pointer still points to the
+memory location of the deallocated memory. The system may reallocated the
+previously freed memory, and if the program then dereference the dangling
+pointer, unpredictable behavior may occurs.</li>
+</ul>
+
 <h4 id="1-pointer-operation">1. Pointer Operation</h4>
 <ol>
   <li>p++</li>
@@ -6698,13 +6719,6 @@ $(document).ready(function() {
     <span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;*</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div></div>
-
-<h4 id="problems-using-pointers">Problems Using Pointers</h4>
-<ol>
-  <li>uninitialized ptr.</li>
-  <li>memory leak.</li>
-  <li>dangling pointer.</li>
-</ol>
 
 <h4 id="2-void-pointer">2. Void Pointer</h4>
 <p>A void pointer is a pointer that has no associated data type with it.</p>
@@ -6805,7 +6819,7 @@ unspecified where it will be stored and should not be modified.</li>
   
      
     	<li><a href="/categories.html#PL-ref">
-    		PL <span>239</span>
+    		PL <span>238</span>
     	</a></li>
     
   
@@ -6824,9 +6838,9 @@ unspecified where it will be stored and should not be modified.</li>
 
   
      
-    	<li><a href="/tags.html#c++-ref">c++ <span>61</span></a></li>
+    	<li><a href="/tags.html#c++-ref">c++ <span>59</span></a></li>
      
-    	<li><a href="/tags.html#compile-ref">compile <span>75</span></a></li>
+    	<li><a href="/tags.html#compile-ref">compile <span>73</span></a></li>
     
   
 
@@ -6839,11 +6853,11 @@ unspecified where it will be stored and should not be modified.</li>
   <div class="pagination">
     <ul>
       
-      <li class="prev"><a href="/pl/pl-compile-c++-data-type.html" title="C++: Data Type">&larr; 上一篇</a></li>
+      <li class="prev"><a href="/pl/pl-compile-c++-lvalue-and-rvalue.html" title="C++: Lvalues and Rvalues">&larr; 上一篇</a></li>
       
       <li><a href="/archive.html">文章列表</a></li>
       
-      <li class="next"><a href="/pl/pl-compile-c++-string-literal.html" title="C++ Type: String literal">下一篇 &rarr;</a></li>
+      <li class="next"><a href="/pl/pl-compile-c++-reference.html" title="C++: Reference">下一篇 &rarr;</a></li>
       
     </ul>
   </div>

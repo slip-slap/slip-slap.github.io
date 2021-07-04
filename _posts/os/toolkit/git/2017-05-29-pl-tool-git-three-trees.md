@@ -13,6 +13,17 @@ tags: ["toolkit","git"]
 Git is all about the three trees: working directory, index, and HEAD, and all
 the operations is for them.
 
+1. Working directory: The other trees store their content in an efficient but
+   inconvient manner, inside the *.git* folder.
+
+- The working directory unpacks them into actual files, which makes it much
+  easizer for you to edit them. Think of the working directory as a *sandbox*,
+  where you can try changes out before commiting them to you staging area.
+
+2. Index:  The *index* is your proposed next commit. We've also been referring to this
+  concept as Git's "Staging Area" as this is what Git looks at when you run git
+  commit.
+
 
 <img align="left" src="{{IMAGE_PATH}}/git/git-three-trees.png" /> 
 

@@ -3,7 +3,7 @@
   <title>Just Do It</title>
   <link href="/atom.xml" rel="self"/>
   <link href=""/>
-  <updated>2021-07-02T12:17:22+09:00</updated>
+  <updated>2021-07-04T15:25:16+09:00</updated>
   <id></id>
   <author>
     <name>reed</name>
@@ -10621,6 +10621,22 @@ struct node * rr_rotati...</content>
   </entry>
 
   <entry>
+    <title>Git: summary</title>
+    <link href="/os/pl-tool-git-summary.html"/>
+    <updated>2017-05-30T00:00:00+09:00</updated>
+    <id>/os/pl-tool-git-summary</id>
+    <content type="html">
+You need have a git soul when you use git.
+
+You are not in a default file system, it’s new, and complete different.
+
+You go to file source, copy it to the destination when you use the classic file
+system, in which the source is a directory.
+
+In git, you still go to the source when you want get s...</content>
+  </entry>
+
+  <entry>
     <title>Git:  Philosophy Behind the Scene</title>
     <link href="/os/pl-tool-git-philosophy.html"/>
     <updated>2017-05-30T00:00:00+09:00</updated>
@@ -10663,15 +10679,12 @@ Git is all about the three trees: working directory, index, and HEAD, and all
 the operations is for them.
 
 
+  Working directory: The other trees store their content in an efficient but
+inconvient manner, inside the .git folder.
 
-1.3 git status
-Comparing these trees, and show their difference.
 
-1.4 git add
-Tracking new files, it essentially add this file to index tree.
 
-1.2 git clone
-This command is git clon...</content>
+  The working directory unpacks them into actual files, whi...</content>
   </entry>
 
   <entry>
@@ -10960,6 +10973,10 @@ it heavily depends on the plugin and shortcut to improve the efficient.
     <updated>2017-05-11T00:00:00+09:00</updated>
     <id>/os/pl-tool-git-transfer-commit-fetch-pull-push</id>
     <content type="html">
+The output of git pull
+
+
+
 Core
 git fetch and git merge are all just operations related to commits.
 
@@ -10968,8 +10985,7 @@ execute git log command after git fetch, the result is as follows:
 
 
 
-Git pull without arguments will in addition merge the remote master branch
-int...</content>
+Git pull without arguments will in addition merge th...</content>
   </entry>
 
   <entry>
@@ -10996,6 +11012,23 @@ Reference
   </entry>
 
   <entry>
+    <title>Git: bare repository</title>
+    <link href="/os/pl-tool-git-bare-repository.html"/>
+    <updated>2017-05-10T00:00:00+09:00</updated>
+    <id>/os/pl-tool-git-bare-repository</id>
+    <content type="html">
+Example
+Make a bare repository by git init –bare command.
+
+  This repository only contains HEAD, without index and “working directory”.
+
+
+
+
+</content>
+  </entry>
+
+  <entry>
     <title>Git: Patching</title>
     <link href="/pl/pl-tool-git-patching.html"/>
     <updated>2017-05-09T00:00:00+09:00</updated>
@@ -11008,6 +11041,20 @@ cherry-pick
 diff
 rebase
 revert
+
+</content>
+  </entry>
+
+  <entry>
+    <title>Git: Hooks</title>
+    <link href="/pl/pl-tool-git-hooks.html"/>
+    <updated>2017-05-09T00:00:00+09:00</updated>
+    <id>/pl/pl-tool-git-hooks</id>
+    <content type="html">
+Reference
+
+  Bitbucket Git hooks
+
 
 </content>
   </entry>
@@ -12079,128 +12126,59 @@ functional programming techniques
   </entry>
 
   <entry>
-    <title>C++ 11: Smart Pointer</title>
-    <link href="/pl/pl-compile-c++-version-c++11-smart-pointer.html"/>
+    <title>C++ GP:  Template</title>
+    <link href="/pl/pl-compile-c++-gp-template.html"/>
     <updated>2017-03-08T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-version-c++11-smart-pointer</id>
+    <id>/pl/pl-compile-c++-gp-template</id>
     <content type="html">
-unique_ptr
+function and class template
 
-  smart_pointer is implemented to prevent memory leaks
-    
-      it overload -&amp;gt; operator and * opeator
-      wraps a raw pointer
-      unique_ptr is always the unique ownership of associated raw pointer.
-    
-  
-
-
-A
-
-  we can not create a unique_ptr through assignment, it will ca...</content>
-  </entry>
-
-  <entry>
-    <title>C++: Variable assignment and initialization</title>
-    <link href="/pl/pl-compile-c++-variable-assignment-and-initialization.html"/>
-    <updated>2017-03-08T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-variable-assignment-and-initialization</id>
-    <content type="html">
-Definition: Variable Assignment
-After a variable has been defined, you can give it a value(in a separate
-statement) using the = operator. This process is copy assignment for
-short.
-
-int width;
-width = 5;
-
-
-
-  The downside of assignment is that it requires at least two statements: one
-to define t...</content>
-  </entry>
-
-  <entry>
-    <title>C++ Keyword: typedef</title>
-    <link href="/pl/pl-compile-c++-typedef.html"/>
-    <updated>2017-03-08T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-typedef</id>
-    <content type="html">
-Definition: Typedef(which is short for “type definition”) is a keyword that
-creates an alias for an existing data type. To create such an alias, we use the
-typedef keyword.
-
-typedef double distance_t; // define distance_t as an alias for type double;
-
-
-
-  By convention, typedef names typically u...</content>
-  </entry>
-
-  <entry>
-    <title>C++ Type: String literal</title>
-    <link href="/pl/pl-compile-c++-string-literal.html"/>
-    <updated>2017-03-08T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-string-literal</id>
-    <content type="html">
-String literal
-The string literal is stored in the read-only part of memory by most of the compilers. The C
-and C++ standards say that string literals have static storage duration, any attempt at modifying
-them gives undefined behaviour.
-
-string and string literal
-
-  the c_str() function returns...</content>
-  </entry>
-
-  <entry>
-    <title>C++: Pointer</title>
-    <link href="/pl/pl-compile-c++-pointer.html"/>
-    <updated>2017-03-08T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-pointer</id>
-    <content type="html">
-1. Pointer Operation
-
-  p++
-  p–
-  p+1
+  they are convenient, but don’t use them, too difficult to debug.
+  It just use the compiler to generate code.
 
 
 #include &amp;lt;iostream&amp;gt;
-int main(){
-    int a[5]={1,2,2,1,9};
-    int *p = a;
-    std::cout&amp;lt;&amp;lt;p++&amp;lt;&amp;lt;std::endl;
-    std::cout&amp;lt;&amp;lt;a+1&amp;lt;&amp;lt;std::endl;
-    std::cout&amp;lt;&amp;lt;*(a+1)&amp;lt;&amp;lt;std::endl;
+#include &amp;lt;string&amp;gt;
+
+template&amp;lt;typename T&amp;gt;
+void my_print(T value)
+{
+	std::cout&amp;lt;&amp;lt;value&amp;lt;&amp;lt;&quot;\n&quot;;
 }
 
-
-Problems Using Pointers
-
-  uninitialize...</content>
+template&amp;l...</content>
   </entry>
 
   <entry>
-    <title>C++: Data Type</title>
-    <link href="/pl/pl-compile-c++-data-type.html"/>
+    <title>C++: #include and #define</title>
+    <link href="/pl/pl-compile-c++-hash-include-define.html"/>
     <updated>2017-03-08T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-data-type</id>
+    <id>/pl/pl-compile-c++-hash-include-define</id>
     <content type="html">
-Definition: Void is the easiest of the data types to explain. Basically,
-void means “no type”. Consequentially, variables can not be defined with a type
-of void.
-
-void value; //won't work, variables can't be defined with a void type
+Background
+In the C and C++ programming languages, an #include guard, sometimes called a
+macro guard, header guard of file guard.
 
 
+  Different naming conventions for the guard macro may be used by different programmers.
+  Other common forms of the above example include GRANDPARENT_INCLUDED(with...</content>
+  </entry>
 
-  The function of void is the similar to zero.
+  <entry>
+    <title>C++: Function-like Macros</title>
+    <link href="/pl/pl-compile-c++-function-like-macro.html"/>
+    <updated>2017-03-08T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-function-like-macro</id>
+    <content type="html">
+#define PRINT(A) std::cout&amp;lt;&amp;lt;&quot;this is output: &quot;&amp;lt;&amp;lt;#A&amp;lt;&amp;lt;std::endl
+PRINT(&quot;hello&quot;);
 
 
-const和指针
+Reference
 
-c...</content>
+  Function-like macros
+
+</content>
   </entry>
 
   <entry>
@@ -12223,64 +12201,111 @@ H
   </entry>
 
   <entry>
-    <title>C++: Reference</title>
-    <link href="/pl/pl-compile-c++-reference.html"/>
+    <title>C++ Keyword: Memory Allocate and Free</title>
+    <link href="/pl/pl-compile-c++-keyword-new-memory-layout.html"/>
     <updated>2017-03-08T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-reference</id>
+    <id>/pl/pl-compile-c++-keyword-new-memory-layout</id>
     <content type="html">
-####
-
-  reference must be initilized.
-  can only be refered to one value.
+Trick
 
 
-int &amp;amp;b name; // illegal
-
-void increment(int&amp;amp; number)
-{
-	number++;
-}
-
-void increment(int&amp;amp;&amp;amp; number)
-{
-	number++;
-}
-
-int main()
-{
-	int a = 3;
-	increment(a);
-	increment(4);
-}
-
-
-1. Left reference
-
-  reference ...</content>
+  define
+    int var=8; //not dynamically allocated, you can't delete on it
+int *ptr = new int; // dynamically allocated, you can call delete on it
+    
+  
+  delete
+    
+      The following did nothing at all, you didn’t free anything, as the pointer
+pointed at NULL.
+        ptr = NULL;
+...</content>
   </entry>
 
   <entry>
-    <title>C++: Package Manager</title>
-    <link href="/pl/pl-compile-c++-package-manager.html"/>
+    <title>C++: Garbage Collection</title>
+    <link href="/pl/pl-compile-c++-garbage-collection.html"/>
     <updated>2017-03-08T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-package-manager</id>
+    <id>/pl/pl-compile-c++-garbage-collection</id>
     <content type="html">
-Introduction
-Here is the list conan, cpm, dds, pacm, hunter, vcpkg
-
-1.1 Brew
-the missing package manager for macos, 和centos下的yumhe ubuntu下的apt-get类似
-
-  brew的安装目录在/usr/local/Cellar
-  配置目录在/usr/local/etc
-  命令目录在/usr/local/bin
+Apply these general in order
 
 
-使用
-
-  brew install pyenv
+  Store data in containers
     
-      it will put pyenv-related file und...</content>
+      the semantics of the fundamental abstraction is reflected in the interface
+    
+  
+  Manage all resources with resource handles
+    
+      RAII
+      Not just memory: all resources
+    
+  
+  Use “smart pointers”
+    
+      they...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Linker</title>
+    <link href="/pl/pl-compile-c++-linker.html"/>
+    <updated>2017-03-08T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-linker</id>
+    <content type="html">
+1. Definition
+A linker is a computer program that takes one or more object files generated by
+a compiler and combines them into one, executable program.
+
+
+
+
+  Linking has nothing to do with C or C++ specifically: compilers just generate the object files.
+the linker then takes them as input witho...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Algorithm</title>
+    <link href="/pl/pl-compile-c++-algorithm.html"/>
+    <updated>2017-03-08T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-algorithm</id>
+    <content type="html">
+find
+find(beg, end, val)
+return 返回一个迭代器，指向输入序列中第一个等于val的元素。
+find_if(beg, end, unaryPred)
+return 返回一个迭代器， 指向第一个满足unaryPred的元素 
+parameter 因为谓词的参数为容器的元素类型，因此，谓词不能是成员函数
+
+//谓词
+bool my_minus(int a){
+	    return (a-1) == 2;
+}
+//主调函数
+list&amp;lt;int&amp;gt; container;
+container.push_back(3);
+container.push_back...</content>
+  </entry>
+
+  <entry>
+    <title>C++: IO</title>
+    <link href="/pl/pl-compile-c++-io.html"/>
+    <updated>2017-03-08T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-io</id>
+    <content type="html">
+Stream
+
+  to access data that from outside of a program
+    
+      Inputstream: access data from outside of a program.
+      Outputstream: send data out of the program.
+    
+  
+  so we have IOS, which means:
+    
+      Inputstream: istream, ifstream
+      Outputstream: ostream, ofstream
+      ci...</content>
   </entry>
 
   <entry>
@@ -12367,40 +12392,29 @@ bit operator
   </entry>
 
   <entry>
-    <title>C++: Macro</title>
-    <link href="/pl/pl-compile-c++-macro.html"/>
+    <title>C++ Keyword: New</title>
+    <link href="/pl/pl-compile-c++-new-reload.html"/>
     <updated>2017-03-08T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-macro</id>
-    <content type="html">
-#define PRINT(A) std::cout&amp;lt;&amp;lt;&quot;this is output: &quot;&amp;lt;&amp;lt;#A&amp;lt;&amp;lt;std::endl
-PRINT(&quot;hello&quot;);
-
-</content>
-  </entry>
-
-  <entry>
-    <title>C++: Lvalues and Rvalues</title>
-    <link href="/pl/pl-compile-c++-lvalue-and-rvalue.html"/>
-    <updated>2017-03-08T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-lvalue-and-rvalue</id>
+    <id>/pl/pl-compile-c++-new-reload</id>
     <content type="html">
 ####
 
-  2.rvalue: a temporary value
+  the new operator calls a function to perform the requisite memory allocation,
+you can rewrite and overwrite this function to change its behavior.
 
 
-###
+Rule
 
-  you can’t take an lvalue reference form an rvalue.
-  you can take an lvalue reference form an lvalue.
+  If you apply address in heap, you must return
 
 
-####
+#include&amp;lt;iostream&amp;gt;
+#include &amp;lt;memory&amp;gt;
 
-  the keyword const will ask the compiler do something.
-    
-      compier will probably create like a temporary variable to storage
-      th...</content>
+class student
+{
+	private:
+		int* a...</content>
   </entry>
 
   <entry>
@@ -12432,247 +12446,6 @@ std::istream &amp;amp;operator&amp;gt;&amp;gt;(std::istream &amp;amp;is,Worker &
 //call
     Worker worker;
     ...</content>
-  </entry>
-
-  <entry>
-    <title>C++: Linker</title>
-    <link href="/pl/pl-compile-c++-linker.html"/>
-    <updated>2017-03-08T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-linker</id>
-    <content type="html">
-1. Definition
-A linker is a computer program that takes one or more object files generated by
-a compiler and combines them into one, executable program.
-
-
-
-
-  Linking has nothing to do with C or C++ specifically: compilers just generate the object files.
-the linker then takes them as input witho...</content>
-  </entry>
-
-  <entry>
-    <title>C++: Keywords</title>
-    <link href="/pl/pl-compile-c++-keyword.html"/>
-    <updated>2017-03-08T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-keyword</id>
-    <content type="html">
-explicit
-c++为只用传递一个参数的构造函数定义了一个隐士转换
-
-class Animal{
-	public:
-	    Animal(){
-        cout&amp;lt;&amp;lt;&quot;no parameter constructor&quot;&amp;lt;&amp;lt;endl;
-        }
-	    explicit Animal(int a){
-	    cout&amp;lt;&amp;lt;&quot;parameter constructor&quot;&amp;lt;&amp;lt;endl;
-	    }
-};
-Animal dog = 3         //报错，无法使用explicit Animal构造器
-
-
-class...</content>
-  </entry>
-
-  <entry>
-    <title>C++ Keyword: static</title>
-    <link href="/pl/pl-compile-c++-keyword-static.html"/>
-    <updated>2017-03-08T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-keyword-static</id>
-    <content type="html">
-I
-This keyword is related to the linker stage.
-
-  The linker is not going to look outside of the scope of this translation unit
-for that symbol definiton
-  kind of declaring a variable private in a class.
-
-
-2. function scope
-
-#include &amp;lt;iostream&amp;gt;
-void age()
-{
-	static int age = 18;
-	std::cou...</content>
-  </entry>
-
-  <entry>
-    <title>C++ Keyword: New</title>
-    <link href="/pl/pl-compile-c++-keyword-new-reload.html"/>
-    <updated>2017-03-08T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-keyword-new-reload</id>
-    <content type="html">
-####
-
-  the new operator calls a function to perform the requisite memory allocation,
-you can rewrite and overwrite this function to change its behavior.
-
-
-Rule
-
-  If you apply address in heap, you must return
-
-
-#include&amp;lt;iostream&amp;gt;
-#include &amp;lt;memory&amp;gt;
-
-class student
-{
-	private:
-		int* a...</content>
-  </entry>
-
-  <entry>
-    <title>C++ Keyword: Memory Allocate and Free</title>
-    <link href="/pl/pl-compile-c++-keyword-new-memory-layout.html"/>
-    <updated>2017-03-08T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-keyword-new-memory-layout</id>
-    <content type="html">
-Trick
-
-
-  define
-    int var=8; //not dynamically allocated, you can't delete on it
-int *ptr = new int; // dynamically allocated, you can call delete on it
-    
-  
-  delete
-    
-      The following did nothing at all, you didn’t free anything, as the pointer
-pointed at NULL.
-        ptr = NULL;
-...</content>
-  </entry>
-
-  <entry>
-    <title>C++: #include and #define</title>
-    <link href="/pl/pl-compile-c++-keyword-hash-define.html"/>
-    <updated>2017-03-08T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-keyword-hash-define</id>
-    <content type="html">
-Background
-In the C and C++ programming languages, an #include guard, sometimes called a
-macro guard, header guard of file guard.
-
-
-  Different naming conventions for the guard macro may be used by different programmers.
-  Other common forms of the above example include GRANDPARENT_INCLUDED(with...</content>
-  </entry>
-
-  <entry>
-    <title>C++ Keyword: Const</title>
-    <link href="/pl/pl-compile-c++-keyword-const.html"/>
-    <updated>2017-03-08T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-keyword-const</id>
-    <content type="html">
-I
-
-  const is a fake keyword, it’s just a promise.
-    
-      the qualifier const can be applied to the declaration of any variable to specify that its
-value will not be changed.
-      const keyword applies to whatever is immediately to its left.
-      if there is nothing to its left, it applies...</content>
-  </entry>
-
-  <entry>
-    <title>C++: Iterator</title>
-    <link href="/pl/pl-compile-c++-iterator.html"/>
-    <updated>2017-03-08T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-iterator</id>
-    <content type="html">
-intro
-
-谓词
-一元谓词: 接受单一参数unary predicate
-二元谓词: 接受两个参数binary predicate
-
-算法
-简单查找算法
-
-find
-find(beg, end, val)
-return 返回一个迭代器，指向输入序列中第一个等于val的元素。
-find_if(beg, end, unaryPred)
-return 返回一个迭代器， 指向第一个满足unaryPred的元素 
-parameter 因为谓词的参数为容器的元素类型，因此，谓词不能是成员函数
-
-//谓词
-bool my_minus(int a){
-	    return (a-1) == 2;
-...</content>
-  </entry>
-
-  <entry>
-    <title>C++: IO</title>
-    <link href="/pl/pl-compile-c++-io.html"/>
-    <updated>2017-03-08T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-io</id>
-    <content type="html">
-Stream
-
-  to access data that from outside of a program
-    
-      Inputstream: access data from outside of a program.
-      Outputstream: send data out of the program.
-    
-  
-  so we have IOS, which means:
-    
-      Inputstream: istream, ifstream
-      Outputstream: ostream, ofstream
-      ci...</content>
-  </entry>
-
-  <entry>
-    <title>C++ GP:  Template</title>
-    <link href="/pl/pl-compile-c++-gp-template.html"/>
-    <updated>2017-03-08T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-gp-template</id>
-    <content type="html">
-function and class template
-
-  they are convenient, but don’t use them, too difficult to debug.
-  It just use the compiler to generate code.
-
-
-#include &amp;lt;iostream&amp;gt;
-#include &amp;lt;string&amp;gt;
-
-template&amp;lt;typename T&amp;gt;
-void my_print(T value)
-{
-	std::cout&amp;lt;&amp;lt;value&amp;lt;&amp;lt;&quot;\n&quot;;
-}
-
-template&amp;l...</content>
-  </entry>
-
-  <entry>
-    <title>C++: Garbage Collection</title>
-    <link href="/pl/pl-compile-c++-garbage-collection.html"/>
-    <updated>2017-03-08T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-garbage-collection</id>
-    <content type="html">
-Apply these general in order
-
-
-  Store data in containers
-    
-      the semantics of the fundamental abstraction is reflected in the interface
-    
-  
-  Manage all resources with resource handles
-    
-      RAII
-      Not just memory: all resources
-    
-  
-  Use “smart pointers”
-    
-      they...</content>
   </entry>
 
   <entry>
@@ -12723,54 +12496,6 @@ point...</content>
   </entry>
 
   <entry>
-    <title>C++: For Statement</title>
-    <link href="/pl/pl-compile-c++-for-statement.html"/>
-    <updated>2017-03-08T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-for-statement</id>
-    <content type="html">
-Use Nested for Loop to Print
-
-#include &amp;lt;iostream&amp;gt;
-#include &amp;lt;string&amp;gt;
-
-
-void print_square()
-{
-	for(int i=0;i&amp;lt;4;i++)
-	{
-		int line_head = 4*i + 1;
-		for(int j=0;j&amp;lt;4;j++)
-		{
-			std::string s_number = std::to_string(line_head+j);
-			if(s_number.length() &amp;lt; 2)
-			{
-				s_number.ap...</content>
-  </entry>
-
-  <entry>
-    <title>C++: Expression</title>
-    <link href="/pl/pl-compile-c++-express.html"/>
-    <updated>2017-03-08T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-express</id>
-    <content type="html">
-类型转换
-隐士转换
-C++语言不会直接将两个不同类型的值相加，而是先根据类型转换的规则将运算的
-类型统一后，再求值。
-int ival = 3.541 + 3;
-// 1 3转换成double型，结果类型为double
-// 2 初始化过程中，初始化对象的类型无法改变，初始值被转化为该对象的类型
-
-
-显示转换
-表达式 cast-name(expression)
-type: 转换的目标类型，expression要转换的值
-cast-name是static, dynamic, const, reinterpret中的一种
-
-</content>
-  </entry>
-
-  <entry>
     <title>C++: Error</title>
     <link href="/pl/pl-compile-c++-error.html"/>
     <updated>2017-03-08T00:00:00+09:00</updated>
@@ -12786,43 +12511,217 @@ Type
   </entry>
 
   <entry>
-    <title>C++ Embedding: </title>
-    <link href="/pl/pl-compile-c++-embedding.html"/>
+    <title>C++ 11: Smart Pointer</title>
+    <link href="/pl/pl-compile-c++-version-c++11-smart-pointer.html"/>
     <updated>2017-03-08T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-embedding</id>
+    <id>/pl/pl-compile-c++-version-c++11-smart-pointer</id>
     <content type="html">
-Python Embedding
+unique_ptr
 
-
-  C++ Code
-
-
-#include &amp;lt;iostream&amp;gt;
-int main()
-{
-  system(&quot;python /Users/kismet/Documents/code/cpp_code/test.py&quot;);
-  return 0;
-}
-
-
-
-  Python Code
-    print(&quot;this is python script&quot;)
+  smart_pointer is implemented to prevent memory leaks
+    
+      it overload -&amp;gt; operator and * opeator
+      wraps a raw pointer
+      unique_ptr is always the unique ownership of associated raw pointer.
     
   
 
 
-Shell Embedding
+A
+
+  we can not create a unique_ptr through assignment, it will ca...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Variable assignment and initialization</title>
+    <link href="/pl/pl-compile-c++-variable-assignment-and-initialization.html"/>
+    <updated>2017-03-08T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-variable-assignment-and-initialization</id>
+    <content type="html">
+Definition: Variable Assignment
+After a variable has been defined, you can give it a value(in a separate
+statement) using the = operator. This process is copy assignment for
+short.
+
+int width;
+width = 5;
 
 
-  Shell Code
+
+  The downside of assignment is that it requires at least two statements: one
+to define t...</content>
+  </entry>
+
+  <entry>
+    <title>C++ Keyword: typedef</title>
+    <link href="/pl/pl-compile-c++-typedef.html"/>
+    <updated>2017-03-08T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-typedef</id>
+    <content type="html">
+Definition: Typedef(which is short for “type definition”) is a keyword that
+creates an alias for an existing data type. To create such an alias, we use the
+typedef keyword.
+
+typedef double distance_t; // define distance_t as an alias for type double;
 
 
-#!/bin/zsh
-echo &quot;hello&quot;
+
+  By convention, typedef names typically u...</content>
+  </entry>
+
+  <entry>
+    <title>C++ Type: String literal</title>
+    <link href="/pl/pl-compile-c++-string-literal.html"/>
+    <updated>2017-03-08T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-string-literal</id>
+    <content type="html">
+String literal
+The string literal is stored in the read-only part of memory by most of the compilers. The C
+and C++ standards say that string literals have static storage duration, any attempt at modifying
+them gives undefined behaviour.
+
+string and string literal
+
+  the c_str() function returns...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Reference</title>
+    <link href="/pl/pl-compile-c++-reference.html"/>
+    <updated>2017-03-08T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-reference</id>
+    <content type="html">
+####
+
+  reference must be initilized.
+  can only be refered to one value.
 
 
-</content>
+int &amp;amp;b name; // illegal
+
+void increment(int&amp;amp; number)
+{
+	number++;
+}
+
+void increment(int&amp;amp;&amp;amp; number)
+{
+	number++;
+}
+
+int main()
+{
+	int a = 3;
+	increment(a);
+	increment(4);
+}
+
+
+1. Left reference
+
+  reference ...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Pointer</title>
+    <link href="/pl/pl-compile-c++-pointer.html"/>
+    <updated>2017-03-08T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-pointer</id>
+    <content type="html">
+Pointer
+Pointer is just an allocated  address of an object, and it has  lifecycle:
+uninitialized pointer, dangling pointer.
+
+
+  uninitialized pointer is just as the name suggests which means the operation
+system hasn’t allocate an address to it.
+  Dangling pointer are pointers that do not point ...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Lvalues and Rvalues</title>
+    <link href="/pl/pl-compile-c++-lvalue-and-rvalue.html"/>
+    <updated>2017-03-08T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-lvalue-and-rvalue</id>
+    <content type="html">
+####
+
+  2.rvalue: a temporary value
+
+
+###
+
+  you can’t take an lvalue reference form an rvalue.
+  you can take an lvalue reference form an lvalue.
+
+
+####
+
+  the keyword const will ask the compiler do something.
+    
+      compier will probably create like a temporary variable to storage
+      th...</content>
+  </entry>
+
+  <entry>
+    <title>C++ Keyword: static</title>
+    <link href="/pl/pl-compile-c++-keyword-static.html"/>
+    <updated>2017-03-08T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-keyword-static</id>
+    <content type="html">
+I
+This keyword is related to the linker stage.
+
+  The linker is not going to look outside of the scope of this translation unit
+for that symbol definiton
+  kind of declaring a variable private in a class.
+
+
+2. function scope
+
+#include &amp;lt;iostream&amp;gt;
+void age()
+{
+	static int age = 18;
+	std::cou...</content>
+  </entry>
+
+  <entry>
+    <title>C++ Keyword: Const</title>
+    <link href="/pl/pl-compile-c++-keyword-const.html"/>
+    <updated>2017-03-08T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-keyword-const</id>
+    <content type="html">
+I
+
+  const is a fake keyword, it’s just a promise.
+    
+      the qualifier const can be applied to the declaration of any variable to specify that its
+value will not be changed.
+      const keyword applies to whatever is immediately to its left.
+      if there is nothing to its left, it applies...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Data Type</title>
+    <link href="/pl/pl-compile-c++-data-type.html"/>
+    <updated>2017-03-08T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-data-type</id>
+    <content type="html">
+Definition: Void is the easiest of the data types to explain. Basically,
+void means “no type”. Consequentially, variables can not be defined with a type
+of void.
+
+void value; //won't work, variables can't be defined with a void type
+
+
+
+  The function of void is the similar to zero.
+
+
+const和指针
+
+c...</content>
   </entry>
 
   <entry>
@@ -12843,6 +12742,78 @@ int main()
 	double d_arr[4]={1,2,3,4};
 
 	std::cout&amp;lt;&amp;lt;&quot;ad...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Keywords</title>
+    <link href="/pl/pl-compile-c++-keyword.html"/>
+    <updated>2017-03-08T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-keyword</id>
+    <content type="html">
+explicit
+c++为只用传递一个参数的构造函数定义了一个隐士转换
+
+class Animal{
+	public:
+	    Animal(){
+        cout&amp;lt;&amp;lt;&quot;no parameter constructor&quot;&amp;lt;&amp;lt;endl;
+        }
+	    explicit Animal(int a){
+	    cout&amp;lt;&amp;lt;&quot;parameter constructor&quot;&amp;lt;&amp;lt;endl;
+	    }
+};
+Animal dog = 3         //报错，无法使用explicit Animal构造器
+
+
+class...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Package Manager</title>
+    <link href="/pl/pl-compile-c++-package-manager.html"/>
+    <updated>2017-03-08T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-package-manager</id>
+    <content type="html">
+Introduction
+Here is the list conan, cpm, dds, pacm, hunter, vcpkg
+
+1.1 Brew
+the missing package manager for macos, 和centos下的yumhe ubuntu下的apt-get类似
+
+  brew的安装目录在/usr/local/Cellar
+  配置目录在/usr/local/etc
+  命令目录在/usr/local/bin
+
+
+使用
+
+  brew install pyenv
+    
+      it will put pyenv-related file und...</content>
+  </entry>
+
+  <entry>
+    <title>C++: For Statement</title>
+    <link href="/pl/pl-compile-c++-for-statement.html"/>
+    <updated>2017-03-08T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-for-statement</id>
+    <content type="html">
+Use Nested for Loop to Print
+#include &amp;lt;iostream&amp;gt;
+#include &amp;lt;string&amp;gt;
+
+
+void print_square()
+{
+	for(int i=0;i&amp;lt;4;i++)
+	{
+		int line_head = 4*i + 1;
+		for(int j=0;j&amp;lt;4;j++)
+		{
+			std::string s_number = std::to_string(line_head+j);
+			if(s_number.length() &amp;lt; 2)
+			{
+				s_number.app...</content>
   </entry>
 
   <entry>

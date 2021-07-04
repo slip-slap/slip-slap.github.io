@@ -8,6 +8,9 @@ tags: ["toolkit","git"]
 ---
 {% include JB/setup %}
 
+
+
+
 **Terminology: detached head**:
 If you check the commit log, you will find something called "HEAD".
 - This *HEAD* is a pointer which points to a commit.
