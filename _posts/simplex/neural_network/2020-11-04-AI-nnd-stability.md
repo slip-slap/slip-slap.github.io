@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "N.N.D.: Stability"
+title: "Neural Network: Stability"
 keywords: []
 description: 
-category: "AI"
-tags: ["learning","N.N.D."]
+category: "Simplex"
+tags: []
 ---
 {% include JB/setup %}
 

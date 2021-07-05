@@ -2,8 +2,8 @@
 layout: post
 title: "Boosting Algorithm"
 keywords: ["AdaBoost", "GB"]
-description: "neural network"
-category: "AI"
+description: ""
+category: "Simplex"
 tags: ["model" ]
 ---
 {% include JB/setup %}

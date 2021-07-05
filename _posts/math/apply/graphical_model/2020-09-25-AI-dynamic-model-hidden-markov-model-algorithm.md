@@ -45,7 +45,6 @@ A first-order hidden Markov model instantiates two simpliying assumptions.
 
 
 
-
 ### Reference
 1. [HHM](http://www.blackarbs.com/blog/introduction-hidden-markov-models-python-networkx-sklearn/2/9/2017)
 2. [stanford Hiddern Markov Model](https://web.stanford.edu/~jurafsky/slp3/A.pdf)
