@@ -1,0 +1,34 @@
+I"�
+<p><strong>Definition:</strong> Void is the easiest of the data types to explain. Basically,
+void means “no type”. Consequentially, variables can not be defined with a type
+of void.</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="n">value</span><span class="p">;</span> <span class="c1">//won't work, variables can't be defined with a void type</span>
+</code></pre></div></div>
+
+<ol>
+  <li>The function of void is the similar to zero.</li>
+</ol>
+
+<h4 id="const和指针">const和指针</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const double pi =3.14;  //pi 是常量，值不能改变
+double *ptr = &amp;pi;      //错误: ptr是一个普通指针
+//但是却可以使用const指针指向非const对象
+double deta = 0.0;
+const double *ptr = &amp;deta;
+//为什么呢？const指针的含义是不可以通过指针改变所指向对象的值，至于指向的
+//对象是不是const对象，它是不care的
+</code></pre></div></div>
+
+<h5 id="reference-to-const">reference to const</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> const int ci = 1024;
+ int &amp;r1 = ci;
+// 允许将一个const int&amp; 绑定到一个普通的int对象上
+int i =42;
+const int &amp;r2 = i;
+//为什么呢？指导思想和指针是一样的。const的引用的含义是不可以通过引用改变
+</code></pre></div></div>
+
+:ET

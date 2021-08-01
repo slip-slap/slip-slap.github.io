@@ -1,0 +1,22 @@
+I"ò
+<h4 id="what-the-crap-of-openml">what the crap of openml</h4>
+
+<p>An automated machine learning environment.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">openml</span>
+
+<span class="c1"># obtain dataset list
+</span><span class="n">dataset_list</span> <span class="o">=</span> <span class="n">openml</span><span class="p">.</span><span class="n">datasets</span><span class="p">.</span><span class="n">list_datasets</span><span class="p">()</span>
+<span class="n">dataset_list_pd</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">dataset_list</span><span class="p">,</span><span class="n">orient</span><span class="o">=</span><span class="s">'index'</span><span class="p">)</span>
+
+<span class="c1"># get the mnist dataset ID
+</span><span class="n">dataset_list_pd</span><span class="p">[</span><span class="n">dataset_list_pd</span><span class="p">.</span><span class="n">name</span><span class="p">.</span><span class="nb">str</span><span class="p">.</span><span class="n">contains</span><span class="p">(</span><span class="s">'mnist'</span><span class="p">)]</span>
+<span class="n">mnist_dataset</span> <span class="o">=</span> <span class="n">openml</span><span class="p">.</span><span class="n">datasets</span><span class="p">.</span><span class="n">get_dataset</span><span class="p">(</span><span class="mi">554</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h4 id="reference">Reference</h4>
+<ol>
+  <li><a href="https://openml.github.io/OpenML/Python-examples/">OpenML tutorial</a></li>
+</ol>
+
+:ET

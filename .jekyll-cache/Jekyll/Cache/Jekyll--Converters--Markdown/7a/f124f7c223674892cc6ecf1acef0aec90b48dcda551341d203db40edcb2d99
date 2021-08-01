@@ -1,0 +1,57 @@
+I"i
+<h4 id="attention">Attention</h4>
+<ol>
+  <li>if std::find can’t find the specified element, it will return the last pointer.</li>
+</ol>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Product</span><span class="p">{</span>
+	<span class="nl">public:</span>
+		<span class="n">Product</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">id</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">)</span><span class="o">:</span><span class="n">m_id</span><span class="p">(</span><span class="n">id</span><span class="p">),</span><span class="n">m_product_name</span><span class="p">(</span><span class="n">name</span><span class="p">){</span>
+		<span class="p">}</span>
+
+	<span class="k">friend</span> <span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">ostream</span><span class="p">,</span> <span class="k">const</span> <span class="n">Product</span><span class="o">&amp;</span> <span class="n">product</span><span class="p">){</span>
+		<span class="n">ostream</span><span class="o">&lt;&lt;</span><span class="s">"id: "</span><span class="o">&lt;&lt;</span><span class="n">product</span><span class="p">.</span><span class="n">m_id</span><span class="o">&lt;&lt;</span><span class="s">",  name: "</span><span class="o">&lt;&lt;</span><span class="n">product</span><span class="p">.</span><span class="n">m_product_name</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+		<span class="k">return</span> <span class="n">ostream</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="k">friend</span> <span class="kt">bool</span> <span class="k">operator</span><span class="o">==</span><span class="p">(</span><span class="k">const</span> <span class="n">Product</span><span class="o">&amp;</span> <span class="n">prod1</span><span class="p">,</span> <span class="k">const</span> <span class="n">Product</span><span class="o">&amp;</span> <span class="n">prod2</span><span class="p">){</span>
+		<span class="k">return</span> <span class="n">prod1</span><span class="p">.</span><span class="n">m_id</span> <span class="o">==</span> <span class="n">prod2</span><span class="p">.</span><span class="n">m_id</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="nl">private:</span>
+		<span class="n">std</span><span class="o">::</span><span class="n">string</span>  <span class="n">m_id</span><span class="p">;</span>
+		<span class="n">std</span><span class="o">::</span><span class="n">string</span>  <span class="n">m_product_name</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+	<span class="n">Product</span> <span class="n">prod1</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="s">"001"</span><span class="p">),</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="s">"にゃにゃ"</span><span class="p">));</span>
+	<span class="n">Product</span> <span class="n">prod2</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="s">"002"</span><span class="p">),</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="s">"トトロ"</span><span class="p">));</span>
+	<span class="n">Product</span> <span class="n">prod3</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="s">"003"</span><span class="p">),</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="s">"コナン"</span><span class="p">));</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">list</span><span class="o">&lt;</span><span class="n">Product</span><span class="o">&gt;</span> <span class="n">prod_container</span><span class="p">;</span>
+	<span class="n">prod_container</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">prod1</span><span class="p">);</span>
+	<span class="n">prod_container</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">prod2</span><span class="p">);</span>
+	<span class="n">prod_container</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">prod3</span><span class="p">);</span>
+
+	<span class="n">std</span><span class="o">::</span><span class="n">list</span><span class="o">&lt;</span><span class="n">Product</span><span class="o">&gt;::</span><span class="n">iterator</span> <span class="n">itr</span><span class="o">=</span><span class="n">std</span><span class="o">::</span><span class="n">find</span><span class="p">(</span><span class="n">prod_container</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">prod_container</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="n">prod2</span><span class="p">);</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;*</span><span class="n">itr</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h4 id="error">Error</h4>
+<ol>
+  <li>pointer being freed was not allocated.</li>
+</ol>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;list&gt;
+</span><span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">list</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">queue</span><span class="p">;</span>
+	<span class="n">queue</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h4 id="reference">reference</h4>
+<ol>
+  <li><a href="https://stackoverflow.com/questions/4604136/how-to-search-for-an-element-in-an-stl-list">std::find</a></li>
+</ol>
+
+:ET

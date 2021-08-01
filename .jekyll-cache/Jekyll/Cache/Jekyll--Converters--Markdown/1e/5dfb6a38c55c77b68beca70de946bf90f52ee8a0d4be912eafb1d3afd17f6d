@@ -1,0 +1,24 @@
+I"D
+<h4 id="1-primitives">1: Primitives</h4>
+<p>In order for OpenGl to know what to make of your collection of coordinates and color values OpenGL
+requires you to hint what kind of render types you want to form with the data.</p>
+<ol>
+  <li>Do we want the data rendered as a collection of points, a collection of triangles or perhaps just
+one long line.</li>
+  <li>Those hints are called primitives and are given to OpenGL while calling any of the drawing
+commands.</li>
+  <li>Some of these hints are GL_POINTS, GL_TRIANGLES and GL_LINE_STRIP</li>
+</ol>
+
+<h4 id="2-fragment">2: Fragment</h4>
+<ol>
+  <li>A fragment in OpenGl is all the data required for OpenGL to render a single pixel.</li>
+</ol>
+
+<h4 id="3-normalized-device-coordinatesndc">3: Normalized Device Coordinates(NDC)</h4>
+<p>Once your vertex coordinates have been processed in the vertex shader, they should be in normalized
+device coordinates which is a small space where the x, y and z values vary from -1.0 to 1.0. Any
+coordinates the fall outside this range will be discarded/clipped and won’t be visible on your
+screen.</p>
+
+:ET

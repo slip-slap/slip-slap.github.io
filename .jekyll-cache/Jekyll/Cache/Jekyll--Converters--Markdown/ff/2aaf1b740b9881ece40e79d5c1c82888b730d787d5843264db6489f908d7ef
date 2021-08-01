@@ -1,0 +1,51 @@
+I"‹
+<h4 id="question-search-path">Question: search path?</h4>
+<p>Before use this command, I get a couple of questions?</p>
+<ol>
+  <li>What is the search path?
+    <ul>
+      <li>CMake provide default search path, one of them is <strong>CMAKE_SYSTEM_PREFIX_PATH</strong>.</li>
+      <li>you can print this variable in the <strong>CMakelists.txt</strong></li>
+      <li>you can add another path into this <strong>CMAKE_PREFIX_PATH</strong></li>
+    </ul>
+  </li>
+</ol>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">cmake</span> <span class="o">-</span><span class="n">DCMAKE_PREFIX_PATH</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">qt</span><span class="o">/</span><span class="mf">6.0.2</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">cmake</span><span class="o">/</span> <span class="p">..</span><span class="o">/</span>
+<span class="n">list</span><span class="p">(</span><span class="n">APPEND</span> <span class="n">CMAKE_PREFIX_PATH</span> <span class="s">"/tmp/test"</span> <span class="s">"/another/library/path"</span><span class="p">)</span>
+<span class="n">message</span><span class="p">(</span><span class="s">"system prefix path: "</span> <span class="err">$</span><span class="p">{</span><span class="n">CMAKE_SYSTEM_PREFIX_PATH</span><span class="p">})</span>
+<span class="cm">/*
+system prefix path: /opt/local/usr//usr/local/usr/X11R6/usr/pkg/opt/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr
+*/</span>
+</code></pre></div></div>
+
+<ol>
+  <li>Does system environment variable evolved during this search?</li>
+  <li>If the answer is Yes, what are they?</li>
+</ol>
+
+<h4 id="a">A</h4>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># find_library</span>
+<span class="c"># find_path</span>
+<span class="c"># find_program</span>
+<span class="c"># find_package</span>
+</code></pre></div></div>
+
+<h4 id="qt-library">Qt library</h4>
+<p>Qt has many components, if you wnat to know how to use one module in CMake.</p>
+<ul>
+  <li>Step 1: go to its official website</li>
+  <li>Step 2: search that module</li>
+  <li>Step 3: you can find the usage at the page end.</li>
+</ul>
+
+<p><img src="/images/pl-script-cmake-system-inspection-qt-cmake.png" height="" width="" /></p>
+
+<h4 id="reference">Reference</h4>
+<ol>
+  <li><a href="https://medium.com/@onur.dundar1/cmake-tutorial-585dd180109b">cmake find package</a></li>
+  <li><a href="https://cmake.org/cmake/help/v3.20/command/find_package.html">cmake official</a></li>
+  <li><a href="https://stackoverflow.com/questions/25395880/cmake-set-default-search-path">append search path to CMAKE_PREFIX_PATH</a></li>
+</ol>
+:ET

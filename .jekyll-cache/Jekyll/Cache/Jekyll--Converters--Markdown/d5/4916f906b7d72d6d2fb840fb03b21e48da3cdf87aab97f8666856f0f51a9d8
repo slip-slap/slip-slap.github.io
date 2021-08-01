@@ -1,0 +1,24 @@
+I"�<h3 id="intro">intro</h3>
+<p>os: this module provides a portable way of using operating system dependent
+functionality</p>
+<h3 id="功能">功能</h3>
+<hr />
+
+<h4 id="常用功能">常用功能</h4>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">os</span>
+<span class="c1"># 清屏
+</span><span class="n">os</span><span class="p">.</span><span class="n">system</span><span class="p">(</span><span class="s">'clear'</span><span class="p">)</span>
+<span class="c1"># 获得当前文件名
+</span><span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">__file__</span><span class="p">)</span>
+<span class="c1"># 获得当前文件所在位置的目录名
+</span><span class="n">os</span><span class="p">.</span><span class="n">getcwd</span><span class="p">()</span>         
+</code></pre></div></div>
+<hr />
+
+<h4 id="目录操作">目录操作</h4>
+<ul>
+  <li>os.walk(top，topdown)</li>
+  <li>top根目录下的每一个文件夹包括他自己，产生三元组(dirpath,dirnames,filenames),分别为文件夹路径，文件夹名字，文件名</li>
+  <li>topdown –可选，默认情况下，一个目录的三元组将比任何子文件夹的三元组先产生，也即先遍历父目录</li>
+</ul>
+:ET

@@ -1,0 +1,87 @@
+I")
+<h3 id="介绍">介绍</h3>
+<p>注解也叫作元数据，为我们在代码中添o加信息提供了一种形式化的方法</p>
+<ul>
+  <li>metadata: data that provides information about other data</li>
+</ul>
+<hr />
+
+<h3 id="使用">使用</h3>
+<hr />
+
+<h4 id="注解的定义">注解的定义</h4>
+<ul>
+  <li>源码注解   注解在源码中存在</li>
+  <li>编译时注解 注解在源码和.class文件中都存在</li>
+  <li>运行时注解 在运行阶段起作用的注解，甚至影响程序运行逻辑的注解
+    <h4 id="注解的分类">注解的分类</h4>
+  </li>
+</ul>
+<hr />
+
+<h5 id="jdk注解">JDK注解</h5>
+<p>JDK注解@Override，@Deprecated和@Suppvisewarnings都是编译时注解</p>
+<hr />
+
+<h5 id="第三方注解">第三方注解</h5>
+<hr />
+
+<h5 id="自定义注解">自定义注解</h5>
+<hr />
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">tuesday</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">java.lang.annotation.*</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.lang.reflect.Method</span><span class="o">;</span>
+
+<span class="c1">//自定义注解</span>
+<span class="c1">//元注解</span>
+<span class="c1">//指明作用域</span>
+<span class="nd">@Target</span><span class="o">({</span><span class="nc">ElementType</span><span class="o">.</span><span class="na">METHOD</span><span class="o">,</span><span class="nc">ElementType</span><span class="o">.</span><span class="na">TYPE</span><span class="o">})</span>
+<span class="nd">@Retention</span><span class="o">(</span><span class="nc">RetentionPolicy</span><span class="o">.</span><span class="na">RUNTIME</span><span class="o">)</span>  <span class="c1">//运行时存在，可以通过反射去读取</span>
+<span class="nd">@Inherited</span>                           <span class="c1">//允许子类继承</span>
+<span class="nd">@Documented</span>                          <span class="c1">//生成javadoc时会包含注解</span>
+<span class="c1">//使用interface关键字来定义注解 注解也是一种类</span>
+<span class="c1">//当注解只有一个成员时，成员名必须为value(), 使用使可以忽略成员名和赋值号(=)</span>
+<span class="c1">//注解类可以没有成员，没有成员的注解称为标识注解</span>
+<span class="c1">//成员的类型是受限的，合法的类型包括原始类型及String,Class,Annotation,Enumeration</span>
+<span class="c1">//成员以无参无异常方式声明</span>
+<span class="c1">//因为约定俗成的使用方式为，当只有一个成员变量的时候，使用的时候只传递成员变量的值即可</span>
+<span class="c1">//可以用default为成员指定一个默认值</span>
+<span class="c1">//注解的作用域ElementType.TYPE,ElementType.CONSTRUCTOR,ElementType.CONSTRUCTOR,ElementType.LOCAL_VARIABLE,ElementType.FIELD,ElementType.PACKAGE</span>
+<span class="kd">public</span> <span class="nd">@interface</span> <span class="nc">Foo</span><span class="o">{</span>
+	    <span class="nc">String</span> <span class="nf">desc</span><span class="o">()</span> <span class="k">default</span> <span class="s">""</span><span class="o">;</span>                     <span class="c1">//对于注解类Foo来说，desc虽然没有参数，但确实是一个方法</span>
+	    <span class="nc">String</span> <span class="nf">author</span><span class="o">()</span> <span class="k">default</span> <span class="s">""</span><span class="o">;</span>
+	    <span class="kt">int</span> <span class="nf">age</span><span class="o">()</span> <span class="k">default</span> <span class="mi">18</span><span class="o">;</span>
+<span class="o">}</span>
+
+<span class="nd">@interface</span> <span class="n">fuc</span><span class="o">{</span>
+	    <span class="c1">//Map&lt;String ,String&gt; me();  //error 不能返回Map类型</span>
+	    <span class="c1">//String foo(int a);         //error 不能有参数</span>
+<span class="o">}</span>
+<span class="nd">@Foo</span><span class="o">(</span><span class="n">desc</span> <span class="o">=</span> <span class="s">"class annotation"</span><span class="o">)</span>
+<span class="kd">class</span> <span class="nc">ParseAnnotation</span><span class="o">{</span>
+    <span class="nd">@Foo</span><span class="o">(</span><span class="n">desc</span> <span class="o">=</span> <span class="s">"method annotation"</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">parseAnnotation</span><span class="o">(){</span>
+        <span class="k">try</span><span class="o">{</span>
+            <span class="nc">Class</span> <span class="n">clz</span><span class="o">=</span><span class="nc">Class</span><span class="o">.</span><span class="na">forName</span><span class="o">(</span><span class="s">"tuesday.ParseAnnotation"</span><span class="o">);</span>
+            <span class="c1">//获取类注解</span>
+            <span class="k">if</span><span class="o">(</span><span class="n">clz</span><span class="o">.</span><span class="na">isAnnotationPresent</span><span class="o">(</span><span class="nc">Foo</span><span class="o">.</span><span class="na">class</span><span class="o">)){</span>
+                <span class="nc">Foo</span> <span class="n">foo</span><span class="o">=(</span><span class="nc">Foo</span><span class="o">)</span><span class="n">clz</span><span class="o">.</span><span class="na">getAnnotation</span><span class="o">(</span><span class="nc">Foo</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+                <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">foo</span><span class="o">.</span><span class="na">desc</span><span class="o">());</span>
+            <span class="o">}</span>
+            <span class="c1">//获取方法注解</span>
+            <span class="nc">Method</span><span class="o">[]</span> <span class="n">ms</span><span class="o">=</span><span class="n">clz</span><span class="o">.</span><span class="na">getMethods</span><span class="o">();</span>
+            <span class="k">for</span><span class="o">(</span><span class="nc">Method</span> <span class="nl">m:</span><span class="n">ms</span><span class="o">){</span>
+                <span class="k">if</span><span class="o">(</span><span class="n">m</span><span class="o">.</span><span class="na">isAnnotationPresent</span><span class="o">(</span><span class="nc">Foo</span><span class="o">.</span><span class="na">class</span><span class="o">)){</span>
+                    <span class="nc">Foo</span> <span class="n">foo</span><span class="o">=(</span><span class="nc">Foo</span><span class="o">)</span><span class="n">m</span><span class="o">.</span><span class="na">getAnnotation</span><span class="o">(</span><span class="nc">Foo</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+                    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">foo</span><span class="o">.</span><span class="na">desc</span><span class="o">());</span>
+                <span class="o">}</span>
+            <span class="o">}</span>
+        <span class="o">}</span><span class="k">catch</span> <span class="o">(</span><span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">Exception</span> <span class="n">e</span><span class="o">){</span>
+            <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+        <span class="o">}</span>
+   <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+:ET

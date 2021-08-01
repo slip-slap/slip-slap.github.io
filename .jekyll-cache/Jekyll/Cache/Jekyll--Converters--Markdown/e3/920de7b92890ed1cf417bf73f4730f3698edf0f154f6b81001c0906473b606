@@ -1,0 +1,48 @@
+I"\	
+<p><strong>Definition:</strong> Typedef(which is short for “type definition”) is a keyword that
+creates an alias for an existing data type. To create such an alias, we use the
+<em>typedef</em> keyword.</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">typedef</span> <span class="kt">double</span> <span class="n">distance_t</span><span class="p">;</span> <span class="c1">// define distance_t as an alias for type double;</span>
+</code></pre></div></div>
+
+<ol>
+  <li>By convention, typedef names typically use a “_t” suffix. This both
+indicates that the name is a typedef. and helps prvent from naming collisions
+with other types of identifiers.</li>
+</ol>
+
+<h4 id="scope">Scope</h4>
+<p>Scope if a property of an identifier, typedef identifiers follow the same
+scoping rules as variable identifiers: a typedef defined inside a block has
+block scope and is usable only within that block. whereas a typedef defined in
+the global namespace has file scope and is usable to the end of the file.</p>
+
+<h4 id="why-bother">Why bother?</h4>
+<p>one purpose of having types is to make sure that variables are always used in the way that they were
+intended to be used.</p>
+<ol>
+  <li>typedefs provide a level of abstraction away from the actual types being used, allowing you, the
+programmer, to focus on the concept of just what a variable should mean.</li>
+  <li>This makes it easier to write clean code, but it also makes if far easier to modify your code</li>
+</ol>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">ScoreByName</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h4 id="program-once">program once</h4>
+<ol>
+  <li>it is header guard, this file will be included only once.</li>
+  <li>try to avoid double including
+    <ul>
+      <li>header guard are little piece of codes protect the contents of a header from being copied more
+than once.</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="reference">reference</h4>
+<ol>
+  <li><a href="https://www.cprogramming.com/tutorial/typedef.html">typedef</a></li>
+</ol>
+:ET

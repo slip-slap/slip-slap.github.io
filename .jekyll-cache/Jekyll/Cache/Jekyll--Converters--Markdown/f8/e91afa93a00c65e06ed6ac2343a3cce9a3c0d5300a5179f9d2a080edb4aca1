@@ -1,0 +1,91 @@
+I"�,
+<h4 id="variable-sharing">variable sharing</h4>
+
+<p>It is a mechanism in Tensorflow that allows for <strong>sharing variables accessed in different part of the code
+without passing the reference around</strong>. <br />
+In traditional method, when you want to use the same variable in different method, you have to pass the variable by function parameter.
+But, tensorflow provides a new way to <strong>access variables in different function</strong>, This is amazing.</p>
+
+<ol>
+  <li>
+    <p>the method tf.get_variable() can be used with the name of the variable as the argument to either create a 
+new variable with such name or retrieve the one that was create before.</p>
+  </li>
+  <li>
+    <p>the method tf.Variable will create a new variable every time it was called. and add a suffix to the variable if a variable with such a name 
+already exists.</p>
+  </li>
+</ol>
+
+<h4 id="two-types-of-scopes">two types of scopes</h4>
+
+<ol>
+  <li>name scope: tf.name_scope</li>
+  <li>variable scope: created using tf.variable_scope, <strong>it is for the purpose of the variable sharing mechanism 
+that a separate type of scope (variable scope) was introduced</strong>, 这里的variable, 应该理解成变化的</li>
+</ol>
+
+<p>This is a pretty long story, <strong>name_scope</strong> is very common, nothing different compare with the purpose of name space in c++. <br />
+but, the weird thing is variable scope is invented on purpose just to satisfy the <strong>variable sharing mechanism</strong> purpose. <br />
+<strong>The only way to place a variable accessed using tf.get_variable in a scope is to use a variable scope</strong></p>
+
+<p>why it has two different types of scopes. The reason is that with variable scope, <strong>one can define separate scopes for re-usable variable
+that are not effected by the current name space</strong> used to define operation. such as the following code.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">with</span> <span class="n">tf</span><span class="p">.</span><span class="n">name_scope</span><span class="p">(</span><span class="s">"foo"</span><span class="p">):</span>
+    <span class="k">with</span> <span class="n">tf</span><span class="p">.</span><span class="n">variable_scope</span><span class="p">(</span><span class="s">"var_scope"</span><span class="p">):</span>
+        <span class="n">v1</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">get_variable</span><span class="p">(</span><span class="s">"bird"</span><span class="p">,[])</span>
+
+<span class="k">with</span> <span class="n">tf</span><span class="p">.</span><span class="n">name_scope</span><span class="p">(</span><span class="s">"bar"</span><span class="p">):</span>
+    <span class="k">with</span> <span class="n">tf</span><span class="p">.</span><span class="n">variable_scope</span><span class="p">(</span><span class="s">"var_scope"</span><span class="p">,</span> <span class="n">reuse</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+        <span class="n">v2</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">get_variable</span><span class="p">(</span><span class="s">"bird"</span><span class="p">,</span> <span class="p">[])</span>
+</code></pre></div></div>
+
+<p>The following code is about tf.variable_scope and tf.name_scope</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="n">tf</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+
+<span class="c1"># use NumPy to produce data
+</span><span class="n">x_data</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">float32</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
+<span class="n">y_data</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">dot</span><span class="p">([</span><span class="mf">0.100</span><span class="p">,</span> <span class="mf">0.200</span><span class="p">],</span> <span class="n">x_data</span><span class="p">)</span> <span class="o">+</span> <span class="mf">0.300</span>
+
+<span class="c1"># build a linear model
+</span><span class="n">input_x</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="bp">None</span><span class="p">],</span><span class="n">dtype</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="n">float32</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s">"input_x"</span><span class="p">)</span>
+<span class="n">input_y</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">[</span><span class="mi">100</span><span class="p">],</span><span class="n">dtype</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="n">float32</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s">"input_y"</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="n">tf</span><span class="p">.</span><span class="n">variable_scope</span><span class="p">(</span><span class="s">"var"</span><span class="p">,</span><span class="n">reuse</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="n">AUTO_REUSE</span><span class="p">):</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">get_variable</span><span class="p">(</span><span class="n">initializer</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="n">zeros</span><span class="p">([</span><span class="mi">1</span><span class="p">]),</span><span class="n">name</span><span class="o">=</span><span class="s">"b"</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">b</span><span class="p">.</span><span class="n">name</span><span class="p">)</span>
+    <span class="n">w</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">get_variable</span><span class="p">(</span><span class="n">initializer</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="n">random_uniform</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">),</span><span class="n">name</span><span class="o">=</span><span class="s">"w"</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">input_x</span><span class="p">)</span> <span class="o">+</span> <span class="n">b</span>
+
+<span class="c1"># loss
+</span><span class="k">with</span> <span class="n">tf</span><span class="p">.</span><span class="n">name_scope</span><span class="p">(</span><span class="s">"total"</span><span class="p">):</span>
+    <span class="n">loss</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">reduce_mean</span><span class="p">(</span><span class="n">tf</span><span class="p">.</span><span class="n">square</span><span class="p">(</span><span class="n">y</span> <span class="o">-</span> <span class="n">input_y</span><span class="p">))</span>
+    <span class="n">loss_summary</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">summary</span><span class="p">.</span><span class="n">scalar</span><span class="p">(</span><span class="s">"loss"</span><span class="p">,</span><span class="n">loss</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">loss</span><span class="p">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">optimizer</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">train</span><span class="p">.</span><span class="n">GradientDescentOptimizer</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">train</span> <span class="o">=</span> <span class="n">optimizer</span><span class="p">.</span><span class="n">minimize</span><span class="p">(</span><span class="n">loss</span><span class="p">)</span>
+
+
+<span class="c1"># init
+</span><span class="n">init</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">global_variables_initializer</span><span class="p">()</span>
+
+
+
+<span class="k">with</span> <span class="n">tf</span><span class="p">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
+    <span class="n">sess</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">init</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">step</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">401</span><span class="p">):</span>
+        <span class="n">sess</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">train</span><span class="p">,</span><span class="n">feed_dict</span><span class="o">=</span><span class="p">{</span><span class="n">input_x</span><span class="p">:</span><span class="n">x_data</span><span class="p">,</span><span class="n">input_y</span><span class="p">:</span><span class="n">y_data</span><span class="p">})</span>
+        <span class="k">if</span> <span class="n">step</span> <span class="o">%</span> <span class="mi">20</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="n">step</span><span class="p">,</span> <span class="n">sess</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">w</span><span class="p">),</span> <span class="n">sess</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+
+</code></pre></div></div>
+
+<h4 id="reference">Reference</h4>
+<ol>
+  <li><a href="https://stackoverflow.com/questions/35919020/whats-the-difference-of-name-scope-and-a-variable-scope-in-tensorflow">name_scope and variable_scope</a></li>
+</ol>
+
+:ET

@@ -1,0 +1,47 @@
+I" 
+<h4 id="unique_ptr">unique_ptr</h4>
+<ol>
+  <li>smart_pointer is implemented to prevent memory leaks
+    <ul>
+      <li>it overload -&gt; operator and * opeator</li>
+      <li>wraps a raw pointer</li>
+      <li>unique_ptr is always the unique ownership of associated raw pointer.</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="a">A</h4>
+<ol>
+  <li>we can not create a unique_ptr through assignment, it will cause compiler
+error.</li>
+  <li>we can not copy a unique_ptr</li>
+  <li>both assignment operator and copy constructor are deleted in unique_ptr
+class.</li>
+</ol>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+#include &lt;string&gt;
+</span><span class="k">class</span> <span class="nc">student</span>
+<span class="p">{</span>
+<span class="nl">private:</span>
+	<span class="kt">int</span> <span class="n">age</span><span class="p">;</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">name</span><span class="p">;</span>
+<span class="nl">public:</span>
+	<span class="n">student</span><span class="p">(){}</span>
+	<span class="n">student</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">int</span> <span class="n">age</span><span class="p">){</span>
+
+		<span class="k">this</span><span class="o">-&gt;</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
+		<span class="k">this</span><span class="o">-&gt;</span><span class="n">age</span>  <span class="o">=</span> <span class="n">age</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">};</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">student</span><span class="o">&gt;</span> <span class="n">stu1</span><span class="p">(</span><span class="k">new</span> <span class="n">student</span><span class="p">(</span><span class="s">"liam"</span><span class="p">,</span> <span class="mi">18</span><span class="p">));</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">student</span><span class="o">&gt;</span> <span class="n">stu2</span><span class="p">;</span>
+	<span class="n">stu2</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="n">stu1</span><span class="p">);</span> <span class="c1">//stu1 turn to nullptr</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+:ET

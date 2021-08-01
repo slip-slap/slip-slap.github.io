@@ -1,0 +1,79 @@
+I"	
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;string&gt;
+</span>
+<span class="k">struct</span> <span class="nc">node</span> 
+<span class="p">{</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">name</span><span class="p">;</span>
+	<span class="k">struct</span> <span class="nc">node</span><span class="o">*</span> <span class="n">next_node</span><span class="o">=</span><span class="nb">nullptr</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="k">class</span> <span class="nc">link_list</span>
+<span class="p">{</span>
+	<span class="nl">private:</span>
+		<span class="k">struct</span> <span class="nc">node</span> <span class="o">*</span> <span class="n">head</span><span class="p">;</span>
+		<span class="k">struct</span> <span class="nc">node</span> <span class="o">*</span> <span class="n">tail</span><span class="p">;</span>
+
+    <span class="nl">public:</span>
+		<span class="n">link_list</span><span class="p">(){}</span>
+
+		<span class="n">link_list</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">name</span><span class="p">)</span>
+		<span class="p">{</span>
+			<span class="n">head</span> <span class="o">=</span> <span class="k">new</span> <span class="n">node</span><span class="p">();</span>
+			<span class="n">head</span><span class="o">-&gt;</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
+			<span class="n">tail</span> <span class="o">=</span> <span class="n">head</span><span class="p">;</span>
+		<span class="p">}</span>
+
+		<span class="kt">void</span> <span class="n">insert</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">name</span><span class="p">)</span>
+		<span class="p">{</span>
+			<span class="k">struct</span> <span class="nc">node</span><span class="o">*</span> <span class="n">temp</span> <span class="o">=</span> <span class="k">new</span> <span class="n">node</span><span class="p">();</span>
+			<span class="n">temp</span><span class="o">-&gt;</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
+			<span class="n">tail</span><span class="o">-&gt;</span><span class="n">next_node</span> <span class="o">=</span> <span class="n">temp</span> <span class="p">;</span>
+			<span class="n">tail</span> <span class="o">=</span> <span class="n">tail</span><span class="o">-&gt;</span><span class="n">next_node</span><span class="p">;</span>
+		<span class="p">}</span>
+
+		<span class="kt">void</span> <span class="n">display</span><span class="p">()</span>
+		<span class="p">{</span>
+			<span class="k">struct</span> <span class="nc">node</span> <span class="o">*</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">head</span><span class="p">;</span>
+			<span class="k">while</span><span class="p">(</span><span class="n">temp</span><span class="o">!=</span><span class="nb">nullptr</span><span class="p">)</span>
+			<span class="p">{</span>
+				<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">temp</span><span class="o">-&gt;</span><span class="n">name</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+				<span class="n">temp</span> <span class="o">=</span> <span class="n">temp</span><span class="o">-&gt;</span><span class="n">next_node</span><span class="p">;</span>
+			<span class="p">}</span>
+		<span class="p">}</span>
+
+		<span class="c1">// can't remove the last node</span>
+		<span class="kt">void</span> <span class="n">remove</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">name</span><span class="p">)</span>
+		<span class="p">{</span>
+			<span class="k">struct</span> <span class="nc">node</span> <span class="o">*</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">head</span><span class="p">;</span>
+			<span class="k">while</span><span class="p">(</span><span class="n">temp</span><span class="o">!=</span><span class="nb">nullptr</span><span class="p">)</span>
+			<span class="p">{</span>
+				<span class="k">if</span><span class="p">(</span><span class="n">temp</span><span class="o">-&gt;</span><span class="n">name</span><span class="o">==</span> <span class="n">name</span><span class="o">&amp;&amp;</span><span class="n">temp</span><span class="o">-&gt;</span><span class="n">next_node</span><span class="o">!=</span><span class="nb">nullptr</span><span class="p">)</span>
+				<span class="p">{</span>
+					<span class="n">temp</span><span class="o">-&gt;</span><span class="n">name</span> <span class="o">=</span> <span class="n">temp</span><span class="o">-&gt;</span><span class="n">next_node</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">;</span>
+					<span class="n">temp</span><span class="o">-&gt;</span><span class="n">next_node</span> <span class="o">=</span> <span class="n">temp</span><span class="o">-&gt;</span><span class="n">next_node</span><span class="o">-&gt;</span><span class="n">next_node</span><span class="p">;</span>
+				<span class="p">}</span><span class="k">else</span>
+				<span class="p">{</span>
+					<span class="n">temp</span> <span class="o">=</span> <span class="n">temp</span><span class="o">-&gt;</span><span class="n">next_node</span><span class="p">;</span>
+				<span class="p">}</span>
+			<span class="p">}</span>
+		<span class="p">}</span>
+
+<span class="p">};</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+
+	<span class="n">link_list</span> <span class="n">my_link_list</span><span class="p">(</span><span class="s">"zhang"</span><span class="p">);</span>
+	<span class="n">my_link_list</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="s">"niko"</span><span class="p">);</span>
+	<span class="n">my_link_list</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="s">"liam"</span><span class="p">);</span>
+	<span class="n">my_link_list</span><span class="p">.</span><span class="n">display</span><span class="p">();</span>
+	<span class="n">my_link_list</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="s">"zhang"</span><span class="p">);</span>
+	<span class="n">my_link_list</span><span class="p">.</span><span class="n">display</span><span class="p">();</span>
+
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+:ET

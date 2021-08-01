@@ -1,0 +1,64 @@
+I"�	
+<h4 id="model">Model</h4>
+<p>Git is all about the three trees: working directory, index, and HEAD, and all
+the operations is for them.</p>
+
+<ol>
+  <li>Working directory: The other trees store their content in an efficient but
+inconvient manner, inside the <em>.git</em> folder.</li>
+</ol>
+
+<ul>
+  <li>The working directory unpacks them into actual files, which makes it much
+easizer for you to edit them. Think of the working directory as a <em>sandbox</em>,
+where you can try changes out before commiting them to you staging area.</li>
+</ul>
+
+<ol>
+  <li>Index:  The <em>index</em> is your proposed next commit. We’ve also been referring to this
+  concept as Git’s “Staging Area” as this is what Git looks at when you run git
+  commit.</li>
+</ol>
+
+<p><img align="left" src="/images/git/git-three-trees.png" /></p>
+
+<h4 id="13-git-status">1.3 git status</h4>
+<p>Comparing these trees, and show their difference.</p>
+
+<h4 id="14-git-add">1.4 git add</h4>
+<p>Tracking new files, it essentially add this file to index tree.</p>
+
+<h5 id="12-git-clone">1.2 git clone</h5>
+<p>This command is git clone and not “checkout”. This is an important
+distinction-instead of getting just a working copy, Git receives a full copy of
+nearly all data that the server has.</p>
+<ul>
+  <li>Every version of every file for the history of the project is pulled down by
+default when you run git clone</li>
+</ul>
+
+<h4 id="15-ignoring-files">1.5 Ignoring Files</h4>
+<p>Often, you’ll have a class of files that you don’t want Git to automatically add
+or even show you as being untracked.</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cat</span> .gitignore
+<span class="k">*</span>.[oa]
+<span class="k">*</span>~
+</code></pre></div></div>
+<ul>
+  <li>the first line tells Git to ignore any files ending in “.o” or “.a”</li>
+  <li>the second line tells git to ignore all files whose names end with a tilde(~)</li>
+</ul>
+
+<h4 id="16-git-diff">1.6 git diff</h4>
+<p>The git status is too vague for you, you want to know exactly what you changed,
+not just which files were changed. you can use git diff.</p>
+<ul>
+  <li>git diff shows you the exact lines added and removed-the patch</li>
+</ul>
+
+<h4 id="reference">Reference</h4>
+<ol>
+  <li><a href="https://stackoverflow.com/questions/2529441/how-to-read-the-output-from-git-diff">How to read the outputs of git diff</a></li>
+</ol>
+:ET

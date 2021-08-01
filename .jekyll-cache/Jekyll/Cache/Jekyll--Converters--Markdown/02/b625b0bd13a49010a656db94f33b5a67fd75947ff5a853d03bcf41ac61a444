@@ -1,0 +1,56 @@
+I"�
+<h4 id="introduction">Introduction</h4>
+<p>Here is the list <strong>conan, cpm, dds, pacm, hunter, vcpkg</strong></p>
+
+<h4 id="11-brew">1.1 Brew</h4>
+<p>the missing package manager for macos, 和centos下的yumhe ubuntu下的apt-get类似</p>
+<ol>
+  <li>brew的安装目录在/usr/local/Cellar</li>
+  <li>配置目录在/usr/local/etc</li>
+  <li>命令目录在/usr/local/bin</li>
+</ol>
+
+<h4 id="使用">使用</h4>
+<ol>
+  <li>brew install pyenv
+    <ul>
+      <li>it will put pyenv-related file under <strong>/usr/local/Cellar</strong> directory.</li>
+      <li>at the same time create symlink of command under <strong>/path/to/pyenv/bin/pyenv</strong>,
+and put the symlink under <strong>/usr/local/bin</strong>, which is a system default path.</li>
+    </ul>
+  </li>
+</ol>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">ls</span> <span class="nt">-l</span> /usr/local/bin/pyenv
+lrwxr-xr-x 1 kismet admin 32 Jun  5 10:40 /usr/local/bin/pyenv -&gt;
+../Cellar/pyenv/1.2.18/bin/pyenv
+</code></pre></div></div>
+
+<ol>
+  <li>brew upgrade boost</li>
+  <li>brew info boost  查看boost相关信息</li>
+  <li>brew link
+    <ul>
+      <li>this is just a fancy version of <strong>ln -s</strong></li>
+      <li>you install library by brew install, how could you get the system find them
+and use them, create symlink under <strong>/usr/local/lib</strong> directory</li>
+    </ul>
+  </li>
+</ol>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">ls</span> <span class="nt">-l</span> | <span class="nb">grep </span>opencv | <span class="nb">head</span> <span class="nt">-5</span>
+lrwxr-xr-x   1 kismet admin   37 Jun  4 21:10 libade.a -&gt;
+../Cellar/opencv/4.3.0_4/lib/libade.a
+lrwxr-xr-x   1 kismet admin   48 Jun  4 21:10 libcorrespondence.a -&gt;
+../Cellar/opencv/4.3.0_4/lib/libcorrespondence.a
+lrwxr-xr-x   1 kismet admin   40 Jun  4 21:10 libippicv.a -&gt;
+../Cellar/opencv/4.3.0_4/lib/libippicv.a
+lrwxr-xr-x   1 kismet admin   39 Jun  4 21:10 libippiw.a -&gt;
+../Cellar/opencv/4.3.0_4/lib/libippiw.a
+lrwxr-xr-x   1 kismet admin   43 Jun  4 21:10 libittnotify.a -&gt;
+../Cellar/opencv/4.3.0_4/lib/libittnotify.a
+</code></pre></div></div>
+
+<h4 id="12-port">1.2 Port</h4>
+
+:ET

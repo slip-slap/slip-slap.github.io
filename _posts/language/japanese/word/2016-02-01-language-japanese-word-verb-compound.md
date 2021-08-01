@@ -50,7 +50,6 @@ tags: ["日本語"]
 3. 待ち合わせ: appointment
 4. 盛り合わせ
 
-
 #### 5. 抜く
 1. やり抜く、走り抜く、守り抜く、生き抜く
 - when that condition continues until the end

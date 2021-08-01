@@ -30,18 +30,18 @@ not subject, which could be the place, time, object  of the verb.
 
 
 
+#### なのに・なので
+1. the part comes before に or で is used as a noun, or something, so the structure is as sentence/connection particle + に・で・は
+- 仕事忙しのに、給料は安いです。
+- 夫は料理が上手なのに、あまり作ってくれません。
+- 一番大切なのは家族の健康です。
+-  日本へ来たのは去年の三月です。
 
 
 
-#### わけがない・わけはない・わけではない
-1. わけがない: it's impossible
-- 秋山はあの人のことを好きなわけがない.
-- 彼はお金がないですから、家を買えるわけがない: he is poor, there is no way he can buy a house.
 
-2. わけはない: it's not impossible, and imply something else
--  you prefer not to use this phrase
-3. わけではない: imply something else.
-秋山はあの人のことを好きなわけではない
+
+
 
 
 

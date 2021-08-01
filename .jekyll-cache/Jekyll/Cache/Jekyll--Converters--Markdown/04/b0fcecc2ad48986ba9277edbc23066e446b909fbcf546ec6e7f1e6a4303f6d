@@ -1,0 +1,84 @@
+I"Ô0
+<h4 id="signal-and-slot">signal and slot</h4>
+<p>If you have a programming backgound, you may hear about event handling where you interact with a widget
+and a function is executed. <br />
+The idea in PyQt5 is the same but definitions are a bit different. <br />
+So when you click a QPushButton, a signal is emitted. The signal name in this case is called clicked(). <br />
+In order to bind the emitted signal with a slot, you need to use the <strong>connect()</strong> method as you will see. <br />
+This event handling process continues to work until you close your form or main widget. <br /></p>
+
+<ul>
+  <li>connect the clicked() signal with a slot using connect() method like this:</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="bp">self</span><span class="p">.</span><span class="n">ui</span><span class="p">.</span><span class="n">pushButton</span><span class="p">.</span><span class="n">clicked</span><span class="p">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">btnClicked</span><span class="p">)</span>
+</code></pre></div></div>
+<p>the bthClicked here is the slot or the function that will be executed when you click the QBushButton</p>
+
+<ol>
+  <li>The following code is the gui created by the Qtdesigner</li>
+</ol>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kn">from</span> <span class="nn">PyQt5</span> <span class="kn">import</span> <span class="n">QtCore</span><span class="p">,</span> <span class="n">QtGui</span><span class="p">,</span> <span class="n">QtWidgets</span>
+
+<span class="k">class</span> <span class="nc">Ui_MainWindow</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">setupUi</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">MainWindow</span><span class="p">):</span>
+        <span class="n">MainWindow</span><span class="p">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="s">"MainWindow"</span><span class="p">)</span>
+        <span class="n">MainWindow</span><span class="p">.</span><span class="n">resize</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">centralwidget</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="p">.</span><span class="n">QWidget</span><span class="p">(</span><span class="n">MainWindow</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">centralwidget</span><span class="p">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="s">"centralwidget"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">pushButton</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="p">.</span><span class="n">QPushButton</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">centralwidget</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">pushButton</span><span class="p">.</span><span class="n">setGeometry</span><span class="p">(</span><span class="n">QtCore</span><span class="p">.</span><span class="n">QRect</span><span class="p">(</span><span class="mi">230</span><span class="p">,</span> <span class="mi">290</span><span class="p">,</span> <span class="mi">113</span><span class="p">,</span> <span class="mi">32</span><span class="p">))</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">pushButton</span><span class="p">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="s">"pushButton"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">label</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="p">.</span><span class="n">QLabel</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">centralwidget</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">label</span><span class="p">.</span><span class="n">setGeometry</span><span class="p">(</span><span class="n">QtCore</span><span class="p">.</span><span class="n">QRect</span><span class="p">(</span><span class="mi">230</span><span class="p">,</span> <span class="mi">230</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">16</span><span class="p">))</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">label</span><span class="p">.</span><span class="n">setAlignment</span><span class="p">(</span><span class="n">QtCore</span><span class="p">.</span><span class="n">Qt</span><span class="p">.</span><span class="n">AlignCenter</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">label</span><span class="p">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="s">"label"</span><span class="p">)</span>
+        <span class="n">MainWindow</span><span class="p">.</span><span class="n">setCentralWidget</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">centralwidget</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">menubar</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="p">.</span><span class="n">QMenuBar</span><span class="p">(</span><span class="n">MainWindow</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">menubar</span><span class="p">.</span><span class="n">setGeometry</span><span class="p">(</span><span class="n">QtCore</span><span class="p">.</span><span class="n">QRect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">800</span><span class="p">,</span> <span class="mi">22</span><span class="p">))</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">menubar</span><span class="p">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="s">"menubar"</span><span class="p">)</span>
+        <span class="n">MainWindow</span><span class="p">.</span><span class="n">setMenuBar</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">menubar</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">statusbar</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="p">.</span><span class="n">QStatusBar</span><span class="p">(</span><span class="n">MainWindow</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">statusbar</span><span class="p">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="s">"statusbar"</span><span class="p">)</span>
+        <span class="n">MainWindow</span><span class="p">.</span><span class="n">setStatusBar</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">statusbar</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="p">.</span><span class="n">retranslateUi</span><span class="p">(</span><span class="n">MainWindow</span><span class="p">)</span>
+        <span class="n">QtCore</span><span class="p">.</span><span class="n">QMetaObject</span><span class="p">.</span><span class="n">connectSlotsByName</span><span class="p">(</span><span class="n">MainWindow</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">retranslateUi</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">MainWindow</span><span class="p">):</span>
+        <span class="n">_translate</span> <span class="o">=</span> <span class="n">QtCore</span><span class="p">.</span><span class="n">QCoreApplication</span><span class="p">.</span><span class="n">translate</span>
+        <span class="n">MainWindow</span><span class="p">.</span><span class="n">setWindowTitle</span><span class="p">(</span><span class="n">_translate</span><span class="p">(</span><span class="s">"MainWindow"</span><span class="p">,</span> <span class="s">"MainWindow"</span><span class="p">))</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">pushButton</span><span class="p">.</span><span class="n">setText</span><span class="p">(</span><span class="n">_translate</span><span class="p">(</span><span class="s">"MainWindow"</span><span class="p">,</span> <span class="s">"Change"</span><span class="p">))</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">label</span><span class="p">.</span><span class="n">setText</span><span class="p">(</span><span class="n">_translate</span><span class="p">(</span><span class="s">"MainWindow"</span><span class="p">,</span> <span class="s">"a"</span><span class="p">))</span>
+</code></pre></div></div>
+
+<ol>
+  <li>The following code is the control part</li>
+</ol>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">PyQt5</span> <span class="kn">import</span> <span class="n">QtWidgets</span><span class="p">,</span> <span class="n">QtGui</span><span class="p">,</span> <span class="n">QtCore</span>
+<span class="kn">from</span> <span class="nn">design</span> <span class="kn">import</span> <span class="n">Ui_MainWindow</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="k">class</span> <span class="nc">mywindow</span><span class="p">(</span><span class="n">QtWidgets</span><span class="p">.</span><span class="n">QMainWindow</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">mywindow</span><span class="p">,</span><span class="bp">self</span><span class="p">).</span><span class="n">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">ui</span> <span class="o">=</span> <span class="n">Ui_MainWindow</span><span class="p">()</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">ui</span><span class="p">.</span><span class="n">setupUi</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">ui</span><span class="p">.</span><span class="n">pushButton</span><span class="p">.</span><span class="n">clicked</span><span class="p">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">btnClicked</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">btnClicked</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">ui</span><span class="p">.</span><span class="n">label</span><span class="p">.</span><span class="n">setText</span><span class="p">(</span><span class="s">"changed"</span><span class="p">)</span>
+
+
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="p">.</span><span class="n">QApplication</span><span class="p">([])</span>
+<span class="n">application</span> <span class="o">=</span> <span class="n">mywindow</span><span class="p">()</span>
+<span class="n">application</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="n">sys</span><span class="p">.</span><span class="nb">exit</span><span class="p">(</span><span class="n">app</span><span class="p">.</span><span class="k">exec</span><span class="p">())</span>
+</code></pre></div></div>
+
+:ET

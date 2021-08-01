@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "C++ STL: Architecture"
+title: "C++ STL: summary"
 keywords: []
 description: 
 category: "PL"
-tags: ["c++","compile"]
+tags: ["c++","compile","summary"]
 ---
 {% include JB/setup %}
 
@@ -35,6 +35,11 @@ tags: ["c++","compile"]
 Foo foo;
 m_foo_vector.push_back(foo);
 ```
+
+
+#### Galois
+The pattern of STL library is mimicked by the other language, such as in python,
+the list and min() function.
 
 #### Reference
 1. [container behaviour](https://stackoverflow.com/questions/7382090/c-vector-push-back)

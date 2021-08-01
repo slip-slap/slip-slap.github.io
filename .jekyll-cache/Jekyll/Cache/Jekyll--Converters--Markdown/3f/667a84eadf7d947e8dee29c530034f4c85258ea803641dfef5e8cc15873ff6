@@ -1,0 +1,52 @@
+I"¿<h4 id="the-entry">The entry</h4>
+<ol>
+  <li>The entry point to cmake is under the cmakemain.cxx</li>
+</ol>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">ac</span><span class="p">,</span> <span class="kt">char</span> <span class="k">const</span><span class="o">*</span> <span class="k">const</span><span class="o">*</span> <span class="n">av</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">cmSystemTools</span><span class="o">::</span><span class="n">EnsureStdPipes</span><span class="p">();</span>
+
+  <span class="c1">// Replace streambuf so we can output Unicode to console</span>
+  <span class="k">auto</span> <span class="n">consoleBuf</span> <span class="o">=</span> <span class="n">cm</span><span class="o">::</span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">cmConsoleBuf</span><span class="o">&gt;</span><span class="p">();</span>
+  <span class="n">consoleBuf</span><span class="o">-&gt;</span><span class="n">SetUTF8Pipes</span><span class="p">();</span>
+
+  <span class="n">cmsys</span><span class="o">::</span><span class="n">Encoding</span><span class="o">::</span><span class="n">CommandLineArguments</span> <span class="n">args</span> <span class="o">=</span>
+    <span class="n">cmsys</span><span class="o">::</span><span class="n">Encoding</span><span class="o">::</span><span class="n">CommandLineArguments</span><span class="o">::</span><span class="n">Main</span><span class="p">(</span><span class="n">ac</span><span class="p">,</span> <span class="n">av</span><span class="p">);</span>
+  <span class="n">ac</span> <span class="o">=</span> <span class="n">args</span><span class="p">.</span><span class="n">argc</span><span class="p">();</span>
+  <span class="n">av</span> <span class="o">=</span> <span class="n">args</span><span class="p">.</span><span class="n">argv</span><span class="p">();</span>
+
+  <span class="n">cmSystemTools</span><span class="o">::</span><span class="n">InitializeLibUV</span><span class="p">();</span>
+  <span class="n">cmSystemTools</span><span class="o">::</span><span class="n">FindCMakeResources</span><span class="p">(</span><span class="n">av</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">ac</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">av</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s">"--build"</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="n">do_build</span><span class="p">(</span><span class="n">ac</span><span class="p">,</span> <span class="n">av</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">av</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s">"--install"</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="n">do_install</span><span class="p">(</span><span class="n">ac</span><span class="p">,</span> <span class="n">av</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">av</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s">"--open"</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="n">do_open</span><span class="p">(</span><span class="n">ac</span><span class="p">,</span> <span class="n">av</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">av</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s">"-E"</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="n">do_command</span><span class="p">(</span><span class="n">ac</span><span class="p">,</span> <span class="n">av</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="n">consoleBuf</span><span class="p">));</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="kt">int</span> <span class="n">ret</span> <span class="o">=</span> <span class="n">do_cmake</span><span class="p">(</span><span class="n">ac</span><span class="p">,</span> <span class="n">av</span><span class="p">);</span>
+<span class="cp">#ifndef CMAKE_BOOTSTRAP
+</span>  <span class="n">cmDynamicLoader</span><span class="o">::</span><span class="n">FlushCache</span><span class="p">();</span>
+<span class="cp">#endif
+</span>  <span class="k">if</span> <span class="p">(</span><span class="n">uv_loop_t</span><span class="o">*</span> <span class="n">loop</span> <span class="o">=</span> <span class="n">uv_default_loop</span><span class="p">())</span> <span class="p">{</span>
+    <span class="n">uv_loop_close</span><span class="p">(</span><span class="n">loop</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="n">ret</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h4 id="reference">Reference</h4>
+<ol>
+  <li><a href="https://github.com/Kitware/CMake">cmake source code</a></li>
+  <li><a href="https://github.com/Kitware/CMake/tree/master/Help/dev">cmake developer help documentation</a></li>
+</ol>
+
+:ET

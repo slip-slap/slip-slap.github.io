@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "D.P.: Introduction"
+title: "D.P.: Dirichilet Process"
 keywords: []
 description: 
 category: "math"

@@ -26,6 +26,10 @@ tags: ["日本語"]
 - ここに言えるか？
 
 
+1. 大したことないエピソート。
+
+
+
 
 #### Reference
 1. [てん・ている](https://maggiesensei.com/2016/03/28/casual-contraction-dropping-%E3%81%84-i-%E3%81%A6%E3%82%93-ten-%E3%81%A8%E3%81%8Ftoku/)

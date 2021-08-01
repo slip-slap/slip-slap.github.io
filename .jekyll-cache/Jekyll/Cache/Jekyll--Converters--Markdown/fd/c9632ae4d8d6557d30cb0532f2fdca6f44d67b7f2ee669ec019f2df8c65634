@@ -1,0 +1,57 @@
+I"�<h4 id="introduction">Introduction</h4>
+<ol>
+  <li>A node is a small part of a picture
+    <ul>
+      <li>A node of shape <strong>circle</strong> will be drawn as cricle; a node of shape <strong>rectangle</strong> as a rectangle</li>
+      <li>A node may also contain some text</li>
+      <li>A node can get a name for later reference</li>
+    </ul>
+  </li>
+  <li>Code Example</li>
+</ol>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{tikzpicture}</span>
+<span class="k">\path</span> ( 0,2) node [shape=circle,draw] <span class="p">{}</span>
+( 0,1) node [shape=circle,draw] <span class="p">{}</span>
+( 0,0) node [shape=circle,draw] <span class="p">{}</span>
+( 1,1) node [shape=rectangle,draw] <span class="p">{}</span>
+(-1,1) node [shape=rectangle,draw] <span class="p">{}</span>;
+<span class="nt">\end{tikzpicture}</span>
+</code></pre></div></div>
+
+<p>The code <strong>(0,2) node [shape=circle, draw] {}</strong> means the following: “in the main path, add a
+move-to to the coordinate (0,2). Then, temporarily suspend the construction of the main path while
+the node is build. This node will be a circle around an empty text. This circle is to be drawn, but
+not filled or otherwise used”</p>
+
+<ol>
+  <li>more simple grammar
+    <ul>
+      <li>The <strong>\node</strong> command is an abbreviation for <strong>\path node</strong></li>
+    </ul>
+  </li>
+</ol>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{tikzpicture}</span>
+<span class="k">\node</span> at ( 0,2) [circle,draw] <span class="p">{}</span>;
+<span class="k">\node</span> at ( 0,1) [circle,draw] <span class="p">{}</span>;
+<span class="k">\node</span> at ( 0,0) [circle,draw] <span class="p">{}</span>;
+<span class="k">\node</span> at ( 1,1) [rectangle,draw] <span class="p">{}</span>;
+<span class="k">\node</span> at (-1,1) [rectangle,draw] <span class="p">{}</span>;
+<span class="nt">\end{tikzpicture}</span>
+</code></pre></div></div>
+
+<h4 id="2-using-styles">2. Using Styles</h4>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\tikzstyle</span><span class="p">{</span>place<span class="p">}</span>=[circle,draw=blue!50,fill=blue!20,thick]
+<span class="k">\tikzstyle</span><span class="p">{</span>transition<span class="p">}</span>=[rectangle,draw=black!50,fill=black!20,thick]
+<span class="nt">\begin{tikzpicture}</span>
+<span class="k">\node</span> at ( 0,2) [place] <span class="p">{}</span>;
+<span class="k">\node</span> at ( 0,1) [place] <span class="p">{}</span>;
+<span class="k">\node</span> at ( 0,0) [place] <span class="p">{}</span>;
+<span class="k">\node</span> at ( 1,1) [transition] <span class="p">{}</span>;
+<span class="k">\node</span> at (-1,1) [transition] <span class="p">{}</span>;
+<span class="nt">\end{tikzpicture}</span>
+</code></pre></div></div>
+
+:ET

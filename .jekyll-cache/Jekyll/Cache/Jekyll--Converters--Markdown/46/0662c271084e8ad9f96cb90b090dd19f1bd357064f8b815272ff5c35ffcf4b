@@ -1,0 +1,90 @@
+I"<<h4 id="question-1-what-does-this-find_package-command-do">Question 1: what does this find_package command do?</h4>
+<p>This command tries to find the following two files:</p>
+<ol>
+  <li>OpenCVConfig.cmake,</li>
+  <li>opencv-config.cmake. 
+Get the cmake find the header and library.</li>
+</ol>
+
+<h4 id="question-2-where-are-they">Question 2: Where are they?</h4>
+<p>They reside under library folder. For example:</p>
+<ol>
+  <li>the boost library: the related cmake file lies in
+<em>/usr/local/Cellar/boost/1.76.0/lib/cmake</em></li>
+  <li>the opencv library: corresponding cmake files are in
+<em>/usr/local/Cellar/opencv/4.5.2_4/lib/cmake</em></li>
+  <li>the qt library: the relevant cmake files are put under 
+<em>/usr/local/Cellar/qt/6.1.1/lib/cmake</em></li>
+</ol>
+
+<h4 id="question-3-how-to-use-them">Question 3: How to use them?</h4>
+<p>Put those files in a location where <em>cmake</em> can find them. CMake constructs a
+set of installation prefixes for the package. Generally speaking, it is from two aspect:</p>
+
+<ol>
+  <li>cmake-specific variables:
+    <ul>
+      <li>CMAKE_PREFIX_PATH</li>
+    </ul>
+  </li>
+  <li>the standard system envrionment variable:
+    <ul>
+      <li>CMAKE_SYSTEM_PREFIX_PATH
+        <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/opt/local/usr//usr/local/usr/X11R6/usr/pkg/opt/Applications/Xcode.app/Contents/Developer/Platfor│
+ms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="example-use-opencv-library">Example: use opencv library</h4>
+<ol>
+  <li>install opencv library via <em>brew install opencv</em></li>
+  <li>go to folder <em>/usr/local/Cellar</em>, you will find the opencv library.</li>
+  <li>the related cmake file is in the <em>cmake</em> folder, and this <em>cmake</em> folder is
+under <em>opencv/lib/</em>.</li>
+</ol>
+
+<p>To use this in CMake, we should get this be found. It’s simple, put a soft link
+of this cmake file in the search path of cmake, such as, <em>/usr/local/</em>, which is
+one of the search location of system-specific prefix.</p>
+
+<div class="language-cmake highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ln -s /usr/local/Cellar/opencv/4.5.2_4/lib/cmake/opencv4 opencv4
+</code></pre></div></div>
+
+<h5 id="2self-define">2.Self-define</h5>
+<ul>
+  <li>CMakeLists.txt</li>
+</ul>
+
+<div class="language-cmake highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cmake_minimum_required</span><span class="p">(</span>VERSION 3.10<span class="p">)</span>
+<span class="nb">project</span><span class="p">(</span>hello_world<span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span>CMAKE_MODULE_PATH <span class="s2">"/Users/kismet/Documents/code/cmake_code/tutorial/CMake/Help/guide/tutorial/my_step/cmake/modules"</span><span class="p">)</span>
+<span class="nb">find_package</span><span class="p">(</span>Opencv REQUIRED<span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li>FindOpencv.cmake</li>
+</ul>
+
+<div class="language-cmake highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">message</span><span class="p">(</span><span class="s2">"this is find opencv"</span><span class="p">)</span>
+</code></pre></div></div>
+<ol>
+  <li>find_package is supposed to work with Find&lt;package&gt;.cmake module</li>
+  <li>The purpose of the file is to define the search rules for the package and set
+different variables, such as &lt;package&gt;_FOUND, &lt;package&gt;_INCLUDE_DIRS
+and &lt;package&gt;_LIBRARIES.</li>
+</ol>
+
+<h4 id="examples">Examples</h4>
+<ol>
+  <li>opencv: you will find related cmake file under the opencv source code.</li>
+</ol>
+
+<h4 id="reference">Reference</h4>
+<ol>
+  <li><a href="https://cmake.org/cmake/help/latest/command/find_package.html">find package</a></li>
+</ol>
+
+:ET

@@ -47,6 +47,10 @@ int main()
 #### Galois
 1. C++ provides a lot of features, but we don't need to use them, it's up to
    you, based on your practice.
+2. Stroustrup originally used *class* to specify types in templates to avoid
+   introducing a new keyword. Some in the committee introduced a new keyword
+   *typename* to resolve syntactic ambiguity, and decided to let it also be used
+   to specify templated types to reduce confusion.
 
 
 

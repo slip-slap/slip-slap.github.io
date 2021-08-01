@@ -1,0 +1,62 @@
+I"�
+
+<h4 id="motivation">Motivation</h4>
+<p>Gambling</p>
+
+<ol>
+  <li>defective random variable: it means there is some probability that J is going
+to be infinite</li>
+  <li>Indicator random variable: An indicator random variable is a special kind of
+random variable associated with the occurence of an event. The indicator
+random variable $I_A$ associate with event A has value 1 if event A occurs
+and has value 0 otherwise. In other words, $I_A$ maps all outcomes in the set
+A to 1 and all outcomes outside A to 0.
+    <h4 id="definition">Definition</h4>
+  </li>
+  <li>A stopping trial(or stopping time) J for a sequence of rv’s
+$X_1,X_2,\cdots,$ is a positive integer-valued rv such that for each $n\geq 1$,
+the indicator rv \(\mathbb{I}_{\{J=n\}}\) is a function of $X_1,X_2,\cdots,X_n$.
+    <ul>
+      <li>stopping trail doesn’t need IID random variables</li>
+    </ul>
+  </li>
+  <li>
+    <p>Generalized Stopping Trial: for a sequence of pairs of rv’s $(X_1,V_1),(X_2,V_2) \cdots$
+is a positive integer-valued rv such that, for each $n\geq 1$, the indicator
+rv $\mathcal{I}_{{J=n}}$ is a function of $X_1,V_1,X_2,V_2,\cdots,X_n,V_n$
+where each pair</p>
+  </li>
+  <li>Wald’s Equality: Let ${X_n;n\geq 1}$ be a sequence of IID rv’s, each of
+mean $\bar{X}$. If J is a stopping trial for ${X_n;n\geq 1}$ and if $E[J]&lt;
+\infty$, then the sum $S_J=X_1+X_2+\cdots + X_J$ at the stopping trial J
+satisfies <br />
+\(E[S_J]=\bar{X}E[J]\)</li>
+  <li>Generalized Wald’s Equality:
+is independent and identically distributed(IID) to all other pairs. Assume
+that each X_i has finite mean $\bar{X}$. If J is a stopping trial for ${
+ (X_n,V_n); n \geq 1   }$
+    <h4 id="proof">Proof</h4>
+    <p>\(\begin{aligned} \mathrm{E}\left[S_{J}\right] &amp;=\sum_{n} \mathrm{E}\left[X_{n}
+\mathbb{I}_{J \geq n}\right] \\ &amp;=\sum_{n} \mathrm{E}\left[X_{n}\right]
+\mathrm{E}\left[\mathbb{I}_{J \geq n}\right] \\ &amp;=X \sum_{n}
+\mathrm{E}\left[\mathbb{I}_{J \geq n}\right] \\ &amp;=X \sum_{n}^{n}
+\operatorname{Pr}\{J \geq n\}=\overline{X E}[J] \end{aligned}\)</p>
+    <ul>
+      <li>E(XY)=E(X)E(Y) if X and Y are independent.</li>
+      <li>If you are playing a fair game, your expected gain is the expected gain for
+trail times the expected number of times you play.</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="application-of-walds-equality">Application of Wald’s Equality</h4>
+<p>Consider the possibly-defective stopping trial J where is the first n for which
+$S_n=X_1+\cdots +X_n=1$, the first trial at which the gambler is ahead.<br />
+According to Wald’s equality<br />
+\(E[J]=\frac{1}{X}=\frac{1}{2 p-1}\)</p>
+
+<h4 id="galois">Galois</h4>
+<ol>
+  <li>math is very simple if you are familiar with the basic definition.</li>
+</ol>
+:ET

@@ -8,6 +8,20 @@ tags: ["c++","compile"]
 ---
 {% include JB/setup %}
 
+
+#### What is a library?
+A command library is nothing but headers and libs.  At the same time, it needs
+to provide information how to use this library.  jou want people to make use of
+this library, you should provide a way. For CMake users, you should provide
+cmake file; for pkg-config users, you should provide a .pc file. Here is what a
+library folder look like.
+
+
+<img src="{{IMAGE_PATH}}/pl/c++/library_structure.png" height="" width="" />
+
+
+
+
 #### 1.  .a extension and .dylib extension
 1. .a extension means a static library.
 - Static libraries allow application to load code into its address space at compile time.

@@ -1,0 +1,39 @@
+I"ö
+<h4 id="arichitecture">arichitecture</h4>
+<p><strong>t-Distributed stochastic neighbouring embedding(t-SNE) minimizes the divergence between two distributions:
+a distribution that measures pairwise similarities of the input objects and a distribution that measures pairwise
+similarities of the corresponding low-dimensional points in the embedding.</strong></p>
+
+<h4 id="formula">formula</h4>
+
+<p>this formula converts euclidean distance between two points into probability that how alike the points are(the larger distance, the smaller probability):</p>
+
+\[p_{j | i}=\frac{\exp \left(-\left\|x_{i}-x_{j}\right\|^{2} /\left(2 \sigma_{i}^{2}\right)\right)}{\sum_{k \neq i} \exp \left(-\left\|x_{i}-x_{k}\right\|^{2} /\left(2 \sigma_{i}^{2}\right)\right)}\]
+
+<p>while for the low dimensional countpart:
+\(q_{j | i}=\frac{\exp \left(-\left\|y_{i}-y_{j}\right\|^{2}\right)}{\sum_{k \neq i} \exp \left(-\left\|y_{i}-y_{k}\right\|^{2}\right)}\)</p>
+
+<p>the KL divergence:</p>
+
+\[D_{K L}\left(P_{i} \| Q_{i}\right)=\sum_{i} \sum_{j} p_{j i} \cdot \log \frac{p_{j i}}{q_{j i}}\]
+
+<p>gradient descent:</p>
+
+\[\frac{\partial C}{\partial y_{i}}=-\frac{\partial \sum_{i} \sum_{j} p_{j i} \log q_{j i}}{\partial y_{i}}\]
+
+<p>look at this equation, the number of the independent variable is the number of y. So we differentiate to each
+\(y_{i}\)</p>
+
+<h4 id="the-relation-between-kl-divergence-and-maxmizing-likelihood">the relation between KL divergence and Maxmizing likelihood</h4>
+
+<p>Maximizing likelihood is mimimizing the KL divergence</p>
+
+\[\begin{aligned} D_{K L}\left[P\left(x | \theta^{*}\right) \| P(x | \theta)\right] &amp;=\mathbb{E}_{x \sim P\left(x | \theta^{*}\right)}\left[\log \frac{P\left(x | \theta^{*}\right)}{P(x | \theta)}\right] \\ &amp;=\mathbb{E}_{x \sim P\left(x | \theta^{*}\right)}\left[\log P\left(x | \theta^{*}\right)-\log P(x | \theta)\right] \\ &amp;=\mathbb{E}_{x \sim P\left(x | \theta^{*}\right)}\left[\log P\left(x | \theta^{*}\right)\right]-\mathbb{E}_{x \sim P\left(x | \theta^{*}\right)}[\log P(x | \theta)] \end{aligned}\]
+
+<h4 id="reference">Reference</h4>
+<ol>
+  <li><a href="https://wu-2018.github.io/2018/11/30/tSNE-from-scratch.html">tSNE-from-scratch</a></li>
+  <li><a href="https://wiseodd.github.io/techblog/2017/01/26/kl-mle/">MLE and KL</a></li>
+</ol>
+
+:ET

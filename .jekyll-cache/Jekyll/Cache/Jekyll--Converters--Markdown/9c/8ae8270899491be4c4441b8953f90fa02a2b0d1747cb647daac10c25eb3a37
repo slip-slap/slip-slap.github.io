@@ -1,0 +1,130 @@
+I"{
+<h4 id="definition">Definition</h4>
+<ol>
+  <li>Def: A state(node) j is accessible from i(i$\rightarrow$j) if a walk exists from
+i to j.
+    <ul>
+      <li>$i\rightarrow j$ means that, starting in i, entry to j is possible, perhaps
+with multiple steps.$i \neq j$ means there is no possibility of ever reaching
+j from i.</li>
+      <li>If $i\rightarrow j$ and $j\rightarrow k$, then $i\rightarrow k$. (Concatenate
+a walk i to j with a walk from j to k)</li>
+    </ul>
+  </li>
+  <li>
+    <p>An n-step walk is an ordered string of nodes(states), say\(\left(i_{0}, i_{1}, \ldots i_{n}\right), n \geq 1\), with a directed arc from $i_{m-1}$ to $i_m$ for each ,$1\leq m \leq n$.</p>
+  </li>
+  <li>Def: States i and j communicate ($i\rightarrow j$) if $i\rightarrow j$ and $j\rightarrow i$</li>
+  <li>A class C of states is a non-empty set of states such that each $i\in C$
+communicates with every other $j\in C$ and communicates with no $j \notin C$.
+<img src="/images/math-apply-probability-and-statistics-stochastic-process-finite-state-markov-chain.png" />
+    <ul>
+      <li>$C_1={2,3}$</li>
+      <li>$C_2={4,5}$</li>
+      <li>$C_3={1}$</li>
+      <li>$C_4={6}$</li>
+      <li><strong>why $C_4$ is a class?</strong>, if I don’t count this case as a class, I cannot
+partition it, because partitioning means that I should cover the whole states
+in the classes.</li>
+    </ul>
+  </li>
+  <li>For finite-state Markov chains, a recurrent state is a state i that is
+accessible from all states that are accessible from i(i is recurrent if $i
+\rightarrow j$ implies that $j \rightarrow i$). A transient state is a state
+that is not recurrent.
+    <ul>
+      <li>The states in a class are all recurrent or all transient.</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="periodic-states-and-classes">Periodic States and Classes.</h4>
+<p>The period, d(i), of state i is defined as <br />
+$d(i)=gcd{n:p_{ii}^n}&gt;0$</p>
+
+<ul>
+  <li>if d(i)=1, i is aperiodic</li>
+  <li>if d(i)&gt;1, i is periodic with period d(i)</li>
+  <li>All states in the same class have the same period.</li>
+  <li>State i is called aperiodic if there are two consecutive numbers s and s+1
+such that the process can be in state i at these times.</li>
+</ul>
+
+<h4 id="ergodic-markov-chain">Ergodic Markov Chain</h4>
+<p>Ergodic Markov Chains gradually lose their memory of where they started,
+i.e,.$P_{ij}^n$ goes to a limit $\pi_j&gt;0$ as $n \rightarrow \infty$, and this
+limit does not depend on the starting state i.
+A Markov Chain is called ergodic if all its states are ergodic.</p>
+<ul>
+  <li>In a finite state Markov chain, a state that is recurrent and aperiodic is
+called ergodic</li>
+  <li>we are interested in irreducible, ergodic Markov chains.</li>
+</ul>
+
+<h4 id="unichain">Unichain</h4>
+<ol>
+  <li>A unichain is a finite-state Markov chain that contains a single recurrent
+class plus, perhaps, some transient states. An ergodic unichain is a unichain
+for which the recurrent class is ergodic.</li>
+</ol>
+
+<h4 id="matrix-approach">Matrix Approach</h4>
+<ol>
+  <li>Probability Vector: A probability vector is a vector\(\vec{\pi}=\left(\pi_{1}, \dots, \pi_{\mathrm{M}}\right)\)
+for which each $\pi_i$ is nonnegative and $\sum_i{\pi_i}=1$.</li>
+  <li>Steady-state Vector: A probability vector $\vec{\pi}$ is caled a steady-state
+vector for the transition matrix [P] if $\vec{\pi}=\vec{\pi}[P]$
+    <ul>
+      <li>In matrix terms,
+\(\lim _{n \rightarrow \infty}\left[P^{n}\right]=\vec{e} \vec{\pi}\) 
+where $\vec{e}=(1,1,\cdots,1)^T$ is a column vector, and $\vec{\pi}$ is a row
+vector.</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="theorm">Theorm</h4>
+<p>Let an ergodic finite-state Markov chain have transition matrix [P]. Then for
+each j, $max_iP_{ij}^n$ is nonincreasing in n,$min_iP_{ij}^n$ is nondecreasing
+in n.
+\(\lim _{n \rightarrow \infty} \max _{i} P_{i j}^{n}=\lim _{n \rightarrow \infty}
+\min _{i} P_{i j}^{n} \doteq \pi_{j}&gt;0\) <br />
+with exponential convergence in n.</p>
+<h5 id="example">Example</h5>
+<p>Consider the 2-state ergodic chain with $P_{12}=P_{21}=3/4$. Then</p>
+<ul>
+  <li>$P_{12}^n=\frac{12}{16},\frac{6}{16},\frac{9}{16}$</li>
+  <li>$P_{22}^n=\frac{4}{16},\frac{10}{16},\frac{7}{16}$
+    <h5 id="proof">Proof</h5>
+    <p>\(\begin{array}{l}{P_{i j}^{n+1} \leq \max _{k} P_{k j}^{n}} \\ {P_{i j}^{n+1}
+\geq \min _{k} P_{k j}^{n}}\end{array}\)</p>
+  </li>
+</ul>
+
+<h4 id="eigenvalue-and-eigenvector">Eigenvalue and Eigenvector</h4>
+<p>\(\begin{array}{ll}{\pi_{1} P_{11}+\pi_{2} P_{21}=\lambda \pi_{1}} &amp; {P_{11}
+\nu_{1}+P_{12} \nu_{2}=\lambda \nu_{1}} \\ {\pi_{1} P_{12}+\pi_{2}
+P_{22}=\lambda \pi_{2}} &amp; {P_{21} \nu_{1}+P_{22} \nu_{2}=\lambda
+\nu_{2}}\end{array}\)</p>
+
+<p>Accordint to $[P-\lambda I]=0$ <br />
+$lambda_1=1 \quad \lambda_2=1-P_{12}-P_{21}$ <br />
+Eigenvector <br />
+\(\begin{aligned} \pi_{1}^{(1)} &amp;=\frac{P_{21}}{P_{12}+P_{21}} &amp; \pi_{2}^{(1)}
+&amp;=\frac{P_{12}}{P_{12}+P_{21}} \\ \pi_{1}^{(2)} &amp;=1 &amp; \pi_{2}^{(2)} &amp;=-1
+\end{aligned}\) <br />
+\(\begin{array}{ll}{\nu_{1}^{(1)}=} &amp; {1 \quad \nu_{2}^{(1)}=\quad 1} \\
+{\nu_{1}^{(2)}=} &amp; {\frac{P_{12}}{P_{12}+P_{21}} \quad \nu_{2}^{(2)}=\quad
+\frac{-P_{21}}{P_{12}+P_{21}}}\end{array}\) <br /></p>
+
+\[\left[P^{n}\right]=\left[\begin{array}{ll}{\pi_{1}+\pi_{2} \lambda_{2}^{n}} &amp;
+{\pi_{2}-\pi_{2} \lambda_{2}^{n}} \\ {\pi_{1}-\pi_{1} \lambda_{2}^{n}} &amp;
+{\pi_{2}+\pi_{1} \lambda_{2}^{n}}\end{array}\right]\]
+
+<h4 id="reference">Reference</h4>
+<ol>
+  <li><a href="http://courses.washington.edu/inde411/MarkovChains(part3).pdf">Markov Chain</a></li>
+  <li><a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-262-discrete-stochastic-processes-spring-2011/course-notes/MIT6_262S11_chap03.pdf">MIT Finite State Markov Chains</a></li>
+</ol>
+
+:ET

@@ -9,8 +9,16 @@ tags: ["日本語"]
 {% include JB/setup %}
 
 
-#### いっぱい・たくさん・たっぷり
+#### 取る・もらう・くれる
+1.　取る: just means the action of getting something.
+2. もらう・くれる: the additional meaning is from whom to whom.
 
+
+#### 質問・問題
+1. 質問: question
+2. 問題: problem
+
+#### いっぱい・たくさん・たっぷり
 
 #### 酔っ払う・酔う
 1. 酔っ払う: お酒にしか使わない

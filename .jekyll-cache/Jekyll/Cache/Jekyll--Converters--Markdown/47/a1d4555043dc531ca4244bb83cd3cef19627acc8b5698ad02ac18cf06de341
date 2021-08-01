@@ -1,0 +1,70 @@
+I"�
+<ol>
+  <li>
+    <p>with the vertex data defined we’d like to send it as input to the first process of the graphics
+pipeline: the vertex shader. This is done by creating memory on the GPU where we store the vertex
+data, configure how OpenGL should interpret the memory and specify how to send the data to the
+graphics card. The vertex shader then processes as much as vertices as we tell it to from its
+memroy.</p>
+  </li>
+  <li>
+    <p>We manage this memory via so called vertex buffer object(VBO) that can store a large number of
+vertices in the GPU’s memory.</p>
+    <ul>
+      <li>The advantage of using those buffer objects is that we can send large batches of data all at once
+to the graphics.</li>
+    </ul>
+  </li>
+</ol>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// create object</span>
+<span class="n">GLuint</span> <span class="n">objectId</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="n">glGenObject</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">objectId</span><span class="p">);</span>
+<span class="c1">// bind object to context, bind means select</span>
+<span class="n">glBindObject</span><span class="p">(</span><span class="n">GL_WINDOW_TARGET</span><span class="p">,</span> <span class="n">objectId</span><span class="p">);</span>
+<span class="c1">// set options of object currently bound to GL_WINDOW_TARGET</span>
+<span class="n">glSetObjectOption</span><span class="p">(</span><span class="n">GL_WINDOW_TARGET</span><span class="p">,</span> <span class="n">GL_OPTION_WINDOW_WIDTH</span><span class="p">,</span> <span class="mi">800</span><span class="p">);</span>
+<span class="n">glSetObjectOption</span><span class="p">(</span><span class="n">GL_WINDOW_TARGET</span><span class="p">,</span> <span class="n">GL_OPTION_WINDOW_HEIGHT</span><span class="p">,</span> <span class="mi">600</span><span class="p">);</span>
+<span class="c1">// Set context target back to default</span>
+<span class="n">glBindObject</span><span class="p">(</span><span class="n">GL_WINDOW_TARGET</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</code></pre></div></div>
+
+<ol>
+  <li>Viewport</li>
+  <li>Behind the scenes OpenGL uses the data specified via <strong>glViewport</strong> to transform the 2D
+coordinates it processed to coordinates on your screen.
+    <ul>
+      <li>For example, a processed point of location(-0.5, 0.5) would(as its final transformation) be mapped
+to (200,450) in screen coordinates.</li>
+      <li>Note that processed coordinates in OpenGL are between -1 and 1 so we effectively map from the
+range (-1 to 1) to (0, 800) and (0, 600)</li>
+    </ul>
+  </li>
+  <li>Double buffer: When an application draws in a single buffer the resulting image might display
+flickering issues. This is because the resulting output image is not drawn in an instant, but
+drawn pixel by pixel and usually from left to right and top to bottom.
+    <ul>
+      <li>because these images are not displayed at an instant to the user, but rather via a step by step
+generation the result may contain quite a few artifacts.</li>
+      <li>To circumvent these issues, windowing applications apply a double buffer for rendering.</li>
+      <li>The front buffer contains the final output image that is shown at the screen, while all the
+rendering commands draw to the back buffer. As soon as all the rendering commands are finished we
+swap the back buffer to the front buffer so the image is instantly displayed to the user.</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="shader">Shader</h4>
+<ol>
+  <li>In order for OpenGl to know what to make of your collection of coordinates and color values
+OpenGL requires you to hint what kind of render types you want to form with the data.
+    <ul>
+      <li>Do we want the data rendered as a collection of points, a collection of triangles or perhaps just
+one long line?</li>
+      <li>Those hints are called primitives and are given to OpenGL while calling any of the drawing
+commands.</li>
+      <li>Some of these hints are GL_POINTS, GL_TRIANGLES and GL_LINE_STRIP.</li>
+    </ul>
+  </li>
+</ol>
+:ET

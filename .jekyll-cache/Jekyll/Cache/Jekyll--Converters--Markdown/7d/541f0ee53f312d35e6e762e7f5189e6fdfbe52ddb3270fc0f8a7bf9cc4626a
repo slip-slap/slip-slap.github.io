@@ -1,0 +1,43 @@
+I"™
+<h3 id="components-of-a-hmm">Components of A HMM</h3>
+
+<ol>
+  <li>\(Q=q_{1}q_{2}...q_{N}\) a set of N states</li>
+  <li>\(A=a_{11}...a_{ij}...a_{NN}\) a transition probability matrix A, each \(a_{ij}\) representing the probability of moving 
+form state \(i\) to state \(j\), \(s.t. \sum_{j=1}^Na_{ij}=1 \forall i\)</li>
+  <li>\(O=o_1o_2...o_T\) a sequence of T observations</li>
+  <li>\(B=b_i(o_t)\) a sequence of observation likelihoods, also called emission probabilities, each expressing a probability of an observation
+\(o_t\) being generated from a state \(i\)</li>
+  <li>\(\pi=\pi_{1}, \pi_{2}, \dots, \pi_{N}\) an initial probability distribution over states</li>
+</ol>
+
+<h4 id="three-problem">three problem</h4>
+
+<ol>
+  <li>
+    <p><strong>Likelihood</strong> Given an HMM \(\lambda=(A,B)\) and an observation \(O\), determine the likelihood 
+\(P(O | \lambda)\)</p>
+  </li>
+  <li><strong>Decoding</strong> Given an observation sequence \(O\),and an HMM \(\lambda=(A,B)\), discover the best hidden state sequence Q</li>
+  <li><strong>Learning</strong> Given an observation sequence \(O\), and the set of states in the HMM, learn the HMM parameters A and B</li>
+</ol>
+
+<h3 id="two-simplifying-assumptions">Two simplifying assumptions</h3>
+
+<p>A first-order hidden Markov model instantiates two simpliying assumptions.</p>
+<ol>
+  <li>the probability of a particular state depends on only the previous state</li>
+</ol>
+
+<h3 id="algorithm">Algorithm</h3>
+
+<h4 id="forward-algorithm">Forward Algorithm</h4>
+<p><img src="/images/HMM-forward-algorithm.png" height="" width="" /></p>
+
+<h3 id="reference">Reference</h3>
+<ol>
+  <li><a href="http://www.blackarbs.com/blog/introduction-hidden-markov-models-python-networkx-sklearn/2/9/2017">HHM</a></li>
+  <li><a href="https://web.stanford.edu/~jurafsky/slp3/A.pdf">stanford Hiddern Markov Model</a></li>
+  <li><a href="https://blog.csdn.net/likelet/article/details/7056068">CSDN-HMM</a></li>
+</ol>
+:ET

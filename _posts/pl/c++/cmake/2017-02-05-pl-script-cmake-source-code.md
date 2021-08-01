@@ -4,7 +4,7 @@ title: "CMake: Source Code"
 keywords: []
 description: 
 category: "PL"
-tags: ["cmake","script"]
+tags: ["cmake"]
 ---
 
 #### The entry 

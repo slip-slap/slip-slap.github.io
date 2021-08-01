@@ -1,0 +1,26 @@
+I"`
+<h4 id="what-is-the-crap-of-random-forest-">what is the crap of random forest ?</h4>
+
+<p>The random forest combines hundreds or thousands of decision trees, <strong>trains each one on a slightly different set 
+of the observations</strong>, splitting nodes in each tree considering a limited number of features. The final predictions 
+of the random forest are make by <strong>averaging</strong> the predictions of each individual tree.</p>
+
+<h4 id="how-does-this-idea-come-out">How does this idea come out?</h4>
+
+<p>You have to decide whether Tesla stock will go up and you have access to a dozen analysts who have no prior knowledge
+about the company. Each analyst has low bias because they don’t come in with any assumptions, and is allowed to learn 
+from news reports. <br /></p>
+
+<p>But each individual analyst has high variance and would come up with drastically different predictions if given a 
+different training set of reports.<br /></p>
+
+<p>The solution is to not rely on any one individual, but pool the votes of each analyst. Furthermore, like in a random
+forest, allow each analyst access to only a section of the reports and hope the effects of the noisy information will
+be cancelled out by the sampling. In real life, we rely on multiple sources (never trust a solitary Amazon review),
+and therefore, not only is a decision tree intuitive, but so is the idea of combining them in a random forest.</p>
+
+<h4 id="reference">Reference</h4>
+<ol>
+  <li><a href="https://towardsdatascience.com/an-implementation-and-explanation-of-the-random-forest-in-python-77bf308a9b76">Explanation of the Random Forest</a></li>
+</ol>
+:ET

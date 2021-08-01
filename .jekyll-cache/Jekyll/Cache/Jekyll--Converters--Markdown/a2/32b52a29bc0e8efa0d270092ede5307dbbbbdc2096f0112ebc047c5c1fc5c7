@@ -1,0 +1,227 @@
+I"�Q
+<p>####</p>
+<ol>
+  <li>strategy 1: prefer to choose object with lowest weight</li>
+  <li>strategy 2: prefer to choose object with higest profit
+both of them sounds feasible.</li>
+</ol>
+
+<h4 id="dynamic-programingbottom-up-problem">Dynamic Programing(Bottom Up Problem)</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Knapsack</th>
+      <th> </th>
+      <th> </th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+      <th>6</th>
+      <th>7</th>
+      <th>8</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>P</td>
+      <td>W</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>2</td>
+      <td>2</td>
+      <td>3</td>
+      <td>3</td>
+      <td>3</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>4</td>
+      <td>3</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>2</td>
+      <td>5</td>
+      <td>5</td>
+      <td>6</td>
+      <td>7</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>5</td>
+      <td>4</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>2</td>
+      <td>5</td>
+      <td>6</td>
+      <td>6</td>
+      <td>7</td>
+      <td>8</td>
+    </tr>
+  </tbody>
+</table>
+
+<ol>
+  <li>Formula
+$
+V[i, \omega]=\max {V[i-1, \omega], V[i-1, \omega-\omega(i)]+P(i]}
+$</li>
+</ol>
+
+<h4 id="set-method">set method</h4>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include&lt;iostream&gt;
+</span>
+<span class="c1">// object weight 2,3,4,5</span>
+<span class="c1">// object value  1,2,5,6</span>
+<span class="c1">// bag compacity 8</span>
+<span class="c1">// maxmize profit</span>
+<span class="kt">int</span> <span class="nf">knapsack</span><span class="p">(</span><span class="kt">int</span> <span class="n">row</span><span class="p">,</span> <span class="kt">int</span> <span class="n">column</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="k">static</span> <span class="kt">int</span> <span class="n">object_weight</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">};</span>
+	<span class="k">static</span> <span class="kt">int</span> <span class="n">object_value</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">};</span>
+	<span class="c1">// profit table</span>
+	<span class="k">static</span> <span class="kt">int</span> <span class="n">profit_table</span><span class="p">[</span><span class="mi">5</span><span class="p">][</span><span class="mi">9</span><span class="p">];</span>
+	<span class="k">if</span><span class="p">(</span><span class="n">column</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">){</span><span class="k">return</span> <span class="o">-</span><span class="mi">99999</span><span class="p">;}</span>
+	<span class="k">if</span><span class="p">(</span><span class="n">row</span> <span class="o">==</span> <span class="mi">0</span><span class="o">||</span><span class="n">column</span> <span class="o">==</span> <span class="mi">0</span><span class="p">){</span><span class="k">return</span> <span class="mi">0</span><span class="p">;}</span>
+
+	<span class="kt">int</span> <span class="n">profit_a</span> <span class="o">=</span> <span class="n">knapsack</span><span class="p">(</span><span class="n">row</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">column</span><span class="p">);</span>
+	<span class="kt">int</span> <span class="n">profit_b</span> <span class="o">=</span> <span class="n">knapsack</span><span class="p">(</span><span class="n">row</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">column</span><span class="o">-</span><span class="n">object_weight</span><span class="p">[</span><span class="n">row</span><span class="p">])</span> <span class="o">+</span> <span class="n">object_value</span><span class="p">[</span><span class="n">row</span><span class="p">];</span>
+	<span class="k">return</span> <span class="n">std</span><span class="o">::</span><span class="n">max</span><span class="p">(</span><span class="n">profit_a</span><span class="p">,</span><span class="n">profit_b</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">knapsack</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">8</span><span class="p">)</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">knapsack</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">8</span><span class="p">)</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">knapsack</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">knapsack</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">8</span><span class="p">)</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">knapsack</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">knapsack</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h4 id="exponential-method">Exponential Method</h4>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">struct</span> <span class="nc">node</span> <span class="p">{</span>
+	<span class="kt">int</span> <span class="n">key</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">level</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+	<span class="n">node</span><span class="o">*</span> <span class="n">left_child</span> <span class="o">=</span> <span class="nb">nullptr</span><span class="p">;</span>
+	<span class="n">node</span><span class="o">*</span> <span class="n">right_child</span> <span class="o">=</span> <span class="nb">nullptr</span><span class="p">;</span>
+<span class="p">};</span>
+
+
+<span class="kt">void</span> <span class="nf">bfs</span><span class="p">(</span><span class="n">node</span><span class="o">*</span> <span class="n">root</span><span class="p">,</span> <span class="kt">int</span> <span class="n">level</span><span class="p">){</span>
+	<span class="k">if</span><span class="p">(</span><span class="n">level</span> <span class="o">==</span> <span class="mi">1</span><span class="p">){</span>
+		<span class="k">return</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">2</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+		<span class="n">node</span><span class="o">*</span> <span class="n">temp</span> <span class="o">=</span> <span class="k">new</span> <span class="n">node</span><span class="p">();</span>
+		<span class="n">temp</span><span class="o">-&gt;</span><span class="n">key</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+		<span class="n">temp</span><span class="o">-&gt;</span><span class="n">level</span> <span class="o">=</span> <span class="n">level</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+		<span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="o">==</span><span class="mi">0</span><span class="p">){</span>
+			<span class="n">root</span><span class="o">-&gt;</span><span class="n">left_child</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+		<span class="p">}</span><span class="k">else</span><span class="p">{</span>
+			<span class="n">root</span><span class="o">-&gt;</span><span class="n">right_child</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+	<span class="n">bfs</span><span class="p">(</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">left_child</span><span class="p">,</span> <span class="n">level</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+	<span class="n">bfs</span><span class="p">(</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">right_child</span><span class="p">,</span> <span class="n">level</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">visit_tree</span><span class="p">(</span><span class="n">node</span><span class="o">*</span> <span class="n">child</span><span class="p">){</span>
+	<span class="k">if</span><span class="p">(</span><span class="n">child</span> <span class="o">==</span> <span class="nb">nullptr</span><span class="p">){</span>
+		<span class="k">return</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">child</span><span class="o">-&gt;</span><span class="n">key</span><span class="p">;</span>
+	<span class="n">visit_tree</span><span class="p">(</span><span class="n">child</span><span class="o">-&gt;</span><span class="n">left_child</span><span class="p">);</span>
+	<span class="n">visit_tree</span><span class="p">(</span><span class="n">child</span><span class="o">-&gt;</span><span class="n">right_child</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+	<span class="n">node</span><span class="o">*</span> <span class="n">root</span> <span class="o">=</span> <span class="k">new</span> <span class="n">node</span><span class="p">();</span>
+	<span class="n">root</span><span class="o">-&gt;</span><span class="n">key</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+	<span class="n">bfs</span><span class="p">(</span><span class="n">root</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+	<span class="n">visit_tree</span><span class="p">(</span><span class="n">root</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h4 id="dynamic-method">Dynamic Method</h4>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="cp">#include &lt;iostream&gt;
+#include &lt;list&gt;
+</span>
+<span class="k">const</span> <span class="kt">int</span> <span class="n">SOLUTON_SIZE</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+<span class="k">const</span> <span class="kt">int</span> <span class="n">PROFITS</span><span class="p">[</span><span class="n">SOLUTON_SIZE</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">};</span>	
+<span class="k">const</span> <span class="kt">int</span> <span class="n">WEIGHTS</span><span class="p">[</span><span class="n">SOLUTON_SIZE</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">};</span>
+<span class="k">const</span> <span class="kt">int</span> <span class="n">WEIGHTS_LIMIT</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">profit_arr</span><span class="p">[</span><span class="mi">5</span><span class="p">][</span><span class="mi">9</span><span class="p">];</span>
+
+<span class="kt">void</span> <span class="nf">Print2DAarray</span><span class="p">(</span><span class="kt">int</span> <span class="n">arr</span><span class="p">[</span><span class="mi">5</span><span class="p">][</span><span class="mi">9</span><span class="p">],</span> <span class="kt">int</span> <span class="n">row</span><span class="p">,</span> <span class="kt">int</span> <span class="n">col</span><span class="p">){</span>
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">row</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">w</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">w</span><span class="o">&lt;</span><span class="n">col</span><span class="p">;</span><span class="n">w</span><span class="o">++</span><span class="p">){</span>
+			<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">w</span><span class="p">]</span><span class="o">&lt;&lt;</span><span class="s">", "</span><span class="p">;</span>
+		<span class="p">}</span>
+		<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">SOLUTON_SIZE</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+		<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">WEIGHTS_LIMIT</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">){</span>
+			<span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="o">==</span><span class="mi">0</span> <span class="o">||</span> <span class="n">j</span><span class="o">==</span><span class="mi">0</span><span class="p">){</span> <span class="n">profit_arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;}</span>
+			<span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">WEIGHTS</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">j</span> <span class="o">||</span> <span class="n">WEIGHTS</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">j</span><span class="p">){</span>
+				<span class="kt">int</span> <span class="n">profit1</span> <span class="o">=</span>  <span class="n">profit_arr</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">];</span>
+				<span class="kt">int</span> <span class="n">profit2</span> <span class="o">=</span>  <span class="n">PROFITS</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">profit_arr</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span> <span class="o">-</span> <span class="n">WEIGHTS</span><span class="p">[</span><span class="n">i</span><span class="p">]];</span>
+				<span class="k">if</span><span class="p">(</span><span class="n">profit1</span><span class="o">&gt;</span><span class="n">profit2</span><span class="p">){</span><span class="n">profit_arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">profit1</span><span class="p">;}</span>
+				<span class="k">else</span><span class="p">{</span><span class="n">profit_arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="n">profit2</span><span class="p">;}</span>
+			<span class="p">}</span>
+			<span class="k">else</span><span class="p">{</span>
+				<span class="n">profit_arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">profit_arr</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">];</span>
+			<span class="p">}</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+	<span class="n">Print2DAarray</span><span class="p">(</span><span class="n">profit_arr</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+:ET

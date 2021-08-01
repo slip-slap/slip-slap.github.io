@@ -1,0 +1,217 @@
+I"�N<h4 id="command">Command</h4>
+<ol>
+  <li>latex provides table environment to typeset a table</li>
+  <li>the paramaters follow tabular command specify the alignment each column</li>
+  <li>the vertical line decides to render the vertical line separated the table or
+not.</li>
+</ol>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{table}</span>[h!]
+	<span class="nt">\begin{center}</span>
+		<span class="k">\caption</span><span class="p">{</span>first table<span class="p">}</span>
+		<span class="nt">\begin{tabular}</span><span class="p">{</span>l|c|r<span class="p">}</span>
+			<span class="k">\hline</span>
+			Value 1 <span class="p">&amp;</span> value 2 <span class="p">&amp;</span> value 3<span class="k">\\</span>
+			<span class="k">\hline</span>
+			1 <span class="p">&amp;</span> 4.2    <span class="p">&amp;</span> d<span class="k">\\</span>
+			2 <span class="p">&amp;</span> 1234.6 <span class="p">&amp;</span> e<span class="k">\\</span>
+			2 <span class="p">&amp;</span> 123400.6 <span class="p">&amp;</span> e<span class="k">\\</span>
+			<span class="k">\hline</span>
+		<span class="nt">\end{tabular}</span>
+	<span class="nt">\end{center}</span>
+<span class="nt">\end{table}</span>
+</code></pre></div></div>
+
+<h4 id="2-package">2 Package</h4>
+
+<h5 id="21-siunitx-package">2.1 siunitx package</h5>
+<ol>
+  <li>align numbers at decimal point</li>
+</ol>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">\usepackage</span><span class="p">{</span>siunitx<span class="p">}</span> <span class="c">% Required for alignment</span>
+  <span class="k">\sisetup</span><span class="p">{</span>
+	  round-mode          = places, <span class="c">% Rounds numbers</span>
+	    round-precision     = 2, <span class="c">% to 2 places</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<h5 id="makecell-package">makecell package</h5>
+<p>add line break in a table cell</p>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="nt">\begin{table*}</span>
+	<span class="k">\normalsize</span>
+<span class="k">\caption</span><span class="p">{</span>The optimum lay-ups using two distinct fiber angles under various biaxial loading cases<span class="p">}</span>
+<span class="k">\label</span><span class="p">{</span>tab:two<span class="p">_</span>distinct<span class="p">_</span>angle<span class="p">}</span>
+<span class="k">\centering</span>
+<span class="nt">\begin{tabular}</span><span class="p">{</span>clccc<span class="p">}</span>
+	<span class="k">\toprule</span>
+	<span class="k">\textbf</span><span class="p">{</span>Loading<span class="p">}</span> <span class="p">$</span><span class="nb">N</span><span class="p">_{</span><span class="nb">x</span><span class="p">}</span><span class="o">/</span><span class="nb">N</span><span class="p">_{</span><span class="nb">y</span><span class="p">}</span><span class="o">/</span><span class="nb">N</span><span class="p">_{</span><span class="nb">xy</span><span class="p">}$</span> <span class="k">\textbf</span><span class="p">{</span>(MPa m)<span class="p">}</span>   <span class="p">&amp;</span>
+	<span class="k">\makecell</span><span class="p">{</span><span class="k">\textbf</span><span class="p">{</span>Optimum lay-up <span class="p">}</span> <span class="k">\\</span> <span class="k">\textbf</span><span class="p">{</span>sequences<span class="p">}</span>  <span class="p">}</span>                        <span class="p">&amp;</span>
+	<span class="k">\textbf</span><span class="p">{</span>Laminate thickness<span class="p">}</span> <span class="p">&amp;</span>  <span class="k">\makecell</span><span class="p">{</span><span class="k">\textbf</span><span class="p">{</span>Safety factor <span class="p">}</span> <span class="k">\\</span>
+	<span class="k">\textbf</span><span class="p">{</span>for Tsai-wu<span class="p">}}</span>  <span class="p">&amp;</span>
+	<span class="k">\makecell</span><span class="p">{</span><span class="k">\textbf</span><span class="p">{</span>Safety factor <span class="p">}</span> <span class="k">\\</span> <span class="k">\textbf</span><span class="p">{</span>for  maximum stress<span class="p">}}</span>
+	 <span class="k">\\</span>
+	<span class="k">\midrule</span>
+	10/5/0        <span class="p">&amp;</span>  <span class="p">$</span><span class="o">[</span><span class="m">33</span><span class="p">_{</span><span class="m">29</span><span class="p">}</span><span class="o">/</span><span class="nv">\text</span><span class="p">{</span><span class="o">-</span><span class="p">}</span><span class="m">39</span><span class="p">_{</span><span class="m">25</span><span class="p">}</span><span class="o">/</span><span class="nv">\bar</span><span class="p">{</span><span class="nv">\text</span><span class="p">{</span><span class="o">-</span><span class="p">}</span><span class="m">39</span><span class="p">}</span><span class="o">]</span><span class="p">_</span><span class="nb">s</span><span class="p">$</span>      <span class="p">&amp;</span>     109               <span class="p">&amp;</span>  1.0074      <span class="p">&amp;</span>  1.0246  <span class="k">\\</span>
+	<span class="k">\bottomrule</span>
+<span class="nt">\end{tabular}</span>
+<span class="nt">\end{table*}</span>
+</code></pre></div></div>
+
+<h5 id="22--multirow-package">2.2  multirow package</h5>
+<ol>
+  <li>grammar: \multirow{NUMBER_OF_ROWS}{WIDTH}{CONTENT}
+    <ul>
+      <li>It’s used to make a row span several cells</li>
+      <li>Use an asterisk as an argument for the width, it means, this width should be
+determined automatically.</li>
+    </ul>
+  </li>
+</ol>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{table}</span>[h!]
+	<span class="nt">\begin{center}</span>
+		<span class="k">\caption</span><span class="p">{</span>first table<span class="p">}</span>
+		<span class="nt">\begin{tabular}</span><span class="p">{</span>l|c|r<span class="p">}</span>
+			<span class="k">\toprule</span>
+			<span class="k">\textbf</span><span class="p">{</span>Value 1<span class="p">}</span> <span class="p">&amp;</span> <span class="k">\textbf</span><span class="p">{</span>Value 2<span class="p">}</span> <span class="p">&amp;</span> <span class="k">\textbf</span><span class="p">{</span>Value 3<span class="p">}</span><span class="k">\\</span>
+			<span class="k">\midrule</span>
+			<span class="k">\multirow</span><span class="p">{</span>3<span class="p">}{</span>*<span class="p">}{</span>2<span class="p">}</span> <span class="p">&amp;</span> 4.2    <span class="p">&amp;</span> d<span class="k">\\</span>
+			 <span class="p">&amp;</span> 1234.6 <span class="p">&amp;</span> e<span class="k">\\</span>
+			 <span class="p">&amp;</span> 123400.6 <span class="p">&amp;</span> e<span class="k">\\</span>
+			<span class="k">\bottomrule</span>
+		<span class="nt">\end{tabular}</span>
+	<span class="nt">\end{center}</span>
+<span class="nt">\end{table}</span>
+</code></pre></div></div>
+
+<h5 id="23-multicol-package">2.3 multicol package</h5>
+
+<h5 id="3-booktabs-package">3. booktabs package</h5>
+<ol>
+  <li>booktabs package provides much prettier horizontal separator.
+    <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{table}</span>[h!]
+ <span class="nt">\begin{center}</span>
+     <span class="k">\caption</span><span class="p">{</span>first table<span class="p">}</span>
+     <span class="nt">\begin{tabular}</span><span class="p">{</span>l|c|r<span class="p">}</span>
+         <span class="k">\toprule</span>
+         <span class="k">\textbf</span><span class="p">{</span>Value 1<span class="p">}</span> <span class="p">&amp;</span> <span class="k">\textbf</span><span class="p">{</span>Value 2<span class="p">}</span> <span class="p">&amp;</span> <span class="k">\textbf</span><span class="p">{</span>Value 3<span class="p">}</span><span class="k">\\</span>
+         <span class="k">\midrule</span>
+         1 <span class="p">&amp;</span> 4.2    <span class="p">&amp;</span> d<span class="k">\\</span>
+         2 <span class="p">&amp;</span> 1234.6 <span class="p">&amp;</span> e<span class="k">\\</span>
+         2 <span class="p">&amp;</span> 123400.6 <span class="p">&amp;</span> e<span class="k">\\</span>
+         <span class="k">\bottomrule</span>
+     <span class="nt">\end{tabular}</span>
+ <span class="nt">\end{center}</span>
+<span class="nt">\end{table}</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h5 id="4-longtable-package">4. longtable package</h5>
+<p>If you have a lot of rows in your table, the table will be cropped at the bottom of the page,
+longtable package provides a convenient to make tables span multiple pages.</p>
+
+<h5 id="5-rotating-package">5. rotating package</h5>
+<ol>
+  <li>If we add too many columns, we might be getting a table that’s too wide for the page. In this
+situation, it’s often best to simply rotate the table and print it in sideways.</li>
+  <li>replace the table environment with sidewaystable environment</li>
+</ol>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{sidewaystable}</span>[h!]
+	<span class="nt">\begin{center}</span>
+		<span class="k">\caption</span><span class="p">{</span>first table<span class="p">}</span>
+		<span class="nt">\begin{tabular}</span><span class="p">{</span>lSr<span class="p">}</span>
+			<span class="k">\hline</span>
+			Value 1 <span class="p">&amp;</span> value 2 <span class="p">&amp;</span> value 3<span class="k">\\</span>
+			<span class="k">\hline</span>
+			1 <span class="p">&amp;</span> 4.2    <span class="p">&amp;</span> d<span class="k">\\</span>
+			2 <span class="p">&amp;</span> 1234.6 <span class="p">&amp;</span> e<span class="k">\\</span>
+			2 <span class="p">&amp;</span> 123400.6 <span class="p">&amp;</span> e<span class="k">\\</span>
+			<span class="k">\hline</span>
+		<span class="nt">\end{tabular}</span>
+	<span class="nt">\end{center}</span>
+<span class="nt">\end{sidewaystable}</span>
+</code></pre></div></div>
+
+<h5 id="6-mdwtab-package">6. mdwtab package</h5>
+<p>mdwtab.sty which are used to format tables.</p>
+
+<h4 id="threeparttable-package">threeparttable package</h4>
+<p>Add notes under the table</p>
+<ol>
+  <li>this package faciliate tables with caption and notes.</li>
+  <li>A threeparttable does not float, but you can put it in a table environment.
+This causes extra typing, gives more flexibility</li>
+  <li>There is nothing automatic about the notes, you must specify the identifier
+in the body of the table.</li>
+</ol>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{table}</span>
+	<span class="k">\centering</span>
+	<span class="nt">\begin{threeparttable}</span>
+		<span class="k">\caption</span><span class="p">{</span>Three Part Table<span class="p">}</span>
+		<span class="nt">\begin{tabular}</span><span class="p">{</span>lllll<span class="p">}</span>
+			<span class="k">\toprule</span>
+			1 <span class="k">\tnote</span><span class="p">{</span>1<span class="p">}</span> <span class="p">&amp;</span> 2<span class="p">&amp;</span> 2<span class="p">&amp;</span> 2<span class="p">&amp;</span> 200000000000<span class="k">\\</span>
+			3  <span class="p">&amp;</span> 4<span class="p">&amp;</span> 4<span class="p">&amp;</span> 4<span class="p">&amp;</span> 4<span class="k">\\</span>
+			<span class="k">\bottomrule</span>
+		<span class="nt">\end{tabular}</span>
+		<span class="nt">\begin{tablenotes}</span>
+		<span class="k">\item</span><span class="na">[1]</span> the first note
+		<span class="nt">\end{tablenotes}</span>
+	<span class="nt">\end{threeparttable}</span>
+<span class="nt">\end{table}</span>
+</code></pre></div></div>
+
+<h5 id="8-resizebox">8. resizebox</h5>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{table}</span>
+	<span class="k">\normalsize</span>
+<span class="k">\caption</span><span class="p">{</span>Comparison with the results of DSA<span class="p">}</span>
+<span class="k">\label</span><span class="p">{</span>tab:comparision<span class="p">}</span>
+<span class="k">\centering</span>
+	<span class="c">%\resizebox{.9\textwidth}{!}{</span>
+	<span class="k">\resizebox</span><span class="p">{</span>10cm<span class="p">}{</span>!<span class="p">}{</span>
+<span class="nt">\begin{tabular}</span><span class="p">{</span>c|cccc|lccc<span class="p">}</span>
+	<span class="k">\toprule</span>
+	<span class="k">\textbf</span><span class="p">{</span>Loading<span class="p">}</span>	    <span class="p">&amp;</span> <span class="k">\multicolumn</span> <span class="p">{</span>4<span class="p">}{</span>c<span class="p">}{</span><span class="k">\textbf</span><span class="p">{</span>Akbulut and Sonmez's<span class="k">\cite</span><span class="p">{</span>akbulut2008optimum<span class="p">}</span> Study<span class="p">}}</span>   <span class="p">&amp;</span> <span class="k">\multicolumn</span> <span class="p">{</span>4<span class="p">}{</span>c<span class="p">}{</span><span class="k">\textbf</span><span class="p">{</span>Present Study<span class="p">}}</span><span class="k">\\</span>
+	<span class="k">\midrule</span>
+	 <span class="p">$</span><span class="nb">N</span><span class="p">_{</span><span class="nb">x</span><span class="p">}</span><span class="o">/</span><span class="nb">N</span><span class="p">_{</span><span class="nb">y</span><span class="p">}</span><span class="o">/</span><span class="nb">N</span><span class="p">_{</span><span class="nb">xy</span><span class="p">}$</span>   <span class="p">&amp;</span> Optimum lay-up			        <span class="p">&amp;</span> laminate  <span class="p">&amp;</span> TW <span class="p">&amp;</span> MS   <span class="p">&amp;</span> Optimum lay-up <span class="p">&amp;</span> laminate  <span class="p">&amp;</span> TW <span class="p">&amp;</span> MS <span class="k">\\</span>
+	  (MPa m)	            <span class="p">&amp;</span> sequences					        <span class="p">&amp;</span> thickness <span class="p">&amp;</span>    <span class="p">&amp;</span>      <span class="p">&amp;</span> sequences	     <span class="p">&amp;</span> thickness <span class="p">&amp;</span>    <span class="p">&amp;</span>    <span class="k">\\</span>
+	<span class="k">\midrule</span>
+	  80/5/0                 <span class="p">&amp;</span>  <span class="p">$</span><span class="o">[</span><span class="m">21</span><span class="p">_{</span><span class="m">25</span><span class="p">}</span><span class="o">/</span><span class="nv">\text</span><span class="p">{</span><span class="o">-</span><span class="p">}</span><span class="m">19</span><span class="p">_{</span><span class="m">28</span><span class="p">}</span><span class="o">]</span><span class="p">_</span><span class="nb">s</span><span class="p">$</span>     <span class="p">&amp;</span>  106      <span class="p">&amp;</span>  1.0113  <span class="p">&amp;</span>  1.2213 <span class="p">&amp;</span> <span class="p">$</span><span class="o">[</span><span class="nv">\text</span><span class="p">{</span><span class="o">-</span><span class="p">}</span><span class="m">20</span><span class="p">_{</span><span class="m">27</span><span class="p">}</span><span class="o">/</span><span class="m">21</span><span class="p">_{</span><span class="m">25</span><span class="p">}</span><span class="o">/</span><span class="nv">\bar</span><span class="p">{</span><span class="m">25</span><span class="p">}</span><span class="o">]</span><span class="p">_</span><span class="nb">s</span><span class="p">$</span>             <span class="p">&amp;</span>     105      <span class="p">&amp;</span>  1.0029      <span class="p">&amp;</span>  1.2063    <span class="k">\\</span>
+	  120/5/0                <span class="p">&amp;</span>  <span class="p">$</span><span class="o">[</span><span class="m">17</span><span class="p">_{</span><span class="m">35</span><span class="p">}</span><span class="o">/</span><span class="nv">\text</span><span class="p">{</span><span class="o">-</span><span class="p">}</span><span class="m">17</span><span class="p">_{</span><span class="m">35</span><span class="p">}</span><span class="o">]</span><span class="p">_</span><span class="nb">s</span><span class="p">$</span>     <span class="p">&amp;</span>  140      <span class="p">&amp;</span>  1.0030  <span class="p">&amp;</span>  1.0950 <span class="p">&amp;</span> <span class="p">$</span><span class="o">[</span><span class="nv">\text</span><span class="p">{</span><span class="o">-</span><span class="p">}</span><span class="m">18</span><span class="p">_{</span><span class="m">34</span><span class="p">}</span><span class="o">/</span><span class="m">17</span><span class="p">_{</span><span class="m">36</span><span class="p">}</span><span class="o">]</span><span class="p">_</span><span class="nb">s</span><span class="p">$</span>                     <span class="p">&amp;</span>     140      <span class="p">&amp;</span>  1.0000      <span class="p">&amp;</span>  1.0898     <span class="k">\\</span>
+	<span class="k">\bottomrule</span>
+<span class="nt">\end{tabular}</span>
+<span class="p">}</span>
+<span class="nt">\end{table}</span>
+</code></pre></div></div>
+
+<h5 id="9-adjustbox">9. adjustbox</h5>
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{table}</span>
+<span class="k">\centering</span>
+<span class="k">\caption</span><span class="p">{</span>Different Activation Functions<span class="p">}</span>
+<span class="nt">\begin{adjustbox}</span><span class="p">{</span>width=1<span class="k">\textwidth</span><span class="p">}</span>
+<span class="k">\label</span><span class="p">{</span>tab:transfer<span class="p">_</span>function<span class="p">}</span>
+	<span class="nt">\begin{tabular}</span><span class="p">{</span>lllc<span class="p">}</span>
+			<span class="k">\toprule</span>
+			Type <span class="p">&amp;</span> Description  <span class="p">&amp;</span> Formula <span class="p">&amp;</span> Range  <span class="k">\\</span>
+			<span class="k">\midrule</span>
+			Linear   <span class="p">&amp;</span> The output is proportional to the input <span class="p">&amp;</span> <span class="p">$</span><span class="nb">f</span><span class="o">(</span><span class="nb">x</span><span class="o">)=</span><span class="nb">cx</span><span class="p">$</span>                  <span class="p">&amp;</span>  <span class="p">$</span><span class="o">(-</span><span class="nv">\infty</span><span class="nb">, </span><span class="o">+</span><span class="nv">\infty</span><span class="o">)</span><span class="p">$</span> <span class="k">\\</span>
+			Softplus <span class="p">&amp;</span> A family of S-shaped functions          <span class="p">&amp;</span> <span class="p">$</span><span class="nb">f</span><span class="o">(</span><span class="nb">x</span><span class="o">)</span><span class="nb"> </span><span class="o">=</span><span class="nb"> ln</span><span class="o">(</span><span class="m">1</span><span class="o">+</span><span class="nb">e</span><span class="p">^</span><span class="nb">x</span><span class="o">)</span><span class="p">$</span>         <span class="p">&amp;</span> <span class="p">$</span><span class="o">(</span><span class="m">0</span><span class="nb">, </span><span class="o">+</span><span class="nv">\infty</span><span class="o">)</span><span class="p">$</span> <span class="k">\\</span>
+			<span class="k">\bottomrule</span>
+	<span class="nt">\end{tabular}</span>
+<span class="nt">\end{adjustbox}</span>
+<span class="nt">\end{table}</span>
+</code></pre></div></div>
+
+<h4 id="reference">Reference</h4>
+<ol>
+  <li><a href="https://www.latex-tutorial.com/tutorials/tables/">tables</a></li>
+  <li><a href="http://texdoc.net/texmf-dist/doc/latex/threeparttable/threeparttable.pdf">Threeparttable</a></li>
+  <li><a href="https://stackoverflow.com/questions/4809482/how-do-i-reduce-the-size-of-an-entire-latex-table">stackoverflow reduce size of latex table</a></li>
+</ol>
+:ET

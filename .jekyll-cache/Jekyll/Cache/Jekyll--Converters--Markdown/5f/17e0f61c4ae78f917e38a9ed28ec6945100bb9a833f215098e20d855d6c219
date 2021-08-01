@@ -1,0 +1,58 @@
+I"`
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include&lt;iostream&gt;
+</span>
+<span class="k">struct</span> <span class="nc">node</span> 
+<span class="p">{</span>
+	<span class="kt">int</span> <span class="n">key</span><span class="p">;</span>
+	<span class="k">struct</span> <span class="nc">node</span> <span class="o">*</span> <span class="n">ptr_next</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="k">struct</span> <span class="nc">stack</span> 
+<span class="p">{</span>
+	<span class="k">struct</span> <span class="nc">node</span><span class="o">*</span> <span class="n">top</span><span class="o">=</span><span class="nb">nullptr</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">size</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="kt">void</span> <span class="nf">push</span><span class="p">(</span><span class="k">struct</span> <span class="nc">stack</span> <span class="o">&amp;</span><span class="n">st</span><span class="p">,</span> <span class="kt">int</span> <span class="n">key</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="k">struct</span> <span class="nc">node</span> <span class="o">*</span><span class="n">temp</span> <span class="o">=</span> <span class="k">new</span> <span class="n">node</span><span class="p">();</span>
+	<span class="n">temp</span><span class="o">-&gt;</span><span class="n">key</span> <span class="o">=</span> <span class="n">key</span><span class="p">;</span>
+
+	<span class="n">temp</span><span class="o">-&gt;</span><span class="n">ptr_next</span><span class="o">=</span><span class="n">st</span><span class="p">.</span><span class="n">top</span><span class="p">;</span>
+	<span class="n">st</span><span class="p">.</span><span class="n">top</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+	<span class="n">st</span><span class="p">.</span><span class="n">size</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">pop</span><span class="p">(</span><span class="k">struct</span> <span class="nc">stack</span> <span class="o">&amp;</span><span class="n">st</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="k">if</span><span class="p">(</span><span class="n">st</span><span class="p">.</span><span class="n">top</span><span class="o">==</span><span class="nb">nullptr</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"overflow"</span><span class="p">;</span>
+		<span class="k">return</span><span class="p">;</span>
+	<span class="p">}</span><span class="k">else</span>
+	<span class="p">{</span>
+		<span class="n">st</span><span class="p">.</span><span class="n">top</span><span class="o">=</span><span class="n">st</span><span class="p">.</span><span class="n">top</span><span class="o">-&gt;</span><span class="n">ptr_next</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">display</span><span class="p">(</span><span class="k">struct</span> <span class="nc">stack</span> <span class="o">&amp;</span><span class="n">st</span><span class="p">)</span>
+<span class="p">{</span>
+
+	<span class="k">struct</span> <span class="nc">node</span><span class="o">*</span> <span class="n">temp</span><span class="o">=</span><span class="n">st</span><span class="p">.</span><span class="n">top</span><span class="p">;</span>
+	<span class="k">while</span><span class="p">(</span><span class="n">temp</span><span class="o">!=</span><span class="nb">nullptr</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">temp</span><span class="o">-&gt;</span><span class="n">key</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+		<span class="n">temp</span><span class="o">=</span><span class="n">temp</span><span class="o">-&gt;</span><span class="n">ptr_next</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="k">struct</span> <span class="nc">stack</span> <span class="n">st</span><span class="p">;</span>
+	<span class="n">push</span><span class="p">(</span><span class="n">st</span><span class="p">,</span><span class="mi">4</span><span class="p">);</span>
+	<span class="n">push</span><span class="p">(</span><span class="n">st</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+	<span class="n">pop</span><span class="p">(</span><span class="n">st</span><span class="p">);</span>
+	<span class="n">display</span><span class="p">(</span><span class="n">st</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+:ET

@@ -1,0 +1,168 @@
+I"
+<h3 id="1-introduction">1. Introduction</h3>
+<p>This software is plugin system, so it is very flexible and diffcult to learn.
+it heavily depends on the plugin and shortcut to improve the efficient.</p>
+
+<h3 id="2-常用功能">2. 常用功能</h3>
+
+<h4 id="21-setting">2.1 Setting</h4>
+
+<ol>
+  <li>set relativenumber!</li>
+  <li>set cursorline</li>
+  <li>syntax off  I spend a lot of time to fix this simple question, crap !!!!!!!!</li>
+</ol>
+
+<h4 id="22-register">2.2 register</h4>
+<p>To access a register, type <strong>“a</strong>, <strong>a</strong> is the name of the register. <br />
+:reg to check out the content of the  register <br /></p>
+<ol>
+  <li>to paste from system clipboard on Mac  <strong>”*p</strong></li>
+  <li>to copy into system clipboard on Mac <strong>”*yy</strong></li>
+</ol>
+
+<h4 id="23-format">2.3 format</h4>
+<ol>
+  <li>select the lines of text you want to re-format:
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>v
+</code></pre></div>    </div>
+  </li>
+  <li>reformat it
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gq
+</code></pre></div>    </div>
+    <h4 id="24-code-folding">2.4 Code folding</h4>
+  </li>
+  <li>zc: fold up</li>
+  <li>zR: unfold</li>
+</ol>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s2">" set the folding method in configuration file
+set foldmethod=indent
+</span></code></pre></div></div>
+
+<h4 id="25-search">2.5 Search</h4>
+
+<ol>
+  <li>/target 从文档的开始匹配目标字符串，n匹配下一个，N匹配上一个</li>
+  <li>?target 从文档的结束位置匹配目标字符串，n匹配下一个，N匹配上一个</li>
+</ol>
+
+<h4 id="26-delete">2.6 Delete</h4>
+<ul>
+  <li>ctrl+w 删除光标所在行的光标之前的文字</li>
+  <li>ndd 删除光标所在行的后n行，包括光标所在行</li>
+</ul>
+
+<h4 id="版本查看">版本查看</h4>
+<p>:version 查看vim支持的插件，如python等
+:set  show vars different from defaults
+:h key-notation 查看键盘映射
+:ctrl+r anti-cancel
+:set colorcolumn=80 lenght marke</p>
+
+<h4 id="code-complete">Code Complete</h4>
+
+<p>ctrl+p 默认的代码补全功能是根据缓冲区中的内容进行正则匹配</p>
+
+<h4 id="javascript">javascript</h4>
+
+<p>在.vimrc配置文件中添加</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+</code></pre></div></div>
+
+<p>ctrl+x ctrl+o 方向箭头选择补全的文本</p>
+
+<h4 id="十六进制查看">十六进制查看</h4>
+
+<p>在normal模式中输入”:%!xxd”
+切换回常规模式:”:%!xxd -r”</p>
+
+<h4 id="auto-indent">auto indent</h4>
+
+<p>vim在粘贴代码时会自动缩进，把代码搞得一团糟糕，需要提前设置</p>
+<ul>
+  <li>set paste</li>
+  <li>set nopaste</li>
+</ul>
+
+<p>copy into vim from GUI results missing line</p>
+<ul>
+  <li>before pasting to vim, make sure the Insert Mode is activated.</li>
+  <li>the reason is that paste character <strong>i</strong> or character <strong>o</strong> will trigger
+insert mode, and you will miss everying before</li>
+</ul>
+
+<h4 id="joining-two-lines-with-j">joining two lines with J</h4>
+<ol>
+  <li>J joins the line the cursor is on with the line below</li>
+</ol>
+
+<h4 id="open-file">open file</h4>
+
+<ol>
+  <li>vim -On file1 file2 n表示要打开的文件数，O大写表示打开垂直窗口</li>
+  <li>open a new window below the current one
+    <ul>
+      <li>:new filename</li>
+    </ul>
+  </li>
+  <li>open a new window beside the current one
+    <ul>
+      <li>:vert new filename</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="vim中执行shell命令">vim中执行shell命令</h4>
+
+<ul>
+  <li>!command
+不退出vim并执行shell命令command,输出命令显示在vim的命令区域，不改变当前编辑的文件内容</li>
+  <li>r !command 将shell命令command的结果插入到当前行的下一行</li>
+</ul>
+
+<h4 id="tab与空格替换">tab与空格替换</h4>
+<p>a tab could be a different number of columns depending on your enviroment</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># substitue tab for space
+:set ts=4
+:set expandtab
+:%retab!
+
+# substitue space for tab
+:set ts=4
+:set noexpandtab
+:%retab!
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="3-mode">3. Mode</h3>
+
+<h4 id="33-recording-mode">3.3 Recording Mode</h4>
+
+<p>record type character into register</p>
+
+<ol>
+  <li>press q to enter into recording mode in normal mode, and vim begin to record
+your operation</li>
+  <li>press q to end recording in normal mode</li>
+  <li>press @&lt;letter&gt; to replay the recorded operation</li>
+</ol>
+<hr />
+
+<p>参考内容 <br /></p>
+<ol>
+  <li><a href="http://learnvimscriptthehardway.onefloweroneworld.com/chapters/12.html">learn vim the hardest way</a> <br /></li>
+  <li><a href="https://www.cs.swarthmore.edu/oldhelp/vim/help.html">vim tip and tricks</a> <br /></li>
+  <li><a href="https://vim.sourceforge.io/docs.php">vim教程官方网站</a> <br /></li>
+  <li><a href="ftp://ftp.vim.org/pub/vim/doc/book/vimbook-OPL.pdf">vim官方网站pdf教程</a> <br /></li>
+  <li><a href="https://github.com/VundleVim/Vundle.vim">vundle教程</a><br /></li>
+  <li><a href="http://ternjs.net/doc/manual.html#server">tern安装教程</a><br /></li>
+  <li><a href="http://kien.github.io/ctrlp.vim/#installation">CtrlP-plugin</a></li>
+  <li><a href="https://stackoverflow.com/questions/1527784/what-is-vim-recording-and-how-can-it-be-disabled">vim recording mode</a> <br /></li>
+  <li><a href="https://stackoverflow.com/questions/1497958/how-do-i-use-vim-registers">vim register</a> <br /></li>
+  <li><a href="https://thoughtbot.com/blog/wrap-existing-text-at-80-characters-in-vim">vim format</a></li>
+</ol>
+:ET

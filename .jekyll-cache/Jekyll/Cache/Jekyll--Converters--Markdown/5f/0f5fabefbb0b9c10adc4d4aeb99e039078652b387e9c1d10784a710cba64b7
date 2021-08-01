@@ -1,0 +1,129 @@
+I"� 
+<h4 id="create">create</h4>
+
+<p>python是有Unix shell和c的语法习惯，c是没有new关键字的，所以python也没有，创建对象直接调用构造函数。</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># self表示this指针
+</span><span class="k">class</span> <span class="nc">Test</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">my_print</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">__class__</span><span class="p">)</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">Test</span><span class="p">()</span>
+<span class="n">t</span><span class="p">.</span><span class="n">my_print</span><span class="p">()</span>
+<span class="n">Test</span><span class="p">.</span><span class="n">my_print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+
+</code></pre></div></div>
+
+<h4 id="多态">多态</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Duck</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+	    <span class="k">print</span><span class="p">(</span><span class="s">"__init__"</span><span class="p">)</span>
+ 
+    <span class="k">def</span> <span class="nf">sleep</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"duck sleep"</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">Fish</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"__init__"</span><span class="p">)</span>
+									        
+    <span class="k">def</span> <span class="nf">sleep</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"fish sleep"</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">animal_sleep</span><span class="p">(</span><span class="n">animal</span><span class="p">):</span>
+    <span class="n">animal</span><span class="p">.</span><span class="n">sleep</span><span class="p">()</span>
+
+<span class="n">duck</span> <span class="o">=</span> <span class="n">Duck</span><span class="p">()</span>
+<span class="n">fish</span> <span class="o">=</span> <span class="n">Fish</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="n">duck</span><span class="p">,</span> <span class="n">fish</span><span class="p">]:</span>
+<span class="n">animal_sleep</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h4 id="attribute">attribute</h4>
+
+<p>Python is different from Java, it doesn’t have the so-called getter and setter method. <br />
+and why this happened, because, it doesn’t need this.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+
+    <span class="o">@</span><span class="nb">property</span>
+    <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"get name"</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">name</span>
+
+    <span class="o">@</span><span class="n">name</span><span class="p">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">name</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"set name"</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="nb">str</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="nb">TypeError</span><span class="p">(</span><span class="s">"Expected a string"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">_name</span> <span class="o">=</span> <span class="n">name</span>
+
+<span class="n">person</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s">"Tom"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">person</span><span class="p">.</span><span class="n">name</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h4 id="__eq__-and-__hash__-function">__eq__ and __hash__ function</h4>
+
+<p>if you create a new class in python, and you don’t implement the <strong>__eq__ and __hash__</strong> method.
+the new class will extend the default  <strong>__eq__ and __hash__</strong> method. what does these two methods
+mean ?</p>
+
+<ol>
+  <li><strong>__hash__</strong> method is used to generate the hash int value according the object.
+According to the official document, The only required property is that objects which compare equal have the same hash value;
+It is advised to mix together hash values of the component of the object that also play a part in comparison of objects by packing
+them into a tuple and hashing the tuple. For example:</li>
+</ol>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">hash</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">hash</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="p">.</span><span class="n">nick</span><span class="p">,</span> <span class="bp">self</span><span class="p">.</span><span class="n">color</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h4 id="comparison-methods-in-python">comparison methods in python</h4>
+<p>The comparison methods were first introduced in Python2.1 and they are also called <strong>comparison magic methods</strong>
+It’s kind of like operator reload</p>
+
+<pre><code class="language-python3">#object.__lt__(self, other) # For x &lt; y
+#object.__le__(self, other) # For x &lt;= y
+#object.__eq__(self, other) # For x == y
+#object.__ne__(self, other) # For x != y OR x &lt;&gt; y
+#object.__gt__(self, other) # For x &gt; y
+#object.__ge__(self, other) # For x &gt;= y
+
+# define class
+class Point:
+    def __init__(self,x,y):
+        self.x = x
+        self.y = y
+        
+    def __eq__(self,other):
+        print("this is equal")
+        distance = (self.x - other.x)*(self.x - other.x) + (self.y - other.y)*(self.y - other.y)
+        if np.sqrt(distance) &lt; 0.01:
+            return True
+        else:
+            return False
+        
+    def __lt__(self,other):
+        print("this is less than")
+        return True
+        
+    def __hash__(self):
+        print("this is hash")
+        return hash((self.x, self.y))
+
+# define points
+a = Point(1,2)
+b = Point(3,4)
+c = Point(3,4.0001)
+
+# call the __lt__ function
+b &lt; c
+</code></pre>
+
+:ET

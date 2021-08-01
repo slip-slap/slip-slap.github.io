@@ -1,0 +1,26 @@
+I"�
+<h4 id="introduction">Introduction</h4>
+<p>The most prevalent type of bottom-up parser today is based on a concept called LR(k) parsing</p>
+<ol>
+  <li>The “L” is for left-to-right scanning of the input</li>
+  <li>The “R” for constructing a rightmost derivation in reverse.</li>
+  <li>The k for the number of input symbols of lookahead that are used in making parsing decisions.</li>
+</ol>
+
+<h4 id="advantage">Advantage</h4>
+<ol>
+  <li>LR parsers can be constructed to recognize virtually all programming language constructs for
+which context-free grammars can be written</li>
+  <li>The LR-parsing method is the most general nonbacktracking shift-reduce parsing method known, yet
+it can be implemented as efficiently as other, more primitive shift-reduce methods.</li>
+  <li>An LR parser can detect a syntactic error as soon as it is possible to do so on a left-to-right
+scan of the input.</li>
+  <li>The class of grammars that can be parsed using LR methods is a proper superset of the class of
+grammars that can be parsed with predictive or LL methods.</li>
+</ol>
+
+<h4 id="disadvantage">Disadvantage</h4>
+<ol>
+  <li>It is too much work to construct an LR parser by hand for a typical programming-language grammar.</li>
+</ol>
+:ET

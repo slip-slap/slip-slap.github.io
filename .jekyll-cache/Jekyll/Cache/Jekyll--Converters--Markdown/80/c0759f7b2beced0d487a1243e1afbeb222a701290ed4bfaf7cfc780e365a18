@@ -1,0 +1,65 @@
+I"÷!
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="n">st</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+
+
+<span class="k">def</span> <span class="nf">f_0</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="s">""" Target distribution: \propto N(-5, 2) """</span>
+    <span class="k">return</span> <span class="n">np</span><span class="p">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="mi">5</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="mi">2</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">f_j</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">beta</span><span class="p">):</span>
+    <span class="s">""" Intermediate distribution: interpolation between f_0 and f_n """</span>
+    <span class="k">return</span> <span class="n">f_0</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">**</span><span class="n">beta</span> <span class="o">*</span> <span class="n">f_0</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">beta</span><span class="p">)</span>
+
+<span class="c1"># Proposal distribution: 1/Z * f_n
+</span><span class="n">p_n</span> <span class="o">=</span> <span class="n">st</span><span class="p">.</span><span class="n">norm</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">T</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">n_steps</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+    <span class="s">""" Transition distribution: T(x'|x) using n-steps Metropolis sampler """</span>
+    <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_steps</span><span class="p">):</span>
+        <span class="c1"># Proposal
+</span>        <span class="n">x_prime</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="n">randn</span><span class="p">()</span>
+
+        <span class="c1"># Acceptance prob
+</span>        <span class="n">a</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">x_prime</span><span class="p">)</span> <span class="o">/</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="n">rand</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">a</span><span class="p">:</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">x_prime</span>
+
+    <span class="k">return</span> <span class="n">x</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span>
+
+<span class="n">n_inter</span> <span class="o">=</span> <span class="mi">50</span>  <span class="c1"># num of intermediate dists
+</span><span class="n">betas</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">n_inter</span><span class="p">)</span>
+
+<span class="c1"># Sampling
+</span><span class="n">n_samples</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">samples</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_samples</span><span class="p">)</span>
+<span class="n">weights</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_samples</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_samples</span><span class="p">):</span>
+    <span class="c1"># Sample initial point from q(x)
+</span>    <span class="n">x</span> <span class="o">=</span> <span class="n">p_n</span><span class="p">.</span><span class="n">rvs</span><span class="p">()</span>
+    <span class="n">w</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">betas</span><span class="p">)):</span>
+        <span class="c1"># Transition
+</span>        <span class="n">x</span> <span class="o">=</span> <span class="n">T</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">f_j</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">betas</span><span class="p">[</span><span class="n">n</span><span class="p">]),</span> <span class="n">n_steps</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+
+        <span class="c1"># Compute weight in log space (log-sum):
+</span>        <span class="c1"># w *= f_{n-1}(x_{n-1}) / f_n(x_{n-1})
+</span>        <span class="n">w</span> <span class="o">+=</span> <span class="n">np</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="n">f_j</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">betas</span><span class="p">[</span><span class="n">n</span><span class="p">]))</span> <span class="o">-</span> <span class="n">np</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="n">f_j</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">betas</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span>
+
+    <span class="n">samples</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span>
+    <span class="n">weights</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">exp</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>  <span class="c1"># Transform back using exp
+</span>    <span class="c1"># Compute expectation
+</span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="n">np</span><span class="p">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">weights</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">weights</span> <span class="o">*</span> <span class="n">samples</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h4 id="reference">Reference</h4>
+<p><a href="https://wiseodd.github.io/techblog/2017/12/23/annealed-importance-sampling/">Annealed Importance Sampling</a></p>
+
+:ET

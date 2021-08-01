@@ -1,0 +1,41 @@
+I"v
+<h4 id="em-algorithm">EM algorithm</h4>
+
+<p>EM is an algorithm for maximum the likelihood function</p>
+
+<p><strong>广义EM算法，E步骤是固定参数优化隐分布，M步骤是固定隐分布优化参数,可以用GMM算作为类比</strong></p>
+
+<h4 id="jensens-inequality">Jensen’s inequality</h4>
+<p>Jensen’s inequality generalizes the statement that the secant line of a convex lies above the graph of the function.
+which in Jensen’s inequality for two points. The Jensen’s inequality is(for \(t\in[0,1]\)):</p>
+
+\[f\left(t x_{1}+(1-t) x_{2}\right) \leq t f\left(x_{1}\right)+(1-t) f\left(x_{2}\right)\]
+
+<p>in the context of probability, it is generally stated in the following form, if X is a random variable and 
+\(\varphi\) is a convex function</p>
+
+\[\varphi(\mathrm{E}[X]) \leq \mathrm{E}[\varphi(X)]\]
+
+<p><img src="/images/convex.png" height="" width="" /></p>
+
+<h4 id="galois">Galois</h4>
+<ol>
+  <li>EM algorithm, what does E and M, respectively, stand for?</li>
+  <li>They denote the expectation and maximum of the parameter theta that we are
+looking for, nothing about the latent variable, it’s just a tool to make the
+topic eazier to understand.
+    <ul>
+      <li>suppose we have a mixed guassian model, they are $N_1(\mu^1,\sigma^1)$ and $N_2(\mu^2,\sigma^2)$</li>
+      <li>then the parameters are $(\mu^1,\sigma^1,\mu^2,\sigma^2)$, we want to
+calculate their expectation</li>
+      <li>Maximization the likelihood.</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="reference">Reference</h4>
+<ol>
+  <li><a href="https://en.wikipedia.org/wiki/Expectation%E2%80%93maximization_algorithm">Expectation and Maximization</a></li>
+</ol>
+
+:ET

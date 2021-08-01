@@ -1,0 +1,17 @@
+I"ª
+<h4 id="introduction">introduction</h4>
+<p>you can treat tensorflow as a blackbox, when we want to check the tensor.
+tensorflow provide some api to get the tensor</p>
+
+<h4 id="check-the-tensor-with-tfsession">check the tensor with tf.Session()</h4>
+
+<h4 id="check-the-variable">check the variable</h4>
+
+<p>Tensorflow provides graph collections that group the variables. To access the
+variables you can run the following code</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># get variable that you trained
+</span><span class="n">tf</span><span class="p">.</span><span class="n">get_collection</span><span class="p">(</span><span class="n">tf</span><span class="p">.</span><span class="n">GraphKeys</span><span class="p">.</span><span class="n">TRAINABLE_VARIABLES</span><span class="p">)</span>
+<span class="c1"># get all variable 
+</span>
+</code></pre></div></div>
+:ET

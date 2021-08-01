@@ -1,0 +1,41 @@
+I"e
+<p><img src="/images/math-apply-information-theory-communication-over-noisy-channel.png" /></p>
+
+<h4 id="concept">Concept</h4>
+<ol>
+  <li>A discrete memoryless channel Q: is characterized by an input alphabet
+$A_{\mathcal{X}}$, an output alphabet $A_{\mathcal{Y}}$, and a set of
+conditional probability distributions $P(y|x)$, one for each $x \in
+$A_{\mathcal{X}}$</li>
+</ol>
+
+<h5 id="capacity-of-channel-q">Capacity of Channel Q:</h5>
+<p>\(C(Q)=\max _{\mathcal{P}_{X}} I(X ; Y)\)</p>
+<ul>
+  <li>The capacity of a channel is the maximum over all input distributions $P(x)$,
+of the mutual information.</li>
+  <li>The distribution $\mathcal{P}_X$ that achieves the maximum is called the
+optimal input distribution, denoted by $\mathcal{P}_X^{\star}$</li>
+  <li>The nature of a channel is that it <strong>defines a conditional distribution</strong>, nothing
+but a conditional distribution.</li>
+</ul>
+
+<h5 id="what-does-this-use-for">What does this use for?</h5>
+<ol>
+  <li>capacity actually measures how fast you can reliably communicate over the
+channel</li>
+</ol>
+
+<h4 id="concept-1">Concept</h4>
+<ol>
+  <li>An (N,K) block code for a channel Q is a list of $S=2^K$ codewords</li>
+</ol>
+
+<h4 id="shannons-noisy-channel-coding-theorem">Shannon’s noisy-channel coding theorem</h4>
+<p>Associated with each discrete memoryless channel, there is a nonnegative number
+C(called the channel capacity) with the following property. For any $\epsilon &gt;0$
+and $R&lt;C$, for large enough N, there exists a block code of length N and are
+$\geq R$ and a decoding algorithm, such that the maximal probability of block
+error is $\leq \epsilon$</p>
+
+:ET

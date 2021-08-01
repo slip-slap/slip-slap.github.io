@@ -1,0 +1,59 @@
+I"`
+
+<p>Just as other programs, the git configuration can be divided into three level.</p>
+
+<h3 id="1-configuration-file">1. Configuration File</h3>
+<h4 id="11-system-level">1.1 System level</h4>
+<ol>
+  <li>a file named /etc/config: a file contain values applied to every use in this
+ system</li>
+  <li>pass –system to git config, it reads and writes from this file</li>
+</ol>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config <span class="nt">--system</span>
+</code></pre></div></div>
+<h4 id="12-global-level">1.2 Global level</h4>
+
+<ol>
+  <li>a file named ~/.gitconfig: values specifically to you.</li>
+  <li>you can make Git read and writes by passing –global option to git config.</li>
+</ol>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config <span class="nt">--global</span>
+</code></pre></div></div>
+
+<h4 id="13-project-level">1.3 Project level</h4>
+<ol>
+  <li>a file named config, located in the git directory(.git/config): a file
+specific to that single repository..</li>
+  <li>read from and write to this file with –local option</li>
+</ol>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config <span class="nt">--local</span>
+</code></pre></div></div>
+
+<h3 id="2-set">2. set</h3>
+<h4 id="21-your-identity">2.1 Your Identity</h4>
+<p>Git commit uses this information</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config <span class="nt">--global</span> user.name <span class="s2">"Huiyao"</span>
+git config <span class="nt">--global</span> user.email zhang@123.com
+</code></pre></div></div>
+
+<h4 id="22-your-editor">2.2 Your Editor</h4>
+<p>You can configure the default text editor that will be used when Git needs you
+to type in a message. If not configured, Git uses your system’s default editor.</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config <span class="nt">--global</span> core.editor vim
+</code></pre></div></div>
+
+<h3 id="3-display">3. display</h3>
+<p>Git might read the same configuration variable from more than one file, it’s
+possible that you have an unexpected value for one of these values and you don’t
+know why. In cases like that, you can query Git as to the origin for that value.</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config <span class="nt">--list</span>
+git config <span class="nt">--show-origin</span> rerere.autoUpdate
+</code></pre></div></div>
+
+:ET

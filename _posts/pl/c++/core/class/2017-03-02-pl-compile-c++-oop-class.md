@@ -9,93 +9,82 @@ tags: ["c++","compile"]
 
 {% include JB/setup %}
 
-####
-1. why data is modified by private ? function is modified by public?
-- just like a car, it has button you can push, the button is like a function,
-  it's public.
-- But what's in the button, you have no idea. It's the data which is private.
+The following code is a what a perfect class should look like, which includes
+constructor, copy constructor, assignment operator, move semantics, destructor.
+
 
 ```cpp
-#include <algorithm> // std::copy
-#include <cstddef> // std::size_t
 #include <iostream>
-class String{
+#include <vector>
+#include <algorithm>
+
+class String
+{
 	public:
-		String(char* char_arr);
-		String(const String& other);
-		String(String&& other);
+		String(char* str, int length)
+		{
+			std::cout<<"constructor"<<std::endl;
+			m_char = new char[length];
+			m_length = length;
+			std::copy(str, str+length, m_char);
+		}
 
-		~String();
+		String(const String& another)
+		{
+			std::cout<<"copy constructor"<<std::endl;
+			m_char = new char[another.m_length];
+			m_length = another.m_length;
+			std::copy(another.m_char, another.m_char+another.m_length, m_char);
+		}
+		String(String&& another):
+			String(another.m_char, another.m_length)
+		{
+			std::cout<<"move constructor"<<std::endl;
+			swap(*this, another);	
+		}
 
-		// it is a member function
-		String& operator=(String other);
-		String& operator+(const String& other);
+		String& operator=(String another){
+			std::cout<<"assignment operator"<<std::endl;
+			swap(*this, another);
+			return *this;
+		}
 
-		friend void swap(String& fst, String& sec);
-		friend std::ostream& operator<<(std::ostream& out, String& other);
+
+		friend void swap(String& first, String& sec)
+		{
+			std::swap(first.m_char, sec.m_char);	
+			std::swap(first.m_length, sec.m_length);	
+		}
+		~String()
+		{
+			delete m_char;
+			m_char = nullptr;
+		}
+		friend std::ostream& operator<<(std::ostream& out, String& obj)
+		{
+			out<<obj.m_char<<std::endl;
+			return out;
+		}
+
 
 	private:
-		std::size_t m_Size;
-		char* m_Array;
-
+		char* m_char;
+		int m_length;
 };
 
 
-int main(){
-	char* liam = new char[5];
-	char* joana = new char[6];
-	std::memcpy(liam,"liam",4);
-	std::memcpy(joana,"joana",5);
-	//for(int i=0;i<5;i++){std::cout<<liam[i];}
-	String name1(liam);
-	String name2(joana);
-	std::cout<<name1+name2;
-	return 0;
-}
-
-String::String(char* char_arr)
+int main()
 {
-	m_Size = std::strlen(char_arr) +1;
-	m_Array = new char[m_Size];
-	std::memcpy(m_Array, char_arr, m_Size);
-	std::cout<<"construstor"<<std::endl;
-};
-
-String::String(const String& other)
-{
-	m_Array = new char[other.m_Size];
-	std::cout<<"copy construstor"<<std::endl;
-	std::copy(other.m_Array, other.m_Array+m_Size, m_Array);
+	char name1[5]={'l','i','a','m','\0'};	
+	char name2[7]={'j','o','r','d','a','n','\0'};	
+	String player1(name1,5);
+	String player2(name2,5);
+	std::cout<<player1;
+	std::cout<<player2;
+	std::swap(player1, player2);
+	std::cout<<player1;
+	std::cout<<player2;
 }
-String::String(String&& other){
-	std::cout<<"move semantics"<<std::endl;
-}
-
-String::~String(){
-			delete[] m_Array;
-		}
-String& String::operator=(String other){
-	std::cout<<"assignment operator"<<std::endl;
-	swap(*this, other);
-	return *this;
-}
-
-String& String::operator+(const String& other){
-	m_Size= other.m_Size + m_Size;
-	std::copy(other.m_Array, other.m_Array+other.m_Size-1, m_Array+4);
-	return *this;
-}
-
-std::ostream& operator<<(std::ostream& out, String& other){
-	std::cout<<other.m_Array<<std::endl;
-	return out;
-}
-
-void swap(String& fst, String& sec){
-		std::swap(fst.m_Size, sec.m_Size);
-		std::swap(fst.m_Array, sec.m_Array);
-}
-
 ```
 
 

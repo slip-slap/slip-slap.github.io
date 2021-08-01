@@ -1,0 +1,28 @@
+I"¤<h4 id="introduction">Introduction</h4>
+<p>According to the name, Isomap is a nonlinear dimensionality reduction method.
+It is one of several widely used low-dimensional embedding methods, it is for
+computing a quasi-isometric, low-dimensional embedding of a set of
+high-dimensioal data points. The algorithm provides a simple method for
+estimating the <strong>intrinsic geometry of a data manifold</strong> on a rough estimate of
+each data pointâ€™s neighbors on the manifold. Isomap is highly efficient and
+generally applicable to a broad range of data sources and dimensionalites.</p>
+
+<h4 id="isomap">ISOMAP</h4>
+<ol>
+  <li>Isomap is a combination of the Floyd-Warshall algorithm with classic
+Multidimensional Scaling. Classic Multimensional Scaling takes a matrix of
+pair-wise distances between all points and computes a position for each point.
+Isomap assumesthat the pair-wise distances are only known between neighboring
+points, and uses the Floyd-Warshall algorithm to compute the pair-wise distances
+between all other points. This effectively estimates the full matrix of
+pair-wise geodesic distances between all of the points.</li>
+  <li>Landmark-Isomap is a variant of this algorithm that uses landmarks to
+increase speed, at the cost of some accuracy</li>
+</ol>
+
+<h4 id="reference">Reference</h4>
+<ol>
+  <li><a href="https://en.wikipedia.org/wiki/Nonlinear_dimensionality_reduction#Locally-linear_embedding">ISOMAP</a></li>
+</ol>
+
+:ET

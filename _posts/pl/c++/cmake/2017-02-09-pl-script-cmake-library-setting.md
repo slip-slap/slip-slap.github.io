@@ -4,7 +4,7 @@ title: "CMake: Library setting"
 keywords: []
 description: 
 category: "PL"
-tags: ["cmake","script"]
+tags: ["cmake"]
 ---
 
 
@@ -30,7 +30,6 @@ target_include_directories(libA
 #### 2. Global function
 1. install(xxx) command is a global function in cmake programming language.
 - xxx denotes different object, it may a FILES, CODE, TARGETS, SCRIPT, EXPORT.
-
 
 
 

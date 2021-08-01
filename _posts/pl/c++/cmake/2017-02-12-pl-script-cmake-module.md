@@ -66,9 +66,6 @@ set_target_properties(foo PROPERTIES IMPORTED_LOCATION "${FOO_LIBRARY_PATH}")
 
 
 
-
-
-
 #### 2. What is pkgconfig
 pkg-config program is used to retrieve information about installed libaries in the system. 
 It is typically used to compile and link against one or more libraries.

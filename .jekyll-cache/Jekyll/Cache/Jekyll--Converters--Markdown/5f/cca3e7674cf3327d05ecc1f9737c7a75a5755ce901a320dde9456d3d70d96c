@@ -1,0 +1,112 @@
+I"�<h4 id="the-relationship-between-tikz-and-pgf">the relationship between Tikz and PGF</h4>
+
+<ol>
+  <li>Tikz is a user-friendliness frontend of PGF library, where <strong>Tikz</strong> means “TikZ isn Kevin Zeichenprogramm.” Tikz’s job is to make 
+your life eazier by providing a easy-to-learn and easy-to-use syntax for describing graphics.</li>
+  <li>PGF is a backend of Tikz</li>
+</ol>
+
+<p>You can create your own frontend based on the PGF library.</p>
+
+<h4 id="design-principal-underlie-tikz">Design Principal Underlie TikZ</h4>
+
+<h5 id="1-special-syntax-for-specifying-points">1. Special syntax for specifying points</h5>
+
+<ol>
+  <li>provide two Tex dimensions, separated by commas, in round brackets as in (1cm, 2pt)</li>
+  <li>specify a point in polar coordinates by using a colon instead of a comma as in (30:1cm), which means “1cm in a 30 degrees direction”</li>
+  <li>If you do not provide a unit, as in (2,1), you specify a point in PGF’s xy-coordinate system. By default, the unit x-vector goes 1cm
+to the right and the unit y-vector goes 1cm upward.</li>
+  <li>It is also possible to use an anchor of a previously defined shape as in (first node.south)</li>
+  <li>relative movement with ++ and + <br />
+  The difference is two plus signs change the current point. For example (1,0) ++(1,0) ++(0,1) specifes three coordinates (1,0),(2,0) and (2,1)
+  The one plus doesn’t chane the current point. For example (1,0) +(1,0) +(0,1) specifies the three coordinates (1,0), (2,0) and (1,1)</li>
+</ol>
+
+<h5 id="2-special-syntax-for-path-specifications">2. Special Syntax For Path Specifications</h5>
+
+<p>When creating a picture using TikZ, you main job is the specification of <strong>paths</strong>. <br />
+A path is a series of straight or curved lines, which need not be connected, but it is not yet specified what should happen with it.
+the source of the syntax comes from <strong>METAPOST</strong> <br /></p>
+
+<p>For example, to specify a triangular path you use</p>
+
+<div class="language-tex highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(5pt,0pt) -- (0pt,0pt) -- (0pt,5pt) -- cycle
+</code></pre></div></div>
+
+<h5 id="3-actions-on-paths">3. Actions on Paths</h5>
+
+<p>A path is just a series of straight and curved lines, but it is not yet specified what should happen with it. <br />
+one can <strong>draw</strong> a path, <strong>fill</strong> a path, <strong>shade</strong> a path, <strong>clip</strong> it, or do any combination of these.</p>
+
+<ol>
+  <li>Drawing (also known as stroking) can be thought of as taking a pen of a certain thickness and moving it along the path.</li>
+  <li>Filling means that the interior of the path is filled with a uniform color. Obviously, filling makes sense only for <strong>closed</strong>
+paths and a path is automatically closed prior to filling. If necessary.</li>
+</ol>
+
+<p>For example, Given the path as  <strong>\path (0,0) rectangle (2ex, 1ex)</strong> <br /></p>
+<ol>
+  <li>draw it by adding the <strong>draw</strong> option <strong>\path[draw] (0,0) rectangle (2ex, 1ex)</strong>  <strong>\draw</strong> command is an abbreviation for <strong>\path[draw]</strong></li>
+  <li>fill it by adding the <strong>fill</strong> option <strong>\path[fill] (0,0) rectangle (2ex, 1ex)</strong>  <strong>\fill</strong> command is an abbreviation for <strong>\path[fill]</strong></li>
+  <li><strong>\filldraw</strong> command is an abbreviation for <strong>\path[fill,draw]</strong></li>
+</ol>
+
+<h5 id="4-key-value-syntax-for-graphic-parameters">4. Key-Value Syntax for Graphic Parameters</h5>
+
+<p>Whenever TikZ draws or fills a path, a large number of graphic parameters influenced the rendering. Example include the color used,
+the dashing pattern, and many others. <br />
+In TikZ, all these options are specified as lists of so called key-values pairs. they are passed as optional parameters to the path drawing and filling commands</p>
+
+<div class="language-tex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{tikzpicture}</span>
+    <span class="k">\path</span><span class="na">[draw][line width=2pt,color=red]</span>
+        (0,0) -- (1,0) -- (2,2) -- (3,3) ;
+<span class="nt">\end{tikzpicture}</span>
+</code></pre></div></div>
+
+<h5 id="special-syntax-for-specifying-nodes">Special Syntax for Specifying Nodes</h5>
+
+<p>TikZ introduces a special syntax for adding text, more generally, nodes to a graphic. <br />
+which means Tikz provides <strong>Node grammar</strong> to add text to a graphic <br /></p>
+
+<div class="language-tex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{tikzpicture}</span>
+    <span class="k">\path</span><span class="na">[draw][line width=2pt,color=red]</span>
+        (0,0) node <span class="p">{</span>text<span class="p">}</span> -- (3,3) ;
+<span class="nt">\end{tikzpicture}</span>
+</code></pre></div></div>
+<ol>
+  <li>The <strong>\node</strong> command is an abbreviation for <strong>\path node</strong></li>
+  <li>The <strong>\matrix</strong> command is an abbreviation for <strong>\path node[matrix]</strong></li>
+</ol>
+
+<div class="language-tex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{tikzpicture}</span>
+    <span class="k">\node</span> at (0,2) [circle,draw] <span class="p">{}</span>;
+    <span class="k">\node</span> at (0,1) [circle,draw] <span class="p">{}</span>;
+    <span class="k">\node</span> at (0,0) [circle,draw] <span class="p">{}</span>;
+    <span class="k">\node</span> at (1,1) [rectangle,draw] <span class="p">{}</span>;
+    <span class="k">\node</span> at (-1,1) [rectangle,draw] <span class="p">{}</span>;
+<span class="nt">\end{tikzpicture}</span>
+</code></pre></div></div>
+
+<h4 id="weird-grammar-in-tikz">Weird Grammar in Tikz</h4>
+
+<div class="language-tex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">% in the following line, you can't put any space around the equivalent sign after the word style.</span>
+<span class="c">% That's the rule, you just can't </span>
+<span class="k">\tikzstyle</span> my style=[color = blue!50, very thin]
+<span class="nt">\begin{tikzpicture}</span>
+  <span class="k">\draw</span><span class="na">[style=my style ,step=0.5]</span> (-1.4,-1.4) grid (1.4,1.4);
+  <span class="k">\draw</span> (0,0) circle (1cm);
+<span class="nt">\end{tikzpicture}</span>.
+</code></pre></div></div>
+
+<h4 id="color-expression">Color Expression</h4>
+
+<p>PGF uses Uwe Kern’s <strong>xcolor</strong> package. <br />
+in the latex code, <strong>green!20!white</strong> means 20% green and 80% white.</p>
+
+<h4 id="reference">Reference</h4>
+<ol>
+  <li><a href="http://texdoc.net/texmf-dist/doc/latex/xcolor/xcolor.pdf">xcolor package</a></li>
+</ol>
+
+:ET

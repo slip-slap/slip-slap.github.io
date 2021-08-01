@@ -44,7 +44,5 @@ before A verb occurs, verb B occurs.
 
 
 
-
-
 #### Reference
 1. [ないで・ないうちに](https://kawakawalearningstudio.com/japanese/jlpt-n3-grammar-you-need-to-know-how-to-use-%EF%BD%9E%E3%81%AA%E3%81%84%E3%81%A7-%EF%BD%9E%E3%81%9A-and-%EF%BD%9E%E3%81%AA%E3%81%84%E3%81%86%E3%81%A1%E3%81%AB/)

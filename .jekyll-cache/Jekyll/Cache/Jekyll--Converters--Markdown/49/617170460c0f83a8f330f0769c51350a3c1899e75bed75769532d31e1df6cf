@@ -1,0 +1,118 @@
+I"�
+<h4 id="1-why-bother">1. Why bother?</h4>
+<ol>
+  <li>Simplicity of design is the most important consideration.  The separation of lexical and
+syntactic analysis often allows us to simplify at least one of these tasks.
+    <ul>
+      <li>For example, a parser that had to deal with comments and whitespace as syntactic units would be
+considerably more complex than one that can assume comments and whitespace have already been
+removed by the lexical analyzer.</li>
+      <li>If we are designing a new language, separating lexical and syntactic concerns can lead to a
+cleaner overall langugae design.</li>
+    </ul>
+  </li>
+  <li>Compiler efficiency is improved. A separate lexical analyzer allows us to apply specialized
+techniques that serve only the lexical task, not the job of parsing. In addition, specialized
+buffering techniques for reading input characters can speed up the compiler significantly.</li>
+</ol>
+
+<h4 id="2-terminology">2. Terminology</h4>
+<ol>
+  <li>a token is a pair consisting of a token name and an optional attribute value.
+    <ul>
+      <li>The token name is an abstract symbol representing a kind of lexical unit, e.g., a paritcular
+keyword, or a sequence of input characters denoting an identifier.</li>
+      <li>The token names are the input symbols that the parser processes.</li>
+    </ul>
+  </li>
+  <li>A pattern is a description of the form that the lexemes of a token may take.
+    <ul>
+      <li>In the case of a kewword as a token, the pattern is just the sequence of characters that form the
+keywod.</li>
+      <li>For identifiers and some other tokens, the pattern is a more complex structure that is matched by
+many strings.</li>
+    </ul>
+  </li>
+  <li>A lexeme is a sequence of characters in the source program that matches the pattern for a token
+and is identified by the lexical analyzer as an instance of that token.</li>
+</ol>
+
+<h4 id="3-attributes-for-tokens">3. Attributes for Tokens</h4>
+<ol>
+  <li>When more than one lexeme can match a pattern, the lexical analyzer must provide the subsequent
+compiler phases additional information about the particular lexeme that matched.
+    <ul>
+      <li>For example, the pattern for token number matches both 0 and 1, but it is extremely important for
+the code generator to know which lexeme was found in the source program. Thus, in many cases the
+lexical analyzer returns to the parser not only a token name, but an attribute value that
+describues the lexeme represented by the token.</li>
+    </ul>
+  </li>
+  <li>We shall assume that tokens have at most one associated attribute, although this attribute may
+have a structure that combines several pieces of information.
+    <ul>
+      <li>The most important example is the token id, where we need to associate with the token a great deal
+of information</li>
+      <li>Normally, information about an identifier -e.g., its lexeme, its type, and the location at which
+it is first found is kept in the symbol table.</li>
+    </ul>
+  </li>
+</ol>
+
+<table>
+  <thead>
+    <tr>
+      <th>TOKEN</th>
+      <th>INFORMAL DESCRIPTION</th>
+      <th>SAMPLE LEXEMES</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>if</td>
+      <td>characters i,f</td>
+      <td>if</td>
+    </tr>
+    <tr>
+      <td>else</td>
+      <td>characters e, l, s, e</td>
+      <td>else</td>
+    </tr>
+    <tr>
+      <td>comparison</td>
+      <td>&lt; or &gt; or &lt;= or &gt;=</td>
+      <td>&lt;=,!=</td>
+    </tr>
+    <tr>
+      <td>id</td>
+      <td>letter followed by letters and digits</td>
+      <td>pi, score, D2</td>
+    </tr>
+    <tr>
+      <td>number</td>
+      <td>any numeric constant</td>
+      <td>3.1415, 0.6</td>
+    </tr>
+    <tr>
+      <td>literal</td>
+      <td>anything but “, surround by “‘s</td>
+      <td>“core dumped”</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="4-lexical-errors">4. Lexical Errors</h4>
+<ol>
+  <li>It is hard for a lexical analyzer to tell, without the aid of other components, that there is a
+source-code error.
+    <ul>
+      <li>e.g., if the string fi is encountered for the first time in a C program; a lexical analyzer cannot
+tell whether fi is a misspelling of the keyword or an undeclared function indentifer.</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="5-transition-diagram">5. Transition Diagram</h4>
+<p><img src="/images/compiler-lexical-transition-diagram.png" /></p>
+
+:ET

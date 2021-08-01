@@ -1,0 +1,76 @@
+I"¦$
+<p><strong>Question:</strong> How to sample from a multivariable distribution in which only the
+conditional distribution is clear, such as the probability distribution of one
+variable is clear given the rest.</p>
+
+<ul>
+  <li>The one who answer the question is gibbs.</li>
+</ul>
+
+<h4 id="process">Process</h4>
+<p>Suppose we want to generate samples from the joint distribution of \(\left(Y_{1}, \ldots, Y_{k}\right) \in R^{k}\), Further suppose that we can
+generate from each of the full conditionalal distributions\(Y_{i} |
+Y_{-i}=y_{-i}\), where <br />
+\(Y_{-i}=\left(Y_{1}, \ldots, Y_{i-1}, Y_{i+1}, \ldots, Y_{k}\right)\)
+namely, we can generate from the conditional distribution of $Y_i$ given the
+values of all the other coordinates.</p>
+<ul>
+  <li>Specify an initial value \(\left(y_{1}(0), \ldots, y_{k(0)}\right) \text { for }\left(Y_{1}, \ldots,
+Y_{k}\right)\)</li>
+  <li>For N&gt;0, generate $Y_{i(N)}$ from its conditional distribution given \(\left(y_{1}(N), \ldots, y_{i-1(N)}, y_{i+1(N-1)}, \ldots, y_{k(N-1)}\right)\) for each $i=1,\ldots,k$.</li>
+</ul>
+
+<h4 id="python-implementation">Python Implementation</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="n">sns</span>
+
+<span class="k">def</span> <span class="nf">p_x_given_y</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">mus</span><span class="p">,</span> <span class="n">sigmas</span><span class="p">):</span>
+    <span class="n">mu</span> <span class="o">=</span> <span class="n">mus</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">sigmas</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="n">sigmas</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">y</span> <span class="o">-</span> <span class="n">mus</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">sigma</span> <span class="o">=</span> <span class="n">sigmas</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">sigmas</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="n">sigmas</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">sigmas</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="n">normal</span><span class="p">(</span><span class="n">mu</span><span class="p">,</span> <span class="n">sigma</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">p_y_given_x</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">mus</span><span class="p">,</span> <span class="n">sigmas</span><span class="p">):</span>
+    <span class="n">mu</span> <span class="o">=</span> <span class="n">mus</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">sigmas</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="n">sigmas</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">mus</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">sigma</span> <span class="o">=</span> <span class="n">sigmas</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">sigmas</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="n">sigmas</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">sigmas</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="n">normal</span><span class="p">(</span><span class="n">mu</span><span class="p">,</span> <span class="n">sigma</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">gibbs_sampling</span><span class="p">(</span><span class="n">mus</span><span class="p">,</span> <span class="n">sigmas</span><span class="p">,</span> <span class="nb">iter</span><span class="o">=</span><span class="mi">10000</span><span class="p">):</span>
+    <span class="n">samples</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">zeros</span><span class="p">((</span><span class="nb">iter</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="n">rand</span><span class="p">()</span> <span class="o">*</span> <span class="mi">10</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">iter</span><span class="p">):</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">p_x_given_y</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">mus</span><span class="p">,</span> <span class="n">sigmas</span><span class="p">)</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">p_y_given_x</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">mus</span><span class="p">,</span> <span class="n">sigmas</span><span class="p">)</span>
+        <span class="n">samples</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">samples</span>
+
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="n">mus</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+    <span class="n">sigmas</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="p">.</span><span class="mi">9</span><span class="p">],</span> <span class="p">[.</span><span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
+
+    <span class="n">samples</span> <span class="o">=</span> <span class="n">gibbs_sampling</span><span class="p">(</span><span class="n">mus</span><span class="p">,</span> <span class="n">sigmas</span><span class="p">)</span>
+    <span class="n">sns</span><span class="p">.</span><span class="n">jointplot</span><span class="p">(</span><span class="n">samples</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">samples</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">])</span>
+
+</code></pre></div></div>
+
+<h4 id="galois">Galois</h4>
+<ol>
+  <li>Gibbs sampling, in nature, just a fancy markov chain.</li>
+  <li>Markov Chain must can do something, so what does markov chain can do?
+<strong>sampling</strong>.</li>
+  <li>After learn stochastic process for such a long time, we finaly can use this
+do something, <strong>finally!!!</strong></li>
+</ol>
+
+<h4 id="reference">Reference</h4>
+<ol>
+  <li><a href="http://fourier.eng.hmc.edu/e161/lectures/gaussianprocess/node7.html.">conditional distribution of multivariate Gaussian</a></li>
+  <li><a href="https://wiseodd.github.io/techblog/2015/10/09/gibbs-sampling/">Gibbs Sampling</a></li>
+</ol>
+
+:ET
