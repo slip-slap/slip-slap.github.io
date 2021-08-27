@@ -26,7 +26,6 @@ article to help him decide if it is worth reading.
 - Redundant phrases, unnecessary adverbs and adjectives, and repetitive information.
 
 
-
 #### Template
 1. A genetic algorithm is used to obtain $\cdots$.
 2. It is concluded that the repair strategy should always be used with the optimization.

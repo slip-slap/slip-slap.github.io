@@ -166,7 +166,7 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">1102</span>
+<span title="文章总数">1127</span>
 <ul>
 
 
@@ -615,7 +615,17 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#June-2020">2020 年 06 月 (47)</a></li>
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#June-2020">2020 年 06 月 (49)</a></li>
     
   
 
@@ -3651,7 +3661,17 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#April-2017">2017 年 04 月 (27)</a></li>
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#April-2017">2017 年 04 月 (29)</a></li>
     
   
 
@@ -4039,7 +4059,112 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#March-2017">2017 年 03 月 (77)</a></li>
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2017">2017 年 03 月 (98)</a></li>
     
   
 
@@ -5831,7 +5956,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#life-ref">life (15)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (240)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (263)</a></li>
 
   <li><a href="/categories.html#OS-ref">OS (14)</a></li>
 
@@ -5843,7 +5968,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#Economy-ref">Economy (2)</a></li>
 
-  <li><a href="/categories.html#work-ref">work (55)</a></li>
+  <li><a href="/categories.html#work-ref">work (57)</a></li>
 
   <li><a href="/categories.html#AI-ref">AI (40)</a></li>
 
@@ -5931,7 +6056,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#compile-ref" style="font-size: 14pt; color: #444;">compile</a>
+    <a href="/tags.html#compile-ref" style="font-size: 15.5pt; color: #333;">compile</a>
   
     
     
@@ -5945,7 +6070,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#cmake-ref" style="font-size: 9.5pt; color: #888;">cmake</a>
+    <a href="/tags.html#cmake-ref" style="font-size: 10pt; color: #888;">cmake</a>
   
     
     
@@ -5959,7 +6084,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#c++-ref" style="font-size: 13.5pt; color: #555;">c++</a>
+    <a href="/tags.html#c++-ref" style="font-size: 15pt; color: #333;">c++</a>
   
     
     
@@ -5980,7 +6105,7 @@ $(document).ready(function() {
     
     
     
-    <a href="/tags.html#Qt-ref" style="font-size: 9pt; color: #999;">Qt</a>
+    <a href="/tags.html#Qt-ref" style="font-size: 9.5pt; color: #999;">Qt</a>
   
     
     
@@ -6720,114 +6845,24 @@ $(document).ready(function() {
 
         </div>
       </div>
-      <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-<span class="cp">#include &lt;iostream&gt;
-#include &lt;string&gt;
-</span>
+      <h4 id="rules-for-calling-the-base-class-constructor">Rules For calling the base class constructor</h4>
+<p>Base class constructos are automatically called for you if they have no
+argument.</p>
+<ol>
+  <li>If you want to call a superclass constructor with an argument, you must use
+subclass’s constructor initialization list.</li>
+  <li>Unlike Java, C++ supports multiple inheritance, so the base class must be
+referred to by name, rather than “super()”</li>
+</ol>
 
-<span class="kt">void</span> <span class="nf">print_square</span><span class="p">()</span>
-<span class="p">{</span>
-	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">4</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
-	<span class="p">{</span>
-		<span class="kt">int</span> <span class="n">line_head</span> <span class="o">=</span> <span class="mi">4</span><span class="o">*</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
-		<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;</span><span class="mi">4</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
-		<span class="p">{</span>
-			<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">s_number</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">to_string</span><span class="p">(</span><span class="n">line_head</span><span class="o">+</span><span class="n">j</span><span class="p">);</span>
-			<span class="k">if</span><span class="p">(</span><span class="n">s_number</span><span class="p">.</span><span class="n">length</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">)</span>
-			<span class="p">{</span>
-				<span class="n">s_number</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="s">" "</span><span class="p">);</span>
-			<span class="p">}</span>
-			<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">s_number</span><span class="o">&lt;&lt;</span><span class="s">" "</span><span class="p">;</span>
-		<span class="p">}</span>
-		<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
-	<span class="p">}</span>
-<span class="p">}</span>
+<h4 id="rule-for-calling-base-class-method-from-the-derived-class">Rule for calling base class method from the derived class</h4>
 
+<h4 id="reference">Reference</h4>
+<ol>
+  <li><a href="https://stackoverflow.com/questions/120876/what-are-the-rules-for-calling-the-base-class-constructor#:~:text=If%20you%20want%20to%20call,rather%20than%20%22super()%22.">rules for calling base class constructor</a></li>
+  <li><a href="https://stackoverflow.com/questions/357307/how-to-call-a-parent-class-function-from-derived-class-function">call parent class method from a derived class</a></li>
+</ol>
 
-<span class="kt">void</span> <span class="nf">print_upper_triangle</span><span class="p">()</span>
-<span class="p">{</span>
-	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">4</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
-	<span class="p">{</span>
-		<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;</span><span class="mi">4</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
-		<span class="p">{</span>
-           <span class="k">if</span><span class="p">(</span><span class="n">j</span><span class="o">&gt;=</span><span class="n">i</span><span class="p">)</span>
-		   <span class="p">{</span>
-			   <span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"*"</span><span class="p">;</span>
-		   <span class="p">}</span><span class="k">else</span>
-		   <span class="p">{</span>
-			   <span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">" "</span><span class="p">;</span>
-		   <span class="p">}</span>
-		<span class="p">}</span>
-		<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
-	<span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kt">void</span> <span class="nf">print_lower_triangle</span><span class="p">()</span>
-<span class="p">{</span>
-	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">4</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
-	<span class="p">{</span>
-		<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;</span><span class="mi">4</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
-		<span class="p">{</span>
-			<span class="k">if</span><span class="p">(</span><span class="n">j</span><span class="o">&lt;=</span><span class="n">i</span><span class="p">)</span>
-			<span class="p">{</span>
-				<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"*"</span><span class="p">;</span>
-			<span class="p">}</span><span class="k">else</span>
-			<span class="p">{</span>
-				<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">" "</span><span class="p">;</span>
-			<span class="p">}</span>
-
-		<span class="p">}</span>
-		<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
-	<span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kt">void</span> <span class="nf">print_transpose_triangle</span><span class="p">()</span>
-<span class="p">{</span>
-	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">4</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
-	<span class="p">{</span>
-		<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;</span><span class="mi">4</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
-		<span class="p">{</span>
-			<span class="k">if</span><span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">)</span>
-			<span class="p">{</span>
-				<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">" "</span><span class="p">;</span>
-			<span class="p">}</span><span class="k">else</span>
-			<span class="p">{</span>
-				<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"*"</span><span class="p">;</span>
-			<span class="p">}</span>
-		<span class="p">}</span>
-		<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
-	<span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kt">void</span> <span class="nf">print_pascal_triangle</span><span class="p">()</span>
-<span class="p">{</span>
-
-	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">4</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
-	<span class="p">{</span>
-		<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;</span><span class="mi">7</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
-		<span class="p">{</span>
-			<span class="k">if</span><span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">)</span>
-			<span class="p">{</span>
-				<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">" "</span><span class="p">;</span>
-			<span class="p">}</span><span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="n">i</span><span class="o">&gt;=</span><span class="mi">3</span> <span class="o">&amp;&amp;</span> <span class="n">j</span><span class="o">&lt;</span><span class="mi">4</span><span class="o">+</span><span class="n">i</span><span class="p">)</span>
-			<span class="p">{</span>
-				<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"*"</span><span class="p">;</span>
-			<span class="p">}</span><span class="k">else</span>
-			<span class="p">{</span>
-				<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">" "</span><span class="p">;</span>
-			<span class="p">}</span>
-
-		<span class="p">}</span>
-		<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
-	<span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
-	<span class="n">print_lower_triangle</span><span class="p">();</span>
-	<span class="n">print_transpose_triangle</span><span class="p">();</span>
-	<span class="n">print_pascal_triangle</span><span class="p">();</span>
-<span class="p">}</span>
-</code></pre></div></div>
 
       
       <footer>
@@ -6856,7 +6891,7 @@ $(document).ready(function() {
   
      
     	<li><a href="/categories.html#PL-ref">
-    		PL <span>240</span>
+    		PL <span>263</span>
     	</a></li>
     
   
@@ -6875,9 +6910,9 @@ $(document).ready(function() {
 
   
      
-    	<li><a href="/tags.html#c++-ref">c++ <span>63</span></a></li>
+    	<li><a href="/tags.html#c++-ref">c++ <span>85</span></a></li>
      
-    	<li><a href="/tags.html#compile-ref">compile <span>74</span></a></li>
+    	<li><a href="/tags.html#compile-ref">compile <span>94</span></a></li>
     
   
 

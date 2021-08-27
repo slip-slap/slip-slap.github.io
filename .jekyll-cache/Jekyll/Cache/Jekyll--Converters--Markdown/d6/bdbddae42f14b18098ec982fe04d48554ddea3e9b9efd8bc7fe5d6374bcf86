@@ -1,0 +1,12 @@
+I"p
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="nc">T</span><span class="p">&gt;</span>
+<span class="k">struct</span> <span class="nc">iterator_traits</span><span class="o">&lt;</span><span class="n">T</span><span class="o">*&gt;</span>
+<span class="p">{</span>
+	<span class="k">typedef</span> <span class="n">T</span> <span class="n">value_type</span><span class="p">;</span>
+	<span class="k">typedef</span> <span class="kt">ptrdiff_t</span> <span class="n">difference_type</span><span class="p">;</span>
+	<span class="k">typedef</span> <span class="n">T</span><span class="o">*</span> <span class="n">pointer</span><span class="p">;</span>
+	<span class="k">typedef</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">reference</span><span class="p">;</span>
+	<span class="k">typedef</span> <span class="n">random_access_iterator_tag</span> <span class="n">iterator_category</span><span class="p">;</span>
+<span class="p">}</span>	
+</code></pre></div></div>
+:ET

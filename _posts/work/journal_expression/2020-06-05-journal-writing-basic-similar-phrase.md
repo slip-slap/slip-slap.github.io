@@ -20,3 +20,8 @@ have the same or nearly the same meaning, and they are used in the same way.
    for instance.
 2. Mobile devices are becoming less expensive. Sophisticated smartphones, for
    instance, can now be purchased for less than \$100.
+
+
+#### various and diverse
+1. various: many options
+2. diverse: many different options

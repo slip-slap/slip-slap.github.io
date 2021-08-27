@@ -1,0 +1,56 @@
+I"{
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#content in foo.h
+</span>
+<span class="k">class</span> <span class="nc">Foo</span><span class="p">{</span>
+	<span class="nl">public:</span>
+		<span class="n">Foo</span><span class="p">();</span>
+<span class="p">};</span>
+</code></pre></div></div>
+<ol>
+  <li>If we include the above header file multiple times without header guard, the 
+the header file repeat itself on the cpp file which refers to it.</li>
+</ol>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#content in foo.cpp
+#include "foo.h"
+#include "foo.h"
+</span><span class="n">Foo</span><span class="o">::</span><span class="n">Foo</span><span class="p">(){</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ol>
+  <li>excution the following command</li>
+</ol>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcc <span class="nt">-E</span> foo.cpp
+</code></pre></div></div>
+
+<ol>
+  <li>the output</li>
+</ol>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="c"># 1 "foo.cpp"</span>
+<span class="c"># 1 "&lt;built-in&gt;"</span>
+<span class="c"># 1 "&lt;command-line&gt;"</span>
+<span class="c"># 1 "foo.cpp"</span>
+
+<span class="c"># 1 "foo.h" 1</span>
+class Foo<span class="o">{</span>
+ public:
+  Foo<span class="o">()</span><span class="p">;</span>
+<span class="o">}</span><span class="p">;</span>
+<span class="c"># 3 "foo.cpp" 2</span>
+<span class="c"># 1 "foo.h" 1</span>
+class Foo<span class="o">{</span>
+ public:
+  Foo<span class="o">()</span><span class="p">;</span>
+<span class="o">}</span><span class="p">;</span>
+<span class="c"># 4 "foo.cpp" 2</span>
+
+Foo::Foo<span class="o">(){</span>
+
+<span class="o">}</span>
+</code></pre></div></div>
+
+:ET

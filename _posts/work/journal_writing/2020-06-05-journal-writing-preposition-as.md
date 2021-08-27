@@ -33,7 +33,6 @@ satify $a+b < 1$ for all $x,y \in R^n$.
 2. As the name suggests, K is a cone, and is always convex, even when the original cone K is not..
 
 
-
 ### Relate
 - How both relate to making experimental measurements.
 - How they relate to quality improvement projects.

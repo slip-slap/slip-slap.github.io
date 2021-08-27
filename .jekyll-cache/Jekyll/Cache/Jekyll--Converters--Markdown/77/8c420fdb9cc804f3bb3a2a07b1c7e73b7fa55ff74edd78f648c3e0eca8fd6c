@@ -1,0 +1,85 @@
+I"<h4 id="motivation">Motivation</h4>
+<p>名字由来: panel data和data analysis。panel data是经济学中关于多维数据集的一个术语
+，pandas也提供了panel的数据类型。<br /></p>
+
+<h4 id="what-is-the-difference-between-series-and-dataframe-">what is the difference between Series and DataFrame ?</h4>
+<ol>
+  <li>According to <a href="http://pandas.pydata.org/pandas-docs/version/0.13.1/generated/pandas.DataFrame.html">Pandas Docs</a> <strong>DataFrame
+can be thought as a dict-like container for Series Objects</strong></li>
+  <li>As Pandas can be thought as a dict-like container for Series Objects. so when change a variable type from dictonary type
+to dataframe type. the key still unchange, but the value turned into a Series object.</li>
+  <li>Analogously, we need both list and matries
+But which one is treat as a Series, according to the following code, I think each columns is treat as a Series.
+That’s the reason why the <strong>row of dataframe</strong> are named as <strong>index</strong>.  Actually, the <strong>index is the Series object attribute</strong></li>
+</ol>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">dic1</span><span class="o">=</span><span class="p">{</span><span class="s">'name'</span><span class="p">:[</span><span class="s">'jason'</span><span class="p">,</span><span class="s">'hennry'</span><span class="p">,</span><span class="s">'mattel'</span><span class="p">,</span><span class="s">'hemmann'</span><span class="p">],</span><span class="s">'age'</span><span class="p">:[</span><span class="mi">17</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">40</span><span class="p">],</span><span class="s">'gender'</span><span class="p">:[</span><span class="s">'male'</span><span class="p">,</span><span class="s">'female'</span><span class="p">,</span><span class="s">'female'</span><span class="p">,</span><span class="s">'male'</span><span class="p">]}</span>
+<span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">dic1</span><span class="p">)</span>
+
+<span class="s">"""
+name  age  gender
+0    jason   17    male
+1   hennry   20  female
+2   mattel    5  female
+3  hemmann   40    male
+"""</span>
+</code></pre></div></div>
+
+<h4 id="series">Series</h4>
+
+<p>Creating a <strong>Series</strong> by passing a list of values</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="n">s1</span><span class="o">=</span><span class="n">pd</span><span class="p">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">46</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+<span class="c1"># find the index of an value
+</span><span class="n">s1</span><span class="p">[</span><span class="n">s1</span><span class="o">==</span><span class="mi">3</span><span class="p">]</span>
+</code></pre></div></div>
+
+<h5 id="selecting-by-label">selecting by label</h5>
+
+<p>For getting a cross section using a label:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">dates</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">date_range</span><span class="p">(</span><span class="s">'19980403'</span><span class="p">,</span><span class="n">periods</span><span class="o">=</span><span class="mi">9</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="n">dates</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="s">'ABCD'</span><span class="p">))</span>
+
+<span class="n">df</span><span class="p">.</span><span class="n">loc</span><span class="p">[:,[</span><span class="s">'A'</span><span class="p">,</span><span class="s">'B'</span><span class="p">]]</span>
+</code></pre></div></div>
+
+<h5 id="selecting-by-position">selecting by position</h5>
+<p>select via the position of the passed integer</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span><span class="n">index</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="s">'abc'</span><span class="p">),</span><span class="n">columns</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="s">'defg'</span><span class="p">))</span>
+<span class="n">df</span><span class="p">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+<span class="c1"># selecting the element whose index is [0,0]
+</span><span class="n">df</span><span class="p">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+</code></pre></div></div>
+
+<h4 id="draw">Draw</h4>
+<ol>
+  <li>Pandas has tight integration with matplotlib.</li>
+</ol>
+
+<h4 id="dataframe-and-list-numpy">Dataframe, and list, numpy</h4>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># change the column one to a list</span>
+
+col_one_to_list <span class="o">=</span> <span class="nb">df</span><span class="o">[</span><span class="s1">'one'</span><span class="o">]</span>.tolist<span class="o">()</span>
+
+<span class="c"># change the column one to an array</span>
+
+col_one_to_arrary <span class="o">=</span> <span class="nb">df</span><span class="o">[</span><span class="s1">'one'</span><span class="o">]</span>.to_numpy<span class="o">()</span>
+</code></pre></div></div>
+<h4 id="with-csv-file">With csv file</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>df = pd.read_csv("input.csv") # read csv file
+df.iloc[0,2] = 8 # modify element
+df.to_csv("input_output.csv") # save csv file
+</code></pre></div></div>
+
+<h4 id="reference">Reference</h4>
+<ol>
+  <li><a href="http://pandas.pydata.org/pandas-docs/stable/install.html">官网</a></li>
+  <li><a href="http://pandas.pydata.org/pandas-docs/stable/getting_started/10min.html#selection">Ten minutes to Pandas</a></li>
+  <li><a href="https://stackoverflow.com/questions/26047209/what-is-the-difference-between-a-pandas-series-and-a-single-column-dataframe">the difference between Series and Dataframe</a></li>
+  <li><a href="http://queirozf.com/entries/pandas-dataframe-plot-examples-with-matplotlib-pyplot">Use Pandas to
+Draw</a></li>
+</ol>
+:ET

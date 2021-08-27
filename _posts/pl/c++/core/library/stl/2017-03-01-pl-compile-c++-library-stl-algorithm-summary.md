@@ -9,6 +9,13 @@ tags: ["c++","compile"]
 {% include JB/setup %}
 
 
+#### Terminology
+1. predicates: To increase their flexibility and power, several algorithms allow
+   the user to pass user-defined operations, which they call internally. These
+   operations might be ordinary functions or function objects. If these
+   functions return a Boollean value, they are called predicates.
+
+
 
 ##### find
 find(beg, end, val)<br />

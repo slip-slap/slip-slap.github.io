@@ -1,0 +1,21 @@
+I"!
+<h4 id="purpose">Purpose</h4>
+<p>Specializing class templates allow you to optimize implementations for certain
+types or to fix a misbehavior of certain types for an instantiation of the class
+template.</p>
+<ul>
+  <li>If you specialize a class template, you must also specialize all member
+functions.</li>
+  <li>To specialize a class template, you have to declare the class with a leading 
+template&lt;&gt; and a specification of the types for which the class template is
+specialized. The types are used as a template argument and must be specified
+directly following the name of the class:</li>
+</ul>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">template</span><span class="o">&lt;</span><span class="p">&gt;</span>
+<span class="k">class</span> <span class="nc">Stack</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span>
+<span class="p">{</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+:ET

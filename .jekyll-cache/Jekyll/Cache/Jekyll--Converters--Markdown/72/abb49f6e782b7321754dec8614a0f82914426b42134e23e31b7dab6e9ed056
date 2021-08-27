@@ -1,0 +1,33 @@
+I"Ã
+<h4 id="typename">Typename</h4>
+<ol>
+  <li>The keyword <em>typename</em> was instroduced during the standardization of C++ to
+clarify that an identifier inside a template is a type.
+Consider the following example</li>
+</ol>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="nc">T</span><span class="p">&gt;</span> <span class="k">class</span> <span class="nc">My</span> <span class="k">class</span>
+<span class="err">{</span>
+	<span class="nc">typename</span> <span class="n">T</span><span class="o">::</span><span class="n">SubType</span><span class="o">*</span> <span class="n">ptr</span><span class="p">;</span>
+<span class="err">}</span>
+</code></pre></div></div>
+
+<p>Without <em>typename</em>, <em>SubType</em> would be considered a static member. Thus, it
+would be a concrete variable or object. As a result, the expression</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">T</span><span class="o">::</span><span class="n">SubType</span> <span class="o">*</span> <span class="n">ptr</span>
+</code></pre></div></div>
+
+<p>would be a multiplication of the static <em>Subtype</em> member of class <em>T</em> with
+<em>ptr</em>.</p>
+
+<h4 id="instantiation-and-specialization">Instantiation and Specialization</h4>
+<ol>
+  <li>The process of creating a regular class, function, or member function from a
+template by substituing actual values for its arguments is called template
+instantiation.</li>
+  <li>The resuting entity(class, function, or member function) is generically
+called a specialization.</li>
+</ol>
+
+:ET

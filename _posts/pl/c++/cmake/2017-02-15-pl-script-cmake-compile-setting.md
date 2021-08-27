@@ -38,10 +38,11 @@ cmake -DCMAKE_CXX_COMPILER=clang++ -DCMAKE_C_COMPILER=clang
 
 #### Setting in CMakeLists.txt
 
-```lcmake
+```cmake
 set(CMAKE_CXX_STANDARD 11)
 SET(CMAKE_CXX_FLAGS "-O0") // disable c++ optimization
 SET(CMAKE_C_FLAGS "-O0")   // disable c optimization
+set(CMAKE_CXX_FLAGS "-fno-elide-constructors")
 ```
 
 #### Reference

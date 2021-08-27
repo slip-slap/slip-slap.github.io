@@ -1,0 +1,23 @@
+I"…
+<h4 id="template-template-parameter">Template template parameter</h4>
+
+<p>if the template parameter of the template template parameter is not used, you
+	can omit its name:</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="nc">T</span><span class="p">,</span> <span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="nc">ELEM</span><span class="p">&gt;&gt;</span> <span class="k">class</span> <span class="nc">CONT</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">deque</span><span class="o">&gt;</span>
+<span class="k">class</span> <span class="nc">Stack</span> <span class="p">{</span> <span class="p">};</span>
+<span class="c1">// omit the template parameter of template template parameter</span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="nc">T</span><span class="p">,</span> <span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span><span class="p">&gt;&gt;</span> <span class="k">class</span> <span class="nc">CONT</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">deque</span><span class="o">&gt;</span>
+<span class="k">class</span> <span class="nc">Stack</span> <span class="p">{</span> <span class="p">};</span>
+</code></pre></div></div>
+
+<h4 id="template-template-argument-matching">Template template argument matching</h4>
+<p>If you try to use the above <em>Stack</em>, you get an error message saying that the
+default value <em>std::deque</em> is not compatible with the template template
+parameter <em>CONT</em>. The problem is that a template template argument must be a
+template with parameters that exactly math the parameters of the template
+template parameters it substitues.</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">tempate</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="nc">ELEM</span><span class="p">,</span> <span class="k">typename</span> <span class="nc">ALLOC</span><span class="o">=</span><span class="n">std</span><span class="o">::</span><span class="n">allocator</span><span class="o">&lt;</span><span class="n">ELEM</span><span class="p">&gt;</span><span class="o">&gt;</span> <span class="k">class</span> <span class="nc">CONT</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">deque</span><span class="o">&gt;</span> <span class="k">class</span> <span class="nc">Stack</span><span class="p">{};</span>
+</code></pre></div></div>
+:ET

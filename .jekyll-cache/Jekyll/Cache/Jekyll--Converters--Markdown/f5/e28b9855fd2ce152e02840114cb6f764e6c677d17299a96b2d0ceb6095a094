@@ -1,0 +1,57 @@
+I"�
+<h4 id="explicit">explicit</h4>
+<p>c++为只用传递一个参数的构造函数定义了一个隐士转换</p>
+
+<pre><code class="language-cpp,monokai">class Animal{
+	public:
+	    Animal(){
+        cout&lt;&lt;"no parameter constructor"&lt;&lt;endl;
+        }
+	    explicit Animal(int a){
+	    cout&lt;&lt;"parameter constructor"&lt;&lt;endl;
+	    }
+};
+Animal dog = 3         //报错，无法使用explicit Animal构造器
+</code></pre>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Animal{
+	public:
+	    Animal(){
+        cout&lt;&lt;"no parameter constructor"&lt;&lt;endl;
+	    }
+	    Animal(int a){
+        cout&lt;&lt;"parameter constructor"&lt;&lt;endl;
+	    }
+};
+Animal dog = 3        //隐士调用Animal(int a)构造函数
+</code></pre></div></div>
+
+<h4 id="auto">auto</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>list&lt;Point2d&gt; container;
+Point2d p1( 0,-1);
+container.push_back(p1);
+//下面的做法并不会改变容器内的值,因为var不是指针，也是引用; 
+for(auto var:container){ 
+	var.x=1;
+	var.y=2;
+}
+//正确示范
+for(auto itr=container.begin();itr!=container.end();itr++){
+    itr-&gt;x=itr-&gt;x/x_border;
+    itr-&gt;y=itr-&gt;y/y_border;
+}
+</code></pre></div></div>
+
+<h4 id="char">char</h4>
+<p>ANSI C提供了三种字符类型, char, signed char, unsigned char<br />
+signed char取值范围-128-127 unsigned char取值范围0-255<br />
+char是Implementation Defined, 未明确定义。一般用signed char或者unsigned char<br />
+来实现。VC编译器和x86上的GCC把char定义为signed char, arm-linux-gcc把char定义<br />
+unsigned char</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>char a = -1;
+printf("%d", a);//a等于-1,说明我的机器把char当作signed char处理
+</code></pre></div></div>
+
+:ET

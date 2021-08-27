@@ -1,0 +1,58 @@
+I"ö
+<h4 id="comilation">Comilation</h4>
+<p>templates are compiled twice:</p>
+<ol>
+  <li>Without instantiation, the template code itself is checked for correct
+syntax. Syntax errors are discovered, such as missing semicolons.</li>
+  <li>At the time of instantiation, the template code is checked to ensure that all
+calls are valid, invalid calls are discovered, such as unsupported calls.</li>
+</ol>
+
+<h4 id="template-parameters">Template parameters</h4>
+<p>Function templates have two kinds of parameters:</p>
+<ol>
+  <li>Template parameters, which are declared in angle brackets before the function
+template name:</li>
+</ol>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="nc">T</span><span class="p">&gt;</span> <span class="c1">// T is template parameter</span>
+</code></pre></div></div>
+
+<ol>
+  <li>Call parameters, which are declare in parentheses after the function template
+name:</li>
+</ol>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">max</span><span class="p">(</span><span class="n">T</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="n">T</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">b</span><span class="p">)</span> <span class="c1">// a and b are call parameters.</span>
+</code></pre></div></div>
+<p>you may have as many template parameters as you like. However, in function
+templates(unlike class templates) no default template arguments can be
+specified.</p>
+
+<ul>
+  <li>the reason is mainly the result of a historical glitch in the development of
+function templates. There are probably no technical hindrances to implementing
+such a feature in modern C++ compilers, the in the future it will probably be
+available.</li>
+</ul>
+
+<h4 id="function-template-arguments">Function Template Arguments</h4>
+<p>Some template arguments can never be deduced. The corresponding parameters are
+best placed at the beginning of the list of template parameters so they can be
+specified explicitly while allowing the other arguments to be deduced.</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="nc">DstT</span><span class="p">,</span> <span class="k">typename</span> <span class="nc">SrcT</span><span class="p">&gt;</span> <span class="n">in</span> <span class="n">line</span> <span class="n">DstT</span> <span class="nf">implicit_cast</span> <span class="p">(</span><span class="n">SrcT</span> <span class="k">const</span><span class="o">&amp;</span>
+<span class="n">x</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="c1">// SrcT can be deduced</span>
+	<span class="c1">// but DstT can not</span>
+	<span class="k">return</span> <span class="n">x</span><span class="p">;</span>
+<span class="p">}</span>	
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="kt">double</span> <span class="n">value</span> <span class="o">=</span> <span class="n">implicit_cast</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+<span class="p">}</span>	
+</code></pre></div></div>
+
+:ET

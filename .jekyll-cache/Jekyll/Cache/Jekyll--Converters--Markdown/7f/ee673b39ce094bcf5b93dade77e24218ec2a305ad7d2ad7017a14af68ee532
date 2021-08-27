@@ -1,0 +1,39 @@
+I"ß
+<h4 id="method">Method</h4>
+<ol>
+  <li>Generator can specify the compiler, some generators are tied to a specific
+compiler.</li>
+  <li>Set  environment variable</li>
+  <li>cache entry</li>
+</ol>
+
+<p>CMake will try a list of usual compilers until it finds a working compiler, the
+list can be found in the files</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/usr/local/Cellar/cmake/3.17.3/share/cmake/Modules
+CMakeCXXCompiler.cmake.in
+CMakeCXXCompilerABI.cpp
+CMakeCXXCompilerId.cpp.in
+CMakeCXXInformation.cmake
+CMakeDetermineCXXCompiler.cmake
+</code></pre></div></div>
+
+<h4 id="using-command-line">Using Command Line</h4>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">cmake</span> <span class="o">-</span><span class="n">DCMAKE_CXX_COMPILER</span><span class="o">=</span><span class="n">clang</span><span class="o">++</span> <span class="o">-</span><span class="n">DCMAKE_C_COMPILER</span><span class="o">=</span><span class="n">clang</span>
+</code></pre></div></div>
+
+<h4 id="setting-in-cmakeliststxt">Setting in CMakeLists.txt</h4>
+
+<div class="language-cmake highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">set</span><span class="p">(</span>CMAKE_CXX_STANDARD 11<span class="p">)</span>
+<span class="nf">SET</span><span class="p">(</span>CMAKE_CXX_FLAGS <span class="s2">"-O0"</span><span class="p">)</span> // disable c++ optimization
+<span class="nf">SET</span><span class="p">(</span>CMAKE_C_FLAGS <span class="s2">"-O0"</span><span class="p">)</span>   // disable c optimization
+<span class="nb">set</span><span class="p">(</span>CMAKE_CXX_FLAGS <span class="s2">"-fno-elide-constructors"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h4 id="reference">Reference</h4>
+<ol>
+  <li><a href="https://unix.stackexchange.com/questions/187455/how-to-compile-without-optimizations-o0-using-cmake">cmake disable optimization</a></li>
+</ol>
+
+:ET

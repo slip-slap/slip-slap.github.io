@@ -3,7 +3,7 @@
   <title>Just Do It</title>
   <link href="/atom.xml" rel="self"/>
   <link href=""/>
-  <updated>2021-08-01T11:48:00+09:00</updated>
+  <updated>2021-08-26T16:43:54+09:00</updated>
   <id></id>
   <author>
     <name>reed</name>
@@ -910,6 +910,20 @@ Our findings underline the d...</content>
   </entry>
 
   <entry>
+    <title>Work: bibliography</title>
+    <link href="/work/journal-writing-module-bibliography.html"/>
+    <updated>2020-06-08T00:00:00+09:00</updated>
+    <id>/work/journal-writing-module-bibliography</id>
+    <content type="html">
+Types of in-text citation
+
+  Parenthetical citation: you put the source reference in parentheses directly
+in your text. This usually includes the author’s last name along with the
+publication date and/or the page number.
+  Numeric citation: You number each of your sources in the reference list a...</content>
+  </entry>
+
+  <entry>
     <title>Work: Abstract</title>
     <link href="/work/journal-writing-module-abstract.html"/>
     <updated>2020-06-08T00:00:00+09:00</updated>
@@ -1450,13 +1464,12 @@ Analysis
       DOI: 10.3993/jfbim00268
     
   
-  Predicting Strength Ratio of Laminated Composite Material with Evolutionary
-Artificial Neural
-Network
-
-
-
-  Publish...</content>
+  硕士论文
+    
+      Publisher: 知网
+    
+  
+  Predicting Strength Ratio of Laminated Composite Material with Evolutionar...</content>
   </entry>
 
   <entry>
@@ -1531,6 +1544,24 @@ circulated. 2): issue refers to how many times that periodical has been
 published during that year.
 
 </content>
+  </entry>
+
+  <entry>
+    <title>Work: Common Journal</title>
+    <link href="/work/work-journal-advanced.html"/>
+    <updated>2020-06-03T00:00:00+09:00</updated>
+    <id>/work/work-journal-advanced</id>
+    <content type="html">
+1. Advances in Neural Information Processing Systems(NIPS)
+
+  Editor Michael Jordan, Yann Lecun
+  Paper: ImageNet classification with deep convolutional neural networks
+
+
+It is by far the biggest conference in the area of AI and machine learning,
+which more focused on theory and methodology.
+
+2....</content>
   </entry>
 
   <entry>
@@ -11579,6 +11610,19 @@ Reference
   </entry>
 
   <entry>
+    <title>Qt: Free Resources</title>
+    <link href="/pl/pl-qt-free-resource.html"/>
+    <updated>2017-04-08T00:00:00+09:00</updated>
+    <id>/pl/pl-qt-free-resource</id>
+    <content type="html">
+
+  stylesheet website
+  menu icon
+
+</content>
+  </entry>
+
+  <entry>
     <title>Qt: Core</title>
     <link href="/pl/pl-qt-core.html"/>
     <updated>2017-04-08T00:00:00+09:00</updated>
@@ -11594,6 +11638,29 @@ following figure.
 How to design a window?
 It will be trivial and inefficient if design a window by writing code line
 by line. This will g...</content>
+  </entry>
+
+  <entry>
+    <title>Qt: bugs</title>
+    <link href="/pl/pl-qt-bugs-and-resolution.html"/>
+    <updated>2017-04-08T00:00:00+09:00</updated>
+    <id>/pl/pl-qt-bugs-and-resolution</id>
+    <content type="html">
+Invisible menubar
+
+
+  solution
+    ui-&amp;gt;setupUi(this);
+ui-&amp;gt;menuBar-&amp;gt;setNativeMenuBar(false);
+    
+  
+
+
+Reference
+
+  invisible menu bar
+
+</content>
   </entry>
 
   <entry>
@@ -12209,27 +12276,43 @@ functional programming techniques
   </entry>
 
   <entry>
-    <title>C++ GP:  Template</title>
-    <link href="/pl/pl-compile-c++-gp-template.html"/>
-    <updated>2017-03-08T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-gp-template</id>
+    <title>C++: Book</title>
+    <link href="/pl/pl-compile-c++-book.html"/>
+    <updated>2017-03-15T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-book</id>
     <content type="html">
-function and class template
+Reference
+1.C++ booklist
+</content>
+  </entry>
 
-  they are convenient, but don’t use them, too difficult to debug.
-  It just use the compiler to generate code.
+  <entry>
+    <title>C++: Preprocessor Code</title>
+    <link href="/pl/pl-compile-c++-preprocessor-code.html"/>
+    <updated>2017-03-08T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-preprocessor-code</id>
+    <content type="html">
+#content in foo.h
+
+class Foo{
+	public:
+		Foo();
+};
 
 
-#include &amp;lt;iostream&amp;gt;
-#include &amp;lt;string&amp;gt;
+  If we include the above header file multiple times without header guard, the 
+the header file repeat itself on the cpp file which refers to it.
 
-template&amp;lt;typename T&amp;gt;
-void my_print(T value)
-{
-	std::cout&amp;lt;&amp;lt;value&amp;lt;&amp;lt;&quot;\n&quot;;
+
+#content in foo.cpp
+#include &quot;foo.h&quot;
+#include &quot;foo.h&quot;
+Foo::Foo(){
 }
 
-template&amp;l...</content>
+
+
+  excution the following...</content>
   </entry>
 
   <entry>
@@ -12366,6 +12449,144 @@ Stream
       Inputstream: istream, ifstream
       Outputstream: ostream, ofstream
       ci...</content>
+  </entry>
+
+  <entry>
+    <title>C++ GP:  Trait classes</title>
+    <link href="/pl/pl-compile-c++-gp-trait-classes.html"/>
+    <updated>2017-03-08T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-gp-trait-classes</id>
+    <content type="html">
+Why bother?
+It is true that class template or function template can accept as many as
+possible arguments, however, which brings inconvience for client. It is tedious
+and error-prone to provide multiple arguments. 
+That’s where the trait class comes to rescue, to reduce the number of template
+pra...</content>
+  </entry>
+
+  <entry>
+    <title>C++ GP:  Template</title>
+    <link href="/pl/pl-compile-c++-gp-template.html"/>
+    <updated>2017-03-08T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-gp-template</id>
+    <content type="html">
+function and class template
+
+  they are convenient, but don’t use them, too difficult to debug.
+  It just use the compiler to generate code.
+
+
+#include &amp;lt;iostream&amp;gt;
+#include &amp;lt;string&amp;gt;
+
+template&amp;lt;typename T&amp;gt;
+void my_print(T value)
+{
+	std::cout&amp;lt;&amp;lt;value&amp;lt;&amp;lt;&quot;\n&quot;;
+}
+
+template&amp;l...</content>
+  </entry>
+
+  <entry>
+    <title>C++ GP: Template Parameters</title>
+    <link href="/pl/pl-compile-c++-gp-template-parameter.html"/>
+    <updated>2017-03-08T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-gp-template-parameter</id>
+    <content type="html">
+1. Type Parameters
+Type parameters are introduced with either the keyword typename or the keyword
+class: the two are entirely equivalent.
+
+  The keyword must be followed by a simple identifier and that identifier must
+be followed by a comma to denote the start of then next parameter
+declaration....</content>
+  </entry>
+
+  <entry>
+    <title>C++ GP: summary</title>
+    <link href="/pl/pl-compile-c++-gp-summary.html"/>
+    <updated>2017-03-08T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-gp-summary</id>
+    <content type="html">
+Polymorphism
+There are two major approaches to polymorphism in programming:
+
+  subtype polymorphism,  realized with inheritance and virtual functions:
+interface requirements are written as virtual functions of an abstract class,
+from which concrete classes are derived.
+  parametric polymorphism,...</content>
+  </entry>
+
+  <entry>
+    <title>C++ GP:  Function Template</title>
+    <link href="/pl/pl-compile-c++-gp-function-template.html"/>
+    <updated>2017-03-08T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-gp-function-template</id>
+    <content type="html">
+Comilation
+templates are compiled twice:
+
+  Without instantiation, the template code itself is checked for correct
+syntax. Syntax errors are discovered, such as missing semicolons.
+  At the time of instantiation, the template code is checked to ensure that all
+calls are valid, invalid calls are ...</content>
+  </entry>
+
+  <entry>
+    <title>C++ GP:  Class Template</title>
+    <link href="/pl/pl-compile-c++-gp-class-template.html"/>
+    <updated>2017-03-08T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-gp-class-template</id>
+    <content type="html">
+Template template parameter
+
+if the template parameter of the template template parameter is not used, you
+	can omit its name:
+
+template &amp;lt;typename T, template &amp;lt;typename ELEM&amp;gt;&amp;gt; class CONT = std::deque&amp;gt;
+class Stack { };
+// omit the template parameter of template template parameter
+t...</content>
+  </entry>
+
+  <entry>
+    <title>C++ GP:  Specializations of class templates</title>
+    <link href="/pl/pl-compile-c++-gp-class-template-specialization.html"/>
+    <updated>2017-03-08T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-gp-class-template-specialization</id>
+    <content type="html">
+Purpose
+Specializing class templates allow you to optimize implementations for certain
+types or to fix a misbehavior of certain types for an instantiation of the class
+template.
+
+  If you specialize a class template, you must also specialize all member
+functions.
+  To specialize a class template...</content>
+  </entry>
+
+  <entry>
+    <title>C++ GP:  basic</title>
+    <link href="/pl/pl-compile-c++-gp-basic.html"/>
+    <updated>2017-03-08T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-gp-basic</id>
+    <content type="html">
+Typename
+
+  The keyword typename was instroduced during the standardization of C++ to
+clarify that an identifier inside a template is a type.
+Consider the following example
+
+
+template &amp;lt;typename T&amp;gt; class My class
+{
+	typename T::SubType* ptr;
+}
+
+
+Without typename, SubType would be considered...</content>
   </entry>
 
   <entry>
@@ -12646,6 +12867,29 @@ string and string literal
   </entry>
 
   <entry>
+    <title>C++ Keyword: static</title>
+    <link href="/pl/pl-compile-c++-static.html"/>
+    <updated>2017-03-08T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-static</id>
+    <content type="html">
+I
+This keyword is related to the linker stage.
+
+  The linker is not going to look outside of the scope of this translation unit
+for that symbol definiton
+  kind of declaring a variable private in a class.
+
+
+2. function scope
+
+#include &amp;lt;iostream&amp;gt;
+void age()
+{
+	static int age = 18;
+	std::cou...</content>
+  </entry>
+
+  <entry>
     <title>C++: Reference</title>
     <link href="/pl/pl-compile-c++-reference.html"/>
     <updated>2017-03-08T00:00:00+09:00</updated>
@@ -12699,6 +12943,21 @@ system hasn’t allocate an address to it.
   </entry>
 
   <entry>
+    <title>C++: One definition rule</title>
+    <link href="/pl/pl-compile-c++-one-definition-rule.html"/>
+    <updated>2017-03-08T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-one-definition-rule</id>
+    <content type="html">
+Inline function
+The spec specifically states that the ODR does not apply to inline functions, so
+if you have a header file with an implementation of a class member function
+	that’s marked inline, that’s perfectly fine.
+
+Template function
+</content>
+  </entry>
+
+  <entry>
     <title>C++: Lvalues and Rvalues</title>
     <link href="/pl/pl-compile-c++-lvalue-and-rvalue.html"/>
     <updated>2017-03-08T00:00:00+09:00</updated>
@@ -12724,42 +12983,26 @@ system hasn’t allocate an address to it.
   </entry>
 
   <entry>
-    <title>C++ Keyword: static</title>
-    <link href="/pl/pl-compile-c++-keyword-static.html"/>
+    <title>C++: Extern</title>
+    <link href="/pl/pl-compile-c++-extern.html"/>
     <updated>2017-03-08T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-keyword-static</id>
+    <id>/pl/pl-compile-c++-extern</id>
     <content type="html">
-I
-This keyword is related to the linker stage.
+Why bother?
+This is for global variable.
 
-  The linker is not going to look outside of the scope of this translation unit
-for that symbol definiton
-  kind of declaring a variable private in a class.
+How to use?
+
+  delcare the existence of global variables in a header, so that each source
+file that includes the header knows about it.
+  But you only need to “define” it once in one of your source files.
 
 
-2. function scope
+Reference
 
-#include &amp;lt;iostream&amp;gt;
-void age()
-{
-	static int age = 18;
-	std::cou...</content>
-  </entry>
+  When to use exten in C++
 
-  <entry>
-    <title>C++ Keyword: Const</title>
-    <link href="/pl/pl-compile-c++-keyword-const.html"/>
-    <updated>2017-03-08T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-keyword-const</id>
-    <content type="html">
-I
-
-  const is a fake keyword, it’s just a promise.
-    
-      the qualifier const can be applied to the declaration of any variable to specify that its
-value will not be changed.
-      const keyword applies to whatever is immediately to its left.
-      if there is nothing to its left, it applies...</content>
+</content>
   </entry>
 
   <entry>
@@ -12782,6 +13025,48 @@ void value; //won't work, variables can't be defined with a void type
 const和指针
 
 c...</content>
+  </entry>
+
+  <entry>
+    <title>C++: Conversion of data type</title>
+    <link href="/pl/pl-compile-c++-data-type-conversion.html"/>
+    <updated>2017-03-08T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-data-type-conversion</id>
+    <content type="html">
+Type Punning
+
+reinterpret_cast
+int id = reinterpret_cast&amp;lt;int&amp;gt;(&amp;amp;obj);
+
+
+dynamic_cast
+dynamic_cast is a corresponding of isinstance of Python in c++.
+
+if(NewType* v=dynamic_cast&amp;lt;NewType*&amp;gt;(old)){
+	//old was safely casted to NewType
+	v-&amp;gt;doSomthing();
+}
+
+
+The Swiss knife
+
+#include ...</content>
+  </entry>
+
+  <entry>
+    <title>C++ Keyword: Const</title>
+    <link href="/pl/pl-compile-c++-const.html"/>
+    <updated>2017-03-08T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-const</id>
+    <content type="html">
+I
+
+  const is a fake keyword, it’s just a promise.
+    
+      the qualifier const can be applied to the declaration of any variable to specify that its
+value will not be changed.
+      const keyword applies to whatever is immediately to its left.
+      if there is nothing to its left, it applies...</content>
   </entry>
 
   <entry>
@@ -12951,12 +13236,52 @@ void swap(int &amp;amp;a, int &amp;amp;b)
   </entry>
 
   <entry>
+    <title>C++ OOP: Static</title>
+    <link href="/pl/pl-compile-c++-oop-static.html"/>
+    <updated>2017-03-02T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-oop-static</id>
+    <content type="html">How to use
+
+You can’t define a static variable in a class declaration, because it break the
+rule that one variable can only be defined once.  One head file usually could be
+included multiple times, and the variable will be defined many times.
+
+Reference
+
+  staic variable
+initialization
+
+
+</content>
+  </entry>
+
+  <entry>
     <title>C++ OOP: Polymorphism</title>
     <link href="/pl/pl-compile-c++-oop-polymorphism.html"/>
     <updated>2017-03-02T00:00:00+09:00</updated>
     <id>/pl/pl-compile-c++-oop-polymorphism</id>
     <content type="html">
 </content>
+  </entry>
+
+  <entry>
+    <title>C++ OOP: A Perfect Class</title>
+    <link href="/pl/pl-compile-c++-oop-perfect-class.html"/>
+    <updated>2017-03-02T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-oop-perfect-class</id>
+    <content type="html">
+The following code is a what a perfect class should look like, which includes
+constructor, copy constructor, assignment operator, move semantics, destructor.
+
+#include &amp;lt;iostream&amp;gt;
+#include &amp;lt;vector&amp;gt;
+#include &amp;lt;algorithm&amp;gt;
+
+class String
+{
+	public:
+		String(char* str, int length)
+		{...</content>
   </entry>
 
   <entry>
@@ -12983,24 +13308,13 @@ class Student{
     <link href="/pl/pl-compile-c++-oop-inheritancer.html"/>
     <updated>2017-03-02T00:00:00+09:00</updated>
     <id>/pl/pl-compile-c++-oop-inheritancer</id>
-    <content type="html">
-#include &amp;lt;iostream&amp;gt;
-#include &amp;lt;string&amp;gt;
+    <content type="html">Rules For calling the base class constructor
+Base class constructos are automatically called for you if they have no
+argument.
 
-
-void print_square()
-{
-	for(int i=0;i&amp;lt;4;i++)
-	{
-		int line_head = 4*i + 1;
-		for(int j=0;j&amp;lt;4;j++)
-		{
-			std::string s_number = std::to_string(line_head+j);
-			if(s_number.length() &amp;lt; 2)
-			{
-				s_number.append(&quot; &quot;);
-			}
-			std::cout&amp;l...</content>
+  If you want to call a superclass constructor with an argument, you must use
+subclass’s constructor initialization list.
+  Unlike Java, C++ supports multiple inheritanc...</content>
   </entry>
 
   <entry>
@@ -13068,26 +13382,6 @@ existing object, it will be called in the following case.
     
       pass an object to an argument of a function need copy constructor.
       When an object of the class is returne...</content>
-  </entry>
-
-  <entry>
-    <title>C++ OOP: Class</title>
-    <link href="/pl/pl-compile-c++-oop-class.html"/>
-    <updated>2017-03-02T00:00:00+09:00</updated>
-    <id>/pl/pl-compile-c++-oop-class</id>
-    <content type="html">
-The following code is a what a perfect class should look like, which includes
-constructor, copy constructor, assignment operator, move semantics, destructor.
-
-#include &amp;lt;iostream&amp;gt;
-#include &amp;lt;vector&amp;gt;
-#include &amp;lt;algorithm&amp;gt;
-
-class String
-{
-	public:
-		String(char* str, int length)
-		{...</content>
   </entry>
 
   <entry>
@@ -13173,6 +13467,33 @@ through(thro...</content>
   </entry>
 
   <entry>
+    <title>C++ STL: Smart Pointer</title>
+    <link href="/pl/pl-compile-c++-library-stl-smart-pointer.html"/>
+    <updated>2017-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-library-stl-smart-pointer</id>
+    <content type="html">
+Reference
+
+  smart pointer
+
+</content>
+  </entry>
+
+  <entry>
+    <title>C++ STL: Idiom</title>
+    <link href="/pl/pl-compile-c++-library-stl-idiom.html"/>
+    <updated>2017-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-library-stl-idiom</id>
+    <content type="html">
+Remove and Erase
+
+std::vector&amp;lt;int&amp;gt; before{4};
+std::copy(before.begin(), before.end(),std::ostream_iterator&amp;lt;int&amp;gt;{std::cout, &quot;\n&quot;});
+before.erase(std::remove(before.begin(), before.end(),4),before.end());
+std::copy(before.begin(), before.end(),std::ostream_iterator&amp;lt;int&amp;gt;{std::cout...</content>
+  </entry>
+
+  <entry>
     <title>C++ STL Container: Vector</title>
     <link href="/pl/pl-compile-c++-library-stl-container-vector.html"/>
     <updated>2017-03-01T00:00:00+09:00</updated>
@@ -13219,6 +13540,21 @@ std::vector&amp;lt;int&amp;gt; c1={1, 2, 3, 4};...</content>
   </entry>
 
   <entry>
+    <title>C++ STL Container: Stack</title>
+    <link href="/pl/pl-compile-c++-library-stl-container-stack.html"/>
+    <updated>2017-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-library-stl-container-stack</id>
+    <content type="html">
+Why pop doesn’t return?
+
+Reference
+
+  stack not return
+
+</content>
+  </entry>
+
+  <entry>
     <title>C++ STL Container: List</title>
     <link href="/pl/pl-compile-c++-library-stl-container-list.html"/>
     <updated>2017-03-01T00:00:00+09:00</updated>
@@ -13238,26 +13574,31 @@ class Product{
   </entry>
 
   <entry>
+    <title>C++ STL: Iterator Adapters</title>
+    <link href="/pl/pl-compile-c++-library-stl-container-iterator.html"/>
+    <updated>2017-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-library-stl-container-iterator</id>
+    <content type="html">
+Iterators are objects that can iterate over elements of a sequence via a common
+interface that is adapted from ordinary pointers.
+
+Iterator Adapters
+Iterators are pure abstractions: anything that behaves like an iterator is an
+iterator. For this reason, you can write classes that have the interf...</content>
+  </entry>
+
+  <entry>
     <title>C++ STL: Algorithm</title>
     <link href="/pl/pl-compile-c++-library-stl-algorithm-summary.html"/>
     <updated>2017-03-01T00:00:00+09:00</updated>
     <id>/pl/pl-compile-c++-library-stl-algorithm-summary</id>
     <content type="html">
-find
-find(beg, end, val)
-return 返回一个迭代器，指向输入序列中第一个等于val的元素。
-find_if(beg, end, unaryPred)
-return 返回一个迭代器， 指向第一个满足unaryPred的元素 
-parameter 因为谓词的参数为容器的元素类型，因此，谓词不能是成员函数
+Terminology
 
-//谓词
-bool my_minus(int a){
-	    return (a-1) == 2;
-}
-//主调函数
-list&amp;lt;int&amp;gt; container;
-container.push_back(3);
-container.push_back...</content>
+  predicates: To increase their flexibility and power, several algorithms allow
+the user to pass user-defined operations, which they call internally. These
+operations might be ordinary functions or function objects. If these
+functions return a Boollean value, they are called predica...</content>
   </entry>
 
   <entry>
@@ -13335,6 +13676,23 @@ b&amp;lt;&amp;lt;1,2,3,4;//赋值初始化
   </entry>
 
   <entry>
+    <title>C++ Library: Boost Graph Library</title>
+    <link href="/pl/pl-compile-c++-library-boost-graph-library-introduction.html"/>
+    <updated>2017-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-library-boost-graph-library-introduction</id>
+    <content type="html">
+Vertex and Edge
+In the BGL, vertices and edges are manipulated through opaque handles called
+vertex descriptors and edge descriptors.
+
+  The descriptor types for a graph type are always accessible through the
+graph_traits class.
+
+
+boost::adjacency_list&amp;lt;&amp;gt;::vertex_descriptor v = add_vertex(G...</content>
+  </entry>
+
+  <entry>
     <title>C++ Library: Boost</title>
     <link href="/pl/pl-compile-c++-library-boost.html"/>
     <updated>2017-03-01T00:00:00+09:00</updated>
@@ -13354,6 +13712,19 @@ boost::filesystem::path full_path=boost::filesystem::current_path()/&quot;google
 
 
 获得当前文件...</content>
+  </entry>
+
+  <entry>
+    <title>C++ Library: Boost summary</title>
+    <link href="/pl/pl-compile-c++-library-boost-summary.html"/>
+    <updated>2017-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-library-boost-summary</id>
+    <content type="html">
+
+  a book for boost library
+
+
+</content>
   </entry>
 
   <entry>
@@ -13382,6 +13753,22 @@ boost::filesystem::path full_path=boost::filesystem::current_path()/&quot;google
 
 
 A few libraries have optional...</content>
+  </entry>
+
+  <entry>
+    <title>C++ Library boost: PropertyMap</title>
+    <link href="/pl/pl-compile-c++-library-boost-property-map.html"/>
+    <updated>2017-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-compile-c++-library-boost-property-map</id>
+    <content type="html">
+iterator_property_map
+This is an adaptor that wraps a type that models RandomAccessIterator to
+create an LValuePropertyMap.
+
+  This adaptor is often useful for creating a property map out of an array,
+where the key is an integer offset into the array, and the array contains
+value objects.
+  You ...</content>
   </entry>
 
   <entry>
@@ -13414,6 +13801,25 @@ separated arguments and a closing parenthesis.
 Variable
 
  ...</content>
+  </entry>
+
+  <entry>
+    <title>CMake: Project structure</title>
+    <link href="/pl/pl-script-cmake-project-structure-with-cmake.html"/>
+    <updated>2017-03-01T00:00:00+09:00</updated>
+    <id>/pl/pl-script-cmake-project-structure-with-cmake</id>
+    <content type="html">
+  include
+  src
+  tests
+  libs
+
+
+Reference
+
+  C++ project structure with CMake
+
+</content>
   </entry>
 
   <entry>
@@ -14857,14 +15263,15 @@ generates random variables,cdf function
     <link href="/pl/pl-script-python-package-pandas.html"/>
     <updated>2017-01-17T00:00:00+09:00</updated>
     <id>/pl/pl-script-python-package-pandas</id>
-    <content type="html">名字由来: panel data和data analysis。panel data是经济学中关于多维数据集的一个术语
+    <content type="html">Motivation
+名字由来: panel data和data analysis。panel data是经济学中关于多维数据集的一个术语
 ，pandas也提供了panel的数据类型。
 
 what is the difference between Series and DataFrame ?
 
   According to Pandas Docs DataFrame
 can be thought as a dict-like container for Series Objects
-  As Pandas can be thought as a dict-like container for Series ...</content>
+  As Pandas can be thought as a dict-like container ...</content>
   </entry>
 
   <entry>
