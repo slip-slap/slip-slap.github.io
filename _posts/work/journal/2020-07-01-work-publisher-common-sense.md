@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Publisher: Common sense"
+title: "Journal: terminology"
 keywords: []
 description: 
 category: "work"
@@ -22,5 +22,6 @@ tags: []
 
 #### Reference
 1. [DOI](https://library.uic.edu/help/article/1966/what-is-a-doi-and-how-do-i-use-them-in-citations#:~:text=A%20DOI%2C%20or%20Digital%20Object,a%20document%20from%20your%20citation.)
+2. [Where to Get DOI](https://www.crossref.org/)
 
 

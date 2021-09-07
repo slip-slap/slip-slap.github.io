@@ -32,6 +32,5 @@ to it
    extending its functionality.
 
 
-
 #### Reference
 1. [Decorator](https://medium.com/datadriveninvestor/design-patterns-a-quick-guide-to-observer-pattern-d0622145d6c2)

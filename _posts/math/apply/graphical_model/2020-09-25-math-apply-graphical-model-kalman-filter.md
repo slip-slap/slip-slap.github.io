@@ -1,12 +1,13 @@
 ---
 layout: post
-title: "Dynamic Model: Kalman Filter"
-keywords: []
-description: ""
-category: "AI"
-tags: ["D.M."]
+title: "G.M.: Kalman Filter"
+keywords: [] 
+description: 
+category: "math"
+tags: ["apply","G.M."]
 ---
 {% include JB/setup %}
+
 
 #### 1. Problem
 

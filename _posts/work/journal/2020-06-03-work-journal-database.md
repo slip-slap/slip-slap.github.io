@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Work: academic database"
+title: "Journal: academic database"
 keywords: []
 description: 
 category: "work"
-tags: []
+tags: ["journal"]
 ---
 {% include JB/setup %}
 

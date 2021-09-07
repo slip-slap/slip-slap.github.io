@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Work: Cover letter of Journal"
+title: "Journal: Cover letter of Journal"
 keywords: []
 description: 
 category: "work"
-tags: []
+tags: ["journal"]
 ---
 {% include JB/setup %}
 

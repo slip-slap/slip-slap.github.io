@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Work: Common Journal"
+title: "Journal: Common Journal"
 keywords: []
 description: 
 category: "work"
-tags: []
+tags: ["journal"]
 ---
 {% include JB/setup %}
 
@@ -13,9 +13,13 @@ tags: []
 1. Editor Michael Jordan, Yann Lecun
 2. Paper: ImageNet classification with deep convolutional neural networks
 
-
 It is by far the biggest conference in the area of AI and machine learning,
 which more focused on theory and methodology.
+
+1. reference(APA)
+- Hasselmo, M.E., Schnell, E. & Barkai, E. (1995) Dynamics of learning and
+  recall at excitatory recurrent synapsesand cholinergic modulation in rat
+  hippocampal region CA3. Journal of Neuroscience 15(7):5249-5262.
 
 #### 2. Computer Vision and Pattern Recognition(CPVR)
 

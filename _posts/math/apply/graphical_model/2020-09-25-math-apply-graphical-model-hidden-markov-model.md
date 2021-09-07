@@ -1,13 +1,12 @@
 ---
 layout: post
-title: "Dynamic Model: Hidden Markov Model Algorithm"
-keywords: []
-description: ""
-category: "AI"
-tags: ["D.M."]
+title: "G.M.: Hidden Markov Model Algorithm"
+keywords: [] 
+description: 
+category: "math"
+tags: ["apply","G.M.","G.M.L."]
 ---
 {% include JB/setup %}
-
 
 ### Components of A HMM 
 

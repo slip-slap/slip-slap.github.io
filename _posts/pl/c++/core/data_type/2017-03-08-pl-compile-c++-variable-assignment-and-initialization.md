@@ -37,20 +37,5 @@ int d { 7 }; // initializer in braces.
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #### Reference
 1. [Variable assignment and initialization](https://www.learncpp.com/cpp-tutorial/variable-assignment-and-initialization/)
