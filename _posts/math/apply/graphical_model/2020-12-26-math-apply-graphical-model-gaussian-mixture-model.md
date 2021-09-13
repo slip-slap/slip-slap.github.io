@@ -3,8 +3,8 @@ layout: post
 title: "Classification: Gaussian Mixture Model"
 keywords: []
 description: ""
-category: "AI"
-tags: ["classification" ]
+category: "math"
+tags: ["apply","G.M." ]
 ---
 {% include JB/setup %}
 

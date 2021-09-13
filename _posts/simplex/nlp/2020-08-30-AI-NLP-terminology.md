@@ -3,7 +3,7 @@ layout: post
 title: "NLP: terminology"
 keywords: []
 description: ""
-category: "AI"
+category: "Simplex"
 tags: ["NLP"]
 ---
 {% include JB/setup %}

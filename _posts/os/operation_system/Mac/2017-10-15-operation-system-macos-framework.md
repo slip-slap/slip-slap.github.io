@@ -19,6 +19,16 @@ such as image and sound together in one place.
 
 
 
+#### Galois
+1. The reason I prefer MacOS is that it derives from linux, which is
+   open-source. Then I think I know what happens in there. 
+2. However, no matter which platform you choose, you need to know your system:
+   the available interface, and where you are.
+3. For example, you want to develop a desktop application, then you need MacOS
+   SDK, which is bundled with XCode.
+
+
+
 
 
 

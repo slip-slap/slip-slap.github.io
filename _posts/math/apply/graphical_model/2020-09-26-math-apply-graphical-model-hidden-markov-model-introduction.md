@@ -3,8 +3,8 @@ layout: post
 title: "Dynamic Model: Hidden Markov Model"
 keywords: []
 description: ""
-category: "AI"
-tags: ["D.M."]
+category: "math"
+tags: ["G.M."]
 ---
 {% include JB/setup %}
 

@@ -3,7 +3,7 @@ layout: post
 title: "N.N.D.: Recurrent Neural Network"
 keywords: []
 description: 
-category: "AI"
+category: "Simplex"
 tags: ["N.N.D."]
 ---
 {% include JB/setup %}

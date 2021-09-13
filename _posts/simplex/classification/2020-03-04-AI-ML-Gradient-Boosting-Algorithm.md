@@ -3,7 +3,7 @@ layout: post
 title: "Gradient Boosting Algorithm(GBM)"
 keywords: []
 description: 
-category: "AI"
+category: "Simplex"
 tags: []
 ---
 {% include JB/setup %}

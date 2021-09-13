@@ -3,7 +3,7 @@ layout: post
 title: "Traditional: Random Forest"
 keywords: []
 description: 
-category: "AI"
+category: "Simplex"
 tags: ["traditional"]
 ---
 {% include JB/setup %}

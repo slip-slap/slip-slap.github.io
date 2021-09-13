@@ -14,8 +14,8 @@ What *git rebase* does is modify the record of commit history. In nature, it
 modify the commits.
 
 
-<img align="left" src="{{IMAGE_PATH}}/git_before_rebase.png" /> 
-<img align="left" src="{{IMAGE_PATH}}/git_after_rebase.png" /> 
+<img align="left" src="{{IMAGE_PATH}}/git/git_before_rebase.png" /> 
+<img align="left" src="{{IMAGE_PATH}}/git/git_after_rebase.png" /> 
 
 
 

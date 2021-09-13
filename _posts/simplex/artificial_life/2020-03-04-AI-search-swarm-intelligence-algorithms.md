@@ -3,7 +3,7 @@ layout: post
 title: "Search: Swarm Intelligence"
 keywords: []
 description: "introduction"
-category: "AI"
+category: "Simplex"
 tags: ["search"]
 ---
 {% include JB/setup %}

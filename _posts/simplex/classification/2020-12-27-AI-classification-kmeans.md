@@ -3,7 +3,7 @@ layout: post
 title: "Classification: Kmeans"
 keywords: []
 description: ""
-category: "AI" 
+category: "Simplex" 
 tags: ["classification"]
 ---
 {% include JB/setup %}

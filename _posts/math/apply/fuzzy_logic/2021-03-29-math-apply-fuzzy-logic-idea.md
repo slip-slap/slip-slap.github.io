@@ -3,7 +3,7 @@ layout: post
 title: "FL: Idea"
 keywords: []
 description: ""
-category: "AI" 
+category: "math" 
 tags: ["FL"]
 ---
 {% include JB/setup %}

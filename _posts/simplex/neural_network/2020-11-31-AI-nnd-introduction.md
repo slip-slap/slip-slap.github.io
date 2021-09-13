@@ -3,7 +3,7 @@ layout: post
 title: "N.N.D.: summary"
 keywords: []
 description: ""
-category: "AI"
+category: "Simplex"
 tags: ["summary","N.N.D."]
 ---
 {% include JB/setup %}

@@ -3,7 +3,7 @@ layout: post
 title: "N.N.D.: Competitive Network"
 keywords: []
 description: ""
-category: "AI"
+category: "Simplex"
 tags: ["N.N.D."]
 ---
 {% include JB/setup %}

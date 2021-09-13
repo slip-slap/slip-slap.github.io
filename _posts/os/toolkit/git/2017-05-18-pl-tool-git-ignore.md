@@ -19,9 +19,18 @@ tags: ["toolkit","git"]
 2. A line starting with # serves as a comment.
 
 
+#### Problem: Untracked a tracked file or folder
+
+```cmake
+git rm -r --cached <folder>
+git rm --cached <file>
+```
+
 
 
 #### Reference
 1. [git ignore](https://git-scm.com/docs/gitignore)
+2. [forget tracked
+   file](https://stackoverflow.com/questions/1274057/how-can-i-make-git-forget-about-a-file-that-was-tracked-but-is-now-in-gitign)
 
 

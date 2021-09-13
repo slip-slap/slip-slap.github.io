@@ -3,7 +3,7 @@ layout: post
 title: "N.N.D.: Associative Networks"
 keywords: []
 description: ""
-category: "AI"
+category: "Simplex"
 tags: ["N.N.D."]
 ---
 {% include JB/setup %}

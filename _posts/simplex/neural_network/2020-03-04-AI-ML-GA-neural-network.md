@@ -3,7 +3,7 @@ layout: post
 title: "neural network with genetic algorithm"
 keywords: []
 description: 
-category: "AI"
+category: "Simplex"
 tags: []
 ---
 {% include JB/setup %}
