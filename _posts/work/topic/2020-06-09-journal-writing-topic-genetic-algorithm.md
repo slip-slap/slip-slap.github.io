@@ -8,6 +8,28 @@ tags: []
 ---
 {% include JB/setup %}
 
+####
+
+exploration and exploitation trade-off/delima.
+
+
+computationally inexpensive in terms of both memory requirements and
+speed
+
+
+Genetic algorithms, first developed and investigated by John Holland, are a
+family of computational models inspired by the concept of 'survial of the
+fittest' and have gained significant application in search, optimization, and
+machine learning.
+
+
+
+John Henry Holland
+
+
+
+
+
 #### Introduction
 1. gradient based optimization
 2. stochastic optimization
@@ -17,7 +39,6 @@ tags: []
 - However, there are many parameters in genetic algorithms that should be tuned.
 - without explicit parameter tuning.
 6. high computational intensity
-
 
 ####
 1. selection scheme

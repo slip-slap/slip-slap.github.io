@@ -10,3 +10,9 @@ tags: ["apply","G.M."]
 
 
 
+<img src="{{IMAGE_PATH}}/LDA.png" height="" width="" />
+
+
+
+#### Reference
+1. [LDA youtube](https://www.youtube.com/watch?v=T05t-SqKArY)

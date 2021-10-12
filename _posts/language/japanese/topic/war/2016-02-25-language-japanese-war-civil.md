@@ -15,3 +15,8 @@ tags: ["英語"]
 
 #### A
 1. 地位協定(ちいきょうてい): status of forces agreement
+
+
+#### 
+1. 運が良ければ
+

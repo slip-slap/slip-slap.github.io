@@ -69,6 +69,16 @@ It can be replaced with る。
 1. なんなんだよ　マジで
 
 
+####
+1. 何をしているのか
+2. 何をしているの
+3. 何しているの
+4. 何してるの
+5. 何してんの
+6. 何してんん
+7. 何してん
+
+
 #### Reference
 1. [ヤバイ](https://bondlingo.tv/blog/yabai%E3%82%84%E3%81%B0%E3%81%84-a-common-japanese-phrase-to-show-how-cool-you-are/)
 2. [なんでやねん](https://japanese.stackexchange.com/questions/44186/usage-of-%E3%81%AA%E3%82%93%E3%81%A7%E3%82%84%E3%81%AD%E3%82%93)

@@ -160,11 +160,16 @@ Example: 玉子焼き(cooked egg) 卵かけご飯(uncooked egg)
 - 商店・用品店・喫茶店
 
 #### 6. 気にすると気になる
-1. ~をに気にする: worry about
-- あの噂が気になる: you are just curious about the gossip
+1. ~をに気にする: worry about(bad thing)
 - 試験の結果を気にする
 - あの噂(うわさ)を気になる: you have something to do with the rumor and you are worried about it.
+- 気にしないでください
 
+2. 気になる
+
+3. 気に入る: 好き
+
+- あの噂が気になる: you are just curious about the gossip
 #### 7. 世界・世の中
 1. 世界: world
 2. 世の中: society
@@ -248,6 +253,27 @@ B: 行ってらっしゃい:
 2.  売り出す: to put on the market, to put on sale
 - 新型のパソコンが売り出される: a new PC model is coming onto the market
 3. 売れる: to be well known, to be popular
+
+
+#### とんでもない
+1. とんでもない＋noun: when you want to emphasize nouns or adjectives
+- とんでもないことになるよ
+- 今年はとんでもない新人が会社に入ってきた(terrible good or bad)
+
+2. strong deny the possibility
+- 彼のことが好きなんじゃない？
+- とんでもないです(no way)
+
+
+#### 押すと押さえる
+1. 押すは比較的短い時間
+2. 押さえるは比較的長い時間
+
+
+#### 通訳と翻訳
+#### 付けるとかける
+1. かける: to pour something
+
 
 
 
