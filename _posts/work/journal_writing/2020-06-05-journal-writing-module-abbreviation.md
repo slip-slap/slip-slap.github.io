@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Work: Abbreviation"
+title: "Journal Writing: Abbreviation"
 keywords: []
 description: 
 category: "work"

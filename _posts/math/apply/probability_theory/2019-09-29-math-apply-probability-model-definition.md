@@ -8,6 +8,11 @@ tags: ["apply","P.A.S.","P.M."]
 ---
 {% include JB/setup %}
 
+1. probability is the measure of uncertainty.
+2. A probability model consists of nonempty set called the sample space $S$; a
+   collection of events that are subsets of $S$; and a probability measure $P$
+   assigning a probability between 0 and 1 to each event, with $P(\empty) = 0$
+   and $P(S)=1$.
 
 #### 1 Probability space
 First we define two concept: *sample space* and *event*.

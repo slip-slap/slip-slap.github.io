@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Work: Experiment"
+title: "Journal Writing: Experiment"
 keywords: []
 description: 
 category: "work"

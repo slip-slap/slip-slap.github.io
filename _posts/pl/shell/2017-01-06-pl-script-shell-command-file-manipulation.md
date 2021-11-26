@@ -27,6 +27,21 @@ Permissions can be divided into four parts
 - c: stands for character file
 
 
+#### Trailing slash
+1. "If it ends with a slash, it's a directory. If not, it's a file." is an easy
+   convention to remember.
+2. At least on the operating systems I commonly use, doubling the slash causes
+   no problems, while omitting the slash causes big ones. It is, therefore,
+   safest to both put the slash into the variable and use "$path/$file" when
+   making use of it.
+
+3. multiple slashes are allowed and are equivalent to a single slash.
+
+
+#### Reference
+1. [trailing slash](https://stackoverflow.com/questions/980255/should-a-directory-path-variable-end-with-a-trailing-slash)
+2. [multiple slash](https://unix.stackexchange.com/questions/1910/how-does-linux-handle-multiple-consecutive-path-separators-home-username)
+
 
 
 

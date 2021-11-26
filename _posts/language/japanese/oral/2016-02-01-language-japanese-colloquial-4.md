@@ -45,3 +45,14 @@ something.
 図書館では、携帯が使えないことになっている。
 - なる: indicate turn, for example,　秋になる
 
+
+
+
+
+
+
+#### そうでしょうね・そうですね
+1. そうでしょうね: mostly agree but not sure, neither confirm or deny.
+2. そうですね: I agree with you, that's right.
+
+

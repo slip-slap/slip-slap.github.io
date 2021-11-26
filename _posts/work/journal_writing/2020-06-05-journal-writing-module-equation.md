@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Work: Equation"
+title: "Journal Writing: Equation"
 keywords: []
 description: 
 category: "work"
@@ -30,7 +30,7 @@ Newton's second law of motion, ma=f, is maybe one of the first differential equa
 ####
 1. The negation of 3 is -3.
 2. Similarly, we let X denotes this variable.
-
+3. Each was given a grade on a scale 0 to 100.
 
 #### Percent and Percentage
 1. percent is always associated with a specific number. 
@@ -39,4 +39,6 @@ Newton's second law of motion, ma=f, is maybe one of the first differential equa
 We use Sk to denote the set of symmetric k × k matrices, Sk
 to denote the set of symmetric positive semidefinite k × k matrices, and Sk
 to denote the set of symmetric positive definite k × k matrices.
+
+
 

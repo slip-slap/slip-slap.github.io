@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Work: Figure"
+title: "Journal Writing: Figure"
 keywords: []
 description: 
 category: "work"

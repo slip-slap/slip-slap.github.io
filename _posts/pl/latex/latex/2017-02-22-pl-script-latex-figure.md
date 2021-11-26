@@ -94,16 +94,28 @@ define new custom floats as well.
 ##### 3.2 Mutiple images/subfigures 
 
 ```latex
-\begin{figure}[h!]
-\centering
-	\begin{subfigure}[b]{0.4\linewidth}
-		\includegraphics[width=\linewidth{path_to.jpg}]
+\begin{figure}
+	\caption{Obtained nondominated solutions with NSGA II algorithm proceeds on
+	the constrained optimization problem.}  
+	\begin{subfigure}{.5\textwidth}
+		\includegraphics[width=0.9\linewidth]{Figures/chapter3/fig/glass/1.png}
 	\end{subfigure}
-	\begin{subfigure}[b]{0.6\linewidth}
-		\includegraphics[width=\linewidth{path_to.jpg}]
+	\begin{subfigure}{.5\textwidth}
+		\includegraphics[width=0.9\linewidth]{Figures/chapter3/fig/glass/3.png}
 	\end{subfigure}
-	\caption{}
-	\label{fig:image_xx}
+	\begin{subfigure}{.5\textwidth}
+		\includegraphics[width=0.9\linewidth]{Figures/chapter3/fig/glass/5.png}
+	\end{subfigure}
+	\begin{subfigure}{.5\textwidth}
+		\includegraphics[width=0.9\linewidth]{Figures/chapter3/fig/glass/7.png}
+	\end{subfigure}
+	\begin{subfigure}{.5\textwidth}
+		\includegraphics[width=0.9\linewidth]{Figures/chapter3/fig/glass/9.png}
+	\end{subfigure}
+	\begin{subfigure}{.5\textwidth}
+		\includegraphics[width=0.9\linewidth]{Figures/chapter3/fig/glass/10.png}
+	\end{subfigure}
+	\label{fig:chapter3-ga}
 \end{figure}
 ```
 

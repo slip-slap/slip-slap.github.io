@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Work: Abstract"
+title: "Journal Writing: Abstract"
 keywords: []
 description: 
 category: "work"
@@ -11,7 +11,6 @@ tags: []
 #### Why bother abstract?
 It should enable the reader to deduce the purpose and the results of the
 article to help him decide if it is worth reading.
-
 
 
 #### Things shouldn't appear within it.
@@ -25,7 +24,22 @@ article to help him decide if it is worth reading.
 - Lengthy background or contextual information.
 - Redundant phrases, unnecessary adverbs and adjectives, and repetitive information.
 
-
 #### Template
 1. A genetic algorithm is used to obtain $\cdots$.
 2. It is concluded that the repair strategy should always be used with the optimization.
+
+
+
+
+
+#### Example
+1. We trained a large, deep convolutional neural network
+2. The simulation results clearly show that the particle swarm optimization
+   algorithm provides better solutions in terms of performance and computational
+   time then the genetic algorithm based approaches.
+
+
+
+
+
+

@@ -7,8 +7,11 @@ category: "PL"
 tags: ["latex","script"]
 ---
 
+#### layout
 
-<img src="{{IMAGE_PATH}}/pl-script-latex-layout-page-size.png" height="300" width="200" />
+
+
+
 
 
 #### Concept
@@ -18,6 +21,10 @@ tags: ["latex","script"]
 4. \linewidth is a variable that represents the current size of the line of text. 
 - \linewidth may changed in a nested list, \hsize, \testwidth, \columnwidth don't change.
 
+
+What can I do with this
+
+<img src="{{IMAGE_PATH}}/pl/latex/pl_script_latex_layout_page_size.png" height="" width="" />
 
 #### Reference
 1. [textwidth and linewidth](https://tex.stackexchange.com/questions/16942/difference-between-textwidth-linewidth-and-hsize/16956)

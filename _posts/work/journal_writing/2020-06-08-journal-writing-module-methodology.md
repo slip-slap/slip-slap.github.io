@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Work: Methodology"
+title: "Journal Writing: Methodology"
 keywords: []
 description: 
 category: "work"

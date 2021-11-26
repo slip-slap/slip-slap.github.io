@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Work: bibliography"
+title: "Journal Writing: bibliography"
 keywords: []
 description: 
 category: "work"

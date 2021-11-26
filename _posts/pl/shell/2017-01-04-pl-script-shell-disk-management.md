@@ -60,7 +60,6 @@ UUID=eb448abb-3012-4d8d-bcde-94434d586a31 /                       ext4    defaul
 
 
 
-
 #### Reference
 1. [View Partion Table](https://vitux.com/4-ways-to-view-the-partition-table-in-linux/)
 2. [Disk
