@@ -148,17 +148,17 @@ $(document).ready(function() {
           <a href="/" title="查看最近发表"><i class="icon-fixed-width icon-edit"></i> 最近发表</a>
 <ul>
 
-  <li><a href="/work/journal-writing-module-acknowledgement.html" title="查看《Journal Writing: Acknowledgement》">Journal Writing: Acknowledgement</a></li>
+  <li><a href="/life/to-do-list.html" title="查看《To-do Lists》">To-do Lists</a></li>
 
-  <li><a href="/os/pl-tool-git-file-operation.html" title="查看《Git: File Operation》">Git: File Operation</a></li>
+  <li><a href="/pl/pl-script-cmake-CMakeLists.html" title="查看《CMake: CMakeLists》">CMake: CMakeLists</a></li>
 
-  <li><a href="/%E8%A8%80%E8%91%89/language-japanese-oral-usual.html" title="查看《口頭: 普通》">口頭: 普通</a></li>
+  <li><a href="/pl/pl-compile-c++-library-googletest-basic.html" title="查看《C++ Library: Basic of Googletest》">C++ Library: Basic of Googletest</a></li>
 
-  <li><a href="/work/journal-writing-title.html" title="查看《Journal Writing: Title》">Journal Writing: Title</a></li>
+  <li><a href="/%E8%A8%80%E8%91%89/language-japanese-body-workout.html" title="查看《体: 運動》">体: 運動</a></li>
 
-  <li><a href="/life/life-techniques-with-phone.html" title="查看《Techniques with Phone》">Techniques with Phone</a></li>
+  <li><a href="/pl/pl-latex-template-book.html" title="查看《Latex: Book》">Latex: Book</a></li>
 
-  <li><a href="/life/life-culture-with-last-name.html" title="查看《Culture with Last Name》">Culture with Last Name</a></li>
+  <li><a href="/pl/pl-script-latex-command-grammar.html" title="查看《Latex: Native Command》">Latex: Native Command</a></li>
 
 </ul>
 
@@ -166,7 +166,7 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">1158</span>
+<span title="文章总数">1163</span>
 <ul>
 
 
@@ -184,6 +184,27 @@ $(document).ready(function() {
   
   
   
+    <li><a href="/archive.html#January-2022">2022 年 01 月 (3)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#December-2021">2021 年 12 月 (3)</a></li>
+    
+  
 
   
   
@@ -224,7 +245,27 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#November-2021">2021 年 11 月 (11)</a></li>
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#November-2021">2021 年 11 月 (12)</a></li>
     
   
 
@@ -706,12 +747,7 @@ $(document).ready(function() {
   
   
   
-
-  
-  
-  
-  
-    <li><a href="/archive.html#June-2020">2020 年 06 月 (50)</a></li>
+    <li><a href="/archive.html#June-2020">2020 年 06 月 (49)</a></li>
     
   
 
@@ -6095,12 +6131,7 @@ $(document).ready(function() {
   
   
   
-
-  
-  
-  
-  
-    <li><a href="/archive.html#February-2016">2016 年 02 月 (101)</a></li>
+    <li><a href="/archive.html#February-2016">2016 年 02 月 (100)</a></li>
     
   
 
@@ -6115,11 +6146,11 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#言葉-ref">言葉 (234)</a></li>
 
-  <li><a href="/categories.html#life-ref">life (20)</a></li>
+  <li><a href="/categories.html#life-ref">life (21)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (270)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (274)</a></li>
 
-  <li><a href="/categories.html#OS-ref">OS (15)</a></li>
+  <li><a href="/categories.html#OS-ref">OS (16)</a></li>
 
   <li><a href="/categories.html#Algorithm-ref">Algorithm (81)</a></li>
 
@@ -6129,7 +6160,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#Economy-ref">Economy (2)</a></li>
 
-  <li><a href="/categories.html#work-ref">work (61)</a></li>
+  <li><a href="/categories.html#work-ref">work (60)</a></li>
 
   <li><a href="/categories.html#Simplex-ref">Simplex (39)</a></li>
 
@@ -7011,12 +7042,36 @@ $(document).ready(function() {
 
         </div>
       </div>
-      
-<p>####</p>
-<ol>
-  <li>人类所有的知识, 艺术，见识和智慧只属于那些有条件发现他们，并理解他们的人。</li>
-</ol>
+      <div id="encrypted_content">
+  <form id="encrypt_form" action="#" method="post">
+    <input id="encrypt_password"
+           type="password"
+           name="password"
+           placeholder="try 'password'"
+           autofocus />
 
+    <input type="submit" value="Unlock"/>
+  </form>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+  <script>
+    document.getElementById('encrypt_form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var passphrase = document.getElementById('encrypt_password').value,
+          encryptedMsg = '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',
+          encryptedHMAC = encryptedMsg.substring(0, 64),
+          encryptedHTML = encryptedMsg.substring(64),
+          decryptedHMAC = CryptoJS.HmacSHA256(encryptedHTML, CryptoJS.SHA256(passphrase).toString()).toString();
+
+      if (decryptedHMAC !== encryptedHMAC) {
+        alert('Bad passphrase!');
+        return;
+      }
+
+      var plainHTML = CryptoJS.AES.decrypt(encryptedHTML, passphrase).toString(CryptoJS.enc.Utf8);
+      document.getElementById('encrypted_content').innerHTML = plainHTML;
+    });
+  </script>
+</div>
 
       
       <footer>
@@ -7045,7 +7100,7 @@ $(document).ready(function() {
   
      
     	<li><a href="/categories.html#life-ref">
-    		life <span>20</span>
+    		life <span>21</span>
     	</a></li>
     
   
@@ -7074,30 +7129,6 @@ $(document).ready(function() {
 
 <section id="comments">
   
-
-
-  
-<div id="disqus_thread"></div>
-
-<script type="text/javascript">
-    var disqus_developer = 1;
-    var disqus_shortname = 'just-do-it-1';
-    
-    var disqus_identifier = 'Motto';
-    var disqus_title = 'Motto';
-    var disqus_url = '/life/life-motto.html';
-    
-    
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-
-
-
-
 
 </section>
 
@@ -7137,7 +7168,7 @@ $(document).ready(function () {
     </section>
 
     <footer id="bottom">
-      <p align="center">&copy; 2021 reed
+      <p align="center">&copy; 2022 reed
         with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
         and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
       </p>

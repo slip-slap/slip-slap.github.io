@@ -148,17 +148,17 @@ $(document).ready(function() {
           <a href="/" title="查看最近发表"><i class="icon-fixed-width icon-edit"></i> 最近发表</a>
 <ul>
 
-  <li><a href="/work/journal-writing-module-acknowledgement.html" title="查看《Journal Writing: Acknowledgement》">Journal Writing: Acknowledgement</a></li>
+  <li><a href="/life/to-do-list.html" title="查看《To-do Lists》">To-do Lists</a></li>
 
-  <li><a href="/os/pl-tool-git-file-operation.html" title="查看《Git: File Operation》">Git: File Operation</a></li>
+  <li><a href="/pl/pl-script-cmake-CMakeLists.html" title="查看《CMake: CMakeLists》">CMake: CMakeLists</a></li>
 
-  <li><a href="/%E8%A8%80%E8%91%89/language-japanese-oral-usual.html" title="查看《口頭: 普通》">口頭: 普通</a></li>
+  <li><a href="/pl/pl-compile-c++-library-googletest-basic.html" title="查看《C++ Library: Basic of Googletest》">C++ Library: Basic of Googletest</a></li>
 
-  <li><a href="/work/journal-writing-title.html" title="查看《Journal Writing: Title》">Journal Writing: Title</a></li>
+  <li><a href="/%E8%A8%80%E8%91%89/language-japanese-body-workout.html" title="查看《体: 運動》">体: 運動</a></li>
 
-  <li><a href="/life/life-techniques-with-phone.html" title="查看《Techniques with Phone》">Techniques with Phone</a></li>
+  <li><a href="/pl/pl-latex-template-book.html" title="查看《Latex: Book》">Latex: Book</a></li>
 
-  <li><a href="/life/life-culture-with-last-name.html" title="查看《Culture with Last Name》">Culture with Last Name</a></li>
+  <li><a href="/pl/pl-script-latex-command-grammar.html" title="查看《Latex: Native Command》">Latex: Native Command</a></li>
 
 </ul>
 
@@ -166,7 +166,7 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">1158</span>
+<span title="文章总数">1163</span>
 <ul>
 
 
@@ -184,6 +184,27 @@ $(document).ready(function() {
   
   
   
+    <li><a href="/archive.html#January-2022">2022 年 01 月 (3)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#December-2021">2021 年 12 月 (3)</a></li>
+    
+  
 
   
   
@@ -224,7 +245,27 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#November-2021">2021 年 11 月 (11)</a></li>
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#November-2021">2021 年 11 月 (12)</a></li>
     
   
 
@@ -706,12 +747,7 @@ $(document).ready(function() {
   
   
   
-
-  
-  
-  
-  
-    <li><a href="/archive.html#June-2020">2020 年 06 月 (50)</a></li>
+    <li><a href="/archive.html#June-2020">2020 年 06 月 (49)</a></li>
     
   
 
@@ -6095,12 +6131,7 @@ $(document).ready(function() {
   
   
   
-
-  
-  
-  
-  
-    <li><a href="/archive.html#February-2016">2016 年 02 月 (101)</a></li>
+    <li><a href="/archive.html#February-2016">2016 年 02 月 (100)</a></li>
     
   
 
@@ -6115,11 +6146,11 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#言葉-ref">言葉 (234)</a></li>
 
-  <li><a href="/categories.html#life-ref">life (20)</a></li>
+  <li><a href="/categories.html#life-ref">life (21)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (270)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (274)</a></li>
 
-  <li><a href="/categories.html#OS-ref">OS (15)</a></li>
+  <li><a href="/categories.html#OS-ref">OS (16)</a></li>
 
   <li><a href="/categories.html#Algorithm-ref">Algorithm (81)</a></li>
 
@@ -6129,7 +6160,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#Economy-ref">Economy (2)</a></li>
 
-  <li><a href="/categories.html#work-ref">work (61)</a></li>
+  <li><a href="/categories.html#work-ref">work (60)</a></li>
 
   <li><a href="/categories.html#Simplex-ref">Simplex (39)</a></li>
 
@@ -7011,118 +7042,36 @@ $(document).ready(function() {
 
         </div>
       </div>
-      
-<h4 id="politics">Politics</h4>
-<ol>
-  <li>岑永康</li>
-  <li>八方論談 DIALOGUE360</li>
-  <li>寰宇全視界</li>
-</ol>
+      <div id="encrypted_content">
+  <form id="encrypt_form" action="#" method="post">
+    <input id="encrypt_password"
+           type="password"
+           name="password"
+           placeholder="try 'password'"
+           autofocus />
 
-<h4 id="life">Life</h4>
-<ol>
-  <li>川口春奈オフィシャル はーちゃんねる</li>
-</ol>
+    <input type="submit" value="Unlock"/>
+  </form>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+  <script>
+    document.getElementById('encrypt_form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var passphrase = document.getElementById('encrypt_password').value,
+          encryptedMsg = '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',
+          encryptedHMAC = encryptedMsg.substring(0, 64),
+          encryptedHTML = encryptedMsg.substring(64),
+          decryptedHMAC = CryptoJS.HmacSHA256(encryptedHTML, CryptoJS.SHA256(passphrase).toString()).toString();
 
-<h4 id="programming">Programming</h4>
-<ol>
-  <li>Continuous Delivery</li>
-  <li>CppCon</li>
-  <li>The Cherno</li>
-  <li>Abdul Bari</li>
-</ol>
+      if (decryptedHMAC !== encryptedHMAC) {
+        alert('Bad passphrase!');
+        return;
+      }
 
-<h4 id="アニメ">アニメ</h4>
-<ol>
-  <li>【アニメ】名探偵コナン公式</li>
-  <li>東映アニメーションミュージアムチャンネル</li>
-</ol>
-
-<h4 id="artificial-intelligence">Artificial Intelligence</h4>
-<ol>
-  <li>徐亦达</li>
-</ol>
-
-<h4 id="english-learning">English Learning</h4>
-<ol>
-  <li>Tarle Speech &amp; Language Services - English Pronunciation</li>
-</ol>
-
-<h4 id="japanese-learning">Japanese Learning</h4>
-<ol>
-  <li>日本語の森</li>
-  <li>秋山燿平</li>
-  <li>Haru’s Japanese Cafe / Haru Sensei</li>
-  <li>何必日語</li>
-  <li>Ryuuu TV / 學日文看日本</li>
-</ol>
-
-<h4 id="english-variety">English Variety</h4>
-<ol>
-  <li>WILTY? Nope!</li>
-  <li>TheEllenShow</li>
-  <li>Jimmy Kimmel Live</li>
-</ol>
-
-<h4 id="movie">Movie</h4>
-<ol>
-  <li>青蛙刀圣1993</li>
-  <li>超級歪 SuperY</li>
-</ol>
-
-<h4 id="mathematics">Mathematics</h4>
-<ol>
-  <li>XylyXylyX</li>
-  <li>Insights into Mathematics</li>
-  <li>
-    <p>3Blue1Brown</p>
-  </li>
-  <li>Veritasium</li>
-  <li>cheap</li>
-  <li>Rachel’s English</li>
-  <li>Mathologer</li>
-  <li>Stanford</li>
-  <li>Reducible</li>
-  <li>Frederic Schuller</li>
-  <li>Numberphile</li>
-  <li>Steve Brunton</li>
-  <li>MIT OpenCourseWare</li>
-  <li>Ben Eater</li>
-  <li>Mike Dane</li>
-  <li>The School of Life</li>
-  <li>eigenchris</li>
-  <li>commutant</li>
-  <li>Elliot Nicholson</li>
-  <li>Zach Star</li>
-  <li>Khan Academy</li>
-  <li>In One Lesson</li>
-  <li>Uncode - GATE Computer Science</li>
-  <li>Rasim Muratovic</li>
-  <li>Henry Segerman</li>
-  <li>CodeParade</li>
-  <li>Neso Academy</li>
-  <li>CrashCourse</li>
-  <li>Real Engineering</li>
-  <li>Luke Smith</li>
-  <li>Brian Will</li>
-  <li>WatchMojo.com</li>
-  <li>JUMP COMICS CHANNEL</li>
-  <li>vcubingx</li>
-  <li>Victor Lavrenko</li>
-  <li>Physics Videos by Eugene Khutoryansky</li>
-  <li>BBC Documentary</li>
-  <li>Socratica</li>
-  <li>妈咪说MommyTalk</li>
-  <li>PengTitus</li>
-  <li>Jianbin Liu</li>
-  <li>Chris Stuckmann</li>
-  <li>Smosh</li>
-  <li>HISTORY</li>
-  <li>Aurélien Géron</li>
-  <li>Bay Area NLP And Hypnosis</li>
-  <li>StatQuest with Josh Starmer</li>
-</ol>
-
+      var plainHTML = CryptoJS.AES.decrypt(encryptedHTML, passphrase).toString(CryptoJS.enc.Utf8);
+      document.getElementById('encrypted_content').innerHTML = plainHTML;
+    });
+  </script>
+</div>
 
       
       <footer>
@@ -7151,7 +7100,7 @@ $(document).ready(function() {
   
      
     	<li><a href="/categories.html#life-ref">
-    		life <span>20</span>
+    		life <span>21</span>
     	</a></li>
     
   
@@ -7197,30 +7146,6 @@ $(document).ready(function() {
 <section id="comments">
   
 
-
-  
-<div id="disqus_thread"></div>
-
-<script type="text/javascript">
-    var disqus_developer = 1;
-    var disqus_shortname = 'just-do-it-1';
-    
-    var disqus_identifier = 'Youtube channels';
-    var disqus_title = 'Youtube channels';
-    var disqus_url = '/life/life-followed-youtube-channels.html';
-    
-    
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-
-
-
-
-
 </section>
 
 
@@ -7259,7 +7184,7 @@ $(document).ready(function () {
     </section>
 
     <footer id="bottom">
-      <p align="center">&copy; 2021 reed
+      <p align="center">&copy; 2022 reed
         with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
         and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
       </p>

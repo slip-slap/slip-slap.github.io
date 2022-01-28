@@ -148,17 +148,17 @@ $(document).ready(function() {
           <a href="/" title="查看最近发表"><i class="icon-fixed-width icon-edit"></i> 最近发表</a>
 <ul>
 
-  <li><a href="/work/journal-writing-module-acknowledgement.html" title="查看《Journal Writing: Acknowledgement》">Journal Writing: Acknowledgement</a></li>
+  <li><a href="/life/to-do-list.html" title="查看《To-do Lists》">To-do Lists</a></li>
 
-  <li><a href="/os/pl-tool-git-file-operation.html" title="查看《Git: File Operation》">Git: File Operation</a></li>
+  <li><a href="/pl/pl-script-cmake-CMakeLists.html" title="查看《CMake: CMakeLists》">CMake: CMakeLists</a></li>
 
-  <li><a href="/%E8%A8%80%E8%91%89/language-japanese-oral-usual.html" title="查看《口頭: 普通》">口頭: 普通</a></li>
+  <li><a href="/pl/pl-compile-c++-library-googletest-basic.html" title="查看《C++ Library: Basic of Googletest》">C++ Library: Basic of Googletest</a></li>
 
-  <li><a href="/work/journal-writing-title.html" title="查看《Journal Writing: Title》">Journal Writing: Title</a></li>
+  <li><a href="/%E8%A8%80%E8%91%89/language-japanese-body-workout.html" title="查看《体: 運動》">体: 運動</a></li>
 
-  <li><a href="/life/life-techniques-with-phone.html" title="查看《Techniques with Phone》">Techniques with Phone</a></li>
+  <li><a href="/pl/pl-latex-template-book.html" title="查看《Latex: Book》">Latex: Book</a></li>
 
-  <li><a href="/life/life-culture-with-last-name.html" title="查看《Culture with Last Name》">Culture with Last Name</a></li>
+  <li><a href="/pl/pl-script-latex-command-grammar.html" title="查看《Latex: Native Command》">Latex: Native Command</a></li>
 
 </ul>
 
@@ -166,7 +166,7 @@ $(document).ready(function() {
         <!--
         <section>
           <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
-<span title="文章总数">1158</span>
+<span title="文章总数">1163</span>
 <ul>
 
 
@@ -184,6 +184,27 @@ $(document).ready(function() {
   
   
   
+    <li><a href="/archive.html#January-2022">2022 年 01 月 (3)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#December-2021">2021 年 12 月 (3)</a></li>
+    
+  
 
   
   
@@ -224,7 +245,27 @@ $(document).ready(function() {
   
   
   
-    <li><a href="/archive.html#November-2021">2021 年 11 月 (11)</a></li>
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#November-2021">2021 年 11 月 (12)</a></li>
     
   
 
@@ -706,12 +747,7 @@ $(document).ready(function() {
   
   
   
-
-  
-  
-  
-  
-    <li><a href="/archive.html#June-2020">2020 年 06 月 (50)</a></li>
+    <li><a href="/archive.html#June-2020">2020 年 06 月 (49)</a></li>
     
   
 
@@ -6095,12 +6131,7 @@ $(document).ready(function() {
   
   
   
-
-  
-  
-  
-  
-    <li><a href="/archive.html#February-2016">2016 年 02 月 (101)</a></li>
+    <li><a href="/archive.html#February-2016">2016 年 02 月 (100)</a></li>
     
   
 
@@ -6115,11 +6146,11 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#言葉-ref">言葉 (234)</a></li>
 
-  <li><a href="/categories.html#life-ref">life (20)</a></li>
+  <li><a href="/categories.html#life-ref">life (21)</a></li>
 
-  <li><a href="/categories.html#PL-ref">PL (270)</a></li>
+  <li><a href="/categories.html#PL-ref">PL (274)</a></li>
 
-  <li><a href="/categories.html#OS-ref">OS (15)</a></li>
+  <li><a href="/categories.html#OS-ref">OS (16)</a></li>
 
   <li><a href="/categories.html#Algorithm-ref">Algorithm (81)</a></li>
 
@@ -6129,7 +6160,7 @@ $(document).ready(function() {
 
   <li><a href="/categories.html#Economy-ref">Economy (2)</a></li>
 
-  <li><a href="/categories.html#work-ref">work (61)</a></li>
+  <li><a href="/categories.html#work-ref">work (60)</a></li>
 
   <li><a href="/categories.html#Simplex-ref">Simplex (39)</a></li>
 
@@ -7011,101 +7042,36 @@ $(document).ready(function() {
 
         </div>
       </div>
-      
-<ol>
-  <li>2019.10.19 update</li>
-</ol>
+      <div id="encrypted_content">
+  <form id="encrypt_form" action="#" method="post">
+    <input id="encrypt_password"
+           type="password"
+           name="password"
+           placeholder="try 'password'"
+           autofocus />
 
-<h3 id="旅行物品">旅行物品</h3>
-<ul>
-  <li>29寸黑色拉箱</li>
-  <li>MUJI20英寸拉杆箱</li>
-  <li>双肩包</li>
-  <li>化妆品包</li>
-  <li>抽真空压缩袋+手泵</li>
-</ul>
+    <input type="submit" value="Unlock"/>
+  </form>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+  <script>
+    document.getElementById('encrypt_form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var passphrase = document.getElementById('encrypt_password').value,
+          encryptedMsg = '0590959ec9095b262bc26f16e9f82ec3dc88d7b66bbe3872e09bcabd55024276U2FsdGVkX19mbrxtadvRixl32bnLCE/yoNVEmjNesqdKO2oSC+8XFEeABFCV8vSXhg723DYyGgr6sSXBeVBnh2N93VHixYO3s5zXSzDUJmuPPkhMLLasIMSjIC4G6opIrxS+cNsvrKmg1C8IXf0Qhi29LFCMx3x8y3iXiUWVssDUhdL94j/qr+3HxI06sVDLbVlaMugiVywFOE+LEIAoNBBOsZoHo80Dp94I/180fS4ML8ULnZRIQNdNABL5B8/jHyJeOliGXhB8MZrC1s9dPpjijqT/M5zKLlNr7cJxiW5SEcynvsKJk4Hsq0lAE7Eq/PH/M3lB7Qa5x44pIJro4KNDzB9TJrVvecCWOoogMbQUPk2hTiup2f1CrSJHUQQ33n0/V4VGjwDOXpaEBqle+vL4KuyfRaf1yBRihSzyUgsokNM7dq/H6kVu9Xu0oXni8bZa8sdZVMBqU+N9q87TeVGW6vjG6MLDozXWBZMEmaTuZ2BiGDkkryCeCs/sS+L9YqbPFB6qoaJ9R7ogrJoCUuf8HcltH8MtC3pbrzdinXKdeex3kW22iHla5ShkKRao6/7ldmTU8OONX66DFqy5ct/jEpNYk44vgrs1A0AIOxZ+xy97pGl6bx6SPdz3qDo9jtuKc1w68tqozLnl4VywTvSGTzrdW7rjYd3WCuHnmi7f2a93QSOgjY+bpSh4kYzS/Gr22hNMEJPqxeqG8o5chDTcLTQ1NCK+cwB3UISjSCE4djc3WPTacuKli91Gn8CHVwxOfJRuqbLriDSNgInbIhIE/IvpAF2tEaYaRj0KwjBzkoLBfK453woTN/leViabd/CrS7KQfnf3qlbFzrqcHbzAyMw1yQMtu5WbveZZ2ThwfsDvr1WjzxEZro/Yd4KE5iwEg0smelMI+HA/CkdHxtPhU3sK9RhBBrMCVGWDB8xO/zsc4vDG2dC2+BXJPndSlg2aKABpB9wlvnHzJj7l2GMOKx5YRBm3U0/eSK7c1c+hsN6gApHKSjkzliHsPpT6A26YYdnrtp+c5QRqnxBxIFBjbEqJjp1OX6Zbh4+abgYWx7AMhGyrrIJRGwA+YKOgLc9hBMNRlqXLXfaPE/xKX7Zwo/6hJqzNQd75++SYQfg0X/TXEPruynHfPrhpvycUpmy9DgHBAt3ZXauygeFVC21ICMdpZAHw0vQplQBcul0wO8NTjQGlaed3idCqhc5M1vXMmAsKtxmdECycEGIEpq6GHdl6KI5FQ4i9xMjZ17/qVsBOiscdfVk2bS7dKGYy3+pGwl16FdAN73qnXXKrDsufzshOSskkid9YQ1bGavxFW5axbvlUwue+ssSW2tO+vUqszp150pom8mRZRDHVSNOtXhH+AxSX0nv6JzNj0tcwlpsjydzBtVzt0u/ElVFVOUG0Ov0wwrk3ZaQLiKXbwPuKjMHxh47bP7ss9Sz3ZRh+GKkzRISwTwiU0Cj/ed7rCgA3NaiwWWfW5rjMwD8gzbjcD+52NUmprmoQmr4Mq22YvcX1CwwuaBuXZubVnQ5tf6JPfrUukY24QLo/g/VxGwWETOBDQTiiYd8+mWjbLfDqdL3rzQjFlA4zlnhAyk4+ggdw4QkNt7D2x9DYRvKF2Sr3fR3JzZI0Zhnar5569S/FV9my+NjAis4OZrhWnzcBmyCQST4Ietpd1d+saQQOJU55PlkmDGztxXmG5+2AVHZUVrOClo3tCYt3CMwKmAq4nDdtjaSO2zjT76tUv8N2v7ypaCOh+vra42byQbOJ7fMmF76Vs2igLY+G0YvGpsIJdo9UcXn/stCVONadKwPtUnGOxrjH/NIEPt8kxnPt6RxH3X0QhN12rFPSDJk7fvbY+U9HF3yDI78aVNjp1rryuF8D6YtwIZPWBYjAg+FcA/mQwcB2R6UpYs+6yRj8RHl59dxavbRqm0IAxrM1r54qaF1+s3V9lZiFSbGFccir09pzowev3J0ioqOI+Bmcfjlc8x1UP5Gw9IjKVIMQsszL0+j856aI3PCO3M/Nd/tHre5sHQ0Va+oAwcGgyRtx76YTH58IQ5r8Fk8or1+3mBYKuo0yal1sVCGM7xTHEC9kEuCEbNW3kYuF7B72PNznNJMSRika0p7xC+IV5EpE9q2mlDqFDSaFJPDSpdJayYtwvPwWbOOs480xZiBlq2ig7/LwMSSY9zSzOei1X3/dDBaKWeJvPf9DVVheioY67rQGUmYocKyUef7GxzaKBDh/HbyuJ8QPhXlq1e84MCFiFNpEOKvEnJvo8n+n7yME0OrIKb2sOA0rCgW95Dxg4prcijv2KfYvHhPEUF3kNV4jlkyZBkeQLRrpUrLTxsZuUdR3iBxVud5LyQv16CnbqYIcStbYyQsY1CyBrpdr4ynLJAJqTGbJ94VE3LKa6KNCzwqVIFaqjY5jmOKajJZ4n73S7JJHK0m4E4Sp34G0jD21zJpy3OFfa6DIO+faDSKc6sDDZbthrta/eHiPjMFGdWcR1QSac/4AbYy1cif6QV1d/uwazaMy9uUjFuf//wSQPre6QsGjpJktRmWZ3dA/eg0cleme0vEZzM4rr5cV9JBDu1QqsA==',
+          encryptedHMAC = encryptedMsg.substring(0, 64),
+          encryptedHTML = encryptedMsg.substring(64),
+          decryptedHMAC = CryptoJS.HmacSHA256(encryptedHTML, CryptoJS.SHA256(passphrase).toString()).toString();
 
-<h3 id="生活用品">生活用品</h3>
-<ul>
-  <li>台灯</li>
-  <li>ニトリ保温杯</li>
-  <li>印章&amp;印泥</li>
-  <li>MUJI アロマストーン(aroma stone) with essential oil</li>
-</ul>
+      if (decryptedHMAC !== encryptedHMAC) {
+        alert('Bad passphrase!');
+        return;
+      }
 
-<h4 id="电子产品">电子产品</h4>
-<ul>
-  <li>MacBook Air</li>
-  <li>MacBook Air Charger</li>
-  <li>IODATA 移动光驱</li>
-  <li>SAMSUNG Galaxy S9+</li>
-  <li>DAMSUNG Galaxy S9+ Charger</li>
-  <li>CANON 相机</li>
-  <li>DW腕表</li>
-  <li>ELECOM 16G U盘</li>
-  <li>ELECOM HDMI/VGA Mini DisplayPorts Convert Adapter</li>
-  <li>Beats イヤホン</li>
-</ul>
-
-<h4 id="家用电器">家用电器</h4>
-<ul>
-  <li>冰箱</li>
-  <li>电热水壶</li>
-  <li>台灯</li>
-  <li>PHILIPS吹风机</li>
-</ul>
-
-<h4 id="化妆品">化妆品</h4>
-<ul>
-  <li>MUJI化妆水</li>
-  <li>MUJI面霜</li>
-</ul>
-
-<h4 id="清洁用品">清洁用品</h4>
-<ul>
-  <li>Schick Hydro5 剃须刀</li>
-  <li>指甲刀</li>
-  <li>鼻毛剪</li>
-</ul>
-
-<h4 id="衣服">衣服</h4>
-<ul>
-  <li>UNIQLO黑色风衣</li>
-  <li>UNIQLO连帽外套M</li>
-  <li>UNIQLO短款白色羽绒服M</li>
-  <li>ADIDAS短款黄色羽绒服S</li>
-  <li>ADIDAS三叶草运动鞋</li>
-  <li>MUJI运动休闲鞋</li>
-  <li>Kangol帽子</li>
-  <li>UNIQLOカシミヤクネックセーター(S)</li>
-  <li>PUMA プルオーバー パーカー(US-XS)</li>
-</ul>
-
-<h3 id="厨房用品">厨房用品</h3>
-
-<h4 id="电器用品">电器用品</h4>
-<ul>
-  <li>油烟机</li>
-  <li>微波炉</li>
-  <li>冰箱</li>
-  <li>烤面包机</li>
-  <li>电饭煲</li>
-  <li>电磁炉</li>
-  <li>烤箱</li>
-  <li>定时器</li>
-  <li>冰箱</li>
-</ul>
-
-<h4 id="厨具">厨具</h4>
-<ul>
-  <li>炒锅</li>
-</ul>
-
-<h4 id="home">Home</h4>
-<ol>
-  <li>hair dryer</li>
-  <li>PHILIPS Series 5000, Electric Razor</li>
-</ol>
+      var plainHTML = CryptoJS.AES.decrypt(encryptedHTML, passphrase).toString(CryptoJS.enc.Utf8);
+      document.getElementById('encrypted_content').innerHTML = plainHTML;
+    });
+  </script>
+</div>
 
       
       <footer>
@@ -7134,7 +7100,7 @@ $(document).ready(function() {
   
      
     	<li><a href="/categories.html#life-ref">
-    		life <span>20</span>
+    		life <span>21</span>
     	</a></li>
     
   
@@ -7163,30 +7129,6 @@ $(document).ready(function() {
 
 <section id="comments">
   
-
-
-  
-<div id="disqus_thread"></div>
-
-<script type="text/javascript">
-    var disqus_developer = 1;
-    var disqus_shortname = 'just-do-it-1';
-    
-    var disqus_identifier = '物品清单';
-    var disqus_title = '物品清单';
-    var disqus_url = '/life/life-goods-list.html';
-    
-    
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-
-
-
-
 
 </section>
 
@@ -7226,7 +7168,7 @@ $(document).ready(function () {
     </section>
 
     <footer id="bottom">
-      <p align="center">&copy; 2021 reed
+      <p align="center">&copy; 2022 reed
         with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
         and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
       </p>
