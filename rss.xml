@@ -5,221 +5,10 @@
   <description>Just Do It - </description>
   <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
   <link></link>
-  <lastBuildDate>Mon, 07 Feb 2022 11:56:03 +0900</lastBuildDate>
-  <pubDate>Mon, 07 Feb 2022 11:56:03 +0900</pubDate>
+  <lastBuildDate>Mon, 07 Feb 2022 13:18:29 +0900</lastBuildDate>
+  <pubDate>Mon, 07 Feb 2022 13:18:29 +0900</pubDate>
   <ttl>1800</ttl>
 
-
-  <item>
-    <title>Latex: Figure</title>
-    <description>&lt;h3 id=&quot;1-basic-knowledge-of-an-figure&quot;&gt;1. Basic knowledge of an Figure&lt;/h3&gt;
-
-&lt;h4 id=&quot;11-dpi-and-ppi&quot;&gt;1.1 DPI and PPI&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;PPI describes the resolution in pixels of a digital image.&lt;/li&gt;
-  &lt;li&gt;DPI describes the the amount of ink dots on a printed image.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;12-eps-file&quot;&gt;1.2 EPS file&lt;/h4&gt;
-&lt;p&gt;A file ends with eps extension, you can make it as large as a billboard you see on the side of the highway.
-If you want to include an eps file in your document, just treat as an image. There is one thing
-that you should keep in mind, save the extension!&lt;/p&gt;
-
-&lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;\includegraphics&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;[scale=1]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;experiment&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;figure&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;13-svg&quot;&gt;1.3 SVG&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;convert an file with svg extension to file with pdf extension, the following command will generate two files:
-    &lt;ul&gt;
-      &lt;li&gt;a tex file which is the tex code&lt;/li&gt;
-      &lt;li&gt;a pdf file which is the image&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;inkscape &lt;span class=&quot;nt&quot;&gt;-D&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-z&lt;/span&gt; post_train.svg &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; post_train.pdf &lt;span class=&quot;nt&quot;&gt;--export-latex&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;integrated this file into pdf&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;language-tex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;\usepackage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;graphicx,import&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;nt&quot;&gt;\begin{figure}&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;\centering&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;\def\svgwidth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;\columnwidth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;\import&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;fig/&lt;span class=&quot;p&quot;&gt;}{&lt;/span&gt;pre&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;train.pdf&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;tex&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;\label&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;fig:train-process&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;\end{figure}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Open the generated file with pdf_tex extension, and it’s just a normal latex file. You can edit this file.
-    &lt;ul&gt;
-      &lt;li&gt;In the preamble of this file, it provides information about how to use it.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;%% Creator: Inkscape 1.0.2 (e86c8708, 2021-01-15), www.inkscape.org&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;%% Accompanies image file 'post_train.pdf' (pdf, eps, ps)&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;%%&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;%% To include the image in your LaTeX document, write&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;%%  instead of&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;%% To scale the image, write&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;2-positioning&quot;&gt;2. Positioning&lt;/h3&gt;
-
-&lt;h5 id=&quot;21-requirement&quot;&gt;2.1 requirement&lt;/h5&gt;
-&lt;ol&gt;
-  &lt;li&gt;The contents of this object, i.e., the image, cannot be broken over a page.&lt;/li&gt;
-  &lt;li&gt;We should be able to specify the position of this object in the document&lt;/li&gt;
-  &lt;li&gt;We should be able to add a caption to this object&lt;/li&gt;
-  &lt;li&gt;We should be able to add a reference to this object, so that it can be cross-referenced
-elsewhere in the document&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h5 id=&quot;22-floats&quot;&gt;2.2 Floats&lt;/h5&gt;
-&lt;p&gt;In latex, floats are used to contain things that must be placed inside a single page, i,e, they
-cannot be broken over multiple pages. floats can be used to contain tables and figures, but we can
-define new custom floats as well.&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;The entity contained in a float is placed in a single page. If the entity(an image, for example)
-can not be contained in the space left in the current page, it is placed at the top of the next
-page&lt;/li&gt;
-  &lt;li&gt;Floats can be positioned whereever we specify - top, middle, bottom, left, right&lt;/li&gt;
-  &lt;li&gt;They can have a caption describing them.&lt;/li&gt;
-  &lt;li&gt;They are numbered(so we can references to them)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;3-basic-use&quot;&gt;3. Basic Use&lt;/h3&gt;
-
-&lt;h4 id=&quot;31-scale-a-figure&quot;&gt;3.1 Scale a figure&lt;/h4&gt;
-
-&lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;\begin{figure}&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;\centering&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;\includegraphics&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;[width=0.9\textwidth]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;./a0&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;figure&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;ann&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;for&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;clt&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;architecture.png&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;\end{figure}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h5 id=&quot;32-mutiple-imagessubfigures&quot;&gt;3.2 Mutiple images/subfigures&lt;/h5&gt;
-
-&lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;\begin{figure}&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;\caption&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Obtained nondominated solutions with NSGA II algorithm proceeds on
-	the constrained optimization problem.&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;  
-	&lt;span class=&quot;nt&quot;&gt;\begin{subfigure}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;.5&lt;span class=&quot;k&quot;&gt;\textwidth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-		&lt;span class=&quot;k&quot;&gt;\includegraphics&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;[width=0.9\linewidth]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Figures/chapter3/fig/glass/1.png&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-	&lt;span class=&quot;nt&quot;&gt;\end{subfigure}&lt;/span&gt;
-	&lt;span class=&quot;nt&quot;&gt;\begin{subfigure}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;.5&lt;span class=&quot;k&quot;&gt;\textwidth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-		&lt;span class=&quot;k&quot;&gt;\includegraphics&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;[width=0.9\linewidth]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Figures/chapter3/fig/glass/3.png&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-	&lt;span class=&quot;nt&quot;&gt;\end{subfigure}&lt;/span&gt;
-	&lt;span class=&quot;nt&quot;&gt;\begin{subfigure}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;.5&lt;span class=&quot;k&quot;&gt;\textwidth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-		&lt;span class=&quot;k&quot;&gt;\includegraphics&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;[width=0.9\linewidth]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Figures/chapter3/fig/glass/5.png&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-	&lt;span class=&quot;nt&quot;&gt;\end{subfigure}&lt;/span&gt;
-	&lt;span class=&quot;nt&quot;&gt;\begin{subfigure}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;.5&lt;span class=&quot;k&quot;&gt;\textwidth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-		&lt;span class=&quot;k&quot;&gt;\includegraphics&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;[width=0.9\linewidth]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Figures/chapter3/fig/glass/7.png&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-	&lt;span class=&quot;nt&quot;&gt;\end{subfigure}&lt;/span&gt;
-	&lt;span class=&quot;nt&quot;&gt;\begin{subfigure}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;.5&lt;span class=&quot;k&quot;&gt;\textwidth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-		&lt;span class=&quot;k&quot;&gt;\includegraphics&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;[width=0.9\linewidth]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Figures/chapter3/fig/glass/9.png&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-	&lt;span class=&quot;nt&quot;&gt;\end{subfigure}&lt;/span&gt;
-	&lt;span class=&quot;nt&quot;&gt;\begin{subfigure}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;.5&lt;span class=&quot;k&quot;&gt;\textwidth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-		&lt;span class=&quot;k&quot;&gt;\includegraphics&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;[width=0.9\linewidth]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Figures/chapter3/fig/glass/10.png&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-	&lt;span class=&quot;nt&quot;&gt;\end{subfigure}&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;\label&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;fig:chapter3-ga&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;\end{figure}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;33-figure-and-text&quot;&gt;3.3 Figure and Text&lt;/h4&gt;
-
-&lt;div class=&quot;language-tex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;\noindent&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;\begin{minipage}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;0.3&lt;span class=&quot;k&quot;&gt;\textwidth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;% adapt widths of minipages to your needs&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;\includegraphics&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;[width=\linewidth]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;yourimage&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;\end{minipage}&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;\hfill&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;% this line is necessary&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;\begin{minipage}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;0.6&lt;span class=&quot;k&quot;&gt;\textwidth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;\raggedleft&lt;/span&gt;
-Yesterday,&lt;span class=&quot;k&quot;&gt;\\&lt;/span&gt;
-all my troubles seemed so far away&lt;span class=&quot;k&quot;&gt;\\&lt;/span&gt;
-Now it looks as though they're here to stay&lt;span class=&quot;k&quot;&gt;\\&lt;/span&gt;
-Oh, I believe in yesterday.
-&lt;span class=&quot;nt&quot;&gt;\end{minipage}&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;\end{document}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;4-package&quot;&gt;4 Package&lt;/h3&gt;
-
-&lt;h4 id=&quot;41-graphicx-package&quot;&gt;4.1 graphicx package&lt;/h4&gt;
-&lt;p&gt;graphicx package takes care of the numbering and positioning of the image within the document.&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;\linewidth: the picture will be scaled to fit the width of the document, as a result, smaller
-pictures are upscaled and larger pictures dowscaled respectively..&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;the location in the document&lt;/p&gt;
-    &lt;ul&gt;
-      &lt;li&gt;h(here): same location&lt;/li&gt;
-      &lt;li&gt;t(top): top of page&lt;/li&gt;
-      &lt;li&gt;b(bottom): bottom of page&lt;/li&gt;
-      &lt;li&gt;p(page): on an extra page&lt;/li&gt;
-      &lt;li&gt;!(override): will force the specified location&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h5 id=&quot;411-package-clash&quot;&gt;4.1.1 package clash&lt;/h5&gt;
-&lt;p&gt;The tikz package will load the graphicx automatically, so you can’t load it again.
-Trying to loading it with different options will cause “option clash”.&lt;/p&gt;
-
-&lt;h5 id=&quot;411-resizebox&quot;&gt;4.1.1: \resizebox&lt;/h5&gt;
-&lt;p&gt;scale figure or equation&lt;/p&gt;
-&lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;\begin{figure}&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;\resizebox&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;.9&lt;span class=&quot;k&quot;&gt;\linewidth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}{&lt;/span&gt;!&lt;span class=&quot;p&quot;&gt;}{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;\input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;plot.tex&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;\end{figure}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h5 id=&quot;42-float-package&quot;&gt;4.2 float package&lt;/h5&gt;
-&lt;p&gt;It allows to set the option to [H], which is even stricter than &lt;a href=&quot;adding [h!] behind the figure environment \begin tag will force the figure to be shown at&quot;&gt;h!&lt;/a&gt;&lt;/p&gt;
-
-&lt;h5 id=&quot;43-subcaption-package&quot;&gt;4.3 subcaption package&lt;/h5&gt;
-&lt;p&gt;This package provides &lt;strong&gt;subfigure&lt;/strong&gt; environment;&lt;/p&gt;
-
-&lt;h5 id=&quot;44-subfigure-package&quot;&gt;4.4 subfigure package&lt;/h5&gt;
-
-&lt;p&gt;This package makes it easy to put subfigures in your figures. e.g., “Figure 1a and 1b”. For IEEE
-work, it is a good idea to load it with the tight package option to reduce the amount of white space
-around the subfigures.&lt;/p&gt;
-
-&lt;h5 id=&quot;45-afterpage-package&quot;&gt;4.5 afterpage package&lt;/h5&gt;
-
-&lt;p&gt;Put your figure in a separate page.&lt;/p&gt;
-
-&lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;\afterpage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;nt&quot;&gt;\begin{figure}&lt;/span&gt;
-	&lt;span class=&quot;nt&quot;&gt;\end{figure}&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;\clearpage&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;5-reference&quot;&gt;5. Reference&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://en.99designs.jp/blog/tips/ppi-vs-dpi-whats-the-difference/&quot;&gt;DPI and PPI&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.latex-tutorial.com/tutorials/figures/&quot;&gt;figure in latex&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.overleaf.com/learn/latex/Positioning_of_Figures&quot;&gt;Positioning of Figures&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://tex.stackexchange.com/questions/182467/including-eps-figure-in-pdflatex&quot;&gt;eps format file within
-latex&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://tex.stackexchange.com/questions/98134/is-it-possible-to-scale-an-entire-beginfigure&quot;&gt;scale an figure&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://tex.stackexchange.com/questions/2099/how-to-include-svg-diagrams-in-latex&quot;&gt;How to include SVG diagrams in Latex&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://tex.stackexchange.com/questions/82153/option-clash-when-using-graphicx-and-tikz-packages&quot;&gt;option clash&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://tex.stackexchange.com/questions/41305/how-do-i-put-an-image-on-the-left-of-right-aligned-text&quot;&gt;Figure and Text&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-    <link>/pl/pl-script-latex-figure.html</link>
-    <guid>/pl/pl-script-latex-figure</guid>
-    <pubDate>Fri, 04 Feb 2022 00:00:00 +0900</pubDate>
-  </item>
 
   <item>
     <title>D.P.: Dirichilet Process</title>
@@ -291,520 +80,11 @@ Dirichlet Process. Because it meet the definition of a process.&lt;/li&gt;
 </description>
     <link>/math/math-apply-stochastic-process-dirichlet-process-introduction.html</link>
     <guid>/math/math-apply-stochastic-process-dirichlet-process-introduction</guid>
-    <pubDate>Fri, 04 Feb 2022 00:00:00 +0900</pubDate>
+    <pubDate>Sat, 05 Feb 2022 00:00:00 +0900</pubDate>
   </item>
 
   <item>
-    <title>V.A.: Metric Tensor</title>
-    <description>
-&lt;h4 id=&quot;metric-tensor&quot;&gt;Metric Tensor&lt;/h4&gt;
-
-&lt;p&gt;Metric tensor is used to measure the length of vector. &lt;strong&gt;Please remember the
-following picture&lt;/strong&gt; 
-\(g_{\vec{e}_{i}}=\left[\begin{array}{ll}{\overrightarrow{e_{1}} \cdot
-\overrightarrow{e_{1}}} &amp;amp; {\overrightarrow{e_{1}} \cdot \overrightarrow{e_{2}}}
-\\ {\overrightarrow{e_{2}} \cdot \overrightarrow{e_{1}}} &amp;amp;
-{\overrightarrow{e_{2}} \cdot
-\overrightarrow{e_{2}}}\end{array}\right]_{\overrightarrow{e_{i}}}\)&lt;/p&gt;
-
-&lt;h4 id=&quot;obtain&quot;&gt;Obtain&lt;/h4&gt;
-&lt;p&gt;\(\begin{array}{l}{\text {arc length}=\lim _{\Delta t \rightarrow 0} \sum_{i}
-\frac{\left\|\vec{R}\left(t_{i+1}\right)-\vec{R}\left(t_{i}\right)\right\|}{\Delta
-t} \Delta t} \\ {\text {arclength}=\int\left\|\frac{d \vec{R}}{d t}\right\| d
-t}\end{array}\)&lt;/p&gt;
-
-&lt;h4 id=&quot;arc-length&quot;&gt;Arc Length&lt;/h4&gt;
-&lt;p&gt;\(\begin{aligned}\left\|\frac{d \vec{R}}{d \lambda}\right\|^{2} &amp;amp;=\frac{d
-\vec{R}}{d \lambda} \cdot \frac{d \vec{R}}{d \lambda} \\ &amp;amp;=\left(\frac{\partial
-\vec{R}}{\partial x} \frac{d x}{d \lambda}+\frac{\partial \vec{R}}{\partial y}
-\frac{d y}{d \lambda}\right) \cdot\left(\frac{\partial \vec{R}}{\partial x}
-\frac{d x}{d \lambda}+\frac{\partial \vec{R}}{\partial y} \frac{d y}{d
-\lambda}\right) \\ &amp;amp;=\left(\frac{d x}{d \lambda}\right)^{2}\left(\frac{\partial
-\vec{R}}{\partial x} \cdot \frac{\partial \vec{R}}{\partial x}\right)+2 \frac{d
-x}{d \lambda} \frac{d y}{d \lambda}\left(\frac{\partial \vec{R}}{\partial x}
-\cdot \frac{\partial \vec{R}}{\partial y}\right)+\left(\frac{d y}{d
-\lambda}\right)^{2}\left(\frac{\partial \vec{R}}{\partial y} \cdot
-\frac{\partial \vec{R}}{\partial y}\right) \end{aligned}\) &lt;br /&gt;
-Just  the same as: &lt;br /&gt;
-\(\begin{aligned}\|\vec{v}\|^{2} &amp;amp;=\vec{v} \cdot \vec{v} \\ &amp;amp;=\left(v^{1}
-\overrightarrow{e_{1}}+v^{2} \overrightarrow{e_{2}}\right) \cdot\left(v^{1}
-\overrightarrow{e_{1}}+v^{2} \overrightarrow{e_{2}}\right) \\
-&amp;amp;=\left(v^{1}\right)^{2}(\overrightarrow{e_{1}} \cdot \overrightarrow{e_{1}})+2
-v^{1} v^{2}(\overrightarrow{e_{1}} \cdot
-\overrightarrow{e_{2}})+\left(v^{2}\right)^{2}(\overrightarrow{e_{2}} \cdot
-\overrightarrow{e_{2}}) \end{aligned}\)&lt;/p&gt;
-
-&lt;p&gt;Einstein Notation  $c^1=x, c^2=y$&lt;br /&gt;
-\(\begin{aligned}\left\|\frac{d \vec{R}}{d \lambda}\right\|^{2} &amp;amp;=\frac{d
-\vec{R}}{d \lambda} \cdot \frac{d \vec{R}}{d \lambda} \\ &amp;amp;=\left(\frac{d c}{d
-\lambda} \frac{\partial \vec{R}}{\partial c^{i}}\right) \cdot\left(\frac{d
-c^{j}}{d \lambda} \frac{\partial \vec{R}}{\partial c^{j}}\right) \\ &amp;amp;=\frac{d
-c^{i}}{d \lambda} \frac{d c^{j}}{d \lambda}\left(\frac{\partial
-\vec{R}}{\partial c^{i}} \cdot \frac{\partial \vec{R}}{\partial c^{j}}\right)
-\end{aligned}\)&lt;/p&gt;
-
-&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;When I first encounter the metric tenosr, I totally have no idea what does
-this stand for. Because first I kind of afraid of matrix, I didn’t realize
-it’s a new form to rewrite the expression, It kinds of mysteric, and confuse
-to me; Second, tensor is a complete new to me.&lt;/li&gt;
-  &lt;li&gt;After you realized that metric tensor just a fancy way to rewrite the
-algebra expression, you are so happy.&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-    <link>/math/math-change-vector-analysis-metric-tensor.html</link>
-    <guid>/math/math-change-vector-analysis-metric-tensor</guid>
-    <pubDate>Thu, 03 Feb 2022 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>G.T.A.: Breadth First Search</title>
-    <description>
-&lt;h4 id=&quot;bfs&quot;&gt;BFS&lt;/h4&gt;
-&lt;p&gt;BFS stands for Breadth First Search is a vertex based techinique for finding
-   a shortest path in graph.&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;It uses a Queue data structure which follows first in first out. In BFS, one
-  vertex is selected at a time when it is visited and marked then its adjacent
-  are visited and stored in the queue.
-    &lt;ul&gt;
-      &lt;li&gt;step 1: visiting a vertex&lt;/li&gt;
-      &lt;li&gt;step 2: exploration&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;graph-explaniaton&quot;&gt;Graph Explaniaton&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;/images/math-discrete-graph-theory-bfs.png&quot; /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;iostream&amp;gt;
-#include &amp;lt;list&amp;gt;
-#include &amp;lt;vector&amp;gt;
-&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;b_first&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;column&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;node_queue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vector&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;visited_node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;node_queue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;push_back&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;visited_node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node_queue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-		&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;queue_head&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;node_queue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;front&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-		&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-			&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;queue_head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;visited_node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-				&lt;span class=&quot;n&quot;&gt;node_queue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;push_back&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-				&lt;span class=&quot;n&quot;&gt;visited_node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-				&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;visit node: &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-			&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-		&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;node_queue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pop_front&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
-	&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-			&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-			&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 
-		&lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 
-		&lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;   
-		&lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;	
-		&lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;b_first&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;application&quot;&gt;Application&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;web crawling&lt;/li&gt;
-  &lt;li&gt;social networking&lt;/li&gt;
-  &lt;li&gt;network broadcast&lt;/li&gt;
-  &lt;li&gt;garbage collection&lt;/li&gt;
-  &lt;li&gt;model checking&lt;/li&gt;
-  &lt;li&gt;mathematical conjecture checking&lt;/li&gt;
-  &lt;li&gt;solving puzzles games&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;galois&quot;&gt;galois&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Graph just as the other abstract data type, why we need to study how to visit node
-in a graph, because things turn a little complicate now, array, stack, tree,
-visiting each element is a very simple things.&lt;/li&gt;
-  &lt;li&gt;BFS is one strategy that we visit every node in the graph, and another thing
-we gain is &lt;strong&gt;the approach to find shortest path from one source to the other
-nodes in the graph&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-    <link>/math/math-discrete-graph-theory-algorithm-breadth-first-search.html</link>
-    <guid>/math/math-discrete-graph-theory-algorithm-breadth-first-search</guid>
-    <pubDate>Wed, 02 Feb 2022 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>G.T.A.: Message Passing</title>
-    <description>
-&lt;h4 id=&quot;message-passing-rule-set-a&quot;&gt;Message-passing rule-set A&lt;/h4&gt;
-&lt;h4 id=&quot;message-passing-rule-set-b&quot;&gt;Message-passing rule-set B&lt;/h4&gt;
-
-&lt;h4 id=&quot;min-sum-algorithm-or-viterbi-algorithm&quot;&gt;Min-sum Algorithm or Viterbi Algorithm&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/math-discrete-graph-theory-message-passing.png&quot; /&gt;&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Each node can broadcast its cost to its descendants once it knows the costs
-of all its possible predecessors.&lt;/li&gt;
-  &lt;li&gt;The cost of &lt;strong&gt;A&lt;/strong&gt; is zero, we pass this news on to &lt;strong&gt;H&lt;/strong&gt; and &lt;strong&gt;I&lt;/strong&gt;., as the
-message passes along each edge in the graph, the cost of that edge is added.
-We find the costs of H and I are 4 and 1 respectively. figure(a)&lt;/li&gt;
-  &lt;li&gt;what about &lt;strong&gt;K&lt;/strong&gt;, out of the edge &lt;strong&gt;H-K&lt;/strong&gt; comes the message that a path of
-cost 5 exists from &lt;strong&gt;A&lt;/strong&gt; to &lt;strong&gt;K&lt;/strong&gt; via &lt;strong&gt;H&lt;/strong&gt;; and from edge &lt;strong&gt;I-K&lt;/strong&gt; we learn
-of an alternative path of cost 3 figure(b)&lt;/li&gt;
-  &lt;li&gt;The min-sum algorithm sets the cost of &lt;strong&gt;K&lt;/strong&gt; equal to the minimum of these,
-and records which was the smallest-cost route into &lt;strong&gt;K&lt;/strong&gt; by retaining only
-hte edge &lt;strong&gt;I-K&lt;/strong&gt; and pruning away the other edges leading to K, fiugre(c)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;One reason that graph theory is important is because we can use graph 
-to complete some calculation.&lt;/li&gt;
-  &lt;li&gt;Message-passing rule-set A and message-passing rule-set B just make use the
-structure of the graph and do some math.&lt;/li&gt;
-  &lt;li&gt;At first, I read the phrase “message-passing rule-set A”, I don’t know how to
-separate the sentence, it should be like this “message-passing rule” for “set
-A”. I just need a lot of time to understand something.&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-    <link>/math/math-discrete-graph-theory-algorithm-message-passing.html</link>
-    <guid>/math/math-discrete-graph-theory-algorithm-message-passing</guid>
-    <pubDate>Tue, 01 Feb 2022 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>Stochastic Process: Summary</title>
-    <description>
-&lt;h4 id=&quot;idea&quot;&gt;Idea&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Why bother stochastic processes? what’s the logical purposes behind why these are done?&lt;/li&gt;
-  &lt;li&gt;A practical Problem&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/math-apply-stochastic-process-summary-example.png&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;These are signals collected from a sensor, because of noise, each time, we obtained different signals&lt;/li&gt;
-  &lt;li&gt;The questions are&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;what if we want to know the averaged value at $t_1$ ? how can we calculated this?&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;If we take a vertical line to cut through at $t_1$, the result we get is a collection of random numbers.
-    &lt;ul&gt;
-      &lt;li&gt;so we can treat all the values we obtain at $t_1$ as the value of  a random variable, can we?&lt;/li&gt;
-      &lt;li&gt;of course we can, so we can use the theory we developed in probability to study it’s property.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;What if we want to ask the relationship between the random variable $X_{t1}$ and $X_{t2}$?
-    &lt;ul&gt;
-      &lt;li&gt;what’s the relationship&lt;/li&gt;
-      &lt;li&gt;so stochastic process can be treat as the functions of random variables.&lt;/li&gt;
-      &lt;li&gt;At each time slot, we take a vertical line, we get a random variable, and all this random variables form the stochastic process.&lt;/li&gt;
-      &lt;li&gt;for the very simple bernoulli process, all the random variable all the same, they have the same distribution.&lt;/li&gt;
-      &lt;li&gt;but it doesn’t need to be like this.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;A stochastic process is a mathematical object usually defined as a family of random variables.
-First we have idea, than we want to be exact, we give it a definition.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;introduction&quot;&gt;Introduction&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Stochastic processes which are processes that proceed randomly in time.&lt;/li&gt;
-  &lt;li&gt;We consider sequences $X_0,X_1,X_2,\cdots$ where $X_n$ represents some random
-quantity at time n.
-How do you prevent oil spills? &lt;br /&gt;
-How do you prevent nuclear plants from going off?&lt;br /&gt;
-How do you prevent nuclear weapons from falling in the hands of the wrong people?&lt;br /&gt;
-These again, are probability issues.&lt;br /&gt;
-If you say there is one change in a billion that something will happen, 3/4 people will say
-that’s not acceptable. &lt;strong&gt;I don’t want any risk, these people are fools&lt;/strong&gt;, but unfortunately,
-these fools outnumber those of us who have studied these issues.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;classification&quot;&gt;Classification&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/math-apply-stochastic-process-summary-classification.png&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Just as the other math object, we are concern about it’s classification, how many classes?&lt;/li&gt;
-  &lt;li&gt;From the above picture, we can see there are four classes, the time maybe discrete, and the value may be discrete&lt;/li&gt;
-  &lt;li&gt;the time and the value are something that we care about.&lt;/li&gt;
-  &lt;li&gt;Poisson process about counting, the value is discrete.&lt;/li&gt;
-  &lt;li&gt;Markov chain about different state, the time is discrete.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;probability and statistics is an apply subject. Knowledge we learn in
-calculus, and set theory all can be used in this subject.&lt;/li&gt;
-  &lt;li&gt;Gamma function is from calculus, Jacobian matrix is also from calculus. They
-all can be used to study probability and statistics.&lt;/li&gt;
-  &lt;li&gt;What’s the difference between stochastic process and probability model?
-    &lt;ul&gt;
-      &lt;li&gt;In probability, you generate a sampling point one time.&lt;/li&gt;
-      &lt;li&gt;In stochastic process, you generate a sampling path one time.&lt;/li&gt;
-      &lt;li&gt;If you treat probability as function, because its factor is a variable.&lt;/li&gt;
-      &lt;li&gt;the stochastic is functional, becasue its factor is a function.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Stochastic_process&quot;&gt;Stochastic process&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-    <link>/math/math-apply-stochastic-process-summary.html</link>
-    <guid>/math/math-apply-stochastic-process-summary</guid>
-    <pubDate>Tue, 01 Feb 2022 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>Git: Gitignore</title>
-    <description>
-&lt;h4 id=&quot;ignore-a-tracked-file&quot;&gt;Ignore a tracked file&lt;/h4&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git rm --cached &amp;lt;file&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/1274057/how-can-i-make-git-forget-about-a-file-that-was-tracked-but-is-now-in-gitign&quot;&gt;Forget a tracked file&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://git-scm.com/docs/gitignore&quot;&gt;document&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    <link>/os/os-toolkit-git-gitignore.html</link>
-    <guid>/os/os-toolkit-git-gitignore</guid>
-    <pubDate>Sun, 30 Jan 2022 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>M.C.: Countable State</title>
-    <description>
-&lt;h4 id=&quot;motivation&quot;&gt;Motivation&lt;/h4&gt;
-&lt;p&gt;Markov chains with a countably-infinite state space(more briefly,
-countable-state Markov chains) exhibit some types of behavior not possible for
-chains with a finite state space.&lt;/p&gt;
-&lt;h4 id=&quot;notation&quot;&gt;Notation&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;$P_{0j}^n$ is the probability of being in state j at the end of the nth
-transition, conditional on starting in state 0.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;i\(P_{0 j}^{n}=\left(\begin{array}{l}{n} \\ {k}\end{array}\right) p^{k} q^{n-k}
-\quad \text { where } k=\frac{j+n}{2}\)&lt;/p&gt;
-
-&lt;p&gt;According to the central limit theorem &lt;br /&gt;
-\(\left.P_{0 j}^{n} \sim \frac{1}{\sqrt{2 \pi n p q}} \exp \left[\frac{-(k-n
-p)^{2}}{2 p q n}\right]\right\}
-\text { where } k=\frac{j+n}{2}\)&lt;/p&gt;
-
-&lt;h4 id=&quot;renewal-theory-and-markov-chains&quot;&gt;Renewal Theory and Markov Chains&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;The matrix approach used to analyze finite-state Markov chains does not
-generalize easily to the countable-state case.&lt;/li&gt;
-  &lt;li&gt;Fortunately, renewal theory is ideally suited for this purpose, especially
-for analyzing the long term behavior of countable-state Markov chains.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Renewal Process: for a recurrent state j, the sequence of subsequent entries to
-state j, conditional on starting in j, forms a renewal process.&lt;/li&gt;
-  &lt;li&gt;First-passage-time Probability: $f_{ij}(n)$, of a Markov chain is the
-probability, condtitional on $X_0=i$, that the first subsequent entry to
-state $j$ occurs at discrete epoch n.&lt;/li&gt;
-  &lt;li&gt;Birth-death Markov chains: A birth-death Markov chain is a Markov chain in
-which the state space is the set of nonngeative integers; for all $i\geq 0$,
-the transition probabilities satisfy $P_{i,i+1}&amp;gt;0$ and $P_{i+1,i}&amp;gt;0$, and for
-all $|i-j|&amp;gt;1$, $P_{ij}=0$
-    &lt;ul&gt;
-      &lt;li&gt;death: A transition from state i to i+1 is regarded as a birth and one from
-i+1 to i as a death.&lt;/li&gt;
-      &lt;li&gt;birth-death processes arise in queueing theory, where the state is the number
-of customers, births are customer arrivals, and deaths are customer
-departures.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-262-discrete-stochastic-processes-spring-2011/course-notes/MIT6_262S11_chap05.pdf&quot;&gt;Countable State Markov Chains&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    <link>/math/math-apply-stochastic-process-markov-chain-countable-state.html</link>
-    <guid>/math/math-apply-stochastic-process-markov-chain-countable-state</guid>
-    <pubDate>Sun, 30 Jan 2022 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>R.G.: Chart</title>
-    <description>
-&lt;h4 id=&quot;background&quot;&gt;Background&lt;/h4&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;There are so many topological spaces that mathematicians can not to classify them, such as Hausdorff space, compact space.&lt;/li&gt;
-  &lt;li&gt;For spacetime phyisics, we may focus on topological space (M,O) that can be charted, analogously to how the surface of the
-earth is charted in an altas.&lt;/li&gt;
-  &lt;li&gt;this special topological spaces is called topological manifolds.
-&lt;br /&gt;
-Def: A topological space (M,O) is called a d-dimensional topological manifold if&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h5 id=&quot;terminology&quot;&gt;Terminology&lt;/h5&gt;
-&lt;ol&gt;
-  &lt;li&gt;chart: according to Merriam-Webster, chat is a map of an area. &lt;br /&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;\((u,x)\) is a chart, where u is an open set, and x is a one-to-one map.&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;\((u,x)\) is  chart of (M,O)&lt;/li&gt;
-  &lt;li&gt;altas, the collection of charts&lt;/li&gt;
-  &lt;li&gt;coordinate maps: just a kind of chart if
-\(x^{1} \rightarrow R\) &lt;br /&gt;
-\(x^{...} \rightarrow R\)  and    \(x: u \rightarrow R^{d}\) &lt;br /&gt;
-\(x^{d} \rightarrow R\) &lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;Chart transition maps&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;terminology-coordinates-and-global-coordinate&quot;&gt;Terminology: Coordinates and Global Coordinate&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;A manifold S is a set with a coordinate system. Since S is a set, it has elements. It does not matter what these elements are,
-these elements are called &lt;strong&gt;point&lt;/strong&gt; of S. S must also have a &lt;strong&gt;coordinate system&lt;/strong&gt;. By this we mean a one-to-one mapping from
-from S to \(R^{n}\). which allows us to specify each point in S using a vector of n real numbers. this vector is called the 
-&lt;strong&gt;coordiates&lt;/strong&gt; of the corresponding point. We call the natural number n the dimension of S, and write n=dim S&lt;/li&gt;
-  &lt;li&gt;we call a coordinate system that has S as its domain &lt;strong&gt;a global coordinate system&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;terminology-coordinate-transformation&quot;&gt;Terminology: Coordinate Transformation&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;/images/riemann-geometry-coordiate-transform.png&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;remark&quot;&gt;Remark&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;The chart is so different from the real world, we need to get the relationship between the chart and the real world.&lt;/li&gt;
-  &lt;li&gt;To consider S as a manifold means that one is interested in investigating those properties of S which are invariant under coordinate transformations.
-In particular, differential geometry analyzes the geometry of objects  using defferential operators with respect to a variety of functions on S, and it
-would be problematic if these operators depended fundamentally on the choice of coordinates. Hence it is necessary to restric the coordiantes systems to those
-which allow smooth transformations between each other.&lt;/li&gt;
-  &lt;li&gt;No matter which object we want to study, &lt;strong&gt;the philosophy is based on two charts&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h5 id=&quot;example&quot;&gt;Example&lt;/h5&gt;
-&lt;ol&gt;
-  &lt;li&gt;the surface of doughnut is a two-dimensional topoligical manifold.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;history&quot;&gt;History&lt;/h4&gt;
-&lt;p&gt;Riemann Geometry origins from differential geometry, and the basic strategy of differential 
-geometry is parameterization. So, so called chared just a generalization of parameterization of 
-curves, surfaces.&lt;/p&gt;
-
-</description>
-    <link>/math/math-space-riemann-geometry-chart.html</link>
-    <guid>/math/math-space-riemann-geometry-chart</guid>
-    <pubDate>Sat, 29 Jan 2022 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>To-do Lists</title>
-    <description>
-</description>
-    <link>/life/to-do-list.html</link>
-    <guid>/life/to-do-list</guid>
-    <pubDate>Sun, 23 Jan 2022 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>V.A.: Kronecker Delta</title>
-    <description>
-&lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
-&lt;p&gt;\(\delta_{i j}=\left\{\begin{array}{ll}{0} &amp;amp; {\text { if } i \neq j} \\ {1} &amp;amp;
-{\text { if } i=j}\end{array}\right.\)&lt;/p&gt;
-
-&lt;h4 id=&quot;example&quot;&gt;Example&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;The inner product of vector: \(\mathbf{a} \cdot \mathbf{b}=\sum_{i,
-j=1}^{n} a_{i} \delta_{i j} b_{j}\)
-    &lt;ul&gt;
-      &lt;li&gt;
-\[a=\sum_{i j} a_{i} c_{j} \delta_{i j}=b_1 c_1 \delta_{11}+b_1 c_2
-\delta_{12} b_2 c_1 \delta_{21}+b_2 c_2 \delta_{22}\]
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;where $\delta_{12}$ and $\delta_{21}$ are zeros&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;\(\begin{aligned} \sum_{j} \delta_{i j} a_{j} &amp;amp;=a_{i} \\ \sum_{i} a_{i}
-\delta_{i j} &amp;amp;=a_{j} \\ \sum_{k} \delta_{i k} \delta_{k j} &amp;amp;=\delta_{i j}
-\end{aligned}\)
-    &lt;ul&gt;
-      &lt;li&gt;for the third formula, maybe you need spent a little time to think about it,
-but it’s not that difficult. for the two items, we only need consider about
-the first term \(\delta_{i k}\) is when i equals to k, so we only have
-\(\delta_{i i}\), it’s the same rule, we have only \(\delta_{j j}\), so what’s
-the result of \(\delta_{i i} \delta_{j j}\)&lt;/li&gt;
-      &lt;li&gt;it can also be treated as an identity matrix&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;2021/05/10 update&lt;/li&gt;
-  &lt;li&gt;I thought I understand this problem, actually, I didn’t get the essence.&lt;/li&gt;
-  &lt;li&gt;The essence is as the following: If kronecker delta are involved, keep the
-free index, throw away the dummy index.&lt;/li&gt;
-  &lt;li&gt;Keep the free index, throw the dummy index away.&lt;/li&gt;
-  &lt;li&gt;You can apply these simple rule to the above-mentioned second example, it’s trivial.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Why we invent this sign, becasue it can used to express our equation in a
-more compact and concise way, just like matrix, without any linear algebra
-background, you can just treat matrix sign, as a more efficient and compact
-way for expressions&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Kronecker_delta#Definitions_of_the_generalized_Kronecker_delta&quot;&gt;kronecker delta-wiki&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    <link>/math/math-change-vector-analysis-kronecker-delta-function.html</link>
-    <guid>/math/math-change-vector-analysis-kronecker-delta-function</guid>
-    <pubDate>Wed, 19 Jan 2022 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>S.P.: Motivation</title>
+    <title>Stochastic Process: Motivation</title>
     <description>
 &lt;h4 id=&quot;relationship-with-probability-theory&quot;&gt;Relationship with probability theory&lt;/h4&gt;
 &lt;p&gt;Stochastic process are primarily concerned with how events happen as respect to
@@ -866,7 +146,674 @@ is a special family of these sequences.&lt;/li&gt;
 </description>
     <link>/math/math-apply-stochastic-process-motivation.html</link>
     <guid>/math/math-apply-stochastic-process-motivation</guid>
-    <pubDate>Wed, 19 Jan 2022 00:00:00 +0900</pubDate>
+    <pubDate>Fri, 04 Feb 2022 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>I.T.: Entropy</title>
+    <description>
+&lt;h3 id=&quot;1-entropy&quot;&gt;1. Entropy&lt;/h3&gt;
+
+&lt;h4 id=&quot;11--definition&quot;&gt;1.1  Definition&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;The Shannon information content of an outcome x is defined to be: &lt;br /&gt;
+$h(x)=log_2{\frac{1}{P(x)}}$
+    &lt;ul&gt;
+      &lt;li&gt;If $P(x)=\frac{1}{64}$, then $h(x)=6$, how to understand this, it’s kind of
+weired.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;The entropy of an ensemble X is defined to be the average Shannon information
+content of an outcome: &lt;br /&gt;
+\(H(X) \equiv \sum_{x \in \mathcal{A}_{X}} P(x) \log \frac{1}{P(x)}\)
+    &lt;ul&gt;
+      &lt;li&gt;$H(X) \geq 0$ with equality iff $p_i=1$ for one i&lt;/li&gt;
+      &lt;li&gt;Entropy is maximized if p is uniform:
+$H(X) \leq log(|\mathcal{A}_X|)$ with equality iff $p_i=\frac{1}{|\mathcal{A}_X|}$&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;the Entropy(H) is a nice measure of how uncertian the events. The Shannon Entropy measures the average
+imformation that you get from one sample drawn from a given probability.It tells you how unpredictable
+that the probability distribution is. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;actually, we can treat this function as a functional example, because a function to a value, namely, the function of a function&lt;/p&gt;
+
+&lt;h4 id=&quot;12-joint-entropy&quot;&gt;1.2 Joint Entropy&lt;/h4&gt;
+&lt;p&gt;Joint entropy of X,Y is: &lt;br /&gt;
+\(H(X, Y)=\sum_{x y \in \mathcal{A}_X \mathcal{A}_{Y}} P(x, y) \log
+\frac{1}{P(x, y)}\)&lt;/p&gt;
+
+&lt;h4 id=&quot;13--relative-entropy&quot;&gt;1.3  Relative Entropy&lt;/h4&gt;
+&lt;p&gt;The relative entropy or Kullback-Leibler divergence between two probability
+distributions P(x) and Q(x) that are defined over the same alphabet
+$\mathcal{A_X}$ is &lt;br /&gt;
+\(D_{\mathrm{KL}}(P \| Q)=\sum_{x} P(x) \log \frac{P(x)}{Q(x)}\) &lt;br /&gt;
+Gibbs’ inequality, the &lt;strong&gt;most&lt;/strong&gt; important inequality in information theory. 
+\(D_{\mathrm{KL}}(P \| Q) \geq 0\)&lt;/p&gt;
+
+&lt;p&gt;Proof: Uses Jensen’s inequality with $Q(x)$ instead, we define $f(u)=u\log u$
+and let $u=\frac{P(x)}{Q(x)}$ &lt;br /&gt;
+\(\begin{aligned} D_{\mathrm{KL}}(P \| Q) &amp;amp;=\sum_{x} Q(x) \frac{P(x)}{Q(x)} \log
+\frac{P(x)}{Q(x)}=\sum_{x} Q(x) f\left(\frac{P(x)}{Q(x)}\right) \\ &amp;amp; \geq
+f\left(\sum_{x} Q(x) \frac{P(x)}{Q(x)}\right)=f(1)=0 \end{aligned}\)&lt;/p&gt;
+
+&lt;h3 id=&quot;2-chain-rule&quot;&gt;2 Chain rule&lt;/h3&gt;
+
+&lt;h4 id=&quot;21-chain-rule-for-information-content&quot;&gt;2.1 Chain rule for information content&lt;/h4&gt;
+&lt;p&gt;$log \frac{1}{P(x,y)}=log{1}{P(x)}+log{1}{P(y|x)}$ &lt;br /&gt;
+so &lt;br /&gt;
+$h(x,y)=h(x)+h(y|x)$
+&lt;br /&gt;&lt;/p&gt;
+&lt;h4 id=&quot;22-chain-rule-for-entropy&quot;&gt;2.2 Chain rule for entropy&lt;/h4&gt;
+&lt;p&gt;The joint entropy, conditional entropy and marigal entropy are related by: &lt;br /&gt;
+$H(X,Y)=H(X)+H(Y|X)=H(Y)+H(X|Y)$ &lt;br /&gt;
+In words, this says that the uncertainty of X and Y is the uncertainty of X plus
+the uncertainty of Y given X.&lt;/p&gt;
+
+&lt;h4 id=&quot;23--mutual-information-between-x-and-y&quot;&gt;2.3  Mutual Information Between X and Y&lt;/h4&gt;
+&lt;p&gt;\(I(X ; Y) \equiv H(X)-H(X | Y)\) &lt;br /&gt;
+It measures the average reduction in uncertainty about x that results from
+learning the value of y;&lt;/p&gt;
+
+&lt;h4 id=&quot;conditional-mutual-information-between-x-and-y-given-zc_k&quot;&gt;Conditional Mutual Information Between X and Y given $z=c_k$&lt;/h4&gt;
+&lt;p&gt;\(I\left(X ; Y | z=c_{k}\right)=H\left(X | z=c_{k}\right)-H\left(X | Y,
+z=c_{k}\right)\)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/math-apply-informtion-theory-entropy-notation-relationship-entropy.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;galois&quot;&gt;Galois&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;\(I(X ; Y) \equiv H(X)-H(X | Y)\)
+    &lt;ul&gt;
+      &lt;li&gt;I have been confused by this formula for a long time, what does this mean? why this make sense&lt;/li&gt;
+      &lt;li&gt;You can treat information or entropy as physics quantity, such as mass, or volume.&lt;/li&gt;
+      &lt;li&gt;what does this formula do is it measure the entropy before it flow into this
+channel which is H(X), than it measures the effect of this channel on this
+entropy, which is $H(X|Y)$. After the things get out of this channel, how much information left? which is $H(X) - H(X|Y)$&lt;/li&gt;
+      &lt;li&gt;which is complete make sense&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Shannon is really clever, treat this things as a physics quantity, it’s unbelievable.&lt;/li&gt;
+  &lt;li&gt;As you can see, at first, entropy is kind of intractable, it just starts with very simple idea.&lt;/li&gt;
+  &lt;li&gt;I want to be a mathematician, かっこいいな&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/math/math-apply-information-theory-entropy.html</link>
+    <guid>/math/math-apply-information-theory-entropy</guid>
+    <pubDate>Sun, 30 Jan 2022 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>P.M.: Law of Large Number</title>
+    <description>
+&lt;h4 id=&quot;what-is-the-crap-of-sampling-distribution&quot;&gt;What is the crap of Sampling Distribution?&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Suppose $X_1,X_2,\cdots,X_n$ is an identically and independently distributed
+sequence, i.e.,$X_1,X_2,\cdots,X_n$ is a sample from some distribution, and
+we are interested in the distribution of a &lt;strong&gt;new random variable&lt;/strong&gt; $Y=h(X_1,X_2,\cdots,X_n)$ for
+some function h.&lt;/li&gt;
+  &lt;li&gt;In particular, we might want to compute the distribution function of Y or
+perhaps its mean and variance. The distribution of Y is sometimes referred to
+as its &lt;strong&gt;sampling distribution&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;As Y is based on a sample form some underlying distribution.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;convergence&quot;&gt;Convergence&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Convergence in probability:
+A sequence of rv’s $Z_1,Z_2,\cdots$ converges in probability to a rv Z if $ \lim &lt;em&gt;{n \rightarrow
+\infty} \operatorname{Pr}\left{\left|Z&lt;/em&gt;{n}-Z\right|&amp;gt;\epsilon\right}=0 $ for every $\epsilon &amp;gt; 0$&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Convergence in distribution:
+A sequence of rv’s $Z_1,Z_2,\cdots$ converges in distribution to a random variable $Z$ if $ \lim &lt;em&gt;{n
+\rightarrow \infty} \mathrm{F}&lt;/em&gt;{Z_{n}}(z)=\mathrm{F}_{Z}(z) $
+at each $z$ for which $F_Z(z)$ is continuous.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Convergence in mean square(MS): A sequence of rv’s $Z_1,Z_2,\cdots$ converges
+in mean square(MS) to a rv Z if $ \left.\lim &lt;em&gt;{n \rightarrow \infty}
+\mathrm{E}\left[\left(Z&lt;/em&gt;{n}-Z\right)^{2}\right]\right} 0 $&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Convergence with probability 1(WP1):
+Let $Z_1,Z_2,\cdot$ be a sequence of rv’s in a sample space $\Omega$ and let Z
+be another rv in $\Omega$. Then ${ Z_n; n\geq 1}$ is defined to converge to Z
+with probability(WP1) if 
+$
+\operatorname{Pr}\left{\omega \in \Omega: \lim &lt;em&gt;{n \rightarrow \infty}
+Z&lt;/em&gt;{n}(\omega)=Z(\omega)\right}=1
+$&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;basic-operator&quot;&gt;Basic Operator&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Expectation E(X)
+$
+\mathrm{E}[\mathrm{a} \mathrm{x}+\mathrm{b}]=\mathrm{aE}[\mathrm{X}]+\mathrm{b}
+$&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;you can treat expection is a linear operator&lt;/strong&gt;
+&lt;strong&gt;you can treat expection is a linear operator&lt;/strong&gt;
+&lt;strong&gt;you can treat expection is a linear operator&lt;/strong&gt;
+&lt;strong&gt;Just unbelievable !!!&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Variation D(X)
+$
+D(\mathrm{X})=\mathrm{E}\left[(\mathrm{X}-\mathrm{m})^{2}\right]
+$ &lt;br /&gt;
+$
+D(X)=E(X^2)-m^2 
+$
+where m is the expected value E(X)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$
+\operatorname{D}[a X+b]=a^{2} \operatorname{D}(X)
+$&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Proof
+$
+\begin{array}{l}{=\mathrm{E}\left[\mathrm{a}^{2} \mathrm{X}^{2}+2 \mathrm{ab}
+\mathrm{X}+\mathrm{b}^{2}\right]-(\mathrm{aE}(\mathrm{X})+\mathrm{b})^{2}} &lt;br /&gt;
+{=\mathrm{a}^{2} \mathrm{E}\left(\mathrm{X}^{2}\right)+2 \mathrm{ab}
+\mathrm{E}(\mathrm{x})+\mathrm{b}^{2}-\mathrm{a}^{2}
+\mathrm{E}^{2}(\mathrm{x})-2 \mathrm{abE}(\mathrm{x})-\mathrm{b}^{2}} &lt;br /&gt;
+{=\mathrm{a}^{2} \mathrm{E}\left(\mathrm{X}^{2}\right)-\mathrm{a}^{2}
+\mathrm{E}^{2}(\mathrm{x})=\mathrm{a}^{2}
+\operatorname{Var}(\mathrm{X})}\end{array}
+$&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;example-mean-and-variance-of-sample&quot;&gt;Example: mean and variance of sample&lt;/h4&gt;
+&lt;p&gt;$
+E(\bar{X})=E\left(\frac{X_{1}+X_{2}+\cdots+X_{n}}{n}\right)
+$
+&lt;br /&gt;
+$
+E(\bar{X})=\frac{1}{n}\left[E\left(X_{1}\right)+E\left(X_{2}\right)+\cdots+E\left(X_{n}\right)\right]
+$
+&lt;br /&gt;
+$
+\operatorname{D}(\bar{X})=\operatorname{D}\left(\frac{X_{1}+X_{2}+\cdots+X_{n}}{n}\right)
+$
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;$
+\operatorname{D}(\bar{X})=\operatorname{D}\left(\frac{1}{n}
+X_{1}+\frac{1}{n} X_{2}+\cdots+\frac{1}{n} X_{n}\right)
+$
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;example-2&quot;&gt;Example 2:&lt;/h4&gt;
+&lt;p&gt;$S_n-n\bar{X}$&lt;/p&gt;
+
+&lt;h4 id=&quot;introduction&quot;&gt;Introduction&lt;/h4&gt;
+&lt;p&gt;Inequalities, or bounds, play an unusually large role in probability. Part of
+the reason is their frequent use in limit theorems and part is an inherent
+imprecision in probability application.&lt;/p&gt;
+
+&lt;h4 id=&quot;markov-inequality&quot;&gt;Markov Inequality&lt;/h4&gt;
+&lt;p&gt;If Y is a non-negative rv with an expectation E[Y], then for any real $y&amp;gt;0$&lt;/p&gt;
+
+&lt;h4 id=&quot;chebyshev-inequality&quot;&gt;Chebyshev Inequality&lt;/h4&gt;
+&lt;p&gt;If Z has a mean $E[Z]=\bar{Z}$ and a variance ,$\sigma_{Z}^2$,then for and&lt;/p&gt;
+
+&lt;p&gt;Proof: Let $Y=(Z-\bar{Z})^2$. Then E[Y]=$\sigma_{Z}^2$ and for any $y&amp;gt;0$&lt;/p&gt;
+
+&lt;h4 id=&quot;chernoff-bound&quot;&gt;Chernoff bound&lt;/h4&gt;
+&lt;p&gt;For any $z&amp;gt;0$ and any $r&amp;gt;0$ such that the moment generating function&lt;/p&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Sometimes proof by image is more intuitively, and simply&lt;/li&gt;
+  &lt;li&gt;The most important thing is inequality and CDF function, you need to get used
+to them.&lt;/li&gt;
+  &lt;li&gt;Treat $E$ as an linear operator, this idea is awesome, $D$ is also a
+operator, but not linear.&lt;/li&gt;
+  &lt;li&gt;Every subject has its theory, like in physics, the theory is $F=ma$,this is
+the theory part.&lt;/li&gt;
+  &lt;li&gt;CDF function play a very very important role in this subject.&lt;/li&gt;
+  &lt;li&gt;Sampling distribution, what does this mean ?  figure it out !!!!!!!&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://revisionmaths.com/advanced-level-maths-revision/statistics/expectation-and-variance&quot;&gt;expectation and variance&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://newonlinecourses.science.psu.edu/stat414/node/167/&quot;&gt;mean and variance of sample
+mean&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.stat.auckland.ac.nz/~fewster/325/notes/ch3.pdf&quot;&gt;expectation and variance&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/math/math-apply-probability-model-law-of-large-number.html</link>
+    <guid>/math/math-apply-probability-model-law-of-large-number</guid>
+    <pubDate>Fri, 28 Jan 2022 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Editor: Vimscript basic</title>
+    <description>
+&lt;h3 id=&quot;1-introduction&quot;&gt;1. Introduction&lt;/h3&gt;
+&lt;p&gt;This software is plugin system, so it is very flexible and diffcult to learn.
+it heavily depends on the plugin and shortcut to improve the efficient.&lt;/p&gt;
+
+&lt;h3 id=&quot;2-常用功能&quot;&gt;2. 常用功能&lt;/h3&gt;
+
+&lt;h4 id=&quot;21-setting&quot;&gt;2.1 Setting&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;set relativenumber!&lt;/li&gt;
+  &lt;li&gt;set cursorline&lt;/li&gt;
+  &lt;li&gt;syntax off  I spend a lot of time to fix this simple question, crap !!!!!!!!&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;22-register&quot;&gt;2.2 register&lt;/h4&gt;
+&lt;p&gt;To access a register, type &lt;strong&gt;“a&lt;/strong&gt;, &lt;strong&gt;a&lt;/strong&gt; is the name of the register. &lt;br /&gt;
+:reg to check out the content of the  register &lt;br /&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;to paste from system clipboard on Mac  &lt;strong&gt;”*p&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;to copy into system clipboard on Mac &lt;strong&gt;”*yy&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;23-format&quot;&gt;2.3 format&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;select the lines of text you want to re-format:
+    &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;v
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;reformat it
+    &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gq
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;h4 id=&quot;24-code-folding&quot;&gt;2.4 Code folding&lt;/h4&gt;
+  &lt;/li&gt;
+  &lt;li&gt;zc: fold up&lt;/li&gt;
+  &lt;li&gt;zR: unfold&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s2&quot;&gt;&quot; set the folding method in configuration file
+set foldmethod=indent
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;25-search&quot;&gt;2.5 Search&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;/target 从文档的开始匹配目标字符串，n匹配下一个，N匹配上一个&lt;/li&gt;
+  &lt;li&gt;?target 从文档的结束位置匹配目标字符串，n匹配下一个，N匹配上一个&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;26-delete&quot;&gt;2.6 Delete&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;ctrl+w 删除光标所在行的光标之前的文字&lt;/li&gt;
+  &lt;li&gt;ndd 删除光标所在行的后n行，包括光标所在行&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;版本查看&quot;&gt;版本查看&lt;/h4&gt;
+&lt;p&gt;:version 查看vim支持的插件，如python等
+:set  show vars different from defaults
+:h key-notation 查看键盘映射
+:ctrl+r anti-cancel
+:set colorcolumn=80 lenght marke&lt;/p&gt;
+
+&lt;h4 id=&quot;code-complete&quot;&gt;Code Complete&lt;/h4&gt;
+
+&lt;p&gt;ctrl+p 默认的代码补全功能是根据缓冲区中的内容进行正则匹配&lt;/p&gt;
+
+&lt;h4 id=&quot;javascript&quot;&gt;javascript&lt;/h4&gt;
+
+&lt;p&gt;在.vimrc配置文件中添加&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;ctrl+x ctrl+o 方向箭头选择补全的文本&lt;/p&gt;
+
+&lt;h4 id=&quot;十六进制查看&quot;&gt;十六进制查看&lt;/h4&gt;
+
+&lt;p&gt;在normal模式中输入”:%!xxd”
+切换回常规模式:”:%!xxd -r”&lt;/p&gt;
+
+&lt;h4 id=&quot;auto-indent&quot;&gt;auto indent&lt;/h4&gt;
+
+&lt;p&gt;vim在粘贴代码时会自动缩进，把代码搞得一团糟糕，需要提前设置&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;set paste&lt;/li&gt;
+  &lt;li&gt;set nopaste&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;copy into vim from GUI results missing line&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;before pasting to vim, make sure the Insert Mode is activated.&lt;/li&gt;
+  &lt;li&gt;the reason is that paste character &lt;strong&gt;i&lt;/strong&gt; or character &lt;strong&gt;o&lt;/strong&gt; will trigger
+insert mode, and you will miss everying before&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;joining-two-lines-with-j&quot;&gt;joining two lines with J&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;J joins the line the cursor is on with the line below&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;open-file&quot;&gt;open file&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;vim -On file1 file2 n表示要打开的文件数，O大写表示打开垂直窗口&lt;/li&gt;
+  &lt;li&gt;open a new window below the current one
+    &lt;ul&gt;
+      &lt;li&gt;:new filename&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;open a new window beside the current one
+    &lt;ul&gt;
+      &lt;li&gt;:vert new filename&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;vim中执行shell命令&quot;&gt;vim中执行shell命令&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;!command
+不退出vim并执行shell命令command,输出命令显示在vim的命令区域，不改变当前编辑的文件内容&lt;/li&gt;
+  &lt;li&gt;r !command 将shell命令command的结果插入到当前行的下一行&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;tab与空格替换&quot;&gt;tab与空格替换&lt;/h4&gt;
+&lt;p&gt;a tab could be a different number of columns depending on your enviroment&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# substitue tab for space
+:set ts=4
+:set expandtab
+:%retab!
+
+# substitue space for tab
+:set ts=4
+:set noexpandtab
+:%retab!
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;3-mode&quot;&gt;3. Mode&lt;/h3&gt;
+
+&lt;h4 id=&quot;33-recording-mode&quot;&gt;3.3 Recording Mode&lt;/h4&gt;
+
+&lt;p&gt;record type character into register&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;press q to enter into recording mode in normal mode, and vim begin to record
+your operation&lt;/li&gt;
+  &lt;li&gt;press q to end recording in normal mode&lt;/li&gt;
+  &lt;li&gt;press @&amp;lt;letter&amp;gt; to replay the recorded operation&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;参考内容 &lt;br /&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;http://learnvimscriptthehardway.onefloweroneworld.com/chapters/12.html&quot;&gt;learn vim the hardest way&lt;/a&gt; &lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cs.swarthmore.edu/oldhelp/vim/help.html&quot;&gt;vim tip and tricks&lt;/a&gt; &lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://vim.sourceforge.io/docs.php&quot;&gt;vim教程官方网站&lt;/a&gt; &lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;ftp://ftp.vim.org/pub/vim/doc/book/vimbook-OPL.pdf&quot;&gt;vim官方网站pdf教程&lt;/a&gt; &lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/VundleVim/Vundle.vim&quot;&gt;vundle教程&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://ternjs.net/doc/manual.html#server&quot;&gt;tern安装教程&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://kien.github.io/ctrlp.vim/#installation&quot;&gt;CtrlP-plugin&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/1527784/what-is-vim-recording-and-how-can-it-be-disabled&quot;&gt;vim recording mode&lt;/a&gt; &lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/1497958/how-do-i-use-vim-registers&quot;&gt;vim register&lt;/a&gt; &lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://thoughtbot.com/blog/wrap-existing-text-at-80-characters-in-vim&quot;&gt;vim format&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/pl/pl-tool-editor-vimscript-basic.html</link>
+    <guid>/pl/pl-tool-editor-vimscript-basic</guid>
+    <pubDate>Thu, 27 Jan 2022 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>To-do Lists</title>
+    <description>
+</description>
+    <link>/life/to-do-list.html</link>
+    <guid>/life/to-do-list</guid>
+    <pubDate>Sun, 23 Jan 2022 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>A.D.: Dynamic Programming</title>
+    <description>
+&lt;p&gt;####&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;why we call this boy dynamic programming,
+    &lt;ul&gt;
+      &lt;li&gt;Dynamic why, why ? just a fancy terminology, it sounded cool.&lt;/li&gt;
+      &lt;li&gt;Programming means optimization in America.&lt;/li&gt;
+      &lt;li&gt;DP is “careful brute force”&lt;/li&gt;
+      &lt;li&gt;Dp is guessing + recursion + momoization&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;topological sort of subproblem dependency DAG.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;define subproblems: is the most difficult part, need some insight.
+    &lt;ul&gt;
+      &lt;li&gt;rule of thumb&lt;/li&gt;
+      &lt;li&gt;suffixes $x[i:]$: topological order is always right to left, decreasing i&lt;/li&gt;
+      &lt;li&gt;prefixes $x[:i]$: topologican order is always left to right, increasing i&lt;/li&gt;
+      &lt;li&gt;substrings: increase substring&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;guess:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;what to guess&lt;/strong&gt;, maybe the most important problem, with some
+practice, you can get it.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;recurrence&lt;/li&gt;
+  &lt;li&gt;recurrence + momoize&lt;/li&gt;
+  &lt;li&gt;solve original problem
+    &lt;ul&gt;
+      &lt;li&gt;parent pointer&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;application&quot;&gt;Application&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;naive&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;fib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Memoized DP Algorithm
+    &lt;ul&gt;
+      &lt;li&gt;fib(k) only recurses the first time it is called&lt;/li&gt;
+      &lt;li&gt;memoized calls cost O(1)&lt;/li&gt;
+      &lt;li&gt;nonmemoized calls is n: fib(1), fib(2), … ,fib(n)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;memo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;memo_fib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;memo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;memo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;memo_fib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;memo_fib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;memo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Bottom-up DP Algorithm&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;bottom_up_fib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;fib&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;fib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;application-1&quot;&gt;Application&lt;/h4&gt;
+
+&lt;h5 id=&quot;shortest-path-problem&quot;&gt;Shortest Path Problem&lt;/h5&gt;
+&lt;h5 id=&quot;text-justification&quot;&gt;Text Justification&lt;/h5&gt;
+&lt;ol&gt;
+  &lt;li&gt;Microsoft Word: greedy&lt;/li&gt;
+  &lt;li&gt;Latex: badness = $(\text{page width - total width})^3$&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h5 id=&quot;parenthesization&quot;&gt;Parenthesization&lt;/h5&gt;
+&lt;h5 id=&quot;edit-distance&quot;&gt;Edit Distance&lt;/h5&gt;
+&lt;h5 id=&quot;knapsack&quot;&gt;Knapsack&lt;/h5&gt;
+
+</description>
+    <link>/algorithm/agorithm-design-dynamic-programming.html</link>
+    <guid>/algorithm/agorithm-design-dynamic-programming</guid>
+    <pubDate>Sun, 16 Jan 2022 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>R.G.: Differential Manifold</title>
+    <description>
+&lt;h4 id=&quot;questions-why-we-need-talk-about-differentiable-manifolds&quot;&gt;Questions: why we need talk about differentiable Manifolds?&lt;/h4&gt;
+&lt;p&gt;It’s important to figure out what kind of structure we need to add on
+topological manifold in order to start talking about differentiablity of curves
+on Manifolds, about differentiblility of functions on manifolds, even about the
+diff- erentiability of maps from one manifold to another manifold.&lt;/p&gt;
+
+&lt;h4 id=&quot;but-how-to-define-differential-and-this-is-the-strategy&quot;&gt;but how to define differential and this is the strategy&lt;/h4&gt;
+&lt;p&gt;idea: try to lift the undergraduate notion of differentiability of a cuve on
+\(R^{d}\) to a notion of differentiability of a curve on M.&lt;/p&gt;
+
+&lt;h4 id=&quot;compatible-charts&quot;&gt;compatible charts&lt;/h4&gt;
+&lt;p&gt;In previous lecture, we used any imaginable charts on the topological manifold
+\((M,O)\). &lt;br /&gt; To emphasis this, we may say that we took u and v form the
+&lt;strong&gt;maximum atlas&lt;/strong&gt; of \((M,O)\)&lt;/p&gt;
+
+&lt;h4 id=&quot;submanifold&quot;&gt;Submanifold&lt;/h4&gt;
+&lt;p&gt;In mathematics, a submanifold of a manifold M is a subset $S$ which itself has
+the structure of a manifold, and for which the inclusion map&lt;/p&gt;
+
+&lt;h4 id=&quot;theorem&quot;&gt;Theorem&lt;/h4&gt;
+&lt;p&gt;For any \(C^{K&amp;gt;1}-atlas\) of a topological  \(manifold (M,O,A_{c^{k&amp;gt;1}})\)
+contains a \(C^{\infty}-atlas\) &lt;br /&gt; \(C^{\infty}-manifolds\) are called
+smooth manifolds unless we with to define Taylor expandibility and complex
+differentibiliay where &lt;br /&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;The \(C^{\infty}\) means, it would suffice for the relevant functions to be
+differentiable some appropriate number of times. Intuitively, we may consider
+\(C^{\infty}\) to simply mean “sufficiently smooth”.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;example&quot;&gt;Example&lt;/h4&gt;
+&lt;p&gt;Let \(f: S \rightarrow R\) be a function on a manifold S. Then if we select a
+coordiante system \(\varphi = [\xi^{i}]\) for S.  This function maybe rewritten
+as a function of the coordinates; letting \([\xi^{i}]\) denote the coordinates
+of the point p, we have &lt;br /&gt; 
+\(f(p)=\bar{f}\left(\xi^{1}, \cdots, \xi^{n}\right), \text { where } \bar{f}=f
+\circ \varphi^{-1}\) &lt;br /&gt;
+Note that \(\bar{f}\) is a real-valued function whose domain is \(\varphi(S)\),
+an open subset of \(R^{n}\). &lt;br /&gt;
+When \(\bar{f}=f \circ \varphi^{-1} \text { is } C^{\infty}\), in other words,\(\bar{f}\left(\xi^{1}, \cdots, \xi^{n}\right)\)
+can be partially differentiated with respect to its variables an unbounded
+number of times, we call \(f\) a \(C^{\infty}\) function on S.&lt;/p&gt;
+
+&lt;h4 id=&quot;terminology&quot;&gt;terminology&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;isomorphic: a set M and a set N are called isomorphic, &lt;strong&gt;set theortically
+speaking&lt;/strong&gt; if there exists an bijection between them. These definition only
+on &lt;strong&gt;set structure&lt;/strong&gt;.&lt;br /&gt;
+\(\exists M \rightarrow N\), bijection &lt;br /&gt;
+This case is called isomorphism; these sets are called isomorphic.&lt;/li&gt;
+  &lt;li&gt;homoporphic: two set but equipped with topology, \((M,O_{M})\) and
+\((N,O_{N})\). and now we going to define &lt;strong&gt;topological isomorphic&lt;/strong&gt;, with a
+traditional name &lt;strong&gt;homeomorphic&lt;/strong&gt;.  which means they are at the &lt;strong&gt;set level&lt;/strong&gt;
+isomorphic, additionaly, not only a bijection, but also continuously, because
+continuity are structure related concept   &lt;br /&gt; \(\exists M \rightarrow
+N\), bijection &lt;br /&gt;
+homeomorphic is a strong definition, compared with isomorphic.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;word-iso--and-homo-&quot;&gt;word: iso- and homo-&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;the difference between [iso-] and [homo-] is the difference being
+equivalent or identical. [iso-] means identical, [Homo-] means identical.&lt;/li&gt;
+  &lt;li&gt;There is a subtle but clear difference between equivalent and identical. For
+example, the prime mnister of the UK is equivalent of the chancellor of
+Germany. In both cases, the person holding office is the head of the
+goverment. The two are equivalent, but they are not identical.&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/math/math-space-riemann-geometry-differentiable-manifold.html</link>
+    <guid>/math/math-space-riemann-geometry-differentiable-manifold</guid>
+    <pubDate>Mon, 10 Jan 2022 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>EM: summary</title>
+    <description>
+&lt;h4 id=&quot;em-algorithm&quot;&gt;EM algorithm&lt;/h4&gt;
+
+&lt;p&gt;EM is an algorithm for maximum the likelihood function&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;广义EM算法，E步骤是固定参数优化隐分布，M步骤是固定隐分布优化参数,可以用GMM算作为类比&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;jensens-inequality&quot;&gt;Jensen’s inequality&lt;/h4&gt;
+&lt;p&gt;Jensen’s inequality generalizes the statement that the secant line of a convex lies above the graph of the function.
+which in Jensen’s inequality for two points. The Jensen’s inequality is(for \(t\in[0,1]\)):&lt;/p&gt;
+
+\[f\left(t x_{1}+(1-t) x_{2}\right) \leq t f\left(x_{1}\right)+(1-t) f\left(x_{2}\right)\]
+
+&lt;p&gt;in the context of probability, it is generally stated in the following form, if X is a random variable and 
+\(\varphi\) is a convex function&lt;/p&gt;
+
+\[\varphi(\mathrm{E}[X]) \leq \mathrm{E}[\varphi(X)]\]
+
+&lt;p&gt;&lt;img src=&quot;/images/convex.png&quot; height=&quot;&quot; width=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;EM algorithm, what does E and M, respectively, stand for?&lt;/li&gt;
+  &lt;li&gt;They denote the expectation and maximum of the parameter theta that we are
+looking for, nothing about the latent variable, it’s just a tool to make the
+topic eazier to understand.
+    &lt;ul&gt;
+      &lt;li&gt;suppose we have a mixed guassian model, they are $N_1(\mu^1,\sigma^1)$ and $N_2(\mu^2,\sigma^2)$&lt;/li&gt;
+      &lt;li&gt;then the parameters are $(\mu^1,\sigma^1,\mu^2,\sigma^2)$, we want to
+calculate their expectation&lt;/li&gt;
+      &lt;li&gt;Maximization the likelihood.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Expectation%E2%80%93maximization_algorithm&quot;&gt;Expectation and Maximization&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/u010834867/article/details/90762296&quot;&gt;EM&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://zhuanlan.zhihu.com/p/40991784&quot;&gt;EM&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/simplex/simplex-em-summary.html</link>
+    <guid>/simplex/simplex-em-summary</guid>
+    <pubDate>Sat, 08 Jan 2022 00:00:00 +0900</pubDate>
   </item>
 
   <item>
@@ -1730,45 +1677,6 @@ possibility distribution of an inferred fuzzy control action.&lt;/li&gt;
     <link>/math/math-apply-fuzzy-logic-operation.html</link>
     <guid>/math/math-apply-fuzzy-logic-operation</guid>
     <pubDate>Sun, 28 Mar 2021 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>Tex: Different Version</title>
-    <description>&lt;h4 id=&quot;xetex&quot;&gt;XeTex&lt;/h4&gt;
-&lt;p&gt;Xetex is a Unicode Tex engine which can load the system font directly using 
-HarfBuzz library.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;It doesn’t produce PDF output directly, works via an intermediate format
-XDV(extended DVI). XDV files can not be viewed directly, and are normally
-converted directly to PDF as part of the xetex run.(by xdvipdfmx)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;work-with-system-font&quot;&gt;Work with System Font&lt;/h4&gt;
-
-&lt;div class=&quot;language-tex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;\documentclass&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;[a4paper]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;article&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;\usepackage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;fontspec,lipsum&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;\setmainfont&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;[Path=/Users/username/Downloads/]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;SpecialFont.ttf&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;nt&quot;&gt;\begin{document}&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;\lipsum&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;\end{document}&lt;/span&gt; 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;luatex&quot;&gt;LuaTex&lt;/h4&gt;
-&lt;p&gt;LuaTex is a Tex engine with a Lua interpreter.&lt;/p&gt;
-
-&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://texfaq.org/FAQ-xetex-luatex#:~:text=LuaTeX%2C%20like%20XeTeX%2C%20is%20a,end%20makes%20it%20particularly%20powerful.&quot;&gt;XeTex and LuaTex&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://tex.stackexchange.com/questions/70364/xelatex-on-mac-osx-using-user-fonts&quot;&gt;XeLatex on MacOS: Using User Fonts&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-    <link>/pl/pl-script-tex-variation.html</link>
-    <guid>/pl/pl-script-tex-variation</guid>
-    <pubDate>Fri, 19 Feb 2021 00:00:00 +0900</pubDate>
   </item>
 
   <item>
@@ -5750,56 +5658,6 @@ published during that year.&lt;/p&gt;
   </item>
 
   <item>
-    <title>EM: summary</title>
-    <description>
-&lt;h4 id=&quot;em-algorithm&quot;&gt;EM algorithm&lt;/h4&gt;
-
-&lt;p&gt;EM is an algorithm for maximum the likelihood function&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;广义EM算法，E步骤是固定参数优化隐分布，M步骤是固定隐分布优化参数,可以用GMM算作为类比&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;jensens-inequality&quot;&gt;Jensen’s inequality&lt;/h4&gt;
-&lt;p&gt;Jensen’s inequality generalizes the statement that the secant line of a convex lies above the graph of the function.
-which in Jensen’s inequality for two points. The Jensen’s inequality is(for \(t\in[0,1]\)):&lt;/p&gt;
-
-\[f\left(t x_{1}+(1-t) x_{2}\right) \leq t f\left(x_{1}\right)+(1-t) f\left(x_{2}\right)\]
-
-&lt;p&gt;in the context of probability, it is generally stated in the following form, if X is a random variable and 
-\(\varphi\) is a convex function&lt;/p&gt;
-
-\[\varphi(\mathrm{E}[X]) \leq \mathrm{E}[\varphi(X)]\]
-
-&lt;p&gt;&lt;img src=&quot;/images/convex.png&quot; height=&quot;&quot; width=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;EM algorithm, what does E and M, respectively, stand for?&lt;/li&gt;
-  &lt;li&gt;They denote the expectation and maximum of the parameter theta that we are
-looking for, nothing about the latent variable, it’s just a tool to make the
-topic eazier to understand.
-    &lt;ul&gt;
-      &lt;li&gt;suppose we have a mixed guassian model, they are $N_1(\mu^1,\sigma^1)$ and $N_2(\mu^2,\sigma^2)$&lt;/li&gt;
-      &lt;li&gt;then the parameters are $(\mu^1,\sigma^1,\mu^2,\sigma^2)$, we want to
-calculate their expectation&lt;/li&gt;
-      &lt;li&gt;Maximization the likelihood.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Expectation%E2%80%93maximization_algorithm&quot;&gt;Expectation and Maximization&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/u010834867/article/details/90762296&quot;&gt;EM&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://zhuanlan.zhihu.com/p/40991784&quot;&gt;EM&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-    <link>/simplex/simplex-em-summary.html</link>
-    <guid>/simplex/simplex-em-summary</guid>
-    <pubDate>Wed, 04 Mar 2020 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
     <title>Boosting Algorithm</title>
     <description>
 &lt;h4 id=&quot;what-is-the-crap-of-boosting-algorithm-&quot;&gt;what is the crap of boosting algorithm ?&lt;/h4&gt;
@@ -6961,6 +6819,46 @@ complicate, we need pay more attention.&lt;/li&gt;
   </item>
 
   <item>
+    <title>G.T.A.: Message Passing</title>
+    <description>
+&lt;h4 id=&quot;message-passing-rule-set-a&quot;&gt;Message-passing rule-set A&lt;/h4&gt;
+&lt;h4 id=&quot;message-passing-rule-set-b&quot;&gt;Message-passing rule-set B&lt;/h4&gt;
+
+&lt;h4 id=&quot;min-sum-algorithm-or-viterbi-algorithm&quot;&gt;Min-sum Algorithm or Viterbi Algorithm&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/math-discrete-graph-theory-message-passing.png&quot; /&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Each node can broadcast its cost to its descendants once it knows the costs
+of all its possible predecessors.&lt;/li&gt;
+  &lt;li&gt;The cost of &lt;strong&gt;A&lt;/strong&gt; is zero, we pass this news on to &lt;strong&gt;H&lt;/strong&gt; and &lt;strong&gt;I&lt;/strong&gt;., as the
+message passes along each edge in the graph, the cost of that edge is added.
+We find the costs of H and I are 4 and 1 respectively. figure(a)&lt;/li&gt;
+  &lt;li&gt;what about &lt;strong&gt;K&lt;/strong&gt;, out of the edge &lt;strong&gt;H-K&lt;/strong&gt; comes the message that a path of
+cost 5 exists from &lt;strong&gt;A&lt;/strong&gt; to &lt;strong&gt;K&lt;/strong&gt; via &lt;strong&gt;H&lt;/strong&gt;; and from edge &lt;strong&gt;I-K&lt;/strong&gt; we learn
+of an alternative path of cost 3 figure(b)&lt;/li&gt;
+  &lt;li&gt;The min-sum algorithm sets the cost of &lt;strong&gt;K&lt;/strong&gt; equal to the minimum of these,
+and records which was the smallest-cost route into &lt;strong&gt;K&lt;/strong&gt; by retaining only
+hte edge &lt;strong&gt;I-K&lt;/strong&gt; and pruning away the other edges leading to K, fiugre(c)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;One reason that graph theory is important is because we can use graph 
+to complete some calculation.&lt;/li&gt;
+  &lt;li&gt;Message-passing rule-set A and message-passing rule-set B just make use the
+structure of the graph and do some math.&lt;/li&gt;
+  &lt;li&gt;At first, I read the phrase “message-passing rule-set A”, I don’t know how to
+separate the sentence, it should be like this “message-passing rule” for “set
+A”. I just need a lot of time to understand something.&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/math/math-discrete-graph-theory-algorithm-message-passing.html</link>
+    <guid>/math/math-discrete-graph-theory-algorithm-message-passing</guid>
+    <pubDate>Wed, 18 Dec 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
     <title>G.T.A.: Deepth First Search</title>
     <description>
 &lt;h4 id=&quot;dfs&quot;&gt;DFS&lt;/h4&gt;
@@ -7050,6 +6948,92 @@ data structure, performs two stages:&lt;/p&gt;
 </description>
     <link>/math/math-discrete-graph-theory-algorithm-deepth-first-search.html</link>
     <guid>/math/math-discrete-graph-theory-algorithm-deepth-first-search</guid>
+    <pubDate>Wed, 18 Dec 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>G.T.A.: Breadth First Search</title>
+    <description>
+&lt;h4 id=&quot;bfs&quot;&gt;BFS&lt;/h4&gt;
+&lt;p&gt;BFS stands for Breadth First Search is a vertex based techinique for finding
+   a shortest path in graph.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;It uses a Queue data structure which follows first in first out. In BFS, one
+  vertex is selected at a time when it is visited and marked then its adjacent
+  are visited and stored in the queue.
+    &lt;ul&gt;
+      &lt;li&gt;step 1: visiting a vertex&lt;/li&gt;
+      &lt;li&gt;step 2: exploration&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;graph-explaniaton&quot;&gt;Graph Explaniaton&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/math-discrete-graph-theory-bfs.png&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;iostream&amp;gt;
+#include &amp;lt;list&amp;gt;
+#include &amp;lt;vector&amp;gt;
+&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;b_first&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;column&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;node_queue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vector&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;visited_node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;node_queue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;push_back&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;visited_node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node_queue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+		&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;queue_head&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;node_queue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;front&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+			&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;queue_head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;visited_node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+				&lt;span class=&quot;n&quot;&gt;node_queue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;push_back&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+				&lt;span class=&quot;n&quot;&gt;visited_node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+				&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;visit node: &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+			&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+		&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;node_queue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pop_front&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+	&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+			&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+			&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 
+		&lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 
+		&lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;   
+		&lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;	
+		&lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;b_first&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;application&quot;&gt;Application&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;web crawling&lt;/li&gt;
+  &lt;li&gt;social networking&lt;/li&gt;
+  &lt;li&gt;network broadcast&lt;/li&gt;
+  &lt;li&gt;garbage collection&lt;/li&gt;
+  &lt;li&gt;model checking&lt;/li&gt;
+  &lt;li&gt;mathematical conjecture checking&lt;/li&gt;
+  &lt;li&gt;solving puzzles games&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Graph just as the other abstract data type, why we need to study how to visit node
+in a graph, because things turn a little complicate now, array, stack, tree,
+visiting each element is a very simple things.&lt;/li&gt;
+  &lt;li&gt;BFS is one strategy that we visit every node in the graph, and another thing
+we gain is &lt;strong&gt;the approach to find shortest path from one source to the other
+nodes in the graph&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/math/math-discrete-graph-theory-algorithm-breadth-first-search.html</link>
+    <guid>/math/math-discrete-graph-theory-algorithm-breadth-first-search</guid>
     <pubDate>Wed, 18 Dec 2019 00:00:00 +0900</pubDate>
   </item>
 
@@ -7581,154 +7565,6 @@ categories.&lt;/p&gt;
     <link>/math/math-apply-probability-model-categorical-distribution.html</link>
     <guid>/math/math-apply-probability-model-categorical-distribution</guid>
     <pubDate>Thu, 26 Sep 2019 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>P.M.: Law of Large Number</title>
-    <description>
-&lt;h4 id=&quot;what-is-the-crap-of-sampling-distribution&quot;&gt;What is the crap of Sampling Distribution?&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Suppose $X_1,X_2,\cdots,X_n$ is an identically and independently distributed
-sequence, i.e.,$X_1,X_2,\cdots,X_n$ is a sample from some distribution, and
-we are interested in the distribution of a &lt;strong&gt;new random variable&lt;/strong&gt; $Y=h(X_1,X_2,\cdots,X_n)$ for
-some function h.&lt;/li&gt;
-  &lt;li&gt;In particular, we might want to compute the distribution function of Y or
-perhaps its mean and variance. The distribution of Y is sometimes referred to
-as its &lt;strong&gt;sampling distribution&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;As Y is based on a sample form some underlying distribution.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;convergence&quot;&gt;Convergence&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Convergence in probability:
-A sequence of rv’s $Z_1,Z_2,\cdots$ converges in probability to a rv Z if $ \lim &lt;em&gt;{n \rightarrow
-\infty} \operatorname{Pr}\left{\left|Z&lt;/em&gt;{n}-Z\right|&amp;gt;\epsilon\right}=0 $ for every $\epsilon &amp;gt; 0$&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Convergence in distribution:
-A sequence of rv’s $Z_1,Z_2,\cdots$ converges in distribution to a random variable $Z$ if $ \lim &lt;em&gt;{n
-\rightarrow \infty} \mathrm{F}&lt;/em&gt;{Z_{n}}(z)=\mathrm{F}_{Z}(z) $
-at each $z$ for which $F_Z(z)$ is continuous.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Convergence in mean square(MS): A sequence of rv’s $Z_1,Z_2,\cdots$ converges
-in mean square(MS) to a rv Z if $ \left.\lim &lt;em&gt;{n \rightarrow \infty}
-\mathrm{E}\left[\left(Z&lt;/em&gt;{n}-Z\right)^{2}\right]\right} 0 $&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Convergence with probability 1(WP1):
-Let $Z_1,Z_2,\cdot$ be a sequence of rv’s in a sample space $\Omega$ and let Z
-be another rv in $\Omega$. Then ${ Z_n; n\geq 1}$ is defined to converge to Z
-with probability(WP1) if 
-$
-\operatorname{Pr}\left{\omega \in \Omega: \lim &lt;em&gt;{n \rightarrow \infty}
-Z&lt;/em&gt;{n}(\omega)=Z(\omega)\right}=1
-$&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;basic-operator&quot;&gt;Basic Operator&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Expectation E(X)
-$
-\mathrm{E}[\mathrm{a} \mathrm{x}+\mathrm{b}]=\mathrm{aE}[\mathrm{X}]+\mathrm{b}
-$&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;strong&gt;you can treat expection is a linear operator&lt;/strong&gt;
-&lt;strong&gt;you can treat expection is a linear operator&lt;/strong&gt;
-&lt;strong&gt;you can treat expection is a linear operator&lt;/strong&gt;
-&lt;strong&gt;Just unbelievable !!!&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Variation D(X)
-$
-D(\mathrm{X})=\mathrm{E}\left[(\mathrm{X}-\mathrm{m})^{2}\right]
-$ &lt;br /&gt;
-$
-D(X)=E(X^2)-m^2 
-$
-where m is the expected value E(X)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;$
-\operatorname{D}[a X+b]=a^{2} \operatorname{D}(X)
-$&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Proof
-$
-\begin{array}{l}{=\mathrm{E}\left[\mathrm{a}^{2} \mathrm{X}^{2}+2 \mathrm{ab}
-\mathrm{X}+\mathrm{b}^{2}\right]-(\mathrm{aE}(\mathrm{X})+\mathrm{b})^{2}} &lt;br /&gt;
-{=\mathrm{a}^{2} \mathrm{E}\left(\mathrm{X}^{2}\right)+2 \mathrm{ab}
-\mathrm{E}(\mathrm{x})+\mathrm{b}^{2}-\mathrm{a}^{2}
-\mathrm{E}^{2}(\mathrm{x})-2 \mathrm{abE}(\mathrm{x})-\mathrm{b}^{2}} &lt;br /&gt;
-{=\mathrm{a}^{2} \mathrm{E}\left(\mathrm{X}^{2}\right)-\mathrm{a}^{2}
-\mathrm{E}^{2}(\mathrm{x})=\mathrm{a}^{2}
-\operatorname{Var}(\mathrm{X})}\end{array}
-$&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;example-mean-and-variance-of-sample&quot;&gt;Example: mean and variance of sample&lt;/h4&gt;
-&lt;p&gt;$
-E(\bar{X})=E\left(\frac{X_{1}+X_{2}+\cdots+X_{n}}{n}\right)
-$
-&lt;br /&gt;
-$
-E(\bar{X})=\frac{1}{n}\left[E\left(X_{1}\right)+E\left(X_{2}\right)+\cdots+E\left(X_{n}\right)\right]
-$
-&lt;br /&gt;
-$
-\operatorname{D}(\bar{X})=\operatorname{D}\left(\frac{X_{1}+X_{2}+\cdots+X_{n}}{n}\right)
-$
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;$
-\operatorname{D}(\bar{X})=\operatorname{D}\left(\frac{1}{n}
-X_{1}+\frac{1}{n} X_{2}+\cdots+\frac{1}{n} X_{n}\right)
-$
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;example-2&quot;&gt;Example 2:&lt;/h4&gt;
-&lt;p&gt;$S_n-n\bar{X}$&lt;/p&gt;
-
-&lt;h4 id=&quot;introduction&quot;&gt;Introduction&lt;/h4&gt;
-&lt;p&gt;Inequalities, or bounds, play an unusually large role in probability. Part of
-the reason is their frequent use in limit theorems and part is an inherent
-imprecision in probability application.&lt;/p&gt;
-
-&lt;h4 id=&quot;markov-inequality&quot;&gt;Markov Inequality&lt;/h4&gt;
-&lt;p&gt;If Y is a non-negative rv with an expectation E[Y], then for any real $y&amp;gt;0$&lt;/p&gt;
-
-&lt;h4 id=&quot;chebyshev-inequality&quot;&gt;Chebyshev Inequality&lt;/h4&gt;
-&lt;p&gt;If Z has a mean $E[Z]=\bar{Z}$ and a variance ,$\sigma_{Z}^2$,then for and&lt;/p&gt;
-
-&lt;p&gt;Proof: Let $Y=(Z-\bar{Z})^2$. Then E[Y]=$\sigma_{Z}^2$ and for any $y&amp;gt;0$&lt;/p&gt;
-
-&lt;h4 id=&quot;chernoff-bound&quot;&gt;Chernoff bound&lt;/h4&gt;
-&lt;p&gt;For any $z&amp;gt;0$ and any $r&amp;gt;0$ such that the moment generating function&lt;/p&gt;
-
-&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Sometimes proof by image is more intuitively, and simply&lt;/li&gt;
-  &lt;li&gt;The most important thing is inequality and CDF function, you need to get used
-to them.&lt;/li&gt;
-  &lt;li&gt;Treat $E$ as an linear operator, this idea is awesome, $D$ is also a
-operator, but not linear.&lt;/li&gt;
-  &lt;li&gt;Every subject has its theory, like in physics, the theory is $F=ma$,this is
-the theory part.&lt;/li&gt;
-  &lt;li&gt;CDF function play a very very important role in this subject.&lt;/li&gt;
-  &lt;li&gt;Sampling distribution, what does this mean ?  figure it out !!!!!!!&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://revisionmaths.com/advanced-level-maths-revision/statistics/expectation-and-variance&quot;&gt;expectation and variance&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://newonlinecourses.science.psu.edu/stat414/node/167/&quot;&gt;mean and variance of sample
-mean&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.stat.auckland.ac.nz/~fewster/325/notes/ch3.pdf&quot;&gt;expectation and variance&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-    <link>/math/math-apply-probability-model-law-of-large-number.html</link>
-    <guid>/math/math-apply-probability-model-law-of-large-number</guid>
-    <pubDate>Wed, 25 Sep 2019 00:00:00 +0900</pubDate>
   </item>
 
   <item>
@@ -9257,6 +9093,102 @@ function&lt;/strong&gt; \(A: \Omega \rightarrow A\)&lt;/li&gt;
   </item>
 
   <item>
+    <title>S.P.: summary</title>
+    <description>
+&lt;h4 id=&quot;idea&quot;&gt;Idea&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Why bother stochastic processes? what’s the logical purposes behind why these are done?&lt;/li&gt;
+  &lt;li&gt;A practical Problem&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/math-apply-stochastic-process-summary-example.png&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;These are signals collected from a sensor, because of noise, each time, we obtained different signals&lt;/li&gt;
+  &lt;li&gt;The questions are&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;what if we want to know the averaged value at $t_1$ ? how can we calculated this?&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;If we take a vertical line to cut through at $t_1$, the result we get is a collection of random numbers.
+    &lt;ul&gt;
+      &lt;li&gt;so we can treat all the values we obtain at $t_1$ as the value of  a random variable, can we?&lt;/li&gt;
+      &lt;li&gt;of course we can, so we can use the theory we developed in probability to study it’s property.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What if we want to ask the relationship between the random variable $X_{t1}$ and $X_{t2}$?
+    &lt;ul&gt;
+      &lt;li&gt;what’s the relationship&lt;/li&gt;
+      &lt;li&gt;so stochastic process can be treat as the functions of random variables.&lt;/li&gt;
+      &lt;li&gt;At each time slot, we take a vertical line, we get a random variable, and all this random variables form the stochastic process.&lt;/li&gt;
+      &lt;li&gt;for the very simple bernoulli process, all the random variable all the same, they have the same distribution.&lt;/li&gt;
+      &lt;li&gt;but it doesn’t need to be like this.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;A stochastic process is a mathematical object usually defined as a family of random variables.
+First we have idea, than we want to be exact, we give it a definition.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;introduction&quot;&gt;Introduction&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Stochastic processes which are processes that proceed randomly in time.&lt;/li&gt;
+  &lt;li&gt;We consider sequences $X_0,X_1,X_2,\cdots$ where $X_n$ represents some random
+quantity at time n.
+How do you prevent oil spills? &lt;br /&gt;
+How do you prevent nuclear plants from going off?&lt;br /&gt;
+How do you prevent nuclear weapons from falling in the hands of the wrong people?&lt;br /&gt;
+These again, are probability issues.&lt;br /&gt;
+If you say there is one change in a billion that something will happen, 3/4 people will say
+that’s not acceptable. &lt;strong&gt;I don’t want any risk, these people are fools&lt;/strong&gt;, but unfortunately,
+these fools outnumber those of us who have studied these issues.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;classification&quot;&gt;Classification&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/math-apply-stochastic-process-summary-classification.png&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Just as the other math object, we are concern about it’s classification, how many classes?&lt;/li&gt;
+  &lt;li&gt;From the above picture, we can see there are four classes, the time maybe discrete, and the value may be discrete&lt;/li&gt;
+  &lt;li&gt;the time and the value are something that we care about.&lt;/li&gt;
+  &lt;li&gt;Poisson process about counting, the value is discrete.&lt;/li&gt;
+  &lt;li&gt;Markov chain about different state, the time is discrete.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;probability and statistics is an apply subject. Knowledge we learn in
+calculus, and set theory all can be used in this subject.&lt;/li&gt;
+  &lt;li&gt;Gamma function is from calculus, Jacobian matrix is also from calculus. They
+all can be used to study probability and statistics.&lt;/li&gt;
+  &lt;li&gt;What’s the difference between stochastic process and probability model?
+    &lt;ul&gt;
+      &lt;li&gt;In probability, you generate a sampling point one time.&lt;/li&gt;
+      &lt;li&gt;In stochastic process, you generate a sampling path one time.&lt;/li&gt;
+      &lt;li&gt;If you treat probability as function, because its factor is a variable.&lt;/li&gt;
+      &lt;li&gt;the stochastic is functional, becasue its factor is a function.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Stochastic_process&quot;&gt;Stochastic process&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/math/math-apply-stochastic-process-summary.html</link>
+    <guid>/math/math-apply-stochastic-process-summary</guid>
+    <pubDate>Fri, 31 May 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
     <title>S.P.: Notation</title>
     <description>
 &lt;p&gt;####&lt;/p&gt;
@@ -9801,6 +9733,66 @@ Eigenvector &lt;br /&gt;
     <link>/math/math-apply-stochastic-process-markov-chain-finite-state.html</link>
     <guid>/math/math-apply-stochastic-process-markov-chain-finite-state</guid>
     <pubDate>Sat, 18 May 2019 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>M.C.: Countable State</title>
+    <description>
+&lt;h4 id=&quot;motivation&quot;&gt;Motivation&lt;/h4&gt;
+&lt;p&gt;Markov chains with a countably-infinite state space(more briefly,
+countable-state Markov chains) exhibit some types of behavior not possible for
+chains with a finite state space.&lt;/p&gt;
+&lt;h4 id=&quot;notation&quot;&gt;Notation&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;$P_{0j}^n$ is the probability of being in state j at the end of the nth
+transition, conditional on starting in state 0.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;i\(P_{0 j}^{n}=\left(\begin{array}{l}{n} \\ {k}\end{array}\right) p^{k} q^{n-k}
+\quad \text { where } k=\frac{j+n}{2}\)&lt;/p&gt;
+
+&lt;p&gt;According to the central limit theorem &lt;br /&gt;
+\(\left.P_{0 j}^{n} \sim \frac{1}{\sqrt{2 \pi n p q}} \exp \left[\frac{-(k-n
+p)^{2}}{2 p q n}\right]\right\}
+\text { where } k=\frac{j+n}{2}\)&lt;/p&gt;
+
+&lt;h4 id=&quot;renewal-theory-and-markov-chains&quot;&gt;Renewal Theory and Markov Chains&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;The matrix approach used to analyze finite-state Markov chains does not
+generalize easily to the countable-state case.&lt;/li&gt;
+  &lt;li&gt;Fortunately, renewal theory is ideally suited for this purpose, especially
+for analyzing the long term behavior of countable-state Markov chains.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Renewal Process: for a recurrent state j, the sequence of subsequent entries to
+state j, conditional on starting in j, forms a renewal process.&lt;/li&gt;
+  &lt;li&gt;First-passage-time Probability: $f_{ij}(n)$, of a Markov chain is the
+probability, condtitional on $X_0=i$, that the first subsequent entry to
+state $j$ occurs at discrete epoch n.&lt;/li&gt;
+  &lt;li&gt;Birth-death Markov chains: A birth-death Markov chain is a Markov chain in
+which the state space is the set of nonngeative integers; for all $i\geq 0$,
+the transition probabilities satisfy $P_{i,i+1}&amp;gt;0$ and $P_{i+1,i}&amp;gt;0$, and for
+all $|i-j|&amp;gt;1$, $P_{ij}=0$
+    &lt;ul&gt;
+      &lt;li&gt;death: A transition from state i to i+1 is regarded as a birth and one from
+i+1 to i as a death.&lt;/li&gt;
+      &lt;li&gt;birth-death processes arise in queueing theory, where the state is the number
+of customers, births are customer arrivals, and deaths are customer
+departures.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-262-discrete-stochastic-processes-spring-2011/course-notes/MIT6_262S11_chap05.pdf&quot;&gt;Countable State Markov Chains&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/math/math-apply-stochastic-process-markov-chain-countable-state.html</link>
+    <guid>/math/math-apply-stochastic-process-markov-chain-countable-state</guid>
+    <pubDate>Fri, 17 May 2019 00:00:00 +0900</pubDate>
   </item>
 
   <item>
@@ -11040,103 +11032,6 @@ distribution of y given x is a Gaussian distribution.
 </description>
     <link>/math/math-apply-information-theory-exact-marginalization.html</link>
     <guid>/math/math-apply-information-theory-exact-marginalization</guid>
-    <pubDate>Mon, 25 Feb 2019 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
-    <title>I.T.: Entropy</title>
-    <description>
-&lt;h3 id=&quot;1-entropy&quot;&gt;1. Entropy&lt;/h3&gt;
-
-&lt;h4 id=&quot;11--definition&quot;&gt;1.1  Definition&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;The Shannon information content of an outcome x is defined to be: &lt;br /&gt;
-$h(x)=log_2{\frac{1}{P(x)}}$
-    &lt;ul&gt;
-      &lt;li&gt;If $P(x)=\frac{1}{64}$, then $h(x)=6$, how to understand this, it’s kind of
-weired.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;The entropy of an ensemble X is defined to be the average Shannon information
-content of an outcome: &lt;br /&gt;
-\(H(X) \equiv \sum_{x \in \mathcal{A}_{X}} P(x) \log \frac{1}{P(x)}\)
-    &lt;ul&gt;
-      &lt;li&gt;$H(X) \geq 0$ with equality iff $p_i=1$ for one i&lt;/li&gt;
-      &lt;li&gt;Entropy is maximized if p is uniform:
-$H(X) \leq log(|\mathcal{A}_X|)$ with equality iff $p_i=\frac{1}{|\mathcal{A}_X|}$&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;the Entropy(H) is a nice measure of how uncertian the events. The Shannon Entropy measures the average
-imformation that you get from one sample drawn from a given probability.It tells you how unpredictable
-that the probability distribution is. &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;actually, we can treat this function as a functional example, because a function to a value, namely, the function of a function&lt;/p&gt;
-
-&lt;h4 id=&quot;12-joint-entropy&quot;&gt;1.2 Joint Entropy&lt;/h4&gt;
-&lt;p&gt;Joint entropy of X,Y is: &lt;br /&gt;
-\(H(X, Y)=\sum_{x y \in \mathcal{A}_X \mathcal{A}_{Y}} P(x, y) \log
-\frac{1}{P(x, y)}\)&lt;/p&gt;
-
-&lt;h4 id=&quot;13--relative-entropy&quot;&gt;1.3  Relative Entropy&lt;/h4&gt;
-&lt;p&gt;The relative entropy or Kullback-Leibler divergence between two probability
-distributions P(x) and Q(x) that are defined over the same alphabet
-$\mathcal{A_X}$ is &lt;br /&gt;
-\(D_{\mathrm{KL}}(P \| Q)=\sum_{x} P(x) \log \frac{P(x)}{Q(x)}\) &lt;br /&gt;
-Gibbs’ inequality, the &lt;strong&gt;most&lt;/strong&gt; important inequality in information theory. 
-\(D_{\mathrm{KL}}(P \| Q) \geq 0\)&lt;/p&gt;
-
-&lt;p&gt;Proof: Uses Jensen’s inequality with $Q(x)$ instead, we define $f(u)=u\log u$
-and let $u=\frac{P(x)}{Q(x)}$ &lt;br /&gt;
-\(\begin{aligned} D_{\mathrm{KL}}(P \| Q) &amp;amp;=\sum_{x} Q(x) \frac{P(x)}{Q(x)} \log
-\frac{P(x)}{Q(x)}=\sum_{x} Q(x) f\left(\frac{P(x)}{Q(x)}\right) \\ &amp;amp; \geq
-f\left(\sum_{x} Q(x) \frac{P(x)}{Q(x)}\right)=f(1)=0 \end{aligned}\)&lt;/p&gt;
-
-&lt;h3 id=&quot;2-chain-rule&quot;&gt;2 Chain rule&lt;/h3&gt;
-
-&lt;h4 id=&quot;21-chain-rule-for-information-content&quot;&gt;2.1 Chain rule for information content&lt;/h4&gt;
-&lt;p&gt;$log \frac{1}{P(x,y)}=log{1}{P(x)}+log{1}{P(y|x)}$ &lt;br /&gt;
-so &lt;br /&gt;
-$h(x,y)=h(x)+h(y|x)$
-&lt;br /&gt;&lt;/p&gt;
-&lt;h4 id=&quot;22-chain-rule-for-entropy&quot;&gt;2.2 Chain rule for entropy&lt;/h4&gt;
-&lt;p&gt;The joint entropy, conditional entropy and marigal entropy are related by: &lt;br /&gt;
-$H(X,Y)=H(X)+H(Y|X)=H(Y)+H(X|Y)$ &lt;br /&gt;
-In words, this says that the uncertainty of X and Y is the uncertainty of X plus
-the uncertainty of Y given X.&lt;/p&gt;
-
-&lt;h4 id=&quot;23--mutual-information-between-x-and-y&quot;&gt;2.3  Mutual Information Between X and Y&lt;/h4&gt;
-&lt;p&gt;\(I(X ; Y) \equiv H(X)-H(X | Y)\) &lt;br /&gt;
-It measures the average reduction in uncertainty about x that results from
-learning the value of y;&lt;/p&gt;
-
-&lt;h4 id=&quot;conditional-mutual-information-between-x-and-y-given-zc_k&quot;&gt;Conditional Mutual Information Between X and Y given $z=c_k$&lt;/h4&gt;
-&lt;p&gt;\(I\left(X ; Y | z=c_{k}\right)=H\left(X | z=c_{k}\right)-H\left(X | Y,
-z=c_{k}\right)\)&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/math-apply-informtion-theory-entropy-notation-relationship-entropy.png&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;galois&quot;&gt;Galois&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;\(I(X ; Y) \equiv H(X)-H(X | Y)\)
-    &lt;ul&gt;
-      &lt;li&gt;I have been confused by this formula for a long time, what does this mean? why this make sense&lt;/li&gt;
-      &lt;li&gt;You can treat information or entropy as physics quantity, such as mass, or volume.&lt;/li&gt;
-      &lt;li&gt;what does this formula do is it measure the entropy before it flow into this
-channel which is H(X), than it measures the effect of this channel on this
-entropy, which is $H(X|Y)$. After the things get out of this channel, how much information left? which is $H(X) - H(X|Y)$&lt;/li&gt;
-      &lt;li&gt;which is complete make sense&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Shannon is really clever, treat this things as a physics quantity, it’s unbelievable.&lt;/li&gt;
-  &lt;li&gt;As you can see, at first, entropy is kind of intractable, it just starts with very simple idea.&lt;/li&gt;
-  &lt;li&gt;I want to be a mathematician, かっこいいな&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-    <link>/math/math-apply-information-theory-entropy.html</link>
-    <guid>/math/math-apply-information-theory-entropy</guid>
     <pubDate>Mon, 25 Feb 2019 00:00:00 +0900</pubDate>
   </item>
 
@@ -14246,6 +14141,137 @@ rewrite the expression, that’s all the point.&lt;/li&gt;
   </item>
 
   <item>
+    <title>V.A.: Metric Tensor</title>
+    <description>
+&lt;h4 id=&quot;metric-tensor&quot;&gt;Metric Tensor&lt;/h4&gt;
+
+&lt;p&gt;Metric tensor is used to measure the length of vector. &lt;strong&gt;Please remember the
+following picture&lt;/strong&gt; 
+\(g_{\vec{e}_{i}}=\left[\begin{array}{ll}{\overrightarrow{e_{1}} \cdot
+\overrightarrow{e_{1}}} &amp;amp; {\overrightarrow{e_{1}} \cdot \overrightarrow{e_{2}}}
+\\ {\overrightarrow{e_{2}} \cdot \overrightarrow{e_{1}}} &amp;amp;
+{\overrightarrow{e_{2}} \cdot
+\overrightarrow{e_{2}}}\end{array}\right]_{\overrightarrow{e_{i}}}\)&lt;/p&gt;
+
+&lt;h4 id=&quot;obtain&quot;&gt;Obtain&lt;/h4&gt;
+&lt;p&gt;\(\begin{array}{l}{\text {arc length}=\lim _{\Delta t \rightarrow 0} \sum_{i}
+\frac{\left\|\vec{R}\left(t_{i+1}\right)-\vec{R}\left(t_{i}\right)\right\|}{\Delta
+t} \Delta t} \\ {\text {arclength}=\int\left\|\frac{d \vec{R}}{d t}\right\| d
+t}\end{array}\)&lt;/p&gt;
+
+&lt;h4 id=&quot;arc-length&quot;&gt;Arc Length&lt;/h4&gt;
+&lt;p&gt;\(\begin{aligned}\left\|\frac{d \vec{R}}{d \lambda}\right\|^{2} &amp;amp;=\frac{d
+\vec{R}}{d \lambda} \cdot \frac{d \vec{R}}{d \lambda} \\ &amp;amp;=\left(\frac{\partial
+\vec{R}}{\partial x} \frac{d x}{d \lambda}+\frac{\partial \vec{R}}{\partial y}
+\frac{d y}{d \lambda}\right) \cdot\left(\frac{\partial \vec{R}}{\partial x}
+\frac{d x}{d \lambda}+\frac{\partial \vec{R}}{\partial y} \frac{d y}{d
+\lambda}\right) \\ &amp;amp;=\left(\frac{d x}{d \lambda}\right)^{2}\left(\frac{\partial
+\vec{R}}{\partial x} \cdot \frac{\partial \vec{R}}{\partial x}\right)+2 \frac{d
+x}{d \lambda} \frac{d y}{d \lambda}\left(\frac{\partial \vec{R}}{\partial x}
+\cdot \frac{\partial \vec{R}}{\partial y}\right)+\left(\frac{d y}{d
+\lambda}\right)^{2}\left(\frac{\partial \vec{R}}{\partial y} \cdot
+\frac{\partial \vec{R}}{\partial y}\right) \end{aligned}\) &lt;br /&gt;
+Just  the same as: &lt;br /&gt;
+\(\begin{aligned}\|\vec{v}\|^{2} &amp;amp;=\vec{v} \cdot \vec{v} \\ &amp;amp;=\left(v^{1}
+\overrightarrow{e_{1}}+v^{2} \overrightarrow{e_{2}}\right) \cdot\left(v^{1}
+\overrightarrow{e_{1}}+v^{2} \overrightarrow{e_{2}}\right) \\
+&amp;amp;=\left(v^{1}\right)^{2}(\overrightarrow{e_{1}} \cdot \overrightarrow{e_{1}})+2
+v^{1} v^{2}(\overrightarrow{e_{1}} \cdot
+\overrightarrow{e_{2}})+\left(v^{2}\right)^{2}(\overrightarrow{e_{2}} \cdot
+\overrightarrow{e_{2}}) \end{aligned}\)&lt;/p&gt;
+
+&lt;p&gt;Einstein Notation  $c^1=x, c^2=y$&lt;br /&gt;
+\(\begin{aligned}\left\|\frac{d \vec{R}}{d \lambda}\right\|^{2} &amp;amp;=\frac{d
+\vec{R}}{d \lambda} \cdot \frac{d \vec{R}}{d \lambda} \\ &amp;amp;=\left(\frac{d c}{d
+\lambda} \frac{\partial \vec{R}}{\partial c^{i}}\right) \cdot\left(\frac{d
+c^{j}}{d \lambda} \frac{\partial \vec{R}}{\partial c^{j}}\right) \\ &amp;amp;=\frac{d
+c^{i}}{d \lambda} \frac{d c^{j}}{d \lambda}\left(\frac{\partial
+\vec{R}}{\partial c^{i}} \cdot \frac{\partial \vec{R}}{\partial c^{j}}\right)
+\end{aligned}\)&lt;/p&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;When I first encounter the metric tenosr, I totally have no idea what does
+this stand for. Because first I kind of afraid of matrix, I didn’t realize
+it’s a new form to rewrite the expression, It kinds of mysteric, and confuse
+to me; Second, tensor is a complete new to me.&lt;/li&gt;
+  &lt;li&gt;After you realized that metric tensor just a fancy way to rewrite the
+algebra expression, you are so happy.&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/math/math-change-vector-analysis-metric-tensor.html</link>
+    <guid>/math/math-change-vector-analysis-metric-tensor</guid>
+    <pubDate>Sat, 01 Dec 2018 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>V.A.: Kronecker Delta</title>
+    <description>
+&lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
+&lt;p&gt;\(\delta_{i j}=\left\{\begin{array}{ll}{0} &amp;amp; {\text { if } i \neq j} \\ {1} &amp;amp;
+{\text { if } i=j}\end{array}\right.\)&lt;/p&gt;
+
+&lt;h4 id=&quot;example&quot;&gt;Example&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;The inner product of vector: \(\mathbf{a} \cdot \mathbf{b}=\sum_{i,
+j=1}^{n} a_{i} \delta_{i j} b_{j}\)
+    &lt;ul&gt;
+      &lt;li&gt;
+\[a=\sum_{i j} a_{i} c_{j} \delta_{i j}=b_1 c_1 \delta_{11}+b_1 c_2
+\delta_{12} b_2 c_1 \delta_{21}+b_2 c_2 \delta_{22}\]
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;where $\delta_{12}$ and $\delta_{21}$ are zeros&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;\(\begin{aligned} \sum_{j} \delta_{i j} a_{j} &amp;amp;=a_{i} \\ \sum_{i} a_{i}
+\delta_{i j} &amp;amp;=a_{j} \\ \sum_{k} \delta_{i k} \delta_{k j} &amp;amp;=\delta_{i j}
+\end{aligned}\)
+    &lt;ul&gt;
+      &lt;li&gt;for the third formula, maybe you need spent a little time to think about it,
+but it’s not that difficult. for the two items, we only need consider about
+the first term \(\delta_{i k}\) is when i equals to k, so we only have
+\(\delta_{i i}\), it’s the same rule, we have only \(\delta_{j j}\), so what’s
+the result of \(\delta_{i i} \delta_{j j}\)&lt;/li&gt;
+      &lt;li&gt;it can also be treated as an identity matrix&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;2021/05/10 update&lt;/li&gt;
+  &lt;li&gt;I thought I understand this problem, actually, I didn’t get the essence.&lt;/li&gt;
+  &lt;li&gt;The essence is as the following: If kronecker delta are involved, keep the
+free index, throw away the dummy index.&lt;/li&gt;
+  &lt;li&gt;Keep the free index, throw the dummy index away.&lt;/li&gt;
+  &lt;li&gt;You can apply these simple rule to the above-mentioned second example, it’s trivial.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Why we invent this sign, becasue it can used to express our equation in a
+more compact and concise way, just like matrix, without any linear algebra
+background, you can just treat matrix sign, as a more efficient and compact
+way for expressions&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Kronecker_delta#Definitions_of_the_generalized_Kronecker_delta&quot;&gt;kronecker delta-wiki&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/math/math-change-vector-analysis-kronecker-delta-function.html</link>
+    <guid>/math/math-change-vector-analysis-kronecker-delta-function</guid>
+    <pubDate>Sat, 01 Dec 2018 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
     <title>V.A.: Introduction</title>
     <description>
 &lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
@@ -17293,84 +17319,6 @@ from me. ahaahaaha…. &lt;br /&gt;&lt;/p&gt;
   </item>
 
   <item>
-    <title>R.G.: Differential Manifold</title>
-    <description>
-&lt;h4 id=&quot;questions-why-we-need-talk-about-differentiable-manifolds&quot;&gt;Questions: why we need talk about differentiable Manifolds?&lt;/h4&gt;
-&lt;p&gt;It’s important to figure out what kind of structure we need to add on
-topological manifold in order to start talking about differentiablity of curves
-on Manifolds, about differentiblility of functions on manifolds, even about the
-diff- erentiability of maps from one manifold to another manifold.&lt;/p&gt;
-
-&lt;h4 id=&quot;but-how-to-define-differential-and-this-is-the-strategy&quot;&gt;but how to define differential and this is the strategy&lt;/h4&gt;
-&lt;p&gt;idea: try to lift the undergraduate notion of differentiability of a cuve on
-\(R^{d}\) to a notion of differentiability of a curve on M.&lt;/p&gt;
-
-&lt;h4 id=&quot;compatible-charts&quot;&gt;compatible charts&lt;/h4&gt;
-&lt;p&gt;In previous lecture, we used any imaginable charts on the topological manifold
-\((M,O)\). &lt;br /&gt; To emphasis this, we may say that we took u and v form the
-&lt;strong&gt;maximum atlas&lt;/strong&gt; of \((M,O)\)&lt;/p&gt;
-
-&lt;h4 id=&quot;submanifold&quot;&gt;Submanifold&lt;/h4&gt;
-&lt;p&gt;In mathematics, a submanifold of a manifold M is a subset $S$ which itself has
-the structure of a manifold, and for which the inclusion map&lt;/p&gt;
-
-&lt;h4 id=&quot;theorem&quot;&gt;Theorem&lt;/h4&gt;
-&lt;p&gt;For any \(C^{K&amp;gt;1}-atlas\) of a topological  \(manifold (M,O,A_{c^{k&amp;gt;1}})\)
-contains a \(C^{\infty}-atlas\) &lt;br /&gt; \(C^{\infty}-manifolds\) are called
-smooth manifolds unless we with to define Taylor expandibility and complex
-differentibiliay where &lt;br /&gt;&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;The \(C^{\infty}\) means, it would suffice for the relevant functions to be
-differentiable some appropriate number of times. Intuitively, we may consider
-\(C^{\infty}\) to simply mean “sufficiently smooth”.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;example&quot;&gt;Example&lt;/h4&gt;
-&lt;p&gt;Let \(f: S \rightarrow R\) be a function on a manifold S. Then if we select a
-coordiante system \(\varphi = [\xi^{i}]\) for S.  This function maybe rewritten
-as a function of the coordinates; letting \([\xi^{i}]\) denote the coordinates
-of the point p, we have &lt;br /&gt; 
-\(f(p)=\bar{f}\left(\xi^{1}, \cdots, \xi^{n}\right), \text { where } \bar{f}=f
-\circ \varphi^{-1}\) &lt;br /&gt;
-Note that \(\bar{f}\) is a real-valued function whose domain is \(\varphi(S)\),
-an open subset of \(R^{n}\). &lt;br /&gt;
-When \(\bar{f}=f \circ \varphi^{-1} \text { is } C^{\infty}\), in other words,\(\bar{f}\left(\xi^{1}, \cdots, \xi^{n}\right)\)
-can be partially differentiated with respect to its variables an unbounded
-number of times, we call \(f\) a \(C^{\infty}\) function on S.&lt;/p&gt;
-
-&lt;h4 id=&quot;terminology&quot;&gt;terminology&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;isomorphic: a set M and a set N are called isomorphic, &lt;strong&gt;set theortically
-speaking&lt;/strong&gt; if there exists an bijection between them. These definition only
-on &lt;strong&gt;set structure&lt;/strong&gt;.&lt;br /&gt;
-\(\exists M \rightarrow N\), bijection &lt;br /&gt;
-This case is called isomorphism; these sets are called isomorphic.&lt;/li&gt;
-  &lt;li&gt;homoporphic: two set but equipped with topology, \((M,O_{M})\) and
-\((N,O_{N})\). and now we going to define &lt;strong&gt;topological isomorphic&lt;/strong&gt;, with a
-traditional name &lt;strong&gt;homeomorphic&lt;/strong&gt;.  which means they are at the &lt;strong&gt;set level&lt;/strong&gt;
-isomorphic, additionaly, not only a bijection, but also continuously, because
-continuity are structure related concept   &lt;br /&gt; \(\exists M \rightarrow
-N\), bijection &lt;br /&gt;
-homeomorphic is a strong definition, compared with isomorphic.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;word-iso--and-homo-&quot;&gt;word: iso- and homo-&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;the difference between [iso-] and [homo-] is the difference being
-equivalent or identical. [iso-] means identical, [Homo-] means identical.&lt;/li&gt;
-  &lt;li&gt;There is a subtle but clear difference between equivalent and identical. For
-example, the prime mnister of the UK is equivalent of the chancellor of
-Germany. In both cases, the person holding office is the head of the
-goverment. The two are equivalent, but they are not identical.&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-    <link>/math/math-space-riemann-geometry-differentiable-manifold.html</link>
-    <guid>/math/math-space-riemann-geometry-differentiable-manifold</guid>
-    <pubDate>Fri, 21 Sep 2018 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
     <title>R.G.: Connections</title>
     <description>&lt;h4 id=&quot;directional-derivative-of-tensor-field&quot;&gt;Directional derivative of tensor field&lt;/h4&gt;
 &lt;p&gt;we formulate a wish list of properties what the \(\nabla_{X}\) acting on a tensor field should have.&lt;/p&gt;
@@ -17446,6 +17394,74 @@ change covariantly with respect to changes in coordinates.&lt;/li&gt;
 </description>
     <link>/math/math-space-riemann-geometry-connection.html</link>
     <guid>/math/math-space-riemann-geometry-connection</guid>
+    <pubDate>Fri, 21 Sep 2018 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>R.G.: Chart</title>
+    <description>
+&lt;h4 id=&quot;background&quot;&gt;Background&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;There are so many topological spaces that mathematicians can not to classify them, such as Hausdorff space, compact space.&lt;/li&gt;
+  &lt;li&gt;For spacetime phyisics, we may focus on topological space (M,O) that can be charted, analogously to how the surface of the
+earth is charted in an altas.&lt;/li&gt;
+  &lt;li&gt;this special topological spaces is called topological manifolds.
+&lt;br /&gt;
+Def: A topological space (M,O) is called a d-dimensional topological manifold if&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h5 id=&quot;terminology&quot;&gt;Terminology&lt;/h5&gt;
+&lt;ol&gt;
+  &lt;li&gt;chart: according to Merriam-Webster, chat is a map of an area. &lt;br /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;\((u,x)\) is a chart, where u is an open set, and x is a one-to-one map.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;\((u,x)\) is  chart of (M,O)&lt;/li&gt;
+  &lt;li&gt;altas, the collection of charts&lt;/li&gt;
+  &lt;li&gt;coordinate maps: just a kind of chart if
+\(x^{1} \rightarrow R\) &lt;br /&gt;
+\(x^{...} \rightarrow R\)  and    \(x: u \rightarrow R^{d}\) &lt;br /&gt;
+\(x^{d} \rightarrow R\) &lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;Chart transition maps&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;terminology-coordinates-and-global-coordinate&quot;&gt;Terminology: Coordinates and Global Coordinate&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;A manifold S is a set with a coordinate system. Since S is a set, it has elements. It does not matter what these elements are,
+these elements are called &lt;strong&gt;point&lt;/strong&gt; of S. S must also have a &lt;strong&gt;coordinate system&lt;/strong&gt;. By this we mean a one-to-one mapping from
+from S to \(R^{n}\). which allows us to specify each point in S using a vector of n real numbers. this vector is called the 
+&lt;strong&gt;coordiates&lt;/strong&gt; of the corresponding point. We call the natural number n the dimension of S, and write n=dim S&lt;/li&gt;
+  &lt;li&gt;we call a coordinate system that has S as its domain &lt;strong&gt;a global coordinate system&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;terminology-coordinate-transformation&quot;&gt;Terminology: Coordinate Transformation&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/riemann-geometry-coordiate-transform.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;remark&quot;&gt;Remark&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;The chart is so different from the real world, we need to get the relationship between the chart and the real world.&lt;/li&gt;
+  &lt;li&gt;To consider S as a manifold means that one is interested in investigating those properties of S which are invariant under coordinate transformations.
+In particular, differential geometry analyzes the geometry of objects  using defferential operators with respect to a variety of functions on S, and it
+would be problematic if these operators depended fundamentally on the choice of coordinates. Hence it is necessary to restric the coordiantes systems to those
+which allow smooth transformations between each other.&lt;/li&gt;
+  &lt;li&gt;No matter which object we want to study, &lt;strong&gt;the philosophy is based on two charts&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h5 id=&quot;example&quot;&gt;Example&lt;/h5&gt;
+&lt;ol&gt;
+  &lt;li&gt;the surface of doughnut is a two-dimensional topoligical manifold.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;history&quot;&gt;History&lt;/h4&gt;
+&lt;p&gt;Riemann Geometry origins from differential geometry, and the basic strategy of differential 
+geometry is parameterization. So, so called chared just a generalization of parameterization of 
+curves, surfaces.&lt;/p&gt;
+
+</description>
+    <link>/math/math-space-riemann-geometry-chart.html</link>
+    <guid>/math/math-space-riemann-geometry-chart</guid>
     <pubDate>Fri, 21 Sep 2018 00:00:00 +0900</pubDate>
   </item>
 
@@ -26116,116 +26132,6 @@ describe the semantics.&lt;/li&gt;
   </item>
 
   <item>
-    <title>A.D.: Dynamic Programming</title>
-    <description>
-&lt;p&gt;####&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;why we call this boy dynamic programming,
-    &lt;ul&gt;
-      &lt;li&gt;Dynamic why, why ? just a fancy terminology, it sounded cool.&lt;/li&gt;
-      &lt;li&gt;Programming means optimization in America.&lt;/li&gt;
-      &lt;li&gt;DP is “careful brute force”&lt;/li&gt;
-      &lt;li&gt;Dp is guessing + recursion + momoization&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;topological sort of subproblem dependency DAG.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;define subproblems: is the most difficult part, need some insight.
-    &lt;ul&gt;
-      &lt;li&gt;rule of thumb&lt;/li&gt;
-      &lt;li&gt;suffixes $x[i:]$: topological order is always right to left, decreasing i&lt;/li&gt;
-      &lt;li&gt;prefixes $x[:i]$: topologican order is always left to right, increasing i&lt;/li&gt;
-      &lt;li&gt;substrings: increase substring&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;guess:
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;what to guess&lt;/strong&gt;, maybe the most important problem, with some
-practice, you can get it.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;recurrence&lt;/li&gt;
-  &lt;li&gt;recurrence + momoize&lt;/li&gt;
-  &lt;li&gt;solve original problem
-    &lt;ul&gt;
-      &lt;li&gt;parent pointer&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;application&quot;&gt;Application&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;naive&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;fib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Memoized DP Algorithm
-    &lt;ul&gt;
-      &lt;li&gt;fib(k) only recurses the first time it is called&lt;/li&gt;
-      &lt;li&gt;memoized calls cost O(1)&lt;/li&gt;
-      &lt;li&gt;nonmemoized calls is n: fib(1), fib(2), … ,fib(n)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;memo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;memo_fib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;memo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;memo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;memo_fib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;memo_fib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;memo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Bottom-up DP Algorithm&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;bottom_up_fib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;fib&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;fib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;  
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;application-1&quot;&gt;Application&lt;/h4&gt;
-
-&lt;h5 id=&quot;shortest-path-problem&quot;&gt;Shortest Path Problem&lt;/h5&gt;
-&lt;h5 id=&quot;text-justification&quot;&gt;Text Justification&lt;/h5&gt;
-&lt;ol&gt;
-  &lt;li&gt;Microsoft Word: greedy&lt;/li&gt;
-  &lt;li&gt;Latex: badness = $(\text{page width - total width})^3$&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h5 id=&quot;parenthesization&quot;&gt;Parenthesization&lt;/h5&gt;
-&lt;h5 id=&quot;edit-distance&quot;&gt;Edit Distance&lt;/h5&gt;
-&lt;h5 id=&quot;knapsack&quot;&gt;Knapsack&lt;/h5&gt;
-
-</description>
-    <link>/algorithm/agorithm-design-dynamic-programming.html</link>
-    <guid>/algorithm/agorithm-design-dynamic-programming</guid>
-    <pubDate>Thu, 15 Jun 2017 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
     <title>A.D.: Dynamic Programming - text justification</title>
     <description>
 &lt;h4 id=&quot;recurrence-relation&quot;&gt;Recurrence relation&lt;/h4&gt;
@@ -28947,181 +28853,6 @@ in command line, first, you click the prefix, then type the command&lt;/li&gt;
   </item>
 
   <item>
-    <title>Editor: Vimscript basic</title>
-    <description>
-&lt;h3 id=&quot;1-introduction&quot;&gt;1. Introduction&lt;/h3&gt;
-&lt;p&gt;This software is plugin system, so it is very flexible and diffcult to learn.
-it heavily depends on the plugin and shortcut to improve the efficient.&lt;/p&gt;
-
-&lt;h3 id=&quot;2-常用功能&quot;&gt;2. 常用功能&lt;/h3&gt;
-
-&lt;h4 id=&quot;21-setting&quot;&gt;2.1 Setting&lt;/h4&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;set relativenumber!&lt;/li&gt;
-  &lt;li&gt;set cursorline&lt;/li&gt;
-  &lt;li&gt;syntax off  I spend a lot of time to fix this simple question, crap !!!!!!!!&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;22-register&quot;&gt;2.2 register&lt;/h4&gt;
-&lt;p&gt;To access a register, type &lt;strong&gt;“a&lt;/strong&gt;, &lt;strong&gt;a&lt;/strong&gt; is the name of the register. &lt;br /&gt;
-:reg to check out the content of the  register &lt;br /&gt;&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;to paste from system clipboard on Mac  &lt;strong&gt;”*p&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;to copy into system clipboard on Mac &lt;strong&gt;”*yy&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;23-format&quot;&gt;2.3 format&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;select the lines of text you want to re-format:
-    &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;v
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;reformat it
-    &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gq
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;h4 id=&quot;24-code-folding&quot;&gt;2.4 Code folding&lt;/h4&gt;
-  &lt;/li&gt;
-  &lt;li&gt;zc: fold up&lt;/li&gt;
-  &lt;li&gt;zR: unfold&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s2&quot;&gt;&quot; set the folding method in configuration file
-set foldmethod=indent
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;25-search&quot;&gt;2.5 Search&lt;/h4&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;/target 从文档的开始匹配目标字符串，n匹配下一个，N匹配上一个&lt;/li&gt;
-  &lt;li&gt;?target 从文档的结束位置匹配目标字符串，n匹配下一个，N匹配上一个&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;26-delete&quot;&gt;2.6 Delete&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;ctrl+w 删除光标所在行的光标之前的文字&lt;/li&gt;
-  &lt;li&gt;ndd 删除光标所在行的后n行，包括光标所在行&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;版本查看&quot;&gt;版本查看&lt;/h4&gt;
-&lt;p&gt;:version 查看vim支持的插件，如python等
-:set  show vars different from defaults
-:h key-notation 查看键盘映射
-:ctrl+r anti-cancel
-:set colorcolumn=80 lenght marke&lt;/p&gt;
-
-&lt;h4 id=&quot;code-complete&quot;&gt;Code Complete&lt;/h4&gt;
-
-&lt;p&gt;ctrl+p 默认的代码补全功能是根据缓冲区中的内容进行正则匹配&lt;/p&gt;
-
-&lt;h4 id=&quot;javascript&quot;&gt;javascript&lt;/h4&gt;
-
-&lt;p&gt;在.vimrc配置文件中添加&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;ctrl+x ctrl+o 方向箭头选择补全的文本&lt;/p&gt;
-
-&lt;h4 id=&quot;十六进制查看&quot;&gt;十六进制查看&lt;/h4&gt;
-
-&lt;p&gt;在normal模式中输入”:%!xxd”
-切换回常规模式:”:%!xxd -r”&lt;/p&gt;
-
-&lt;h4 id=&quot;auto-indent&quot;&gt;auto indent&lt;/h4&gt;
-
-&lt;p&gt;vim在粘贴代码时会自动缩进，把代码搞得一团糟糕，需要提前设置&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;set paste&lt;/li&gt;
-  &lt;li&gt;set nopaste&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;copy into vim from GUI results missing line&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;before pasting to vim, make sure the Insert Mode is activated.&lt;/li&gt;
-  &lt;li&gt;the reason is that paste character &lt;strong&gt;i&lt;/strong&gt; or character &lt;strong&gt;o&lt;/strong&gt; will trigger
-insert mode, and you will miss everying before&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;joining-two-lines-with-j&quot;&gt;joining two lines with J&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;J joins the line the cursor is on with the line below&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;open-file&quot;&gt;open file&lt;/h4&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;vim -On file1 file2 n表示要打开的文件数，O大写表示打开垂直窗口&lt;/li&gt;
-  &lt;li&gt;open a new window below the current one
-    &lt;ul&gt;
-      &lt;li&gt;:new filename&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;open a new window beside the current one
-    &lt;ul&gt;
-      &lt;li&gt;:vert new filename&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;vim中执行shell命令&quot;&gt;vim中执行shell命令&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;!command
-不退出vim并执行shell命令command,输出命令显示在vim的命令区域，不改变当前编辑的文件内容&lt;/li&gt;
-  &lt;li&gt;r !command 将shell命令command的结果插入到当前行的下一行&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;tab与空格替换&quot;&gt;tab与空格替换&lt;/h4&gt;
-&lt;p&gt;a tab could be a different number of columns depending on your enviroment&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# substitue tab for space
-:set ts=4
-:set expandtab
-:%retab!
-
-# substitue space for tab
-:set ts=4
-:set noexpandtab
-:%retab!
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;3-mode&quot;&gt;3. Mode&lt;/h3&gt;
-
-&lt;h4 id=&quot;33-recording-mode&quot;&gt;3.3 Recording Mode&lt;/h4&gt;
-
-&lt;p&gt;record type character into register&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;press q to enter into recording mode in normal mode, and vim begin to record
-your operation&lt;/li&gt;
-  &lt;li&gt;press q to end recording in normal mode&lt;/li&gt;
-  &lt;li&gt;press @&amp;lt;letter&amp;gt; to replay the recorded operation&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;参考内容 &lt;br /&gt;&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;http://learnvimscriptthehardway.onefloweroneworld.com/chapters/12.html&quot;&gt;learn vim the hardest way&lt;/a&gt; &lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.cs.swarthmore.edu/oldhelp/vim/help.html&quot;&gt;vim tip and tricks&lt;/a&gt; &lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://vim.sourceforge.io/docs.php&quot;&gt;vim教程官方网站&lt;/a&gt; &lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;ftp://ftp.vim.org/pub/vim/doc/book/vimbook-OPL.pdf&quot;&gt;vim官方网站pdf教程&lt;/a&gt; &lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/VundleVim/Vundle.vim&quot;&gt;vundle教程&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://ternjs.net/doc/manual.html#server&quot;&gt;tern安装教程&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://kien.github.io/ctrlp.vim/#installation&quot;&gt;CtrlP-plugin&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/1527784/what-is-vim-recording-and-how-can-it-be-disabled&quot;&gt;vim recording mode&lt;/a&gt; &lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/1497958/how-do-i-use-vim-registers&quot;&gt;vim register&lt;/a&gt; &lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://thoughtbot.com/blog/wrap-existing-text-at-80-characters-in-vim&quot;&gt;vim format&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    <link>/pl/pl-tool-editor-vimscript-basic.html</link>
-    <guid>/pl/pl-tool-editor-vimscript-basic</guid>
-    <pubDate>Thu, 11 May 2017 00:00:00 +0900</pubDate>
-  </item>
-
-  <item>
     <title>Git: transfer commit pull push fetch</title>
     <description>
 &lt;h4 id=&quot;the-output-of-git-pull&quot;&gt;The output of git pull&lt;/h4&gt;
@@ -29129,7 +28860,6 @@ your operation&lt;/li&gt;
 &lt;p&gt;&lt;img align=&quot;left&quot; src=&quot;/images/git/git-transfer-commit-pull-output.png&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;core&quot;&gt;Core&lt;/h4&gt;
-
 &lt;p&gt;&lt;em&gt;git fetch&lt;/em&gt; and &lt;em&gt;git merge&lt;/em&gt; are all just operations related to commits.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Git fetch&lt;/strong&gt; without arguments will update all the remote-tracking branches.
@@ -29157,9 +28887,6 @@ more like just checking to see if there are nay changes available.&lt;/p&gt;
     &lt;p&gt;git pull: on the other hand does that and brings those changes from the
 reomote repository.&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Git pull is short hand for git fetch followed by git merge FETCH_HEAD&lt;/p&gt;
-  &lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h4 id=&quot;21-git-merge&quot;&gt;2.1 git merge&lt;/h4&gt;
@@ -29186,7 +28913,6 @@ requirement for fast forward merge, it fails.&lt;/p&gt;
   &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/292357/what-is-the-difference-between-git-pull-and-git-fetch&quot;&gt;fetch and pull 1&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.freecodecamp.org/news/git-fetch-vs-pull/#:~:text=git%20fetch%20is%20the%20command,changes%20from%20the%20remote%20repository.&quot;&gt;fetch and pull 2&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/3340051/what-does-the-output-of-git-pull-actually-mean#:~:text=It%20finds%20all%20the%20objects,git%20book%20for%20more%20information.&quot;&gt;output of git pull&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/9237348/what-does-fetch-head-in-git-mean&quot;&gt;Git Fetch Head&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </description>
     <link>/os/pl-tool-git-transfer-commit-fetch-pull-push.html</link>
@@ -37698,6 +37424,200 @@ vertical or near-vertical lines) are doubled.
 </description>
     <link>/pl/pl-script-latex-fonts.html</link>
     <guid>/pl/pl-script-latex-fonts</guid>
+    <pubDate>Wed, 22 Feb 2017 00:00:00 +0900</pubDate>
+  </item>
+
+  <item>
+    <title>Latex: Figure</title>
+    <description>&lt;h3 id=&quot;1-basic-knowledge-of-an-figure&quot;&gt;1. Basic knowledge of an Figure&lt;/h3&gt;
+
+&lt;h4 id=&quot;11-dpi-and-ppi&quot;&gt;1.1 DPI and PPI&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;PPI describes the resolution in pixels of a digital image.&lt;/li&gt;
+  &lt;li&gt;DPI describes the the amount of ink dots on a printed image.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;12-eps-file&quot;&gt;1.2 EPS file&lt;/h4&gt;
+&lt;p&gt;A file ends with eps extension, you can make it as large as a billboard you see on the side of the highway.
+If you want to include an eps file in your document, just treat as an image. There is one thing
+that you should keep in mind, save the extension!&lt;/p&gt;
+
+&lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;\includegraphics&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;[scale=1]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;experiment&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;figure&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;13-svg&quot;&gt;1.3 SVG&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;convert an file with svg extension to file with pdf extension, the following command will generate two files:
+    &lt;ul&gt;
+      &lt;li&gt;a tex file which is the tex code&lt;/li&gt;
+      &lt;li&gt;a pdf file which is the image&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;inkscape &lt;span class=&quot;nt&quot;&gt;-D&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-z&lt;/span&gt; post_train.svg &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; post_train.pdf &lt;span class=&quot;nt&quot;&gt;--export-latex&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;integrated this file into pdf&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-tex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;\usepackage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;graphicx,import&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;\begin{figure}&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;\centering&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;\def\svgwidth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;\columnwidth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;\import&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;fig/&lt;span class=&quot;p&quot;&gt;}{&lt;/span&gt;pre&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;train.pdf&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;tex&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;\label&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;fig:train-process&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;\end{figure}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Open the generated file with pdf_tex extension, and it’s just a normal latex file. You can edit this file.
+    &lt;ul&gt;
+      &lt;li&gt;In the preamble of this file, it provides information about how to use it.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;%% Creator: Inkscape 1.0.2 (e86c8708, 2021-01-15), www.inkscape.org&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;%% Accompanies image file 'post_train.pdf' (pdf, eps, ps)&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;%%&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;%% To include the image in your LaTeX document, write&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;%%  instead of&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;%% To scale the image, write&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;2-positioning&quot;&gt;2. Positioning&lt;/h3&gt;
+
+&lt;h5 id=&quot;21-requirement&quot;&gt;2.1 requirement&lt;/h5&gt;
+&lt;ol&gt;
+  &lt;li&gt;The contents of this object, i.e., the image, cannot be broken over a page.&lt;/li&gt;
+  &lt;li&gt;We should be able to specify the position of this object in the document&lt;/li&gt;
+  &lt;li&gt;We should be able to add a caption to this object&lt;/li&gt;
+  &lt;li&gt;We should be able to add a reference to this object, so that it can be cross-referenced
+elsewhere in the document&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h5 id=&quot;22-floats&quot;&gt;2.2 Floats&lt;/h5&gt;
+&lt;p&gt;In latex, floats are used to contain things that must be placed inside a single page, i,e, they
+cannot be broken over multiple pages. floats can be used to contain tables and figures, but we can
+define new custom floats as well.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;The entity contained in a float is placed in a single page. If the entity(an image, for example)
+can not be contained in the space left in the current page, it is placed at the top of the next
+page&lt;/li&gt;
+  &lt;li&gt;Floats can be positioned whereever we specify - top, middle, bottom, left, right&lt;/li&gt;
+  &lt;li&gt;They can have a caption describing them.&lt;/li&gt;
+  &lt;li&gt;They are numbered(so we can references to them)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;3-basic-use&quot;&gt;3. Basic Use&lt;/h3&gt;
+
+&lt;h4 id=&quot;31-scale-a-figure&quot;&gt;3.1 Scale a figure&lt;/h4&gt;
+
+&lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;\begin{figure}&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;\centering&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;\includegraphics&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;[width=0.9\textwidth]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;./a0&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;figure&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;ann&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;for&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;clt&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;architecture.png&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;\end{figure}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h5 id=&quot;32-mutiple-imagessubfigures&quot;&gt;3.2 Mutiple images/subfigures&lt;/h5&gt;
+
+&lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;\begin{figure}&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;\caption&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Obtained nondominated solutions with NSGA II algorithm proceeds on
+	the constrained optimization problem.&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;  
+	&lt;span class=&quot;nt&quot;&gt;\begin{subfigure}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;.5&lt;span class=&quot;k&quot;&gt;\textwidth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;\includegraphics&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;[width=0.9\linewidth]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Figures/chapter3/fig/glass/1.png&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;\end{subfigure}&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;\begin{subfigure}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;.5&lt;span class=&quot;k&quot;&gt;\textwidth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;\includegraphics&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;[width=0.9\linewidth]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Figures/chapter3/fig/glass/3.png&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;\end{subfigure}&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;\begin{subfigure}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;.5&lt;span class=&quot;k&quot;&gt;\textwidth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;\includegraphics&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;[width=0.9\linewidth]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Figures/chapter3/fig/glass/5.png&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;\end{subfigure}&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;\begin{subfigure}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;.5&lt;span class=&quot;k&quot;&gt;\textwidth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;\includegraphics&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;[width=0.9\linewidth]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Figures/chapter3/fig/glass/7.png&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;\end{subfigure}&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;\begin{subfigure}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;.5&lt;span class=&quot;k&quot;&gt;\textwidth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;\includegraphics&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;[width=0.9\linewidth]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Figures/chapter3/fig/glass/9.png&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;\end{subfigure}&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;\begin{subfigure}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;.5&lt;span class=&quot;k&quot;&gt;\textwidth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;\includegraphics&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;[width=0.9\linewidth]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Figures/chapter3/fig/glass/10.png&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;\end{subfigure}&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;\label&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;fig:chapter3-ga&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;\end{figure}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;4-package&quot;&gt;4 Package&lt;/h3&gt;
+
+&lt;h4 id=&quot;41-graphicx-package&quot;&gt;4.1 graphicx package&lt;/h4&gt;
+&lt;p&gt;graphicx package takes care of the numbering and positioning of the image within the document.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;\linewidth: the picture will be scaled to fit the width of the document, as a result, smaller
+pictures are upscaled and larger pictures dowscaled respectively..&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;the location in the document&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;h(here): same location&lt;/li&gt;
+      &lt;li&gt;t(top): top of page&lt;/li&gt;
+      &lt;li&gt;b(bottom): bottom of page&lt;/li&gt;
+      &lt;li&gt;p(page): on an extra page&lt;/li&gt;
+      &lt;li&gt;!(override): will force the specified location&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h5 id=&quot;411-package-clash&quot;&gt;4.1.1 package clash&lt;/h5&gt;
+&lt;p&gt;The tikz package will load the graphicx automatically, so you can’t load it again.
+Trying to loading it with different options will cause “option clash”.&lt;/p&gt;
+
+&lt;h5 id=&quot;411-resizebox&quot;&gt;4.1.1: \resizebox&lt;/h5&gt;
+&lt;p&gt;scale figure or equation&lt;/p&gt;
+&lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;\begin{figure}&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;\resizebox&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;.9&lt;span class=&quot;k&quot;&gt;\linewidth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}{&lt;/span&gt;!&lt;span class=&quot;p&quot;&gt;}{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;\input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;plot.tex&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;\end{figure}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h5 id=&quot;42-float-package&quot;&gt;4.2 float package&lt;/h5&gt;
+&lt;p&gt;It allows to set the option to [H], which is even stricter than &lt;a href=&quot;adding [h!] behind the figure environment \begin tag will force the figure to be shown at&quot;&gt;h!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;43-subcaption-package&quot;&gt;4.3 subcaption package&lt;/h5&gt;
+&lt;p&gt;This package provides &lt;strong&gt;subfigure&lt;/strong&gt; environment;&lt;/p&gt;
+
+&lt;h5 id=&quot;44-subfigure-package&quot;&gt;4.4 subfigure package&lt;/h5&gt;
+
+&lt;p&gt;This package makes it easy to put subfigures in your figures. e.g., “Figure 1a and 1b”. For IEEE
+work, it is a good idea to load it with the tight package option to reduce the amount of white space
+around the subfigures.&lt;/p&gt;
+
+&lt;h5 id=&quot;45-afterpage-package&quot;&gt;4.5 afterpage package&lt;/h5&gt;
+
+&lt;p&gt;Put your figure in a separate page.&lt;/p&gt;
+
+&lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;\afterpage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;\begin{figure}&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;\end{figure}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\clearpage&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;5-reference&quot;&gt;5. Reference&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.99designs.jp/blog/tips/ppi-vs-dpi-whats-the-difference/&quot;&gt;DPI and PPI&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.latex-tutorial.com/tutorials/figures/&quot;&gt;figure in latex&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.overleaf.com/learn/latex/Positioning_of_Figures&quot;&gt;Positioning of Figures&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://tex.stackexchange.com/questions/182467/including-eps-figure-in-pdflatex&quot;&gt;eps format file within
+latex&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://tex.stackexchange.com/questions/98134/is-it-possible-to-scale-an-entire-beginfigure&quot;&gt;scale an figure&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://tex.stackexchange.com/questions/2099/how-to-include-svg-diagrams-in-latex&quot;&gt;How to include SVG diagrams in Latex&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://tex.stackexchange.com/questions/82153/option-clash-when-using-graphicx-and-tikz-packages&quot;&gt;option clash&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/pl/pl-script-latex-figure.html</link>
+    <guid>/pl/pl-script-latex-figure</guid>
     <pubDate>Wed, 22 Feb 2017 00:00:00 +0900</pubDate>
   </item>
 
