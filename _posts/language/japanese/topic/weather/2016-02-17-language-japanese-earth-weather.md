@@ -1,0 +1,24 @@
+---
+layout: post
+title: "地球: 天気"
+keywords: [""]
+description: ""
+category: "言葉"
+tags: ["日本語"]
+---
+{% include JB/setup %}
+
+####
+1. 雨
+2. 梅雨(つゆ): rainy season
+3. 大雨(おおあめ): heavy rain
+4. 蒸し暑い
+5. 豪雨(ごうう)
+6. 猛暑(もうしょ)
+
+####
+1. 降る
+2. 土砂降り(どしゃぶり): heavy rain
+
+####
+1. 雨降った場合.

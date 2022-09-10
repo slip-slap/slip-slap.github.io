@@ -1,0 +1,10 @@
+---
+layout: encrypted
+title: "Books, Movies and Music"
+keywords: []
+description: ""
+category: "life"
+tags: ["life"]
+
+encrypted: 1edcdee79998effbbe2d277fdcc66c7692272e458d06a4785d96f45f2905b776U2FsdGVkX1+96zACZg0VWVu9sI3/LnjgRNe6+Lyi/pVUn9JYUtjo3nwYd3Z+78WY9Z09CYI8xOK55E1e1YXPfV+54B11JTVX5RvdUZ8WkhVklBhK6yn9UKlkTVdocS9NPKzH0tviqGkkomdVH0fa5yHMYWbuC5OZuvS+eSx/dtKsX9mIv2x1t0F35ME4zKT5qxs35XcTglaYNjW5A/umNlLpnF55hd49qsv3svYXxuaYLo1bRYW+phZ4aXw0/dA33s3A2p8UFuvr8zT2q4hYikdtMvCru+m1kGtVQDf4Oi/YEIVEAL3WB7BGOJlDSTNBJ7iO7zjHbGG4BNzMEfVlCtlIum9lP9J4vQ/G0b12dAcf5wLGlu/RoObYfEA8mgaUJnzZoIJmgH+x3uKir/tSdDinBDVV5wMhhZUO8Y0bV++R+Ar3qmnk/AFvod3xPdOnZnLtlB41FS9PKxsMa24G9xa4oL8gsMGs0YRY319IdAkyVRusMgKcSe47Llo2Dx/l8+CdeXZA73JoZBoVaeMvRr+wEKKxAnlYEKy2hflZa6Rg/picnGq2tL1frWatceXUFGfR93O5Pi+U0ujIUNmvZ1CToEHSZDNHOjAjXobYBzw=
+---

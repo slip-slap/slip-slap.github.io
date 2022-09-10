@@ -1,0 +1,10 @@
+---
+layout: encrypted
+title: "Techniques with Phone"
+keywords: ["life"]
+description: "清单"
+category: "life"
+tags: ["life"]
+
+encrypted: a51c358c1843b51f5dafcfb569e51d192e7f255f5dba4f638790822535562baaU2FsdGVkX1/JedESqQiTnWcmacsFDtqTf9Py3wof+UK+E8j7rv3nysr2Cfox/dRjBdWCZw5F0Ho5Xdlu+U5kffc34eSqelcPE8dWuVhmUbEbRHfcnIBQZiL4DGBaBNjLZnejh1a0I8tp4Sdc4O8fPcbli4LCbwTZQ4zbcsVsAtgLMAX89dvHZExdnPNnowZdi4cqXV+WYaoAfuCizzPlcaXSJSdR2BydXbS1Zr7jFLxMz2v+Z+SnvyFM8/MBRZ37Erh/In60dgMyIL89LyNpfEdE2e7hOPv/4+qG0LfTLTPQofAqlYJJI79bq2DyHVQyIwbQiUjZrWiqaoL9UQ3gOrjKvEADYwjk/ZVIhtfbF3JOInAbZpKg4B8e/23G/38AcawMLFAKh6500eD15yhE7fB+EgadtJZeHuecFMYq5KWncMFjy3gUE5AHYlhYawjDzrlfb7W/LchtWxlT9q8ehbkXS0AQuR11BDUd1EgezRqMy3vO8i8E7og+kf1G5CSXwuYf3/ex6vmRNTyf/IOo2KNtSr4xFV+OGcp/uXIDC5a9Lw3N7jmLXuWLlHAWGqAjrnFYhfAfC+LkxVrV9BDJ6A==
+---
