@@ -8,14 +8,25 @@ tags: ["c++","compile"]
 ---
 {% include JB/setup %}
 
+#### What's the goodness of c++ IO?
+1. Abstraction: stream is an abstraction.
+- To write data to a physical device, such as screen, disk, it is
+necessary to deal with these devices. However, in C++ programs use an
+object(cout) to write data to screen instead of using the screen device
+directly. This is the heart of C++ IO.
+
+
 #### Stream
 1. to access data that from outside of a program 
 - Inputstream: access data from outside of a program.
 - Outputstream: send data out of the program. 
-2. so we have IOS, which means:
 - Inputstream: istream, ifstream
 - Outputstream: ostream, ofstream
 - cin is an object of istream, cout is an object of ostream.
+3. flags  
+- std::ifstream automatically has the ios::in flag set.
+- std::ofstream automatically has the ios::out flag set.
+- std::fstream has neither ios::in or ios::out automatically
 
 
 #### Example

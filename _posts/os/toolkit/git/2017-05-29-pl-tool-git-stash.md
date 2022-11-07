@@ -12,7 +12,6 @@ tags: ["toolkit","git"]
 This command saves your local modifications away and reverts the working
 directory to match the *HEAD* commit
 
-#### 
 
 
 

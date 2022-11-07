@@ -8,6 +8,18 @@ tags: ["python","script"]
 ---
 {% include JB/setup %}
 
+#### conda env
+
+```python
+conda create --name py39_tf --clone py39
+conda env remove -n py39
+```
+
+
+##### Install with domestic mirror
+```python
+pip install openyxl -i https://pypi.tuna.tsinghua.edu.cn/simple
+```
 
 
 #### Download website
@@ -20,16 +32,6 @@ tags: ["python","script"]
 
 ```shell
 sudo jupyter notebook --allow-root
-```
-
-#### integrated with matplotlib
-put **%matplotlib inline** in the first cell of the notebook to plot
-```python
-%matplotlib inline
-
-import matplotlib
-import numpy as np
-import matplotlib.pyplot as plt
 ```
 
 
@@ -67,5 +69,7 @@ c.NotebookApp.browser = u'open -a /Applications/Google\ Chrome.app %s'
 ```
 
 
+#### Reference
+1. [tsinghua channel](https://blog.csdn.net/Trance95/article/details/124731504)
 
 
