@@ -1,0 +1,7735 @@
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 7 ]>    <html lang="zh-CN" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="zh-CN" class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="zh-CN" class="ie9"> <![endif]-->
+<!--[if (gte IE 10)|!(IE)]><!--> <html lang="zh-CN"> <!--<![endif]-->
+
+<head>
+  <meta charset="UTF-8">
+
+  <title>言葉: 選ぶ - Just Do It</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="author" content="ZHY">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  <!-- Feed -->
+  <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss.xml">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/atom.xml">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/themes/twitter/css/style.css?ver=20151125">
+  <link rel="stylesheet" href="/assets/themes/twitter/css/font-awesome.min.css?ver=20151122">
+  <!--[if IE 7 ]><link rel="stylesheet" href="/assets/themes/twitter/css/font-awesome-ie7.min.css?ver=20151122"><![endif]-->
+
+  <!-- Scripts -->
+  <script type="text/javascript" src="/assets/themes/twitter/js/jquery-1.11.1.min.js"></script>
+  <!--[if lt IE 9]><script src="/assets/themes/twitter/js/html5shiv.min.js"></script><![endif]-->
+  <!--<script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script> -->
+	<script type="text/javascript">
+	window.MathJax = {
+	  tex: {
+		packages: ['base', 'ams']
+	  },
+	  loader: {
+		load: ['ui/menu', '[tex]/ams']
+	  },
+	  startup: {
+		ready() {
+		  MathJax.startup.defaultReady();
+		  const Macro = MathJax._.input.tex.Symbol.Macro;
+		  const MapHandler = MathJax._.input.tex.MapHandler.MapHandler;
+		  const Array = MathJax._.input.tex.ams.AmsMethods.default.Array;
+		  const env = new Macro('psmallmatrix', Array, [null, '(', ')', 'c', '.333em', '.2em', 'S', 1]);
+		  MapHandler.getMap('AMSmath-environment').add('psmallmatrix', env);
+		}
+	  }
+	};
+	</script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+
+</head> 
+<body>
+
+  <div id="wrap">
+    <header id="top">
+      <!-- Home Link -->
+      <a id="logo" href="/" title="回到首页">
+        <img src="/assets/themes/twitter/img/logo.png" alt="Just Do It">
+      </a>
+      <!-- Navigation Bar -->
+      <nav id="navbar">
+        <ul>
+          <li>
+            <a href="/" title="首页">首页</a>
+          </li>
+          <li>
+            <a href="/categories.html" title="分类">分类</a>
+          </li>
+          <li>
+            <a href="/tags.html" title="标签">标签</a>
+          </li>
+          <!--
+          <li>
+            <a href="/messages.html" title="留言板">留言板</a>
+          </li>
+          <li id="about-link" >
+            <a href="/about.html" title="关于我">关于我</a>
+          </li>
+          -->
+          <!--
+          <li id="rss-link">
+            <a href="/rss.xml" title="订阅 RSS"><i class="icon-large icon-fixed-width icon-rss"></i></a>
+          -->
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="main">
+
+      <!-- Sidebar -->
+      <aside id="sidebar">
+        <section id="search-box">
+          <form id="search-form">
+  <input id="query" type="text" placeholder="正则搜索"></input>
+  <button type="submit"><i class="icon-search"></i></button>
+</form>
+<script type="text/javascript">
+$(document).ready(function() {
+  $('#search-form').submit(function() {
+    $('#query').blur().attr('disabled', true);
+    $('#main-content').hide();
+    $('#loader').show();
+    $.ajax({url: '/atom.xml?r=' + (Math.random() * 999999), dataType: 'xml', success: function(data) {
+      var rq = new RegExp($('#query').val(), 'im');
+      var rl = /\/([^\/]+)\.html$/;
+      var html = '';
+      $(data).find('entry').each(function(index, entry) {
+        var title = $(entry).find('title').text();
+        var link = $(entry).find('link').attr('href');
+        var title_en = rl.exec(link)[1].replace('-', ' ');
+        var content = $(entry).find('content').text();
+        if (rq.test(title) || rq.test(title_en) || rq.test(content)) {
+          var parts = $(entry).find('updated').text().split(/[-T:+]/g);
+          var months = [ "January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December" ];
+          date = parts[2] + ' ' + months[parts[1] - 1] + ' ' + parts[0];
+          html += '<article class="nested">';
+          html += '<header><h2><a href="' + link + '">' + title + '</a></h2></header>';
+          html += '<section><p>' + content + '</p></section>';
+          html += '<footer><p>更新日期：' + date + '</p></footer>';
+          html += '</article>';
+        }
+      });
+      $('#main-content').html(html);
+      $('#loader').hide();
+      $('#main-content').show();
+    }});
+    $('#query').blur().attr('disabled', false);
+    return false;
+  });
+});
+</script>
+
+        </section>
+        <section class="active">
+          <a href="/" title="查看最近发表"><i class="icon-fixed-width icon-edit"></i> 最近发表</a>
+<ul>
+
+  <li><a href="/work/work-journal-database.html" title="查看《Journal: Academic Database》">Journal: Academic Database</a></li>
+
+  <li><a href="/pl/pl-script-python-comprehension.html" title="查看《Python: Comprehension》">Python: Comprehension</a></li>
+
+  <li><a href="/pl/pl-script-python-built-in-function-next-and-itr.html" title="查看《Python: For Loop》">Python: For Loop</a></li>
+
+  <li><a href="/pl/pl-script-python-built-in-function-dir.html" title="查看《Python: Built-in Function dir()》">Python: Built-in Function dir()</a></li>
+
+  <li><a href="/pl/pl-script-python-built-in-function-enumberate.html" title="查看《Python: Built-in Function》">Python: Built-in Function</a></li>
+
+  <li><a href="/work/work-journal-published-work.html" title="查看《Journal: published work》">Journal: published work</a></li>
+
+</ul>
+
+        </section>
+        <!--
+        <section>
+          <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
+<span title="文章总数">1170</span>
+<ul>
+
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#November-2022">2022 年 11 月 (12)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#October-2022">2022 年 10 月 (7)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#September-2022">2022 年 09 月 (12)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#August-2022">2022 年 08 月 (5)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#July-2022">2022 年 07 月 (9)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#June-2022">2022 年 06 月 (2)</a></li>
+    
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#May-2022">2022 年 05 月 (1)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2022">2022 年 03 月 (8)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#February-2022">2022 年 02 月 (7)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#January-2022">2022 年 01 月 (8)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#December-2021">2021 年 12 月 (3)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#November-2021">2021 年 11 月 (11)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#September-2021">2021 年 09 月 (2)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2021">2021 年 03 月 (3)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#December-2020">2020 年 12 月 (6)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#November-2020">2020 年 11 月 (17)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#October-2020">2020 年 10 月 (2)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#September-2020">2020 年 09 月 (4)</a></li>
+    
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#August-2020">2020 年 08 月 (1)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#July-2020">2020 年 07 月 (7)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#June-2020">2020 年 06 月 (41)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2020">2020 年 03 月 (4)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#February-2020">2020 年 02 月 (2)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#January-2020">2020 年 01 月 (8)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#December-2019">2019 年 12 月 (17)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#November-2019">2019 年 11 月 (4)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#September-2019">2019 年 09 月 (15)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#August-2019">2019 年 08 月 (17)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#July-2019">2019 年 07 月 (13)</a></li>
+    
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#June-2019">2019 年 06 月 (1)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#May-2019">2019 年 05 月 (21)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2019">2019 年 03 月 (16)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#February-2019">2019 年 02 月 (17)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#January-2019">2019 年 01 月 (24)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#December-2018">2018 年 12 月 (74)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#November-2018">2018 年 11 月 (8)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#October-2018">2018 年 10 月 (30)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#September-2018">2018 年 09 月 (27)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#August-2018">2018 年 08 月 (8)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#July-2018">2018 年 07 月 (6)</a></li>
+    
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#June-2018">2018 年 06 月 (1)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#April-2018">2018 年 04 月 (24)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2018">2018 年 03 月 (13)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#February-2018">2018 年 02 月 (9)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#January-2018">2018 年 01 月 (5)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#December-2017">2017 年 12 月 (16)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#November-2017">2017 年 11 月 (10)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#October-2017">2017 年 10 月 (25)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#September-2017">2017 年 09 月 (30)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#July-2017">2017 年 07 月 (28)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#June-2017">2017 年 06 月 (52)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#May-2017">2017 年 05 月 (24)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#April-2017">2017 年 04 月 (27)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2017">2017 年 03 月 (100)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#February-2017">2017 年 02 月 (33)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#January-2017">2017 年 01 月 (54)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#December-2016">2016 年 12 月 (15)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2016">2016 年 03 月 (133)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#February-2016">2016 年 02 月 (91)</a></li>
+    
+  
+
+</ul>
+
+        </section>
+        -->
+        <section>
+          <a href="/categories.html" title="查看所有分类"><i class="icon-fixed-width icon-folder-open"></i> Outline</a>
+<span title="分类总数">11</span>
+<ul>
+
+  <li><a href="/categories.html#言葉-ref">言葉 (237)</a></li>
+
+  <li><a href="/categories.html#life-ref">life (21)</a></li>
+
+  <li><a href="/categories.html#PL-ref">PL (277)</a></li>
+
+  <li><a href="/categories.html#OS-ref">OS (15)</a></li>
+
+  <li><a href="/categories.html#Algorithm-ref">Algorithm (81)</a></li>
+
+  <li><a href="/categories.html#CS-ref">CS (68)</a></li>
+
+  <li><a href="/categories.html#math-ref">math (366)</a></li>
+
+  <li><a href="/categories.html#Economy-ref">Economy (2)</a></li>
+
+  <li><a href="/categories.html#work-ref">work (26)</a></li>
+
+  <li><a href="/categories.html#Simplex-ref">Simplex (39)</a></li>
+
+  <li><a href="/categories.html#Writing-ref">Writing (36)</a></li>
+
+</ul>
+
+        </section>
+        <section>
+          <a href="/tags.html" title="查看所有标签"><i class="icon-fixed-width icon-tags"></i> Tags</a>
+<span title="标签总数">111</span>
+<div id="tag-cloud">
+
+
+
+
+
+
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#日本語-ref" style="font-size: 16pt; color: #222;">日本語</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#英語-ref" style="font-size: 18pt; color: #000;">英語</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#summary-ref" style="font-size: 11pt; color: #777;">summary</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#japan-ref" style="font-size: 9pt; color: #999;">japan</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#life-ref" style="font-size: 9.5pt; color: #999;">life</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#food-ref" style="font-size: 9pt; color: #999;">food</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#shell-ref" style="font-size: 10.5pt; color: #888;">shell</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#script-ref" style="font-size: 16.5pt; color: #111;">script</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#python-ref" style="font-size: 12pt; color: #666;">python</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#compile-ref" style="font-size: 15.5pt; color: #222;">compile</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#make-ref" style="font-size: 9pt; color: #999;">make</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#cmake-ref" style="font-size: 10pt; color: #888;">cmake</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#latex-ref" style="font-size: 11pt; color: #777;">latex</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#c++-ref" style="font-size: 15pt; color: #333;">c++</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#java-ref" style="font-size: 10pt; color: #888;">java</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#graphics programming-ref" style="font-size: 9.5pt; color: #999;">graphics programming</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#Qt-ref" style="font-size: 9.5pt; color: #999;">Qt</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#haskell-ref" style="font-size: 10pt; color: #888;">haskell</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#lazy evaluation-ref" style="font-size: 9.5pt; color: #999;">lazy evaluation</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#tool-ref" style="font-size: 9.5pt; color: #888;">tool</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#git-ref" style="font-size: 10pt; color: #888;">git</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#editor-ref" style="font-size: 9.5pt; color: #888;">editor</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#toolkit-ref" style="font-size: 10pt; color: #888;">toolkit</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#debugger-ref" style="font-size: 9pt; color: #999;">debugger</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#gdb-ref" style="font-size: 9pt; color: #999;">gdb</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#A.D.T.-ref" style="font-size: 11.5pt; color: #777;">A.D.T.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#A.D.T.P.-ref" style="font-size: 9pt; color: #999;">A.D.T.P.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#A.D.-ref" style="font-size: 10pt; color: #888;">A.D.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#A.P.-ref" style="font-size: 10pt; color: #888;">A.P.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#AA-ref" style="font-size: 9.5pt; color: #999;">AA</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#D.P.-ref" style="font-size: 9.5pt; color: #888;">D.P.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#microprocessor-ref" style="font-size: 10pt; color: #888;">microprocessor</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#compiler-ref" style="font-size: 10pt; color: #888;">compiler</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#TOC-ref" style="font-size: 9.5pt; color: #999;">TOC</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#OS-ref" style="font-size: 9.5pt; color: #888;">OS</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#assembly-ref" style="font-size: 9.5pt; color: #888;">assembly</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#jekyll-ref" style="font-size: 9.5pt; color: #999;">jekyll</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#ruby-ref" style="font-size: 9pt; color: #999;">ruby</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#構造-ref" style="font-size: 13pt; color: #555;">構造</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#L.T.-ref" style="font-size: 9.5pt; color: #999;">L.T.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#L.A.-ref" style="font-size: 10pt; color: #888;">L.A.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#Lie-ref" style="font-size: 9.5pt; color: #999;">Lie</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#A.A.-ref" style="font-size: 10.5pt; color: #777;">A.A.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#E.A.-ref" style="font-size: 9pt; color: #999;">E.A.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#N.T.-ref" style="font-size: 9pt; color: #999;">N.T.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#A.T.-ref" style="font-size: 9.5pt; color: #999;">A.T.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#space-ref" style="font-size: 13.5pt; color: #555;">space</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#M.A.-ref" style="font-size: 9pt; color: #999;">M.A.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#M.T.-ref" style="font-size: 9.5pt; color: #999;">M.T.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#topology-ref" style="font-size: 9.5pt; color: #999;">topology</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#I.G.-ref" style="font-size: 9pt; color: #999;">I.G.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#R.G.-ref" style="font-size: 9.5pt; color: #888;">R.G.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#D.G.-ref" style="font-size: 10pt; color: #888;">D.G.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#H.G.-ref" style="font-size: 9.5pt; color: #999;">H.G.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#P.G.-ref" style="font-size: 9pt; color: #999;">P.G.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#A.G.-ref" style="font-size: 9pt; color: #999;">A.G.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#geometry-ref" style="font-size: 9pt; color: #999;">geometry</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#change-ref" style="font-size: 13pt; color: #555;">change</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#F.A.-ref" style="font-size: 9.5pt; color: #999;">F.A.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#apply-ref" style="font-size: 18pt; color: #000;">apply</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#T.A.-ref" style="font-size: 9pt; color: #999;">T.A.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#V.A.-ref" style="font-size: 10pt; color: #888;">V.A.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#C.A.-ref" style="font-size: 9.5pt; color: #888;">C.A.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#R.A.-ref" style="font-size: 10.5pt; color: #888;">R.A.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#basic-ref" style="font-size: 10pt; color: #888;">basic</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#C.T.-ref" style="font-size: 10pt; color: #888;">C.T.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#S.T.-ref" style="font-size: 9pt; color: #999;">S.T.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#G.M.-ref" style="font-size: 10.5pt; color: #777;">G.M.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#P.G.M.D.T.-ref" style="font-size: 9pt; color: #999;">P.G.M.D.T.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#G.M.D.T.-ref" style="font-size: 9pt; color: #999;">G.M.D.T.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#G.M.L.-ref" style="font-size: 9.5pt; color: #999;">G.M.L.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#P.G.M.-ref" style="font-size: 9pt; color: #999;">P.G.M.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#P.G.M.L.-ref" style="font-size: 9pt; color: #999;">P.G.M.L.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#G.M.I.-ref" style="font-size: 9pt; color: #999;">G.M.I.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#G.M.R.-ref" style="font-size: 9.5pt; color: #999;">G.M.R.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#I.T.-ref" style="font-size: 9.5pt; color: #888;">I.T.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#C.O.-ref" style="font-size: 9.5pt; color: #999;">C.O.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#N.A.-ref" style="font-size: 9pt; color: #999;">N.A.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#Game Theory-ref" style="font-size: 9.5pt; color: #999;">Game Theory</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#G.T.-ref" style="font-size: 10pt; color: #888;">G.T.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#S.P.-ref" style="font-size: 10.5pt; color: #777;">S.P.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#M.C.-ref" style="font-size: 9.5pt; color: #999;">M.C.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#R.P.-ref" style="font-size: 9pt; color: #999;">R.P.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#P.P.-ref" style="font-size: 9pt; color: #999;">P.P.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#D.T.-ref" style="font-size: 9pt; color: #999;">D.T.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#P.A.S.-ref" style="font-size: 11.5pt; color: #666;">P.A.S.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#Frequentist-ref" style="font-size: 9pt; color: #999;">Frequentist</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#inference-ref" style="font-size: 9pt; color: #999;">inference</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#Bayesian-ref" style="font-size: 9.5pt; color: #999;">Bayesian</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#P.A.S.M.-ref" style="font-size: 9pt; color: #999;">P.A.S.M.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#statistics-ref" style="font-size: 10pt; color: #888;">statistics</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#P.A.S-ref" style="font-size: 9pt; color: #999;">P.A.S</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#P.M.-ref" style="font-size: 10pt; color: #888;">P.M.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#discrete-ref" style="font-size: 10pt; color: #888;">discrete</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#CMB-ref" style="font-size: 9pt; color: #999;">CMB</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#G.T.A.-ref" style="font-size: 9pt; color: #999;">G.T.A.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#C.F.-ref" style="font-size: 9pt; color: #999;">C.F.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#search-ref" style="font-size: 9pt; color: #999;">search</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#model-ref" style="font-size: 9pt; color: #999;">model</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#journal-ref" style="font-size: 9.5pt; color: #999;">journal</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#General Writing Rule-ref" style="font-size: 10.5pt; color: #888;">General Writing Rule</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#Journal writing-ref" style="font-size: 10pt; color: #888;">Journal writing</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#manifold-ref" style="font-size: 9.5pt; color: #999;">manifold</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#learning-ref" style="font-size: 9pt; color: #999;">learning</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#NLP-ref" style="font-size: 9pt; color: #999;">NLP</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#traditional-ref" style="font-size: 9pt; color: #999;">traditional</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#N.N.D.-ref" style="font-size: 10pt; color: #888;">N.N.D.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#classification-ref" style="font-size: 9pt; color: #999;">classification</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#FL-ref" style="font-size: 9pt; color: #999;">FL</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#CV-ref" style="font-size: 9pt; color: #999;">CV</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#EM-ref" style="font-size: 9pt; color: #999;">EM</a>
+  
+
+</div>
+
+        </section>
+        <div id="fixed-container">
+  <section>
+    
+  </section>
+  <section>
+    <a href="#"><i class="icon-fixed-width icon-heart"></i> 与我联系</a>
+<div id="contacts-list">
+  <a href="mailto:zhanghy1012@gmail.com" target="_blank" title="Gmail">
+    <i class="icon-large icon-fixed-width icon-envelope"></i>
+  </a>
+  <a href="https://github.com/slip-slap" target="_blank" title="GitHub">
+    <i class="icon-large icon-fixed-width icon-github"></i>
+  </a>
+
+<!-- You will not be able to see this text. 
+  <a href="http://weibo.com/" target="_blank" title="新浪微博">
+    <i class="icon-large icon-fixed-width icon-weibo"></i>
+  </a>
+  <a href="https://twitter.com/" target="_blank" title="Twitter">
+    <i class="icon-large icon-fixed-width icon-twitter"></i>
+  </a>
+-->
+</div>
+
+  </section>
+  <section>
+    <a href="#"><i class="icon-fixed-width icon-link"></i> 友情链接</a>
+<ul>
+  <li><a href="https://github.com/Shopify/liquid/wiki/Liquid-for-Designers" target="_blank">Liquid 模板引擎</a></li>
+  <li><a href="http://jekyllrb.com/" target="_blank">Jekyll 静态博客生成器</a></li>
+</ul>
+
+  </section>
+</div>
+<script type="text/javascript">
+$(document).ready(function() {
+  var position = $('#fixed-container').offset();
+  $(window).scroll(function() {
+    if($(window).scrollTop() > position.top) {
+      $('#fixed-container').css('position','fixed').css('top','0');
+    } else {
+      $('#fixed-container').css('position','static');
+    }
+  });
+});
+</script>
+
+      </aside>
+
+      <!-- Main Content -->
+      <div id="main-inner">
+        <div id="loader"><img src="/assets/themes/twitter/img/loading.gif" alt="请稍侯"></div>
+        <div id="main-content">
+          
+
+
+
+<section id="content">
+  <article class="post">
+  <!--
+  - math support
+  -->
+      <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+                tex2jax: {
+                      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+                            inlineMath: [['$','$']]
+                                }
+                                  });
+      </script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+
+    <header>
+      <h1>言葉: 選ぶ</h1>
+    </header>
+
+    <section>
+      <div class="post-extra">
+        <div class="pull-left">
+          <span>25 February 2022</span>
+        </div>
+        <div class="pull-right">
+          
+
+
+  <span id="share">
+  <a class="wechat" target="_blank" title="分享到微信" href="http://chart.apis.google.com/chart?cht=qr&amp;chs=300x300&amp;chl=/%E8%A8%80%E8%91%89/language-japanese-word-difference.html"><i class="icon-large icon-wechat"></i></a>
+  <a class="weibo" target="_blank" title="分享到微博" href="http://service.weibo.com/share/share.php?title=言葉: 選ぶ - Just Do It&amp;url=/%E8%A8%80%E8%91%89/language-japanese-word-difference.html&amp;type=3&amp;searchPic=1"><i class="icon-large icon-weibo"></i></a>
+  <a class="qzone" target="_blank" title="分享到 QQ 空间" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=/%E8%A8%80%E8%91%89/language-japanese-word-difference.html&amp;title=言葉: 選ぶ - Just Do It&amp;summary=&amp;site="><i class="icon-large icon-qzone"></i></a>
+  <a class="twitter" target="_blank" title="Share to Twitter" href="https://twitter.com/intent/tweet?url=/%E8%A8%80%E8%91%89/language-japanese-word-difference.html&amp;text=言葉: 選ぶ - Just Do It&amp;via="><i class="icon-large icon-twitter"></i></a>
+  <a class="facebook" target="_blank" title="Share to Facebook" href="http://www.facebook.com/sharer.php?u=/%E8%A8%80%E8%91%89/language-japanese-word-difference.html&amp;t=言葉: 選ぶ - Just Do It"><i class="icon-large icon-facebook-sign"></i></a>
+  <a class="googleplus" target="_blank" title="Share to Google+" href="https://plus.google.com/share?url=/%E8%A8%80%E8%91%89/language-japanese-word-difference.html"><i class="icon-large icon-google-plus-sign"></i></a>
+</span>
+
+
+
+
+
+        </div>
+      </div>
+      
+<h4 id="なければならないなきゃいけない">なければならない・なきゃいけない</h4>
+<ol>
+  <li>なきゃいけない　oral</li>
+</ol>
+
+<h4 id="過ごす暮らす">過ごす・暮らす</h4>
+<ol>
+  <li>週末を過ごす</li>
+  <li>僕がずっと家で暮らしている</li>
+</ol>
+
+<h4 id="ともかくとにかく">ともかく・とにかく</h4>
+<ol>
+  <li>とにかく泳ぐ: 泳ぐ is the most important thing.</li>
+  <li>試験勉強さておき、ともかく泳ぐ: 泳ぐ is not the most important thing</li>
+</ol>
+
+<h4 id="中国語">中国語</h4>
+<ol>
+  <li>深刻: serious
+    <ul>
+      <li>現在、所得格差が深刻な社会問題となっている</li>
+    </ul>
+  </li>
+  <li>差別: discriminate
+    <ul>
+      <li>差別待遇</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="取るもらうくれる">取る・もらう・くれる</h4>
+<p>1.　取る: just means the action of getting something.</p>
+<ol>
+  <li>もらう・くれる: the additional meaning is from whom to whom.</li>
+</ol>
+
+<h4 id="質問問題">質問・問題</h4>
+<ol>
+  <li>質問: question</li>
+  <li>問題: problem</li>
+</ol>
+
+<h4 id="いっぱいたくさんたっぷり">いっぱい・たくさん・たっぷり</h4>
+
+<h4 id="酔っ払う酔う">酔っ払う・酔う</h4>
+<ol>
+  <li>酔っ払う: お酒にしか使わない</li>
+  <li>酔う: お酒以外にも使える
+    <ul>
+      <li>車や船などの乗り物に酔って</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="大きい大きな">大きい・大きな</h4>
+<ol>
+  <li>大きい: 具体的なもの</li>
+  <li>大きな: abstract
+    <ul>
+      <li>大きな影響</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="好き気に入る好このみ">好き・気に入る・好(この)み</h4>
+<ol>
+  <li>好き: sounds like ongoing feeling, real love.</li>
+  <li>気に入る: when you find/hear/see something, you think it’s interesting, you
+want to try.</li>
+  <li>好み: noun</li>
+</ol>
+
+<h4 id="いきなり急に突然">いきなり・急に・突然</h4>
+<ol>
+  <li>いきなり: more casual and colloquial
+    <ul>
+      <li>can be used as event that you didn’t expect and it went through an appropriate
+process.</li>
+      <li>急に and 突然 don’t have the process meaning.</li>
+      <li>前回好評, 本が売れちゃって、いきなりSMの話ですか。</li>
+    </ul>
+  </li>
+  <li>突然: formal</li>
+</ol>
+
+<h4 id="一回いっかい一度">一回(いっかい)・一度</h4>
+<ol>
+  <li>一回: just to describe the order, first, second, third
+    <ul>
+      <li>第一回オリンピック</li>
+      <li>２０回目結婚記念日</li>
+    </ul>
+  </li>
+  <li>一度: implies this is the last time</li>
+</ol>
+
+<h4 id="嬉しい楽しい">嬉しい・楽しい</h4>
+<ol>
+  <li>嬉しい:  not last.
+    <ul>
+      <li>今日はクラスで先生に褒められて、嬉しい</li>
+    </ul>
+  </li>
+  <li>楽しい: last for a long time</li>
+</ol>
+
+<ul>
+  <li>今日の授業は実用的な表現が多くて、楽しい</li>
+</ul>
+
+<h4 id="あいている空いている">あいている・空いている</h4>
+<ol>
+  <li>あいている: you can make use of, it’s objective</li>
+  <li>すいている: it is not crowed, it’s subjective</li>
+</ol>
+
+<ul>
+  <li>お腹がすいています</li>
+</ul>
+
+<h4 id="勉強する学まなぶ">勉強する・学(まな)ぶ</h4>
+<ol>
+  <li>勉強: study, work hard
+    <ul>
+      <li>もっと勉強する</li>
+    </ul>
+  </li>
+  <li>学ぶ: learn 学んで
+    <ul>
+      <li>彼の考え方からは学ぶとこと多い</li>
+    </ul>
+  </li>
+  <li>習う: learned by
+    <ul>
+      <li>日本語を秋山から習っている</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="良いいい">良い・いい</h4>
+<ol>
+  <li>いい: used in colloquial.</li>
+  <li>よい: used in formal document.</li>
+</ol>
+
+<h4 id="ようにために">ように・ために</h4>
+<ol>
+  <li>ように: used with nonvolitional verbs, which includes the potential form
+    <ul>
+      <li>雨が降るように、祈(いの)った</li>
+    </ul>
+  </li>
+  <li>ために: used with volitional verbs</li>
+</ol>
+
+<h4 id="返る戻る">返る・戻る</h4>
+<ol>
+  <li>返る: means the place is the home ground of this object
+    <ul>
+      <li>in English, we have two ways to express this.</li>
+      <li>return this book, doesn’t imply a direction</li>
+      <li>go back, come back</li>
+    </ul>
+  </li>
+  <li>戻る: implies the place is a temporal places
+    <ul>
+      <li>or used the value of something</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="欲しい見たい">欲しい・見たい</h4>
+<ol>
+  <li>欲しい
+    <ul>
+      <li>want somebody to do something</li>
+      <li>昨日早く来て欲しかった</li>
+      <li>おっとに野菜を食べて欲しい</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="遅れる遅く">遅れる・遅く</h4>
+<ol>
+  <li>遅れる: is a verb
+    <ul>
+      <li>彼は今日学校に遅れた</li>
+    </ul>
+  </li>
+  <li>遅く: adjective
+    <ul>
+      <li>彼はその会議に１０分遅く来た</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="別の他の">別の・他の</h4>
+<ol>
+  <li>別の: means another
+    <ul>
+      <li>別の色を見せてください(if there are a few choices)</li>
+      <li>他の色をめせてください(if there are many choices)</li>
+    </ul>
+  </li>
+  <li>他の: means other</li>
+</ol>
+
+<h4 id="たくさん多い">たくさん・多い</h4>
+<ol>
+  <li>多い: is used with countable nouns</li>
+  <li>たくさん: modify both countable and uncountable nouns</li>
+</ol>
+
+<h4 id="いくらぐらい">いくら・ぐらい</h4>
+<ol>
+  <li>いくら: 値段</li>
+  <li>ぐらい: 色んな程度
+    <ul>
+      <li>いくらぐらい</li>
+    </ul>
+  </li>
+  <li>いくつ:</li>
+</ol>
+
+<h4 id="屋敷部屋">屋敷・部屋</h4>
+<ol>
+  <li>部屋: room
+    <ul>
+      <li>部: its basic means part of something</li>
+    </ul>
+  </li>
+  <li>屋敷: mansion</li>
+</ol>
+
+<h4 id="1-苦手下手">1. 苦手・下手</h4>
+<ol>
+  <li>苦手: means that you think you are not good at something, which does not
+necessarily mean you are really bad at it. Sometimes people who are actually
+good at something still regard themselves 苦手 at it, because they either
+think they are not good enough, or they simply do not like doing it.</li>
+  <li>下手: means you are bad at something.</li>
+</ol>
+
+<h4 id="2-記入入力">2. 記入・入力</h4>
+<ol>
+  <li>記入: for handwriting</li>
+  <li>入力: for typing</li>
+</ol>
+
+<h4 id="3-異なる違う">3. 異なる・違う</h4>
+
+<ol>
+  <li>電話番号を違っている  the telephone number is different</li>
+  <li>電話番号を間違って　　the telephone is wrong</li>
+</ol>
+
+<h4 id="4-卵玉子">4. 卵・玉子</h4>
+<ol>
+  <li>卵: means before cooked egg</li>
+  <li>玉子: measn after cooked egg</li>
+</ol>
+
+<p>Example: 玉子焼き(cooked egg) 卵かけご飯(uncooked egg)</p>
+
+<h4 id="5-屋店">5. 屋・店</h4>
+<ol>
+  <li>屋: has a long history, and a smaller place; 店: new introduce into Japan
+    <ul>
+      <li>八百屋・本や・靴屋</li>
+      <li>商店・用品店・喫茶店</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="6-気にすると気になる">6. 気にすると気になる</h4>
+<ol>
+  <li>~をに気にする: worry about(bad thing)
+    <ul>
+      <li>試験の結果を気にする</li>
+      <li>あの噂(うわさ)を気になる: you have something to do with the rumor and you are worried about it.</li>
+      <li>気にしないでください</li>
+    </ul>
+  </li>
+  <li>
+    <p>気になる</p>
+  </li>
+  <li>気に入る: 好き</li>
+</ol>
+
+<ul>
+  <li>あの噂が気になる: you are just curious about the gossip
+    <h4 id="7-世界世の中">7. 世界・世の中</h4>
+    <ol>
+      <li>世界: world</li>
+      <li>世の中: society
+        <h3 id="あたり">あたり</h3>
+      </li>
+      <li>この辺り: around here</li>
+      <li>一人当たり五千円: 5000 yen per person</li>
+    </ol>
+  </li>
+</ul>
+
+<h4 id="いがい">いがい</h4>
+<ol>
+  <li>これは以外に方法はない: this is the only way</li>
+  <li>これは以外に安かった: unexpected cheap</li>
+</ol>
+
+<h4 id="切る消す">切る・消す</h4>
+<ol>
+  <li>電気を消す</li>
+  <li>スイッチを切る</li>
+</ol>
+
+<h4 id="1-本日今日">1. 本日・今日</h4>
+<ol>
+  <li>本日 is keigo, you will hear this on a train or airplane, or in a store, but you won’t be saying
+it yourself</li>
+  <li>今日 is what you would use in ordinary situations.</li>
+</ol>
+
+<h4 id="1-知る分かる">1. 知る・分かる</h4>
+
+<h5 id="1-知る">1. 知る</h5>
+<ol>
+  <li>when you describe the state of knowing something or someone
+    <ul>
+      <li>知っています(polite)</li>
+      <li>知ってます(polite but conversational)</li>
+      <li>知っている(casual)</li>
+      <li>知ってる(more casual)</li>
+    </ul>
+  </li>
+  <li>example
+    <ul>
+      <li>マギー先生をしていますか？(Do you know Maggie sensei)</li>
+      <li>マギー先生を知りますか？(wrong)</li>
+    </ul>
+  </li>
+</ol>
+
+<h5 id="2-分かる">2. 分かる</h5>
+<ol>
+  <li>分かる: something unclear has became clear
+    <ul>
+      <li>いま、わかります(not natural)</li>
+      <li>いま、わかりました(now, I understand)</li>
+    </ul>
+  </li>
+  <li>When you respond to someone who just explained something or just finished explaining something
+    <ul>
+      <li>給料日まで３０００円を貸してくれない？(Can you spare me 3000yen until the pay day?)</li>
+    </ul>
+  </li>
+  <li>to identify something/someone to be able to tell the difference
+    <ul>
+      <li>ねえ、前髪少しだけ切ったの、分かる？(I got my bangs trimmed just a little, Can you tell?)</li>
+      <li>全然、わからなかった(I couldn’t tell at all)</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="2-気持ち気分">2. 気持ち・気分</h4>
+<ol>
+  <li>気持ち: it means mental preparation</li>
+  <li>気分:  it means physical feeling</li>
+</ol>
+
+<h4 id="1-行ってきます">1. 行ってきます</h4>
+<p>A: 行ってきます
+B: 行ってらっしゃい:</p>
+<ul>
+  <li>行って+いらっしゃい</li>
+  <li>いたっしゃい is the command form of いらっしゃる</li>
+</ul>
+
+<h4 id="2-like">2. like</h4>
+<ol>
+  <li>好き</li>
+  <li>気に入る</li>
+</ol>
+
+<h4 id="3-anticipate">3. anticipate</h4>
+<ol>
+  <li>見込み: 来年大学卒業の見込みです</li>
+  <li>はず:</li>
+</ol>
+
+<h4 id="4-sit">4. sit</h4>
+<ol>
+  <li>腰掛ける: to sit on a chair or something that has a certain height.</li>
+  <li>座る: to sit on the floor or ground</li>
+</ol>
+
+<h4 id="6-受ける">6. 受ける</h4>
+<ol>
+  <li>引き受ける: 仕事を引き受ける</li>
+  <li>受け取る: 荷物を受け取る</li>
+</ol>
+
+<h4 id="7-売る">7. 売る</h4>
+<ol>
+  <li>売り切れ: sold out</li>
+  <li>売り出す: to put on the market, to put on sale
+    <ul>
+      <li>新型のパソコンが売り出される: a new PC model is coming onto the market</li>
+    </ul>
+  </li>
+  <li>売れる: to be well known, to be popular</li>
+</ol>
+
+<h4 id="とんでもない">とんでもない</h4>
+<ol>
+  <li>とんでもない＋noun: when you want to emphasize nouns or adjectives
+    <ul>
+      <li>とんでもないことになるよ</li>
+      <li>今年はとんでもない新人が会社に入ってきた(terrible good or bad)</li>
+    </ul>
+  </li>
+  <li>strong deny the possibility
+    <ul>
+      <li>彼のことが好きなんじゃない？</li>
+      <li>とんでもないです(no way)</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="押すと押さえる">押すと押さえる</h4>
+<ol>
+  <li>押すは比較的短い時間</li>
+  <li>押さえるは比較的長い時間</li>
+</ol>
+
+<h4 id="通訳と翻訳">通訳と翻訳</h4>
+<h4 id="付けるとかける">付けるとかける</h4>
+<ol>
+  <li>かける: to pour something</li>
+</ol>
+
+<h4 id="reference">Reference</h4>
+<ol>
+  <li><a href="http://maggiesensei.com/2020/02/20/how-to-use-%e7%9f%a5%e3%82%8b-%ef%bc%86-%e3%82%8f%e3%81%8b%e3%82%8b-shiru-wakaru/">知る・分かる</a></li>
+  <li><a href="https://www.wasabi-jpn.com/japanese-grammar/how-to-express-aims/#4">ように・ために</a></li>
+  <li><a href="http://jpyokoso.com/how-to-use-ikinari-kyuni-and-totuzen-the-right-way/">いきなり・急に・突然</a></li>
+  <li><a href="https://www.italki.com/post/question-87975?hl=ja">好き・気に入る</a></li>
+  <li><a href="https://jlptsensei.com/learn-japanese-grammar/%E3%81%AA%E3%81%84%E3%81%A7-naide-meaning/">ないで</a></li>
+</ol>
+
+
+      
+      <footer>
+        <p>
+          本作品由 <a href="mailto:zhanghy1012@gmail.com">ZHY</a> 创作，采用
+          <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="查看协议详细信息" target="_blank">CC BY-NC-SA 3.0 许可协议</a>
+          进行许可。
+        </p>
+      </footer>
+      
+    </section>
+
+  </article>
+</section>
+
+<section>
+
+  <div class="tag-box-wrapper">
+    
+    <ul class="tag-box inline">
+      <li><i class="icon-large icon-folder-open"></i></li>
+      
+      
+
+
+  
+     
+    	<li><a href="/categories.html#言葉-ref">
+    		言葉 <span>237</span>
+    	</a></li>
+    
+  
+
+
+
+    </ul>
+    
+
+    
+    <ul class="tag-box inline">
+      <li><i class="icon-large icon-tags"></i></li>
+      
+      
+
+
+  
+     
+    	<li><a href="/tags.html#日本語-ref">日本語 <span>104</span></a></li>
+    
+  
+
+
+
+    </ul>
+    
+  </div>
+
+  <div class="pagination">
+    <ul>
+      
+      <li class="prev"><a href="/%E8%A8%80%E8%91%89/language-japanese-body-disease.html" title="体: 病気">&larr; 上一篇</a></li>
+      
+      <li><a href="/archive.html">文章列表</a></li>
+      
+      <li class="next"><a href="/math/math-apply-graphical-model-algorithm-sum-product.html" title="G.M.: Sum Product Algorithm">下一篇 &rarr;</a></li>
+      
+    </ul>
+  </div>
+
+</section>
+
+<section id="comments">
+  
+
+
+  
+<div id="disqus_thread"></div>
+
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'just-do-it-1';
+    
+    var disqus_identifier = '言葉: 選ぶ';
+    var disqus_title = '言葉: 選ぶ';
+    var disqus_url = '/%E8%A8%80%E8%91%89/language-japanese-word-difference.html';
+    
+    
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+
+
+
+
+</section>
+
+
+
+
+
+
+        </div>
+      </div>
+
+      <div id="back-top">
+  <a href="#top" title="回到顶部">
+    <i class="icon-2x icon-arrow-up"></i>
+  </a>
+</div>
+<script type="text/javascript">
+$("#back-top").hide();
+$(document).ready(function () {
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 100) {
+      $('#back-top').fadeIn();
+    } else {
+      $('#back-top').fadeOut();
+    }
+  });
+  $('#back-top a').click(function () {
+    $('body,html').animate({
+      scrollTop: 0
+    }, 500);
+    return false;
+  });
+});
+</script>
+
+
+    </section>
+
+    <footer id="bottom">
+      <p align="center">&copy; 2022 ZHY
+        with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+        and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+      </p>
+    </footer>
+  </div>
+
+  <script type="text/javascript">
+    $('article.post a').attr('target', '_blank');
+    if (navigator.appVersion.indexOf("Mac") != -1) {
+      $('code, pre').css('font-family', 'Courier, monospace');
+    }
+  </script>
+  
+
+  
+</body>
+</html>
+
+
+
+
+

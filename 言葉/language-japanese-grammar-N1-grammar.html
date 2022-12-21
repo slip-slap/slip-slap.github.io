@@ -1,0 +1,8781 @@
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 7 ]>    <html lang="zh-CN" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="zh-CN" class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="zh-CN" class="ie9"> <![endif]-->
+<!--[if (gte IE 10)|!(IE)]><!--> <html lang="zh-CN"> <!--<![endif]-->
+
+<head>
+  <meta charset="UTF-8">
+
+  <title>sentence: n1 文法 - Just Do It</title>
+  <meta name="keywords" content="">
+  
+  <meta name="author" content="ZHY">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  <!-- Feed -->
+  <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss.xml">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/atom.xml">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/themes/twitter/css/style.css?ver=20151125">
+  <link rel="stylesheet" href="/assets/themes/twitter/css/font-awesome.min.css?ver=20151122">
+  <!--[if IE 7 ]><link rel="stylesheet" href="/assets/themes/twitter/css/font-awesome-ie7.min.css?ver=20151122"><![endif]-->
+
+  <!-- Scripts -->
+  <script type="text/javascript" src="/assets/themes/twitter/js/jquery-1.11.1.min.js"></script>
+  <!--[if lt IE 9]><script src="/assets/themes/twitter/js/html5shiv.min.js"></script><![endif]-->
+  <!--<script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script> -->
+	<script type="text/javascript">
+	window.MathJax = {
+	  tex: {
+		packages: ['base', 'ams']
+	  },
+	  loader: {
+		load: ['ui/menu', '[tex]/ams']
+	  },
+	  startup: {
+		ready() {
+		  MathJax.startup.defaultReady();
+		  const Macro = MathJax._.input.tex.Symbol.Macro;
+		  const MapHandler = MathJax._.input.tex.MapHandler.MapHandler;
+		  const Array = MathJax._.input.tex.ams.AmsMethods.default.Array;
+		  const env = new Macro('psmallmatrix', Array, [null, '(', ')', 'c', '.333em', '.2em', 'S', 1]);
+		  MapHandler.getMap('AMSmath-environment').add('psmallmatrix', env);
+		}
+	  }
+	};
+	</script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+
+</head> 
+<body>
+
+  <div id="wrap">
+    <header id="top">
+      <!-- Home Link -->
+      <a id="logo" href="/" title="回到首页">
+        <img src="/assets/themes/twitter/img/logo.png" alt="Just Do It">
+      </a>
+      <!-- Navigation Bar -->
+      <nav id="navbar">
+        <ul>
+          <li>
+            <a href="/" title="首页">首页</a>
+          </li>
+          <li>
+            <a href="/categories.html" title="分类">分类</a>
+          </li>
+          <li>
+            <a href="/tags.html" title="标签">标签</a>
+          </li>
+          <!--
+          <li>
+            <a href="/messages.html" title="留言板">留言板</a>
+          </li>
+          <li id="about-link" >
+            <a href="/about.html" title="关于我">关于我</a>
+          </li>
+          -->
+          <!--
+          <li id="rss-link">
+            <a href="/rss.xml" title="订阅 RSS"><i class="icon-large icon-fixed-width icon-rss"></i></a>
+          -->
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="main">
+
+      <!-- Sidebar -->
+      <aside id="sidebar">
+        <section id="search-box">
+          <form id="search-form">
+  <input id="query" type="text" placeholder="正则搜索"></input>
+  <button type="submit"><i class="icon-search"></i></button>
+</form>
+<script type="text/javascript">
+$(document).ready(function() {
+  $('#search-form').submit(function() {
+    $('#query').blur().attr('disabled', true);
+    $('#main-content').hide();
+    $('#loader').show();
+    $.ajax({url: '/atom.xml?r=' + (Math.random() * 999999), dataType: 'xml', success: function(data) {
+      var rq = new RegExp($('#query').val(), 'im');
+      var rl = /\/([^\/]+)\.html$/;
+      var html = '';
+      $(data).find('entry').each(function(index, entry) {
+        var title = $(entry).find('title').text();
+        var link = $(entry).find('link').attr('href');
+        var title_en = rl.exec(link)[1].replace('-', ' ');
+        var content = $(entry).find('content').text();
+        if (rq.test(title) || rq.test(title_en) || rq.test(content)) {
+          var parts = $(entry).find('updated').text().split(/[-T:+]/g);
+          var months = [ "January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December" ];
+          date = parts[2] + ' ' + months[parts[1] - 1] + ' ' + parts[0];
+          html += '<article class="nested">';
+          html += '<header><h2><a href="' + link + '">' + title + '</a></h2></header>';
+          html += '<section><p>' + content + '</p></section>';
+          html += '<footer><p>更新日期：' + date + '</p></footer>';
+          html += '</article>';
+        }
+      });
+      $('#main-content').html(html);
+      $('#loader').hide();
+      $('#main-content').show();
+    }});
+    $('#query').blur().attr('disabled', false);
+    return false;
+  });
+});
+</script>
+
+        </section>
+        <section class="active">
+          <a href="/" title="查看最近发表"><i class="icon-fixed-width icon-edit"></i> 最近发表</a>
+<ul>
+
+  <li><a href="/work/work-journal-database.html" title="查看《Journal: Academic Database》">Journal: Academic Database</a></li>
+
+  <li><a href="/pl/pl-script-python-comprehension.html" title="查看《Python: Comprehension》">Python: Comprehension</a></li>
+
+  <li><a href="/pl/pl-script-python-built-in-function-next-and-itr.html" title="查看《Python: For Loop》">Python: For Loop</a></li>
+
+  <li><a href="/pl/pl-script-python-built-in-function-dir.html" title="查看《Python: Built-in Function dir()》">Python: Built-in Function dir()</a></li>
+
+  <li><a href="/pl/pl-script-python-built-in-function-enumberate.html" title="查看《Python: Built-in Function》">Python: Built-in Function</a></li>
+
+  <li><a href="/work/work-journal-published-work.html" title="查看《Journal: published work》">Journal: published work</a></li>
+
+</ul>
+
+        </section>
+        <!--
+        <section>
+          <a href="/archive.html" title="查看所有存档"><i class="icon-fixed-width icon-file-text"></i> 文章存档</a>
+<span title="文章总数">1170</span>
+<ul>
+
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#November-2022">2022 年 11 月 (12)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#October-2022">2022 年 10 月 (7)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#September-2022">2022 年 09 月 (12)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#August-2022">2022 年 08 月 (5)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#July-2022">2022 年 07 月 (9)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#June-2022">2022 年 06 月 (2)</a></li>
+    
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#May-2022">2022 年 05 月 (1)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2022">2022 年 03 月 (8)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#February-2022">2022 年 02 月 (7)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#January-2022">2022 年 01 月 (8)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#December-2021">2021 年 12 月 (3)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#November-2021">2021 年 11 月 (11)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#September-2021">2021 年 09 月 (2)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2021">2021 年 03 月 (3)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#December-2020">2020 年 12 月 (6)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#November-2020">2020 年 11 月 (17)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#October-2020">2020 年 10 月 (2)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#September-2020">2020 年 09 月 (4)</a></li>
+    
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#August-2020">2020 年 08 月 (1)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#July-2020">2020 年 07 月 (7)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#June-2020">2020 年 06 月 (41)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2020">2020 年 03 月 (4)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#February-2020">2020 年 02 月 (2)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#January-2020">2020 年 01 月 (8)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#December-2019">2019 年 12 月 (17)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#November-2019">2019 年 11 月 (4)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#September-2019">2019 年 09 月 (15)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#August-2019">2019 年 08 月 (17)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#July-2019">2019 年 07 月 (13)</a></li>
+    
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#June-2019">2019 年 06 月 (1)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#May-2019">2019 年 05 月 (21)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2019">2019 年 03 月 (16)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#February-2019">2019 年 02 月 (17)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#January-2019">2019 年 01 月 (24)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#December-2018">2018 年 12 月 (74)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#November-2018">2018 年 11 月 (8)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#October-2018">2018 年 10 月 (30)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#September-2018">2018 年 09 月 (27)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#August-2018">2018 年 08 月 (8)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#July-2018">2018 年 07 月 (6)</a></li>
+    
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#June-2018">2018 年 06 月 (1)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#April-2018">2018 年 04 月 (24)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2018">2018 年 03 月 (13)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#February-2018">2018 年 02 月 (9)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#January-2018">2018 年 01 月 (5)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#December-2017">2017 年 12 月 (16)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#November-2017">2017 年 11 月 (10)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#October-2017">2017 年 10 月 (25)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#September-2017">2017 年 09 月 (30)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#July-2017">2017 年 07 月 (28)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#June-2017">2017 年 06 月 (52)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#May-2017">2017 年 05 月 (24)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#April-2017">2017 年 04 月 (27)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2017">2017 年 03 月 (100)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#February-2017">2017 年 02 月 (33)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#January-2017">2017 年 01 月 (54)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#December-2016">2016 年 12 月 (15)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#March-2016">2016 年 03 月 (133)</a></li>
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    <li><a href="/archive.html#February-2016">2016 年 02 月 (91)</a></li>
+    
+  
+
+</ul>
+
+        </section>
+        -->
+        <section>
+          <a href="/categories.html" title="查看所有分类"><i class="icon-fixed-width icon-folder-open"></i> Outline</a>
+<span title="分类总数">11</span>
+<ul>
+
+  <li><a href="/categories.html#言葉-ref">言葉 (237)</a></li>
+
+  <li><a href="/categories.html#life-ref">life (21)</a></li>
+
+  <li><a href="/categories.html#PL-ref">PL (277)</a></li>
+
+  <li><a href="/categories.html#OS-ref">OS (15)</a></li>
+
+  <li><a href="/categories.html#Algorithm-ref">Algorithm (81)</a></li>
+
+  <li><a href="/categories.html#CS-ref">CS (68)</a></li>
+
+  <li><a href="/categories.html#math-ref">math (366)</a></li>
+
+  <li><a href="/categories.html#Economy-ref">Economy (2)</a></li>
+
+  <li><a href="/categories.html#work-ref">work (26)</a></li>
+
+  <li><a href="/categories.html#Simplex-ref">Simplex (39)</a></li>
+
+  <li><a href="/categories.html#Writing-ref">Writing (36)</a></li>
+
+</ul>
+
+        </section>
+        <section>
+          <a href="/tags.html" title="查看所有标签"><i class="icon-fixed-width icon-tags"></i> Tags</a>
+<span title="标签总数">111</span>
+<div id="tag-cloud">
+
+
+
+
+
+
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#日本語-ref" style="font-size: 16pt; color: #222;">日本語</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#英語-ref" style="font-size: 18pt; color: #000;">英語</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#summary-ref" style="font-size: 11pt; color: #777;">summary</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#japan-ref" style="font-size: 9pt; color: #999;">japan</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#life-ref" style="font-size: 9.5pt; color: #999;">life</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#food-ref" style="font-size: 9pt; color: #999;">food</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#shell-ref" style="font-size: 10.5pt; color: #888;">shell</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#script-ref" style="font-size: 16.5pt; color: #111;">script</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#python-ref" style="font-size: 12pt; color: #666;">python</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#compile-ref" style="font-size: 15.5pt; color: #222;">compile</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#make-ref" style="font-size: 9pt; color: #999;">make</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#cmake-ref" style="font-size: 10pt; color: #888;">cmake</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#latex-ref" style="font-size: 11pt; color: #777;">latex</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#c++-ref" style="font-size: 15pt; color: #333;">c++</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#java-ref" style="font-size: 10pt; color: #888;">java</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#graphics programming-ref" style="font-size: 9.5pt; color: #999;">graphics programming</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#Qt-ref" style="font-size: 9.5pt; color: #999;">Qt</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#haskell-ref" style="font-size: 10pt; color: #888;">haskell</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#lazy evaluation-ref" style="font-size: 9.5pt; color: #999;">lazy evaluation</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#tool-ref" style="font-size: 9.5pt; color: #888;">tool</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#git-ref" style="font-size: 10pt; color: #888;">git</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#editor-ref" style="font-size: 9.5pt; color: #888;">editor</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#toolkit-ref" style="font-size: 10pt; color: #888;">toolkit</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#debugger-ref" style="font-size: 9pt; color: #999;">debugger</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#gdb-ref" style="font-size: 9pt; color: #999;">gdb</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#A.D.T.-ref" style="font-size: 11.5pt; color: #777;">A.D.T.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#A.D.T.P.-ref" style="font-size: 9pt; color: #999;">A.D.T.P.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#A.D.-ref" style="font-size: 10pt; color: #888;">A.D.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#A.P.-ref" style="font-size: 10pt; color: #888;">A.P.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#AA-ref" style="font-size: 9.5pt; color: #999;">AA</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#D.P.-ref" style="font-size: 9.5pt; color: #888;">D.P.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#microprocessor-ref" style="font-size: 10pt; color: #888;">microprocessor</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#compiler-ref" style="font-size: 10pt; color: #888;">compiler</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#TOC-ref" style="font-size: 9.5pt; color: #999;">TOC</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#OS-ref" style="font-size: 9.5pt; color: #888;">OS</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#assembly-ref" style="font-size: 9.5pt; color: #888;">assembly</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#jekyll-ref" style="font-size: 9.5pt; color: #999;">jekyll</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#ruby-ref" style="font-size: 9pt; color: #999;">ruby</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#構造-ref" style="font-size: 13pt; color: #555;">構造</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#L.T.-ref" style="font-size: 9.5pt; color: #999;">L.T.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#L.A.-ref" style="font-size: 10pt; color: #888;">L.A.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#Lie-ref" style="font-size: 9.5pt; color: #999;">Lie</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#A.A.-ref" style="font-size: 10.5pt; color: #777;">A.A.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#E.A.-ref" style="font-size: 9pt; color: #999;">E.A.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#N.T.-ref" style="font-size: 9pt; color: #999;">N.T.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#A.T.-ref" style="font-size: 9.5pt; color: #999;">A.T.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#space-ref" style="font-size: 13.5pt; color: #555;">space</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#M.A.-ref" style="font-size: 9pt; color: #999;">M.A.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#M.T.-ref" style="font-size: 9.5pt; color: #999;">M.T.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#topology-ref" style="font-size: 9.5pt; color: #999;">topology</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#I.G.-ref" style="font-size: 9pt; color: #999;">I.G.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#R.G.-ref" style="font-size: 9.5pt; color: #888;">R.G.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#D.G.-ref" style="font-size: 10pt; color: #888;">D.G.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#H.G.-ref" style="font-size: 9.5pt; color: #999;">H.G.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#P.G.-ref" style="font-size: 9pt; color: #999;">P.G.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#A.G.-ref" style="font-size: 9pt; color: #999;">A.G.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#geometry-ref" style="font-size: 9pt; color: #999;">geometry</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#change-ref" style="font-size: 13pt; color: #555;">change</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#F.A.-ref" style="font-size: 9.5pt; color: #999;">F.A.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#apply-ref" style="font-size: 18pt; color: #000;">apply</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#T.A.-ref" style="font-size: 9pt; color: #999;">T.A.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#V.A.-ref" style="font-size: 10pt; color: #888;">V.A.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#C.A.-ref" style="font-size: 9.5pt; color: #888;">C.A.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#R.A.-ref" style="font-size: 10.5pt; color: #888;">R.A.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#basic-ref" style="font-size: 10pt; color: #888;">basic</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#C.T.-ref" style="font-size: 10pt; color: #888;">C.T.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#S.T.-ref" style="font-size: 9pt; color: #999;">S.T.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#G.M.-ref" style="font-size: 10.5pt; color: #777;">G.M.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#P.G.M.D.T.-ref" style="font-size: 9pt; color: #999;">P.G.M.D.T.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#G.M.D.T.-ref" style="font-size: 9pt; color: #999;">G.M.D.T.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#G.M.L.-ref" style="font-size: 9.5pt; color: #999;">G.M.L.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#P.G.M.-ref" style="font-size: 9pt; color: #999;">P.G.M.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#P.G.M.L.-ref" style="font-size: 9pt; color: #999;">P.G.M.L.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#G.M.I.-ref" style="font-size: 9pt; color: #999;">G.M.I.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#G.M.R.-ref" style="font-size: 9.5pt; color: #999;">G.M.R.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#I.T.-ref" style="font-size: 9.5pt; color: #888;">I.T.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#C.O.-ref" style="font-size: 9.5pt; color: #999;">C.O.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#N.A.-ref" style="font-size: 9pt; color: #999;">N.A.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#Game Theory-ref" style="font-size: 9.5pt; color: #999;">Game Theory</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#G.T.-ref" style="font-size: 10pt; color: #888;">G.T.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#S.P.-ref" style="font-size: 10.5pt; color: #777;">S.P.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#M.C.-ref" style="font-size: 9.5pt; color: #999;">M.C.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#R.P.-ref" style="font-size: 9pt; color: #999;">R.P.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#P.P.-ref" style="font-size: 9pt; color: #999;">P.P.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#D.T.-ref" style="font-size: 9pt; color: #999;">D.T.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#P.A.S.-ref" style="font-size: 11.5pt; color: #666;">P.A.S.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#Frequentist-ref" style="font-size: 9pt; color: #999;">Frequentist</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#inference-ref" style="font-size: 9pt; color: #999;">inference</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#Bayesian-ref" style="font-size: 9.5pt; color: #999;">Bayesian</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#P.A.S.M.-ref" style="font-size: 9pt; color: #999;">P.A.S.M.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#statistics-ref" style="font-size: 10pt; color: #888;">statistics</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#P.A.S-ref" style="font-size: 9pt; color: #999;">P.A.S</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#P.M.-ref" style="font-size: 10pt; color: #888;">P.M.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#discrete-ref" style="font-size: 10pt; color: #888;">discrete</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#CMB-ref" style="font-size: 9pt; color: #999;">CMB</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#G.T.A.-ref" style="font-size: 9pt; color: #999;">G.T.A.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#C.F.-ref" style="font-size: 9pt; color: #999;">C.F.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#search-ref" style="font-size: 9pt; color: #999;">search</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#model-ref" style="font-size: 9pt; color: #999;">model</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#journal-ref" style="font-size: 9.5pt; color: #999;">journal</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#General Writing Rule-ref" style="font-size: 10.5pt; color: #888;">General Writing Rule</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#Journal writing-ref" style="font-size: 10pt; color: #888;">Journal writing</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#manifold-ref" style="font-size: 9.5pt; color: #999;">manifold</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#learning-ref" style="font-size: 9pt; color: #999;">learning</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#NLP-ref" style="font-size: 9pt; color: #999;">NLP</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#traditional-ref" style="font-size: 9pt; color: #999;">traditional</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#N.N.D.-ref" style="font-size: 10pt; color: #888;">N.N.D.</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#classification-ref" style="font-size: 9pt; color: #999;">classification</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#FL-ref" style="font-size: 9pt; color: #999;">FL</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#CV-ref" style="font-size: 9pt; color: #999;">CV</a>
+  
+    
+    
+    
+    
+    
+    <a href="/tags.html#EM-ref" style="font-size: 9pt; color: #999;">EM</a>
+  
+
+</div>
+
+        </section>
+        <div id="fixed-container">
+  <section>
+    
+  </section>
+  <section>
+    <a href="#"><i class="icon-fixed-width icon-heart"></i> 与我联系</a>
+<div id="contacts-list">
+  <a href="mailto:zhanghy1012@gmail.com" target="_blank" title="Gmail">
+    <i class="icon-large icon-fixed-width icon-envelope"></i>
+  </a>
+  <a href="https://github.com/slip-slap" target="_blank" title="GitHub">
+    <i class="icon-large icon-fixed-width icon-github"></i>
+  </a>
+
+<!-- You will not be able to see this text. 
+  <a href="http://weibo.com/" target="_blank" title="新浪微博">
+    <i class="icon-large icon-fixed-width icon-weibo"></i>
+  </a>
+  <a href="https://twitter.com/" target="_blank" title="Twitter">
+    <i class="icon-large icon-fixed-width icon-twitter"></i>
+  </a>
+-->
+</div>
+
+  </section>
+  <section>
+    <a href="#"><i class="icon-fixed-width icon-link"></i> 友情链接</a>
+<ul>
+  <li><a href="https://github.com/Shopify/liquid/wiki/Liquid-for-Designers" target="_blank">Liquid 模板引擎</a></li>
+  <li><a href="http://jekyllrb.com/" target="_blank">Jekyll 静态博客生成器</a></li>
+</ul>
+
+  </section>
+</div>
+<script type="text/javascript">
+$(document).ready(function() {
+  var position = $('#fixed-container').offset();
+  $(window).scroll(function() {
+    if($(window).scrollTop() > position.top) {
+      $('#fixed-container').css('position','fixed').css('top','0');
+    } else {
+      $('#fixed-container').css('position','static');
+    }
+  });
+});
+</script>
+
+      </aside>
+
+      <!-- Main Content -->
+      <div id="main-inner">
+        <div id="loader"><img src="/assets/themes/twitter/img/loading.gif" alt="请稍侯"></div>
+        <div id="main-content">
+          
+
+
+
+<section id="content">
+  <article class="post">
+  <!--
+  - math support
+  -->
+      <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+                tex2jax: {
+                      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+                            inlineMath: [['$','$']]
+                                }
+                                  });
+      </script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+
+    <header>
+      <h1>sentence: n1 文法</h1>
+    </header>
+
+    <section>
+      <div class="post-extra">
+        <div class="pull-left">
+          <span>16 March 2022</span>
+        </div>
+        <div class="pull-right">
+          
+
+
+  <span id="share">
+  <a class="wechat" target="_blank" title="分享到微信" href="http://chart.apis.google.com/chart?cht=qr&amp;chs=300x300&amp;chl=/%E8%A8%80%E8%91%89/language-japanese-grammar-N1-grammar.html"><i class="icon-large icon-wechat"></i></a>
+  <a class="weibo" target="_blank" title="分享到微博" href="http://service.weibo.com/share/share.php?title=sentence: n1 文法 - Just Do It&amp;url=/%E8%A8%80%E8%91%89/language-japanese-grammar-N1-grammar.html&amp;type=3&amp;searchPic=1"><i class="icon-large icon-weibo"></i></a>
+  <a class="qzone" target="_blank" title="分享到 QQ 空间" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=/%E8%A8%80%E8%91%89/language-japanese-grammar-N1-grammar.html&amp;title=sentence: n1 文法 - Just Do It&amp;summary=&amp;site="><i class="icon-large icon-qzone"></i></a>
+  <a class="twitter" target="_blank" title="Share to Twitter" href="https://twitter.com/intent/tweet?url=/%E8%A8%80%E8%91%89/language-japanese-grammar-N1-grammar.html&amp;text=sentence: n1 文法 - Just Do It&amp;via="><i class="icon-large icon-twitter"></i></a>
+  <a class="facebook" target="_blank" title="Share to Facebook" href="http://www.facebook.com/sharer.php?u=/%E8%A8%80%E8%91%89/language-japanese-grammar-N1-grammar.html&amp;t=sentence: n1 文法 - Just Do It"><i class="icon-large icon-facebook-sign"></i></a>
+  <a class="googleplus" target="_blank" title="Share to Google+" href="https://plus.google.com/share?url=/%E8%A8%80%E8%91%89/language-japanese-grammar-N1-grammar.html"><i class="icon-large icon-google-plus-sign"></i></a>
+</span>
+
+
+
+
+
+        </div>
+      </div>
+      
+<h4 id="1-てもでも">1. ても・でも</h4>
+<ol>
+  <li>イ形ーかろう</li>
+  <li>名詞・ナーだろう・であろう  +    が・と</li>
+  <li>動意向形</li>
+</ol>
+
+<ul>
+  <li>どんなに高かろうと、どうしても手に入りたい</li>
+</ul>
+
+<ol>
+  <li>だ・だろう
+“~のだろう” is the potenial form of “〜のだ”
+    <ul>
+      <li>大勢の人が集まっているところを見ると、かなり大きい事故なだろう.</li>
+      <li>これは必ずやらなければならないことなのだ (mandatory task)</li>
+    </ul>
+  </li>
+  <li>〜であれ・であろうと
+    <ul>
+      <li>誰であれ、欠点の１つや２つは持っています。</li>
+    </ul>
+  </li>
+  <li>~であれ〜であれ・であろうと〜であろうと・だろうが
+    <ul>
+      <li>国会議員だろうが、公務員だろうが、税金は納めなければならない。</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="2-てもなくても">2. ~ても〜なくても</h4>
+
+<ol>
+  <li>動意向形+が・と＋同一動詞まい形+が・と
+    <ul>
+      <li>周囲のひとが反対しようとしまいと、私の気持ちは変わらない。</li>
+    </ul>
+  </li>
+  <li>~(よう)が・と〜(よう)が・と
+    <ul>
+      <li>あの人は暑かろうと寒かろうと、いつも同じ服を着ている。</li>
+    </ul>
+  </li>
+  <li>~(よ)うにも〜(でき)ない
+    <ul>
+      <li>お金がないので、この本を買おうにも買えない</li>
+    </ul>
+  </li>
+  <li>(辞書形)に(可能性)ない
+    <ul>
+      <li>言うに言えない: can’t say even though you want to.</li>
+      <li>泣くに泣けない: can’t cry even if you hope so.</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="3-かどうか">3. かどうか</h4>
+
+<ol>
+  <li>出来るかどうか</li>
+  <li>合格するか否かは、君自身の努力による。</li>
+  <li>かどうか</li>
+  <li>か否か(かいなか)</li>
+  <li>かないか</li>
+</ol>
+
+<h4 id="5-by-the-way">5. by the way</h4>
+<ol>
+  <li>かたがた(formal)
+    <ul>
+      <li>花見かたがた一度ぜひ遊びに来ていただきたいですが。</li>
+    </ul>
+  </li>
+  <li>次いでに</li>
+  <li>がてら
+    <ul>
+      <li>お墓(はか)参りがてら、とライブに行った</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="6-ながら">6. ~ながら</h4>
+<ol>
+  <li>傍ら(かたわら)
+    <ul>
+      <li>勉強を進めるかたわら、アルバイトも週に三回します。</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="7-ようにようなようだ">7. ように・ような・ようだ</h4>
+<ol>
+  <li>かのごとく
+    <ul>
+      <li>彼は、事件には関係していないかのごとく、知らぬふりをしていた</li>
+      <li>彼女はそのことを知っているはずなのに、まったく聞いたことがないかのごとこ態度だった</li>
+      <li>光陰矢のごとし</li>
+    </ul>
+  </li>
+  <li>かのように</li>
+</ol>
+
+<h4 id="8-because">8. because</h4>
+<ol>
+  <li>ことだし: also because
+    <ul>
+      <li>全員も揃ったことだし、そろそろ会議を始めましょう</li>
+      <li>し denotes one of the reason when is used at the end of a sentence.</li>
+    </ul>
+  </li>
+  <li>こととて
+    <ul>
+      <li>急なこととて、お茶と漬物しかありませんが、どうぞ召し上がってください。</li>
+      <li>世間知らずのこととて、法律に反する行為をした場合は、罰を免れない？</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="9-ないで">9. ないで</h4>
+<ol>
+  <li>ことなしに
+    <ul>
+      <li>親友は、細かい事情を聞くことなしに、私にお金を貸してくれた。</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="2-end-up-with">2. end up with</h4>
+<ol>
+  <li>始末だ: end up with
+    <ul>
+      <li>一人でできると言っていたのに、結局は助けるを求める始末だ。</li>
+    </ul>
+  </li>
+  <li>ずじまい(しまい)
+    <ul>
+      <li>やりたいことは山ほどあったが、結局、何もできずじまいでこの歳になった。</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="3-ところで--だけだない">3. ところで ~ だけだ・ない</h4>
+<ol>
+  <li>even if
+    <ul>
+      <li>たとえ失敗したところで、失うのがあるわけじゃないし、駄目で元々さ、先やってみよう。</li>
+    </ul>
+  </li>
+  <li>~たりとも　〜ない
+    <ul>
+      <li>医者は手術の間、一瞬たりとも気が抜けない</li>
+    </ul>
+  </li>
+  <li>~も　〜ない</li>
+</ol>
+
+<h4 id="4-impossible">4. impossible</h4>
+<ol>
+  <li>わけがない</li>
+  <li>っこない
+    <ul>
+      <li>そんなむずかしいこと、子供にはわかりっこない</li>
+    </ul>
+  </li>
+  <li>
+    <p>はずがない</p>
+  </li>
+  <li>たところ</li>
+  <li>ばかりに</li>
+</ol>
+
+<h4 id="5-て">5. て</h4>
+<ol>
+  <li>~てから＋というもの(emphasis the previous part)
+    <ul>
+      <li>彼は結婚してからというもの、人が変わったようにまじめになった。</li>
+    </ul>
+  </li>
+  <li>~でなくてなんだろう
+    <ul>
+      <li>これが愛でなくてなんだろう</li>
+    </ul>
+  </li>
+  <li>~てしかるべきだ
+    <ul>
+      <li>３０歳までに結婚してしかるべきという考え方はもう古い。</li>
+    </ul>
+  </li>
+  <li>〜ては〜ては
+    <ul>
+      <li>降ってやみ、降ってはやみの天気が続いている</li>
+    </ul>
+  </li>
+  <li>〜であるまいし・じゃあるまいし: である=です まいし=ないだろう
+    <ul>
+      <li>子供ではあるまいし、もう少し冷静に話し合うべきだ。</li>
+    </ul>
+  </li>
+  <li>~ていられない
+    <ul>
+      <li>彼は正義感が強いから、上司の不正を黙ってみていられなかったんだと思う</li>
+    </ul>
+  </li>
+  <li>~てばかりもいられない
+    <ul>
+      <li>大学に受かったからといって、喜んでばかりもいられない。この先、やらなければならないことはいっぱいある。</li>
+    </ul>
+  </li>
+  <li>~て憚らない(はばからない)
+    <ul>
+      <li>無知は個性だと宣伝して憚らない人がいる。</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="6-と">6. と</h4>
+<ol>
+  <li>と言えども: although
+    <ul>
+      <li>仕事が溜まっていて、連休といえども毎日出社しなければならない。</li>
+    </ul>
+  </li>
+  <li>といえなくもない
+    <ul>
+      <li>今の生活は充実にしているといえなくもないが、何か物足りない感じがする。</li>
+    </ul>
+  </li>
+  <li>といったところだ・というところだ: ぐらい
+    <ul>
+      <li>自分で料理を作るといっても、せいぜいサラダとかゆで卵といったところだ。</li>
+    </ul>
+  </li>
+  <li>これ　といって〜ない: といって: 提起 これといって 特别提起这个
+    <ul>
+      <li>今週の新聞にはこれといって大したニュースは載っていない</li>
+      <li>食べ物に関してはこれといった好き嫌いはないんですが、着るものにはこだわりがあります。</li>
+    </ul>
+  </li>
+  <li>~といったらありはしない・といったらありゃしない・といったらない・ったらない・ったらありゃしない
+    <ul>
+      <li>といったら in speak of</li>
+      <li>このところは残業続きで、疲れるといったらない</li>
+    </ul>
+  </li>
+  <li>~と言わず〜と言わず: object
+    <ul>
+      <li>今の若者は休み時間と言わず食事中と言わずいつも携帯電話を離さない</li>
+    </ul>
+  </li>
+  <li>~といい〜といい: subject
+    <ul>
+      <li>手と言い足と言い血だらけだった。</li>
+    </ul>
+  </li>
+  <li>と(は)打って変わって
+    <ul>
+      <li>昨日土砂降りとはうってかわって、今日は晴だった。</li>
+    </ul>
+  </li>
+  <li>~と思いきや: ~と思ったら違った
+    <ul>
+      <li>何も連絡ないから父親は元気だと思いきや入院していて驚いた。</li>
+    </ul>
+  </li>
+  <li>ときたら: in speak of
+    <ul>
+      <li>まったく、うちの犬ときたら泥棒が入ってきても、寝ていたんですよ。</li>
+    </ul>
+  </li>
+  <li>ところを: during
+    <ul>
+      <li>お忙しところを、恐(おそ)れ入りますが、どうかよろしくお願い申し上げます。</li>
+    </ul>
+  </li>
+  <li>ところに
+    <ul>
+      <li>新聞を読もうとしたところに、電話がかかってきた。</li>
+      <li>いいところにきました。来得正好</li>
+    </ul>
+  </li>
+  <li>~としたって・〜としたところで: たって＝ても
+    <ul>
+      <li>きに入った部件が見つかったとしたって、買うだけの頭金が足りない</li>
+    </ul>
+  </li>
+  <li>〜として〜ない
+    <ul>
+      <li>今回の期末試験では、一人として満点を取る生徒はいなかった。</li>
+    </ul>
+  </li>
+  <li>~とて: としても、でも
+    <ul>
+      <li>常に冷静彼とてやはり人間だから、感情的になってしまうこともあるんだろう。</li>
+    </ul>
+  </li>
+  <li>〜とは・なんて: 竟然
+    <ul>
+      <li>普段は大人しい彼があんなに怒るとは、</li>
+      <li>二十歳にもなりながら、そんな簡単なこともできないとは。</li>
+    </ul>
+  </li>
+  <li>~とばかりに・と言わんばかりに</li>
+  <li>~とまでは行かないが・〜とまでは行かないとしても
+    <ul>
+      <li>毎日とまでは行かないが、週に２、３回は掃除をしようと思う</li>
+    </ul>
+  </li>
+  <li>~とまでは言わないが・〜とまでは言わないとしても
+    <ul>
+      <li>君自身の問題だから、「やめてしまえ」とまでは言わないが、いまいちが考え直してみたらどうだろうか。</li>
+    </ul>
+  </li>
+  <li>ともあろうものが: 身为，，，还
+    <ul>
+      <li>警察官ともあろうものが、暴力団に捜索情報を流れしていたとは。</li>
+    </ul>
+  </li>
+  <li>～としたことが: として
+    <ul>
+      <li>私としたことが、こんなつまらないミスをするとは</li>
+    </ul>
+  </li>
+  <li>ともなく・ともなしに: 不经意地
+    <ul>
+      <li>電車の窓から外を見るともなくみていたら、高校時代の同級生の姿見に入った</li>
+      <li>どこからともなく美しい歌声が聞こえてきた。</li>
+    </ul>
+  </li>
+  <li>ともなると・ともなれば
+    <ul>
+      <li>社会人ともなると、服装や言葉遣いを気をつかなければならない</li>
+    </ul>
+  </li>
+  <li>と・に〜を重ねて
+    <ul>
+      <li>修正に修正を重ねて、最終の企画書を提出した。</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="7-な">7. な</h4>
+<ol>
+  <li>ないではない・ないでもない: the fact
+    <ul>
+      <li>お酒は飲まないでもないが、あまり好きじゃないです。</li>
+    </ul>
+  </li>
+  <li>ないものでもない: the future
+    <ul>
+      <li>ひょっとしたら、引き受けないものでもない</li>
+    </ul>
+  </li>
+  <li>ないこともない</li>
+  <li>なくもない: 言える・考える・思う
+    <ul>
+      <li>理解できなくもない</li>
+    </ul>
+  </li>
+  <li>ないまでも
+    <ul>
+      <li>全部できないまでも、できるだけやろう</li>
+    </ul>
+  </li>
+  <li>までもない</li>
+  <li>ながら
+    <ul>
+      <li>残念ながら: although i am sorry.</li>
+    </ul>
+  </li>
+  <li>名詞＋なしには・なしでは
+    <ul>
+      <li>動詞＋ことなしに</li>
+      <li>今回のアンケート調査では、インターネットなしでは、生きていけないと答えた若者が８４％を占めている。</li>
+    </ul>
+  </li>
+  <li>名詞＋なくして(は): 如果没有…就不能: なければ
+    <ul>
+      <li>動詞＋ことなくして</li>
+      <li>人々の信頼なくして、リーダーの務めが果たせない。</li>
+    </ul>
+  </li>
+  <li>なしに: しないで
+    <ul>
+      <li>ことなしに</li>
+      <li>彼は一言の挨拶もなしに帰国した。</li>
+    </ul>
+  </li>
+  <li>〜ならいざ知らず
+    <ul>
+      <li>知らなかったのならいざ知らず、知っていてこんなことをするなんて、許せない。</li>
+    </ul>
+  </li>
+  <li>~ならまだしも
+    <ul>
+      <li>一度や二度遅刻したことがあるならまだしも毎日遅刻は無視できない問題だ。</li>
+    </ul>
+  </li>
+  <li>~ならともかく</li>
+  <li>ならではの・ならでは: only
+    <ul>
+      <li>札幌の雪まつりに行きましたが、北國ならではの風情がありました。</li>
+    </ul>
+  </li>
+  <li>動詞辞書形+なり: が早いか
+    <ul>
+      <li>私の料理を人口食べるなり、父は変顔して席を立ってしまた。　</li>
+    </ul>
+  </li>
+  <li>動詞た形＋なり
+    <ul>
+      <li>主人は朝早く出かけたり、この時間になっても帰ってきてません。</li>
+    </ul>
+  </li>
+  <li>名詞・動詞辞書形＋なり〜なり
+    <ul>
+      <li>友達なり家族なり誰か信頼できるひとに相談したい。</li>
+    </ul>
+  </li>
+  <li>~たり〜たり
+    <ul>
+      <li>行ったり来たり</li>
+    </ul>
+  </li>
+  <li>なりの・なりに
+    <ul>
+      <li>人にはそれぞれ、その人なりの生き方や生きがいがあっていいと思う。</li>
+    </ul>
+  </li>
+  <li>なりとも: such as
+    <ul>
+      <li>時間があったら、電話なりとも、かけてくれればいい</li>
+    </ul>
+  </li>
+  <li>たりとも
+    <ul>
+      <li>一刻たりとも</li>
+    </ul>
+  </li>
+  <li>なりなんなりと
+    <ul>
+      <li>なんなりとお好きなものを持って帰っていい。</li>
+      <li>どこへなりとも、誰となりとも、なんなりと</li>
+    </ul>
+  </li>
+  <li>に値する・値しない: 価値がある</li>
+  <li>にはあたらない: までもない
+    <ul>
+      <li>本人も謝っているんだし、そんなに怒るにはあたらない。</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="経">経</h4>
+<ol>
+  <li>経る(へる)
+    <ul>
+      <li>なすこともなく日を経る: 何をしなくても、1日を経た</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="ふる">ふる</h4>
+<ol>
+  <li>pretend as
+    <ul>
+      <li>学者ぶる</li>
+      <li>偉ぶる</li>
+    </ul>
+  </li>
+  <li>the state
+仕事ぶり</li>
+</ol>
+
+<h3 id="p35">p35</h3>
+
+<h4 id="as-if">as if</h4>
+<ol>
+  <li>らしい</li>
+  <li>っぽい</li>
+  <li>じみた</li>
+</ol>
+
+<h4 id="p34">p34</h4>
+
+<h4 id="からあるからのからする">からある・からの・からする</h4>
+<ol>
+  <li>身長２メートルからある男性が、突然、目の前に現れた。</li>
+</ol>
+
+<h4 id="からを守る">〜から〜を守る</h4>
+<ol>
+  <li>子どもの頃担任の先生が私をいじめから守ってくれた</li>
+</ol>
+
+<h3 id="p33">p33</h3>
+
+<h4 id="11-がてらwhile-doing-something">11 がてら(while doing something)</h4>
+
+<h3 id="p32">p32</h3>
+
+<h4 id="depends-on">depends on</h4>
+<ol>
+  <li>如何だ
+    <ul>
+      <li>これが成功するかどうかはみんなの努力いかんだ。</li>
+    </ul>
+  </li>
+  <li>次第</li>
+</ol>
+
+<h4 id="覚えはない-i-dont-remember">覚えはない: i don’t remember</h4>
+<ol>
+  <li>渡辺さんにお金を借りた覚えはない</li>
+  <li>そんなひどいことを言われる覚えはない。</li>
+</ol>
+
+<h4 id="折におりに">折に(おりに)</h4>
+<ol>
+  <li>今度お宅にお伺いするおりには、美味しいワインをお持ちします。</li>
+</ol>
+
+<h4 id="かいがある甲斐がない">かいがある・甲斐がない</h4>
+<ol>
+  <li>努力の甲斐があって、オリンピックの選手に選ばれた。</li>
+</ol>
+
+<h3 id="p29">p29</h3>
+
+<h4 id="揉めるもめる-come-into-quarrel">揉める(もめる): come into quarrel</h4>
+<ol>
+  <li>儲けた(もうけた)お金の配分をめぐって、仲間同士で揉めた。</li>
+</ol>
+
+<h4 id="もたらすbring-in">もたらす(bring in)</h4>
+<ol>
+  <li>招く(まねく)</li>
+  <li>もたらす</li>
+</ol>
+
+<h4 id="もてなすtreat">もてなす(treat)</h4>
+<ol>
+  <li>持てなす</li>
+  <li>奢る</li>
+  <li>誘う</li>
+</ol>
+
+<h4 id="物足りない">物足りない</h4>
+<ol>
+  <li>物足りない(ものたりない): unsatisffied with the current situation
+    <ul>
+      <li>一泊だけでは物足りない気がして、もう一日泊まることにした</li>
+    </ul>
+  </li>
+  <li>もったいない</li>
+</ol>
+
+<h4 id="もくろみ">もくろみ</h4>
+<ol>
+  <li>目論見</li>
+  <li>計画</li>
+  <li>図る(はかる)</li>
+</ol>
+
+<h4 id="競">競</h4>
+<ol>
+  <li>競馬(けいば)</li>
+  <li>競争</li>
+</ol>
+
+<h3 id="p24">p24</h3>
+
+<h3 id="はれ">はれ</h3>
+<ol>
+  <li>晴れる</li>
+  <li>腫れる</li>
+</ol>
+
+<h4 id="盛">盛</h4>
+<ol>
+  <li>盛る(さかる)</li>
+  <li>盛る(もる)</li>
+</ol>
+
+<h4 id="端">端</h4>
+<ol>
+  <li>途中</li>
+  <li>中途半端
+    <ul>
+      <li>みんなで分けたら半端がでたので、欲しい人に余計にあげた。</li>
+      <li>半端な態度はよくない</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="万能ばんのう">万能(ばんのう)</h4>
+<ol>
+  <li>万歳(ばんざい)</li>
+  <li>万全(ばんぜん)</li>
+</ol>
+
+<h4 id="反する">反する</h4>
+<ol>
+  <li>規則に反する、罰を与えられる</li>
+</ol>
+
+<h3 id="p23">p23</h3>
+
+<h4 id="防">防</h4>
+<ol>
+  <li>防ぐ(ふせ)</li>
+  <li>防止</li>
+  <li>予防</li>
+</ol>
+
+<h3 id="p13">p13</h3>
+
+<h4 id="すば">すば</h4>
+<ol>
+  <li>すばしこい・はしこい</li>
+  <li>素早い(すばやい)</li>
+</ol>
+
+<h4 id="廃れるすたれる">廃れる(すたれる)</h4>
+<ol>
+  <li>最近の流行は、すぐに廃れる</li>
+  <li>衰える(おとろえる)</li>
+  <li>廃棄物</li>
+</ol>
+
+<h4 id="濯ぐすすぐ">濯ぐ(すすぐ)</h4>
+<ol>
+  <li>彼は、努力して過去の汚名を濯いだ</li>
+</ol>
+
+<h3 id="p12">p12</h3>
+
+<h4 id="心">心</h4>
+<ol>
+  <li>下心(したごころ)
+    <ul>
+      <li>彼のしたごころを見抜く</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="地">地</h4>
+
+<ol>
+  <li>じ
+    <ul>
+      <li>生地</li>
+      <li>地元</li>
+      <li>下地</li>
+      <li>地震</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="adverb">adverb</h4>
+<ol>
+  <li>萎びる(しなびる)</li>
+  <li>枯れる</li>
+  <li>みずみずしい</li>
+</ol>
+
+<h4 id="adj">adj</h4>
+<ol>
+  <li>柔らかい</li>
+  <li>しなやか</li>
+</ol>
+
+<h3 id="凌">凌</h3>
+<ol>
+  <li>凌ぐ(しのぐ): get rid of</li>
+  <li>耐える</li>
+</ol>
+
+<h4 id="1-た拍子ひょうしに-the-moment">1 た拍子(ひょうし)に: the moment</h4>
+<ol>
+  <li>くしゃみをした拍子にメガネが落ちた</li>
+</ol>
+
+<h4 id="2-まみれcovered-in">2 まみれ(covered in)</h4>
+<ol>
+  <li>彼女の服は破れて泥まみれだった</li>
+  <li>犯行現場には血塗れのナイフが残されていた。</li>
+</ol>
+
+<h4 id="3-ものをi-wish">3 ものを(i wish)</h4>
+<ol>
+  <li>私に連絡してくれれば、迎えに言ってあげたものを。if you had contacted me, i would have come to pick you up.</li>
+</ol>
+
+<h4 id="4-のみならずnot-only-のみならない">4 のみならず(not only のみならない)</h4>
+<ol>
+  <li>若い人のみならず老人や子供達にも人気がある。</li>
+</ol>
+
+<h4 id="5-からある">5 からある</h4>
+<ol>
+  <li>最近、以前からある疣痔(いぼじ)が痛みmす</li>
+</ol>
+
+<h4 id="6-とされる">6 とされる</h4>
+<ol>
+  <li>必要とされるお金をまだ集めていない(i donot get the amount of money set as required.)</li>
+</ol>
+
+<h4 id="7-やむを得ない">7 やむを得ない</h4>
+
+<p>5.1 ~まい</p>
+<ul>
+  <li>ベトナムはもう電車ができたから、渋滞するまい。</li>
+</ul>
+
+<p>5.2 ~べからず</p>
+<ul>
+  <li>産業廃棄物を山に捨てるべからず。</li>
+</ul>
+
+<p>6.1 〜そばから</p>
+<ul>
+  <li>あのラーメン屋さんは、外にのれんをかけたそばから、長い行列ができてしまう。</li>
+</ul>
+
+<p>6.3 aが早いかb</p>
+<ul>
+  <li>チャイムがなるが早いか、生徒たちは弁当を取り出して食べ始めた。</li>
+  <li>彼はとてもお腹が空いていたので、座るが早いか、「いただきます」も言わないで食べ始めた。</li>
+</ul>
+
+<p>7.1 よくも〜ものだ:
+本当に〜したんだ。驚きや怒り、意外な気持ち、憎しみ、あきれるなどの気持ちを強調した表現。</p>
+
+<ul>
+  <li>彼は全然仕事をしてないのに、よくも部長に慣れたものだ。</li>
+</ul>
+
+<p>7.2 ~ないものは〜ない</p>
+<ul>
+  <li>食べられないものは食べられない。</li>
+  <li>そんなに泣いても叫んでも、買えないものは買えない。</li>
+</ul>
+
+<p>7.3 ~以外の何者でもない</p>
+<ul>
+  <li>あんなに何度もお辞儀をするなんて日本人以外の何者でもない。</li>
+</ul>
+
+<p>7.4 ~てからというもの: aして以来今までbの状態が続く</p>
+<ul>
+  <li>ダイエットを始めてからというもの、こめや甘いものを食べていない。</li>
+</ul>
+
+<p>7.5 ~ものなら: もし〜できるなら(話し相手は〜絶対できないと思う)</p>
+<ul>
+  <li>殴れるものなら殴ってみろ</li>
+</ul>
+
+<p>7.6 ~ないものでもない(全くできないことはない)</p>
+<ul>
+  <li>この商品売れないものでもないけど、儲けは望めそうもないね。</li>
+</ul>
+
+<p>7.7 ~ものを: aすればbになるのに</p>
+<ul>
+  <li>もっと早く話してくれれば良いものを、なんて話さなかったんだ。</li>
+</ul>
+
+<p>8.2 ことなしに: aをしないでbをする</p>
+<ul>
+  <li>snsが普及している世の中。直接会うことなしに結婚するカップルがいるらしい。</li>
+</ul>
+
+<p>8.4 aてもbすぎることはない</p>
+<ul>
+  <li>工場内での作業は危険を伴うので、確認してもしすぎることはない。</li>
+</ul>
+
+<p>9.2 ~をもって: ~があれば、〜で</p>
+<ul>
+  <li>本日をもって営業を終了させていただきます。</li>
+</ul>
+
+<p>11.1  ~だけましだ</p>
+<ul>
+  <li>うちの会社は彼の会社に比べでたった一ヶ月でもバーナスがでるだけましだ。</li>
+</ul>
+
+<p>14.1 まるで〜かのようだ</p>
+<ul>
+  <li>ストレスの多い会社で働いているときは、まるで地獄にいるかのようだった。</li>
+</ul>
+
+<p>14.2 aようでいてb</p>
+<ul>
+  <li>日本人だから日本の文化を何でも知っているようでいて、意外と知らない。</li>
+  <li>この辞書は何でも載っているようでいて、知りたい言葉が載っていない。</li>
+</ul>
+
+<p>14.3  aようによってはb: a次第でbにする</p>
+<ul>
+  <li>道の選ぶようによっては約束の時間に間に合うかも。</li>
+</ul>
+
+<p>15.1 ~にかかっている</p>
+<ul>
+  <li>この動画の成功は、「いいね」の数と「シャア」の数にかかっている</li>
+  <li>料理の良し悪しは塩加減にかかっている。</li>
+</ul>
+
+<p>15.2 ~に託けて：を理由に</p>
+<ul>
+  <li>最近出張に託けて、彼は浮気をしている気がする。</li>
+</ul>
+
+<p>15.3 ~にかまけて：ばかりして</p>
+<ul>
+  <li>忙しさにかまけて、宿題をせず、先生に叱れた。</li>
+</ul>
+
+<p>15.4 ~に硬くない:〜と考えるのは簡単だ</p>
+<ul>
+  <li>昔の自分を思い出せば、新入社員の心情は想像に硬くない。</li>
+</ul>
+
+<p>16.1 ~にいたる：〜という重大事態になって</p>
+<ul>
+  <li>皆が反省する中、彼に至っては反省の色がまるでない。</li>
+  <li>昨日の午前5時3０分、彼は死に至りました。</li>
+</ul>
+
+<p>16.2 aに引き換えb：aとbは反対だ</p>
+<ul>
+  <li>姉は頭が良くて、努力家だ、それに引き換え私はいつも家でだらだらしてしまう怠け者だ。</li>
+</ul>
+
+<p>16.3 〜に関わる</p>
+<ul>
+  <li>この怪我は命に関わるほどではないので、安心してください。</li>
+</ul>
+
+<p>16.4 ~にして(程度強調)</p>
+<ul>
+  <li>私は二十歳の頃から結婚したいと言い続けてきたが、四十五歳にしてようやく結婚することができた。</li>
+</ul>
+
+<p>16.5 ~に即して</p>
+<ul>
+  <li>メデイアは事実に即して報道するべきだ。何があっても嘘を放送してはならない。</li>
+</ul>
+
+<p>20.1 aないまでもb: aの程度でなくてもいいから、bくらい</p>
+<ul>
+  <li>最近１０キロも太ってしまった、１０キロとは言わないまでも、とりあえず３キロは痩せたい。</li>
+</ul>
+
+<p>21.1 ~はしない(可能性はない、ありえない)</p>
+<ul>
+  <li>痩せたいなら、朝ご飯食べなくても死にはしないよ。</li>
+</ul>
+
+<p>21.2 一概に〜とばかりに言えない(必ず全部が〜とは言えない)</p>
+<ul>
+  <li>先生でも一概に何でも知っているとは言えない</li>
+</ul>
+
+<p>21.3 試しがない: 〜できたことがない</p>
+<ul>
+  <li>この無料の天気予報は、当たった試しがない。</li>
+</ul>
+
+<p>21.4 ~たつもりはない(~と思っていない)</p>
+<ul>
+  <li>最近、利用したつもりがない、不正請求による詐欺が横行している。</li>
+  <li>ポケットにスマホを入れていると、電話したつもりはないのにお母さんにかかっていた。</li>
+</ul>
+
+<p>21.5 aてばかりもいられない</p>
+<ul>
+  <li>座って話してばかりいられない、もう会議の時間だ。</li>
+</ul>
+
+<p>23.1 ~たら〜たで</p>
+<ul>
+  <li>早く結婚したいなんて言ってるけど、結婚したら結婚したで大変だと思うよ。</li>
+  <li>中古車の値段が高いのは嫌だが、安かったら安かったで不安になる。</li>
+</ul>
+
+<p>23.2 ~ても〜きれない: ~しても足りない、もっとしたい</p>
+<ul>
+  <li>あの試合でのミスは悔やんでも悔みきれない。</li>
+  <li>旅行先で見知らぬ人に助けられて感謝してもしきれない。</li>
+</ul>
+
+<p>23.3 ~aてでもb: aがどうであっても・どんな方法でも、絶対bする</p>
+
+<ul>
+  <li>アイドルの卒業コンサートにあらゆる仕事をキャンセルしてでも行きたい。</li>
+  <li>自分の命を犠牲にしてでも、こともを守りたい。</li>
+</ul>
+
+<p>24.1 どうせaならb/aからにはb</p>
+
+<ul>
+  <li>どうせ福岡に行くなら、豚骨ラーメンや明太子など福岡名物をたくさん食べたい。</li>
+</ul>
+
+<p>27.4 のではなかろうか</p>
+<ul>
+  <li>最近、日本語が話せるベトナム人が、増えてきているのではなかろうか</li>
+</ul>
+
+<p>28.2 aようがaまいが</p>
+<ul>
+  <li>タバコは吸おうが、吸うまいが、誰でも癌になる可能性はある。</li>
+</ul>
+
+<p>28.3 ~ようが・ようと</p>
+<ul>
+  <li>周りの人が無理だと言おうが、私はn1に合格できるように頑張るつもりだ。</li>
+  <li>両親が反対しようが、私は彼と結婚する。</li>
+  <li>どんなに安かろうが使わないものは買わない方がいいと思うよ。</li>
+</ul>
+
+<p>28.4 ~てこそ: ~をして初めて</p>
+<ul>
+  <li>親になってこそ母の苦労がわかる。</li>
+</ul>
+
+<p>31.1 ~ずにすませる・ずにすんだ：〜なくても良くなる
+する＝せずにすむ</p>
+<ul>
+  <li>替玉受験によって勉強せずにすませる。</li>
+  <li>うまい具合に電話がなり、話したくない話題を話さずにすんだ。</li>
+</ul>
+
+<p>31.2 aなりbなりaでもbでも好きな方を選ぶ</p>
+<ul>
+  <li>お困りのことがございましたら、メールなり電話なり、連絡してくださいね。</li>
+  <li>道に迷ったなら交番で聞くなり周りの人聞くなりすればよかったのに。</li>
+</ul>
+
+<p>31.3 aと言わずbと言わず：どこでも、いつでも</p>
+<ul>
+  <li>日本人は子供と言わず、大人と言わずアニメをよく見ます。</li>
+</ul>
+
+<p>32.1 ~相まって: aとbが影響しあって</p>
+<ul>
+  <li>豚骨ラーメンは濃厚なスープと極細麺が相まって最高に美味しい。</li>
+</ul>
+
+<p>32.2 ~て見せる: あることをやって他の人に見せる</p>
+<ul>
+  <li>今年こそ必ずやn1に合格して見せる。</li>
+  <li>来月の試験、必ず１００点をとって見せる。</li>
+</ul>
+
+<p>32.3 ~そびれる: ~しようと思っていたけど機会がなくてできない</p>
+
+<ul>
+  <li>毎朝起きるのが遅くて、朝ご飯を食べそびれる。</li>
+</ul>
+
+<p>32.4 ~てしまいそうだ(~してしまうかもしれない)</p>
+
+<p>32.6 いかに〜か</p>
+<ul>
+  <li>島川先生という人物がいかに面白いか、みんなさんまだ知らない。</li>
+</ul>
+
+<h4 id="限り">限り</h4>
+<ol>
+  <li>羨ましい限りだ。very jealous</li>
+  <li>ないとは限らない: it is possible</li>
+</ol>
+
+<h3 id="vp6">vp6</h3>
+
+<h4 id="おかす">おかす</h4>
+<ol>
+  <li>犯す
+    <ul>
+      <li>犯罪・過ち・ミス</li>
+    </ul>
+  </li>
+  <li>侵す
+    <ul>
+      <li>権利を侵す</li>
+    </ul>
+  </li>
+  <li>冒す</li>
+</ol>
+
+<h4 id="はかる">はかる</h4>
+<ol>
+  <li>図る
+    <ul>
+      <li>長さ・重さ</li>
+    </ul>
+  </li>
+  <li>謀る: 悪いことを計画する</li>
+</ol>
+
+<h4 id="かえりみる">かえりみる</h4>
+<ol>
+  <li>省みる: 反省する</li>
+  <li>顧みる:</li>
+</ol>
+
+<h4 id="たえる">たえる</h4>
+<ol>
+  <li>耐える: 我慢する
+    <ul>
+      <li>暑さ・寒さ・嵐に耐える</li>
+    </ul>
+  </li>
+  <li>堪える: それをする価値がある
+    <ul>
+      <li>読む・菊に堪えない</li>
+    </ul>
+  </li>
+  <li>絶える: 続いているものが途中で終わる
+    <ul>
+      <li>連絡・メールが絶える</li>
+      <li>息が絶える</li>
+      <li>母親は心配が堪えない</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="vp8">vp8</h3>
+
+<ol>
+  <li>損なう(そこなう)</li>
+  <li>賄う: まかなう
+    <ul>
+      <li>会社から交通費を賄う</li>
+      <li>アルバイトで生活を賄う</li>
+    </ul>
+  </li>
+  <li>戸惑う(とまどう)
+    <ul>
+      <li>新カメラに戸惑う</li>
+    </ul>
+  </li>
+  <li>導く
+    <ul>
+      <li>道を導く</li>
+      <li>チームを勝利に導く</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="からするからあるからの">からする・からある・からの</h4>
+<p>彼女は四十億円からする遺産を相続したそうだ。</p>
+<h4 id="嫌いがある-have-tendency-to-do-something">嫌いがある: have tendency to do something</h4>
+<ol>
+  <li>話を面白くためだろうか、彼は物事を大袈裟に言う嫌いがある。</li>
+</ol>
+
+<h4 id="術がないすべ-no-way-to-do-something">術がない(すべ): no way to do something</h4>
+<ul>
+  <li>こんなに壊れては、もう直す術がない。</li>
+</ul>
+
+<h4 id="１">１</h4>
+<ol>
+  <li>すら
+    <ul>
+      <li>この悩みは親友にすら言えない:</li>
+    </ul>
+  </li>
+  <li>さえ</li>
+</ol>
+
+<h4 id="そびれる">そびれる</h4>
+<ul>
+  <li>行きそびれる
+    <h4 id="だに">だに</h4>
+    <ol>
+      <li>こんなことになるとは、夢にだに思わなかった</li>
+      <li>このような大災害になるとは、想像だにしなかった。</li>
+    </ol>
+  </li>
+</ul>
+
+<p>####</p>
+<ol>
+  <li>たる
+    <ul>
+      <li>教師たる者、生徒のお手本にならなければならない</li>
+    </ul>
+  </li>
+  <li>として</li>
+</ol>
+
+<h4 id="つたり">つ・たり・</h4>
+<ol>
+  <li>ラッシュアワーの時間なので、地下鉄の乗客で押しつ押されつしている</li>
+  <li>事実を言おうか言うまいか、廊下をいきつ戻りつ考えた。</li>
+  <li>持ちつ持たれつ</li>
+</ol>
+
+<h4 id="っぱなし-まま">っぱなし: まま</h4>
+<ul>
+  <li>水を出しっぱなしにして、歯を磨くのはもったいないですよ。</li>
+  <li>立ちっぱなし</li>
+  <li>座りっぱなし</li>
+  <li>動きっぱなし</li>
+  <li>空きっぱなし</li>
+</ul>
+
+<h4 id="あ">あ</h4>
+
+<ol>
+  <li>~あっての
+    <ul>
+      <li>N１合格できたのも、先生のご指導あっての物です、本当にお世話になりました。</li>
+      <li>大勢の前でスピーチするのは初めての経験とあって、彼は酷く緊張していた。</li>
+      <li>私を見捨てないでください、あなたあっての私なんですから。</li>
+    </ul>
+  </li>
+  <li>AとあってはB：Bをするのは、Aという特別な理由がある。
+    <ul>
+      <li>由香先生の頼みとあっては、断れない。</li>
+    </ul>
+  </li>
+  <li>~とあって
+    <ul>
+      <li>彼はN1に合格したとあって、やはり日本語がとても上手いなぁ。</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="い">い</h4>
+<ol>
+  <li>に到るまで
+    <ul>
+      <li>結婚を控え、家具はもちろん、皿やスープンに到るまで新しいのを買い揃えた。</li>
+    </ul>
+  </li>
+  <li>に至って
+    <ul>
+      <li>証拠となる書類が発見されるに至って、彼はやっと自分の罪を認めた。</li>
+    </ul>
+  </li>
+  <li>に至っては/と
+    <ul>
+      <li>ことここに至っては: 事已至此</li>
+    </ul>
+  </li>
+  <li>に至っても
+    <ul>
+      <li>みんなに批判されるに至っても、彼は自分の生き方をかえるようとしなかった。</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="お">お</h4>
+<ol>
+  <li>~に負うところが多い: によるところが多い:owe to
+    <ul>
+      <li>この研究の成功はチームメンバーの協力に負うところが多い</li>
+    </ul>
+  </li>
+  <li>~におかれましては: は
+    <ul>
+      <li>といたしましては</li>
+    </ul>
+  </li>
+  <li>aは言うに及ばずb: aはもちろんbも
+    <ul>
+      <li>彼は国内は言うに及ばず、海外にまで知られた作曲家である。</li>
+    </ul>
+  </li>
+  <li>aはいうに及ばずb
+    <ul>
+      <li>ゆか先生日本語は言うに及ばず英語やベトナム語も話せる。</li>
+    </ul>
+  </li>
+  <li>には及ばない: には敵わない(かな)
+    <ul>
+      <li>数学にかけては、彼には及ばない</li>
+    </ul>
+  </li>
+  <li>をおいて: except
+    <ul>
+      <li>彼をおいて、この仕事をまかせられる人間ないだろう。</li>
+    </ul>
+  </li>
+  <li>を押して・を押し切って: 顶住压力，排除困难做某事
+    <ul>
+      <li>病気を押し切って、会議に出席した</li>
+    </ul>
+  </li>
+  <li>を(皮切り)かわきりに(して)
+    <ul>
+      <li>上海を皮切りに全国十ヵ所コンサートを開くことになりました。</li>
+    </ul>
+  </li>
+  <li>をはじめとして: 以…为首, 大家一起做了某件事</li>
+</ol>
+
+<h4 id="か">か</h4>
+<ol>
+  <li>〜に欠かせない/が欠かせない</li>
+  <li>にかかったら・にかかっては・にかかると
+    <ul>
+      <li>彼女にかかっては、嫌なことも言えなくなる</li>
+    </ul>
+  </li>
+  <li>にかかっている・にかかる: 次第だ、いかんにかかっている
+    <ul>
+      <li>今年卒業できるかどうかは、これからの頑張りにはかかっている</li>
+    </ul>
+  </li>
+  <li>にかかわらず</li>
+  <li>~にかこつけて</li>
+  <li>にかまけて:
+    <ul>
+      <li>仕事しかまけて、子供の面倒を見る時間がない。</li>
+    </ul>
+  </li>
+  <li>にかたくない: 想像できる
+    <ul>
+      <li>想像に硬くない</li>
+    </ul>
+  </li>
+  <li>顧みず(かえりみず): in spite of
+    <ul>
+      <li>家族のことも自分の健康も顧みず懸命に会社のために働いている。</li>
+    </ul>
+  </li>
+  <li>を機(き)に: 〜を契機に・〜をきっかけに
+    <ul>
+      <li>結婚を機に、仕事を辞めて家庭に入った。</li>
+    </ul>
+  </li>
+</ol>
+
+<h5 id="1-限">1. 限</h5>
+<ol>
+  <li>~ないとも限らない
+    <ul>
+      <li>確率が低いが、抽選で海外旅行に当たらないとも限らないよ</li>
+    </ul>
+  </li>
+  <li>~からといって~とはかぎらない
+means: you can’t get the result given the reason
+    <ul>
+      <li>日本人だからといって、日本の文化に詳しいとは限らない。not because someone is japanese, so he knows japanese culture well.</li>
+    </ul>
+  </li>
+  <li>
+    <p>〜に限ったことではない</p>
+  </li>
+  <li>~限りだ: very
+    <ul>
+      <li>羨ましい限りだ</li>
+    </ul>
+  </li>
+  <li>を限りに: 前面为时间名词，表示最大限度
+    <ul>
+      <li>今日を限りにタバコを止めることにした。</li>
+      <li>名詞＋を限りに: 以…为最大限度</li>
+      <li>力を限りに、ゴールに向かって走っていました。</li>
+      <li>声を限りに</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="き">き</h4>
+<ol>
+  <li>を禁じ得ない: (涙・怒り・同情・戸惑い)
+    <ul>
+      <li>この事件の犯人には、強い怒りをきんじえない</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="さ">さ</h4>
+<ol>
+  <li>さえ:
+    <ul>
+      <li>そんなことは子供さえ知っている</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="し">し</h4>
+<ol>
+  <li>~にしくはない: 如くはない
+    <ul>
+      <li>逃げるに如くはない</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="ま">ま</h4>
+<ol>
+  <li>まじき: 作为…不应该有的行为
+    <ul>
+      <li>としてあるまじきこと、~としてやるまじきこと</li>
+      <li>彼の言動は社会人としてあるまじきもので、とうてい許すことはできない</li>
+    </ul>
+  </li>
+  <li>~まで(のこと)だ: 只是…/只好…
+    <ul>
+      <li>念(ねん)のため、確認するまでのことだ</li>
+      <li>試験は終わった。あとはただ結果を待つまでだ</li>
+    </ul>
+  </li>
+  <li>までもなく・までもない
+    <ul>
+      <li>ことはない</li>
+      <li>そんな遠い店まで買いに行くまでもない。電話で注文すればすぐ届くんだから。</li>
+    </ul>
+  </li>
+  <li>まみれ・だれけ・ずこれ
+    <ul>
+      <li>ほこりまみれ</li>
+      <li>ずくめ: 尽くす(つくす)</li>
+      <li>この一年間は娘が結婚して、息子は大学に入って、良いことずくめだった。</li>
+      <li>いいことずくめ</li>
+    </ul>
+  </li>
+  <li>までして: 多用于作出牺牲
+    <ul>
+      <li>徹夜までして頑張ったのに、テストで良い点が取れなかった。</li>
+    </ul>
+  </li>
+  <li>~てまで：〜のような極端な程度まで
+    <ul>
+      <li>新居を買いたいが、借金してまで買いたいとは思わない。</li>
+      <li>私は家族との時間を犠牲にしてまで、会社のために働きたいとは思っていません</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="な">な</h4>
+<ol>
+  <li>を蔑(ないがし)ろにする: 下に見る/を無視して
+    <ul>
+      <li>人の意見を蔑ろにする</li>
+    </ul>
+  </li>
+  <li>を等閑(なおざり)にして
+    <ul>
+      <li>子供のしつけを等閑にしていては、将来は大変なことになるよ。</li>
+    </ul>
+  </li>
+  <li>
+    <p>~をいい加減にして: ごまかす</p>
+  </li>
+  <li>を控え・を控えて: 面临，在…即将到临之际
+    <ul>
+      <li>結婚式を一ヶ月後に控え、いろいろな準備で忙しい。</li>
+      <li>控室: 等候室</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="め">め</h4>
+<ol>
+  <li>めく・めいて・めいた: ぎみ・っぽい
+    <ul>
+      <li>謎めいた言葉</li>
+      <li>皮肉めいた言い方</li>
+      <li>風邪気味</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="も">も</h4>
+<ol>
+  <li>もさることながら: ~はもちろん
+    <ul>
+      <li>親の希望もさることながら、やはり本人の気持ちが第一だろう。</li>
+    </ul>
+  </li>
+  <li>ものを: 用在句尾，对已经发生的事情表示后悔，遗憾的情绪。
+    <ul>
+      <li>誰かに相談すれば簡単に解決できたものを、どうして一人で悩んでいたのだろう</li>
+    </ul>
+  </li>
+  <li>ものと思われる
+    <ul>
+      <li>この状況では、あまり良い結果は期待できないものと思われる。</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="や">や</h4>
+<ol>
+  <li>や否や
+    <ul>
+      <li>彼は空港につくや否や、恋人の入院先に駆けつけた。</li>
+    </ul>
+  </li>
+  <li>やれ〜やれ〜: とか〜とか
+    <ul>
+      <li>日本で部屋を借りる場合、やれ敷金だやれ礼金だと、いろいろなお金がかかる</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="ゆ">ゆ</h4>
+<ol>
+  <li>ゆえ(に・の): because</li>
+</ol>
+
+<h4 id="よ">よ</h4>
+<ol>
+  <li>動詞＋ます形+よう:(しようがない) 方法
+    <ul>
+      <li>〜としか言いようがない</li>
+    </ul>
+  </li>
+  <li>動詞ます形＋ようによっては: based on the method
+    <ul>
+      <li>考えようによっては、やりようによっては、見ようによっては</li>
+      <li>やりようによっては、そこ仕事もっと簡単に済ませることができる。</li>
+    </ul>
+  </li>
+  <li>を余儀なくさせる: have to do something
+    <ul>
+      <li>両国関係の悪化が、プロジェクトの中止を余儀なくさせる。</li>
+    </ul>
+  </li>
+  <li>を余儀なくされる
+    <ul>
+      <li>不正な取引が明らかになり、その取引に関わった会社役員は辞職をよぎなくされた。</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="と">と</h4>
+<ol>
+  <li>も同然だ</li>
+  <li>を振り出しに:  ~を皮切りに
+    <ul>
+      <li>彼は小学校の教師を振り出しに社会に出た。</li>
+    </ul>
+  </li>
+  <li>を経(へ)て: 经过
+    <ul>
+      <li>正式の手続きを経て、この大学に入りました。</li>
+    </ul>
+  </li>
+  <li>を前にして: 马上就要
+    <ul>
+      <li>試合を前にして、選手たちは緊張しています</li>
+    </ul>
+  </li>
+  <li>をもって・をもちまして: 于…开始/结束
+    <ul>
+      <li>今回のシンポジウムは本日をもって終了いたします。</li>
+      <li>by means of</li>
+      <li>身をもって、日系企業の文化を体験した。</li>
+    </ul>
+  </li>
+  <li>〜をもってすれば</li>
+  <li>
+    <p>~をもってしても</p>
+  </li>
+  <li>をものともせずに: 不顾，不怕(多表示积极的意思)
+    <ul>
+      <li>彼女は周りの反対をものともせずに、自分の信じる道を歩み続けてきた。</li>
+    </ul>
+  </li>
+  <li>を余所に: 不顾，不怕
+    <ul>
+      <li>親の心配をよそに、彼女は一人旅に出かけた。</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="group-1-unecessary-to-do-something">Group 1: unecessary to do something</h4>
+<ol>
+  <li>ことはない</li>
+  <li>までもない</li>
+  <li>にはあたらない</li>
+  <li>に及ばない</li>
+  <li>言うまでもなく: 自不必说</li>
+</ol>
+
+<h4 id="group-2">Group 2:</h4>
+<ol>
+  <li>にかかったら・にかかっては・にかかると: 多表示人或者人的言行达到某种无人能及的程度</li>
+  <li>~ときたら: 评价</li>
+  <li>~に至っては: 描述</li>
+</ol>
+
+
+      
+      <footer>
+        <p>
+          本作品由 <a href="mailto:zhanghy1012@gmail.com">ZHY</a> 创作，采用
+          <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="查看协议详细信息" target="_blank">CC BY-NC-SA 3.0 许可协议</a>
+          进行许可。
+        </p>
+      </footer>
+      
+    </section>
+
+  </article>
+</section>
+
+<section>
+
+  <div class="tag-box-wrapper">
+    
+    <ul class="tag-box inline">
+      <li><i class="icon-large icon-folder-open"></i></li>
+      
+      
+
+
+  
+     
+    	<li><a href="/categories.html#言葉-ref">
+    		言葉 <span>237</span>
+    	</a></li>
+    
+  
+
+
+
+    </ul>
+    
+
+    
+    <ul class="tag-box inline">
+      <li><i class="icon-large icon-tags"></i></li>
+      
+      
+
+
+  
+     
+    	<li><a href="/tags.html#日本語-ref">日本語 <span>104</span></a></li>
+    
+  
+
+
+
+    </ul>
+    
+  </div>
+
+  <div class="pagination">
+    <ul>
+      
+      <li class="prev"><a href="/%E8%A8%80%E8%91%89/language-japanese-word-pronounciation.html" title="言葉: 読み方">&larr; 上一篇</a></li>
+      
+      <li><a href="/archive.html">文章列表</a></li>
+      
+      <li class="next"><a href="/%E8%A8%80%E8%91%89/language-japanese-earth-environment.html" title="地球: 環境">下一篇 &rarr;</a></li>
+      
+    </ul>
+  </div>
+
+</section>
+
+<section id="comments">
+  
+
+
+  
+<div id="disqus_thread"></div>
+
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'just-do-it-1';
+    
+    var disqus_identifier = 'sentence: n1 文法';
+    var disqus_title = 'sentence: n1 文法';
+    var disqus_url = '/%E8%A8%80%E8%91%89/language-japanese-grammar-N1-grammar.html';
+    
+    
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+
+
+
+
+</section>
+
+
+
+
+
+
+        </div>
+      </div>
+
+      <div id="back-top">
+  <a href="#top" title="回到顶部">
+    <i class="icon-2x icon-arrow-up"></i>
+  </a>
+</div>
+<script type="text/javascript">
+$("#back-top").hide();
+$(document).ready(function () {
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 100) {
+      $('#back-top').fadeIn();
+    } else {
+      $('#back-top').fadeOut();
+    }
+  });
+  $('#back-top a').click(function () {
+    $('body,html').animate({
+      scrollTop: 0
+    }, 500);
+    return false;
+  });
+});
+</script>
+
+
+    </section>
+
+    <footer id="bottom">
+      <p align="center">&copy; 2022 ZHY
+        with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+        and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+      </p>
+    </footer>
+  </div>
+
+  <script type="text/javascript">
+    $('article.post a').attr('target', '_blank');
+    if (navigator.appVersion.indexOf("Mac") != -1) {
+      $('code, pre').css('font-family', 'Courier, monospace');
+    }
+  </script>
+  
+
+  
+</body>
+</html>
+
+
+
+
+
