@@ -5,12 +5,1696 @@
   <description>Just Do It - </description>
   <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
   <link></link>
+<<<<<<< Updated upstream
   <lastBuildDate>Wed, 21 Dec 2022 19:48:01 +0800</lastBuildDate>
   <pubDate>Wed, 21 Dec 2022 19:48:01 +0800</pubDate>
+=======
+  <lastBuildDate>Thu, 29 Jun 2023 11:08:41 +0800</lastBuildDate>
+  <pubDate>Thu, 29 Jun 2023 11:08:41 +0800</pubDate>
+>>>>>>> Stashed changes
   <ttl>1800</ttl>
 
 
   <item>
+<<<<<<< Updated upstream
+=======
+    <title>Git: Summary</title>
+    <description>
+&lt;h4 id=&quot;update-20230629&quot;&gt;update 20230629&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;The common operations in a folder are simple: create a file, check files,
+delete a file.
+    &lt;ul&gt;
+      &lt;li&gt;There are correspondings in git. git add, git ls-files, git rm git restore&lt;/li&gt;
+      &lt;li&gt;Just think of the index area is a normal directory, you can do whatever you want.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;1-what-is-version-control&quot;&gt;1. What is version control?&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Records changes to a file or set of files over time&lt;/li&gt;
+  &lt;li&gt;Revert selected files back to a previous state, revert the entire projected
+back to a previous state.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;2-what-is-the-problem-&quot;&gt;2. What is the problem ?&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;assume you are a coder,  and work on a project. Accasionaly you revise you
+code, some days later, you want get things back to where they were.
+    &lt;ul&gt;
+      &lt;li&gt;one solution is every time you change your code, you make a copy, but as time
+goes on, this is a nightmare. Based on the timeline, we packed the code we get
+anywhere we want.&lt;/li&gt;
+      &lt;li&gt;the second solution is git, and git is an artifact.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;3-the-philosphy&quot;&gt;3. The Philosphy&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;if you check the code in your project carefully, your file can be divided
+into two classes, &lt;strong&gt;folder and text&lt;/strong&gt;.
+    &lt;ul&gt;
+      &lt;li&gt;In git, both the &lt;strong&gt;folder and text&lt;/strong&gt; ,separately, are abstracted as &lt;strong&gt;tree 
+and blob&lt;/strong&gt;, we call them objects in general.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;we are not satisfied with the timeline, we use a more complicated structure
+which is called &lt;strong&gt;graph&lt;/strong&gt; to track all the change, each point in a timeline
+is a snapshot of the project. We have a fancy terminology for snapshot, which
+is called &lt;strong&gt;commits&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;how to connect these &lt;strong&gt;graph&lt;/strong&gt;, and what’s the direction of the two node ? The
+solution is pointer, and the direction is from descendant to ancestor.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;what’s the name of each node ? How to identify them ?
+    &lt;ul&gt;
+      &lt;li&gt;It use hash function, but it’s not readable, so we create a reference to them,
+you can it branch.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;summary&quot;&gt;Summary&lt;/h4&gt;
+
+&lt;p&gt;You need have a git soul when you use git.&lt;/p&gt;
+
+&lt;p&gt;You are not in a default file system, it’s new, and complete different.&lt;/p&gt;
+
+&lt;p&gt;You go to file source, copy it to the destination when you use the classic file
+system, in which the source is a directory.&lt;/p&gt;
+
+&lt;p&gt;In git, you still go to the source when you want get something back, but it is
+not a directory any more, it’s a commit. you go to a commit, and you get
+something back. Keep that in mind.&lt;/p&gt;
+
+&lt;p&gt;Thinking things differently is realy a beautiful thing.&lt;/p&gt;
+
+</description>
+    <link>/os/pl-tool-git-summary.html</link>
+    <guid>/os/pl-tool-git-summary</guid>
+    <pubDate>Thu, 29 Jun 2023 00:00:00 +0800</pubDate>
+  </item>
+
+  <item>
+    <title>Git: transfer commit pull push fetch</title>
+    <description>
+&lt;h4 id=&quot;the-output-of-git-pull&quot;&gt;The output of git pull&lt;/h4&gt;
+
+&lt;p&gt;&lt;img align=&quot;left&quot; src=&quot;/images/git/git-transfer-commit-pull-output.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;core&quot;&gt;Core&lt;/h4&gt;
+&lt;p&gt;&lt;em&gt;git fetch&lt;/em&gt; and &lt;em&gt;git merge&lt;/em&gt; are all just operations related to commits.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Git fetch&lt;/strong&gt; without arguments will update all the remote-tracking branches.
+execute &lt;em&gt;git log&lt;/em&gt; command after &lt;em&gt;git fetch&lt;/em&gt;, the result is as follows:&lt;/p&gt;
+
+&lt;p&gt;&lt;img align=&quot;left&quot; src=&quot;/images/git/git-fetch-command.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Git pull&lt;/strong&gt; without arguments will in addition merge the remote master branch
+into the current branch.&lt;/p&gt;
+
+&lt;p&gt;In the default mode, &lt;strong&gt;git pull&lt;/strong&gt; is shorthand for &lt;strong&gt;get fetch&lt;/strong&gt; followed by
+&lt;em&gt;*git merge FETCH_HEAD **
+(the commit history after  *git pull&lt;/em&gt;, which equals to the combination of &lt;em&gt;git
+fetch&lt;/em&gt;  and &lt;em&gt;git merge FETCH_HEAD&lt;/em&gt;.)&lt;/p&gt;
+
+&lt;p&gt;&lt;img align=&quot;left&quot; src=&quot;/images/git/git-merge-command.png&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;git fetch: is the command that tells you local git to retrieve the latest
+meta-data info from the original(yet doesn’t do any file transferring.) It’s
+more like just checking to see if there are nay changes available.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;git pull: on the other hand does that and brings those changes from the
+reomote repository.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;21-git-merge&quot;&gt;2.1 git merge&lt;/h4&gt;
+&lt;p&gt;Instead of just moving the branch pointer forward, Git creates a new snapshot
+that results from this three-way merge and automatically creates a new commit
+that points to it. This is referred to as a merge commit.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;it is special it has more than one parent&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;merge specific files from another branch&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git checkout sourch_branch &amp;lt;paths&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ol&gt;
+  &lt;li&gt;The output of the git ls-files command consists of multiple columns, each providing different information about the files. Here’s a breakdown of what each column represents:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Mode: The mode column represents the file mode or permissions. It indicates the file’s type (regular file, symlink, etc.) and its permissions (read, write, execute) for different user groups (owner, group, others).&lt;/p&gt;
+
+&lt;p&gt;Object type: This column specifies the type of object that the file represents in Git. It can be a “blob” for regular files, “tree” for directories, or “commit” for submodules.&lt;/p&gt;
+
+&lt;p&gt;Object hash: The object hash (also known as the SHA-1 or SHA-256 hash) is a unique identifier for the Git object associated with the file. This hash is used to track changes and identify the file across commits.&lt;/p&gt;
+
+&lt;p&gt;Stage: The stage column indicates the stage of the file in the Git index. During a merge conflict, a file can have multiple stages, each representing a different conflicting version. The stage numbers are typically 1, 2, and 3, corresponding to the conflicted versions.&lt;/p&gt;
+
+&lt;p&gt;File path: This column displays the path and name of the file within the Git repository. It shows the location of the file relative to the repository’s root directory.(Written by ChatGPT)&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;During a merge conflict, Git keeps track of the conflicting versions of a file by assigning them different stage numbers. Stage 1 represents the version from the current branch, stage 2 represents the version from the branch being merged, and stage 3 represents the common ancestor version. By using stage numbers, Git distinguishes between these conflicting versions, making it easier to identify and resolve conflicts in a targeted manner.(By ChatGPT)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;p&gt;&lt;em&gt;git pull&lt;/em&gt; is nothing but a fancy git fast forward merge, if it doesn’t satisfy
+requirement for fast forward merge, it fails.&lt;/p&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/292357/what-is-the-difference-between-git-pull-and-git-fetch&quot;&gt;fetch and pull 1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.freecodecamp.org/news/git-fetch-vs-pull/#:~:text=git%20fetch%20is%20the%20command,changes%20from%20the%20remote%20repository.&quot;&gt;fetch and pull 2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/3340051/what-does-the-output-of-git-pull-actually-mean#:~:text=It%20finds%20all%20the%20objects,git%20book%20for%20more%20information.&quot;&gt;output of git pull&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/os/pl-tool-git-transfer-commit-fetch-pull-push.html</link>
+    <guid>/os/pl-tool-git-transfer-commit-fetch-pull-push</guid>
+    <pubDate>Tue, 20 Jun 2023 00:00:00 +0800</pubDate>
+  </item>
+
+  <item>
+    <title>Git: Internals</title>
+    <description>
+&lt;h4 id=&quot;index&quot;&gt;Index&lt;/h4&gt;
+
+&lt;h4 id=&quot;blob-tree-and-commit&quot;&gt;blob, tree, and commit&lt;/h4&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;blob&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tree&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tree&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;blob&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;commits&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;parents&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;commit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;author&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;snapshot&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tree&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://zhuanlan.zhihu.com/p/96631135&quot;&gt;git内部原理&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/4084921/what-does-the-git-index-contain-exactly&quot;&gt;The index&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/pl/pl-tool-git-internals.html</link>
+    <guid>/pl/pl-tool-git-internals</guid>
+    <pubDate>Mon, 19 Jun 2023 00:00:00 +0800</pubDate>
+  </item>
+
+  <item>
+    <title>Python Package: Pandas</title>
+    <description>&lt;h4 id=&quot;motivation&quot;&gt;Motivation&lt;/h4&gt;
+&lt;p&gt;名字由来: panel data和data analysis。panel data是经济学中关于多维数据集的一个术语
+，pandas也提供了panel的数据类型。&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;what-is-the-difference-between-series-and-dataframe-&quot;&gt;what is the difference between Series and DataFrame ?&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;According to &lt;a href=&quot;http://pandas.pydata.org/pandas-docs/version/0.13.1/generated/pandas.DataFrame.html&quot;&gt;Pandas Docs&lt;/a&gt; &lt;strong&gt;DataFrame
+can be thought as a dict-like container for Series Objects&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;As Pandas can be thought as a dict-like container for Series Objects. so when change a variable type from dictonary type
+to dataframe type. the key still unchange, but the value turned into a Series object.&lt;/li&gt;
+  &lt;li&gt;Analogously, we need both list and matries
+But which one is treat as a Series, according to the following code, I think each columns is treat as a Series.
+That’s the reason why the &lt;strong&gt;row of dataframe&lt;/strong&gt; are named as &lt;strong&gt;index&lt;/strong&gt;.  Actually, the &lt;strong&gt;index is the Series object attribute&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;dic1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;name&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;jason&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;hennry&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;mattel&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;hemmann&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;age&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;17&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;gender&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;male&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;female&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;female&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;male&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]}&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DataFrame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dic1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot;
+name  age  gender
+0    jason   17    male
+1   hennry   20  female
+2   mattel    5  female
+3  hemmann   40    male
+&quot;&quot;&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;playground&quot;&gt;Playground&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Obtain data
+    &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;adult&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read_csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;names&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;age&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;workclass&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;fnlwgt&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;education&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;    &lt;span class=&quot;s&quot;&gt;&apos;education_num&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;marital_status&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;occupation&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;relationship&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;race&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;sex&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;capital_gain&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;capital_loss&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;hours_per_week&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;native_country&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;label&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index_col&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Sampling 100 points&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;adult&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sample&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Access data with df.loc(selection by label)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:,[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;A&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;B&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Access data with df.iloc(selection by position)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;iloc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;series&quot;&gt;Series&lt;/h4&gt;
+
+&lt;p&gt;Creating a &lt;strong&gt;Series&lt;/strong&gt; by passing a list of values&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pandas&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;s1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Series&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;46&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# find the index of an value
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;dataframe-and-list-numpy&quot;&gt;Dataframe, and list, numpy&lt;/h4&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# change the column one to a list&lt;/span&gt;
+
+col_one_to_list &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;one&apos;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;.tolist&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# change the column one to an array&lt;/span&gt;
+
+col_one_to_arrary &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;one&apos;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;.to_numpy&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h4 id=&quot;with-csv-file&quot;&gt;With csv file&lt;/h4&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;df = pd.read_csv(&quot;input.csv&quot;) # read csv file
+df.iloc[0,2] = 8 # modify element
+df.to_csv(&quot;input_output.csv&quot;) # save csv file
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;I feel it is tricky to work with pandas, the reason is pandas is a two-dimensional data structure.
+    &lt;ul&gt;
+      &lt;li&gt;The data structure that I am familiar with, such as vector, list, map, are one dimensional.&lt;/li&gt;
+      &lt;li&gt;There is only one method to access the data.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Pandas is different, it’s two dimensional, and it provides two approach to track the data.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;http://pandas.pydata.org/pandas-docs/stable/install.html&quot;&gt;官网&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/26047209/what-is-the-difference-between-a-pandas-series-and-a-single-column-dataframe&quot;&gt;the difference between Series and Dataframe&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://towardsdatascience.com/pandas-index-explained-b131beaf6f7b&quot;&gt;index in pandas&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/pl/pl-script-python-package-pandas.html</link>
+    <guid>/pl/pl-script-python-package-pandas</guid>
+    <pubDate>Wed, 07 Jun 2023 00:00:00 +0800</pubDate>
+  </item>
+
+  <item>
+    <title>Numpy for machine learning</title>
+    <description>&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import numpy as np
+
+x = np.linspace(-np.pi,np.pi,200)
+y = 1/(1+np.exp(2*x + 3))
+
+w = np.random.rand()
+b = np.random.rand()
+for i in range(1000):
+    y_pred = 1/(1+np.exp(w*x + b))
+    loss = np.square(y - y_pred).sum()
+    print(loss)
+    grad_y_pred = 2 * (y - y_pred)
+    grad_sigma = y_pred*(1-y_pred)
+    grad_w = (grad_y_pred*grad_sigma*x).sum()
+    grad_b = (grad_y_pred*grad_sigma).sum()
+    w = w - 0.01 * grad_w
+    b = b - 0.01 * grad_b
+print(w,b)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+    <link>/pl/pl-script-python-package-numpy-machine-learning.html</link>
+    <guid>/pl/pl-script-python-package-numpy-machine-learning</guid>
+    <pubDate>Wed, 07 Jun 2023 00:00:00 +0800</pubDate>
+  </item>
+
+  <item>
+    <title>Python Package: axis</title>
+    <description>
+&lt;h4 id=&quot;random-module&quot;&gt;random module&lt;/h4&gt;
+&lt;p&gt;This module is consists of two components, they are &lt;br /&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;simple random data&lt;/li&gt;
+  &lt;li&gt;Distributions, such as uniform distribution, normal distribution,poisson distribution etc.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;uniform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;common-function&quot;&gt;common function&lt;/h4&gt;
+
+&lt;h5 id=&quot;npwhere&quot;&gt;np.where()&lt;/h5&gt;
+&lt;ol&gt;
+  &lt;li&gt;The input argument of this API is bool value&lt;/li&gt;
+  &lt;li&gt;the return is the index whose bool value is true&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Example 1
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;where&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# the value of the result
+# (array([1, 2, 4]),)
+# Example 2
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fitness&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;where&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fitness&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fitness&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# the value of the result is the position of the maximization value
+# (array([5]),)
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h5 id=&quot;numpy中的与dot&quot;&gt;numpy中的*与dot&lt;/h5&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;#元素逐个计算 c为[[1, 4],[2, 12]]
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#矩阵的乘法
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h5 id=&quot;linalg&quot;&gt;linalg&lt;/h5&gt;
+&lt;ul&gt;
+  &lt;li&gt;Core Linear Algebra Tools&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;matrix&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;eigenvalues&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;eigenvectors&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;linalg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;eig&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;matrix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h5 id=&quot;random-seed&quot;&gt;random seed&lt;/h5&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;seed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rand&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# array([0.96702984, 0.54723225, 0.97268436])
+&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rand&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#array([0.71481599, 0.69772882, 0.2160895 ])
+&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;seed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rand&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# array([0.96702984, 0.54723225, 0.97268436])
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h5 id=&quot;the-axis-in-python-module&quot;&gt;the axis in python module&lt;/h5&gt;
+
+&lt;p&gt;look at the following code&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;arr=np.arange(12).reshape(2,3,2)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;when execute sum operation along axis=0, which means the variable is &lt;strong&gt;the first value of the array’s shape&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;so are &lt;em&gt;*2&lt;/em&gt;3*&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-python3&quot;&gt;import numpy as np
+
+arr=np.arange(12).reshape(2,3,2)
+&quot;&quot;&quot;
+array([[[ 0,  1],
+        [ 2,  3],
+        [ 4,  5]],
+
+       [[ 6,  7],
+        [ 8,  9],
+        [10, 11]]])
+
+&quot;&quot;&quot;
+np.sum(arr,axis=0)
+
+&quot;&quot;&quot;
+array([[ 6,  8],
+       [10, 12],
+       [14, 16]])
+because the sum operates along the axis which equals zero, so we set the starting value to be zero.
+and along the axis,the possible values are 0,1 
+
+000-&amp;gt;100  001-&amp;gt;101
+010-&amp;gt;110  011-&amp;gt;111
+020-&amp;gt;120  021-&amp;gt;121
+&quot;&quot;&quot;
+
+np.sum(arr, axis=1)
+
+&quot;&quot;&quot;
+array([[ 6,  9],
+       [24, 27]])
+
+along the axis which equals one, the possible value are 0,1,2
+
+000-&amp;gt;010-&amp;gt;020  100-&amp;gt;110-&amp;gt;120
+001-&amp;gt;011-&amp;gt;021  101-&amp;gt;111-&amp;gt;121
+&quot;&quot;&quot;
+########################################################################
+arr2 = np.arange(12).reshape(3,4)
+
+# the axis has the same meaning just as np.sum() operation
+np.insert(arr2,0,0,axis=0)
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h5 id=&quot;the-relationship-between-numpy-arrays-and-matrix&quot;&gt;the relationship between numpy arrays and matrix&lt;/h5&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Matrix objects are a subclass of numpy ndarrays, so they inherit all the attributes and methods&lt;/li&gt;
+  &lt;li&gt;Matrices are strictly 2-dimensional, Numpy arrays are N-dimensional&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h5 id=&quot;function-argsort&quot;&gt;function argsort()&lt;/h5&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;argsort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
+&lt;span class=&quot;c1&quot;&gt;# result is [1,2,0]
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/Cowry5/article/details/80188056&quot;&gt;python 中对axis的个人理解&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/pl/pl-script-python-package-numpy-axis.html</link>
+    <guid>/pl/pl-script-python-package-numpy-axis</guid>
+    <pubDate>Wed, 07 Jun 2023 00:00:00 +0800</pubDate>
+  </item>
+
+  <item>
+    <title>Latex: Table</title>
+    <description>&lt;h4 id=&quot;label-and-caption&quot;&gt;label and caption&lt;/h4&gt;
+&lt;p&gt;\caption has to come before \label. This applies to figures and tables in general&lt;/p&gt;
+
+&lt;h4 id=&quot;adjustment-of-row-height-and-column-width&quot;&gt;Adjustment of row height and column width&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;To change only one particular row you could use the command \rule with a
+width of zero and the height you want as parameter, for example
+\rule{0pt}{25pt}&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;\documentclass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;article&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;\begin{document}&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;\begin{tabular}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;|r|c|l|&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\hline&lt;/span&gt; 
+A &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; B &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; C &lt;span class=&quot;k&quot;&gt;\\&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\hline&lt;/span&gt; 
+1 &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; 2 &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; 3 &lt;span class=&quot;k&quot;&gt;\\&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\hline&lt;/span&gt; 
+&lt;span class=&quot;nt&quot;&gt;\end{tabular}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;\begin{tabular}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;|r|c|l|&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\hline&lt;/span&gt; 
+A &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; B &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; C &lt;span class=&quot;k&quot;&gt;\\&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\hline&lt;/span&gt; 
+&lt;span class=&quot;k&quot;&gt;\rule&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;0pt&lt;span class=&quot;p&quot;&gt;}{&lt;/span&gt;25pt&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;1 &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; 2 &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; 3 &lt;span class=&quot;k&quot;&gt;\\&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\hline&lt;/span&gt; 
+&lt;span class=&quot;nt&quot;&gt;\end{tabular}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;\end{document}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;command&quot;&gt;Command&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;latex provides table environment to typeset a table&lt;/li&gt;
+  &lt;li&gt;the paramaters follow tabular command specify the alignment each column&lt;/li&gt;
+  &lt;li&gt;the vertical line decides to render the vertical line separated the table or
+not.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;\begin{table}&lt;/span&gt;[h!]
+	&lt;span class=&quot;nt&quot;&gt;\begin{center}&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;\caption&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;first table&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+		&lt;span class=&quot;nt&quot;&gt;\begin{tabular}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;l|c|r&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+			&lt;span class=&quot;k&quot;&gt;\hline&lt;/span&gt;
+			Value 1 &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; value 2 &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; value 3&lt;span class=&quot;k&quot;&gt;\\&lt;/span&gt;
+			&lt;span class=&quot;k&quot;&gt;\hline&lt;/span&gt;
+			1 &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; 4.2    &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; d&lt;span class=&quot;k&quot;&gt;\\&lt;/span&gt;
+			2 &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; 1234.6 &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; e&lt;span class=&quot;k&quot;&gt;\\&lt;/span&gt;
+			2 &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; 123400.6 &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; e&lt;span class=&quot;k&quot;&gt;\\&lt;/span&gt;
+			&lt;span class=&quot;k&quot;&gt;\hline&lt;/span&gt;
+		&lt;span class=&quot;nt&quot;&gt;\end{tabular}&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;\end{center}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;\end{table}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;2-package&quot;&gt;2 Package&lt;/h4&gt;
+
+&lt;h5 id=&quot;21-siunitx-package&quot;&gt;2.1 siunitx package&lt;/h5&gt;
+&lt;ol&gt;
+  &lt;li&gt;align numbers at decimal point&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;k&quot;&gt;\usepackage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;siunitx&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;% Required for alignment&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;\sisetup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	  round-mode          = places, &lt;span class=&quot;c&quot;&gt;% Rounds numbers&lt;/span&gt;
+	    round-precision     = 2, &lt;span class=&quot;c&quot;&gt;% to 2 places&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h5 id=&quot;makecell-package&quot;&gt;makecell package&lt;/h5&gt;
+&lt;p&gt;add line break in a table cell&lt;/p&gt;
+
+&lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;nt&quot;&gt;\begin{table*}&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;\normalsize&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\caption&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;The optimum lay-ups using two distinct fiber angles under various biaxial loading cases&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\label&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;tab:two&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;distinct&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;angle&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\centering&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;\begin{tabular}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;clccc&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;\toprule&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;\textbf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Loading&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;N&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;N&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;N&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;xy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}$&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;\textbf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;(MPa m)&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;   &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;\makecell&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;\textbf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Optimum lay-up &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;\\&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;\textbf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;sequences&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;                        &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;\textbf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Laminate thickness&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;  &lt;span class=&quot;k&quot;&gt;\makecell&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;\textbf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Safety factor &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;\\&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;\textbf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;for Tsai-wu&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;\makecell&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;\textbf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Safety factor &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;\\&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;\textbf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;for  maximum stress&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;
+	 &lt;span class=&quot;k&quot;&gt;\\&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;\midrule&lt;/span&gt;
+	10/5/0        &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;33&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;29&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;39&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;25&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\bar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;39&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;      &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;     109               &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;  1.0074      &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;  1.0246  &lt;span class=&quot;k&quot;&gt;\\&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;\bottomrule&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;\end{tabular}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;\end{table*}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h5 id=&quot;22--multirow-package&quot;&gt;2.2  multirow package&lt;/h5&gt;
+&lt;ol&gt;
+  &lt;li&gt;grammar: \multirow{NUMBER_OF_ROWS}{WIDTH}{CONTENT}
+    &lt;ul&gt;
+      &lt;li&gt;It’s used to make a row span several cells&lt;/li&gt;
+      &lt;li&gt;Use an asterisk as an argument for the width, it means, this width should be
+determined automatically.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;\begin{table}&lt;/span&gt;[h!]
+	&lt;span class=&quot;nt&quot;&gt;\begin{center}&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;\caption&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;first table&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+		&lt;span class=&quot;nt&quot;&gt;\begin{tabular}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;l|c|r&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+			&lt;span class=&quot;k&quot;&gt;\toprule&lt;/span&gt;
+			&lt;span class=&quot;k&quot;&gt;\textbf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Value 1&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;\textbf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Value 2&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;\textbf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Value 3&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;\\&lt;/span&gt;
+			&lt;span class=&quot;k&quot;&gt;\midrule&lt;/span&gt;
+			&lt;span class=&quot;k&quot;&gt;\multirow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;3&lt;span class=&quot;p&quot;&gt;}{&lt;/span&gt;*&lt;span class=&quot;p&quot;&gt;}{&lt;/span&gt;2&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; 4.2    &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; d&lt;span class=&quot;k&quot;&gt;\\&lt;/span&gt;
+			 &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; 1234.6 &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; e&lt;span class=&quot;k&quot;&gt;\\&lt;/span&gt;
+			 &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; 123400.6 &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; e&lt;span class=&quot;k&quot;&gt;\\&lt;/span&gt;
+			&lt;span class=&quot;k&quot;&gt;\bottomrule&lt;/span&gt;
+		&lt;span class=&quot;nt&quot;&gt;\end{tabular}&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;\end{center}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;\end{table}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h5 id=&quot;23-multicol-package&quot;&gt;2.3 multicol package&lt;/h5&gt;
+
+&lt;h5 id=&quot;3-booktabs-package&quot;&gt;3. booktabs package&lt;/h5&gt;
+&lt;ol&gt;
+  &lt;li&gt;booktabs package provides much prettier horizontal separator.
+    &lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;\begin{table}&lt;/span&gt;[h!]
+ &lt;span class=&quot;nt&quot;&gt;\begin{center}&lt;/span&gt;
+     &lt;span class=&quot;k&quot;&gt;\caption&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;first table&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+     &lt;span class=&quot;nt&quot;&gt;\begin{tabular}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;l|c|r&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+         &lt;span class=&quot;k&quot;&gt;\toprule&lt;/span&gt;
+         &lt;span class=&quot;k&quot;&gt;\textbf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Value 1&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;\textbf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Value 2&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;\textbf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Value 3&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;\\&lt;/span&gt;
+         &lt;span class=&quot;k&quot;&gt;\midrule&lt;/span&gt;
+         1 &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; 4.2    &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; d&lt;span class=&quot;k&quot;&gt;\\&lt;/span&gt;
+         2 &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; 1234.6 &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; e&lt;span class=&quot;k&quot;&gt;\\&lt;/span&gt;
+         2 &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; 123400.6 &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; e&lt;span class=&quot;k&quot;&gt;\\&lt;/span&gt;
+         &lt;span class=&quot;k&quot;&gt;\bottomrule&lt;/span&gt;
+     &lt;span class=&quot;nt&quot;&gt;\end{tabular}&lt;/span&gt;
+ &lt;span class=&quot;nt&quot;&gt;\end{center}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;\end{table}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h5 id=&quot;4-longtable-package&quot;&gt;4. longtable package&lt;/h5&gt;
+&lt;p&gt;If you have a lot of rows in your table, the table will be cropped at the bottom of the page,
+longtable package provides a convenient to make tables span multiple pages.&lt;/p&gt;
+
+&lt;h5 id=&quot;5-rotating-package&quot;&gt;5. rotating package&lt;/h5&gt;
+&lt;ol&gt;
+  &lt;li&gt;If we add too many columns, we might be getting a table that’s too wide for the page. In this
+situation, it’s often best to simply rotate the table and print it in sideways.&lt;/li&gt;
+  &lt;li&gt;replace the table environment with sidewaystable environment&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;\begin{sidewaystable}&lt;/span&gt;[h!]
+	&lt;span class=&quot;nt&quot;&gt;\begin{center}&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;\caption&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;first table&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+		&lt;span class=&quot;nt&quot;&gt;\begin{tabular}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;lSr&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+			&lt;span class=&quot;k&quot;&gt;\hline&lt;/span&gt;
+			Value 1 &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; value 2 &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; value 3&lt;span class=&quot;k&quot;&gt;\\&lt;/span&gt;
+			&lt;span class=&quot;k&quot;&gt;\hline&lt;/span&gt;
+			1 &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; 4.2    &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; d&lt;span class=&quot;k&quot;&gt;\\&lt;/span&gt;
+			2 &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; 1234.6 &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; e&lt;span class=&quot;k&quot;&gt;\\&lt;/span&gt;
+			2 &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; 123400.6 &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; e&lt;span class=&quot;k&quot;&gt;\\&lt;/span&gt;
+			&lt;span class=&quot;k&quot;&gt;\hline&lt;/span&gt;
+		&lt;span class=&quot;nt&quot;&gt;\end{tabular}&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;\end{center}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;\end{sidewaystable}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h5 id=&quot;6-mdwtab-package&quot;&gt;6. mdwtab package&lt;/h5&gt;
+&lt;p&gt;mdwtab.sty which are used to format tables.&lt;/p&gt;
+
+&lt;h4 id=&quot;threeparttable-package&quot;&gt;threeparttable package&lt;/h4&gt;
+&lt;p&gt;Add notes under the table&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;this package faciliate tables with caption and notes.&lt;/li&gt;
+  &lt;li&gt;A threeparttable does not float, but you can put it in a table environment.
+This causes extra typing, gives more flexibility&lt;/li&gt;
+  &lt;li&gt;There is nothing automatic about the notes, you must specify the identifier
+in the body of the table.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;\begin{table}&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;\centering&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;\begin{threeparttable}&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;\caption&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Three Part Table&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+		&lt;span class=&quot;nt&quot;&gt;\begin{tabular}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;lllll&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+			&lt;span class=&quot;k&quot;&gt;\toprule&lt;/span&gt;
+			1 &lt;span class=&quot;k&quot;&gt;\tnote&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;1&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; 2&lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; 2&lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; 2&lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; 200000000000&lt;span class=&quot;k&quot;&gt;\\&lt;/span&gt;
+			3  &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; 4&lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; 4&lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; 4&lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; 4&lt;span class=&quot;k&quot;&gt;\\&lt;/span&gt;
+			&lt;span class=&quot;k&quot;&gt;\bottomrule&lt;/span&gt;
+		&lt;span class=&quot;nt&quot;&gt;\end{tabular}&lt;/span&gt;
+		&lt;span class=&quot;nt&quot;&gt;\begin{tablenotes}&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;\item&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;[1]&lt;/span&gt; the first note
+		&lt;span class=&quot;nt&quot;&gt;\end{tablenotes}&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;\end{threeparttable}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;\end{table}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h5 id=&quot;8-resizebox&quot;&gt;8. resizebox&lt;/h5&gt;
+
+&lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;\begin{table}&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;\normalsize&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\caption&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Comparison with the results of DSA&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\label&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;tab:comparision&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\centering&lt;/span&gt;
+	&lt;span class=&quot;c&quot;&gt;%\resizebox{.9\textwidth}{!}{&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;\resizebox&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;10cm&lt;span class=&quot;p&quot;&gt;}{&lt;/span&gt;!&lt;span class=&quot;p&quot;&gt;}{&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;\begin{tabular}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;c|cccc|lccc&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;\toprule&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;\textbf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Loading&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;	    &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;\multicolumn&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;4&lt;span class=&quot;p&quot;&gt;}{&lt;/span&gt;c&lt;span class=&quot;p&quot;&gt;}{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;\textbf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Akbulut and Sonmez&apos;s&lt;span class=&quot;k&quot;&gt;\cite&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;akbulut2008optimum&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; Study&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;   &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;\multicolumn&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;4&lt;span class=&quot;p&quot;&gt;}{&lt;/span&gt;c&lt;span class=&quot;p&quot;&gt;}{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;\textbf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Present Study&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;\\&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;\midrule&lt;/span&gt;
+	 &lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;N&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;N&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;N&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;xy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}$&lt;/span&gt;   &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; Optimum lay-up			        &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; laminate  &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; TW &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; MS   &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; Optimum lay-up &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; laminate  &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; TW &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; MS &lt;span class=&quot;k&quot;&gt;\\&lt;/span&gt;
+	  (MPa m)	            &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; sequences					        &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; thickness &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;    &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;      &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; sequences	     &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; thickness &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;    &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;\\&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;\midrule&lt;/span&gt;
+	  80/5/0                 &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;21&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;25&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;19&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;28&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;  106      &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;  1.0113  &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;  1.2213 &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;27&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;21&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;25&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\bar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;25&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;             &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;     105      &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;  1.0029      &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;  1.2063    &lt;span class=&quot;k&quot;&gt;\\&lt;/span&gt;
+	  120/5/0                &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;17&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;35&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;17&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;35&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;  140      &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;  1.0030  &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;  1.0950 &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;18&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;34&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;17&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;36&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;                     &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;     140      &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;  1.0000      &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;  1.0898     &lt;span class=&quot;k&quot;&gt;\\&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;\bottomrule&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;\end{tabular}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;\end{table}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h5 id=&quot;9-adjustbox&quot;&gt;9. adjustbox&lt;/h5&gt;
+&lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;\begin{table}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\centering&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\caption&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Different Activation Functions&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;\begin{adjustbox}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;width=1&lt;span class=&quot;k&quot;&gt;\textwidth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\label&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;tab:transfer&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;function&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;\begin{tabular}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;lllc&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+			&lt;span class=&quot;k&quot;&gt;\toprule&lt;/span&gt;
+			Type &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; Description  &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; Formula &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; Range  &lt;span class=&quot;k&quot;&gt;\\&lt;/span&gt;
+			&lt;span class=&quot;k&quot;&gt;\midrule&lt;/span&gt;
+			Linear   &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; The output is proportional to the input &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;                  &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\infty&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\infty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;\\&lt;/span&gt;
+			Softplus &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; A family of S-shaped functions          &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt; ln&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;         &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\infty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;\\&lt;/span&gt;
+			&lt;span class=&quot;k&quot;&gt;\bottomrule&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;\end{tabular}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;\end{adjustbox}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;\end{table}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.latex-tutorial.com/tutorials/tables/&quot;&gt;tables&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://texdoc.net/texmf-dist/doc/latex/threeparttable/threeparttable.pdf&quot;&gt;Threeparttable&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/4809482/how-do-i-reduce-the-size-of-an-entire-latex-table&quot;&gt;stackoverflow reduce size of latex table&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.sascha-frank.com/Faq/tables_four.html&quot;&gt;Adjustment of width and height&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://tex.stackexchange.com/questions/19651/reference-to-a-figure-uses-the-sections-number&quot;&gt;position of caption and label in table and figure&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/pl/pl-script-latex-table.html</link>
+    <guid>/pl/pl-script-latex-table</guid>
+    <pubDate>Fri, 26 May 2023 00:00:00 +0800</pubDate>
+  </item>
+
+  <item>
+    <title>Journal Writing: Trick</title>
+    <description>
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://paperswithcode.com/&quot;&gt;Paperswithcode&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://nn.labml.ai/&quot;&gt;How to read code&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/work/journal-writing-trick.html</link>
+    <guid>/work/journal-writing-trick</guid>
+    <pubDate>Wed, 24 May 2023 00:00:00 +0800</pubDate>
+  </item>
+
+  <item>
+    <title>OS: History</title>
+    <description>
+&lt;h4 id=&quot;timeline&quot;&gt;Timeline&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/os/os-general-timeline.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;linux-and-bsd&quot;&gt;Linux and BSD&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Linux is just the Linux Kernel. A typical Linux distributions are made of many pieces of software.
+That’s why linux is sometimes called GNU/Linux. There are many linux distributions, like Redhat,Ubuntu,Debian,
+if you want to install Linux, you will need to choose among the linux distributions first&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;BSDs are both a kernel and an operating system. For example, FreeBSD provides both the BSD kernel and the operating system.&lt;/li&gt;
+  &lt;li&gt;Both of Linux and BSDs are compilant with POSIX standard.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;mac-os-x-linux-and-bsd&quot;&gt;Mac OS X, Linux, and BSD&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Mac OS X distribution is based on BSD kernel and BSD operationg system. The command line in the Mac OS X is not as powerful as GNU/linux.&lt;/li&gt;
+  &lt;li&gt;Although both of them are compilant with POSIX standard, the grammar are little different. GNU/linux seems more simple and powerfull. so
+you should replace Mac OS X utilities with GNU core utilities.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;command-line-under-macos-and-gnu&quot;&gt;Command line under MacOS and GNU&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;use man + command: the usage infomation is about Macos.&lt;/li&gt;
+  &lt;li&gt;use command –help: the usage information is about GNU.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;mac-os-and-bsdwritten-by-gpt&quot;&gt;Mac OS and BSD(written by GPT)&lt;/h4&gt;
+&lt;p&gt;Darwin Kernel: At the core of macOS lies the Darwin kernel, which is a hybrid kernel derived from the BSD 4.4-Lite kernel and Mach microkernel. The Darwin kernel provides the low-level functionality and interfaces for the operating system.&lt;/p&gt;
+
+&lt;p&gt;BSD Userland: macOS incorporates various components from the BSD userland, which includes a significant portion of the user-level tools and utilities. These BSD-derived components include the command-line interface, shell utilities, file system utilities, network stack, and more. macOS uses BSD’s command-line interface and utilities, such as ls, cp, mv, and grep, which are compatible with their BSD counterparts.&lt;/p&gt;
+
+&lt;p&gt;Frameworks and APIs: While macOS has BSD roots, it has evolved to include many additional frameworks and APIs that are specific to the macOS ecosystem. These frameworks, such as Cocoa and Core Foundation, provide higher-level functionality and interfaces for application development on macOS.&lt;/p&gt;
+
+&lt;p&gt;Compatibility and Standards: macOS adheres to various industry standards, including POSIX (Portable Operating System Interface), which is a set of standards derived from Unix and includes the POSIX API for UNIX-like systems. This adherence to standards ensures compatibility with software developed for BSD and other POSIX-compliant systems.&lt;/p&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.topbug.net/blog/2013/04/14/install-and-use-gnu-command-line-tools-in-mac-os-x/&quot;&gt;Install and Use GNU command on MacOS&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.howtogeek.com/190773/htg-explains-whats-the-difference-between-linux-and-bsd/&quot;&gt;Linux and BSD&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.howtogeek.com/182649/htg-explains-what-is-unix/&quot;&gt;History&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/cs/computer-science-operation-system-history.html</link>
+    <guid>/cs/computer-science-operation-system-history</guid>
+    <pubDate>Tue, 23 May 2023 00:00:00 +0800</pubDate>
+  </item>
+
+  <item>
+    <title>OS: Portable Operating System Interface</title>
+    <description>
+&lt;p&gt;The following explanation is written by GPT.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#include &amp;lt;stdio.h&amp;gt;
+#include &amp;lt;stdlib.h&amp;gt;
+#include &amp;lt;sys/stat.h&amp;gt;
+
+int main() {
+    const char* directoryName = &quot;my_directory&quot;;
+
+    // Create the directory with read, write, and execute permissions for user, group, and others
+    if (mkdir(directoryName, S_IRWXU | S_IRWXG | S_IRWXO) == -1) {
+        perror(&quot;Error creating directory&quot;);
+        exit(EXIT_FAILURE);
+    }
+
+    printf(&quot;Directory created successfully.\n&quot;);
+
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;In this example, we have a C program that uses the mkdir() function from POSIX to create a directory named “my_directory”.&lt;/p&gt;
+
+&lt;p&gt;The mkdir() function takes the directory name as the first argument (directoryName) and the permissions for the directory as the second argument. In this case, we use symbolic constants (S_IRWXU, S_IRWXG, S_IRWXO) from the sys/stat.h header to set read, write, and execute permissions for the user, group, and others.&lt;/p&gt;
+
+&lt;p&gt;If the mkdir() function returns -1, it indicates an error occurred, and the program prints an error message using perror(). It then exits with a failure status.&lt;/p&gt;
+
+&lt;p&gt;If the directory creation is successful, the program prints a success message.&lt;/p&gt;
+
+&lt;p&gt;This short example demonstrates how to create a directory using a POSIX function. The same code can be compiled and executed on various UNIX-like systems, providing portability and compatibility.&lt;/p&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://baijiahao.baidu.com/s?id=1663873870836212494&amp;amp;wfr=spider&amp;amp;for=pc&quot;&gt;POSIX&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/cs/computer-science-operation-system-POSIX.html</link>
+    <guid>/cs/computer-science-operation-system-POSIX</guid>
+    <pubDate>Tue, 23 May 2023 00:00:00 +0800</pubDate>
+  </item>
+
+  <item>
+    <title>Python: Tqdm Package</title>
+    <description>
+&lt;h4 id=&quot;tqdm&quot;&gt;tqdm&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;tqdm: means progress in Arabic&lt;/li&gt;
+  &lt;li&gt;function: instantly make your loops show a progress meter -  just wrap any iterable with tqdm &lt;strong&gt;tqdm(iterable)&lt;/strong&gt;, and you are done&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;useage&quot;&gt;useage&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;command line mode&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;seq &lt;/span&gt;100000000 | tqdm &lt;span class=&quot;nt&quot;&gt;--total&lt;/span&gt; 100000000 | &lt;span class=&quot;nb&quot;&gt;wc&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-l&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;python code mode&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;tqdm&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tqdm&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tqdm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1000000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;pass&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://tqdm.github.io/&quot;&gt;tqdm&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=n4E7of9BINo&quot;&gt;tqdm&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/pl/pl-script-python-tqdm.html</link>
+    <guid>/pl/pl-script-python-tqdm</guid>
+    <pubDate>Fri, 12 May 2023 00:00:00 +0800</pubDate>
+  </item>
+
+  <item>
+    <title>NLP: Reinforcement Learning</title>
+    <description>
+</description>
+    <link>/simplex/AI-RL.html</link>
+    <guid>/simplex/AI-RL</guid>
+    <pubDate>Thu, 11 May 2023 00:00:00 +0800</pubDate>
+  </item>
+
+  <item>
+    <title>Python Package: Concatenate</title>
+    <description>
+&lt;h4 id=&quot;concatenate&quot;&gt;concatenate()&lt;/h4&gt;
+&lt;p&gt;The concatenate() function is the opposite of np.sum(arr,
+axis), the common is that change happened along the specified axis: np.sum(arr,
+axis) function collapse the specifed axis, and np.concatenate() expand the
+specified axis.&lt;/p&gt;
+
+&lt;h4 id=&quot;the-zero-in-numpy&quot;&gt;The Zero in numpy&lt;/h4&gt;
+&lt;p&gt;The Zero in numpy is an array with shape (0, number1, number2…), the first
+number in this tuple has to be zero, the rest number can be any number. And it’s
+easy to figure out.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;This idea is very powerful, which is similar to zero in number, you can
+manipulate similar operation.&lt;/li&gt;
+  &lt;li&gt;Just like zero in Categorical theory and the haskell.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/22732589/concatenating-empty-array-in-numpy&quot;&gt;concatenating empty array&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/pl/pl-script-python-package-numpy-concatenate.html</link>
+    <guid>/pl/pl-script-python-package-numpy-concatenate</guid>
+    <pubDate>Thu, 11 May 2023 00:00:00 +0800</pubDate>
+  </item>
+
+  <item>
+    <title>Python: Image Process</title>
+    <description>
+&lt;h4 id=&quot;opencv&quot;&gt;Opencv&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;install: using pip to install opencv is eazier than with conda
+    &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;python&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pip&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;opencv&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;python&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;cv2&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;convert-between-a-pil-image-and-a-numpy-array&quot;&gt;convert between a PIL Image and a numpy array&lt;/h4&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;PIL&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Image&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# the conversion from Image to array
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;im&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;sample.png&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;\&lt;span class=&quot;n&quot;&gt;_im&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;im&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;\&lt;span class=&quot;n&quot;&gt;_im&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shape&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# the conversion from array to Image
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new_im&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fromarray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np_im&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# for grey images, you need add the following code 
+# new_im = new_im.convert(&quot;L&quot;)
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new_im&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;save&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;altered_sample.png&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://kite.com/python/examples/4887/pil-convert-between-a-pil-%60image%60-and-a-numpy-%60array%60&quot;&gt;convert between PIL Image and Array&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/16720682/pil-cannot-write-mode-f-to-jpeg&quot;&gt;PIL can not write mode F to jpeg&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/pl/pl-script-python-image_process.html</link>
+    <guid>/pl/pl-script-python-image_process</guid>
+    <pubDate>Wed, 10 May 2023 00:00:00 +0800</pubDate>
+  </item>
+
+  <item>
+    <title>Git: With Proxy</title>
+    <description>
+&lt;h4 id=&quot;which-protocol-are-you-using&quot;&gt;Which protocol are you using?&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;ssh protocol
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git@github.com:AFAgarap/cnn-svm.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;git protocol
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git://github.com/cms-sw/cmssw.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;https protocol
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://github.com/lilykonings/jekyll-password-protect.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;the-corresponding-proxy&quot;&gt;The corresponding proxy&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;ssh proxy: In this case, git relis on ssh to handle the connection; in order to connect through a
+SOCKS proxy you have to configure ssh itself, setting the ProxyCommand option in your
+~/.ssh/config file:
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Host github.com
+ User                    git
+ ProxyCommand            nc -x localhost:1080 %h %p
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;case-1&quot;&gt;Case 1:&lt;/h4&gt;
+&lt;p&gt;problem: Try to push local branch to remote with command-git push origin master:master, it fails and prompt can not connect to
+127.0.0.1:7890
+solve: remove the following code from .ssh/config file, it works.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Host github.com
+    User                    git
+    ProxyCommand            nc -x localhost:1080 %h %p
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;refleck: I don’t know why this happen, anyway it works.&lt;/p&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://cms-sw.github.io/tutorial-proxy.html&quot;&gt;Git with proxy&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/pl/pl-tool-git-proxy.html</link>
+    <guid>/pl/pl-tool-git-proxy</guid>
+    <pubDate>Sat, 06 May 2023 00:00:00 +0800</pubDate>
+  </item>
+
+  <item>
+    <title>Git: Ignore</title>
+    <description>
+&lt;h4 id=&quot;incentive&quot;&gt;Incentive?&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;specifies intentionally untracked files to ignore.
+    &lt;ul&gt;
+      &lt;li&gt;File are already tracked by Git are not affected.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;ignoring-files&quot;&gt;Ignoring Files&lt;/h4&gt;
+&lt;p&gt;Often, you’ll have a class of files that you don’t want Git to automatically add
+or even show you as being untracked.&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cat&lt;/span&gt; .gitignore
+&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.[oa]
+&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;~
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;the first line tells Git to ignore any files ending in “.o” or “.a”&lt;/li&gt;
+  &lt;li&gt;the second line tells git to ignore all files whose names end with a tilde(~)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;pattern&quot;&gt;Pattern&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;A blank line matches no files, so it can serve as a separator for readability.&lt;/li&gt;
+  &lt;li&gt;A line starting with # serves as a comment.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;problem-untracked-a-tracked-file-or-folder&quot;&gt;Problem: Untracked a tracked file or folder&lt;/h4&gt;
+
+&lt;div class=&quot;language-cmake highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git rm -r --cached &amp;lt;folder&amp;gt;
+git rm --cached &amp;lt;file&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://git-scm.com/docs/gitignore&quot;&gt;git ignore&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/1274057/how-can-i-make-git-forget-about-a-file-that-was-tracked-but-is-now-in-gitign&quot;&gt;forget tracked
+file&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.freecodecamp.org/news/gitignore-file-how-to-ignore-files-and-folders-in-git/&quot;&gt;slash problem&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/os/pl-tool-git-ignore.html</link>
+    <guid>/os/pl-tool-git-ignore</guid>
+    <pubDate>Sat, 06 May 2023 00:00:00 +0800</pubDate>
+  </item>
+
+  <item>
+    <title>NLP: self-supervised learning</title>
+    <description>
+&lt;p&gt;sel-supervised learning: first mentioned by Lecun with “”&lt;/p&gt;
+
+</description>
+    <link>/simplex/AI-fine-tuning.html</link>
+    <guid>/simplex/AI-fine-tuning</guid>
+    <pubDate>Thu, 04 May 2023 00:00:00 +0800</pubDate>
+  </item>
+
+  <item>
+    <title>Internet: Virtual network and ZEROTIER</title>
+    <description>
+&lt;h4 id=&quot;zerotier&quot;&gt;ZEROTIER&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;After join a network, enter ipconfig in the command line, a new internet adapter appears&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/os/internet/internet.png&quot; height=&quot;&quot; width=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;Zerotier&quot;&gt;https://www.zerotier.com/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.helpwire.app/blog/error-code-0x204-on-mac/&quot;&gt;Microsoft Remote Desktop with error 0X204&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/cs/internet-virtual-network.html</link>
+    <guid>/cs/internet-virtual-network</guid>
+    <pubDate>Sun, 23 Apr 2023 00:00:00 +0800</pubDate>
+  </item>
+
+  <item>
+    <title>Classification: Measure</title>
+    <description>
+&lt;h4 id=&quot;sensitivity-and-specificity&quot;&gt;Sensitivity and Specificity&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Sensitivity:&lt;/li&gt;
+  &lt;li&gt;Specificity:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Sensitivity_and_specificity&quot;&gt;Sensitivity and specificity -wikipedia&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/simplex/AI-classification-measure.html</link>
+    <guid>/simplex/AI-classification-measure</guid>
+    <pubDate>Wed, 19 Apr 2023 00:00:00 +0800</pubDate>
+  </item>
+
+  <item>
+    <title>Internet: Port Forwarding</title>
+    <description>
+&lt;h4 id=&quot;rinetd&quot;&gt;Rinetd&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Create a listening port in the host&lt;/li&gt;
+  &lt;li&gt;Forward incomeing connection from listening port to another
+    &lt;ul&gt;
+      &lt;li&gt;Open configuration file /opt/homebrew/etc/rinetd.conf&lt;/li&gt;
+      &lt;li&gt;enter the forward rule
+        &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# bindadress  bindport  connectaddress  connectport  options...&lt;/span&gt;
+0.0.0.0     65510        127.0.0.1   7890 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/cs/internet-port-forwarding.html</link>
+    <guid>/cs/internet-port-forwarding</guid>
+    <pubDate>Tue, 11 Apr 2023 00:00:00 +0800</pubDate>
+  </item>
+
+  <item>
+    <title>Internet: OSI</title>
+    <description>
+&lt;h4 id=&quot;bandwidth&quot;&gt;Bandwidth&lt;/h4&gt;
+&lt;p&gt;Bandwidth is how much information you receive every second&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Ki refers to 1024; Mi refers to 1024*1024&lt;/li&gt;
+  &lt;li&gt;1Kbps: 1000 bit/s&lt;/li&gt;
+  &lt;li&gt;1KiBps: 1024 bit/s&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;osi&quot;&gt;OSI&lt;/h4&gt;
+&lt;h5 id=&quot;物理层&quot;&gt;物理层&lt;/h5&gt;
+&lt;ul&gt;
+  &lt;li&gt;对于电脑主机含移动设备，网卡硬件包含了物理层的协议实现&lt;/li&gt;
+  &lt;li&gt;调制解调器：翻译数字信号和模拟信号&lt;/li&gt;
+  &lt;li&gt;中继器：信号在物理介质中传输，会出现衰减。中继器可以增强信号。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;数据链路层&quot;&gt;数据链路层&lt;/h5&gt;
+&lt;ul&gt;
+  &lt;li&gt;物理层信息打包，物理层传输的信息就是比特流。但是计算机处理比特流很不方便。链路层就是要把比特流打包，链路层的单位，叫做一帧。&lt;/li&gt;
+  &lt;li&gt;对于电脑主机含移动设备，网卡硬件和网卡驱动包含了链路层的协议实现&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;网络层&quot;&gt;网络层&lt;/h5&gt;
+&lt;ol&gt;
+  &lt;li&gt;存在的理由
+    &lt;ul&gt;
+      &lt;li&gt;提供路由机制&lt;/li&gt;
+      &lt;li&gt;网络层两种交换技术：circuit switching vs packet switching&lt;/li&gt;
+      &lt;li&gt;对于电脑主机含移动设备，网络层的协议实现通常包含在操作系统自带的网络模块中。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;基于网络层的相关软件
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol&quot;&gt;ping&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;One problem confuses me is that how could I use ping without port? It’s because ping is based on
+ICMP protocol, and it’s in the network layer. There is no TCP or UDP port number associated with ICMP packets as these numbers
+are associated with the transport layer above&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Traceroute&quot;&gt;traceroute&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h5 id=&quot;传输层&quot;&gt;传输层&lt;/h5&gt;
+&lt;ul&gt;
+  &lt;li&gt;屏蔽circuit switching和package switching的差异&lt;/li&gt;
+  &lt;li&gt;网络层是面向主机的，网络层地址就是某个主机地址。而传输层是面向进程的，因此传输层必须在网络层地址的基础上，再
+引入某种新的标识，用来区分同一主机上不同的进程。&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+    <link>/cs/internet-osi-model.html</link>
+    <guid>/cs/internet-osi-model</guid>
+    <pubDate>Tue, 11 Apr 2023 00:00:00 +0800</pubDate>
+  </item>
+
+  <item>
+    <title>Internet: Mac OS and Windows</title>
+    <description>
+&lt;h4 id=&quot;connect-to-macos-from-windows&quot;&gt;Connect to MacOS from Windows&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;windows + r&lt;/li&gt;
+  &lt;li&gt;\\ + target IP address(for example: \192.168.31.164)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;connect-to-windows-from-macos&quot;&gt;Connect to Windows from MacOS&lt;/h4&gt;
+&lt;p&gt;SMB: Server Message Block protocol&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Open finder&lt;/li&gt;
+  &lt;li&gt;Open the go menu and select Connect to Sever&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/cs/internet-windows-and-macos.html</link>
+    <guid>/cs/internet-windows-and-macos</guid>
+    <pubDate>Mon, 10 Apr 2023 00:00:00 +0800</pubDate>
+  </item>
+
+  <item>
+    <title>Internet: netcat</title>
+    <description>
+&lt;ol&gt;
+  &lt;li&gt;The following command means the same thing.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;nc &lt;span class=&quot;nt&quot;&gt;-lp&lt;/span&gt; 234 &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt;
+nc &lt;span class=&quot;nt&quot;&gt;-l&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 234 
+nc &lt;span class=&quot;nt&quot;&gt;-lvp&lt;/span&gt; 234
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+</description>
+    <link>/cs/internet-netcat.html</link>
+    <guid>/cs/internet-netcat</guid>
+    <pubDate>Mon, 10 Apr 2023 00:00:00 +0800</pubDate>
+  </item>
+
+  <item>
+    <title>Python Pytorch: With M1 Pro</title>
+    <description>
+&lt;p&gt;Pytorch uses Apple’s Metal Performance Shaders(MPS) as a backend.&lt;/p&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://towardsdatascience.com/installing-pytorch-on-apple-m1-chip-with-gpu-acceleration-3351dc44d67c&quot;&gt;tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/pl/pl-script-python-pytorch-with-m1-pro.html</link>
+    <guid>/pl/pl-script-python-pytorch-with-m1-pro</guid>
+    <pubDate>Mon, 20 Mar 2023 00:00:00 +0800</pubDate>
+  </item>
+
+  <item>
+    <title>Pytorch: Concept</title>
+    <description>
+&lt;h4 id=&quot;advantage&quot;&gt;Advantage&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;N-dimensional Tensor(like NumPy) computation on GPUs&lt;/li&gt;
+  &lt;li&gt;Automatic differentiation for training deep neural networks&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;dataset-and-dataloader&quot;&gt;Dataset and Dataloader&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Dataset: stores data samples and expected values.&lt;/li&gt;
+  &lt;li&gt;Dataloader: groups data in batches, enables multiprocessing&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://medium.com/analytics-vidhya/creating-a-custom-dataset-and-dataloader-in-pytorch-76f210a1df5d&quot;&gt;using dataset and dataloader&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://pytorch.org/docs/stable/index.html&quot;&gt;Pytorch API&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/pl/pl-script-python-pytorch-data-preprocess.html</link>
+    <guid>/pl/pl-script-python-pytorch-data-preprocess</guid>
+    <pubDate>Mon, 20 Mar 2023 00:00:00 +0800</pubDate>
+  </item>
+
+  <item>
+    <title>Latex: With Chinese</title>
+    <description>&lt;h3 id=&quot;how-to-add-chinese&quot;&gt;How to Add Chinese&lt;/h3&gt;
+
+&lt;div class=&quot;language-tex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;\documentclass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;article&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\usepackage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;xeCJK&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\setCJKmainfont&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;[Path=/System/Library/Fonts/Supplemental/]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Songti.ttc&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;\usepackage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;tikz&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\usetikzlibrary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;calendar&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;\begin{document}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\sffamily\scriptsize&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\tikz&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;\calendar&lt;/span&gt; [dates=2022-01-01 to 2022-12-last,
+             month list,month label left,month yshift=4.25em]
+            if (Sunday) [red!50]
+            if (Saturday) [red!50];
+&lt;span class=&quot;k&quot;&gt;\pagebreak&lt;/span&gt;;
+
+&lt;span class=&quot;k&quot;&gt;\renewcommand&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;\arraystretch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}{&lt;/span&gt;1.8&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;% adjust vertical length&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;11/05&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;\end{document}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+</description>
+    <link>/pl/pl-script-latex-chinese.html</link>
+    <guid>/pl/pl-script-latex-chinese</guid>
+    <pubDate>Tue, 14 Feb 2023 00:00:00 +0800</pubDate>
+  </item>
+
+  <item>
+    <title>Git: The Three Trees</title>
+    <description>
+&lt;h4 id=&quot;model&quot;&gt;Model&lt;/h4&gt;
+&lt;p&gt;Git is all about the three trees: working directory, index, and HEAD, and all
+the operations is for them.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Working directory: The other trees store their content in an efficient but
+inconvient manner, inside the &lt;em&gt;.git&lt;/em&gt; folder.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The working directory unpacks them into actual files, which makes it much
+easizer for you to edit them. Think of the working directory as a &lt;em&gt;sandbox&lt;/em&gt;,
+where you can try changes out before commiting them to you staging area.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Index:  The &lt;em&gt;index&lt;/em&gt; is your proposed next commit. We’ve also been referring to this
+  concept as Git’s “Staging Area” as this is what Git looks at when you run git
+  commit.
+    &lt;ul&gt;
+      &lt;li&gt;An index is a list of names and pointers to content. In books, it’s page
+numbers. In the Git index, it’s object ID’s in the repository’s object
+database.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;HEAD&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img align=&quot;left&quot; src=&quot;/images/git/git-three-trees.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;13-git-status&quot;&gt;1.3 git status&lt;/h4&gt;
+&lt;p&gt;Comparing these trees, and show their difference.&lt;/p&gt;
+
+&lt;h4 id=&quot;14-git-add&quot;&gt;1.4 git add&lt;/h4&gt;
+&lt;p&gt;Tracking new files, it essentially add this file to index tree.&lt;/p&gt;
+
+&lt;h5 id=&quot;12-git-clone&quot;&gt;1.2 git clone&lt;/h5&gt;
+&lt;p&gt;This command is git clone and not “checkout”. This is an important
+distinction-instead of getting just a working copy, Git receives a full copy of
+nearly all data that the server has.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Every version of every file for the history of the project is pulled down by
+default when you run git clone&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;16-git-diff&quot;&gt;1.6 git diff&lt;/h4&gt;
+&lt;p&gt;The git status is too vague for you, you want to know exactly what you changed,
+not just which files were changed. you can use git diff.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;git diff shows you the exact lines added and removed-the patch&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/2529441/how-to-read-the-output-from-git-diff&quot;&gt;How to read the outputs of git diff&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/12138207/is-the-git-staging-area-just-an-index&quot;&gt;git index and staged area&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/os/pl-tool-git-three-trees.html</link>
+    <guid>/os/pl-tool-git-three-trees</guid>
+    <pubDate>Thu, 22 Dec 2022 00:00:00 +0800</pubDate>
+  </item>
+
+  <item>
+    <title>Journal: Bibtex of Published Work</title>
+    <description>
+&lt;div class=&quot;language-tex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@article&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Zhang2022,
+	title = &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;The Multi-Objective Design of Laminated Structure with
+		  Non-Dominated Sorting Genetic Algorithm&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+	journal = &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;International Journal of Advanced Computer Science and
+			Applications&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+	doi = &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;10.14569/IJACSA.2022.01310106&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+	url = &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;http://dx.doi.org/10.14569/IJACSA.2022.01310106&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+	year = &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;2022&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+	publisher = &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;The Science and Information Organization&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+	volume = &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;13&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+	number = &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;10&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+	author = &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Huiyao Zhang and Yuxiao Wang and Fangmeng Zeng&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+@article&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;HuiyaoZHANG2022,
+  title=&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Optimum Design of Laminated Composites for Minimum Thickness by a Variant of Genetic Algorithm&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+  author=&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Huiyao ZHANG and Atsushi YOKOYAMA&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+  journal=&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Journal of Textile Engineering&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+  volume=&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;68&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+  number=&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;2&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+  pages=&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;31-39&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+  year=&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;2022&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+  doi=&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;10.4188/jte.68.31&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+@article&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Zhang2021,
+title = &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;A Technique for Constrained Optimization of Cross-ply Laminates using a New Variant of Genetic Algorithm&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+journal = &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;International Journal of Advanced Computer Science and Applications&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+doi = &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;10.14569/IJACSA.2021.0120689&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+url = &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;http://dx.doi.org/10.14569/IJACSA.2021.0120689&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+year = &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;2021&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+publisher = &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;The Science and Information Organization&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+volume = &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;12&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+number = &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;6&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+author = &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Huiyao Zhang and Atsushi Yokoyama&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+@article&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Zhang20211,
+title = &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Predicting Strength Ratio of Laminated Composite Material with Evolutionary Artificial Neural Network&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+journal = &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;International Journal of Advanced Computer Science and Applications&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+doi = &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;10.14569/IJACSA.2021.0120602&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+url = &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;http://dx.doi.org/10.14569/IJACSA.2021.0120602&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+year = &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;2021&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+publisher = &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;The Science and Information Organization&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+volume = &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;12&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+number = &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;6&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+author = &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Huiyaoo  Zhang and Atsushi Yokoyama&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+@article&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Zhang2017,
+  doi = &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;10.3993/jfbim00268&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+  url = &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;https://doi.org/10.3993/jfbim00268&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+  year = &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;2017&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+  month = jun,
+  publisher = &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Textile Bioengineering and Informatics Society&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+  volume = &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;10&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+  number = &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;3&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+  pages = &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;131--139&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+  author = &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Hui-Yao Zhang&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+  title = &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;A Study on the Female Chest Contour with Elliptic Fourier Analysis&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+  journal = &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Journal of Fiber Bioengineering and Informatics&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+    <link>/work/work-journal-published-work-citation.html</link>
+    <guid>/work/work-journal-published-work-citation</guid>
+    <pubDate>Wed, 21 Dec 2022 00:00:00 +0800</pubDate>
+  </item>
+
+  <item>
+    <title>Latex: Bibliography</title>
+    <description>&lt;h4 id=&quot;1-introduction&quot;&gt;1. Introduction&lt;/h4&gt;
+&lt;p&gt;bibtex is one of the additions of tex to manage the bibliography of a paper, so is biber.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;bibtex&lt;/strong&gt; and &lt;strong&gt;biber&lt;/strong&gt; are external programs that process bibliography
+information and act as the interface between you .bib file and your Latex
+document.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Natbib and biblatex are latex packages that format citations and
+bibliographies: natbib works only with &lt;strong&gt;bibtex&lt;/strong&gt;; while biblatex works with both bibtex and biber.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;2-with-bibtex-as-the-engine&quot;&gt;2. With Bibtex as the engine&lt;/h4&gt;
+
+&lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;\begin{document}&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;\section&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;First section&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+This document is an example of &lt;span class=&quot;k&quot;&gt;\texttt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;thebibliography&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; environment using 
+in bibliography management. Three items are cited: &lt;span class=&quot;k&quot;&gt;\textit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;The &lt;span class=&quot;k&quot;&gt;\LaTeX\ &lt;/span&gt;Companion&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; 
+book &lt;span class=&quot;k&quot;&gt;\cite&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;latexcompanion&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;, the Einstein journal paper &lt;span class=&quot;k&quot;&gt;\cite&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;einstein&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;, and the 
+Donald Knuth&apos;s website &lt;span class=&quot;k&quot;&gt;\cite&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;knuthwebsite&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;. The &lt;span class=&quot;k&quot;&gt;\LaTeX\ &lt;/span&gt;related items are
+&lt;span class=&quot;k&quot;&gt;\cite&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;latexcompanion,knuthwebsite&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;. 
+
+&lt;span class=&quot;k&quot;&gt;\medskip&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;\begin{thebibliography}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;9&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\bibitem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;latexcompanion&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; 
+Michel Goossens, Frank Mittelbach, and Alexander Samarin. 
+&lt;span class=&quot;k&quot;&gt;\textit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;The &lt;span class=&quot;k&quot;&gt;\LaTeX\ &lt;/span&gt;Companion&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;. 
+Addison-Wesley, Reading, Massachusetts, 1993.
+
+&lt;span class=&quot;k&quot;&gt;\bibitem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;einstein&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; 
+Albert Einstein. 
+&lt;span class=&quot;k&quot;&gt;\textit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Zur Elektrodynamik bewegter K&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;\&quot;&lt;/span&gt;o&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;rper&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;. (German) 
+[&lt;span class=&quot;k&quot;&gt;\textit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;On the electrodynamics of moving bodies&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;]. 
+Annalen der Physik, 322(10):891–921, 1905.
+
+&lt;span class=&quot;k&quot;&gt;\bibitem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;knuthwebsite&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; 
+Knuth: Computers and Typesetting,
+&lt;span class=&quot;k&quot;&gt;\\\texttt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;http://www-cs-faculty.stanford.edu/&lt;span class=&quot;k&quot;&gt;\~&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;uno/abcde.html&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;\end{thebibliography}&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;\end{document}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h5 id=&quot;core-module&quot;&gt;Core module&lt;/h5&gt;
+
+&lt;p&gt;&lt;strong&gt;step 1&lt;/strong&gt;: prepare the dataset &lt;br /&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;prepare the bibliography file with extension “bib”, such as &lt;strong&gt;citation-database.bib&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@article&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;liu2015comparison,
+  title=&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Comparison of four Adaboost algorithm based artificial neural networks in wind speed predictions&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+  author=&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Liu, Hui and Tian, Hong-qi and Li, Yan-fei and Zhang, Lei&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+  journal=&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Energy Conversion and Management&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+  volume=&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;92&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+  pages=&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;67--81&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+  year=&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;2015&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+  publisher=&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Elsevier&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;step 2&lt;/strong&gt;: include the &lt;strong&gt;citation-database.bib&lt;/strong&gt; file, without the extension&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;To choose a Bibtex bibliographic style file with extension .bst. In the following example, the
+file is &lt;strong&gt;plain.bst&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;\bibliographystyle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;plain&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\bibliography&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;citation-database&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;\end{document}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;step 3&lt;/strong&gt;: to insert a citation where label is the label of a bibliography entry in a .bib file.&lt;/p&gt;
+
+&lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;According to the paper&lt;span class=&quot;k&quot;&gt;\cite&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;liu2015comparison&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;how-to-use-a-specific-style&quot;&gt;How to use a specific style&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;You will need to typeset your document four times, first LaTex, BibTex, Latex, and then Latex
+again.
+    &lt;ul&gt;
+      &lt;li&gt;Your bibliography will now appear in the style of your choice and your citations will be correctly
+formatted.&lt;/li&gt;
+      &lt;li&gt;If question marks appear where citations should, that means you need to Latex your document once
+more.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;3-the-package-providing-reference-style&quot;&gt;3. The package providing reference style&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Both &lt;strong&gt;Natbib&lt;/strong&gt; and &lt;strong&gt;biblatex&lt;/strong&gt; packages provides styles to typeset citation and reference.&lt;/li&gt;
+  &lt;li&gt;Specify an engine, which is bibtex or biber, with natbib package you can only
+use the bibtex engine, with biblatex package, you have both.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;1-natbib-package&quot;&gt;1. Natbib Package&lt;/h4&gt;
+
+&lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;%in the preamble&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;%--------------------------------&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\usepackage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;natbib&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\bibliographystyle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;stylename&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;%dinat, humannat, plainnat&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;%--------------------------------&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\bibliography&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;bibfile&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;% where the bibliography will be printed&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h4 id=&quot;2-biblatex-package&quot;&gt;2. biblatex Package&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;in the preamble you need to use the following code:
+    &lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;\usepackage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;biblatex&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;% loads up the biblatex package&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\addbibresource&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;     &lt;span class=&quot;c&quot;&gt;% specify which bib files you want to use. simply enter the file name with&lt;/span&gt;
+extension 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;if you want to declare one style for citations and a different style for the bibliography, you use
+the words citestyle and bibstyle.
+    &lt;ul&gt;
+      &lt;li&gt;in the body of the document instead of using a \bibliography command to construct bibliography,&lt;/li&gt;
+      &lt;li&gt;you use the \printbibliography command&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;\usepackage&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;[citestyle=alphabetic, bibstyle=authortitle]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;biblatex&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Another argument you can give the \usepackage command is the sorting option. Here’s a list of
+some of different sorting options available:
+    &lt;ul&gt;
+      &lt;li&gt;nty - sorts entries by name, title, year;&lt;/li&gt;
+      &lt;li&gt;nyt - sorts entries by name, year, title;&lt;/li&gt;
+      &lt;li&gt;nyvt - sorts entries by name, year, volume, title;&lt;/li&gt;
+      &lt;li&gt;none - no sorting. Entries appear in the order they appear in the text.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;If you don’t specify an order the default is nty.&lt;/p&gt;
+
+&lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;\usepackage&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;[style=authoryear, sorting=ynt]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;biblatex&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;4-work-with-latex-template-provided-by-a-journal&quot;&gt;4. Work with latex template provided by a Journal&lt;/h4&gt;
+&lt;p&gt;You can get a latex template from a journal, within the template folder you can
+find a bibliography style file. In this case, you can use it format your
+reference, and the engine is bibtex.&lt;/p&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Biber_(LaTeX)&quot;&gt;Biber&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.overleaf.com/learn/latex/Articles/Getting_started_with_BibLaTeX&quot;&gt;biblatex package&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.overleaf.com/learn/latex/Natbib_bibliography_styles&quot;&gt;Natbib Package&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.overleaf.com/learn/latex/biblatex_bibliography_styles&quot;&gt;biblatex bibliography styles&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://tex.stackexchange.com/questions/25701/bibtex-vs-biber-and-biblatex-vs-natbib#:~:text=bibtex%20and%20biber%20are%20external,as%20the%20interface%20between%20your%20.&amp;amp;text=natbib%20and%20biblatex%20are%20LaTeX,with%20both%20bibtex%20and%20biber%20.&quot;&gt;bibtex vs biber and biblatex vs natbib&lt;/a&gt;)&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+    <link>/pl/pl-script-latex-bibliography.html</link>
+    <guid>/pl/pl-script-latex-bibliography</guid>
+    <pubDate>Wed, 21 Dec 2022 00:00:00 +0800</pubDate>
+  </item>
+
+  <item>
+    <title>Latex: Bibtex with DOI, and Endnote</title>
+    <description>&lt;h4 id=&quot;import-reference-with-bib-extension-into-endnote&quot;&gt;Import reference with bib extension into Endnote&lt;/h4&gt;
+&lt;p&gt;Endnote failed to display the reference imported from a bib file used in latex
+even if I use the correct filter which specified by the endnote. To figure out
+the reason, I export the reference in bib form from endnote, then I re-import
+this bib file, which can be showed properly. So I compare this bib file with the
+bib file used in latex, the difference is so tricky.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Bib file used in latex
+    &lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@article&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;schmit1977optimum,
+  author=&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Schmit Jr, LA and Farshi, B&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+  journal=&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;International journal for numerical methods in engineering&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+  volume=&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;11&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+  number=&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;4&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+  pages=&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;623--640&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+  year=&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;1977&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+  publisher=&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Wiley Online Library&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+  url=&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;https://doi.org/10.1002/nme.1620110403&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Exported file from Endnote
+    &lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@article&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;RN369,
+author = &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Schmit Jr, L. A. and Farshi, B.&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+title = &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Optimum design of laminated fibre composite plates&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+journal = &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;International journal for numerical methods in engineering&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+volume = &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;11&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+number = &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;4&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+pages = &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;623--640&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+url = &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;https://doi.org/10.1002/nme.1620110403&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+year = &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;1977&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;,
+type = &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Journal Article&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Observe the two files, the first difference is identation, in which the first
+one has two spaces, and the second has three spaces in each entry; the second
+difference is the space before and after an equation mark, where the first has
+space, the last doesn’t have space.&lt;/p&gt;
+
+&lt;h4 id=&quot;bibtex-with-doi&quot;&gt;Bibtex with DOI&lt;/h4&gt;
+&lt;p&gt;There is a tool that can convert a DOI to any format which includes bibtex, apa,chicago in  &lt;a href=&quot;https://citation.crosscite.org/&quot;&gt;This site&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;galois&quot;&gt;Galois&lt;/h4&gt;
+&lt;p&gt;Program is very stupid: the input follows its grammar, it can read it perfectly,
+otherwise a small mistake will make it crash.&lt;/p&gt;
+
+</description>
+    <link>/pl/pl-script-latex-bibliography-with-endnote.html</link>
+    <guid>/pl/pl-script-latex-bibliography-with-endnote</guid>
+    <pubDate>Wed, 21 Dec 2022 00:00:00 +0800</pubDate>
+  </item>
+
+  <item>
+>>>>>>> Stashed changes
     <title>Journal: Academic Database</title>
     <description>
 &lt;h4 id=&quot;top-list-of-academic-research-databases&quot;&gt;Top list of academic research databases&lt;/h4&gt;
@@ -1638,6 +3322,29 @@ Chrome&lt;/a&gt;&lt;/li&gt;
   <item>
     <title>Journal Writing: Introduction</title>
     <description>
+<<<<<<< Updated upstream
+=======
+&lt;h4 id=&quot;context&quot;&gt;Context&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Handwritten digit recognition is a challenging problem that has been intensely studied for many
+years in the field of handwriting recognition.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;however&quot;&gt;However&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;However, most of the papers published on the MNIST database have focused mainly on the
+recognition rate and only a few of them have mentioned the reiability.&lt;/li&gt;
+  &lt;li&gt;Prior systems for generating conjectures have either contributed genuinely useful research
+conjectures via methods that do not easily generalize to other mathematical areas, or have
+demonstrated novel, general methods for finding conjectures that have not yet yielded
+mathematically valuable results.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;contribution&quot;&gt;Contribution&lt;/h4&gt;
+&lt;p&gt;Our goals are not only to improve the current recognition performance but also to seek the highest
+reliability on the application f handwritten digits.&lt;/p&gt;
+
+>>>>>>> Stashed changes
 &lt;p&gt;The introduction parts includes four points:&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;context&lt;/li&gt;
@@ -1760,6 +3467,7 @@ to do something is… )&lt;/p&gt;
   </item>
 
   <item>
+<<<<<<< Updated upstream
     <title>Latex: Table</title>
     <description>&lt;h4 id=&quot;adjustment-of-row-height-and-column-width&quot;&gt;Adjustment of row height and column width&lt;/h4&gt;
 &lt;ol&gt;
@@ -2012,6 +3720,8 @@ in the body of the table.&lt;/li&gt;
   </item>
 
   <item>
+=======
+>>>>>>> Stashed changes
     <title>Editor: Vim</title>
     <description>
 &lt;h3 id=&quot;1-introduction&quot;&gt;1. Introduction&lt;/h3&gt;
@@ -2210,6 +3920,7 @@ your operation&lt;/li&gt;
   </item>
 
   <item>
+<<<<<<< Updated upstream
     <title>OS: History</title>
     <description>
 &lt;h4 id=&quot;timeline&quot;&gt;Timeline&lt;/h4&gt;
@@ -2249,6 +3960,8 @@ you should replace Mac OS X utilities with GNU core utilities.&lt;/li&gt;
   </item>
 
   <item>
+=======
+>>>>>>> Stashed changes
     <title>Shell: Zsh</title>
     <description>
 &lt;h4 id=&quot;plugin&quot;&gt;plugin&lt;/h4&gt;
@@ -6082,6 +7795,26 @@ Japanese&lt;/a&gt;&lt;/li&gt;
   </item>
 
   <item>
+<<<<<<< Updated upstream
+=======
+    <title>NLP: Transformer</title>
+    <description>
+&lt;h4 id=&quot;word2vec-rnn-and-transformer&quot;&gt;word2vec, rnn and transformer&lt;/h4&gt;
+&lt;p&gt;Those models in nature are dictionary, where word2vec doesn’t take the context into consideration,
+rnn does, and transformer does.&lt;/p&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=LE3NfEULV6k&quot;&gt;word2vec, rnn and transformer&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    <link>/simplex/AI-NLP-transformer.html</link>
+    <guid>/simplex/AI-NLP-transformer</guid>
+    <pubDate>Sun, 20 Mar 2022 00:00:00 +0800</pubDate>
+  </item>
+
+  <item>
+>>>>>>> Stashed changes
     <title>sentence: n1 文法</title>
     <description>
 &lt;h4 id=&quot;1-てもでも&quot;&gt;1. ても・でも&lt;/h4&gt;
@@ -10642,7 +12375,17 @@ can care less about computation.&lt;/li&gt;
   <item>
     <title>Simplex: Repository</title>
     <description>
+<<<<<<< Updated upstream
 &lt;ol&gt;
+=======
+&lt;h4 id=&quot;indicator&quot;&gt;Indicator&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Sensitivity, specificity, accuracy&lt;/li&gt;
+  &lt;li&gt;Recall, precision,&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;ROC(Reciever Operation Curve) and Area Under ROC-curve&lt;/p&gt;
+  &lt;/li&gt;
+>>>>>>> Stashed changes
   &lt;li&gt;&lt;a href=&quot;https://archive.ics.uci.edu/ml/index.php&quot;&gt;UCI&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </description>
@@ -30784,6 +32527,7 @@ prefix.&lt;/li&gt;
   </item>
 
   <item>
+<<<<<<< Updated upstream
     <title>Harmony: Framework</title>
     <description>
 &lt;p&gt;&lt;img src=&quot;/images/os/os-harmony-architecture.png&quot; height=&quot;&quot; width=&quot;&quot; /&gt;&lt;/p&gt;
@@ -30799,6 +32543,8 @@ prefix.&lt;/li&gt;
   </item>
 
   <item>
+=======
+>>>>>>> Stashed changes
     <title>TOC: DFA</title>
     <description>
 &lt;h4 id=&quot;a&quot;&gt;A&lt;/h4&gt;
@@ -36320,6 +38066,7 @@ number of pointer changs, O(1)&lt;/li&gt;
   </item>
 
   <item>
+<<<<<<< Updated upstream
     <title>Git: Summary</title>
     <description>
 &lt;h4 id=&quot;1-what-is-version-control&quot;&gt;1. What is version control?&lt;/h4&gt;
@@ -36390,6 +38137,8 @@ something back. Keep that in mind.&lt;/p&gt;
   </item>
 
   <item>
+=======
+>>>>>>> Stashed changes
     <title>Git: Basic Operation</title>
     <description>
 &lt;h4 id=&quot;3-layout&quot;&gt;3. Layout&lt;/h4&gt;
@@ -36483,6 +38232,7 @@ git checkout ad62409
   </item>
 
   <item>
+<<<<<<< Updated upstream
     <title>Git: The Three Trees</title>
     <description>
 &lt;h4 id=&quot;model&quot;&gt;Model&lt;/h4&gt;
@@ -36541,6 +38291,8 @@ not just which files were changed. you can use git diff.&lt;/p&gt;
   </item>
 
   <item>
+=======
+>>>>>>> Stashed changes
     <title>Git: Configuration and Internals</title>
     <description>
 &lt;p&gt;Just as other programs, the git configuration can be divided into three level.&lt;/p&gt;
@@ -36743,6 +38495,7 @@ program.&lt;/li&gt;
   </item>
 
   <item>
+<<<<<<< Updated upstream
     <title>Git: Ignore</title>
     <description>
 &lt;h4 id=&quot;incentive&quot;&gt;Incentive?&lt;/h4&gt;
@@ -36793,6 +38546,8 @@ file&lt;/a&gt;&lt;/li&gt;
   </item>
 
   <item>
+=======
+>>>>>>> Stashed changes
     <title>Git:  alias of commit</title>
     <description>
 &lt;p&gt;&lt;strong&gt;Terminology: detached head&lt;/strong&gt;:
@@ -36922,6 +38677,7 @@ in command line, first, you click the prefix, then type the command&lt;/li&gt;
   </item>
 
   <item>
+<<<<<<< Updated upstream
     <title>Git: transfer commit pull push fetch</title>
     <description>
 &lt;h4 id=&quot;the-output-of-git-pull&quot;&gt;The output of git pull&lt;/h4&gt;
@@ -36990,6 +38746,8 @@ requirement for fast forward merge, it fails.&lt;/p&gt;
   </item>
 
   <item>
+=======
+>>>>>>> Stashed changes
     <title>Git: bisect</title>
     <description>
 &lt;p&gt;This command uses a binary search algorithm to find which commit in your
@@ -37168,6 +38926,7 @@ requested)&lt;/li&gt;
   </item>
 
   <item>
+<<<<<<< Updated upstream
     <title>Git: Internals</title>
     <description>
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;blob&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
@@ -37186,6 +38945,8 @@ requested)&lt;/li&gt;
   </item>
 
   <item>
+=======
+>>>>>>> Stashed changes
     <title>Haskell: summary</title>
     <description>
 &lt;h4 id=&quot;a&quot;&gt;A&lt;/h4&gt;
@@ -45242,6 +47003,7 @@ delimiters tall enough to just cover the size of the formula that they enclose.&
   </item>
 
   <item>
+<<<<<<< Updated upstream
     <title>Latex: Bibliography</title>
     <description>&lt;h4 id=&quot;1-introduction&quot;&gt;1. Introduction&lt;/h4&gt;
 &lt;p&gt;bibtex is one of the additions of tex to manage the bibliography of a paper, so is biber.&lt;/p&gt;
@@ -45468,6 +47230,8 @@ otherwise a small mistake will make it crash.&lt;/p&gt;
   </item>
 
   <item>
+=======
+>>>>>>> Stashed changes
     <title>Latex: Customizing Bibliographic Style Files</title>
     <description>&lt;h4 id=&quot;cusomizing-with-biblatex&quot;&gt;Cusomizing with biblatex&lt;/h4&gt;
 &lt;p&gt;The goals are as follows:&lt;/p&gt;
@@ -46486,6 +48250,7 @@ of the program they install.&lt;/li&gt;
   </item>
 
   <item>
+<<<<<<< Updated upstream
     <title>Python: Tqdm Package</title>
     <description>
 &lt;h4 id=&quot;tqdm&quot;&gt;tqdm&lt;/h4&gt;
@@ -46525,6 +48290,8 @@ of the program they install.&lt;/li&gt;
   </item>
 
   <item>
+=======
+>>>>>>> Stashed changes
     <title>Python: Sys</title>
     <description>
 &lt;h4 id=&quot;intro&quot;&gt;intro&lt;/h4&gt;
@@ -46730,6 +48497,7 @@ name is used to uniquely identify the module in the import system&lt;/p&gt;
   <item>
     <title>Python: Keyword</title>
     <description>
+<<<<<<< Updated upstream
 &lt;h4 id=&quot;pass&quot;&gt;pass&lt;/h4&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# 占位语句，啥都不干
@@ -46737,6 +48505,11 @@ name is used to uniquely identify the module in the import system&lt;/p&gt;
 for i in range(10):
     pass
     print(i)
+=======
+&lt;h4 id=&quot;true-and-false&quot;&gt;True and False&lt;/h4&gt;
+&lt;p&gt;In python, True equals 1, and False equals 0&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;np.sum([True,5]) # The result is 6
+>>>>>>> Stashed changes
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h4 id=&quot;globallocal-and-nonlocal&quot;&gt;global,local and nonlocal&lt;/h4&gt;
@@ -46754,7 +48527,10 @@ local nor the global scope&lt;/li&gt;
         &lt;span class=&quot;k&quot;&gt;nonlocal&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;
         &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
         &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+<<<<<<< Updated upstream
         
+=======
+>>>>>>> Stashed changes
     &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;current_index&lt;/span&gt;
 
 &lt;span class=&quot;c1&quot;&gt;# call the function
@@ -47152,6 +48928,7 @@ list of dictionaries.&lt;/p&gt;
   </item>
 
   <item>
+<<<<<<< Updated upstream
     <title>Python: PIL package</title>
     <description>
 &lt;h4 id=&quot;what-is-pil&quot;&gt;what is PIL&lt;/h4&gt;
@@ -47186,6 +48963,8 @@ list of dictionaries.&lt;/p&gt;
   </item>
 
   <item>
+=======
+>>>>>>> Stashed changes
     <title>Python TF: Tensorboard</title>
     <description>
 &lt;h4 id=&quot;introduction&quot;&gt;Introduction&lt;/h4&gt;
@@ -47821,6 +49600,7 @@ st.norm.rvs(0,1,10)j&lt;/p&gt;
   </item>
 
   <item>
+<<<<<<< Updated upstream
     <title>Python Package: Pandas</title>
     <description>&lt;h4 id=&quot;motivation&quot;&gt;Motivation&lt;/h4&gt;
 &lt;p&gt;名字由来: panel data和data analysis。panel data是经济学中关于多维数据集的一个术语
@@ -48081,6 +49861,8 @@ a[0:2,:]
   </item>
 
   <item>
+=======
+>>>>>>> Stashed changes
     <title>Python Package: Matplotlib and Seaborn</title>
     <description>
 &lt;h4 id=&quot;concept&quot;&gt;Concept&lt;/h4&gt;
@@ -48297,6 +50079,18 @@ you need set the backend of matplotlib&lt;/p&gt;
   &lt;li&gt;Various toy datasets: IRIS dataset,Boston house prices dataset&lt;/li&gt;
 &lt;/ul&gt;
 
+<<<<<<< Updated upstream
+=======
+&lt;h4 id=&quot;installation-with-conda&quot;&gt;Installation with CONDA&lt;/h4&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;conda&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;scikit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;learn&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://sssaini.medium.com/install-scikit-learn-on-apple-silicon-m1-e9477dfd98f&quot;&gt;Install with conda&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+>>>>>>> Stashed changes
 </description>
     <link>/pl/pl-script-python-ml-sklearn.html</link>
     <guid>/pl/pl-script-python-ml-sklearn</guid>
@@ -48306,6 +50100,7 @@ you need set the backend of matplotlib&lt;/p&gt;
   <item>
     <title>Python ML: Keras</title>
     <description>
+<<<<<<< Updated upstream
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;keras.models&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;load_model&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;load_model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;model.h5&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;# x is test data
@@ -48313,6 +50108,12 @@ you need set the backend of matplotlib&lt;/p&gt;
 &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
+=======
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://keras.io/api/callbacks/early_stopping/&quot;&gt;Keras API&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+>>>>>>> Stashed changes
 </description>
     <link>/pl/pl-script-python-ml-keras-model.html</link>
     <guid>/pl/pl-script-python-ml-keras-model</guid>
@@ -48732,11 +50533,20 @@ alt-b: move cursor backward one word
   <item>
     <title>Shell: Internet</title>
     <description>
+<<<<<<< Updated upstream
+=======
+&lt;h4 id=&quot;hub-switch-router&quot;&gt;Hub, switch, router&lt;/h4&gt;
+
+>>>>>>> Stashed changes
 &lt;ul&gt;
   &lt;li&gt;TCP/IP: Transmission Control Protocol/Internet Protocol&lt;/li&gt;
   &lt;li&gt;LAN: Local Area Network&lt;/li&gt;
   &lt;li&gt;WAN: Wide Area Network&lt;/li&gt;
   &lt;li&gt;DNS: Domain name system&lt;/li&gt;
+<<<<<<< Updated upstream
+=======
+  &lt;li&gt;0.0 means that any IP either from a local system or from anywhere on the internet can access&lt;/li&gt;
+>>>>>>> Stashed changes
 &lt;/ul&gt;
 
 &lt;h4 id=&quot;netstat&quot;&gt;netstat&lt;/h4&gt;
@@ -48751,6 +50561,7 @@ alt-b: move cursor backward one word
   &lt;li&gt;ip addr&lt;/li&gt;
 &lt;/ol&gt;
 
+<<<<<<< Updated upstream
 &lt;h4 id=&quot;fping&quot;&gt;fping&lt;/h4&gt;
 
 &lt;h4 id=&quot;hping&quot;&gt;hping&lt;/h4&gt;
@@ -48764,6 +50575,15 @@ alt-b: move cursor backward one word
 &lt;h3 id=&quot;批量服务扫描&quot;&gt;批量服务扫描&lt;/h3&gt;
 
 &lt;h4 id=&quot;nmap&quot;&gt;nmap&lt;/h4&gt;
+=======
+&lt;h4 id=&quot;hping-fping&quot;&gt;hping fping&lt;/h4&gt;
+&lt;p&gt;路由扫描 
+ traceroute 
+ mtr 
+批量服务扫描 
+nmap 
+ncat&lt;/p&gt;
+>>>>>>> Stashed changes
 
 &lt;h5 id=&quot;常用功能&quot;&gt;常用功能&lt;/h5&gt;
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# 查看肉鸡开放的端口&lt;/span&gt;
@@ -48777,11 +50597,18 @@ PORT     STATE  SERVICE
 3389/tcp closed ms-wbt-server
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
+<<<<<<< Updated upstream
 &lt;h4 id=&quot;ncat&quot;&gt;ncat&lt;/h4&gt;
 
 &lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
 &lt;ol&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.cnblogs.com/gbyukg/p/3326825.html&quot;&gt;Curl&lt;/a&gt;&lt;/li&gt;
+=======
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cnblogs.com/gbyukg/p/3326825.html&quot;&gt;Curl&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=1z0ULvg_pW8&quot;&gt;Switch, hub, router&lt;/a&gt;&lt;/li&gt;
+>>>>>>> Stashed changes
 &lt;/ol&gt;
 
 </description>
